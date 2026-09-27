@@ -1,6 +1,144 @@
 {
   "cases": [
     {
+      "id": "shipwithmuse",
+      "slug": "shipwithmuse",
+      "title": "工具：shipwithmuse.live — Muse 社区作品目录",
+      "titleEn": "Tool: shipwithmuse.live — a catalog of things people built with Muse",
+      "summary": "Show HN（item 49863641，2026-09-27 ~05:38Z，Algolia 核对 4pts）https://shipwithmuse.live/ — 独立策展目录，按 Errands / Coding / Local models / Games 等分栏收录公开 Muse 作品（页内自称 1079 builds；含 X / GitHub / Reddit / 视频等入口）。作者 DEV 文称动机是 Muse 公开产出散落各处不好逛。官网 HTTP 200。与本站 Errand（Grok Bot/Muse 相邻）可互参；本条是目录工具笔记，不是 Meta Muse 官方站，也不替你验证每条 build。",
+      "summaryEn": "Show HN item 49863641 (2026-09-27 ~05:38Z, 4pts on Algolia at check time) at https://shipwithmuse.live/ — an independent curated catalog of public Muse builds by use case (Errands / Coding / Local models / Games, etc.; the page claims 1079 builds, with X / GitHub / Reddit / video entries). The author’s DEV post says public Muse shipping was scattered. Site HTTP 200. Useful beside this library’s Errand (Grok Bot/Muse-adjacent) card; this is a directory tool note — not the official Meta Muse site, and individual builds are not verified here.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "community"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://shipwithmuse.live/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49863641",
+        "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
+        "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。1079 builds、分类数字是页面自述快照（2026-09-27 晚间）。独立非官方；赞助位页面有标价，收录不构成推荐。未逐条核 build 真实性。预览 Playwright 实拍目录首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are Show HN 49863641 and the public catalog; secondary is the DEV post. 1079 builds and category counts are page self-report snapshots (evening 2026-09-27). Independent, not official; sponsor slots show pricing on the page and are not endorsements. Individual builds were not verified one-by-one. Preview is a Playwright 3:2 capture of the catalog above the fold. Unrated.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "点进第三方 build / 外链前自行判断来源；目录不代替官方文档。",
+      "approvalBoundaryEn": "Judge third-party builds and outbound links yourself before following them; the catalog does not replace official docs.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-27",
+      "updatedAt": "2026-09-27T12:05:00Z",
+      "previewImage": "/previews/shipwithmuse.webp",
+      "landing": {
+        "what": "shipwithmuse.live 是一个独立策展的 Muse 作品目录（Show HN item 49863641）。页面按用例分栏（Errands & personal agent、Coding & dev tools、Local & open models、Games & 3D 等），聚合公开的 X 帖、GitHub、Reddit、视频与指南入口；页头自称 1079 builds（2026-09-27 晚间看到的数字）。作者在 DEV 文写：Muse 公开产出散落各平台，所以做了可按类浏览的目录。可提交自己的 build。本站把它收成「工具笔记」：方便顺着 Muse / Errand 相邻话题往下逛，不是 Meta 官方 showcase。",
+        "whatEn": "shipwithmuse.live is an independent curated Muse build catalog (Show HN item 49863641). It groups public X posts, GitHub repos, Reddit threads, videos, and guides by use case (Errands & personal agent, Coding & dev tools, Local & open models, Games & 3D, and more); the header claimed 1079 builds when checked on the evening of 2026-09-27. The author’s DEV post says public Muse shipping was scattered across platforms, so they built a browsable directory. You can submit your own build. This library lists it as a tool tip for exploring Muse / Errand-adjacent work — not Meta’s official showcase.",
+        "contrast": {
+          "caption": "左列是目录页与 Show HN / DEV 文对得上的事实。右列只说明为什么放在 Cases 里对照 Muse / Errand，不补写本库没核过的官方 Muse 细节。",
+          "captionEn": "Left column: what the catalog, Show HN, and DEV post actually say. Right column: why it sits beside Muse / Errand Cases — not a fill-in of official Muse details unchecked here.",
+          "leftLabel": "shipwithmuse.live",
+          "leftLabelEn": "shipwithmuse.live",
+          "rightLabel": "对照本站 Muse 相邻",
+          "rightLabelEn": "Beside Muse-adjacent Cases",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "第三方策展目录 + 提交入口；按用例浏览公开 Muse 产出。",
+              "leftEn": "Third-party curated catalog + submit flow; browse public Muse shipping by use case.",
+              "right": "本站 Errand 卡讲的是「每席一电脑」相邻桌面实现；这里是作品墙，不是客户端。",
+              "rightEn": "This library’s Errand card is a per-seat-computer adjacent desktop; this is a build wall, not a client."
+            },
+            {
+              "aspect": "官方关系",
+              "aspectEn": "Official relationship",
+              "left": "独立站点；页面有 Sponsors 标价位。",
+              "leftEn": "Independent site; the page shows priced Sponsor slots.",
+              "right": "不以本目录代替 Meta Muse / Runta / xAI 文档。",
+              "rightEn": "Does not replace Meta Muse / Runta / xAI docs."
+            },
+            {
+              "aspect": "数字口径",
+              "aspectEn": "Numbers",
+              "left": "1079 builds 与分类计数是页内自述快照。",
+              "leftEn": "1079 builds and category counts are on-page self-report snapshots.",
+              "right": "本库不复述为「已核实总量」，只记核对当晚看到的页面数字。",
+              "rightEn": "This library does not treat them as audited totals — only as numbers seen on the page that evening."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "打开目录首页",
+            "titleEn": "Open the catalog home",
+            "body": "访问 https://shipwithmuse.live/ ，先扫 Newly submitted 与分类栏，确认页头 build 计数是你浏览当晚的数字。",
+            "bodyEn": "Visit https://shipwithmuse.live/, skim Newly submitted and the category rails, and treat the header build count as whatever the page shows that evening.",
+            "links": [
+              {
+                "href": "https://shipwithmuse.live/",
+                "label": "shipwithmuse.live",
+                "labelEn": "shipwithmuse.live"
+              }
+            ]
+          },
+          {
+            "title": "按用例点进一条外链",
+            "titleEn": "Follow one build by use case",
+            "body": "从 Errands / Coding / Local models 等栏点进作者原帖或仓库；外链质量自辨，目录不做背书。",
+            "bodyEn": "Open an author post or repo from Errands / Coding / Local models (etc.); judge outbound quality yourself — the catalog is not an endorsement.",
+            "links": [
+              {
+                "href": "https://news.ycombinator.com/item?id=49863641",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          },
+          {
+            "title": "对照本站 Errand",
+            "titleEn": "Compare with this library’s Errand card",
+            "body": "若你关心 Muse /「每席一电脑」相邻实现，可回到本站 Errand 卡看 Runta 桌面路径；目录与客户端不是同一层。",
+            "bodyEn": "If you care about Muse / per-seat-computer adjacent stacks, return to this library’s Errand card for the Runta desktop path; catalog ≠ client.",
+            "links": [
+              {
+                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/",
+                "label": "Errand 案例页",
+                "labelEn": "Errand case page"
+              },
+              {
+                "href": "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
+                "label": "作者 DEV 文",
+                "labelEn": "Author DEV post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "非 Meta Muse 官方；赞助位与点击数是站点自有机制，本站不转推赞助。",
+            "textEn": "Not official Meta Muse; sponsor slots and click counts are the site’s own mechanics — this library does not push sponsorships."
+          },
+          {
+            "text": "未逐条核实 build；外链可能失效或夸大。",
+            "textEn": "Builds were not verified one-by-one; outbound links may rot or overclaim."
+          },
+          {
+            "text": "页内 build 总数会变；引用时写核对日期。",
+            "textEn": "On-page build totals change; cite the date you checked."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍目录首屏（3:2 自托管）",
+        "previewCreditEn": "Preview: Playwright capture of catalog above-the-fold (3:2 self-hosted)"
+      }
+    },
+    {
       "id": "personal-jarvis",
       "slug": "personal-jarvis-opensource",
       "title": "Personal Jarvis：开源本机语音编排桌面（Grok Bot 相邻）",
@@ -4901,10 +5039,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-25T01:12:00Z",
+    "updatedAt": "2026-09-27T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.30",
-    "count": 127,
+    "version": "1.4.31",
+    "count": 128,
     "sourcesCrawled": [
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
@@ -5031,7 +5169,11 @@
       "https://www.copilotkit.ai/openbot",
       "https://news.ycombinator.com/item?id=49365575",
       "https://news.ycombinator.com/",
-      "https://news.ycombinator.com/show"
+      "https://news.ycombinator.com/show",
+      "https://shipwithmuse.live/",
+      "https://news.ycombinator.com/item?id=49863641",
+      "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
+      "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/"
     ]
   }
 }
