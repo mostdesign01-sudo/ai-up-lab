@@ -1,11 +1,83 @@
 {
   "meta": {
-    "updatedAt": "2026-09-26T12:05:00Z",
+    "updatedAt": "2026-09-27T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.9",
-    "count": 13
+    "version": "1.1.10",
+    "count": 14
   },
   "models": [
+    {
+      "id": "maniac-mansion-3d",
+      "slug": "maniac-mansion-3d",
+      "name": "Maniac Mansion 3D (Astra)",
+      "vendor": "OpenAI",
+      "title": "Astra 重建《疯狂大厦》3D 漫步（社区 demo）",
+      "titleEn": "Astra rebuilds Maniac Mansion as a 3D walkthrough (community demo)",
+      "summary": "Show HN（item 49864738，2026-09-27 ~08:58Z，Algolia 核对 2pts）https://github.com/s-macke/maniac-mansion-3d — 作者 s-macke 在 HN 自述：先用 GPT-6 Astra + Blender 做真实物体重建实验，再把 DOS EGA《Maniac Mansion》原画屏幕喂给 Astra 转成 3D 场景，最终做成整栋宅的浏览器漫步。Live：https://s-macke.github.io/maniac-mansion-3d/（HTTP 200）。README：34 个房间空间、Three.js、烘焙光照、非可玩重制（无谜题/背包）。仓库描述写 Built with Blender, Three.js and AI；2026-09-27 gh api：无 SPDX license、1★。本卡只记 Astra 能力展示与可点开的 walkthrough，不为 LucasArts / Disney IP 背书，也不分发原作资源。",
+      "summaryEn": "Show HN item 49864738 (2026-09-27 ~08:58Z, 2pts on Algolia at check time) at https://github.com/s-macke/maniac-mansion-3d — author s-macke wrote on HN that GPT-6 Astra + Blender experiments on real objects led to feeding original DOS EGA Maniac Mansion screens into Astra to rebuild rooms in 3D, then a full-house browser walkthrough. Live: https://s-macke.github.io/maniac-mansion-3d/ (HTTP 200). README: 34 room spaces, Three.js, baked lighting, exploration only (no puzzles/inventory). Repo blurb: Built with Blender, Three.js and AI; 2026-09-27 gh api: no SPDX license, 1★. Catalogued as an Astra capability showcase with a clickable walkthrough — not an endorsement of LucasArts / Disney IP, and no original game assets are redistributed here.",
+      "announcedAt": "2026-09-27",
+      "publishedAt": "2026-09-27",
+      "updatedAt": "2026-09-27T12:05:00Z",
+      "sources": [
+        {
+          "kind": "community",
+          "label": "Live：Maniac Mansion 3D 漫步",
+          "labelEn": "Live: Maniac Mansion 3D walkthrough",
+          "url": "https://s-macke.github.io/maniac-mansion-3d/",
+          "by": "s-macke",
+          "date": "2026-09-27"
+        },
+        {
+          "kind": "community",
+          "label": "GitHub：s-macke/maniac-mansion-3d",
+          "labelEn": "GitHub: s-macke/maniac-mansion-3d",
+          "url": "https://github.com/s-macke/maniac-mansion-3d",
+          "by": "s-macke"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Show HN Maniac Mansion 3D",
+          "labelEn": "Hacker News: Show HN Maniac Mansion 3D",
+          "url": "https://news.ycombinator.com/item?id=49864738",
+          "by": "Hacker News",
+          "date": "2026-09-27"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 公告：GPT-6 Astra（所用模型）",
+          "labelEn": "OpenAI announcement: GPT-6 Astra (the model used)",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "by": "OpenAI",
+          "date": "2026-09-03"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者 HN 自述：用 GPT-6 Astra + Blender 把原作 EGA 屏幕重建为可走 3D；「Astra」字样来自 Show HN 正文，仓库 README 写 Blender / Three.js / AI，未逐房间复述模型名。",
+          "textEn": "Author’s HN claim: GPT-6 Astra + Blender rebuilt original EGA screens into walkable 3D; “Astra” is from the Show HN text — the repo README says Blender / Three.js / AI and does not restate the model name per room."
+        },
+        {
+          "text": "README 可核：34 个房间空间、门口/梯子交互、对照 Original EGA、静态站无后端；WASD / 触控漫游。",
+          "textEn": "README-checkable: 34 room spaces, door/ladder interactions, Original EGA compare, static site with no backend; WASD / touch navigation."
+        },
+        {
+          "text": "Live Pages 与仓库 HTTP 200（2026-09-27 晚间核对）。非可玩 remake：无谜题、无角色操控。",
+          "textEn": "Live Pages and repo HTTP 200 (checked evening 2026-09-27). Not a playable remake: no puzzles, no character control."
+        }
+      ],
+      "qualityNote": "社区 demo 卡，不是模型本体卡（本体见 gpt-6-astra）。主源是作者 Show HN 正文对 Astra 的自述 + 可打开的 Pages 漫步；本库未复跑 Blender 构建，也未审计每个房间几何是否「正确」。仓库无 SPDX license（fan project）；原作美术属 Lucasfilm / Disney 体系——本卡只链公开 walkthrough，不分发 ROM/原画包。1★ 是收录时快照。预览建议 Playwright 实拍 live 首屏或仓库 walkthrough-preview.jpg 裁 3:2。不打星。",
+      "qualityNoteEn": "Community-demo card, not the model card (see gpt-6-astra). Primary sources are the author’s Show HN Astra claim plus the open Pages walkthrough; this library did not re-run the Blender build or audit every room’s geometry. No SPDX license (fan project); original art is Lucasfilm / Disney — this card only links the public walkthrough and redistributes no ROM/artwork pack. 1★ is a snapshot at listing time. Prefer a Playwright capture of the live first screen or the repo walkthrough-preview.jpg cropped 3:2. Unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra",
+        "astra-openai-showcase",
+        "astra-mini-lol"
+      ],
+      "previewImage": "/previews/maniac-mansion-3d.webp",
+      "previewCredit": "预览：live 漫步首屏 / 仓库 walkthrough-preview（3:2 自托管）",
+      "previewCreditEn": "Preview: live walkthrough above-the-fold / repo walkthrough-preview (3:2 self-hosted)",
+      "featured": true
+    },
     {
       "id": "claude-opus-5-5",
       "slug": "claude-opus-5-5",
@@ -652,6 +724,7 @@
       "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "maniac-mansion-3d",
         "astra-mini-lol",
         "astra-tripo-3d-prompts",
         "astra-openai-showcase",
@@ -726,6 +799,7 @@
       "qualityNoteEn": "A community-showcase card, not a model card: the model itself is the GPT-6 Astra card on this board. The official source is OpenAI Developers’ Showcase page — returned 200 when this library opened it on 2026-09-13, with the category tabs and the GPT-6 Astra model filter confirmed; it is OpenAI’s general demo wall, not an Astra-only gallery, and the count is not re-tallied here. 宝玉’s (@dotey) 12 Sept post is the Chinese entry point only: it lists no builds itself. The OpenAIDevs article post it quotes (x.com/OpenAIDevs/status/2098827327832822014) is reachable, but the article deep link x.com/i/article/2098531824528220160 returned 404 to this library while logged out, so it is not listed. Every build description and figure in the OpenAIDevs article (e.g. “2,234 anatomical parts,” “3,295 editable objects”) is the official community article’s own claim — not opened one by one here, and unverified counts are not repeated. Preview is the OpenAIDevs article cover (the “GPT-6 Astra · Community Builds” galaxy image, letterboxed to 3:2), not a Showcase-page screenshot. Unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "maniac-mansion-3d",
         "gpt-6-astra"
       ],
       "previewImage": "/previews/astra-openai-showcase.webp",
