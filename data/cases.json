@@ -1,6 +1,146 @@
 {
   "cases": [
     {
+      "id": "leftovers",
+      "slug": "leftovers",
+      "title": "工具：Leftovers — 清理 coding agent 留在 Mac 上的进程与缓存",
+      "titleEn": "Tool: Leftovers — clean up processes and caches coding agents leave on a Mac",
+      "summary": "Show HN（item 49861159，2026-09-26 ~22:27Z，Algolia 核对 2pts）https://github.com/arpwal/leftovers — MIT 免费 macOS 菜单栏应用：按 footprint（RAM+压缩+swap）找出 agent / 应用留下的 dev server、MCP、git worktree、LaunchAgent 与可重建缓存，安全清理。仓库 arpwal/leftovers 于 2026-09-28 gh api：MIT、2★；文档站 https://arpwal.github.io/leftovers/ HTTP 200。与 Grok Bot / Claude Code / Cursor Agent 等本机旁路相邻；本条是工具笔记，不替你在本机执行清理。",
+      "summaryEn": "Show HN item 49861159 (2026-09-26 ~22:27Z, 2pts on Algolia at check time) at https://github.com/arpwal/leftovers — MIT free macOS menu-bar app: finds leftover dev servers, MCP copies, git worktrees, LaunchAgents, and rebuildable caches by footprint (RAM + compressed + swap) and cleans them safely. Repo arpwal/leftovers on the 2026-09-28 gh api: MIT, 2★; docs site https://arpwal.github.io/leftovers/ HTTP 200. Adjacent to local Grok Bot / Claude Code / Cursor Agent workflows; this is a tool tip — it does not run cleanup on your machine for you.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://github.com/arpwal/leftovers",
+      "secondaryUrls": [
+        "https://arpwal.github.io/leftovers/",
+        "https://news.ycombinator.com/item?id=49861159"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 Show HN 49861159 与 MIT 仓库 / 文档站。收录理由：agent 本机残留是真实痛点，菜单栏 + CLI 可核对。边界：只支持 macOS；清理动作不可逆，受保护进程会拒绝；本站未在你的 Mac 上安装或代清。星数仍低（核对 2★）。预览 Playwright 实拍文档首页 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are Show HN 49861159 and the MIT repo / docs site. Listing rationale: leftover local agent processes are a real pain; menu bar + CLI are checkable. Boundary: macOS only; cleanup is irreversible and protected processes are refused; this site did not install or clean on your Mac. Star count is still low (2★ at check time). Preview is a Playwright 3:2 capture of the docs home. Unrated.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "退出进程、删缓存、删 worktree 前自己确认；受保护进程与作者安全规则优先。未审过的清理不要对着生产目录乱点。",
+      "approvalBoundaryEn": "Confirm before quitting processes, deleting caches, or removing worktrees; protected processes and the author’s safety rules win. Do not click cleanup against production folders you have not reviewed.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-26",
+      "updatedAt": "2026-09-28T01:05:00Z",
+      "previewImage": "/previews/leftovers.webp",
+      "landing": {
+        "what": "Leftovers 是开源 macOS 菜单栏工具（MIT）。README 写：coding agent 会话常留下 dev server、各自一份 MCP、git worktree 和定时任务；Activity Monitor 按内存排序时，已经换到 swap 的泄漏几乎看不见。Leftovers 读每个进程的 footprint（RAM + 压缩 + swap），列出 likely leaks、按 agent 会话归类的占用、可安全移除的 worktree（含 GitHub squash-merge 已合但本地还在的），以及可重建的开发者缓存（Xcode / npm / Docker 构建缓存等，不碰你的代码和数据库 volume）。也有 CLI：`leftovers --report` / `--json` / `--clean`。Show HN item 49861159。本站收成「工具笔记」：给跑本机 agent（含 Grok Bot 相邻栈）时清桌面用，不是云端 Bot 本身。",
+        "whatEn": "Leftovers is an open-source macOS menu-bar tool (MIT). The README says coding-agent sessions often leave behind dev servers, per-session MCP copies, git worktrees, and scheduled jobs; Activity Monitor sorts by RAM, so a leak already swapped out barely shows. Leftovers reads each process’s footprint (RAM + compressed + swap), lists likely leaks, memory by agent session, worktrees that are safe to remove (including ones squash-merged on GitHub that local git still keeps), and rebuildable developer caches (Xcode / npm / Docker build cache, and more — not your code or database volumes). CLI too: leftovers --report / --json / --clean. Show HN item 49861159. This library lists it as a tool tip for cleaning a local agent desk (including Grok Bot-adjacent stacks) — not the cloud Bot itself.",
+        "contrast": {
+          "caption": "左列是 README / Show HN 对得上的事实。右列说明为什么放在 Cases 工具笔记，而不是当成「官方 Grok Bot 插件」。",
+          "captionEn": "Left column: what the README / Show HN actually say. Right column: why it sits as a Cases tool tip — not an official Grok Bot plugin.",
+          "leftLabel": "Leftovers",
+          "leftLabelEn": "Leftovers",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "macOS 菜单栏 + CLI：找 footprint 泄漏、agent 会话、worktree、可重建缓存并安全清理。",
+              "leftEn": "macOS menu bar + CLI: find footprint leaks, agent sessions, worktrees, rebuildable caches, and clean them safely.",
+              "right": "本站 Cases 的「AI tool tip」；帮本机 agent 桌面减负，不是 xAI / Cursor 官方功能。",
+              "rightEn": "An AI tool tip in Cases — lightens a local agent desk; not an official xAI / Cursor feature."
+            },
+            {
+              "aspect": "平台",
+              "aspectEn": "Platform",
+              "left": "README 与 Homebrew cask 面向 macOS；署名 notarized。",
+              "leftEn": "README and Homebrew cask target macOS; described as notarized.",
+              "right": "Linux / Windows 不在本条范围；Grok Bot 云电脑上的残留也不由它管。",
+              "rightEn": "Linux / Windows are out of scope here; leftovers on a Grok Bot cloud computer are not what this app manages."
+            },
+            {
+              "aspect": "安全边界",
+              "aspectEn": "Safety",
+              "left": "受保护进程拒绝退出；Docker volume 不提供删除；worktree 有未提交改动则 git 拒绝。",
+              "leftEn": "Protected processes refuse quit; Docker volumes are never offered for delete; git refuses worktrees with uncommitted work.",
+              "right": "本站未代装、未代清。清理不可逆，点之前自己看列表。",
+              "rightEn": "This site did not install or clean for you. Cleanup is irreversible — read the list first."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "打开文档与仓库",
+            "titleEn": "Open the docs and the repo",
+            "body": "先看 https://arpwal.github.io/leftovers/ 与 GitHub README，确认 MIT、macOS、footprint / agents / worktrees / caches 几块对得上你的痛点。",
+            "bodyEn": "Read https://arpwal.github.io/leftovers/ and the GitHub README first; confirm MIT, macOS, and the footprint / agents / worktrees / caches sections match your pain.",
+            "links": [
+              {
+                "href": "https://arpwal.github.io/leftovers/",
+                "label": "文档站",
+                "labelEn": "Docs site"
+              },
+              {
+                "href": "https://github.com/arpwal/leftovers",
+                "label": "GitHub",
+                "labelEn": "GitHub"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49861159",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          },
+          {
+            "title": "按作者方式安装",
+            "titleEn": "Install the author’s way",
+            "body": "README：拖进 Applications，或 `brew install --cask arpwal/tap/leftovers`。本站不代装。装好后先看 Overview / Likely Leaks，别一上来 --clean。",
+            "bodyEn": "README: drag into Applications, or brew install --cask arpwal/tap/leftovers. This site does not install it. After install, read Overview / Likely Leaks before any --clean.",
+            "links": [
+              {
+                "href": "https://github.com/arpwal/leftovers",
+                "label": "安装说明在 README",
+                "labelEn": "Install notes in the README"
+              }
+            ]
+          },
+          {
+            "title": "只清你看得懂的项",
+            "titleEn": "Clean only what you understand",
+            "body": "优先 likely leaks 与已合并且无改动的 worktree；缓存类只清作者标明可重建的。生产目录、未提交 worktree、Docker volume 别碰。",
+            "bodyEn": "Prefer likely leaks and already-merged worktrees with no local changes; only clear caches the author marks rebuildable. Leave production folders, dirty worktrees, and Docker volumes alone.",
+            "links": [
+              {
+                "href": "https://arpwal.github.io/leftovers/",
+                "label": "功能说明",
+                "labelEn": "Feature notes"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "MIT 开源，但星数仍低（2026-09-28 核对 2★）；功能以当日 README 为准。",
+            "textEn": "MIT open source, but stars are still low (2★ on 2026-09-28 check); features follow that day’s README."
+          },
+          {
+            "text": "只覆盖 macOS。不是 Grok Bot 官方组件，也不清理云端电脑。",
+            "textEn": "macOS only. Not an official Grok Bot component, and it does not clean a cloud computer."
+          },
+          {
+            "text": "本站未在读者机器上安装或执行清理；误杀进程 / 删缓存的风险由读者承担。",
+            "textEn": "This site did not install or run cleanup on the reader’s machine; the reader owns the risk of quitting the wrong process or deleting a cache."
+          }
+        ]
+      }
+    },
+    {
       "id": "shipwithmuse",
       "slug": "shipwithmuse",
       "title": "工具：shipwithmuse.live — Muse 社区作品目录",
@@ -5039,10 +5179,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-27T12:05:00Z",
+    "updatedAt": "2026-09-28T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.31",
-    "count": 128,
+    "version": "1.4.32",
+    "count": 129,
     "sourcesCrawled": [
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
@@ -5173,7 +5313,18 @@
       "https://shipwithmuse.live/",
       "https://news.ycombinator.com/item?id=49863641",
       "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
-      "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/"
+      "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/",
+      "https://loficities.com/",
+      "https://news.ycombinator.com/item?id=49869574",
+      "https://shotcandy.vercel.app",
+      "https://github.com/btahir/shotcandy",
+      "https://news.ycombinator.com/item?id=49871097",
+      "https://tinyaiarena.com/",
+      "https://github.com/hp6/ai-arena",
+      "https://news.ycombinator.com/item?id=49867775",
+      "https://github.com/arpwal/leftovers",
+      "https://arpwal.github.io/leftovers/",
+      "https://news.ycombinator.com/item?id=49861159"
     ]
   }
 }
