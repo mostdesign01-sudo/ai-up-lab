@@ -1,6 +1,98 @@
 {
   "items": [
     {
+      "id": "lofi-cities",
+      "slug": "lofi-cities",
+      "title": "Lofi Cities：像素夜城 + 浏览器里现场合成的 lofi",
+      "titleEn": "Lofi Cities: pixel night cities with lofi composed live in the browser",
+      "summary": "Show HN（item 49869574，2026-09-27 ~18:44Z，Algolia 核对 154pts）https://loficities.com/ — 免费、免注册：巴黎 / 东京 / 纽约 / 香港 / 悉尼 / 旧金山等像素夜景上，lofi 节拍在浏览器里现场合成（页内 schema 自称 endless）。作者 Safa Elmali（X @SafaElmali）。官网 HTTP 200。公开页未见 SPDX 开源仓库链接（作者其他项目另有 GitHub）。预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49869574 (2026-09-27 ~18:44Z, 154pts on Algolia at check time) at https://loficities.com/ — free, no sign-up: pixel-art nights in Paris / Tokyo / New York / Hong Kong / Sydney / San Francisco (and more) with lofi beats composed live in the browser (on-page schema calls them endless). Author Safa Elmali (X @SafaElmali). Site HTTP 200. No SPDX open-source repo link found on the public page (the author has other GitHub projects). Preview is a Playwright capture of the home page, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "tool"
+      ],
+      "sourceUrl": "https://loficities.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49869574",
+        "https://x.com/SafaElmali",
+        "https://github.com/SafaElmali"
+      ],
+      "previewImage": "/previews/lofi-cities.webp",
+      "featured": true,
+      "publishedAt": "2026-09-27",
+      "updatedAt": "2026-09-28T01:05:00Z",
+      "qualityNote": "主源是 Show HN 49869574（核对 154pts）与公开站。收录理由：立刻可逛的高质量氛围向单页。边界：未找到页面自链的 SPDX 仓库；音频/美术归属以作者页为准；本站未代开付费打赏。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49869574 (154pts at check time) and the public site. Listing rationale: a high-quality ambient single page you can try immediately. Boundary: no SPDX repo self-linked from the page was found; audio/art credit follows the author’s page; paid tips were not opened here. Preview is self-hosted.",
+      "tags": [
+        "lofi",
+        "pixel-art",
+        "audio",
+        "ambient",
+        "show-hn",
+        "demo"
+      ]
+    },
+    {
+      "id": "shotcandy",
+      "slug": "shotcandy",
+      "title": "Shotcandy：浏览器里把截图做成可分享图/视频",
+      "titleEn": "Shotcandy: turn a screenshot into a share-ready image or video in the browser",
+      "summary": "Show HN（item 49871097，2026-09-27 ~21:35Z，Algolia 核对 2pts）https://shotcandy.vercel.app — 粘贴或选一张截图，本地套样式后导出分享图/视频；README 称免账号、不上传、无水印。仓库 btahir/shotcandy 于 2026-09-28 gh api：MIT、10★。公开页与仓库 HTTP 200。预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49871097 (2026-09-27 ~21:35Z, 2pts on Algolia at check time) at https://shotcandy.vercel.app — paste or pick a screenshot, style it locally, and export a share-ready image or video. The README says no account, no upload, no watermark. Repo btahir/shotcandy on the 2026-09-28 gh api: MIT, 10★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "types": [
+        "tool"
+      ],
+      "sourceUrl": "https://shotcandy.vercel.app",
+      "secondaryUrls": [
+        "https://github.com/btahir/shotcandy",
+        "https://news.ycombinator.com/item?id=49871097"
+      ],
+      "previewImage": "/previews/shotcandy.webp",
+      "featured": true,
+      "publishedAt": "2026-09-27",
+      "updatedAt": "2026-09-28T01:05:00Z",
+      "qualityNote": "主源是 Show HN 49871097 与 MIT 仓库 / 浏览器页。收录理由：立刻可试的截图美化工具。边界：样式与导出尺寸以作者实现为准；本站未代传真实截图做批量审计。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49871097 and the MIT repo / browser page. Listing rationale: a tryable screenshot beautifier. Boundary: styles and export sizes follow the author’s implementation; this site did not upload real screenshots for a bulk audit. Preview is self-hosted.",
+      "tags": [
+        "screenshot",
+        "export",
+        "browser",
+        "tool",
+        "show-hn",
+        "mit",
+        "design"
+      ]
+    },
+    {
+      "id": "tiny-ai-arena",
+      "slug": "tiny-ai-arena",
+      "title": "Tiny AI Arena：看四个模型在 8×8 格子里对打",
+      "titleEn": "Tiny AI Arena: watch four models fight on an 8×8 grid",
+      "summary": "Show HN（item 49867775，2026-09-27 ~15:51Z，Algolia 核对 96pts）https://tinyaiarena.com/ — 浏览器观战：四模型在风景 8×8 格子上「生死」对打，可逐帧回放与自动播放；作者对照「名叫 AI Arena 却只是无聊基准」的吐槽。代码仓库 hp6/ai-arena（Show HN 自链），2026-09-28 gh api：无 SPDX license、12★。官网 HTTP 200。HN 有移动端滚动难用的反馈。预览为 Playwright 实拍观战页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49867775 (2026-09-27 ~15:51Z, 96pts on Algolia at check time) at https://tinyaiarena.com/ — spectate in the browser: four models fight life-or-death on a scenic 8×8 grid, with frame-by-frame and autoplay. The author contrasts it with “AI Arena” pages that are only boring benchmarks. Code repo hp6/ai-arena (linked from Show HN); on the 2026-09-28 gh api: no SPDX license, 12★. Site HTTP 200. HN comments report hard scrolling on mobile. Preview is a Playwright capture of the spectate page, cropped to 3:2 WebP.",
+      "types": [
+        "demo"
+      ],
+      "sourceUrl": "https://tinyaiarena.com/",
+      "secondaryUrls": [
+        "https://github.com/hp6/ai-arena",
+        "https://news.ycombinator.com/item?id=49867775"
+      ],
+      "previewImage": "/previews/tiny-ai-arena.webp",
+      "featured": true,
+      "publishedAt": "2026-09-27",
+      "updatedAt": "2026-09-28T01:05:00Z",
+      "qualityNote": "主源是 Show HN 49867775（核对 96pts）与公开站 / 仓库。收录理由：可点开的互动演示，不是排行榜文案。边界：仓库无 SPDX；对战结果与模型名以页面为准，不构成智力排名；移动端体验有 HN 差评。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49867775 (96pts at check time) and the public site / repo. Listing rationale: a clickable interactive demo, not a leaderboard write-up. Boundary: repo has no SPDX; match outcomes and model names follow the page and are not an intelligence ranking; mobile UX drew HN complaints. Preview is self-hosted.",
+      "tags": [
+        "ai",
+        "arena",
+        "demo",
+        "show-hn",
+        "agents"
+      ]
+    },
+    {
       "id": "nudl",
       "slug": "nudl",
       "title": "nudl：剪贴板一键去掉链接 tracking 参数",
@@ -2725,9 +2817,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-27T12:35:00Z",
+    "updatedAt": "2026-09-28T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.44",
-    "count": 92
+    "version": "1.3.47",
+    "count": 95
   }
 }
