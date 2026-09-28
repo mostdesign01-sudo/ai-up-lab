@@ -1,11 +1,76 @@
 {
   "meta": {
-    "updatedAt": "2026-09-27T12:35:00Z",
+    "updatedAt": "2026-09-28T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.11",
-    "count": 14
+    "version": "1.1.12",
+    "count": 15
   },
   "models": [
+    {
+      "id": "ember-1",
+      "slug": "ember-1",
+      "name": "Ember-1",
+      "vendor": "Fireworks",
+      "title": "Ember-1（Fireworks Research 专用模型）",
+      "titleEn": "Ember-1 (Fireworks Research specialized model)",
+      "summary": "Fireworks Research 的专用模型 Ember-1。官博 https://fireworks.ai/blog/ember-1 页眉 PUBLISHED 9/23/2026，模型页 https://fireworks.ai/models/fireworks/ember-1 元数据 Created on 9/22/2026；两页晚间 GET 均为 HTTP 200。模型页写 model path：accounts/fireworks/models/ember-1。官方自述：基于 Kimi K3，推理更短，大约少用 40% token 且质量相当；Serverless 定价 $3.00 / $0.30 / $15.00 每百万 token（input / cached input / output）；Mixture-of-Experts、参数 2.78T、上下文 1040k；Function Calling 与 image input 为 Supported，Fine-tuning 为 Not supported；官博写 “Available today”。HN 首页 item 49868830（标题 Ember-1，链向官博；Algolia 写入时核对 494pts，2026-09-27T17:31:53Z，约 2026-09-28 01:31 CST；研究笔记快照为 493pts）。Artificial Analysis https://artificialanalysis.ai/models/ember-1 为 HTTP 404，本卡不编第三方榜链接。晨间目录未收，晚间补上。",
+      "summaryEn": "Ember-1, a specialized model from Fireworks Research. The blog at https://fireworks.ai/blog/ember-1 is marked PUBLISHED 9/23/2026; the model page at https://fireworks.ai/models/fireworks/ember-1 lists Created on 9/22/2026. Both returned HTTP 200 on an evening GET. The model page lists model path accounts/fireworks/models/ember-1. Vendor claims: built on Kimi K3, with shorter reasoning, about 40% fewer tokens at comparable quality; serverless pricing $3.00 / $0.30 / $15.00 per 1M tokens (input / cached input / output); Mixture-of-Experts, 2.78T parameters, 1040k context; function calling and image input Supported, fine-tuning Not supported; the blog says “Available today.” HN front-page item 49868830 (title Ember-1, linking the blog; 494pts on Algolia at write time, 2026-09-27T17:31:53Z, about 2026-09-28 01:31 CST; the research-note snapshot was 493pts). Artificial Analysis https://artificialanalysis.ai/models/ember-1 returned HTTP 404 — no third-party board link is invented here. The morning catalog skipped it; this evening wave picks it up.",
+      "announcedAt": "2026-09-23",
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-28T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Fireworks 官博：Introducing Ember-1",
+          "labelEn": "Fireworks blog: Introducing Ember-1",
+          "url": "https://fireworks.ai/blog/ember-1",
+          "by": "Fireworks",
+          "date": "2026-09-23"
+        },
+        {
+          "kind": "official",
+          "label": "Fireworks 模型页：Ember-1（model path accounts/fireworks/models/ember-1）",
+          "labelEn": "Fireworks model page: Ember-1 (model path accounts/fireworks/models/ember-1)",
+          "url": "https://fireworks.ai/models/fireworks/ember-1",
+          "by": "Fireworks",
+          "date": "2026-09-22"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Ember-1",
+          "labelEn": "Hacker News: Ember-1",
+          "url": "https://news.ycombinator.com/item?id=49868830",
+          "by": "Hacker News",
+          "date": "2026-09-27"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方自述（官博）：Ember-1 是 Fireworks Research 的专用模型，Built on Kimi K3，用大约 40% 更少的 token 维持与 Kimi K3 相当的质量；页内写 “Available today”，并称这是 Fireworks Research 系列的第一款。小节标题 “half the tokens, same answers” 是厂商表述，量化口径以正文约 40% 为准，本库不把标题改写成另一套百分比。",
+          "textEn": "Vendor claim (blog): Ember-1 is a specialized model from Fireworks Research, built on Kimi K3, using about 40% fewer tokens while keeping quality comparable to Kimi K3. The page says “Available today” and calls it the first in a Fireworks Research series. The section title “half the tokens, same answers” is vendor framing; the quantified claim stays the body’s ~40%, and this card does not turn the heading into a second percentage."
+        },
+        {
+          "text": "官方自述（模型页）：Serverless 价目 $3.00 / $0.30 / $15.00 per 1M tokens（input / cached input / output）；Mixture-of-Experts Yes；Parameters 2.78T；Context Length 1040k tokens；Calibrated No。model path 为 accounts/fireworks/models/ember-1，State Ready。",
+          "textEn": "Vendor claim (model page): serverless price $3.00 / $0.30 / $15.00 per 1M tokens (input / cached input / output); Mixture-of-Experts Yes; Parameters 2.78T; context length 1040k tokens; Calibrated No. Model path accounts/fireworks/models/ember-1, state Ready."
+        },
+        {
+          "text": "官方自述（模型页 Supported Functionality）：Function Calling Supported；Support image input Supported；Fine-tuning Not supported；Embeddings 与 Rerankers 均为 Not supported；Serverless Supported。官博另写正在推出针对 Ember-1 的 training support。两处口径不一致：能力开关以模型页当日文字为准，不把博客那句当成「今天已可微调」。",
+          "textEn": "Vendor claim (model page, Supported Functionality): function calling Supported; image input Supported; fine-tuning Not supported; embeddings and rerankers Not supported; serverless Supported. The blog separately says training support for Ember-1 is launching. Those two statements disagree: the capability flags follow the model page’s wording that day, and the blog sentence is not treated as “fine-tuning is available today.”"
+        },
+        {
+          "text": "官博还附厂商基准表与客户 A/B（例如约 35%–50% token、Bedside Bench / Terminal Bench / SWE-bench 等）。那些分数与美元节省一律是厂商自述，本库未复跑，也不在本卡复述具体分值，以免和缺失的第三方榜混读。Artificial Analysis 的 ember-1 URL 晚间为 HTTP 404。",
+          "textEn": "The blog also includes vendor benchmark tables and customer A/B notes (for example about 35%–50% tokens, Bedside Bench / Terminal Bench / SWE-bench, and others). Those scores and dollar savings are vendor claims only — not re-run here, and not restated as figures on this card, so they are not mixed with a missing third-party board. The Artificial Analysis ember-1 URL returned HTTP 404 this evening."
+        }
+      ],
+      "qualityNote": "收录理由：HN 首页热帖（写入时 Algolia 核对 494pts；研究笔记快照 493pts）的 Fireworks 专用模型，官博与模型页均可核，晨间目录跳过、晚间补上。核实边界：约 40% token、Serverless 价、2.78T、1040k、MoE、函数调用、图像输入、微调开关一律为官方自述（官博 PUBLISHED 9/23/2026，模型页 Created on 9/22/2026）。官博基准表与 A/B 数字不在本卡复述。Artificial Analysis ember-1 页 HTTP 404，故无第三方榜链接。官博 “training support” 与模型页 Fine-tuning Not supported 不一致，能力开关以模型页为准。本库未实测 API / Playground。预览为 Playwright 实拍模型页首屏裁 3:2 WebP。不打星（厂商数字未独立复核，且没有可挂的第三方榜）。",
+      "qualityNoteEn": "Why: a Fireworks specialized model on the HN front page (494pts on Algolia at write time; the research-note snapshot was 493pts), with a checkable blog and model page. The morning catalog skipped it; this evening wave adds it. Boundary: the ~40% token claim, serverless price, 2.78T, 1040k context, MoE, function calling, image input, and the fine-tuning flag are vendor claims (blog PUBLISHED 9/23/2026; model page Created on 9/22/2026). Vendor benchmark tables and A/B figures are not restated on this card. The Artificial Analysis ember-1 page returned HTTP 404, so there is no third-party board link. The blog’s “training support” line disagrees with Fine-tuning Not supported on the model page; capability flags follow the model page. API / Playground were not tested here. Preview is a Playwright capture of the model page above the fold, cropped to 3:2 WebP. Unrated — vendor figures were not independently re-run, and no third-party board is available to link.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/ember-1.webp",
+      "previewCredit": "Playwright 实拍 fireworks.ai/models/fireworks/ember-1 首屏，裁 3:2",
+      "previewCreditEn": "Playwright capture of fireworks.ai/models/fireworks/ember-1 above the fold, cropped to 3:2",
+      "featured": true
+    },
     {
       "id": "maniac-mansion-3d",
       "slug": "maniac-mansion-3d",
