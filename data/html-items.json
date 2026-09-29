@@ -1,6 +1,101 @@
 {
   "items": [
     {
+      "id": "microllm-lab",
+      "slug": "microllm-lab",
+      "title": "MicroLLM Lab：浏览器里跑 / 测 7 个小模型",
+      "titleEn": "MicroLLM Lab: run and benchmark 7 tiny LLMs in the browser",
+      "summary": "HN 首页（item 49882781，2026-09-28T18:58:53Z / 约 2026-09-29 02:58 CST，Algolia 核对 116pts）https://stateofutopia.com/experiments/microllmlab/ — 浏览器 WebGPU（可回退 WASM/CPU）加载 Q4 小模型，IndexedDB 缓存，免账号；有 Chat / Benchmarks / Compare 与可分享成绩证书。仓库 robss2020/microllm-lab 于 2026-09-29 gh api：8★、license NOASSERTION；README 列出 PetitGPT / SmolLM2 / MiniMind2 / GPT-2 等权重许可证多为 Apache-2.0 或 MIT。公开页与仓库 HTTP 200。预览为 Playwright 实拍实验页裁 3:2 WebP。",
+      "summaryEn": "HN front page item 49882781 (2026-09-28T18:58:53Z / about 2026-09-29 02:58 CST, 116pts on Algolia at check time) at https://stateofutopia.com/experiments/microllmlab/ — load Q4 small models in the browser over WebGPU (WASM/CPU fallback), cache in IndexedDB, no account; Chat / Benchmarks / Compare plus a shareable certificate. Repo robss2020/microllm-lab on the 2026-09-29 gh api: 8★, license NOASSERTION; the README lists weight licenses mostly Apache-2.0 or MIT (PetitGPT / SmolLM2 / MiniMind2 / GPT-2, …). Public page and repo HTTP 200. Preview is a Playwright capture of the lab page, cropped to 3:2 WebP.",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "sourceUrl": "https://stateofutopia.com/experiments/microllmlab/",
+      "secondaryUrls": [
+        "https://github.com/robss2020/microllm-lab",
+        "https://news.ycombinator.com/item?id=49882781"
+      ],
+      "previewImage": "/previews/microllm-lab.webp",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-29T01:05:00Z",
+      "qualityNote": "主源是 HN 49882781 与公开实验页 / 仓库。收录理由：立刻可试的本机小模型实验室，客观 suite 比聊天皮更有用。边界：仓库 SPDX 为 NOASSERTION，权重许可证以 README 表为准；无 WebGPU 时会慢很多（作者页也提示）；tok/s 与准确率是本机跑出来的，本站未代跑全套。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49882781 and the public lab page / repo. Listing rationale: a tryable on-device small-model lab; the objective suite is more useful than a chat skin alone. Boundary: repo SPDX is NOASSERTION — weight licenses follow the README table; without WebGPU it is much slower (the page says so); tok/s and accuracy are measured on your machine — this site did not run the full suite. Preview is self-hosted.",
+      "tags": [
+        "webgpu",
+        "llm",
+        "browser",
+        "benchmark",
+        "on-device",
+        "show-hn",
+        "tool"
+      ]
+    },
+    {
+      "id": "destroy-stickman",
+      "slug": "destroy-stickman",
+      "title": "Destroy Any Website：用火柴人把任意网页打成碎片",
+      "titleEn": "Destroy Any Website: smash any page with a stickman",
+      "summary": "Show HN（item 49880601，2026-09-28T16:31:28Z / 约 2026-09-29 00:31 CST，Algolia 核对 100pts）https://destroy.spritefusion.com/ — 输入网址，在真实页面上用像素火柴人射击 / 手雷「摧毁」DOM；可多人开房间，也有 Embed。作者挂 Sprite Fusion 出品；公开页未见自链 SPDX 仓库。页面 HTTP 200；作者提示移动端不可玩。预览为 Playwright 实拍入口弹层裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49880601 (2026-09-28T16:31:28Z / about 2026-09-29 00:31 CST, 100pts on Algolia at check time) at https://destroy.spritefusion.com/ — type a URL and shoot / grenade a pixel stickman across the live page to “destroy” the DOM; multiplayer rooms and an embed are offered. Credited to Sprite Fusion; no SPDX repo self-linked from the public page was found. Page HTTP 200; the author notes it is not playable on mobile. Preview is a Playwright capture of the entry modal, cropped to 3:2 WebP.",
+      "types": [
+        "game",
+        "interactive",
+        "demo"
+      ],
+      "sourceUrl": "https://destroy.spritefusion.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49880601",
+        "https://www.spritefusion.com"
+      ],
+      "previewImage": "/previews/destroy-stickman.webp",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-29T01:05:00Z",
+      "qualityNote": "主源是 Show HN 49880601 与公开页。收录理由：高质量可立刻玩的网页互动 demo，和 Sprite Fusion 工具链相邻。边界：公开页未见 SPDX 自链仓库；会加载你输入的第三方站点，注意别对着敏感内网地址乱填；移动端作者标明不可用。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49880601 and the public page. Listing rationale: a high-quality instantly playable web interactive next to the Sprite Fusion toolchain. Boundary: no SPDX repo self-linked from the page; it loads whatever third-party URL you type — do not point it at sensitive internal hosts; the author marks mobile as unavailable. Preview is self-hosted.",
+      "tags": [
+        "game",
+        "interactive",
+        "pixel-art",
+        "sprite-fusion",
+        "show-hn",
+        "demo"
+      ]
+    },
+    {
+      "id": "skinlab",
+      "slug": "skinlab",
+      "title": "SkinLab：皮肤科医生做的浏览器 WebGL 皮肤生物物理模型",
+      "titleEn": "SkinLab: a dermatologist’s browser WebGL biophysical skin model",
+      "summary": "Show HN（item 49881201，2026-09-28T17:12:55Z / 约 2026-09-29 01:12 CST，Algolia 核对 3pts）https://www.drmagnuslynch.com/skin — 浏览器里可切开 / 打孔 / 激光 / TCA 的皮肤体素块，再按时间轴结疤与重塑；Three.js + WebGL。作者自述为皮肤科医生 vibe coding。公开页 HTTP 200；页内未见自链 SPDX 仓库。预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49881201 (2026-09-28T17:12:55Z / about 2026-09-29 01:12 CST, 3pts on Algolia at check time) at https://www.drmagnuslynch.com/skin — a browser voxel skin block you can cut / punch / laser / TCA, then scar and remodel on a timeline; Three.js + WebGL. The author describes themselves as a dermatologist vibe-coding the model. Public page HTTP 200; no SPDX repo self-linked from the page was found. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "interactive",
+        "tool"
+      ],
+      "sourceUrl": "https://www.drmagnuslynch.com/skin",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49881201"
+      ],
+      "previewImage": "/previews/skinlab.webp",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-29T01:05:00Z",
+      "qualityNote": "主源是 Show HN 49881201 与公开 SkinLab 页。收录理由：可交互的医学向 WebGL demo，参数和文献口径写在页上。边界：不是诊疗建议；Validate / Scar report 是作者实现，本站未医学复核；未见 SPDX 自链仓库。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49881201 and the public SkinLab page. Listing rationale: an interactive medical-leaning WebGL demo with parameters and literature notes on the page. Boundary: not clinical advice; Validate / Scar report are the author’s implementation and were not medically audited here; no SPDX repo self-linked from the page. Preview is self-hosted.",
+      "tags": [
+        "webgl",
+        "threejs",
+        "medical",
+        "interactive",
+        "show-hn",
+        "demo"
+      ]
+    },
+    {
       "id": "gpu-font",
       "slug": "gpu-font",
       "title": "GPU-font：在浏览器里从一行字认字体",
@@ -2847,9 +2942,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-28T12:30:00Z",
+    "updatedAt": "2026-09-29T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.48",
-    "count": 96
+    "version": "1.3.49",
+    "count": 99
   }
 }

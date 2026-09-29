@@ -1,6 +1,20 @@
 {
   "notes": [
     {
+      "date": "2026-09-29",
+      "title": "并入 main：Jeff、MicroLLM Lab、Destroy Stickman、SkinLab",
+      "titleEn": "Merge main: Jeff, MicroLLM Lab, Destroy Stickman, SkinLab",
+      "body": "并入 2026-09-29 早间收录（jeff、microllm-lab、destroy-stickman、skinlab）。条目都保留。main 上 cases 是 1.4.34（131），本分支已是 1.4.37（132）；合并后 133 条，升到 1.4.38。两边 html-items 都是 1.3.48，main 为 99 条、本分支为 96 条；合并后 99 条，升到 1.3.49。这次 main 没改 models / agent-ui 的条目，版本维持本分支已经更高的 models 1.1.12（15）与 agent-ui 1.4.22（57）。jeff 是本机 Jev 兼容决策模型，不归入设计。microllm-lab 是浏览器里的小模型实验室，destroy-stickman 是网页破坏小游戏，skinlab 是皮肤生物物理 WebGL 演示，都不是设计工具，不打 design。",
+      "bodyEn": "Merged the 29 Sept 2026 morning catalog (jeff, microllm-lab, destroy-stickman, skinlab). Every entry is kept. cases on main was 1.4.34 (131); this branch was already 1.4.37 (132). After the merge there are 133 entries at 1.4.38. Both sides had html-items 1.3.48, main with 99 entries and this branch with 96. After the merge there are 99 entries at 1.3.49. This main commit did not change models or agent-ui entries, so those stay at the higher versions already on this branch: models 1.1.12 (15) and agent-ui 1.4.22 (57). jeff is a local Jev-compatible decision model and is not filed under design. microllm-lab is an in-browser small-model lab, destroy-stickman is a webpage-destruction game, and skinlab is a skin-biophysics WebGL demo; none is a design tool, so none is tagged design."
+    },
+    {
+      "date": "2026-09-29",
+      "title": "早间收录：Cases +1（Jeff）、HTML +3（MicroLLM Lab / Destroy Stickman / SkinLab）",
+      "titleEn": "Morning catalog: Cases +1 (Jeff), HTML +3 (MicroLLM Lab / Destroy Stickman / SkinLab)",
+      "body": "Cases：收 jeff（HN 首页 item 49883844，核对 235pts，2026-09-28T20:23:36Z）https://github.com/firelex/jeff — MIT 本机 Jev 兼容 System One 小决策模型（Qwen3.5 / Gemma 4 微调），`jeff-serve` + `/v1/systemone`；2026-09-29 gh api 282★，作者写明独立非 TypeSafe。详情含 landing。requiresApproval：下权重 / 送真实文本前自己确认。HTML：收 microllm-lab（item 49882781，核对 116pts）https://stateofutopia.com/experiments/microllmlab/ — 浏览器 WebGPU Q4 小模型实验室，仓库 robss2020/microllm-lab 8★、SPDX NOASSERTION。收 destroy-stickman（Show HN item 49880601，核对 100pts）https://destroy.spritefusion.com/ — Sprite Fusion 火柴人毁页互动，公开页未见 SPDX 自链。收 skinlab（item 49881201，核对 3pts）https://www.drmagnuslynch.com/skin — 皮肤科医生 WebGL 皮肤生物物理模型，Three.js，非诊疗建议。三条均配 3:2 自托管预览。Agent UI：今日无足够「可复制给 Agent」的免费新件，未硬凑。跳过：X @bot API client-not-enrolled，fxtwitter 用户页无推文列表；Low Poly Earth 为 Apple silicon 原生应用（非浏览器 HTML）；Divot.css / Corral / Jauvex 偏薄未收；芯片/监管/讣闻类新闻未入库。",
+      "bodyEn": "Cases: added jeff (HN front item 49883844, 235pts at check, 2026-09-28T20:23:36Z) https://github.com/firelex/jeff — MIT local Jev-compatible System One decision models (Qwen3.5 / Gemma 4 fine-tunes) with jeff-serve + /v1/systemone; 282★ on the 2026-09-29 gh api; author states independent / not TypeSafe. Detail page includes landing. requiresApproval: confirm before downloading weights or sending real text. HTML: added microllm-lab (item 49882781, 116pts) https://stateofutopia.com/experiments/microllmlab/ — browser WebGPU Q4 small-model lab; repo robss2020/microllm-lab 8★, SPDX NOASSERTION. Added destroy-stickman (Show HN item 49880601, 100pts) https://destroy.spritefusion.com/ — Sprite Fusion stickman page-destroy interactive; no SPDX repo self-linked from the page. Added skinlab (item 49881201, 3pts) https://www.drmagnuslynch.com/skin — dermatologist WebGL biophysical skin model on Three.js; not clinical advice. All three have 3:2 self-hosted previews. Agent UI: no solid free “copyable for agents” new piece today — not padded. Skipped: X @bot API client-not-enrolled and fxtwitter user page had no tweet list; Low Poly Earth is a native Apple-silicon app (not browser HTML); Divot.css / Corral / Jauvex too thin; chip / regulation / obituary news not filed into A/B/C."
+    },
+    {
       "date": "2026-09-28",
       "title": "并入 main：#66 Ember-1、Onesie、GPU-font",
       "titleEn": "Merge main: #66 Ember-1, Onesie, GPU-font",
