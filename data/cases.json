@@ -1,6 +1,138 @@
 {
   "cases": [
     {
+      "id": "jeff",
+      "slug": "jeff",
+      "title": "工具：Jeff — 本机可跑的 Jev 兼容 System One 小决策模型",
+      "titleEn": "Tool: Jeff — local Jev-compatible System One decision models",
+      "summary": "HN 首页（item 49883844，2026-09-28T20:23:36Z / 约 2026-09-29 04:23 CST，Algolia 核对 235pts）https://github.com/firelex/jeff — MIT：把 Qwen3.5 / Gemma 4 微调成零样本分类决策模型，请求格式与 TypeSafe Jev 同形；作者称约 22 ms（RTX PRO 6000）/ 28 ms（Apple M4 Max MLX）一次前向，输出是各选项校准概率，不是生成文本。README：`jeff-serve` + `/v1/systemone`，支持 choice / noul / score；训练全在本机硬件，合成数据来自开源模型。仓库 firelex/jeff 于 2026-09-29 gh api：MIT、282★；Hugging Face 有 Jeff-Qwen3.5-0.8B / 2B 与 Jeff-Gemma4-E2B。作者写明独立项目、非 TypeSafe 官方。本条是工具笔记，不替你下载权重或代跑服务。",
+      "summaryEn": "HN front page item 49883844 (2026-09-28T20:23:36Z / about 2026-09-29 04:23 CST, 235pts on Algolia at check time) at https://github.com/firelex/jeff — MIT fine-tunes of Qwen3.5 / Gemma 4 for zero-shot classification in the same request shape as TypeSafe Jev. The author reports about 22 ms (RTX PRO 6000) / 28 ms (Apple M4 Max MLX) per forward pass, returning calibrated option probabilities rather than generated text. README: jeff-serve plus /v1/systemone with choice / noul / score; training on local hardware; synthetic data from an open model. Repo firelex/jeff on the 2026-09-29 gh api: MIT, 282★; Hugging Face hosts Jeff-Qwen3.5-0.8B / 2B and Jeff-Gemma4-E2B. The author states it is independent and not affiliated with TypeSafe. This is a tool tip — it does not download weights or run the server for you.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://github.com/firelex/jeff",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49883844",
+        "https://huggingface.co/mstrasser/Jeff-Qwen3.5-0.8B"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 HN 49883844 与 MIT 仓库 / Hugging Face 权重页。收录理由：与本站已收的 Jev / Onesie 同属 System One 决策线，但可本机跑、可脚本化 HTTP。边界：基准表与毫秒数是作者 README / 自测口径，本站未复跑；作者自述在推理向基准上仍明显弱于 Jev；独立非 TypeSafe 官方。下载权重与起服务会占磁盘与 GPU/CPU，本站未代装。预览 Playwright 实拍 GitHub 仓库首屏裁 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are HN 49883844 and the MIT repo / Hugging Face weight pages. Listing rationale: same System One decision line as catalogued Jev / Onesie, but runnable locally over a scriptable HTTP API. Boundary: benchmark tables and millisecond figures are the author’s README / self-test numbers, not re-run here; the author says reasoning-heavy benches stay well below Jev; independent, not TypeSafe-official. Downloading weights and serving uses disk and GPU/CPU; this site did not install it. Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "下载权重、起 jeff-serve、或把真实工单 / 用户文本送进 /v1/systemone 之前自己确认。概率不是审计结论；不要把密钥或未脱敏数据当默认输入。",
+      "approvalBoundaryEn": "Confirm before downloading weights, starting jeff-serve, or sending real tickets / user text to /v1/systemone. A probability is not an audit; do not treat secrets or unredacted data as the default input.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-29T01:05:00Z",
+      "previewImage": "/previews/jeff.webp",
+      "landing": {
+        "what": "Jeff 是 MIT 开源的本机 System One 决策模型线（仓库 firelex/jeff）。作者把 Qwen3.5 与 Gemma 4 微调成零样本分类器：你用自然语言描述状态和选项，模型一次前向返回各选项校准概率（choice / noul / score），请求格式刻意对齐 TypeSafe Jev。README 给 `jeff-serve` 与 `/v1/systemone` 的 curl 示例，并自称约 22–28 ms 级延迟（视硬件而定）。训练与合成数据流程写明跑在本机硬件、合成数据来自开源模型。Hugging Face 有 0.8B / 2B / Gemma4-E2B 权重。Show HN/HN 首页 item 49883844。本站收成「工具笔记」：给已在玩 Jev / Onesie 的人一条可本机跑的相邻栈，不是 Grok Bot 本体，也不是 TypeSafe 官方。",
+        "whatEn": "Jeff is an MIT-licensed local System One decision-model line (repo firelex/jeff). The author fine-tunes Qwen3.5 and Gemma 4 into zero-shot classifiers: describe a state and options in plain words, get calibrated option probabilities from one forward pass (choice / noul / score), in a request shape deliberately aligned with TypeSafe Jev. The README shows jeff-serve and a /v1/systemone curl example, and claims roughly 22–28 ms latency depending on hardware. Training and synthetic-data steps are described as local-hardware / open-model. Hugging Face hosts 0.8B / 2B / Gemma4-E2B weights. HN item 49883844. Listed here as a tool tip next to catalogued Jev / Onesie — not Grok Bot itself, and not TypeSafe-official.",
+        "contrast": {
+          "caption": "左列是 README / HN 对得上的事实。右列说明为什么放在 Cases 工具笔记，以及不要把它当成已经替你验证过的 Jev 替代品。",
+          "captionEn": "Left column: what the README / HN actually say. Right column: why it sits as a Cases tool tip, and why it is not a verified Jev replacement.",
+          "leftLabel": "Jeff",
+          "leftLabelEn": "Jeff",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "本机可服务的小决策模型：同一请求里多题，stdout/HTTP 拿概率与选项。",
+              "leftEn": "Small decision models you can serve locally: several questions in one request, probabilities and picks over HTTP/stdout.",
+              "right": "Cases「AI tool tip」。相邻 Jev / Onesie；作者写明独立、非 TypeSafe 背书。",
+              "rightEn": "An AI tool tip in Cases. Adjacent to Jev / Onesie; the author states it is independent and not TypeSafe-endorsed."
+            },
+            {
+              "aspect": "速度与准度",
+              "aspectEn": "Speed and accuracy",
+              "left": "README：毫秒级前向；总表接近或局部超过已发表的 Jev 数字，推理向基准仍明显更弱。",
+              "leftEn": "README: millisecond forward passes; overall tables approach or locally beat published Jev figures, while reasoning-heavy benches stay weaker.",
+              "right": "数字是作者自测快照。本站未复跑；选型仍要你自己在任务上测。",
+              "rightEn": "Figures are the author’s self-test snapshot. This site did not re-run them; validate on your own task."
+            },
+            {
+              "aspect": "你要自己做的事",
+              "aspectEn": "What you still do",
+              "left": "uv sync、下 Hugging Face 权重、起 jeff-serve，再 curl /v1/systemone。",
+              "leftEn": "uv sync, download Hugging Face weights, start jeff-serve, then curl /v1/systemone.",
+              "right": "本站未代下权重、未代起服务。工单原文与密钥不要当默认 payload。",
+              "rightEn": "This site did not download weights or start a server. Do not send raw tickets or secrets as the default payload."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读仓库和 HN",
+            "titleEn": "Read the repo and the HN thread",
+            "body": "打开 GitHub README 与 item 49883844，确认 MIT、Jev 兼容口径、以及「独立非 TypeSafe」声明。",
+            "bodyEn": "Open the GitHub README and item 49883844. Confirm MIT, the Jev-compatible framing, and the independent / not-TypeSafe statement.",
+            "links": [
+              {
+                "href": "https://github.com/firelex/jeff",
+                "label": "GitHub README",
+                "labelEn": "GitHub README"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49883844",
+                "label": "HN",
+                "labelEn": "HN"
+              }
+            ]
+          },
+          {
+            "title": "按作者方式起本地服务",
+            "titleEn": "Start the local server the author’s way",
+            "body": "README：`uv sync`，`hf download mstrasser/Jeff-Qwen3.5-0.8B`，再 `JEFF_CHECKPOINT=… uv run jeff-serve`（Apple 可用 MLX extra）。先对本机 curl，再接到你的脚本。",
+            "bodyEn": "README: uv sync, hf download mstrasser/Jeff-Qwen3.5-0.8B, then JEFF_CHECKPOINT=… uv run jeff-serve (MLX extra on Apple). Curl locally before wiring your scripts.",
+            "links": [
+              {
+                "href": "https://huggingface.co/mstrasser/Jeff-Qwen3.5-0.8B",
+                "label": "Hugging Face 0.8B",
+                "labelEn": "Hugging Face 0.8B"
+              }
+            ]
+          },
+          {
+            "title": "用真实任务抽检，别只看总表",
+            "titleEn": "Spot-check on your task — not only the overall table",
+            "body": "作者也写：零样本不够就短微调；推理向基准仍弱于 Jev。把你的路由 / 审核样例跑一遍再决定是否进流水线。",
+            "bodyEn": "The author also says a short fine-tune helps when zero-shot is not enough, and reasoning benches stay below Jev. Run your own routing / moderation samples before putting it in a pipeline.",
+            "links": []
+          }
+        ],
+        "boundaries": [
+          {
+            "title": "不是 TypeSafe / Grok Bot 官方",
+            "titleEn": "Not TypeSafe or Grok Bot official",
+            "body": "只是请求格式相邻。密钥、SLA、产品承诺都以各自官方文档为准。"
+          },
+          {
+            "title": "自测数字勿当本站基准",
+            "titleEn": "Author figures are not this site’s benchmark",
+            "body": "毫秒数、总表命中率、游戏 demo 分数均来自 README；换硬件或题集都会变。"
+          },
+          {
+            "title": "输入仍要你把关",
+            "titleEn": "You still gate the inputs",
+            "body": "决策模型会看到你送进 state / questions 的文本。未脱敏工单与密钥不要默认送。"
+          }
+        ]
+      }
+    },
+    {
       "id": "onesie",
       "slug": "onesie",
       "title": "工具：Onesie — 给 System One 模型用的 Unix 风格 CLI",
@@ -5313,10 +5445,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-28T12:10:00Z",
+    "updatedAt": "2026-09-29T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.33",
-    "count": 130,
+    "version": "1.4.34",
+    "count": 131,
     "sourcesCrawled": [
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
@@ -5467,7 +5599,17 @@
       "https://news.ycombinator.com/item?id=49876472",
       "https://dy.github.io/gpu-font/",
       "https://github.com/dy/gpu-font",
-      "https://news.ycombinator.com/item?id=49875638"
+      "https://news.ycombinator.com/item?id=49875638",
+      "https://github.com/firelex/jeff",
+      "https://news.ycombinator.com/item?id=49883844",
+      "https://huggingface.co/mstrasser/Jeff-Qwen3.5-0.8B",
+      "https://stateofutopia.com/experiments/microllmlab/",
+      "https://github.com/robss2020/microllm-lab",
+      "https://news.ycombinator.com/item?id=49882781",
+      "https://destroy.spritefusion.com/",
+      "https://news.ycombinator.com/item?id=49880601",
+      "https://www.drmagnuslynch.com/skin",
+      "https://news.ycombinator.com/item?id=49881201"
     ]
   }
 }

@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-09-29",
+      "title": "早间收录：Cases +1（Jeff）、HTML +3（MicroLLM Lab / Destroy Stickman / SkinLab）",
+      "titleEn": "Morning catalog: Cases +1 (Jeff), HTML +3 (MicroLLM Lab / Destroy Stickman / SkinLab)",
+      "body": "Cases：收 jeff（HN 首页 item 49883844，核对 235pts，2026-09-28T20:23:36Z）https://github.com/firelex/jeff — MIT 本机 Jev 兼容 System One 小决策模型（Qwen3.5 / Gemma 4 微调），`jeff-serve` + `/v1/systemone`；2026-09-29 gh api 282★，作者写明独立非 TypeSafe。详情含 landing。requiresApproval：下权重 / 送真实文本前自己确认。HTML：收 microllm-lab（item 49882781，核对 116pts）https://stateofutopia.com/experiments/microllmlab/ — 浏览器 WebGPU Q4 小模型实验室，仓库 robss2020/microllm-lab 8★、SPDX NOASSERTION。收 destroy-stickman（Show HN item 49880601，核对 100pts）https://destroy.spritefusion.com/ — Sprite Fusion 火柴人毁页互动，公开页未见 SPDX 自链。收 skinlab（item 49881201，核对 3pts）https://www.drmagnuslynch.com/skin — 皮肤科医生 WebGL 皮肤生物物理模型，Three.js，非诊疗建议。三条均配 3:2 自托管预览。Agent UI：今日无足够「可复制给 Agent」的免费新件，未硬凑。跳过：X @bot API client-not-enrolled，fxtwitter 用户页无推文列表；Low Poly Earth 为 Apple silicon 原生应用（非浏览器 HTML）；Divot.css / Corral / Jauvex 偏薄未收；芯片/监管/讣闻类新闻未入库。",
+      "bodyEn": "Cases: added jeff (HN front item 49883844, 235pts at check, 2026-09-28T20:23:36Z) https://github.com/firelex/jeff — MIT local Jev-compatible System One decision models (Qwen3.5 / Gemma 4 fine-tunes) with jeff-serve + /v1/systemone; 282★ on the 2026-09-29 gh api; author states independent / not TypeSafe. Detail page includes landing. requiresApproval: confirm before downloading weights or sending real text. HTML: added microllm-lab (item 49882781, 116pts) https://stateofutopia.com/experiments/microllmlab/ — browser WebGPU Q4 small-model lab; repo robss2020/microllm-lab 8★, SPDX NOASSERTION. Added destroy-stickman (Show HN item 49880601, 100pts) https://destroy.spritefusion.com/ — Sprite Fusion stickman page-destroy interactive; no SPDX repo self-linked from the page. Added skinlab (item 49881201, 3pts) https://www.drmagnuslynch.com/skin — dermatologist WebGL biophysical skin model on Three.js; not clinical advice. All three have 3:2 self-hosted previews. Agent UI: no solid free “copyable for agents” new piece today — not padded. Skipped: X @bot API client-not-enrolled and fxtwitter user page had no tweet list; Low Poly Earth is a native Apple-silicon app (not browser HTML); Divot.css / Corral / Jauvex too thin; chip / regulation / obituary news not filed into A/B/C."
+    },
+    {
       "date": "2026-09-28",
       "title": "晚间收录：Models +1（Ember-1）、Cases +1（Onesie）、HTML +1（GPU-font）",
       "titleEn": "Evening catalog: Models +1 (Ember-1), Cases +1 (Onesie), HTML +1 (GPU-font)",
