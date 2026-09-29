@@ -1,11 +1,149 @@
 {
   "meta": {
-    "updatedAt": "2026-09-28T12:10:00Z",
+    "updatedAt": "2026-09-29T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.11",
-    "count": 15
+    "version": "1.1.12",
+    "count": 17
   },
   "models": [
+    {
+      "id": "claude-sonnet-5-5",
+      "slug": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "vendor": "Anthropic",
+      "title": "Claude Sonnet 5.5（Anthropic）",
+      "titleEn": "Claude Sonnet 5.5 (Anthropic)",
+      "summary": "Anthropic 于 2026-09-28 发布的 Claude 5.5 家族第二款模型（官方页标题 “Introducing Claude Sonnet 5.5”，晚间 GET HTTP 200）。官方页正文称：相对 Claude Sonnet 5 为明确升级，生成快 30%+，多数工作花费可低至 30%；价目与 Sonnet 5 同为输入 $2 / 输出 $10 / cache reads $0.20 每百万 token，但因 token 更少所以更便宜。定位为 Opus 5.5 的更快、更低成本补位：擅长边界清晰的日常任务、修 bug、做文档 / 幻灯 / 表格，并写有较锐的设计眼。官方表（列 Sonnet 5.5 / Sonnet 5 / Opus 5.5 / GPT-6 Sol）：Terminal-Bench 4.0 70.6% / 10.3% / 66.4%¹ / —；CursorBench 4.0 55.5% / 34.1% / 57.8% / —；GDPval-AA v2.1 1844 / 1449 / 1846 / 1487⁴。平台模型 id：`claude-sonnet-5-5`；称已在全平台可用（含 AWS / Google Cloud / Azure），零数据保留与 Opus 5.5 / Sonnet 5 相同。第三方榜 Artificial Analysis https://artificialanalysis.ai/models/claude-sonnet-5-5（变体 Adaptive Reasoning, Max Effort, Default Fallback，晚间 GET 200）：Intelligence Index 56，输出速度 138.7 tok/s（#29/216），价 $2/$10、Cache Discount 90%、每任务 $7.60，1M 上下文。HN：item 49881850（标题 Sonnet 5.5，Algolia 晚间核对 825pts，2026-09-28T17:58:11Z / 约 2026-09-29 01:58 CST）。晨间目录未收（当日只收 Jeff + HTML），晚间补上。",
+      "summaryEn": "Anthropic’s second model in the Claude 5.5 family, announced 2026-09-28 (official page title “Introducing Claude Sonnet 5.5”, evening GET HTTP 200). The page calls it a clear upgrade over Claude Sonnet 5: 30%+ faster generation and up to 30% less cost for most work, at the same list price as Sonnet 5 — $2 input / $10 output / $0.20 cache reads per 1M tokens — because it typically uses fewer tokens. Positioned as a faster, lower-cost complement to Opus 5.5 for well-scoped everyday tasks, bug fixes, and polished documents, slides, and spreadsheets, with a noted eye for design. Vendor table (columns Sonnet 5.5 / Sonnet 5 / Opus 5.5 / GPT-6 Sol): Terminal-Bench 4.0 70.6% / 10.3% / 66.4%¹ / —; CursorBench 4.0 55.5% / 34.1% / 57.8% / —; GDPval-AA v2.1 1844 / 1449 / 1846 / 1487⁴. Platform model id: claude-sonnet-5-5; the page says it is available on all platforms including AWS / Google Cloud / Azure, with the same zero data retention as Opus 5.5 / Sonnet 5. Third-party board Artificial Analysis https://artificialanalysis.ai/models/claude-sonnet-5-5 (variant Adaptive Reasoning, Max Effort, Default Fallback, evening GET 200): Intelligence Index 56, 138.7 tok/s (#29/216), $2/$10, Cache Discount 90%, $7.60 per task, 1M context. HN item 49881850 (title Sonnet 5.5, 825pts on Algolia at evening check, 2026-09-28T17:58:11Z / about 2026-09-29 01:58 CST). Morning catalog skipped it (Jeff + HTML only); this evening wave picks it up.",
+      "announcedAt": "2026-09-28",
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-09-29T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Anthropic 官方页：Introducing Claude Sonnet 5.5",
+          "labelEn": "Anthropic official page: Introducing Claude Sonnet 5.5",
+          "url": "https://www.anthropic.com/claude-sonnet-5-5",
+          "by": "Anthropic",
+          "date": "2026-09-28"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：Claude Sonnet 5.5 智能 / 速度 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: Claude Sonnet 5.5 intelligence / speed / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/claude-sonnet-5-5",
+          "by": "Artificial Analysis",
+          "date": "2026-09-29"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Sonnet 5.5",
+          "labelEn": "Hacker News: Sonnet 5.5",
+          "url": "https://news.ycombinator.com/item?id=49881850",
+          "by": "Hacker News",
+          "date": "2026-09-28"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Claude 5.5 家族第二款；相对 Sonnet 5 明确升级，生成快 30%+，多数工作花费可低至 30%；价目与 Sonnet 5 同为 $2/$10/$0.20，因 token 更少而更便宜。平台 id：claude-sonnet-5-5；称全平台可用（含 AWS / Google Cloud / Azure）。同页写 Haiku 5.5 将在随后数周加入家族。",
+          "textEn": "Vendor claim: second model in the Claude 5.5 family; a clear upgrade over Sonnet 5 with 30%+ faster generation and up to 30% lower cost for most work at the same $2/$10/$0.20 list price, because it uses fewer tokens. Platform id claude-sonnet-5-5; claimed available on all platforms including AWS / Google Cloud / Azure. The same page says Haiku 5.5 joins the family in the coming weeks."
+        },
+        {
+          "text": "官方称（对照表节选，列 Sonnet 5.5 / Sonnet 5 / Opus 5.5 / GPT-6 Sol）：Terminal-Bench 4.0 70.6% / 10.3% / 66.4%¹ / —；CursorBench 4.0 55.5% / 34.1% / 57.8% / —；GDPval-AA v2.1 1844 / 1449 / 1846 / 1487⁴；OSWorld 2.1 80.1% partial / 57.0% / 81.8% / —。页注：¹ Opus 5.5 为 Xhigh；并写 Opus 5.5 在复杂、开放式、需持续判断的工作上仍明显更强。本库未复跑。",
+          "textEn": "Vendor claim (table excerpt, columns Sonnet 5.5 / Sonnet 5 / Opus 5.5 / GPT-6 Sol): Terminal-Bench 4.0 70.6% / 10.3% / 66.4%¹ / —; CursorBench 4.0 55.5% / 34.1% / 57.8% / —; GDPval-AA v2.1 1844 / 1449 / 1846 / 1487⁴; OSWorld 2.1 80.1% partial / 57.0% / 81.8% / —. Page note: ¹ Opus 5.5 at Xhigh; the page also says Opus 5.5 remains clearly stronger on complex, open-ended work needing sustained judgment. Not re-run here."
+        },
+        {
+          "text": "官方称：网络安全能力接近 Opus 5，故为首个带与顶尖模型类似 cyber 保障与回退的 Sonnet；生物学保障与 Sonnet 5 相同；另写首个带防蒸馏分类器与扩展 preserved thinking 的 Sonnet。常规软件开发与多数生命科学工作自称不受影响。本库未测安全策略。",
+          "textEn": "Vendor claim: cybersecurity capabilities comparable to Opus 5, so it is the first Sonnet to ship with cyber safeguards and fallbacks like the top models; biology safeguards match Sonnet 5; also the first Sonnet with distillation-attack classifiers and expanded preserved thinking. Routine software development and most life-sciences work are claimed unaffected. Safeguard policy not tested here."
+        },
+        {
+          "text": "第三方榜（Artificial Analysis，非官方、非本库）：页面标题 “Claude Sonnet 5.5 (max with fallback)”，变体 Adaptive Reasoning, Max Effort, Default Fallback；Intelligence Index 56；输出 138.7 tok/s（#29/216）；价输入 $2.00 / 输出 $10.00、Cache Discount 90%、Cost per Intelligence Index task $7.60；Verbosity 410M output tokens（#102/216）；1M 上下文；发布月 September 2026 / FAQ 写 released September 28, 2026。不把 AA 数字与官方页基准合成新指标。",
+          "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): page title “Claude Sonnet 5.5 (max with fallback)”, variant Adaptive Reasoning, Max Effort, Default Fallback; Intelligence Index 56; 138.7 tok/s (#29/216); $2.00 input / $10.00 output, Cache Discount 90%, $7.60 per Intelligence Index task; verbosity 410M output tokens (#102/216); 1M context; release month September 2026 / FAQ says released September 28, 2026. AA figures are not merged with the vendor table into a new metric."
+        }
+      ],
+      "qualityNote": "收录理由：2026-09-28 官方发布、HN item 49881850（晚间 Algolia 核对 825pts）与 AA 第三方榜均可核；晨间只收 Jeff + HTML，晚间补 Models 头条。核实边界：30%+ 速度、最多 30% 花费、价目、基准表、全平台可用、cyber/生物保障一律为官方页自述（anthropic.com/claude-sonnet-5-5，晚间 HTTP 200），本库未复跑、未实测 API。页内写 Opus 5.5 在复杂开放工作上仍更强，故不把 Sonnet 写成「全面第一」。Intelligence Index 56、138.7 tok/s、$7.60/任务、90% 缓存折扣、1M 上下文来自 AA（晚间 HTTP 200），非本库复跑。同板已有 claude-opus-5-5；互链只表示同家族，不表示评测对齐。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: official 2026-09-28 launch, HN item 49881850 (825pts on Algolia at evening check), and the AA board are all verifiable; morning only shipped Jeff + HTML, so evening adds the Models headline. Boundary: 30%+ speed, up to 30% cost, prices, benchmarks, platform availability, and cyber/biology safeguards are vendor claims from anthropic.com/claude-sonnet-5-5 (evening HTTP 200); nothing re-run, API untested. The page itself says Opus 5.5 remains stronger on complex open-ended work — Sonnet is not framed as first everywhere. Intelligence Index 56, 138.7 tok/s, $7.60/task, 90% cache discount, and 1M context come from AA (evening HTTP 200), not re-run here. Same-board claude-opus-5-5 cross-link is family-only, not an aligned eval claim. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "claude-opus-5-5",
+        "claude-fable-5-1"
+      ],
+      "previewImage": "/previews/claude-sonnet-5-5.webp",
+      "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-sonnet-5-5 首屏",
+      "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-sonnet-5-5 above the fold",
+      "featured": true,
+      "stars": 4
+    },
+    {
+      "id": "jeeves",
+      "slug": "jeeves",
+      "name": "Jeeves",
+      "vendor": "PostHog",
+      "title": "Jeeves：带推理的开源 Jev 风格决策模型（PostHog）",
+      "titleEn": "Jeeves: open Jev-style decision model with reasoning (PostHog)",
+      "summary": "HN（item 49891290，2026-09-29T11:13:54Z / 约 19:13 CST，Algolia 晚间核对 33pts）https://github.com/PostHog/jeeves — MIT：PostHog 开源的「会先想再决定」的 Jev 风格分类器。README：基于 Qwen3.5-9B（LoRA + pointer head），SFT + CISPO 训练，带 block-4 diffusion drafter；同一请求支持 noul / choice / score，API 与 Jev 同形（`/v1/systemone`）。作者表（thinking、greedy、2560-token 上限；Kev-9B / Jev 列为 Kev 公布数字）：Test overall 0.889 vs Kev 0.822 / Jev 0.857；JevBench overall（231 public）0.935 vs Jev 0.866；JevBench hard 0.865 vs Jev 0.730。延迟自述：无 thinking 约 0.3 s/请求，有 thinking 中位约 3.3 s（单 H100）；需 CUDA（Hopper 才用 FP8 kernel）。权重 https://huggingface.co/PostHog/jeeves。仓库于 2026-09-29 gh api：MIT、21★；README 写 Inspired by Kev。公开仓与 HF 晚间 GET 200。本库未复跑基准、未代下权重。",
+      "summaryEn": "HN item 49891290 (2026-09-29T11:13:54Z / about 19:13 CST, 33pts on Algolia at evening check) at https://github.com/PostHog/jeeves — MIT open-source Jev-style classifier from PostHog that reasons before it decides. README: Qwen3.5-9B with LoRA + pointer head, trained with SFT + CISPO, plus a block-4 diffusion drafter; same request supports noul / choice / score via a Jev-shaped /v1/systemone API. Author table (thinking, greedy, 2560-token cap; Kev-9B / Jev columns are Kev-published): Test overall 0.889 vs Kev 0.822 / Jev 0.857; JevBench overall (231 public) 0.935 vs Jev 0.866; JevBench hard 0.865 vs Jev 0.730. Latency claim: about 0.3 s/request without thinking, ~3.3 s median with it on one H100; needs CUDA (Hopper for the FP8 kernel). Weights at https://huggingface.co/PostHog/jeeves. Repo on the 2026-09-29 gh api: MIT, 21★; README says Inspired by Kev. Public repo and HF evening GET 200. Benchmarks not re-run here; weights not downloaded for you.",
+      "announcedAt": "2026-09-29",
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-09-29T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "GitHub：PostHog/jeeves（MIT）",
+          "labelEn": "GitHub: PostHog/jeeves (MIT)",
+          "url": "https://github.com/PostHog/jeeves",
+          "by": "PostHog",
+          "date": "2026-09-29"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：PostHog/jeeves 权重",
+          "labelEn": "Hugging Face: PostHog/jeeves weights",
+          "url": "https://huggingface.co/PostHog/jeeves",
+          "by": "PostHog",
+          "date": "2026-09-29"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Jeeves. Reasoning improves Jev-like decision models",
+          "labelEn": "Hacker News: Jeeves. Reasoning improves Jev-like decision models",
+          "url": "https://news.ycombinator.com/item?id=49891290",
+          "by": "Hacker News",
+          "date": "2026-09-29"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "README：9B Jev-like 模型（Qwen3.5-9B LoRA + pointer head），先推理再决策；带 diffusion drafter；训练代码与 train/dev/test 数据一并开源。",
+          "textEn": "README: a 9B Jev-like model (Qwen3.5-9B LoRA + pointer head) that thinks before it decides; ships a diffusion drafter; training code and train/dev/test data are open."
+        },
+        {
+          "text": "作者基准表（自述，非本库）：Test overall 0.889（Kev-9B 0.822 / Jev 0.857）；JevBench overall 0.935（Jev 0.866）；hard 0.865（Jev 0.730）。无 thinking 同 checkpoint 在作者 test split 上 0.804（有 thinking 0.840）。",
+          "textEn": "Author benchmark table (claim, not this library): Test overall 0.889 (Kev-9B 0.822 / Jev 0.857); JevBench overall 0.935 (Jev 0.866); hard 0.865 (Jev 0.730). Without thinking the same checkpoint scores 0.804 on the author’s test split (0.840 with thinking)."
+        },
+        {
+          "text": "API 与 Jev 同形：`python -m inference.serve` 后打 `/v1/systemone`；支持 choice / noul / score。延迟自述：无 thinking ~0.3 s，有 thinking 中位 ~3.3 s（H100）；需 CUDA。",
+          "textEn": "Jev-shaped API: after `python -m inference.serve`, hit `/v1/systemone`; supports choice / noul / score. Latency claim: ~0.3 s without thinking, ~3.3 s median with it (H100); CUDA required."
+        }
+      ],
+      "qualityNote": "收录理由：晨间已收 Jeff（本机小决策模型），晚间 HN 出现 PostHog 开源、带推理的 Jev 风格 9B，补上 System One 线的「会想」一档。边界：基准与延迟是 README 自述 / Kev 公布对照，本库未复跑；需 CUDA GPU，未代装。Inspired by Kev，非 TypeSafe 官方。预览为 Playwright 实拍 GitHub README 首屏裁 3:2。",
+      "qualityNoteEn": "Why: morning already catalogued Jeff (tiny local decision models); evening HN brought PostHog’s open reasoning Jev-style 9B — the “thinks first” tier on the System One line. Boundary: benchmarks and latency are README / Kev-published claims, not re-run here; CUDA GPU required, not installed for you. Inspired by Kev; not TypeSafe official. Preview is a Playwright capture of the GitHub README above the fold, cropped to 3:2.",
+      "relatedCaseIds": [
+        "jeff",
+        "onesie"
+      ],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "ollaya",
+        "laya-system-one"
+      ],
+      "previewImage": "/previews/jeeves.webp",
+      "previewCredit": "预览：Playwright 实拍 github.com/PostHog/jeeves README 首屏",
+      "previewCreditEn": "Preview: Playwright capture of github.com/PostHog/jeeves README above the fold",
+      "featured": true,
+      "stars": 4
+    },
     {
       "id": "ember-1",
       "slug": "ember-1",
@@ -208,7 +346,8 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "claude-fable-5-1",
-        "step-5-preview"
+        "step-5-preview",
+        "claude-sonnet-5-5"
       ],
       "previewImage": "/previews/claude-opus-5-5.webp",
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-opus-5-5 首屏",
@@ -283,7 +422,8 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "typesafe-jev",
-        "laya-system-one"
+        "laya-system-one",
+        "jeeves"
       ],
       "previewImage": "/previews/ollaya.webp",
       "previewCredit": "Playwright 实拍 ollaya.dev 首屏，裁 3:2",
@@ -615,7 +755,8 @@
       "relatedModelIds": [
         "typesafe-jev",
         "ollaya",
-        "jev-plays-pokemon"
+        "jev-plays-pokemon",
+        "jeeves"
       ],
       "previewImage": "/previews/laya-system-one.webp",
       "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
@@ -1117,7 +1258,8 @@
       "relatedModelIds": [
         "laya-system-one",
         "ollaya",
-        "jev-plays-pokemon"
+        "jev-plays-pokemon",
+        "jeeves"
       ],
       "featured": true,
       "stars": 4
