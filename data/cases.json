@@ -1,6 +1,44 @@
 {
   "cases": [
     {
+      "id": "grok-bot-for-marketing",
+      "slug": "xai-grok-bot-for-marketing",
+      "title": "官方指南：Grok Bot for Marketing（六席营销小队）",
+      "titleEn": "Official guide: Grok Bot for Marketing",
+      "summary": "Josh Kim 2026-09-24 官方 Guides：六席专科营销 Bot——Market Researcher（读竞品页写战略缺口）、Product Marketer（Google Docs 定位简报 / 落地页大纲 / 搜索广告文案）、Performance Marketer（搭真实 Google Ads 壳）、Website Ops（Cursor 写页并开营销站 PR）、Marketing Analyst（拉 Ads 记分牌只建议不改预算）、Project Manager（吃掉多席交接税）。用虚构航司 X-Air 跑通研究→文案→广告壳→PR→分析全环；强调先接 Docs/Ads/GitHub 等、席位稳定后再 Share as Template，对外投放与花钱仍人审。异于已收录的 GTM / PMs / Engineering 官方指南。",
+      "summaryEn": "Official Sep 24, 2026 Guides piece by Josh Kim: six specialist marketing Bots — Market Researcher (competitor pages → strategic gaps), Product Marketer (positioning briefs / landing outlines / search variants in Google Docs), Performance Marketer (real Google Ads campaign shells), Website Ops (Cursor-written pages that open PRs on the marketing site), Marketing Analyst (Ads scoreboard recommendations without changing live budgets), and Project Manager (handoff tax). Walks a fictional airline X-Air from research through page, ads, and analyst read. Wire Docs/Ads/GitHub first; Share as Template only after a seat is stable; outbound spend stays human-gated. Distinct from the already-catalogued GTM / PMs / Engineering official guides.",
+      "categories": [
+        "marketing",
+        "multi-agent",
+        "automation"
+      ],
+      "role": "Marketing ops playbook",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-marketing",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24）。文内「改变怎么交营销活」等为作者场景，本库不当 KPI；Ads 写权限与花钱必须人审。与已收录 grok-bot-for-gtm / grok-bot-for-pms / grok-bot-for-engineering 同系列不同角色。",
+      "qualityNoteEn": "Official Guides (2026-09-24). In-article claims about changing marketing shipping are scene-setting, not verified KPIs here; Ads write access and spend stay human-gated. Same Guides series as already-listed GTM / PMs / Engineering, different role.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "研究草稿与 Docs 改写可先跑；Google Ads 上线、改预算、发帖与合入必须人批。",
+      "approvalBoundaryEn": "Research drafts and Doc rewrites can run first; live Google Ads, budget changes, posts, and merges need a human.",
+      "connectors": [
+        "google-docs",
+        "google-ads",
+        "github",
+        "slack"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-09-30T01:20:00Z"
+    },
+    {
       "id": "jeff",
       "slug": "jeff",
       "title": "工具：Jeff — 本机可跑的 Jev 兼容 System One 小决策模型",
@@ -5445,10 +5483,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-29T01:05:00Z",
+    "updatedAt": "2026-09-30T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.34",
-    "count": 131,
+    "version": "1.4.35",
+    "count": 132,
     "sourcesCrawled": [
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
@@ -5609,7 +5647,8 @@
       "https://destroy.spritefusion.com/",
       "https://news.ycombinator.com/item?id=49880601",
       "https://www.drmagnuslynch.com/skin",
-      "https://news.ycombinator.com/item?id=49881201"
+      "https://news.ycombinator.com/item?id=49881201",
+      "https://x.ai/bot/guides/grok-bot-for-marketing"
     ]
   }
 }

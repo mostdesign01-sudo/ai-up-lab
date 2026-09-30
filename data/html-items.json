@@ -1,6 +1,101 @@
 {
   "items": [
     {
+      "id": "space-bl2",
+      "slug": "space-bl2",
+      "title": "Space Now：实时太阳系 + 52 万小行星与在轨卫星",
+      "titleEn": "Space Now: real-time Solar System with 526k asteroids and tracked satellites",
+      "summary": "Show HN（item 49898778，2026-09-29T19:08:01Z / 约 2026-09-30 03:08 CST，Algolia 早间核对 97pts）https://space.bl2.net/ — 浏览器里实时三维「Space Now」：页内写 Satellites 约 19,879 条有轨道 + 15,265 近似、Solar System bodies 约 527,080（含小行星/彗星），数据源自称 CelesTrak；可切地球 / 全太阳系、搜索 ISS·Starlink·行星、拖拽旋转与 WASD 飞行。公开页早间 GET HTTP 200，未见独立 SPDX 仓库自链。预览为 Playwright 实拍英文界面地球卫星云裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49898778 (2026-09-29T19:08:01Z / about 2026-09-30 03:08 CST, 97pts on Algolia at the morning check) at https://space.bl2.net/ — a real-time 3D “Space Now” in the browser. The page states about 19,879 satellites with orbits plus 15,265 approximate, and about 527,080 Solar System bodies (asteroids/comets), sourced from CelesTrak; toggle Earth vs full system, search ISS / Starlink / planets, drag to orbit and WASD to fly. Public page morning GET HTTP 200; no separate SPDX repo linked from the page. Preview is a Playwright capture of the English Earth satellite cloud, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "tool"
+      ],
+      "sourceUrl": "https://space.bl2.net/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49898778"
+      ],
+      "previewImage": "/previews/space-bl2.webp",
+      "featured": true,
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-09-30T01:20:00Z",
+      "qualityNote": "主源是 Show HN 49898778 与公开页。收录理由：立刻可试的实时天文可视化，不是营销空页。边界：轨道/目录数字以页内当时显示为准，本站不代拉 CelesTrak、不核验每颗目标。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49898778 and the public page. Listing rationale: a concretely tryable real-time sky visualization, not an empty marketing page. Boundary: orbit/catalog figures are whatever the page shows at check time; this site does not fetch CelesTrak or verify every object. Preview is self-hosted.",
+      "tags": [
+        "space",
+        "threejs",
+        "satellites",
+        "asteroids",
+        "realtime",
+        "demo",
+        "show-hn",
+        "webgl"
+      ]
+    },
+    {
+      "id": "enigma-design",
+      "slug": "enigma-design",
+      "title": "Enigma.design：可互动的三维恩尼格玛机教学页",
+      "titleEn": "Enigma.design: an interactive 3D Enigma machine lesson",
+      "summary": "Show HN（item 49896757，2026-09-29T17:15:56Z / 约 2026-09-30 01:15 CST，Algolia 早间核对 31pts）https://enigma.design/ — 浏览器里可转转子、接线板与打字的三维恩尼格玛教学：作者称对照史料尺寸做了内部机件，并带战时照片与逐步课程（日密钥纸 / 插线 / 转子序 / 环位）。公开页早间 GET HTTP 200；作者在 HN 写仍在打磨，未见独立 SPDX 仓库自链。预览为 Playwright 实拍首屏三维样机裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49896757 (2026-09-29T17:15:56Z / about 2026-09-30 01:15 CST, 31pts on Algolia at the morning check) at https://enigma.design/ — an interactive 3D Enigma lesson in the browser: turn rotors, set the plugboard, and type, with wartime photos and a step-through (daily key sheet / cables / rotor order / ring settings). The author says internal parts were sized from historical references and that the build is still a work in progress. Public page morning GET HTTP 200; no separate SPDX repo linked from the page. Preview is a Playwright capture of the hero 3D machine, cropped to 3:2 WebP.",
+      "types": [
+        "demo"
+      ],
+      "sourceUrl": "https://enigma.design/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49896757"
+      ],
+      "previewImage": "/previews/enigma-design.webp",
+      "featured": true,
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-09-30T01:20:00Z",
+      "qualityNote": "主源是 Show HN 49896757 与公开教学页。收录理由：可动手理解恩尼格玛机件的高质量交互页。边界：密码学教学演示，不是作战级复刻保证；作者自称 WIP。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49896757 and the public lesson page. Listing rationale: a high-quality interactive page for understanding Enigma mechanics. Boundary: an educational demo, not a claim of combat-grade replica fidelity; the author calls it a WIP. Preview is self-hosted.",
+      "tags": [
+        "enigma",
+        "3d",
+        "crypto-history",
+        "education",
+        "demo",
+        "show-hn",
+        "interactive"
+      ]
+    },
+    {
+      "id": "scissor-studio",
+      "slug": "scissor-studio",
+      "title": "Scissor：浏览器里免费的矢量 + 像素设计编辑器",
+      "titleEn": "Scissor: free vector and pixel design editor in the browser",
+      "summary": "Show HN（item 49875308，2026-09-28T08:55:31Z / 约 16:55 CST，Algolia 早间核对 134pts）https://scissor.studio/ — 免费浏览器矢量优先编辑器（兼像素层）：钢笔/形状/文字/图层蒙版/实时效果/多网格与描摹；自称 Rust→WASM、无安装无账号、作品留在本机，可装成 PWA；导入导出含 SVG / PDF / PSD / PNG / WebP 等。作者在 HN 写尚未决定是否开源；社区问题可开 samalstudios/scissor-community。公开页早间 Playwright 可达（欢迎层可见）。预览为 Playwright 实拍欢迎层+工作台裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49875308 (2026-09-28T08:55:31Z / about 16:55 CST, 134pts on Algolia at the morning check) at https://scissor.studio/ — a free, vector-first browser editor with pixel layers: pen/shapes/type/layers/masks/live effects/grids/tracing. The page claims Rust→WASM, no install or account, on-device artwork, and PWA install; import/export includes SVG / PDF / PSD / PNG / WebP and more. On HN the author has not decided on open source yet; bugs can go to samalstudios/scissor-community. Public page reachable via Playwright at the morning check (welcome modal visible). Preview is a Playwright capture of the welcome layer over the workspace, cropped to 3:2 WebP.",
+      "types": [
+        "tool"
+      ],
+      "sourceUrl": "https://scissor.studio/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49875308",
+        "https://github.com/samalstudios/scissor-community"
+      ],
+      "previewImage": "/previews/scissor-studio.webp",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-09-30T01:20:00Z",
+      "qualityNote": "主源是 Show HN 49875308 与公开工具页。收录理由：立刻可试的免费本机向设计工具（向量+像素），不是空落地页。边界：作者尚未承诺开源；移动端 UI 仍 WIP；「不上传」以页内自述为准，本站不代存你的稿件。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49875308 and the public tool page. Listing rationale: a concretely tryable free on-device design tool (vector + pixels), not an empty landing page. Boundary: open source is undecided; mobile UI is still WIP; “nothing uploaded” is the vendor claim — this site does not store your artwork. Preview is self-hosted.",
+      "tags": [
+        "vector",
+        "design",
+        "editor",
+        "wasm",
+        "browser",
+        "privacy",
+        "tool",
+        "show-hn",
+        "pwa"
+      ]
+    },
+    {
       "id": "rename-tools",
       "slug": "rename-tools",
       "title": "Rename.Tools：浏览器里批量重命名本地文件",
@@ -2946,9 +3041,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-29T12:10:00Z",
+    "updatedAt": "2026-09-30T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.49",
-    "count": 100
+    "version": "1.3.50",
+    "count": 103
   }
 }
