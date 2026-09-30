@@ -1,11 +1,97 @@
 {
   "meta": {
-    "updatedAt": "2026-09-29T12:10:00Z",
+    "updatedAt": "2026-09-30T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.12",
-    "count": 17
+    "version": "1.1.13",
+    "count": 18
   },
   "models": [
+    {
+      "id": "gpt-6-1-sol",
+      "slug": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "vendor": "OpenAI",
+      "title": "GPT-6.1 Sol（OpenAI）",
+      "titleEn": "GPT-6.1 Sol (OpenAI)",
+      "summary": "OpenAI 于 2026-09-29 发布的 GPT-6 Sol 升级款（官方页标题 “Introducing GPT-6.1 Sol”，页内大标题 “Near-Astra intelligence for a fifth of the price”，晚间 Playwright GET HTTP 200）。官方称：在 agentic coding、电脑操作与专业工作上几乎对齐 GPT-6 Astra，标准输入与输出 token 价格约为 Astra 的五分之一。标准 API 价：输入 $2 / 缓存输入 $0.10 / 输出 $10 每百万 token；缓存输入官方称比标准输入少 95%、比 GPT-6 Sol 的缓存输入少 50%。API id：`gpt-6.1-sol`。可用性：Plus / Pro / Business / Enterprise / Edu 的 ChatGPT Work 与 Codex；尚未进入 Chat；API 已可用。Ultrafast 官方称将在随后数日推出，在 Codex 里相对标准速度最高 8 倍 token 生成。第三方榜 Artificial Analysis https://artificialanalysis.ai/models/gpt-6-1-sol（GPT-6.1 Sol (max)，晚间 GET 200）：Intelligence Index 52（#10/222），67.8 tok/s（#107/222），价 $2/$10、Cache Discount 95%、每 Intelligence Index 任务 $0.72，1M 上下文，发布日 2026-09-29。AA 文章称 GPT-6 Sol 在 7 天后被 6.1 Sol 接替，约比 Astra II 低 1 分、每任务成本不到其四分之一。HN：item 49896586（标题 “GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price”，Algolia 晚间核对约 974pts，2026-09-29T17:06:45Z / 约 2026-09-30 01:06 CST）。晨间 changelog 把通用 DevDay 新闻排除在 A/B/C 之外、未收本模型（板上只有 gpt-6-astra），晚间补进 Models。",
+      "summaryEn": "OpenAI’s upgrade to GPT-6 Sol, announced 2026-09-29 (official page title “Introducing GPT-6.1 Sol”, on-page headline “Near-Astra intelligence for a fifth of the price”, evening Playwright GET HTTP 200). Vendor claim: it nearly matches GPT-6 Astra on agentic coding, computer use, and professional work at about one-fifth of Astra’s standard input and output token prices. Standard API price: $2 input / $0.10 cached input / $10 output per million tokens; cached input is claimed 95% less than standard input and 50% less than GPT-6 Sol’s cached input. API id: gpt-6.1-sol. Availability: Plus / Pro / Business / Enterprise / Edu in ChatGPT Work and Codex; not yet in Chat; API is available. Ultrafast is claimed for the coming days, up to 8× faster token generation versus standard speed in Codex. Third-party board Artificial Analysis https://artificialanalysis.ai/models/gpt-6-1-sol (GPT-6.1 Sol (max), evening GET 200): Intelligence Index 52 (#10/222), 67.8 tok/s (#107/222), $2/$10, Cache Discount 95%, $0.72 per Intelligence Index task, 1M context, released 2026-09-29. The AA article says GPT-6 Sol was replaced by 6.1 Sol after 7 days, about 1 point below Astra II at under a quarter of the cost per task. HN item 49896586 (title “GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price”, about 974pts on Algolia at the evening check, 2026-09-29T17:06:45Z / about 2026-09-30 01:06 CST). Morning changelog kept generic DevDay news out of A/B/C and did not file this model (the board only had gpt-6-astra); this evening wave adds it to Models.",
+      "announcedAt": "2026-09-29",
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-09-30T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "OpenAI 官方页：Introducing GPT-6.1 Sol",
+          "labelEn": "OpenAI official page: Introducing GPT-6.1 Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+          "by": "OpenAI",
+          "date": "2026-09-29"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 系统卡附录：GPT-6.1 Sol",
+          "labelEn": "OpenAI system card addendum: GPT-6.1 Sol",
+          "url": "https://deploymentsafety.openai.com/gpt-6-1-sol",
+          "by": "OpenAI",
+          "date": "2026-09-29"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：GPT-6.1 Sol (max) 智能 / 速度 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: GPT-6.1 Sol (max) intelligence / speed / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+          "by": "Artificial Analysis",
+          "date": "2026-09-30"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 文章：GPT-6.1 Sol 在 7 天后接替 GPT-6 Sol",
+          "labelEn": "Artificial Analysis article: GPT-6.1 Sol replaces GPT-6 Sol after 7 days",
+          "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+          "by": "Artificial Analysis",
+          "date": "2026-09-30"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+          "labelEn": "Hacker News: GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+          "url": "https://news.ycombinator.com/item?id=49896586",
+          "by": "Hacker News",
+          "date": "2026-09-29"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：GPT-6 Sol 的升级款，在 agentic coding、电脑操作与专业工作上几乎对齐 GPT-6 Astra，标准输入与输出 token 价格约为 Astra 的五分之一。标准 API：$2 / 百万输入 token、$0.10 / 百万缓存输入 token、$10 / 百万输出 token。缓存输入官方称比标准输入少 95%，比 GPT-6 Sol 的缓存输入少 50%。",
+          "textEn": "Vendor claim: an upgrade to GPT-6 Sol that nearly matches GPT-6 Astra on agentic coding, computer use, and professional work at about one-fifth of Astra’s standard input and output token prices. Standard API: $2 per million input tokens, $0.10 per million cached input tokens, $10 per million output tokens. Cached input is claimed 95% less than standard input and 50% less than GPT-6 Sol’s cached input."
+        },
+        {
+          "text": "官方称（评测节选，本库未复跑）：DeepSWE v1.1 在约五分之一成本下对齐 Astra，并以更低 effort / 成本超出 GPT-6 Sol 最佳 6.4 个百分点；GDP.pdf 高于带 fallbacks 的 Opus 5.5，成本不到一半；AutomationBench 在 medium effort 比 Opus 5.5 高 2.2 个百分点、约三分之一成本，相对 GPT-6 Sol 高 4.8 个百分点（页内措辞）；OSWorld 2.0 离线 partial 在 max effort 比 GPT-6 Sol 高 7 个百分点、成本不到一半，距 Astra 在 2.1 个百分点以内；Terminal-Bench Science 0.1 在 max effort 超过 GPT-6 Sol 一倍以上、单任务成本不到一半，Astra 在最难科学任务上仍最高（68.1%）；难提示事实性：低 effort 含事实错误的回答占比相对 GPT-6 Sol 从 11.4% 降到 7.7%。",
+          "textEn": "Vendor claim (eval excerpts, not re-run here): on DeepSWE v1.1 it matches Astra at about one-fifth the cost and eclipses GPT-6 Sol’s best by 6.4 percentage points at lower effort and cost; on GDP.pdf it scores higher than Opus 5.5 with fallbacks at less than half the cost; on AutomationBench it is 2.2 percentage points above Opus 5.5 at medium effort and about one-third the cost, and 4.8 percentage points above GPT-6 Sol (page wording); on OSWorld 2.0 offline partial it is 7 percentage points above GPT-6 Sol at max effort at less than half the cost, and within 2.1 percentage points of Astra; on Terminal-Bench Science 0.1 it more than doubles GPT-6 Sol at max effort at less than half the cost per task, while Astra remains highest on the hardest science at 68.1%; factuality on hard prompts: the low-effort share of responses with a factual error falls from 11.4% to 7.7% versus GPT-6 Sol."
+        },
+        {
+          "text": "官方称：即日起向 Plus / Pro / Business / Enterprise / Edu 开放，位于 ChatGPT Work 与 Codex；尚未进入 Chat。开发者可通过 OpenAI API 使用，模型 id 为 `gpt-6.1-sol`，API 已可用。Ultrafast 将在随后数日推出，官方称在 Codex 中相对标准速度最高快 8 倍 token 生成。",
+          "textEn": "Vendor claim: available starting today to Plus / Pro / Business / Enterprise / Edu users in ChatGPT Work and Codex; not yet in Chat. Developers can use it on the OpenAI API as gpt-6.1-sol; the API is available. Ultrafast is coming in the next few days, claimed at up to 8× faster token generation versus standard speed in Codex."
+        },
+        {
+          "text": "第三方榜（Artificial Analysis，非官方、非本库）：GPT-6.1 Sol (max) Intelligence Index 52（#10/222），输出 67.8 tok/s（#107/222），价输入 $2 / 输出 $10、Cache Discount 95%、每 Intelligence Index 任务 $0.72，1M 上下文，发布日 2026-09-29。同站文章称 GPT-6 Sol 在 7 天后换成 6.1 Sol，约比 Astra II 低 1 分、每任务成本不到四分之一。不把 AA 数字与官方页评测合成新指标。",
+          "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): GPT-6.1 Sol (max) Intelligence Index 52 (#10/222), 67.8 tok/s (#107/222), $2 input / $10 output, Cache Discount 95%, $0.72 per Intelligence Index task, 1M context, released 2026-09-29. The same site’s article says GPT-6 Sol was replaced by 6.1 Sol after 7 days, about 1 point below Astra II at under a quarter of the cost per task. AA figures are not merged with the vendor evals into a new metric."
+        }
+      ],
+      "qualityNote": "收录理由：2026-09-29 官方发布、HN item 49896586（晚间 Algolia 核对约 974pts）与 AA 模型页、AA 文章均可核；晨间 changelog 明确跳过通用 DevDay 新闻、不进 A/B/C，Models 板当时有 gpt-6-astra、没有 gpt-6-1-sol，晚间补上。核实边界：五分之一价格、缓存 $0.10、95% / 50%、评测摘录、可用性、API id、Ultrafast 8 倍一律为官方页自述（openai.com/index/introducing-gpt-6-1-sol/，晚间 Playwright GET HTTP 200），本库未复跑、未实测 API。页内写 Astra 在最难科学任务上仍最高（Terminal-Bench Science 0.1 68.1%），故不把 “Near-Astra” 写成全面第一。Intelligence Index 52、#10/222、67.8 tok/s、#107/222、$0.72/任务、95% 缓存折扣、1M 上下文，以及「约低 1 分 / 不到四分之一成本」来自 AA（晚间 HTTP 200），非本库复跑。系统卡附录 https://deploymentsafety.openai.com/gpt-6-1-sol 晚间 HTTP 200，只作安全部署入口，本库未逐条核对其中评测。同板互链 gpt-6-astra、astra-openai-showcase、claude-sonnet-5-5 只表示同板相关（Sonnet 官方表对照过 GPT-6 Sol），不表示评测对齐。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: official 2026-09-29 launch, HN item 49896586 (about 974pts on Algolia at the evening check), and the AA model page plus AA article are all verifiable; the morning changelog explicitly skipped generic DevDay news for A/B/C, and the Models board had gpt-6-astra but not gpt-6-1-sol, so evening adds it. Boundary: the one-fifth price, $0.10 cached input, 95% / 50%, eval excerpts, availability, API id, and Ultrafast 8× are vendor claims from openai.com/index/introducing-gpt-6-1-sol/ (evening Playwright GET HTTP 200); nothing re-run, API untested. The page says Astra is still highest on the hardest science (Terminal-Bench Science 0.1 at 68.1%), so “Near-Astra” is not framed as first everywhere. Intelligence Index 52, #10/222, 67.8 tok/s, #107/222, $0.72/task, the 95% cache discount, 1M context, and “about 1 point below / under a quarter of the cost” come from AA (evening HTTP 200), not re-run here. The system card addendum at https://deploymentsafety.openai.com/gpt-6-1-sol returned HTTP 200 in the evening and is only a deployment-safety entry point; its evals were not checked line by line. Cross-links to gpt-6-astra, astra-openai-showcase, and claude-sonnet-5-5 are same-board only (Sonnet’s vendor table already contrasts GPT-6 Sol), not an aligned-eval claim. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra",
+        "astra-openai-showcase",
+        "claude-sonnet-5-5"
+      ],
+      "previewImage": "/previews/gpt-6-1-sol.webp",
+      "previewCredit": "预览：Playwright 实拍 openai.com/index/introducing-gpt-6-1-sol/ 首屏",
+      "previewCreditEn": "Preview: Playwright capture of openai.com/index/introducing-gpt-6-1-sol/ above the fold",
+      "featured": true,
+      "stars": 4
+    },
     {
       "id": "claude-sonnet-5-5",
       "slug": "claude-sonnet-5-5",
@@ -67,7 +153,8 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "claude-opus-5-5",
-        "claude-fable-5-1"
+        "claude-fable-5-1",
+        "gpt-6-1-sol"
       ],
       "previewImage": "/previews/claude-sonnet-5-5.webp",
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-sonnet-5-5 首屏",
@@ -930,6 +1017,7 @@
       "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "gpt-6-1-sol",
         "maniac-mansion-3d",
         "astra-mini-lol",
         "astra-tripo-3d-prompts",
