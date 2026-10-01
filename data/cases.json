@@ -1,6 +1,153 @@
 {
   "cases": [
     {
+      "id": "magnitude",
+      "slug": "magnitude",
+      "title": "工具：Magnitude — 为本机 Agent 自调优的开源推理引擎",
+      "titleEn": "Tool: Magnitude — open-source self-tuning inference engine for local agents",
+      "summary": "Launch HN（item 49911995，2026-09-30T17:37:40Z / 约 2026-10-01 01:37 CST，Algolia 晚间核对 169pts）https://github.com/magnitudedev/magnitude — Apache-2.0：面向本机 Agent 的推理引擎，在目标硬件上编译并调参 kernel，官网称相对 llama.cpp 最高约 2×（示例：M4 Pro Metal decode 30→57 tok/s；DGX Spark CUDA decode 49→58 tok/s，Qwen 3.6 35B A3B 4-bit / 64k / 无投机解码）。桌面端可一键接 Pi / OpenCode / Hermes / Codex / Claude Code 等，也提供 OpenAI 兼容接口；按需起停模型，会话间共享前缀缓存。仓库 magnitudedev/magnitude 于 2026-10-01 gh api：Apache-2.0、5926★；站点 https://magnitude.dev/ HTTP 200。晨间 changelog 把它与 Ledge 等一并标为「偏应用」跳过；晚间按「具体有用的 AI 工具」进 Cases 工具笔记。本条不替你下载模型或代跑推理。",
+      "summaryEn": "Launch HN item 49911995 (2026-09-30T17:37:40Z / about 2026-10-01 01:37 CST, 169pts on Algolia at the evening check) at https://github.com/magnitudedev/magnitude — Apache-2.0 inference engine for local agents that compiles and tunes kernels on your hardware. The site claims up to about 2× vs llama.cpp (example: M4 Pro Metal decode 30→57 tok/s; DGX Spark CUDA decode 49→58 tok/s, Qwen 3.6 35B A3B 4-bit / 64k / no speculative decoding). Desktop app one-clicks Pi / OpenCode / Hermes / Codex / Claude Code and more, plus an OpenAI-compatible API; models start on demand and stop after idle; sessions share prefix caches. Repo magnitudedev/magnitude on the 2026-10-01 gh api: Apache-2.0, 5926★; https://magnitude.dev/ HTTP 200. Morning changelog skipped it as app-shaped; this evening wave files it as a concrete AI-tool tip in Cases. This tip does not download models or run inference for you.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://github.com/magnitudedev/magnitude",
+      "secondaryUrls": [
+        "https://magnitude.dev/",
+        "https://news.ycombinator.com/item?id=49911995"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 Launch HN 49911995、Apache-2.0 仓库与 magnitude.dev。收录理由：本机跑 Agent 时推理引擎是真实痛点，且与 Pi/Codex/Claude Code 等已常见栈可对接。边界：官网/Launch HN 基准是厂商自测口径（HN 评论对 M5+/MLX 对比有异议）；本库未复跑；多 GPU / 部分机型检测仍有 issue。预览 Playwright 实拍 magnitude.dev 首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are Launch HN 49911995, the Apache-2.0 repo, and magnitude.dev. Listing rationale: local-agent inference engines are a real pain point, and it plugs into stacks people already run (Pi/Codex/Claude Code). Boundary: site/Launch HN benches are vendor self-tests (HN comments dispute M5+/MLX comparisons); not re-run here; multi-GPU / some hardware detection still has open issues. Preview is a Playwright 3:2 capture of magnitude.dev above the fold. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "下载桌面端、拉模型权重、把本地文件/密钥接到 Agent 之前自己确认。基准数字以你机器实测为准；不要只靠厂商对比表选型。",
+      "approvalBoundaryEn": "Confirm before installing the desktop app, pulling model weights, or wiring local files/secrets into an agent. Treat vendor comparison tables as claims until you measure on your machine.",
+      "language": "en",
+      "connectors": [
+        "computer"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-10-01T12:00:00Z",
+      "previewImage": "/previews/magnitude.webp",
+      "landing": {
+        "what": "Magnitude 是 Apache-2.0 开源的本机推理引擎（仓库 magnitudedev/magnitude，站点 magnitude.dev）。面向「已经在跑 coding / 桌面 Agent、想把模型留在本机」的人：在你的 Mac / Linux / Windows 硬件上编译并调参 kernel，再按需起停模型。官网写可一键接 Pi、OpenCode、Hermes、Codex、Claude Code 等，也提供 OpenAI 兼容接口；会话之间共享前缀缓存，闲置后关掉模型。Launch HN item 49911995。本站收成 Cases「工具笔记」：补晨间跳过的具体有用工具，不是 Grok Bot 本体，也不是又一个通用聊天客户端。",
+        "whatEn": "Magnitude is an Apache-2.0 local inference engine (repo magnitudedev/magnitude, site magnitude.dev). It targets people already running coding / desktop agents who want models to stay on-device: compile and tune kernels on your Mac / Linux / Windows hardware, then start and stop models on demand. The site says one-click connects Pi, OpenCode, Hermes, Codex, Claude Code, and more, plus an OpenAI-compatible API; sessions share prefix caches and idle models shut down. Launch HN item 49911995. Listed here as a Cases tool tip filling a concrete gap the morning wave skipped — not Grok Bot itself, and not another generic chat client.",
+        "contrast": {
+          "caption": "左列是官网 / Launch HN / 仓库对得上的事实。右列说明为什么放在 Cases 工具笔记，以及不要把它当成已经替你验证过的「全面碾压 llama.cpp / MLX」。",
+          "captionEn": "Left column: what the site / Launch HN / repo actually say. Right column: why it sits as a Cases tool tip, and why it is not a verified “beats llama.cpp / MLX everywhere” claim.",
+          "leftLabel": "Magnitude",
+          "leftLabelEn": "Magnitude",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "本机推理引擎 + 桌面端：为目标硬件调 kernel，给 Agent 提供本地 OpenAI 兼容端点。",
+              "leftEn": "Local inference engine + desktop app: tunes kernels to your hardware and serves an OpenAI-compatible endpoint for agents.",
+              "right": "Cases「AI tool tip」。帮本机 Agent 跑开源权重，不是云端 Bot 托管。",
+              "rightEn": "An AI tool tip in Cases — helps local agents run open weights; not hosted cloud Bot compute."
+            },
+            {
+              "aspect": "速度主张",
+              "aspectEn": "Speed claim",
+              "left": "官网示例相对 llama.cpp：Metal decode +92%，CUDA decode +19%（给定模型与设置）。",
+              "leftEn": "Site examples vs llama.cpp: Metal decode +92%, CUDA decode +19% (given model and settings).",
+              "right": "HN 评论对 M5+ / MLX 对比有异议；本库未复跑，选型以你机器实测为准。",
+              "rightEn": "HN comments dispute M5+ / MLX comparisons; not re-run here — measure on your machine before choosing."
+            },
+            {
+              "aspect": "对接面",
+              "aspectEn": "Integrations",
+              "left": "官网列 Pi / OpenCode / Hermes / Codex / Claude Code 等一键连接；也可走 OpenAI 兼容 API。",
+              "leftEn": "Site lists one-click Pi / OpenCode / Hermes / Codex / Claude Code and more; OpenAI-compatible API also works.",
+              "right": "不替代 Cursor Cloud Agent / Grok Bot 云电脑；本条也不代你改 Agent 配置。",
+              "rightEn": "Does not replace Cursor Cloud Agents / Grok Bot cloud computers; this tip also does not rewrite your agent config for you."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看官网与 Launch HN",
+            "titleEn": "Read the site and Launch HN first",
+            "body": "打开 https://magnitude.dev/ 与 HN item 49911995，核对 Apache-2.0、支持的 OS / Agent、以及他们自己贴的基准表。再决定是否值得在你硬件上试。",
+            "bodyEn": "Open https://magnitude.dev/ and HN item 49911995; confirm Apache-2.0, supported OS / agents, and their own bench table before deciding a trial on your hardware.",
+            "links": [
+              {
+                "href": "https://magnitude.dev/",
+                "label": "官网",
+                "labelEn": "Site"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49911995",
+                "label": "Launch HN",
+                "labelEn": "Launch HN"
+              },
+              {
+                "href": "https://github.com/magnitudedev/magnitude",
+                "label": "GitHub",
+                "labelEn": "GitHub"
+              }
+            ]
+          },
+          {
+            "title": "按作者方式安装桌面端",
+            "titleEn": "Install the desktop app the author’s way",
+            "body": "从官网或仓库 README 下载对应平台安装包。本站不代装。装好后先看模型目录与硬件检测结果，再决定拉哪一档量化。",
+            "bodyEn": "Download the platform installer from the site or repo README. This site does not install it. After install, read the model catalog and hardware detection before picking a quant.",
+            "links": [
+              {
+                "href": "https://magnitude.dev/",
+                "label": "下载入口在官网",
+                "labelEn": "Downloads on the site"
+              },
+              {
+                "href": "https://github.com/magnitudedev/magnitude",
+                "label": "README",
+                "labelEn": "README"
+              }
+            ]
+          },
+          {
+            "title": "接到你已有的 Agent，自己测一轮",
+            "titleEn": "Wire it to an agent you already use, then measure",
+            "body": "用官网列出的一键连接，或把 OpenAI 兼容基址指到 Magnitude。用你真实的长上下文 / 工具调用轨迹测 decode 与显存，不要只抄宣传数字。密钥与本地仓库权限仍按你自己的审批边界。",
+            "bodyEn": "Use a listed one-click connector, or point an OpenAI-compatible base URL at Magnitude. Measure decode and memory on your real long-context / tool-call traces — do not copy marketing numbers. Keep your own approval boundary for secrets and repo write access.",
+            "links": [
+              {
+                "href": "https://magnitude.dev/",
+                "label": "对接说明在官网",
+                "labelEn": "Integration notes on the site"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Apache-2.0 开源；2026-10-01 gh api 约 5926★。功能与模型目录以当日官网 / README 为准。",
+            "textEn": "Apache-2.0 open source; about 5926★ on the 2026-10-01 gh api. Features and model catalog follow that day’s site / README."
+          },
+          {
+            "text": "厂商相对 llama.cpp 的加速是自测口径；HN 上已有 M5+ / MLX 反例讨论。本库未复跑。",
+            "textEn": "Vendor speedups vs llama.cpp are self-tests; HN already has M5+ / MLX counterexamples. Not re-run here."
+          },
+          {
+            "text": "本站未代装、未代下模型、未代改你的 Agent。多 GPU / 冷门硬件可能仍有检测与性能缺口。",
+            "textEn": "This site did not install the app, pull weights, or rewrite your agent. Multi-GPU / unusual hardware may still hit detection or performance gaps."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 magnitude.dev 首屏",
+        "previewCreditEn": "Preview: Playwright capture of magnitude.dev above the fold"
+      }
+    },
+    {
       "id": "team-bots",
       "slug": "xai-team-bots",
       "title": "官方发布：Team Bots（共享上下文的团队 Bot）",
@@ -5529,11 +5676,17 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-01T01:00:00Z",
+    "updatedAt": "2026-10-01T12:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.36",
-    "count": 133,
+    "version": "1.4.37",
+    "count": 134,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=49913571",
+      "https://artificialanalysis.ai/models/gemini-4-argon",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "https://news.ycombinator.com/item?id=49911995",
+      "https://magnitude.dev/",
+      "https://github.com/magnitudedev/magnitude",
       "https://x.ai/bot",
       "https://x.ai/news",
       "https://x.ai/news/team-bots",
