@@ -1,11 +1,86 @@
 {
   "meta": {
-    "updatedAt": "2026-09-30T12:10:00Z",
+    "updatedAt": "2026-10-01T12:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.13",
-    "count": 18
+    "version": "1.1.14",
+    "count": 19
   },
   "models": [
+    {
+      "id": "gemini-4-argon",
+      "slug": "gemini-4-argon",
+      "name": "Gemini 4 Argon",
+      "vendor": "Google",
+      "title": "Gemini 4 Argon（Google）",
+      "titleEn": "Gemini 4 Argon (Google)",
+      "summary": "Google 于 2026-09-30 宣布的下一代前沿模型 Gemini 4 Argon（官方页 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ ，晚间 Playwright GET HTTP 200）。官方称面向长程复杂工作流：真实软件工程、法律/金融等企业知识工作，以及网络安全防御；输出 token 上限扩到 1M（相对此前 64K）。首发只对 Fairwind Program 受信网络防御方开放；公共页写明后续尽快扩到开发者、企业与消费者，并从付费 API 与 Google AI Ultra 订户开始。入门价官方写 $2 / 百万输入 token、$10 / 百万输出 token，缓存输入相对输入价 95% off；入门期后升至 $4 / $20。官方评测摘录（标官方称，本库未复跑）：DeepSWE v1.1 77.9%；Vals Index 领先；AutomationBench 51.3%（#1）；LVBench 91.7%；CWE-bench v1 68% 并列第一。第三方榜 Artificial Analysis https://artificialanalysis.ai/models/gemini-4-argon（Gemini 4 Argon (High)，晚间 GET 200）：Intelligence Index 53（#8/223），价 $2/$10、Cache Discount 95%、每 Intelligence Index 任务约 $1.99，1M 上下文，发布日 2026-09-30；速度栏 N/A。HN item 49913571（标题 “Gemini 4 Argon”，Algolia 晚间核对 1447pts，2026-09-30T20:04:37Z / 约 2026-10-01 04:04 CST）。晨间 changelog 跳过非 A/B/C 头条，未收本模型；晚间补进 Models。",
+      "summaryEn": "Google’s next frontier model, announced 2026-09-30 (official page https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ , evening Playwright GET HTTP 200). Vendor claim: built for long-horizon complex workflows across real-world software engineering, enterprise knowledge work such as legal and finance, and cybersecurity defense; output token limit raised to 1M (from the previous 64K). Initial access is limited to trusted cyber defenders in the Fairwind Program; the public page says broader access for developers, enterprises, and consumers will follow as soon as possible, starting with paid API customers and Google AI Ultra subscribers. Introductory price is stated as $2 per million input tokens and $10 per million output tokens, with cached input at 95% off the input price; after the introductory period the page says $4 / $20. Vendor eval excerpts (marked as vendor claims, not re-run here): DeepSWE v1.1 77.9%; leading on the Vals Index; AutomationBench 51.3% (#1); LVBench 91.7%; CWE-bench v1 68% tied for first. Third-party board Artificial Analysis https://artificialanalysis.ai/models/gemini-4-argon (Gemini 4 Argon (High), evening GET 200): Intelligence Index 53 (#8/223), $2/$10, Cache Discount 95%, about $1.99 per Intelligence Index task, 1M context, released 2026-09-30; speed listed N/A. HN item 49913571 (title “Gemini 4 Argon”, 1447pts on Algolia at the evening check, 2026-09-30T20:04:37Z / about 2026-10-01 04:04 CST). Morning changelog skipped non-A/B/C headlines and did not file this model; this evening wave adds it to Models.",
+      "announcedAt": "2026-09-30",
+      "publishedAt": "2026-10-01",
+      "updatedAt": "2026-10-01T12:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 官方页：Gemini 4 Argon",
+          "labelEn": "Google official page: Gemini 4 Argon",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+          "by": "Google DeepMind / Google",
+          "date": "2026-09-30"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis：Gemini 4 Argon (High) 智能 / 价格分析（第三方榜）",
+          "labelEn": "Artificial Analysis: Gemini 4 Argon (High) intelligence / price analysis (third-party board)",
+          "url": "https://artificialanalysis.ai/models/gemini-4-argon",
+          "by": "Artificial Analysis",
+          "date": "2026-09-30"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 文章：Gemini 4 Argon 重回前三实验室智能梯队",
+          "labelEn": "Artificial Analysis article: Gemini 4 Argon returns Google among the top three labs",
+          "url": "https://artificialanalysis.ai/articles/gemini-4-argon-google-top-three-labs",
+          "by": "Artificial Analysis",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Gemini 4 Argon",
+          "labelEn": "Hacker News: Gemini 4 Argon",
+          "url": "https://news.ycombinator.com/item?id=49913571",
+          "by": "Hacker News",
+          "date": "2026-09-30"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：面向长程复杂工作流（软件工程、法律/金融等知识工作、网络防御）；输出上限扩到 1M token。首发仅 Fairwind 受信防御方；入门 API 价 $2/$10（缓存输入 95% off），入门期后 $4/$20。",
+          "textEn": "Vendor claim: built for long-horizon workflows (software engineering, legal/finance knowledge work, cyber defense); output limit raised to 1M tokens. Initial access is Fairwind trusted defenders only; introductory API price $2/$10 (cached input 95% off), then $4/$20 after the introductory period."
+        },
+        {
+          "text": "官方评测摘录（本库未复跑）：DeepSWE v1.1 77.9%；Vals Index 领先；AutomationBench 51.3%（#1）；LVBench 91.7%；CWE-bench v1 68% 并列第一。页内另有量子算法优化、机房内存优化、C/C++→Rust 迁移等内部用例叙述。",
+          "textEn": "Vendor eval excerpts (not re-run here): DeepSWE v1.1 77.9%; leading on the Vals Index; AutomationBench 51.3% (#1); LVBench 91.7%; CWE-bench v1 68% tied for first. The page also narrates internal uses such as quantum algorithmic optimization, datacenter memory savings, and C/C++→Rust migrations."
+        },
+        {
+          "text": "第三方 Artificial Analysis（Gemini 4 Argon (High)）：Intelligence Index 53（#8/223），$2/$10、Cache Discount 95%、约 $1.99 / 任务，1M 上下文；速度栏 N/A。公开可用性仍以 Fairwind / 后续扩量公告为准，本库不当成已对人人开放。",
+          "textEn": "Third-party Artificial Analysis (Gemini 4 Argon (High)): Intelligence Index 53 (#8/223), $2/$10, Cache Discount 95%, about $1.99 per task, 1M context; speed listed N/A. Public availability still follows Fairwind / later rollout notices — this library does not treat it as open to everyone yet."
+        }
+      ],
+      "stars": 4,
+      "featured": true,
+      "previewImage": "/previews/gemini-4-argon.webp",
+      "previewCredit": "预览：Playwright 实拍 blog.google Gemini 4 Argon 首屏",
+      "previewCreditEn": "Preview: Playwright capture of the blog.google Gemini 4 Argon above-the-fold",
+      "qualityNote": "主源是 Google 官方博文与 Artificial Analysis 第三方榜 / 文章，外加 HN 49913571。收录理由：当日 HN 头条级前沿模型（Algolia 1447pts），且晨间未进 Models。边界：首发仅 Fairwind；官方评测与内部用例数字均为厂商叙述，本库未复跑；AA 速度 N/A；入门价有时效。不打星以外的主观排名。",
+      "qualityNoteEn": "Primary sources are Google’s official blog and Artificial Analysis’s third-party board / article, plus HN 49913571. Listing rationale: same-day HN front-page frontier model (1447pts on Algolia) missed by the morning Models pass. Boundary: Fairwind-only at launch; vendor evals and internal-use figures are vendor narration, not re-run here; AA speed is N/A; introductory pricing is time-limited. No subjective ranking beyond the board’s stars field.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-1-sol",
+        "gpt-6-astra",
+        "claude-sonnet-5-5",
+        "claude-opus-5-5"
+      ]
+    },
     {
       "id": "gpt-6-1-sol",
       "slug": "gpt-6-1-sol",
