@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-01",
+      "title": "早间收录：Cases +1（Team Bots）、HTML +4（Dental Scope / 56k.rip / Halfspace / 黑洞光线追踪）",
+      "titleEn": "Morning catalog: Cases +1 (Team Bots), HTML +4 (Dental Scope / 56k.rip / Halfspace / black-hole raytracer)",
+      "body": "Cases：收 team-bots —— SpaceXAI 官方 2026-09-28 https://x.ai/news/team-bots 。共享一只配好上下文/插件/凭证/记忆的 Grok Bot 给整队，私聊隔离，可进 Slack；文内四条可复现工作流（客户组早间 brief、工程组 Linear+Cloud Agent、营销组品牌审+改站预览、数据组只读 Databricks）。Teams/Enterprise 公测；客户数字不当 KPI。HTML：收 dental-scope（Show HN item 49886535，Algolia 早间核对 114pts，2026-09-29T00:47:19Z）https://dental-scope.com/ —— 免费 WebGL 三维牙科解剖，仓库 Yoosseph/dental-scope MIT、86★，解剖细节以教学可视化论、非临床依据。收 56k-rip（HN item 49915126，核对 28pts，2026-09-30T22:08:50Z）https://56k.rip/ —— 1996 拨号桌面模拟，按 14.4/28.8/56k 字节预算出页。收 halfspace（HN item 49913350，核对 65pts，2026-09-30T19:44:37Z）demo https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half —— 距离场实体建模实验 IDE，仓库 mkeeter/halfspace MPL-2.0、51★。收 blackhole-raytracer（Show HN item 49914648，核对 2pts，2026-09-30T21:23:01Z）https://rivendell.dmitrybrant.com/blackhole/ —— Schwarzschild 测地线实时 GPU 光线追踪。四条均配 Playwright 实拍 3:2 自托管预览。Agent UI：扫 ThreeUI browse 与近期 Show HN three.js 件后，无足够确认 Community 免费且可复制给 Agent 的新件，未硬凑。跳过：Ledge.sh（桌面笔记产品，非 HTML 组件页）；Lathoa / Magnitude / Gatekeeper 等偏应用或非 A/B/C；芯片/监管类 HN 头条不进库；X @bot 公共镜像时间线不完整，未硬打 API。cases 132→133（1.4.35→1.4.36）；html-items 103→107（1.3.50→1.3.51）。未改 agent-ui。",
+      "bodyEn": "Cases: added team-bots — official SpaceXAI 2026-09-28 launch at https://x.ai/news/team-bots. Share one configured Grok Bot across a team with private 1:1 chats and optional Slack; four reproducible workflows (account morning briefs, engineering Linear+Cloud Agents, marketing brand review + site preview, read-only Databricks data bot). Teams/Enterprise public beta; customer figures not treated as KPIs. HTML: dental-scope (Show HN 49886535, 114pts) free WebGL dental anatomy; 56k-rip (HN 49915126, 28pts) 1996 dial-up sim; halfspace (HN 49913350, 65pts) SDF modeling IDE demo; blackhole-raytracer (Show HN 49914648, 2pts) Schwarzschild geodesic GPU raytracer. All four with Playwright 3:2 self-hosted previews. Agent UI: no clear new Community-free copyable ThreeUI items after browse/Show HN scan. Skipped Ledge.sh (desktop notes product), app-shaped Show HNs, chip/regulation headlines; @bot public mirrors incomplete, no API hammering. cases 132→133; html-items 103→107; agent-ui unchanged."
+    },
+    {
       "date": "2026-09-30",
       "title": "晚间收录：Models +1（GPT-6.1 Sol）",
       "titleEn": "Evening catalog: Models +1 (GPT-6.1 Sol)",

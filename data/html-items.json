@@ -1,6 +1,135 @@
 {
   "items": [
     {
+      "id": "dental-scope",
+      "slug": "dental-scope",
+      "title": "Dental Scope：免费可互动的三维牙科解剖",
+      "titleEn": "Dental Scope: free interactive 3D dental anatomy",
+      "summary": "Show HN（item 49886535，2026-09-29T00:47:19Z / 约 08:47 CST，Algolia 早间核对 114pts）https://dental-scope.com/ — 浏览器 WebGL 三维牙科解剖：牙齿 / 颌骨 / 神经血管与分层结构，可旋转剖切。作者在 HN 写明免费开源；仓库 Yoosseph/dental-scope 早间 gh api：LICENSE 为 MIT 正文、86★，homepage 指向本站。公开页早间 GET HTTP 200。预览为 Playwright 实拍三维解剖界面裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49886535 (2026-09-29T00:47:19Z / about 08:47 CST, 114pts on Algolia at the morning check) at https://dental-scope.com/ — a free WebGL 3D dental anatomy explorer for teeth, jaws, nerves/vessels, and layered structures with rotate/dissect controls. The author calls it free and open source on HN; repo Yoosseph/dental-scope morning gh api: MIT LICENSE text, 86★, homepage points here. Public page morning GET HTTP 200. Preview is a Playwright capture of the 3D anatomy UI, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "tool"
+      ],
+      "sourceUrl": "https://dental-scope.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49886535",
+        "https://github.com/Yoosseph/dental-scope"
+      ],
+      "previewImage": "/previews/dental-scope.webp",
+      "featured": true,
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-10-01T01:00:00Z",
+      "qualityNote": "主源是 Show HN 49886535 与公开页 / MIT 仓库。收录理由：立刻可试的三维解剖交互，不是空落地页。边界：HN 有评论质疑恒牙数量等解剖细节，本库不背书医学准确性，仅作可视化学习工具；请勿当临床依据。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49886535 and the public page / MIT repo. Listing rationale: a tryable 3D anatomy interaction, not an empty landing page. Boundary: HN comments question some anatomical details (e.g. permanent-tooth count); this catalog does not vouch clinical accuracy — learning visualization only, not a clinical reference. Preview is self-hosted.",
+      "tags": [
+        "dental",
+        "anatomy",
+        "3d",
+        "webgl",
+        "education",
+        "demo",
+        "show-hn",
+        "mit"
+      ]
+    },
+    {
+      "id": "56k-rip",
+      "slug": "56k-rip",
+      "title": "56k.rip：浏览器里重演 1996 拨号上网",
+      "titleEn": "56k.rip: the 1996 dial-up internet experience in a browser",
+      "summary": "HN（item 49915126，2026-09-30T22:08:50Z / 约 2026-10-01 06:08 CST，Algolia 早间核对 28pts）https://56k.rip/ — 浏览器模拟 1996 拨号桌面：开 Dial-Up Networking、听握手音、按 14.4 / 28.8 / 56k 字节预算慢慢出页；还有邮件、聊天室、扫雷、画板与屏保。页内称连接按真实速率节流、图片程序化生成并压到 216 色 web-safe，声音多在浏览器合成，无需账号。公开页早间 GET HTTP 200。预览为 Playwright 实拍拨号桌面裁 3:2 WebP。",
+      "summaryEn": "HN item 49915126 (2026-09-30T22:08:50Z / about 2026-10-01 06:08 CST, 28pts on Algolia at the morning check) at https://56k.rip/ — a browser simulation of a 1996 dial-up desktop: open Dial-Up Networking, hear the handshake, and watch pages arrive against a real 14.4 / 28.8 / 56k byte budget, plus mail, chat, minesweeper, paint, and screensavers. The page says delivery is rate-limited for real, pictures are procedural and reduced to the 216-color web-safe palette, most sounds are synthesized in-browser, and no account is needed. Public page morning GET HTTP 200. Preview is a Playwright capture of the dial-up desktop, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "interactive"
+      ],
+      "sourceUrl": "https://56k.rip/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49915126"
+      ],
+      "previewImage": "/previews/56k-rip.webp",
+      "featured": true,
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-10-01T01:00:00Z",
+      "qualityNote": "主源是 HN 49915126 与公开页。收录理由：完整可玩的拨号时代浏览器体验，速率节流可感知。边界：怀旧模拟，不是真实 ISP；「别人摘机掉线」等为设计效果。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49915126 and the public page. Listing rationale: a complete, playable dial-up-era browser experience with perceptible rate limiting. Boundary: a nostalgia simulation, not a real ISP; “someone picks up the extension” is a designed effect. Preview is self-hosted.",
+      "tags": [
+        "retro",
+        "dial-up",
+        "1996",
+        "demo",
+        "interactive",
+        "nostalgia",
+        "hn"
+      ]
+    },
+    {
+      "id": "halfspace",
+      "slug": "halfspace",
+      "title": "Halfspace：浏览器里用距离场做实体建模的实验 IDE",
+      "titleEn": "Halfspace: experimental browser IDE for solid modeling with distance fields",
+      "summary": "HN（item 49913350，2026-09-30T19:44:37Z / 约 2026-10-01 03:44 CST，Algolia 早间核对 65pts）https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter 的实验 IDE：把距离场放在前台做实体建模，可栅格化与导出三角网格；栈为 Rust + egui + wgpu + Rhai，有 Web 与原生。可试 demo：https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half （早间 GET HTTP 200）。仓库 mkeeter/halfspace 早间 gh api：MPL-2.0、51★。作者自称实验向、勿作关键负载。预览为 Playwright 实拍 Web demo 裁 3:2 WebP。",
+      "summaryEn": "HN item 49913350 (2026-09-30T19:44:37Z / about 2026-10-01 03:44 CST, 65pts on Algolia at the morning check) at https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter’s experimental IDE that puts distance fields first for solid modeling, with rasterization and triangle-mesh export; stack is Rust + egui + wgpu + Rhai for web and native. Tryable demo: https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half (morning GET HTTP 200). Repo mkeeter/halfspace morning gh api: MPL-2.0, 51★. Author calls it experimental — not for critical work. Preview is a Playwright capture of the web demo, cropped to 3:2 WebP.",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "sourceUrl": "https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half",
+      "secondaryUrls": [
+        "https://www.mattkeeter.com/projects/halfspace/",
+        "https://github.com/mkeeter/halfspace",
+        "https://news.ycombinator.com/item?id=49913350"
+      ],
+      "previewImage": "/previews/halfspace.webp",
+      "featured": true,
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-10-01T01:00:00Z",
+      "qualityNote": "主源是 HN 49913350、项目文与 Web demo / MPL-2.0 仓库。收录理由：立刻可开的距离场建模 IDE（WebGPU）。边界：作者标明实验、API 可能破坏；移动 Safari WebGPU 作者称有问题；本库不保证网格可打印质量。gh api 核对 MPL-2.0、51★。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49913350, the project writeup, the web demo, and the MPL-2.0 repo. Listing rationale: a tryable distance-field modeling IDE (WebGPU). Boundary: author marks it experimental with possible breaking changes; mobile Safari WebGPU has known issues per the author; this catalog does not guarantee print-ready meshes. gh api check: MPL-2.0, 51★. Preview is self-hosted.",
+      "tags": [
+        "sdf",
+        "cad",
+        "webgpu",
+        "rust",
+        "wasm",
+        "tool",
+        "show-hn",
+        "mpl"
+      ]
+    },
+    {
+      "id": "blackhole-raytracer",
+      "slug": "blackhole-raytracer",
+      "title": "黑洞实时光线追踪：广义相对论测地线可视化",
+      "titleEn": "Real-time black hole raytracer along GR geodesics",
+      "summary": "Show HN（item 49914648，2026-09-30T21:23:01Z / 约 2026-10-01 05:23 CST，Algolia 早间核对 2pts）https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant 2026 浏览器实时 GPU 光线追踪：沿 Schwarzschild 黑洞测地线弯曲光线，可拖拽轨道、调曲率 / FOV / 步数，开关吸积盘、行星、反射球与爱因斯坦环演示。公开页早间 GET HTTP 200。预览为 Playwright 实拍黑洞阴影与吸积盘裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49914648 (2026-09-30T21:23:01Z / about 2026-10-01 05:23 CST, 2pts on Algolia at the morning check) at https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant’s 2026 in-browser real-time GPU raytracer that bends light along Schwarzschild geodesics; drag to orbit, tune curvature / FOV / steps, and toggle accretion disk, planets, reflective spheres, and Einstein-ring demos. Public page morning GET HTTP 200. Preview is a Playwright capture of the black-hole shadow and disk, cropped to 3:2 WebP.",
+      "types": [
+        "demo",
+        "interactive"
+      ],
+      "sourceUrl": "https://rivendell.dmitrybrant.com/blackhole/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49914648"
+      ],
+      "previewImage": "/previews/blackhole-raytracer.webp",
+      "featured": true,
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-10-01T01:00:00Z",
+      "qualityNote": "主源是 Show HN 49914648 与公开页。收录理由：可动手的 GR 光线弯曲可视化，参数可调。边界：作者写明吸积盘简化、视点是悬停快照而非真实坠入体验；热度早间仅 2pts，但页面完整可试。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49914648 and the public page. Listing rationale: a hands-on GR light-bending visualization with tunable parameters. Boundary: author notes a simplified disk and a hovering snapshot view, not a free-fall experience; morning score was only 2pts, but the page is complete and tryable. Preview is self-hosted.",
+      "tags": [
+        "blackhole",
+        "raytracing",
+        "webgl",
+        "physics",
+        "demo",
+        "show-hn",
+        "relativity"
+      ]
+    },
+    {
       "id": "space-bl2",
       "slug": "space-bl2",
       "title": "Space Now：实时太阳系 + 52 万小行星与在轨卫星",
@@ -3041,9 +3170,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-30T01:20:00Z",
+    "updatedAt": "2026-10-01T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.50",
-    "count": 103
+    "version": "1.3.51",
+    "count": 107
   }
 }

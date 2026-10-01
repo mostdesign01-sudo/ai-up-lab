@@ -1,6 +1,52 @@
 {
   "cases": [
     {
+      "id": "team-bots",
+      "slug": "xai-team-bots",
+      "title": "官方发布：Team Bots（共享上下文的团队 Bot）",
+      "titleEn": "Official launch: Team Bots (shared-context team bots)",
+      "summary": "SpaceXAI 官方 2026-09-28 发布 https://x.ai/news/team-bots ：把一只配好上下文 / 插件 / 凭证 / 记忆的 Grok Bot 共享给整队，每人私聊仍隔离，也可拉进 Slack 频道协作。文内可复现四条工作流——客户组（夜间读 Gong/Notion/Slack，工作日早间发 brief 与角色草稿）、工程组（接 Linear/Datadog/Cursor，开 Cloud Agent 修明确 bug）、营销组（对照品牌指南审稿并改站到预览人签）、数据组（只读 Databricks 答一次性分析，记住纠正）。公开页写明 Teams / Enterprise 公测；文内 Harper「24 小时建 Bot、挽回 12 万美元保费」等为客户口述，本库不当独立 KPI。异于已收录的个人营销/GTM/Engineering Guides。",
+      "summaryEn": "Official SpaceXAI launch on 2026-09-28 at https://x.ai/news/team-bots: share one Grok Bot configured with context, plugins, credentials, and memory across a team, while keeping each person’s chats private, or invite it into Slack. Four reproducible internal workflows: account teams (nightly Gong/Notion/Slack review → weekday morning brief and role-specific drafts), engineering (Linear/Datadog/Cursor, launch Cloud Agents for well-scoped fixes), marketing (brand-guide review then website/SEO changes to preview for human sign-off), and data (read-only Databricks answers that remember corrections). Page states Teams/Enterprise public beta. Harper’s “built in 24 hours / $120k recovered” line is a customer quote, not an independent KPI here. Distinct from already-catalogued personal Marketing/GTM/Engineering Guides.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation",
+        "sales",
+        "marketing",
+        "engineering"
+      ],
+      "role": "Team shared Bot",
+      "sourceUrl": "https://x.ai/news/team-bots",
+      "secondaryUrls": [
+        "https://x.ai/news",
+        "https://x.ai/bot"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 x.ai/news 官方发布页（页内日期 2026-09-28）。收录理由：可照着搭的共享 Bot 四条工作流，不是空泛产品新闻。边界：Teams/Enterprise 公测；客户数字与「100+ PR/天」为官方/客户叙述，本库未复跑；对外发帖、改生产、花钱与写仓库权限仍人审。",
+      "qualityNoteEn": "Primary source is the official x.ai/news launch page (in-page date 2026-09-28). Listing rationale: four concrete shared-Bot workflows you can mirror, not vague product news. Boundary: Teams/Enterprise public beta; customer figures and “100+ PRs/day” are vendor/customer claims, not re-run here; still human-gate posts, production changes, spend, and write access.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "私聊问答与草稿可先跑；Slack 公开发布、改网站上线、开 Cloud Agent 合入、查仓写操作与花钱必须人批。",
+      "approvalBoundaryEn": "Private Q&A and drafts can run first; Slack broadcasts, live site changes, Cloud Agent merges, warehouse writes, and spend need a human.",
+      "connectors": [
+        "slack",
+        "notion",
+        "github",
+        "salesforce",
+        "linear",
+        "datadog",
+        "cursor",
+        "databricks"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-10-01T01:00:00Z"
+    },
+    {
       "id": "grok-bot-for-marketing",
       "slug": "xai-grok-bot-for-marketing",
       "title": "官方指南：Grok Bot for Marketing（六席营销小队）",
@@ -5483,11 +5529,14 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-30T01:20:00Z",
+    "updatedAt": "2026-10-01T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.35",
-    "count": 132,
+    "version": "1.4.36",
+    "count": 133,
     "sourcesCrawled": [
+      "https://x.ai/bot",
+      "https://x.ai/news",
+      "https://x.ai/news/team-bots",
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
       "https://personaljarvis.ai",
