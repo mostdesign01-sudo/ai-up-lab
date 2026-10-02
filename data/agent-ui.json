@@ -31,7 +31,9 @@
       "qualityNote": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。README 写明编排的是 Claude Code CLI 子进程，并列出 Director / Planner / Advisor 与 Claude Code / OpenAI / Perplexity；官网营销计数不转成核验指标。registry.npmjs.org/rondoflow 返回 404，不填 npmPackage。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。",
       "qualityNoteEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The README says the canvas runs Claude Code CLI subprocesses and lists Director / Planner / Advisor plus Claude Code / OpenAI / Perplexity; homepage marketing counts are not recorded as verified metrics. registry.npmjs.org/rondoflow returned 404, so npmPackage is omitted. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T12:28:44Z"
+      "updatedAt": "2026-09-23T12:28:44Z",
+      "hook": "在画布上编排本机 Agent，真的会改文件、跑命令。",
+      "hookEn": "Arrange local agents on a canvas that edits files and runs commands."
     },
     {
       "id": "facet-3d",
@@ -67,7 +69,9 @@
       "qualityNote": "MIT（2026-09-22 gh api）。公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。预览为 Playwright 实拍 playground 首屏裁 3:2。",
       "qualityNoteEn": "MIT (gh api, 2026-09-22). Public playground and GitHub README both state 30 components, copy-paste, and Agent MCP; not ThreeUI Pro. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
       "publishedAt": "2026-09-22",
-      "updatedAt": "2026-09-22T01:20:00Z"
+      "updatedAt": "2026-09-22T01:20:00Z",
+      "hook": "30 个可复制进项目的三维组件，Agent 也能按目录装。",
+      "hookEn": "30 copy-paste 3D components, with a catalog an agent can install from."
     },
     {
       "id": "sylva-living-world",
@@ -101,7 +105,9 @@
       "qualityNote": "community-sync-report（2026-08-31）components 含 sylva-living-world（variant living-green），不在 excludedProParents；仓库 MIT。公开页 200（2026-09-18），默认变体 Living Green 免登录可看，页头 GET PRO 为站级 CTA（Bookshelf 等 Community 页同样存在）。预览为 Playwright 实拍 Living Green 演示画布（约 40s 生长态）裁 3:2。",
       "qualityNoteEn": "Listed in community-sync-report (2026-08-31) components as sylva-living-world (variant living-green), not in excludedProParents; repo is MIT. Public page 200 (2026-09-18); the default Living Green variant renders without login, and the header GET PRO is a site-wide CTA (also present on Community pages such as Bookshelf). Preview is a Playwright capture of the live Living Green canvas (~40s into growth) cropped to 3:2.",
       "publishedAt": "2026-09-18",
-      "updatedAt": "2026-09-18T12:31:00Z"
+      "updatedAt": "2026-09-18T12:31:00Z",
+      "hook": "免费的苔藓森林场景；同页的季节变体不收录。",
+      "hookEn": "A free moss-forest scene; seasonal variants on the page are not listed."
     },
     {
       "id": "bookshelf",
@@ -135,7 +141,9 @@
       "qualityNote": "community-sync-report 含 bookshelf（Community 免费）。公开页 200（2026-09-18）；预览取官方缩略图裁 3:2。",
       "qualityNoteEn": "Listed in community-sync-report as bookshelf (Community/free). Public page 200 (2026-09-18); preview is the official thumbnail cropped to 3:2.",
       "publishedAt": "2026-09-18",
-      "updatedAt": "2026-09-18T01:12:00Z"
+      "updatedAt": "2026-09-18T01:12:00Z",
+      "hook": "可以翻开检视的书架场景，封面带着箔印。",
+      "hookEn": "A bookshelf scene you can open and page through, with foil covers."
     },
     {
       "id": "engraved-certificate",
@@ -168,7 +176,9 @@
       "qualityNote": "community-sync-report 含 engraved-certificate（Community 免费）。公开页 200（2026-09-17）；预览取官方缩略图裁 3:2。",
       "qualityNoteEn": "Listed in community-sync-report as engraved-certificate (Community/free). Public page 200 (2026-09-17); preview is the official thumbnail cropped to 3:2.",
       "publishedAt": "2026-09-17",
-      "updatedAt": "2026-09-17T01:23:00Z"
+      "updatedAt": "2026-09-17T01:23:00Z",
+      "hook": "雕版证书板面，圆形扭索纹会自己轮换状态。",
+      "hookEn": "An engraved certificate whose guilloche rosettes cycle on their own."
     },
     {
       "id": "zephyr-framework",
@@ -202,7 +212,9 @@
       "qualityNote": "公开演示 200（2026-09-15）。组件数为站点自述；预览取文档页 Agent API 段 3:2。非 ThreeUI。",
       "qualityNoteEn": "Public demo returned 200 (2026-09-15). Component count is a site claim; preview is a 3:2 crop around the Agent API section. Not ThreeUI.",
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "零运行时的网页组件，Agent 可以开窗、切页、推数据。",
+      "hookEn": "Zero-runtime web components an agent can open, switch, and fill with data."
     },
     {
       "id": "cloud-field",
@@ -235,7 +247,9 @@
       "qualityNote": "Community 免费背景（2026-09-14 核到页面可达、Copy Prompt 可见、无 Pro template 遮罩；规范 URL 为 /backgrounds/portal-field/cloud-field）。复制 prompt，勿手写体积云。",
       "qualityNoteEn": "Free Community background (page reachable with Copy Prompt and no Pro template overlay, checked 2026-09-14; canonical URL /backgrounds/portal-field/cloud-field). Copy the prompt; don’t hand-author volume clouds.",
       "publishedAt": "2026-09-14",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "星空下的云层气流，适合做落地页或控制台的底。",
+      "hookEn": "A starfield of drifting clouds, meant as atmosphere for a landing or a console."
     },
     {
       "id": "dot-border-button",
@@ -268,7 +282,9 @@
       "qualityNote": "Community 免费按钮（2026-09-14 核到 Copy Prompt、无 Pro template 遮罩；规范 URL 为 /buttons/rectangle-buttons/dot-border-button）。复制 prompt，勿手写描边动画。",
       "qualityNoteEn": "Free Community button (Copy Prompt present, no Pro template overlay, checked 2026-09-14; canonical URL /buttons/rectangle-buttons/dot-border-button). Copy the prompt; don’t hand-author the border motion.",
       "publishedAt": "2026-09-14",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "四角点阵、虚线描边的按钮，适合控制台的主操作。",
+      "hookEn": "A dotted-corner button with dashed borders, for a console's main action."
     },
     {
       "id": "typography-vortex",
@@ -301,7 +317,9 @@
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写粒子环。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the particle rings.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-13T12:20:00Z"
+      "updatedAt": "2026-09-13T12:20:00Z",
+      "hook": "旋转的字环和漂浮字形，指针扫过会把字溶开。",
+      "hookEn": "Spinning type rings and drifting letters that dissolve under the pointer."
     },
     {
       "id": "semantic-bloom",
@@ -334,7 +352,9 @@
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写黏稠粒子场。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the viscous particle field.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-13T12:20:00Z"
+      "updatedAt": "2026-09-13T12:20:00Z",
+      "hook": "可改的字标，粒子被吸向字母并把它点亮。",
+      "hookEn": "A wordmark that pulls a particle field into its letters and lights them up."
     },
     {
       "id": "uplink-loader",
@@ -367,7 +387,9 @@
       "qualityNote": "Community 免费 CSS 加载件（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community CSS loader (Copy Prompt present, no Pro template overlay, checked 2026-09-12). Copy the prompt; don’t hand-write shaders.",
       "publishedAt": "2026-09-12",
-      "updatedAt": "2026-09-12T12:15:00Z"
+      "updatedAt": "2026-09-12T12:15:00Z",
+      "hook": "赛博风的上行加载条，进度、刻度和霓虹读数都在。",
+      "hookEn": "A cinematic uplink loader with stepped progress, ticks, and neon readouts."
     },
     {
       "id": "spark-badge",
@@ -400,7 +422,9 @@
       "qualityNote": "Community 免费背景（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。四变体均按免费收录。",
       "qualityNoteEn": "Free Community background (Copy Prompt present, no Pro template overlay, checked 2026-09-12). All four variants treated as free.",
       "publishedAt": "2026-09-12",
-      "updatedAt": "2026-09-12T12:15:00Z"
+      "updatedAt": "2026-09-12T12:15:00Z",
+      "hook": "光雨拼出的徽章背景，适合成就或密钥卡的氛围。",
+      "hookEn": "A badge assembled from luminous rain, for an achievement or key-card mood."
     },
     {
       "id": "3d-paper",
@@ -432,7 +456,9 @@
       "qualityNote": "Community 免费 Three.js 纸张组件（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js paper component (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "立体纸张封面，适合作品集和证书卡。",
+      "hookEn": "Dimensional paper covers for a portfolio or a certificate card."
     },
     {
       "id": "woven-cloth",
@@ -465,7 +491,9 @@
       "qualityNote": "Community 免费 Three.js 背景（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js background (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "编织布料的三维背景，适合落地页的材质底。",
+      "hookEn": "A woven-cloth background for the material base of a landing page."
     },
     {
       "id": "matrix-field",
@@ -499,7 +527,9 @@
       "qualityNote": "Community 免费背景（无 PRO 角标，在 THREEUI 免费栏目下的 Laser 家族）。复制 prompt，勿手写着色器。预览为 ThreeUI 官方缩略图裁 3:2。",
       "qualityNoteEn": "Free Community background (no PRO badge; Laser family under the free THREEUI section). Copy the prompt — do not hand-write the shader. Preview is ThreeUI’s official thumbnail cropped to 3:2.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T12:00:00Z"
+      "updatedAt": "2026-09-10T12:00:00Z",
+      "hook": "跟着指针走的激光矩阵，适合面板的氛围底。",
+      "hookEn": "A pointer-reactive laser matrix for the atmosphere behind a panel."
     },
     {
       "id": "liquid-metal-button",
@@ -533,7 +563,9 @@
       "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。预览为现场演示帧（指针悬停态）裁 3:2。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge; under Buttons in the free THREEUI section). Copy the prompt and only change label / hue — do not hand-write the shader. Preview is a live demo frame (pointer-hover state) cropped to 3:2.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T12:00:00Z"
+      "updatedAt": "2026-09-10T12:00:00Z",
+      "hook": "液态金属按钮，指针带动光谱，按下泛起涟漪。",
+      "hookEn": "A liquid-metal button whose color follows the pointer and ripples on press."
     },
     {
       "id": "energy-orb",
@@ -566,7 +598,9 @@
       "qualityNote": "Community 免费背景（无 PRO 角标）。复制 prompt 只改色相/透明度，不要手写着色器。",
       "qualityNoteEn": "Free Community background (no PRO badge). Copy the prompt and only retint hue/opacity — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "带边缘辉光和星场的能量球，适合面板氛围。",
+      "hookEn": "An energy globe with rim glow and a star field, for panel atmosphere."
     },
     {
       "id": "generative-tree",
@@ -600,7 +634,9 @@
       "qualityNote": "Community 免费 Elements 变体（无 PRO 角标）。复制 prompt 只改色相与粒子，不要手写动效。",
       "qualityNoteEn": "Free Community Elements variant (no PRO badge). Copy the prompt and only retint hue / particles — do not hand-write motion.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "画笔感的树从根长到金尖，指针像风一样吹它。",
+      "hookEn": "A painterly tree that grows to golden tips and sways as if the pointer were wind."
     },
     {
       "id": "performance-gauges",
@@ -634,7 +670,9 @@
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt 只改色相与文案，不要手写动效。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and only retint hue / labels — do not hand-write motion.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "转速表一类的性能仪表，用来装饰实时指标。",
+      "hookEn": "Performance gauges, including a tachometer, as ornament for live metrics."
     },
     {
       "id": "circle-buttons",
@@ -668,7 +706,9 @@
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt，改主色即可。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and retint the accent.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "圆形按钮，暗玻璃表面上有一圈转动的光。",
+      "hookEn": "Circle buttons on dark glass, with a light that travels the rim."
     },
     {
       "id": "wireframe-forms-cube",
@@ -701,7 +741,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Wireframe Forms 的 cube 做 Agent 面板装饰。保持免费 Community 变体，线框疏一点、色相偏冷。",
       "promptHintEn": "Use Wireframe Forms cube as Agent panel ornament. Keep the free Community variant, thin the wireframe, cool the hue.",
-      "previewImage": "/previews/wireframe-forms-cube.webp"
+      "previewImage": "/previews/wireframe-forms-cube.webp",
+      "hook": "棱镜线框立方体，适合界面上的小装饰。",
+      "hookEn": "A prismatic wireframe cube for a small ornament on an interface."
     },
     {
       "id": "three-ws",
@@ -735,7 +777,9 @@
       "npmPackage": "@three-ws/sdk",
       "promptHint": "用 three.ws 的 agent-3d 嵌入做站点里的 3D 助手壳；保持开源嵌入，换我们的形象与人设。",
       "promptHintEn": "Embed three.ws agent-3d as the site’s 3D assistant shell; keep the open-source embed and swap in our avatar and persona.",
-      "previewImage": "/previews/three-ws.webp"
+      "previewImage": "/previews/three-ws.webp",
+      "hook": "两行 HTML 嵌入的三维形象，文字或自拍就能造。",
+      "hookEn": "A 3D agent you embed in two lines of HTML and shape from text or a selfie."
     },
     {
       "id": "shadcn-ui",
@@ -763,7 +807,9 @@
       ],
       "promptHint": "先用 shadcn/ui 搭按钮、表单和对话框，再往上叠 Beautiful UI 的 Agent 原语。",
       "promptHintEn": "Build buttons, forms, and dialogs with shadcn/ui first, then stack Beautiful UI’s agent primitives on top.",
-      "previewImage": "/previews/shadcn-ui.webp"
+      "previewImage": "/previews/shadcn-ui.webp",
+      "hook": "开源的设计系统地基，组件复制进项目再改。",
+      "hookEn": "An open design-system base: copy the components in and make them yours."
     },
     {
       "id": "transitions-dev",
@@ -792,7 +838,9 @@
       ],
       "promptHint": "从 Transitions.dev 免费区抄一个流式文字或思考态过渡，接到现有 Chat 组件上。",
       "promptHintEn": "Copy one free streaming-text or thinking-state transition from Transitions.dev onto the existing Chat component.",
-      "previewImage": "/previews/transitions-dev.webp"
+      "previewImage": "/previews/transitions-dev.webp",
+      "hook": "给 Agent 的界面过渡：卡片缩放、数字翻动、文字流出。",
+      "hookEn": "Interface transitions for agents: cards resize, numbers pop, and text streams in."
     },
     {
       "id": "rare-ui",
@@ -820,7 +868,9 @@
       ],
       "promptHint": "参考 Rare UI 的动效密度，只抄一个交互进现有页面，不要整站换皮。",
       "promptHintEn": "Take Rare UI’s motion density; copy one interaction into the existing page, don’t reskin the whole site.",
-      "previewImage": "/previews/rare-ui.webp"
+      "previewImage": "/previews/rare-ui.webp",
+      "hook": "少见的动效组件，适合给 Agent 当高完成度参考。",
+      "hookEn": "Uncommon animated components, a high-finish reference for an agent."
     },
     {
       "id": "beui",
@@ -850,7 +900,9 @@
       ],
       "promptHint": "从 beUI registry 装一个 Prompt Input 和 Approval Card，动效跟项目主色走。",
       "promptHintEn": "Install a Prompt Input and Approval Card from the beUI registry. Match motion to the project’s primary color.",
-      "previewImage": "/previews/beui.webp"
+      "previewImage": "/previews/beui.webp",
+      "hook": "带动效的 React 组件，附带给 Agent 的安装说明。",
+      "hookEn": "Animated React components with install notes written for an agent."
     },
     {
       "id": "beautiful-ui",
@@ -877,7 +929,9 @@
       ],
       "promptHint": "用 Beautiful UI 的 Approval Card 和 Thinking 做 Agent 对话页。保持深色，审批默认停住。",
       "promptHintEn": "Use Beautiful UI’s Approval Card and Thinking for an agent chat. Keep it dark; approvals stay blocked by default.",
-      "previewImage": "/previews/beautiful-ui.webp"
+      "previewImage": "/previews/beautiful-ui.webp",
+      "hook": "给 AI 界面的零件：思考轨迹、审批卡和输入条。",
+      "hookEn": "Parts for an AI interface: thinking traces, approval cards, and a prompt bar."
     },
     {
       "id": "buttermax",
@@ -909,7 +963,9 @@
       ],
       "promptHint": "参考 Buttermax 的首屏：大字标 + 中间一件 3D 物 + 少按钮。转场和鼠标跟随要慢、要润，不要堆特效。",
       "promptHintEn": "Take Buttermax’s first screen: big wordmark, one 3D object in the middle, few buttons. Keep transitions and mouse-follow slow and smooth — don’t pile on effects.",
-      "previewImage": "/previews/buttermax.webp"
+      "previewImage": "/previews/buttermax.webp",
+      "hook": "鼠标跟随、液态动效和转场都很顺的作品集站。",
+      "hookEn": "A portfolio worth taking apart for its mouse-follow, liquid motion, and page changes."
     },
     {
       "id": "metalforge-progress",
@@ -941,7 +997,9 @@
       ],
       "promptHint": "用 MetalForge Progress 做同步/加载进度条。先在编辑器里选 Spring 或 Slosh，换成我们的主色，导出前先截预览给设计看。",
       "promptHintEn": "Use MetalForge Progress for a sync/loading bar. Pick Spring or Slosh in the editor, switch to our primary color, and screenshot the preview for design before exporting.",
-      "previewImage": "/previews/metalforge-progress.webp"
+      "previewImage": "/previews/metalforge-progress.webp",
+      "hook": "在浏览器里调进度条着色器，并能实时预览。",
+      "hookEn": "Progress-bar shaders you can tweak in the browser with a live preview."
     },
     {
       "id": "structure-flow",
@@ -975,7 +1033,9 @@
       "titleEn": "Structure Flow",
       "summaryEn": "A ThreeUI Community 3D field study: free variants for structure flow, orbit orbs, lattices, nebulae, and fluid fields. No login; preview on the browse page.",
       "qualityNoteEn": "A good first 3D hero for an Agent: copy the page prompt / Skill.md and only change hue, point size, and speed — no hand-editing of procedural JS.",
-      "promptHintEn": "Use Structure Flow as a product first-screen background. Keep the free Community variant, switch to our primary color, slow it down, and thin out the points."
+      "promptHintEn": "Use Structure Flow as a product first-screen background. Keep the free Community variant, switch to our primary color, slow it down, and thin out the points.",
+      "hook": "结构流、星云和流体场，打开就能预览。",
+      "hookEn": "A field study of structure flow, nebulae, and fluid you can preview without signing in."
     },
     {
       "id": "predictive-arc",
@@ -1009,7 +1069,9 @@
       "titleEn": "Predictive Arc",
       "summaryEn": "Canvas / WebGL signal arcs: predictive arc, pixel arc, particles, grid, and halftone flow. Free variants live in the Community directory.",
       "qualityNoteEn": "Works well for a dashboard or “thinking” state. Hand the prompt to an Agent, tune hue / speed, and make it your data arc — stay off Pro variants.",
-      "promptHintEn": "Drop Predictive Arc into a console top bar. Use a free variant, switch to brand amber, slow it down, and keep it readable."
+      "promptHintEn": "Drop Predictive Arc into a console top bar. Use a free variant, switch to brand amber, slow it down, and keep it readable.",
+      "hook": "预测弧、粒子和网格组成的信号弧，适合做流动背景。",
+      "hookEn": "Signal arcs of prediction, particles, and grids, for a flowing background."
     },
     {
       "id": "brand-orbs",
@@ -1042,7 +1104,9 @@
       "titleEn": "Brand Orbs",
       "summaryEn": "A set of Canvas brand orbs: free Claude, Cursor, GitHub, Figma, and other variants. Fits a tools wall or integrations list.",
       "qualityNoteEn": "A ready start for an integrations icon wall. On the Skill side, swap logos and size; the theme can change as a group.",
-      "promptHintEn": "Use Brand Orbs as a “tools we connect” row. Keep free variants only, unify the size, and let hover spin gently."
+      "promptHintEn": "Use Brand Orbs as a “tools we connect” row. Keep free variants only, unify the size, and let hover spin gently.",
+      "hook": "一排品牌球，适合做工具墙或集成列表。",
+      "hookEn": "A row of brand orbs for a tools wall or an integrations list."
     },
     {
       "id": "rectangle-buttons",
@@ -1075,7 +1139,9 @@
       "titleEn": "Rectangle Buttons",
       "summaryEn": "Community rectangle button family: dark glass, Launch, dotted borders, sliding type, gradient beams, and other free CTAs. Pure CSS/DOM.",
       "qualityNoteEn": "The fastest swap for a landing primary button. Copy the prompt, change color and copy; the Agent does not need to rewrite motion.",
-      "promptHintEn": "Pick a free CTA from Rectangle Buttons. Change the copy to “Start trial” and the color to the site accent."
+      "promptHintEn": "Pick a free CTA from Rectangle Buttons. Change the copy to “Start trial” and the color to the site accent.",
+      "hook": "矩形的主按钮，从暗玻璃到渐变光束都有。",
+      "hookEn": "Rectangle actions, from dark glass to a gradient beam."
     },
     {
       "id": "shader-buttons",
@@ -1109,7 +1175,9 @@
       "titleEn": "Shader Buttons",
       "summaryEn": "Shader buttons: free WebGL variants such as Star Portal, Ignition, Plasma, and Thinking. Fits a high-energy CTA.",
       "qualityNoteEn": "Use this set when you want an Agent to make a button that “breathes.” Changing hue in Skill.md is enough — do not hand-write GLSL.",
-      "promptHintEn": "Use the free Thinking variant from Shader Buttons as a “generating” button. Switch to indigo and drop the brightness a little."
+      "promptHintEn": "Use the free Thinking variant from Shader Buttons as a “generating” button. Switch to indigo and drop the brightness a little.",
+      "hook": "从星门到等离子的着色器按钮，适合醒目的主操作。",
+      "hookEn": "Shader buttons, from a star portal to plasma, for a high-energy action."
     },
     {
       "id": "constellation-field",
@@ -1142,7 +1210,9 @@
       "titleEn": "Constellation Field",
       "summaryEn": "Particle constellation fields: free Canvas variants for drift, networks, gate flow, links, and contours. Fits a connected-feeling background.",
       "qualityNoteEn": "A background for multi-agent / network stories. Hand the prompt to an Agent, tune density and stroke; once the theme changes, ship it.",
-      "promptHintEn": "Use Constellation Field as a “collaboration network” background. Fewer particles, thinner lines, colors that sit with the paper base."
+      "promptHintEn": "Use Constellation Field as a “collaboration network” background. Fewer particles, thinner lines, colors that sit with the paper base.",
+      "hook": "粒子连成的星座场，适合做有连接感的背景。",
+      "hookEn": "Particle constellations for a background that feels connected."
     },
     {
       "id": "landscape",
@@ -1176,7 +1246,9 @@
       "titleEn": "Landscape",
       "summaryEn": "A 3D landscape that can switch time of day and weather: free sunrise, noon, sunset, night, rain, and snow variants.",
       "qualityNoteEn": "A ready scene for an atmosphere page or weather product. The Agent only needs to change the time of day per the Skill — no need to rebuild terrain.",
-      "promptHintEn": "Use the Landscape sunset variant as a cover. Stay on the free Community set; do not switch to Pro terrain."
+      "promptHintEn": "Use the Landscape sunset variant as a cover. Stay on the free Community set; do not switch to Pro terrain.",
+      "hook": "可切换晨昏和天气的三维地貌。",
+      "hookEn": "A 3D landscape that switches time of day and weather."
     },
     {
       "id": "sketchbook",
@@ -1209,7 +1281,9 @@
       "titleEn": "Sketchbook",
       "summaryEn": "MengTo Sketchbook landing: like a flip-through sketchbook. The full Community page opens with no login.",
       "qualityNoteEn": "A full-page template for portfolio narrative. Hand the prompt to an Agent, swap cover type and paper color, and leave the structure alone at first.",
-      "promptHintEn": "Use the Sketchbook landing as the skeleton of our portfolio home. Keep the page-turn rhythm; only change copy and primary color."
+      "promptHintEn": "Use the Sketchbook landing as the skeleton of our portfolio home. Keep the page-turn rhythm; only change copy and primary color.",
+      "hook": "像一本可以翻开的速写本，整页打开就能看。",
+      "hookEn": "A landing that opens like a sketchbook you can flip through."
     },
     {
       "id": "kage",
@@ -1242,7 +1316,9 @@
       "titleEn": "Kage",
       "summaryEn": "Kage landing: a full-page template of shadow and leftover space. Community-free; title type and primary color can be tuned.",
       "qualityNoteEn": "A good start for a quiet brand site. The Skill controls type and primary color; an Agent rethemes faster than rewriting layout.",
-      "promptHintEn": "Use Kage as a brand intro page. Change the title to our Chinese name, use indigo as the primary, and keep the large leftover space."
+      "promptHintEn": "Use Kage as a brand intro page. Change the title to our Chinese name, use indigo as the primary, and keep the large leftover space.",
+      "hook": "偏影与留白的整页模板，标题字体和主色都能改。",
+      "hookEn": "A full-page template of shadow and open space, with type and color you can tune."
     },
     {
       "id": "complete-shelf",
@@ -1275,7 +1351,9 @@
       "titleEn": "Complete Shelf",
       "summaryEn": "A full-wall bookshelf landing: fits a bookstore, course catalog, or “all work” index. Free Community full page.",
       "qualityNoteEn": "Catalog sites can reuse this as-is. Let the Agent change spine colors and titles per the Skill — do not rebuild the shelf geometry.",
-      "promptHintEn": "Use Complete Shelf as a course catalog. Each spine is a course name; primary color follows the site paper tone."
+      "promptHintEn": "Use Complete Shelf as a course catalog. Each spine is a course name; primary color follows the site paper tone.",
+      "hook": "整面书架，适合书店、课程或全部作品。",
+      "hookEn": "A full wall of shelves for a bookstore, a course list, or all of the work."
     },
     {
       "id": "sylva-living-green",
@@ -1309,7 +1387,9 @@
       "titleEn": "Sylva · Living Green",
       "summaryEn": "The free Living Green variant of the Sylva landing: a full-page forest mood. Sakura / Maple / Sequoia in the same series are Pro and are not listed here.",
       "qualityNoteEn": "A free full page for nature-leaning products. Link Living Green only; do not open or prompt sakura / maple and other Pro variants.",
-      "promptHintEn": "Use only Sylva’s Living Green. Change the title and primary color. Do not switch to seasonal variants marked PRO."
+      "promptHintEn": "Use only Sylva’s Living Green. Change the title and primary color. Do not switch to seasonal variants marked PRO.",
+      "hook": "整页森林氛围的落地页，这一版可以免费用。",
+      "hookEn": "A full-page forest landing you can use for free."
     },
     {
       "id": "text-path-studies",
@@ -1342,7 +1422,9 @@
       "titleEn": "Text Path Studies",
       "summaryEn": "Path-type studies: free Canvas variants for globe type, outline flow, glyph clouds, cloth, ripples, and spheres.",
       "qualityNoteEn": "Use when a chapter title should “walk a path.” The Agent only changes the words and hue; geometry stays with the existing Skill.",
-      "promptHintEn": "Use Text Path Studies for a chapter title. Change the words to the Chinese product name; hue should sit with the paper base."
+      "promptHintEn": "Use Text Path Studies for a chapter title. Change the words to the Chinese product name; hue should sit with the paper base.",
+      "hook": "字沿着路径走：地球、布料、涟漪和球体。",
+      "hookEn": "Type that follows a path: a globe, cloth, ripples, and a sphere."
     },
     {
       "id": "gallery-heading",
@@ -1375,7 +1457,9 @@
       "titleEn": "Gallery Heading",
       "summaryEn": "Gallery wordmarks: free rising-diagonal, falling, sweep, and loop variants. Fits portfolio section breaks.",
       "qualityNoteEn": "Ready motion for section titles. Copy the prompt to change type and hue; the Agent does not need to rebuild the sweep.",
-      "promptHintEn": "Use Gallery Heading for portfolio sections. Change the title to “Featured,” make the type a bit heavier, hue toward indigo."
+      "promptHintEn": "Use Gallery Heading for portfolio sections. Change the title to “Featured,” make the type a bit heavier, hue toward indigo.",
+      "hook": "画廊用的字标，斜向升起、坠落或横扫。",
+      "hookEn": "Gallery wordmarks that rise on a diagonal, fall, or sweep across."
     },
     {
       "id": "article-headings",
@@ -1409,7 +1493,9 @@
       "titleEn": "Article Headings",
       "summaryEn": "Article-open wordmarks: free intro type, particle wordmarks, and audio wordmarks. Fits a long-form or changelog header.",
       "qualityNoteEn": "Reusable for blog/log titles. Hand the Skill to an Agent to change copy and rhythm; keep particle density low.",
-      "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read."
+      "promptHintEn": "Use Article Headings as a changelog header. Change the words to “Listed today,” fewer particles, easier to read.",
+      "hook": "文章开头的字标，适合长文或更新日志的顶栏。",
+      "hookEn": "Wordmarks for the top of a long piece or a changelog."
     },
     {
       "id": "koi-studies",
@@ -1443,7 +1529,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Koi Studies 做作品集封面。保持 Community 免费变体，换成我们的纸色和主红，翻页慢一点，打开减弱动效时用静态叠。",
-      "promptHintEn": "Use Koi Studies as a portfolio cover. Keep the free Community variant, switch to our paper color and primary red, slow the flip, and use a static stack when reduced motion is on."
+      "promptHintEn": "Use Koi Studies as a portfolio cover. Keep the free Community variant, switch to our paper color and primary red, slow the flip, and use a static stack when reduced motion is on.",
+      "hook": "可翻页的锦鲤卡片，指针一斜就有立体深度。",
+      "hookEn": "A stack of koi cards with real depth that tilts under the pointer."
     },
     {
       "id": "bestsellers-book-showcase",
@@ -1477,7 +1565,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Bestsellers Book Showcase 做系列手册首屏。保持 Community 免费版，换成我们的书名、主色和衬线字体，不要加 Pro 变体。",
-      "promptHintEn": "Use Bestsellers Book Showcase as a series-manual first screen. Keep the free Community edition, swap in our titles, primary color, and serif; do not add Pro variants."
+      "promptHintEn": "Use Bestsellers Book Showcase as a series-manual first screen. Keep the free Community edition, swap in our titles, primary color, and serif; do not add Pro variants.",
+      "hook": "一整页书封陈列，标题字体和主色都能改。",
+      "hookEn": "A full page of book covers in an editorial layout, with type and color you can tune."
     },
     {
       "id": "japanese-tower",
@@ -1511,7 +1601,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Country Towers 的 Japan 变体做文化产品首屏。保持 Community 免费版，相机再远一点，搭建动画放慢，地形再绿一些。",
-      "promptHintEn": "Use the Japan variant of Country Towers as a cultural-product first screen. Keep the free Community edition, pull the camera back, slow the build animation, and make the terrain a bit greener."
+      "promptHintEn": "Use the Japan variant of Country Towers as a cultural-product first screen. Keep the free Community edition, pull the camera back, slow the build animation, and make the terrain a bit greener.",
+      "hook": "六国塔楼立在程序化的地形上，可以转着看。",
+      "hookEn": "Towers from six countries stand on a generated landscape you can orbit."
     },
     {
       "id": "character-carousel",
@@ -1545,7 +1637,9 @@
       ],
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Character Carousel 的 filmstrip 变体做 Agent 团队墙。保持 Community 免费版，换成我们的人名与职责，主色跟品牌走。",
-      "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color."
+      "promptHintEn": "Use the filmstrip variant of Character Carousel as an Agent team wall. Keep the free Community edition, swap in our names and roles, and match the brand color.",
+      "hook": "人像卡片走马灯，指针、滚轮和键盘都能换。",
+      "hookEn": "A carousel of character cards you switch with the pointer, the wheel, or the keyboard."
     },
     {
       "id": "warp-field",
@@ -1578,7 +1672,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Warp Field 的 streaks 做产品首屏背景。保持免费 Community 变体，换成靛紫，拖影疏一点。",
       "promptHintEn": "Use Warp Field streaks as the product first-screen background. Keep the free Community variant, switch to indigo, and thin the streaks.",
-      "previewImage": "/previews/warp-field.webp"
+      "previewImage": "/previews/warp-field.webp",
+      "hook": "跃迁拖影场，适合落地页第一屏的速度感。",
+      "hookEn": "A warp-streak field for the rush of a landing-page first screen."
     },
     {
       "id": "diagnostics-panel",
@@ -1610,7 +1706,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Diagnostics Panel 的 layers 变体做状态页。保持免费 Community 变体，层色换成我们的主色。",
       "promptHintEn": "Use the layers variant of Diagnostics Panel as a status page. Keep the free Community variant and switch layer colors to ours.",
-      "previewImage": "/previews/diagnostics-panel.webp"
+      "previewImage": "/previews/diagnostics-panel.webp",
+      "hook": "等距的诊断台，适合运维或系统结构的可视化。",
+      "hookEn": "An isometric diagnostics board for operations or a view of a system."
     },
     {
       "id": "liquid-form",
@@ -1642,7 +1740,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Liquid Form 做首屏背景。保持免费 Community 变体，金属色换成我们的主色，流动放慢。",
       "promptHintEn": "Use Liquid Form as the first-screen background. Keep the free Community variant, switch the metal to our primary color, and slow the flow.",
-      "previewImage": "/previews/liquid-form.webp"
+      "previewImage": "/previews/liquid-form.webp",
+      "hook": "液态金属的网页背景，体积小，适合垫在首屏下。",
+      "hookEn": "A compact liquid-metal background that sits under a first screen."
     },
     {
       "id": "crt",
@@ -1674,7 +1774,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 CRT 做首屏背景。保持免费 Community 变体，色相换成我们的主色，速度放慢。",
       "promptHintEn": "Use CRT as the first-screen background. Keep the free Community variant, switch hue to our primary, and slow the speed.",
-      "previewImage": "/previews/crt.webp"
+      "previewImage": "/previews/crt.webp",
+      "hook": "曲面玻璃的老显示器背景，适合复古的第一屏。",
+      "hookEn": "A curved-glass screen background for a retro first screen."
     },
     {
       "id": "skeuomorphic-toggle",
@@ -1706,7 +1808,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Skeuomorphic Toggle 做设置页开关。保持免费 Community 变体，色相换成我们的主色。",
       "promptHintEn": "Use Skeuomorphic Toggle for settings switches. Keep the free Community variant; switch hue to our primary.",
-      "previewImage": "/previews/skeuomorphic-toggle.webp"
+      "previewImage": "/previews/skeuomorphic-toggle.webp",
+      "hook": "拟物开关，也有现代、玻璃和着色器几种样子。",
+      "hookEn": "A toggle in skeuomorphic, modern, glass, and shader forms that follows light and dark."
     },
     {
       "id": "portal-field",
@@ -1738,7 +1842,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Portal Field 做落地页背景。保持免费 Community 变体，只调速度和色相。",
       "promptHintEn": "Use Portal Field as a landing background. Keep the free Community variant; only tweak speed and hue.",
-      "previewImage": "/previews/portal-field.webp"
+      "previewImage": "/previews/portal-field.webp",
+      "hook": "门户、云和气流一类的背景场，打开就能预览。",
+      "hookEn": "Background fields of portals, clouds, and flow that you can preview right away."
     },
     {
       "id": "canvas-ui",
@@ -1770,7 +1876,9 @@
       "npmPackage": "@canvas-ui/core",
       "promptHint": "从 Canvas UI 复制 Liquid 组件进项目，保持 DOM 可选中可点击，并做无 html-in-canvas 时的降级。",
       "promptHintEn": "Copy Canvas UI's Liquid into the project; keep DOM selectable/clickable and keep the non-html-in-canvas fallback.",
-      "previewImage": "/previews/canvas-ui.webp"
+      "previewImage": "/previews/canvas-ui.webp",
+      "hook": "把液态和玻璃效果叠在还能点的界面上。",
+      "hookEn": "Liquid and glass effects laid over an interface you can still click."
     },
     {
       "id": "temple-night",
@@ -1802,7 +1910,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Temple Night 做暗色落地首屏。保持免费 Community 变体，不要切到 PRO 日落。",
       "promptHintEn": "Use Temple Night for a dark landing hero. Keep the free Community variant; do not switch to PRO sunsets.",
-      "previewImage": "/previews/temple-night.webp"
+      "previewImage": "/previews/temple-night.webp",
+      "hook": "京都夜寺：雨、雾、叶，光点跟着指针走。",
+      "hookEn": "A Kyoto temple at night, with rain, mist, leaves, and light that follows the pointer."
     },
     {
       "id": "animated-top-dock",
@@ -1834,7 +1944,9 @@
       "npmPackage": "@designcodeio/threeui",
       "promptHint": "用 Animated Top Dock 做控制台顶栏。选 Sable 或 Liquid Glass，保持免费变体。",
       "promptHintEn": "Use Animated Top Dock as a console top bar. Pick Sable or Liquid Glass; keep the free variants.",
-      "previewImage": "/previews/animated-top-dock.webp"
+      "previewImage": "/previews/animated-top-dock.webp",
+      "hook": "顶部停靠栏，从命令条到液态玻璃都有。",
+      "hookEn": "A top dock, from a command bar to liquid glass."
     },
     {
       "id": "threeui-gallery",
@@ -1869,7 +1981,9 @@
       "qualityNoteEn": "community-sync lists parent `gallery` in Community (no Pro-only variants). Site-wide GET PRO links do not make this entry paid. Includes a Playwright-captured self-hosted 3:2 preview.",
       "featured": false,
       "publishedAt": "2026-09-21",
-      "updatedAt": "2026-09-21T01:20:00Z"
+      "updatedAt": "2026-09-21T01:20:00Z",
+      "hook": "弯曲图板绕柱旋转的英雄图带，可调速度和透明度。",
+      "hookEn": "A hero ribbon of curved panels on a column, with speed and opacity."
     }
   ],
   "meta": {

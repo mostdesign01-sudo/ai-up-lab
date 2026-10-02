@@ -1,13 +1,13 @@
 /** Public umbrella brand. Library names stay separate. */
 export const siteName = "AI UP LAB";
 
-export const siteTagline = "核验精选 · 人核过的用法、路径、三库拣货";
-export const siteTaglineEn = "Curated & checked · use-cases, paths, three-library picks";
+export const siteTagline = "面向任务的 AI 实践资源";
+export const siteTaglineEn = "AI resources for real tasks";
 
 export const siteDescription =
-  "AI UP LAB：核验精选的可复用用法。人核过的 Cases / HTML / Agent UI，加上 Paths 与 Combos。不是 bot 安装目录。";
+  "AI UP LAB：按任务探索学习与工作流、工具与应用、界面与范例、模型与能力、提示词与素材。每条附原文链接。";
 export const siteDescriptionEn =
-  "AI UP LAB: curated, human-checked use-cases — Cases / HTML / Agent UI plus Paths and Combos. Not a bot install directory.";
+  "AI UP LAB: learning, workflows, tools, interfaces, model capabilities, and prompts, organized around your tasks. Every entry links to its source.";
 
 /** Public source repo for this site. The GitHub-star CTA points here; it is unrelated to curator ★ or visitor ☆. */
 export const repoSlug = "mostdesign01-sudo/grokbot-use-cases";

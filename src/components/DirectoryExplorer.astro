@@ -1,0 +1,90 @@
+---
+import DirectoryCard from "./DirectoryCard.astro";
+import Loc from "./Loc.astro";
+import { entries, sections, tasks, entrySearchText, type SectionId } from "../lib/directory";
+interface Props { section?: SectionId; }
+const { section } = Astro.props;
+const listed = section ? entries.filter(entry => entry.sections.includes(section)) : entries;
+---
+<section class="directory-explorer" data-directory data-section={section}>
+  <form class="directory-filters" data-directory-form role="search">
+    <label class="directory-query"><span><Loc zh="搜索" en="Search" /></span><input type="search" name="q" placeholder="工具、模型、任务或关键词" data-ph-zh="工具、模型、任务或关键词" data-ph-en="Tool, model, task, or keyword" autocomplete="off" /></label>
+    {!section && <label><span><Loc zh="目录" en="Section" /></span><select name="section"><option value="" data-label-zh="全部目录" data-label-en="All sections">全部目录</option>{sections.map(item => <option value={item.id} data-label-zh={item.title.zh} data-label-en={item.title.en}>{item.title.zh}</option>)}</select></label>}
+    <label><span><Loc zh="任务" en="Task" /></span><select name="task"><option value="" data-label-zh="全部任务" data-label-en="All tasks">全部任务</option>{tasks.map(task => <option value={task.id} data-label-zh={task.title.zh} data-label-en={task.title.en}>{task.title.zh}</option>)}</select></label>
+    <label><span><Loc zh="难度" en="Level" /></span><select name="difficulty"><option value="" data-label-zh="全部难度" data-label-en="All levels">全部难度</option><option value="starter" data-label-zh="入门" data-label-en="Starter">入门</option><option value="intermediate" data-label-zh="进阶" data-label-en="Intermediate">进阶</option><option value="advanced" data-label-zh="高阶" data-label-en="Advanced">高阶</option></select></label>
+    <label><span><Loc zh="排序" en="Sort" /></span><select name="sort"><option value="relevance" data-label-zh="相关优先" data-label-en="Relevance">相关优先</option><option value="latest" data-label-zh="最近更新" data-label-en="Recently updated">最近更新</option><option value="featured" data-label-zh="编辑精选" data-label-en="Editor's picks">编辑精选</option></select></label>
+    <label><span><Loc zh="内容形式" en="Format" /></span><select name="lib"><option value="" data-label-zh="全部形式" data-label-en="All formats">全部形式</option><option value="grok" data-label-zh="教程与案例" data-label-en="Guides & cases">教程与案例</option><option value="html" data-label-zh="网页资源" data-label-en="Web resources">网页资源</option><option value="agent-ui" data-label-zh="界面组件" data-label-en="UI components">界面组件</option><option value="models" data-label-zh="模型卡" data-label-en="Model cards">模型卡</option><option value="image-prompts" data-label-zh="图像提示词" data-label-en="Image prompts">图像提示词</option></select></label>
+    <button type="reset" class="btn btn-ghost"><Loc zh="清除筛选" en="Clear filters" /></button>
+  </form>
+  <p class="directory-filter-note"><Loc zh="任务与难度只筛选已标注的条目；同一资源可能出现在多个目录。" en="Task and level filters include tagged entries only; a resource can belong to several sections." /></p>
+  <p class="count-row" data-directory-count role="status" aria-live="polite"><Loc zh={`共 ${listed.length} 条`} en={`${listed.length} entries`} /></p>
+  <div class="directory-grid" data-directory-grid>
+    {listed.map(entry => <div data-entry data-key={entry.key} data-lib={entry.lib} data-sections={entry.sections.join(",")} data-tasks={entry.tasks.join(",")} data-difficulty={entry.difficulty} data-title={`${entry.title.zh} ${entry.title.en}`} data-text={entrySearchText(entry)} data-updated={entry.updatedAt} data-featured={entry.featured ? "1" : "0"}><DirectoryCard entry={entry} /></div>)}
+  </div>
+  <p class="empty" data-directory-empty hidden><Loc zh="没有符合条件的条目。试试减少筛选条件或更短的关键词。" en="No matching entries. Try fewer filters or a shorter query." /></p>
+  <button class="btn btn-ghost directory-more" type="button" data-directory-more hidden><Loc zh="再看 24 条" en="Show 24 more" /></button>
+  <noscript><p><Loc zh="当前展示全部条目。开启 JavaScript 后可搜索和筛选。" en="All entries are shown. Enable JavaScript to search and filter." /></p></noscript>
+</section>
+<script>
+  const root = document.querySelector<HTMLElement>("[data-directory]");
+  if (root) {
+    const form = root.querySelector<HTMLFormElement>("[data-directory-form]")!;
+    const grid = root.querySelector<HTMLElement>("[data-directory-grid]")!;
+    const items = [...grid.querySelectorAll<HTMLElement>("[data-entry]")];
+    const count = root.querySelector<HTMLElement>("[data-directory-count]")!;
+    const empty = root.querySelector<HTMLElement>("[data-directory-empty]")!;
+    const more = root.querySelector<HTMLButtonElement>("[data-directory-more]")!;
+    let limit = 24;
+    const restore = () => {
+      form.reset();
+      const params = new URLSearchParams(location.search);
+      for (const key of ["q", "section", "task", "difficulty", "sort", "lib"]) {
+        const field = form.elements.namedItem(key);
+        if ((field instanceof HTMLInputElement || field instanceof HTMLSelectElement) && params.has(key)) {
+          const value = params.get(key)!;
+          if (field instanceof HTMLInputElement || [...field.options].some(option => option.value === value)) field.value = value;
+        }
+      }
+    };
+    const apply = (sync = true) => {
+      const data = new FormData(form);
+      const q = String(data.get("q") ?? "").trim().toLowerCase();
+      const tokens = q.split(/\s+/).filter(Boolean);
+      const section = root.dataset.section || String(data.get("section") ?? "");
+      const task = String(data.get("task") ?? "");
+      const difficulty = String(data.get("difficulty") ?? "");
+      const lib = String(data.get("lib") ?? "");
+      const sort = String(data.get("sort") ?? "relevance");
+      const matched = items.filter(item => {
+        const text = (item.dataset.text ?? "").toLowerCase();
+        return tokens.every(token => text.includes(token)) && (!section || item.dataset.sections?.split(",").includes(section)) && (!task || item.dataset.tasks?.split(",").includes(task)) && (!difficulty || item.dataset.difficulty === difficulty) && (!lib || item.dataset.lib === lib);
+      });
+      const relevance = (item: HTMLElement) => tokens.reduce((score, token) => score + ((item.dataset.title ?? "").toLowerCase().includes(token) ? 1 : 0), 0);
+      matched.sort((a, b) => {
+        if (sort === "relevance" && q) { const rank = relevance(b) - relevance(a); if (rank) return rank; }
+        if (sort === "featured") { const featured = Number(b.dataset.featured) - Number(a.dataset.featured); if (featured) return featured; }
+        return (b.dataset.updated ?? "").localeCompare(a.dataset.updated ?? "") || (a.dataset.key ?? "").localeCompare(b.dataset.key ?? "");
+      });
+      items.forEach(item => { item.hidden = true; });
+      matched.forEach((item, index) => { item.hidden = index >= limit; grid.append(item); });
+      const total = matched.length;
+      count.textContent = document.documentElement.dataset.locale === "en" ? `${Math.min(limit, total)} shown · ${total} matches` : `已显示 ${Math.min(limit, total)} 条 · 共 ${total} 条匹配`;
+      empty.hidden = total !== 0;
+      more.hidden = limit >= total;
+      if (sync) {
+        const params = new URLSearchParams();
+        for (const [key, value] of data) if (value && !(key === "sort" && value === "relevance")) params.set(key, String(value));
+        history.replaceState(null, "", location.pathname + (params.size ? `?${params}` : ""));
+      }
+    };
+    const change = () => { limit = 24; apply(); };
+    form.addEventListener("input", change);
+    form.addEventListener("submit", event => { event.preventDefault(); change(); });
+    form.addEventListener("reset", () => requestAnimationFrame(change));
+    more.addEventListener("click", () => { const start = limit; limit += 24; apply(false); const first = [...grid.children].filter((item): item is HTMLElement => item instanceof HTMLElement && !item.hidden)[start]; first?.querySelector<HTMLAnchorElement>("a")?.focus(); });
+    document.addEventListener("localechange", () => apply(false));
+    window.addEventListener("popstate", () => { restore(); limit = 24; apply(false); });
+    restore();
+    apply(false);
+  }
+</script>

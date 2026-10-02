@@ -2,170 +2,38 @@
 import BrandMark from "./BrandMark.astro";
 import GitHubStar from "./GitHubStar.astro";
 import Loc from "./Loc.astro";
-import { withBase, isCurrentPath, isSectionPath } from "../lib/paths";
+import { sections, entries } from "../lib/directory";
+import { withBase, isSectionPath, isCurrentPath } from "../lib/paths";
 import { ui } from "../lib/i18n";
-import { siteName } from "../lib/site";
-
+import { siteName, siteTagline, siteTaglineEn } from "../lib/site";
 const path = Astro.url.pathname;
-const htmlRoot = withBase("html/");
-const agentUiRoot = withBase("agent-ui/");
-const searchRoot = withBase("search/");
-const libParam = Astro.url.searchParams.get("lib");
-const isHtml = isSectionPath(path, htmlRoot) || (isCurrentPath(path, searchRoot) && libParam === "html");
-const isAgentUi = isSectionPath(path, agentUiRoot) || (isCurrentPath(path, searchRoot) && libParam === "agent-ui");
-const isGrok =
-  isSectionPath(path, withBase("cases/")) ||
-  isSectionPath(path, withBase("featured/")) ||
-  isSectionPath(path, withBase("latest/")) ||
-  isSectionPath(path, withBase("types/")) ||
-  (isCurrentPath(path, searchRoot) && libParam === "grok");
-
-const currentLib = isAgentUi ? "agent-ui" : isHtml ? "html" : isGrok ? "grok" : "lab";
-
-type NavLink = { href: string; label: { zh: string; en: string }; section?: boolean; favorites?: boolean };
-
-/** Visitor favorites live in localStorage; the badge count is painted client-side. */
-const favoritesLink: NavLink = { href: withBase("favorites/"), label: ui.nav.favorites, favorites: true };
-
-const labLinks: NavLink[] = [
-  { href: withBase("/"), label: ui.nav.home },
-  { href: withBase("paths/"), label: ui.nav.paths, section: true },
-  { href: withBase("combos/"), label: ui.nav.combos, section: true },
-  { href: withBase("models/"), label: ui.nav.models, section: true },
-  { href: withBase("image-prompts/"), label: ui.nav.imagePrompts, section: true },
-  { href: withBase("search/"), label: ui.nav.search },
-  favoritesLink,
-  { href: withBase("docs/"), label: ui.nav.docs },
-  { href: withBase("changelog/"), label: ui.nav.changelog },
-];
-
-const grokLinks: NavLink[] = [
-  { href: withBase("cases/"), label: ui.nav.overview },
-  { href: withBase("featured/"), label: ui.nav.featured },
-  { href: withBase("latest/"), label: ui.nav.latest },
-  { href: withBase("types/"), label: ui.nav.types, section: true },
-  { href: withBase("search/?lib=grok"), label: ui.nav.search },
-  favoritesLink,
-];
-
-const htmlLinks: NavLink[] = [
-  { href: withBase("html/"), label: ui.nav.overview },
-  { href: withBase("html/featured/"), label: ui.nav.featured },
-  { href: withBase("html/latest/"), label: ui.nav.latest },
-  { href: withBase("html/types/"), label: ui.nav.types, section: true },
-  { href: withBase("search/?lib=html"), label: ui.nav.search },
-  favoritesLink,
-];
-
-const agentUiLinks: NavLink[] = [
-  { href: withBase("agent-ui/"), label: ui.nav.overview },
-  { href: withBase("agent-ui/featured/"), label: ui.nav.featured },
-  { href: withBase("agent-ui/latest/"), label: ui.nav.latest },
-  { href: withBase("agent-ui/types/"), label: ui.nav.types, section: true },
-  { href: withBase("search/?lib=agent-ui"), label: ui.nav.search },
-  favoritesLink,
-];
-
-const links: NavLink[] =
-  currentLib === "agent-ui" ? agentUiLinks : currentLib === "html" ? htmlLinks : currentLib === "grok" ? grokLinks : labLinks;
-
-const brandLine =
-  currentLib === "agent-ui"
-    ? ui.brand.agentUi
-    : currentLib === "html"
-      ? ui.brand.html
-      : currentLib === "grok"
-        ? ui.brand.grok
-        : ui.brand.lab;
+const currentEntry = entries.find(entry => isCurrentPath(path, entry.href));
+const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPath(path, withBase(`${section.id}/`)))?.id;
 ---
-
-<header class="site-header">
-  <div class="wrap header-inner">
-    <div class="header-start">
-      <a class="brand" href={withBase("/")}>
-        <span class="brand-mark" aria-hidden="true">
-          <BrandMark />
-        </span>
-        <span class="brand-text">
-          <strong>{siteName}</strong>
-          <span><Loc zh={brandLine.zh} en={brandLine.en} /></span>
-        </span>
-      </a>
-      <nav class="collection-tabs" aria-label={ui.header.collections.zh} data-aria-zh={ui.header.collections.zh} data-aria-en={ui.header.collections.en}>
-        <a
-          class="tab-grok"
-          href={withBase("cases/")}
-          aria-current={currentLib === "grok" ? "page" : undefined}
-        >
-          Grok Bot
-        </a>
-        <a
-          class="tab-html"
-          href={withBase("html/")}
-          aria-current={currentLib === "html" ? "page" : undefined}
-        >
-          <Loc zh={ui.lib.html.zh} en={ui.lib.html.en} />
-        </a>
-        <a
-          class="tab-agent-ui"
-          href={withBase("agent-ui/")}
-          aria-current={currentLib === "agent-ui" ? "page" : undefined}
-        >
-          Agent UI
-        </a>
-      </nav>
-    </div>
-    <nav class="nav" aria-label={ui.header.sections.zh} data-aria-zh={ui.header.sections.zh} data-aria-en={ui.header.sections.en}>
-      {
-        links.map((link) => (
-          <a
-            href={link.href}
-            aria-current={(link.section
-              ? isSectionPath(path, link.href)
-              : isCurrentPath(path, link.href))
-              ? "page"
-              : undefined}
-          >
-            <Loc zh={link.label.zh} en={link.label.en} />
-            {link.favorites && <span class="fav-count" data-fav-count hidden aria-hidden="true"></span>}
-          </a>
-        ))
-      }
+<header class="site-header directory-header">
+  <div class="wrap-wide directory-header-top">
+    <a class="brand" href={withBase("/")}><span class="brand-mark" aria-hidden="true"><BrandMark /></span><span class="brand-text"><strong>{siteName}</strong><span><Loc zh={siteTagline} en={siteTaglineEn} /></span></span></a>
+    <div class="directory-header-tools">
+      <a href={withBase("search/")}><Loc zh="搜索" en="Search" /></a>
+      <a href={withBase("favorites/")}><Loc zh="收藏" en="Saved" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
       <GitHubStar variant="pill" />
-      <div class="locale-toggle" role="group" aria-label={ui.header.locale.zh} data-aria-zh={ui.header.locale.zh} data-aria-en={ui.header.locale.en}>
-        <button type="button" data-locale-set="zh" aria-pressed="true">ZH</button>
-        <span aria-hidden="true">|</span>
-        <button type="button" data-locale-set="en" aria-pressed="false">EN</button>
-      </div>
-      <button
-        class="theme-toggle"
-        type="button"
-        data-theme-toggle
-        aria-label={ui.header.theme.zh}
-        data-aria-zh={ui.header.theme.zh}
-        data-aria-en={ui.header.theme.en}
-      >
-        <span aria-hidden="true">◐</span>
-      </button>
-    </nav>
+      <div class="locale-toggle" role="group" aria-label="语言 / Language"><button type="button" data-locale-set="zh" aria-pressed="true">ZH</button><span aria-hidden="true">|</span><button type="button" data-locale-set="en" aria-pressed="false">EN</button></div>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label={ui.header.theme.zh} data-aria-zh={ui.header.theme.zh} data-aria-en={ui.header.theme.en}><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" /><path fill="currentColor" d="M8 1.75a6.25 6.25 0 0 0 0 12.5V1.75Z" /></svg></button>
+    </div>
   </div>
+  <nav class="wrap-wide directory-nav" aria-label="目录 / Directory">
+    <a href={withBase("/")} aria-current={isCurrentPath(path, withBase("/")) ? "page" : undefined}><Loc zh="首页" en="Home" /></a>
+    {sections.map(section => <a href={withBase(`${section.id}/`)} aria-current={active === section.id ? "page" : undefined}><Loc zh={section.title.zh} en={section.title.en} /></a>)}
+  </nav>
 </header>
-
 <script>
-  document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      event.preventDefault();
-      event.stopPropagation();
-      const next = button.dataset.localeSet === "en" ? "en" : "zh";
-      const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
-      apply?.(next, true);
-    });
-  });
-
-  const themeButton = document.querySelector("[data-theme-toggle]");
-  themeButton?.addEventListener("click", () => {
+  document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach(button => button.addEventListener("click", () => {
+    const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
+    apply?.(button.dataset.localeSet === "en" ? "en" : "zh", true);
+  }));
+  document.querySelector("[data-theme-toggle]")?.addEventListener("click", () => {
     const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
     document.documentElement.dataset.theme = next;
-    localStorage.setItem("theme", next);
+    try { localStorage.setItem("theme", next); } catch {}
   });
 </script>

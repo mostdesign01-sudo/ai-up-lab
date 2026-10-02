@@ -1,0 +1,53 @@
+{
+  "caseTools": [
+    "pi-1-0",
+    "magnitude",
+    "jeff",
+    "onesie",
+    "leftovers",
+    "shipwithmuse",
+    "personal-jarvis",
+    "us-paypal-cn-visa",
+    "errand-opensource",
+    "openbot-opensource",
+    "ronglecat-awesome-grok-bot",
+    "grok-ship",
+    "rosterroom-prompts",
+    "saily-us-number-esim",
+    "native-subtitle-quote-image",
+    "compound-engineering-plugin",
+    "gbdl-definition-language",
+    "shrdgn-grokbot-skills",
+    "awesome-grokbot-shares",
+    "gawkbot-opensource",
+    "awesome-grok-bot",
+    "grokbot-linux-unofficial",
+    "grokbot-boring-directory",
+    "figma-bro",
+    "lingxi-engineering-org",
+    "mobile-mcp"
+  ],
+  "casePrompts": [
+    "rosterroom-prompts",
+    "templates-for-grok-bot",
+    "native-subtitle-quote-image"
+  ],
+  "htmlLearning": [
+    "transformer-explainer",
+    "system-design-atlas",
+    "programming-museum",
+    "flexbox-froggy",
+    "css-grid-garden",
+    "mdn-css-examples"
+  ],
+  "htmlPrompts": [
+    "sceneai",
+    "meigen",
+    "taste-skill",
+    "designlang",
+    "refero-styles",
+    "poster-comp-vol1",
+    "poster-comp-vol2",
+    "ai-event-posters"
+  ]
+}

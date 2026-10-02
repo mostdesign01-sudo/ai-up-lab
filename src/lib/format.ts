@@ -8,8 +8,12 @@ function toDate(input: string | Date): Date {
   return new Date(input);
 }
 
+const partFormatters = new Map<string, Intl.DateTimeFormat>();
+
 function shanghaiParts(input: string | Date, locale: "zh-CN" | "en-US" = "zh-CN") {
-  const parts = new Intl.DateTimeFormat(locale, {
+  let formatter = partFormatters.get(locale);
+  if (!formatter) {
+    formatter = new Intl.DateTimeFormat(locale, {
     timeZone: TIMEZONE,
     year: "numeric",
     month: "numeric",
@@ -18,7 +22,10 @@ function shanghaiParts(input: string | Date, locale: "zh-CN" | "en-US" = "zh-CN"
     hour: "2-digit",
     minute: "2-digit",
     hour12: false,
-  }).formatToParts(toDate(input));
+    });
+    partFormatters.set(locale, formatter);
+  }
+  const parts = formatter.formatToParts(toDate(input));
 
   const get = (type: Intl.DateTimeFormatPartTypes) =>
     parts.find((part) => part.type === type)?.value ?? "";

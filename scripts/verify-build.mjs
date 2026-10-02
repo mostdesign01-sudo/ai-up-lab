@@ -12,6 +12,14 @@ const imagePromptsDataset = JSON.parse(await readFile(new URL("../data/image-pro
 
 const requiredPages = [
   "index.html",
+  "learn/index.html",
+  "tools/index.html",
+  "design/index.html",
+  "prompts/index.html",
+  "about/index.html",
+  "catalog.json",
+  "llms.txt",
+  "sitemap.xml",
   "cases/index.html",
   "featured/index.html",
   "latest/index.html",
@@ -309,27 +317,34 @@ if (!favorites.includes("我的收藏") || !favorites.includes("data-fav-item=")
 }
 
 const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
-if (!home.includes("今日看点") || !home.includes("home-plaza") || !home.includes("home-pill")) {
+if (!home.includes("最近更新") || !home.includes("directory-home")) {
   console.error("Homepage is missing the plaza digest shell (今日看点 / home-plaza / home-pill).");
   process.exit(1);
 }
 
-if (!home.includes("可跑路径") || !home.includes("plaza-paths-strip")) {
-  console.error("Homepage is missing the playbooks strip (可跑路径 / plaza-paths-strip).");
+if (/paths\/|combos\//.test(home) || home.includes("本周可抄") || home.includes("plaza-paths-strip")) {
+  console.error("Homepage still exposes internal paths/ or combos/ (playbooks strip or links).");
   process.exit(1);
 }
 
-if (!home.includes("本周可抄") || !home.includes("paths/daily-to-draft")) {
-  console.error("Homepage is missing this week’s steal (本周可抄 → /paths/daily-to-draft/).");
-  process.exit(1);
+async function assertNoindex(rel) {
+  const page = await readFile(new URL(`../dist/${rel}`, import.meta.url), "utf8");
+  if (!page.includes('name="robots" content="noindex, nofollow"')) {
+    console.error(`${rel} is missing <meta name="robots" content="noindex, nofollow">.`);
+    process.exit(1);
+  }
 }
 
-if (!home.includes("combos/") || !home.includes("三库组合")) {
-  console.error("Homepage is missing the Combos rail link (combos/ / 三库组合).");
-  process.exit(1);
+await assertNoindex("paths/index.html");
+for (const path of pathsDataset.paths) {
+  await assertNoindex(`paths/${path.slug}/index.html`);
+}
+await assertNoindex("combos/index.html");
+for (const combo of combosDataset.combos) {
+  await assertNoindex(`combos/${combo.slug}/index.html`);
 }
 
-if (!home.includes("models/") || !home.includes("最新模型")) {
+if (!home.includes("models/") || !home.includes("模型与能力")) {
   console.error("Homepage is missing the Models rail link (models/ / 最新模型).");
   process.exit(1);
 }
@@ -340,7 +355,7 @@ if (!modelsIndex.includes("models/gpt-6-astra/") || !modelsIndex.includes("GPT-6
   process.exit(1);
 }
 
-if (!home.includes("image-prompts/") || !home.includes("Image 2.5 提示词")) {
+if (!home.includes("prompts/") || !home.includes("提示词与素材")) {
   console.error("Homepage is missing the Image 2.5 prompts rail link (image-prompts/ / Image 2.5 提示词).");
   process.exit(1);
 }
@@ -378,23 +393,23 @@ if (
   }
 }
 
-if (!home.includes("核验精选") || !home.includes("plaza-position")) {
-  console.error("Homepage is missing positioning copy (核验精选 / plaza-position).");
+if (!home.includes("把 AI 用到你的下一件事里") || !home.includes("directory-home-hero")) {
+  console.error("Homepage is missing the hero (每天更新的 AI 教程… / plaza-hero).");
   process.exit(1);
 }
 
-if (!home.includes("grokbots.best") || !home.includes("cases/grokbots-best")) {
-  console.error("Homepage is missing the grokbots.best sibling link (library case).");
+if (!home.includes("新手从这里开始") || !home.includes("learn/?difficulty=starter")) {
+  console.error("Homepage is missing the starter row (新手从这里开始 → /cases/?difficulty=starter).");
   process.exit(1);
 }
 
-if (!home.includes("核验精选的可复用用法")) {
-  console.error("Homepage meta/OG is missing curated-use-case positioning.");
+if (!home.includes("按任务探索")) {
+  console.error("Homepage meta/OG is missing task-based positioning.");
   process.exit(1);
 }
 
 // GitHub star CTA for this repo: home rail card + header pill / footer line on a regular page.
-const repoUrl = "https://github.com/mostdesign01-sudo/grokbot-use-cases";
+const repoUrl = `https://github.com/${process.env.GITHUB_REPOSITORY || "mostdesign01-sudo/grokbot-use-cases"}`;
 if (!home.includes("给本项目点个 Star") || !home.includes("gh-star-rail") || !home.includes(repoUrl)) {
   console.error("Homepage is missing the GitHub star CTA (给本项目点个 Star / gh-star-rail → repo URL).");
   process.exit(1);
@@ -432,6 +447,83 @@ if (missing.length) {
   process.exit(1);
 }
 
+{
+  const hookNoise = /HTTP|gh api|Algolia|\d\s*pts\b|\bpts\b|★|撰写时|item \d|\d{4}-\d\d-\d\d/;
+  const hookBad = [];
+  const lintHooks = (label, items) => {
+    const absent = [];
+    const bad = [];
+    for (const item of items) {
+      const hasHook = item.hook !== undefined || item.hookEn !== undefined;
+      if (!hasHook) {
+        absent.push(item.id);
+        continue;
+      }
+      const zh = typeof item.hook === "string" ? item.hook : "";
+      const en = typeof item.hookEn === "string" ? item.hookEn : "";
+      const reasons = [];
+      if (!zh || !en) reasons.push("pair");
+      if ([...zh].length > 36) reasons.push(`zh ${[...zh].length}`);
+      if (en.length > 90) reasons.push(`en ${en.length}`);
+      if (!/[。！]$/.test(zh)) reasons.push("zh ending");
+      if (!/[.!]$/.test(en)) reasons.push("en ending");
+      if (hookNoise.test(zh + en)) reasons.push("banned token");
+      if (reasons.length) bad.push(`${item.id} (${reasons.join(", ")})`);
+    }
+    if (absent.length) {
+      hookBad.push(...absent.map(id => `${label}/${id} (missing hook pair)`));
+      console.error(`hook lint: ${label} ${absent.length} without a hook: ${absent.join(", ")}`);
+    }
+    if (bad.length) {
+      hookBad.push(...bad.map((line) => `${label}/${line}`));
+      console.error(`hook lint: ${label} ${bad.length} format violation(s): ${bad.join("; ")}`);
+    } else {
+      console.log(`hook lint: ${label} ${items.length} items, ${absent.length} missing, 0 format violations.`);
+    }
+  };
+  lintHooks("cases", dataset.cases);
+  lintHooks("html", htmlDataset.items);
+  lintHooks("agent-ui", agentUiDataset.items);
+  if (hookBad.length) process.exit(1);
+}
+
 console.log(
   `Build verified: ${dataset.cases.length} case pages, ${htmlDataset.items.length} HTML item pages, ${agentUiDataset.items.length} Agent UI pages, ${pathsDataset.paths.length} playbook pages, ${combosDataset.combos.length} combo pages, ${modelsDataset.models.length} model pages, ${imagePromptsDataset.items.length} image prompt pages, and core routes present.`,
 );
+
+// A purpose-based directory must preserve each legacy entry, URL, and favorite key.
+const directory = JSON.parse(await readFile(new URL("../dist/catalog.json", import.meta.url), "utf8"));
+const membership = JSON.parse(await readFile(new URL("../data/directory.json", import.meta.url), "utf8"));
+const sources = [
+  ["grok", "cases", dataset.cases], ["html", "html", htmlDataset.items],
+  ["agent-ui", "agent-ui", agentUiDataset.items], ["models", "models", modelsDataset.models],
+  ["image-prompts", "image-prompts", imagePromptsDataset.items],
+];
+const expectedKeys = sources.flatMap(([lib, , list]) => list.map(item => `${lib}:${item.id}`));
+const actualKeys = directory.entries.map(entry => entry.key);
+if (new Set(actualKeys).size !== actualKeys.length || actualKeys.length !== expectedKeys.length || expectedKeys.some(key => !actualKeys.includes(key))) {
+  throw new Error("Unified directory duplicates or loses an existing entry.");
+}
+const sectionIds = ["learn", "tools", "design", "models", "prompts"];
+const searchPage = await readFile(new URL("../dist/search/index.html", import.meta.url), "utf8");
+const sitemap = await readFile(new URL("../dist/sitemap.xml", import.meta.url), "utf8");
+for (const section of sectionIds) {
+  if (!directory.entries.some(entry => entry.sections.includes(section))) throw new Error(`Empty section: ${section}`);
+  const page = await readFile(new URL(`../dist/${section}/index.html`, import.meta.url), "utf8");
+  if (!page.includes(`/${section}/`)) throw new Error(`Missing section navigation: ${section}`);
+}
+for (const [lib, path, list] of sources) {
+  for (const item of list) {
+    const entry = directory.entries.find(entry => entry.key === `${lib}:${item.id}`);
+    if (!entry.href.endsWith(`/${path}/${item.slug}/`)) throw new Error(`Legacy URL changed: ${entry.key}`);
+    if (!entry.sections.length || entry.sections.some(id => !sectionIds.includes(id))) throw new Error(`Invalid section membership: ${entry.key}`);
+    if (!searchPage.includes(`data-key="${entry.key}"`) || !searchPage.includes(`data-fav-key="${entry.key}"`)) throw new Error(`Missing search or favorite entry: ${entry.key}`);
+    if (!sitemap.includes(entry.href)) throw new Error(`Missing detail URL in sitemap: ${entry.key}`);
+  }
+}
+for (const [key, ids] of Object.entries(membership)) {
+  const pool = key.startsWith("case") ? dataset.cases : htmlDataset.items;
+  if (new Set(ids).size !== ids.length || ids.some(id => !pool.some(item => item.id === id))) throw new Error(`Stale directory mapping: ${key}`);
+}
+if (/paths\/|combos\/|favorites\/|search\//.test(sitemap)) throw new Error("Sitemap exposes internal or user-specific pages.");
+console.log(`Directory verified: ${actualKeys.length} unique entries across five source libraries; legacy links and favorite keys preserved.`);

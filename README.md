@@ -1,151 +1,83 @@
 # AI UP LAB
 
-核验精选：人核过的用法、路径、三库拣货。不是 bot 安装目录；要浏览/安装 bot 与 skill，见库内的 [grokbots.best](https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/grokbots-best/)。默认简体中文，顶栏 **ZH | EN** 可切换并写入 `localStorage`（URL 不变）。
+把 AI 用到你的下一件事里。按任务探索教程、工具、界面范例、模型能力和提示词；每条资源附原文链接。
 
-- 站点名：AI UP LAB
-- 标语：核验精选 · 人核过的用法、路径、三库拣货
-- 当前内容库：Grok Bot 案例、HTML 收集、Agent UI（ThreeUI Community 免费件）
-- 仓库：https://github.com/mostdesign01-sudo/grokbot-use-cases
-- 预期公开地址：https://mostdesign01-sudo.github.io/grokbot-use-cases/
+公开站点：https://mostdesign01-sudo.github.io/grokbot-use-cases/
 
-本站**不是** xAI / SpaceXAI / Cursor 官方站点。所有案例来自公开文档与社区文章，原始链接写在每条记录里。
+## 目录方向
 
-## 本地运行
+本站从 Grok Bot 用法起步，逐步扩展为跨产品、跨模型的 AI 实践库。目录围绕稳定需求组织；Grok Bot、Cursor、Claude、具体模型版本留在条目的产品名与标签中，不作为一级目录。
+
+| 一级目录 | 路径 | 收录范围 |
+| --- | --- | --- |
+| 学习与工作流 | `/learn/` | 入门教程、研究方法、创作流程、Agent 协作与自动化实践 |
+| 工具与应用 | `/tools/` | 可直接使用的应用、Skill、插件、开源 Agent 与网页工具 |
+| 界面与范例 | `/design/` | 网页与交互参考、组件、模板、可给 Agent 使用的界面范例 |
+| 模型与能力 | `/models/` | 模型公告、获取方式、能力变化、评测来源与社区展示 |
+| 提示词与素材 | `/prompts/` | 任务配方、图像提示词、设计参考与可复用素材 |
+
+任务是第二层筛选：研究与学习、内容与创作、编程与开发、自动化与协作、业务与运营。未标注任务或难度的资源不会被当作已标注；同一资源可以进入多个目录。
+
+未来的视觉、语音、视频、实时交互和自主 Agent 内容仍按“读者想完成什么”归档。出现足够多的独立资源后，再增加能力标签或子类，不为单个新品开一个一级栏目。
+
+## 现有内容如何迁移
+
+底层五套数据继续独立保存，现有 id、slug、原文链接和收藏键不变。新的展示层在 `src/lib/directory.ts` 汇总它们，`data/directory.json` 保存人工挑出的跨库归属：
+
+- Cases 默认进“学习与工作流”；`caseTools` 中的工具进入“工具与应用”，`casePrompts` 可同时进入“提示词与素材”。新增工具案例请同时更新这张映射表。
+- HTML 中 `tool` 类型进“工具与应用”；演示、交互、组件等进“界面与范例”；`htmlLearning`、`htmlPrompts` 补充学习和素材归属。
+- Agent UI 进入“界面与范例”。目前条目来自 ThreeUI Community，后续可按来源许可扩展；不要把免费、免登录等当前来源条件推定到未来所有来源。
+- Models 进入“模型与能力”；Image Prompts 进入“提示词与素材”。当前图像条目仍明确标注适用模型，目录名称不绑定版本。
+
+`/cases/`、`/html/`、`/agent-ui/`、`/image-prompts/` 及所有详情链接继续可用。历史收藏仍用 `grok:id` 等键，新目录收藏与旧详情页互通。内部 `paths/`、`combos/` 暂不在公开导航展示，并保留 noindex。
+
+## 本地运行与发布
 
 需要 Node.js 20+。
 
 ```bash
-npm install
+npm ci
 npm run dev
+npm run build
+npm run preview
 ```
 
-开发服务器默认在 `http://localhost:4321/grokbot-use-cases/`（因为 GitHub Pages 项目站使用 `/grokbot-use-cases/` 作为 `base`）。
+本地入口为 `http://localhost:4321/grokbot-use-cases/`。GitHub Pages 的项目路径由 `astro.config.mjs` 的 `base` 决定；改仓库名时同步调整它和 `src/lib/site.ts` 的仓库链接。
 
-```bash
-npm run build    # 输出到 dist/，并校验 20 条详情页都已生成
-npm run preview  # 预览生产构建
-```
+`.github/workflows/deploy.yml` 在 PR 上构建检查，在 main 推送后部署。新目录通过静态 HTML 发布，不需要服务器、数据库或访问时调用模型。
 
-## 每日如何更新数据
+## 日常编辑
 
-应用逻辑（页面、筛选、样式）与数据分离。日常更新**只改数据文件**，不必改组件。
+数据与页面分离。每次新增或修订：
 
-1. **Grok Bot 案例**：编辑 [`data/cases.json`](data/cases.json)
-   - 新增或修订 `cases[]` 条目
-   - 更新 `meta.updatedAt`（UTC ISO）、`meta.version`、`meta.count`
-   - 字段见 [`data/schema.md`](data/schema.md)
-2. **HTML 收集**：编辑 [`data/html-items.json`](data/html-items.json)
-   - 只收录真实公开 URL，勿与 cases 混写
-   - 字段见 [`data/html-schema.md`](data/html-schema.md)
-3. **Agent UI**：编辑 [`data/agent-ui.json`](data/agent-ui.json)
-   - 只收录 ThreeUI Community 免费、免登录条目，勿写 Pro / MCP
-   - 字段见 [`data/agent-ui-schema.md`](data/agent-ui-schema.md)
-4. **可跑路径**：编辑 [`data/paths.json`](data/paths.json)
-   - 只写 brief → 席位 → 验收闸门；相关 id 必须已在三套库里
-   - 可选 `run`：详情页「开跑」复制丢进对应桌的 brief（静态粘贴，不代发）
-   - 字段见 [`data/paths-schema.md`](data/paths-schema.md)
-5. **三库组合**：编辑 [`data/combos.json`](data/combos.json)
-   - 每条各取一条 HTML 壳、一件 Agent UI、一个 Grok Bot 案例；id 必须已在三套库里
-   - v1 只收 3–5 条精选，不是第四套卡片墙
-   - 字段见 [`data/combos-schema.md`](data/combos-schema.md)
-6. **最新模型**：编辑 [`data/models.json`](data/models.json)
-   - 一张卡一个模型：官方模型页与社区 showcase 分开写；厂商数字一律标「官方称」，社区条数一律标社区自述
-   - 已在 cases 里收过的模型（如 Claude Fable 5.1）只写短卡，用 `relatedCaseIds` 指回，不重复正文
-   - 值得单独看的社区 demo（如 Astra 复刻迷你 LOL）可开一张 demo 卡，用 `relatedModelIds` 与模型卡互指；只记能力展示，不分发游戏文件
-   - 字段见 [`data/models-schema.md`](data/models-schema.md)
-7. **Image 2.5 提示词**：编辑 [`data/image-prompts.json`](data/image-prompts.json)
-   - 一张卡一个可打开的来源：提示词画廊站、案例合集帖或单条可抄的提示词；`sourceUrl` 是原站，作者帖放 `secondaryUrls`
-   - 作者数字一律标「作者称」，站点自报条数写清口径与日期；不写点赞、浏览等互动数字，不搬运整条提示词库
-   - 预览图 3:2，放 `public/previews/{id}.webp`；可选 `relatedModelIds` 指回 `data/models.json`
-   - 字段见 [`data/image-prompts-schema.md`](data/image-prompts-schema.md)
-8. 若有文字说明，追加 [`data/changelog.json`](data/changelog.json) 的 `notes`（含 `titleEn` / `bodyEn`）
-9. 中文条目请同时补英文对照字段（`summaryEn` / `qualityNoteEn` 等，见各 schema）；不要编造新条目或新主张
-10. 提交并推送到 `main`
+1. 选择数据文件：`data/cases.json`、`data/html-items.json`、`data/agent-ui.json`、`data/models.json` 或 `data/image-prompts.json`。
+2. 核对原文、获取方式和重要边界。新增的是工具、教程、模型、组件还是提示词？不要把一般资讯塞进教程库。
+3. 维护 `meta.updatedAt`、`meta.version`、`meta.count` 和条目日期。日期表示整理时间，不是实测证明。
+4. Cases / HTML / Agent UI 要写成对的 `hook` / `hookEn`：一句话说读者能做什么。中文最多 36 字、英文最多 90 字，不放抓取日志、HTTP 状态、互动数字或日期；缺失或格式错误会阻断构建。
+5. 必要时更新 `data/directory.json` 的跨库归属。不同来源讲同一个资源时，优先补充已有条目的来源与步骤，避免重复收录。
+6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。
+7. 更新 `data/changelog.json` 的中英说明，运行 `npm run build` 并检查受影响的页面。
 
-## 可从 X 链出的案例
+字段说明见 `data/schema.md`、`data/html-schema.md`、`data/agent-ui-schema.md`、`data/models-schema.md`、`data/image-prompts-schema.md`。
 
-目录卡可以先薄。某条案例一旦可能从 X 或其它对外帖链到本站详情页，落地页必须先加厚，再放链接。薄目录卡不要配 X CTA。
+### 精选教程的最低内容
 
-落地页要有：
+优先加厚精选条目，不要求每个薄目录卡都写成教程。向外分享的落地页应说明：是什么、适合谁、准备条件、操作步骤、预期结果、限制和真实来源。Cases 使用可选 `landing` 字段。没有实际运行过，不能写“实测通过”；作者声称与官方声称必须清楚归因。
 
-- **它是什么**：说清这条是什么，以及它不是什么
-- **有用的对照，或为什么收录**：不要只把帖子草稿再贴一遍
-- **怎么试**：具体步骤，每步有真实外链
-- **边界**：依赖、密钥、对外动作、不要误当成官方替代
-- **真实预览**（有界面的产品）：沿用 `public/previews/{id}.webp`，3:2。截真实界面，不要画假 UI
+## AIHOT 借用方向与推进顺序
 
-Grok Bot 详情用 `data/cases.json` 的可选 `landing`（字段见 [`data/schema.md`](data/schema.md)）。填了 `landing.steps` 就替换通用的 Skill / Routine 上手路径。
+已对照 [KKKKhazix/AIHOT](https://github.com/KKKKhazix/AIHOT) 的公开架构、提示词、精选评测和接口。当前改版没有引入其代码依赖，也没有同步其线上内容。
 
-Cases may stay thin in the directory. If one might be linked from X or another public post, thicken the landing before adding the CTA. A thin card should not get an X link. The landing needs: what it is, a useful contrast or why it is listed, try-steps with real links, boundaries, and a real preview when it is a UI product.
+1. **本轮已实现：** 读者向目录、五库全站搜索、任务和难度筛选、每页渐进展示、短简介与分类封面、现有内容与收藏兼容、Agent 可读目录和 sitemap。
+2. **下一轮：** 人工选 10–20 条精选补齐步骤与边界；补充实际产品标签、任务标签和核验记录。先明确“来源已核对”和“操作实测”的独立字段，不能用模型评分代替。
+3. **候选池试点：** 借鉴 AIHOT 的采集 → 去重 → 摘要草稿 → 编辑核验流程，从自行选定的官方 RSS、GitHub Releases 和公开文档开始；候选不直接进入公开目录。暂不需要整个 PostgreSQL / worker 架构。
+4. **校准：** 用人工标注的该收／不该收样本比较漏收和误收，再决定评分提示词与门槛。AIHOT 的注意力评分不等于本站的实用性与核验结果。
+5. **规模增长后：** 再评估后台、事件归组、预算熔断与完整 AIHOT 自托管；不要先为几百条静态资源迁移整个服务栈。
 
-GitHub Actions 会重新构建静态站。筛选、详情页、徽章都会从 JSON 重新生成。不要在页面里手写案例正文。
+AIHOT 的代码是 MIT；复制代码或实质部分时保留对应版权和许可，不能沿用它的名称与 Logo。线上服务另受 [使用规则](https://aihot.news/terms) 约束，公开镜像、批量公开再分发、对外商业产品等需书面授权；匿名免 Key 不等于允许公开转载。自己的采集也应遵循各原始来源的许可。
 
-构建后也可访问 `/grokbot-use-cases/data.json` 下载当前数据集。
+## 读取与检索
 
-## GitHub Pages 如何部署
+`/search/` 同时搜索五套内容，支持多关键词、目录、任务、难度、内容形式和排序，标题匹配优先。URL 中保留筛选，兼容已有 `?lib=grok`、`?lib=html` 等入口。浏览器先显示 24 条，按需加载更多；禁用 JavaScript 时仍可阅读全部静态条目。
 
-工作流：[`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
-
-1. 推送到 `main`（或手动 `workflow_dispatch`）
-2. Action 执行 `npm ci` → `npm run build`
-3. 把 `dist/` 作为 GitHub Pages artifact 发布
-
-首次启用（仓库设置里操作一次）：
-
-1. 打开仓库 **Settings → Pages**
-2. **Build and deployment → Source** 选 **GitHub Actions**
-3. 合并本站到 `main` 后，等待 `Deploy to GitHub Pages` 工作流变绿
-
-公开 URL 形态：
-
-```
-https://mostdesign01-sudo.github.io/grokbot-use-cases/
-```
-
-详情页：
-
-```
-https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/<slug>/
-```
-
-Astro 配置了 `site` 与 `base: /grokbot-use-cases`，以匹配项目主页路径。若改仓库名，同步改 `astro.config.mjs` 的 `base`。
-
-## 站点结构
-
-**AI UP LAB** 是伞品牌。顶栏三个内容库：**Grok Bot**（琥珀色）、**HTML 收集**（青绿色）、**Agent UI**（靛紫色）。三套数据分开，不是行业新闻站。
-
-| 路径 | 内容 |
-| --- | --- |
-| `/` | 实验室首页：三张库海报 + 跨库精选瀑布流 |
-| `/cases/` `/cases/[slug]/` | Grok Bot 总览（筛选 + masonry）与详情（含上手路径） |
-| `/featured/` `/latest/` `/types/` `/types/[category]/` | Grok Bot 收集页（masonry） |
-| `/search/` | 三库检索：标题、摘要、标签、收录理由 |
-| `/favorites/` | 我的收藏：卡片 / 详情页 ☆ 存进浏览器 `localStorage`（键 `aiuplab:favorites`），只读本机，无后端 |
-| `/docs/` `/changelog/` | 文档枢纽与按日分组的更新日志 |
-| `/paths/` `/paths/[slug]/` | 可跑路径：brief → 席位 → 验收闸门；详情页「开跑」复制桌 brief（不是第四套卡片库） |
-| `/combos/` `/combos/[slug]/` | 三库交叉组合：一壳 + 一件 + 一案（精选拣货，不是第四面墙） |
-| `/models/` `/models/[slug]/` | 最新模型看板：前沿模型的官方页 + 社区 showcase，首条 GPT-6 Astra（数据 `data/models.json`，另有 `/models.json`） |
-| `/image-prompts/` `/image-prompts/[slug]/` | Image 2.5 提示词看板：GPT-Image-2.5 的提示词画廊、案例合集与可抄的提示词，首条 img.dsxzai.com（数据 `data/image-prompts.json`，另有 `/image-prompts.json`） |
-| `/html/` | HTML 收集总览（masonry 浏览墙） |
-| `/html/featured/` `/html/latest/` `/html/types/` `/html/types/[type]/` | HTML 收集页 |
-| `/html/[slug]/` | 单条 HTML 条目详情（打开原文、适合学什么） |
-| `/agent-ui/` | Agent UI 总览（ThreeUI Community 免费件，masonry） |
-| `/agent-ui/featured/` `/agent-ui/latest/` `/agent-ui/types/` `/agent-ui/types/[type]/` | Agent UI 收集页 |
-| `/agent-ui/[slug]/` | 单条 Agent UI 详情（打开原文、给 Agent 的换主题提示） |
-
-徽章：官方 / 社区 / Cursor相邻 / 需审批 / 例行 / 多Agent。详情页用 `qualityNote` 展示「收录理由」。HTML / Agent UI 条目另有类型徽章与原文链接。
-
-星级：各库与看板的条目都可选填 `stars`（1–5 整数），卡片与详情以 ★ 显示。这是编辑对质量的判断，不是 GitHub star 数；不填就不显示。访客点 ☆ 的收藏与之无关，只存浏览器本地。
-
-GitHub Star：站头「Star」药丸、首页左栏小卡、页脚一行都指向本仓库 https://github.com/mostdesign01-sudo/grokbot-use-cases（组件 `src/components/GitHubStar.astro`）。Star 数由浏览器读 GitHub 公开 API 填入并缓存一小时（键 `aiuplab:gh-stars`），读不到或为 0 就不显示。与 ★ 编辑星级、☆ 收藏是三回事。
-
-## 界面
-
-首页是三张海报（琥珀 / 青绿 / 靛紫）加 Pinterest 式精选墙。HTML 收集与 Agent UI 卡片使用 `public/previews/` 里的自托管缩略图（JSON 里写 `/previews/{id}.webp`，构建时走 Astro `base`）。缺图或加载失败时回退 CSS 库海报。Grok Bot 案例默认海报。不是 AI 新闻站。
-
-重新截取预览（可选，需本机 Chrome + Playwright）：
-
-```bash
-npm i -D playwright sharp
-node scripts/capture-previews.mjs
-```
+`/catalog.json` 提供统一目录摘要、原文链接和归属，`/llms.txt` 说明 Agent 入口；原有五套 JSON 下载路径继续保留。`/sitemap.xml` 只列公开目录与详情，不包含内部运营路径、搜索或收藏。
