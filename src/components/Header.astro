@@ -14,8 +14,15 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
   <div class="wrap-wide directory-header-top">
     <a class="brand" href={withBase("/")}><span class="brand-mark" aria-hidden="true"><BrandMark /></span><span class="brand-text"><strong>{siteName}</strong><span><Loc zh={siteTagline} en={siteTaglineEn} /></span></span></a>
     <div class="directory-header-tools">
-      <a href={withBase("search/")}><Loc zh="搜索" en="Search" /></a>
       <a href={withBase("favorites/")}><Loc zh="收藏" en="Saved" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
+      <details class="directory-header-more">
+        <summary><Loc zh="更多" en="More" /><span aria-hidden="true">⌄</span></summary>
+        <nav class="directory-more-menu" aria-label="更多 / More">
+          <a href={withBase("search/")}><Loc zh="搜索资源" en="Search resources" /></a>
+          <a href={withBase("changelog/")}><Loc zh="更新记录" en="Update notes" /></a>
+          <a href={withBase("about/")}><Loc zh="关于本站" en="About" /></a>
+        </nav>
+      </details>
       <GitHubStar variant="pill" />
       <div class="locale-toggle" role="group" aria-label="语言 / Language"><button type="button" data-locale-set="zh" aria-pressed="true">ZH</button><span aria-hidden="true">|</span><button type="button" data-locale-set="en" aria-pressed="false">EN</button></div>
       <button class="theme-toggle" type="button" data-theme-toggle aria-label={ui.header.theme.zh} data-aria-zh={ui.header.theme.zh} data-aria-en={ui.header.theme.en}><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" /><path fill="currentColor" d="M8 1.75a6.25 6.25 0 0 0 0 12.5V1.75Z" /></svg></button>
@@ -27,6 +34,16 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
   </nav>
 </header>
 <script>
+  const more = document.querySelector<HTMLDetailsElement>(".directory-header-more");
+  document.addEventListener("click", event => {
+    if (event.target instanceof Node && !more?.contains(event.target)) more?.removeAttribute("open");
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && more?.open) {
+      more.removeAttribute("open");
+      more.querySelector("summary")?.focus();
+    }
+  });
   document.querySelectorAll<HTMLButtonElement>("[data-locale-set]").forEach(button => button.addEventListener("click", () => {
     const apply = (window as Window & { __applyLocale?: (locale: string, persist?: boolean) => void }).__applyLocale;
     apply?.(button.dataset.localeSet === "en" ? "en" : "zh", true);
