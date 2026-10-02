@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-02",
+      "title": "早间收录：Cases +1（Pi 1.0）、HTML +2（CSS Bed / Wave）",
+      "titleEn": "Morning catalog: Cases +1 (Pi 1.0), HTML +2 (CSS Bed / Wave)",
+      "body": "Cases：收 pi-1-0 —— HN 首页 item 49926069（Algolia 早间核对 709pts，2026-10-01T19:33:05Z）https://earendil.com/posts/pi-1-0/ 。Earendil MIT 极简 agent harness 发 1.0（Codemode / 虚拟模型 / 延迟工具 / cache warming 等）；同日 Pi Durable（item 49925969，206pts）。仓库 earendil-works/pi 早间 111225★；pi.dev HTTP 200。配富落地页与 Playwright 3:2 预览。HTML：收 css-bed（HN item 49927212，54pts）https://www.cssbed.com/ —— classless 主题对照床，仓库约 27 套主题、183★、无 SPDX LICENSE；与已收 Pico CSS 相邻但不重复。收 wave-subworkflow（Show HN item 49843746，7pts）https://wave.subworkflow.ai/ —— Three.js 层叠波浪渐变编辑器，可即时拖拽试。两条均配自托管 3:2 预览。跳过：Agent UI（ThreeUI Community 自 2026-09-01 同步后无足够确认的新免费可复制件）；Weave Router（Show HN 49911500 / workweave/router，晚间候选）；Janus / Breadcrumb 等分低或未沉淀；@bot X API client-not-enrolled，未硬刷。cases 134→135（1.4.37→1.4.38）；html-items 107→109（1.3.51→1.3.52）。未改 agent-ui。",
+      "bodyEn": "Cases: pi-1-0 — HN front page item 49926069 (709pts morning Algolia, 2026-10-01T19:33:05Z) https://earendil.com/posts/pi-1-0/. Earendil MIT minimal agent harness 1.0 (Codemode / virtual models / deferred tools / cache warming, etc.); same-day Pi Durable (item 49925969, 206pts). Repo earendil-works/pi ~111225★ morning; pi.dev HTTP 200. Rich landing + Playwright 3:2 preview. HTML: css-bed (HN item 49927212, 54pts) https://www.cssbed.com/ — classless theme bed (~27 themes, 183★, no SPDX LICENSE); neighbor to Pico CSS, not a duplicate. wave-subworkflow (Show HN item 49843746, 7pts) https://wave.subworkflow.ai/ — tryable Three.js layered wave-gradient editor. Both with self-hosted 3:2 previews. Skipped: Agent UI (no clear new free ThreeUI Community pieces since 2026-09-01 sync); Weave Router (Show HN 49911500 / workweave/router, evening candidate); thin Janus / Breadcrumb; @bot X API client-not-enrolled, not hammered. cases 134→135; html-items 107→109; agent-ui unchanged."
+    },
+    {
       "date": "2026-10-01",
       "title": "晚间收录：Models +1（Gemini 4 Argon）、Cases +1（Magnitude）",
       "titleEn": "Evening catalog: Models +1 (Gemini 4 Argon), Cases +1 (Magnitude)",

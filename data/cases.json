@@ -1,6 +1,161 @@
 {
   "cases": [
     {
+      "id": "pi-1-0",
+      "slug": "pi-1-0",
+      "title": "工具：Pi 1.0 — 可自改的极简 coding agent 底座（附 Pi Durable）",
+      "titleEn": "Tool: Pi 1.0 — minimal, make-it-yours coding agent harness (plus Pi Durable)",
+      "summary": "HN 首页（item 49926069，2026-10-01T19:33:05Z / 约 2026-10-02 03:33 CST，Algolia 早间核对 709pts）https://earendil.com/posts/pi-1-0/ —— Earendil 发布 Pi 1.0：MIT 极简可扩展 agent harness（TUI / print / RPC / SDK）。文内新增 Codemode（原生 MCP 与非 LLM 模型如 Jev / 图像模型）、虚拟模型扩展、延迟加载工具、Anthropic cache warming、对话中途 system message、新 TUI 主题与默认全屏。同日实验包 Pi Durable（HN item 49925969，核对 206pts）面向长会话 / 多表面。安装：`curl -fsSL https://pi.dev/install.sh | sh` 或 npm `@earendil-works/pi-coding-agent`。仓库 earendil-works/pi 早间 gh api：MIT、111225★；站点 https://pi.dev/ HTTP 200。本站 Cases 已收 Magnitude 写可一键接 Pi——本条补官方 1.0 节点。工具笔记，不替你安装或代跑。",
+      "summaryEn": "HN front page item 49926069 (2026-10-01T19:33:05Z / about 2026-10-02 03:33 CST, 709pts on Algolia at the morning check) at https://earendil.com/posts/pi-1-0/ — Earendil ships Pi 1.0: an MIT minimal, extensible agent harness (TUI / print / RPC / SDK). The post adds Codemode (native MCP plus non-LLM models such as Jev / image models), virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, a new TUI theme, and full-screen by default. Same-day experimental Pi Durable (HN item 49925969, 206pts at check) targets long-running / multi-surface use. Install: `curl -fsSL https://pi.dev/install.sh | sh` or npm `@earendil-works/pi-coding-agent`. Repo earendil-works/pi morning gh api: MIT, 111225★; https://pi.dev/ HTTP 200. Cases already lists Magnitude as one-clickable into Pi — this tip adds the official 1.0 node. Tool tip only; does not install or run it for you.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://earendil.com/posts/pi-1-0/",
+      "secondaryUrls": [
+        "https://pi.dev/",
+        "https://github.com/earendil-works/pi",
+        "https://news.ycombinator.com/item?id=49926069",
+        "https://earendil.com/posts/pi-durable/",
+        "https://news.ycombinator.com/item?id=49925969"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 HN 49926069 / 49925969、Earendil 公告与 pi.dev / MIT 仓库。收录理由：本机 coding agent 底座是真实痛点，且与已收 Magnitude「一键接 Pi」相邻。边界：1.0 功能清单与「hundreds of thousands」用量是厂商文案；Pi Durable 标 experimental；本库未代装、未复跑 benchmark。预览 Playwright 实拍 pi.dev 首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are HN 49926069 / 49925969, the Earendil announce, pi.dev, and the MIT repo. Listing rationale: a local coding-agent harness is a real pain point, and it sits next to catalogued Magnitude’s “one-click Pi” claim. Boundary: the 1.0 feature list and “hundreds of thousands” usage are vendor copy; Pi Durable is marked experimental; this site did not install it or re-run benches. Preview is a Playwright 3:2 capture of pi.dev above the fold. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "跑安装脚本、接 API key / OAuth、或把本机仓库与密钥交给 Pi 之前自己确认。扩展与第三方 Pi package 仍要你审权限。",
+      "approvalBoundaryEn": "Confirm before running the install script, connecting API keys / OAuth, or giving Pi access to local repos and secrets. Extensions and third-party Pi packages still need your permission review.",
+      "language": "en",
+      "connectors": [
+        "computer"
+      ],
+      "featured": true,
+      "publishedAt": "2026-10-01",
+      "updatedAt": "2026-10-02T01:00:00Z",
+      "previewImage": "/previews/pi-1-0.webp",
+      "landing": {
+        "what": "Pi 是 Earendil 的 MIT 开源极简 agent harness（仓库 earendil-works/pi，站点 pi.dev）。定位是「底座你来改」：交互 TUI、print/JSON、RPC、SDK 四种模式；扩展 / skills / prompt 模板 / 主题可打包成 Pi package（npm 或 git）。2026-10-01 的 Pi 1.0 公告写明新增 Codemode（原生 MCP + 非 LLM 模型如 Jev / 图像模型）、虚拟模型扩展、延迟加载工具、Anthropic cache warming、对话中途 system message、新 TUI 主题与默认全屏。同日实验包 Pi Durable 面向长会话与多表面，而不是把这些塞进核心。安装入口在 pi.dev（curl / PowerShell / npm 等）。HN item 49926069（首页）与 49925969（Pi Durable）。本站收成 Cases「工具笔记」：补 Magnitude 文案里「一键接 Pi」对应的官方 1.0 节点，不是 Grok Bot 本体。",
+        "whatEn": "Pi is Earendil’s MIT-licensed minimal agent harness (repo earendil-works/pi, site pi.dev). The pitch is “make the harness yours”: interactive TUI, print/JSON, RPC, and SDK modes; extensions / skills / prompt templates / themes can ship as Pi packages (npm or git). The 2026-10-01 Pi 1.0 announce adds Codemode (native MCP plus non-LLM models such as Jev / image models), virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, a new TUI theme, and full-screen by default. Same-day experimental Pi Durable covers long-running / multi-surface work without bloating the core. Install paths live on pi.dev (curl / PowerShell / npm, etc.). HN items 49926069 (front page) and 49925969 (Pi Durable). Listed here as a Cases tool tip next to Magnitude’s “one-click Pi” claim — not Grok Bot itself.",
+        "contrast": {
+          "caption": "左列是公告 / 官网 / 仓库对得上的事实。右列说明为什么放在 Cases 工具笔记，以及不要把它当成已经替你验证过的「全面替代 Claude Code / Cursor Agent」。",
+          "captionEn": "Left column: what the announce / site / repo actually say. Right column: why it sits as a Cases tool tip, and why it is not a verified “replace Claude Code / Cursor Agent everywhere” claim.",
+          "leftLabel": "Pi 1.0",
+          "leftLabelEn": "Pi 1.0",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "可扩展的本机 coding agent 底座：TUI / print / RPC / SDK，扩展与 package 自装。",
+              "leftEn": "An extensible local coding-agent harness: TUI / print / RPC / SDK, with self-installed extensions and packages.",
+              "right": "Cases「AI tool tip」。帮你跑本机 agent 栈，不是云端 Grok Bot 托管。",
+              "rightEn": "An AI tool tip in Cases — helps run a local agent stack; not hosted Grok Bot compute."
+            },
+            {
+              "aspect": "1.0 增量",
+              "aspectEn": "1.0 delta",
+              "left": "公告列 Codemode、虚拟模型、延迟工具、cache warming、中途 system message 等。",
+              "leftEn": "The announce lists Codemode, virtual models, deferred tools, cache warming, mid-conversation system messages, and more.",
+              "right": "清单是厂商发布说明；本库未逐项复测。Pi Durable 单独标 experimental。",
+              "rightEn": "The list is vendor release notes; not re-tested item-by-item here. Pi Durable is separately marked experimental."
+            },
+            {
+              "aspect": "和本站邻居",
+              "aspectEn": "Neighbors here",
+              "left": "Magnitude 官网写可一键接 Pi；Pi 也写可接多提供商与本机模型路由。",
+              "leftEn": "Magnitude’s site claims one-click Pi; Pi itself talks to many providers and local model routing.",
+              "right": "不替代 Cursor Cloud Agent / Grok Bot 云电脑；本条也不代你改 Agent 配置。",
+              "rightEn": "Does not replace Cursor Cloud Agents / Grok Bot cloud computers; this tip also does not rewrite your agent config for you."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读 1.0 公告与 HN",
+            "titleEn": "Read the 1.0 announce and HN first",
+            "body": "打开 https://earendil.com/posts/pi-1-0/ 与 HN item 49926069，核对 MIT、安装方式、Codemode / Pi Durable 边界。再决定是否装到你的机器。",
+            "bodyEn": "Open https://earendil.com/posts/pi-1-0/ and HN item 49926069; confirm MIT, install paths, and Codemode / Pi Durable boundaries before installing on your machine.",
+            "links": [
+              {
+                "href": "https://earendil.com/posts/pi-1-0/",
+                "label": "Pi 1.0 公告",
+                "labelEn": "Pi 1.0 announce"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49926069",
+                "label": "HN",
+                "labelEn": "HN"
+              },
+              {
+                "href": "https://github.com/earendil-works/pi",
+                "label": "GitHub",
+                "labelEn": "GitHub"
+              }
+            ]
+          },
+          {
+            "title": "按官网方式安装",
+            "titleEn": "Install the author’s way",
+            "body": "从 https://pi.dev/ 选 curl / PowerShell / npm / pnpm / bun 之一。本站不代装。装好后先跑文档里的最小任务，再接密钥与仓库。",
+            "bodyEn": "Pick curl / PowerShell / npm / pnpm / bun from https://pi.dev/. This site does not install it. After install, run a docs-sized minimal task before wiring keys and repos.",
+            "links": [
+              {
+                "href": "https://pi.dev/",
+                "label": "pi.dev 安装入口",
+                "labelEn": "Install on pi.dev"
+              },
+              {
+                "href": "https://github.com/earendil-works/pi",
+                "label": "README",
+                "labelEn": "README"
+              }
+            ]
+          },
+          {
+            "title": "自己接工作流，审扩展权限",
+            "titleEn": "Wire your workflow; review extension permissions",
+            "body": "用扩展 / skills / package 改 harness，或试实验包 Pi Durable。第三方 package 与 MCP 仍按你的审批边界；密钥与写仓库权限不要默认全开。",
+            "bodyEn": "Shape the harness with extensions / skills / packages, or try experimental Pi Durable. Third-party packages and MCP still follow your approval boundary — do not leave secrets and repo write access wide open by default.",
+            "links": [
+              {
+                "href": "https://earendil.com/posts/pi-durable/",
+                "label": "Pi Durable",
+                "labelEn": "Pi Durable"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49925969",
+                "label": "Pi Durable HN",
+                "labelEn": "Pi Durable HN"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "MIT 开源；2026-10-02 早间 gh api 约 111225★。功能以当日公告 / README / pi.dev 为准。",
+            "textEn": "MIT open source; about 111225★ on the 2026-10-02 morning gh api. Features follow that day’s announce / README / pi.dev."
+          },
+          {
+            "text": "「hundreds of thousands」周活与 1.0 能力清单是厂商口径；本库未复跑。Pi Durable 标 experimental。",
+            "textEn": "“Hundreds of thousands” weekly users and the 1.0 capability list are vendor claims; not re-run here. Pi Durable is marked experimental."
+          },
+          {
+            "text": "本站未代装、未代接密钥、未代改你的仓库。安装脚本与第三方 package 仍要你自己审。",
+            "textEn": "This site did not install Pi, connect keys, or rewrite your repos. Install scripts and third-party packages still need your review."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 pi.dev 首屏",
+        "previewCreditEn": "Preview: Playwright capture of pi.dev above the fold"
+      }
+    },
+    {
       "id": "magnitude",
       "slug": "magnitude",
       "title": "工具：Magnitude — 为本机 Agent 自调优的开源推理引擎",
@@ -5676,11 +5831,22 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-01T12:00:00Z",
+    "updatedAt": "2026-10-02T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.37",
-    "count": 134,
+    "version": "1.4.38",
+    "count": 135,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=49926069",
+      "https://earendil.com/posts/pi-1-0/",
+      "https://pi.dev/",
+      "https://github.com/earendil-works/pi",
+      "https://earendil.com/posts/pi-durable/",
+      "https://news.ycombinator.com/item?id=49925969",
+      "https://news.ycombinator.com/item?id=49927212",
+      "https://www.cssbed.com/",
+      "https://github.com/ubershmekel/cssbed",
+      "https://news.ycombinator.com/item?id=49843746",
+      "https://wave.subworkflow.ai/",
       "https://news.ycombinator.com/item?id=49913571",
       "https://artificialanalysis.ai/models/gemini-4-argon",
       "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
