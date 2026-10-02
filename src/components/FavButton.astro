@@ -2,6 +2,7 @@
 import { ui } from "../lib/i18n";
 import { favKey, type FavLib } from "../lib/stars";
 import Loc from "./Loc.astro";
+import Icon from "./Icon.astro";
 
 /**
  * Visitor favorite toggle. Static markup only; state is painted by the
@@ -22,8 +23,8 @@ const key = favKey(lib, id);
   variant === "button" ? (
     <button type="button" class="fav fav-btn btn btn-ghost" data-fav data-fav-key={key} aria-pressed="false">
       <span class="fav-glyph" aria-hidden="true">
-        <span class="fav-glyph-off">☆</span>
-        <span class="fav-glyph-on">★</span>
+        <span class="fav-glyph-off"><Icon name="bookmark" size={18} /></span>
+        <span class="fav-glyph-on"><Icon name="bookmark-fill" size={18} /></span>
       </span>
       <span class="fav-label fav-label-off"><Loc zh={ui.fav.save.zh} en={ui.fav.save.en} /></span>
       <span class="fav-label fav-label-on"><Loc zh={ui.fav.saved.zh} en={ui.fav.saved.en} /></span>
@@ -40,8 +41,8 @@ const key = favKey(lib, id);
       data-aria-en={ui.fav.toggle.en}
     >
       <span class="fav-glyph" aria-hidden="true">
-        <span class="fav-glyph-off">☆</span>
-        <span class="fav-glyph-on">★</span>
+        <span class="fav-glyph-off"><Icon name="bookmark" size={18} /></span>
+        <span class="fav-glyph-on"><Icon name="bookmark-fill" size={18} /></span>
       </span>
     </button>
   )

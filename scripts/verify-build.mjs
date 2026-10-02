@@ -393,8 +393,8 @@ if (
   }
 }
 
-if (!home.includes("把 AI 用到你的下一件事里") || !home.includes("directory-home-hero")) {
-  console.error("Homepage is missing the hero (每天更新的 AI 教程… / plaza-hero).");
+if (!home.includes("编辑精选") || !home.includes("editorial-feature")) {
+  console.error("Homepage is missing the editorial feature.");
   process.exit(1);
 }
 

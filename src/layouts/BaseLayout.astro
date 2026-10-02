@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../styles/editorial.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { withBase } from "../lib/paths";
@@ -134,12 +135,10 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=11";
         });
         try {
           var storedTheme = localStorage.getItem("theme");
-          var theme =
-            storedTheme ||
-            (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+          var theme = storedTheme === "dark" ? "dark" : "light";
           document.documentElement.dataset.theme = theme;
         } catch (e) {
-          document.documentElement.dataset.theme = "dark";
+          document.documentElement.dataset.theme = "light";
         }
       })();
     </script>

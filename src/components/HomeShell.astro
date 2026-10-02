@@ -2,38 +2,54 @@
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 import Loc from "./Loc.astro";
-import DirectoryCard from "./DirectoryCard.astro";
+import EditorialPreview from "./EditorialPreview.astro";
+import FavButton from "./FavButton.astro";
+import Icon from "./Icon.astro";
 import GitHubStar from "./GitHubStar.astro";
 import { sections, entries, sectionEntries, tasks } from "../lib/directory";
+import { homePicks, homeTitles, sourceHost } from "../lib/home-picks";
 import { starterCases } from "../lib/starters";
 import { changelogNotes } from "../lib/cases";
 import { withBase, assetUrl } from "../lib/paths";
 import { shanghaiDateKey } from "../lib/format";
 interface Props { dateKey?: string; }
 const { dateKey } = Astro.props;
-const recent = dateKey ? entries.filter(entry => shanghaiDateKey(entry.updatedAt) === dateKey) : entries.slice(0, 12);
+const [lead, ...supporting] = homePicks;
+const pickKeys = new Set(homePicks.map(pick => pick.entry.key));
+const recent = dateKey ? entries.filter(entry => shanghaiDateKey(entry.updatedAt) === dateKey) : entries.filter(entry => !pickKeys.has(entry.key)).slice(0, 2);
 const starters = starterCases().map(item => entries.find(entry => entry.key === `grok:${item.id}`)!).filter(Boolean);
 const archive = [...new Set(changelogNotes.map(note => note.date))].sort((a, b) => b.localeCompare(a)).slice(0, 8);
+const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "graph", prompts: "note" } as const;
 ---
 <Header />
-<main class="directory-home wrap-wide">
-  <section class="directory-home-hero">
-    <h1><Loc zh="把 AI 用到你的下一件事里" en="Put AI to work on your next task" /></h1>
-    <div class="directory-home-intro">
-      <p class="lede"><Loc zh="从教程学方法，用工具做事情，拿范例开始创作。跟进模型能力，也保留值得长期复用的经验。" en="Learn a method, find a tool, or start from an example. Follow new capabilities and keep practices worth reusing." /></p>
-      <div class="directory-home-actions"><a class="btn btn-primary" href={dateKey ? withBase("learn/") : "#home-picks"}><Loc zh={dateKey ? "看看入门教程" : "先看精选"} en={dateKey ? "Explore starter guides" : "Explore our picks"} /></a><a class="btn" href="#home-recent"><Loc zh={dateKey ? "浏览当天更新" : "逛逛最新内容"} en={dateKey ? "Browse this day's updates" : "Browse the latest"} /></a></div>
-    </div>
-    <div class="directory-task-links">{tasks.map(task => <a href={withBase(`search/?task=${task.id}`)}><Loc zh={task.title.zh} en={task.title.en} /></a>)}</div>
+<main class="directory-home editorial-home wrap-wide">
+  {!dateKey && <section class="editorial-feature" id="home-picks" aria-labelledby="editorial-title">
+    <article class="editorial-lead" data-editorial-entry={lead.entry.key}>
+      <div class="editorial-lead-copy">
+        <p class="editorial-eyebrow"><Loc zh="编辑精选" en="EDITOR'S PICK" /></p>
+        <h1 id="editorial-title"><Loc zh={lead.title.zh} en={lead.title.en} /></h1>
+        <p class="editorial-lead-line"><Loc zh={lead.entry.line.zh} en={lead.entry.line.en} /></p>
+        <p class="editorial-lead-reason"><Loc zh={lead.reason.zh} en={lead.reason.en} /></p>
+        <div class="editorial-meta"><a href={withBase(`${lead.section.id}/`)}><Loc zh={lead.section.title.zh} en={lead.section.title.en} /></a><span>{sourceHost(lead.entry.sourceUrl)}</span></div>
+        <div class="editorial-lead-actions"><a class="editorial-primary" href={lead.entry.href}><Loc zh="阅读用法" en="Read the guide" /><Icon name="arrow" size={20} /></a><FavButton lib={lead.entry.lib} id={lead.entry.id} variant="button" /></div>
+      </div>
+      <a class="editorial-art" href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={assetUrl("/editorial/agent-workflow.webp")} alt="" width="1190" height="1322" fetchpriority="high" loading="eager" decoding="async" /></a>
+    </article>
+    <aside class="editorial-supporting" aria-label="更多精选 / More editorial picks">{supporting.map(pick => <EditorialPreview entry={pick.entry} title={pick.title} line={pick.reason} sectionId={pick.section.id} kind="support" />)}</aside>
+  </section>}
+  {dateKey && <section class="editorial-archive-intro"><p class="editorial-eyebrow"><Loc zh="更新存档" en="UPDATE ARCHIVE" /></p><h1><Loc zh={`${dateKey} 的更新`} en={`Updates for ${dateKey}`} /></h1><a class="editorial-text-link" href={withBase("/")}><Loc zh="回到最新精选" en="Back to the latest picks" /><Icon name="arrow" size={18} /></a></section>}
+  <section class="editorial-recent" id="home-recent" aria-labelledby="recent-title">
+    <div class="editorial-section-heading"><div><h2 id="recent-title"><Loc zh="最近更新" en="Recently added" /></h2><p><Loc zh={dateKey ? "按整理日期回看收录的资源。" : "继续发现工具、方法与范例。"} en={dateKey ? "Resources collected on this date." : "Keep discovering tools, methods, and examples."} /></p></div><a class="editorial-text-link" href={withBase("search/?sort=latest")}><Loc zh="查看全部" en="Browse all" /><Icon name="arrow" size={18} /></a></div>
+    <div class="editorial-recent-grid">{recent.map(entry => <EditorialPreview entry={entry} title={homeTitles.get(entry.key)} />)}</div>
+    {!recent.length && <p><Loc zh="这一天没有新增资源，看看其他日期或探索目录。" en="No new resources on this date. Explore another day or a section." /></p>}
   </section>
-  {!dateKey && <section class="directory-home-section directory-home-picks" id="home-picks"><div class="directory-section-heading"><div><p class="kicker"><Loc zh="精选入门" en="START HERE" /></p><h2><Loc zh="新手从这里开始" en="Start here" /></h2></div><a href={withBase("learn/?difficulty=starter")}><Loc zh="更多入门教程 →" en="More starter guides →" /></a></div><div class="directory-grid directory-starters">{starters.map(entry => <DirectoryCard entry={entry} />)}</div></section>}
-  <section class="directory-home-section" aria-label="目录 / Directory">
-    <div class="directory-section-heading"><div><p class="kicker">EXPLORE</p><h2><Loc zh="按目录探索" en="Explore the directory" /></h2></div></div>
-    <div class="directory-section-row">
-    {sections.map(section => <a class:list={["directory-section-card", `tone-${section.tone}`]} href={withBase(`${section.id}/`)}><img src={assetUrl(section.image)} alt="" width="168" height="112" /><div><h2><Loc zh={section.title.zh} en={section.title.en} /></h2><p><Loc zh={section.description.zh} en={section.description.en} /></p><span><Loc zh={`${sectionEntries(section.id).length} 条资源 →`} en={`${sectionEntries(section.id).length} resources →`} /></span></div></a>)}
-    </div>
+  <section class="editorial-directory" aria-labelledby="directory-title">
+    <h2 id="directory-title"><Loc zh="按目录探索" en="Explore" /></h2>
+    <div class="editorial-directory-links">{sections.map(section => <a href={withBase(`${section.id}/`)}><Icon name={directoryIcons[section.id]} size={26} /><div><h3><Loc zh={section.title.zh} en={section.title.en} /></h3><p><Loc zh={`${sectionEntries(section.id).length} 条资源`} en={`${sectionEntries(section.id).length} resources`} /></p></div><Icon name="arrow" size={16} /></a>)}</div>
   </section>
-  <section class="directory-home-section" id="home-recent"><div class="directory-section-heading"><div><p class="kicker">KEEP EXPLORING</p><h2><Loc zh={dateKey ? `${dateKey} 的更新` : "最近更新"} en={dateKey ? `Updates for ${dateKey}` : "Recently updated"} /></h2></div><a href={withBase("search/?sort=latest")}><Loc zh="查看全部 →" en="Browse all →" /></a></div><div class="directory-grid">{recent.map(entry => <DirectoryCard entry={entry} />)}</div>{!recent.length && <p><Loc zh="这一天没有新增资源，看看其他日期或探索目录。" en="No new resources on this date. Explore another day or a section." /></p>}</section>
-  <section class="directory-home-archive"><h2><Loc zh="按日期回看" en="Browse past updates" /></h2><div class="directory-task-links">{archive.map(date => <a href={withBase(`d/${date}/`)}>{date}</a>)}<a href={withBase("changelog/")}><Loc zh="全部更新记录 →" en="All update notes →" /></a></div></section>
+  {!dateKey && <section class="editorial-starters" aria-labelledby="starter-title"><div class="editorial-section-heading"><div><h2 id="starter-title"><Loc zh="新手从这里开始" en="Start here" /></h2><p><Loc zh="从一篇教程开始，把方法用起来。" en="Start with one guide and put the method to work." /></p></div><a class="editorial-text-link" href={withBase("learn/?difficulty=starter")}><Loc zh="更多入门教程" en="More starter guides" /><Icon name="arrow" size={18} /></a></div><div class="editorial-starter-grid">{starters.map((entry, index) => <a href={entry.href}><span class="editorial-starter-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><div><h3><Loc zh={entry.title.zh} en={entry.title.en} /></h3><p><Loc zh={entry.line.zh} en={entry.line.en} /></p></div><Icon name="arrow" size={18} /></a>)}</div></section>}
+  <section class="editorial-task-section" aria-label="按任务探索 / Explore by task"><h2><Loc zh="按任务探索" en="Explore by task" /></h2><div class="directory-task-links">{tasks.map(task => <a href={withBase(`search/?task=${task.id}`)}><Loc zh={task.title.zh} en={task.title.en} /></a>)}</div></section>
+  <section class="directory-home-archive"><h2><Loc zh="按日期回看" en="Browse past updates" /></h2><div class="directory-task-links">{archive.map(date => <a href={withBase(`d/${date}/`)}>{date}</a>)}<a href={withBase("changelog/")}><Loc zh="全部更新记录" en="All update notes" /><Icon name="arrow" size={14} /></a></div></section>
   <GitHubStar variant="rail" />
 </main>
 <Footer />

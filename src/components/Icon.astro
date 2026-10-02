@@ -1,0 +1,16 @@
+---
+import arrowRight from "@phosphor-icons/core/assets/regular/arrow-right.svg?raw";
+import bookmark from "@phosphor-icons/core/assets/regular/bookmark-simple.svg?raw";
+import bookmarkFill from "@phosphor-icons/core/assets/fill/bookmark-simple-fill.svg?raw";
+import caretDown from "@phosphor-icons/core/assets/regular/caret-down.svg?raw";
+import book from "@phosphor-icons/core/assets/regular/book-open.svg?raw";
+import cube from "@phosphor-icons/core/assets/regular/cube.svg?raw";
+import grid from "@phosphor-icons/core/assets/regular/squares-four.svg?raw";
+import graph from "@phosphor-icons/core/assets/regular/graph.svg?raw";
+import note from "@phosphor-icons/core/assets/regular/note.svg?raw";
+import circleHalf from "@phosphor-icons/core/assets/regular/circle-half.svg?raw";
+const icons = { arrow: arrowRight, bookmark, "bookmark-fill": bookmarkFill, caret: caretDown, book, cube, grid, graph, note, theme: circleHalf };
+interface Props { name: keyof typeof icons; size?: number; class?: string; }
+const { name, size = 20, class: className } = Astro.props;
+---
+<span class:list={["ui-icon", className]} style={`width:${size}px;height:${size}px`} aria-hidden="true" set:html={icons[name]} />
