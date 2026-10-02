@@ -3,7 +3,7 @@ import { entries, sections } from "../lib/directory";
 import { withBase } from "../lib/paths";
 export const GET: APIRoute = ({ site }) => {
   const routes = new Map<string, string | undefined>([
-    ...["", "about/", "changelog/", "cases/", "html/", "agent-ui/", "image-prompts/"].map(path => [withBase(path), undefined] as const),
+    ...["", "about/", "brand/", "changelog/", "cases/", "html/", "agent-ui/", "image-prompts/"].map(path => [withBase(path), undefined] as const),
     ...sections.map(section => [withBase(`${section.id}/`), undefined] as const),
     ...entries.map(entry => [entry.href, entry.updatedAt] as const),
   ]);

@@ -1,17 +1,18 @@
 ---
 /** Pointed-bottom hexagon with an UP triangle cutout and a 45% triangle centered at its centroid. Matches public/favicon.svg. */
+import { brandMark } from "../lib/brand";
 ---
 
 <svg
   class="brand-mark-svg"
   xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 32 32"
+  viewBox={brandMark.viewBox}
   fill="currentColor"
   aria-hidden="true"
 >
   <path
     fill-rule="evenodd"
-    d="M16 4.5 25.6 10.02 25.6 22.02 16 27.54 6.4 22.02 6.4 10.02Z M16 4.5 25.6 22.02 6.4 22.02Z"
+    d={brandMark.outline}
   ></path>
-  <path d="M16 10.924 20.32 18.808 11.68 18.808Z"></path>
+  <path d={brandMark.center}></path>
 </svg>
