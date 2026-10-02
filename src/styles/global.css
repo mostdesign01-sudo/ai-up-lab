@@ -3980,22 +3980,26 @@ html[data-theme="light"] .home-pill {
 
 
 /* The public directory is organized by purpose; legacy detail routes stay intact. */
-.directory-header-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 18px; padding-bottom: 16px; }
-.directory-header-tools { display: flex; align-items: center; gap: 16px; font-size: 13px; }
+.directory-header-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 24px; padding-top: 12px; padding-bottom: 12px; }
+.directory-header-tools { display: flex; align-items: center; gap: 14px; font-size: 13px; }
+.directory-header .brand-text > span { display: none; }
 .directory-header-more { position: relative; }
 .directory-header-more summary { display: flex; align-items: center; gap: 6px; cursor: pointer; list-style: none; min-height: 32px; }
 .directory-header-more summary::-webkit-details-marker { display: none; }
 .directory-header-more[open] summary { color: var(--ink); }
 .directory-more-menu { position: absolute; top: calc(100% + 8px); right: 0; z-index: 20; min-width: 170px; padding: 6px; background: var(--bg-card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgb(0 0 0 / .12); }
 .directory-more-menu a { display: block; padding: 10px 12px; border-radius: 7px; color: var(--ink); }
+.directory-more-menu .directory-more-saved { display: none; }
 .directory-more-menu a:hover, .directory-more-menu a:focus-visible { background: var(--bg); }
-.directory-nav { display: flex; gap: 24px; overflow-x: auto; padding-bottom: 15px; }
-.directory-nav a { white-space: nowrap; color: var(--muted); font-size: 14px; }
+.directory-nav { display: flex; align-items: center; gap: 18px; overflow-x: auto; padding: 6px 0; }
+.directory-nav a { white-space: nowrap; color: var(--muted); font-size: 13px; }
 .directory-nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
-.directory-home { padding-top: 56px; padding-bottom: 64px; }
-.directory-home-hero { max-width: 820px; margin-bottom: 36px; }
-.directory-home-hero h1 { font-size: clamp(32px, 4.5vw, 56px); line-height: 1.18; letter-spacing: -.035em; margin: 12px 0 20px; }
-.directory-home-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 20px; }
+.directory-home { padding-top: 32px; padding-bottom: 64px; }
+.directory-home-hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); align-items: center; gap: 20px 40px; margin-bottom: 24px; }
+.directory-home-hero h1 { font-size: clamp(28px, 3vw, 42px); line-height: 1.25; letter-spacing: -.035em; margin: 0; }
+.directory-home-intro .lede { font-size: 14px; line-height: 1.7; margin: 0; }
+.directory-home-hero > .directory-task-links { grid-column: 1 / -1; }
+.directory-home-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 0; }
 .directory-home-actions a { text-decoration: none; }
 .directory-filters input, .directory-filters select { min-width: 0; width: 100%; border: 1px solid var(--line); border-radius: 9px; background: var(--bg-card); color: var(--ink); font: inherit; padding: 11px 12px; }
 .directory-task-links { display: flex; flex-wrap: wrap; gap: 9px; }
@@ -4009,8 +4013,8 @@ html[data-theme="light"] .home-pill {
 .directory-section-card p { font-size: 13px; color: var(--muted); line-height: 1.65; margin: 0 0 14px; }
 .directory-section-card span { font-size: 12px; }
 .directory-home-section { margin-top: 52px; }
-.directory-home-picks { margin-top: 32px; }
-#home-picks, #home-recent { scroll-margin-top: 180px; }
+.directory-home-picks { margin-top: 24px; }
+#home-picks, #home-recent { scroll-margin-top: 88px; }
 .directory-section-heading { display: flex; justify-content: space-between; align-items: end; gap: 16px; margin-bottom: 20px; }
 .directory-section-heading h2 { font-size: 25px; margin: 6px 0 0; }
 .directory-section-heading > a { font-size: 13px; white-space: nowrap; }
@@ -4041,17 +4045,25 @@ html[data-theme="light"] .home-pill {
 .directory-footer p { color: var(--muted); font-size: 13px; max-width: 460px; }
 .directory-footer .footer-links { display: grid; gap: 8px; margin-top: 14px; }
 @media (max-width: 1050px) {
+  .directory-header-top { grid-template-columns: auto minmax(0, 1fr); gap: 8px 16px; }
+  .directory-header-tools { grid-column: 2; grid-row: 1; justify-self: end; }
+  .directory-nav { grid-column: 1 / -1; grid-row: 2; }
+  #home-picks, #home-recent { scroll-margin-top: 124px; }
   .directory-section-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .directory-starters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
-  .directory-header-top { align-items: flex-start; flex-direction: column; gap: 16px; }
-  .directory-header-tools { gap: 13px; width: 100%; flex-wrap: wrap; }
-  .directory-more-menu { left: 0; right: auto; }
-  .directory-header .brand-text > span { display: block; }
+  .directory-header-top { gap: 6px 8px; padding-top: 10px; padding-bottom: 8px; }
+  .directory-header .brand { gap: 6px; }
+  .directory-header .brand-mark { width: 24px; height: 24px; }
+  .directory-header .brand-text strong { font-size: 12px; }
+  .directory-header-tools { gap: 8px; }
+  .directory-header-tools > .gh-star-pill { display: none; }
+  .directory-header-tools > a { display: none; }
+  .directory-more-menu .directory-more-saved { display: block; }
   .directory-nav { gap: 18px; }
-  .directory-home { padding-top: 32px; }
-  #home-picks, #home-recent { scroll-margin-top: 240px; }
+  .directory-home { padding-top: 24px; }
+  .directory-home-hero { grid-template-columns: minmax(0, 1fr); gap: 14px; }
   .directory-section-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .directory-section-card img { height: 75px; }
   .directory-section-card > div { padding: 14px; }

@@ -18,10 +18,11 @@ const archive = [...new Set(changelogNotes.map(note => note.date))].sort((a, b) 
 <Header />
 <main class="directory-home wrap-wide">
   <section class="directory-home-hero">
-    <p class="kicker">AI UP LAB</p>
     <h1><Loc zh="把 AI 用到你的下一件事里" en="Put AI to work on your next task" /></h1>
-    <p class="lede"><Loc zh="从教程学方法，用工具做事情，拿范例开始创作。跟进模型能力，也保留值得长期复用的经验。" en="Learn a method, find a tool, or start from an example. Follow new capabilities and keep practices worth reusing." /></p>
-    <div class="directory-home-actions"><a class="btn btn-primary" href={dateKey ? withBase("learn/") : "#home-picks"}><Loc zh={dateKey ? "看看入门教程" : "先看精选"} en={dateKey ? "Explore starter guides" : "Explore our picks"} /></a><a class="btn" href="#home-recent"><Loc zh={dateKey ? "浏览当天更新" : "逛逛最新内容"} en={dateKey ? "Browse this day's updates" : "Browse the latest"} /></a></div>
+    <div class="directory-home-intro">
+      <p class="lede"><Loc zh="从教程学方法，用工具做事情，拿范例开始创作。跟进模型能力，也保留值得长期复用的经验。" en="Learn a method, find a tool, or start from an example. Follow new capabilities and keep practices worth reusing." /></p>
+      <div class="directory-home-actions"><a class="btn btn-primary" href={dateKey ? withBase("learn/") : "#home-picks"}><Loc zh={dateKey ? "看看入门教程" : "先看精选"} en={dateKey ? "Explore starter guides" : "Explore our picks"} /></a><a class="btn" href="#home-recent"><Loc zh={dateKey ? "浏览当天更新" : "逛逛最新内容"} en={dateKey ? "Browse this day's updates" : "Browse the latest"} /></a></div>
+    </div>
     <div class="directory-task-links">{tasks.map(task => <a href={withBase(`search/?task=${task.id}`)}><Loc zh={task.title.zh} en={task.title.en} /></a>)}</div>
   </section>
   {!dateKey && <section class="directory-home-section directory-home-picks" id="home-picks"><div class="directory-section-heading"><div><p class="kicker"><Loc zh="精选入门" en="START HERE" /></p><h2><Loc zh="新手从这里开始" en="Start here" /></h2></div><a href={withBase("learn/?difficulty=starter")}><Loc zh="更多入门教程 →" en="More starter guides →" /></a></div><div class="directory-grid directory-starters">{starters.map(entry => <DirectoryCard entry={entry} />)}</div></section>}

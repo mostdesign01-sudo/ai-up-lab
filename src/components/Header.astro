@@ -13,12 +13,17 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
 <header class="site-header directory-header">
   <div class="wrap-wide directory-header-top">
     <a class="brand" href={withBase("/")}><span class="brand-mark" aria-hidden="true"><BrandMark /></span><span class="brand-text"><strong>{siteName}</strong><span><Loc zh={siteTagline} en={siteTaglineEn} /></span></span></a>
+    <nav class="directory-nav" aria-label="目录 / Directory">
+      <a href={withBase("/")} aria-current={isCurrentPath(path, withBase("/")) ? "page" : undefined}><Loc zh="首页" en="Home" /></a>
+      {sections.map(section => <a href={withBase(`${section.id}/`)} aria-current={active === section.id ? "page" : undefined}><Loc zh={section.title.zh} en={section.title.en} /></a>)}
+    </nav>
     <div class="directory-header-tools">
       <a href={withBase("favorites/")}><Loc zh="收藏" en="Saved" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
       <details class="directory-header-more">
         <summary><Loc zh="更多" en="More" /><span aria-hidden="true">⌄</span></summary>
         <nav class="directory-more-menu" aria-label="更多 / More">
           <a href={withBase("search/")}><Loc zh="搜索资源" en="Search resources" /></a>
+          <a class="directory-more-saved" href={withBase("favorites/")}><Loc zh="我的收藏" en="Saved resources" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
           <a href={withBase("changelog/")}><Loc zh="更新记录" en="Update notes" /></a>
           <a href={withBase("about/")}><Loc zh="关于本站" en="About" /></a>
         </nav>
@@ -28,10 +33,6 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
       <button class="theme-toggle" type="button" data-theme-toggle aria-label={ui.header.theme.zh} data-aria-zh={ui.header.theme.zh} data-aria-en={ui.header.theme.en}><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.4" /><path fill="currentColor" d="M8 1.75a6.25 6.25 0 0 0 0 12.5V1.75Z" /></svg></button>
     </div>
   </div>
-  <nav class="wrap-wide directory-nav" aria-label="目录 / Directory">
-    <a href={withBase("/")} aria-current={isCurrentPath(path, withBase("/")) ? "page" : undefined}><Loc zh="首页" en="Home" /></a>
-    {sections.map(section => <a href={withBase(`${section.id}/`)} aria-current={active === section.id ? "page" : undefined}><Loc zh={section.title.zh} en={section.title.en} /></a>)}
-  </nav>
 </header>
 <script>
   const more = document.querySelector<HTMLDetailsElement>(".directory-header-more");
