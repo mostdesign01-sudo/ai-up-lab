@@ -1,5 +1,7 @@
 {
   "caseTools": [
+    "deepseek-harness-desktop",
+    "weave-router",
     "pi-1-0",
     "magnitude",
     "jeff",
