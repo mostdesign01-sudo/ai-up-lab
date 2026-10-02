@@ -1,0 +1,16 @@
+---
+interface Props { variant?: "primary" | "secondary" | "text"; size?: "regular" | "large"; disabled?: boolean; loading?: boolean; }
+const { variant = "primary", size = "regular", disabled = false, loading = false } = Astro.props;
+---
+<button type="button" class:list={["lab-action", `lab-action-${variant}`, `lab-action-${size}`]} disabled={disabled || loading} aria-busy={loading ? "true" : undefined}><slot /></button>
+<style>
+.lab-action { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:44px; padding:10px 16px; border:1px solid transparent; border-radius:var(--lab-radius-control); font:600 14px/1.5 var(--font-sans); cursor:pointer; transition:background 160ms ease-out; }
+.lab-action-primary { background:var(--brass); color:var(--lab-color-onBrand); }
+.lab-action-secondary { background:var(--bg-card); color:var(--ink); border-color:var(--line-strong); }
+.lab-action-text { color:var(--brass); background:transparent; }
+.lab-action-large { min-height:48px; font-size:16px; }
+.lab-action:hover:not(:disabled) { filter:brightness(.94); }
+.lab-action:focus-visible { outline:2px solid var(--brass); outline-offset:3px; }
+.lab-action:disabled { opacity:.5; cursor:not-allowed; }
+@media(prefers-reduced-motion:reduce) { .lab-action { transition:none; } }
+</style>

@@ -557,3 +557,23 @@ for (const theme of ["light", "dark"]) {
   if (contrast(colors.onBrand, colors.brand) < 4.5) throw new Error(`Brand button contrast below target: ${theme}`);
 }
 console.log("Brand system verified: public downloads, consistent logo shapes and tokens, bilingual AI brief, and text contrast targets in both themes.");
+
+// Public rules must resolve to real pages, dependencies, source files, and tokens.
+const knowledge = JSON.parse(await readFile(new URL("../dist/brand/knowledge.json", import.meta.url), "utf8"));
+const ruleIds = new Set(knowledge.specs.map(spec => spec.id));
+if (ruleIds.size !== knowledge.specs.length || knowledge.version !== brandTokens.version) throw new Error("Invalid design knowledge IDs or version.");
+const visitRule = (id, trail = []) => {
+  if (trail.includes(id)) throw new Error(`Design rule dependency cycle: ${[...trail, id].join(" -> ")}`);
+  const spec = knowledge.specs.find(item => item.id === id);
+  if (!spec) throw new Error(`Missing design rule: ${id}`);
+  for (const dep of spec.dependencies) visitRule(dep, [...trail, id]);
+};
+for (const spec of knowledge.specs) {
+  visitRule(spec.id);
+  const page = await readFile(new URL(`../dist/brand/guides/${spec.id}/index.html`, import.meta.url), "utf8");
+  const rule = await readFile(new URL(`../dist/brand/rules/${spec.id}.md`, import.meta.url), "utf8");
+  if (!page.includes(spec.title.zh) || !page.includes(spec.title.en.replaceAll("&", "&amp;")) || !rule.includes(`ID: ${spec.id}`) || !sitemap.includes(`/brand/guides/${spec.id}/`)) throw new Error(`Missing handbook content: ${spec.id}`);
+  for (const ref of spec.code) await readFile(new URL(`../${ref.path}`, import.meta.url), "utf8");
+  for (const token of spec.tokens) if (!brandCSS.includes(`${token}:`)) throw new Error(`Unknown design token: ${spec.id}/${token}`);
+}
+console.log(`Design handbook verified: ${ruleIds.size} bilingual guides, Markdown rules, acyclic dependencies, source mappings, and shared tokens.`);

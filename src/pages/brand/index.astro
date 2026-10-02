@@ -8,6 +8,8 @@ import { entries } from "../../lib/directory";
 import { withBase } from "../../lib/paths";
 import { colorRoles, themes, foundations, aiGuide, designRules, designSystemVersion, designSystemUpdatedAt } from "../../lib/design-system";
 import "../../styles/brand-guide.css";
+import "../../styles/brand-handbook.css";
+import { designKnowledge, designGroups } from "../../lib/design-knowledge";
 const topics = [
   { id: "principles", zh: "设计原则", en: "Principles" },
   { id: "logo", zh: "品牌标志", en: "Logo" },
@@ -27,6 +29,7 @@ const typeSamples = [
 ];
 const samples = [entries.find(entry => entry.key === "html:css-bed")!, entries.find(entry => entry.key === "grok:pi-1-0")!];
 const downloads = [
+  { path: "brand/knowledge.json", name: "ai-up-lab-knowledge.json", zh: "设计知识索引 · JSON", en: "Knowledge registry · JSON", detail: { zh: "规则、依赖、参数与代码映射", en: "Rules, dependencies, tokens, and code mappings" } },
   { path: "brand/logo.svg", name: "ai-up-lab-logo.svg", zh: "Logo · SVG", en: "Logo · SVG", detail: { zh: "透明底，可等比缩放", en: "Transparent, scalable mark" } },
   { path: "brand/logo-inverse.svg", name: "ai-up-lab-logo-inverse.svg", zh: "反白 Logo · SVG", en: "Reversed logo · SVG", detail: { zh: "用于深色背景", en: "For dark surfaces" } },
   { path: "brand/tokens.json", name: "ai-up-lab-tokens.json", zh: "设计参数 · JSON", en: "Design tokens · JSON", detail: { zh: "深浅主题、间距、字体与规则", en: "Themes, spacing, type, and rules" } },
@@ -37,9 +40,11 @@ const downloads = [
 <BaseLayout title="品牌与界面规范 · AI UP LAB" titleEn="Brand & interface guidelines · AI UP LAB" description="AI UP LAB 的品牌标志、色彩、字体、组件与 AI 界面生成指南。" descriptionEn="AI UP LAB logo, colors, typography, components, and AI interface guidelines.">
   <div class="wrap-wide brand-guide">
     <section class="brand-guide-hero">
-      <div><p class="brand-guide-kicker">AI UP LAB / DESIGN SYSTEM</p><h1><Loc zh="品牌与界面规范" en="Brand & interface guidelines" /></h1><p class="lede"><Loc zh="让内容更清楚，让下一步更直观。" en="Make the content clear and the next step obvious." /></p><p class="brand-guide-intro"><Loc zh="一套持续维护的视觉与界面规则，供设计者、开发者和 AI 共用。" en="A shared, evolving set of visual and interface rules for designers, developers, and AI." /></p><div class="brand-guide-actions"><a class="brand-guide-primary" href="#assets"><Loc zh="下载规范与素材" en="Get the guide & assets" /><Icon name="arrow" size={18} /></a><a class="brand-guide-link" href="#ai"><Loc zh="给 AI 的工作说明" en="Get the AI brief" /></a></div><p class="brand-guide-version">v{designSystemVersion} <span>·</span> <time datetime={designSystemUpdatedAt}>{designSystemUpdatedAt}</time></p></div>
+      <div><p class="brand-guide-kicker">AI UP LAB / DESIGN SYSTEM</p><h1><Loc zh="品牌与界面规范" en="Brand & interface guidelines" /></h1><p class="lede"><Loc zh="让内容更清楚，让下一步更直观。" en="Make the content clear and the next step obvious." /></p><p class="brand-guide-intro"><Loc zh="一套持续维护的视觉与界面规则，供设计者、开发者和 AI 共用。" en="A shared, evolving set of visual and interface rules for designers, developers, and AI." /></p><div class="brand-guide-actions"><a class="brand-guide-primary" href="#handbook"><Loc zh="浏览完整规范库" en="Explore the handbook" /><Icon name="arrow" size={18} /></a><a class="brand-guide-link" href={withBase("brand/guides/ai-workflow/")}><Loc zh="按任务生成 AI 说明" en="Build a task brief" /></a></div><p class="brand-guide-version">v{designSystemVersion} <span>·</span> <time datetime={designSystemUpdatedAt}>{designSystemUpdatedAt}</time></p></div>
       <div class="brand-guide-signature"><span class="brand-guide-symbol"><BrandMark /></span><strong>AI UP LAB</strong><p><Loc zh="面向任务的 AI 实践资源" en="AI resources for real tasks" /></p></div>
     </section>
+    <section class="handbook-index" id="handbook"><div class="handbook-index-head"><h2><Loc zh="从规则到实际界面" en="From rules to working interfaces" /></h2><code>10 GUIDES / v{designSystemVersion}</code></div><p class="brand-guide-description"><Loc zh="按设计对象查阅结构、参数、状态与代码；每项规则都能单独交给 AI。" en="Explore anatomy, parameters, states, and code by design object. Share each rule with AI independently." /></p><div class="handbook-index-grid">{designGroups.map(group=><div class="handbook-index-group"><h3><Loc {...group.title} /></h3>{designKnowledge.filter(spec=>spec.group===group.id).map(spec=><a href={withBase(`brand/guides/${spec.id}/`)}><Loc {...spec.title} /><span aria-hidden="true">↗</span></a>)}</div>)}</div></section>
+    <aside class="handbook-source"><Loc zh="方法参考：" en="Method reference: " /><a href="https://tmall-design.com/" target="_blank" rel="noopener noreferrer">Tmall Design</a><Loc zh="。借鉴它将规则、结构化映射和实现代码连接的方式，建立适用于 AI 实践资源站的规范。品牌、参数与示例沿用 AI UP LAB 自身设计。" en=". We adapt its connection between rules, structured mappings, and implementation to a practical AI resource site. Branding, parameters, and examples remain specific to AI UP LAB." /> <a href="https://tmall-design.com/#blog/building-design-wiki-for-aigui" target="_blank" rel="noopener noreferrer"><Loc zh="阅读原版方法文章 ↗" en="Read the original method ↗" /></a></aside>
     <nav class="brand-guide-nav" aria-label="规范目录" data-aria-zh="规范目录" data-aria-en="Guideline contents">{topics.map(topic => <a href={`#${topic.id}`}><Loc zh={topic.zh} en={topic.en} /></a>)}</nav>
     <section id="principles" class="brand-guide-section">
       <div class="brand-guide-heading"><p>01 / PRINCIPLES</p><h2><Loc zh="清楚、实用、有依据" en="Clear, useful, grounded" /></h2></div>

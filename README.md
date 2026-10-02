@@ -101,4 +101,6 @@ AIHOT 的代码是 MIT；复制代码或实质部分时保留对应版权和许�
 - `/brand/tokens.json` 和 `/brand/tokens.css` 提供可供 AI 与开发者读取的参数，`/brand/ai-guide.md` 提供中英工作说明；JSON 使用本站语义参数格式，不声称是 DTCG 标准文件。
 - 指南中的对比度、触控尺寸与状态覆盖是实施目标，不代表整站已通过完整无障碍认证。新页面需检查双语、深浅主题、键盘、移动布局与保存状态。
 
-本轮根据 AI UP LAB 已选定的视觉与用户反馈整理规范。用户提到的 Tmall Design 原版链接尚未核实，未复制其 Logo、素材、代码或声称已逐项对照；找到确切来源后再补充有出处的参考说明。
+原版参考：[Tmall Design](https://tmall-design.com/) 及其 [Design Wiki 方法文章](https://tmall-design.com/#blog/building-design-wiki-for-aigui)。借鉴规则、结构化映射与代码关联的方法，不复制天猫品牌或电商参数。
+
+`src/lib/design-knowledge.ts` 维护 10 项双语规范，生成 `/brand/guides/<id>/`、`/brand/rules/<id>.md` 与 `/brand/knowledge.json`。覆盖基础、布局、素材动效、按钮、卡片、导航、反馈、页面模式、AI 协作和验收。示例复用真实资源和组件；AI 工作说明工具按任务整理规则，在本地运行，不调用 AI 或提交输入。本站提供静态上下文文件，不提供 MCP 服务。
