@@ -1,0 +1,47 @@
+---
+import DirectoryCard from "./DirectoryCard.astro";
+import Loc from "./Loc.astro";
+import { sectionEntries, type SectionId } from "../lib/directory";
+import { withBase } from "../lib/paths";
+interface Props { section: SectionId; }
+const { section } = Astro.props;
+const listed = sectionEntries(section);
+---
+<section data-directory-listing data-section={section} data-search-url={withBase("search/")}>
+  <p class="count-row"><Loc zh={`共 ${listed.length} 条 · 最新在前`} en={`${listed.length} resources · Newest first`} /></p>
+  <div class="directory-grid" data-directory-grid>
+    {listed.map(entry => <div data-entry data-key={entry.key} data-updated={entry.updatedAt}><DirectoryCard entry={entry} /></div>)}
+  </div>
+  <button class="btn btn-ghost directory-more" type="button" data-directory-more hidden><Loc zh="再看 24 条" en="Show 24 more" /></button>
+</section>
+<script>
+  const listing = document.querySelector<HTMLElement>("[data-directory-listing]");
+  if (listing) {
+    // Saved links with filters now open the dedicated search page.
+    const params = new URLSearchParams(location.search);
+    const filters = new URLSearchParams();
+    for (const key of ["q", "task", "difficulty", "sort", "lib"]) {
+      const value = params.get(key);
+      if (value) filters.set(key, value);
+    }
+    if (filters.size) {
+      filters.set("section", listing.dataset.section!);
+      location.replace(`${listing.dataset.searchUrl}?${filters}`);
+    } else {
+      const items = [...listing.querySelectorAll<HTMLElement>("[data-entry]")];
+      const more = listing.querySelector<HTMLButtonElement>("[data-directory-more]")!;
+      let limit = 24;
+      const show = () => {
+        items.forEach((item, index) => { item.hidden = index >= limit; });
+        more.hidden = limit >= items.length;
+      };
+      more.addEventListener("click", () => {
+        const start = limit;
+        limit += 24;
+        show();
+        items[start]?.querySelector<HTMLAnchorElement>("a")?.focus();
+      });
+      show();
+    }
+  }
+</script>

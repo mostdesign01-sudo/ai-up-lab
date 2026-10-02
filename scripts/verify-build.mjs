@@ -398,8 +398,8 @@ if (!home.includes("编辑精选") || !home.includes("editorial-feature")) {
   process.exit(1);
 }
 
-if (!home.includes("新手从这里开始") || !home.includes("learn/?difficulty=starter")) {
-  console.error("Homepage is missing the starter row (新手从这里开始 → /cases/?difficulty=starter).");
+if (!home.includes("新手从这里开始") || !home.replaceAll("&#38;", "&").replaceAll("&amp;", "&").includes("search/?section=learn&difficulty=starter")) {
+  console.error("Homepage is missing the starter row link to search/?section=learn&difficulty=starter.");
   process.exit(1);
 }
 

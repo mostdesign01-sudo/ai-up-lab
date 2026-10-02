@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import DirectoryExplorer from "../components/DirectoryExplorer.astro";
+import DirectoryListing from "../components/DirectoryListing.astro";
 import Loc from "../components/Loc.astro";
 import { sections } from "../lib/directory";
 export function getStaticPaths() {
@@ -10,7 +10,7 @@ const { section } = Astro.props;
 ---
 <BaseLayout title={`${section.title.zh} · AI UP LAB`} titleEn={`${section.title.en} · AI UP LAB`} description={section.description.zh} descriptionEn={section.description.en}>
   <div class="wrap-wide directory-page">
-    <section class="collection-hero"><p class="kicker">AI UP LAB</p><h1><Loc zh={section.title.zh} en={section.title.en} /></h1><p class="lede"><Loc zh={section.description.zh} en={section.description.en} /></p></section>
-    <DirectoryExplorer section={section.id} />
+    <section class="collection-hero"><h1><Loc zh={section.title.zh} en={section.title.en} /></h1><p class="lede"><Loc zh={section.description.zh} en={section.description.en} /></p></section>
+    <DirectoryListing section={section.id} />
   </div>
 </BaseLayout>

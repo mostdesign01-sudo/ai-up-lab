@@ -79,6 +79,7 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: #17111f; }
 .editorial-archive-intro h1 { font-size: 36px; margin: 0 0 18px; }
 .editorial-archive-intro .editorial-eyebrow { margin-bottom: 12px; }
 .directory-card { border-radius: 8px; }
+.model-card .summary { overflow-wrap: anywhere; }
 .directory-card .directory-thumb, .directory-card .directory-thumb.is-cover { aspect-ratio: 16 / 10; }
 @media (max-width: 1200px) {
   .directory-nav { gap: 16px; }
