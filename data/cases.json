@@ -1,6 +1,45 @@
 {
   "cases": [
     {
+      "id": "company-in-a-box-felliu",
+      "slug": "company-in-a-box-multi-bot-decision-gate",
+      "title": "Company-in-a-Box：一个总管 Bot 路由十几个专才，再加决策闸门",
+      "titleEn": "Company-in-a-Box: one manager Bot routes a dozen specialists, plus a decision gate",
+      "summary": "@0xfelliu 2026-10-01 的帖子转引 @unicodef1wn 的长文《AI Company-in-a-Box》（2026-09-22）：从 Grok Bot Marketplace 的 From Grok Bot Team 区装现成专才（Projects Manager、Cooper、Writing Bot、SEO & AEO Desk、Outbound Prospecting、Engineer Bot、figma bro 等 12 个），让 Projects Manager 做唯一入口；再在「经理」与「员工」之间加一层 Jev（TypeSafe 的 System One 决策模型，只做选择 / 打分 / 是非判断）来决定下一步给谁、研究证据够不够、项目算不算完成、动作要不要人批。长文给了四个 Jev 工具的输入输出样例、五级动作权限（读取到金钱 / 不可逆）、先跑通一次再自动化的五个例行任务、可打包的文件夹结构和一个会失败的集成测试。帖子正文另称「76 个 Bot、372 个 skill」，但没有给出可核对的仓库或链接，本库只收长文里能核到的做法。",
+      "summaryEn": "Post by @0xfelliu (2026-10-01) quoting @unicodef1wn’s long article “AI Company-in-a-Box” (2026-09-22): install ready-made specialists from the “From Grok Bot Team” section of the Grok Bot Marketplace (12 in the article, e.g. Projects Manager, Cooper, Writing Bot, SEO & AEO Desk, Outbound Prospecting, Engineer Bot, figma bro), use Projects Manager as the single front door, then add a decision layer between manager and workers: Jev (TypeSafe’s System One model, limited to choose / score / yes-no) decides who acts next, whether research evidence is enough, whether a project is really complete, and whether an action needs a human. The article gives input/output sketches for four Jev tools, five action levels (read → money/irreversible), five routines to automate only after one manual run, a portable folder layout, and a test task that can fail. The post body also claims “76 Grok Bots, 372 skills” but links no repo or source we could check, so only the article’s verifiable method is catalogued.",
+      "categories": [
+        "multi-agent",
+        "ops",
+        "automation"
+      ],
+      "role": "Manager Bot + decision layer",
+      "sourceUrl": "https://x.com/0xfelliu/status/2105720189731938684",
+      "secondaryUrls": [
+        "https://x.com/unicodef1wn/status/2102375891875581966",
+        "https://x.ai/bot/marketplace/bots/projects-manager",
+        "https://x.ai/bot/marketplace/bots/cooper"
+      ],
+      "sourceType": "community",
+      "qualityNote": "社区做法（2026-10-01 帖 + 2026-09-22 长文，均经 fxtwitter 镜像读取）。收录理由：把「谁接下一步 / 证据够不够 / 算不算做完 / 要不要人批」拆成可单独调试的闸门，并给了动作分级与测试思路，可迁移到任何多 Bot 设置，不必用 Jev。边界：帖子里的「76 个 Bot、372 个 skill」无链接可核，未收；长文自己写明没有跑分，不要把示例置信度当结果；Jev 的价格与速度是 TypeSafe 自述，本库未验证；Marketplace 各 Bot 的描述以 x.ai 当日页面为准；Jev 只返回决策，外发、付费、删除、生产改动仍须人批。",
+      "qualityNoteEn": "Community method (2026-10-01 post + 2026-09-22 article, both read via the fxtwitter mirror). Why it is listed: it splits “who acts next / is the evidence enough / is it really done / does a human need to approve” into separately debuggable gates, with action levels and test ideas that transfer to any multi-Bot setup, with or without Jev. Boundaries: the post’s “76 Bots, 372 skills” has no checkable link and is not catalogued; the article itself says it ran no benchmarks, so treat sample confidences as illustrations; Jev pricing and speed are TypeSafe’s own claims and not verified here; Marketplace Bot descriptions follow the live x.ai pages; Jev only returns decisions, so sends, spend, deletes, and production changes stay human-approved.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "Jev 或任何决策层只返回判断；外发邮件、联系客户、发布、付费、签署、删除与生产改动一律人批。先从读取与草稿级动作开始。",
+      "approvalBoundaryEn": "A decision layer such as Jev only returns judgments; sending email, contacting customers, publishing, spending, signing, deleting, and production changes stay human-approved. Start with read and draft-level actions.",
+      "connectors": [
+        "notion"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-01",
+      "updatedAt": "2026-10-03T01:30:00Z",
+      "hook": "用总管 Bot 分活，再加一道决策闸门。",
+      "hookEn": "Route work via a manager Bot, then add a decision gate before anything ships."
+    },
+    {
       "id": "deepseek-harness-desktop",
       "slug": "deepseek-harness-desktop",
       "title": "工具：DeepSeek Harness Desktop — 官方 macOS / Windows 桌面端",
@@ -6403,10 +6442,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-02T12:00:00Z",
+    "updatedAt": "2026-10-03T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.39",
-    "count": 137,
+    "version": "1.4.40",
+    "count": 138,
     "sourcesCrawled": [
       "https://blog.cloudflare.com/clef-decision-models/",
       "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/",
@@ -6605,7 +6644,12 @@
       "https://news.ycombinator.com/item?id=49880601",
       "https://www.drmagnuslynch.com/skin",
       "https://news.ycombinator.com/item?id=49881201",
-      "https://x.ai/bot/guides/grok-bot-for-marketing"
+      "https://x.ai/bot/guides/grok-bot-for-marketing",
+      "https://x.com/0xfelliu/status/2105720189731938684",
+      "https://api.fxtwitter.com/0xfelliu/status/2105720189731938684",
+      "https://x.com/unicodef1wn/status/2102375891875581966",
+      "https://x.ai/bot/marketplace/bots/projects-manager",
+      "https://x.ai/bot/marketplace/bots/cooper"
     ]
   }
 }
