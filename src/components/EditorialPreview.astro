@@ -1,0 +1,22 @@
+---
+import type { DirectoryEntry, SectionId } from "../lib/directory";
+import { sections } from "../lib/directory";
+import type { Copy } from "../lib/i18n";
+import { sourceHost } from "../lib/home-picks";
+import { withBase } from "../lib/paths";
+import FavButton from "./FavButton.astro";
+import Loc from "./Loc.astro";
+interface Props { entry: DirectoryEntry; title?: Copy; line?: Copy; sectionId?: SectionId; kind?: "support" | "recent"; }
+const { entry, title = entry.title, line = entry.line, sectionId = entry.sections[0], kind = "recent" } = Astro.props;
+const section = sections.find(section => section.id === sectionId)!;
+const image = !entry.cover ? entry.thumb : undefined;
+---
+<article class:list={["editorial-preview", `editorial-preview--${kind}`, "card-shell", { "editorial-preview--text": !image }]} data-editorial-entry={entry.key}>
+  {image && <a class="editorial-preview-media" href={entry.href} tabindex="-1" aria-hidden="true"><img src={image} alt="" width="600" height="320" loading={kind === "support" ? "eager" : "lazy"} decoding="async" /></a>}
+  <div class="editorial-preview-copy">
+    <h3><a href={entry.href}><Loc zh={title.zh} en={title.en} /></a></h3>
+    <p><Loc zh={line.zh} en={line.en} /></p>
+    <div class="editorial-meta"><a href={withBase(`${section.id}/`)}><Loc zh={section.title.zh} en={section.title.en} /></a><span>{sourceHost(entry.sourceUrl)}</span></div>
+  </div>
+  <FavButton lib={entry.lib} id={entry.id} />
+</article>

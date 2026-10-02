@@ -29,7 +29,9 @@
         "gallery",
         "docs",
         "hn"
-      ]
+      ],
+      "hook": "给纯 HTML 切换不同的 CSS 主题。",
+      "hookEn": "Switch CSS themes for plain HTML."
     },
     {
       "id": "wave-subworkflow",
@@ -60,7 +62,9 @@
         "demo",
         "tool",
         "show-hn"
-      ]
+      ],
+      "hook": "在浏览器里生成层叠波浪背景。",
+      "hookEn": "Generate layered wave backgrounds in your browser."
     },
     {
       "id": "dental-scope",
@@ -93,7 +97,9 @@
         "demo",
         "show-hn",
         "mit"
-      ]
+      ],
+      "hook": "用可互动的三维模型学习牙科解剖。",
+      "hookEn": "Explore dental anatomy with an interactive 3D model."
     },
     {
       "id": "56k-rip",
@@ -124,7 +130,9 @@
         "interactive",
         "nostalgia",
         "hn"
-      ]
+      ],
+      "hook": "在浏览器里体验拨号上网年代。",
+      "hookEn": "Experience dial-up-era browsing in your browser."
     },
     {
       "id": "halfspace",
@@ -158,7 +166,9 @@
         "tool",
         "show-hn",
         "mpl"
-      ]
+      ],
+      "hook": "在浏览器里用距离场做实体建模。",
+      "hookEn": "Experiment with distance-field solid modeling in your browser."
     },
     {
       "id": "blackhole-raytracer",
@@ -189,7 +199,9 @@
         "demo",
         "show-hn",
         "relativity"
-      ]
+      ],
+      "hook": "用实时光线追踪探索黑洞视觉。",
+      "hookEn": "Explore black-hole visuals with real-time ray tracing."
     },
     {
       "id": "space-bl2",
@@ -221,7 +233,9 @@
         "demo",
         "show-hn",
         "webgl"
-      ]
+      ],
+      "hook": "在浏览器里探索太阳系与小行星。",
+      "hookEn": "Explore the Solar System and asteroids in your browser."
     },
     {
       "id": "enigma-design",
@@ -251,7 +265,9 @@
         "demo",
         "show-hn",
         "interactive"
-      ]
+      ],
+      "hook": "用三维互动演示理解恩尼格玛机。",
+      "hookEn": "Understand the Enigma machine through an interactive 3D demo."
     },
     {
       "id": "scissor-studio",
@@ -284,7 +300,9 @@
         "tool",
         "show-hn",
         "pwa"
-      ]
+      ],
+      "hook": "在浏览器里编辑矢量和像素图。",
+      "hookEn": "Edit vector and pixel art in your browser."
     },
     {
       "id": "rename-tools",
@@ -315,7 +333,9 @@
         "tool",
         "show-hn",
         "agpl"
-      ]
+      ],
+      "hook": "在浏览器里批量重命名本地文件。",
+      "hookEn": "Batch-rename local files through your browser."
     },
     {
       "id": "microllm-lab",
@@ -347,7 +367,9 @@
         "on-device",
         "show-hn",
         "tool"
-      ]
+      ],
+      "hook": "在浏览器里试跑小模型。",
+      "hookEn": "Try small language models in your browser."
     },
     {
       "id": "destroy-stickman",
@@ -379,7 +401,9 @@
         "sprite-fusion",
         "show-hn",
         "demo"
-      ]
+      ],
+      "hook": "把网页变成火柴人的破坏游乐场。",
+      "hookEn": "Turn a web page into a stickman destruction playground."
     },
     {
       "id": "skinlab",
@@ -410,7 +434,9 @@
         "interactive",
         "show-hn",
         "demo"
-      ]
+      ],
+      "hook": "用互动模型探索皮肤的生物物理。",
+      "hookEn": "Explore skin biophysics with an interactive model."
     },
     {
       "id": "gpu-font",
@@ -440,7 +466,9 @@
         "tool",
         "show-hn",
         "mit"
-      ]
+      ],
+      "hook": "从一行文字寻找可能使用的字体。",
+      "hookEn": "Identify possible fonts from a line of text."
     },
     {
       "id": "lofi-cities",
@@ -472,7 +500,9 @@
         "ambient",
         "show-hn",
         "demo"
-      ]
+      ],
+      "hook": "在像素夜城里合成轻松的音乐。",
+      "hookEn": "Synthesize relaxed music in a pixel-art night city."
     },
     {
       "id": "shotcandy",
@@ -502,7 +532,9 @@
         "tool",
         "show-hn",
         "mit"
-      ]
+      ],
+      "hook": "把截图做成适合分享的图或视频。",
+      "hookEn": "Turn screenshots into shareable images or videos."
     },
     {
       "id": "tiny-ai-arena",
@@ -531,7 +563,9 @@
         "demo",
         "show-hn",
         "agents"
-      ]
+      ],
+      "hook": "看不同模型在小棋盘里对战。",
+      "hookEn": "Watch models compete on a small game board."
     },
     {
       "id": "nudl",
@@ -561,7 +595,9 @@
         "tool",
         "show-hn",
         "mit"
-      ]
+      ],
+      "hook": "一键清理剪贴板链接的追踪参数。",
+      "hookEn": "Remove tracking parameters from clipboard links."
     },
     {
       "id": "print-graph-paper",
@@ -589,7 +625,9 @@
         "printable",
         "tool",
         "show-hn"
-      ]
+      ],
+      "hook": "生成可打印的方格纸和点阵纸。",
+      "hookEn": "Generate printable graph and dot-grid paper."
     },
     {
       "id": "last-day-dinosaurs",
@@ -619,7 +657,9 @@
         "webgl",
         "show-hn",
         "interactive"
-      ]
+      ],
+      "hook": "用互动绘画探索恐龙的最后一天。",
+      "hookEn": "Explore the dinosaurs' last day through interactive art."
     },
     {
       "id": "tiddlyinstall",
@@ -650,7 +690,9 @@
         "github",
         "show-hn",
         "tool"
-      ]
+      ],
+      "hook": "用单个 HTML 制作跨平台安装包。",
+      "hookEn": "Make cross-platform installers with a single HTML file."
     },
     {
       "id": "bastardica",
@@ -682,7 +724,9 @@
         "fonttools",
         "show-hn",
         "interactive"
-      ]
+      ],
+      "hook": "在浏览器里实验混合字重。",
+      "hookEn": "Experiment with mixed font weights in your browser."
     },
     {
       "id": "koi-rest",
@@ -712,7 +756,9 @@
         "calm",
         "show-hn",
         "interactive"
-      ]
+      ],
+      "hook": "和陌生人一起看一个安静的锦鲤池。",
+      "hookEn": "Watch a quiet koi pond with strangers."
     },
     {
       "id": "pipefitter",
@@ -743,7 +789,9 @@
         "3d",
         "show-hn",
         "tool"
-      ]
+      ],
+      "hook": "用参数化工具设计异径管接头。",
+      "hookEn": "Design pipe reducers with a parametric tool."
     },
     {
       "id": "c3-playground",
@@ -775,7 +823,9 @@
         "playground",
         "raylib",
         "show-hn"
-      ]
+      ],
+      "hook": "在浏览器里编写图形与声音。",
+      "hookEn": "Code graphics and sound in your browser."
     },
     {
       "id": "cms-ep-sfx-airgap",
@@ -806,7 +856,9 @@
         "html",
         "show-hn",
         "apache-2.0"
-      ]
+      ],
+      "hook": "用自解密 HTML 在离线环境分享密文。",
+      "hookEn": "Share encrypted content offline through self-decrypting HTML."
     },
     {
       "id": "3d-retro",
@@ -842,7 +894,9 @@
       "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49824144，核对 3pts。许可证以站点 humans.txt / llms.txt 的 CC0 1.0 为准；实验计数以 /api/v1/experiments 与首页列表为 31。无独立 GitHub 仓库可核。预览为 Playwright 实拍首页裁 3:2 WebP。",
       "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49824144, 3pts at check time. License follows the site’s humans.txt / llms.txt CC0 1.0 claim; experiment count is 31 per /api/v1/experiments and the homepage list. No separate GitHub repo to verify. Preview is a Playwright homepage capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "可整页粘贴的复古立体技巧，每件都是一个文件。",
+      "hookEn": "A museum of retro 3D tricks, each one a single file you can paste into a page."
     },
     {
       "id": "fractalysis",
@@ -872,7 +926,9 @@
       "qualityNote": "公开页 HTTP 200（2026-09-24）。Show HN item 49816840，核对 2pts。无限放大与扰动法为作者自述，本库未复测深度极限。预览为 Playwright 实拍首屏裁 3:2 WebP（首屏 canvas 需短暂等待才有图）。",
       "qualityNoteEn": "Public page HTTP 200 (2026-09-24). Show HN item 49816840, 2pts at check time. Infinite-zoom / perturbation claims are the author’s; this library did not re-test depth limits. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP (the canvas needs a short wait before it paints).",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "在浏览器里把分形放大到普通精度之外。",
+      "hookEn": "Zoom a fractal in the browser, far past ordinary precision."
     },
     {
       "id": "simten-nand",
@@ -906,7 +962,9 @@
       "qualityNote": "公开页与 GitHub 均 HTTP 200（2026-09-24）。gh api：Apache-2.0、18★。Show HN item 49817114，核对 3pts。FPGA / Verilog 导出为站点自述，本库未在硬件上复测。页面临时提示桌面向。预览为 Playwright 实拍关卡页裁 3:2 WebP。",
       "qualityNoteEn": "Site and GitHub both HTTP 200 (2026-09-24). gh api: Apache-2.0, 18★. Show HN item 49817114, 3pts at check time. FPGA / Verilog export is the site’s claim and was not re-tested on hardware. The page notes a desktop viewport. Preview is a Playwright level-page capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-24T01:13:59Z"
+      "updatedAt": "2026-09-24T01:13:59Z",
+      "hook": "在浏览器用代码接线，从门电路搭起一台处理器。",
+      "hookEn": "Wire gates in the browser and build a processor up from them."
     },
     {
       "id": "lineselect",
@@ -937,7 +995,9 @@
       "qualityNote": "公开文档页与 GitHub 均 HTTP 200（2026-09-23）。gh api：MIT、74★。Show HN item 49813195，Algolia 核对 2pts。文档页写明 Space 选择、Enter 继续，以及 install.sh。crates.io API 为 lineselect 0.2.3 / MIT；HTML 页在本环境返回 404，仍保留作者给出的 crate 链接。预览为 Playwright 实拍 GH Pages 裁 3:2 WebP。",
       "qualityNoteEn": "Public docs page and GitHub both HTTP 200 (2026-09-23). gh api: MIT, 74★. Show HN item 49813195, 2pts on Algolia at check time. The docs page states Space to select, Enter to continue, and install.sh. The crates.io API lists lineselect 0.2.3 / MIT; the HTML page returned 404 from this environment, and the author’s crate link is still kept. Preview is a Playwright capture of the GH Pages, cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T12:28:44Z"
+      "updatedAt": "2026-09-23T12:28:44Z",
+      "hook": "在管道里用键盘勾选行，再交给下一条命令。",
+      "hookEn": "Pick lines from a pipeline with the keyboard, then pass them on."
     },
     {
       "id": "ondevice-tools",
@@ -968,7 +1028,9 @@
       "qualityNote": "官网与 GitHub 均 HTTP 200（2026-09-23）。gh api license 为 AGPL-3.0。Show HN item 49813705，Algolia 核对 1pt。64 为站点与 README 自称，首页分类数加总一致；gh api 的 description 仍是 63，不混成一个数字。页面有展示广告与 gtag；README 的广告资助说明照录。客户端处理是作者声称，未逐工具复测。预览为 Playwright 实拍首页裁 3:2 WebP。",
       "qualityNoteEn": "Site and GitHub both HTTP 200 (2026-09-23). gh api license is AGPL-3.0. Show HN item 49813705, 1pt on Algolia at check time. 64 is the site and README claim, and the homepage category counts add up to it; the gh api description still says 63, so the two figures are not collapsed. The page has display ads and gtag; the README’s ad-funding note is recorded as written. Client-side processing is the author’s claim and was not re-tested tool by tool. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T12:28:44Z"
+      "updatedAt": "2026-09-23T12:28:44Z",
+      "hook": "64 个纯浏览器工具，数据留在本地、不上传。",
+      "hookEn": "64 browser tools that keep your data on-device and never upload it."
     },
     {
       "id": "runboli-halo-guardian",
@@ -998,7 +1060,9 @@
       "qualityNote": "公开页 HTTP 200（2026-09-23）。HN item 49732259。非商业粉丝项目；本库不主张任何商标授权。预览为 Playwright 实拍主菜单裁 3:2 WebP。",
       "qualityNoteEn": "Public page HTTP 200 (2026-09-23). HN item 49732259. Unofficial non-commercial fan project; catalog makes no trademark claim. Preview is a Playwright main-menu capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T01:25:00Z"
+      "updatedAt": "2026-09-23T01:25:00Z",
+      "hook": "把 Halo 3 大厅做成可逛的个人站，藏着照片和小游戏。",
+      "hookEn": "Walk Halo 3's lobby as a personal site, with photos and mini-games tucked in."
     },
     {
       "id": "gpu-lexer",
@@ -1028,7 +1092,9 @@
       "qualityNote": "公开演示页 HTTP 200（2026-09-23）。HN item 49619464。站点自述实验向、与 Shiki 一致率非客观正确性；本库不声称可替换生产高亮器。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Demo page HTTP 200 (2026-09-23). HN item 49619464. Site frames an experiment scored by Shiki agreement, not objective correctness; not catalogued as a production highlighter replacement. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-23",
-      "updatedAt": "2026-09-23T01:25:00Z"
+      "updatedAt": "2026-09-23T01:25:00Z",
+      "hook": "语言无关的 WebGPU 高亮，没见过的语言也能猜类型。",
+      "hookEn": "A language-agnostic WebGPU highlighter that guesses unseen languages."
     },
     {
       "id": "webgcm",
@@ -1059,7 +1125,9 @@
       "qualityNote": "公开落地页与 /climate 互动页均 200（2026-09-22）。Show HN（item 49793545）：作者自述多年打造的教育向浏览器气候玩具/演示，站点文案列出大气层、网格、海洋与 WebGPU/CPU 回退等实现细节——一律为作者自述；本库不声称科学精度超出作者的教育玩具框架。仓库 jlhawn/geodesic 可达。预览为 Playwright 实拍落地页首屏裁 3:2 WebP。",
       "qualityNoteEn": "Landing and /climate interactive pages both 200 (2026-09-22). Show HN item 49793545: the author describes a multi-year educational browser climate toy/demo; site copy lists atmosphere levels, grid, ocean, and WebGPU/CPU fallback details — all author claims. This library does not claim scientific accuracy beyond the author’s educational-toy framing. Repo jlhawn/geodesic reachable. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP.",
       "publishedAt": "2026-09-22",
-      "updatedAt": "2026-09-22T12:30:00Z"
+      "updatedAt": "2026-09-22T12:30:00Z",
+      "hook": "在浏览器里跑的全球气候模型，大气和海洋都在。",
+      "hookEn": "A global climate model in the browser, atmosphere and ocean together."
     },
     {
       "id": "system-design-atlas",
@@ -1089,7 +1157,9 @@
       "qualityNote": "公开页 200（2026-09-22）。GitHub 仓库 MIT，README/描述与主页一致：concept modules、technology pages、worked designs with interactive architecture diagrams。HN item 49799241。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-22). GitHub repo is MIT; README/description matches the homepage: concept modules, technology pages, and worked designs with interactive architecture diagrams. HN item 49799241. Preview is a Playwright capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-22",
-      "updatedAt": "2026-09-22T12:30:00Z"
+      "updatedAt": "2026-09-22T12:30:00Z",
+      "hook": "系统设计阅读站，点开文档就能看架构图。",
+      "hookEn": "Read system-design notes and click through the architecture diagrams."
     },
     {
       "id": "transformer-explainer",
@@ -1121,7 +1191,9 @@
       "qualityNote": "公开页 200（2026-09-22）。HN 首页条目（item 49792342）：浏览器内 GPT-2 small + 可交互注意力图；仓库 MIT。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-22). HN front-page item 49792342: in-browser GPT-2 small with interactive attention maps; repo MIT. Preview is a Playwright capture cropped to 3:2 WebP.",
       "publishedAt": "2026-09-22",
-      "updatedAt": "2026-09-22T01:20:00Z"
+      "updatedAt": "2026-09-22T01:20:00Z",
+      "hook": "在浏览器里跑 GPT-2，并能展开注意力和概率。",
+      "hookEn": "Run GPT-2 in the browser and open attention and the probabilities."
     },
     {
       "id": "geojson-viewer",
@@ -1152,7 +1224,9 @@
       "qualityNote": "公开页 200（2026-09-21）。Show HN 当日条目（item 49784845）：浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验；解析/校验/渲染均本地、不上传，是本库 HTML 分区可用的免费 GIS/开发工具。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-21). Same-day Show HN (item 49784845): paste GeoJSON in-browser and validate against RFC 7946; parse/validate/render stay local with no upload — a useful free GIS/dev tool for the HTML board. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-21",
-      "updatedAt": "2026-09-21T12:24:00Z"
+      "updatedAt": "2026-09-21T12:24:00Z",
+      "hook": "粘贴 GeoJSON，校验过再画上地图，全程不上传。",
+      "hookEn": "Paste GeoJSON, validate it, and draw the map without uploading."
     },
     {
       "id": "gsb-revenue-trivia",
@@ -1182,7 +1256,9 @@
       "qualityNote": "公开页 200（2026-09-21）。Show HN 当日晚间补收（item 49785777）：纯浏览器商业 trivia 小游戏，站点自述免费。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-21). Evening catch of same-day Show HN (item 49785777): a pure browser business trivia game; the site says it is free to play. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-21",
-      "updatedAt": "2026-09-21T12:24:00Z"
+      "updatedAt": "2026-09-21T12:24:00Z",
+      "hook": "读当年的标题，按营收给公司排成金、银、铜。",
+      "hookEn": "Read the year's headlines and rank companies by revenue."
     },
     {
       "id": "ai-event-posters",
@@ -1211,7 +1287,9 @@
       "qualityNote": "公开页 200（2026-09-20）。HN 当日热帖（标题「AI-generated posters don’t have to be horrible」，item 49764791，非 Show HN，故标 show-hn-adjacent）：一篇静态 HTML 长文，逐轮贴出提示词与生成图，风格清单可直接拿去改自己的活动海报，是本库 HTML 分区里少见的「设计方法 + 可抄提示词」文档页。文章日期 2026-06-07，本库按原文日期记 publishedAt。文内图片为作者用 ChatGPT 生成，本库未复跑提示词；HN 分数为当晚快照。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-20). Same-day HN front-page hit (“AI-generated posters don’t have to be horrible”, item 49764791 — not a Show HN, hence the show-hn-adjacent tag): a static HTML essay that shows each prompt round next to its generated poster, with a style list you can lift straight into your own event poster — a rare “design method + copyable prompts” docs page for the HTML library. Article dated 2026-06-07; publishedAt follows the article date. Images are the author’s ChatGPT outputs; prompts not re-run here; the HN score is tonight’s snapshot. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-06-07",
-      "updatedAt": "2026-09-20T12:20:00Z"
+      "updatedAt": "2026-09-20T12:20:00Z",
+      "hook": "同一张活动海报反复改风格，躲开千篇一律的默认样子。",
+      "hookEn": "Restyle one event poster so it stops looking like the default."
     },
     {
       "id": "sparse-snn-demo",
@@ -1242,7 +1320,9 @@
       "qualityNote": "公开页 200（2026-09-20）。Show HN 条目（HN 标题「Connectome-inspired spiking network you can try in the browser」，item 49770006，发帖 2026-09-19 UTC 晚、北京时间 9/20 凌晨，当晚分数不高）：无需安装、打开即画即测的纯前端互动页，模型通过 ONNX Runtime Web 在本地跑。「5% 密度」「约 8% 发放」「约 112× 节能」均为页面自述，本库未复跑、亦未核实 HF 模型仓与 GitHub 仓库内容，只列为次要来源。页面自己写明是研究产物而非产品，本库照录。视觉上偏工具面板，不进精选。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-20). Show HN (“Connectome-inspired spiking network you can try in the browser”, item 49770006, posted late 2026-09-19 UTC / early 9/20 Beijing time, low score tonight): a no-install draw-and-classify client-side interactive page with the model running locally via ONNX Runtime Web. The “5% density”, “~8% firing”, and “~112× energy saving” figures are the page’s own claims — not re-run here; the HF model repo and GitHub repo were not inspected and are listed only as secondary sources. The page itself says research artifact, not production; recorded as such. Visually a tool panel rather than a showpiece, so not featured. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-20",
-      "updatedAt": "2026-09-20T12:20:00Z"
+      "updatedAt": "2026-09-20T12:20:00Z",
+      "hook": "在画板上写数字，让浏览器里的脉冲网络来认。",
+      "hookEn": "Draw a digit and let an in-browser spiking network classify it."
     },
     {
       "id": "mineral-gems",
@@ -1271,7 +1351,9 @@
       "qualityNote": "公开页 200（2026-09-19）。Show HN 当日条目（HN 标题「Procedurally Generated Mineral Gems」）：浏览器内程序化生成矿物宝石，无需安装、直接打开即玩，是本库 HTML 分区偏好的纯前端生成式互动页。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-19). Same-day Show HN (HN title “Procedurally Generated Mineral Gems”): procedurally generated mineral gems rendered in the browser, no install, open and play — the kind of client-side generative interactive page the HTML library favors. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-19",
-      "updatedAt": "2026-09-19T12:20:00Z"
+      "updatedAt": "2026-09-19T12:20:00Z",
+      "hook": "在浏览器里看程序化生成的矿物宝石。",
+      "hookEn": "Procedurally generated mineral gems you can explore in the browser."
     },
     {
       "id": "page-rage",
@@ -1299,7 +1381,9 @@
       "qualityNote": "公开页 200（2026-09-19，/rageit 亦 200）。Show HN 补收（HN 标题「Free game to destroy any web page」，2026-09-18）：本库只收其浏览器内可直接玩的部分——页面自述「Break pre-made pages：No installation. Any browser.」；「砸任意网页」依赖浏览器扩展，扩展本身不在本库收录范围，本库亦未安装测试。属于 HTML 分区的「游戏/互动」类型。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-19; /rageit also 200). Show HN catch-up (HN title “Free game to destroy any web page”, 2026-09-18): catalogued for the part that runs directly in the browser — the page’s own “Break pre-made pages: No installation. Any browser.” mode. Smashing arbitrary pages depends on a browser extension, which is outside this library’s scope and was not installed or tested here. An “interactive” type for the HTML library. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-18",
-      "updatedAt": "2026-09-19T12:20:00Z"
+      "updatedAt": "2026-09-19T12:20:00Z",
+      "hook": "在浏览器里砸预制网页；砸任意网页需要扩展。",
+      "hookEn": "Smash ready-made pages in the browser; any page needs the extension."
     },
     {
       "id": "greenscreen-remover",
@@ -1328,7 +1412,9 @@
       "qualityNote": "公开页 200（2026-09-18）。Show HN 当日条目；免费本地工具，隐私声明清楚（不上传、免账号、无水印），与 Paper Effects 同属浏览器端媒体工具，适合本库 HTML 分区。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-18). Same-day Show HN; a free local tool with a clear privacy claim (no upload, no account, no watermark)—a browser-side media tool in the same vein as Paper Effects, a good fit for the HTML library. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-18",
-      "updatedAt": "2026-09-18T12:31:00Z"
+      "updatedAt": "2026-09-18T12:31:00Z",
+      "hook": "把绿幕视频或图片拖进网页，在本地抠掉背景。",
+      "hookEn": "Drop a green-screen clip or image in the page and key it locally."
     },
     {
       "id": "visual-html-editor",
@@ -1357,7 +1443,9 @@
       "qualityNote": "公开页 200（2026-09-18）。晨扫后补收的 Show HN（2026-09-15）：开源、免注册、直接在浏览器打开编辑器，对 AI 生成 HTML 的可视化修改是本库 HTML 分区的典型用法。预览为 Playwright 实拍首屏裁 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-18). Catch-up for a solid Show HN (2026-09-15) still missing after the morning scan: open source, no sign-up, editor opens in the browser; visually editing AI-generated HTML is a core HTML-library use. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP.",
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-18T12:31:00Z"
+      "updatedAt": "2026-09-18T12:31:00Z",
+      "hook": "在画布上改邮件和网页，源码仍然留在你手里。",
+      "hookEn": "Edit emails and pages on a canvas while the source stays yours."
     },
     {
       "id": "papereffects-text-match-cut",
@@ -1386,7 +1474,9 @@
       "qualityNote": "公开页 200（2026-09-18）。Show HN 当日条目；预览取官网 OG 裁成 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-18). Show HN same-day listing; preview is site OG cropped to 3:2 WebP.",
       "publishedAt": "2026-09-17",
-      "updatedAt": "2026-09-18T01:12:00Z"
+      "updatedAt": "2026-09-18T01:12:00Z",
+      "hook": "在浏览器里做报纸风的文字转场，还能导出动图。",
+      "hookEn": "Make newspaper-style text cuts in the browser and export a GIF."
     },
     {
       "id": "capsule-single-file-apps",
@@ -1416,7 +1506,9 @@
       "qualityNote": "公开页 200（2026-09-17）。Show HN ≈366 分；预览取官网 OG 图裁成 3:2 WebP。",
       "qualityNoteEn": "Public page returned 200 (2026-09-17). Show HN ~366 points; preview is the site OG image cropped to 3:2 WebP.",
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-17T01:23:00Z"
+      "updatedAt": "2026-09-17T01:23:00Z",
+      "hook": "把界面和本地数据库打成一个文件，像文档一样分享。",
+      "hookEn": "Pack a UI and a local database into one file you can share."
     },
     {
       "id": "redis-city",
@@ -1446,7 +1538,9 @@
       "qualityNote": "公开页 200（2026-09-16）。Show HN ≈163 分；预览取项目 OG 图裁成 3:2（无头 Chrome WebGL 截图空白）。",
       "qualityNoteEn": "Public page returned 200 (2026-09-16). Show HN ~163 points; preview is the project OG image cropped to 3:2 (headless Chrome WebGL shot was blank).",
       "publishedAt": "2026-09-12",
-      "updatedAt": "2026-09-16T01:10:52Z"
+      "updatedAt": "2026-09-16T01:10:52Z",
+      "hook": "在立体场景里走一遍 Redis 内部是怎么工作的。",
+      "hookEn": "Walk through how Redis works, as an interactive scene in the browser."
     },
     {
       "id": "code-preview-element",
@@ -1476,7 +1570,9 @@
       "qualityNote": "公开演示 200（2026-09-15）。GitHub star 很少，但 API 清晰、可复现；预览取文档首页 3:2。",
       "qualityNoteEn": "Public demo returned 200 (2026-09-15). Few GitHub stars, but the API is clear and reproducible; preview is a 3:2 crop of the docs home.",
       "publishedAt": "2026-09-15",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "代码块自己渲染成预览，改字的时候页面跟着变。",
+      "hookEn": "A code block that renders itself, and updates as you edit."
     },
     {
       "id": "neobrutalism",
@@ -1505,7 +1601,9 @@
       "qualityNote": "Show HN 2026-09-14（item 49699159）。组件数为站点自述；需 React/Tailwind 栈，不是单文件 HTML。预览取首页 hero 截屏裁 3:2。",
       "qualityNoteEn": "Show HN 2026-09-14 (item 49699159). Component count is a site claim; stack is React/Tailwind, not single-file HTML. Preview is a 3:2 crop of the home hero screenshot.",
       "publishedAt": "2026-09-14",
-      "updatedAt": "2026-09-15T01:30:00Z"
+      "updatedAt": "2026-09-15T01:30:00Z",
+      "hook": "粗野主义的 React 组件站，文档和演示不用登录。",
+      "hookEn": "A public site of neobrutalist React components you can browse without signing in."
     },
     {
       "id": "soundmap",
@@ -1535,7 +1633,9 @@
       "qualityNote": "Show HN 2026-09-10（item 49644603）。托管在 DareBuild 子域；欢迎页可无权限打开。相机与麦克风权限由浏览器本地处理，本站未授权、未录制。预览按线上欢迎屏 DOM/文案复刻渲染（Start your camera / Start camera + mic），非授权后实时画面。",
       "qualityNoteEn": "Show HN 2026-09-10 (item 49644603). Hosted on a DareBuild subdomain; the welcome screen opens without granting permissions. Camera and mic stay browser-local; neither was granted or recorded here. Preview is a faithful welcome-screen recreation from the live DOM/copy (Start your camera / Start camera + mic), not a post-grant live feed.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "把声音叠在摄像头画面上，在浏览器里看见它。",
+      "hookEn": "See sound drawn over your webcam, right in the browser."
     },
     {
       "id": "hopla-games",
@@ -1565,7 +1665,9 @@
       "qualityNote": "Show HN 2026-09-13（item 49682477）。「免费」「画面不上传」「适龄 4+」为站点自述，本站未测摄像头管线。需本机摄像头与兼容浏览器。预览取自站点公开 /map.svg 资源 letterbox 为 3:2。",
       "qualityNoteEn": "Show HN 2026-09-13 (item 49682477). “Free,” “never uploaded,” and “ages 4+” are site claims; the camera pipeline was not re-tested here. Needs a local webcam and a compatible browser. Preview is the site’s public /map.svg letterboxed to 3:2.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-14T01:20:00Z"
+      "updatedAt": "2026-09-14T01:20:00Z",
+      "hook": "免费儿童体感小游戏，摄像头画面留在本机。",
+      "hookEn": "Free webcam movement games for kids, with the camera staying on the device."
     },
     {
       "id": "react-bits",
@@ -1596,7 +1698,9 @@
       "qualityNote": "组件数为作者 / 站点自述：来源帖写「160+」，官网首页 2026-09-14 当日显示「170+ COMPONENTS · FREE FOREVER」，本站均未复计；官网另有付费 Pro 入口，本条只收免费浏览站。来源帖未给外链，官网与仓库均核到 200。仓库许可证为 MIT + Commons Clause（非纯 MIT），商用二次分发前请自查。非 Grok Bot 案例，归 HTML 收集的组件参考。预览为官网现场截图。",
       "qualityNoteEn": "Component counts are author / site claims: the source post says “160+”, and the homepage showed “170+ COMPONENTS · FREE FOREVER” on 2026-09-14 — neither re-counted here. The site also has a paid Pro tier; only the free browse site is catalogued. The post carries no external link; site and repo both returned 200. The repo is licensed MIT + Commons Clause (not plain MIT) — check before redistributing commercially. Not a Grok Bot case; filed under HTML Collection as a component reference. Preview is a live screenshot of the site.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-14T00:30:00Z"
+      "updatedAt": "2026-09-14T00:30:00Z",
+      "hook": "公开的 React 动画组件站，可以按需单个复制。",
+      "hookEn": "A public site of animated React components you can copy one by one."
     },
     {
       "id": "animata",
@@ -1628,7 +1732,9 @@
       "qualityNote": "条数与协议以仓库与官网为准：仓库 LICENSE 为 MIT（2026-09-14 核对）；来源帖写「150+」，官网首页当日显示「155+ animated React components」，均为作者 / 站点自述、未逐条复计。来源帖未给外链，官网与仓库均核到 200。官网带 Carbon 广告位。预览为官网现场截图。",
       "qualityNoteEn": "Count and license follow the repo and site: the repo LICENSE is MIT (checked 2026-09-14); the source post says “150+” and the homepage showed “155+ animated React components” that day — both author / site claims, not re-counted. The post has no external link; site and repo both returned 200. The site carries a Carbon ad slot. Preview is a live screenshot of the site.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-14T00:30:00Z"
+      "updatedAt": "2026-09-14T00:30:00Z",
+      "hook": "MIT 的 React 动画组件，按分类预览后直接复制。",
+      "hookEn": "MIT React animations you preview by category, then copy the code."
     },
     {
       "id": "vengeance-ui",
@@ -1659,7 +1765,9 @@
       "qualityNote": "帖内无链接，以官网为准（2026-09-14 核到 200，仓库同）。作者描述与营销腔（「高级感」「Awesome / Tasteful」）不照搬成事实数字，本条不写组件条数。域名 vengence 与仓库名 Vengeance 拼写不一，已在标题与摘要注明。预览为官网现场截图。",
       "qualityNoteEn": "No link in the post; the official site is the reference (200 on 2026-09-14, repo likewise). Author descriptions and marketing tone (“premium feel”, “Awesome / Tasteful”) are not turned into factual numbers — no component count is recorded here. The domain (vengence) and repo name (Vengeance) are spelled differently, noted in the title and summary. Preview is a live screenshot of the site.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-14T00:30:00Z"
+      "updatedAt": "2026-09-14T00:30:00Z",
+      "hook": "偏落地页的 React 动画组件，复制后就能接进页面。",
+      "hookEn": "Landing-page React animations you copy and drop into a page."
     },
     {
       "id": "session-context",
@@ -1688,7 +1796,9 @@
       "qualityNote": "Show HN 2026-09-12（item 49678035）。站点自述几乎所有值在浏览器内测、不落盘；两个需服务端暂记的演示会在页面标明。指纹熵数字引自公开研究，本站未复测。预览为现场截图。",
       "qualityNoteEn": "Show HN 2026-09-12 (item 49678035). The site claims nearly all values are measured in-browser and not written to disk; the two demos that need short server memory say so on-page. Entropy figures cite published studies and were not re-measured here. Preview is a live screenshot.",
       "publishedAt": "2026-09-12",
-      "updatedAt": "2026-09-13T12:20:00Z"
+      "updatedAt": "2026-09-13T12:20:00Z",
+      "hook": "看清一张网页在要权限之前，能从浏览器知道什么。",
+      "hookEn": "See what one page can learn about you before it asks for permission."
     },
     {
       "id": "programming-museum",
@@ -1717,7 +1827,9 @@
       "qualityNote": "Show HN 2026-09-13（item 49682008）。「可走进展厅」为站点自述的浏览体验；借展仅 MIT/Unlicense、钉 commit 为馆方说明，本站未逐件复核许可证。预览为现场截图。",
       "qualityNoteEn": "Show HN 2026-09-13 (item 49682008). “Walkable rooms” is the site’s own browsing claim; MIT/Unlicense-only loans pinned to commits are the museum’s stated policy, not re-audited item-by-item here. Preview is a live screenshot.",
       "publishedAt": "2026-09-13",
-      "updatedAt": "2026-09-13T12:20:00Z"
+      "updatedAt": "2026-09-13T12:20:00Z",
+      "hook": "走进可漫游的房间，把能跑的源码当展品看。",
+      "hookEn": "Walk through rooms where runnable source code hangs as the exhibits."
     },
     {
       "id": "bodily-oddities",
@@ -1746,7 +1858,9 @@
       "qualityNote": "HN Show 2026-09-10（item 49649789）。条目数「143」为站首页自述，未逐条复计；医学现象说明仅供好奇，非诊疗建议。预览为现场截图。",
       "qualityNoteEn": "Show HN 2026-09-10 (item 49649789). The “143” count is the site’s own homepage claim, not re-counted here; descriptions are curiosity notes, not medical advice. Preview is a live screenshot.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-12T12:15:00Z"
+      "updatedAt": "2026-09-12T12:15:00Z",
+      "hook": "可检索的人体小怪癖百科，吓人的往往也正常。",
+      "hookEn": "A searchable guide to odd bodily quirks, including the scary-but-normal ones."
     },
     {
       "id": "sparkui",
@@ -1777,7 +1891,9 @@
       "qualityNote": "2026-09-12 核对：演示站与 npm 可达；GitHub Limeade-Labs/sparkui star 很少（个位数），以站点 + npm 为主源。模板数 / 组件数为站点自述。预览为现场截图（站点无可靠 og:image）。",
       "qualityNoteEn": "Checked 2026-09-12: demo and npm reachable; GitHub Limeade-Labs/sparkui has only a few stars — treat site + npm as primary. Template/component counts are site claims. Preview is a live screenshot (no reliable og:image).",
       "publishedAt": "2026-04-17",
-      "updatedAt": "2026-09-12T12:15:00Z"
+      "updatedAt": "2026-09-12T12:15:00Z",
+      "hook": "给 Agent 的一次性互动页，点开链接就能操作。",
+      "hookEn": "Ephemeral pages an agent can hand you: open the link, act, and send the result back."
     },
     {
       "id": "daub",
@@ -1809,7 +1925,9 @@
       "qualityNote": "公开演示与 GitHub（2026-09-11 核对约 41 star）。面向 Agent 的 llms.txt / MCP 是亮点；组件数与主题数为站点自述。",
       "qualityNoteEn": "Public demo + GitHub (~41 stars checked 2026-09-11). Agent-facing llms.txt / MCP are the draw; component and theme counts are site claims.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "给 AI 用的零构建 CSS 组件库，带目录和校验。",
+      "hookEn": "A zero-build CSS kit for AI, with a catalog and a way to check the UI."
     },
     {
       "id": "njx-ui",
@@ -1839,7 +1957,9 @@
       "qualityNote": "演示站与 npm 公开可开（2026-09-11）。组件数 / 体积为站点自述；未找到独立开源仓库页时以 npm + 演示站为准。",
       "qualityNoteEn": "Demo and npm are public (2026-09-11). Component counts and bundle size are site claims; when no separate public repo page is found, treat npm + demo as the source.",
       "publishedAt": "2026-09-11",
-      "updatedAt": "2026-09-11T01:10:00Z"
+      "updatedAt": "2026-09-11T01:10:00Z",
+      "hook": "一条链接就能拼落地页的样式库，不用框架。",
+      "hookEn": "A CSS landing kit from one link, with no framework and no build."
     },
     {
       "id": "relativity-park",
@@ -1868,7 +1988,9 @@
       "qualityNote": "HN item 49637385（Show HN: What if the speed of light was 5 km/h?）。演示公开可打开；物理教学用途，非论文复现。预览来自现场截图（无 og:image）。",
       "qualityNoteEn": "HN item 49637385 (Show HN: What if the speed of light was 5 km/h?). Demo is publicly open; physics-teaching demo, not a paper reproduction. Preview is a live screenshot (site has no og:image).",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T12:00:00Z"
+      "updatedAt": "2026-09-10T12:00:00Z",
+      "hook": "把光速降到步行，在公园里看见相对论。",
+      "hookEn": "Set the speed of light to a walking pace and watch relativity in a park."
     },
     {
       "id": "roadwright",
@@ -1899,7 +2021,9 @@
       "qualityNote": "HN item 49641755（Show HN: Draw a wheel. See the road it rolls on）。公开可打开，GitHub 可点进。预览由站点 og 图（1200×630）加边裁成 3:2。",
       "qualityNoteEn": "HN item 49641755 (Show HN: Draw a wheel. See the road it rolls on). Publicly open; GitHub repo linked. Preview is the site’s og image (1200×630) letterboxed to 3:2.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T12:00:00Z"
+      "updatedAt": "2026-09-10T12:00:00Z",
+      "hook": "画一个轮子，立刻看到它无滑滚动时的路面。",
+      "hookEn": "Draw a wheel and instantly see the road it rolls along without slipping."
     },
     {
       "id": "shadcss",
@@ -1929,7 +2053,9 @@
       "qualityNote": "演示与 GitHub 公开可打开（MIT）。组件数/体积以站点当日自述为准。",
       "qualityNoteEn": "Demo and GitHub are publicly open (MIT). Component counts/size are the site’s own claims on the day checked.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "把 shadcn 的样子做成纯 HTML 和 CSS，不靠框架。",
+      "hookEn": "shadcn-style pieces in plain HTML and CSS, with no JavaScript framework."
     },
     {
       "id": "nissy-girl",
@@ -1959,7 +2085,9 @@
       "qualityNote": "HN item 49611054。演示站与 GitHub 公开可打开。来自 Hacker News。",
       "qualityNoteEn": "HN item 49611054. Demo and GitHub are publicly open. From Hacker News.",
       "publishedAt": "2026-09-10",
-      "updatedAt": "2026-09-10T01:40:00Z"
+      "updatedAt": "2026-09-10T01:40:00Z",
+      "hook": "纯 HTML 和 CSS 做出可交互的立体掌机壳体。",
+      "hookEn": "An interactive 3D handheld shell built in HTML and CSS."
     },
     {
       "id": "maple-css",
@@ -1989,7 +2117,9 @@
       "qualityNote": "HN item 49612277。演示与 GitHub 公开可打开。来自 Hacker News。",
       "qualityNoteEn": "HN item 49612277. Demo and GitHub are publicly open. From Hacker News.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "浏览器里按类名即时生成原子 CSS，不用构建。",
+      "hookEn": "Atomic CSS generated in the browser as classes appear, with no build step."
     },
     {
       "id": "topological-picture-book",
@@ -2019,7 +2149,9 @@
       "qualityNote": "HN item 49618050。公开可打开。来自 Hacker News。",
       "qualityNoteEn": "HN item 49618050. Publicly open. From Hacker News.",
       "publishedAt": "2026-09-09",
-      "updatedAt": "2026-09-09T01:15:00Z"
+      "updatedAt": "2026-09-09T01:15:00Z",
+      "hook": "用钢笔素描翻看拓扑曲面，在浏览器里就能读。",
+      "hookEn": "Turn the pages of a pen-and-ink book of topology surfaces in the browser."
     },
     {
       "id": "laser-graffiti",
@@ -2048,7 +2180,9 @@
         "interactive",
         "hacker-news",
         "mit"
-      ]
+      ],
+      "hook": "用鼠标当激光在浏览器里涂鸦，也能接到墙上。",
+      "hookEn": "Draw laser graffiti in the browser with your mouse, or aim a real pointer at a wall."
     },
     {
       "id": "ambient-css",
@@ -2079,7 +2213,9 @@
         "skeuomorphic",
         "lighting",
         "hacker-news"
-      ]
+      ],
+      "hook": "共享一盏光的 CSS，阴影和表面跟着光向走。",
+      "hookEn": "Physically based CSS where shadows and surfaces follow one shared light."
     },
     {
       "id": "millenium-bug",
@@ -2107,7 +2243,9 @@
         "retro",
         "classless",
         "hacker-news"
-      ]
+      ],
+      "hook": "把语义页面收成九十年代末的银行后台。",
+      "hookEn": "Restyle a semantic page as a late-nineties bank back office."
     },
     {
       "id": "single-file-saas",
@@ -2135,7 +2273,9 @@
         "saas",
         "byok",
         "html"
-      ]
+      ],
+      "hook": "一整套自带密钥的应用脚手架，塞在一个文件里。",
+      "hookEn": "A whole bring-your-own-key app scaffold, packed into one file."
     },
     {
       "id": "motionsites",
@@ -2165,7 +2305,9 @@
         "design",
         "tool",
         "prompts"
-      ]
+      ],
+      "hook": "现成的落地页文案，复制就能交给编程助手。",
+      "hookEn": "Ready-made landing-page lines you can paste into a coding agent."
     },
     {
       "id": "meigen",
@@ -2193,7 +2335,9 @@
         "design",
         "tool",
         "prompts"
-      ]
+      ],
+      "hook": "免费的图像文案画廊，按广告、海报和人像分类。",
+      "hookEn": "A free gallery of image lines, sorted into ads, posters, and portraits."
     },
     {
       "id": "refero-styles",
@@ -2222,7 +2366,9 @@
         "design",
         "tool",
         "design-tokens"
-      ]
+      ],
+      "hook": "从真实产品站抽出的设计说明，编程助手可以直接读。",
+      "hookEn": "Design notes pulled from real product sites, ready for a coding agent to read."
     },
     {
       "id": "taste-skill",
@@ -2251,7 +2397,9 @@
         "design",
         "tool",
         "skill"
-      ]
+      ],
+      "hook": "给编程助手装上设计品味，先读简报再动手。",
+      "hookEn": "Skills that give a coding agent design taste, starting from the brief."
     },
     {
       "id": "open-design",
@@ -2279,7 +2427,9 @@
         "design",
         "tool",
         "desktop"
-      ]
+      ],
+      "hook": "本机优先的设计桌面应用，用你已有的编程助手出稿。",
+      "hookEn": "A local-first desktop app that turns your coding agent into a design studio."
     },
     {
       "id": "voronoi-go",
@@ -2307,7 +2457,9 @@
         "game",
         "interactive",
         "hacker-news"
-      ]
+      ],
+      "hook": "在没有方格的棋盘上下围棋，浏览器里就能开局。",
+      "hookEn": "Play Go on a board with no grid, right in the browser."
     },
     {
       "id": "glassbox",
@@ -2339,7 +2491,9 @@
         "webgl",
         "hacker-news",
         "mit"
-      ]
+      ],
+      "hook": "在浏览器里跑指纹探针，看自己有多好认。",
+      "hookEn": "Run fingerprint probes in the browser and see how identifiable you are."
     },
     {
       "id": "designlang",
@@ -2368,7 +2522,9 @@
         "design-tokens",
         "tool"
       ],
-      "previewImage": "/previews/designlang.webp"
+      "previewImage": "/previews/designlang.webp",
+      "hook": "对任意网址抽出设计系统，交给编程助手用。",
+      "hookEn": "Point it at any URL and pull a design system your coding agent can use."
     },
     {
       "id": "poster-comp-vol1",
@@ -2397,7 +2553,9 @@
         "design",
         "html"
       ],
-      "previewImage": "/previews/poster-comp-vol1.webp"
+      "previewImage": "/previews/poster-comp-vol1.webp",
+      "hook": "海报构图上册：用构图管焦点、平衡和视线怎么走。",
+      "hookEn": "Poster layouts that steer focus, balance, and where the eye travels."
     },
     {
       "id": "poster-comp-vol2",
@@ -2426,7 +2584,9 @@
         "design",
         "html"
       ],
-      "previewImage": "/previews/poster-comp-vol2.webp"
+      "previewImage": "/previews/poster-comp-vol2.webp",
+      "hook": "下册讲网格、图文关系和画面里信息有多密。",
+      "hookEn": "Grids, type-and-image relations, and how dense a poster should be."
     },
     {
       "id": "flexbox-froggy",
@@ -2454,7 +2614,9 @@
       "previewImage": "/previews/flexbox-froggy.webp",
       "titleEn": "Flexbox Froggy",
       "summaryEn": "Learn CSS Flexbox as a game: write properties to put frogs on lily pads. By Thomas Park / Codepip, open source, with Simplified Chinese.",
-      "qualityNoteEn": "A classic interactive teaching page. Fits the “game / interactive” HTML learning UI collection."
+      "qualityNoteEn": "A classic interactive teaching page. Fits the “game / interactive” HTML learning UI collection.",
+      "hook": "写 Flexbox 把青蛙放到荷叶上，用闯关来学。",
+      "hookEn": "Learn Flexbox as a game: write the properties that land frogs on lily pads."
     },
     {
       "id": "css-grid-garden",
@@ -2481,7 +2643,9 @@
       "previewImage": "/previews/css-grid-garden.webp",
       "titleEn": "CSS Grid Garden",
       "summaryEn": "Learn CSS Grid by watering a garden. Same author series as Flexbox Froggy, open source, playable in the browser.",
-      "qualityNoteEn": "A counterpart practice page for Grid layout. The URL has been stable for years."
+      "qualityNoteEn": "A counterpart practice page for Grid layout. The URL has been stable for years.",
+      "hook": "用浇水闯关来学网格布局。",
+      "hookEn": "Learn grid layout as a game of watering a garden."
     },
     {
       "id": "animate-css",
@@ -2507,7 +2671,9 @@
       "previewImage": "/previews/animate-css.webp",
       "titleEn": "Animate.css",
       "summaryEn": "Drop-in cross-browser CSS animation library site: preview bounce, fade, flip, and more, plus install and accessibility notes.",
-      "qualityNoteEn": "A motion reference site that shows how to demo animations with plain CSS classes."
+      "qualityNoteEn": "A motion reference site that shows how to demo animations with plain CSS classes.",
+      "hook": "打开就能预览的 CSS 动画库，加上类名即用。",
+      "hookEn": "A CSS animation library you can preview, then drop in with a class name."
     },
     {
       "id": "a-single-div",
@@ -2534,7 +2700,9 @@
       "previewImage": "/previews/a-single-div.webp",
       "titleEn": "A Single Div",
       "summaryEn": "Lynn Fisher’s CSS drawing project: each picture uses one HTML div. Both a portfolio and a pure-CSS graphics experiment.",
-      "qualityNoteEn": "A portfolio that shows how far HTML+CSS can go. Source is public."
+      "qualityNoteEn": "A portfolio that shows how far HTML+CSS can go. Source is public.",
+      "hook": "每幅画只用一个 div，看纯 CSS 能画到哪。",
+      "hookEn": "Each picture uses a single div, showing how far pure CSS can draw."
     },
     {
       "id": "pico-css",
@@ -2558,7 +2726,9 @@
       "previewImage": "/previews/pico-css.webp",
       "titleEn": "Pico CSS",
       "summaryEn": "Minimal CSS framework site for semantic HTML: almost no classes, styles native forms, buttons, and type directly.",
-      "qualityNoteEn": "Useful for comparing “few classes, more semantic tags” component/docs writing."
+      "qualityNoteEn": "Useful for comparing “few classes, more semantic tags” component/docs writing.",
+      "hook": "几乎不用类名，直接把原生表单和按钮变好看。",
+      "hookEn": "Styles native forms and buttons with almost no class names."
     },
     {
       "id": "shoelace",
@@ -2581,7 +2751,9 @@
       "previewImage": "/previews/shoelace.webp",
       "titleEn": "Shoelace",
       "summaryEn": "Open-source Web Components library docs (now pointing to Web Awesome). Drop custom elements such as <sl-button> in via CDN.",
-      "qualityNoteEn": "A framework-agnostic custom-element demo; the site itself is a component docs page."
+      "qualityNoteEn": "A framework-agnostic custom-element demo; the site itself is a component docs page.",
+      "hook": "用自定义元素把按钮和表单插进页面。",
+      "hookEn": "Drop buttons and forms into a page as custom elements."
     },
     {
       "id": "mdn-css-examples",
@@ -2609,7 +2781,9 @@
       "previewImage": "/previews/mdn-css-examples.webp",
       "titleEn": "MDN CSS Examples",
       "summaryEn": "Runnable example index that accompanies MDN’s CSS docs: standalone HTML demos for object-fit, overscroll, counter styles, and small tools.",
-      "qualityNoteEn": "An official docs example index with stable links. A good HTML-demo collection entry."
+      "qualityNoteEn": "An official docs example index with stable links. A good HTML-demo collection entry.",
+      "hook": "配着文档的可运行 CSS 示例，打开就能看。",
+      "hookEn": "Runnable CSS examples that accompany the docs, each on its own page."
     },
     {
       "id": "html5up",
@@ -2633,7 +2807,9 @@
       "previewImage": "/previews/html5up.webp",
       "titleEn": "HTML5 UP",
       "summaryEn": "Free responsive HTML5/CSS3 template library: downloadable landings, portfolios, and more, CCA licensed.",
-      "qualityNoteEn": "A long-maintained open template directory. Fits landing and portfolio HTML."
+      "qualityNoteEn": "A long-maintained open template directory. Fits landing and portfolio HTML.",
+      "hook": "免费的响应式 HTML 模板，下载就能改。",
+      "hookEn": "Free responsive HTML templates you can download and adapt."
     },
     {
       "id": "open-props",
@@ -2659,7 +2835,9 @@
       "previewImage": "/previews/open-props.webp",
       "titleEn": "Open Props",
       "summaryEn": "Adam Argyle’s CSS-variable design-token site: colors, shadows, motion, and other props you can drop into a plain HTML page.",
-      "qualityNoteEn": "The docs site itself demos tokens and components. Useful as a design-system page comparison."
+      "qualityNoteEn": "The docs site itself demos tokens and components. Useful as a design-system page comparison.",
+      "hook": "颜色、阴影和动效的变量，可以直接引进普通页面。",
+      "hookEn": "Color, shadow, and motion variables you can drop into a plain page."
     },
     {
       "id": "shadow-palette",
@@ -2682,7 +2860,9 @@
       "previewImage": "/previews/shadow-palette.webp",
       "titleEn": "CSS Shadow Palette Generator",
       "summaryEn": "Josh Comeau’s shadow-palette generator: tune height and light, then copy CSS custom properties. A ready-to-use tool page.",
-      "qualityNoteEn": "A high-quality front-end tool page. Output can go straight into HTML/CSS."
+      "qualityNoteEn": "A high-quality front-end tool page. Output can go straight into HTML/CSS.",
+      "hook": "调高度和光线，然后复制阴影变量。",
+      "hookEn": "Tune height and light, then copy the shadow variables."
     },
     {
       "id": "threejs-examples",
@@ -2708,7 +2888,9 @@
       "previewImage": "/previews/threejs-examples.webp",
       "titleEn": "three.js examples",
       "summaryEn": "Official three.js example wall: many in-browser WebGL / HTML interactive demos you can open to read the source.",
-      "qualityNoteEn": "Official interactive example index. Fits 3D/game-leaning HTML demos."
+      "qualityNoteEn": "Official interactive example index. Fits 3D/game-leaning HTML demos.",
+      "hook": "一墙可在浏览器里跑的立体示例，点进去能看源码。",
+      "hookEn": "A wall of 3D demos you can run in the browser and open to read the source."
     },
     {
       "id": "bootstrap-examples",
@@ -2732,7 +2914,9 @@
       "previewImage": "/previews/bootstrap-examples.webp",
       "titleEn": "Bootstrap Examples",
       "summaryEn": "Official Bootstrap 5.3 examples: full HTML page fragments and starter templates for covers, pricing, dashboards, blogs, albums, and more.",
-      "qualityNoteEn": "Official landing/component example directory. You can compare the source structure directly."
+      "qualityNoteEn": "Official landing/component example directory. You can compare the source structure directly.",
+      "hook": "封面、定价和仪表盘的完整页面，拿来就能改。",
+      "hookEn": "Full pages for a cover, pricing, and a dashboard, ready to adapt."
     },
     {
       "id": "css-zen-garden",
@@ -2758,7 +2942,9 @@
       "previewImage": "/previews/css-zen-garden.webp",
       "titleEn": "CSS Zen Garden",
       "summaryEn": "The same HTML, different authors’ external stylesheets — a show of how far pure CSS can restyle a page. Dave Shea’s classic CSS design exhibit.",
-      "qualityNoteEn": "A textbook public page on separating structure from presentation. Fits “portfolio / docs.”"
+      "qualityNoteEn": "A textbook public page on separating structure from presentation. Fits “portfolio / docs.”",
+      "hook": "同一份 HTML，换一张样式表就变成另一座花园。",
+      "hookEn": "The same HTML, restyled by other stylesheets into a different page."
     },
     {
       "id": "scroll-driven-animations",
@@ -2788,7 +2974,9 @@
       "previewImage": "/previews/scroll-driven-animations.webp",
       "titleEn": "Scroll-driven Animations",
       "summaryEn": "Bramus’s Chrome-developer demo site: reading progress, cover-flow, stacked cards, horizontal scroll, all scroll-driven. The demo itself is handwritten HTML/CSS/JS with no build step.",
-      "qualityNoteEn": "Official-quality motion lab. Types cover motion, interactive, and docs."
+      "qualityNoteEn": "Official-quality motion lab. Types cover motion, interactive, and docs.",
+      "hook": "用滚动驱动的演示：进度、封面和堆叠卡片。",
+      "hookEn": "Scroll-driven demos for reading progress, cover flow, and stacked cards."
     },
     {
       "id": "squoosh",
@@ -2815,7 +3003,9 @@
       "previewImage": "/previews/squoosh.webp",
       "titleEn": "Squoosh",
       "summaryEn": "GoogleChromeLabs in-browser image compressor: local codecs, side-by-side compare, originals never upload. A high-quality web tool page.",
-      "qualityNoteEn": "Open source, works offline. Fits the “tool” type."
+      "qualityNoteEn": "Open source, works offline. Fits the “tool” type.",
+      "hook": "在浏览器里压缩图片，原图不上传。",
+      "hookEn": "Compress an image in the browser, and the original never uploads."
     },
     {
       "id": "clippy",
@@ -2841,7 +3031,9 @@
       "previewImage": "/previews/clippy.webp",
       "titleEn": "Clippy: CSS clip-path maker",
       "summaryEn": "Bennett Feely’s visual clip-path editor. Drag points to make circle / ellipse / polygon / inset, then copy the CSS.",
-      "qualityNoteEn": "A long-maintained classic CSS tool page. The link still works."
+      "qualityNoteEn": "A long-maintained classic CSS tool page. The link still works.",
+      "hook": "拖点生成裁剪路径，再把样式复制走。",
+      "hookEn": "Drag points to draw a clip shape, then copy the style."
     },
     {
       "id": "css-doodle",
@@ -2869,7 +3061,9 @@
       "previewImage": "/previews/css-doodle.webp",
       "titleEn": "css-doodle",
       "summaryEn": "Web Components CSS pattern generator: draw grids, shapes, and motion with an extended CSS syntax. The docs site is a clickable live demo.",
-      "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive."
+      "qualityNoteEn": "Docs as canvas. Fits motion / component / interactive.",
+      "hook": "用扩展的样式语法画网格和动画，文档页就是现场。",
+      "hookEn": "Draw grids and motion with an extended style syntax; the docs are the live demo."
     },
     {
       "id": "slidevars",
@@ -2900,7 +3094,9 @@
         "codepen",
         "mit",
         "devtools"
-      ]
+      ],
+      "hook": "自动给样式变量做出滑杆，改值页面立刻变。",
+      "hookEn": "Builds sliders for style variables, and the page updates as you move them."
     },
     {
       "id": "dont-wordle",
@@ -2928,7 +3124,9 @@
         "daily",
         "html",
         "hacker-news"
-      ]
+      ],
+      "hook": "每天一词，规则像 Wordle，但猜中隐藏词就输。",
+      "hookEn": "A daily word game with Wordle's rules, except guessing the hidden word loses."
     },
     {
       "id": "rack-02",
@@ -2958,7 +3156,9 @@
         "single-file",
         "html",
         "hacker-news"
-      ]
+      ],
+      "hook": "一整台 techno 机写在一个 HTML 文件里，打开即玩。",
+      "hookEn": "A modular techno machine in one HTML file that plays in the browser."
     },
     {
       "id": "b2tf",
@@ -2988,7 +3188,9 @@
         "directory",
         "skeuomorphic",
         "mobile"
-      ]
+      ],
+      "hook": "复古手机应用的目录，格子里带着视频预览。",
+      "hookEn": "A directory of retro phone apps, each tile with a video preview."
     },
     {
       "id": "polycss",
@@ -3019,7 +3221,9 @@
         "3d",
         "web-components",
         "hacker-news"
-      ]
+      ],
+      "hook": "不用 WebGL 的 CSS 立体引擎，每个面都能点。",
+      "hookEn": "A CSS 3D engine without WebGL, where every polygon is a clickable element."
     },
     {
       "id": "sirenfall",
@@ -3049,7 +3253,9 @@
         "interactive",
         "hacker-news",
         "mit"
-      ]
+      ],
+      "hook": "雨夜里拉下闸，听浏览器实时合成的民防警报。",
+      "hookEn": "Pull the breaker on a rainy night and hear a siren synthesized in the browser."
     },
     {
       "id": "yan-textures",
@@ -3077,7 +3283,9 @@
         "glitch",
         "tool",
         "hacker-news"
-      ]
+      ],
+      "hook": "在本地生成纹理和故障滤镜，再导出图片。",
+      "hookEn": "Generate textures and glitch filters locally, then export the image."
     },
     {
       "id": "cocoon",
@@ -3105,7 +3313,9 @@
         "template",
         "landing",
         "mit"
-      ]
+      ],
+      "hook": "深色单页模板，免构建就能部署。",
+      "hookEn": "A dark one-page template you can deploy with no build step."
     },
     {
       "id": "html-presentation-editor",
@@ -3135,7 +3345,9 @@
         "editor",
         "mit",
         "vanilla-js"
-      ]
+      ],
+      "hook": "单文件演示稿编辑器，改完就写回原来的文件。",
+      "hookEn": "A single-file slide editor: change it in the browser and save the same file."
     },
     {
       "id": "ptree",
@@ -3164,7 +3376,9 @@
         "interactive",
         "show-hn",
         "viz"
-      ]
+      ],
+      "hook": "在浏览器里翻生命树，用性状滑块筛出类群。",
+      "hookEn": "Browse a tree of life in the browser and filter groups with trait sliders."
     },
     {
       "id": "sceneai",
@@ -3196,7 +3410,9 @@
         "claude",
         "saas",
         "glassmorphism"
-      ]
+      ],
+      "hook": "落地页和动态背景的文案库，首页可以免费看样本。",
+      "hookEn": "A library of landing and background lines, with free samples on the homepage."
     },
     {
       "id": "scrolling-text-generator",
@@ -3228,7 +3444,9 @@
       "qualityNoteEn": "Show HN (2026-09-20, item 49778087). Free core; Premium packs / Pass are out of scope. Includes a Playwright-captured self-hosted 3:2 preview.",
       "featured": false,
       "publishedAt": "2026-09-20",
-      "updatedAt": "2026-09-21T01:20:00Z"
+      "updatedAt": "2026-09-21T01:20:00Z",
+      "hook": "在浏览器里调跑马灯和字幕，再导出或嵌进网页。",
+      "hookEn": "Tune a ticker or credits line in the browser, then export or embed it."
     }
   ],
   "meta": {

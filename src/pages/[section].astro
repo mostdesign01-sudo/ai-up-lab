@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DirectoryExplorer from "../components/DirectoryExplorer.astro";
+import Loc from "../components/Loc.astro";
+import { sections } from "../lib/directory";
+export function getStaticPaths() {
+  return sections.filter(section => section.id !== "models").map(section => ({ params: { section: section.id }, props: { section } }));
+}
+const { section } = Astro.props;
+---
+<BaseLayout title={`${section.title.zh} · AI UP LAB`} titleEn={`${section.title.en} · AI UP LAB`} description={section.description.zh} descriptionEn={section.description.en}>
+  <div class="wrap-wide directory-page">
+    <section class="collection-hero"><p class="kicker">AI UP LAB</p><h1><Loc zh={section.title.zh} en={section.title.en} /></h1><p class="lede"><Loc zh={section.description.zh} en={section.description.en} /></p></section>
+    <DirectoryExplorer section={section.id} />
+  </div>
+</BaseLayout>

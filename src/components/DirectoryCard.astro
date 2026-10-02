@@ -1,0 +1,24 @@
+---
+import type { DirectoryEntry } from "../lib/directory";
+import { sections } from "../lib/directory";
+import Loc from "./Loc.astro";
+import FavButton from "./FavButton.astro";
+import Stars from "./Stars.astro";
+interface Props { entry: DirectoryEntry; }
+const { entry } = Astro.props;
+const section = sections.find(section => section.id === entry.sections[0])!;
+let host = "";
+try { host = new URL(entry.sourceUrl).hostname.replace(/^www\./, ""); } catch {}
+---
+<article class="directory-card card-shell">
+  <a class="directory-card-link" href={entry.href}>
+    {entry.thumb && <img class:list={["directory-thumb", { "is-cover": entry.cover }]} src={entry.thumb} alt="" width="600" height="400" loading="lazy" decoding="async" />}
+    <div class="directory-card-copy">
+      <p class="directory-card-kind"><Loc zh={section.title.zh} en={section.title.en} /> <Stars value={entry.stars} /></p>
+      <h3><Loc zh={entry.title.zh} en={entry.title.en} /></h3>
+      <p class="directory-card-line"><Loc zh={entry.line.zh} en={entry.line.en} /></p>
+      <p class="directory-card-source">{host}</p>
+    </div>
+  </a>
+  <FavButton lib={entry.lib} id={entry.id} />
+</article>
