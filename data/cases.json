@@ -1,6 +1,158 @@
 {
   "cases": [
     {
+      "id": "deepseek-harness-desktop",
+      "slug": "deepseek-harness-desktop",
+      "title": "工具：DeepSeek Harness Desktop — 官方 macOS / Windows 桌面端",
+      "titleEn": "Tool: DeepSeek Harness Desktop — official macOS / Windows app",
+      "summary": "DeepSeek Harness 是官方开源的 Agent harness，产品页写明现已全球公开预览。它沿 Cordis「everything is a plugin」把工具、技能和界面做成可组合插件，可以装成桌面应用，也可以从命令行打开 Web UI。桌面端提供 macOS（Apple silicon）与 Windows（64-bit）安装包；Web 入口是 `npx @deepseek-ai/dsh web`。页面把 Agent teams、Auto approval review、Scheduled tasks、Voice input 标成 Experimental，并演示用对话安装插件、预览文档 / 表格 / 代码，以及按日程跑任务。仓库 deepseek-ai/deepseek-harness，许可 MIT。这是一条工具笔记：不代装桌面端、不登录，也不转述第三方博客里的充值或赠金。",
+      "summaryEn": "DeepSeek Harness is DeepSeek’s official open-source Agent harness. The product page says it is in public preview worldwide. It follows Cordis’s “everything is a plugin” idea: tools, skills, and the interface are composable plugins. You can install a desktop app or open the Web UI from the command line. Desktop builds are macOS (Apple silicon) and Windows (64-bit); the web path is `npx @deepseek-ai/dsh web`. The page labels Agent teams, Auto approval review, Scheduled tasks, and Voice input as Experimental, and it shows installing a plugin from chat, previewing docs / spreadsheets / code, and running work on a schedule. Repo deepseek-ai/deepseek-harness, MIT. This is a tool tip: it does not install the desktop app, log in, or repeat cash-credit promos from third-party blogs.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://www.deepseek.com/en/harness/",
+      "secondaryUrls": [
+        "https://github.com/deepseek-ai/deepseek-harness",
+        "https://news.ycombinator.com/item?id=49929489",
+        "https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg",
+        "https://download.deepseek.com/desktop/dsh-latest-windows-x64.exe",
+        "https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是官方产品页 https://www.deepseek.com/en/harness/（晚间 HTTP 200）与仓库 deepseek-ai/deepseek-harness。页内下载为 https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg 与 dsh-latest-windows-x64.exe（晚间 HEAD 200）；快速开始文档 https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart HTTP 200。收录理由：官方桌面 harness，HN item 49929489（2026-10-02T03:11:20Z / 约 11:11 CST，Algolia 晚间核对 262pts）在早间波次之后上了首页。仓库晚间 gh api：MIT、242104★。边界：公开预览；Experimental 以页面标签为准；本库未安装桌面端、未登录、未核第三方促销。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are the official product page https://www.deepseek.com/en/harness/ (evening HTTP 200) and the repo deepseek-ai/deepseek-harness. In-page downloads are https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg and dsh-latest-windows-x64.exe (evening HEAD 200); quickstart https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart returned HTTP 200. Why: an official desktop harness. HN item 49929489 (2026-10-02T03:11:20Z / about 11:11 CST, 262pts on Algolia at the evening check) hit the front page after the morning wave. Evening gh api: MIT, 242104★. Boundary: public preview; Experimental means the page’s label; this site did not install the desktop app, log in, or check third-party promos. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "安装桌面端、运行 npx、登录账号，或把本机文件夹 / 自动批准交给 Harness 之前自己确认。标成 Experimental 的插件不要当成稳定默认。",
+      "approvalBoundaryEn": "Confirm before installing the desktop app, running npx, signing in, or giving Harness a local folder or auto-approval. Plugins labeled Experimental are not a stable default.",
+      "language": "en",
+      "connectors": [
+        "computer"
+      ],
+      "featured": true,
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-02T12:00:00Z",
+      "previewImage": "/previews/deepseek-harness-desktop.webp",
+      "landing": {
+        "what": "DeepSeek Harness 是 DeepSeek 自己的开源 Agent 运行壳，仓库 deepseek-ai/deepseek-harness，产品页在 deepseek.com/en/harness。页内自介写它基于 Cordis 的「everything is a plugin」：工具、技能和界面都可以装插件，也可以在 Creator mode 里用对话做插件。同一产品有两条入口：下载桌面端（macOS Apple silicon 的 dmg、Windows 64-bit 的 exe），或安装 Node 后执行 `npx @deepseek-ai/dsh web`。页面展示的工作包括整理文档、分析表格、改代码、看执行轨迹，以及用 Scheduled tasks 做重复任务。Agent teams、Auto approval review、Scheduled tasks、Voice input 在页面上标着 Experimental。本站收成 Cases 工具笔记，补一条官方桌面 harness，不是 Grok Bot 本体。",
+        "whatEn": "DeepSeek Harness is DeepSeek’s own open-source Agent shell. The repo is deepseek-ai/deepseek-harness and the product page is deepseek.com/en/harness. The on-page introduction says it is built on Cordis’s “everything is a plugin”: tools, skills, and the interface can be plugins, including ones created in chat via Creator mode. Two entries: a desktop download (macOS Apple silicon dmg, Windows 64-bit exe), or `npx @deepseek-ai/dsh web` after Node is installed. The page shows organizing documents, analyzing spreadsheets, editing code, inspecting traces, and recurring work via Scheduled tasks. Agent teams, Auto approval review, Scheduled tasks, and Voice input are labeled Experimental on the page. Listed here as a Cases tool tip for an official desktop harness — not Grok Bot itself.",
+        "contrast": {
+          "caption": "左列是产品页和仓库对得上的事实。右列说明为什么放在 Cases 工具笔记，以及不要把它当成已经替你装好、登录过、或核过赠金的官方替代。",
+          "captionEn": "Left column: what the product page and repo actually say. Right column: why it sits as a Cases tool tip, and why it is not a verified install, login, or promo.",
+          "leftLabel": "DeepSeek Harness",
+          "leftLabelEn": "DeepSeek Harness",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "官方开源 Agent harness：桌面端或 `npx @deepseek-ai/dsh web`，插件可组合。",
+              "leftEn": "Official open-source Agent harness: desktop app or `npx @deepseek-ai/dsh web`, with composable plugins.",
+              "right": "Cases「AI tool tip」。帮你在自己的电脑上跑 Agent，不是云端 Grok Bot 托管。",
+              "rightEn": "An AI tool tip in Cases — runs an Agent on your computer; not hosted Grok Bot compute."
+            },
+            {
+              "aspect": "插件与模式",
+              "aspectEn": "Plugins and modes",
+              "left": "页面写 Cordis「everything is a plugin」；Agent teams、自动批准、定时任务、语音标 Experimental。",
+              "leftEn": "The page cites Cordis “everything is a plugin”; Agent teams, auto-approval, scheduled tasks, and voice are labeled Experimental.",
+              "right": "Experimental 只表示页面标签。本库未逐个打开这些插件，也不把演示文案当成稳定能力。",
+              "rightEn": "Experimental is the page’s label. Those plugins were not opened here, and demo copy is not treated as a stable capability."
+            },
+            {
+              "aspect": "和本站邻居",
+              "aspectEn": "Neighbors here",
+              "left": "同库已有 Pi、Magnitude 等本机 Agent 底座或推理引擎。Harness 是 DeepSeek 官方壳。",
+              "leftEn": "This library already lists local harnesses and engines such as Pi and Magnitude. Harness is DeepSeek’s official shell.",
+              "right": "不替代 Cursor Cloud Agent / Grok Bot 云电脑；本条也不代你改配置或登录。",
+              "rightEn": "Does not replace Cursor Cloud Agents / Grok Bot cloud computers; this tip also does not change your config or sign you in."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读产品页和 HN",
+            "titleEn": "Read the product page and HN first",
+            "body": "打开产品页，核对公开预览、MIT、桌面端系统要求，以及哪些插件标着 Experimental。再看 HN 讨论里别人实际装上之后说了什么。",
+            "bodyEn": "Open the product page and check public preview, MIT, desktop OS requirements, and which plugins are labeled Experimental. Then read the HN thread for what people saw after installing.",
+            "links": [
+              {
+                "href": "https://www.deepseek.com/en/harness/",
+                "label": "产品页",
+                "labelEn": "Product page"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49929489",
+                "label": "HN",
+                "labelEn": "HN"
+              },
+              {
+                "href": "https://github.com/deepseek-ai/deepseek-harness",
+                "label": "GitHub",
+                "labelEn": "GitHub"
+              }
+            ]
+          },
+          {
+            "title": "按官方入口安装",
+            "titleEn": "Install from the official entry",
+            "body": "桌面端用页面上的 macOS（Apple silicon）dmg 或 Windows（64-bit）exe。若只想先看 Web UI，按页面写的安装 Node 后执行 `npx @deepseek-ai/dsh web`。本站不代装。",
+            "bodyEn": "For desktop, use the page’s macOS (Apple silicon) dmg or Windows (64-bit) exe. To try the Web UI only, install Node and run `npx @deepseek-ai/dsh web` as the page says. This site does not install it.",
+            "links": [
+              {
+                "href": "https://www.deepseek.com/en/harness/",
+                "label": "下载在产品页",
+                "labelEn": "Downloads on the product page"
+              },
+              {
+                "href": "https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart",
+                "label": "Quickstart",
+                "labelEn": "Quickstart"
+              }
+            ]
+          },
+          {
+            "title": "先用本地小任务，再开权限",
+            "titleEn": "Start with a local task, then open permissions",
+            "body": "先让它处理一个不含密钥的小文件或只读仓库。插件、自动批准和定时任务按你的审批边界打开。不要把第三方文章里的赠金或充值活动当成官方页已核实的优惠。",
+            "bodyEn": "Start with a small file or a read-only repo that has no secrets. Turn on plugins, auto-approval, and scheduled tasks only inside your own approval boundary. Do not treat cash-credit posts from third-party blogs as offers this page verified.",
+            "links": [
+              {
+                "href": "https://github.com/deepseek-ai/deepseek-harness",
+                "label": "仓库与许可",
+                "labelEn": "Repo and license"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "MIT 开源，产品页写全球公开预览。功能与 Experimental 标签以当日产品页 / README 为准。",
+            "textEn": "MIT open source; the product page says public preview worldwide. Features and Experimental labels follow that day’s product page / README."
+          },
+          {
+            "text": "本站未安装桌面端、未登录、未代跑 npx。第三方博客里的赠金或充值不写入本条。",
+            "textEn": "This site did not install the desktop app, sign in, or run npx. Cash-credit or top-up claims from third-party blogs are not filed here."
+          },
+          {
+            "text": "自动批准、定时任务和本机文件夹访问仍要你自己审。它不是 Cursor Cloud Agent 或 Grok Bot 的官方替代。",
+            "textEn": "Auto-approval, scheduled tasks, and local-folder access still need your review. This is not an official replacement for Cursor Cloud Agents or Grok Bot."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 deepseek.com/en/harness 首屏",
+        "previewCreditEn": "Preview: Playwright capture of deepseek.com/en/harness above the fold"
+      },
+      "hook": "用 DeepSeek 官方桌面 Agent，插件可组合。",
+      "hookEn": "Run DeepSeek’s official desktop Agent with composable plugins."
+    },
+    {
       "id": "pi-1-0",
       "slug": "pi-1-0",
       "title": "工具：Pi 1.0 — 可自改的极简 coding agent 底座（附 Pi Durable）",
@@ -305,6 +457,156 @@
       },
       "hook": "让本机 Agent 推理引擎按任务调优。",
       "hookEn": "Tune a local Agent inference engine for your tasks."
+    },
+    {
+      "id": "weave-router",
+      "slug": "weave-router",
+      "title": "工具：Weave Router — 给 coding agent 的开源模型路由",
+      "titleEn": "Tool: Weave Router — open-source model router for coding agents",
+      "summary": "Weave Router 是给 coding agent 用的开源模型路由。README 的快路径是 `npx @weave-os/router`，可接到 Claude Code、Codex、opencode 或 pi；加上 `--local` 则在本机 8080 端口自托管，提供商密钥留在你的机器上。产品页仍展示兼容包名 `npx @workweave/router`。它按每次上游请求挑模型：难的步骤留给前沿模型，简单的步骤换到更便宜的模型。产品页用 Terminal-Bench 和 SWE-Atlas 对比 GPT-6 Astra 的通过率、耗时和花费，那些数字是厂商自述，本库没有复跑。README 写的是按 action 路由，不是按一整轮对话路由。这是一条工具笔记：不改你的 Agent 配置，也不代付订阅。",
+      "summaryEn": "Weave Router is an open-source model router for coding agents. The README quickstart is `npx @weave-os/router` for Claude Code, Codex, opencode, or pi; `--local` self-hosts on port 8080 and keeps provider keys on your machine. The product page still shows the compatibility package `npx @workweave/router`. It picks a model per upstream request: harder steps stay on a frontier model, easier steps move to a cheaper one. The product page compares pass rate, time, and cost with GPT-6 Astra on Terminal-Bench and SWE-Atlas. Those figures are vendor claims and were not re-run here. The README says routing is per action, not per whole conversation turn. This is a tool tip: it does not rewrite your agent config or pay for a subscription.",
+      "categories": [
+        "research",
+        "daily-digest",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://weaveos.com/products/router",
+      "secondaryUrls": [
+        "https://github.com/weave-os/router",
+        "https://news.ycombinator.com/item?id=49911500",
+        "https://weaveos.com/router"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 README、产品页 https://weaveos.com/products/router 与 https://weaveos.com/router（晚间均 HTTP 200）、仓库 weave-os/router。https://github.com/workweave/router 晚间 301 到 weave-os/router。收录理由：晨间 changelog 把它标为晚间候选；Show HN item 49911500（2026-09-30T16:58:24Z / 约 2026-10-01 00:58 CST，Algolia 晚间核对 105pts）无外链，正文指向该仓库。gh api 晚间 Apache-2.0、5525★。边界：Terminal-Bench 4.0 / SWE-Atlas 相对 GPT-6 Astra 的 pass@2、耗时与美元是产品页自述；英雄区 “Astra Level Quality / 2.3× / 51% of the cost” 同样是页面文案，不与两张表合成新指标。本库未复跑、未代跑 npx。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are the README, https://weaveos.com/products/router and https://weaveos.com/router (both evening HTTP 200), and the repo weave-os/router. https://github.com/workweave/router returned 301 to weave-os/router this evening. Why: the morning changelog named it as an evening candidate. Show HN item 49911500 (2026-09-30T16:58:24Z / about 2026-10-01 00:58 CST, 105pts on Algolia at the evening check) has no external URL; the text points at that repo. Evening gh api: Apache-2.0, 5525★. Boundary: Terminal-Bench 4.0 / SWE-Atlas pass@2, time, and dollars versus GPT-6 Astra are product-page claims; the hero line “Astra Level Quality / 2.3× / 51% of the cost” is page copy too and is not merged with the two tables into a new metric. Not re-run here; npx was not run for you. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "跑 npx、把 Claude Code / Codex / pi 的配置指到路由，或写入提供商密钥之前自己确认。厂商对比表不能代替你自己的账单和任务通过率。",
+      "approvalBoundaryEn": "Confirm before running npx, pointing Claude Code / Codex / pi at the router, or writing provider keys. Vendor comparison tables do not replace your own bill and task pass rate.",
+      "language": "en",
+      "connectors": [
+        "computer"
+      ],
+      "featured": true,
+      "publishedAt": "2026-09-30",
+      "updatedAt": "2026-10-02T12:00:00Z",
+      "previewImage": "/previews/weave-router.webp",
+      "landing": {
+        "what": "Weave Router 是 Weave 做的开源代理，仓库 weave-os/router，许可 Apache-2.0，产品页在 weaveos.com/products/router。README 把它描述成 Anthropic、OpenAI、Gemini 以及 OpenAI 兼容端点的插入式代理：本机一个很小的 embedder 给每次 action 打分，再从你打开的提供商里选模型。最快的接法是 `npx @weave-os/router`，可选 `--claude`、`--codex`、`--opencode`、`--pi`；`--local` 改走本机 localhost:8080。README 写明 npm 包名是 `@weave-os/router`，旧名 `@workweave/router` 仍是兼容别名，所以产品页上的那条命令还在。自托管时密钥放在本机，请求从路由直接打到你配置的提供商。本站收成 Cases 工具笔记：晨间已点名、晚间补上，不是又一个聊天客户端，也不是 Grok Bot。",
+        "whatEn": "Weave Router is Weave’s open-source proxy. The repo is weave-os/router (Apache-2.0) and the product page is weaveos.com/products/router. The README describes a drop-in proxy for Anthropic, OpenAI, Gemini, and OpenAI-compatible endpoints: a small on-box embedder scores each action and picks a model from the providers you enabled. The fast path is `npx @weave-os/router`, with `--claude`, `--codex`, `--opencode`, or `--pi`; `--local` uses localhost:8080 instead. The README says the npm name is `@weave-os/router` and the old `@workweave/router` remains a compatibility alias, which is why that command still appears on the product page. When self-hosted, keys stay on your machine and requests go from the router to the provider you configured. Listed here as a Cases tool tip the morning note deferred — not another chat client, and not Grok Bot.",
+        "contrast": {
+          "caption": "左列是 README / 产品页对得上的事实，基准数字都标成厂商页面自述。右列说明为什么放在 Cases，以及不要把它当成已经替你跑过的「全面对齐 Astra」。",
+          "captionEn": "Left column: what the README / product page say, with bench figures marked as vendor page claims. Right column: why it sits in Cases, and why it is not a verified “matches Astra everywhere” result.",
+          "leftLabel": "Weave Router",
+          "leftLabelEn": "Weave Router",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "开源模型路由：一条 npx 接到现有 coding agent，或 `--local` 自托管。",
+              "leftEn": "Open-source model router: one npx command wires an existing coding agent, or `--local` self-hosts.",
+              "right": "Cases「AI tool tip」。帮你少把简单步骤打到最贵的模型上，不是云端 Bot 托管。",
+              "rightEn": "An AI tool tip in Cases — spends less of the expensive model on easy steps; not hosted cloud Bot compute."
+            },
+            {
+              "aspect": "速度与花费",
+              "aspectEn": "Speed and cost",
+              "left": "厂商页面自述：Terminal-Bench 4.0（66 题）pass@2 为 Router 62.1% / Astra 60.6%，每轮 20.5 分钟与 $5.22 对照 44.1 分钟与 $10.03。SWE-Atlas（124 题）为 62.1% 对照 Astra 66.1%，6.8 分钟 / $2.31 对照 16.7 分钟 / $5.04。英雄区另写约 2.3 倍更快、花费约一半。",
+              "leftEn": "Vendor page claims: Terminal-Bench 4.0 (66 tasks) pass@2 is Router 62.1% / Astra 60.6%, 20.5 min and $5.22 per trial versus 44.1 min and $10.03. SWE-Atlas (124 tasks) is 62.1% versus Astra 66.1%, 6.8 min / $2.31 versus 16.7 min / $5.04. The hero also says about 2.3× faster at about half the cost.",
+              "right": "两张表和英雄句都是厂商自述，本库未复跑，也不合成一个新分数。选型看你自己的任务和账单。",
+              "rightEn": "Both tables and the hero line are vendor claims, not re-run here, and not merged into a new score. Choose from your own tasks and bill."
+            },
+            {
+              "aspect": "对接面",
+              "aspectEn": "Integrations",
+              "left": "README 列 Claude Code、Codex、opencode、pi；产品页还写到 Cursor。按 action 路由，密钥默认留在本机。",
+              "leftEn": "The README lists Claude Code, Codex, opencode, and pi; the product page also names Cursor. Routing is per action, and keys stay on-box by default.",
+              "right": "不替代 Cursor Cloud Agent / Grok Bot 云电脑；本条也不代你改配置或开通 Weave 订阅。",
+              "rightEn": "Does not replace Cursor Cloud Agents / Grok Bot cloud computers; this tip also does not rewrite your config or start a Weave subscription."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读 README 和 Show HN",
+            "titleEn": "Read the README and the Show HN first",
+            "body": "打开仓库 README，核对 Apache-2.0、`npx @weave-os/router` 和 `--local`。产品页上的基准表当作厂商自述来看。Show HN 是文字帖，没有单独的外链。",
+            "bodyEn": "Open the repo README and confirm Apache-2.0, `npx @weave-os/router`, and `--local`. Read the product-page benches as vendor claims. The Show HN post is text-only and has no separate external URL.",
+            "links": [
+              {
+                "href": "https://github.com/weave-os/router",
+                "label": "GitHub README",
+                "labelEn": "GitHub README"
+              },
+              {
+                "href": "https://weaveos.com/products/router",
+                "label": "产品页",
+                "labelEn": "Product page"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49911500",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          },
+          {
+            "title": "按 README 接一个你已经在用的 Agent",
+            "titleEn": "Point one agent you already use at it",
+            "body": "需要 Node 18 或更新。托管快路径用 `npx @weave-os/router`，或加上 `--claude` / `--codex` / `--opencode` / `--pi`。想密钥和路由都留在本机，用 `--local`。产品页的 `@workweave/router` 是 README 里的兼容别名。本站不代跑。",
+            "bodyEn": "Node 18 or newer. The hosted fast path is `npx @weave-os/router`, or add `--claude` / `--codex` / `--opencode` / `--pi`. For keys and the router on your machine, use `--local`. The product page’s `@workweave/router` is the compatibility alias named in the README. This site does not run it for you.",
+            "links": [
+              {
+                "href": "https://github.com/weave-os/router",
+                "label": "Quickstart",
+                "labelEn": "Quickstart"
+              },
+              {
+                "href": "https://weaveos.com/router",
+                "label": "weaveos.com/router",
+                "labelEn": "weaveos.com/router"
+              }
+            ]
+          },
+          {
+            "title": "用你自己的任务对一下账单",
+            "titleEn": "Check the bill on your own tasks",
+            "body": "接上之后看路由把哪些步骤打到前沿模型、哪些换到更便宜的模型。用你真实的仓库任务看通过率和花费，不要只抄 Terminal-Bench 或 SWE-Atlas 的厂商表。订阅档位以产品页当日文字为准。",
+            "bodyEn": "After wiring it up, see which steps stay on a frontier model and which move to a cheaper one. Measure pass rate and spend on your real repo tasks — do not copy the vendor Terminal-Bench or SWE-Atlas table. Subscription tiers follow that day’s product page.",
+            "links": [
+              {
+                "href": "https://weaveos.com/products/router",
+                "label": "厂商对比表在产品页",
+                "labelEn": "Vendor comparison on the product page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Apache-2.0。npm 包名以 README 的 `@weave-os/router` 为准；`@workweave/router` 是兼容别名。旧仓库路径会 301 到 weave-os/router。",
+            "textEn": "Apache-2.0. The npm name follows the README’s `@weave-os/router`; `@workweave/router` is a compatibility alias. The old repo path 301s to weave-os/router."
+          },
+          {
+            "text": "相对 GPT-6 Astra 的通过率、耗时和美元是厂商页面自述。英雄区的倍数和「一半花费」不与两张表合成新指标。本库未复跑。",
+            "textEn": "Pass rate, time, and dollars versus GPT-6 Astra are vendor page claims. The hero’s multiple and “half the cost” are not merged with the two tables into a new metric. Not re-run here."
+          },
+          {
+            "text": "本站未代跑 npx、未写入密钥、未改你的 Agent。产品页「按每一轮对话」的说法，以 README「按 action」为准。",
+            "textEn": "This site did not run npx, write keys, or edit your agent. Where the product page says it reads every turn, the README’s per-action wording is the one this card follows."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 weaveos.com/products/router 首屏",
+        "previewCreditEn": "Preview: Playwright capture of weaveos.com/products/router above the fold"
+      },
+      "hook": "给编程 Agent 按任务换更合适的模型。",
+      "hookEn": "Route each coding-agent task to a model that fits it."
     },
     {
       "id": "team-bots",
@@ -6101,11 +6403,28 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-02T01:00:00Z",
+    "updatedAt": "2026-10-02T12:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.38",
-    "count": 135,
+    "version": "1.4.39",
+    "count": 137,
     "sourcesCrawled": [
+      "https://blog.cloudflare.com/clef-decision-models/",
+      "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/",
+      "https://huggingface.co/Cloudflare/clef",
+      "https://huggingface.co/Cloudflare/clef-flash",
+      "https://clef-evals.workers-ai-mle.workers.dev/",
+      "https://news.ycombinator.com/item?id=49923692",
+      "https://www.deepseek.com/en/harness/",
+      "https://github.com/deepseek-ai/deepseek-harness",
+      "https://news.ycombinator.com/item?id=49929489",
+      "https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg",
+      "https://download.deepseek.com/desktop/dsh-latest-windows-x64.exe",
+      "https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart",
+      "https://weaveos.com/products/router",
+      "https://weaveos.com/router",
+      "https://github.com/weave-os/router",
+      "https://news.ycombinator.com/item?id=49911500",
+      "https://github.com/workweave/router",
       "https://news.ycombinator.com/item?id=49926069",
       "https://earendil.com/posts/pi-1-0/",
       "https://pi.dev/",

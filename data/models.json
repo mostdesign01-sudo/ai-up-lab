@@ -1,11 +1,108 @@
 {
   "meta": {
-    "updatedAt": "2026-10-01T12:00:00Z",
+    "updatedAt": "2026-10-02T12:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.14",
-    "count": 19
+    "version": "1.1.15",
+    "count": 20
   },
   "models": [
+    {
+      "id": "clef",
+      "slug": "clef",
+      "name": "Clef",
+      "vendor": "Cloudflare",
+      "title": "Clef：Cloudflare 开源决策模型（含 Clef-Flash）",
+      "titleEn": "Clef: Cloudflare open-weight decision models (incl. Clef-Flash)",
+      "summary": "Cloudflare 发布开源决策模型 Clef，以及更小的 Clef-Flash。它们不生成自由文本：读入一段状态和一组带类型的问题，为每个允许的答案返回概率。Workers AI 上的模型 id 是 @cf/cloudflare/clef（27B）和 @cf/cloudflare/clef-flash（9B）。官方称接口与 Jev / System One 同形，问题类型仍是 noul / choice / score，并带视觉编码器，状态可以是文本、JSON、图像或视频。权重在 Hugging Face，许可 Apache-2.0。HF 卡写 Clef 由 Qwen/Qwen3.8-27B 后训练、Clef-Flash 由 Qwen/Qwen3.5-9B 后训练，这是厂商 / HF 口径。官博还宣布 RL 微调：先由 forward-deployed engineer 动手，之后再做成自助平台——按路线图记，不是已经核过的产品深度。Decision Index、延迟和工作流分数一律是厂商自述，本库未复跑。同板与 Jev、Laya、Jeeves、Ollaya 相邻；Cases 里已有本机 Jeff 和命令行 Onesie。",
+      "summaryEn": "Cloudflare released the open-weight decision model Clef and the smaller Clef-Flash. They do not generate free text: they read a state plus typed questions and return a probability for every allowed answer. On Workers AI the ids are @cf/cloudflare/clef (27B) and @cf/cloudflare/clef-flash (9B). The vendor says the API matches Jev / System One, with noul / choice / score questions and a vision encoder, so state can be text, JSON, images, or video. Weights are on Hugging Face under Apache-2.0. The HF cards say Clef is post-trained from Qwen/Qwen3.8-27B and Clef-Flash from Qwen/Qwen3.5-9B — a vendor / HF claim. The blog also announces RL fine-tuning: hands-on with a forward-deployed engineer first, then a later self-serve platform. That is a roadmap, not a product depth this library verified. Decision Index, latency, and workflow scores are vendor claims and were not re-run here. On this board it sits next to Jev, Laya, Jeeves, and Ollaya; Cases already lists local Jeff and the Onesie CLI.",
+      "announcedAt": "2026-10-01",
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-02T12:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Cloudflare 官博：Introducing Clef",
+          "labelEn": "Cloudflare blog: Introducing Clef",
+          "url": "https://blog.cloudflare.com/clef-decision-models/",
+          "by": "Cloudflare",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "official",
+          "label": "Cloudflare Changelog：Clef on Workers AI",
+          "labelEn": "Cloudflare Changelog: Clef on Workers AI",
+          "url": "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/",
+          "by": "Cloudflare",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Cloudflare/clef（Apache-2.0）",
+          "labelEn": "Hugging Face: Cloudflare/clef (Apache-2.0)",
+          "url": "https://huggingface.co/Cloudflare/clef",
+          "by": "Cloudflare",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Cloudflare/clef-flash（Apache-2.0）",
+          "labelEn": "Hugging Face: Cloudflare/clef-flash (Apache-2.0)",
+          "url": "https://huggingface.co/Cloudflare/clef-flash",
+          "by": "Cloudflare",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "product",
+          "label": "Decision Index 演示（厂商评测页）",
+          "labelEn": "Decision Index demo (vendor eval page)",
+          "url": "https://clef-evals.workers-ai-mle.workers.dev/",
+          "by": "Cloudflare",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Clef open-weight decision models",
+          "labelEn": "Hacker News: Clef open-weight decision models",
+          "url": "https://news.ycombinator.com/item?id=49923692",
+          "by": "Hacker News",
+          "date": "2026-10-01"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：决策模型，不生成自由文本。输入状态加 typed questions，输出每个允许答案的概率。问题类型为 noul / choice / score，并称与 Jev / System One API 兼容。Workers AI：@cf/cloudflare/clef（27B，偏精度）与 @cf/cloudflare/clef-flash（9B，偏延迟）；changelog 写两者上下文均为 64K，单次最多 64 个问题。",
+          "textEn": "Vendor claim: a decision model, not free-text generation. A state plus typed questions in; a probability for every allowed answer out. Question types are noul / choice / score, and the API is claimed compatible with Jev / System One. Workers AI: @cf/cloudflare/clef (27B, precision) and @cf/cloudflare/clef-flash (9B, latency). The changelog says both use a 64K context and up to 64 questions per request."
+        },
+        {
+          "text": "官方称：带视觉编码器，可对图像（changelog 写最多四张）以及 HF 卡所写的视频做分类，不同于其文中「今天的 Jev 只做文本」的对照。HF 卡：状态可以是文本、JSON、图像或视频；一次前向给每个问题的每个允许选项一个 logit。骨干是厂商 / HF 口径：Clef 后训练自 Qwen/Qwen3.8-27B，Clef-Flash 后训练自 Qwen/Qwen3.5-9B。",
+          "textEn": "Vendor claim: a vision encoder can classify images (the changelog says up to four) and, per the HF card, video — unlike the blog’s contrast that today’s Jev is text-only. HF card: state may be text, JSON, images, or video; one forward pass emits one logit per allowed option of each question. Backbone is a vendor / HF claim: Clef is post-trained from Qwen/Qwen3.8-27B, Clef-Flash from Qwen/Qwen3.5-9B."
+        },
+        {
+          "text": "官方称（未复跑，不把表当成已复核排名）：官博写 Clef 在 Jev Decision Index 上目前领先，完整表在官博和 Decision Index demo。摘录延迟中位：Clef 209.3 ms、Clef-Flash 38.8 ms、Jev 524.1 ms（其 43 次评测自述）。工作流表自述 Clef 在发票处理、客服、安全事件上高于 Jev，Agent trace observability 上 Jev 更高。本库未复跑。",
+          "textEn": "Vendor claim (not re-run, and not treated as a checked ranking): the blog says Clef currently leads the Jev Decision Index; the full table is on the blog and the Decision Index demo. Latency excerpt, median: Clef 209.3 ms, Clef-Flash 38.8 ms, Jev 524.1 ms (their claim across 43 eval runs). Their workflow table says Clef beats Jev on invoice processing, customer service, and security incidents, while Jev is higher on agent-trace observability. Not re-run here."
+        },
+        {
+          "text": "官方称：同时推出 RL 微调。眼下是 forward-deployed engineer 动手帮客户调 Clef；之后再做成自助平台（文中提到用 AI Gateway 采集、Workers AI 跑 rollout、Containers 做 sandbox、Trainer 更新权重、BYO Model 再部署）。本卡只记路线图，未核自助下单是否已经可用。权重 Apache-2.0，可在 HF 自行拉取；本库未代下。",
+          "textEn": "Vendor claim: an RL fine-tuning offer ships alongside the models. Today that is a forward-deployed engineer tuning Clef with the customer; later a self-serve platform (the post mentions AI Gateway capture, Workers AI rollouts, Containers as the sandbox, a Trainer for weights, and BYO Model redeploy). This card records the roadmap only and does not treat self-serve ordering as verified. Weights are Apache-2.0 on HF; this library did not download them."
+        }
+      ],
+      "qualityNote": "收录理由：晨间波次跳过非 A/B/C 头条，晚间补 Models 上的开源决策模型。主源是官博 https://blog.cloudflare.com/clef-decision-models/（晚间 HTTP 200）、Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/（HTTP 200）、HF Cloudflare/clef 与 Cloudflare/clef-flash（Apache-2.0，GET 200；晚间 likes 547 / 183）、Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/（HTTP 200）。HN item 49923692，标题 “Clef: Open-weight decision models, and new RL fine-tuning platform”，2026-10-01T16:18:57Z / 约 2026-10-02 00:18 CST，Algolia 晚间核对 536pts。核实边界：64K、视觉、Jev API 兼容、延迟表、Decision Index / 工作流分数、Qwen 骨干一律是厂商或 HF 卡自述，本库未复跑、未代下权重、未打 Workers AI。RL 微调按「先 FDE、后自助」记路线图，未核产品深度。Artificial Analysis https://artificialanalysis.ai/models/clef 晚间 HTTP 404，不编第三方榜链接。预览为 Playwright 实拍官博首屏裁 3:2 WebP。精选，不打星。",
+      "qualityNoteEn": "Why: the morning wave skipped non-A/B/C headlines; this evening Models board adds the open-weight decision models. Primary sources are the blog https://blog.cloudflare.com/clef-decision-models/ (evening HTTP 200), the Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/ (HTTP 200), HF Cloudflare/clef and Cloudflare/clef-flash (Apache-2.0, GET 200; evening likes 547 / 183), and the Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/ (HTTP 200). HN item 49923692, title “Clef: Open-weight decision models, and new RL fine-tuning platform”, 2026-10-01T16:18:57Z / about 2026-10-02 00:18 CST, 536pts on Algolia at the evening check. Boundary: 64K context, vision, Jev API compatibility, the latency table, Decision Index / workflow scores, and the Qwen backbone are vendor or HF-card claims — not re-run here, weights not downloaded, Workers AI not called. RL fine-tuning is recorded as FDE-first, self-serve later, without verified product depth. Artificial Analysis https://artificialanalysis.ai/models/clef returned HTTP 404 this evening, so no third-party board link is invented. Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP. Featured, unrated.",
+      "relatedCaseIds": [
+        "jeff",
+        "onesie"
+      ],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "laya-system-one",
+        "jeeves",
+        "ollaya"
+      ],
+      "previewImage": "/previews/clef.webp",
+      "previewCredit": "预览：Playwright 实拍 blog.cloudflare.com/clef-decision-models 首屏",
+      "previewCreditEn": "Preview: Playwright capture of blog.cloudflare.com/clef-decision-models above the fold",
+      "featured": true
+    },
     {
       "id": "gemini-4-argon",
       "slug": "gemini-4-argon",
@@ -298,7 +395,8 @@
       "relatedModelIds": [
         "typesafe-jev",
         "ollaya",
-        "laya-system-one"
+        "laya-system-one",
+        "clef"
       ],
       "previewImage": "/previews/jeeves.webp",
       "previewCredit": "预览：Playwright 实拍 github.com/PostHog/jeeves README 首屏",
@@ -585,7 +683,8 @@
       "relatedModelIds": [
         "typesafe-jev",
         "laya-system-one",
-        "jeeves"
+        "jeeves",
+        "clef"
       ],
       "previewImage": "/previews/ollaya.webp",
       "previewCredit": "Playwright 实拍 ollaya.dev 首屏，裁 3:2",
@@ -918,7 +1017,8 @@
         "typesafe-jev",
         "ollaya",
         "jev-plays-pokemon",
-        "jeeves"
+        "jeeves",
+        "clef"
       ],
       "previewImage": "/previews/laya-system-one.webp",
       "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
@@ -1422,7 +1522,8 @@
         "laya-system-one",
         "ollaya",
         "jev-plays-pokemon",
-        "jeeves"
+        "jeeves",
+        "clef"
       ],
       "featured": true,
       "stars": 4
