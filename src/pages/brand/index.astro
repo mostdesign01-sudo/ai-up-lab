@@ -1,0 +1,135 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BrandMark from "../../components/BrandMark.astro";
+import BrandDocsNav from "../../components/BrandDocsNav.astro";
+import BrandDesignShowcase from "../../components/BrandDesignShowcase.astro";
+import DirectoryCard from "../../components/DirectoryCard.astro";
+import Icon from "../../components/Icon.astro";
+import Loc from "../../components/Loc.astro";
+import { entries } from "../../lib/directory";
+import { withBase, assetUrl } from "../../lib/paths";
+import { colorRoles, themes, foundations, aiGuide, designRules, designSystemVersion, designSystemUpdatedAt } from "../../lib/design-system";
+import "../../styles/brand-guide.css";
+import "../../styles/brand-handbook.css";
+import { designKnowledge, designGroups } from "../../lib/design-knowledge";
+const topics = [
+  { id: "principles", zh: "设计原则", en: "Principles" },
+  { id: "logo", zh: "品牌标志", en: "Logo" },
+  { id: "color", zh: "色彩", en: "Color" },
+  { id: "type", zh: "字体与间距", en: "Type & spacing" },
+  { id: "components", zh: "组件", en: "Components" },
+  { id: "layout", zh: "页面结构", en: "Page patterns" },
+  { id: "ai", zh: "给 AI 的规则", en: "AI brief" },
+  { id: "assets", zh: "下载", en: "Downloads" },
+];
+const typeSamples = [
+  { zh: "主推标题", en: "Editorial headline", value: "34–57 px", size: 34, weight: 800, example: { zh: "把 AI 用到下一件事里", en: "Put AI to work" } },
+  { zh: "区块标题", en: "Section heading", value: "23 px", size: 23, weight: 700, example: { zh: "从一篇教程开始", en: "Start with one guide" } },
+  { zh: "资源标题", en: "Resource title", value: "17 px", size: 17, weight: 600, example: { zh: "找到能解决问题的工具", en: "Find a useful tool" } },
+  { zh: "正文", en: "Body text", value: "15 px / 1.7", size: 15, weight: 400, example: { zh: "说清用途、适用人群与真实来源。", en: "Explain purpose, audience, and sources." } },
+  { zh: "来源与日期", en: "Source & date", value: "12 px", size: 12, weight: 400, example: { zh: "来源 · 更新日期 · 使用限制", en: "Source · Updated · Requirements" } },
+];
+const samples = [entries.find(entry => entry.key === "html:css-bed")!, entries.find(entry => entry.key === "grok:pi-1-0")!];
+const downloads = [
+  { path: "brand/knowledge.json", name: "ai-up-lab-knowledge.json", zh: "设计知识索引 · JSON", en: "Knowledge registry · JSON", detail: { zh: "规则、依赖、参数与代码映射", en: "Rules, dependencies, tokens, and code mappings" } },
+  { path: "brand/logo.svg", name: "ai-up-lab-logo.svg", zh: "Logo · SVG", en: "Logo · SVG", detail: { zh: "透明底，可等比缩放", en: "Transparent, scalable mark" } },
+  { path: "brand/logo-inverse.svg", name: "ai-up-lab-logo-inverse.svg", zh: "反白 Logo · SVG", en: "Reversed logo · SVG", detail: { zh: "用于深色背景", en: "For dark surfaces" } },
+  { path: "brand/tokens.json", name: "ai-up-lab-tokens.json", zh: "设计参数 · JSON", en: "Design tokens · JSON", detail: { zh: "深浅主题、间距、字体与规则", en: "Themes, spacing, type, and rules" } },
+  { path: "brand/tokens.css", name: "ai-up-lab-tokens.css", zh: "设计变量 · CSS", en: "Design variables · CSS", detail: { zh: "与本站使用同一份参数", en: "The same tokens used by this site" } },
+  { path: "brand/ai-guide.md", name: "ai-up-lab-ai-guide.md", zh: "AI 工作指南 · Markdown", en: "AI brief · Markdown", detail: { zh: "可交给设计与编程助手", en: "For design and coding assistants" } },
+];
+---
+<BaseLayout title="品牌与界面规范 · AI UP LAB" titleEn="Brand & interface guidelines · AI UP LAB" description="AI UP LAB 的品牌标志、色彩、字体、组件与 AI 界面生成指南。" descriptionEn="AI UP LAB logo, colors, typography, components, and AI interface guidelines.">
+  <div class="wrap-wide brand-guide handbook-shell brand-studio"><BrandDocsNav active="overview" /><article class="handbook-content brand-overview">
+    <section class="brand-guide-hero studio-hero">
+      <div class="studio-hero-copy"><p class="brand-guide-kicker">AI UP LAB / DESIGN SYSTEM / v{designSystemVersion}</p><p class="studio-display" aria-hidden="true">Design,<br />with purpose.</p><h1><Loc zh="品牌与界面规范" en="Brand & interface guidelines" /></h1><p class="brand-guide-intro"><Loc zh="让内容更清楚，让下一步更直观。为真实任务建立一套设计语言，让人和 AI 都能读懂、用起来。" en="Make content clear and the next step obvious. A design language for real tasks, shared by people and AI." /></p><div class="brand-guide-actions"><a class="brand-guide-primary" href="#handbook"><Loc zh="探索规范" en="Explore the system" /><Icon name="arrow" size={18} /></a><a class="brand-guide-link" href={withBase("brand/guides/ai-workflow/")}><Loc zh="交给 AI 使用" en="Use it with AI" /></a></div></div>
+      <figure class="studio-hero-art"><img src={assetUrl("brand/design-sculpture.webp")} width="1536" height="1024" alt="" fetchpriority="high" /><figcaption><span>AI UP LAB / VISUAL STUDY 001</span><span>2026</span></figcaption></figure>
+    </section>
+    <BrandDesignShowcase />
+    <section class="handbook-index" id="handbook"><div class="handbook-index-head"><div><p class="brand-guide-kicker">02 / HANDBOOK</p><h2><Loc zh="从规则到实际界面" en="From rules to working interfaces" /></h2></div><code>10 GUIDES / v{designSystemVersion}</code></div><p class="brand-guide-description"><Loc zh="按设计对象查阅结构、参数、状态与代码；每项规则都能单独交给 AI。" en="Explore anatomy, parameters, states, and code by design object. Share each rule with AI independently." /></p><div class="handbook-index-grid">{designGroups.map(group=><div class="handbook-index-group"><h3><Loc {...group.title} /></h3>{designKnowledge.filter(spec=>spec.group===group.id).map(spec=><a href={withBase(`brand/guides/${spec.id}/`)}><Loc {...spec.title} /><span aria-hidden="true">↗</span></a>)}</div>)}</div></section>
+    <aside class="handbook-source"><Loc zh="方法参考：" en="Method reference: " /><a href="https://tmall-design.com/" target="_blank" rel="noopener noreferrer">Tmall Design</a><Loc zh="。借鉴它将规则、结构化映射和实现代码连接的方式，建立适用于 AI 实践资源站的规范。品牌、参数与示例沿用 AI UP LAB 自身设计。" en=". We adapt its connection between rules, structured mappings, and implementation to a practical AI resource site. Branding, parameters, and examples remain specific to AI UP LAB." /> <a href="https://tmall-design.com/#blog/building-design-wiki-for-aigui" target="_blank" rel="noopener noreferrer"><Loc zh="阅读原版方法文章 ↗" en="Read the original method ↗" /></a></aside>
+    <p class="brand-guide-kicker studio-foundation-label">03 / BRAND FOUNDATIONS</p>
+    <nav class="brand-guide-nav" aria-label="规范目录" data-aria-zh="规范目录" data-aria-en="Guideline contents">{topics.map(topic => <a href={`#${topic.id}`}><Loc zh={topic.zh} en={topic.en} /></a>)}</nav>
+    <section id="principles" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>01 / PRINCIPLES</p><h2><Loc zh="清楚、实用、有依据" en="Clear, useful, grounded" /></h2></div>
+      <div class="brand-guide-three">{[
+        { zh: "内容优先", en: "Content first", line: { zh: "进来就能看到精选或最新资源。低频操作收进合适的入口，不挤占首屏。", en: "Show useful picks and recent resources immediately. Keep occasional controls in an appropriate secondary entry." } },
+        { zh: "行动明确", en: "A clear next step", line: { zh: "按用户要完成的任务组织内容。每条说明能做什么，按钮说明接下来做什么。", en: "Organize around tasks. Explain what a resource does and label the next action." } },
+        { zh: "来源可信", en: "Traceable sources", line: { zh: "真实预览和原文链接优先。编辑推荐、作者声称与实际验证各有清楚边界。", en: "Prefer real previews and original sources. Distinguish editorial picks, author claims, and hands-on validation." } },
+      ].map(item => <article><h3><Loc zh={item.zh} en={item.en} /></h3><p><Loc zh={item.line.zh} en={item.line.en} /></p></article>)}</div>
+    </section>
+    <section id="logo" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>02 / IDENTITY</p><h2><Loc zh="一个标志，两种对比" en="One mark, two contrasts" /></h2></div>
+      <p class="brand-guide-description"><Loc zh="六边形轮廓保留向上的空心三角形，中心加入 45% 等比缩小的实心三角形。标志以中性黑或反白呈现，紫色留给行动与重点。" en="The hexagonal mark contains an upward triangle cutout and a solid triangle scaled to 45% around its centroid. Use neutral dark or reversed light; reserve violet for actions and emphasis." /></p>
+      <div class="brand-guide-logo-grid"><div class="brand-guide-logo-light"><span><BrandMark /></span><p><Loc zh="浅色背景 · 中性黑" en="Light surface · Neutral dark" /></p></div><div class="brand-guide-logo-dark"><span><BrandMark /></span><p><Loc zh="深色背景 · 反白" en="Dark surface · Reversed light" /></p></div><div class="brand-guide-logo-space"><div><BrandMark /></div><p><Loc zh="安全留白 ≥ 标志盒宽的 1/4" en="Clear space ≥ ¼ of the mark box" /></p></div></div>
+      <div class="brand-guide-logo-sizes">{[16,24,32,64].map(size => <div><span style={`width:${size}px;height:${size}px`}><BrandMark /></span><code>{size}px</code></div>)}<p><Loc zh="最小 16 px；手机导航 24 px；桌面导航 32 px。不要拉伸、旋转、描边或给标志加阴影。" en="Minimum 16px; mobile navigation 24px; desktop navigation 32px. Do not stretch, rotate, outline, or shadow the mark." /></p></div>
+    </section>
+    <section id="color" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>03 / COLOR</p><h2><Loc zh="中性底色，紫色引导" en="Neutral surfaces, violet direction" /></h2></div>
+      <p class="brand-guide-description"><Loc zh="下面的色板跟随右上角的深浅主题切换。颜色按用途命名，同一份参数驱动页面与下载文件。" en="These swatches follow the theme switch in the header. Semantic roles share one source with the live site and downloadable tokens." /></p>
+      <div class="brand-guide-palette">{colorRoles.filter(role => !["elevated", "borderStrong", "brandSoft", "onBrand"].includes(role.id)).map(role => <article><div class="brand-guide-swatch" style={`background:var(--lab-color-${role.id})`}></div><div class="brand-guide-swatch-copy"><h3><Loc zh={role.zh} en={role.en} /></h3><code class="brand-guide-light-value">{themes.light[role.id]}</code><code class="brand-guide-dark-value">{themes.dark[role.id]}</code><button type="button" data-brand-copy data-light={themes.light[role.id]} data-dark={themes.dark[role.id]} aria-label={`复制${role.zh}颜色`} data-aria-zh={`复制${role.zh}颜色`} data-aria-en={`Copy ${role.en.toLowerCase()} color`}><Loc zh="复制" en="Copy" /></button></div><code class="brand-guide-token-name">--lab-color-{role.id}</code></article>)}</div>
+      <p class="brand-guide-note"><Loc zh="紫色表示重点和动作，不表示质量高低。状态色同时配文字；分隔线颜色不能用于正文。普通文字以 4.5:1 对比度为目标，大字号以 3:1 为目标。" en="Violet marks emphasis and action, not quality. Pair status colors with labels and never use border colors for body text. Target 4.5:1 for normal text and 3:1 for large text." /></p>
+    </section>
+    <section id="type" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>04 / TYPE & SPACING</p><h2><Loc zh="让层级容易读，让留白有尺度" en="Readable hierarchy, measured space" /></h2></div>
+      <p class="brand-guide-description"><Loc zh="英文使用 Geist，中文使用系统中文字体回退；代码与参数使用 IBM Plex Mono。正文建议 1.7 倍行高，长中文标题按完整短语换行。" en="Use Geist with system CJK fallbacks, and IBM Plex Mono for code. Aim for a 1.7 body line height and keep meaningful phrases together in headlines." /></p>
+      <div class="brand-guide-type-list">{typeSamples.map(sample => <div><p><Loc zh={sample.zh} en={sample.en} /><code>{sample.value}</code></p><div style={`font-size:${sample.size}px;font-weight:${sample.weight}`}><Loc zh={sample.example.zh} en={sample.example.en} /></div></div>)}</div>
+      <h3 class="brand-guide-subhead"><Loc zh="间距以 4 px 为基础" en="Spacing starts at 4px" /></h3><div class="brand-guide-spacing">{foundations.spacing.map(size => <div><span style={`height:${size}px`}></span><code>{size}</code></div>)}</div><p class="brand-guide-note"><Loc zh="控件圆角 7 px，内容卡片圆角 8 px。相邻内容间距优先使用 16 / 24 px，区块间距使用 32 / 48 / 64 px；避免靠大面积空白制造层级。" en="Use 7px control corners and 8px card corners. Prefer 16/24px between related content and 32/48/64px between sections. Avoid oversized blank areas." /></p>
+    </section>
+    <section id="components" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>05 / COMPONENTS</p><h2><Loc zh="少量组件，清楚的状态" en="A small set of clear components" /></h2></div>
+      <p class="brand-guide-description"><Loc zh="优先复用本站组件。主按钮负责下一步，次操作保持轻量；收藏按钮独立于卡片链接。" en="Reuse existing site components. Primary actions show the next step; secondary actions stay quiet. Keep favorites separate from card links." /></p>
+      <div class="brand-guide-component-panel"><h3><Loc zh="按钮与图标" en="Buttons & icons" /></h3><div class="brand-guide-button-row"><a class="brand-guide-primary" href={withBase("tools/")}><Loc zh="浏览工具" en="Explore tools" /><Icon name="arrow" size={18} /></a><a class="brand-guide-secondary" href="#ai"><Loc zh="查看 AI 规则" en="Read AI rules" /></a><button class="brand-guide-secondary" type="button" disabled><Loc zh="暂不可用" en="Unavailable" /></button><a class="brand-guide-link" href={withBase("search/")}><Loc zh="搜索资源" en="Search resources" /></a></div><div class="brand-guide-icon-row">{(["book","cube","grid","graph","note","bookmark","arrow","theme"] as const).map(name => <div><Icon name={name} size={24} /><code>{name}</code></div>)}</div><p class="brand-guide-note"><Loc zh="使用 Phosphor regular 图标，常用尺寸 18 / 20 / 24 px。只有图标的按钮需要可读标签；焦点状态与选中状态分别表达。" en="Use Phosphor regular at 18/20/24px. Icon-only controls need accessible labels; focus and selection are different states." /></p></div>
+      <div class="brand-guide-example-cards">{samples.map(entry => <DirectoryCard entry={entry} />)}</div><p class="brand-guide-note"><Loc zh="以上为真实资源卡片，可以打开详情或收藏。来源、标题与简介的顺序在各个目录保持一致。" en="These are real resources: open a detail page or save an entry. Keep source, title, and description order consistent across sections." /></p>
+      <div class="brand-guide-state-row"><div><h3><Loc zh="状态示例" en="Status examples" /></h3><div class="brand-guide-statuses"><span class="is-success"><Loc zh="可用" en="Available" /></span><span class="is-warning"><Loc zh="待复核" en="Review needed" /></span><span class="is-error"><Loc zh="链接失效" en="Link unavailable" /></span></div><p class="brand-guide-note"><Loc zh="状态演示，不代表上述资源的核验结论。" en="State examples, not verification results for the cards above." /></p></div><div class="brand-guide-empty"><h3><Loc zh="暂无符合条件的资源" en="No matching resources" /></h3><p><Loc zh="试试减少条件，或看看全部内容。" en="Try fewer filters or explore all resources." /></p><a class="brand-guide-link" href={withBase("search/")}><Loc zh="查看全部资源" en="See all resources" /><Icon name="arrow" size={18} /></a></div></div>
+    </section>
+    <section id="layout" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>06 / PAGE PATTERNS</p><h2><Loc zh="三种页面，三个重点" en="Three patterns, three priorities" /></h2></div>
+      <div class="brand-guide-three">{[
+        { zh: "首页：发现值得看的内容", en: "Home: discover useful picks", list: [{zh:"一条主推与两条补充",en:"One lead, two supporting picks"},{zh:"最新更新与目录入口",en:"Recent entries and section links"},{zh:"主推给出用途和推荐理由",en:"A clear purpose and editorial reason"}] },
+        { zh: "分类页：直接浏览", en: "Sections: start browsing", list: [{zh:"标题、简介、资源数量",en:"Title, description, resource count"},{zh:"最新在前，按需展开",en:"Newest first, progressively revealed"},{zh:"搜索与筛选进入独立搜索页",en:"Search and filters on the search page"}] },
+        { zh: "详情页：理解并开始使用", en: "Details: understand and try", list: [{zh:"是什么、适合谁、如何获取",en:"Purpose, audience, and access"},{zh:"真实来源、步骤与限制",en:"Sources, steps, and limitations"},{zh:"保留收藏与相关资源入口",en:"Favorites and related resources"}] },
+      ].map(pattern => <article><h3><Loc zh={pattern.zh} en={pattern.en} /></h3><ul>{pattern.list.map(item => <li><Loc zh={item.zh} en={item.en} /></li>)}</ul></article>)}</div>
+      <p class="brand-guide-note"><Loc zh="内容最大宽度 1344 px。手机两行导航，正文单列，边距至少 14 px；较宽屏幕逐步增加列数。新组件的手机触控目标以 44 px 为目标，并支持键盘与减少动态效果设置。" en="Keep content within 1344px. Use two navigation rows on mobile, single-column content, and at least 14px gutters; add columns on wider screens. Aim for 44px mobile targets on new controls, keyboard support, and reduced motion." /></p>
+    </section>
+    <section id="ai" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>07 / AI BRIEF</p><h2><Loc zh="把规则交给 AI，把质量留在验收里" en="Give AI the rules, then verify the result" /></h2></div>
+      <ol class="brand-guide-rules">{designRules.map(rule => <li><Loc zh={rule.zh} en={rule.en} /></li>)}</ol>
+      <div class="brand-guide-actions"><button type="button" class="brand-guide-primary" data-brand-guide-copy data-guide-url={withBase("brand/ai-guide.md")}><Loc zh="复制完整 AI 工作说明" en="Copy the full AI brief" /></button><a class="brand-guide-link" href={withBase("brand/ai-guide.md")} download="ai-up-lab-ai-guide.md"><Loc zh="下载 Markdown" en="Download Markdown" /></a></div>
+      <details class="brand-guide-brief"><summary><Loc zh="查看完整工作说明" en="Read the full brief" /></summary><pre>{aiGuide}</pre></details>
+      <p class="brand-guide-note"><Loc zh="验收要覆盖手机和桌面、中英双语、深浅主题、键盘操作与收藏状态。上述对比度和触控尺寸是设计目标，不代表整站已通过完整无障碍认证。" en="Verify mobile and desktop, both languages and themes, keyboard use, and saved state. Contrast and target-size requirements are design goals, not a claim of full-site accessibility certification." /></p>
+    </section>
+    <section id="assets" class="brand-guide-section">
+      <div class="brand-guide-heading"><p>08 / RESOURCES</p><h2><Loc zh="同一份规范，直接拿去用" en="One system, ready to reuse" /></h2></div>
+      <div class="brand-guide-downloads">{downloads.map(file => <a href={withBase(file.path)} download={file.name}><div><strong><Loc zh={file.zh} en={file.en} /></strong><p><Loc zh={file.detail.zh} en={file.detail.en} /></p></div><Icon name="arrow" size={20} /></a>)}</div>
+      <p class="brand-guide-note"><Loc zh="这套规范属于 AI UP LAB。后续调整优先更新共用参数与组件，再同步示例和 AI 工作说明。" en="This system belongs to AI UP LAB. Update shared tokens and components first, then keep the examples and AI brief in sync." /></p>
+    </section>
+    <p class="brand-guide-copy-status" data-brand-copy-status role="status" aria-live="polite"></p>
+  </article></div>
+</BaseLayout>
+<script>
+  const status = document.querySelector<HTMLElement>("[data-brand-copy-status]");
+  let statusTimeout: number;
+  const message = (zh: string, en: string) => {
+    if (!status) return;
+    clearTimeout(statusTimeout);
+    status.textContent = document.documentElement.dataset.locale === "en" ? en : zh;
+    statusTimeout = window.setTimeout(() => { status.textContent = ""; }, 4500);
+  };
+  document.querySelectorAll<HTMLButtonElement>("[data-brand-copy]").forEach(button => button.addEventListener("click", async () => {
+    try {
+      const value = document.documentElement.dataset.theme === "dark" ? button.dataset.dark! : button.dataset.light!;
+      await navigator.clipboard.writeText(value);
+      message(`已复制 ${value}`, `Copied ${value}`);
+    } catch { message("未能自动复制，请选中色值复制。", "Copy unavailable. Select the color value to copy it."); }
+  }));
+  const copyGuide = document.querySelector<HTMLButtonElement>("[data-brand-guide-copy]");
+  copyGuide?.addEventListener("click", async () => {
+    try {
+      const response = await fetch(copyGuide.dataset.guideUrl!);
+      if (!response.ok) throw new Error("Guide unavailable");
+      await navigator.clipboard.writeText(await response.text());
+      message("已复制完整 AI 工作说明。", "Copied the full AI brief.");
+    } catch { document.querySelector<HTMLDetailsElement>(".brand-guide-brief")?.setAttribute("open", ""); message("未能自动复制，可从展开的工作说明中复制，或下载文件。", "Copy unavailable. Use the expanded brief or download the file."); }
+  });
+</script>

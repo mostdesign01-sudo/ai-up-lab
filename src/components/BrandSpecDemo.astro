@@ -1,0 +1,47 @@
+---
+import Loc from "./Loc.astro";
+import ActionButton from "./ActionButton.astro";
+import BrandMark from "./BrandMark.astro";
+import DirectoryCard from "./DirectoryCard.astro";
+import BrandBriefBuilder from "./BrandBriefBuilder.astro";
+import { entries } from "../lib/directory";
+import { withBase } from "../lib/paths";
+import type { DesignSpec } from "../lib/design-knowledge";
+const { spec } = Astro.props as {spec:DesignSpec};
+---
+<div class="spec-demo" data-demo={spec.id}>
+<p class="spec-demo-label"><Loc zh="示例 / 可操作的状态标有按钮" en="EXAMPLE / Interactive states have controls" /></p>
+{spec.id === "buttons" && <><div class="brand-guide-button-row"><span data-action-demo><ActionButton><Loc zh="运行状态演示" en="Run state demo" /></ActionButton></span><ActionButton variant="secondary" disabled><Loc zh="暂不可用" en="Unavailable" /></ActionButton><ActionButton loading><Loc zh="处理中" en="Processing" /></ActionButton></div><p role="status" data-action-status><Loc zh="点击主按钮，演示 800 毫秒的忙碌状态；不提交任何内容。" en="The primary button demonstrates an 800ms busy state without submitting anything." /></p></>}
+{spec.id === "resource-cards" && <DirectoryCard entry={entries.find(entry => entry.key === "html:css-bed")!} />}
+{spec.id === "foundations" && <div class="spec-identity"><div><BrandMark /></div><strong>AI UP LAB</strong><p><Loc zh="让内容更清楚，让下一步更直观。" en="Make the content clear and the next step obvious." /></p><a class="brand-guide-link" href={withBase("brand/#color")}><Loc zh="查看完整色板与标志尺寸" en="Explore colors & logo sizes" /></a></div>}
+{spec.id === "navigation" && <><div class="spec-mini-nav"><a href={withBase("learn/")}><Loc zh="学习与工作流" en="Learning" /></a><a href={withBase("tools/")}><Loc zh="工具与应用" en="Tools" /></a><details data-demo-menu><summary><Loc zh="更多" en="More" /></summary><a href={withBase("search/")}><Loc zh="搜索资源" en="Search resources" /></a><a href={withBase("brand/")}><Loc zh="品牌规范" en="Brand guidelines" /></a></details></div><p class="brand-guide-note"><Loc zh="真实入口；更多菜单可通过键盘打开，Escape 关闭并恢复焦点。" en="Real destinations. Open More with the keyboard; Escape closes it and restores focus." /></p></>}
+{spec.id === "feedback" && <><label class="demo-state-label"><Loc zh="切换演示状态" en="Choose a demo state" /><select data-feedback-select>{[{zh:"加载中",en:"Loading"},{zh:"没有匹配",en:"No matches"},{zh:"加载失败",en:"Load failed"},{zh:"加载完成",en:"Complete"}].map((s,i)=><option value={i} data-label-zh={s.zh} data-label-en={s.en}>{s.zh}</option>)}</select></label><div class="feedback-stage" data-feedback-stage aria-busy="true">{[
+{zh:"正在加载示例…",en:"Loading the example…",line:{zh:"布局预留空间，其他入口仍可使用。",en:"Reserved space keeps the layout stable and other entries remain usable."}},
+{zh:"暂无匹配的资源",en:"No matching resources",line:{zh:"减少条件，或查看全部资源。",en:"Use fewer filters or browse all resources."}},
+{zh:"示例加载失败",en:"Example failed to load",line:{zh:"这里模拟局部失败，可以重试。",en:"This simulates a local failure. Retry to recover."}},
+{zh:"示例已加载",en:"Example loaded",line:{zh:"内容区域恢复，其他操作可继续。",en:"The content area has recovered and remains usable."}}
+].map((s,i)=><div data-feedback-panel={i} hidden={i!==0}><h3><Loc zh={s.zh} en={s.en} /></h3><p><Loc {...s.line} /></p>{i===1&&<a href={withBase("search/")} class="brand-guide-link"><Loc zh="查看全部资源" en="See all resources" /></a>}{i===2&&<button type="button" data-feedback-retry class="brand-guide-secondary"><Loc zh="重试演示" en="Retry demo" /></button>}</div>)}</div><p role="status" data-feedback-status></p><noscript><p><Loc zh="状态切换需 JavaScript；完整状态说明见下方表格。" en="State switching requires JavaScript. The table below describes all states." /></p></noscript></>}
+{(spec.id === "layout" || spec.id === "page-patterns") && <div class="pattern-previews">{[
+{title:{zh:"首页 · 发现",en:"Home · Discover"},blocks:[{zh:"主推 + 两条补充",en:"Lead + two supporting picks"},{zh:"最近更新",en:"Recent entries"},{zh:"任务目录",en:"Task sections"}],href:""},
+{title:{zh:"分类 · 浏览",en:"Category · Browse"},blocks:[{zh:"标题 / 简介 / 数量",en:"Title / description / count"},{zh:"最新资源列表",en:"Recent resource list"},{zh:"展开更多",en:"Reveal more"}],href:"learn/"},
+{title:{zh:"详情 · 理解",en:"Detail · Understand"},blocks:[{zh:"用途 / 来源 / 日期",en:"Purpose / source / date"},{zh:"用法与限制",en:"Usage and limits"},{zh:"相关资源",en:"Related resources"}],href:entries.find(e=>e.key==="html:css-bed")!.href},
+{title:{zh:"搜索 · 查找",en:"Search · Find"},blocks:[{zh:"查询与筛选",en:"Query and filters"},{zh:"结果 / 空状态",en:"Results / empty state"},{zh:"结果数量",en:"Result count"}],href:"search/"}
+].map((p,i)=><article><h3><Loc {...p.title} /></h3><div class="pattern-wireframe">{p.blocks.map((block,index)=><div class:list={[index===0&&"is-lead"]}><Loc {...block} /></div>)}</div><a class="brand-guide-link" href={i===2?p.href:withBase(p.href)}><Loc zh="查看实际页面 →" en="Open live example →" /></a></article>)}</div>}
+{spec.id === "assets-motion" && <><div class="motion-track"><div class="motion-mark" data-motion-mark><BrandMark /></div></div><button type="button" class="brand-guide-secondary" data-motion-replay><Loc zh="演示 160ms 反馈动效" en="Replay 160ms feedback" /></button><p class="brand-guide-note"><Loc zh="尊重系统的减少动态效果设置。资源封面优先使用真实预览，概念图不得暗示真实操作结果。" en="Respects reduced motion. Prefer real previews; conceptual images must not imply actual results." /></p></>}
+{spec.id === "ai-workflow" && <BrandBriefBuilder />}
+{spec.id === "review" && <><div class="review-demo">{spec.checks.map(check=><label><input type="checkbox" data-review-check /><Loc {...check} /></label>)}</div><p role="status" data-review-status><Loc zh="尚未检查；仅在实际验证后勾选。" en="Not checked. Tick only after verifying." /></p><button type="button" class="brand-guide-secondary" data-review-reset><Loc zh="重置检查" en="Reset checklist" /></button></>}
+</div>
+<script>
+const en = () => document.documentElement.dataset.locale === "en";
+const action = document.querySelector<HTMLButtonElement>("[data-action-demo] button");
+action?.addEventListener("click", () => { action.disabled=true; action.setAttribute("aria-busy","true"); const status=document.querySelector<HTMLElement>("[data-action-status]")!; status.textContent=en()?"Demo running…":"状态演示中…"; setTimeout(()=>{action.disabled=false; action.removeAttribute("aria-busy");status.textContent=en()?"Demo complete. No data submitted.":"演示完成，没有提交数据。";},800); });
+const select=document.querySelector<HTMLSelectElement>("[data-feedback-select]");
+const switchState=(value:string)=>{document.querySelectorAll<HTMLElement>("[data-feedback-panel]").forEach(panel=>panel.hidden=panel.dataset.feedbackPanel!==value);document.querySelector("[data-feedback-stage]")?.setAttribute("aria-busy",String(value==="0")); const status=document.querySelector<HTMLElement>("[data-feedback-status]"); if(status)status.textContent=en()?["Loading demo.","No matches demo.","Failure demo. Retry is available.","Demo complete."][Number(value)]:["加载状态演示。","无匹配状态演示。","失败状态演示，可重试。","演示完成。"][Number(value)];};
+select?.addEventListener("change",()=>switchState(select.value));
+document.querySelector("[data-feedback-retry]")?.addEventListener("click",()=>{if(select){select.value="3";switchState("3");select.focus();}});
+document.querySelector<HTMLDetailsElement>("[data-demo-menu]")?.addEventListener("keydown",event=>{if(event.key==="Escape"){const menu=event.currentTarget as HTMLDetailsElement;menu.open=false;menu.querySelector("summary")?.focus();}});
+document.querySelector("[data-motion-replay]")?.addEventListener("click",()=>{if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.querySelector("[data-motion-mark]")?.animate([{transform:"translateX(-16px)",opacity:.4},{transform:"translateX(0)",opacity:1}],{duration:160,easing:"ease-out"});});
+const checks=[...document.querySelectorAll<HTMLInputElement>("[data-review-check]")];
+const progress=()=>{const status=document.querySelector<HTMLElement>("[data-review-status]");if(status)status.textContent=en()?`${checks.filter(c=>c.checked).length}/${checks.length} checks recorded in this session.`:`本次已记录 ${checks.filter(c=>c.checked).length}/${checks.length} 项检查。`;};
+checks.forEach(check=>check.addEventListener("change",progress));document.querySelector("[data-review-reset]")?.addEventListener("click",()=>{checks.forEach(check=>check.checked=false);progress();});
+</script>

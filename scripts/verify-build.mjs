@@ -398,8 +398,8 @@ if (!home.includes("编辑精选") || !home.includes("editorial-feature")) {
   process.exit(1);
 }
 
-if (!home.includes("新手从这里开始") || !home.includes("learn/?difficulty=starter")) {
-  console.error("Homepage is missing the starter row (新手从这里开始 → /cases/?difficulty=starter).");
+if (!home.includes("新手从这里开始") || !home.replaceAll("&#38;", "&").replaceAll("&amp;", "&").includes("search/?section=learn&difficulty=starter")) {
+  console.error("Homepage is missing the starter row link to search/?section=learn&difficulty=starter.");
   process.exit(1);
 }
 
@@ -527,3 +527,53 @@ for (const [key, ids] of Object.entries(membership)) {
 }
 if (/paths\/|combos\/|favorites\/|search\//.test(sitemap)) throw new Error("Sitemap exposes internal or user-specific pages.");
 console.log(`Directory verified: ${actualKeys.length} unique entries across five source libraries; legacy links and favorite keys preserved.`);
+
+// Public design assets must agree with the live brand and stay usable by assistants.
+const brandPage = await readFile(new URL("../dist/brand/index.html", import.meta.url), "utf8");
+const brandTokens = JSON.parse(await readFile(new URL("../dist/brand/tokens.json", import.meta.url), "utf8"));
+const brandCSS = await readFile(new URL("../dist/brand/tokens.css", import.meta.url), "utf8");
+const brandBrief = await readFile(new URL("../dist/brand/ai-guide.md", import.meta.url), "utf8");
+const brandSVG = await readFile(new URL("../dist/brand/logo.svg", import.meta.url), "utf8");
+const inverseSVG = await readFile(new URL("../dist/brand/logo-inverse.svg", import.meta.url), "utf8");
+const faviconSVG = await readFile(new URL("../dist/favicon.svg", import.meta.url), "utf8");
+const pathsOf = svg => [...svg.matchAll(/\sd="([^"]+)"/g)].map(match => match[1]);
+if (JSON.stringify(pathsOf(brandSVG)) !== JSON.stringify(pathsOf(faviconSVG)) || JSON.stringify(pathsOf(brandSVG)) !== JSON.stringify(pathsOf(inverseSVG))) throw new Error("Logo downloads and favicon have different shapes.");
+if (!sitemap.includes("/brand/") || !brandPage.includes("品牌与界面规范") || !brandBrief.includes("## Implementation contract") || !brandBrief.includes("## 中文工作说明")) throw new Error("Brand guidelines, sitemap, or bilingual brief are missing.");
+if (brandTokens.brand !== "AI UP LAB" || brandTokens.defaultTheme !== "light") throw new Error("Invalid brand token export.");
+const luminance = hex => {
+  const channels = hex.slice(1).match(/.{2}/g).map(value => parseInt(value, 16) / 255);
+  const linear = channels.map(value => value <= .04045 ? value / 12.92 : ((value + .055) / 1.055) ** 2.4);
+  return linear[0] * .2126 + linear[1] * .7152 + linear[2] * .0722;
+};
+const contrast = (a, b) => { const x = luminance(a), y = luminance(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+for (const theme of ["light", "dark"]) {
+  const colors = brandTokens.themes[theme];
+  for (const [role, value] of Object.entries(colors)) {
+    if (!/^#[0-9a-f]{6}([0-9a-f]{2})?$/i.test(value) || !brandCSS.includes(`--lab-color-${role}:${value};`)) throw new Error(`Invalid or inconsistent exported color: ${theme}/${role}`);
+  }
+  for (const role of ["text", "muted", "subtle", "brand", "success", "warning", "error"]) {
+    if (contrast(colors[role], colors.background) < 4.5 || contrast(colors[role], colors.surface) < 4.5) throw new Error(`Brand text contrast below target: ${theme}/${role}`);
+  }
+  if (contrast(colors.onBrand, colors.brand) < 4.5) throw new Error(`Brand button contrast below target: ${theme}`);
+}
+console.log("Brand system verified: public downloads, consistent logo shapes and tokens, bilingual AI brief, and text contrast targets in both themes.");
+
+// Public rules must resolve to real pages, dependencies, source files, and tokens.
+const knowledge = JSON.parse(await readFile(new URL("../dist/brand/knowledge.json", import.meta.url), "utf8"));
+const ruleIds = new Set(knowledge.specs.map(spec => spec.id));
+if (ruleIds.size !== knowledge.specs.length || knowledge.version !== brandTokens.version) throw new Error("Invalid design knowledge IDs or version.");
+const visitRule = (id, trail = []) => {
+  if (trail.includes(id)) throw new Error(`Design rule dependency cycle: ${[...trail, id].join(" -> ")}`);
+  const spec = knowledge.specs.find(item => item.id === id);
+  if (!spec) throw new Error(`Missing design rule: ${id}`);
+  for (const dep of spec.dependencies) visitRule(dep, [...trail, id]);
+};
+for (const spec of knowledge.specs) {
+  visitRule(spec.id);
+  const page = await readFile(new URL(`../dist/brand/guides/${spec.id}/index.html`, import.meta.url), "utf8");
+  const rule = await readFile(new URL(`../dist/brand/rules/${spec.id}.md`, import.meta.url), "utf8");
+  if (!page.includes(spec.title.zh) || !page.includes(spec.title.en.replaceAll("&", "&amp;")) || !rule.includes(`ID: ${spec.id}`) || !sitemap.includes(`/brand/guides/${spec.id}/`)) throw new Error(`Missing handbook content: ${spec.id}`);
+  for (const ref of spec.code) await readFile(new URL(`../${ref.path}`, import.meta.url), "utf8");
+  for (const token of spec.tokens) if (!brandCSS.includes(`${token}:`)) throw new Error(`Unknown design token: ${spec.id}/${token}`);
+}
+console.log(`Design handbook verified: ${ruleIds.size} bilingual guides, Markdown rules, acyclic dependencies, source mappings, and shared tokens.`);

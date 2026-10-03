@@ -1,0 +1,123 @@
+.brand-guide { padding-block: 24px 64px; }
+.brand-guide-hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; padding-bottom: 32px; }
+.brand-guide-kicker, .brand-guide-heading > p { font-family: var(--font-mono); font-size: 11px; letter-spacing: .06em; color: var(--brass); margin: 0 0 14px; }
+.brand-guide h1 { font-size: clamp(30px, 3.3vw, 44px); font-weight: 700; line-height: 1.3; }
+.brand-guide-intro { max-width: 42rem; font-size: 15px; line-height: 1.8; color: var(--muted); margin: 12px 0 0; }
+.brand-guide-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+.brand-guide-primary, .brand-guide-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 44px; padding: 10px 16px; font: inherit; font-size: 14px; font-weight: 600; text-decoration: none; border-radius: var(--lab-radius-control); cursor: pointer; }
+.brand-guide-primary { color: var(--lab-color-onBrand); background: var(--brass); border: 1px solid var(--brass); }
+.brand-guide-primary:hover { background: color-mix(in srgb, var(--brass) 85%, var(--ink)); color: var(--lab-color-onBrand); }
+.brand-guide-secondary { color: var(--ink); background: var(--bg-card); border: 1px solid var(--line-strong); }
+.brand-guide-secondary:hover { background: var(--bg-soft); }
+.brand-guide-secondary:disabled { cursor: not-allowed; opacity: .45; }
+.brand-guide-link { display: inline-flex; gap: 8px; align-items: center; min-height: 44px; font-size: 14px; color: var(--brass); }
+.brand-guide-version { display: flex; gap: 12px; margin: 20px 0 0; font: 11px var(--font-mono); color: var(--faint); }
+.brand-guide-signature { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 36px 24px; min-height: 250px; background: var(--bg-soft); border-radius: var(--lab-radius-card); }
+.brand-guide-symbol { display: block; width: 88px; height: 88px; }
+.brand-guide-signature strong { font-size: 25px; font-weight: 750; margin-top: 12px; letter-spacing: -.035em; }
+.brand-guide-signature p { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+.brand-guide-nav { display: flex; flex-wrap: wrap; gap: 4px 24px; padding-block: 12px; border-block: 1px solid var(--line); }
+.brand-guide-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); font-size: 13px; }
+.brand-guide-nav a:hover { color: var(--brass); }
+.brand-guide-section { padding-top: 44px; scroll-margin-top: 100px; }
+.brand-guide-section + .brand-guide-section { margin-top: 40px; border-top: 1px solid var(--line); }
+.brand-guide-heading h2 { margin: 0; font-size: 25px; font-weight: 700; line-height: 1.4; }
+.brand-guide-heading { margin-bottom: 20px; }
+.brand-guide-description { max-width: 70ch; font-size: 15px; line-height: 1.8; color: var(--muted); margin: 0 0 24px; }
+.brand-guide-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.brand-guide-three h3 { font-size: 17px; font-weight: 600; line-height: 1.5; }
+.brand-guide-three p, .brand-guide-three li { font-size: 14px; line-height: 1.8; color: var(--muted); }
+.brand-guide-three ul { padding-left: 20px; margin: 0; }
+.brand-guide-note { color: var(--muted); font-size: 12px; line-height: 1.8; margin: 16px 0 0; max-width: 100ch; }
+.brand-guide-logo-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.brand-guide-logo-grid > div { display: flex; align-items: center; justify-content: center; flex-direction: column; min-height: 216px; padding: 24px 16px; border-radius: var(--lab-radius-card); }
+.brand-guide-logo-grid > div > span { display: block; width: 96px; height: 96px; }
+.brand-guide-logo-grid p { margin: 16px 0 0; font-size: 12px; text-align: center; }
+.brand-guide-logo-light { background: #fffefd; color: #17151b; border: 1px solid #e8e5ee; }
+.brand-guide-logo-dark { background: #141218; color: #f5f2fa; }
+.brand-guide-logo-space { border: 1px solid var(--line); }
+.brand-guide-logo-space > div { width: 128px; height: 128px; padding: 24px; outline: 1px dashed var(--line-strong); }
+.brand-guide-logo-sizes { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; margin-top: 24px; }
+.brand-guide-logo-sizes > div { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.brand-guide-logo-sizes > div > span { display: block; }
+.brand-guide code { font-family: var(--font-mono); font-size: 11px; overflow-wrap: anywhere; }
+.brand-guide-logo-sizes > p { flex: 1 1 280px; color: var(--muted); font-size: 13px; line-height: 1.8; margin: 0; }
+.brand-guide-palette { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+.brand-guide-palette > article { min-width: 0; border: 1px solid var(--line); border-radius: var(--lab-radius-card); overflow: hidden; }
+.brand-guide-swatch { height: 76px; border-bottom: 1px solid var(--line); }
+.brand-guide-swatch-copy { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0 4px; padding: 12px 10px 0; }
+.brand-guide-swatch-copy h3 { grid-column: 1 / -1; font-size: 13px; line-height: 1.5; margin: 0; }
+.brand-guide-swatch-copy button { background: none; border: 0; color: var(--brass); font: inherit; font-size: 11px; padding: 0; min-width: 44px; min-height: 44px; cursor: pointer; }
+.brand-guide-token-name { display: block; padding: 0 10px 12px; color: var(--muted); font-size: 9px !important; }
+.brand-guide-dark-value { display: none; }
+html:not([data-theme="light"]) .brand-guide-light-value { display: none; }
+html:not([data-theme="light"]) .brand-guide-dark-value { display: block; }
+.brand-guide-type-list > div { display: grid; grid-template-columns: 190px minmax(0, 1fr); align-items: center; gap: 32px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.brand-guide-type-list p { font-size: 12px; color: var(--muted); margin: 0; }
+.brand-guide-type-list p code { display: block; margin-top: 7px; }
+.brand-guide-type-list > div > div { line-height: 1.7; overflow-wrap: anywhere; }
+.brand-guide-subhead { font-size: 15px; margin: 24px 0 16px; }
+.brand-guide-spacing { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-end; }
+.brand-guide-spacing > div { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.brand-guide-spacing span { display: block; width: 28px; background: var(--brass); border-radius: 3px; }
+.brand-guide-component-panel { padding: 24px; border: 1px solid var(--line); border-radius: var(--lab-radius-card); }
+.brand-guide-component-panel h3 { font-size: 16px; }
+.brand-guide-button-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.brand-guide-icon-row { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
+.brand-guide-icon-row > div { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.brand-guide-icon-row code { font-size: 10px; color: var(--muted); }
+.brand-guide-example-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 24px; max-width: 900px; }
+.brand-guide-state-row { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+.brand-guide-state-row h3 { font-size: 16px; }
+.brand-guide-statuses { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; }
+.brand-guide-statuses > span { display: inline-flex; align-items: center; gap: 8px; }
+.brand-guide-statuses > span::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.brand-guide-statuses .is-success { color: var(--lab-color-success); }
+.brand-guide-statuses .is-warning { color: var(--lab-color-warning); }
+.brand-guide-statuses .is-error { color: var(--lab-color-error); }
+.brand-guide-empty { padding: 24px; border: 1px dashed var(--line-strong); border-radius: var(--lab-radius-card); }
+.brand-guide-empty p { font-size: 13px; color: var(--muted); }
+.brand-guide-rules { padding-left: 22px; max-width: 85ch; }
+.brand-guide-rules li { padding-left: 8px; margin-bottom: 12px; font-size: 15px; line-height: 1.8; }
+.brand-guide-rules li::marker { color: var(--brass); font-weight: 600; }
+.brand-guide-brief { margin-top: 24px; border: 1px solid var(--line); border-radius: var(--lab-radius-card); }
+.brand-guide-brief summary { padding: 14px 16px; min-height: 44px; cursor: pointer; font-size: 13px; }
+.brand-guide-brief pre { padding: 16px; margin: 0; border-top: 1px solid var(--line); font: 12px/1.8 var(--font-mono); color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere; }
+.brand-guide-downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+.brand-guide-downloads a { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--line); color: var(--ink); }
+.brand-guide-downloads a:hover { color: var(--brass); }
+.brand-guide-downloads strong { font-size: 14px; }
+.brand-guide-downloads p { font-size: 12px; color: var(--muted); margin: 8px 0 0; }
+.brand-guide-copy-status:not(:empty) { position: fixed; z-index: 40; bottom: 24px; left: 50%; transform: translateX(-50%); max-width: min(500px, calc(100% - 28px)); width: max-content; border: 1px solid var(--line-strong); border-radius: var(--lab-radius-card); padding: 12px 16px; background: var(--bg-card); color: var(--ink); font-size: 13px; box-shadow: 0 4px 16px rgb(0 0 0 / .08); }
+.brand-guide :focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+@media (max-width: 1050px) {
+  .brand-guide-hero { gap: 24px; grid-template-columns: 1.3fr 1fr; }
+  .brand-guide-palette { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 700px) {
+  .brand-guide { padding-top: 20px; }
+  .brand-guide-hero { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .brand-guide-signature { min-height: 180px; padding-block: 24px; }
+  .brand-guide-symbol { width: 64px; height: 64px; }
+  .brand-guide-signature strong { font-size: 20px; }
+  .brand-guide-nav { gap: 0 20px; }
+  .brand-guide-section { padding-top: 32px; scroll-margin-top: 108px; }
+  .brand-guide-section + .brand-guide-section { margin-top: 28px; }
+  .brand-guide-heading h2 { font-size: 22px; }
+  .brand-guide-three, .brand-guide-logo-grid, .brand-guide-state-row, .brand-guide-downloads { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .brand-guide-three h3 { margin-bottom: 6px; }
+  .brand-guide-three p { margin-block: 0; }
+  .brand-guide-logo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .brand-guide-logo-grid > div { min-height: 180px; }
+  .brand-guide-logo-space { grid-column: 1 / -1; }
+  .brand-guide-logo-grid > div > span { width: 72px; height: 72px; }
+  .brand-guide-palette { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .brand-guide-type-list > div { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .brand-guide-type-list p { display: flex; align-items: baseline; gap: 16px; }
+  .brand-guide-type-list p code { margin: 0; }
+  .brand-guide-type-list > div:first-child > div { font-size: 28px !important; }
+  .brand-guide-spacing { gap: 16px; }
+  .brand-guide-component-panel { padding: 16px; }
+  .brand-guide-example-cards { grid-template-columns: minmax(0, 1fr); }
+  .brand-guide-downloads { gap: 0; }
+}

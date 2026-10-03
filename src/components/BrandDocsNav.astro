@@ -1,0 +1,10 @@
+---
+import { designKnowledge, designGroups } from "../lib/design-knowledge";
+import { withBase } from "../lib/paths";
+import Loc from "./Loc.astro";
+import BrandMark from "./BrandMark.astro";
+const { active } = Astro.props;
+---
+<aside class="handbook-sidebar"><details open><summary><Loc zh="规范目录" en="Handbook contents" /></summary><nav aria-label="Design handbook"><a href={withBase("brand/")} aria-current={active === "overview" ? "page" : undefined}><Loc zh="概览与品牌资产" en="Overview & brand assets" /></a>{designGroups.map(group => <div><p><Loc {...group.title} /></p>{designKnowledge.filter(spec => spec.group === group.id).map(spec => <a href={withBase(`brand/guides/${spec.id}/`)} aria-current={active === spec.id ? "page" : undefined}><Loc {...spec.title} /></a>)}</div>)}</nav></details><a class="handbook-wordmark" href={withBase("brand/")}><span><BrandMark /></span><strong>AI UP LAB<small>DESIGN SYSTEM</small></strong></a></aside>
+
+<script is:inline>if (window.matchMedia("(max-width: 700px)").matches) document.querySelector(".handbook-sidebar details")?.removeAttribute("open");</script>

@@ -1,0 +1,7 @@
+/** The header, downloadable mark, and favicon use these same two shapes. */
+export const brandMark = {
+  viewBox: "0 0 32 32",
+  outline: "M16 4.5 25.6 10.02 25.6 22.02 16 27.54 6.4 22.02 6.4 10.02Z M16 4.5 25.6 22.02 6.4 22.02Z",
+  center: "M16 10.924 20.32 18.808 11.68 18.808Z",
+  centerScale: 0.45,
+};

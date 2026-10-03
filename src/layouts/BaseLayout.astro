@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { withBase } from "../lib/paths";
 import { siteDescription, siteDescriptionEn, siteName } from "../lib/site";
+import { designTokenCSS } from "../lib/design-system";
 
 interface Props {
   title: string;
@@ -35,6 +36,7 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=11";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style is:inline set:html={designTokenCSS}></style>
     <title data-title-zh={title} data-title-en={titleEn}>{title}</title>
     <meta name="description" content={description} data-desc-zh={description} data-desc-en={descriptionEn} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}

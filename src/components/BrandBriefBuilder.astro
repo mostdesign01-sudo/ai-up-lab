@@ -1,0 +1,26 @@
+---
+import Loc from "./Loc.astro";
+import { taskModes, pageModes, taskBrief } from "../lib/design-knowledge";
+import { withBase } from "../lib/paths";
+const origin = new URL(withBase(""), Astro.site).href;
+---
+<form class="brief-builder" data-brief-builder data-origin={origin}>
+  <div class="handbook-pair"><label><Loc zh="这次要做什么" en="Your task" /><select name="task">{taskModes.map((mode,index) => <option value={index} data-label-zh={mode.zh} data-label-en={mode.en}>{mode.zh}</option>)}</select></label><label><Loc zh="页面类型" en="Page type" /><select name="page">{pageModes.map((mode,index) => <option value={index} data-label-zh={mode.zh} data-label-en={mode.en}>{mode.zh}</option>)}</select></label></div>
+  <label><Loc zh="具体需求" en="Your requirement" /><textarea name="requirement" rows="3" maxlength="6000" placeholder="例如：让分类页首屏直接看到资源卡片。" data-ph-zh="例如：让分类页首屏直接看到资源卡片。" data-ph-en="For example: show resource cards immediately on category pages."></textarea></label>
+  <label><Loc zh="生成的工作说明" en="Generated brief" /><textarea name="output" rows="12" readonly>{taskBrief(0,0,"",origin)}</textarea></label>
+  <div class="brand-guide-actions"><button type="button" class="brand-guide-primary" data-brief-copy><Loc zh="复制工作说明" en="Copy brief" /></button><button type="button" class="brand-guide-secondary" data-brief-download><Loc zh="下载 Markdown" en="Download Markdown" /></button></div><p role="status" data-brief-status></p>
+  <p class="brand-guide-note"><Loc zh="此工具在本地整理规则与代码链接，不调用 AI，也不提交输入。无 JavaScript 时可直接复制上方默认说明。" en="This local tool assembles rules and code links; it does not call AI or submit input. Without JavaScript, copy the default brief above." /></p>
+</form>
+<script>
+import { taskBrief } from "../lib/design-knowledge";
+document.querySelectorAll<HTMLFormElement>("[data-brief-builder]").forEach(form => {
+ const output = form.elements.namedItem("output") as HTMLTextAreaElement;
+ const status = form.querySelector<HTMLElement>("[data-brief-status]")!;
+ const value = (name: string) => (form.elements.namedItem(name) as HTMLInputElement).value;
+ const message = (zh:string,en:string) => status.textContent = document.documentElement.dataset.locale === "en" ? en : zh;
+ form.addEventListener("submit", event => event.preventDefault());
+ form.addEventListener("input", () => { output.value=taskBrief(Number(value("task")),Number(value("page")),value("requirement"),form.dataset.origin!); status.textContent=""; });
+ form.querySelector("[data-brief-copy]")?.addEventListener("click", async () => { try { await navigator.clipboard.writeText(output.value); message("已复制工作说明。","Brief copied."); } catch { output.focus(); output.select(); message("请复制已选中的文字。","Copy the selected text."); } });
+ form.querySelector("[data-brief-download]")?.addEventListener("click", () => { const url=URL.createObjectURL(new Blob([output.value],{type:"text/markdown;charset=utf-8"})); const link=document.createElement("a"); link.href=url; link.download="ai-up-lab-task-brief.md"; link.click(); setTimeout(()=>URL.revokeObjectURL(url),1000); message("已准备下载。","Download prepared."); });
+});
+</script>
