@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-03",
+      "title": "收录：Cases +1（Company-in-a-Box 多 Bot 决策闸门）",
+      "titleEn": "Added: Cases +1 (Company-in-a-Box multi-Bot decision gate)",
+      "body": "Cases：收 company-in-a-box-felliu —— @0xfelliu 2026-10-01 帖 https://x.com/0xfelliu/status/2105720189731938684 ，转引 @unicodef1wn 2026-09-22 长文（Projects Manager 作入口 + Jev 决策闸门 + 五级动作权限）。均经 fxtwitter 镜像读取，Marketplace 两个 Bot 页 HTTP 200。帖子称「76 个 Bot、372 个 skill」无可核链接，未收；Jev 价格与速度为 TypeSafe 自述，未验证。",
+      "bodyEn": "Cases: added company-in-a-box-felliu — @0xfelliu’s 2026-10-01 post https://x.com/0xfelliu/status/2105720189731938684 quoting @unicodef1wn’s 2026-09-22 article (Projects Manager as front door + Jev decision gates + five action levels). Both read via the fxtwitter mirror; the two Marketplace Bot pages returned HTTP 200. The post’s “76 Bots, 372 skills” claim has no checkable link and is not catalogued; Jev pricing and speed are TypeSafe’s own claims, unverified."
+    },
+    {
       "date": "2026-10-02",
       "title": "晚间收录：Models +1（Clef）、Cases +2（DeepSeek Harness Desktop / Weave Router）",
       "titleEn": "Evening catalog: Models +1 (Clef), Cases +2 (DeepSeek Harness Desktop / Weave Router)",
