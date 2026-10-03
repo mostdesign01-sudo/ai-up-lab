@@ -1,11 +1,81 @@
 {
   "meta": {
-    "updatedAt": "2026-10-02T12:00:00Z",
+    "updatedAt": "2026-10-03T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.15",
-    "count": 20
+    "version": "1.1.16",
+    "count": 21
   },
   "models": [
+    {
+      "id": "gutsy",
+      "slug": "gutsy",
+      "name": "Gutsy",
+      "vendor": "kouhxp",
+      "title": "Gutsy：本机 CPU 可跑的 0.8B Jev 兼容决策模型",
+      "titleEn": "Gutsy: 0.8B Jev-compatible decision model for local CPU",
+      "summary": "kouhxp 开源的 gutsy-0.8b（v0.4）：把 Qwen3.5-0.8B 微调成决策模型，不生成自由文本。你送一段状态（文本或 JSON）和 typed questions（yes/no、choice、score），它为每个选项返回校准概率；choice / score 还带 reject。运行时 gutsy-inference 走 llama.cpp，默认可在普通 CPU 上起本地 HTTP；接口刻意对齐 Jev / System One（`/v1/systemone` 等），现有客户端多半只换 base URL。权重在 Hugging Face kouhxp/gutsy（Q8_0 与 Q4_K_M GGUF），代码与权重 README 写 Apache-2.0。JevBench / 评测表与延迟是作者自测，本库未复跑。同板与 Jev、Laya、Clef、Jeeves、Ollaya 相邻；Cases 已有本机 Jeff 与 Onesie CLI。",
+      "summaryEn": "kouhxp’s open gutsy-0.8b (v0.4) fine-tunes Qwen3.5-0.8B into a decision model that does not generate free text. You send a state (text or JSON) plus typed questions (yes/no, choice, score) and get a calibrated probability for every option; choice / score answers also carry reject. The gutsy-inference runtime uses llama.cpp and can serve a local HTTP API on an ordinary CPU. The API deliberately matches Jev / System One (`/v1/systemone` and related), so many existing clients only need a new base URL. Weights live on Hugging Face kouhxp/gutsy (Q8_0 and Q4_K_M GGUF); README says Apache-2.0 for code and weights. JevBench / eval tables and latency are author self-tests, not re-run here. On this board it sits next to Jev, Laya, Clef, Jeeves, and Ollaya; Cases already lists local Jeff and the Onesie CLI.",
+      "announcedAt": "2026-10-01",
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-03T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "GitHub：kouhxp/gutsy（Apache-2.0）",
+          "labelEn": "GitHub: kouhxp/gutsy (Apache-2.0)",
+          "url": "https://github.com/kouhxp/gutsy",
+          "by": "kouhxp",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：kouhxp/gutsy（GGUF）",
+          "labelEn": "Hugging Face: kouhxp/gutsy (GGUF)",
+          "url": "https://huggingface.co/kouhxp/gutsy",
+          "by": "kouhxp",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "community",
+          "label": "Show HN：Gutsy 0.8B Jev-compatible on CPU",
+          "labelEn": "Show HN: Gutsy 0.8B Jev-compatible on CPU",
+          "url": "https://news.ycombinator.com/item?id=49923223",
+          "by": "Hacker News",
+          "date": "2026-10-01"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者称：决策模型，不生成自由文本。状态 + typed questions 进，每个允许答案一个概率出；choice / score 含 reject。API 对齐 Jev-style Decisions / TypeSafe systemone，本机 `gutsy-inference serve` 默认 http://127.0.0.1:8765。",
+          "textEn": "Author claim: a decision model, not free-text generation. State plus typed questions in; a probability for every allowed answer out; choice / score include reject. API matches Jev-style Decisions / TypeSafe systemone; local `gutsy-inference serve` defaults to http://127.0.0.1:8765."
+        },
+        {
+          "text": "作者称：gutsy-0.8b v0.4 后训练自 Qwen3.5-0.8B；HF 提供 Q8_0（约 775 MB）与 Q4_K_M（约 505 MB）GGUF，llama.cpp CPU 推理。许可 README 写 Apache-2.0。",
+          "textEn": "Author claim: gutsy-0.8b v0.4 is post-trained from Qwen3.5-0.8B; HF ships Q8_0 (~775 MB) and Q4_K_M (~505 MB) GGUF for llama.cpp CPU inference. README says Apache-2.0."
+        },
+        {
+          "text": "作者自测（未复跑）：公开 JevBench 231 项上 v0.4 Q8_0 合计 169/231（0.732）；并列出相对 Jev / Jeff / Laya 等的对照表。README 也写明日期算术、长政策、常识与硬项校准等弱点。延迟中位 / 尾延迟是作者机器数字。",
+          "textEn": "Author self-test (not re-run): on the public 231-item JevBench set, v0.4 Q8_0 totals 169/231 (0.732); the README also tables comparisons versus Jev / Jeff / Laya and others. It documents weak spots on date arithmetic, long policies, world knowledge, and hard-item calibration. Median / tail latency figures are from the author’s machine."
+        }
+      ],
+      "qualityNote": "收录理由：Show HN item 49923223（2026-10-01T15:44:42Z / 约 23:44 CST，Algolia 晚间核对 9pts）之后权重与 README 仍在更新（仓库晚间 gh api 20★ / Apache-2.0；HF kouhxp/gutsy likes 2 / downloads 69）。与昨日收入的 Clef 同属决策模型线，但这条强调普通 CPU、0.8B GGUF、本机无网络调用。核实边界：JevBench 与各面板分数、校准误差、延迟一律作者 README 自测；未代下 GGUF、未起 serve、未打真实工单。官方源以 GitHub README + HF 卡为准（无单独公司官博）。预览 Playwright 实拍 GitHub 仓库首屏 3:2。不打星。",
+      "qualityNoteEn": "Why: after Show HN item 49923223 (2026-10-01T15:44:42Z / about 23:44 CST, 9pts on Algolia at the evening check) the weights and README kept moving (evening gh api 20★ / Apache-2.0; HF kouhxp/gutsy likes 2 / downloads 69). Same decision-model line as yesterday’s Clef, but this one stresses ordinary CPU, a 0.8B GGUF, and no network calls on box. Boundary: JevBench and panel scores, calibration error, and latency are author README self-tests; GGUF not downloaded, serve not started, real tickets not sent. Official sources are the GitHub README + HF card (no separate company blog). Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated.",
+      "relatedCaseIds": [
+        "jeff",
+        "onesie"
+      ],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "laya-system-one",
+        "clef",
+        "jeeves",
+        "ollaya"
+      ],
+      "previewImage": "/previews/gutsy.webp",
+      "previewCredit": "预览：Playwright 实拍 github.com/kouhxp/gutsy 首屏",
+      "previewCreditEn": "Preview: Playwright capture of github.com/kouhxp/gutsy above the fold",
+      "featured": true
+    },
     {
       "id": "clef",
       "slug": "clef",
@@ -17,7 +87,7 @@
       "summaryEn": "Cloudflare released the open-weight decision model Clef and the smaller Clef-Flash. They do not generate free text: they read a state plus typed questions and return a probability for every allowed answer. On Workers AI the ids are @cf/cloudflare/clef (27B) and @cf/cloudflare/clef-flash (9B). The vendor says the API matches Jev / System One, with noul / choice / score questions and a vision encoder, so state can be text, JSON, images, or video. Weights are on Hugging Face under Apache-2.0. The HF cards say Clef is post-trained from Qwen/Qwen3.8-27B and Clef-Flash from Qwen/Qwen3.5-9B — a vendor / HF claim. The blog also announces RL fine-tuning: hands-on with a forward-deployed engineer first, then a later self-serve platform. That is a roadmap, not a product depth this library verified. Decision Index, latency, and workflow scores are vendor claims and were not re-run here. On this board it sits next to Jev, Laya, Jeeves, and Ollaya; Cases already lists local Jeff and the Onesie CLI.",
       "announcedAt": "2026-10-01",
       "publishedAt": "2026-10-02",
-      "updatedAt": "2026-10-02T12:00:00Z",
+      "updatedAt": "2026-10-03T12:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -93,6 +163,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "gutsy",
         "typesafe-jev",
         "laya-system-one",
         "jeeves",
@@ -345,7 +416,7 @@
       "summaryEn": "HN item 49891290 (2026-09-29T11:13:54Z / about 19:13 CST, 33pts on Algolia at evening check) at https://github.com/PostHog/jeeves — MIT open-source Jev-style classifier from PostHog that reasons before it decides. README: Qwen3.5-9B with LoRA + pointer head, trained with SFT + CISPO, plus a block-4 diffusion drafter; same request supports noul / choice / score via a Jev-shaped /v1/systemone API. Author table (thinking, greedy, 2560-token cap; Kev-9B / Jev columns are Kev-published): Test overall 0.889 vs Kev 0.822 / Jev 0.857; JevBench overall (231 public) 0.935 vs Jev 0.866; JevBench hard 0.865 vs Jev 0.730. Latency claim: about 0.3 s/request without thinking, ~3.3 s median with it on one H100; needs CUDA (Hopper for the FP8 kernel). Weights at https://huggingface.co/PostHog/jeeves. Repo on the 2026-09-29 gh api: MIT, 21★; README says Inspired by Kev. Public repo and HF evening GET 200. Benchmarks not re-run here; weights not downloaded for you.",
       "announcedAt": "2026-09-29",
       "publishedAt": "2026-09-29",
-      "updatedAt": "2026-09-29T12:10:00Z",
+      "updatedAt": "2026-10-03T12:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -393,6 +464,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "gutsy",
         "typesafe-jev",
         "ollaya",
         "laya-system-one",
@@ -626,7 +698,7 @@
       "summaryEn": "HN front-page item 49848269 (2026-09-25 ~18:33Z, 483pts on Algolia at check time) at https://ollaya.dev/ — pitched as “Ollama for open decision models.” It pulls open weights such as Laya / decider / NLI / GLiClass and serves a local TypeSafe-compatible /v1/systemone daemon; the site says existing Jev clients work by pointing TYPESAFE_BASE_URL at localhost. Repo ollaya-dev/ollaya on the 2026-09-26 gh api: Apache-2.0, 296★. Site and repo both HTTP 200. Latency comparisons (e.g. Laya 8–10ms, Jev hosted 236–276ms) are site or third-party claims — not re-run here. Same-day Show HN Ollaya Web UI (item 49855683) is a third-party UI with no license and 1★; not a separate card.",
       "announcedAt": "2026-09-25",
       "publishedAt": "2026-09-26",
-      "updatedAt": "2026-09-26T12:05:00Z",
+      "updatedAt": "2026-10-03T12:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -681,6 +753,7 @@
       "qualityNoteEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "gutsy",
         "typesafe-jev",
         "laya-system-one",
         "jeeves",
@@ -951,7 +1024,7 @@
       "summaryEn": "Author presents Laya as an open-weight non-autoregressive System 1 decision family (Apache 2.0) with choice/score/noul primitives and multilingual routing; sits next to catalogued TypeSafe Jev. Latency/benchmark/Jev-comparison figures are author or third-party claims — not re-run here. HN: item 49765348 (2026-09-19).",
       "announcedAt": "2026-09-19",
       "publishedAt": "2026-09-19",
-      "updatedAt": "2026-09-19T12:20:00Z",
+      "updatedAt": "2026-10-03T12:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -1014,6 +1087,7 @@
       "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "gutsy",
         "typesafe-jev",
         "ollaya",
         "jev-plays-pokemon",
@@ -1474,7 +1548,7 @@
       "summaryEn": "TypeSafe AI’s first public System One Model, announced 2026-09-15. Built for in-software decisions rather than chat: unstructured state in, type-safe structured decisions out with calibrated probabilities and confidence. Vendor claims a new architecture, parallel sampling, and Reinforcement Learning for Calibrated Decisions (RLCD); currently early access; speed, pricing, and eval multipliers are all vendor claims, and the workflow evals were not re-run by this library.",
       "announcedAt": "2026-09-15",
       "publishedAt": "2026-09-16",
-      "updatedAt": "2026-09-19T12:20:00Z",
+      "updatedAt": "2026-10-03T12:10:00Z",
       "sources": [
         {
           "kind": "official",
@@ -1519,6 +1593,7 @@
       "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "gutsy",
         "laya-system-one",
         "ollaya",
         "jev-plays-pokemon",
