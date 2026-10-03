@@ -104,3 +104,5 @@ AIHOT 的代码是 MIT；复制代码或实质部分时保留对应版权和许�
 原版参考：[Tmall Design](https://tmall-design.com/) 及其 [Design Wiki 方法文章](https://tmall-design.com/#blog/building-design-wiki-for-aigui)。借鉴规则、结构化映射与代码关联的方法，不复制天猫品牌或电商参数。
 
 `src/lib/design-knowledge.ts` 维护 10 项双语规范，生成 `/brand/guides/<id>/`、`/brand/rules/<id>.md` 与 `/brand/knowledge.json`。覆盖基础、布局、素材动效、按钮、卡片、导航、反馈、页面模式、AI 协作和验收。示例复用真实资源和组件；AI 工作说明工具按任务整理规则，在本地运行，不调用 AI 或提交输入。本站提供静态上下文文件，不提供 MCP 服务。
+
+规范页视觉参考 Tmall Design 的侧边目录、留白与开放组件展示。`BrandDesignShowcase.astro` 展示真实字体、语义色板与按钮；首页玻璃雕塑是原创概念主视觉，不替代标准 Logo。`public/brand/design-sculpture.webp` 由生成素材压缩为约 69 KB 的静态图片，不引入视频下载或新增运行依赖。

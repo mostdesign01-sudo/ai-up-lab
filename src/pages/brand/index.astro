@@ -1,11 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BrandMark from "../../components/BrandMark.astro";
+import BrandDocsNav from "../../components/BrandDocsNav.astro";
+import BrandDesignShowcase from "../../components/BrandDesignShowcase.astro";
 import DirectoryCard from "../../components/DirectoryCard.astro";
 import Icon from "../../components/Icon.astro";
 import Loc from "../../components/Loc.astro";
 import { entries } from "../../lib/directory";
-import { withBase } from "../../lib/paths";
+import { withBase, assetUrl } from "../../lib/paths";
 import { colorRoles, themes, foundations, aiGuide, designRules, designSystemVersion, designSystemUpdatedAt } from "../../lib/design-system";
 import "../../styles/brand-guide.css";
 import "../../styles/brand-handbook.css";
@@ -38,13 +40,15 @@ const downloads = [
 ];
 ---
 <BaseLayout title="品牌与界面规范 · AI UP LAB" titleEn="Brand & interface guidelines · AI UP LAB" description="AI UP LAB 的品牌标志、色彩、字体、组件与 AI 界面生成指南。" descriptionEn="AI UP LAB logo, colors, typography, components, and AI interface guidelines.">
-  <div class="wrap-wide brand-guide">
-    <section class="brand-guide-hero">
-      <div><p class="brand-guide-kicker">AI UP LAB / DESIGN SYSTEM</p><h1><Loc zh="品牌与界面规范" en="Brand & interface guidelines" /></h1><p class="lede"><Loc zh="让内容更清楚，让下一步更直观。" en="Make the content clear and the next step obvious." /></p><p class="brand-guide-intro"><Loc zh="一套持续维护的视觉与界面规则，供设计者、开发者和 AI 共用。" en="A shared, evolving set of visual and interface rules for designers, developers, and AI." /></p><div class="brand-guide-actions"><a class="brand-guide-primary" href="#handbook"><Loc zh="浏览完整规范库" en="Explore the handbook" /><Icon name="arrow" size={18} /></a><a class="brand-guide-link" href={withBase("brand/guides/ai-workflow/")}><Loc zh="按任务生成 AI 说明" en="Build a task brief" /></a></div><p class="brand-guide-version">v{designSystemVersion} <span>·</span> <time datetime={designSystemUpdatedAt}>{designSystemUpdatedAt}</time></p></div>
-      <div class="brand-guide-signature"><span class="brand-guide-symbol"><BrandMark /></span><strong>AI UP LAB</strong><p><Loc zh="面向任务的 AI 实践资源" en="AI resources for real tasks" /></p></div>
+  <div class="wrap-wide brand-guide handbook-shell brand-studio"><BrandDocsNav active="overview" /><article class="handbook-content brand-overview">
+    <section class="brand-guide-hero studio-hero">
+      <div class="studio-hero-copy"><p class="brand-guide-kicker">AI UP LAB / DESIGN SYSTEM / v{designSystemVersion}</p><p class="studio-display" aria-hidden="true">Design,<br />with purpose.</p><h1><Loc zh="品牌与界面规范" en="Brand & interface guidelines" /></h1><p class="brand-guide-intro"><Loc zh="让内容更清楚，让下一步更直观。为真实任务建立一套设计语言，让人和 AI 都能读懂、用起来。" en="Make content clear and the next step obvious. A design language for real tasks, shared by people and AI." /></p><div class="brand-guide-actions"><a class="brand-guide-primary" href="#handbook"><Loc zh="探索规范" en="Explore the system" /><Icon name="arrow" size={18} /></a><a class="brand-guide-link" href={withBase("brand/guides/ai-workflow/")}><Loc zh="交给 AI 使用" en="Use it with AI" /></a></div></div>
+      <figure class="studio-hero-art"><img src={assetUrl("brand/design-sculpture.webp")} width="1536" height="1024" alt="" fetchpriority="high" /><figcaption><span>AI UP LAB / VISUAL STUDY 001</span><span>2026</span></figcaption></figure>
     </section>
-    <section class="handbook-index" id="handbook"><div class="handbook-index-head"><h2><Loc zh="从规则到实际界面" en="From rules to working interfaces" /></h2><code>10 GUIDES / v{designSystemVersion}</code></div><p class="brand-guide-description"><Loc zh="按设计对象查阅结构、参数、状态与代码；每项规则都能单独交给 AI。" en="Explore anatomy, parameters, states, and code by design object. Share each rule with AI independently." /></p><div class="handbook-index-grid">{designGroups.map(group=><div class="handbook-index-group"><h3><Loc {...group.title} /></h3>{designKnowledge.filter(spec=>spec.group===group.id).map(spec=><a href={withBase(`brand/guides/${spec.id}/`)}><Loc {...spec.title} /><span aria-hidden="true">↗</span></a>)}</div>)}</div></section>
+    <BrandDesignShowcase />
+    <section class="handbook-index" id="handbook"><div class="handbook-index-head"><div><p class="brand-guide-kicker">02 / HANDBOOK</p><h2><Loc zh="从规则到实际界面" en="From rules to working interfaces" /></h2></div><code>10 GUIDES / v{designSystemVersion}</code></div><p class="brand-guide-description"><Loc zh="按设计对象查阅结构、参数、状态与代码；每项规则都能单独交给 AI。" en="Explore anatomy, parameters, states, and code by design object. Share each rule with AI independently." /></p><div class="handbook-index-grid">{designGroups.map(group=><div class="handbook-index-group"><h3><Loc {...group.title} /></h3>{designKnowledge.filter(spec=>spec.group===group.id).map(spec=><a href={withBase(`brand/guides/${spec.id}/`)}><Loc {...spec.title} /><span aria-hidden="true">↗</span></a>)}</div>)}</div></section>
     <aside class="handbook-source"><Loc zh="方法参考：" en="Method reference: " /><a href="https://tmall-design.com/" target="_blank" rel="noopener noreferrer">Tmall Design</a><Loc zh="。借鉴它将规则、结构化映射和实现代码连接的方式，建立适用于 AI 实践资源站的规范。品牌、参数与示例沿用 AI UP LAB 自身设计。" en=". We adapt its connection between rules, structured mappings, and implementation to a practical AI resource site. Branding, parameters, and examples remain specific to AI UP LAB." /> <a href="https://tmall-design.com/#blog/building-design-wiki-for-aigui" target="_blank" rel="noopener noreferrer"><Loc zh="阅读原版方法文章 ↗" en="Read the original method ↗" /></a></aside>
+    <p class="brand-guide-kicker studio-foundation-label">03 / BRAND FOUNDATIONS</p>
     <nav class="brand-guide-nav" aria-label="规范目录" data-aria-zh="规范目录" data-aria-en="Guideline contents">{topics.map(topic => <a href={`#${topic.id}`}><Loc zh={topic.zh} en={topic.en} /></a>)}</nav>
     <section id="principles" class="brand-guide-section">
       <div class="brand-guide-heading"><p>01 / PRINCIPLES</p><h2><Loc zh="清楚、实用、有依据" en="Clear, useful, grounded" /></h2></div>
@@ -101,7 +105,7 @@ const downloads = [
       <p class="brand-guide-note"><Loc zh="这套规范属于 AI UP LAB。后续调整优先更新共用参数与组件，再同步示例和 AI 工作说明。" en="This system belongs to AI UP LAB. Update shared tokens and components first, then keep the examples and AI brief in sync." /></p>
     </section>
     <p class="brand-guide-copy-status" data-brand-copy-status role="status" aria-live="polite"></p>
-  </div>
+  </article></div>
 </BaseLayout>
 <script>
   const status = document.querySelector<HTMLElement>("[data-brand-copy-status]");

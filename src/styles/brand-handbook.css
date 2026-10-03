@@ -80,3 +80,79 @@
 @media(max-width:1050px) { .handbook-shell { grid-template-columns:180px minmax(0,1fr);gap:28px; }.handbook-index-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:700px) { .handbook-shell { display:block; }.handbook-sidebar { position:static;max-height:none;overflow:visible;margin-bottom:24px;border-bottom:1px solid var(--line); }.handbook-sidebar nav { display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px; padding-bottom:16px; }.handbook-sidebar nav>a { grid-column:1/-1; }.handbook-sidebar nav>div { margin-top:4px; }.handbook-sidebar nav a { padding:10px 8px; }.handbook-pair,.pattern-previews { grid-template-columns:1fr; }.spec-demo { padding:16px; }.spec-states { grid-template-columns:1fr; }.spec-table-wrap th,.spec-table-wrap td { padding:12px 7px; }.spec-table-wrap table { font-size:12px; }.handbook-index-grid { gap:24px 16px; }.handbook-index-group a { font-size:14px; }.spec-section { scroll-margin-top:100px; }.handbook-source { padding:16px; } }
 @media(max-width:360px) { .handbook-index-grid { grid-template-columns:1fr; } }
+/* Design studio: editorial scale, quiet navigation, and open specimen surfaces. */
+.handbook-shell { grid-template-columns:208px minmax(0,1fr); gap:64px; padding-top:40px; }
+.handbook-sidebar { top:104px; padding-top:3px; }
+.handbook-sidebar summary { font-size:12px; letter-spacing:.025em; color:var(--faint); }
+.handbook-sidebar nav>div { margin-top:24px; }
+.handbook-sidebar nav p { font-size:12px; margin-bottom:4px; }
+.handbook-sidebar nav a { padding:8px 0; border:0; font-size:14px; color:var(--muted); text-decoration:none; }
+.handbook-sidebar nav a[aria-current] { background:transparent; color:var(--ink); font-weight:650; }
+.handbook-sidebar nav a[aria-current]::before { content:""; display:inline-block; width:5px; height:5px; margin:0 8px 3px 0; background:var(--brass); border-radius:50%; }
+.handbook-wordmark { display:flex; align-items:center; gap:10px; margin-top:44px; text-decoration:none; }
+.handbook-wordmark>span { display:block;width:28px;height:28px; }
+.handbook-wordmark strong { font-size:15px;letter-spacing:-.03em;line-height:1.2; }
+.handbook-wordmark small { display:block;font:9px/1.8 var(--font-mono);letter-spacing:.03em;color:var(--faint); }
+.brand-studio .studio-hero { position:relative; display:grid; grid-template-columns:1.04fr 1fr; gap:12px; min-height:440px; padding:0 0 36px; align-items:center; }
+.studio-hero-copy { position:relative;z-index:1; }
+.studio-display { font-size:clamp(46px,5vw,76px);line-height:1.02;letter-spacing:-.065em;font-weight:650;margin:22px 0 28px; }
+.studio-hero h1 { font-size:21px;line-height:1.4;font-weight:650; }
+.studio-hero .brand-guide-intro { font-size:13px;max-width:31em;line-height:1.8; }
+.studio-hero .brand-guide-actions { gap:20px; }
+.studio-hero-art { position:relative;margin:0;min-width:0;align-self:stretch;display:flex;flex-direction:column;justify-content:center; }
+.studio-hero-art img { width:100%;height:360px;object-fit:cover;object-position:63% 50%;mix-blend-mode:multiply; }
+html[data-theme="dark"] .studio-hero-art img { mix-blend-mode:normal; border-radius:2px; }
+.studio-hero-art figcaption { display:flex;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line);font:9px/1.5 var(--font-mono);color:var(--faint); }
+.design-showcase { margin:12px 0 64px; }
+.design-showcase-heading h2 { font-size:27px;letter-spacing:-.03em;font-weight:650;margin:0 0 24px; }
+.design-showcase-grid { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px; }
+.design-specimen { min-width:0;color:var(--ink);text-decoration:none!important;position:relative; }
+.type-specimen,.color-specimen,.action-specimen { min-height:208px;padding:24px;display:flex;flex-direction:column;justify-content:center;background:var(--bg-soft); }
+.type-specimen>span { font-size:76px;letter-spacing:-.07em;line-height:1;font-weight:600; }
+.type-specimen p { margin:14px 0 8px;font-size:18px; }
+.type-specimen small,.specimen-hint { color:var(--faint);font:9px/1.5 var(--font-mono); }
+.color-specimen { flex-direction:row;flex-wrap:wrap;align-content:center;gap:0; }
+.color-specimen>div { flex:1 1 30%;height:76px; }
+.color-specimen p { width:100%;font:9px/1.5 var(--font-mono);color:var(--faint);margin:18px 0 0; }
+.action-specimen { align-items:center;gap:20px; }
+.action-specimen .lab-action { font-size:12px;padding-inline:12px; }
+.specimen-caption { display:flex;gap:12px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none!important;font-size:13px; }
+.specimen-caption>span { font:10px var(--font-mono);color:var(--faint); }
+.specimen-caption strong { flex:1;font-weight:550; }
+.specimen-caption svg { flex-shrink:0; }
+.design-specimen:hover .specimen-caption { color:var(--brass); }
+[data-specimen-status] { font-size:12px;color:var(--muted);line-height:1.6; }
+[data-specimen-status]:empty { display:none; }
+.brand-overview .handbook-index { margin-bottom:40px; }
+.brand-overview .handbook-index-head { align-items:center; }
+.brand-overview .handbook-index-head h2 { font-size:27px;letter-spacing:-.03em; }
+.brand-overview .handbook-index-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px; }
+.handbook-index-group { border-top:1px solid var(--line-strong);padding-top:18px; }
+.handbook-index-group a { text-decoration:none; font-weight:500;font-size:14px; }
+.handbook-source { border:0;border-top:1px solid var(--line);background:transparent;padding:20px 0;font-size:12px;color:var(--muted); }
+.studio-foundation-label { margin-top:40px; }
+.brand-overview .brand-guide-three { gap:24px; }
+.brand-overview .brand-guide-palette { grid-template-columns:repeat(4,minmax(0,1fr)); }
+.brand-overview .brand-guide-hero ~ .brand-guide-section h2 { font-size:25px; }
+.handbook-content .spec-header { padding:4px 0 32px; }
+.handbook-content .spec-header h1 { font-size:clamp(30px,3.5vw,48px);letter-spacing:-.035em;line-height:1.3;margin:18px 0; }
+.handbook-content .spec-header .brand-guide-intro { max-width:64ch;font-size:15px; }
+.handbook-content .spec-section { margin-top:48px; }
+.handbook-content .spec-section h2 { font-size:26px;letter-spacing:-.025em; }
+.handbook-content .spec-demo { border:0;border-radius:2px;background:color-mix(in srgb,var(--bg-soft) 65%,var(--bg));padding:36px; }
+.handbook-content .spec-demo .brand-guide-button-row { min-height:150px;justify-content:center; }
+.handbook-content .spec-demo-label { font-size:9px!important;color:var(--faint); }
+.handbook-content .spec-comparison article { background:transparent;border-top-width:1px;padding-inline:0; }
+.handbook-content .spec-states { gap:16px 40px; }
+.handbook-content .spec-table-wrap thead { background:transparent; }
+.handbook-content .spec-code-map a { text-decoration:none; }
+.handbook-content .spec-reference { border:0;border-top:1px solid var(--line);padding-inline:0; }
+.spec-dock { position:sticky;bottom:20px;width:max-content;max-width:100%;display:flex;gap:0;margin:44px auto 0;padding:6px;background:var(--bg-card);border:1px solid var(--line);box-shadow:0 4px 20px #00000008;border-radius:12px;z-index:4; }
+.spec-dock a { display:flex;align-items:center;justify-content:center;min-height:44px;padding:8px 20px;font-size:12px;text-decoration:none;color:var(--muted);border-right:1px solid var(--line); }
+.spec-dock a:last-child { border:0; }
+.spec-dock a:hover { color:var(--brass);background:var(--bg-soft); }
+@media(max-width:1050px) { .handbook-shell { grid-template-columns:172px minmax(0,1fr);gap:32px; }.brand-studio .studio-hero { grid-template-columns:1fr;min-height:0; }.studio-display { font-size:64px; }.studio-hero-art { position:absolute;right:0;top:12px;width:46%;opacity:.27;pointer-events:none; }.studio-hero-art figcaption { display:none; }.studio-hero-copy { max-width:100%; }.studio-hero .brand-guide-intro { max-width:34em; }.design-showcase-grid { grid-template-columns:1fr;gap:20px; }.design-specimen { display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center; }.type-specimen,.color-specimen,.action-specimen { min-height:170px; }.specimen-caption { border:0; }.brand-overview .brand-guide-three { grid-template-columns:1fr; }.brand-overview .brand-guide-palette { grid-template-columns:repeat(3,minmax(0,1fr)); } }
+@media(max-width:700px) { .handbook-shell { display:block;padding-top:14px; }.handbook-wordmark { display:none; }.handbook-sidebar { margin-bottom:28px; }.handbook-sidebar summary { font-size:12px; }.handbook-sidebar nav a { font-size:13px;padding:10px 6px; }.brand-studio .studio-hero { display:block;padding-bottom:30px; }.studio-display { font-size:58px;margin:22px 0; }.studio-hero h1 { font-size:19px; }.studio-hero-art { position:static;width:100%;opacity:1;margin:26px 0 0; }.studio-hero-art img { height:260px;object-fit:cover;object-position:center; }.studio-hero-art figcaption { display:flex; }.design-showcase { margin:16px 0 48px; }.design-showcase-heading h2,.brand-overview .handbook-index-head h2 { font-size:23px; }.brand-overview .handbook-index-head { flex-wrap:wrap;gap:8px; }.brand-overview .handbook-index-grid { grid-template-columns:1fr;gap:24px; }.brand-overview .brand-guide-palette { grid-template-columns:repeat(2,minmax(0,1fr)); }.handbook-content .spec-demo { padding:20px; }.handbook-content .spec-demo .brand-guide-button-row { min-height:160px;gap:12px; }.handbook-content .spec-header h1 { font-size:32px; }.handbook-content .spec-section { margin-top:36px; }.spec-dock { bottom:12px; }.spec-dock a { padding-inline:16px; }.type-specimen,.color-specimen,.action-specimen { padding:18px;min-height:150px; }.type-specimen>span { font-size:60px; }.color-specimen>div { height:60px; }.specimen-caption { flex-wrap:wrap;gap:8px;font-size:12px; }.specimen-caption strong { flex-basis:70%; }.design-specimen { gap:14px; } }
+@media(min-width:701px) and (max-width:1050px) { .studio-hero-art { position:static;width:100%;opacity:1;pointer-events:auto; }.studio-hero-art img { height:280px;object-fit:contain; }.studio-hero-art figcaption { display:flex; }.studio-hero .brand-guide-actions { margin-bottom:20px; } }
+@media(max-width:700px) { .studio-display { font-size:clamp(44px,14.8vw,58px); } }
+@media(max-width:700px) { .studio-hero-art img { object-position:80% center; } }

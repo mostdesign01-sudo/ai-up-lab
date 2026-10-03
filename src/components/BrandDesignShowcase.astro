@@ -1,0 +1,18 @@
+---
+import Loc from "./Loc.astro";
+import ActionButton from "./ActionButton.astro";
+import Icon from "./Icon.astro";
+import { withBase } from "../lib/paths";
+---
+<section class="design-showcase" aria-label="Design previews">
+  <div class="design-showcase-heading"><p class="brand-guide-kicker">01 / DESIGN LANGUAGE</p><h2><Loc zh="看见规则，开始设计。" en="See the rules. Start designing." /></h2></div>
+  <div class="design-showcase-grid">
+    <a class="design-specimen" href={withBase("brand/guides/foundations/")}><div class="type-specimen"><span>Aa</span><p>清楚 · Clear</p><small>GEIST / SYSTEM CJK</small></div><div class="specimen-caption"><span>01</span><strong><Loc zh="字体与层级" en="Type & hierarchy" /></strong><Icon name="arrow" size={18} /></div></a>
+    <a class="design-specimen" href={withBase("brand/#color")}><div class="color-specimen"><div style="background:var(--lab-color-text)"></div><div style="background:var(--lab-color-brand)"></div><div style="background:var(--lab-color-soft)"></div><p>NEUTRAL / VIOLET</p></div><div class="specimen-caption"><span>02</span><strong><Loc zh="语义色彩" en="Semantic color" /></strong><Icon name="arrow" size={18} /></div></a>
+    <article class="design-specimen"><div class="action-specimen"><ActionButton><Loc zh="开始下一件事" en="Start your next task" /></ActionButton><span class="specimen-hint">44 PX / 7 PX RADIUS</span></div><a class="specimen-caption" href={withBase("brand/guides/buttons/")}><span>03</span><strong><Loc zh="动作与反馈" en="Action & feedback" /></strong><Icon name="arrow" size={18} /></a><p role="status" data-specimen-status></p></article>
+  </div>
+</section>
+<script>
+const button=document.querySelector<HTMLButtonElement>(".action-specimen button");
+button?.addEventListener("click",()=>{const status=document.querySelector<HTMLElement>("[data-specimen-status]")!;status.textContent=document.documentElement.dataset.locale==="en"?"Ready. Open Action & feedback for the full states.":"准备好了，进入“动作与反馈”查看完整状态。";});
+</script>

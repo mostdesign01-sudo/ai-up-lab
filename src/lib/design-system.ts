@@ -1,5 +1,5 @@
-export const designSystemVersion = "1.1.0";
-export const designSystemUpdatedAt = "2026-10-02";
+export const designSystemVersion = "1.2.0";
+export const designSystemUpdatedAt = "2026-10-03";
 
 export const colorRoles = [
   { id: "background", zh: "页面底色", en: "Background", variable: "--bg" },
