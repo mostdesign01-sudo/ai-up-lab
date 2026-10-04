@@ -1,6 +1,235 @@
 {
   "cases": [
     {
+      "id": "lonely-domain-email-cloudflare-gmail-resend",
+      "slug": "lonely-domain-email-cloudflare-gmail-resend",
+      "title": "教程：免费个人域名邮箱 — Cloudflare 收信 + Resend 发信 + Gmail 统一收发",
+      "titleEn": "Tutorial: free personal-domain email — Cloudflare in, Resend out, Gmail as the inbox",
+      "summary": "Lonely 的 X 长文教程：你已有自己的域名（DNS 托管在 Cloudflare），想用 hi@你的域名.com 收发邮件，又不想换掉每天在用的 Gmail。做法是三个工具分工：Cloudflare 把发到域名邮箱的信转进 Gmail；Resend 当「发信通道」；Gmail 里添加一个「用这个地址发送邮件」的发件身份，回复时对方看到的还是你的域名地址。长文拆成五步，并给了常见报错的排查。时效要紧：Google 在帮助页写明，2027 年 1 月起 Gmail 不再支持第三方地址的「用这个地址发送邮件」，所以这是现阶段方案，不是长期方案。本站没有实际配置过，步骤和实测描述都来自作者原文。",
+      "summaryEn": "Lonely's X article for anyone who already owns a domain (with DNS on Cloudflare) and wants hi@yourdomain.com to work inside the Gmail they already use. Three tools split the job: Cloudflare forwards mail sent to your domain address into Gmail; Resend is the outgoing mail channel; and Gmail gets a “Send mail as” identity so replies still show your domain address. The article walks through five steps and a troubleshooting list. Timing matters: Google's help page says that from January 2027 Gmail drops “Send mail as” for third-party addresses, so this is a stopgap, not a permanent setup. This site has not configured it; the steps and the “tested” remarks come from the author's article.",
+      "hook": "三个免费工具搭域名邮箱，附 2027 年时效提醒。",
+      "hookEn": "Set up a domain email with Cloudflare, Resend and Gmail — with the 2027 deadline flagged.",
+      "categories": [
+        "productivity",
+        "ops"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://x.com/Lonely__MH/status/2104878176811807050",
+      "secondaryUrls": [
+        "https://x.com/lonely__mh/status/2106200059704689061",
+        "https://developers.cloudflare.com/email-service/configuration/email-routing-addresses/",
+        "https://resend.com/docs/send-with-smtp",
+        "https://support.google.com/mail/answer/17101213?hl=en",
+        "https://support.google.com/mail/answer/22370?hl=en",
+        "https://resend.com/pricing"
+      ],
+      "sourceType": "tutorial",
+      "qualityNote": "作者自述教程。主源是 Lonely（@Lonely__MH）2026-09-29 的 X 长文（status 2104878176811807050，标题「免费个人域名邮箱！Cloudflare + Gmail + Resend 5分钟配置完整教程」）；2026-10-03 他发了引用帖 2106200059704689061，这是本站收录的触发点。2026-10-04（Asia/Shanghai）用 fxtwitter 读到长文 64709 浏览、158 赞、321 收藏；引用帖 13303 浏览、136 赞、149 收藏。互动数字只作收录背景，不代表教程已被验证。已对官方页核对到的：Resend SMTP 文档（smtp.resend.com，用户名 resend，密码是 API Key，端口含 465/587）；Resend 定价页和额度说明（免费版每月 3000 封、每天 100 封，两个限制同时生效，所以作者长文写「每月 3000」、引用帖写「每日 100」都不算错；收到的邮件也计入额度）；Resend API Key 页（创建后看不到 Key 的值）；Cloudflare Email Routing 官方文档（目标地址要先验证，规则才生效；Catch-all；Drop 动作＝直接删除不转发）和 Cloudflare 定价页（Email Routing 在 Workers Free 和 Paid 计划都可用，入站不限量）；Google 帮助页（2027 年 1 月起第三方地址的「Send as」结束；2026 年 Q3–Q4 为过渡期，Gmail 可能限制新配置；转发进 Gmail 的邮件不受影响；Gmail 地址和 Workspace 别名不受影响）。没有核对到、仍是作者说法的：Resend 在 Cloudflare 上可一键授权自动加记录；添加域名后约 3 分钟 Verified；DNS 记录名重复拼域名后缀是验证失败最常见原因；Resend 的记录与 Cloudflare 收信 MX 可共存；Gmail 验证邮件会经 Cloudflare 转回；QQ/163 测试里没有 via gmail.com、SPF/DKIM 显示 PASS；新域名发信进垃圾箱会慢慢好转。本站没有买域名、没改 DNS、没注册 Resend、没在 Gmail 里添加过发件地址，也没有发过测试邮件。文中的操作界面（Cloudflare 菜单名已改叫 Email Service）以你打开当天为准。没有配预览图：作者截图里有他自己的域名和后台信息，不转载。不打星。",
+      "qualityNoteEn": "Author self-report tutorial. Primary source: Lonely (@Lonely__MH) X article of 2026-09-29 (status 2104878176811807050, title “Free personal-domain email! Cloudflare + Gmail + Resend, full 5-minute setup”). On 2026-10-03 he posted a quote-post, 2106200059704689061, which triggered this entry. On 2026-10-04 (Asia/Shanghai) fxtwitter showed 64,709 views / 158 likes / 321 bookmarks on the article and 13,303 views / 136 likes / 149 bookmarks on the quote-post; engagement is background only and does not mean the tutorial is verified. Checked against official pages: Resend SMTP docs (smtp.resend.com, username resend, password is the API key, ports include 465 and 587); Resend pricing and quota pages (Free: 3,000 emails per month and 100 per day, both apply — so the article's “3,000 a month” and the quote-post's “100 a day” are both consistent; received mail also counts toward the quota); Resend API-keys page (the key value cannot be viewed after creation); Cloudflare Email Routing docs (a destination address must be verified before rules work; catch-all; the Drop action deletes mail without forwarding) and Cloudflare pricing (Email Routing is on Workers Free and Paid, inbound unlimited); Google help pages (from January 2027 “Send as” for third-party addresses ends; Q3–Q4 2026 is a transition period in which Gmail may restrict new configurations; forwarded mail into Gmail is unaffected; Gmail addresses and Workspace aliases are unaffected). Not verified and still the author's word: Resend can auto-add records on Cloudflare after one authorization; Verified within about 3 minutes; repeating the domain suffix in DNS record names being the most common failure; Resend's records coexisting with Cloudflare's inbound MX; Gmail's confirmation email arriving via Cloudflare; the QQ/163 test showing no via gmail.com and SPF/DKIM PASS; new domains landing in spam at first and improving. This site did not buy a domain, change DNS, sign up for Resend, add a send-as address in Gmail, or send any test mail. Menu names (Cloudflare now labels this area Email Service) are as of the day you open them. No preview image: the author's screenshots show his own domain and dashboards and are not reused. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "买域名、改 DNS、注册 Resend、创建 API Key、在 Gmail 里添加发件地址，都由你自己确认再做。API Key 当密码保管，不要贴给任何人，也不要贴进聊天或让 Agent 代存。",
+      "approvalBoundaryEn": "Buying a domain, changing DNS, signing up for Resend, creating an API key, and adding a send-as address in Gmail are all yours to confirm. Treat the API key like a password: do not paste it to anyone, into chat, or let an agent store it.",
+      "connectors": [
+        "cloudflare",
+        "resend",
+        "gmail",
+        "email"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-04T08:07:11Z",
+      "landing": {
+        "what": "这是一条「用自己的域名收发邮件」的实操教程，作者是 Lonely。你想让别人写信到 hi@你的域名.com，但又不想多开一个邮箱软件，就继续用 Gmail。他的做法是三个工具分工：Cloudflare 负责收信，把发到域名邮箱的邮件转进你的 Gmail；Resend 负责发信，它是一家邮件发送服务，提供一个 SMTP 地址（可以理解成「发信用的邮局地址加账号」）；Gmail 里添加一个「用这个地址发送邮件」的发件身份。配好后，别人写到域名邮箱的信进 Gmail，你在 Gmail 里回复时，对方看到的发件人还是你的域名地址。适合有自己的网站、独立项目或联系邮箱需求，且域名已经在 Cloudflare 管理的人。先说一个要紧的时间点：Google 帮助页写明，2027 年 1 月起 Gmail 将不再支持第三方地址的「用这个地址发送邮件」，所以这套做法是现阶段的方案。本站没有实际配置过，步骤来自作者原文。",
+        "whatEn": "A hands-on tutorial by Lonely for using your own domain for email. You want people to write to hi@yourdomain.com, but you would rather keep living in Gmail than open yet another mail app. His setup splits the job in three: Cloudflare handles incoming mail and forwards what is sent to your domain address into Gmail; Resend handles outgoing mail — it is an email-sending service that gives you an SMTP address (think of it as a “post-office address plus login” for sending); and Gmail gets a “Send mail as” identity. Once set up, mail to your domain address lands in Gmail, and when you reply from Gmail the recipient still sees your domain address as the sender. It suits people with a website, side project or contact address whose domain is already managed on Cloudflare. One timing point matters up front: Google's help page says that from January 2027 Gmail will stop supporting “Send mail as” for third-party addresses, so this is a setup for now. This site has not configured it; the steps come from the author's article.",
+        "contrast": {
+          "caption": "左列是作者长文里的说法，右列是 2026-10-04 对着官方页核对的结果。没核对到的，写明「没核对到」，不当成事实。",
+          "captionEn": "Left: what the author's article says. Right: what the official pages said when checked on 2026-10-04. Anything not checked is marked as such, not treated as fact.",
+          "leftLabel": "作者说",
+          "leftLabelEn": "The author says",
+          "rightLabel": "官方页核对（2026-10-04）",
+          "rightLabelEn": "Official pages (checked 2026-10-04)",
+          "rows": [
+            {
+              "aspect": "Resend 免费额度",
+              "aspectEn": "Resend free quota",
+              "left": "文中写免费版每月 3000 封；引用帖写每日 100 封。",
+              "leftEn": "The article says 3,000 emails a month on the free plan; the quote-post says 100 a day.",
+              "right": "Resend 定价页和额度说明：免费版每月 3000 封，同时每天最多 100 封，两条都生效；收到的邮件也算进额度。以官网当天为准。",
+              "rightEn": "Resend's pricing and quota pages: Free allows 3,000 a month and also 100 a day — both apply — and received mail counts too. The live site wins."
+            },
+            {
+              "aspect": "Gmail 2027 年变更",
+              "aspectEn": "Gmail change in 2027",
+              "left": "Google 已通知，2027 年 1 月起 Gmail 不再支持第三方地址的「用这个地址发送邮件」。",
+              "leftEn": "Google has announced that from January 2027 Gmail drops “Send mail as” for third-party addresses.",
+              "right": "Google 帮助页确认：2027 年 1 月起结束。2026 年第三季度到第四季度是过渡期，现有设置继续可用，但 Gmail 可能限制新的配置，也就是说第四步现在不一定能加成功。转发进 Gmail 的邮件不受影响。",
+              "rightEn": "Google's help page confirms it: it ends in January 2027. Q3–Q4 2026 is a transition period in which existing setups keep working but Gmail may restrict new ones — so step 4 may not even go through today. Mail forwarded into Gmail is unaffected."
+            },
+            {
+              "aspect": "Cloudflare 收信",
+              "aspectEn": "Cloudflare inbound",
+              "left": "Email Routing 免费收信转发，支持 Catch-all；作者的 Catch-all 设成了 Drop。",
+              "leftEn": "Email Routing forwards incoming mail for free and supports catch-all; the author's catch-all is set to Drop.",
+              "right": "Cloudflare 定价页：Email Routing 在免费和付费 Workers 计划都能用，入站不限量。官方文档：目标地址验证后规则才生效；Drop 是直接删除、不转发。",
+              "rightEn": "Cloudflare's pricing page: Email Routing works on Workers Free and Paid, inbound unlimited. Docs: rules only work once the destination address is verified; Drop deletes the mail without forwarding."
+            },
+            {
+              "aspect": "SMTP 参数",
+              "aspectEn": "SMTP settings",
+              "left": "服务器 smtp.resend.com；用户名固定 resend；密码是 API Key；SSL 用 465，TLS 用 587。",
+              "leftEn": "Server smtp.resend.com; username is always resend; password is the API key; 465 for SSL, 587 for TLS.",
+              "right": "Resend SMTP 文档一致：主机 smtp.resend.com，用户名 resend，密码是 API Key；465 是直接加密，587 是先连后升级加密。",
+              "rightEn": "Resend's SMTP docs agree: host smtp.resend.com, username resend, password is the API key; 465 is implicit encryption, 587 upgrades after connecting."
+            },
+            {
+              "aspect": "DNS 记录与测试结果",
+              "aspectEn": "DNS records and test results",
+              "left": "记录名照抄后台，重复拼后缀是最常见失败原因；约 3 分钟 Verified；测试邮件没有 via gmail.com，SPF、DKIM 都是 PASS。",
+              "leftEn": "Copy record names as shown; repeating the domain suffix is the most common failure; Verified in about 3 minutes; the test mail showed no via gmail.com and SPF and DKIM both PASS.",
+              "right": "没核对到。这些是作者自己的经验和测试结果，本站没有实际配置，不能当作保证。",
+              "rightEn": "Not checked. These are the author's own experience and test results; this site did not configure it, so treat none of it as a guarantee."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "动手前：先确认条件和时效",
+            "titleEn": "Before you start: prerequisites and the deadline",
+            "body": "你需要三样东西：一个自己的域名，而且 DNS 已经托管在 Cloudflare（DNS 就是告诉互联网「这个域名的邮件该送到哪」的设置表）；一个 Gmail 账号；一个 Resend 账号。再读一遍 Google 的说明：2027 年 1 月起，第四步用到的「用这个地址发送邮件」会结束，而且过渡期里 Google 可能已经限制新添加。想长期用，作者建议之后换支持 SMTP 的桌面邮件客户端，或迁到完整的域名邮箱服务。",
+            "bodyEn": "You need three things: your own domain with DNS already on Cloudflare (DNS is the settings table that tells the internet where mail for the domain should go), a Gmail account, and a Resend account. Then re-read Google's notice: from January 2027 the “Send mail as” feature used in step 4 ends, and during the transition Google may already restrict adding new ones. For the long run the author suggests moving to a desktop mail client that supports SMTP, or to a full domain-email service.",
+            "links": [
+              {
+                "href": "https://support.google.com/mail/answer/17101213?hl=en",
+                "label": "Google：第三方邮箱支持变更",
+                "labelEn": "Google: third-party account changes"
+              },
+              {
+                "href": "https://support.google.com/mail/answer/22370?hl=en",
+                "label": "Google：用其他地址发送邮件",
+                "labelEn": "Google: send from a different address"
+              }
+            ]
+          },
+          {
+            "title": "第一步：Cloudflare 配收信",
+            "titleEn": "Step 1: set up incoming mail on Cloudflare",
+            "body": "在 Cloudflare 后台进入 Email Service 下的 Email Routing，第一次用按提示启用，并确认它要加的 DNS 记录。然后做两件事：在 Destination addresses 里添加你的 Gmail，并去 Gmail 点验证邮件里的确认链接；再到 Routing rules 点 Create routing rule，建一条转发规则（比如把 hi@你的域名.com 转到 Gmail）。配完用另一个邮箱给它发一封信，Gmail 能收到，收信就通了。避坑：Catch-all 是兜底规则，接收没有单独建规则的地址，比如 hello@。作者截图里的 Catch-all 是 Drop，意思是直接丢弃；想让所有地址都进 Gmail，要把它的动作改成转发到你的 Gmail。",
+            "bodyEn": "In the Cloudflare dashboard open Email Routing under Email Service; if it is your first time, enable it and confirm the DNS records it wants to add. Then do two things: add your Gmail under Destination addresses and click the confirmation link in the verification mail; then under Routing rules choose Create routing rule and make a forwarding rule (for example hi@yourdomain.com to Gmail). Send a test mail from another address — if it reaches Gmail, incoming mail works. Pitfall: catch-all is the fallback rule for addresses without their own rule, such as hello@. In the author's screenshot it is set to Drop, which means discard; to get every address into Gmail, change its action to forward to your Gmail.",
+            "links": [
+              {
+                "href": "https://developers.cloudflare.com/email-service/configuration/email-routing-addresses/",
+                "label": "Cloudflare：路由规则与目标地址",
+                "labelEn": "Cloudflare: routing rules and addresses"
+              },
+              {
+                "href": "https://developers.cloudflare.com/email-service/platform/pricing/",
+                "label": "Cloudflare：Email Routing 定价",
+                "labelEn": "Cloudflare: Email Routing pricing"
+              }
+            ]
+          },
+          {
+            "title": "第二步：Resend 添加域名",
+            "titleEn": "Step 2: add your domain in Resend",
+            "body": "在 Resend 后台进 Domains，点 Add Domain，填你的域名。Resend 会给出一组 DNS 记录，作用是证明「这个域名确实授权 Resend 替它发信」（里面有 SPF、DKIM 这类防冒充的签名记录）。作者说域名在 Cloudflare 时，Resend 能识别并在授权后自动添加；手动添加的话，记录名称直接照抄 Resend 后台，不要自己再拼一遍域名后缀，作者称这是验证不通过最常见的原因。等状态变成 Verified，作者实测约 3 分钟。作者还说 Resend 的记录挂在单独的子域名上，和 Cloudflare 收信用的记录不冲突，这一点本站没有核对到。",
+            "bodyEn": "In the Resend dashboard go to Domains, click Add Domain, and enter your domain. Resend gives you a set of DNS records whose job is to prove the domain authorizes Resend to send for it (they include SPF and DKIM, anti-spoofing signatures). The author says that with a domain on Cloudflare, Resend can detect it and add the records after you authorize; if you add them by hand, copy each record name exactly as Resend shows it and do not append your domain again — he says that is the most common reason verification fails. Wait for the status to read Verified, which took him about 3 minutes. He also says Resend's records sit on a separate subdomain and do not clash with Cloudflare's inbound records; this site has not checked that.",
+            "links": [
+              {
+                "href": "https://resend.com/docs/dashboard/domains/introduction",
+                "label": "Resend：已验证域名",
+                "labelEn": "Resend: verified domains"
+              }
+            ]
+          },
+          {
+            "title": "第三步：创建 API Key，拿到 SMTP 参数",
+            "titleEn": "Step 3: create an API key and get the SMTP settings",
+            "body": "在 Resend 左侧进 API keys，点 Create API key：名称随便起，权限选 Sending access（只能发信，够用），Domain 选刚验证的域名。生成后会显示一串 re_ 开头的 Key，马上复制保存：关掉页面就看不到了，Resend 官方也写明创建后无法再查看，丢了只能重新生成。SMTP 参数一共四项：服务器 smtp.resend.com；用户名固定是 resend，不是你的邮箱；密码是这个 API Key，不是 Resend 的登录密码；端口 465（SSL）或 587（TLS）。",
+            "bodyEn": "In Resend open API keys and click Create API key: any name; permission Sending access (send-only, which is enough); Domain set to the one you just verified. A key starting with re_ is shown once — copy and store it right away: after you close the page you cannot see it again, and Resend's docs confirm the value cannot be viewed after creation, so a lost key must be regenerated. The SMTP settings are four items: server smtp.resend.com; username is always resend, not your email; password is this API key, not your Resend login password; port 465 (SSL) or 587 (TLS).",
+            "links": [
+              {
+                "href": "https://resend.com/docs/send-with-smtp",
+                "label": "Resend：用 SMTP 发信",
+                "labelEn": "Resend: send with SMTP"
+              },
+              {
+                "href": "https://resend.com/docs/dashboard/api-keys/introduction",
+                "label": "Resend：管理 API Key",
+                "labelEn": "Resend: manage API keys"
+              }
+            ]
+          },
+          {
+            "title": "第四步：Gmail 添加发信地址",
+            "titleEn": "Step 4: add the send-as address in Gmail",
+            "body": "打开 Gmail，右上角齿轮进「查看所有设置」→「账号和导入」，找到「用这个地址发送邮件」，点「添加其他电子邮件地址」。填你想显示的名称和域名邮箱，「视为别名」保持勾选，下一步把第三步的 SMTP 参数填进去，选 SSL（推荐）或 TLS。保存后 Gmail 会给这个域名地址发验证邮件，它会被第一步的 Cloudflare 转回你的 Gmail，点确认链接或填验证码即可。作者建议把「回复邮件时」设成「用此相同地址回复」，这样别人写给域名邮箱的信，点回复就自动用域名地址发出。再提醒一次：这一步正是 Google 将在 2027 年 1 月结束的功能，过渡期内也可能已经加不上。",
+            "bodyEn": "In Gmail click the gear, All settings, then Accounts and Import, find “Send mail as” and choose “Add another email address”. Enter the display name and your domain address, keep “Treat as an alias” ticked, and on the next screen fill in the step 3 SMTP settings with SSL (recommended) or TLS. After saving, Gmail sends a verification mail to the domain address; step 1's Cloudflare forwarding brings it back into your Gmail, where you click the confirmation link or enter the code. The author suggests setting “When replying to a message” to “Reply from the same address the message was sent to”, so replying to mail sent to your domain address automatically goes out from it. Once more: this is exactly the feature Google ends in January 2027, and during the transition adding it may already fail.",
+            "links": [
+              {
+                "href": "https://support.google.com/mail/answer/22370?hl=en",
+                "label": "Google：用其他地址发送邮件",
+                "labelEn": "Google: send from a different address"
+              },
+              {
+                "href": "https://support.google.com/mail/answer/17101213?hl=en",
+                "label": "Google：第三方邮箱支持变更",
+                "labelEn": "Google: third-party account changes"
+              }
+            ]
+          },
+          {
+            "title": "第五步：测试收发",
+            "titleEn": "Step 5: test sending and receiving",
+            "body": "用 QQ 邮箱或 163 给域名邮箱发一封信，在 Gmail 里回复，再回到 QQ 邮箱看：发件人应该是你的域名地址，不应出现「由 xxx@gmail.com 代发」或 via gmail.com 的字样。想看得更细，在收到的邮件里点「显示原始邮件」，看 SPF 和 DKIM 是不是 PASS（即防冒充检查通过）；Resend 后台的 Logs 能看到每封信的投递状态。作者列的常见问题：Resend 一直 Not Verified，多半是 DNS 记录名写错；Gmail 提示用户名或密码错误，检查用户名是不是 resend、密码是不是 API Key、复制时有没有多空格；验证邮件收不到，先确认第一步转发是通的，再翻垃圾邮件；发出去进对方垃圾箱，新域名刚开始常见，先去 Logs 看有没有被拒。",
+            "bodyEn": "Send a mail from a QQ or 163 account to your domain address, reply from Gmail, then check it back in QQ: the sender should be your domain address with no “sent on behalf of xxx@gmail.com” or via gmail.com wording. For more detail, open “Show original” on the received mail and check that SPF and DKIM read PASS (the anti-spoofing checks passed); Resend's Logs page shows each message's delivery status. The author's troubleshooting list: Resend stuck on Not Verified is usually a wrongly written DNS record name; Gmail saying the username or password is wrong means check the username is resend, the password is the API key, and no stray spaces were copied; a verification mail that never arrives means first confirm step 1 forwarding works, then check spam; mail landing in the recipient's spam is common for new domains, so look in Logs for rejections first.",
+            "links": [
+              {
+                "href": "https://x.com/Lonely__MH/status/2104878176811807050",
+                "label": "Lonely 的 X 长文（原文）",
+                "labelEn": "Lonely's X article (original)"
+              },
+              {
+                "href": "https://x.com/lonely__mh/status/2106200059704689061",
+                "label": "Lonely 的引用帖",
+                "labelEn": "Lonely's quote-post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "买域名、改 DNS、注册 Resend、创建 API Key、在 Gmail 里添加发件地址，每一步都会真的改动你的账号，请自己确认后再做。改 DNS 之前先看清它会覆盖哪些现有记录。",
+            "textEn": "Buying a domain, changing DNS, signing up for Resend, creating an API key, and adding a send-as address in Gmail all change your real accounts — confirm each yourself. Before editing DNS, check which existing records it would overwrite."
+          },
+          {
+            "text": "API Key 等于发信密码：不要贴给任何人，不要贴进聊天或工单，也不要让 Agent 代为保存。泄露后在 Resend 后台删掉重建。",
+            "textEn": "The API key is effectively a sending password: do not paste it to anyone, into chat or tickets, or let an agent store it. If it leaks, delete and recreate it in the Resend dashboard."
+          },
+          {
+            "text": "时效风险：2027 年 1 月起 Gmail 不再支持第三方地址的「用这个地址发送邮件」（Google 帮助页已写明），过渡期内也可能限制新添加。这套做法不是长期方案；收信转发进 Gmail 不受影响，发信要另想办法。",
+            "textEn": "Timing risk: from January 2027 Gmail no longer supports “Send mail as” for third-party addresses (stated on Google's help page), and during the transition new additions may be restricted. This is not a long-term setup; incoming forwarding into Gmail is unaffected, but sending needs another plan."
+          },
+          {
+            "text": "额度是上限：Resend 免费版每月 3000 封、每天 100 封，收到的邮件也计入；要发大量产品通知或 newsletter，应另开子域名并先看 Resend 当前套餐，以官网为准。",
+            "textEn": "Quotas are caps: Resend Free is 3,000 a month and 100 a day, and received mail counts too. For bulk product notices or newsletters use a separate subdomain and check Resend's current plans; the live site wins."
+          },
+          {
+            "text": "Catch-all 如果保持 Drop，发到没单独建规则的地址的邮件会被直接删除，不会留底。",
+            "textEn": "If catch-all stays on Drop, mail to any address without its own rule is deleted with no copy kept."
+          },
+          {
+            "text": "本站没有实际配置过，也没发过测试邮件；3 分钟验证、SPF/DKIM PASS、没有 via gmail.com 都是作者的实测，不代表你一定能复现。",
+            "textEn": "This site has not configured it or sent any test mail; the 3-minute verification, SPF/DKIM PASS and no via gmail.com are the author's own test results and may not reproduce for you."
+          }
+        ]
+      }
+    },
+    {
       "id": "television",
       "slug": "television",
       "title": "工具：Television — 给个人 Agent 用的开源可视化工作台",
@@ -6552,10 +6781,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-03T12:10:00Z",
+    "updatedAt": "2026-10-04T08:07:11Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.40",
-    "count": 138,
+    "version": "1.4.41",
+    "count": 139,
     "sourcesCrawled": [
       "https://television.run/",
       "https://github.com/telepath-computer/television",
@@ -6759,7 +6988,19 @@
       "https://news.ycombinator.com/item?id=49880601",
       "https://www.drmagnuslynch.com/skin",
       "https://news.ycombinator.com/item?id=49881201",
-      "https://x.ai/bot/guides/grok-bot-for-marketing"
+      "https://x.ai/bot/guides/grok-bot-for-marketing",
+      "https://x.com/Lonely__MH/status/2104878176811807050",
+      "https://x.com/lonely__mh/status/2106200059704689061",
+      "https://api.fxtwitter.com/lonely__mh/status/2104878176811807050",
+      "https://developers.cloudflare.com/email-service/configuration/email-routing-addresses/",
+      "https://developers.cloudflare.com/email-service/platform/pricing/",
+      "https://resend.com/docs/send-with-smtp",
+      "https://resend.com/docs/dashboard/domains/introduction",
+      "https://resend.com/docs/dashboard/api-keys/introduction",
+      "https://resend.com/pricing",
+      "https://resend.com/docs/knowledge-base/account-quotas-and-limits",
+      "https://support.google.com/mail/answer/22370?hl=en",
+      "https://support.google.com/mail/answer/17101213?hl=en"
     ]
   }
 }
