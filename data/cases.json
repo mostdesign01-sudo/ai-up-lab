@@ -1,6 +1,315 @@
 {
   "cases": [
     {
+      "id": "offrun",
+      "slug": "offrun",
+      "title": "工具：Offrun — 在一块 Mac 工作台上并排看编程 Agent",
+      "titleEn": "Tool: Offrun — one Mac workspace for the coding agents you already use",
+      "summary": "Offrun 是 Founderly 做的 Mac 工作台：Claude Code、Codex、AGY 和 Grok Build 并排跑在你自己的登录上，每个任务用单独的 git worktree，账号用量分开看，也可以让另一个 agent 先读 diff。页面写明听写在本机转写，聊天和记忆是仓库里的普通文件。条款写今天免费、不按量计费，你仍自带各家订阅；同时写明软件是许可使用而不是开源。下载页只提供 Apple Silicon（M1 或更新）和 macOS 14 Sonoma 或更高。本条是工具笔记：未下载安装、未登录任何助手、未在本机跑任务。",
+      "summaryEn": "Offrun is Founderly’s Mac workspace: Claude Code, Codex, AGY, and Grok Build run side by side on the logins you already have, each task in its own git worktree, with account usage in view and an optional second agent reading the diff. The page says dictation is transcribed on the Mac, and that chats and memory are plain files in the repo. The terms say the app is free and unmetered today, while you still bring your own agent subscriptions; they also say the software is licensed, not open source. The download page offers Apple Silicon only (M1 or newer) and macOS 14 Sonoma or later. This is a tool tip: the disk image was not installed, no assistant was signed in, and no task was run here.",
+      "hook": "一块免费的 Mac 工作台，并排管理你已有的编程 Agent。",
+      "hookEn": "A free Mac workspace for the coding agents you already use.",
+      "categories": [
+        "engineering",
+        "coding",
+        "multi-agent"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://offrun.dev/",
+      "secondaryUrls": [
+        "https://offrun.dev/download/",
+        "https://news.ycombinator.com/item?id=49942434",
+        "https://offrun.dev/terms/",
+        "https://dl.offrun.dev/download",
+        "https://offrun.dev/privacy/"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是产品页 https://offrun.dev/（晚间 HTTP 200）、下载页 https://offrun.dev/download/（HTTP 200）、条款 https://offrun.dev/terms/（HTTP 200，页首 Last updated 2 October 2026）。Show HN item 49942434，标题 “Show HN: Offrun – manage every coding agent from one workspace”，2026-10-03T08:40:17Z / 约 16:40 CST，Algolia 晚间核对 75pts。下载按钮 https://dl.offrun.dev/download 晚间 302 到 https://cdn.offrun.dev/Offrun-v6.0.7.dmg（HEAD 200，Content-Length 338431870，与页面所写 338.4 MB 一致）；本库未下完整包、未跑 shasum。收录理由：一块工作台并排看已有编程 Agent，和本站 Agent 工作流相邻。为何不进 Agent UI：条款第 2 节授予个人、不可转让、可撤销的使用许可，写明 licensed, not sold，并禁止复制分发、反编译和提取源码；落地页没有开源或 FOSS 声明，也没有公开仓库。价格：条款第 3–4 节写明今天免费、不计量、没有付费计划，Claude Code / Codex / AGY / Grok Build 仍走你自己的订阅；并预告以后可能加付费计划，届时会事先通知。平台：下载页写 Apple Silicon only（M1 or newer）· macOS 14 Sonoma or later，版本 6.0.7、Released 28 September 2026、发布方 Founderly, Inc.；本晚页面检索不到 Intel 构建。Pi / OpenCode 在页面上标 coming soon，不当成已支持。未安装、未登录、未跑任务、未逐句核隐私政策。预览为 Playwright 实拍产品页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary sources are https://offrun.dev/ (evening HTTP 200), https://offrun.dev/download/ (HTTP 200), and https://offrun.dev/terms/ (HTTP 200, “Last updated 2 October 2026”). Show HN item 49942434, title “Show HN: Offrun – manage every coding agent from one workspace”, 2026-10-03T08:40:17Z / about 16:40 CST, 75pts on Algolia at the evening check. The download button https://dl.offrun.dev/download returned 302 to https://cdn.offrun.dev/Offrun-v6.0.7.dmg (HEAD 200, Content-Length 338431870, matching the page’s 338.4 MB); the disk image was not fully downloaded and the checksum was not run. Why: one workspace for coding agents you already use, next to this site’s agent-workflow interest. Why not Agent UI: terms section 2 grants a personal, non-transferable, revocable license, says the app is licensed not sold, and forbids copying, redistribution, reverse engineering, and extracting source. The landing page does not claim open source or FOSS, and there is no public repo. Price: terms sections 3–4 say it is free and unmetered today, with no paid plan; Claude Code / Codex / AGY / Grok Build still use your own subscriptions. A later paid plan is flagged with advance notice. Platform: the download page says Apple Silicon only (M1 or newer), macOS 14 Sonoma or later, version 6.0.7, released 28 September 2026, publisher Founderly, Inc. No Intel build showed up on the pages checked this evening. Pi / OpenCode are labeled coming soon, not treated as supported. Not installed, not signed in, no task run, privacy policy not line-checked. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "下载或安装 DMG、把真实仓库交给 agent、或让 peer review 去改未提交的 diff 之前自己确认。助手仍走你自己的订阅和登录；不要把密钥写进会进仓库的记忆文件。",
+      "approvalBoundaryEn": "Confirm before downloading or installing the DMG, handing a real repo to an agent, or letting peer review touch an uncommitted diff. Assistants still use your own subscriptions and logins; do not put secrets into memory files that land in the repo.",
+      "connectors": [
+        "computer",
+        "claude-code",
+        "codex"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-04T12:10:00Z",
+      "previewImage": "/previews/offrun.webp",
+      "landing": {
+        "what": "Offrun 把你已经在用的编程 Agent 放进同一块 Mac 屏幕：谁在跑、谁在等你、每个账号还剩多少用量。产品页写每个 agent 有自己的 git worktree，另一个 agent 可以先读 diff，合并仍由你决定。条款把价格写成今天免费，同时把软件写成许可使用。本站收成 Cases 工具笔记，是因为 Show HN 上了这块工作台，而它不够开源，进不了 Agent UI 板。",
+        "whatEn": "Offrun puts the coding agents you already use on one Mac screen: who is running, who is waiting, and how much each account has left. The product page says each agent gets its own git worktree, a second agent can read the diff first, and you still decide what merges. The terms call the price free today and the software a license. It is a Cases tool tip because the Show HN is about that workspace, and it is not open enough for the Agent UI board.",
+        "contrast": {
+          "caption": "左列是产品页和条款写明的事实。右列是本站口径：为什么放进 Cases，以及不要误当成开源组件或已经替你接好的云 Agent。",
+          "captionEn": "Left: what the product page and terms state. Right: this library’s framing — why it is in Cases, and why it is not an open component or a cloud agent already wired up for you.",
+          "leftLabel": "Offrun",
+          "leftLabelEn": "Offrun",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "Mac 工作台：并排跑 Claude Code、Codex、AGY、Grok Build，看用量、worktree 和 peer review。",
+              "leftEn": "A Mac workspace that runs Claude Code, Codex, AGY, and Grok Build side by side, with usage, worktrees, and peer review.",
+              "right": "Cases「AI tool tip」。补的是本地屏幕和账号切换，不是又一个可复制进网页的 UI 组件。",
+              "rightEn": "An AI tool tip in Cases. It adds a local screen and account switching, not another UI component you paste into a page."
+            },
+            {
+              "aspect": "钱和许可",
+              "aspectEn": "Price and license",
+              "left": "条款写今天免费、不计量；软件 licensed not sold，禁止再分发和反编译。助手订阅另算。",
+              "leftEn": "Terms say free and unmetered today; the app is licensed not sold, with no redistribution or reverse engineering. Agent subscriptions are separate.",
+              "right": "Agent UI 板收可复制的免费开源界面。这条是闭源许可，留在 Cases。",
+              "rightEn": "The Agent UI board is for free, open, copyable interfaces. This closed license stays in Cases."
+            },
+            {
+              "aspect": "能跑在哪",
+              "aspectEn": "Where it runs",
+              "left": "下载页：Apple Silicon（M1 或更新），macOS 14 Sonoma 或更高。发布方 Founderly, Inc.。",
+              "leftEn": "Download page: Apple Silicon (M1 or newer), macOS 14 Sonoma or later. Publisher Founderly, Inc.",
+              "right": "本晚没有核到 Intel 包。非 Mac 用户看不了这块工作台。本条也不代你安装。",
+              "rightEn": "No Intel build showed up this evening. Off a Mac, this workspace is not available. This tip does not install it for you."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看产品页和条款",
+            "titleEn": "Read the product page and the terms first",
+            "body": "打开 offrun.dev，看并排 agent、worktree 和 peer review 是怎么描述的。条款写许可而不是开源，也写今天免费、以后可能收费会事先通知。Show HN item 49942434 的点数以你打开当天为准，本站晚间核对是 75pts。",
+            "bodyEn": "Open offrun.dev and read how side-by-side agents, worktrees, and peer review are described. The terms say licensed rather than open source, free today, and that a later paid plan would be announced in advance. Point counts on Show HN item 49942434 change — this library’s evening check saw 75pts.",
+            "links": [
+              {
+                "href": "https://offrun.dev/",
+                "label": "Offrun 产品页",
+                "labelEn": "Offrun product page"
+              },
+              {
+                "href": "https://offrun.dev/terms/",
+                "label": "使用条款",
+                "labelEn": "Terms of service"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49942434",
+                "label": "Show HN 讨论",
+                "labelEn": "Show HN thread"
+              }
+            ]
+          },
+          {
+            "title": "对照下载页上的机型",
+            "titleEn": "Check the download page for the machine it supports",
+            "body": "下载页写 Apple Silicon only（M1 或更新）、macOS 14 Sonoma or later，版本 6.0.7。按钮指向 dl.offrun.dev/download。本站只做了 HEAD，没有安装，也没有核对页面上的 shasum。",
+            "bodyEn": "The download page says Apple Silicon only (M1 or newer), macOS 14 Sonoma or later, version 6.0.7. The button points at dl.offrun.dev/download. This site only sent HEAD, did not install, and did not check the published shasum.",
+            "links": [
+              {
+                "href": "https://offrun.dev/download/",
+                "label": "下载页",
+                "labelEn": "Download page"
+              },
+              {
+                "href": "https://dl.offrun.dev/download",
+                "label": "DMG 下载入口",
+                "labelEn": "DMG download entry"
+              }
+            ]
+          },
+          {
+            "title": "自己决定要不要装",
+            "titleEn": "Decide yourself whether to install",
+            "body": "装之前确认机器是 Apple Silicon，并且你已经有要接进去的助手登录。记忆文件会进项目目录。本站没有代装，也没有把真实仓库放进去跑。",
+            "bodyEn": "Before installing, confirm the Mac is Apple Silicon and that you already have an assistant login to connect. Memory files land in the project folder. This site did not install it or run a real repo through it.",
+            "links": [
+              {
+                "href": "https://offrun.dev/privacy/",
+                "label": "隐私政策",
+                "labelEn": "Privacy policy"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "闭源使用许可，不是可复制源码。Agent UI 板不收这条。",
+            "textEn": "Closed license, not copyable source. It is not an Agent UI entry."
+          },
+          {
+            "text": "只要 Apple Silicon 与 macOS 14+。本晚没有 Intel 构建。",
+            "textEn": "Apple Silicon and macOS 14+ only. No Intel build showed up this evening."
+          },
+          {
+            "text": "助手用量和费用仍在 Anthropic、OpenAI、Google、xAI 那边。Offrun 不替代那些订阅。",
+            "textEn": "Assistant usage and charges stay with Anthropic, OpenAI, Google, or xAI. Offrun does not replace those subscriptions."
+          },
+          {
+            "text": "本库未安装、未登录、未跑任务；页面上的示例账号和用量数字是示意。",
+            "textEn": "Not installed, not signed in, no task run. Sample accounts and usage figures on the page are illustrative."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 offrun.dev 首屏",
+        "previewCreditEn": "Preview: Playwright capture of offrun.dev above the fold"
+      }
+    },
+    {
+      "id": "shipslides",
+      "slug": "shipslides",
+      "title": "工具：ShipSlides — 用 serverless agent 把网址做成可编辑幻灯片",
+      "titleEn": "Tool: ShipSlides — turn a URL into editable slides with a serverless agent",
+      "summary": "ShipSlides 让你贴一个网址或一段想法，由 Claude Opus 5.5 和 OpenComputer 上的 serverless agent 写成可编辑的 HTML 幻灯片，再用 Chromium 检查版面，导出 PDF 和 PNG。公开站写着每个 IP 24 小时 3 次、全站每天 50 次。仓库 diggerhq/shipslides 是可一键部署的模板，跑在你自己的 OpenComputer 额度上。本条是工具笔记：未部署、未提交一次完整生成、也未把示例幻灯片当成已复核的内容质量。",
+      "summaryEn": "ShipSlides takes a URL or a short idea. Claude Opus 5.5 and an OpenComputer serverless agent write editable HTML slides, Chromium checks the layout, and the run exports PDF and PNG. The public site says 3 per IP per 24 hours and 50 a day overall. The repo diggerhq/shipslides is a one-click template that runs on your own OpenComputer credits. This is a tool tip: it was not deployed here, a full generation was not submitted, and the sample decks are not treated as checked content quality.",
+      "hook": "把网址或想法交给 Agent，做成可编辑的 HTML 幻灯片。",
+      "hookEn": "Paste a URL or an idea and get editable HTML slides.",
+      "categories": [
+        "content",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://shipslides.dev/",
+      "secondaryUrls": [
+        "https://github.com/diggerhq/shipslides",
+        "https://news.ycombinator.com/item?id=49945713",
+        "https://shipslides.vercel.app/",
+        "https://opencomputer.dev/",
+        "https://app.opencomputer.dev/new?repository-url=https%3A%2F%2Fgithub.com%2Fdiggerhq%2Fshipslides"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 https://shipslides.dev/（晚间 HTTP 200；页内写 Editable HTML · PDF export · 3 per IP / 24 hours · 50 daily，模型与流程写 Opus 5.5、OpenComputer、Chromium 版面检查、HTML/PDF/PNG）。镜像 https://shipslides.vercel.app/ 同 etag、HTTP 200。仓库 diggerhq/shipslides 晚间 gh api：描述与模板对得上，stars 2，license 字段 null，根目录没有 LICENSE 文件；README 写打包的 Frontend Slides 与 Presentation Design 两份 skill 自带 MIT，不把整个模板说成 MIT。创建 2026-10-02T21:40:57Z，pushed 2026-10-03T20:35:14Z。Show HN item 49945713，2026-10-03T16:37:30Z / 约 2026-10-04 00:37 CST，Algolia 晚间核对 2pts。一键部署入口 https://app.opencomputer.dev/new?repository-url=https%3A%2F%2Fgithub.com%2Fdiggerhq%2Fshipslides 与 https://opencomputer.dev/ 晚间 HTTP 200。收录理由：公开可试的「网址 → 可编辑 HTML 幻灯片」agent 模板，和本站 HTML artifact 兴趣相邻。边界：README 写作者于 2026-10-02 跑过编译、测试和一次生产 URL 生成，那是作者自述；本库未 npm install、未登录 OpenComputer、未提交生成、未耗额度。版面检查不等于事实正确。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "qualityNoteEn": "Primary sources are https://shipslides.dev/ (evening HTTP 200; the page says Editable HTML · PDF export · 3 per IP / 24 hours · 50 daily, and describes Opus 5.5, OpenComputer, Chromium layout checks, and HTML/PDF/PNG). Mirror https://shipslides.vercel.app/ shared the etag and returned HTTP 200. Repo diggerhq/shipslides on the evening gh api: description matches the template, 2★, license field null, no LICENSE file at the repo root. The README says the vendored Frontend Slides and Presentation Design skills carry their own MIT licenses — the template as a whole is not called MIT here. Created 2026-10-02T21:40:57Z, pushed 2026-10-03T20:35:14Z. Show HN item 49945713, 2026-10-03T16:37:30Z / about 2026-10-04 00:37 CST, 2pts on Algolia at the evening check. The one-click deploy URL and https://opencomputer.dev/ returned HTTP 200. Why: a public “URL → editable HTML slides” agent template, next to this site’s interest in HTML artifacts. Boundary: the README says the authors passed compile, tests, and one production URL run on 2026-10-02 — an author report. This library did not npm install, sign in to OpenComputer, submit a generation, or spend credits. Layout checks are not fact checks. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "向公开站提交真实网址或内部材料、或用自己的 OpenComputer 额度部署模板之前自己确认。公开演示有次数上限；浏览器里改的 HTML 不会自动写回已经导出的 PDF。",
+      "approvalBoundaryEn": "Confirm before sending a real URL or internal material to the public site, or deploying the template on your own OpenComputer credits. The public demo is rate-limited; browser edits to the HTML do not automatically rewrite an already exported PDF.",
+      "connectors": [
+        "browser",
+        "computer"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-04T12:10:00Z",
+      "previewImage": "/previews/shipslides.webp",
+      "landing": {
+        "what": "ShipSlides 是一个可部署的幻灯片 agent：表单把 brief、受众、页数和风格交给 OpenComputer 上的 designer，模型按站点写的 anthropic/claude-opus-5.5 产出一份自包含 HTML，Chromium 检查画布和文字是否溢出，再导出 HTML、PDF 和 PNG。公开站可以直接试，额度用的是站点自己的 agent；一键按钮则把 diggerhq/shipslides 部署进你的账号。本站收成 Cases 工具笔记，适合想少做一页页排版、又要留下可编辑 HTML 的人看一眼。",
+        "whatEn": "ShipSlides is a deployable slide agent: the form sends a brief, audience, slide count, and style to a designer on OpenComputer. The model named on the site, anthropic/claude-opus-5.5, writes one self-contained HTML deck, Chromium checks the canvas and overflow, then the run exports HTML, PDF, and PNG. The public site is tryable on the site’s own agent; the one-click button deploys diggerhq/shipslides into your account. Listed as a Cases tool tip for people who want less manual layout and an HTML file they can still edit.",
+        "contrast": {
+          "caption": "左列是站点与 README 写明的事实。右列是本站口径：为什么放进 Cases，以及不要误当成已经替你生成并核对过的成品。",
+          "captionEn": "Left: what the site and README state. Right: this library’s framing — why it is in Cases, and why it is not a finished deck this library generated and checked.",
+          "leftLabel": "ShipSlides",
+          "leftLabelEn": "ShipSlides",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "网址或想法进，可编辑 HTML 幻灯片出，附 PDF / PNG。版面用 Chromium 检查。",
+              "leftEn": "A URL or an idea in; editable HTML slides out, plus PDF / PNG. Chromium checks layout.",
+              "right": "Cases「AI tool tip」。记的是这条生成路径，不是本站替你做的一套幻灯片。",
+              "rightEn": "An AI tool tip in Cases. It records the generation path, not a deck this site made for you."
+            },
+            {
+              "aspect": "谁付钱",
+              "aspectEn": "Who pays",
+              "left": "公开演示有 3 次 / IP / 24 小时和每天 50 次。自己部署则走你的 OpenComputer 额度。",
+              "leftEn": "The public demo allows 3 per IP per 24 hours and 50 a day. Your own deploy spends your OpenComputer credits.",
+              "right": "本库没有提交生成，也没有部署。次数和费用以你打开站点时的页面为准。",
+              "rightEn": "This library did not submit a generation or deploy. Limits and cost follow the page when you open it."
+            },
+            {
+              "aspect": "开源边界",
+              "aspectEn": "Open-source boundary",
+              "left": "仓库公开，根目录没有 LICENSE。README 写两份上游 skill 是 MIT。",
+              "leftEn": "The repo is public and has no LICENSE at the root. The README says two upstream skills are MIT.",
+              "right": "不要把整个模板当成 MIT。作者自述的测试通过也不等于本站复跑过。",
+              "rightEn": "Do not treat the whole template as MIT. Author-reported tests passing are not a re-run by this site."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看公开站怎么描述流程",
+            "titleEn": "Read how the public site describes the run",
+            "body": "打开 shipslides.dev，看表单、次数上限，以及「brief → session → designer → Chromium → HTML/PDF/PNG」。Show HN item 49945713 的点数以你打开当天为准，本站晚间核对是 2pts。",
+            "bodyEn": "Open shipslides.dev and read the form, the rate limits, and the path from brief to session, designer, Chromium, then HTML/PDF/PNG. Point counts on Show HN item 49945713 change — this library’s evening check saw 2pts.",
+            "links": [
+              {
+                "href": "https://shipslides.dev/",
+                "label": "ShipSlides 站点",
+                "labelEn": "ShipSlides site"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49945713",
+                "label": "Show HN 讨论",
+                "labelEn": "Show HN thread"
+              }
+            ]
+          },
+          {
+            "title": "对照仓库 README",
+            "titleEn": "Cross-check the repo README",
+            "body": "读 diggerhq/shipslides：模型 id、四个工具、导出路径、以及没有 PowerPoint 和实时协作。根目录没有 LICENSE；两份 skill 的 MIT 只覆盖那两份上游文件。",
+            "bodyEn": "Read diggerhq/shipslides for the model id, the four tools, the export path, and the absence of PowerPoint and realtime collaboration. There is no root LICENSE; MIT covers the two upstream skill files the README names.",
+            "links": [
+              {
+                "href": "https://github.com/diggerhq/shipslides",
+                "label": "GitHub 仓库",
+                "labelEn": "GitHub repo"
+              },
+              {
+                "href": "https://opencomputer.dev/",
+                "label": "OpenComputer",
+                "labelEn": "OpenComputer"
+              }
+            ]
+          },
+          {
+            "title": "要自己的额度再部署",
+            "titleEn": "Deploy only if you want it on your credits",
+            "body": "公开站可以直接看示例。要把 agent 放进自己的账号，用 README 里的一键入口或 npx opencomputer template deploy。本站没有部署，也没有提交一次真实生成。",
+            "bodyEn": "The public site is enough to read the examples. To put the agent in your own account, use the one-click entry in the README or npx opencomputer template deploy. This site did not deploy it or submit a real generation.",
+            "links": [
+              {
+                "href": "https://app.opencomputer.dev/new?repository-url=https%3A%2F%2Fgithub.com%2Fdiggerhq%2Fshipslides",
+                "label": "一键部署入口",
+                "labelEn": "One-click deploy"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "公开演示有次数上限；自己部署消耗 OpenComputer 额度，并需要账号。",
+            "textEn": "The public demo is rate-limited; a deploy spends OpenComputer credits and needs an account."
+          },
+          {
+            "text": "Chromium 检查的是画布、裁切和脚本错误，不证明内容属实。模型看不到导出的 PNG。",
+            "textEn": "Chromium checks canvas, clipping, and script errors. It does not prove the content is true. The model does not see the exported PNGs."
+          },
+          {
+            "text": "没有 PowerPoint 导出，也没有实时协作。浏览器里改字不会自动更新已导出的 PDF。",
+            "textEn": "No PowerPoint export and no realtime collaboration. Editing text in the browser does not automatically update an exported PDF."
+          },
+          {
+            "text": "本库未安装、未部署、未跑完整生成。仓库根目录没有 LICENSE。",
+            "textEn": "Not installed, not deployed, no full generation run. The repo root has no LICENSE."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 shipslides.dev 首屏",
+        "previewCreditEn": "Preview: Playwright capture of shipslides.dev above the fold"
+      }
+    },
+    {
       "id": "television",
       "slug": "television",
       "title": "工具：Television — 给个人 Agent 用的开源可视化工作台",
@@ -6552,11 +6861,27 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-03T12:10:00Z",
+    "updatedAt": "2026-10-04T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.40",
-    "count": 138,
+    "version": "1.4.41",
+    "count": 140,
     "sourcesCrawled": [
+      "https://offrun.dev/",
+      "https://offrun.dev/download/",
+      "https://offrun.dev/terms/",
+      "https://offrun.dev/privacy/",
+      "https://dl.offrun.dev/download",
+      "https://news.ycombinator.com/item?id=49942434",
+      "https://shipslides.dev/",
+      "https://shipslides.vercel.app/",
+      "https://github.com/diggerhq/shipslides",
+      "https://news.ycombinator.com/item?id=49945713",
+      "https://opencomputer.dev/",
+      "https://app.opencomputer.dev/new?repository-url=https%3A%2F%2Fgithub.com%2Fdiggerhq%2Fshipslides",
+      "https://huggingface.co/numidlabs/wazn-2b-v0.1",
+      "https://github.com/numid-ai/wazn-experimental",
+      "https://pypi.org/project/wazn-experimental/",
+      "https://news.ycombinator.com/item?id=49952373",
       "https://television.run/",
       "https://github.com/telepath-computer/television",
       "https://news.ycombinator.com/item?id=49939817",
