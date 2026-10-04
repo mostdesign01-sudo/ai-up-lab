@@ -1,5 +1,7 @@
 {
   "caseTools": [
+    "offrun",
+    "shipslides",
     "deepseek-harness-desktop",
     "weave-router",
     "pi-1-0",

@@ -1,11 +1,90 @@
 {
   "meta": {
-    "updatedAt": "2026-10-03T12:10:00Z",
+    "updatedAt": "2026-10-04T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.16",
-    "count": 21
+    "version": "1.1.17",
+    "count": 22
   },
   "models": [
+    {
+      "id": "wazn",
+      "slug": "wazn",
+      "name": "Wazn",
+      "vendor": "numidlabs",
+      "title": "Wazn：实验性的 2B 决策模型（先编码，再比较选项）",
+      "titleEn": "Wazn: experimental 2B decision model (encode candidates, then compare)",
+      "summary": "numidlabs 的 wazn-2b-v0.1 是一个实验性决策 / 选择模型：骨干是 Qwen/Qwen3.5-2B-Base，另加一个很小的头。你给上下文、可选规则，以及一组自带定义的标签；它为这些标签返回概率分布，不生成自由文本。模型卡把计算写成三步：每个候选单独编码，关系判别器再把候选互相比较，NONE 门估计是不是没有标签适用。权重卡在 Hugging Face numidlabs/wazn-2b-v0.1（Apache-2.0 的是头，骨干另有自己的许可）。Python 包 wazn-experimental 0.1.0a1 可在本机起服务。模型卡的 Limitations 仍是 TODO，没有公布可引用的评测表。同板与 Gutsy、Jev、Laya、Clef、Jeeves、Ollaya 相邻；Cases 已有本机 Jeff 与 Onesie CLI。",
+      "summaryEn": "numidlabs’ wazn-2b-v0.1 is an experimental decision / choice model: a Qwen/Qwen3.5-2B-Base backbone plus a small head. You send a context, optional rules, and labels you define; it returns a probability distribution over those labels and does not generate free text. The model card splits the pass into three steps: encode each candidate, let a relational judge compare the candidates, then let a NONE gate estimate whether any label fits. The public checkpoint is Hugging Face numidlabs/wazn-2b-v0.1 (Apache-2.0 covers the head; the backbone keeps its own license). The Python package wazn-experimental 0.1.0a1 can serve it locally. The card’s Limitations section is still TODO, so there is no eval table to cite. On this board it sits next to Gutsy, Jev, Laya, Clef, Jeeves, and Ollaya; Cases already lists local Jeff and the Onesie CLI.",
+      "announcedAt": "2026-10-04",
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-04T12:10:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Hugging Face：numidlabs/wazn-2b-v0.1",
+          "labelEn": "Hugging Face: numidlabs/wazn-2b-v0.1",
+          "url": "https://huggingface.co/numidlabs/wazn-2b-v0.1",
+          "by": "numidlabs",
+          "date": "2026-10-04"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：numid-ai/wazn-experimental（Apache-2.0）",
+          "labelEn": "GitHub: numid-ai/wazn-experimental (Apache-2.0)",
+          "url": "https://github.com/numid-ai/wazn-experimental",
+          "by": "numid-ai",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "official",
+          "label": "PyPI：wazn-experimental 0.1.0a1",
+          "labelEn": "PyPI: wazn-experimental 0.1.0a1",
+          "url": "https://pypi.org/project/wazn-experimental/",
+          "by": "numid-ai",
+          "date": "2026-10-03"
+        },
+        {
+          "kind": "community",
+          "label": "Show HN：Wazn-2B separate encoding and competition",
+          "labelEn": "Show HN: Wazn-2B separate encoding and competition",
+          "url": "https://news.ycombinator.com/item?id=49952373",
+          "by": "Hacker News",
+          "date": "2026-10-04"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "作者称：决策模型，不生成自由文本。输入是上下文、可选规则，以及你当场给的标签（可带定义和例子）；输出是这些标签上的概率分布，另有 NONE 门估计没有标签适用。模型卡把这写成先逐个编码候选，再由关系判别器互相比较，而不是每个标签单独打分。",
+          "textEn": "Author claim: a decision model, not free-text generation. Input is a context, optional rules, and labels you supply per request (with optional definitions and examples); output is a probability distribution over those labels, plus a NONE gate for “none of them fit.” The model card describes encoding each candidate first, then a relational judge that compares candidates to each other rather than scoring each label alone."
+        },
+        {
+          "text": "作者称：骨干是 Qwen/Qwen3.5-2B-Base，卡上钉的 revision 为 b1485b2fa6dfa1287294f269f5fb618e03d52d7c，不包含在这个权重仓库里。本仓库是头：模型卡写 43,214,082 个参数（关系判别器、NONE 门、tag embeddings、LoRA）。头权重 Apache-2.0；骨干许可另见 Qwen/Qwen3.5-2B-Base。",
+          "textEn": "Author claim: the backbone is Qwen/Qwen3.5-2B-Base at the pinned revision b1485b2fa6dfa1287294f269f5fb618e03d52d7c, and those base weights are not in this repo. This repo is the head: the card says 43,214,082 parameters (relational judge, NONE gate, tag embeddings, LoRA). Head weights are Apache-2.0; the backbone license stays with Qwen/Qwen3.5-2B-Base."
+        },
+        {
+          "text": "作者称：实验性。README 写没有鉴权、请求一次一个、0.x API 可能变；大标签集可以用 tournament 分组比较。包是 wazn-experimental 0.1.0a1，Python 3.11+，`wazn-experimental serve` 默认本机 127.0.0.1:8000。模型卡 Limitations 一节仍是 TODO，没有评测表。本库未安装、未下权重、未复跑。",
+          "textEn": "Author claim: experimental. The README says there is no authentication, requests run one at a time, and the 0.x API may change; large label sets can use a tournament. The package is wazn-experimental 0.1.0a1, Python 3.11+, and `wazn-experimental serve` defaults to 127.0.0.1:8000. The model card’s Limitations section is still TODO, with no eval table. Not installed here, weights not downloaded, not re-run."
+        }
+      ],
+      "qualityNote": "收录理由：Show HN item 49952373，标题 “Show HN: Wazn-2B – decision model with separate encoding and competition”，2026-10-04T10:02:28Z / 约 18:02 CST，Algolia 晚间核对 3pts。公开卡 https://huggingface.co/numidlabs/wazn-2b-v0.1 晚间页面与 API 均为 HTTP 200（private false、gated false；likes 1、downloads 37；license apache-2.0；base_model Qwen/Qwen3.5-2B-Base）。同一晚 https://huggingface.co/numid/wazn-2b-v0.1 页面与 API 均 HTTP 401（Invalid username or password），不把它当公开权重；README 快速开始仍写默认 id `numid/wazn-2b-v0.1`，模型卡上的 serve 示例已经改成 `numidlabs/wazn-2b-v0.1`。仓库 numid-ai/wazn-experimental 晚间 gh api：Apache-2.0、1★，创建 2026-10-01T22:55:05Z，pushed 2026-10-03T04:30:41Z；NOTICE 署 Djellal M' Aniss，并写明骨干另计许可。PyPI wazn-experimental 0.1.0a1，license Apache-2.0，Requires Python >=3.11，上传 2026-10-03T04:27:38Z。核实边界：头参数量、编码 / 比较 / NONE 门、tournament 一律作者模型卡或 README；Limitations 是 TODO，所以不编任何分数。README 示例注释里的 0.93 是代码示意，不当成评测。未 pip install、未下 head.safetensors、未起 serve。与 gutsy、typesafe-jev、laya-system-one、clef、jeeves、ollaya 互链；relatedCaseIds 指向 jeff 与 onesie。预览 Playwright 实拍 HF 模型卡首屏 3:2。不打星。",
+      "qualityNoteEn": "Why: Show HN item 49952373, title “Show HN: Wazn-2B – decision model with separate encoding and competition”, 2026-10-04T10:02:28Z / about 18:02 CST, 3pts on Algolia at the evening check. The public card https://huggingface.co/numidlabs/wazn-2b-v0.1 returned HTTP 200 for both the page and the API (private false, gated false; likes 1, downloads 37; license apache-2.0; base_model Qwen/Qwen3.5-2B-Base). The same evening https://huggingface.co/numid/wazn-2b-v0.1 returned HTTP 401 on the page and the API (Invalid username or password), so it is not treated as a public checkpoint. The README quickstart still defaults to `numid/wazn-2b-v0.1`, while the model card’s serve example already uses `numidlabs/wazn-2b-v0.1`. Repo numid-ai/wazn-experimental on the evening gh api: Apache-2.0, 1★, created 2026-10-01T22:55:05Z, pushed 2026-10-03T04:30:41Z. NOTICE names Djellal M' Aniss and says the backbone keeps its own license. PyPI wazn-experimental 0.1.0a1, Apache-2.0, Requires Python >=3.11, uploaded 2026-10-03T04:27:38Z. Boundary: head parameter count, encode / compare / NONE gate, and tournaments are author card or README claims. Limitations is TODO, so no scores are invented. The 0.93 in a README example comment is illustrative code, not an eval. Not pip-installed, head.safetensors not downloaded, serve not started. Cross-linked with gutsy, typesafe-jev, laya-system-one, clef, jeeves, and ollaya; relatedCaseIds point at jeff and onesie. Preview is a Playwright 3:2 capture of the HF model card above the fold. Unrated.",
+      "relatedCaseIds": [
+        "jeff",
+        "onesie"
+      ],
+      "relatedModelIds": [
+        "gutsy",
+        "clef",
+        "typesafe-jev",
+        "laya-system-one",
+        "jeeves",
+        "ollaya"
+      ],
+      "previewImage": "/previews/wazn.webp",
+      "previewCredit": "预览：Playwright 实拍 huggingface.co/numidlabs/wazn-2b-v0.1 首屏",
+      "previewCreditEn": "Preview: Playwright capture of huggingface.co/numidlabs/wazn-2b-v0.1 above the fold",
+      "featured": true
+    },
     {
       "id": "gutsy",
       "slug": "gutsy",
@@ -65,6 +144,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "wazn",
         "typesafe-jev",
         "laya-system-one",
         "clef",
@@ -163,6 +243,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "wazn",
         "gutsy",
         "typesafe-jev",
         "laya-system-one",
@@ -464,6 +545,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "wazn",
         "gutsy",
         "typesafe-jev",
         "ollaya",
@@ -753,6 +835,7 @@
       "qualityNoteEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "wazn",
         "gutsy",
         "typesafe-jev",
         "laya-system-one",
@@ -1087,6 +1170,7 @@
       "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "wazn",
         "gutsy",
         "typesafe-jev",
         "ollaya",
@@ -1593,6 +1677,7 @@
       "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "wazn",
         "gutsy",
         "laya-system-one",
         "ollaya",
