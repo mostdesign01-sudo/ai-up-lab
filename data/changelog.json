@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-04",
+      "title": "Cases +1：Lonely 免费域名邮箱（Cloudflare + Gmail + Resend）",
+      "titleEn": "Cases +1: Lonely's free domain email (Cloudflare + Gmail + Resend)",
+      "body": "新收 lonely-domain-email-cloudflare-gmail-resend：Lonely 的 X 长文教程（2026-09-29，2026-10-03 他又发了引用帖），用 Cloudflare 收信转发进 Gmail、Resend 的 SMTP 发信、Gmail「用这个地址发送邮件」统一收发。配了落地页：五步流程、避坑点、时效风险和需要自己确认的边界。已对官方页核对：Resend SMTP 文档、定价页与额度说明（免费版每月 3000 封、每天 100 封，两条同时生效）、API Key 页，Cloudflare Email Routing 文档与定价页，Google 帮助页（2027 年 1 月起结束第三方地址的 Send as，2026 Q3–Q4 为过渡期）。没核对到、仍标为作者说法：Resend 自动添加 Cloudflare 记录、约 3 分钟 Verified、DNS 记录名重复后缀是最常见失败原因、SPF/DKIM PASS 与无 via gmail.com 的测试结果。本站没有实际配置过。无预览图（作者截图含他自己的域名和后台）。cases 138→139（1.4.40→1.4.41）。未改其它四库、未改首页精选，未发帖。",
+      "bodyEn": "New entry lonely-domain-email-cloudflare-gmail-resend: Lonely's X article tutorial (2026-09-29, with a quote-post on 2026-10-03) — Cloudflare forwards incoming mail into Gmail, Resend's SMTP handles sending, and Gmail's “Send mail as” ties it together. It has a landing page with the five steps, pitfalls, the timing risk and the boundaries you must confirm yourself. Checked against official pages: Resend SMTP docs, pricing and quota pages (Free is 3,000 a month and 100 a day, both apply), API-keys page; Cloudflare Email Routing docs and pricing; Google help pages (third-party Send as ends January 2027, Q3–Q4 2026 transition). Not verified and still labelled as the author's word: Resend auto-adding records on Cloudflare, Verified in about 3 minutes, repeated suffix in DNS record names as the top failure, and the SPF/DKIM PASS and no-via-gmail.com test results. This site has not configured it. No preview image (the author's screenshots contain his own domain and dashboards). cases 138→139 (1.4.40→1.4.41). Other four libraries and home picks untouched; nothing posted."
+    },
+    {
       "date": "2026-10-03",
       "title": "晚间收录：Models +1（Gutsy）、Cases +1（Television）",
       "titleEn": "Evening catalog: Models +1 (Gutsy), Cases +1 (Television)",
