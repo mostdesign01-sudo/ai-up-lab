@@ -121,3 +121,15 @@ html:not([data-theme="light"]) .brand-guide-dark-value { display: block; }
   .brand-guide-example-cards { grid-template-columns: minmax(0, 1fr); }
   .brand-guide-downloads { gap: 0; }
 }
+.brand-guide-lockup { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 32px; align-items: center; margin-top: 24px; padding: 28px; border: 1px solid var(--line); border-radius: var(--lab-radius-card); }
+.brand-guide-lockup-demo { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+.brand-guide-lockup-demo > div { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.brand-guide-lockup-demo code { font: 11px var(--font-mono); color: var(--faint); }
+.brand-guide-lockup-rules h3 { margin: 0 0 8px; font-size: 17px; font-weight: 600; }
+.brand-guide-lockup-rules ul { margin: 0; padding-left: 20px; }
+.brand-guide-lockup-rules li { font-size: 14px; line-height: 1.8; color: var(--muted); }
+.lab-lockup { --lockup-mark: 32px; display: inline-flex; align-items: center; gap: .36em; color: var(--ink); }
+.lab-lockup > span { display: block; width: var(--lockup-mark); height: var(--lockup-mark); margin-inline: calc(var(--lockup-mark) * -.2); }
+.lab-lockup strong { font-size: 1em; font-weight: 500; letter-spacing: -.02em; line-height: 1; }
+@supports (text-box: trim-both cap alphabetic) { .lab-lockup strong { text-box: trim-both cap alphabetic; } }
+@media (max-width: 700px) { .brand-guide-lockup { grid-template-columns: 1fr; padding: 20px; } }

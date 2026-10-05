@@ -89,9 +89,9 @@
 .handbook-sidebar nav a { padding:8px 0; border:0; font-size:14px; color:var(--muted); text-decoration:none; }
 .handbook-sidebar nav a[aria-current] { background:transparent; color:var(--ink); font-weight:650; }
 .handbook-sidebar nav a[aria-current]::before { content:""; display:inline-block; width:5px; height:5px; margin:0 8px 3px 0; background:var(--brass); border-radius:50%; }
-.handbook-wordmark { display:flex; align-items:center; gap:10px; margin-top:44px; text-decoration:none; }
-.handbook-wordmark>span { display:block;width:28px;height:28px; }
-.handbook-wordmark strong { font-size:15px;letter-spacing:-.03em;line-height:1.2; }
+.handbook-wordmark { --lockup-mark:28px; display:flex; align-items:center; gap:.36em; margin-top:44px; font-size:15px; text-decoration:none; }
+.handbook-wordmark>span { display:block;width:var(--lockup-mark);height:var(--lockup-mark);margin-inline:calc(var(--lockup-mark) * -.2); }
+.handbook-wordmark strong { font-size:1em;font-weight:500;letter-spacing:-.02em;line-height:1.2; }
 .handbook-wordmark small { display:block;font:9px/1.8 var(--font-mono);letter-spacing:.03em;color:var(--faint); }
 .brand-studio .studio-hero { position:relative; display:grid; grid-template-columns:1.04fr 1fr; gap:12px; min-height:440px; padding:0 0 36px; align-items:center; }
 .studio-hero-copy { position:relative;z-index:1; }
