@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "id": "vb6-studio-web",
+      "slug": "vb6-studio-web",
+      "title": "VB6 Studio Web：浏览器里的经典 Visual Basic 6 IDE",
+      "titleEn": "VB6 Studio Web: the classic Visual Basic 6 IDE in your browser",
+      "summary": "HN 首页 item 49956681（2026-10-04T18:49:17Z / 约 10-05 02:49 CST，Algolia 早间核对 69pts）https://wieslawsoltes.github.io/VB6/ —— 用 HTML/CSS/JS 复刻的 VB6 界面：工具箱、窗体设计器、属性面板、工程树都在，打开就是一个示例订单录入窗体，能直接运行。仓库 wieslawsoltes/VB6 早间 gh api：MIT、7★，2026-10-04 刚建；README 写有调试器、WebGPU 绘图和导出单文件 HTML 应用。HN 评论有人导入老 VB6 工程，用到 BitBlt 等 Win32 API 的跑不起来。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN front page item 49956681 (2026-10-04T18:49:17Z / about 02:49 CST on 10-05, 69pts on Algolia this morning) at https://wieslawsoltes.github.io/VB6/ — a VB6 look-alike built in HTML/CSS/JS with toolbox, form designer, properties panel, and project tree; it opens on a sample order-entry form you can run. Repo wieslawsoltes/VB6 morning gh api: MIT, 7★, created 2026-10-04; README lists a debugger, WebGPU drawing, and single-file HTML app export. An HN commenter found old projects using Win32 calls like BitBlt don’t run. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "types": [
+        "interactive",
+        "tool",
+        "demo"
+      ],
+      "sourceUrl": "https://wieslawsoltes.github.io/VB6/",
+      "secondaryUrls": [
+        "https://github.com/wieslawsoltes/VB6",
+        "https://news.ycombinator.com/item?id=49956681"
+      ],
+      "previewImage": "/previews/vb6-studio-web.webp",
+      "featured": true,
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-05T01:10:00Z",
+      "qualityNote": "主源是 HN 49956681、公开页（早间 HTTP 200）与 MIT 仓库。收录理由：一整套老式桌面 IDE 用纯网页技术做出来、能拖控件能运行，适合拆 UI 写法。边界：项目刚建一天；Win32 API 基本没实现，老工程不一定能跑；本库只点开看过，没导入工程。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49956681, the public page (HTTP 200 this morning), and the MIT repo. Listing rationale: a full retro desktop IDE built with plain web tech that you can drag controls in and run, good for studying UI technique. Boundary: the project is a day old; Win32 APIs are mostly missing, so old projects may not run; only opened here, no project imported. Preview is self-hosted.",
+      "tags": [
+        "vb6",
+        "ide",
+        "retro",
+        "form-designer",
+        "single-file",
+        "hn"
+      ],
+      "hook": "在浏览器里拖控件做 VB6 窗体。",
+      "hookEn": "Build VB6 forms in your browser."
+    },
+    {
+      "id": "lighthouses-of-the-world",
+      "slug": "lighthouses-of-the-world",
+      "title": "Lighthouses of the World：全球灯塔按真实闪光节奏亮起的地球",
+      "titleEn": "Lighthouses of the World: every charted light on a globe, blinking on its real cycle",
+      "summary": "HN 首页 item 49933461（2026-10-02T13:45:49Z / 约 21:45 CST，Algolia 早间核对 161pts）https://mapped.earth/lighthouses/world —— 一颗可拖动缩放的暗色地球，页内写收了 75,919 盏有记录的航标灯，按各自真实的闪光周期闪烁；远看是登陆灯，拉近后港口和海岸灯才出现，悬停能看名字和灯质。数据写明来自 OpenSeaMap / OpenStreetMap、NGA List of Lights、NOAA ENC、USCG Light List。底部有苏格兰、布列塔尼、新英格兰、日本、挪威、开普敦快捷跳转。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN front page item 49933461 (2026-10-02T13:45:49Z / about 21:45 CST, 161pts on Algolia this morning) at https://mapped.earth/lighthouses/world — a dark globe you can drag and zoom; the page says it holds 75,919 charted lights, each blinking on its real cycle. Landfall lights show from orbit, harbour and coastal lights appear as you zoom in, and hover shows each light’s name and character. Credited data: OpenSeaMap / OpenStreetMap, NGA List of Lights, NOAA ENC, USCG Light List. Quick jumps for Scotland, Brittany, New England, Japan, Norway, Cape Town. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "sourceUrl": "https://mapped.earth/lighthouses/world",
+      "secondaryUrls": [
+        "https://mapped.earth/",
+        "https://news.ycombinator.com/item?id=49933461"
+      ],
+      "previewImage": "/previews/lighthouses-of-the-world.webp",
+      "featured": true,
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-05T01:10:00Z",
+      "qualityNote": "主源是 HN 49933461 与公开页（早间 HTTP 200）。收录理由：大数据量 + 真实节奏动画 + 分级显示的地球可视化，值得拆交互和性能做法。边界：没找到公开仓库和许可证；HN 有人反馈手机上拖动慢、缩放跳得猛；灯塔数据以各上游为准。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49933461 and the public page (HTTP 200 this morning). Listing rationale: a globe visualization with lots of data, real-rhythm animation, and zoom-based detail, worth studying for interaction and performance. Boundary: no public repo or license found; HN users report slow panning and jumpy zoom on phones; light data follows its upstream sources. Preview is self-hosted.",
+      "tags": [
+        "globe",
+        "webgl",
+        "map",
+        "data-viz",
+        "openstreetmap",
+        "hn"
+      ],
+      "hook": "看全球灯塔按真实节奏一起闪。",
+      "hookEn": "Watch the world's lighthouses blink in real rhythm."
+    },
+    {
+      "id": "timeline-far-future",
+      "slug": "timeline-far-future",
+      "title": "Timeline of the Far Future：把维基百科「遥远未来时间线」做成滚动旅程",
+      "titleEn": "Timeline of the Far Future: Wikipedia’s far-future timeline as a scrolling journey",
+      "summary": "Show HN item 49940317（2026-10-03T00:40:48Z / 约 08:40 CST，Algolia 早间核对 18pts）https://rivendell.dmitrybrant.com/farfuture/ —— 作者 Dmitry Brant 把维基百科那张很长的「遥远未来时间线」表格改成 three.js + TypeScript 的视觉长页：顶部是对数时间轴，可滚动、用方向键或拖时间轴前进，页内写 180 条科学预测，从一千年后一直到 10^10^10^56 年。作者说做的时候用了 agent 辅助。内容改编自维基百科，页面标注 CC BY-SA 4.0。预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49940317 (2026-10-03T00:40:48Z / about 08:40 CST, 18pts on Algolia this morning) at https://rivendell.dmitrybrant.com/farfuture/ — Dmitry Brant turned Wikipedia’s long ‘Timeline of the far future’ table into a three.js + TypeScript visual page: a log-scale timeline on top, advanced by scrolling, arrow keys, or dragging; the page lists 180 scientific projections from a thousand years out to 10^10^10^56 years. The author says he built it with agent help. Content is adapted from Wikipedia and marked CC BY-SA 4.0. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "types": [
+        "interactive",
+        "docs",
+        "motion"
+      ],
+      "sourceUrl": "https://rivendell.dmitrybrant.com/farfuture/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49940317",
+        "https://en.wikipedia.org/wiki/Timeline_of_the_far_future"
+      ],
+      "previewImage": "/previews/timeline-far-future.webp",
+      "featured": false,
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-05T01:10:00Z",
+      "qualityNote": "主源是 Show HN 49940317 与公开页（早间 HTTP 200）。收录理由：把一张枯燥长表改成可滚动的时间旅程，是「同样内容换个呈现」的好例子。边界：HN 分数不高；评论说部分动画按定时器跑、来不及读，有的加载慢；文字内容 CC BY-SA 4.0 随维基百科，代码未见公开仓库。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49940317 and the public page (HTTP 200 this morning). Listing rationale: turns a dry long table into a scrollable journey, a good example of re-presenting the same content. Boundary: modest HN score; commenters say some animations run on timers too fast to read and some load slowly; text is CC BY-SA 4.0 via Wikipedia, no public code repo seen. Preview is self-hosted.",
+      "tags": [
+        "three.js",
+        "timeline",
+        "scrollytelling",
+        "wikipedia",
+        "show-hn"
+      ],
+      "hook": "滚动穿越到宇宙的遥远未来。",
+      "hookEn": "Scroll your way into the far future."
+    },
+    {
       "id": "css-bed",
       "slug": "css-bed",
       "title": "CSS Bed：一套可切换的 classless CSS 主题床",
@@ -3450,9 +3550,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-02T01:00:00Z",
+    "updatedAt": "2026-10-05T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.52",
-    "count": 109
+    "version": "1.3.53",
+    "count": 112
   }
 }

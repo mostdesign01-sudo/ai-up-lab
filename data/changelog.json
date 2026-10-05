@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-05",
+      "title": "早间收录：Cases +1（Main Bot 主动建议）、HTML +3（VB6 Studio Web / 全球灯塔 / 遥远未来时间线）",
+      "titleEn": "Morning catalog: Cases +1 (Main Bot proactive suggestions), HTML +3 (VB6 Studio Web / Lighthouses of the World / Timeline of the Far Future)",
+      "body": "Cases：收 main-bot-proactive —— 官方 @bot 推文 https://x.com/bot/status/2105713240701538538 （2026-10-01，主 Bot 主动提出能帮的事，建议不计用量）与 changelog v0.66.0 https://x.ai/changelog/bot （可设带星标的 Main Bot，主动跟进并协调其他 Bot，需 0.59.0+）。未实测。HTML：收 vb6-studio-web（HN item 49956681，69pts，MIT）；lighthouses-of-the-world（HN item 49933461，161pts，75,919 盏灯按真实节奏闪）；timeline-far-future（Show HN item 49940317，18pts，three.js 改编维基百科，CC BY-SA 4.0）。三条均有 Playwright 实拍 3:2 自托管预览。Agent UI 无新增：ThreeUI Community 仍为 npm 1.2.0（2026-09-01），仓库无新组件。",
+      "bodyEn": "Cases: added main-bot-proactive — official @bot post https://x.com/bot/status/2105713240701538538 (2026-10-01; the primary Bot offers help unprompted, suggestions don’t count against usage) and changelog v0.66.0 https://x.ai/changelog/bot (choose a starred Main Bot that checks in and coordinates other Bots; needs 0.59.0+). Not tested. HTML: added vb6-studio-web (HN item 49956681, 69pts, MIT); lighthouses-of-the-world (HN item 49933461, 161pts, 75,919 lights blinking on real cycles); timeline-far-future (Show HN item 49940317, 18pts, three.js take on the Wikipedia page, CC BY-SA 4.0). All three have self-hosted Playwright 3:2 previews. Agent UI: nothing new; ThreeUI Community is still npm 1.2.0 (2026-09-01) with no new components."
+    },
+    {
       "date": "2026-10-03",
       "title": "晚间收录：Models +1（Gutsy）、Cases +1（Television）",
       "titleEn": "Evening catalog: Models +1 (Gutsy), Cases +1 (Television)",

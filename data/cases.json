@@ -1,6 +1,44 @@
 {
   "cases": [
     {
+      "id": "main-bot-proactive",
+      "slug": "grok-bot-main-bot-proactive",
+      "title": "官方更新：Main Bot 主动找活、帮你分派给其他 Bot",
+      "titleEn": "Official update: a Main Bot that offers help first and routes work to your other Bots",
+      "summary": "官方 @bot 2026-10-01T17:35Z（约 10-02 01:35 CST）发帖 https://x.com/bot/status/2105713240701538538 ：Grok Bot 现在会不等你开口就提出能帮你做的事；同串补充说由你的主 Bot（primary Bot）发现可接手的活并主动提出，分批推送，建议本身不计用量（fxtwitter 早间核对约 622 万浏览、7278 赞）。官方 changelog v0.66.0（2026-10-02）https://x.ai/changelog/bot 写明：可以指定一个带星标的 Main Bot，它会主动来问进度，并协调你其他 Bot 的工作，需要 Grok Bot 0.59.0 及以上。怎么用：把最常找的那只 Bot 设为 Main Bot，以后杂事都丢给它，由它转给负责的专门 Bot；它提出的建议先看再点头。二手报道（Grokati）提到员工 @mattyp 的例子：改签航班后 Bot 提醒他 Uber 预约没跟着改，本库未单独核对该帖。",
+      "summaryEn": "Official @bot post at 2026-10-01T17:35Z (about 01:35 CST on 10-02), https://x.com/bot/status/2105713240701538538: Grok Bot can now suggest ways to help without being asked; the thread adds that your primary Bot spots work it can take off your plate and offers to handle it, rolling out gradually, with suggestions not counting against usage (fxtwitter morning check: about 6.22M views, 7,278 likes). The official changelog v0.66.0 (2026-10-02) at https://x.ai/changelog/bot says you can choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates your other Bots; it needs Grok Bot 0.59.0 or later. How to use it: make the Bot you talk to most your Main Bot, hand it loose requests, and let it pass them to the right specialist Bot; review its suggestions before saying yes. A secondary report (Grokati) mentions staff member @mattyp’s example where Bot noticed an Uber booking wasn’t updated after a flight change; that post wasn’t checked separately here.",
+      "categories": [
+        "multi-agent",
+        "productivity",
+        "automation",
+        "getting-started"
+      ],
+      "role": "Main Bot / coordinator",
+      "sourceUrl": "https://x.com/bot/status/2105713240701538538",
+      "secondaryUrls": [
+        "https://x.ai/changelog/bot",
+        "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions",
+        "https://x.ai/bot"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是官方 @bot 推文（fxtwitter 早间 200）与 x.ai/changelog/bot v0.66.0 条目。收录理由：改变日常用法——从「你去找对的 Bot」变成「交给 Main Bot 分派」，并且会主动提出可接的活。边界：分批推送，不保证每个账号已有；怎么判断该建议什么、能动哪些已连接应用，官方没细说；@mattyp 航班例子来自二手报道。本库未实测。",
+      "qualityNoteEn": "Primary sources are the official @bot post (fxtwitter 200 this morning) and the x.ai/changelog/bot v0.66.0 entry. Listing rationale: it changes everyday use, from picking the right Bot yourself to handing work to a Main Bot that routes it and offers tasks first. Boundary: gradual rollout, not on every account yet; how it decides what to suggest and which connected apps it may touch isn’t spelled out; the @mattyp flight example comes from a secondary report. Not tested here.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "建议可以随便看；它提出要发消息、改预约、花钱或删除东西时，仍要你点头。",
+      "approvalBoundaryEn": "Reading suggestions is free; anything that sends messages, changes bookings, spends money, or deletes still needs your yes.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-01",
+      "updatedAt": "2026-10-05T01:10:00Z",
+      "hook": "设一个主 Bot，让它主动找活、替你分派。",
+      "hookEn": "Pick a Main Bot that finds work and routes it for you."
+    },
+    {
       "id": "television",
       "slug": "television",
       "title": "工具：Television — 给个人 Agent 用的开源可视化工作台",
@@ -6552,10 +6590,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-03T12:10:00Z",
+    "updatedAt": "2026-10-05T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.40",
-    "count": 138,
+    "version": "1.4.41",
+    "count": 139,
     "sourcesCrawled": [
       "https://television.run/",
       "https://github.com/telepath-computer/television",
@@ -6759,7 +6797,10 @@
       "https://news.ycombinator.com/item?id=49880601",
       "https://www.drmagnuslynch.com/skin",
       "https://news.ycombinator.com/item?id=49881201",
-      "https://x.ai/bot/guides/grok-bot-for-marketing"
+      "https://x.ai/bot/guides/grok-bot-for-marketing",
+      "https://x.com/bot/status/2105713240701538538",
+      "https://x.ai/changelog/bot",
+      "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions"
     ]
   }
 }
