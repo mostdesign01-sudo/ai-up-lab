@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-05",
+      "title": "Cases +1：发帖图片素材站清单（@0xCzyan）",
+      "titleEn": "Cases +1: posting image source sites list (@0xCzyan)",
+      "body": "Cases：收 image-source-sites-0xczyan —— 子砚 @0xCzyan 2026-10-04 推文 https://x.com/0xCzyan/status/2106663001164247100 （约 16:29 CST）列出六类发帖素材站：Know Your Meme / Imgur / Giphy / Unsplash / Pexels / Wallhaven。fxtwitter 核对 200；五站 curl 200，Unsplash 本环境 401（反爬），未编通断。配富落地页与原帖配图 3:2 预览。不是 AI 工具，收成内容资源笔记；许可自负。cases 139→140（1.4.41→1.4.42）。未改 html-items / models / agent-ui。与未合的 #78 / #79 可能在 cases.json / changelog.json 冲突，本 PR 基于最新 main。",
+      "bodyEn": "Cases: added image-source-sites-0xczyan — Ziyan @0xCzyan’s 2026-10-04 post https://x.com/0xCzyan/status/2106663001164247100 (about 16:29 CST) listing six posting asset sites: Know Your Meme / Imgur / Giphy / Unsplash / Pexels / Wallhaven. fxtwitter check 200; five sites curl 200, Unsplash 401 here (bot filter), reachability not invented. Ships with a rich landing and a 3:2 crop of the post image. Not an AI tool — filed as a content-resource tip; licenses are on you. cases 139→140 (1.4.41→1.4.42). html-items / models / agent-ui unchanged. May conflict with unmerged #78 / #79 on cases.json / changelog.json; this PR is based on latest main."
+    },
+    {
+      "date": "2026-10-05",
       "title": "早间收录：Cases +1（Main Bot 主动建议）、HTML +3（VB6 Studio Web / 全球灯塔 / 遥远未来时间线）",
       "titleEn": "Morning catalog: Cases +1 (Main Bot proactive suggestions), HTML +3 (VB6 Studio Web / Lighthouses of the World / Timeline of the Far Future)",
       "body": "Cases：收 main-bot-proactive —— 官方 @bot 推文 https://x.com/bot/status/2105713240701538538 （2026-10-01，主 Bot 主动提出能帮的事，建议不计用量）与 changelog v0.66.0 https://x.ai/changelog/bot （可设带星标的 Main Bot，主动跟进并协调其他 Bot，需 0.59.0+）。未实测。HTML：收 vb6-studio-web（HN item 49956681，69pts，MIT）；lighthouses-of-the-world（HN item 49933461，161pts，75,919 盏灯按真实节奏闪）；timeline-far-future（Show HN item 49940317，18pts，three.js 改编维基百科，CC BY-SA 4.0）。三条均有 Playwright 实拍 3:2 自托管预览。Agent UI 无新增：ThreeUI Community 仍为 npm 1.2.0（2026-09-01），仓库无新组件。",
