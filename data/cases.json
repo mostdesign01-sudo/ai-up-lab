@@ -1,6 +1,161 @@
 {
   "cases": [
     {
+      "id": "image-source-sites-0xczyan",
+      "slug": "image-source-sites-0xczyan",
+      "title": "清单：发帖用图片 / GIF / 梗图素材站（子砚 @0xCzyan）",
+      "titleEn": "List: image / GIF / meme source sites for posting (Ziyan @0xCzyan)",
+      "summary": "子砚（@0xCzyan）2026-10-04 发帖 https://x.com/0xCzyan/status/2106663001164247100 ，整理了六类发帖常用素材站：Know Your Meme（梗图）、Imgur（国外热图/GIF）、Giphy（动图表情包）、Unsplash（高清摄影）、Pexels（免费图片/视频）、Wallhaven（高清壁纸）。帖文是社区收藏向清单，不是某个新产品发布，也不是 Grok Bot 用法。本条收成 Cases「内容资源」笔记，方便做图、发推、做落地页预览时找图；各站授权与署名规则不同，用之前自己看许可。本库未代下素材、未代发帖。",
+      "summaryEn": "Ziyan (@0xCzyan) posted https://x.com/0xCzyan/status/2106663001164247100 on 2026-10-04 with six common source sites for posting: Know Your Meme (memes), Imgur (hot images/GIFs), Giphy (animated stickers), Unsplash (high-res photos), Pexels (free photos/video), and Wallhaven (wallpapers). It is a community bookmark list, not a product launch and not a Grok Bot workflow. Listed here as a Cases content-resource tip for finding assets when making images, posts, or landing previews; license and attribution rules differ by site — check before use. This library did not download assets or post on your behalf.",
+      "hook": "六类发帖素材站：梗图、GIF、摄影、壁纸一次收齐。",
+      "hookEn": "Six posting asset sites: memes, GIFs, photos, wallpapers in one list.",
+      "categories": [
+        "content",
+        "marketing",
+        "community"
+      ],
+      "role": "Content resource tip / curated link list",
+      "sourceUrl": "https://x.com/0xCzyan/status/2106663001164247100",
+      "secondaryUrls": [
+        "https://knowyourmeme.com/",
+        "https://imgur.com/",
+        "https://giphy.com/",
+        "https://unsplash.com/",
+        "https://www.pexels.com/",
+        "https://wallhaven.cc/"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 @0xCzyan 推文（api.fxtwitter.com 早间核对 200：作者「子砚」@0xCzyan，created_at Sun Oct 04 08:29:34 +0000 2026 / 约 2026-10-04 16:29 CST；帖内六链与配图 HTxet5AaYAAF3lf；撰写时 fxtwitter 显示约 3.4 万浏览、605 赞、140 转、596 收藏，数字会变）。六站公开页：knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com 晚间 curl 200；unsplash.com 本环境返回 401（常见反爬），站点本身为公开知名图库，以帖文与常识为准、未编通断结论。收录理由：内容创作 / 发帖找图是本站读者常见需求，清单短、链可点。边界：不是 AI 工具、不是官方推荐；各站许可与商业使用条件不同；配图版权归原作者/平台。预览用推文配图裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source is the @0xCzyan post (api.fxtwitter.com morning check 200: author 「子砚」@0xCzyan, created_at Sun Oct 04 08:29:34 +0000 2026 / about 16:29 CST on 2026-10-04; six links plus media HTxet5AaYAAF3lf; at write time fxtwitter showed about 34k views, 605 likes, 140 reposts, 596 bookmarks — counts change). Public pages: knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com returned curl 200 this evening; unsplash.com returned 401 in this environment (common bot filter) — Unsplash is a well-known public library, so reachability is not invented beyond the post. Why: finding posting assets is a common need for this site’s readers, and the list is short with clickable links. Boundary: not an AI tool, not an official endorsement; licenses and commercial terms differ by site; image rights stay with authors/platforms. Preview is the tweet photo cropped to 3:2 WebP. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-05T08:55:00Z",
+      "previewImage": "/previews/image-source-sites-0xczyan.webp",
+      "landing": {
+        "what": "这是一份发帖找图用的社区收藏清单，不是新软件。子砚把六类常用站写在一帖里：梗图查 Know Your Meme，国外热图/GIF 用 Imgur，动图表情包用 Giphy，高清摄影用 Unsplash，免费图片/视频用 Pexels，高清壁纸用 Wallhaven。适合做推文配图、落地页预览、或给 Agent 指定「去哪找免版税参考图」时当入口。本站只收录清单本身，不托管任何素材。",
+        "whatEn": "A community bookmark list for finding posting images — not a new app. Ziyan put six common sites in one post: Know Your Meme for memes, Imgur for hot images/GIFs, Giphy for animated stickers, Unsplash for high-res photos, Pexels for free photos/video, Wallhaven for wallpapers. Useful when making tweet art, landing previews, or telling an agent where to look for royalty-friendly references. This site catalogs the list only; it does not host any assets.",
+        "contrast": {
+          "caption": "左列是帖文写明的用途。右列是本站口径：为什么放进 Cases，以及不要误当成「随便下就能商用」。",
+          "captionEn": "Left: what the post says each site is for. Right: this library’s framing — why it is in Cases, and why it is not a free-for-commercial blank check.",
+          "leftLabel": "帖文里的站",
+          "leftLabelEn": "Sites in the post",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "六个公开素材站的入口链接 + 一句用途说明。",
+              "leftEn": "Entry links to six public asset sites plus a one-line use note each.",
+              "right": "Cases「内容资源」笔记。补的是找图入口，不是生成模型或一键发帖工具。",
+              "rightEn": "A Cases content-resource tip — a find-image entry point, not a generative model or one-click poster."
+            },
+            {
+              "aspect": "和 AI 的关系",
+              "aspectEn": "Relation to AI",
+              "left": "帖文本身不谈模型；用途是发推不缺素材。",
+              "leftEn": "The post does not discuss models; the pitch is never running out of posting assets.",
+              "right": "和本站内容制作 / 营销案例相邻：配图、预览图、参考图常从这些站找。不替代 Unsplash/Pexels 自己的许可页。",
+              "rightEn": "Neighbors this site’s content / marketing cases: cover art, previews, and references often come from these sites. Does not replace each site’s own license page."
+            },
+            {
+              "aspect": "版权",
+              "aspectEn": "Copyright",
+              "left": "帖文未逐条写许可；只列站名与用途。",
+              "leftEn": "The post does not spell out licenses site by site; it only names sites and uses.",
+              "right": "用之前自己打开各站许可/署名说明。梗图与 GIF 常有二次创作与商标风险。",
+              "rightEn": "Open each site’s license / attribution rules before use. Memes and GIFs often carry remix and trademark risk."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先打开原帖核对清单",
+            "titleEn": "Open the original post and check the list",
+            "body": "对照推文里的六条链接与配图。浏览/赞/收藏数会变，本站撰写时用过 fxtwitter 快照，不当 KPI。",
+            "bodyEn": "Match the six links and the attached image in the tweet. View/like/bookmark counts change; this library used an fxtwitter snapshot at write time and does not treat them as KPIs.",
+            "links": [
+              {
+                "href": "https://x.com/0xCzyan/status/2106663001164247100",
+                "label": "原帖 @0xCzyan",
+                "labelEn": "Original post @0xCzyan"
+              }
+            ]
+          },
+          {
+            "title": "按用途点进对应站",
+            "titleEn": "Open the site that matches your use",
+            "body": "梗图 → Know Your Meme；热图/GIF → Imgur；动图表情 → Giphy；摄影 → Unsplash；免费图/视频 → Pexels；壁纸 → Wallhaven。下载或嵌入前读该站许可。",
+            "bodyEn": "Memes → Know Your Meme; hot images/GIFs → Imgur; animated stickers → Giphy; photos → Unsplash; free photos/video → Pexels; wallpapers → Wallhaven. Read that site’s license before download or embed.",
+            "links": [
+              {
+                "href": "https://knowyourmeme.com/",
+                "label": "Know Your Meme",
+                "labelEn": "Know Your Meme"
+              },
+              {
+                "href": "https://imgur.com/",
+                "label": "Imgur",
+                "labelEn": "Imgur"
+              },
+              {
+                "href": "https://giphy.com/",
+                "label": "Giphy",
+                "labelEn": "Giphy"
+              },
+              {
+                "href": "https://unsplash.com/",
+                "label": "Unsplash",
+                "labelEn": "Unsplash"
+              },
+              {
+                "href": "https://www.pexels.com/",
+                "label": "Pexels",
+                "labelEn": "Pexels"
+              },
+              {
+                "href": "https://wallhaven.cc/",
+                "label": "Wallhaven",
+                "labelEn": "Wallhaven"
+              }
+            ]
+          },
+          {
+            "title": "自己决定怎么用",
+            "titleEn": "Decide yourself how to use the assets",
+            "body": "本站不代下图、不代发帖。商用、改图、二次创作是否允许，以各站当下条款为准；有疑问就换有明确授权的图或自己拍。",
+            "bodyEn": "This site does not download images or post for you. Commercial use, edits, and remixes follow each site’s current terms; when unsure, switch to clearly licensed assets or shoot your own.",
+            "links": []
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "这是社区链接清单，不是 AI 产品，也不是本站对任一平台的背书。",
+            "textEn": "A community link list — not an AI product and not this site’s endorsement of any platform."
+          },
+          {
+            "text": "各站许可、署名、商用规则不同；梗图 / GIF 还可能涉及商标与人物肖像。",
+            "textEn": "Licenses, attribution, and commercial rules differ by site; memes / GIFs may also involve trademarks and likeness rights."
+          },
+          {
+            "text": "本库未代下载素材、未代发帖；Unsplash 在本环境自动化访问曾返回 401，通断以你本机浏览器为准。",
+            "textEn": "This library did not download assets or post; Unsplash returned 401 to automated access here — check reachability in your own browser."
+          }
+        ],
+        "previewCredit": "预览：原帖配图裁 3:2（作者 @0xCzyan）",
+        "previewCreditEn": "Preview: original post image cropped to 3:2 (author @0xCzyan)"
+      }
+    },
+    {
       "id": "main-bot-proactive",
       "slug": "grok-bot-main-bot-proactive",
       "title": "官方更新：Main Bot 主动找活、帮你分派给其他 Bot",
@@ -6590,11 +6745,19 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-05T01:10:00Z",
+    "updatedAt": "2026-10-05T08:55:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.41",
-    "count": 139,
+    "version": "1.4.42",
+    "count": 140,
     "sourcesCrawled": [
+      "https://wallhaven.cc/",
+      "https://www.pexels.com/",
+      "https://unsplash.com/",
+      "https://giphy.com/",
+      "https://imgur.com/",
+      "https://knowyourmeme.com/",
+      "https://api.fxtwitter.com/0xCzyan/status/2106663001164247100",
+      "https://x.com/0xCzyan/status/2106663001164247100",
       "https://television.run/",
       "https://github.com/telepath-computer/television",
       "https://news.ycombinator.com/item?id=49939817",
