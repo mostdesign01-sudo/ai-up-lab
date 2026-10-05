@@ -291,7 +291,7 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 [智谱官网首页预览](/brand-collection/assets/references/zhipu/zhipu-preview.webp)
 
-- `https://www.zhipuai.cn/` 对本环境连接失败（000/ERR）
+- 英文首页 https://www.zhipuai.cn/en/ 可打开（页面为 Z.AI）；此前中文首页连接失败
 - **结论**：未找到可核实的官方公开 Brand Guidelines
 
 <a id="iflytek"></a>

@@ -33,6 +33,9 @@ function brandCollectionLinkAttrs() {
       if (node.type === "element" && node.tagName === "a") links.push(node);
     });
     walk(tree, (node) => {
+      if (node.type === "raw" && typeof node.value === "string" && node.value.includes('="/brand-collection/')) {
+        node.value = node.value.replaceAll('="/brand-collection/', `="${base}/brand-collection/`);
+      }
       if (node.type !== "element") return;
       for (const key of ["src", "href"]) {
         const value = node.properties?.[key];
