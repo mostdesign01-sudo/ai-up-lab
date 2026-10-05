@@ -1,0 +1,11 @@
+---
+import BrandCollectionFrame from "../components/BrandCollectionFrame.astro";
+
+const fm = Astro.props.frontmatter ?? Astro.props;
+---
+
+<BrandCollectionFrame title={fm.title} titleEn={fm.titleEn} description={fm.description} descriptionEn={fm.descriptionEn}>
+  <article class="bc-doc">
+    <slot />
+  </article>
+</BrandCollectionFrame>

@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Loc from "./Loc.astro";
+import { withBase, isCurrentPath } from "../lib/paths";
+import { brandCollectionCopyright, brandCollectionPages } from "../lib/brand-collection";
+import "../styles/brand-collection.css";
+
+interface Props {
+  title: string;
+  titleEn: string;
+  description: string;
+  descriptionEn: string;
+}
+
+const { title, titleEn, description, descriptionEn } = Astro.props;
+const path = Astro.url.pathname;
+---
+
+<BaseLayout title={title} titleEn={titleEn} description={description} descriptionEn={descriptionEn}>
+  <div class="wrap-wide bc">
+    <nav class="bc-subnav" aria-label="品牌收集" data-aria-zh="品牌收集" data-aria-en="Brand collection">
+      {
+        brandCollectionPages.map((page) => (
+          <a href={withBase(page.href)} aria-current={isCurrentPath(path, withBase(page.href)) ? "page" : undefined}>
+            <Loc zh={page.zh} en={page.en} />
+          </a>
+        ))
+      }
+    </nav>
+    <slot />
+    <p class="bc-copyright"><Loc zh={brandCollectionCopyright.zh} en={brandCollectionCopyright.en} /></p>
+  </div>
+</BaseLayout>

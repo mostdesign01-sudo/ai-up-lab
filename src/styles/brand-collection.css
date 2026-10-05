@@ -1,0 +1,55 @@
+.bc { padding-bottom: 24px; }
+.bc-subnav { display: flex; gap: 8px 18px; overflow-x: auto; margin: 0 0 28px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.bc-subnav a { display: inline-flex; align-items: center; min-height: 36px; color: var(--muted); font-size: 14px; text-decoration: none; white-space: nowrap; }
+.bc-subnav a[aria-current="page"] { color: var(--brass); font-weight: 700; text-decoration: underline; text-underline-offset: 8px; text-decoration-thickness: 2px; }
+.bc-intro { max-width: 68ch; }
+.bc-intro .lede { max-width: 68ch; }
+.bc-section { margin-top: 40px; }
+.bc-section h2 { font-size: 23px; margin: 0 0 8px; }
+.bc-section > .bc-section-note { margin: 0 0 16px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.bc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px; }
+.bc-card { display: flex; flex-direction: column; gap: 10px; min-width: 0; min-height: 100%; padding: 16px; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--lab-radius-card); }
+.bc-card h3 { margin: 0; font-size: 17px; line-height: 1.4; }
+.bc-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.bc-logo { display: flex; align-items: center; height: 72px; margin: 0; padding: 8px 12px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+.bc-logo.is-plain { padding: 0; border: 0; background: transparent; }
+.bc-logo img { display: block; max-width: 100%; max-height: 48px; width: auto; height: auto; object-fit: contain; }
+.bc-card-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; font-size: 13px; }
+.bc-card-links a { color: var(--brass); }
+.bc-gaps { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.bc-gaps li { padding-top: 12px; border-top: 1px solid var(--line); }
+.bc-gaps strong { display: block; margin-bottom: 4px; }
+.bc-gaps p { margin: 0 0 4px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.bc-copyright { margin: 40px 0 0; color: var(--faint); font-size: 12px; line-height: 1.6; }
+.bc a:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+
+.bc-doc { max-width: 100%; min-width: 0; font-size: 15px; line-height: 1.7; overflow-x: auto; }
+.bc-doc h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.2; }
+.bc-doc h2 { font-size: 23px; margin: 36px 0 12px; }
+.bc-doc h3 { font-size: 17px; margin: 24px 0 8px; }
+.bc-doc h4 { font-size: 15px; margin: 18px 0 8px; }
+.bc-doc p { margin: 0 0 12px; }
+.bc-doc ul, .bc-doc ol { margin: 0 0 14px; padding-left: 1.3em; }
+.bc-doc li + li { margin-top: 4px; }
+.bc-doc a:not(.bc-figure) { color: var(--brass); }
+.bc-doc strong { font-weight: 650; }
+.bc-doc hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0; }
+.bc-doc blockquote { margin: 16px 0; padding: 4px 0 4px 16px; border-left: 2px solid var(--brass); color: var(--muted); }
+.bc-doc code { font-family: var(--font-mono); font-size: 0.86em; padding: 0.1em 0.35em; border-radius: 6px; background: var(--bg-soft); }
+.bc-doc pre { overflow-x: auto; padding: 12px 14px; border-radius: var(--lab-radius-card); background: var(--bg-soft); }
+.bc-doc pre code { padding: 0; background: none; }
+.bc-doc table { width: max-content; min-width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 13px; line-height: 1.55; }
+.bc-doc th, .bc-doc td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: left; }
+.bc-doc th { background: var(--bg-soft); font-weight: 650; }
+.bc-doc img { max-width: 100%; height: auto; }
+a.bc-figure { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; max-width: 100%; margin: 12px 0; color: inherit; text-decoration: none; }
+a.bc-figure img { max-width: 100%; max-height: 720px; width: auto; height: auto; object-fit: contain; object-position: top left; border: 1px solid var(--line); border-radius: var(--lab-radius-card); background: #fff; }
+.bc-figure-label { color: var(--faint); font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
+.bc-doc td a.bc-figure, .bc-doc th a.bc-figure { margin: 0; }
+.bc-doc td a.bc-figure img, .bc-doc th a.bc-figure img { max-height: 96px; max-width: 180px; }
+
+@media (max-width: 700px) {
+  .bc-section { margin-top: 32px; }
+  .bc-grid { grid-template-columns: minmax(0, 1fr); }
+  .bc-doc h1 { font-size: 32px; }
+}

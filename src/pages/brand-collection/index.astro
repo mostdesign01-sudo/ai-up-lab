@@ -1,0 +1,124 @@
+---
+import BrandCollectionFrame from "../../components/BrandCollectionFrame.astro";
+import Loc from "../../components/Loc.astro";
+import { assetUrl, withBase } from "../../lib/paths";
+import { benchmarkStudies, referenceGaps, referenceGroups } from "../../lib/brand-collection";
+---
+
+<BrandCollectionFrame
+  title="品牌收集 · AI UP LAB"
+  titleEn="Brand collection · AI UP LAB"
+  description="海内外 AI 品牌的视觉识别、品牌规范与网页设计系统公开参考，以及得物、AI UP LAB、JOMA 的对标笔记。"
+  descriptionEn="Public AI brand identity and design-system references, plus benchmark notes for Dewu, AI UP LAB, and JOMA."
+>
+  <section class="collection-hero bc-intro">
+    <p class="kicker">AI UP LAB</p>
+    <h1><Loc zh="品牌收集" en="Brand collection" /></h1>
+    <p class="lede">
+      <Loc
+        zh="这里收集公开的视觉识别、品牌规范和网页设计系统，以及若干品牌的参考对标。色值、字体、尺寸、日期和口号都附来源；查不到就写「未找到公开来源」。从网页 CSS、截图或计算样式量出来的值标为「实测」，只有品牌方公开发布的规范才算「官方」。第三方来源会标明「第三方」。"
+        en="Public visual identities, brand guidelines, and web design systems, plus a few benchmark notes. Colors, type, sizes, dates, and slogans keep their source links. Anything not found is marked as such. Values measured from website CSS are marked 实测; only rules a brand has published are marked 官方. Third-party sources are marked 第三方."
+      />
+    </p>
+    <p class="meta-line"><Loc zh="条目正文为简体中文。" en="The entry pages are in Simplified Chinese." /></p>
+  </section>
+
+  {
+    referenceGroups.map((group) => (
+      <section class="bc-section" id={group.id}>
+        <h2><Loc zh={group.title.zh} en={group.title.en} /></h2>
+        <p class="bc-section-note">
+          <a href={withBase(`brand-collection/references/#${group.cards[0]?.anchor ?? ""}`)}>
+            <Loc zh="在参考清单中查看这一组" en="Open this group in the reference list" />
+          </a>
+        </p>
+        <div class="bc-grid">
+          {group.cards.map((card) => (
+            <article class="bc-card">
+              {card.logo && (
+                <p class:list={["bc-logo", { "is-plain": card.well === "plain" }]}>
+                  <img src={assetUrl(card.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
+                </p>
+              )}
+              <h3>{card.name}</h3>
+              <p>{card.notable}</p>
+              <p class="bc-card-links">
+                {card.url && (
+                  <a href={card.url} target="_blank" rel="noopener noreferrer">
+                    <Loc zh="官方链接" en="Official link" />
+                  </a>
+                )}
+                <a href={withBase(`brand-collection/references/#${card.anchor}`)}>
+                  <Loc zh="查看条目" en="Read the note" />
+                </a>
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="bc-section" id="gaps">
+    <h2><Loc zh="未找到官方公开规范" en="No public brand guidelines found" /></h2>
+    <p class="bc-section-note">
+      <Loc
+        zh="以下结论来自同一份核实清单。没有可用的官方规范页时，不补一条推测链接。"
+        en="These conclusions are from the same checked list. Where no public guidelines page was found, there is no guessed link."
+      />
+    </p>
+    <ul class="bc-gaps">
+      {
+        referenceGaps.map((item) => (
+          <li>
+            <strong>{item.name}</strong>
+            <p>{item.notable}</p>
+            <p class="bc-card-links">
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  <Loc zh="来源里给出的链接" en="Link from the notes" />
+                </a>
+              )}
+              <a href={withBase(`brand-collection/references/#${item.anchor}`)}>
+                <Loc zh="查看条目" en="Read the note" />
+              </a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="bc-section-note">
+      <a href={withBase("brand-collection/references/#aggregators")}><Loc zh="规范聚合站" en="Guideline directories" /></a>
+      {" · "}
+      <a href={withBase("brand-collection/references/#gaps")}><Loc zh="打不开或未找到的完整清单" en="Full list of gaps and unreachable links" /></a>
+    </p>
+  </section>
+
+  <section class="bc-section" id="benchmarks">
+    <h2><Loc zh="对标研究" en="Benchmark studies" /></h2>
+    <p class="bc-section-note">
+      <Loc
+        zh="下面三组笔记只使用公开发布的资料和官网实测。得物没有公开品牌规范页；极光蓝色值没有公开来源，页内青色只按官网 CSS 实测记录。"
+        en="These notes use public material and measurements from live websites. Dewu has no public brand-guidelines page; there is no published hex for 极光蓝, so the cyan values are website CSS measurements only."
+      />
+    </p>
+    <div class="bc-grid">
+      {
+        benchmarkStudies.map((study) => (
+          <article class="bc-card">
+            {study.logo && (
+              <p class:list={["bc-logo", { "is-plain": study.well === "plain" }]}>
+                <img src={assetUrl(study.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
+              </p>
+            )}
+            <h3><Loc zh={study.title.zh} en={study.title.en} /></h3>
+            <p>{study.line}</p>
+            <p class="bc-card-links">
+              <a href={withBase(study.href)}><Loc zh="打开笔记" en="Open the note" /></a>
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BrandCollectionFrame>
