@@ -44,6 +44,7 @@
 .bc-doc img { max-width: 100%; height: auto; }
 a.bc-figure { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; max-width: 100%; margin: 12px 0; color: inherit; text-decoration: none; }
 a.bc-figure img { max-width: 100%; max-height: 720px; width: auto; height: auto; object-fit: contain; object-position: top left; border: 1px solid var(--line); border-radius: var(--lab-radius-card); background: #fff; }
+a.bc-figure.is-on-dark img { background: #1b1913; }
 .bc-figure-label { color: var(--faint); font-size: 12px; line-height: 1.5; overflow-wrap: anywhere; }
 .bc-doc td a.bc-figure, .bc-doc th a.bc-figure { margin: 0; }
 .bc-doc td a.bc-figure img, .bc-doc th a.bc-figure img { max-height: 96px; max-width: 180px; }

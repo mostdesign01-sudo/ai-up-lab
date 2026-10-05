@@ -40,7 +40,8 @@ function brandCollectionLinkAttrs() {
       }
       if (href.includes("/brand-collection/assets/") && image.test(href)) {
         const label = textOf(node).trim();
-        node.properties.className = ["bc-figure"];
+        const onDark = /(?:wordmark-dark|logo-inverse)\./i.test(href);
+        node.properties.className = onDark ? ["bc-figure", "is-on-dark"] : ["bc-figure"];
         node.children = [
           { type: "element", tagName: "img", properties: { src: href, alt: label, loading: "lazy", decoding: "async" }, children: [] },
           { type: "element", tagName: "span", properties: { className: ["bc-figure-label"] }, children: [{ type: "text", value: label }] },
