@@ -1,4 +1,5 @@
 import type { APIRoute } from "astro";
+import { brandCollectionPages } from "../lib/brand-collection";
 import { designKnowledge } from "../lib/design-knowledge";
 import { entries, sections } from "../lib/directory";
 import { withBase } from "../lib/paths";
@@ -7,6 +8,7 @@ export const GET: APIRoute = ({ site }) => {
     ...["", "about/", "brand/", "changelog/", "cases/", "html/", "agent-ui/", "image-prompts/"].map(path => [withBase(path), undefined] as const),
     ...designKnowledge.map(spec => [withBase(`brand/guides/${spec.id}/`), undefined] as const),
     ...sections.map(section => [withBase(`${section.id}/`), undefined] as const),
+    ...brandCollectionPages.map(page => [withBase(page.href), undefined] as const),
     ...entries.map(entry => [entry.href, entry.updatedAt] as const),
   ]);
   const escape = (value: string) => value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

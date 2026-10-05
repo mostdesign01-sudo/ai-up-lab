@@ -46,6 +46,13 @@ const requiredPages = [
   "models.json",
   "image-prompts/index.html",
   "image-prompts.json",
+  "brand-collection/index.html",
+  "brand-collection/references/index.html",
+  "brand-collection/dewu/index.html",
+  "brand-collection/ai-up-lab/index.html",
+  "brand-collection/joma/index.html",
+  "brand-collection/joma/visual-audit/index.html",
+  "brand-collection/joma/china-ecommerce/index.html",
 ];
 
 const missing = [];
@@ -577,3 +584,28 @@ for (const spec of knowledge.specs) {
   for (const token of spec.tokens) if (!brandCSS.includes(`${token}:`)) throw new Error(`Unknown design token: ${spec.id}/${token}`);
 }
 console.log(`Design handbook verified: ${ruleIds.size} bilingual guides, Markdown rules, acyclic dependencies, source mappings, and shared tokens.`);
+
+const brandCollectionPages = [
+  "brand-collection/index.html",
+  "brand-collection/references/index.html",
+  "brand-collection/dewu/index.html",
+  "brand-collection/ai-up-lab/index.html",
+  "brand-collection/joma/index.html",
+  "brand-collection/joma/visual-audit/index.html",
+  "brand-collection/joma/china-ecommerce/index.html",
+];
+const brandCollectionForbidden = ["品牌书", "brand-book", "design-spec", "内部", "evidence", "brand-rules"];
+for (const page of brandCollectionPages) {
+  const html = await readFile(new URL(`../dist/${page}`, import.meta.url), "utf8");
+  if (!html.includes("品牌收集") || !sitemap.includes(`/${page.replace(/index\.html$/, "")}`)) {
+    throw new Error(`Brand collection page missing from the nav or sitemap: ${page}`);
+  }
+  for (const term of brandCollectionForbidden) {
+    if (html.includes(term)) throw new Error(`Brand collection page includes “${term}”: ${page}`);
+  }
+}
+const brandCollectionIndex = await readFile(new URL("../dist/brand-collection/index.html", import.meta.url), "utf8");
+if (!brandCollectionIndex.includes("https://openai.com/brand/") || !brandCollectionIndex.includes("对标研究")) {
+  throw new Error("Brand collection index is missing the reference grid or benchmark block.");
+}
+console.log("Brand collection verified: public pages, navigation, sitemap, and no internal-source wording.");
