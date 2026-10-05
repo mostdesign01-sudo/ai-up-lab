@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="StockX">
+  <rect width="1600" height="1000" fill="#f4f1ea"/>
+  <rect x="48" y="48" width="1504" height="904" rx="28" fill="none" stroke="#d9d3c7" stroke-width="2"/>
+  <text x="800" y="470" text-anchor="middle" font-family="Geist, Inter, sans-serif" font-size="92" font-weight="650" fill="#17151b">StockX</text>
+  <text x="800" y="560" text-anchor="middle" font-family="Geist, Inter, sans-serif" font-size="32" fill="#625d6d">官方页面要求登录，未取得公开预览</text>
+</svg>

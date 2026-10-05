@@ -18,6 +18,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="openai"></a>
 ### 1. OpenAI — Design Guidelines（已核实 200）
+
+[OpenAI 官方 Blossom 标志（品牌页拦截了截图）](/brand-collection/assets/references/openai/openai-blossom-light.svg)
+
 - **资源名**：OpenAI Design Guidelines / Brand
 - **官方 URL**：https://openai.com/brand/
 - **包含**：Wordmark（OpenAI Sans，O 为正圆）、Blossom 符号、合作 lockup、Do/Don’t、商标使用条款；可下载 logos zip / partnership templates
@@ -27,6 +30,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="anthropic"></a>
 ### 2. Anthropic / Claude — Press kit + Brandfolder（已核实 200）
+
+[Anthropic 新闻与媒体页预览](/brand-collection/assets/references/anthropic/anthropic-preview.webp)
+
 - **资源名**：Media assets / Press kit；Brandfolder Newsroom
 - **官方 URL**：
   - https://www.anthropic.com/news （入口「Download press kit」→ https://www.anthropic.com/press-kit ）
@@ -38,6 +44,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="gemini"></a>
 ### 3. Google Gemini / DeepMind
+
+[Google Gemini 视觉设计页预览](/brand-collection/assets/references/gemini/gemini-preview.webp)
+
 - **Gemini 视觉设计文章**（已核实 200）：https://design.google/library/gemini-ai-visual-design  
   - 内容：渐变叙事、圆形/负空间 Logo 逻辑、thinking 动效、与 Google 四色圆点的关系；**非可下载 Brand Kit**
 - **Google Brand Resource Center**（已核实 200）：https://about.google/brand-resource-center/guidance/  
@@ -48,6 +57,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="fluent"></a>
 ### 4. Microsoft Copilot / Fluent 2（已核实 200）
+
+[Microsoft Fluent 2 设计系统页预览](/brand-collection/assets/references/fluent/fluent-preview.webp)
+
 - **资源名**：Fluent 2 Design System（含 Copilot UI Kits 说明）
 - **官方 URL**：https://fluent2.microsoft.design/ ；色彩等：https://fluent2.microsoft.design/color
 - **包含**：设计语言 token（色/描边/圆角/间距）、Core UI Kits、**Copilot UI Kits**（Web/iOS/Android AI 组件）、Figma 对齐
@@ -57,6 +69,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="meta"></a>
 ### 5. Meta AI / Meta Brand Resource Center（已核实 200）
+
+[Meta 品牌资源中心预览](/brand-collection/assets/references/meta/meta-preview.webp)
+
 - **资源名**：Meta Brand Resource Center
 - **官方 URL**：https://www.meta.com/brand/resources/ ；Meta logo 细则：https://www.meta.com/brand/resources/meta/meta/
 - **包含**：Meta logo 四色变体、最小尺寸、使用场景；强调 **Brand Review 审批**
@@ -65,6 +80,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="mistral"></a>
 ### 6. Mistral AI — Brand assets（已核实 200）
+
+[Mistral AI 品牌资产页预览](/brand-collection/assets/references/mistral/mistral-preview.webp)
+
 - **资源名**：Brand assets and guidelines
 - **官方 URL**：https://mistral.ai/brand/
 - **包含**：Pixel cat 徽章、Gradient/Inverted/Black lockup、净空与误用、各模型像素插画、Wallpaper；zip：`Mistral_Brandkit_2026.zip` / Logos / Models 等
@@ -73,6 +91,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="xai"></a>
 ### 7. xAI / Grok — Brand Guidelines（已核实 200）
+
+[xAI 品牌指南页预览](/brand-collection/assets/references/xai/xai-preview.webp)
+
 - **资源名**：Brand Guidelines（页面标题现为 SpaceXAI Brand Guidelines，日期 Feb 14, 2025）
 - **官方 URL**：https://x.ai/legal/brand-guidelines
 - **包含**：商标使用 Do/Don’t、内容归属文案（“Written with Grok” / “Created with Grok”）、Logo 须按下载件原样使用
@@ -81,6 +102,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="huggingface"></a>
 ### 8. Hugging Face — Brand Assets（已核实 200）
+
+[Hugging Face 品牌资产页预览](/brand-collection/assets/references/huggingface/huggingface-preview.webp)
+
 - **资源名**：Brand Assets + brand-assets dataset
 - **官方 URL**：https://huggingface.co/brand ；数据集：https://huggingface.co/datasets/huggingface/brand-assets
 - **包含**：HF logo / with-title / monochrome / pirate 等 SVG·PNG；品牌色示例（页内见 `#FF9D00`）；Universe 其他资产入口
@@ -90,6 +114,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="runway"></a>
 ### 9. Runway — Brand Guidelines & Assets（已核实 200）
+
+[Runway 品牌规范页预览](/brand-collection/assets/references/runway/runway-preview.webp)
+
 - **资源名**：Runway Brand Assets and Guidelines
 - **官方 URL**：https://runway.com/brand-guidelines
 - **包含**：命名（称 Runway，勿称 Runway AI/ML）、最小尺寸、黑白对比、净空、Wordmark Don’ts、小场景可用 Symbol
@@ -99,6 +126,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="elevenlabs"></a>
 ### 10. ElevenLabs — Brand guidelines and press kit（已核实 200）
+
+[ElevenLabs 品牌规范页预览](/brand-collection/assets/references/elevenlabs/elevenlabs-preview.webp)
+
 - **资源名**：Brand guidelines and press kit
 - **官方 URL**：https://elevenlabs.io/brand
 - **包含**：官方 Logo、净空、11 Symbol 构造、平台子品牌（ElevenAgents / Creative / API / Music）色与图形、命名 Don’ts、可下载 PNG/SVG/zip
@@ -108,6 +138,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="cursor"></a>
 ### 11. Cursor — Brand Guidelines（已核实 200）
+
+[Cursor 品牌规范页预览](/brand-collection/assets/references/cursor/cursor-preview.webp)
+
 - **资源名**：Cursor brand guidelines
 - **官方 URL**：https://cursor.com/brand
 - **包含**：2D/2.5D/3D logo·icon·avatar；命名（称 Cursor，勿 Cursor AI）；可下载 zip
@@ -117,29 +150,44 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="cohere"></a>
 ### 12. Cohere
+
+[Cohere 新闻室预览](/brand-collection/assets/references/cohere/cohere-preview.webp)
+
 - **Newsroom**（已核实 200）：https://cohere.com/newsroom — 媒体联系 `press@cohere.com`，未见完整自助 Brand Guidelines 页
 - **品牌演进博文**（已核实 200）：https://cohere.com/blog/reimagined-brand （2023-03-29，重塑叙事；非现行完整 VI 手册）
 - **结论**：**未找到官方公开完整 Brand Book / logo kit 自助页**（需走 press）
 
 <a id="perplexity"></a>
 ### 13. Perplexity
+
+[Perplexity 官网首页预览](/brand-collection/assets/references/perplexity/perplexity-preview.webp)
+
 - 官网 `https://www.perplexity.ai/` 对本环境常 403；**未找到官方公开 Brand Guidelines 页**
 - 第三方案例（Smith & Diction 等）与 `live.standards.site/perplexity`（抓取曾 500）**不算官方规范**
 - **结论**：未找到官方公开规范
 
 <a id="midjourney"></a>
 ### 14. Midjourney
+
+[Midjourney 官网首页预览](/brand-collection/assets/references/midjourney/midjourney-preview.webp)
+
 - 官网可访问；**未找到官方公开 Brand Guidelines / Brand Kit 页**
 - **结论**：未找到官方公开规范
 
 <a id="stability"></a>
 ### 15. Stability AI
+
+[Stability AI 官网首页预览](/brand-collection/assets/references/stability/stability-preview.webp)
+
 - Press：https://stability.ai/press （已核实 200；内容偏空壳/产品页结构，未见完整可下载 Brand Kit）
 - `stability.ai/brand-style` 为产品功能页，**不是**公司 VI 手册
 - **结论**：未找到可用的官方公开 Brand Book
 
 <a id="notion"></a>
 ### 16. Notion（含 Notion AI）
+
+[Notion 官网首页预览](/brand-collection/assets/references/notion/notion-preview.webp)
+
 - Media Kit（Notion 站点，已核实 200）：https://notion.notion.site/Media-Kit-205535b1d9c4440497a3d7a2ac096286  
   - Logo、产品截图、插画等媒体资产；联系 press@makenotion.com
 - **未找到**独立「Notion AI」VI；沿用 Notion 母品牌
@@ -147,6 +195,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="vercel"></a>
 ### 17. Vercel / v0 / Geist（已核实 200）
+
+[Vercel Geist 设计系统页预览](/brand-collection/assets/references/vercel/vercel-preview.webp)
+
 - **Geist Design System**：https://vercel.com/geist/introduction — 色、字体（Geist Sans/Mono）、Materials、Grid、React 组件 `@vercel/geistcn`
 - **Brand assets**：https://vercel.com/geist/brands — Vercel / Next.js / Turbo / **v0** / eve / AI SDK 的 SVG·PNG 与使用条款
 - **可下载**：是（单文件 SVG/PNG）
@@ -164,6 +215,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="kimi"></a>
 ### 1. 月之暗面 Kimi — 品牌手册（已核实 200）⭐
+
+[Kimi 品牌页预览](/brand-collection/assets/references/kimi/kimi-preview.webp)
+
 - **资源名**：Kimi 品牌手册
 - **官方 URL**：https://www.kimi.ai/zh-hans/resources/kimi-brand
 - **包含**：标志系统、色彩（核心品牌蓝）、排版（Inter / Geist Mono / Sentient）、网格、界面升级说明、生成式视觉资产生成器、数据可视化规范、影调与触点；许可联系 hi@moonshot.ai / legal@moonshot.ai
@@ -171,6 +225,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 - **亮点**：国内少见的「完整公开 Brand System 网页」——科学人文 + De-coding 质感 + 生成式资产
 
 <h3 id="minimax">2. MiniMax — Brand VI / Brand Book（已核实 200）⭐</h3>
+
+[MiniMax 品牌视觉页预览](/brand-collection/assets/references/minimax/minimax-preview.webp)
+
 - **资源名**：Brand VI — MiniMax Brand Book
 - **官方 URL**：https://www.minimax.io/brand-vi  
 - **PDF**：https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf （已核实 200，%PDF-1.7）
@@ -181,6 +238,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="tencent"></a>
 ### 3. 腾讯（集团品牌；混元产品页）
+
+[腾讯品牌和使用指南页预览](/brand-collection/assets/references/tencent/tencent-preview.webp)
+
 - **品牌和使用指南**（已核实 200）：https://www.tencent.com/zh-cn/newsroom/media-resources/brand-and-usage-guides/  
   - 可下 PDF：  
     - 腾讯蓝色彩系统：https://www.tencent.com/wp-content/uploads/2022/12/Tencent-Blue_Color-System-Guideline_181112_compressed-1.pdf  
@@ -190,6 +250,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="baidu"></a>
 ### 4. 百度 / 文心
+
+[文心一言产品页预览](/brand-collection/assets/references/baidu/baidu-preview.webp)
+
 - 官方 `vi.baidu.com` 对本环境无法连通（000）
 - 第三方镜像汇总（已核实 200，**非百度官网**）：https://bdvi.honglei.net/ — 可见「百度品牌系统 / 子品牌 VI / 百度智能云」等目录结构
 - 文心一言产品：https://yiyan.baidu.com/ （已核实 200）— **未见独立公开文心 Brand Guidelines**
@@ -197,6 +260,9 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="alibaba"></a>
 ### 5. 阿里 / 通义 / Qwen
+
+[千问官网首页预览（通义域名跳转到官方千问页）](/brand-collection/assets/references/tongyi/tongyi-preview.webp)
+
 - 通义：https://tongyi.aliyun.com/ （200）；Qwen：https://qwenlm.github.io/ （200）
 - 国际站伙伴标志规范（已核实 200）：https://activity.alibaba.com/page/c590c5e9.html  
 - **未找到**通义/Qwen 独立官方公开 Brand Book；阿里云历史品牌 PDF 多为第三方转载，不作官方主链
@@ -204,23 +270,35 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 <a id="doubao"></a>
 ### 6. 字节豆包 / 火山引擎
+
+[火山引擎官网首页预览（豆包首页在此环境显示区域限制）](/brand-collection/assets/references/doubao/doubao-preview.webp)
+
 - https://www.doubao.com/ 、https://www.volcengine.com/ （均 200）
 - **未找到**豆包/火山官方公开 Brand Guidelines / Brand Kit 页
 - **结论**：未找到官方公开规范
 
 <a id="deepseek"></a>
 ### 7. DeepSeek
+
+[DeepSeek 官网首页预览](/brand-collection/assets/references/deepseek/deepseek-preview.webp)
+
 - https://www.deepseek.com/ （200）
 - 第三方「Design System」提炼页存在，**非官方**
 - **结论**：未找到官方公开 Brand Guidelines
 
 <a id="zhipu"></a>
 ### 8. 智谱
+
+[智谱官网首页预览](/brand-collection/assets/references/zhipu/zhipu-preview.webp)
+
 - `https://www.zhipuai.cn/` 对本环境连接失败（000/ERR）
 - **结论**：未找到可核实的官方公开 Brand Guidelines
 
 <a id="iflytek"></a>
 ### 9. 科大讯飞
+
+[科大讯飞官网首页预览](/brand-collection/assets/references/iflytek/iflytek-preview.webp)
+
 - 官网 https://www.iflytek.com/ （200）
 - 曾检索到 `https://cdn.iflyos.cn/docs/brand_usage.pdf`（署名使用规范）；**本轮 curl 无法稳定拉取（000ERR）** → 标注 **链接不稳定/打不开**
 - **结论**：未见完整消费级 AI 产品 Brand Book；技术署名 PDF 待浏览器侧再试
@@ -235,6 +313,18 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 ## 三、网页品牌设计规范与聚合站（偏科技）
 
 ### 设计系统 / 品牌页（已核实可访问）
+
+<div class="bc-hero">
+  <a class="bc-figure is-cover" href="https://vercel.com/geist/introduction"><img src="/brand-collection/assets/references/vercel/vercel-preview.webp" alt="Vercel Geist 设计系统页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Vercel Geist</span></a>
+  <a class="bc-figure is-cover" href="https://linear.app/brand"><img src="/brand-collection/assets/references/linear/linear-preview.webp" alt="Linear 品牌页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Linear</span></a>
+  <a class="bc-figure is-cover" href="https://stripe.com/newsroom/information"><img src="/brand-collection/assets/references/stripe/stripe-preview.webp" alt="Stripe 新闻室资料页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Stripe</span></a>
+  <a class="bc-figure is-cover" href="https://carbondesignsystem.com/"><img src="/brand-collection/assets/references/carbon/carbon-preview.webp" alt="IBM Carbon 设计系统首页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">IBM Carbon</span></a>
+  <a class="bc-figure is-cover" href="https://carbondesignsystem.com/building-blocks/foundations/carbon-for-ai"><img src="/brand-collection/assets/references/carbon-ai/carbon-ai-preview.webp" alt="IBM Carbon for AI 页面预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">IBM Carbon for AI</span></a>
+  <a class="bc-figure is-cover" href="https://m3.material.io/"><img src="/brand-collection/assets/references/material/material-preview.webp" alt="Google Material 3 页面预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Google Material 3</span></a>
+  <a class="bc-figure is-cover" href="https://fluent2.microsoft.design/"><img src="/brand-collection/assets/references/fluent/fluent-preview.webp" alt="Microsoft Fluent 2 设计系统页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Microsoft Fluent 2</span></a>
+  <a class="bc-figure is-cover" href="https://atlassian.design/"><img src="/brand-collection/assets/references/atlassian/atlassian-preview.webp" alt="Atlassian Design 首页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Atlassian Design</span></a>
+  <a class="bc-figure is-cover" href="https://developer.apple.com/design/human-interface-guidelines/"><img src="/brand-collection/assets/references/apple-hig/apple-hig-preview.webp" alt="Apple 人机界面指南页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">Apple HIG</span></a>
+</div>
 
 | 品牌/系统 | 资源 | URL | 亮点 |
 |-----------|------|-----|------|
@@ -281,6 +371,8 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 ## 五、本站预览素材
 
 > 素材均来自各品牌公开发布的资料，版权归原品牌所有，仅作学习与参考。
+
+各品牌条目上的页面预览，是 2026-10-05 用 1440×900 视口截取的官网公开页，存成最长边不超过 1600px 的 WebP。OpenAI 品牌页被拦截，改用其公开 Blossom 标志。StockX 品牌资产页要求登录，该条用名称占位。豆包首页在此环境显示区域限制，预览改用火山引擎官网。通义域名会跳到官方千问页。
 
 | 本站路径 | 来源 |
 |------|------|
