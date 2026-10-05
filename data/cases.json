@@ -1,6 +1,319 @@
 {
   "cases": [
     {
+      "id": "scm-screen-memories",
+      "slug": "scm-screen-memories",
+      "title": "工具：SCM（Screen Memories）— 用一句话搜本机照片和视频",
+      "titleEn": "Tool: SCM (Screen Memories) — search local photos and video in plain words",
+      "summary": "SCM（Screen Memories，屏幕记忆）是一款只跑在你自己 Mac 上的找图应用。你用平常的话描述一张照片或一段画面，它就在你指定的文件夹里找：整张照片或整段视频、视频里的某一镜头、画面上印着的字、以及视频里说出口的原话。不需要账号，文件也不上传；识别在这台 Mac 上完成。第一次使用会下载视觉模型的权重（README 写默认大约 435MB），下完之后可以断网搜。安装走 Homebrew，README 写明面向苹果自研芯片的 Mac（M 系列）、系统 macOS 12 及以上。这是一条工具笔记：本库没有安装，也没有拿真实相册试过。",
+      "summaryEn": "SCM (Screen Memories) is a find-your-photos app that runs only on your Mac. You describe a picture or a moment in ordinary words and it looks through folders you choose: a whole photo or video, one shot inside a video, words printed on the picture, or the exact words spoken in a clip. No account, and the files are not uploaded; the matching happens on that Mac. The first run downloads vision-model weights (the README says the default is about 435MB); after that it can search offline. Install is Homebrew. The README says Apple-silicon Macs (M-series) and macOS 12 or newer. This is a tool tip: this library did not install it or try it on a real photo library.",
+      "hook": "用一句话搜本机照片，也能跳到视频里的那一帧。",
+      "hookEn": "Search local photos, and jump to the matching moment inside a video.",
+      "categories": [
+        "research",
+        "engineering",
+        "content"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://scm.allenlee.site",
+      "secondaryUrls": [
+        "https://github.com/allenv0/SCM",
+        "https://news.ycombinator.com/item?id=49952111",
+        "https://github.com/allenv0/homebrew-scm"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是产品页 https://scm.allenlee.site（撰写时 HTTP 200）、仓库 allenv0/SCM（撰写时 gh api：MIT、主语言 JavaScript、创建于 2026-10-03T16:11:55Z、329★、GitHub Releases 列表长度 0；package.json 版本号 0.2.4，依赖 electron ^43.7.0。Electron 是把网页技术包成桌面程序的壳）。Show HN item 49952111（标题 Show HN: AI search for every photo and every frame of video on macOS，2026-10-04T09:24:52.000Z / 约 2026-10-04 17:24 CST，撰写时 HN 页面与 Algolia 均为 154pts；当时不在 HN 首页 HTML 里（产品页仍写着上过首页））。Homebrew tap 仓库 https://github.com/allenv0/homebrew-scm 可打开。README 与产品页列出的安装命令是 brew tap allenv0/scm；brew trust allenv0/scm；brew install --cask allenv0/scm/scm。五种搜索是 README 表格：Files（整张照片/视频按意思找，用 CLIP，也就是把一句话和画面配对的视觉模型）、Scenes（视频里的镜头，点开跳到时间码）、OCR（认出画面上的字；引擎是 Tesseract，这个开源程序负责认字；README 写英语加 35 种语言开关）、Dialogue（视频里的原话，用 Whisper，也就是把人话转成文字的模型）、LLMs（可选；对已经抽出的对白、画面文字和文件名做本地对话，回答带引用。README 写没在设置里打开就不会下载聊天模型）。收录理由：本机、无账号、用一句话搜照片和视频镜头，是具体能用的找图工具。边界：只按 README 的 Mac 安装路径记；默认权重大小、语言数量和聊天模型体积都是 README 数字，本库没有自己称过。未执行 brew、未安装、未索引任何相册。预览为 Playwright 实拍产品页首屏裁 3:2 WebP（截图时页面角标为 328★，撰写时 gh api 为 329★）。不打星。",
+      "qualityNoteEn": "Primary sources are https://scm.allenlee.site (HTTP 200 at write time) and repo allenv0/SCM (gh api at write time: MIT, primary language JavaScript, created 2026-10-03T16:11:55Z, 329★, GitHub Releases list length 0; package.json version 0.2.4, dependency electron ^43.7.0. Electron is the shell that wraps web tech into a desktop app). Show HN item 49952111 (title Show HN: AI search for every photo and every frame of video on macOS, 2026-10-04T09:24:52.000Z / about 17:24 CST on 2026-10-04, 154pts on both the HN page and Algolia at write time; not in the HN front-page HTML then (the product page still says it made the front page)). The Homebrew tap repo https://github.com/allenv0/homebrew-scm opens. The install lines on the README and the product page are brew tap allenv0/scm; brew trust allenv0/scm; brew install --cask allenv0/scm/scm. The five modes are the README table: Files (whole photos/videos by meaning, using CLIP — a vision model that pairs a sentence with a picture), Scenes (a shot inside a video, open it and jump to the timecode), OCR (read words painted on the frame; the engine is Tesseract, the open-source program that does that reading; the README says English plus 35 language toggles), Dialogue (exact spoken words, via Whisper — a model that turns speech into text), LLMs (opt-in local chat over dialogue, on-screen text, and filenames already extracted, with citations. The README says the chat model is not downloaded until you turn it on in Settings). Why: a concrete local photo-and-video finder with no account. Boundary: the Mac install path is recorded as the README states it; default weight size, language count, and chat-model size are README figures, not measured here. brew was not run, the app was not installed, and no photo library was indexed. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP (the page badge read 328★ in that shot; gh api at write time was 329★). Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "用 Homebrew 安装，以及把真实照片或视频文件夹交给它之前，自己确认。本库没有代装。",
+      "approvalBoundaryEn": "Confirm before installing with Homebrew and before pointing it at real photo or video folders. This library did not install it.",
+      "connectors": [
+        "computer",
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-05T12:16:40Z",
+      "previewImage": "/previews/scm-screen-memories.webp",
+      "landing": {
+        "what": "SCM 是 Allen Lee 做的 Mac 桌面应用，名字展开是 Screen Memories（屏幕记忆）。它不把照片传上云，而是在你选定的文件夹里建一个本地索引，然后让你用一句人话去搜。README 把搜索分成五档，每档解决的问题不一样：Files 找整张照片或整段视频（靠视觉模型把句子和画面配上，这种模型叫 CLIP）；Scenes 找视频里的一个镜头，结果上有时间码，点开就跳到那一秒；OCR 找画面上印着的字（认字程序是 Tesseract，README 写可以开英语和另外 35 种语言）；Dialogue 找视频里说出口的原话（把声音转成文字的模型叫 Whisper）；LLMs 是可选的本地聊天，只根据已经抽出来的对白、画面文字和文件名来答，并给出处，不打开就不会下载那份聊天模型。适合手里有大量本地素材、又不想把底片交出去的人。",
+        "whatEn": "SCM is Allen Lee’s Mac app. The name expands to Screen Memories. It does not upload your photos. It builds a local index of folders you pick, then lets you search with an ordinary sentence. The README splits search into five modes: Files finds a whole photo or video (a vision model called CLIP pairs the sentence with the picture); Scenes finds one shot inside a video and shows a timecode you can jump to; OCR finds words printed on the frame (the reader is Tesseract; the README says English plus 35 other language toggles); Dialogue finds the exact words spoken in a video (Whisper is the model that turns speech into text); LLMs is an optional local chat that answers only from dialogue, on-screen text, and filenames already extracted, and it cites them — the chat model is not downloaded until you turn the mode on. It is for people who have a lot of local footage and do not want to hand the originals to a cloud.",
+        "contrast": {
+          "caption": "左列是产品页和 README 写明的事实。右列是本站口径：为什么放进 Cases，以及不要把它当成已经替你装好的 Grok Bot 技能。",
+          "captionEn": "Left: what the product page and README state. Right: this library’s framing — why it is in Cases, and why it is not a Grok Bot skill we already installed for you.",
+          "leftLabel": "SCM",
+          "leftLabelEn": "SCM",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "本机 Mac 应用：用一句话搜文件夹里的照片，以及视频里的某一帧。",
+              "leftEn": "A local Mac app: describe a photo, or one frame of a video, and search a folder.",
+              "right": "Cases 里的 AI 工具笔记。补的是「找自己的素材」，不是又一篇聊天机器人教程。",
+              "rightEn": "An AI tool tip in Cases. It fills “find my own footage,” not another chatbot tutorial."
+            },
+            {
+              "aspect": "数据去哪",
+              "aspectEn": "Where the files go",
+              "left": "作者称无账号、不上传、识别在 Mac 上；权重下一次，之后可离线。",
+              "leftEn": "The author says no account, no uploads, inference on the Mac; weights download once, then it can run offline.",
+              "right": "这是作者承诺。本库没有安装程序，也没有审计它到底有没有向外发文件。",
+              "rightEn": "That is the author’s promise. This library did not install the app and did not audit whether it sends files out."
+            },
+            {
+              "aspect": "怎么装",
+              "aspectEn": "How you install",
+              "left": "Homebrew 三条命令；README 写 Apple 芯片、macOS 12+。GitHub Releases 列表是空的。",
+              "leftEn": "Three Homebrew commands; the README says Apple silicon and macOS 12+. The GitHub Releases list is empty.",
+              "right": "不要从本站下安装包。装之前自己看 tap 仓库。本库没有执行 brew。",
+              "rightEn": "Do not look for an installer on this site. Read the tap repo before you install. This library did not run brew."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看产品页和 Show HN",
+            "titleEn": "Read the product page and the Show HN first",
+            "body": "打开 scm.allenlee.site，看它怎么讲五种搜索和 Homebrew 安装。Show HN 讨论在 item 49952111。点数会变，以你打开当天为准。",
+            "bodyEn": "Open scm.allenlee.site and see how it describes the five search modes and the Homebrew install. The Show HN thread is item 49952111. Point counts change — use whatever the thread shows when you open it.",
+            "links": [
+              {
+                "href": "https://scm.allenlee.site",
+                "label": "SCM 产品页",
+                "labelEn": "SCM product page"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49952111",
+                "label": "Show HN 讨论",
+                "labelEn": "Show HN thread"
+              }
+            ]
+          },
+          {
+            "title": "对照仓库 README",
+            "titleEn": "Cross-check the repo README",
+            "body": "读 allenv0/SCM 的 README：五种模式、默认视觉模型大约 435MB、可选的本地聊天，以及三条 brew 命令。安装包不在 GitHub Releases 里；tap 在 allenv0/homebrew-scm。",
+            "bodyEn": "Read the allenv0/SCM README: the five modes, the default vision weights of about 435MB, the optional local chat, and the three brew commands. Installers are not in GitHub Releases; the tap is allenv0/homebrew-scm.",
+            "links": [
+              {
+                "href": "https://github.com/allenv0/SCM",
+                "label": "GitHub 仓库",
+                "labelEn": "GitHub repo"
+              },
+              {
+                "href": "https://github.com/allenv0/homebrew-scm",
+                "label": "Homebrew tap",
+                "labelEn": "Homebrew tap"
+              }
+            ]
+          },
+          {
+            "title": "自己决定要不要装",
+            "titleEn": "Decide yourself whether to install",
+            "body": "三条命令是：brew tap allenv0/scm；brew trust allenv0/scm；brew install --cask allenv0/scm/scm。本库没有跑过这些命令，也没有把任何一个文件夹交给它索引。装之前想清楚：它会读你的照片和视频，并下载一份模型权重。",
+            "bodyEn": "The three commands are brew tap allenv0/scm, brew trust allenv0/scm, and brew install --cask allenv0/scm/scm. This library did not run them and did not hand any folder to the indexer. Before you install, decide whether you want it reading your photos and videos and downloading model weights.",
+            "links": [
+              {
+                "href": "https://scm.allenlee.site",
+                "label": "产品页上的安装命令",
+                "labelEn": "Install commands on the product page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未安装、未执行 brew、未用真实相册或视频试过任何一种搜索。",
+            "textEn": "This library did not install it, did not run brew, and did not try any search mode on a real photo or video library."
+          },
+          {
+            "text": "README 写安装面向 Apple 芯片和 macOS 12 及以上。GitHub 上没有列出 Releases，不要等一个网页版。",
+            "textEn": "The README says the install is for Apple silicon and macOS 12 or newer. GitHub lists no Releases — there is no web app to wait for."
+          },
+          {
+            "text": "默认视觉模型大约 435MB、OCR 的 35 种语言、可选聊天模型的体积，都是 README 里的数字，本库没有自己称过或跑过。",
+            "textEn": "The default vision weights of about 435MB, the 35 OCR languages, and the optional chat-model sizes are README figures. This library did not measure or run them."
+          },
+          {
+            "text": "「不上传、可离线」是作者的说法。本库没有审计安装包会不会联网。",
+            "textEn": "“No uploads, works offline” is the author’s claim. This library did not audit whether the installed app phones home."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 scm.allenlee.site 首屏",
+        "previewCreditEn": "Preview: Playwright capture of scm.allenlee.site above the fold"
+      }
+    },
+    {
+      "id": "cloudflare-web-search-api",
+      "slug": "cloudflare-web-search-api",
+      "title": "工具：Cloudflare Web Search API — 让 Agent 搜现在的网页",
+      "titleEn": "Tool: Cloudflare Web Search API — let an agent search the live web",
+      "summary": "Cloudflare Web Search API 是一个还在 beta（试用，接口以后可能改）的搜索接口。你的 AI 应用或 Agent 可以用它去搜现在的网页，给回答找依据，而不是猜一个网址，或只靠模型训练时见过的旧资料。上线时可选三家搜索服务：Ceramic.ai、Exa、Linkup。请求经过 Cloudflare 的 AI Gateway（他们的调用记录和扣费入口）：会出现在网关日志里，按各家自己的标价扣 AI Gateway 额度，Cloudflare 称不加价；也可以改用你自己存在网关上的那一家密钥。需要 Cloudflare 账号和 API token。这是一条工具笔记：本库没有发出过任何搜索请求。",
+      "summaryEn": "Cloudflare Web Search API is a search API still in beta (a trial; the interface may change). Your AI app or agent can use it to search the live web and base the answer on those pages, instead of guessing a URL or relying only on what the model saw before its training cutoff. At launch you can pick three search providers: Ceramic.ai, Exa, and Linkup. Requests go through Cloudflare AI Gateway (their log and billing front door): they show up in the gateway logs and are billed to AI Gateway credits at each provider’s list price. Cloudflare says it adds no markup. You can also use your own provider key stored on the gateway. You need a Cloudflare account and an API token. This is a tool tip: this library did not send any search request.",
+      "hook": "给 Agent 一个搜实时网页的接口，回答有出处。",
+      "hookEn": "An API so agents search the live web instead of guessing links.",
+      "categories": [
+        "research",
+        "engineering",
+        "coding"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+      "secondaryUrls": [
+        "https://developers.cloudflare.com/web-search/",
+        "https://developers.cloudflare.com/web-search/how-to-use/",
+        "https://developers.cloudflare.com/web-search/providers/",
+        "https://news.ycombinator.com/item?id=49963171",
+        "https://developers.cloudflare.com/ai-gateway/",
+        "https://blog.cloudflare.com/clef-decision-models/",
+        "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/（页内日期 October 2, 2026，撰写时 HTTP 200）与用法文档 https://developers.cloudflare.com/web-search/how-to-use/（HTTP 200；页内 Last updated Oct 2, 2026，markdown 的 dateModified 为 2026-10-02）。HN item 49963171（标题 Web Search API，作者 tosh，2026-10-05T10:47:06.000Z / 约 2026-10-05 18:47 CST，链接指向上述 changelog）。撰写时该帖仍在 HN 首页 HTML 中；撰写时 HN 页面 score 为 65pts，Algolia 为 61pts（两边不一致，都写上，不并成一个数）。changelog 写明上线供应商为 Ceramic.ai、Exa、Linkup，三家都支持经 Cloudflare 的 Zero Data Retention（零数据保留：对方称请求做完后不留下你的搜索内容），并承诺遵守 Cloudflare 的 verified bot 抓取标准。用法文档写明：provider 只能是 ceramic、exa、linkup，不填则默认 ceramic；limit 为 1 到 10，默认 10；query 最长 1024 字符。REST 是 POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ ，token 需要 Account → Workers AI → Read 和 Account → AI Gateway → Read。Workers 是 env.AI.websearch({ gatewayId, query, provider, limit })。每个账号有一个名叫 default 的网关。收录理由：Agent 要搜现在的网页时，这是官方刚公开的接口。和本库已有的 Cloudflare Clef 决策模型不是同一件事。Cases 没有 relatedModelIds 字段，所以在来源和试步骤里链到已上线的 /models/clef/（撰写时该页 HTTP 200）和 Clef 官博。边界：beta；要账号、额度和 token；按各家标价扣费。本库未创建 token、未发出任何搜索请求。预览为 Playwright 实拍 changelog 首屏裁 3:2 WebP。不打星。未改 models.json。",
+      "qualityNoteEn": "Primary sources are the Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/ (on-page date October 2, 2026, HTTP 200 at write time) and the how-to https://developers.cloudflare.com/web-search/how-to-use/ (HTTP 200; on-page Last updated Oct 2, 2026, markdown dateModified 2026-10-02). HN item 49963171 (title Web Search API, author tosh, 2026-10-05T10:47:06.000Z / about 18:47 CST on 2026-10-05, URL is that changelog). The thread was still in the HN front-page HTML at write time. The HN page score was 65pts and Algolia was 61pts (the counters disagreed, so both numbers are written). The changelog says the launch providers are Ceramic.ai, Exa, and Linkup, that all three support Zero Data Retention for requests made through Cloudflare (they say the search text is not kept after the request), and that they committed to Cloudflare’s verified-bot crawling standards. The how-to says provider must be ceramic, exa, or linkup, and defaults to ceramic; limit is 1 to 10, default 10; query max length is 1024 characters. REST is POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ . The token needs Account → Workers AI → Read and Account → AI Gateway → Read. Workers is env.AI.websearch({ gatewayId, query, provider, limit }). Every account has a gateway named default. Why: an official, just-published way for an agent to search the live web. It is not the same product as Cloudflare Clef, the decision model already in this library. Cases have no relatedModelIds field, so the sources and the try-steps link the live /models/clef/ page (HTTP 200 at write time) and the Clef blog. Boundary: beta; needs an account, credits, and a token; billed at each provider’s list price. This library did not create a token and did not send a search. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP. Unrated. models.json was not edited.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "创建 API token，或发出会扣 AI Gateway 额度的搜索之前，自己确认。本库没有代为调用。",
+      "approvalBoundaryEn": "Confirm before creating an API token or sending a search that spends AI Gateway credits. This library did not call it.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-05T12:16:40Z",
+      "previewImage": "/previews/cloudflare-web-search-api.webp",
+      "landing": {
+        "what": "这是 Cloudflare 在 2026-10-02 写进更新日志的一个搜索接口，目前标成 beta。它要解决的问题很具体：Agent 回答「现在网上怎么说」时，不要自己编一个链接，也不要只靠训练截止日之前的记忆。你选一家搜索服务（Ceramic.ai、Exa 或 Linkup），把问题交过去，拿回搜索结果。请求都经过 AI Gateway：网关是 Cloudflare 放在调用前面的一层，负责记日志和扣费。changelog 写费用按各家标价走，Cloudflare 不加价；你也可以把那一家的密钥存在网关上自己付。用法有两条：任何后端发 REST 请求，或者在 Cloudflare Worker 里调用 env.AI.websearch。它和本库已经收录的 Clef 不是同一个产品——Clef 是一个给选项打分的决策模型，这个接口是去搜网页。",
+        "whatEn": "This is a search API Cloudflare added to the changelog on 2026-10-02. It is marked beta. The job is specific: when an agent answers “what does the web say right now,” it should not invent a link or rely only on memory from before the training cutoff. You pick a search provider (Ceramic.ai, Exa, or Linkup), send the question, and get results back. Every request goes through AI Gateway, the layer Cloudflare puts in front of the call to keep logs and handle billing. The changelog says you pay each provider’s list price with no Cloudflare markup, or you store your own provider key on the gateway. There are two ways to call it: a REST request from any backend, or env.AI.websearch inside a Cloudflare Worker. It is not the Clef model already in this library. Clef scores allowed answers. This API searches the web.",
+        "contrast": {
+          "caption": "左列是 changelog 和用法文档写明的事实。右列是本站口径：为什么单独收一条，以及不要和 Clef 或「已经替你调通」搞混。",
+          "captionEn": "Left: what the changelog and the how-to state. Right: this library’s framing — why this is its own entry, and why it is not Clef or a call we already made.",
+          "leftLabel": "Web Search API",
+          "leftLabelEn": "Web Search API",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "给 Agent 用的网页搜索接口。beta。三家供应商：Ceramic.ai、Exa、Linkup。",
+              "leftEn": "A web search API for agents. Beta. Three providers: Ceramic.ai, Exa, Linkup.",
+              "right": "Cases 工具笔记。补的是「搜现在的网页」，不是又一个聊天模型卡。",
+              "rightEn": "An AI tool tip in Cases. It fills “search the live web,” not another chat-model card."
+            },
+            {
+              "aspect": "钱和日志",
+              "aspectEn": "Money and logs",
+              "left": "走 AI Gateway。按各家标价扣额度，Cloudflare 称不加价。也可以自带密钥。请求出现在网关日志里。",
+              "leftEn": "Runs through AI Gateway. Billed at each provider’s list price; Cloudflare says no markup. Bring-your-own key is supported. Requests show in the gateway logs.",
+              "right": "会花钱。本库没有账号、没有 token、没有打过这个接口，也不知道你的网关里还剩多少额度。",
+              "rightEn": "It can spend money. This library has no account, no token, and did not call the API. It does not know your remaining credits."
+            },
+            {
+              "aspect": "和 Clef 的关系",
+              "aspectEn": "Relation to Clef",
+              "left": "同一家公司的另一件产品。Clef 是决策模型；这个接口是搜索。",
+              "leftEn": "Another product from the same company. Clef is a decision model; this API is search.",
+              "right": "本库模型页已有 Clef。Cases 不能写 relatedModelIds，所以在来源和下面的步骤里放上那张卡的链接。",
+              "rightEn": "Clef is already on this library’s model page. Cases cannot store a relatedModelIds field, so the card is linked from the sources and from the step below."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读更新日志和讨论",
+            "titleEn": "Read the changelog and the thread first",
+            "body": "changelog 日期是 October 2, 2026，标题 Introducing Web Search API。HN 讨论是 item 49963171。点数涨得快，以你打开当天为准。",
+            "bodyEn": "The changelog is dated October 2, 2026, titled Introducing Web Search API. The HN thread is item 49963171. Points move quickly — use the count on the day you open it.",
+            "links": [
+              {
+                "href": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+                "label": "Cloudflare 更新日志",
+                "labelEn": "Cloudflare changelog"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49963171",
+                "label": "HN 讨论",
+                "labelEn": "HN thread"
+              }
+            ]
+          },
+          {
+            "title": "按文档看怎么调用，先别贴真密钥",
+            "titleEn": "Read the how-to before you paste a real key",
+            "body": "用法文档写两条路。REST：向 /accounts/{账号}/ai/websearch/ 发 POST，正文里有 query、provider（ceramic、exa 或 linkup）、limit，以及 options.gateway.id。Workers：env.AI.websearch({ gatewayId, query, provider, limit })。token 需要 Workers AI 的 Read 和 AI Gateway 的 Read。文档写 query 最长 1024 字，limit 为 1 到 10。本库没有发过请求。",
+            "bodyEn": "The how-to shows two paths. REST: POST /accounts/{account}/ai/websearch/ with query, provider (ceramic, exa, or linkup), limit, and options.gateway.id. Workers: env.AI.websearch({ gatewayId, query, provider, limit }). The token needs Workers AI Read and AI Gateway Read. The docs say query maxes at 1024 characters and limit is 1 to 10. This library did not send a request.",
+            "links": [
+              {
+                "href": "https://developers.cloudflare.com/web-search/how-to-use/",
+                "label": "怎么用",
+                "labelEn": "How to use"
+              },
+              {
+                "href": "https://developers.cloudflare.com/web-search/providers/",
+                "label": "三家供应商",
+                "labelEn": "The three providers"
+              },
+              {
+                "href": "https://developers.cloudflare.com/web-search/",
+                "label": "Web Search API 文档",
+                "labelEn": "Web Search API docs"
+              }
+            ]
+          },
+          {
+            "title": "不要和 Clef 决策模型搞混",
+            "titleEn": "Do not mix it up with the Clef decision model",
+            "body": "如果你是从本库的 Cloudflare 条目点过来的：Clef / Clef-Flash 是开源决策模型，回答是概率而不是网页链接。Web Search API 是搜网页。两张卡都留着，各管一件事。",
+            "bodyEn": "If you arrived from this library’s Cloudflare entries: Clef / Clef-Flash are open-weight decision models. They return probabilities, not web links. Web Search API searches the web. Both cards stay, and each covers one job.",
+            "links": [
+              {
+                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/",
+                "label": "本库的 Clef 模型页",
+                "labelEn": "Clef model page in this library"
+              },
+              {
+                "href": "https://blog.cloudflare.com/clef-decision-models/",
+                "label": "Clef 官博",
+                "labelEn": "Clef blog post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "beta。文档和字段以后可能改。本库未创建 token，也未发出任何搜索请求。",
+            "textEn": "Beta. The docs and fields may change. This library did not create a token and did not send a search request."
+          },
+          {
+            "text": "需要 Cloudflare 账号。REST 的 token 要有 Workers AI Read 和 AI Gateway Read。额度不够或没配自带密钥时，调用会失败或扣费——以你账号里的实际账单为准。",
+            "textEn": "Needs a Cloudflare account. The REST token needs Workers AI Read and AI Gateway Read. If credits are empty or your own key is missing, the call fails or spends money — your account’s bill is the source of truth."
+          },
+          {
+            "text": "「不加价」和「零数据保留」是 Cloudflare 与供应商的说法。本库没有审计账单，也没有审计他们是否真的不留数据。",
+            "textEn": "“No markup” and “zero data retention” are claims from Cloudflare and the providers. This library did not audit a bill or whether the search text is actually discarded."
+          },
+          {
+            "text": "不是 Clef，也不是 Grok Bot 里的一个现成技能。接进自己的 Agent 之前，先在文档里的示例上自己试一次。",
+            "textEn": "This is not Clef, and it is not a ready-made skill inside Grok Bot. Try the sample in the docs yourself before you wire it into an agent."
+          }
+        ],
+        "previewCredit": "预览：Playwright 实拍 Cloudflare changelog 首屏",
+        "previewCreditEn": "Preview: Playwright capture of the Cloudflare changelog above the fold"
+      }
+    },
+    {
       "id": "image-source-sites-0xczyan",
       "slug": "image-source-sites-0xczyan",
       "title": "清单：发帖用图片 / GIF / 梗图素材站（子砚 @0xCzyan）",
@@ -6745,11 +7058,23 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-05T08:55:00Z",
+    "updatedAt": "2026-10-05T12:16:40Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.42",
-    "count": 140,
+    "version": "1.4.43",
+    "count": 142,
     "sourcesCrawled": [
+      "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/",
+      "https://blog.cloudflare.com/clef-decision-models/",
+      "https://developers.cloudflare.com/ai-gateway/",
+      "https://developers.cloudflare.com/web-search/providers/",
+      "https://developers.cloudflare.com/web-search/how-to-use/",
+      "https://developers.cloudflare.com/web-search/",
+      "https://news.ycombinator.com/item?id=49963171",
+      "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+      "https://github.com/allenv0/homebrew-scm",
+      "https://news.ycombinator.com/item?id=49952111",
+      "https://github.com/allenv0/SCM",
+      "https://scm.allenlee.site",
       "https://wallhaven.cc/",
       "https://www.pexels.com/",
       "https://unsplash.com/",
