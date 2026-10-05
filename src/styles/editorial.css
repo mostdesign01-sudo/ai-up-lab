@@ -8,8 +8,13 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
 :root { --font-sans: var(--lab-font-sans); --font-mono: var(--lab-font-mono); }
 .ui-icon > svg { display: block; width: 100%; height: 100%; }
 .directory-header-top { padding-block: 20px; }
-.directory-header .brand-mark { width: var(--lab-logo-desktop); height: var(--lab-logo-desktop); }
-.directory-header .brand-text strong { font-size: 18px; font-weight: 750; }
+/* Logo lockup (design system 1.2.1). The mark artwork keeps 20% empty space on each side of its box, so trim it:
+   the visible glyph then sits on the grid edge and the visible gap equals 0.5 × the wordmark cap height (0.36em in Geist). */
+.directory-header .brand { --lockup-mark: var(--lab-logo-desktop); font-size: 18px; gap: .36em; }
+.directory-header .brand-mark { width: var(--lockup-mark); height: var(--lockup-mark); margin-inline: calc(var(--lockup-mark) * -.2); }
+.directory-header .brand-text { line-height: 1; }
+.directory-header .brand-text strong { font-size: 1em; font-weight: 500; letter-spacing: -.02em; line-height: 1; }
+@supports (text-box: trim-both cap alphabetic) { .directory-header .brand-text strong { text-box: trim-both cap alphabetic; } }
 .directory-nav { gap: 22px; }
 .directory-nav a { font-size: 14px; }
 .directory-nav a[aria-current="page"] { color: var(--brass); text-decoration: underline; text-underline-offset: 10px; text-decoration-thickness: 2px; }
@@ -109,8 +114,7 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
 }
 @media (max-width: 700px) {
   .directory-header-top { padding-block: 10px 8px; }
-  .directory-header .brand-text strong { font-size: 12px; }
-  .directory-header .brand-mark { width: var(--lab-logo-mobile); height: var(--lab-logo-mobile); }
+  .directory-header .brand { --lockup-mark: var(--lab-logo-mobile); font-size: 14px; }
   .directory-nav { gap: 18px; }
   .editorial-home { padding-top: 28px; }
   .editorial-lead { grid-template-columns: minmax(0, 1fr); gap: 20px; }

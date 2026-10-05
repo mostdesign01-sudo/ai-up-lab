@@ -63,6 +63,16 @@ const downloads = [
       <p class="brand-guide-description"><Loc zh="六边形轮廓保留向上的空心三角形，中心加入 45% 等比缩小的实心三角形。标志以中性黑或反白呈现，紫色留给行动与重点。" en="The hexagonal mark contains an upward triangle cutout and a solid triangle scaled to 45% around its centroid. Use neutral dark or reversed light; reserve violet for actions and emphasis." /></p>
       <div class="brand-guide-logo-grid"><div class="brand-guide-logo-light"><span><BrandMark /></span><p><Loc zh="浅色背景 · 中性黑" en="Light surface · Neutral dark" /></p></div><div class="brand-guide-logo-dark"><span><BrandMark /></span><p><Loc zh="深色背景 · 反白" en="Dark surface · Reversed light" /></p></div><div class="brand-guide-logo-space"><div><BrandMark /></div><p><Loc zh="安全留白 ≥ 标志盒宽的 1/4" en="Clear space ≥ ¼ of the mark box" /></p></div></div>
       <div class="brand-guide-logo-sizes">{[16,24,32,64].map(size => <div><span style={`width:${size}px;height:${size}px`}><BrandMark /></span><code>{size}px</code></div>)}<p><Loc zh="最小 16 px；手机导航 24 px；桌面导航 32 px。不要拉伸、旋转、描边或给标志加阴影。" en="Minimum 16px; mobile navigation 24px; desktop navigation 32px. Do not stretch, rotate, outline, or shadow the mark." /></p></div>
+      <div class="brand-guide-lockup" id="logo-lockup">
+        <div class="brand-guide-lockup-demo">{[[64,36],[32,18],[24,14]].map(([mark, type]) => <div><span class="lab-lockup" style={`--lockup-mark:${mark}px;font-size:${type}px`}><span><BrandMark /></span><strong>AI UP LAB</strong></span><code>{mark}px / {type}px</code></div>)}</div>
+        <div class="brand-guide-lockup-rules"><h3><Loc zh="横向组合（标志 + 字标）" en="Horizontal lockup (mark + wordmark)" /></h3><ul>
+          <li><Loc zh="字标：Geist 500，字距 -0.02em（大于 64px 的展示尺寸用 -0.045em）。" en="Wordmark: Geist 500, tracking -0.02em (-0.045em at display sizes above 64px)." /></li>
+          <li><Loc zh="比例：可见图形高度 ≈ 字母大写高度的 1.75 倍。桌面 32px 标志配 18px 字，手机 24px 配 14px。" en="Scale: the visible glyph is about 1.75 × the cap height. 32px mark with 18px type on desktop; 24px with 14px on mobile." /></li>
+          <li><Loc zh="间距：图形右缘到首字母 = 大写高度的 0.5 倍（Geist 中约 0.36em）。SVG 盒子两侧自带 20% 空白，要先扣掉，不要在外框上再加间距。" en="Gap: from the glyph edge to the first letter = 0.5 × cap height (about 0.36em in Geist). The SVG box carries 20% empty space per side; trim it instead of adding spacing to the box." /></li>
+          <li><Loc zh="对齐：图形与大写字母高度居中；左侧以可见图形边缘对齐页面网格。" en="Alignment: centre the glyph on the cap height; align the visible glyph edge, not the SVG box, to the page grid." /></li>
+          <li><Loc zh="留白：整个组合四周至少保留 1/4 标志盒宽；标志最小 16px。" en="Clear space: at least ¼ of the mark box around the whole lockup; minimum mark size 16px." /></li>
+        </ul></div>
+      </div>
     </section>
     <section id="color" class="brand-guide-section">
       <div class="brand-guide-heading"><p>03 / COLOR</p><h2><Loc zh="中性底色，紫色引导" en="Neutral surfaces, violet direction" /></h2></div>
