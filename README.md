@@ -2,7 +2,7 @@
 
 把 AI 用到你的下一件事里。按任务探索教程、工具、界面范例、模型能力和提示词；每条资源附原文链接。
 
-公开站点：https://mostdesign01-sudo.github.io/grokbot-use-cases/
+公开站点：https://mostdesign01-sudo.github.io/ai-up-lab/
 
 ## 目录方向
 
@@ -42,7 +42,7 @@ npm run build
 npm run preview
 ```
 
-本地入口为 `http://localhost:4321/grokbot-use-cases/`。GitHub Pages 的项目路径由 `astro.config.mjs` 的 `base` 决定；改仓库名时同步调整它和 `src/lib/site.ts` 的仓库链接。
+本地入口为 `http://localhost:4321/ai-up-lab/`。GitHub Pages 的项目路径由 `astro.config.mjs` 的 `base` 决定；改仓库名时同步调整它和 `src/lib/site.ts` 的仓库链接。
 
 `.github/workflows/deploy.yml` 在 PR 上构建检查，在 main 推送后部署。新目录通过静态 HTML 发布，不需要服务器、数据库或访问时调用模型。
 

@@ -11,7 +11,7 @@ import "../../../styles/brand-handbook.css";
 export function getStaticPaths() { return designKnowledge.map(spec => ({params:{slug:spec.id},props:{spec}})); }
 const { spec } = Astro.props;
 const group=designGroups.find(group=>group.id===spec.group)!;
-const codeBase="https://github.com/mostdesign01-sudo/grokbot-use-cases/blob/codex/simplify-category-pages/";
+const codeBase="https://github.com/mostdesign01-sudo/ai-up-lab/blob/codex/simplify-category-pages/";
 ---
 <BaseLayout title={`${spec.title.zh} · AI UP LAB 设计规范`} titleEn={`${spec.title.en} · AI UP LAB design system`} description={spec.definition.zh} descriptionEn={spec.definition.en}>
 <div class="wrap-wide brand-guide handbook-shell"><BrandDocsNav active={spec.id} /><article class="handbook-content">

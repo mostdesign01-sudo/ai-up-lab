@@ -458,7 +458,7 @@
         "https://news.ycombinator.com/item?id=49963171",
         "https://developers.cloudflare.com/ai-gateway/",
         "https://blog.cloudflare.com/clef-decision-models/",
-        "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/"
+        "https://mostdesign01-sudo.github.io/ai-up-lab/models/clef/"
       ],
       "sourceType": "official-launch",
       "qualityNote": "主源是 Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/（页内日期 October 2, 2026，撰写时 HTTP 200）与用法文档 https://developers.cloudflare.com/web-search/how-to-use/（HTTP 200；页内 Last updated Oct 2, 2026，markdown 的 dateModified 为 2026-10-02）。HN item 49963171（标题 Web Search API，作者 tosh，2026-10-05T10:47:06.000Z / 约 2026-10-05 18:47 CST，链接指向上述 changelog）。撰写时该帖仍在 HN 首页 HTML 中；撰写时 HN 页面 score 为 65pts，Algolia 为 61pts（两边不一致，都写上，不并成一个数）。changelog 写明上线供应商为 Ceramic.ai、Exa、Linkup，三家都支持经 Cloudflare 的 Zero Data Retention（零数据保留：对方称请求做完后不留下你的搜索内容），并承诺遵守 Cloudflare 的 verified bot 抓取标准。用法文档写明：provider 只能是 ceramic、exa、linkup，不填则默认 ceramic；limit 为 1 到 10，默认 10；query 最长 1024 字符。REST 是 POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ ，token 需要 Account → Workers AI → Read 和 Account → AI Gateway → Read。Workers 是 env.AI.websearch({ gatewayId, query, provider, limit })。每个账号有一个名叫 default 的网关。收录理由：Agent 要搜现在的网页时，这是官方刚公开的接口。和本库已有的 Cloudflare Clef 决策模型不是同一件事。Cases 没有 relatedModelIds 字段，所以在来源和试步骤里链到已上线的 /models/clef/（撰写时该页 HTTP 200）和 Clef 官博。边界：beta；要账号、额度和 token；按各家标价扣费。本库未创建 token、未发出任何搜索请求。预览为 Playwright 实拍 changelog 首屏裁 3:2 WebP。不打星。未改 models.json。",
@@ -564,7 +564,7 @@
             "bodyEn": "If you arrived from this library’s Cloudflare entries: Clef / Clef-Flash are open-weight decision models. They return probabilities, not web links. Web Search API searches the web. Both cards stay, and each covers one job.",
             "links": [
               {
-                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/",
+                "href": "https://mostdesign01-sudo.github.io/ai-up-lab/models/clef/",
                 "label": "本库的 Clef 模型页",
                 "labelEn": "Clef model page in this library"
               },
@@ -2065,7 +2065,7 @@
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49863641",
         "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
-        "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/"
+        "https://mostdesign01-sudo.github.io/ai-up-lab/cases/errand-opensource/"
       ],
       "sourceType": "community",
       "qualityNote": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。1079 builds、分类数字是页面自述快照（2026-09-27 晚间）。独立非官方；赞助位页面有标价，收录不构成推荐。未逐条核 build 真实性。预览 Playwright 实拍目录首屏 3:2。不打星。",
@@ -2156,7 +2156,7 @@
             "bodyEn": "If you care about Muse / per-seat-computer adjacent stacks, return to this library’s Errand card for the Runta desktop path; catalog ≠ client.",
             "links": [
               {
-                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/",
+                "href": "https://mostdesign01-sudo.github.io/ai-up-lab/cases/errand-opensource/",
                 "label": "Errand 案例页",
                 "labelEn": "Errand case page"
               },
@@ -2346,7 +2346,7 @@
         "https://x.com/hejushang8/status/2102602033488634298",
         "https://www.paypal.com/us/home",
         "https://hejushang8.com/",
-        "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/saily-us-number-esim/"
+        "https://mostdesign01-sudo.github.io/ai-up-lab/cases/saily-us-number-esim/"
       ],
       "sourceType": "tutorial",
       "qualityNote": "作者自述。主源是 2026-09-23 短帖；2026-09-24（Asia/Shanghai）用 fxtwitter 镜像核对了正文和两张图：PayPal 钱包里招商银行 Visa 尾号 2852，以及美区 Apple ID 付款方式页。副源是同日长文（article 2102588711330590720）和引用帖 2102602033488634298。机房 IP、约一周再绑卡、Saily 约 1 美元、已用约 4 个月、能付 AI / VPS，都是作者自己的说法和截图。本站没有开设 PayPal 账户，也没有绑定任何银行卡。价格和优惠码与本条无关，不转载、不复核（Saily 另见 saily-us-number-esim）。有封号风险：作者写明账号可能被冻，卡若已经绑上且账号进不去，这张卡可能解不下来。完整步骤见作者长文。不构成购买建议，也不构成金融或法律建议；PayPal 官方页面优先。预览是作者短帖两张截图拼成 3:2。不打星。",
@@ -2447,7 +2447,7 @@
                 "labelEn": "PayPal US home"
               },
               {
-                "href": "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/saily-us-number-esim/",
+                "href": "https://mostdesign01-sudo.github.io/ai-up-lab/cases/saily-us-number-esim/",
                 "label": "本站 Saily 笔记",
                 "labelEn": "Saily note on this site"
               },
@@ -7358,7 +7358,7 @@
       "https://x.ai/bot/guides",
       "https://x.ai/news",
       "https://x.ai/changelog/bot",
-      "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/",
+      "https://mostdesign01-sudo.github.io/ai-up-lab/models/clef/",
       "https://blog.cloudflare.com/clef-decision-models/",
       "https://developers.cloudflare.com/ai-gateway/",
       "https://developers.cloudflare.com/web-search/providers/",
@@ -7546,7 +7546,7 @@
       "https://shipwithmuse.live/",
       "https://news.ycombinator.com/item?id=49863641",
       "https://dev.to/md_ayanbag_03a42545b17ac/i-built-a-directory-to-track-every-public-thing-people-are-shipping-with-muse-2ef8",
-      "https://mostdesign01-sudo.github.io/grokbot-use-cases/cases/errand-opensource/",
+      "https://mostdesign01-sudo.github.io/ai-up-lab/cases/errand-opensource/",
       "https://loficities.com/",
       "https://news.ycombinator.com/item?id=49869574",
       "https://shotcandy.vercel.app",
