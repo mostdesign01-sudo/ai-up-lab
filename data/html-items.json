@@ -1,6 +1,101 @@
 {
   "items": [
     {
+      "id": "flatten-sf",
+      "slug": "flatten-sf",
+      "title": "Flatten SF：在旧金山找最平的步行/骑车路线",
+      "titleEn": "Flatten SF: the flattest walking or cycling route across San Francisco",
+      "summary": "HN 首页 item 49971230（2026-10-05T21:40:50Z / 约 10-06 05:40 CST，早间约 96 分）https://flattensf.com/ —— 输入起点终点，选步行或骑车，它会给出从最短到最平的一整串路线（截图里是 30 条），拖动滑杆就能在「少走路」和「少爬坡」之间换，左侧同步显示距离、累计爬升、最陡坡度和高程曲线，还能复制链接分享。地图数据来自 Overture / OpenStreetMap，高程用 USGS 3DEP。页面署名 Drew Edwards。预览为无头浏览器实拍首屏裁 3:2 WebP。",
+      "summaryEn": "HN front page item 49971230 (2026-10-05T21:40:50Z / about 05:40 CST on 10-06, about 96 points this morning) at https://flattensf.com/ — enter two places, pick walk or bike, and it lists every route from shortest to flattest (30 in the capture); drag the slider to trade distance for climbing while the panel updates distance, total climb, steepest grade, and an elevation profile, with a copy-link button. Map data from Overture / OpenStreetMap, elevation from USGS 3DEP. Credited to Drew Edwards. Preview is a headless-browser capture of the first screen, cropped to 3:2 WebP.",
+      "sourceUrl": "https://flattensf.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49971230"
+      ],
+      "previewImage": "/previews/flatten-sf.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "map",
+        "routing",
+        "elevation",
+        "san-francisco",
+        "hacker-news"
+      ],
+      "qualityNote": "主源是 HN 49971230 与公开页（早间 HTTP 200）。收录理由：一个滑杆把「最短 vs 最平」的取舍讲得一目了然，交互和信息面板都值得借鉴。边界：只覆盖旧金山；有评论说个别路段推荐不准；未见公开代码仓库。预览自托管。",
+      "qualityNoteEn": "Primary sources are HN 49971230 and the public page (HTTP 200 this morning). Why listed: one slider makes the shortest-versus-flattest trade-off obvious, and both the interaction and the info panel are worth borrowing. Boundary: San Francisco only; a commenter reports some suggestions are off; no public code repo seen. Preview is self-hosted.",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "一根滑杆，在少走路和少爬坡之间挑。",
+      "hookEn": "One slider between shorter and flatter."
+    },
+    {
+      "id": "stillwet-ai-paintings",
+      "slug": "stillwet-ai-paintings",
+      "title": "stillwet：AI 模型用代码一笔笔画油画，还能回放作画过程",
+      "titleEn": "stillwet: AI models paint stroke by stroke in code, with replayable sessions",
+      "summary": "Show HN item 49928566（2026-10-02T00:27:56Z / 约 08:27 CST，早间约 387 分）https://stillwet.art/ —— 网站说明：每幅画都是模型把每一笔写成代码，再交给油画颜料模拟器画出来，没有用图像生成模型。首页会加速回放一幅画从空白到完成的过程，下面是 75 幅作品的画廊，标了作画模型（如 Claude Opus 5.5、GPT-6.1 Sol、Claude Sonnet 5）、轮次和策展人短评，还有「the studio, live」实时看它作画。预览为无头浏览器实拍回放末段裁 3:2 WebP。",
+      "summaryEn": "Show HN item 49928566 (2026-10-02T00:27:56Z / about 08:27 CST, about 387 points this morning) at https://stillwet.art/ — per the site, each painting is a model writing every brushstroke as code, carried out by an oil-paint simulation, with no image generator. The home page replays one painting from blank canvas to finish, sped up, above a gallery of 75 works labeled with the painting model (such as Claude Opus 5.5, GPT-6.1 Sol, Claude Sonnet 5), the round, and curator notes, plus a live studio view. Preview is a headless-browser capture near the end of the replay, cropped to 3:2 WebP.",
+      "sourceUrl": "https://stillwet.art/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49928566"
+      ],
+      "previewImage": "/previews/stillwet.webp",
+      "types": [
+        "interactive",
+        "portfolio",
+        "motion"
+      ],
+      "tags": [
+        "generative-art",
+        "canvas",
+        "ai-painting",
+        "show-hn"
+      ],
+      "qualityNote": "主源是 Show HN 49928566 与公开页（早间 HTTP 200）。收录理由：「看画被一笔笔画出来」的回放很抓人，作品页的模型/轮次标注方式也清楚。边界：具体怎么提示模型、模拟器怎么做，站点和 HN 帖都没细讲；有评论嫌部分风景构图重复。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49928566 and the public page (HTTP 200 this morning). Why listed: watching a painting get built stroke by stroke is gripping, and the model and round labels are clear. Boundary: neither the site nor the HN thread explains the prompting or the simulator in detail; some commenters find the landscapes repetitive. Preview is self-hosted.",
+      "featured": false,
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "看 AI 用代码一笔笔把油画画出来。",
+      "hookEn": "Watch AI paint an oil painting, one coded stroke at a time."
+    },
+    {
+      "id": "island-three",
+      "slug": "island-three",
+      "title": "Island Three：在浏览器里走进一座 O’Neill 太空圆柱城",
+      "titleEn": "Island Three: walk around an O’Neill cylinder in the browser",
+      "summary": "Show HN item 49963508（2026-10-05T11:32:58Z / 约 19:32 CST，早间约 7 分）https://islandthree.world —— 作者 Zach Kauble 把 1970 年代 O’Neill 设想的「三号岛」太空殖民地做成浏览器里能走动的 3D 世界：三条山谷和三扇窗交替、抬头能看到圆柱另一侧的地面，首页还有灵感来源和时间线说明。作者在 HN 说：开发用 Claude Code 指挥，建模主要是 Claude 通过 MCP 操作 Blender。点「Enter the colony」进入，首次加载要建整个世界，可能要等一分钟。预览为首页实拍裁 3:2 WebP（3D 场景在无头环境未渲染出来）。",
+      "summaryEn": "Show HN item 49963508 (2026-10-05T11:32:58Z / about 19:32 CST, about 7 points this morning) at https://islandthree.world — Zach Kauble turned the 1970s O’Neill Island Three space-colony design into a walkable browser 3D world: three valleys alternating with three windows, with the far side of the cylinder overhead, plus a landing page on the inspiration and timeline. On HN he says he directed the build with Claude Code and most modeling was Claude driving Blender through MCP. Click Enter the colony; the first visit builds the whole world and can take a minute. Preview is a capture of the landing page cropped to 3:2 WebP (the 3D scene did not render in the headless capture).",
+      "sourceUrl": "https://islandthree.world",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49963508",
+        "https://islandthree.world/colony/"
+      ],
+      "previewImage": "/previews/island-three.webp",
+      "types": [
+        "interactive",
+        "demo",
+        "game"
+      ],
+      "tags": [
+        "3d",
+        "webgl",
+        "space",
+        "blender-mcp",
+        "show-hn"
+      ],
+      "qualityNote": "主源是 Show HN 49963508 与公开页（早间 HTTP 200）。收录理由：一个人用 AI 写代码、AI 操作 Blender 建模，做出可走动的大场景，是「AI 辅助做 3D 网页」的好例子。边界：HN 分数还低；首次加载慢、对设备性能有要求；预览只是首页文字页，不代表 3D 画面；未见公开代码仓库。预览自托管。",
+      "qualityNoteEn": "Primary sources are Show HN 49963508 and the public page (HTTP 200 this morning). Why listed: one person using AI for code and AI-driven Blender modeling to ship a walkable large scene, a good example of AI-assisted 3D on the web. Boundary: low HN score so far; slow first load and demanding on hardware; the preview shows only the text landing page, not the 3D view; no public code repo seen. Preview is self-hosted.",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "在浏览器里走进一座太空圆柱城。",
+      "hookEn": "Walk into a space-colony cylinder in your browser."
+    },
+    {
       "id": "vb6-studio-web",
       "slug": "vb6-studio-web",
       "title": "VB6 Studio Web：浏览器里的经典 Visual Basic 6 IDE",
@@ -3550,9 +3645,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-05T01:10:00Z",
+    "updatedAt": "2026-10-06T01:07:41Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.53",
-    "count": 112
+    "version": "1.3.54",
+    "count": 115
   }
 }

@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-06",
+      "title": "早间收录：Cases +7（官方 Guides 5 篇 + 采购 / 客服两篇官方实践）、HTML +3（Flatten SF / stillwet / Island Three）",
+      "body": "Grok Bot 案例补上 9 月 24 日一批官方 Guides：for Work、Post-Sales、Recruiting、SDRs、Legal Ops（https://x.ai/bot/guides），以及官方 News 的 Haggle Bot 采购实践（https://x.ai/news/grok-bot-procurement）和客服规模化实践（https://x.ai/news/grok-bot-customer-support）。HTML 收集：Flatten SF（HN item 49971230）、stillwet AI 油画回放（Show HN 49928566）、Island Three 浏览器太空圆柱城（Show HN 49963508），均带 3:2 自托管预览。@bot 今早没有新的可复现用法帖；Agent UI 今天没有新增。",
+      "titleEn": "Morning catalog: Cases +7 (five official Guides plus procurement and support case studies), HTML +3 (Flatten SF / stillwet / Island Three)",
+      "bodyEn": "Cases adds the Sep 24 batch of official Guides: for Work, Post-Sales, Recruiting, SDRs, and Legal Ops (https://x.ai/bot/guides), plus the official Haggle Bot procurement post (https://x.ai/news/grok-bot-procurement) and the support-at-scale post (https://x.ai/news/grok-bot-customer-support). HTML Collection: Flatten SF (HN item 49971230), stillwet AI painting replays (Show HN 49928566), and Island Three, a walkable O’Neill cylinder (Show HN 49963508), each with a self-hosted 3:2 preview. No new reproducible @bot usage posts this morning; no Agent UI additions today."
+    },
+    {
       "date": "2026-10-05",
       "title": "晚间收录：Cases +2（SCM Screen Memories / Cloudflare Web Search API）",
       "titleEn": "Evening catalog: Cases +2 (SCM Screen Memories / Cloudflare Web Search API)",

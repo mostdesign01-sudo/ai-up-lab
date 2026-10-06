@@ -1,6 +1,291 @@
 {
   "cases": [
     {
+      "id": "grok-bot-for-work",
+      "slug": "xai-grok-bot-for-work",
+      "title": "官方指南：Grok Bot for Work（收件箱、日历、情报三只 Bot + 一个总管）",
+      "titleEn": "Official guide: Grok Bot for Work (inbox, calendar, intel bots plus one Bot Boss)",
+      "summary": "SpaceXAI 的 Josh Kim 2026-09-24 写的官方指南：他用四只 Bot 管日常工作。Inbox Manager 只读邮件、Slack 和私信，每次只挑出约 3 件「又重要又急」的事；Calendar EA 守住整块专注时间、把会议排得紧凑、别撞上接孩子的时间，改日程前先问；Intel Scout 工作日 8 点和 17 点各报一次：公司里影响你的事、没跟进的事、开会前要知道的事；最后一只 Bot Boss 当唯一入口，其他三只都向它汇报，你只跟它说话。四只 Bot 的完整设定文都能直接复制。",
+      "summaryEn": "Official guide by SpaceXAI’s Josh Kim, Sep 24, 2026: four bots for everyday work. Inbox Manager reads email, Slack, and DMs read-only and surfaces about three items that are both important and urgent; Calendar EA protects focus blocks, packs meetings together, guards the school-pickup hard stop, and asks before moving anything; Intel Scout reports at 8am and 5pm on weekdays (company moves that affect you, open follow-ups, what you need before meetings); Bot Boss is the single front door the other three report to. All four instruction texts are copyable.",
+      "categories": [
+        "productivity",
+        "multi-agent",
+        "daily-digest",
+        "getting-started"
+      ],
+      "role": "Personal work assistant team",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-work",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24），早间页面 200。收录理由：四段设定文可以原样复制，是普通上班族最容易照抄的一套。边界：文中效果是作者个人感受；设定里写明默认「先建好但不启用、你点 Enable 才跑」、只读、不替你发。本库未实测。",
+      "qualityNoteEn": "Official Guides (Sep 24, 2026), page returned 200 this morning. Why listed: four copy-paste instruction texts, the easiest set for an ordinary office worker to reuse. Boundary: results are the author’s own account; the instructions default to created-but-disabled until you hit Enable, read-only, never sending for you. Not tested here.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "读和整理可以自动；回邮件、发 Slack、改日历、发邀请都要你确认。",
+      "approvalBoundaryEn": "Reading and sorting can run on their own; replies, Slack posts, calendar changes, and invites need your confirmation.",
+      "connectors": [
+        "email",
+        "slack",
+        "calendar"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "四只 Bot 管邮件、日历、消息，你只跟总管说话。",
+      "hookEn": "Four bots handle mail, calendar, and news; you only talk to the boss bot."
+    },
+    {
+      "id": "grok-bot-for-post-sales",
+      "slug": "xai-grok-bot-for-post-sales",
+      "title": "官方指南：Grok Bot for Post-Sales（一个参谋长 Bot 管一屋子专员）",
+      "titleEn": "Official guide: Grok Bot for Post-Sales (one chief-of-staff bot over a bench of specialists)",
+      "summary": "SpaceXAI 的 Blake Schuller 2026-09-24 官方指南：客户经理手上账户多、上下文散在通话记录、Slack、邮件和日历里。他试过自己管 20 只 Bot，太乱，于是只跟一只叫 Gus 的参谋长说话，其他 Bot（每个客户一只专员、帮他写邮件的 Ink、查文档答问题的 Questions、读内部频道的 Scout 等）都向 Gus 汇报。常用 Routine：每 15 分钟检查一次、会前 15–35 分钟才写会前卡片；每天 9/13/16 点列「我答应过但没做的事」；只追「我发了没人回、下一步在我」的消息；工作日早上找用量骤降的账户；周五自动更新看板；周三让 Gus 自查哪些 Routine 没人看。起步方法：录 10 分钟语音讲你一天怎么过，丢给 Bot 让它搭系统。",
+      "summaryEn": "Official guide by SpaceXAI’s Blake Schuller, Sep 24, 2026. Post-sales context is scattered across call transcripts, Slack, email, and calendars. After trying to manage twenty bots directly, he talks only to one chief-of-staff bot, Gus; account specialists, a writer bot (Ink), a docs-answer bot (Questions), and a channel reader (Scout) report to Gus. Routines include call prep that checks every 15 minutes but only writes when a call is 15–35 minutes out, an unfinished-promises list at 9, 1, and 4, an unanswered-asks check that only surfaces threads where the next move is his, morning usage-cliff scans, a Friday dashboard, and a Wednesday self-audit. Start by recording a ten-minute voice memo of your day and asking a bot to build the system.",
+      "categories": [
+        "customer-success",
+        "multi-agent",
+        "automation",
+        "sales"
+      ],
+      "role": "Account manager / CSM",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-post-sales",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24）。收录理由：「只管一只 Bot」的思路和一组时间点很具体的 Routine，换成任何手上客户多的岗位都能抄。边界：用到的通话记录、CRM 等连接器要你自己有；邮件只存草稿，作者亲自按发送。本库未实测。",
+      "qualityNoteEn": "Official Guides (Sep 24, 2026). Why listed: the manage-one-bot idea plus routines with very concrete timing transfer to any role juggling many accounts. Boundary: you need your own transcript and CRM connections; replies sit in drafts and the author presses send. Not tested here.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "整理、写草稿、做会前卡片可以自动；任何以你名义发出去的东西都由你按发送。",
+      "approvalBoundaryEn": "Organizing, drafting, and prep cards can run on their own; anything sent under your name waits for you to press send.",
+      "connectors": [
+        "calendar",
+        "slack",
+        "email",
+        "crm"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "只跟一个参谋长 Bot 说话，其余 Bot 向它汇报。",
+      "hookEn": "Talk to one chief-of-staff bot; the rest report to it."
+    },
+    {
+      "id": "grok-bot-for-recruiting",
+      "slug": "xai-grok-bot-for-recruiting",
+      "title": "官方指南：Grok Bot for Recruiting（面试简报、评分表、寻访、漏斗分析）",
+      "titleEn": "Official guide: Grok Bot for Recruiting (interview briefs, scorecards, sourcing, loop analysis)",
+      "summary": "SpaceXAI 的 Holly Dyche 2026-09-24 官方指南：招聘团队搭了四只 Bot。Preppy 在面试前往 Slack 发一条简报，把候选人背景、阶段、要重点问什么集中到一处；Pulse 面完拉会议转写，对着岗位评分表起草反馈，先问你几个问题（打分、感觉、哪里存疑）再改稿提交到招聘系统；Scout 读几百份录用和淘汰的记录学规律，夜里找候选人、起草多轮触达，你批准才发；eVal 找候选人在哪一轮最常挂、原因是什么，反推初筛该问的问题。开车路上也能用语音让它改招聘系统里的记录。",
+      "summaryEn": "Official guide by SpaceXAI’s Holly Dyche, Sep 24, 2026: four recruiting bots. Preppy posts one Slack brief before each interview with candidate context, stage, and focus areas; Pulse pulls the meeting transcript after an interview, drafts feedback against the role scorecard, asks you a few follow-ups (rating, gut feel, anything fuzzy), then redrafts and submits to the ATS; Scout learns from hundreds of hired and rejected candidates, sources overnight, and drafts multi-touch outreach you approve before sending; eVal finds where candidates fail in the loop and turns that into recruiter-screen questions. Voice mode lets you update the ATS on the go.",
+      "categories": [
+        "recruiting",
+        "multi-agent",
+        "automation"
+      ],
+      "role": "Recruiter / recruiting team",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-recruiting",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24）。收录理由：四只 Bot 各管一段招聘流程，前后串起来，是团队一起用的完整示例。边界：要连招聘系统（文中是 Ashby）、Notion、会议转写；涉及候选人个人信息，注意公司隐私规定。本库未实测。",
+      "qualityNoteEn": "Official Guides (Sep 24, 2026). Why listed: four bots each own one stage and hand off to each other, a full team example. Boundary: needs your ATS (Ashby in the post), Notion, and meeting transcripts; candidate data is personal, so follow your privacy rules. Not tested here.",
+      "difficulty": "intermediate",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "简报和草稿可以自动；给候选人发消息、提交评分、改录用状态要人确认。",
+      "approvalBoundaryEn": "Briefs and drafts can run on their own; messaging candidates, submitting scorecards, and changing hiring status need a person.",
+      "connectors": [
+        "ats",
+        "slack",
+        "notion",
+        "linkedin"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "面前简报、面后评分表，Bot 先起草你再拍板。",
+      "hookEn": "Briefs before, scorecards after: the bot drafts, you decide."
+    },
+    {
+      "id": "grok-bot-for-sdrs",
+      "slug": "xai-grok-bot-for-sdrs",
+      "title": "官方指南：Grok Bot for SDRs（Cursor 写研究和初稿，Grok Bot 做后面的杂活）",
+      "titleEn": "Official guide: Grok Bot for SDRs (Cursor writes research and drafts, Grok Bot does the busywork)",
+      "summary": "SpaceXAI 销售开发 Stefan Markarian 2026-09-24 官方指南：五步做外联——Cursor 云端 agent 查客户用量、丢单记录和过往通话写研究包；按这个故事找人；用写作技能起草第一封信；Grok Bot 检查每个人是否已在别的序列里或有进行中的商机，干净的标 CLEAR 进序列但不发，有问题的标 FLAG 等人看；最后他本人发。一只 Bot 一件事：总管负责每天早上的流程，一只管名单表格防止重复联系，一只发不带附言的 LinkedIn 邀请并先查每日上限。规矩：绝不自动发送，同一个问题出两次就写进技能。",
+      "summaryEn": "Official guide by SpaceXAI SDR Stefan Markarian, Sep 24, 2026: five steps. Cursor cloud agents build a research packet from product usage, closed-lost deals, and past calls; prospects are matched to that story; first touches are drafted with writing skills; Grok Bot checks whether each person is already in another sequence or tied to an open opportunity, enrolls CLEAR contacts unsent and holds FLAGs for review; he sends himself. One job per bot: a chief of staff owns the morning run, one keeps the prospecting sheet so nobody is worked twice, one sends blank LinkedIn requests after checking caps. Rules: never auto-send, and any problem that happens twice becomes a skill update.",
+      "categories": [
+        "sales",
+        "multi-agent",
+        "automation",
+        "skills"
+      ],
+      "role": "SDR / outbound sales",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-sdrs",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24）。收录理由：清楚示范 Cursor 和 Grok Bot 怎么分工，以及 CLEAR/FLAG 这种「干净的往前走、有疑问的停下」的分拣法，其他岗位也能用。边界：依赖 Salesforce、Gong、Nooks、Amplemarket 等付费销售工具；文中数字是作者某一天的情况。本库未实测。",
+      "qualityNoteEn": "Official Guides (Sep 24, 2026). Why listed: a clear split of work between Cursor and Grok Bot, and a CLEAR/FLAG triage (clean items move, questionable ones stop) that works for other roles too. Boundary: relies on paid sales tools (Salesforce, Gong, Nooks, Amplemarket); figures describe one day in the author’s work. Not tested here.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "研究、起草、建记录、排进序列（不发）可以自动；每一封信和每条触达都由人发。",
+      "approvalBoundaryEn": "Research, drafts, record creation, and unsent enrollment can run on their own; every email and touch is sent by a person.",
+      "connectors": [
+        "crm",
+        "salesforce",
+        "linkedin",
+        "cursor"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "干净的名单往前走，有疑问的停下等你。",
+      "hookEn": "Clean contacts move ahead; questionable ones wait for you."
+    },
+    {
+      "id": "grok-bot-for-legal-ops",
+      "slug": "xai-grok-bot-for-legal-ops",
+      "title": "官方指南：Grok Bot for Legal Ops（法务运营：会前准备、Slack 分拣、合同流程）",
+      "titleEn": "Official guide: Grok Bot for Legal Ops (1:1 prep, Slack triage, contract workflows)",
+      "summary": "SpaceXAI 法务运营 Kelly Noguchi 2026-09-24 官方指南：律师 1:1 前，Bot 翻 Slack、Notion、会议记录和跟踪表起草议程，会后把决定写回对应页面；盯法务相关频道里没人回、口径打架的问题；从 Slack 请求自动维护「待法务审」跟踪表，并补上商机和报价快照；在合同系统里查流程和状态，经明确要求才帮你把已批文件放进流程，写入前先预览确认。原来靠 Cursor 自动化 + Google Apps Script 跑的表，现在全搬进 Grok Bot。可借鉴的规矩：按流程拆 Bot、对外消息一律先草稿再人发、读和写系统分开。",
+      "summaryEn": "Official guide by SpaceXAI Legal Ops’ Kelly Noguchi, Sep 24, 2026. Before attorney 1:1s the bot drafts an agenda from Slack, Notion, notes, and trackers, then writes decisions back afterward; it watches legal channels for unanswered or conflicting guidance; it maintains a Legal Review tracker from Slack intakes enriched with deal and quote snapshots; in the contract system it looks up workflows and, only on explicit request, moves approved documents with a preview before any write. A tracker that used to run on Cursor automation plus Google Apps Script now runs fully in Grok Bot. Portable rules: one bot per workflow, draft-then-human-send for outbound messages, separate read and write paths.",
+      "categories": [
+        "ops",
+        "automation",
+        "research"
+      ],
+      "role": "Legal operations",
+      "sourceUrl": "https://x.ai/bot/guides/grok-bot-for-legal-ops",
+      "secondaryUrls": [
+        "https://x.ai/bot/guides"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "官方 Guides（2026-09-24）。收录理由：少见的法务岗位实例，而且写清了「哪些只读、哪些写之前要预览」。边界：依赖 Ironclad、Salesforce 等企业系统；法律判断仍由律师做。本库未实测。",
+      "qualityNoteEn": "Official Guides (Sep 24, 2026). Why listed: a rare legal-team example that spells out what stays read-only and what needs a preview before writing. Boundary: relies on enterprise systems like Ironclad and Salesforce; legal judgment stays with attorneys. Not tested here.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "整理、查资料、起草可以自动；对外消息、写入合同系统和 CRM 前都要人确认。",
+      "approvalBoundaryEn": "Organizing, research, and drafting can run on their own; outbound messages and writes to the contract system or CRM need a person first.",
+      "connectors": [
+        "slack",
+        "notion",
+        "salesforce",
+        "files"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-24",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "法务的会前准备和跟踪表，交给 Bot 维护。",
+      "hookEn": "Let a bot keep legal’s prep and trackers current."
+    },
+    {
+      "id": "haggle-bot-procurement",
+      "slug": "xai-grok-bot-procurement-haggle-bot",
+      "title": "官方实践：Haggle Bot 管采购（找闲置席位、比价、准备砍价）",
+      "titleEn": "Official case: Haggle Bot for procurement (idle seats, price comparison, negotiation prep)",
+      "summary": "SpaceXAI 2026-09-04 官方文章：他们做了一只叫 Haggle Bot 的采购 Bot，接上 Slack、Notion、Drive、Gmail、Hex 和 Ramp，先摸清约 125 家在用供应商。例子：某个软件 43 个付费席位 90 天没人用，退掉省 $14,220；另一个按月付费的软件找出每年 $85,662 的闲置项；续约时比较几家替代品、算出筹码再起草回信；每周新员工物品订单在 Amazon、Costco、Uline、Walmart 间比价，结果写进可改的表格。文中给出完整设定文模板：哪些事可以直接做、哪些每次都要你点头、哪些绝对不做（签约、下单、付款）。官方称累计找出超过 $100,000 的直接节省。",
+      "summaryEn": "Official SpaceXAI post, Sep 4, 2026: a procurement bot called Haggle Bot, connected to Slack, Notion, Drive, Gmail, Hex, and Ramp, first mapped about 125 active vendors. Examples: 43 paid seats idle for 90 days on one product ($14,220 saved), $85,662 a year of unused SKUs on a month-to-month product, renewal research that priced alternatives and drafted a counteroffer, and weekly new-hire supply orders shopped across Amazon, Costco, Uline, and Walmart into an editable sheet. The post shares a full instruction template with three permission lines: always allowed, needs the operator’s go every time, never (signing, buying, approving charges). SpaceXAI reports more than $100,000 in direct savings.",
+      "categories": [
+        "finance",
+        "ops",
+        "automation"
+      ],
+      "role": "Procurement / vendor spend",
+      "sourceUrl": "https://x.ai/news/grok-bot-procurement",
+      "secondaryUrls": [
+        "https://x.ai/news"
+      ],
+      "sourceType": "case-study",
+      "qualityNote": "官方 News（2026-09-04），早间页面 200。收录理由：设定文模板把「能做、要批、绝不做」三条线写得很清楚，小公司查闲置订阅也能直接套。边界：节省金额是官方自报，本库无法核实；需要能读到账单和席位使用数据。本库未实测。",
+      "qualityNoteEn": "Official News (Sep 4, 2026), page returned 200 this morning. Why listed: the template draws clear lines between allowed, needs-approval, and never, and a small company can reuse it to find idle subscriptions. Boundary: savings figures are self-reported and not verified here; you need access to billing and seat-usage data. Not tested here.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "查数据、问同事、整理档案可以自动；给供应商发信每次都要批；签约、下单、付款一律不做。",
+      "approvalBoundaryEn": "Reading data, asking colleagues, and keeping dossiers can run on their own; every vendor-facing send needs approval; signing, buying, and paying are never allowed.",
+      "connectors": [
+        "slack",
+        "notion",
+        "gmail",
+        "expense",
+        "files"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-04",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "让 Bot 找出没人用的订阅席位。",
+      "hookEn": "Let a bot find the seats nobody uses."
+    },
+    {
+      "id": "grok-bot-scale-customer-support",
+      "slug": "xai-grok-bot-customer-support-at-scale",
+      "title": "官方实践：SpaceXAI 用 Grok Bot 扛客服量（先只写内部备注，再逐步放开）",
+      "titleEn": "Official case: how SpaceXAI scaled customer support with Grok Bot (internal notes first, then wider)",
+      "summary": "SpaceXAI 2026-09-22 官方文章：Cursor 并入后两支客服团队合并、产品线变多。做法是一步步放开：先接工单系统 Plain 和 Linear，让 Bot 像负责人一样处理工单，但只能写内部备注、每个写操作都要人批；给每次运行加记录和评估，出错就调；第一天先人工审它对简单工单的理解和回复，当天就放它直接回客户。之后让它在工单进来时先查 Linear 已知问题和 Datadog 报错、录视频复现 bug；按退款规则处理大部分退款；盯排队量和响应时限；同类问题多到阈值就自动开事故；每周给管理层报哪里答得不好。官方称工单量涨了 175% 没加人，单张成本低到 $0.20–0.30。",
+      "summaryEn": "Official SpaceXAI post, Sep 22, 2026. After Cursor joined, two support teams merged around more products. Rollout was gradual: connect Plain (ticketing) and Linear, let the bot act as ticket owner but write only internal notes with every write approved, add traces and evals, review its read and proposed reply on easy tickets for one day, then let it answer customers directly. Later it pre-investigates every ticket against known Linear issues and Datadog errors, records bug repro videos, resolves most refunds under clear rules, manages queue priority and SLA alerts, declares incidents when similar reports cross a threshold, and sends leadership a weekly note on where AI answers fall short. SpaceXAI reports a 175% ticket increase with no new hires and costs as low as $0.20–0.30 per ticket.",
+      "categories": [
+        "support",
+        "automation",
+        "ops"
+      ],
+      "role": "Support operations lead",
+      "sourceUrl": "https://x.ai/news/grok-bot-customer-support",
+      "secondaryUrls": [
+        "https://x.ai/news",
+        "https://x.ai/bot/guides/grok-bot-for-support"
+      ],
+      "sourceType": "case-study",
+      "qualityNote": "官方 News（2026-09-22）。收录理由：和已收的 Support 指南互补，重点是「怎么一步步放权」——先只写内部备注、全程人批，再放开。边界：175%、$0.20–0.30 等数字是官方自报，本库无法核实；用到的 Plain、Linear、Datadog 需要你自己有。本库未实测。",
+      "qualityNoteEn": "Official News (Sep 22, 2026). Why listed: complements the Support guide already listed, focusing on how to hand over control step by step, starting with internal notes and human approval on every write. Boundary: the 175% and $0.20–0.30 figures are self-reported and not verified here; Plain, Linear, and Datadog are your own to connect. Not tested here.",
+      "difficulty": "advanced",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "起步阶段所有写操作都人批；放开后直接回复和规则内退款由 Bot 做，规则外的仍交给人。",
+      "approvalBoundaryEn": "At the start every write is approved by a person; later the bot replies and handles in-policy refunds itself, and anything outside the rules goes to a person.",
+      "connectors": [
+        "ticket",
+        "linear",
+        "datadog",
+        "support",
+        "x"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-09-22",
+      "updatedAt": "2026-10-06T01:07:41Z",
+      "hook": "客服先只写内部备注，靠得住了再放开。",
+      "hookEn": "Start with internal notes only; widen once it’s reliable."
+    },
+    {
       "id": "scm-screen-memories",
       "slug": "scm-screen-memories",
       "title": "工具：SCM（Screen Memories）— 用一句话搜本机照片和视频",
@@ -7058,11 +7343,21 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-05T12:16:40Z",
+    "updatedAt": "2026-10-06T01:07:41Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.43",
-    "count": 142,
+    "version": "1.4.44",
+    "count": 149,
     "sourcesCrawled": [
+      "https://x.ai/bot/guides/grok-bot-for-work",
+      "https://x.ai/bot/guides/grok-bot-for-post-sales",
+      "https://x.ai/bot/guides/grok-bot-for-recruiting",
+      "https://x.ai/bot/guides/grok-bot-for-sdrs",
+      "https://x.ai/bot/guides/grok-bot-for-legal-ops",
+      "https://x.ai/news/grok-bot-procurement",
+      "https://x.ai/news/grok-bot-customer-support",
+      "https://x.ai/bot/guides",
+      "https://x.ai/news",
+      "https://x.ai/changelog/bot",
       "https://mostdesign01-sudo.github.io/grokbot-use-cases/models/clef/",
       "https://blog.cloudflare.com/clef-decision-models/",
       "https://developers.cloudflare.com/ai-gateway/",
@@ -7088,7 +7383,6 @@
       "https://news.ycombinator.com/item?id=49939817",
       "https://telepath.computer/blog/introducing-television/",
       "https://television.run/install.md",
-      "https://blog.cloudflare.com/clef-decision-models/",
       "https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/",
       "https://huggingface.co/Cloudflare/clef",
       "https://huggingface.co/Cloudflare/clef-flash",
@@ -7123,7 +7417,6 @@
       "https://magnitude.dev/",
       "https://github.com/magnitudedev/magnitude",
       "https://x.ai/bot",
-      "https://x.ai/news",
       "https://x.ai/news/team-bots",
       "https://github.com/PersonalJarvis/PersonalJarvis",
       "https://news.ycombinator.com/item?id=49833292",
@@ -7178,7 +7471,6 @@
       "https://x.com/mattyp/status/2092286281266962681",
       "https://ryanperry.io/post/grokbot-mobile-app-lifecycle",
       "https://github.com/jakob-bu/grok-bot-linux-unofficial",
-      "https://x.ai/bot/guides",
       "https://flaviocopes.com/grok-bot/",
       "https://x.com/robrtcode/status/2094388848230793346",
       "https://www.b2tf.app",
@@ -7287,7 +7579,6 @@
       "https://news.ycombinator.com/item?id=49881201",
       "https://x.ai/bot/guides/grok-bot-for-marketing",
       "https://x.com/bot/status/2105713240701538538",
-      "https://x.ai/changelog/bot",
       "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions"
     ]
   }
