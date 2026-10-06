@@ -1,6 +1,161 @@
 {
   "cases": [
     {
+      "id": "coisland",
+      "slug": "coisland",
+      "title": "工具：CoIsland — 把开发告警收进 Mac 刘海，一键交给编程助手",
+      "titleEn": "Tool: CoIsland — a Mac notch app that hands a dev alert to your coding agent",
+      "summary": "CoIsland 是一款只跑在 Mac 上的小应用，给同时盯着很多开发工具的人用。GitHub、Vercel、Sentry、Jira、Snowflake 这些地方一有状况，它就收成一条告警，出现在屏幕顶部的刘海里；你点一下，就能把这条告警交给 Claude Code、Codex 或 Cortex Code 去看。不买也能先试：最早的 2 条监控可以一直免费跑，不用注册。这是一条工具笔记：本库没有安装，也没有把真实告警交给任何助手。",
+      "summaryEn": "CoIsland is a Mac-only app for people who watch a lot of developer tools at once. When something happens in GitHub, Vercel, Sentry, Jira, Snowflake, and the rest, it turns that into one alert in the notch at the top of the screen. One click hands that alert to Claude Code, Codex, or Cortex Code. You can try it without paying: the two oldest monitors keep running for free, with no account. This is a tool tip. This library did not install it and did not hand a real alert to any agent.",
+      "hook": "Mac 刘海里盯着开发工具，告警一键交给编程助手。",
+      "hookEn": "A Mac notch app that hands a dev alert to your coding agent.",
+      "categories": [
+        "engineering",
+        "coding",
+        "automation"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://coisland.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49970043",
+        "https://coisland.app/connectors/",
+        "https://coisland.app/agents/",
+        "https://coisland.app/privacy/"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是产品页 https://coisland.app/ 。本环境 curl 直接请求会被 Cloudflare 拦成 403；撰写时用本机 Chrome 打开首页为 HTTP 200，标题 CoIsland: your whole engineering stack centralized。连接器页、助手页、隐私政策经可读文本抓取均为 200（https://coisland.app/connectors/ 、/agents/ 、/privacy/）。Show HN item 49970043（标题 Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you，作者 LeDonT，2026-10-05T20:14:52.000Z / 约 2026-10-06 04:14 CST）。撰写时 HN 页面与 Algolia 都是 9pts。评论 49971029 问会不会加 Cursor，作者回复 49971033「Yes We can! Will work on it.」——所以今天的助手名单里还没有 Cursor。首页 FAQ 写：连接器 35+；免费是最早的 2 条监控一直可用、不限时间、不用账号；许可证一次买断，早鸟价 $29.99 到 10 月 25 日，之后 $49.99，最多 2 台 Mac，含一年更新，这一年里的版本以后仍归你，再续一年更新是 $5.99，无订阅，30 天内可一键退款。页面还列了早鸟合计 $50.99（每把钥匙 $25.49）和 $112.49（每把钥匙 $22.49），每把钥匙仍是最多 2 台 Mac；页文没有把套装写成「几把」，这里不替它补数量。系统要求：苹果自研芯片（M1 或更新）、macOS 14 及以上，不支持 Intel；原生 Swift。隐私政策写开发者是蒙特利尔的 DonTizi；首页作者自述是蒙特利尔的应用 AI 工程师，并称自己从 2026 年 7 月起每天用刘海办公。本库没有把这两个名字核成同一个人。隐私政策比首页那句「没有 CoIsland 服务器」更细：工具数据留在本机，应用还会问更新服务器，买了之后还会问许可证服务器，这两处都不接收工具里的数据；「匿名上报我加了哪类连接器」默认关闭。把告警交给助手时，那份简报会进 Anthropic、OpenAI 或 Snowflake 你自己的账号。本库未下载、未安装、未接任何连接器、未把告警交给助手。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source is https://coisland.app/. A direct curl from this environment is blocked by Cloudflare with 403; local Chrome opened the homepage at HTTP 200, title CoIsland: your whole engineering stack centralized. The connectors, agents, and privacy pages were fetched as readable text at HTTP 200 (https://coisland.app/connectors/, /agents/, /privacy/). Show HN item 49970043 (title Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you, author LeDonT, 2026-10-05T20:14:52.000Z / about 04:14 CST on 2026-10-06). At write time the HN page and Algolia both showed 9pts. Comment 49971029 asks about Cursor; the author replied in 49971033 “Yes We can! Will work on it.” Cursor is not in today’s agent list. The homepage FAQ says 35+ connectors; the free tier is the 2 oldest monitors, forever, no account; a license is paid once, early bird $29.99 until October 25 then $49.99, for up to 2 Macs, with a year of updates, and the versions from that year stay yours. Another year of updates is $5.99. No subscription. 30 days to refund in one click. The page also lists early-bird totals of $50.99 ($25.49 a key) and $112.49 ($22.49 a key), each key still covering up to 2 Macs. The page does not spell the bundle as a key count, so none is added here. Requirements: Apple silicon (M1 or later), macOS 14 or newer, not Intel; native Swift. The privacy policy names DonTizi, an independent developer in Montreal. The homepage author describes themself as an applied AI engineer in Montréal and says they have run their days from the notch since July 2026. This library did not verify that those names are the same person. The privacy policy is more specific than the homepage line “no CoIsland server”: tool data stays on the Mac, while the app also contacts an update server and, after purchase, a license server. Neither receives tool data. “Share which connector types I add, anonymously” is off until you turn it on. Handing an alert to an agent sends that brief to Anthropic, OpenAI, or Snowflake under your own account. This library did not download, install, connect a tool, or hand over an alert. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "把真实账号或密钥接进去，以及让助手动手之前，自己确认。本库没有代装。",
+      "approvalBoundaryEn": "Confirm before connecting a real account or key, and before letting an agent act. This library did not install it.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T12:50:00Z",
+      "previewImage": "/previews/coisland.webp",
+      "landing": {
+        "what": "CoIsland 是一个住在 Mac 刘海（屏幕最上方那条凹槽）里的监视器。你给每个工具设一条监控：一句这个工具自己的查询，按你定的间隔去看，比如每 30 秒或每 5 分钟。出了状况才出现在刘海里，带上命中的行和备注。你点一下，Claude Code、Codex 或 Cortex Code 会在告警下面打开自己的命令行，第一条消息就是这份告警。站点写明它自己不带模型，用的是你已经登录的那三个助手。助手不能自己把告警关掉，关掉仍是你的事。适合一个人同时看着公司、副业和课业好几套 GitHub、部署和工单、不想再来回切浏览器标签的人。",
+        "whatEn": "CoIsland lives in the Mac notch, the cutout at the top of the screen. You set a monitor per tool: one query in that tool’s own language, checked on a schedule you pick, such as every 30 seconds or every 5 minutes. Only what fired shows up in the notch, with the matching rows and your notes. One click opens Claude Code, Codex, or Cortex Code in a terminal under the alert, and the first message is that alert. The site says CoIsland adds no model of its own. It starts the agent you already signed into. No agent can close an alert. You do. It is for someone watching several stacks at once — a job, a side project, coursework — and tired of tabbing between GitHub, deploys, and tickets.",
+        "contrast": {
+          "caption": "左列是首页、助手页和隐私政策写明的事实。右列是本站口径：为什么放进 Cases，以及不要把它当成已经替你装好的技能。",
+          "captionEn": "Left: what the homepage, the agents page, and the privacy policy state. Right: this library’s framing — why it is in Cases, and why it is not a skill we already installed.",
+          "leftLabel": "CoIsland",
+          "leftLabelEn": "CoIsland",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "Mac 刘海应用：盯着你的开发工具，把告警一键交给 Claude Code、Codex 或 Cortex Code。",
+              "leftEn": "A Mac notch app: watch your dev tools, and hand an alert to Claude Code, Codex, or Cortex Code.",
+              "right": "Cases 里的工具笔记。补的是「告警别散落在十个网站里」，不是又一篇聊天机器人教程。",
+              "rightEn": "An AI tool tip in Cases. It fills “don’t leave alerts scattered across ten sites,” not another chatbot tutorial."
+            },
+            {
+              "aspect": "数据和钱",
+              "aspectEn": "Data and money",
+              "left": "首页称没有 CoIsland 账号，密钥在 Mac 钥匙串里，应用直接找你的工具。免费保留最早 2 条监控。买断早鸟 $29.99，10 月 25 日后 $49.99。",
+              "leftEn": "The homepage says no CoIsland account, keys live in the Mac Keychain, and the app talks to your tools directly. The 2 oldest monitors stay free. A license is $29.99 early bird, then $49.99 after October 25.",
+              "right": "隐私政策还写了更新服务器和买后的许可证服务器，只是它们不收工具数据。本库没有安装，也没有付款。",
+              "rightEn": "The privacy policy also names an update server and, after you buy, a license server. They do not receive tool data. This library did not install it and did not pay."
+            },
+            {
+              "aspect": "助手会不会自己改东西",
+              "aspectEn": "Will the agent change things",
+              "left": "站点写 Claude Code 用自动模式、Codex 用 approve-for-me、Cortex Code 默认先问再写。三者都不能自己关掉告警。",
+              "leftEn": "The site says Claude Code runs in auto mode, Codex uses approve-for-me, and Cortex Code asks before writes by default. None of the three can close an alert.",
+              "right": "这是站点对三家助手的描述。本库没有装这三个命令行，也没有交过一条真告警。",
+              "rightEn": "That is the site’s description of the three agents. This library did not install those command-line tools and did not hand over a real alert."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看首页和 Show HN",
+            "titleEn": "Read the homepage and the Show HN first",
+            "body": "打开 coisland.app，看它怎么讲刘海、35 个以上的连接器，以及免费的 2 条监控。Show HN 讨论在 item 49970043。有人问 Cursor，作者说会做，所以别默认今天就能接 Cursor。点数会变，以你打开当天为准。",
+            "bodyEn": "Open coisland.app and see how it describes the notch, 35+ connectors, and the two free monitors. The Show HN thread is item 49970043. Someone asked about Cursor and the author said they would work on it, so don’t assume Cursor works today. Point counts change — use whatever the thread shows when you open it.",
+            "links": [
+              {
+                "href": "https://coisland.app/",
+                "label": "CoIsland 首页",
+                "labelEn": "CoIsland homepage"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49970043",
+                "label": "Show HN 讨论",
+                "labelEn": "Show HN thread"
+              }
+            ]
+          },
+          {
+            "title": "对照能接什么、交给谁、数据去哪",
+            "titleEn": "Check what it connects, who it hands work to, and where data goes",
+            "body": "连接器页是完整名单。助手页写三个命令行：Claude Code、Codex、Cortex Code，以及各自要你自己的账号。隐私政策写密钥在 Mac 钥匙串（系统存密码的地方），工具内容留在本机；更新和许可证会联网，但不收这些内容。把告警交出去之后，那份简报会进助手厂商。",
+            "bodyEn": "The connectors page is the full list. The agents page names three command-line tools — Claude Code, Codex, and Cortex Code — and says each one uses your own account. The privacy policy says keys stay in the Mac Keychain (where the system keeps passwords) and tool contents stay on the Mac. Updates and the license do use the network, but they don’t receive those contents. Once you hand an alert over, that brief goes to the agent’s maker.",
+            "links": [
+              {
+                "href": "https://coisland.app/connectors/",
+                "label": "连接器名单",
+                "labelEn": "Connector list"
+              },
+              {
+                "href": "https://coisland.app/agents/",
+                "label": "交给哪个助手",
+                "labelEn": "Which agents"
+              },
+              {
+                "href": "https://coisland.app/privacy/",
+                "label": "隐私政策",
+                "labelEn": "Privacy policy"
+              }
+            ]
+          },
+          {
+            "title": "自己决定要不要装",
+            "titleEn": "Decide yourself whether to install",
+            "body": "首页有 Download free。系统要求是苹果自研芯片、macOS 14 或更新，Intel 的 Mac 不行。免费先跑最早的 2 条监控。要全部监控再看早鸟价。本库没有下载安装包，也没有把任何一个仓库或数据库交给它。",
+            "bodyEn": "The homepage has Download free. It needs Apple silicon and macOS 14 or newer. Intel Macs are out. The free tier runs the two oldest monitors. Read the early-bird price before you unlock the rest. This library did not download the installer and did not point it at any repo or database.",
+            "links": [
+              {
+                "href": "https://coisland.app/",
+                "label": "首页上的下载和价格",
+                "labelEn": "Download and price on the homepage"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未下载、未安装、未接 GitHub 或其他工具，也没有把告警交给 Claude Code、Codex 或 Cortex Code。",
+            "textEn": "This library did not download it, did not install it, did not connect GitHub or any other tool, and did not hand an alert to Claude Code, Codex, or Cortex Code."
+          },
+          {
+            "text": "只支持苹果自研芯片（M1 或更新）和 macOS 14 及以上。Intel 的 Mac 不能用。",
+            "textEn": "Apple silicon only (M1 or later) and macOS 14 or newer. It does not run on Intel Macs."
+          },
+          {
+            "text": "「没有服务器、密钥只在钥匙串」要和隐私政策一起看：更新服务器和买后的许可证服务器是存在的，它们不接收工具数据。匿名的连接器种类统计默认关闭。交给助手的那条告警，会按你在 Anthropic、OpenAI 或 Snowflake 的账号送出去。",
+            "textEn": "“No server, keys only in the Keychain” has to be read with the privacy policy. An update server exists, and a license server exists after you buy. They do not receive tool data. The anonymous connector-type count is off until you enable it. The alert you hand to an agent is sent under your Anthropic, OpenAI, or Snowflake account."
+          },
+          {
+            "text": "价格、35+ 连接器、三家助手的自动或询问模式，都是站点自己的说法。Cursor 还不在名单里。本库没有付款，也没有替你试退款。",
+            "textEn": "The price, the 35+ connectors, and how the three agents auto-run or ask first are the site’s own statements. Cursor is not on the list yet. This library did not pay and did not try a refund."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 coisland.app 首屏",
+        "previewCreditEn": "Preview: Chrome capture of coisland.app above the fold"
+      }
+    },
+    {
       "id": "grok-bot-for-work",
       "slug": "xai-grok-bot-for-work",
       "title": "官方指南：Grok Bot for Work（收件箱、日历、情报三只 Bot + 一个总管）",
@@ -7343,11 +7498,30 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-06T01:07:41Z",
+    "updatedAt": "2026-10-06T12:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.44",
-    "count": 149,
+    "version": "1.4.45",
+    "count": 150,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=49969183",
+      "https://reflection.ai/blog/introducing-beam",
+      "https://platform.reflection.ai/",
+      "https://artificialanalysis.ai/models/beam",
+      "https://artificialanalysis.ai/models/reflection-beam",
+      "https://news.ycombinator.com/item?id=49970043",
+      "https://coisland.app/",
+      "https://coisland.app/connectors/",
+      "https://coisland.app/agents/",
+      "https://coisland.app/privacy/",
+      "https://news.ycombinator.com/item?id=49972211",
+      "https://gwern.net/doc/design/2026-10-03-gwern-samon.html",
+      "https://gwern.net/doc/design/2026-10-03-gwern-samon.html#play",
+      "https://news.ycombinator.com/item?id=49964102",
+      "https://thankyousteve.org/",
+      "https://news.ycombinator.com/item?id=49965227",
+      "https://pumpkins.sh/",
+      "https://pumpkins.sh/vr",
+      "https://linesofcode.dev",
       "https://x.ai/bot/guides/grok-bot-for-work",
       "https://x.ai/bot/guides/grok-bot-for-post-sales",
       "https://x.ai/bot/guides/grok-bot-for-recruiting",

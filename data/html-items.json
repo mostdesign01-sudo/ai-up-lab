@@ -1,6 +1,101 @@
 {
   "items": [
     {
+      "id": "samon",
+      "slug": "samon",
+      "title": "Samon：一笔把沙子耙完的枯山水谜题",
+      "titleEn": "Samon: a one-stroke Zen-garden raking puzzle",
+      "summary": "Samon 是一页能玩的枯山水谜题，给喜欢慢慢解谜、也想看规则是怎么收紧的人。小和尚走进沙子，你得用一笔把沙子耙完再走回门口，不能踩自己的线。页顶就是原型，里面有 148 座花园。署名是 Gwern，以及 Claude 5.5 Opus、Claude 5.1 Fable、GPT-6 Astra。页上那些「有多少种耙法」是作者自己跑求解器得到的，这里没有重跑。",
+      "summaryEn": "Samon is a playable Zen-garden puzzle for people who like a slow puzzle and also want to see how the rules get tighter. A novice monk walks into the sand, and you have to rake every cell in one stroke and get back to the gate without crossing your own line. The prototype sits at the top of the page, with 148 gardens. It is credited to Gwern, along with Claude 5.5 Opus, Claude 5.1 Fable, and GPT-6 Astra. The “how many rakings” figures on the page come from the author’s own solver and were not re-run here.",
+      "sourceUrl": "https://gwern.net/doc/design/2026-10-03-gwern-samon.html#play",
+      "secondaryUrls": [
+        "https://gwern.net/doc/design/2026-10-03-gwern-samon.html",
+        "https://news.ycombinator.com/item?id=49972211"
+      ],
+      "previewImage": "/previews/samon.webp",
+      "types": [
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "puzzle",
+        "zen-garden",
+        "canvas",
+        "gwern",
+        "hacker-news"
+      ],
+      "qualityNote": "主源是 https://gwern.net/doc/design/2026-10-03-gwern-samon.html （撰写时 HTTP 200）。这是一个 gwtar 自解压 HTML：同一个文件里包着正文和附件，要靠脚本拆开；无脚本时页面自己这么写。可玩原型的锚点是 #play。拆出的正文 meta：作者 Gwern, Claude-5.5-Opus, Claude-5.1-Fable, GPT-6 Astra；article:published_time 2023-02-13，article:modified_time 2026-10-05；状态 in progress。页内写空的 7×7、角门有 1,510,446 种合法耙法，148 座花园。这些是设计文档里的求解器实验，本库未重跑。许可段写 Gwern 与模型写的部分为 CC0；古典诗是公有领域；页内那首尺八录音在美国的邻接权，文档自己写了保留到 2031 的一种算法，本库没有做版权鉴定。HN item 49972211（标题 Samon: Designing a Zen Garden Raking Puzzle，作者 networked，2026-10-05T23:35:35.000Z / 约 2026-10-06 07:35 CST）。撰写时 HN 页面与 Algolia 都是 47pts。预览为 Chrome 打开 #play 后实拍原型「The corridor / Dawn」裁 3:2 WebP。本库没有打完整座花园。",
+      "qualityNoteEn": "Primary source is https://gwern.net/doc/design/2026-10-03-gwern-samon.html (HTTP 200 at write time). It is a gwtar self-extracting HTML file: the essay and its assets are packed in one file and unpacked by a script. The page says so when JavaScript is off. The playable prototype’s anchor is #play. Extracted meta: authors Gwern, Claude-5.5-Opus, Claude-5.1-Fable, GPT-6 Astra; article:published_time 2023-02-13, article:modified_time 2026-10-05; status in progress. The page says an empty 7×7 garden with a corner gate has 1,510,446 valid rakings, and that the prototype has 148 gardens. Those are solver experiments in the design doc, not re-run here. The license section puts Gwern’s and the models’ work under CC0, treats the classical poems as public domain, and itself flags a US sound-recording term for the shakuhachi track through 2031 under one reading. This library did not make a copyright determination. HN item 49972211 (title Samon: Designing a Zen Garden Raking Puzzle, author networked, 2026-10-05T23:35:35.000Z / about 07:35 CST on 2026-10-06). At write time the HN page and Algolia both showed 47pts. Preview is a Chrome capture of the #play prototype (“The corridor / Dawn”), cropped to 3:2 WebP. The full set of gardens was not played through here.",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T12:50:00Z",
+      "hook": "一笔把沙子耙完的枯山水谜题，页面里就能试。",
+      "hookEn": "A one-stroke Zen-garden puzzle you can play on the page."
+    },
+    {
+      "id": "pumpkin-patch",
+      "slug": "pumpkin-patch",
+      "title": "Pumpkin Patch：认领一只南瓜，刻完让它亮着",
+      "titleEn": "Pumpkin Patch: claim a pumpkin, carve it, and leave it glowing",
+      "summary": "Pumpkin Patch 是 Tim Mikeladze 做的网页南瓜地，给想在万圣节前刻一只、或者只是进去逛的人。页面按一百万只来铺：你认领一只，用刀、钻头或一张照片刻它，刻完留在地里发光，别人能找到。右下角可以戴上头显，在地里走。截图时计数写着已经刻了 447 只，这个数字会变。本库没有认领，也没有进头显。",
+      "summaryEn": "Pumpkin Patch is a web pumpkin field by Tim Mikeladze, for someone who wants to carve one before Halloween or just walk through. The page lays out a million of them. You claim one, carve it with a knife, a drill, or a photo, and leave it glowing for other people to find. A control at the bottom right opens a headset walk through the field. At capture time the counter said 447 had been carved. That number will change. This library did not claim one and did not enter the headset mode.",
+      "sourceUrl": "https://pumpkins.sh/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49965227",
+        "https://pumpkins.sh/vr",
+        "https://linesofcode.dev"
+      ],
+      "previewImage": "/previews/pumpkin-patch.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "halloween",
+        "canvas",
+        "vr",
+        "pumpkin",
+        "show-hn"
+      ],
+      "qualityNote": "主源是 https://pumpkins.sh/ （撰写时 HTTP 200）。标题 Pumpkin Patch。页面说明是 A million pumpkins under a Halloween moon. Claim a pumpkin, carve it, and leave it glowing for everyone。About 弹层写 “a patch of about a million pumpkins”，作者 Tim Mikeladze，并链到 linesofcode.dev（撰写时 HTTP 200）。刻南瓜的方式按 About：刀、钻头或一张照片。月亮按当晚真实月相，天气对所有人相同——这是页面自己的话。计数器在 Chrome 实拍时为 447 of 1,000,000 pumpkins carved so far，会变，不当成固定成绩。VR 入口是按钮 Walk it in VR，链到 https://pumpkins.sh/vr （撰写时 HTTP 200）。本库没有认领、没有刻、没有戴头显走。Show HN item 49965227（标题 Show HN: Pumpkins.sh – claim, carve, and display a pumpkin to the world，作者 linesofcode，2026-10-05T14:18:09.000Z / 约 2026-10-05 22:18 CST）。撰写时 HN 页面与 Algolia 都是 24pts。预览为 Chrome 实拍大门那一屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is https://pumpkins.sh/ (HTTP 200 at write time). Title Pumpkin Patch. The page description is “A million pumpkins under a Halloween moon. Claim a pumpkin, carve it, and leave it glowing for everyone.” The About layer says “a patch of about a million pumpkins,” names Tim Mikeladze, and links linesofcode.dev (HTTP 200 at write time). Carving, per About, is a knife, a drill, or a photo. The moon is “in its real phase tonight” and “the weather is the same for everyone” — the page’s own words. The counter at the Chrome capture read “447 of 1,000,000 pumpkins carved so far.” It will change and is not a fixed score. The VR entry is the button Walk it in VR, linking to https://pumpkins.sh/vr (HTTP 200 at write time). This library did not claim, carve, or walk it in a headset. Show HN item 49965227 (title Show HN: Pumpkins.sh – claim, carve, and display a pumpkin to the world, author linesofcode, 2026-10-05T14:18:09.000Z / about 22:18 CST on 2026-10-05). At write time the HN page and Algolia both showed 24pts. Preview is a Chrome capture of the gate, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T12:50:00Z",
+      "hook": "一百万只南瓜里认领一只，刻完让它亮着。",
+      "hookEn": "Claim one of a million pumpkins, carve it, leave it glowing."
+    },
+    {
+      "id": "thank-you-steve",
+      "slug": "thank-you-steve",
+      "title": "Thank you, Steve：滚动纪念乔布斯",
+      "titleEn": "Thank you, Steve: a scrolling tribute to Steve Jobs",
+      "summary": "Thank you, Steve 是 Akash Bangad 做的滚动网页，纪念 2011 年 10 月 5 日去世的史蒂夫·乔布斯。从车库里的 Apple I 一路滚到 iPhone，能听他的声音，最后点一支蜡烛。给想用几分钟把这段历史看完的人。本库打开了开场那张点阵肖像，没有戴耳机把后面的机器一幕幕滚完。",
+      "summaryEn": "Thank you, Steve is a scrolling page by Akash Bangad for Steve Jobs, who died on 5 October 2011. You move from the Apple I in a garage through to the iPhone, can hear his voice, and light a candle at the end. It is for someone who wants a few minutes with that history. This library opened the dotted portrait on the title card and did not scroll through the later machines with headphones.",
+      "sourceUrl": "https://thankyousteve.org/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49964102"
+      ],
+      "previewImage": "/previews/thank-you-steve.webp",
+      "types": [
+        "interactive",
+        "motion"
+      ],
+      "tags": [
+        "tribute",
+        "scroll",
+        "steve-jobs",
+        "canvas",
+        "show-hn"
+      ],
+      "qualityNote": "主源是 https://thankyousteve.org/ （撰写时 HTTP 200）。标题 Thank you, Steve · An interactive tribute to Steve Jobs (1955–2011)。页内作者 Akash Bangad，schema.org 的 datePublished 是 2026-09-30，并链到他的影片与 x.com/Akash_Bang。隐藏的章节从 1976 年车库里的 Apple I 写到 2011 年 10 月 5 日的蜡烛。开场文案在撰写日（2026-10-06）显示 Fifteen years since we lost him。Show HN item 49964102（标题 Show HN: Steve Jobs died 15 years ago today. I built an interactive tribute，作者 akashbangad，2026-10-05T12:42:45.000Z / 约 2026-10-05 20:42 CST）。撰写时 HN 页面与 Algolia 都是 15pts。预览为 Chrome 实拍开场：点阵肖像、日期和 Begin。无 GPU 的 Chrome 建不起 WebGL，按钮不会出现；改用 SwiftShader 后开场画面才出来。本库点过 Begin without sound，只看到转场的光，没有把七段历史滚完，也没有开声音。",
+      "qualityNoteEn": "Primary source is https://thankyousteve.org/ (HTTP 200 at write time). Title: Thank you, Steve · An interactive tribute to Steve Jobs (1955–2011). On-page author Akash Bangad. schema.org datePublished is 2026-09-30, with links to his film and x.com/Akash_Bang. The hidden chapter list runs from the 1976 garage Apple I to a candle on 5 October 2011. On the write date (2026-10-06) the opener read “Fifteen years since we lost him.” Show HN item 49964102 (title Show HN: Steve Jobs died 15 years ago today. I built an interactive tribute, author akashbangad, 2026-10-05T12:42:45.000Z / about 20:42 CST on 2026-10-05). At write time the HN page and Algolia both showed 15pts. Preview is a Chrome capture of the opener: the dotted portrait, the dates, and Begin. Chrome without a GPU could not create a WebGL context, so the buttons never appeared; SwiftShader produced the opener. Begin without sound was clicked and only a transition light was seen. The seven chapters were not scrolled, and sound was not turned on.",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-06T12:50:00Z",
+      "hook": "往下滚，走过乔布斯做过的那些屏幕。",
+      "hookEn": "Scroll through the screens Steve Jobs made."
+    },
+    {
       "id": "flatten-sf",
       "slug": "flatten-sf",
       "title": "Flatten SF：在旧金山找最平的步行/骑车路线",
@@ -3645,9 +3740,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-06T01:07:41Z",
+    "updatedAt": "2026-10-06T12:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.54",
-    "count": 115
+    "version": "1.3.55",
+    "count": 118
   }
 }
