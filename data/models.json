@@ -1,11 +1,76 @@
 {
   "meta": {
-    "updatedAt": "2026-10-03T12:10:00Z",
+    "updatedAt": "2026-10-06T12:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.16",
-    "count": 21
+    "version": "1.1.17",
+    "count": 22
   },
   "models": [
+    {
+      "id": "beam",
+      "slug": "beam",
+      "name": "Beam",
+      "vendor": "Reflection",
+      "title": "Beam：Reflection 的 501B 开源权重模型（还不能下载）",
+      "titleEn": "Beam: Reflection’s 501B open-weight model (not downloadable yet)",
+      "summary": "Beam 是 Reflection 在 2026 年 10 月 5 日公开的开源权重模型，给要写代码、做推理、让编程助手干活的人用。它是稀疏混合专家：参数一共 5010 亿，每次真正计算时只用其中 230 亿。现在还不能下载。官网写它还在做最后一轮安全测试（专门找它会不会被带去干不该干的事），眼下只能到平台页登记提前试用；权重、技术报告、模型卡和给开发者的配套，都说这个月晚些时候才放，并打算用 Apache 2.0。页面表格里的分数是厂商自己报的，这里没有复跑。",
+      "summaryEn": "Beam is Reflection’s open-weight model, announced on 5 October 2026, for people who write code, reason through problems, or hand work to a coding agent. It is a sparse mixture-of-experts model: 501 billion parameters in total, with 23 billion active on each step. It is not downloadable yet. The site says it is still in final safety testing (checking whether it can be talked into doing something it should not), and that early access is a signup only. Weights, the technical report, the model card, and the developer extras are promised later this month, under Apache 2.0. The scores on the page are the vendor’s own numbers and were not re-run here.",
+      "announcedAt": "2026-10-05",
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-06T12:50:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Reflection 官博：Introducing Beam",
+          "labelEn": "Reflection blog: Introducing Beam",
+          "url": "https://reflection.ai/blog/introducing-beam",
+          "by": "Reflection",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "official",
+          "label": "提前试用登记（平台页，不是权重下载）",
+          "labelEn": "Early-access signup (platform page, not a weight download)",
+          "url": "https://platform.reflection.ai/",
+          "by": "Reflection",
+          "date": "2026-10-05"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Beam: Reflection's 501B open-weight model",
+          "labelEn": "Hacker News: Beam: Reflection's 501B open-weight model",
+          "url": "https://news.ycombinator.com/item?id=49969183",
+          "by": "Hacker News",
+          "date": "2026-10-05"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：稀疏混合专家，总参数 5010 亿、每次启用 230 亿，面向写代码、推理和让助手干活。模型本身只处理文字；图片或别的材料要先变成文字它才能用。现在还不能下载。博文写正在做最后的安全测试，提前试用只是登记；权重、技术报告、模型卡和开发者配套「这个月晚些时候」放出，许可打算用 Apache 2.0。",
+          "textEn": "Vendor claim: a sparse mixture-of-experts model, 501 billion parameters total and 23 billion active, built for coding, reasoning, and agent work. The model itself is text-only; images or other material have to be turned into text first. It is not downloadable yet. The post says final safety testing is still underway and early access is a signup. Weights, the technical report, the model card, and developer extras are promised later this month, under Apache 2.0."
+        },
+        {
+          "text": "官方表格（本库未复跑，NR 表示对方没公布）：Beam 一列里 DeepSWE v1.1 为 44.4，Terminal Bench v2.1 为 80.1，SWE Bench Pro v1 为 65.5，SWEBench Verified 为 80.9，不用工具的 HLE 为 36.2，GPQA Diamond 为 90.5。正文另称：在更难的推理测试上，分数和 GLM-5.2 差不多，推理计算量大约少 3 到 4 倍。这是厂商比较，不是本库测出来的名次。",
+          "textEn": "Vendor table (not re-run here; NR means the other lab did not publish a score). In the Beam column: DeepSWE v1.1 44.4, Terminal Bench v2.1 80.1, SWE Bench Pro v1 65.5, SWEBench Verified 80.9, HLE with no tools 36.2, GPQA Diamond 90.5. The prose also says that on harder reasoning tests the scores are comparable to GLM-5.2 at about 3–4× less inference compute. That comparison is the vendor’s, not a ranking produced here."
+        },
+        {
+          "text": "官方称：预训练用了 23.8 万亿 token（文本切成的小段），在 6144 张 NVIDIA GB300 NVL72 上不到四周跑完。强化学习用 1.05 万张 NVIDIA GB300，四周里产生超过 1 亿次尝试，单次上下文最长 256K token；文中写中期训练把可用上下文拉到 100 万 token。这些都是厂商自述，本库没有复现训练。",
+          "textEn": "Vendor claim: pretraining used 23.8 trillion tokens and finished in under four weeks on 6,144 NVIDIA GB300 NVL72 GPUs. Reinforcement learning used 10,500 NVIDIA GB300 GPUs, produced more than 100 million rollouts over four weeks, and allowed up to 256K tokens of context; the post says midtraining extends usable context to 1 million tokens. All of that is the vendor’s account. This library did not reproduce the training."
+        }
+      ],
+      "qualityNote": "收录理由：HN item 49969183（标题 Beam: Reflection's 501B open-weight model，提交者 Philpax，2026-10-05T19:16:35.000Z / 约 2026-10-06 03:16 CST）。撰写时 HN 页面与 Algolia 都是 478pts。官博 https://reflection.ai/blog/introducing-beam 撰写时 HTTP 200，页内日期 October 5, 2026，8 min read。提前试用链接指向 https://platform.reflection.ai/ ，撰写时 HTTP 200，但是一个要脚本才能画出的平台页；静态 HTML 里看不到权重下载，本库没有登记账号。博文写明：仍在最终 red-teaming（安全对抗测试）和评测中；权重、技术报告、模型卡和 developer artifacts 这个月晚些时候才发布，许可写的是 Apache 2.0。所以现在不能当已可下载的开源模型。表格数字、3–4 倍推理计算量、23.8 万亿 token、GPU 数量、1 亿次尝试、256K / 1M 上下文都是厂商自述，本库未复跑、未下权重。Artificial Analysis 的 https://artificialanalysis.ai/models/beam 与 https://artificialanalysis.ai/models/reflection-beam 撰写时均为 HTTP 404，不编第三方榜链接。预览为 Chrome 实拍官博首屏裁 3:2 WebP。精选，不打星。与 gemini-4-argon、gpt-6-astra、claude-opus-5-5 互链。",
+      "qualityNoteEn": "Why: HN item 49969183 (title Beam: Reflection's 501B open-weight model, submitter Philpax, 2026-10-05T19:16:35.000Z / about 03:16 CST on 2026-10-06). At write time the HN page and Algolia both showed 478pts. The blog https://reflection.ai/blog/introducing-beam returned HTTP 200; the page is dated October 5, 2026, 8 min read. Early access points at https://platform.reflection.ai/, which returned HTTP 200 but is a script-drawn platform page. The static HTML shows no weight download, and this library did not sign up. The post says final red-teaming and evaluations are still underway, and that the weights, technical report, model card, and developer artifacts come later this month under Apache 2.0. It is not a downloadable open model today. The table, the 3–4× inference-compute claim, 23.8 trillion tokens, the GPU counts, the 100 million rollouts, and the 256K / 1M context figures are vendor claims — not re-run here, weights not downloaded. Artificial Analysis URLs https://artificialanalysis.ai/models/beam and https://artificialanalysis.ai/models/reflection-beam both returned HTTP 404, so no third-party board link is invented. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Featured, unrated. Cross-linked with gemini-4-argon, gpt-6-astra, and claude-opus-5-5.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gemini-4-argon",
+        "gpt-6-astra",
+        "claude-opus-5-5"
+      ],
+      "previewImage": "/previews/beam.webp",
+      "previewCredit": "预览：Chrome 实拍 reflection.ai/blog/introducing-beam 首屏",
+      "previewCreditEn": "Preview: Chrome capture of reflection.ai/blog/introducing-beam above the fold",
+      "featured": true
+    },
     {
       "id": "gutsy",
       "slug": "gutsy",
@@ -185,7 +250,7 @@
       "summaryEn": "Google’s next frontier model, announced 2026-09-30 (official page https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/ , evening Playwright GET HTTP 200). Vendor claim: built for long-horizon complex workflows across real-world software engineering, enterprise knowledge work such as legal and finance, and cybersecurity defense; output token limit raised to 1M (from the previous 64K). Initial access is limited to trusted cyber defenders in the Fairwind Program; the public page says broader access for developers, enterprises, and consumers will follow as soon as possible, starting with paid API customers and Google AI Ultra subscribers. Introductory price is stated as $2 per million input tokens and $10 per million output tokens, with cached input at 95% off the input price; after the introductory period the page says $4 / $20. Vendor eval excerpts (marked as vendor claims, not re-run here): DeepSWE v1.1 77.9%; leading on the Vals Index; AutomationBench 51.3% (#1); LVBench 91.7%; CWE-bench v1 68% tied for first. Third-party board Artificial Analysis https://artificialanalysis.ai/models/gemini-4-argon (Gemini 4 Argon (High), evening GET 200): Intelligence Index 53 (#8/223), $2/$10, Cache Discount 95%, about $1.99 per Intelligence Index task, 1M context, released 2026-09-30; speed listed N/A. HN item 49913571 (title “Gemini 4 Argon”, 1447pts on Algolia at the evening check, 2026-09-30T20:04:37Z / about 2026-10-01 04:04 CST). Morning changelog skipped non-A/B/C headlines and did not file this model; this evening wave adds it to Models.",
       "announcedAt": "2026-09-30",
       "publishedAt": "2026-10-01",
-      "updatedAt": "2026-10-01T12:00:00Z",
+      "updatedAt": "2026-10-06T12:50:00Z",
       "sources": [
         {
           "kind": "official",
@@ -243,6 +308,7 @@
       "qualityNoteEn": "Primary sources are Google’s official blog and Artificial Analysis’s third-party board / article, plus HN 49913571. Listing rationale: same-day HN front-page frontier model (1447pts on Algolia) missed by the morning Models pass. Boundary: Fairwind-only at launch; vendor evals and internal-use figures are vendor narration, not re-run here; AA speed is N/A; introductory pricing is time-limited. No subjective ranking beyond the board’s stars field.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "beam",
         "gpt-6-1-sol",
         "gpt-6-astra",
         "claude-sonnet-5-5",
@@ -624,7 +690,7 @@
       "summaryEn": "Anthropic’s first model in the Claude 5.5 family, announced 2026-09-22 (official page title “Introducing Claude Opus 5.5”, HTTP 200). The page says it performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5 on typical workloads; the meta description says it leads in agentic coding and knowledge work and costs 40% less to run than Opus 5. Vendor price table (per 1M tokens): input $4, output $20 (claimed 20% less than Opus 5), cache reads $0.20 (vs Opus 5 at $0.50, claimed 60% less), cache writes $5 (vs $6.25); fast mode is $8 input / $40 output, claimed up to 2.5× speed. Third-party board: the Artificial Analysis page (variant “Adaptive Reasoning, Max Effort, Default Fallback”) lists Intelligence Index 58 (#1 / 211), $4.00 input / $20.00 output, a 95% cache discount, $5.98 per task, and a 1M context; the speed cell is N/A. HN: item 49803892 (1793pts on Algolia at check time, 2026-09-22 ~16:29Z).",
       "announcedAt": "2026-09-22",
       "publishedAt": "2026-09-25",
-      "updatedAt": "2026-09-25T12:20:00Z",
+      "updatedAt": "2026-10-06T12:50:00Z",
       "sources": [
         {
           "kind": "official",
@@ -677,6 +743,7 @@
       "qualityNoteEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "beam",
         "claude-fable-5-1",
         "step-5-preview",
         "claude-sonnet-5-5"
@@ -1190,7 +1257,7 @@
       "summaryEn": "OpenAI’s frontier model, announced 2026-09-03. Official pitch: computer use, browsing, software engineering, cybersecurity, science, and professional work; in ChatGPT, Sites builds and hosts websites, web apps, and games from one prompt; API name gpt-6-astra. Community side: on 8 Sept YouWare posted that it sorted 720+ community Astra builds (game prototypes, 3D worlds, product UIs, motion, sims), prompts included to replay on YouWare.",
       "announcedAt": "2026-09-03",
       "publishedAt": "2026-09-08",
-      "updatedAt": "2026-09-20T12:20:00Z",
+      "updatedAt": "2026-10-06T12:50:00Z",
       "sources": [
         {
           "kind": "official",
@@ -1266,6 +1333,7 @@
       "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "beam",
         "gpt-6-1-sol",
         "maniac-mansion-3d",
         "astra-mini-lol",
