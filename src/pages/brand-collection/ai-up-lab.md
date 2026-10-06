@@ -8,8 +8,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 # AI UP LAB · 品牌规范参考对标
 
-> 整理：2026-10-05 17:10（Asia/Shanghai）｜依据：[AI 品牌 VI 参考清单](../references/) + 对 [站点](https://mostdesign01-sudo.github.io/grokbot-use-cases/) 的 HTML/CSS 抓取和浏览器计算样式实测  
-> 前提：AI UP LAB 已经有一套相当完整的在线规范（[/brand/](https://mostdesign01-sudo.github.io/grokbot-use-cases/brand/) v1.2.1：10 份 guide、tokens.json/css、knowledge.json、AI brief、logo SVG）。所以这份对标 **不重做体系**，只解决两件事：**规范和线上实际不一致的地方**，以及 **规范还没覆盖的触点（X / 分享图、命名、误用图例）**。
+> 整理：2026-10-05 17:10（Asia/Shanghai）｜依据：[AI 品牌 VI 参考清单](../references/) + 对 [站点](https://mostdesign01-sudo.github.io/ai-up-lab/) 的 HTML/CSS 抓取和浏览器计算样式实测  
+> 前提：AI UP LAB 已经有一套相当完整的在线规范（[/brand/](https://mostdesign01-sudo.github.io/ai-up-lab/brand/) v1.2.1：10 份 guide、tokens.json/css、knowledge.json、AI brief、logo SVG）。所以这份对标 **不重做体系**，只解决两件事：**规范和线上实际不一致的地方**，以及 **规范还没覆盖的触点（X / 分享图、命名、误用图例）**。
 
 ---
 
@@ -20,7 +20,7 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 | 项 | 值 |
 |---|---|
 | 定位语 | 「面向任务的 AI 实践资源 / AI resources for real tasks」；页脚写「独立整理的 AI 实践资源。每条附来源」 |
-| 标志 | 六边形轮廓 + 向上空心三角 + 中心 45% 等比实心三角；中性黑 `#17151b` / 反白 `#f5f2fa`（[logo.svg](https://mostdesign01-sudo.github.io/grokbot-use-cases/brand/logo.svg)、[logo-inverse.svg](https://mostdesign01-sudo.github.io/grokbot-use-cases/brand/logo-inverse.svg)） |
+| 标志 | 六边形轮廓 + 向上空心三角 + 中心 45% 等比实心三角；中性黑 `#17151b` / 反白 `#f5f2fa`（[logo.svg](https://mostdesign01-sudo.github.io/ai-up-lab/brand/logo.svg)、[logo-inverse.svg](https://mostdesign01-sudo.github.io/ai-up-lab/brand/logo-inverse.svg)） |
 | 横向组合 | 标志 + 「AI UP LAB」，字标用 Geist 500、字距 -0.02em（64px 以上用 -0.045em）；桌面 32px 标志配 18px 字，手机 24px 配 14px；标志最小 16px；四周净空 ≥ 标志盒宽的 1/4 |
 | 字体 | `Geist`（Google Fonts，400–700），中文回退 PingFang SC / Hiragino Sans GB / Microsoft YaHei / Noto Sans SC；代码和参数用 `IBM Plex Mono` 400/500。浏览器计算样式已确认 body 使用这组字体 |
 | 色板（浅 / 深） | 底 `#fffefd` / `#141218`；表面 `#ffffff` / `#1b1822`；柔和底 `#f5f2fa` / `#25202e`；正文 `#17151b` / `#f5f2fa`；辅助 `#625d6d` / `#b2aabb`；注释 `#777080` / `#968ba4`；分隔线 `#e8e5ee` / `#332d3c`；**品牌紫 `#6741c2` / `#b79af5`**；成功 `#217a4d` / `#75d49e`；警告 `#8a5b12` / `#ecc17a`；错误 `#b42318` / `#ff9e98` |
@@ -30,7 +30,7 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 | 首页结构 | 编辑精选（1 主 + 2 补充）→ 最近更新 → 目录（学习与工作流 117 / 工具与应用 82 / 界面与范例 150 / 模型与能力 21 / 提示词与素材 12 条）→ 新手入门 → 按任务 → 按日期 |
 | 方法参考 | 页面注明借鉴 [Tmall Design](https://tmall-design.com/#blog/building-design-wiki-for-aigui) 的「规则 → 结构化映射 → 代码」做法 |
 
-截图：[首页](https://mostdesign01-sudo.github.io/grokbot-use-cases/) 1440/390 宽、[`/brand/`](https://mostdesign01-sudo.github.io/grokbot-use-cases/brand/) 1440 宽：[home-1440.png](/brand-collection/assets/ai-up-lab/home-1440.webp)、[home-390.png](/brand-collection/assets/ai-up-lab/home-390.webp)、[brand-1440.png](/brand-collection/assets/ai-up-lab/brand-1440.webp)。标志与分享图：[logo.svg](/brand-collection/assets/ai-up-lab/logo.svg)、[logo-inverse.svg](/brand-collection/assets/ai-up-lab/logo-inverse.svg)、[favicon.svg](/brand-collection/assets/ai-up-lab/favicon.svg)、[og.png](/brand-collection/assets/ai-up-lab/og.webp)。
+截图：[首页](https://mostdesign01-sudo.github.io/ai-up-lab/) 1440/390 宽、[`/brand/`](https://mostdesign01-sudo.github.io/ai-up-lab/brand/) 1440 宽：[home-1440.png](/brand-collection/assets/ai-up-lab/home-1440.webp)、[home-390.png](/brand-collection/assets/ai-up-lab/home-390.webp)、[brand-1440.png](/brand-collection/assets/ai-up-lab/brand-1440.webp)。标志与分享图：[logo.svg](/brand-collection/assets/ai-up-lab/logo.svg)、[logo-inverse.svg](/brand-collection/assets/ai-up-lab/logo-inverse.svg)、[favicon.svg](/brand-collection/assets/ai-up-lab/favicon.svg)、[og.png](/brand-collection/assets/ai-up-lab/og.webp)。
 
 ### 0.2 线上和规范对不上的地方（实测）
 
@@ -40,7 +40,7 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 4. **favicon 还是旧色**：`favicon.svg` 用 `#f4efe6` 底配 `#1a1713` 图形，这是旧浅色主题的 `--bg / --ink`，不在 v1.2.1 色板里。
 5. **OG 图文案过期，也不分页**：`og.png`（1200×630）是白底居中的横向组合，下方胶囊写「AI UP LAB · curated cases & HTML」，跟现在的定位「AI resources for real tasks」对不上；首页和 `/brand/` 用的是同一张。`twitter:card=summary_large_image` 已经配好了。
 6. **规范没有覆盖社交 / X**：`/brand/` 的 8 节里没有分享图或 X 配图模板。
-7. **命名在各触点不一致**：品牌名是 AI UP LAB，仓库和 URL 是 `grokbot-use-cases`，X 账号 @mostdes7gn（第三方镜像里显示名是「白日做梦™」，x.com 本身返回 403，头像、横幅、简介都未能核实）。
+7. **命名在各触点不一致**：品牌名是 AI UP LAB，仓库和 URL 当时是 `grokbot-use-cases`（2026-10-06 已统一改为 `ai-up-lab`），X 账号 @mostdes7gn（第三方镜像里显示名是「白日做梦™」，x.com 本身返回 403，头像、横幅、简介都未能核实）。
 8. **误用规则只有文字**（「不要拉伸、旋转、描边或给标志加阴影」），没有图例。
 
 ---
@@ -94,7 +94,7 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 **落到 AI UP LAB**
 - 在 `/brand/` 最上面加一个「30 秒版」区块：
-  - **命名**：写作「AI UP LAB」，全大写，单个空格；不写 AIUPLAB、AI Up Lab、AI-UP-LAB；`grokbot-use-cases` 只是仓库名，不当品牌名用。
+  - **命名**：写作「AI UP LAB」，全大写，单个空格；不写 AIUPLAB、AI Up Lab、AI-UP-LAB；`ai-up-lab` 只是仓库名，不当品牌名用。
   - **三级标志**：横向组合（站头、OG）→ 单标志（16–32px 图标位）→ **X 头像版**（标志放进圆形，定安全区）。
   - **两色**：中性黑 `#17151b`（浅底）、反白 `#f5f2fa`（深底），紫色不进标志（规范已有，这里提到最上面）。
 - X 显示名要不要和品牌名对齐，由 Hao 决定。规范里至少写清「对外提到本站时一律写 AI UP LAB」。
@@ -183,6 +183,6 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 ## 6. 线上核对范围
 
-> 需要复核时请直接访问线上站点 https://mostdesign01-sudo.github.io/grokbot-use-cases/ 。
+> 需要复核时请直接访问线上站点 https://mostdesign01-sudo.github.io/ai-up-lab/ 。
 
 核对过首页与 `/brand/` 的 HTML、站点 CSS（`_section_.BnVLC-FU.css`）、`tokens.css`、`favicon.svg`、`logo.svg`、`logo-inverse.svg`、`og.png`，以及首页 1440 / 390 宽和 `/brand/` 1440 宽截图、浏览器计算样式。截图与标志见上文。

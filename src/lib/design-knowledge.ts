@@ -178,7 +178,7 @@ export const designKnowledge: DesignSpec[] = [
     good: c("读取 resource-cards 规则和实际组件，再改卡片简介与状态。", "Read resource-cards and its actual implementation before changing copy and states."), bad: c("只输入“高级、科技、简洁”，让 AI 自行猜测品牌、内容和操作。", "Ask only for premium, futuristic, minimal and let AI guess brand, content, and behavior."),
     checks: [c("工作说明包含任务、目标页面、相关规则和验收方式。", "The brief includes task, target page, relevant rules, and validation."), c("映射中的组件路径确实存在。", "Every mapped source path exists."), c("没有把示例服务或 MCP 配置描述为已部署能力。", "Examples and MCP configurations are not presented as deployed capabilities.")],
     tokens: [], code: [{ path: "src/lib/design-knowledge.ts", purpose: c("规则与映射注册表", "Rules and mapping registry") }, { path: "src/components/BrandBriefBuilder.astro", purpose: c("任务工作说明生成器", "Task brief builder") }], dependencies: ["page-patterns"], reference: "blog/building-design-wiki-for-aigui",
-    snippet: `// Read the public knowledge registry, then the referenced source files.\nconst knowledge = await fetch("/grokbot-use-cases/brand/knowledge.json")\n  .then(response => response.json());\nconst cardSpec = knowledge.objects.find(item => item.id === "resource-cards");`,
+    snippet: `// Read the public knowledge registry, then the referenced source files.\nconst knowledge = await fetch("/ai-up-lab/brand/knowledge.json")\n  .then(response => response.json());\nconst cardSpec = knowledge.objects.find(item => item.id === "resource-cards");`,
   },
   {
     id: "review", group: "workflow", title: c("设计验收与维护", "Design review & maintenance"),

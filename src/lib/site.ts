@@ -10,7 +10,7 @@ export const siteDescriptionEn =
   "AI UP LAB: learning, workflows, tools, interfaces, model capabilities, and prompts, organized around your tasks. Every entry links to its source.";
 
 /** Public source repo for this site. The GitHub-star CTA points here; it is unrelated to curator ★ or visitor ☆. */
-export const repoSlug = "mostdesign01-sudo/grokbot-use-cases";
+export const repoSlug = "mostdesign01-sudo/ai-up-lab";
 export const repoUrl = `https://github.com/${repoSlug}`;
 /** Unauthenticated public endpoint used only to paint the live stargazer count client-side. */
 export const repoApiUrl = `https://api.github.com/repos/${repoSlug}`;

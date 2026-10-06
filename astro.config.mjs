@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-const base = "/grokbot-use-cases";
+const base = "/ai-up-lab";
 
 function walk(node, visit) {
   visit(node);
