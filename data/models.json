@@ -1,11 +1,171 @@
 {
   "meta": {
-    "updatedAt": "2026-10-07T04:55:00Z",
+    "updatedAt": "2026-10-07T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.18",
-    "count": 23
+    "version": "1.1.19",
+    "count": 25
   },
   "models": [
+    {
+      "id": "strands-decider-2b",
+      "slug": "strands-decider-2b",
+      "name": "Strands Decider 2B",
+      "vendor": "Strands Agents",
+      "title": "Strands Decider 2B：一个小的开源决策模型，只做选择题和打分",
+      "titleEn": "Strands Decider 2B: a small open decision model that picks an option or gives a score",
+      "summary": "Strands Decider 2B 是 Strands Agents 放出的一个小决策模型。它不写文章。你给它一段现状和几个允许的答案，它为每个答案打一个概率，也可以按一个分数尺打分。仓库写它大约 19 亿参数，基于 Qwen3.5-2B 改来，拿掉了原来用来生成文字的那一层，换上一个大约一百万参数的小头。代码和权重以 Apache-2.0 发布，可以在自己的 CPU 或显卡上跑。官博是 2026-10-01，仓库现在指向的参考版本是 v21，更早的 v19 仍在。本库没有安装，也没有复跑仓库里的分数。",
+      "summaryEn": "Strands Decider 2B is a small decision model from Strands Agents. It does not write prose. You give it a situation and the answers you allow, and it returns a probability for each one, or a score on a scale. The repo says it has about 1.9 billion parameters, starts from Qwen3.5-2B, removes the layer that used to generate text, and adds a small head of about a million parameters. Code and weights are Apache-2.0, and it can run on your own CPU or GPU. The blog is dated 2026-10-01. The repo’s reference version now is v21, and the earlier v19 is still published. This library did not install it and did not re-run the repo’s scores.",
+      "announcedAt": "2026-10-01",
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Strands 官博：Introducing Strands Decider 2B",
+          "labelEn": "Strands blog: Introducing Strands Decider 2B",
+          "url": "https://strandsagents.com/blog/introducing-strands-decider/",
+          "by": "Marc Brooker, Mike Chambers, Fabio Nonato de Paula",
+          "date": "2026-10-01"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：strands-labs/strands-decider（Apache-2.0）",
+          "labelEn": "GitHub: strands-labs/strands-decider (Apache-2.0)",
+          "url": "https://github.com/strands-labs/strands-decider",
+          "by": "strands-labs",
+          "date": "2026-10-07"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：当前参考权重 v21",
+          "labelEn": "Hugging Face: current reference weights, v21",
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21",
+          "by": "StrandsAgents"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：仍在发布的 v19",
+          "labelEn": "Hugging Face: v19, still published",
+          "url": "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19",
+          "by": "StrandsAgents"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=49987076",
+          "by": "Hacker News",
+          "date": "2026-10-07"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "它是决策模型：不自由写字。你给现状，再给允许的答案。问题有三种，仓库用 noul（是或否）、choice（多选一）和 score（按分数尺打分）。一次前向就把这些答案的概率算出来。仓库写参数量约 19 亿，躯干是 Qwen3.5-2B-Base，原来的语言模型头被拿掉，换成约一百万参数的指针头，再用 rank-16 的 LoRA 微调。LoRA 是只训练一小部分新增权重的做法。",
+          "textEn": "It is a decision model: it does not write free text. You provide a situation and the answers you allow. The repo’s three question types are noul (yes or no), choice (one of several), and score (a point on a scale). One forward pass produces the probabilities. The repo says about 1.9 billion parameters. The torso is Qwen3.5-2B-Base, the old language-model head is removed, a pointer head of about a million parameters replaces it, and a rank-16 LoRA adapts the torso. LoRA means only a small set of added weights is trained."
+        },
+        {
+          "text": "怎么试（仓库写的命令，本库没跑过）：pip install strands-decider，然后 strands-decider ask，模型名写 StrandsAgents/strands-decider-2B-hobson-v21。也可以在本机 serve。仓库写它能在 CPU、苹果芯片 Mac 或一块消费级显卡上跑。许可 Apache-2.0。",
+          "textEn": "How to try, as the repo writes it (not run here): pip install strands-decider, then strands-decider ask with the model id StrandsAgents/strands-decider-2B-hobson-v21. You can also serve it locally. The repo says it runs on CPU, an Apple-silicon Mac, or a consumer GPU. License Apache-2.0."
+        },
+        {
+          "text": "仓库自测，本库未复跑，也不把它当成排名。README 的表：JevBench 公开集 231 题，v21 准确率 0.762（176/231），v19 为 0.723（167/231）。同一张表写，六次种子的平均和 v19 配方几乎一样，单次相差大约 10 题以内就算没有分出胜负。延迟列在 v19：RTX 3090 中位 115 ms。官博 10 月 1 日还有一套“在 2B 档第几名”的说法，本卡不转述，因为仓库后来的表自己提醒小差距不可靠。",
+          "textEn": "Repo self-test, not re-run here, and not treated as a ranking. The README table: on the 231-task public JevBench set, v21 accuracy is 0.762 (176/231) and v19 is 0.723 (167/231). The same table says a six-seed average of the v21 recipe and the v19 recipe land in the same place, and a gap under about 10 tasks between two single runs is unresolved. The latency column is on v19: median 115 ms on an RTX 3090. The October 1 blog also has a “place in the 2B class” claim. This card does not repeat it, because the repo’s later table says small gaps are not reliable."
+        }
+      ],
+      "qualityNote": "收录理由：HN item 49987076，标题 Strands Decider 2B: a small, open-source, decision model，作者 gmays，2026-10-07T02:02:11.000Z（约 10:02 CST），撰写时 Algolia 208pts，外链即官博。官博 https://strandsagents.com/blog/introducing-strands-decider/ 撰写时 HTTP 200，页内日期 October 1, 2026，作者 Marc Brooker、Mike Chambers、Fabio Nonato de Paula。博文命令示例仍写 v19。仓库 README 撰写时已把参考模型写成 v21（strands-decider-2B-hobson-v21），并写 v19 仍发布。规格和分数以 README 为准，博文里的名次不转抄。gh api：strands-labs/strands-decider，Apache-2.0，475★，创建于 2026-09-29T16:36:38Z。HF 的 v19 与 v21 页面撰写时均为 HTTP 200。本库未 pip install，未下载权重，未复跑 JevBench，未在 RTX 3090 或 Mac 上计时。同板与 Clef、Gutsy、Jeeves、Jev、Laya、Ollaya 互链；Cases 里已有本机 Jeff 和命令行 Onesie。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Why: HN item 49987076, title Strands Decider 2B: a small, open-source, decision model, author gmays, 2026-10-07T02:02:11.000Z (about 10:02 CST), 208pts on Algolia at write time, linking the blog. The blog https://strandsagents.com/blog/introducing-strands-decider/ returned HTTP 200, dated October 1, 2026, by Marc Brooker, Mike Chambers, and Fabio Nonato de Paula. The blog’s command examples still say v19. The README at write time names v21 (strands-decider-2B-hobson-v21) as the reference and says v19 stays published. Specs and scores follow the README. The blog’s class ranking is not copied. gh api: strands-labs/strands-decider, Apache-2.0, 475★, created 2026-09-29T16:36:38Z. The HF pages for v19 and v21 both returned HTTP 200. This library did not pip install, did not download weights, did not re-run JevBench, and did not time it on an RTX 3090 or a Mac. Cross-linked on this board with Clef, Gutsy, Jeeves, Jev, Laya, and Ollaya. Cases already lists local Jeff and the Onesie CLI. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "relatedCaseIds": [
+        "jeff",
+        "onesie"
+      ],
+      "relatedModelIds": [
+        "clef",
+        "gutsy",
+        "jeeves",
+        "typesafe-jev",
+        "laya-system-one",
+        "ollaya"
+      ],
+      "previewImage": "/previews/strands-decider-2b.webp",
+      "previewCredit": "预览：Chrome 实拍 strandsagents.com 官博首屏",
+      "previewCreditEn": "Preview: Chrome capture of the strandsagents.com blog above the fold",
+      "featured": false
+    },
+    {
+      "id": "embeddinggemma-2",
+      "slug": "embeddinggemma-2",
+      "name": "EmbeddingGemma 2",
+      "vendor": "Google DeepMind",
+      "title": "EmbeddingGemma 2：把文字、图片、声音和视频收成同一套向量的小模型",
+      "titleEn": "EmbeddingGemma 2: a small model that turns text, images, audio, and video into one vector space",
+      "summary": "EmbeddingGemma 2 是 Google DeepMind 在 2026-10-06 发布的开源嵌入模型。嵌入是一串数字，用来表示一段文字、一张图或一段声音的意思，方便按意思搜索，而不是按关键词硬对。这一版把文字（含代码）、图片、视频和声音放进同一个 768 维的空间。模型卡写总参数 7.4 亿，其中文字部分约 2.7 亿，视觉编码器 1.7 亿，音频编码器 3 亿，可以只加载用得到的那一部分。许可页标题是 Apache License 2.0。它面向手机和笔记本上的本地搜索。模型卡里的测试分是 Google 自己报的，本库没有复跑，也没有下载权重。",
+      "summaryEn": "EmbeddingGemma 2 is an open embedding model Google DeepMind released on 2026-10-06. An embedding is a list of numbers that stands for the meaning of a passage, a picture, or a sound, so you can search by meaning rather than by exact keywords. This version puts text (including code), images, video, and audio in one 768-dimension space. The model card says 740 million parameters in total: about 270 million for text, a 170 million vision encoder, and a 300 million audio encoder, and you can load only the part you need. The license page is titled Apache License 2.0. It is aimed at search on a phone or laptop. Scores on the model card are Google’s own. This library did not re-run them and did not download the weights.",
+      "announcedAt": "2026-10-06",
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 官博：EmbeddingGemma 2",
+          "labelEn": "Google blog: EmbeddingGemma 2",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+          "by": "Sahil Dua, Henrique Schechter Vera, Google DeepMind",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型卡：google/embeddinggemma-2",
+          "labelEn": "Hugging Face model card: google/embeddinggemma-2",
+          "url": "https://huggingface.co/google/embeddinggemma-2",
+          "by": "Google DeepMind",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Gemma 文档：EmbeddingGemma",
+          "labelEn": "Gemma docs: EmbeddingGemma",
+          "url": "https://ai.google.dev/gemma/docs/embeddinggemma",
+          "by": "Google AI for Developers"
+        },
+        {
+          "kind": "official",
+          "label": "许可页：Apache License 2.0",
+          "labelEn": "License page: Apache License 2.0",
+          "url": "https://ai.google.dev/gemma/apache_2",
+          "by": "Google"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=49980487",
+          "by": "Hacker News",
+          "date": "2026-10-06"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "模型卡写：总参数 7.4 亿。文字骨干 1.3 亿加嵌入层 1.4 亿，合起来约 2.7 亿；视觉编码器 1.7 亿，音频编码器 3 亿。输出默认 768 维，也可以截成 512、256 或 128 维，用来少占存储。上下文窗口 8192 token。输入可以是文字、图片、视频、声音，以及它们的组合。",
+          "textEn": "The model card says 740 million parameters total. The text side is a 130 million backbone plus a 140 million embedder, about 270 million together. The vision encoder is 170 million and the audio encoder is 300 million. The default output is 768 dimensions, and it can be cut to 512, 256, or 128 to store less. The context window is 8,192 tokens. Inputs can be text, images, video, audio, and combinations of those."
+        },
+        {
+          "text": "模型卡上的对比分（官方数字，本库未复跑）：代码检索 MTEB Code 的 NDCG@10，EmbeddingGemma 2 是 78.68，上一版是 68.76。多语言文本 MTEB 的平均分是 61.36，上一版是 61.15。模型卡正文另写代码任务相对上一版大约提高 14%。这两处是同一张表和同一页的说法。",
+          "textEn": "Comparison scores on the model card (vendor numbers, not re-run here): on MTEB Code, NDCG@10 is 78.68 for EmbeddingGemma 2 and 68.76 for the previous version. Multilingual text MTEB mean is 61.36 versus 61.15. The card’s prose also says code tasks improved by about 14% versus the previous version. Those are the table and the prose on the same page."
+        },
+        {
+          "text": "怎么拿（官方渠道，本库没下载）：权重在 Hugging Face 的 google/embeddinggemma-2。文档在 ai.google.dev 的 EmbeddingGemma 页。模型卡写可以用 transformers、sentence-transformers 等常见库加载，也面向设备端。官博还写了在手机上的内存占用和能塞进多少分钟音频，那些设备数字没有写进模型卡的规格表，本卡不另抄一份。",
+          "textEn": "Where to get it (official channels, not downloaded here): weights are at google/embeddinggemma-2 on Hugging Face. Docs are the EmbeddingGemma page on ai.google.dev. The model card says it loads with common libraries such as transformers and sentence-transformers, and that it is meant for devices. The blog also states phone memory and how many minutes of audio fit. Those device figures are not in the model card’s spec table, so this card does not copy a second set."
+        }
+      ],
+      "qualityNote": "收录理由：HN item 49980487，标题 EmbeddingGemma 2: An open, lightweight multimodal embedding model，作者 ilreb，2026-10-06T16:03:49.000Z（约 2026-10-07 00:03 CST），撰写时 Algolia 352pts。官博 https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ 撰写时 HTTP 200，页内日期 Oct 06, 2026，作者 Sahil Dua 与 Henrique Schechter Vera。模型卡 https://huggingface.co/google/embeddinggemma-2 撰写时 HTTP 200，front matter 写 license apache-2.0。卡内许可链接 https://ai.google.dev/gemma/docs/gemma_4_license 撰写时 301 到 https://ai.google.dev/gemma/apache_2 ，该页 HTTP 200，标题 Apache License 2.0。文档 https://ai.google.dev/gemma/docs/embeddinggemma HTTP 200。规格和表内分数以模型卡为准。官博另有 Pixel 机型内存、5.5 分钟音频、29 张图、58 帧视频等说法，未写入要点，避免和模型卡的“数分钟音视频”并成两套数字。本库未下载权重，未做检索实验，未复跑 MTEB。同板没有另一张嵌入模型卡，因此 relatedModelIds 留空。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Why: HN item 49980487, title EmbeddingGemma 2: An open, lightweight multimodal embedding model, author ilreb, 2026-10-06T16:03:49.000Z (about 00:03 CST on 2026-10-07), 352pts on Algolia at write time. The blog https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ returned HTTP 200, dated Oct 06, 2026, by Sahil Dua and Henrique Schechter Vera. The model card https://huggingface.co/google/embeddinggemma-2 returned HTTP 200, with license apache-2.0 in the front matter. The card’s license link https://ai.google.dev/gemma/docs/gemma_4_license returned 301 to https://ai.google.dev/gemma/apache_2, which returned HTTP 200 and is titled Apache License 2.0. Docs https://ai.google.dev/gemma/docs/embeddinggemma returned HTTP 200. Specs and in-table scores follow the model card. The blog also states Pixel memory, 5.5 minutes of audio, 29 images, and 58 video frames. Those are not copied into the highlights, so they do not sit beside the model card’s “minutes of audio or video” as a second set of numbers. This library did not download weights, did not run a search experiment, and did not re-run MTEB. There is no other embedding card on this board, so relatedModelIds is empty. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/embeddinggemma-2.webp",
+      "previewCredit": "预览：Chrome 实拍 Google 官博首屏",
+      "previewCreditEn": "Preview: Chrome capture of the Google blog above the fold",
+      "featured": false
+    },
     {
       "id": "nano-banana-2-1",
       "slug": "nano-banana-2-1",
@@ -238,6 +398,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "strands-decider-2b",
         "typesafe-jev",
         "laya-system-one",
         "clef",
@@ -336,6 +497,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "strands-decider-2b",
         "gutsy",
         "typesafe-jev",
         "laya-system-one",
@@ -638,6 +800,7 @@
         "onesie"
       ],
       "relatedModelIds": [
+        "strands-decider-2b",
         "gutsy",
         "typesafe-jev",
         "ollaya",
@@ -928,6 +1091,7 @@
       "qualityNoteEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "strands-decider-2b",
         "gutsy",
         "typesafe-jev",
         "laya-system-one",
@@ -1262,6 +1426,7 @@
       "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "strands-decider-2b",
         "gutsy",
         "typesafe-jev",
         "ollaya",
@@ -1769,6 +1934,7 @@
       "qualityNoteEn": "Why: a 9/15 announcement of a new class of frontier decision model with strong HN interest; fits the Models board. Boundary: speed / cost / eval multipliers are vendor claims taken from the official blog post and homepage, not independently verified here; early access, API not tested by this library. All three source URLs returned 200 on 2026-09-16. No preview image.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "strands-decider-2b",
         "gutsy",
         "laya-system-one",
         "ollaya",
