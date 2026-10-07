@@ -1,11 +1,119 @@
 {
   "meta": {
-    "updatedAt": "2026-10-06T12:50:00Z",
+    "updatedAt": "2026-10-07T04:55:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.17",
-    "count": 22
+    "version": "1.1.18",
+    "count": 23
   },
   "models": [
+    {
+      "id": "nano-banana-2-1",
+      "slug": "nano-banana-2-1",
+      "name": "Nano Banana 2.1",
+      "vendor": "Google",
+      "title": "Nano Banana 2.1：Google 新版出图改图模型，主打海报排版、局部改图和角色一致",
+      "titleEn": "Nano Banana 2.1: Google’s new image generation and editing model, aimed at layout design, masked edits, and consistent subjects",
+      "summary": "Nano Banana 2.1 是 Google 在 2026 年 10 月 6 日（北京时间 10 月 7 日凌晨）发布的出图和改图模型，是 Nano Banana 2 的升级版。适合要做海报、信息图、商品图、角色设定，并且需要反复修改的设计师和内容创作者。Google 在 X 上说它全面超过自家之前的图片模型，进步最明显的是三件事：版式设计、用遮罩改图（先圈出一块区域，只改这一块），以及同一个人物或商品在多张图里保持一致。普通用户可以在 Gemini App 里试（官方模型卡把它列为发布渠道，正在陆续上线）；开发者可以在 Google AI Studio 里试，或用 API 调用 gemini-nano-banana-2.1，API 没有免费档。下面的对比分数和价格都是 Google 自己公布的，本库没有实际出图、没有复跑对比。",
+      "summaryEn": "Nano Banana 2.1 is Google’s image generation and editing model, released on 6 October 2026 (early 7 October Beijing time) as an upgrade to Nano Banana 2. It suits designers and content creators who make posters, infographics, product shots, or character sheets and need to iterate. Google’s X post says it beats the company’s previous image models across the board, with the biggest gains in visual design, mask-based editing (outline an area and change only that part), and keeping the same person or product consistent across images. Regular users can try it in the Gemini app (listed as a launch channel on the model card, rolling out); developers can try it in Google AI Studio or call gemini-nano-banana-2.1 through the API, which has no free tier. The comparison scores and prices below are Google’s own; this library did not generate images or re-run any comparison.",
+      "announcedAt": "2026-10-06",
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-07T04:55:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 官方 X 帖：Meet Nano Banana 2.1（含宣传短片）",
+          "labelEn": "Google on X: Meet Nano Banana 2.1 (with promo clip)",
+          "url": "https://x.com/Google/status/2107501209154204148",
+          "by": "@Google",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Gemini API 模型页：gemini-nano-banana-2.1（能力与参数）",
+          "labelEn": "Gemini API model page: gemini-nano-banana-2.1 (capabilities and specs)",
+          "url": "https://ai.google.dev/gemini-api/docs/models/gemini-nano-banana-2.1",
+          "by": "Google AI for Developers",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Google DeepMind 模型卡：Nano Banana 2.1（评分、渠道、已知不足）",
+          "labelEn": "Google DeepMind model card: Nano Banana 2.1 (scores, channels, known limits)",
+          "url": "https://deepmind.google/models/model-cards/nano-banana-2-1/",
+          "by": "Google DeepMind",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Gemini API 出图指南（上手代码）",
+          "labelEn": "Gemini API image generation guide (starter code)",
+          "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+          "by": "Google AI for Developers"
+        },
+        {
+          "kind": "official",
+          "label": "Gemini API 价格页（按张折算的出图价）",
+          "labelEn": "Gemini API pricing (per-image equivalents)",
+          "url": "https://ai.google.dev/gemini-api/docs/pricing",
+          "by": "Google AI for Developers"
+        },
+        {
+          "kind": "official",
+          "label": "Gemini API 更新日志：10 月 6 日正式发布",
+          "labelEn": "Gemini API release notes: GA on 6 October",
+          "url": "https://ai.google.dev/gemini-api/docs/changelog",
+          "by": "Google AI for Developers",
+          "date": "2026-10-06"
+        },
+        {
+          "kind": "official",
+          "label": "Google AI Studio（网页里直接试，需要 Google 账号）",
+          "labelEn": "Google AI Studio (try it in the browser; Google account required)",
+          "url": "https://aistudio.google.com/",
+          "by": "Google"
+        },
+        {
+          "kind": "community",
+          "label": "Android Authority：Nano Banana 2.1 上线报道",
+          "labelEn": "Android Authority: Nano Banana 2.1 launch coverage",
+          "url": "https://www.androidauthority.com/google-launches-nano-banana-2-1-3719823/",
+          "by": "Android Authority",
+          "date": "2026-10-06"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称（X 帖与模型卡）：这一版主要强在三处。一是版式设计，海报、信息图这种要把大字标题、照片和小标签排在一起的图更像样；二是遮罩或涂鸦改图，圈出一块或在图上画几笔，只改那一块；三是主体一致，同一个人物或商品放进多张图里还是同一个样子。宣传短片里能看到一张户外越野跑海报（大字标题、圆形照片、坐标和标签排版）、一只挂着水珠的甲虫特写和一组干花微距。这些是 Google 自己挑的样片，不代表每次出图都这样。",
+          "textEn": "Vendor claim (X post and model card): the release focuses on three things. Visual design: posters and infographics that mix big headlines, photos, and small labels come out better. Mask or doodle editing: outline an area or scribble on it, and only that part changes. Subject consistency: the same person or product looks the same across images. The promo clip shows a trail-running poster (bold headline, circular photo, coordinates and label layout), a dew-covered beetle close-up, and dried-flower macros. These are samples Google picked; they do not mean every result looks like this."
+        },
+        {
+          "text": "官方开发者文档写的具体变化：出图分 1K、2K、4K 三档，默认 1K；修好了超宽、超长比例（1:4、4:1、1:8、8:1）在 2K 和 4K 下出现的拼接痕迹；图里的文字和信息图排版更准；一次最多放 14 张参考图，其中最多 4 个角色保持长相一致、最多 10 个物品保持外观；可以先用 Google 网页和图片搜索查资料再画；「思考」程度可选 minimal、medium（默认）、high，也就是让模型先想多少再动笔。输入可以是文字、图片、视频和 PDF。",
+          "textEn": "Specific changes in the developer docs: output at 1K, 2K, or 4K (1K by default); fixed seam artifacts on very wide or tall ratios (1:4, 4:1, 1:8, 8:1) at 2K and 4K; more accurate text and infographic layout; up to 14 reference images in one request, keeping up to 4 characters and up to 10 objects consistent; can look things up with Google Web and Image Search before drawing; a Thinking setting of minimal, medium (default), or high, i.e. how much the model plans before drawing. Inputs can be text, images, video, and PDF."
+        },
+        {
+          "text": "官方模型卡的对比分（找人两两比较哪张更好，再算出相对分，越高越好，只在这张表里互相比较有意义；本库未复跑）：开「思考」时，总体偏好 1050，Nano Banana 2 是 990，Nano Banana Pro 是 935；信息图设计 1048，对比 961 和 912；遮罩或涂鸦改图 1049，对比 965 和 927；多角色一致 1106，对比 978 和 1011。不开「思考」时分数低一些，例如总体偏好 1015。",
+          "textEn": "Model-card comparison scores (people pick the better image in pairs, then a relative score is computed; higher is better and it only means something within this table; not re-run here). With Thinking on: overall preference 1050 vs 990 for Nano Banana 2 and 935 for Nano Banana Pro; infographic design 1048 vs 961 and 912; mask or doodle editing 1049 vs 965 and 927; multi-character consistency 1106 vs 978 and 1011. Scores are lower with Thinking off, e.g. 1015 for overall preference."
+        },
+        {
+          "text": "怎么试（官方渠道）：模型卡列出的上线渠道有 Gemini App、Google AI Studio、Gemini API、Google 搜索的 AI 模式、Google Ads、Google Flow 和 Google Stitch。设计师最直接的是 Gemini App 和 Flow；要接进自己工具的，在 AI Studio 先试再看出图指南调 API。官方价格页（撰写时）：API 只有付费档，按张折算 1K 约 0.0336 美元、2K 约 0.0504 美元、4K 约 0.113 美元，批量模式约半价。有些第三方文章把 4K 写成 0.0756 美元，与官方价格页不符，以官方为准。",
+          "textEn": "How to try (official channels): the model card lists the Gemini app, Google AI Studio, the Gemini API, AI Mode in Google Search, Google Ads, Google Flow, and Google Stitch. For designers the Gemini app and Flow are the most direct; to wire it into your own tools, try it in AI Studio first, then follow the image generation guide. Official pricing at write time: the API is paid only, roughly $0.0336 per 1K image, $0.0504 per 2K, and $0.113 per 4K, with Batch about half. Some third-party articles list 4K at $0.0756, which does not match the official pricing page; go by the official page."
+        },
+        {
+          "text": "边界（官方模型卡自己写的不足）：小字容易糊，1K 档尤其明显，长段落、整页文字也不行；输入图和输出图里的人物不一定完全一致；遮罩或涂鸦改图有时只听了一半，涂鸦痕迹可能留在图上；改图时偶尔沿用原图的姿势；有时分不清左右；3D 空间和事实准确性仍有限。要印刷级清晰小字的物料，别直接用 1K 出图交付。旧版 gemini-3.1-flash-image 已在 API 上标为弃用，官方更新日志撰写时写「还没定关停日期」。",
+          "textEn": "Limits (from the model card itself): small text often blurs, especially at 1K, and long paragraphs or full pages do not work well; people in the input and output images are not always consistent; masked or doodle edits sometimes follow only part of the instruction, and scribbles can remain; edits occasionally keep the original pose; left and right sometimes get mixed up; 3D reasoning and factual accuracy are still limited. For print work that needs crisp small text, do not ship 1K output as is. The older gemini-3.1-flash-image is marked deprecated on the API; at write time the release notes say no shutdown date has been announced."
+        }
+      ],
+      "qualityNote": "收录理由：Hao 转来的 Google 官方 X 帖（@Google，status 2107501209154204148，2026-10-06T16:00:18Z / 北京时间 2026-10-07 00:00），本库偏重 AI×设计，这是 Google 主力出图模型的更新，而且主打版式设计和改图。核对（撰写时，2026-10-07 北京时间中午）：Gemini API 模型页、DeepMind 模型卡（页内 Published 6 October 2026）、出图指南、价格页、更新日志均 HTTP 200；更新日志 10 月 6 日写正式发布（GA），并写旧版 gemini-3.1-flash-image 弃用、还没定关停日期（S5 Labs 等第三方写 10 月 29 日关停，与官方页当前文字不符，未采用）。价格以官方价格页为准（4K 约 0.113 美元/张）。没有找到 blog.google 上的发布博文，所以官方来源是 X 帖、模型卡和开发者文档。Gemini App 是否已在某个账号里切到 2.1，本库没有登录确认。本库没有实际出图、没有调用 API、没有复跑模型卡评分；遮罩改图、14 张参考图、搜索查资料等功能都没有实测。预览是 X 帖宣传短片（原片 800×800）按 2 倍速转成 3:2 动图 WebP，样片由 Google 挑选。精选，不打星。",
+      "qualityNoteEn": "Why: the official Google X post Hao shared (@Google, status 2107501209154204148, 2026-10-06T16:00:18Z / 00:00 on 2026-10-07 Beijing time). This library leans AI × design, and this is an update to Google’s main image model with layout design and editing as headline features. Checks at write time (around noon Beijing time on 2026-10-07): the Gemini API model page, the DeepMind model card (Published 6 October 2026), the image generation guide, the pricing page, and the release notes all returned HTTP 200. The release notes mark it GA on 6 October and say the older gemini-3.1-flash-image is deprecated with no shutdown date announced (S5 Labs and others reported 29 October, which does not match the official page’s current wording, so it is not used). Prices follow the official pricing page (about $0.113 per 4K image). No launch post was found on blog.google, so the official sources are the X post, the model card, and developer docs. Whether a given Gemini app account has switched to 2.1 was not checked (no sign-in). This library did not generate images, call the API, or re-run model-card scores; masked editing, 14 reference images, and search grounding were not tested. The preview is the X promo clip (800×800 original) at 2× speed, cropped to a 3:2 animated WebP; the samples are Google’s picks. Featured, unrated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gemini-4-argon"
+      ],
+      "previewImage": "/previews/nano-banana-2-1.webp",
+      "previewCredit": "预览：Google 官方 X 帖宣传短片，2 倍速、裁 3:2 动图（样片由 Google 挑选）",
+      "previewCreditEn": "Preview: Google’s official X promo clip at 2× speed, cropped to a 3:2 animation (samples picked by Google)",
+      "featured": true
+    },
     {
       "id": "beam",
       "slug": "beam",
