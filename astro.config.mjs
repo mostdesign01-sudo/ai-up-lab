@@ -32,18 +32,40 @@ function brandCollectionLinkAttrs() {
     walk(tree, (node) => {
       if (node.type === "element" && node.tagName === "a") links.push(node);
     });
+    walk(tree, (node) => {
+      if (node.type === "raw" && typeof node.value === "string" && node.value.includes('="/brand-collection/')) {
+        node.value = node.value.replaceAll('="/brand-collection/', `="${base}/brand-collection/`);
+      }
+      if (node.type !== "element") return;
+      for (const key of ["src", "href"]) {
+        const value = node.properties?.[key];
+        if (typeof value === "string" && value.startsWith("/brand-collection/")) {
+          node.properties[key] = base + value;
+        }
+      }
+    });
     for (const node of links) {
       const href = String(node.properties?.href ?? "");
       if (/^https?:/i.test(href)) {
         node.properties.target = "_blank";
         node.properties.rel = "noopener noreferrer";
       }
+      const classes = node.properties?.className;
+      const classList = Array.isArray(classes) ? classes : classes ? [classes] : [];
+      if (classList.includes("bc-figure")) continue;
       if (href.includes("/brand-collection/assets/") && image.test(href)) {
         const label = textOf(node).trim();
         const onDark = /(?:wordmark-dark|logo-inverse)\./i.test(href);
-        node.properties.className = onDark ? ["bc-figure", "is-on-dark"] : ["bc-figure"];
+        const cover = /-preview\./i.test(href);
+        const mark = /-placeholder\./i.test(href);
+        node.properties.className = ["bc-figure", onDark && "is-on-dark", cover && "is-cover", mark && "is-mark"].filter(Boolean);
+        const img = { src: href, alt: label, loading: "lazy", decoding: "async" };
+        if (cover || mark) {
+          img.width = 1440;
+          img.height = 900;
+        }
         node.children = [
-          { type: "element", tagName: "img", properties: { src: href, alt: label, loading: "lazy", decoding: "async" }, children: [] },
+          { type: "element", tagName: "img", properties: img, children: [] },
           { type: "element", tagName: "span", properties: { className: ["bc-figure-label"] }, children: [{ type: "text", value: label }] },
         ];
       }

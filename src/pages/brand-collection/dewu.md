@@ -8,6 +8,12 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 
 # 得物 / POIZON · 品牌规范参考对标
 
+<div class="bc-hero">
+  <a class="bc-figure is-cover" href="https://www.dewu.com/"><img src="/brand-collection/assets/dewu/dewu-home-1440.webp" alt="得物官网首页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">dewu.com 首页</span></a>
+  <a class="bc-figure is-cover" href="https://www.poizon.com/"><img src="/brand-collection/assets/dewu/poizon-home-1440.webp" alt="POIZON 官网首页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">poizon.com 首页</span></a>
+  <a class="bc-figure is-mark" href="https://www.dewu.com/"><img src="/brand-collection/assets/dewu/dewu-logo-120.webp" alt="得物官网标志" width="120" height="120" loading="lazy" decoding="async" /><span class="bc-figure-label">得物标志</span></a>
+</div>
+
 > 整理：2026-10-05（Asia/Shanghai）｜依据：[AI 品牌 VI 参考清单](../references/) + 本轮公开检索与官网实测  
 > 边界先说清：得物的核心是 **潮流电商 + 鉴别信任 + 社区内容**，不是 AI 公司。下面借的是 AI 品牌的 **规范方法、资产管理和数字体验**，不借它们的「AI 气质」（渐变光晕、像素/代码纹理、生成艺术）。
 
@@ -60,6 +66,8 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 
 ### 2.1 Kimi 品牌手册：借结构和数据可视化
 
+[Kimi 品牌页预览](/brand-collection/assets/references/kimi/kimi-preview.webp)
+
 **可借鉴的具体点**
 - **在线规范的章节顺序**：原点 → 标志系统 → 色彩 → 排版与网格 → 界面升级说明 → 生成式视觉资产 → 数据可视化 → 品牌触点 → 品牌影调（视频分类）→ 联系方式。页面公开，完整矢量包要按联系方式申请（hi@moonshot.ai / legal@moonshot.ai）。
 - **双网格**：「标准化基础网格」保证全端一致，「多元表现力网格」给文字少、以视觉为主的场景留弹性。
@@ -78,6 +86,8 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 ---
 
 ### 2.2 OpenAI Design Guidelines：借词标主次、Don'ts 和联名 lockup
+
+[OpenAI 官方 Blossom 标志](/brand-collection/assets/references/openai/openai-blossom-light.svg)
 
 **可借鉴的具体点**（本轮浏览器打开 [openai.com/brand](https://openai.com/brand/) 核实）
 - **主次关系写死**：Wordmark 是主品牌；Blossom 符号「DON'T use the Blossom as the primary branding」，而且主词标不和 Blossom 同时使用。
@@ -99,6 +109,8 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 
 ### 2.3 ElevenLabs：借子品牌命名和图形母题
 
+[ElevenLabs 品牌规范页预览](/brand-collection/assets/references/elevenlabs/elevenlabs-preview.webp)
+
 **可借鉴的具体点**
 - 母品牌 ElevenLabs 下有 ElevenAgents / ElevenCreative / ElevenAPI / ElevenMusic，**每个都有独立 logotype**。主色分别是蓝、橙、单色；图形母题分别是圆/球体、Chladni 纹、Chladni 纹 + 动态字。
 - **命名 Do/Don't 表**：ElevenAgents 不加空格，不写 ElevenLabs Agents / Eleven Agents；母品牌也列了 Eleven Labs、ELEVENLABS、用「II」或「11」拼符号等错误写法。
@@ -116,6 +128,8 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 ---
 
 ### 2.4 IBM Carbon for AI：借 AI 标识和可解释性，但不借 AI 美学
+
+[IBM Carbon for AI 页面预览](/brand-collection/assets/references/carbon-ai/carbon-ai-preview.webp)
 
 **可借鉴的具体点**
 - **AI label** 是界面里标示「AI 在场」的唯一标记，同时也是 **解释弹层的入口**（第一层先给摘要，需要时再展开）。
@@ -135,6 +149,8 @@ descriptionEn: "Public-source benchmark notes for Dewu and POIZON, including web
 ---
 
 ### 2.5 补充（非 AI）：StockX，同赛道的信任表达
+
+[StockX 名称占位（官方品牌资产页要求登录）](/brand-collection/assets/references/stockx/stockx-placeholder.svg)
 
 > 说明：StockX 官网对 curl/WebFetch 返回 403，本轮用浏览器打开 Brand Assets 页核实目录。没找到 StockX 公开的视觉规范（色值、字体）；GOAT 只在[使用条款](https://www.goat.com/terms)里要求商标使用须事先书面许可，网上流传的「GOAT Brand Book」属于同名的另一家机构，不采用；Nike 未找到公开品牌规范页。
 

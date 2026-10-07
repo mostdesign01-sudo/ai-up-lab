@@ -8,6 +8,15 @@ descriptionEn: "Public-source notes on JOMA: identity, positioning, China busine
 
 # JOMA（Joma Sport）公开资料调研
 
+<div class="bc-hero">
+  <a class="bc-figure is-cover" href="https://www.joma-sport.com/"><img src="/brand-collection/assets/joma/joma-sport-preview.webp" alt="JOMA 官网首页预览" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">官网首页</span></a>
+  <a class="bc-figure is-mark" href="https://www.joma-sport.com/"><img src="/brand-collection/assets/joma/logo-joma-official-header-blue.svg" alt="JOMA 官网页头标志" width="850" height="130" loading="lazy" decoding="async" /><span class="bc-figure-label">官网页头标志</span></a>
+  <a class="bc-figure is-mark" href="https://www.joma-sport.com/"><img src="/brand-collection/assets/joma/logo-joma-favicon-official-196.webp" alt="JOMA 官网图标" width="196" height="196" loading="lazy" decoding="async" /><span class="bc-figure-label">官网图标</span></a>
+  <a class="bc-figure is-cover" href="https://www.joma-sport.com/"><img src="/brand-collection/assets/joma/homepage-banner-esbri-padel-2026.webp" alt="JOMA 官网 Padel 头图" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">官网 Padel 头图</span></a>
+  <a class="bc-figure is-cover" href="https://www.joma-sport.com/"><img src="/brand-collection/assets/joma/carousel-football-restyling-26.webp" alt="JOMA 足球品类官网海报" width="1440" height="900" loading="lazy" decoding="async" /><span class="bc-figure-label">足球品类海报</span></a>
+  <a class="bc-figure is-cover" href="https://mall.jd.com/index-618700.html"><img src="/brand-collection/assets/joma/china-ecommerce/12-tmall-liga-t1-main-alicdn.webp" alt="JOMA 天猫商品主图" width="800" height="800" loading="lazy" decoding="async" /><span class="bc-figure-label">天猫商品主图</span></a>
+</div>
+
 > 调研日期：2026-09-09（Asia/Shanghai）  
 > 用途：中国市场品牌升级 brief 事实底稿  
 > 方法：WebSearch + WebFetch 公开来源核实；未找到处标注「未找到公开来源」  

@@ -67,6 +67,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 ### 2.1 Vercel Geist：收圆角，统一材质层级
 
+[Vercel Geist 设计系统页预览](/brand-collection/assets/references/vercel/vercel-preview.webp)
+
 **可借鉴的具体点**（[Materials 页](https://vercel.com/geist/materials)）
 - 用「材质」管圆角、填充、描边和阴影，而不是每个组件各自定：
   - Surface：`material-base` 和 `small` 用 6px，`medium` 和 `large` 用 12px；
@@ -85,6 +87,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 ---
 
 ### 2.2 Linear Brand：一屏版和命名规则
+
+[Linear 品牌页预览](/brand-collection/assets/references/linear/linear-preview.webp)
 
 **可借鉴的具体点**
 - **Naming**：「Linear」是一个词、首字母大写，同时是公司名和产品名，不写「Linear app」。
@@ -106,6 +110,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 ### 2.3 Runway：误用图例
 
+[Runway 品牌规范页预览](/brand-collection/assets/references/runway/runway-preview.webp)
+
 **可借鉴的具体点**
 - 名称规则一句话写死：「Please refer to us as Runway. Not Runway AI, RunwayML…」
 - 数字媒体最小高度 24px；净空用字形单位（腿高 x，再加 1/2x 给降部）。
@@ -121,6 +127,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 ---
 
 ### 2.4 ElevenLabs：分区靠图形，不靠颜色
+
+[ElevenLabs 品牌规范页预览](/brand-collection/assets/references/elevenlabs/elevenlabs-preview.webp)
 
 **可借鉴的具体点**
 - ElevenAgents、ElevenCreative、ElevenAPI 分别用蓝、橙、单色，图形母题分别是圆/球体、Chladni 纹、Chladni 纹 + 动态字；每个平台有命名 Do/Don't。
@@ -139,6 +147,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 
 ### 2.5 Kimi：生成器思路，用来做 X 配图和 OG 模板
 
+[Kimi 品牌页预览](/brand-collection/assets/references/kimi/kimi-preview.webp)
+
 **可借鉴的具体点**
 - 「品牌视觉资产：生成式设计系统」：壁纸生成器把品牌色和提示词转成统一质感的视觉，**写在品牌手册里**，而不是交给设计师每次手做。
 - 数据可视化：「中性灰为底色，通过精准的电光蓝高亮」核心指标，「绝不可造成误导或扭曲」。
@@ -156,6 +166,8 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 ---
 
 ## 3. 顺手借一条：Carbon for AI 的「AI 标签」
+
+[IBM Carbon for AI 页面预览](/brand-collection/assets/references/carbon-ai/carbon-ai-preview.webp)
 
 [Carbon for AI](https://carbondesignsystem.com/building-blocks/foundations/carbon-for-ai) 用统一的 AI label 标出 AI 生成的内容，并且明确「不要把 AI 样式当装饰」。本站首页主推用了生成式概念插图（紫色等距插画），规范也要求概念图不冒充证据。建议给这类图加一个统一的小角标「概念图 / Illustration」（中性色，不用紫），把规范里的这条原则变成用户看得见的东西。
 
