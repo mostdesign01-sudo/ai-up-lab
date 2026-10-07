@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-07",
+      "title": "单条收录：Cases +1（ArtCraft Crafting Apps）",
+      "titleEn": "Single add: Cases +1 (ArtCraft Crafting Apps)",
+      "body": "Cases：新开 /cases/artcraft-crafting-apps/ —— ArtCraft 团队用 Rust 从零写的七款开源创作软件，对标 Photoshop / Illustrator / Premiere Pro / Lightroom / Acrobat / After Effects / InDesign，每款都带 CLI 和 MCP 服务器，AI 助手可直接操作。线索为 X 帖 @math_fournity（北京时间 10-07 03:30）；以官网总览页、PhotoCraft 产品页和七个 storytold 仓库 README 为准（撰写时均 HTTP 200，MIT/Apache-2.0 双许可，声明与 Adobe 无关联）。写清是什么、适合谁、怎么试（下载/源码/MCP 接入）和边界：早期 alpha、官方自认替代不了日常专业工作、PSD 重新保存非逐字节相同；未下载、未安装、未接 MCP。预览为官网四款应用官方截图 3:2 拼图 WebP。同步加入 directory.json caseTools。cases 151→152（→1.4.47）。未改首页精选。",
+      "bodyEn": "Cases: new /cases/artcraft-crafting-apps/ — seven open-source creative apps the ArtCraft team wrote from scratch in Rust, matching Photoshop / Illustrator / Premiere Pro / Lightroom / Acrobat / After Effects / InDesign, each with a CLI and an MCP server so an AI agent can drive it. Lead was an X post by @math_fournity (03:30 on 10-07 Beijing time); the entry follows the official overview page, the PhotoCraft product page, and the seven storytold repo READMEs (all HTTP 200 at write time; dual MIT/Apache-2.0; not affiliated with Adobe). Covers what it is, who it is for, how to try it (installers / source / MCP), and the limits: early alpha, the team’s own note that it cannot yet replace daily professional work, and PSD re-saves not being byte-identical; nothing downloaded, installed, or connected over MCP. Preview is a 3:2 WebP collage of four official app screenshots. Added to directory.json caseTools. cases 151→152 (→1.4.47). Homepage featured picks unchanged."
+    },
+    {
+      "date": "2026-10-07",
       "title": "单条收录：Models +1（Nano Banana 2.1）",
       "titleEn": "Single add: Models +1 (Nano Banana 2.1)",
       "body": "Models：新开 /models/nano-banana-2-1/ —— Google 2026-10-06 发布的出图改图模型（X 帖 @Google 北京时间 10-07 00:00），主打版式设计、遮罩改图和主体一致。官方来源：X 帖、Gemini API 模型页、DeepMind 模型卡、出图指南、价格页、更新日志（撰写时均 HTTP 200）。写清是什么、适合谁、怎么试（Gemini App / AI Studio / API，API 无免费档）、模型卡自述的不足；对比分与价格标为官方自述，未出图、未复跑。预览为官方宣传短片 2 倍速 3:2 动图 WebP。同板关联 gemini-4-argon。models 22→23（→1.1.18）。未改首页精选。",

@@ -1,6 +1,179 @@
 {
   "cases": [
     {
+      "id": "artcraft-crafting-apps",
+      "slug": "artcraft-crafting-apps",
+      "title": "工具：ArtCraft Crafting Apps — 七款对标 Adobe 的开源创作软件，AI 助手能直接操作",
+      "titleEn": "Tool: ArtCraft Crafting Apps — seven open-source Adobe-style creative apps an AI agent can drive",
+      "summary": "ArtCraft 团队用 Rust 从零重写了七款对标 Adobe 的创作软件：修图 PhotoCraft（对标 Photoshop）、矢量插画 VectorCraft（Illustrator）、剪视频 FilmCraft（Premiere Pro）、照片管理和 RAW 冲印 LightCraft（Lightroom）、PDF 工具 PrintCraft（Acrobat）、动效特效 EffectCraft（After Effects）、排版 DesignCraft（InDesign）。全部免费开源，Mac、Windows、Linux 都有安装包。跟 AI 最相关的是：每个应用都带命令行和 MCP 服务器，Claude 这类 AI 助手可以直接打开文件、调参数、导出，不用靠截图点鼠标。现在都还很早期，官方自己说 PhotoCraft 还替代不了日常专业工作。这是一条工具笔记：本库没有下载安装，也没有让 AI 助手实际操作过。",
+      "summaryEn": "The ArtCraft team rewrote seven Adobe-style creative apps from scratch in Rust: PhotoCraft for image editing (like Photoshop), VectorCraft for vector illustration (Illustrator), FilmCraft for video editing (Premiere Pro), LightCraft for photo library and raw development (Lightroom), PrintCraft for PDFs (Acrobat), EffectCraft for motion graphics and effects (After Effects), and DesignCraft for page layout (InDesign). All are free and open source, with installers for macOS, Windows, and Linux. The AI angle: every app ships a command-line tool and an MCP server, so an agent like Claude can open files, set parameters, and export without clicking through screenshots. All of them are early; the team itself says PhotoCraft cannot yet replace daily professional work. This is a tool tip. This library did not install any of them or let an agent drive one.",
+      "hook": "七款对标 Adobe 的开源软件，AI 助手能用 MCP 直接操作。",
+      "hookEn": "Seven free, open-source Adobe-style apps that an AI agent can drive over MCP.",
+      "categories": [
+        "content",
+        "automation",
+        "coding"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://getartcraft.com/apps",
+      "secondaryUrls": [
+        "https://github.com/storytold/photocraft",
+        "https://getartcraft.com/apps/photocraft",
+        "https://github.com/storytold/photocraft/blob/main/docs/control-protocol.md",
+        "https://github.com/storytold/photocraft/blob/main/docs/roadmap.md",
+        "https://github.com/storytold/vectorcraft",
+        "https://github.com/storytold/filmcraft",
+        "https://github.com/storytold/lightcraft",
+        "https://github.com/storytold/printcraft",
+        "https://github.com/storytold/effectcraft",
+        "https://github.com/storytold/designcraft",
+        "https://x.com/math_fournity/status/2107554211529724384"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "线索来自 X 帖 @math_fournity（2026-10-06T19:30:55Z / 北京时间 2026-10-07 03:30），原文「🚨 Adobe 天塌了，全套Adobe软件，开源实现」，附官网总览页截图，撰写时约 72 万浏览、9.7k 赞、1.1 万收藏。帖子说法偏夸张，本条以官方来源为准。主源是 ArtCraft 官网总览页 https://getartcraft.com/apps（撰写时 HTTP 200，标题 Crafting Apps: open-source creative tools — ArtCraft），写的是七款应用、纯 Rust、开源免费，原则里列了「Agent-ready：CLI、JSON 控制通道或 MCP 服务器驱动每个应用」。七个仓库都在 GitHub 组织 storytold 下（ArtCraft 主仓库 storytold/artcraft 也在此，官网页脚写 hello@storyteller.ai），各自 README 都写 clean-room（只依据公开规范和观察到的行为实现，不含 Adobe 代码或素材）、MIT 或 Apache-2.0 双许可，并写明与 Adobe 无关联。gh api 撰写时 star 数：photocraft 约 11.7k、filmcraft 约 2.3k、lightcraft 约 1.8k、printcraft 约 1.6k、vectorcraft 约 1.5k、effectcraft 约 1.1k、designcraft 约 0.7k；仓库建于 2026-09-30 至 10-01（UTC），最早的正式发布是 photocraft 2026-10-02T00:09Z，其余六个 2026-10-02T22:31Z 左右。撰写时 PhotoCraft 最新 v0.3.0（2026-10-07T10:33Z），官网下载区仍显示 0.2.0。官网状态标签：PhotoCraft、PrintCraft 为 Early alpha，其余为 In development。PhotoCraft README：500+ 条命令同时供界面、CLI、JSON 控制通道和 MCP 使用；`photocraft-cli mcp` 可无界面运行，也可桥接到正在运行的应用；docs/control-protocol.md 写桥接只监听本机回环地址并要令牌，文件读写范围用 --automation-read-root / --automation-write-root 限定。PrintCraft README 写 MCP 默认不启动、不开网络端口，只在助手启动 printcraft-cli mcp 时经 stdin/stdout 运行。PhotoCraft README 状态段原话大意：还不是日常专业工作的 Photoshop 替代品，最大缺口是 AI/生成式功能、约二十个工具、排版深度和插件兼容。PSD：官网写 135 个真实文件里 134 个逐字节往返；README 更细：psd-tools 测试集 309 个文件里 307 个打开再保存后渲染一致，重新保存的文件并非逐字节相同，只有独立的 photocraft-psd 库能逐字节还原。两处口径不同，本条按 README。组织里 10-07 还新建了 gridcraft（Excel）、cadcraft（AutoCAD）、deckcraft（PowerPoint）、soundcraft（Pro Tools），不在官网七款之列，本条不收。本库未下载、未安装、未从源码编译、未接 MCP。预览为官网四款应用官方截图（PhotoCraft / VectorCraft / FilmCraft / PrintCraft）拼成 3:2 WebP。不打星。",
+      "qualityNoteEn": "Lead: X post by @math_fournity (2026-10-06T19:30:55Z / 03:30 on 2026-10-07 Beijing time), text “🚨 Adobe is done for — the whole Adobe suite, open-source,” with a screenshot of the official overview page; about 724k views, 9.7k likes, and 11k bookmarks at write time. The post overstates things, so this entry follows the official sources. Primary source is the ArtCraft overview page https://getartcraft.com/apps (HTTP 200 at write time, title Crafting Apps: open-source creative tools — ArtCraft): seven apps, pure Rust, open source and free, and an “Agent-ready” principle — drive every app from a CLI, a JSON control channel, or an MCP server. All seven repos live in the GitHub org storytold (alongside the main ArtCraft repo storytold/artcraft; the site footer lists hello@storyteller.ai). Each README says clean-room (built from public specs and observed behaviour only, no Adobe code or assets), dual MIT or Apache-2.0, and not affiliated with Adobe. Stars via gh api at write time: photocraft about 11.7k, filmcraft about 2.3k, lightcraft about 1.8k, printcraft about 1.6k, vectorcraft about 1.5k, effectcraft about 1.1k, designcraft about 0.7k. Repos were created 2026-09-30 to 10-01 (UTC); the first release was photocraft at 2026-10-02T00:09Z, the other six around 2026-10-02T22:31Z. At write time PhotoCraft’s latest is v0.3.0 (2026-10-07T10:33Z) while the site’s download area still shows 0.2.0. Site status labels: PhotoCraft and PrintCraft are Early alpha, the rest In development. PhotoCraft README: 500+ commands shared by the UI, CLI, JSON control channel, and MCP; `photocraft-cli mcp` runs headless or bridges to the running app; docs/control-protocol.md says the bridge listens on loopback only and needs a token, and file access is limited with --automation-read-root / --automation-write-root. PrintCraft README says its MCP server never starts on its own, opens no network port, and runs over stdin/stdout only while an agent launches printcraft-cli mcp. PhotoCraft README status, paraphrased: not yet a Photoshop replacement for daily professional work; the biggest gaps are AI/generative features, about twenty tools, typography depth, and plug-in compatibility. PSD: the site says 134 of 135 real files round-trip byte for byte; the README is more specific — 307 of 309 psd-tools files render the same after open-and-save, a re-saved file is not byte-identical, and only the standalone photocraft-psd crate reproduces files byte for byte. The two differ; this entry follows the README. On 10-07 the org also created gridcraft (Excel), cadcraft (AutoCAD), deckcraft (PowerPoint), and soundcraft (Pro Tools); they are not among the site’s seven and are not covered here. This library did not download, install, build from source, or connect MCP. Preview is a 3:2 WebP collage of four official app screenshots from the site (PhotoCraft / VectorCraft / FilmCraft / PrintCraft). Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "让 AI 助手通过 MCP 读写文件前，先限定它能碰的文件夹，重要文件先备份。本库没有代装。",
+      "approvalBoundaryEn": "Before letting an agent read or write files over MCP, limit which folders it can touch and back up important files. This library did not install it.",
+      "connectors": [
+        "computer",
+        "files"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-02",
+      "updatedAt": "2026-10-07T11:00:00Z",
+      "previewImage": "/previews/artcraft-crafting-apps.webp",
+      "landing": {
+        "what": "ArtCraft 本来是做 AI 出图出视频的团队，这次另开了一套叫 Crafting Apps 的开源软件：七款应用分别对应 Adobe 的 Photoshop、Illustrator、Premiere Pro、Lightroom、Acrobat、After Effects 和 InDesign，界面、快捷键和菜单都照着设计师已经熟悉的习惯来，全部用 Rust 从零写成，文件都在你自己电脑上处理。对 AI 来说，最有用的是每个应用里的每个按钮都是一条命令：界面、命令行和 MCP 服务器调的是同一套命令。所以你可以让 Claude、Cursor 这类助手直接修图、批量调色、拆合 PDF、排版，而不是让它看截图去点。适合想试 Adobe 免费替代品的设计师，以及想让 AI 助手直接动手处理图片、PDF、视频的人。",
+        "whatEn": "ArtCraft is a team that makes an AI image and video studio. Crafting Apps is a separate set of open-source apps: seven of them, matching Adobe’s Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, and InDesign. Layouts, shortcuts, and menus follow habits designers already have. Every app is written from scratch in Rust, and your files are processed on your own machine. For AI, the useful part is that every button in each app is a command, and the UI, the command line, and the MCP server all call the same commands. So an agent like Claude or Cursor can retouch images, batch-grade photos, split and merge PDFs, or lay out pages directly, instead of reading screenshots and clicking. It suits designers who want to try a free Adobe alternative, and anyone who wants an AI agent to work on images, PDFs, and video hands-on.",
+        "contrast": {
+          "caption": "左列是官网和各仓库 README 写的事实。右列是本站口径：为什么收进来，以及别把它当成已经能换掉 Adobe 的东西。",
+          "captionEn": "Left: what the site and each repo README state. Right: this library’s framing — why it is here, and why not to treat it as a ready Adobe replacement.",
+          "leftLabel": "Crafting Apps",
+          "leftLabelEn": "Crafting Apps",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "七款开源创作软件：修图、矢量、剪辑、照片 RAW、PDF、动效、排版。Mac、Windows、Linux 都有安装包，免费。",
+              "leftEn": "Seven open-source creative apps: image editing, vector, video, photo raw, PDF, motion, and layout. Installers for macOS, Windows, and Linux, free.",
+              "right": "Cases 里的工具笔记，偏 AI×设计。收它是因为「设计软件能被 AI 助手直接操作」，不是因为它已经比 Adobe 好用。",
+              "rightEn": "An AI×design tool tip in Cases. It is here because design software that an agent can drive directly is useful, not because it already beats Adobe."
+            },
+            {
+              "aspect": "跟 AI 有什么关系",
+              "aspectEn": "Where AI comes in",
+              "left": "每个应用都带命令行和 MCP 服务器。PhotoCraft 有 500 多条命令，界面能点的，AI 助手也能调。",
+              "leftEn": "Every app ships a command line and an MCP server. PhotoCraft has 500+ commands; anything you can click, an agent can call.",
+              "right": "这是 README 的说法。本库没有接过 MCP，也没让助手真修过一张图。PhotoCraft 自己还没有生成式 AI 功能。",
+              "rightEn": "That is the README’s claim. This library did not connect MCP or have an agent edit a real image. PhotoCraft itself has no generative AI features yet."
+            },
+            {
+              "aspect": "能不能换掉 Adobe",
+              "aspectEn": "Can it replace Adobe",
+              "left": "官网标 PhotoCraft、PrintCraft 为早期 alpha，其余为开发中。PhotoCraft README 直说还替代不了日常专业工作，缺约二十个工具和插件兼容。",
+              "leftEn": "The site marks PhotoCraft and PrintCraft as early alpha and the rest as in development. PhotoCraft’s README says plainly it cannot yet replace daily professional work and lacks about twenty tools and plug-in support.",
+              "right": "X 上「Adobe 天塌了」是夸张说法。可以先拿来做小活、试自动化，正式项目别急着迁过去。",
+              "rightEn": "“Adobe is done for” on X is an overstatement. Use it for small jobs and automation experiments; don’t rush real projects over."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看总览页，挑一个你最常用的",
+            "titleEn": "Start with the overview and pick the one you use most",
+            "body": "打开官网总览页，七款应用各有一张卡片，写着对应的用途、状态（早期 alpha 或开发中）和支持的系统。修图选 PhotoCraft，处理 PDF 选 PrintCraft，这两个最成熟。每个应用页都有下载按钮和 GitHub 链接。",
+            "bodyEn": "Open the overview page. Each of the seven apps has a card with what it does, its status (early alpha or in development), and supported systems. Pick PhotoCraft for image editing or PrintCraft for PDFs; those two are the furthest along. Every app page has a download button and a GitHub link.",
+            "links": [
+              {
+                "href": "https://getartcraft.com/apps",
+                "label": "Crafting Apps 总览",
+                "labelEn": "Crafting Apps overview"
+              },
+              {
+                "href": "https://getartcraft.com/apps/photocraft",
+                "label": "PhotoCraft 介绍和下载",
+                "labelEn": "PhotoCraft page and downloads"
+              },
+              {
+                "href": "https://getartcraft.com/apps/printcraft",
+                "label": "PrintCraft 介绍和下载",
+                "labelEn": "PrintCraft page and downloads"
+              }
+            ]
+          },
+          {
+            "title": "下载安装，或者从源码跑",
+            "titleEn": "Download an installer, or run from source",
+            "body": "Mac 下 dmg，Windows 下 msi 或免安装 zip，Linux 有 AppImage、deb、rpm。官网下载区的版本号可能比 GitHub 慢一步，想要最新的去 GitHub Releases。会用 Rust 的话，官网也给了 git clone 后 cargo run 的三行命令。",
+            "bodyEn": "On macOS grab the dmg; on Windows the msi or the portable zip; on Linux there are AppImage, deb, and rpm. The site’s download area can lag GitHub by a version, so check GitHub Releases for the newest. If you use Rust, the site also gives a three-line git clone and cargo run.",
+            "links": [
+              {
+                "href": "https://github.com/storytold/photocraft/releases",
+                "label": "PhotoCraft GitHub Releases",
+                "labelEn": "PhotoCraft GitHub Releases"
+              },
+              {
+                "href": "https://github.com/storytold/photocraft",
+                "label": "PhotoCraft 仓库",
+                "labelEn": "PhotoCraft repo"
+              }
+            ]
+          },
+          {
+            "title": "让 AI 助手接上 MCP",
+            "titleEn": "Connect your AI agent over MCP",
+            "body": "每个应用都有自己的命令行工具，比如 photocraft-cli mcp、printcraft-cli mcp。把它加进 Claude、Cursor 等助手的 MCP 配置里，助手就能直接调这个应用的命令。PhotoCraft 可以不开窗口跑，也可以连到你正在用的应用上，让你看着它改。配置前先读控制协议文档，用读写目录参数限定它能碰的文件夹。",
+            "bodyEn": "Each app has its own command-line tool, such as photocraft-cli mcp or printcraft-cli mcp. Add it to the MCP config of Claude, Cursor, or another agent, and the agent can call that app’s commands directly. PhotoCraft can run with no window, or bridge to the app you have open so you can watch it work. Read the control protocol doc first, and use the read/write root flags to limit which folders it can touch.",
+            "links": [
+              {
+                "href": "https://github.com/storytold/photocraft/blob/main/docs/control-protocol.md",
+                "label": "PhotoCraft 控制协议和 MCP",
+                "labelEn": "PhotoCraft control protocol and MCP"
+              },
+              {
+                "href": "https://github.com/storytold/printcraft",
+                "label": "PrintCraft README（MCP 配置示例）",
+                "labelEn": "PrintCraft README (MCP config example)"
+              },
+              {
+                "href": "https://github.com/storytold/designcraft/blob/main/docs/mcp.md",
+                "label": "DesignCraft 的 MCP 说明",
+                "labelEn": "DesignCraft MCP notes"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库没有下载、安装或编译任何一款，也没有把 MCP 接进任何 AI 助手。功能和测试数字都是官网和 README 的说法。",
+            "textEn": "This library did not download, install, or build any of them, and did not connect MCP to any agent. Features and test numbers are what the site and READMEs say."
+          },
+          {
+            "text": "都还很早期：PhotoCraft、PrintCraft 是早期 alpha，其余五款在开发中。PhotoCraft 官方说还替代不了日常专业工作，缺约二十个工具、排版深度和 Photoshop 插件兼容，也还没有生成式 AI 功能。",
+            "textEn": "All early: PhotoCraft and PrintCraft are early alpha, the other five are in development. PhotoCraft’s team says it cannot yet replace daily professional work; it lacks about twenty tools, typography depth, Photoshop plug-in support, and generative AI features."
+          },
+          {
+            "text": "这是独立开源项目，和 Adobe 没有关系，也打不开 Adobe 账号或云文档。PSD 能打开再保存，但 README 写明重新保存后的文件不是逐字节相同；交付给别人的文件，先在原软件里核对一遍。",
+            "textEn": "This is an independent open-source project, not affiliated with Adobe, and it does not open Adobe accounts or cloud documents. It opens and saves PSDs, but the README says a re-saved file is not byte-identical; check anything you hand off in the original software first."
+          },
+          {
+            "text": "让 AI 助手通过 MCP 改文件前，先限定它能读写的文件夹，并备份原文件。网页版需要你自己下载网页包部署，官网没有现成的在线编辑器。",
+            "textEn": "Before an agent edits files over MCP, limit which folders it can read and write, and back up originals. The web build is a package you host yourself; the site offers no ready-made online editor."
+          }
+        ],
+        "previewCredit": "预览：getartcraft.com 官方截图拼图（PhotoCraft / VectorCraft / FilmCraft / PrintCraft）",
+        "previewCreditEn": "Preview: collage of official screenshots from getartcraft.com (PhotoCraft / VectorCraft / FilmCraft / PrintCraft)"
+      }
+    },
+    {
       "id": "james-pember-grok-bot-team",
       "slug": "james-pember-grok-bot-team",
       "title": "James Pember：让 Bot 先接 Slack 里的产品问题，再替你备好双周会材料",
@@ -7540,11 +7713,25 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T01:00:00Z",
+    "updatedAt": "2026-10-07T11:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.46",
-    "count": 151,
+    "version": "1.4.47",
+    "count": 152,
     "sourcesCrawled": [
+      "https://x.com/math_fournity/status/2107554211529724384",
+      "https://getartcraft.com/apps",
+      "https://getartcraft.com/apps/photocraft",
+      "https://getartcraft.com/apps/printcraft",
+      "https://github.com/storytold/photocraft",
+      "https://github.com/storytold/photocraft/blob/main/docs/control-protocol.md",
+      "https://github.com/storytold/photocraft/blob/main/docs/roadmap.md",
+      "https://github.com/storytold/vectorcraft",
+      "https://github.com/storytold/filmcraft",
+      "https://github.com/storytold/lightcraft",
+      "https://github.com/storytold/printcraft",
+      "https://github.com/storytold/effectcraft",
+      "https://github.com/storytold/designcraft",
+      "https://github.com/storytold/designcraft/blob/main/docs/mcp.md",
       "https://news.ycombinator.com/item?id=49969183",
       "https://reflection.ai/blog/introducing-beam",
       "https://platform.reflection.ai/",
