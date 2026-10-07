@@ -1,6 +1,107 @@
 {
   "items": [
     {
+      "id": "banyan",
+      "slug": "banyan",
+      "title": "Banyan：一个 HTML 文件里长出的程序化榕树",
+      "titleEn": "Banyan: a procedural banyan tree grown in one HTML file",
+      "summary": "一棵能转着看的 3D 榕树，整页就是一个 HTML 文件（约 748 KB，里面打包了 three.js），打开后不再下载任何东西。每棵树都由一个 32 位种子长出来：主干、垂下来的气生根、树皮、叶子、草地和光线全是代码生成的。页面右上角能换季节、换光线、点「new tree」再长一棵，还能复制这棵树的链接给别人。适合想看「单文件能做到多复杂」的人。",
+      "summaryEn": "A 3D banyan you can orbit, and the whole page is one HTML file (about 748 KB with three.js bundled) that downloads nothing else once open. Every tree grows from a 32-bit seed: trunk, hanging aerial roots, bark, leaves, ground, and light are all generated in code. The top-right panel switches season and light, grows a new tree, and copies a link to the one you are looking at. Good for anyone curious how far a single file can go.",
+      "sourceUrl": "https://satyasairay.github.io/banyan/banyan_v5.html",
+      "secondaryUrls": [
+        "https://github.com/satyasairay/banyan",
+        "https://news.ycombinator.com/item?id=49977811"
+      ],
+      "previewImage": "/previews/banyan.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "three.js",
+        "single-file-html",
+        "procedural",
+        "webgl",
+        "show-hn"
+      ],
+      "qualityNote": "Show HN item 49977811（2026-10-06T13:04:47.000Z / 约 21:04 CST），撰写时 Algolia 1pt。页面与仓库撰写时 HTTP 200；仓库 satyasairay/banyan 为 AGPL-3.0。748 KB、零网络请求、与 ez-tree 的对比都出自作者帖文，本库没有自己做基准测试。预览为 Chrome 实拍默认种子打开后的画面，裁 3:2 WebP。",
+      "qualityNoteEn": "Show HN item 49977811 (2026-10-06T13:04:47.000Z / about 21:04 CST), 1pt on Algolia at write time. Page and repo HTTP 200 at write time; repo satyasairay/banyan is AGPL-3.0. The 748 KB size, zero network requests, and the ez-tree comparison come from the author’s post; this library did not benchmark it. Preview is a Chrome capture of the default seed, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T01:00:00Z",
+      "hook": "一个 HTML 文件，一个种子，长出一整棵能转着看的榕树。",
+      "hookEn": "One HTML file and one seed grow a whole banyan you can orbit."
+    },
+    {
+      "id": "gss-lang",
+      "slug": "gss-lang",
+      "title": "GSS：用写 CSS 的方式写 3D 场景",
+      "titleEn": "GSS: write 3D scenes the way you write CSS",
+      "summary": "GSS（GPU Style Sheets）给会写 CSS、但不想先学着色器语言的人用。你在 @scene 里列出球、环、方块这些形状，再用选择器给它们上颜色、材质和 @keyframes 动画；编译器把整张样式表变成一个着色器，在 WebGL2 或 WebGPU 上渲染，不用 Three.js，也不用模型文件。官网有在线 Playground，边改边出图；也能用 npm、Vite 插件或一行 CDN 脚本加一个 <gss-scene> 标签放进自己的页面。作者特意提到：大模型本来就会写 CSS，所以让 AI 来写场景很顺手。",
+      "summaryEn": "GSS (GPU Style Sheets) is for people who know CSS and do not want to learn a shader language first. You list shapes like spheres, tori, and cubes in an @scene, then style them with selectors, materials, and @keyframes; the compiler turns the whole stylesheet into one shader rendered in WebGL2 or WebGPU, with no Three.js and no meshes. The site has a live playground that re-renders as you type, and you can drop it into a page via npm, a Vite plugin, or one CDN script plus a <gss-scene> tag. The author points out that language models already write CSS well, so it pairs naturally with AI.",
+      "sourceUrl": "https://www.gss-lang.dev/",
+      "secondaryUrls": [
+        "https://www.gss-lang.dev/playground",
+        "https://github.com/LukyVj/GSS",
+        "https://news.ycombinator.com/item?id=49977287"
+      ],
+      "previewImage": "/previews/gss-lang.webp",
+      "types": [
+        "tool",
+        "interactive",
+        "docs"
+      ],
+      "tags": [
+        "css",
+        "shader",
+        "raymarching",
+        "webgpu",
+        "webgl2",
+        "show-hn"
+      ],
+      "qualityNote": "Show HN item 49977287（2026-10-06T12:10:55.000Z / 约 20:10 CST），撰写时 Algolia 1pt。官网与 Playground 撰写时 HTTP 200；仓库 LukyVj/GSS 为 Apache-2.0、31★，npm gss-lang 0.0.5，版本还很早。本库只打开了官网首页，没有自己写场景。预览为 Chrome 实拍官网首屏，裁 3:2 WebP。",
+      "qualityNoteEn": "Show HN item 49977287 (2026-10-06T12:10:55.000Z / about 20:10 CST), 1pt on Algolia at write time. Site and playground HTTP 200 at write time; repo LukyVj/GSS is Apache-2.0 with 31★, npm gss-lang 0.0.5, so it is very early. This library only opened the homepage and did not write a scene. Preview is a Chrome capture of the homepage hero, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T01:00:00Z",
+      "hook": "会写 CSS 就能写 3D：选择器加动画，编译成一个着色器。",
+      "hookEn": "If you can write CSS, you can write 3D: selectors and keyframes compiled to one shader."
+    },
+    {
+      "id": "frutjam",
+      "slug": "frutjam",
+      "title": "Frutjam：纯 CSS、不用 JS 的 Tailwind 组件库",
+      "titleEn": "Frutjam: a CSS-only Tailwind component library with no JavaScript",
+      "summary": "给用 Tailwind CSS v4 做页面、又不想往里塞一堆脚本的人。Frutjam 有 65+ 个组件（按钮、弹窗、抽屉、标签页、轮播、表格等）和整块的页头、首屏、价格区，全部只用 CSS 实现，不需要 JavaScript；每套主题都按 WCAG AA 做了对比度，自带从右到左排版。文档站有中文等多语言，还提供 llms.txt 方便让 AI 照着写。MIT 开源，免费。",
+      "summaryEn": "For people building pages with Tailwind CSS v4 who do not want to ship a pile of scripts. Frutjam has 65+ components (buttons, modals, drawers, tabs, carousels, tables, and more) plus ready header, hero, and pricing blocks, all in CSS with no JavaScript. Every theme targets WCAG AA contrast, and right-to-left layout is built in. The docs come in several languages including Chinese and ship an llms.txt so an AI can follow them. MIT, free.",
+      "sourceUrl": "https://frutjam.com/",
+      "secondaryUrls": [
+        "https://github.com/nezanuha/frutjam",
+        "https://www.npmjs.com/package/frutjam",
+        "https://news.ycombinator.com/item?id=49978580"
+      ],
+      "previewImage": "/previews/frutjam.webp",
+      "types": [
+        "component",
+        "library",
+        "docs"
+      ],
+      "tags": [
+        "css-only",
+        "tailwind",
+        "accessibility",
+        "components",
+        "show-hn"
+      ],
+      "qualityNote": "Show HN item 49978580（2026-10-06T13:56:51.000Z / 约 21:56 CST），撰写时 Algolia 2pts。官网与文档撰写时 HTTP 200；仓库 nezanuha/frutjam 为 MIT、9★，npm frutjam 2.3.0。首页的「PageSpeed 100/100」「WCAG AA/AAA」是项目自述，本库没有复测。站内的 Cherry MCP 等产品入口不在本条范围。预览为 Chrome 实拍首页首屏，裁 3:2 WebP。",
+      "qualityNoteEn": "Show HN item 49978580 (2026-10-06T13:56:51.000Z / about 21:56 CST), 2pts on Algolia at write time. Site and docs HTTP 200 at write time; repo nezanuha/frutjam is MIT with 9★, npm frutjam 2.3.0. The homepage’s “PageSpeed 100/100” and “WCAG AA/AAA” are project claims, not re-tested here. Other products linked on the site, such as Cherry MCP, are out of scope. Preview is a Chrome capture of the homepage hero, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T01:00:00Z",
+      "hook": "65 个组件全用 CSS 写，一行 JS 都不用。",
+      "hookEn": "65 components in pure CSS, not a line of JavaScript."
+    },
+    {
       "id": "samon",
       "slug": "samon",
       "title": "Samon：一笔把沙子耙完的枯山水谜题",
@@ -3740,9 +3841,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-06T12:50:00Z",
+    "updatedAt": "2026-10-07T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.55",
-    "count": 118
+    "version": "1.3.56",
+    "count": 121
   }
 }

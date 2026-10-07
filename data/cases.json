@@ -1,6 +1,48 @@
 {
   "cases": [
     {
+      "id": "james-pember-grok-bot-team",
+      "slug": "james-pember-grok-bot-team",
+      "title": "James Pember：让 Bot 先接 Slack 里的产品问题，再替你备好双周会材料",
+      "titleEn": "James Pember: a Bot that triages product questions in Slack and preps the fortnightly sync",
+      "summary": "James Pember 用了一周 Grok Bot 后写的实测。他给每只 Bot 只分一件事、配好要用的技能和工具，让它们自己建和改例行任务：看日历、等 Slack 里某类回复、或者按「每天早上」「一天 4 次」跑。文中两个能照着做的用法：一是 Bot 当「第一道防线」，在 Slack 里自己分诊产品问题和 bug，帮团队找到临时绕过办法；二是双周产品营销例会前，Bot 去翻发布说明、GitHub 和 Slack，汇总成一份会前阅读材料发给大家。他也说得很直白：给团队用的多人 Agent 还没真正解决。",
+      "summaryEn": "James Pember’s write-up after a week with Grok Bot. Each Bot gets one scoped job plus the skills and tools it needs, and creates or updates its own routines: watch the calendar, wait for a certain kind of Slack reply, or run “every morning” or “4 times a day.” Two workflows you can copy: a Bot as the first line of defense that triages product questions and bugs in Slack on its own and found the team an instant workaround, and a Bot that digs through release notes, GitHub, and Slack before the fortnightly product-marketing sync and sends a packaged pre-read. He is also blunt that multi-player agents for whole teams are still unsolved.",
+      "hook": "Slack 里的产品问题先让 Bot 接，例会材料也让它备。",
+      "hookEn": "Let a Bot take first pass on product questions in Slack, and prep the sync too.",
+      "categories": [
+        "automation",
+        "ops",
+        "daily-digest"
+      ],
+      "role": "Product / marketing lead",
+      "sourceUrl": "https://jamespember.substack.com/p/grok-bot-is-really-good",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49960401"
+      ],
+      "sourceType": "community",
+      "qualityNote": "作者个人 Substack，2026-10-04 发布（撰写时 HTTP 200）。HN item 49960401，撰写时 Algolia 3pts。两个用法（Slack 分诊、双周会前阅读材料）是作者自述的真实工作流，文中有截图，但没有公开提示词或技能文件；本库没有复跑。他提到 Gmail、日历、Drive、Slack、GitHub 五个原生连接器占他约八成工作，这是他个人的估计。预览为 Chrome 实拍文章首屏，裁 3:2 WebP。",
+      "qualityNoteEn": "Author’s own Substack, published 2026-10-04 (HTTP 200 at write time). HN item 49960401, 3pts on Algolia at write time. The two workflows (Slack triage, fortnightly pre-read) are the author’s own account with screenshots; no prompts or skill files are published, and this library did not re-run them. His “about 80% of my work” for Gmail, Calendar, Drive, Slack, and GitHub is his personal estimate. Preview is a Chrome capture of the article’s first screen, cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "Bot 在 Slack 里先答、先分诊可以；给客户回话、改工单优先级或往外群发会前材料前，先让人看一眼。",
+      "approvalBoundaryEn": "Let the Bot answer and triage first in Slack; have a person check before it replies to customers, changes ticket priority, or sends a pre-read to a wider list.",
+      "connectors": [
+        "slack",
+        "github",
+        "gmail",
+        "calendar",
+        "files"
+      ],
+      "language": "en",
+      "featured": false,
+      "publishedAt": "2026-10-04",
+      "updatedAt": "2026-10-07T01:00:00Z",
+      "previewImage": "/previews/james-pember-grok-bot-team.webp"
+    },
+    {
       "id": "coisland",
       "slug": "coisland",
       "title": "工具：CoIsland — 把开发告警收进 Mac 刘海，一键交给编程助手",
@@ -7498,10 +7540,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-06T12:50:00Z",
+    "updatedAt": "2026-10-07T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.45",
-    "count": 150,
+    "version": "1.4.46",
+    "count": 151,
     "sourcesCrawled": [
       "https://news.ycombinator.com/item?id=49969183",
       "https://reflection.ai/blog/introducing-beam",
@@ -7753,7 +7795,9 @@
       "https://news.ycombinator.com/item?id=49881201",
       "https://x.ai/bot/guides/grok-bot-for-marketing",
       "https://x.com/bot/status/2105713240701538538",
-      "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions"
+      "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions",
+      "https://jamespember.substack.com/p/grok-bot-is-really-good",
+      "https://news.ycombinator.com/item?id=49960401"
     ]
   }
 }

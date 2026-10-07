@@ -1,6 +1,48 @@
 {
   "items": [
     {
+      "id": "shaders-com",
+      "slug": "shaders-com",
+      "title": "Shaders：200+ 个开源 WebGPU 特效组件，编程助手可直接接",
+      "titleEn": "Shaders: 200+ open-source WebGPU effect components your coding agent can use",
+      "summary": "Shaders 把渐变、噪点、玻璃、金属、光效、扭曲、转场、鼠标拖尾这类 WebGPU 特效做成一个个组件，React、Vue、Svelte、Solid 和原生 JS 都能用，一层层叠起来就是一张会动的背景或首屏。官网有免费的设计编辑器，调好后导出对应框架的代码。和 Agent 最相关的一点：一行 `npx shaders@latest install-mcp` 就能把它的 MCP 服务装进 Claude Code、Cursor、Codex 等，让助手自己找、装、改你设计的特效，免费账号也能用；另有 llms.txt 给模型读。",
+      "summaryEn": "Shaders turns WebGPU effects such as gradients, noise, glass, metal, light, distortion, transitions, and cursor trails into components for React, Vue, Svelte, Solid, and plain JS; stack a few and you have a moving background or hero. The site has a free design editor that exports code for your framework. The agent-relevant part: one `npx shaders@latest install-mcp` installs its MCP server into Claude Code, Cursor, Codex, and others so the agent can find, install, and edit the effects you designed, free accounts included, and there is an llms.txt for models.",
+      "sourceUrl": "https://shaders.com/",
+      "secondaryUrls": [
+        "https://github.com/shader-effects-inc/shaders",
+        "https://shaders.com/docs/guide/mcp",
+        "https://www.npmjs.com/package/shaders",
+        "https://news.ycombinator.com/item?id=49980593"
+      ],
+      "previewImage": "/previews/shaders-com.webp",
+      "npmPackage": "shaders",
+      "promptHint": "用 Shaders 的免费开源组件给首屏或背景叠两三层特效（比如 LinearGradient + CursorTrail），先装 MCP 让助手按 llms-full.txt 里的参数调；不要用 Pro 预设、Pro 网页区块或 Pro 提示词。",
+      "promptHintEn": "Stack two or three free open-source Shaders components for a hero or background (for example LinearGradient + CursorTrail), install the MCP so the agent tunes props from llms-full.txt, and do not use Pro presets, Pro sections, or Pro prompts.",
+      "types": [
+        "component",
+        "shader",
+        "background",
+        "agent-api",
+        "library"
+      ],
+      "tags": [
+        "webgpu",
+        "shaders",
+        "mcp",
+        "react",
+        "vue",
+        "svelte",
+        "hacker-news"
+      ],
+      "qualityNote": "HN item 49980593（2026-10-06T16:12:21.000Z / 约 2026-10-07 00:12 CST），撰写时 Algolia 2pts。官网、MCP 文档撰写时 HTTP 200；仓库 shader-effects-inc/shaders 为 MIT、1263★，npm shaders 4.0.0。价格页写：免费档包含全部开源组件、设计编辑器、代码导出和 CLI/MCP；Pro（$199/年）加的是 1000+ 预设、55+ 网页区块、给 AI 的复制提示词和高清导出——这些不在本条收录范围。「16,000+ 设计工程师」是官网自述。本库没有安装 MCP。预览为 Chrome（软件渲染 WebGPU）实拍首页编辑器演示区，裁 3:2 WebP。",
+      "qualityNoteEn": "HN item 49980593 (2026-10-06T16:12:21.000Z / about 00:12 CST on 2026-10-07), 2pts on Algolia at write time. Site and MCP docs HTTP 200 at write time; repo shader-effects-inc/shaders is MIT with 1263★, npm shaders 4.0.0. The pricing page says the free tier includes every open-source component, the design editor, code export, and CLI/MCP; Pro ($199/yr) adds 1000+ presets, 55+ website sections, copy-paste prompts for AI, and HD export, all out of scope here. “16,000+ design engineers” is a site claim. This library did not install the MCP. Preview is a Chrome capture (software-rendered WebGPU) of the homepage editor demo, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T01:00:00Z",
+      "hook": "200 多个 WebGPU 特效组件，装个 MCP 就能让助手来调。",
+      "hookEn": "200+ WebGPU effect components, and one MCP install lets your agent tune them."
+    },
+    {
       "id": "rondoflow",
       "slug": "rondoflow",
       "title": "RondoFlow：可视化编排本地 Claude Code Agent 团队",
@@ -1987,9 +2029,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-09-23T12:28:44Z",
+    "updatedAt": "2026-10-07T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.21",
-    "count": 57
+    "version": "1.4.22",
+    "count": 58
   }
 }

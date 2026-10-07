@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-07",
+      "title": "早间更新：Cases +1（James Pember）、HTML +3（Banyan / GSS / Frutjam）、Agent UI +1（Shaders）",
+      "titleEn": "Morning update: Cases +1 (James Pember), HTML +3 (Banyan / GSS / Frutjam), Agent UI +1 (Shaders)",
+      "body": "Cases：收 james-pember-grok-bot-team —— James Pember 的 Substack 实测（2026-10-04，HN item 49960401），两个可照做的用法：Bot 在 Slack 里先分诊产品问题，以及双周会前自动汇总发布说明、GitHub 和 Slack 做会前材料；未复跑。HTML：收 banyan（Show HN 49977811，单 HTML 文件的程序化榕树，AGPL-3.0）、gss-lang（Show HN 49977287，用 CSS 写 3D 场景、编译成一个着色器，Apache-2.0）、frutjam（Show HN 49978580，纯 CSS 的 Tailwind v4 组件库，MIT）。Agent UI：收 shaders-com（HN 49980593，MIT 开源 WebGPU 特效组件，免费档含 MCP；Pro 预设、区块与提示词不收）。五条均配 3:2 自托管预览。官方 @bot 与 x.ai changelog 自 10-02 v0.66.0 后无新条目，本次不加。cases 150→151（→1.4.46）；html-items 118→121（→1.3.56）；agent-ui 57→58（→1.4.22）。未改首页精选。",
+      "bodyEn": "Cases: james-pember-grok-bot-team — James Pember’s Substack write-up (2026-10-04, HN item 49960401) with two copyable workflows: a Bot that triages product questions in Slack first, and a Bot that compiles release notes, GitHub, and Slack into a pre-read before the fortnightly sync; not re-run. HTML: banyan (Show HN 49977811, a procedural banyan in one HTML file, AGPL-3.0), gss-lang (Show HN 49977287, CSS-style 3D scenes compiled to one shader, Apache-2.0), frutjam (Show HN 49978580, CSS-only Tailwind v4 components, MIT). Agent UI: shaders-com (HN 49980593, MIT open-source WebGPU effect components with a free MCP; Pro presets, sections, and prompts excluded). All five have self-hosted 3:2 previews. No new official @bot or x.ai changelog entries since v0.66.0 on 10-02. cases 150→151 (→1.4.46); html-items 118→121 (→1.3.56); agent-ui 57→58 (→1.4.22). Homepage featured picks unchanged."
+    },
+    {
       "date": "2026-10-06",
       "title": "晚间收录：Models +1（Beam）、Cases +1（CoIsland）、HTML +3（Samon / Thank you, Steve / Pumpkin Patch）",
       "titleEn": "Evening catalog: Models +1 (Beam), Cases +1 (CoIsland), HTML +3 (Samon / Thank you, Steve / Pumpkin Patch)",
