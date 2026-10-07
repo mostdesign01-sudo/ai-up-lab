@@ -1,6 +1,742 @@
 {
   "cases": [
     {
+      "id": "graphical",
+      "slug": "graphical",
+      "title": "工具：Graphical — 调一套视觉主题，再交给编程助手用",
+      "titleEn": "Tool: Graphical — set a visual theme, then hand it to your coding agent",
+      "summary": "Graphical 是 Josh Puckett 和 Adam Michela 做的视觉主题工具，给用编程助手做界面的设计师和开发者。你在里面调颜色、浅色和深色、字体、间距、图标、圆角和阴影、动效，以及 Base UI 组件在不同状态下的样子。Base UI 是一套没有预设外观的界面零件。调完可以下载，也可以用 shadcn 装进项目（shadcn 是把组件源码直接放进你自己仓库的一种装法）。下载里有一份 GUI.md、浅色和深色的主题说明、安装步骤，以及三个给编程助手用的技能文件，让助手按你的设计语言改现有界面、做新界面。站点写一次买断，购买按钮现在是 $49。这是一条工具笔记：本库没有购买，也没有把主题交给任何助手。",
+      "summaryEn": "Graphical is a visual theme tool by Josh Puckett and Adam Michela, for designers and developers who build interfaces with a coding agent. You set colors, light and dark, type, spacing, icons, corners and shadows, motion, and how Base UI components look in each state. Base UI is a set of interface parts without a preset look. You can download the result or install it with shadcn, which copies component source into your own repo. The download includes a GUI.md, light and dark theme notes, setup steps, and three skill files so an agent follows your design language on existing screens and new ones. The site says it is a one-time purchase, and the buy button currently reads $49. This is a tool tip: this library did not buy it and did not hand a theme to any agent.",
+      "hook": "调好颜色、字体和间距，再交给编程助手做界面。",
+      "hookEn": "Set colors, type, and spacing, then let your coding agent build the interface.",
+      "categories": [
+        "content",
+        "engineering",
+        "coding"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://www.graphicalui.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=49971356",
+        "https://x.com/joshpuckett",
+        "https://x.com/soopa"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是产品页 https://www.graphicalui.com/ ，撰写时 curl HTTP 200。页脚写 Created with care in California by Josh Puckett 与 Adam Michela，链接分别是 https://x.com/joshpuckett 与 https://x.com/soopa 。版权年份组件的 initialYear 是 2026。本环境的 X 连接未授权，没有打开这两人的帖子，作者名以页脚为准。页面 meta 描述是 “A tool to create visual themes, customize components, and build interfaces with your coding agent.” 首屏把 ChatGPT、Claude、Cursor、Grok 写成可切换的对象，意思是交给你已经在用的编程助手。FAQ 写明：给设计师、开发者和用编程助手做应用的人；包含主题编辑器、5 套可改的样式、主题 token、React 组件源码；每份下载含 GUI.md、浅色和深色主题说明、安装步骤和三个 coding-agent skills；组件编辑器对着 Base UI，React 源码可直接用；问「是否必须用 React 或 Base UI」，页面答 No，主题文件可以用于任何框架、组件库或语言。购买区标题 One-time purchase，正文写主题编辑器、一套起始样式和基础组件可用于不限数量的项目，主题编辑器的后续更新包含在内。按钮文字是 Buy for $49，另有仅供读屏的 previously $99，并链到 https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00 。本库没有下单，没有核对 Stripe 结账页的税额或地区限制。站点 HTML 没有写公开日期。HN item 49971356，标题 Graphical UI，作者 handfuloflight，2026-10-05T21:51:09.000Z（约 2026-10-06 05:51 CST），撰写时 Algolia 34pts。未购买、未下载、未把 GUI.md 或技能文件交给 Cursor、Claude、ChatGPT 或 Grok。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source is https://www.graphicalui.com/, curl HTTP 200 at write time. The footer says Created with care in California by Josh Puckett and Adam Michela, linking https://x.com/joshpuckett and https://x.com/soopa. The copyright widget’s initialYear is 2026. X was not authorized in this environment, so those posts were not opened; the names follow the footer. The meta description is “A tool to create visual themes, customize components, and build interfaces with your coding agent.” The hero swaps ChatGPT, Claude, Cursor, and Grok, meaning the agent you already use. The FAQ says it is for designers, developers, and anyone building an app with a coding agent; it includes the theme builder, 5 customizable styles, theme tokens, and React component source; each download includes GUI.md, light and dark theme references, setup instructions, and three coding-agent skills; the editor targets Base UI components and ships React source; asked “Do I have to use React or Base UI?”, the page answers No, and says the theme files can be used with any framework, component library, or language. The purchase block is titled One-time purchase and says the theme builder, launch collection of styles, and foundation components can be used in unlimited projects, with ongoing updates to the theme builder included. The button reads Buy for $49, with screen-reader text previously $99, and points at https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00. This library did not check out and did not verify tax or regional limits on the Stripe page. The HTML states no public launch date. HN item 49971356, title Graphical UI, author handfuloflight, 2026-10-05T21:51:09.000Z (about 05:51 CST on 2026-10-06), 34pts on Algolia at write time. Not purchased, not downloaded, and GUI.md and the skill files were not given to Cursor, Claude, ChatGPT, or Grok. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "付款，以及把主题文件交给会改你仓库的编程助手之前，自己确认。本库没有代买、代装。",
+      "approvalBoundaryEn": "Confirm before paying, and before handing the theme files to a coding agent that can edit your repo. This library did not buy or install it.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "previewImage": "/previews/graphical.webp",
+      "landing": {
+        "what": "Graphical 让你先定一套界面长什么样，再把这套规定交给编程助手。你调的是设计里那些反复出现的决定：颜色（含浅色和深色两套）、字体和行高、间距、图标家族、圆角描边和阴影、按钮与菜单的动效，以及 Base UI 组件在不同状态下的样子。Base UI 是一套不带现成皮肤的界面零件，Graphical 给它们配外观。导出有两条路：直接下载，或用 shadcn 装进项目。shadcn 的做法是把组件源码放进你的仓库，而不是只装一个远程包。下载物里有 GUI.md（给助手读的设计说明）、浅色和深色的主题参考、安装步骤，以及三个技能文件。页面说适合设计师、开发者，以及任何已经在用 ChatGPT、Claude、Cursor 或 Grok 做应用的人。",
+        "whatEn": "Graphical is where you decide how an interface should look, then hand that decision to a coding agent. You set the choices that repeat: colors for light and dark, type and line height, spacing, an icon family, corners, strokes and shadows, motion for buttons and menus, and how Base UI components look in each state. Base UI is a set of interface parts without a ready-made skin; Graphical gives them a look. You either download the files or install them with shadcn, which puts the component source in your repo instead of only adding a remote package. The download includes GUI.md (design notes for the agent), light and dark theme references, setup steps, and three skill files. The page says it is for designers, developers, and anyone already building an app with ChatGPT, Claude, Cursor, or Grok.",
+        "contrast": {
+          "caption": "左列是产品页写明的事实。右列是本站口径：为什么放进 Cases，以及不要把它当成已经替你装进仓库的技能。",
+          "captionEn": "Left: what the product page states. Right: this library’s framing, and why this is not a skill we already installed in a repo.",
+          "leftLabel": "Graphical",
+          "leftLabelEn": "Graphical",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "视觉主题编辑器：调颜色、字体、间距、图标、形状、动效和 Base UI 组件状态，再交给编程助手。",
+              "leftEn": "A visual theme editor: colors, type, spacing, icons, shape, motion, and Base UI component states, then handoff to a coding agent.",
+              "right": "Cases 里的设计工具笔记。补的是「先有一套设计语言，助手再照着做界面」。",
+              "rightEn": "A design-tool tip in Cases. It fills “decide the design language first, then let the agent build the interface.”"
+            },
+            {
+              "aspect": "怎么带走",
+              "aspectEn": "What you take with you",
+              "left": "下载或用 shadcn 安装。含 GUI.md、浅色和深色说明、安装步骤、三个技能文件，以及 React 组件源码。",
+              "leftEn": "Download or install with shadcn. Includes GUI.md, light and dark notes, setup steps, three skill files, and React component source.",
+              "right": "页面说主题文件不绑定 React。本库没有下载这包文件，也没有在仓库里跑过安装。",
+              "rightEn": "The page says the theme files are not tied to React. This library did not download the package and did not run the install in a repo."
+            },
+            {
+              "aspect": "钱",
+              "aspectEn": "Price",
+              "left": "一次买断。按钮写 Buy for $49，读屏文本写 previously $99。不限项目数，主题编辑器的后续更新包含在内。",
+              "leftEn": "One-time purchase. The button says Buy for $49, and screen-reader text says previously $99. Unlimited projects, with later theme-builder updates included.",
+              "right": "这是页面上的标价。本库没有付款，也没有打开结账后的发票或退款条款。",
+              "rightEn": "That is the price printed on the page. This library did not pay, and did not open an invoice or the refund terms after checkout."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看首页在卖什么",
+            "titleEn": "Read what the homepage is selling",
+            "body": "打开 graphicalui.com，看它怎么讲主题、组件状态，以及交给 ChatGPT、Claude、Cursor 或 Grok。页脚是 Josh Puckett 和 Adam Michela。Show HN 讨论在 item 49971356。点数会变，以你打开当天为准。",
+            "bodyEn": "Open graphicalui.com and see how it describes themes, component states, and handoff to ChatGPT, Claude, Cursor, or Grok. The footer names Josh Puckett and Adam Michela. The Show HN thread is item 49971356. Point counts change. Use whatever the thread shows when you open it.",
+            "links": [
+              {
+                "href": "https://www.graphicalui.com/",
+                "label": "Graphical 首页",
+                "labelEn": "Graphical homepage"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49971356",
+                "label": "HN 讨论",
+                "labelEn": "HN thread"
+              }
+            ]
+          },
+          {
+            "title": "对照包含物和价格",
+            "titleEn": "Check what is included and what it costs",
+            "body": "页面向下有一次买断：$49，读屏文本写以前是 $99。FAQ 写 5 套可改样式、主题 token、React 源码、GUI.md 和三个技能。问是否必须用 React，页面答不必，主题文件可以拿到别的框架里用。",
+            "bodyEn": "Further down, the one-time price is $49, with screen-reader text that it was previously $99. The FAQ lists 5 customizable styles, theme tokens, React source, GUI.md, and three skills. Asked whether React is required, the page says no: the theme files can go to another framework.",
+            "links": [
+              {
+                "href": "https://www.graphicalui.com/",
+                "label": "首页上的价格和 FAQ",
+                "labelEn": "Price and FAQ on the homepage"
+              }
+            ]
+          },
+          {
+            "title": "自己决定要不要买",
+            "titleEn": "Decide yourself whether to buy",
+            "body": "购买按钮指向 Stripe。买到的是主题编辑器和组件源码，不是本站代装的技能。本库没有付款，也没有把 GUI.md 交给任何编程助手试做一屏界面。",
+            "bodyEn": "The buy button goes to Stripe. What you get is the theme builder and component source, not a skill this site installed for you. This library did not pay and did not ask any coding agent to build a screen from GUI.md.",
+            "links": [
+              {
+                "href": "https://www.graphicalui.com/",
+                "label": "首页上的购买按钮",
+                "labelEn": "Buy button on the homepage"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未购买、未下载、未执行 shadcn 安装，也没有把 GUI.md 或三个技能文件交给 Cursor、Claude、ChatGPT 或 Grok。",
+            "textEn": "This library did not buy it, did not download it, did not run a shadcn install, and did not hand GUI.md or the three skill files to Cursor, Claude, ChatGPT, or Grok."
+          },
+          {
+            "text": "$49 和 previously $99 是页面上的文字。没有核对结账页的税、币种或退款。",
+            "textEn": "$49 and previously $99 are the words on the page. Tax, currency, and refund terms on the checkout page were not checked."
+          },
+          {
+            "text": "「主题文件可用于任何框架」是 FAQ 的回答。本库没有拿非 React 项目试过。",
+            "textEn": "“Theme files work with any framework” is the FAQ’s answer. This library did not try them in a non-React project."
+          },
+          {
+            "text": "站点没有写公开日期。2026-10-05 是 HN 帖的时间，不是页面上的发行声明。",
+            "textEn": "The site states no launch date. 2026-10-05 is the HN post time, not a release line printed on the page."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 graphicalui.com 首屏",
+        "previewCreditEn": "Preview: Chrome capture of graphicalui.com above the fold"
+      }
+    },
+    {
+      "id": "protopie-mcp",
+      "slug": "protopie-mcp",
+      "title": "工具：ProtoPie MCP 正式版 — 用你自己的 AI 改原型，企业版再出代码",
+      "titleEn": "Tool: ProtoPie MCP, now official — edit prototypes with your own AI; code export is Enterprise",
+      "summary": "ProtoPie 在 2026-10-07 的官方博客宣布 ProtoPie MCP 正式版。MCP 是一种让 AI 助手连接外部工具的插头。这篇是给已经在用 ProtoPie 做可交互原型的人：Studio MCP 可以浏览你打开的组件库，把库里的组件放进原型，也可以把图层、场景、变量这些对象的 ID 写进提示词，让助手改到具体的那一个。出代码是另一档。Code MCP 官方列出的框架现在包括 React、React Native、Qt / QML、Flutter、SwiftUI、Compose 和 ArkTS，其中 React Native 是这次加上的。博客把套餐分成两档：Pro 计划的 MCP Core 只有 Studio MCP；Enterprise 计划的 MCP Enterprise 才有 Studio MCP、Code MCP 和 Dev View。本库没有 ProtoPie 账号，没有连过 MCP。",
+      "summaryEn": "ProtoPie’s official blog on 2026-10-07 announced that ProtoPie MCP is now official. MCP is a plug that lets an AI assistant talk to an outside tool. The post is for people who already prototype interactions in ProtoPie. Studio MCP can browse the libraries you have enabled, place those components into a prototype, and take an element’s ID in the prompt so the assistant edits that layer, scene, or variable. Code generation is a separate tier. Code MCP’s official framework list is now React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS. React Native is the one added this time. The blog splits plans in two: MCP Core on the Pro plan is Studio MCP only; MCP Enterprise on the Enterprise plan adds Code MCP and Dev View. This library has no ProtoPie account and did not connect MCP.",
+      "hook": "用你自己的 AI 改 ProtoPie 原型，企业版才能出代码。",
+      "hookEn": "Edit a ProtoPie prototype with your own AI. Code export needs Enterprise.",
+      "categories": [
+        "engineering",
+        "content",
+        "coding"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://www.protopie.io/blog/protopie-mcp-official",
+      "secondaryUrls": [
+        "https://www.protopie.io/features/protopie-mcp"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是官方博客 https://www.protopie.io/blog/protopie-mcp-official ，撰写时 HTTP 200。作者 Iulia Sorodoc，头衔 Product Marketing Manager at ProtoPie，页内日期 Oct 7, 2026，文首标 3 min read。博客写 Studio MCP 可浏览已启用的 ProtoPie 库并把库组件作为实例放进原型；可复制 Layer、Scene、Variable、Component、Trigger、Response 或其他受支持元素的 ID 放进提示词。Code MCP 官方支持列表为 React、React Native、Qt / QML、Flutter、SwiftUI、Compose、ArkTS，文中把 React Native 写成这次新增。套餐原文：MCP Core（Studio MCP）在 Pro plan；MCP Enterprise（Studio MCP、Code MCP、Dev View）在 Enterprise plan。文中还提到 2026-10-13 19:00 EDT 的一场汽车 HMI 网络研讨会，本库没有报名。产品功能页 https://www.protopie.io/features/protopie-mcp 撰写时可读，标题 From Prompt to Production。该页把 Studio MCP 写成自带 AI（列出 Claude Code、Cursor、VS Code、Codex 等），并写 manually perfect every detail, token-free。token-free 只按页面用词记录，本库没有核对它是否完全不消耗 ProtoPie 的 AI 额度。功能页把 MCP Core 写成给个人跨职能的人做原型，把 MCP Enterprise 写成给组织出代码；Pro 与 Enterprise 的计划名以博客原文为准，功能页没有再写 Pro 这个词。功能页 FAQ 在抓取时是折叠的，答案没有展开，不引用。本库没有 ProtoPie 账号，没有安装 Studio，没有连接 MCP，没有生成 React Native 或其他框架的代码，也没有打开 Dev View。预览为 Chrome 实拍这篇官方博客首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source is the official blog https://www.protopie.io/blog/protopie-mcp-official, HTTP 200 at write time. Author Iulia Sorodoc, Product Marketing Manager at ProtoPie, on-page date Oct 7, 2026, labeled 3 min read. The post says Studio MCP can browse enabled ProtoPie libraries and add library components as instances; you can copy the ID of a Layer, Scene, Variable, Component, Trigger, Response, or other supported element into the prompt. Code MCP’s official list is React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS, and the post calls React Native the addition. Plans, in the post’s words: MCP Core (Studio MCP) on the Pro plan; MCP Enterprise (Studio MCP, Code MCP, and Dev View) on the Enterprise plan. The post also names an automotive HMI webinar on 2026-10-13 at 7:00 PM EDT. This library did not register. The product page https://www.protopie.io/features/protopie-mcp was readable at write time, titled From Prompt to Production. It describes Studio MCP as bring-your-own AI (Claude Code, Cursor, VS Code, Codex, and more) and says “manually perfect every detail, token-free.” token-free is recorded as the page’s wording; this library did not check whether that means zero ProtoPie AI credits. The page frames MCP Core for solo cross-functional builders and MCP Enterprise for organizations generating code. The plan names Pro and Enterprise follow the blog; the features page does not repeat the word Pro. Its FAQ was collapsed in the fetch, so those answers are not quoted. This library has no ProtoPie account, did not install Studio, did not connect MCP, did not generate React Native or any other code, and did not open Dev View. Preview is a Chrome capture of the official blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "把公司组件库或未公开的原型交给 AI 之前，自己确认账号和套餐。本库没有代连。",
+      "approvalBoundaryEn": "Confirm the account and plan before handing a company library or an unreleased prototype to an AI. This library did not connect it.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "previewImage": "/previews/protopie-mcp.webp",
+      "landing": {
+        "what": "ProtoPie 用来做可以点、可以滑动的交互原型。这篇 2026-10-07 的官方说明说，MCP 正式可用：你自己的 AI 助手可以接到 ProtoPie 上改原型。能接的范围看套餐。Pro 上的 MCP Core 只有 Studio MCP，用来在原型里干活：读你已经启用的组件库，把库组件放进画布，以及按你复制的 ID 改某一个图层、场景、变量、组件、触发或响应。Enterprise 上的 MCP Enterprise 才加上 Code MCP 和 Dev View。Code MCP 是把原型上下文交给助手去生成代码，官方列出的框架是 React、React Native、Qt / QML、Flutter、SwiftUI、Compose、ArkTS。博客把整条路径写成：提示词、原型、验证、代码。验证那一步它提到可以用 ProtoPie Connect 在真实硬件上试交互。那句话是产品路径说明，本库没有接硬件。",
+        "whatEn": "ProtoPie is for prototypes you can tap and swipe. The official note on 2026-10-07 says MCP is now official, so your own AI assistant can connect to ProtoPie and edit a prototype. What it can do depends on the plan. MCP Core on Pro is Studio MCP only: work inside the prototype, read libraries you already enabled, place those components, and edit one layer, scene, variable, component, trigger, or response by the ID you copied. MCP Enterprise on the Enterprise plan adds Code MCP and Dev View. Code MCP hands prototype context to an assistant to generate code. The official framework list is React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS. The blog writes the path as prompt, prototype, validate, code. The validate step mentions trying interactions on real hardware with ProtoPie Connect. That is the product’s description of the path. This library did not connect hardware.",
+        "contrast": {
+          "caption": "左列是 2026-10-07 官方博客的原话范围。右列是本站口径：谁该看，以及不要把它当成免费、已经接通的代码导出。",
+          "captionEn": "Left: the scope of the 2026-10-07 official blog. Right: who this is for, and why it is not a free code export we already connected.",
+          "leftLabel": "ProtoPie 官方博客",
+          "leftLabelEn": "ProtoPie’s blog",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "谁能用哪一档",
+              "aspectEn": "Who gets which tier",
+              "left": "Pro：Studio MCP。Enterprise：Studio MCP、Code MCP、Dev View。",
+              "leftEn": "Pro: Studio MCP. Enterprise: Studio MCP, Code MCP, and Dev View.",
+              "right": "改原型和出代码不是同一个套餐。本库没有登录，不知道某个账号实际被分到哪一档。",
+              "rightEn": "Editing a prototype and generating code are not the same plan. This library did not sign in, so it does not know which tier a given account has."
+            },
+            {
+              "aspect": "这次多了什么",
+              "aspectEn": "What this release adds",
+              "left": "用自己的组件库、按元素 ID 点名修改，以及 Code MCP 增加 React Native。",
+              "leftEn": "Your own component libraries, edits aimed at an element ID, and React Native added to Code MCP.",
+              "right": "这些是博客列出的变化。本库没有在 Studio 里点过一次。",
+              "rightEn": "Those are the changes the blog lists. This library did not click through them in Studio."
+            },
+            {
+              "aspect": "和 Figma 助手的差别",
+              "aspectEn": "How this differs from the Figma agent",
+              "left": "ProtoPie 这条是交互原型工具自己的 MCP，套餐写在 ProtoPie 的 Pro 和 Enterprise 上。",
+              "leftEn": "This entry is ProtoPie’s own MCP for interaction prototypes, priced on ProtoPie Pro and Enterprise.",
+              "right": "同日收录的 Figma agent 是 Figma 画布里的助手，席位规则不同。两套不要当成同一个开关。",
+              "rightEn": "The Figma agent filed the same day lives on the Figma canvas and uses different seat rules. They are not one switch."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "读这篇正式说明",
+            "titleEn": "Read the official note",
+            "body": "打开 2026-10-07 的博客，先分清 Studio MCP 和 Code MCP。只有 Enterprise 同时包含代码生成和 Dev View。",
+            "bodyEn": "Open the 2026-10-07 blog and separate Studio MCP from Code MCP. Only Enterprise includes code generation and Dev View.",
+            "links": [
+              {
+                "href": "https://www.protopie.io/blog/protopie-mcp-official",
+                "label": "ProtoPie MCP 正式说明",
+                "labelEn": "ProtoPie MCP official note"
+              },
+              {
+                "href": "https://www.protopie.io/features/protopie-mcp",
+                "label": "功能页",
+                "labelEn": "Feature page"
+              }
+            ]
+          },
+          {
+            "title": "对照你的套餐",
+            "titleEn": "Check your plan",
+            "body": "博客写 Pro 用 Studio MCP 改原型，Enterprise 才出代码。本库没有打开计费页，价格和席位以你账号里看到的为准。",
+            "bodyEn": "The blog says Pro uses Studio MCP to edit prototypes, and Enterprise is what generates code. This library did not open a billing page. Price and seats are whatever your account shows.",
+            "links": [
+              {
+                "href": "https://www.protopie.io/blog/protopie-mcp-official",
+                "label": "文中的两档套餐",
+                "labelEn": "The two tiers in the post"
+              }
+            ]
+          },
+          {
+            "title": "再决定要不要把原型接上 AI",
+            "titleEn": "Then decide whether to connect a prototype",
+            "body": "连接之后，助手能按 ID 改你文件里的交互。公司组件库和未公开流程不要先接上。本库没有安装，也没有把任何原型交出去。",
+            "bodyEn": "Once connected, an assistant can change interactions in your file by ID. Do not connect a company library or an unreleased flow first. This library did not install it and did not hand over a prototype.",
+            "links": [
+              {
+                "href": "https://www.protopie.io/blog/protopie-mcp-official",
+                "label": "文中的 ID 用法",
+                "labelEn": "How IDs are described in the post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库没有 ProtoPie 账号，没有安装 Studio，没有连接 MCP，没有生成任何框架的代码，也没有打开 Dev View。",
+            "textEn": "This library has no ProtoPie account, did not install Studio, did not connect MCP, did not generate code for any framework, and did not open Dev View."
+          },
+          {
+            "text": "Pro 与 Enterprise 的功能划分以这篇博客为准。具体价格、席位数量和你们公司是否已经买了 Enterprise，本库没有查账单。",
+            "textEn": "The Pro versus Enterprise split follows this blog. Prices, seat counts, and whether a given company already has Enterprise were not checked against a bill."
+          },
+          {
+            "text": "React Native 是博客写的新增框架。其余框架出现在同一份官方列表里。本库没有逐个导出试过。",
+            "textEn": "React Native is the framework the blog calls new. The other frameworks are on the same official list. This library did not try an export for each one."
+          },
+          {
+            "text": "文中的 10 月 13 日网络研讨会只是预告，本库没有参加，也不把预告当成功能已经上线的证明。",
+            "textEn": "The October 13 webinar is an announcement in the post. This library did not attend, and the listing is not proof that a feature is live."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 ProtoPie 官方博客首屏",
+        "previewCreditEn": "Preview: Chrome capture of the official ProtoPie blog above the fold"
+      }
+    },
+    {
+      "id": "figma-agent-ga",
+      "slug": "figma-agent-ga",
+      "title": "资讯：Figma 设计助手正式开放，能不能改稿要看席位",
+      "titleEn": "News: Figma’s design agent is generally available, and editing depends on your seat",
+      "summary": "Figma 在 2026-10-06 把画布里的设计助手从公测改成正式版。发布说明写的新能力包括：给设计库上传 markdown 规则，助手在启用该库时会读；可以看同事的助手正在画布上做什么；可以让助手在 Figma 里搜文件；生成式插件正式开放；可以在助手里写、发布自己的技能，自定义技能在 Starter 上也可用。从这一天起，使用会计入 Figma 的 AI 额度。席位要分开看。帮助中心写所有计划都能用，但 Full 席位且对文件有编辑权才能让助手改那个文件；View、Dev、Collab 或只有查看权的人可以聊天，不能改该文件；任何人都可以在自己的草稿里聊天并让助手改。同一天的官方博客写得更窄：Full 席位的 Professional、Organization、Enterprise 和部分 Education，Starter 是有限可用，Collab、Dev、View 只能在草稿里用。两处不一致，这条都记上，不把其中一句当成另一句的勘误。本库没有登录 Figma。",
+      "summaryEn": "On 2026-10-06 Figma moved the design agent on the canvas from open beta to general availability. The release notes list library guidelines as markdown that the agent reads when that library is on, a way to watch teammates’ agents on the canvas, file search from the chat, generative plugins as generally available, and custom skills you write and publish in the agent. Custom skills are available on Starter. From that day, use counts against Figma AI credits. Seats need two readings. The help center says every plan can use it, but a Full seat with edit access is what can ask the agent to change that file. View, Dev, and Collab seats, or view-only access, can chat and not edit the file. Anyone can chat and ask for edits in their own drafts. The same day’s blog is narrower: Full seats on Professional, Organization, Enterprise, and some Education plans, limited availability on Starter, and Collab, Dev, and View seats only in drafts. Both wordings are recorded. Neither is treated as a correction of the other. This library did not sign in to Figma.",
+      "hook": "Figma 的设计助手正式上线，能不能改稿要看席位。",
+      "hookEn": "Figma’s design agent is generally available. Editing depends on your seat.",
+      "categories": [
+        "research",
+        "content",
+        "engineering"
+      ],
+      "role": "AI 资讯",
+      "sourceUrl": "https://www.figma.com/release-notes/",
+      "secondaryUrls": [
+        "https://www.figma.com/blog/figma-agent-and-design-systems/",
+        "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+        "https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ",
+        "https://mostdesign01-sudo.github.io/ai-up-lab/cases/figma-bro/"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是 https://www.figma.com/release-notes/ ，撰写时 HTTP 200，2026-10-06 条目标题 The Figma agent is generally available。同日博客 https://www.figma.com/blog/figma-agent-and-design-systems/ HTTP 200，作者 Wayne Lin，Product Manager, Figma，日期 October 6, 2026。帮助中心 https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files HTTP 200，页首 Who can use this feature 写 Available on all plans，并写明 Full 席位加编辑权才能让助手改文件，View / Dev / Collab 或仅查看可以聊天不能改该文件，任何人可在自己的 Draft 里聊天并改。博客末段写：Full seat on Professional, Organization, Enterprise, and some Education plans, limited availability on the Starter plan；Collab, Dev, and View seats can use the agent in their drafts。两套说法同时保留。额度 FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ HTTP 200，写明 Design 与 Weave 里的助手于 October 6, 2026 从 open beta 转为 general availability，并开始消耗 Figma AI credits；公测期间不消耗。具体每月额度数字在另一篇价格表，本条不转抄没有逐格核对的数字。发布说明还写：库的 markdown 指南、看同事助手、搜文件、生成式插件 GA、自定义技能在 starter 可用。旧的公测帮助页仍写 beta，与 10 月 6 日的发布说明冲突，不采用。本库未登录，未在文件里发过提示，未上传库指南，未跟过同事的助手。和库内 figma-bro 不是同一件事：那条是社区的 Grok Bot 模板。预览为 Chrome 实拍上述博客首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source is https://www.figma.com/release-notes/, HTTP 200 at write time. The 2026-10-06 item is titled The Figma agent is generally available. The same-day blog https://www.figma.com/blog/figma-agent-and-design-systems/ returned HTTP 200, by Wayne Lin, Product Manager at Figma, dated October 6, 2026. Help center https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files returned HTTP 200. Its “Who can use this feature” line says Available on all plans, then says a Full seat plus edit access is required for the agent to edit that file, View / Dev / Collab or view-only can chat without editing it, and anyone can chat and edit in their own drafts. The blog’s closing lines say Full seats on Professional, Organization, Enterprise, and some Education plans, limited availability on Starter, and Collab, Dev, and View seats can use the agent in drafts. Both wordings are kept. The credits FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ returned HTTP 200 and says the agent in Design and Weave tools moved from open beta to general availability on October 6, 2026 and now consumes Figma AI credits; beta usage did not. Monthly credit amounts live on another pricing table and are not copied here without a cell-by-cell check. The release notes also list markdown library guidelines, watching teammates’ agents, file search, generative plugins GA, and custom skills on Starter. An older help page still says beta and conflicts with the October 6 notes, so it is not used. This library did not sign in, did not send a prompt in a file, did not upload library guidelines, and did not follow a teammate’s agent. This is not the in-library figma-bro entry, which is a community Grok Bot template. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "让助手改团队文件、发布组件或消耗 AI 额度之前，先看自己的席位。本库没有代为登录。",
+      "approvalBoundaryEn": "Check your seat before letting the agent edit a team file, publish components, or spend AI credits. This library did not sign in for you.",
+      "connectors": [
+        "figma"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "previewImage": "/previews/figma-agent-ga.webp",
+      "landing": {
+        "what": "这是 Figma 自己的设计助手在 2026-10-06 从公测变成正式版的说明，不是又一个外面的插件。发布说明里和设计系统直接相关的几件事是：可以把规则、正例和反例写成 markdown 放进设计库，只要这个库开着，助手每次被提问都会读；可以点开聊天堆叠，看同事的助手正在画布上做什么；可以让它在 Figma 里搜文件，包括 FigJam 便签和 Slides；生成式插件正式开放；可以在助手里写自己的技能并发布，而且自定义技能在 Starter 计划上也能用。帮助中心补充了怎么打开：在画布上选中图层后点 Agents，或用 Cmd / Ctrl + Enter。从 10 月 6 日起，这些使用计入 AI 额度。公测时不扣。能改文件的人，按帮助中心是有编辑权的 Full 席位；只能看的席位可以聊，改动限制在自己的草稿。官方博客同一天又写了 Starter 有限可用、部分 Education 才有。两条都留着，因为它们不是同一句话。",
+        "whatEn": "This is Figma’s own note that the design agent left open beta on 2026-10-06. It is not another outside plugin. The release notes’ design-system pieces are: markdown rules, good examples, and bad examples on a library, read whenever that library is enabled; a chat pile so you can watch a teammate’s agent on the canvas; file search across Figma, including FigJam stickies and Slides; generative plugins generally available; and skills you write and publish in the agent, including on the Starter plan. The help center adds how to open it: select a layer and click Agents, or press Cmd or Ctrl + Enter. From October 6, this use counts against AI credits. Beta use did not. Who can edit, per the help center, is a Full seat with edit access. View-only seats can chat, and edits stay in their own drafts. The same day’s blog also says Starter is limited and only some Education plans are included. Both sentences stay, because they are not the same sentence.",
+        "contrast": {
+          "caption": "左列是发布说明、博客和帮助中心写明的范围。右列是本站口径：这是一条资讯，不是已经替你改过的设计系统。",
+          "captionEn": "Left: what the release notes, the blog, and the help center state. Right: this is a news note, not a design system we already edited.",
+          "leftLabel": "Figma 官方",
+          "leftLabelEn": "Figma’s pages",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "Figma 画布里的设计助手正式版，并开始消耗 AI 额度。",
+              "leftEn": "The design agent on the Figma canvas, now generally available, and it spends AI credits.",
+              "right": "Cases 里的 AI 资讯。库里已有的 figma bro 是社区 Grok Bot 模板，不是这个助手。",
+              "rightEn": "An AI news note in Cases. The figma bro entry already in the library is a community Grok Bot template, not this agent."
+            },
+            {
+              "aspect": "谁能改文件",
+              "aspectEn": "Who can edit a file",
+              "left": "帮助中心：Full 席位且有编辑权。博客：Full 席位的付费计划，Starter 有限，部分 Education。",
+              "leftEn": "Help center: a Full seat with edit access. Blog: Full seats on paid plans, limited Starter, some Education.",
+              "right": "两处都是官方文字，本条不合并成一句。以你账号里实际出现的按钮为准。",
+              "rightEn": "Both are official wordings. This note does not merge them into one sentence. Use the button your account actually shows."
+            },
+            {
+              "aspect": "和设计系统的关系",
+              "aspectEn": "What it does with a design system",
+              "left": "库的 markdown 指南会在提问时被读到；博客举例用它补文档、查组件是不是用了 token、批量改名。",
+              "leftEn": "Library markdown is read when you prompt with that library on. The blog’s examples are docs, token checks, and bulk renames.",
+              "right": "例子是博客里的用法建议。本库没有拿一个真实组件库跑过。",
+              "rightEn": "The examples are usage ideas in the blog. This library did not run them on a real component library."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读发布说明",
+            "titleEn": "Read the release notes first",
+            "body": "10 月 6 日那一条列出正式版、库指南、看同事的助手、搜文件、生成式插件和 Starter 上的自定义技能，并写明开始消耗 AI 额度。",
+            "bodyEn": "The October 6 note lists general availability, library guidelines, watching teammates’ agents, file search, generative plugins, and custom skills on Starter, and it says AI credits now apply.",
+            "links": [
+              {
+                "href": "https://www.figma.com/release-notes/",
+                "label": "Figma 发布说明",
+                "labelEn": "Figma release notes"
+              }
+            ]
+          },
+          {
+            "title": "对照席位和额度",
+            "titleEn": "Compare seats and credits",
+            "body": "帮助中心写所有计划、按席位决定能不能改文件。博客写 Starter 有限、部分 Education。额度 FAQ 写 10 月 6 日起才扣费。每月送多少额度，打开额度说明自己看，本条不抄表。",
+            "bodyEn": "The help center says all plans, with the seat deciding whether the agent can edit. The blog says Starter is limited and only some Education plans qualify. The credits FAQ says charges start on October 6. For how many credits a seat includes, open the credits article yourself. This note does not copy that table.",
+            "links": [
+              {
+                "href": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+                "label": "帮助中心：谁能用",
+                "labelEn": "Help center: who can use it"
+              },
+              {
+                "href": "https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ",
+                "label": "额度 FAQ",
+                "labelEn": "Credits FAQ"
+              },
+              {
+                "href": "https://www.figma.com/blog/figma-agent-and-design-systems/",
+                "label": "设计系统用法博客",
+                "labelEn": "Design-system blog"
+              }
+            ]
+          },
+          {
+            "title": "在自己的草稿里试，再碰团队文件",
+            "titleEn": "Try a draft before a team file",
+            "body": "帮助中心写草稿里谁都可以让助手改。团队库和正式文件先看席位。本库没有登录，也没有上传过一份 markdown 库指南。",
+            "bodyEn": "The help center says anyone can ask for edits in their own drafts. Check the seat before a team library or a production file. This library did not sign in and did not upload a markdown library guide.",
+            "links": [
+              {
+                "href": "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+                "label": "帮助中心里的打开方式",
+                "labelEn": "How the help center says to open it"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未登录 Figma，未发送提示，未让助手改文件，未上传库指南，未跟随同事的助手，也未消耗额度。",
+            "textEn": "This library did not sign in to Figma, did not send a prompt, did not let the agent edit a file, did not upload library guidelines, did not follow a teammate’s agent, and did not spend credits."
+          },
+          {
+            "text": "帮助中心写所有计划可用，博客写 Starter 有限、只覆盖部分 Education。以你账号显示的为准。",
+            "textEn": "The help center says all plans. The blog says Starter is limited and only some Education plans are covered. Go by what your account shows."
+          },
+          {
+            "text": "每月额度的具体数字没有抄进本条。额度从 2026-10-06 起才计入，这句来自额度 FAQ。",
+            "textEn": "Monthly credit amounts are not copied here. The line that credits start counting on 2026-10-06 comes from the credits FAQ."
+          },
+          {
+            "text": "更早的帮助页仍写公测、不扣额度。那是旧页，和 10 月 6 日的发布说明冲突，不要拿它当现状。",
+            "textEn": "An older help page still says beta and no credit charge. That page is stale and conflicts with the October 6 notes. Do not treat it as the current state."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 Figma 博客首屏",
+        "previewCreditEn": "Preview: Chrome capture of the Figma blog above the fold"
+      }
+    },
+    {
+      "id": "gamma-5",
+      "slug": "gamma-5",
+      "title": "工具：Gamma 5 — 跟助手把演示做完，也能导入现成的 PPT 和 PDF",
+      "titleEn": "Tool: Gamma 5 — finish a deck with the agent, or import a PowerPoint or PDF",
+      "summary": "Gamma 的帮助中心已经在用 Gamma 5 这个名字说明现在的做法。新建时先跟 AI 助手对话：你说要做什么，回答几个问题，它做出整份演示、文档或网页。旧的经典生成器还在，仪表盘上点 Use classic generator。编辑器有两种模式：自己点进卡片改，或者切到 AI 编辑，点中某一个元素再下指令。帮助中心写，AI 编辑会记住你一开始的目标，小改动只动那一块。导入也改过：在 Gamma 5 里，PowerPoint 和 PDF 可以保留原来的版式，并且还能改；经典生成器只导入文字。主题改成跟文件走，改一个文件的颜色和字体不会波及别的文件。形状可以当自由块拖到幻灯片上。本库没有找到 gamma.app 上单独的 Gamma 5 发布博文，也没有登录生成过一份演示。",
+      "summaryEn": "Gamma’s help center now uses the name Gamma 5 for the current product. A new piece starts as a conversation with the AI agent: you say what you are making, answer a few questions, and it builds the deck, document, or page. The older classic generator is still there, under Use classic generator on the dashboard. The editor has two modes: click into a card and edit it yourself, or switch to AI editing, select one element, and give an instruction. The help center says AI editing keeps your original goal, so a small fix stays on that part. Import changed too: in Gamma 5, PowerPoint and PDF files can keep their original layouts and stay editable. The classic generator imports text only. Themes now live on the file, so changing colors and type on one file does not change the others. Shapes can be dragged onto a slide as free blocks. This library did not find a standalone Gamma 5 launch post on gamma.app, and did not sign in to generate a deck.",
+      "hook": "跟 Gamma 的助手对话来做演示，也能导入现成 PPT。",
+      "hookEn": "Build a deck by talking with Gamma’s agent, or import a PowerPoint you already have.",
+      "categories": [
+        "content",
+        "marketing"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma",
+      "secondaryUrls": [
+        "https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai",
+        "https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma",
+        "https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma",
+        "https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them",
+        "https://gamma.app/"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "没有找到 gamma.app/insights 上的 Gamma 5 发布文。检索到的 gamma.app 自己的文章仍是 2025-09-15 的 Gamma 3.0。撰写时 gamma.app 首页 HTML 也没有 Gamma 5 这几个字。因此本条只采用帮助中心，不采用通讯社稿里的用户规模和准确率。帮助中心撰写时均为 HTTP 200：新建文 https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma （页内 Updated yesterday，相对 2026-10-07 的抓取）写明 Creating in Gamma 5 starts with a conversation，经典生成器仍在。编辑文 https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai 页内 Updated today，写 AI editing has been rebuilt，记住最初目标，小改不重做整份；Gamma 5 编辑器有 manual editing 与 AI editing 两种模式，左上角切换；改完可用 Original / Modified 对比，一次请求的改动一起接受，不能逐条挑。导入文 https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma 写 Gamma 5 的导入重做过，PowerPoint 与 PDF 保留版式且可编辑；pptx / docx 单文件上限 200 MB，PDF 100 MB；部分图表会变成静态图；经典生成器只导入文字；Excel 与 Keynote 不能直接导入。主题文 https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma 写主题跟文件走，可调颜色、字体、标志、形状描边阴影和 AI 图片风格。形状文 https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them 写形状是 freeform block，可拖到任意位置。这些页面没有标出一份统一的发布日期，也没有 Gamma 5 的价格。本库未登录、未生成、未导入文件。预览为 Chrome 实拍导入帮助文首屏裁 3:2 WebP，图中能看到 Gamma 5 和 Updated yesterday。不打星。",
+      "qualityNoteEn": "No Gamma 5 launch post was found on gamma.app/insights. The Gamma article that search returned on gamma.app itself is still Gamma 3.0 from 2025-09-15. The gamma.app homepage HTML at write time also did not contain the words Gamma 5. This entry therefore follows the help center only, and does not use user counts or accuracy figures from press republications. Help pages returned HTTP 200 at write time. The create article https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma (on-page Updated yesterday, relative to a fetch on 2026-10-07) says creating in Gamma 5 starts with a conversation, and the classic generator remains. The edit article https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai says Updated today, that AI editing has been rebuilt, that the original goal is kept, and that a small fix does not redo the whole piece. It says the Gamma 5 editor has manual editing and AI editing, toggled at the top left, with an Original / Modified compare. Changes from one request are accepted together. The import article https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma says Gamma 5 import was rebuilt, PowerPoint and PDF keep their layouts and stay editable, pptx / docx are up to 200 MB, PDFs up to 100 MB, some charts arrive as static images, the classic generator imports text only, and Excel and Keynote cannot be imported directly. The theme article https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma says themes live on the file and cover colors, fonts, logos, shape strokes and shadows, and AI image styles. The shapes article https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them says a shape is a freeform block you can drag. These pages do not share one launch date, and they do not state a Gamma 5 price. This library did not sign in, did not generate a deck, and did not import a file. Preview is a Chrome capture of the import article above the fold, cropped to 3:2 WebP; the shot shows Gamma 5 and Updated yesterday. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "把内部 PPT 或 PDF 交给 Gamma 之前自己确认。本库没有代为登录或上传。",
+      "approvalBoundaryEn": "Confirm before handing an internal PowerPoint or PDF to Gamma. This library did not sign in or upload one.",
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "previewImage": "/previews/gamma-5.webp",
+      "landing": {
+        "what": "Gamma 用来把一份想法做成演示、文档或网页。帮助中心现在把新的做法叫做 Gamma 5：你不是先填一个长表单，而是先跟助手说话，它问几个问题，然后做出整份材料。做完以后可以自己改，也可以切到 AI 编辑，点中一张卡片或一个元素，让它只动那一块。帮助中心写它会记住你最初的目标，所以后面的小修改不会把整份重写掉。你也可以把已经做好的 PowerPoint 或 PDF 导进去。Gamma 5 的导入会尽量留下原来的版式，导进来之后还能改。如果走旧的经典生成器，它只拿走文字，不拿版式。主题（颜色、字体、标志、圆角和阴影）现在属于这一份文件。改这一份，不会把工作区里其他文件一起改掉。形状可以像贴纸一样拖到幻灯片的任意位置，帮助中心把它叫做自由块。",
+        "whatEn": "Gamma turns an idea into a deck, a document, or a web page. The help center now calls the current way Gamma 5. You do not start with a long form. You talk to the agent, it asks a few questions, and it builds the piece. After that you can edit it yourself, or switch to AI editing, click a card or one element, and ask it to change only that. The help center says it keeps your original goal, so a later small fix does not rewrite the whole piece. You can also bring in a PowerPoint or PDF you already have. Gamma 5’s import tries to keep the original layout, and the result stays editable. The older classic generator takes the text only, not the layout. A theme — colors, type, logo, corners, and shadows — now belongs to that one file. Changing it does not restyle every other file in the workspace. Shapes can be dragged anywhere on a slide. The help center calls that a freeform block.",
+        "contrast": {
+          "caption": "左列是帮助中心写明的 Gamma 5。右列是本站口径：哪些是文档里的话，哪些本库没有亲手做过。",
+          "captionEn": "Left: Gamma 5 as the help center describes it. Right: what this library did not do itself.",
+          "leftLabel": "Gamma 帮助中心",
+          "leftLabelEn": "Gamma Help Center",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "怎么开始",
+              "aspectEn": "How you start",
+              "left": "Gamma 5 从一段对话开始。经典生成器还在，入口是 Use classic generator。",
+              "leftEn": "Gamma 5 starts with a conversation. The classic generator remains, under Use classic generator.",
+              "right": "这是帮助中心的用法说明。本库没有账号，没有真的对话出一份演示。",
+              "rightEn": "That is the help center’s how-to. This library has no account and did not actually talk a deck into existence."
+            },
+            {
+              "aspect": "导入",
+              "aspectEn": "Import",
+              "left": "Gamma 5 里 PPT 和 PDF 保留版式且可改。经典生成器只导入文字。单文件上限 pptx / docx 200 MB，PDF 100 MB。",
+              "leftEn": "In Gamma 5, PPT and PDF keep their layout and stay editable. The classic generator imports text only. Limits are 200 MB for pptx / docx and 100 MB for PDF.",
+              "right": "上限和“保留版式”都是帮助中心的话。本库没有上传过文件，不知道复杂图表会丢多少。帮助中心自己也写，有的图表会变成不能编辑的图。",
+              "rightEn": "The limits and “keep the layout” are the help center’s words. This library did not upload a file, so it does not know how much a complex chart loses. The help center itself says some charts arrive as images you cannot edit."
+            },
+            {
+              "aspect": "样式",
+              "aspectEn": "Styles",
+              "left": "主题跟文件走，可调颜色、字体、标志、描边、阴影和 AI 图片风格。形状是可拖动的自由块。",
+              "leftEn": "Themes live on the file: colors, type, logo, strokes, shadows, and AI image styles. Shapes are freeform blocks you can drag.",
+              "right": "帮助中心没有写“样式比上一版多了多少”。本条也不写这个比较。",
+              "rightEn": "The help center does not say how many more styles this is than the previous version. This note does not add that comparison."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "从帮助中心确认这是 Gamma 5",
+            "titleEn": "Confirm Gamma 5 in the help center",
+            "body": "新建帮助写：Gamma 5 从对话开始，经典生成器仍可用。编辑帮助写两种模式，以及 AI 编辑会记住最初目标。",
+            "bodyEn": "The create article says Gamma 5 starts with a conversation and the classic generator is still available. The edit article describes the two modes and says AI editing keeps the original goal.",
+            "links": [
+              {
+                "href": "https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma",
+                "label": "新建帮助",
+                "labelEn": "Create article"
+              },
+              {
+                "href": "https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai",
+                "label": "AI 编辑帮助",
+                "labelEn": "AI editing article"
+              }
+            ]
+          },
+          {
+            "title": "看导入和主题各自怎么写",
+            "titleEn": "Read import and themes on their own pages",
+            "body": "导入帮助写 PPT、PDF 的版式可以留下，并给出文件大小上限。主题帮助写改动只影响当前这份文件。形状帮助写自由块可以拖到任意位置。",
+            "bodyEn": "The import article says PPT and PDF layouts can stay, and it gives file-size limits. The theme article says a change affects only the current file. The shapes article says a freeform block can be dragged anywhere.",
+            "links": [
+              {
+                "href": "https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma",
+                "label": "导入帮助",
+                "labelEn": "Import article"
+              },
+              {
+                "href": "https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma",
+                "label": "主题帮助",
+                "labelEn": "Theme article"
+              },
+              {
+                "href": "https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them",
+                "label": "形状帮助",
+                "labelEn": "Shapes article"
+              }
+            ]
+          },
+          {
+            "title": "登录后再决定要不要传文件",
+            "titleEn": "Sign in yourself before you upload",
+            "body": "产品入口在 gamma.app。帮助中心没有写出 Gamma 5 的价格。本库没有登录，也没有把一份 PPT 传上去看版式还在不在。",
+            "bodyEn": "The product lives at gamma.app. The help center does not state a Gamma 5 price. This library did not sign in and did not upload a PowerPoint to see whether the layout survived.",
+            "links": [
+              {
+                "href": "https://gamma.app/",
+                "label": "Gamma 产品首页",
+                "labelEn": "Gamma homepage"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未登录 Gamma，未与助手对话生成演示，未导入 PPT、PDF 或 Word。",
+            "textEn": "This library did not sign in to Gamma, did not generate a deck with the agent, and did not import a PowerPoint, PDF, or Word file."
+          },
+          {
+            "text": "gamma.app 上没有找到单独的 Gamma 5 发布博文。本条不采用新闻稿里的用户数或识别准确率。",
+            "textEn": "No standalone Gamma 5 launch post was found on gamma.app. User counts and accuracy figures from press write-ups are not used."
+          },
+          {
+            "text": "帮助中心没有给出 Gamma 5 的价格，也没有一个统一的发布日期。新建页写 Updated yesterday，编辑页写 Updated today，都是相对 2026-10-07 抓取而言。",
+            "textEn": "The help center states no Gamma 5 price and no single launch date. The create page says Updated yesterday and the edit page says Updated today, both relative to a fetch on 2026-10-07."
+          },
+          {
+            "text": "文件上限、图表可能变成图片、Excel 与 Keynote 不能直接导入，都是导入帮助里的原话，本库没有拿样例文件试过。",
+            "textEn": "File-size limits, charts that may become images, and no direct Excel or Keynote import are the import article’s own words. This library did not try them with a sample file."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 Gamma 导入帮助首屏",
+        "previewCreditEn": "Preview: Chrome capture of Gamma’s import help article above the fold"
+      }
+    },
+    {
+      "id": "openai-math-progress",
+      "slug": "openai-math-progress",
+      "title": "资讯：OpenAI 公开一批数学文稿，附带可检查的证明文件",
+      "titleEn": "News: OpenAI published a batch of math papers, with proof files you can check",
+      "summary": "OpenAI 发了一篇《Sharing AI progress in mathematics》，并在 GitHub 仓库 openai/math 放出一批由内部模型写出的数学文稿。仓库说明写，当前目录有 722 篇文稿，分成 372 个结果族。一篇族可以把主结果、伴随论证和另一种证法放在一起。仓库同时放了 Lean 证明。Lean 是一种可以用电脑检查证明对不对的语言。说明写，不是每一篇都有 Lean，没有形式化的结果里可能有问题，他们会尽快改。博文还写，这次附了 10 份推理过程的缩写，以及按 ChatGPT Pro 思考时长估算的计算量：平均每个结果大约相当于 3 小时。模型本身还没有放出。本库没有读这些论文，也没有跑过 Lean。",
+      "summaryEn": "OpenAI published “Sharing AI progress in mathematics” and put a batch of math papers from an internal model in the GitHub repo openai/math. The repo says the catalogue has 722 manuscripts in 372 families. A family can hold a main result, companion arguments, and another proof. The repo also includes Lean proofs. Lean is a language a computer can use to check whether a proof holds. The readme says not every paper has Lean, that some results without it could have issues, and that they will try to fix those quickly. The post also says this release includes 10 shortened reasoning summaries and a compute estimate in ChatGPT Pro thinking time: about three hours for the average result. The model itself is not released. This library did not read the papers and did not run Lean.",
+      "hook": "OpenAI 公开一批数学文稿，并附上可以核对的证明。",
+      "hookEn": "OpenAI published a batch of math papers, plus proofs you can check.",
+      "categories": [
+        "research"
+      ],
+      "role": "AI 资讯",
+      "sourceUrl": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "secondaryUrls": [
+        "https://github.com/openai/math",
+        "https://github.com/openai/math/blob/main/CONTENTS.md",
+        "https://news.ycombinator.com/item?id=49984923"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "公告页 https://openai.com/index/sharing-ai-progress-in-mathematics/ 在本环境 curl 为 403（要过浏览器校验）。可读文本来自 r.jina.ai 对同一 URL 的抓取，标题 Sharing AI progress in mathematics。HN item 49984923 的外链就是这个 URL，作者 OfficialTurkey，2026-10-06T22:17:21.000Z（约 2026-10-07 06:17 CST），撰写时 Algolia 981pts。博文写：结果来自一个内部前沿模型；与普林斯顿高等研究院的数学与人工智能顾问组商量过发布方式；材料放在 GitHub，含修订和引用约定；许多证明有 Lean 形式化，以后继续补；另有 10 份推理摘要、按 ChatGPT Pro 用量估算的计算量，以及尝试过多少问题的统计。博文给出的计算量原句是 The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking。博文说会资助研讨会，细节以后再说；模型还在准备负责任地发布，本条不把它写成已上线的模型。仓库 https://github.com/openai/math 撰写时 gh api：Apache-2.0，创建于 2026-10-06T21:47:02Z，6913★。README 与 CONTENTS.md 都写 722 manuscripts、372 families。README 写并非都有 Lean，未形式化的结果可能有问题。本库没有逐篇打开 PDF，没有运行 Lean，没有核对“大约三小时”的换算，也没有打开博文里指向的 Navier-Stokes 模型页。预览为 Chrome 实拍 GitHub 仓库首屏裁 3:2 WebP，因为公告页在无头浏览器里仍是校验页。不打星。",
+      "qualityNoteEn": "A curl of https://openai.com/index/sharing-ai-progress-in-mathematics/ returned 403 in this environment (a browser check). The readable text is a fetch of that same URL through r.jina.ai, title Sharing AI progress in mathematics. HN item 49984923 links that URL, author OfficialTurkey, 2026-10-06T22:17:21.000Z (about 06:17 CST on 2026-10-07), 981pts on Algolia at write time. The post says the results come from an internal frontier model, that release practice was discussed with the Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study, that the materials are on GitHub with revision and citation protocols, that many proofs have Lean formalizations and more will be added, and that the release includes 10 reasoning summaries, a compute estimate in ChatGPT Pro usage, and statistics on how many problems were attempted. The compute sentence is: The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking. The post says workshops will be funded later, without details. It says the model is still being prepared for a responsible release, so this note does not treat it as a model you can call. Repo https://github.com/openai/math via gh api at write time: Apache-2.0, created 2026-10-06T21:47:02Z, 6913★. Both the README and CONTENTS.md say 722 manuscripts and 372 families. The README says not every paper has Lean and that some unformalized results could have issues. This library did not open the PDFs one by one, did not run Lean, did not check the “about three hours” conversion, and did not open the Navier-Stokes model page linked from the post. Preview is a Chrome capture of the GitHub repo above the fold, cropped to 3:2 WebP, because the announcement URL still showed a browser check in headless Chrome. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "connectors": [
+        "browser"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-06",
+      "updatedAt": "2026-10-07T12:30:00Z",
+      "previewImage": "/previews/openai-math-progress.webp",
+      "landing": {
+        "what": "这是一次数学结果的公开，不是一个你能在聊天框里调用的新模型。OpenAI 说这些文稿来自他们内部还没发布的模型。公开的位置是 GitHub 仓库 openai/math，许可 Apache-2.0。仓库自己的目录写着 722 篇文稿、372 个结果族。一个族是一组相关论文，可以包括主结果、配套论证或另一种证法。旁边有 Lean 证明，电脑可以检查这些证明是否成立。仓库写得很直：不是每篇都有 Lean，没做形式化的结果里可能有错，发现了会改。博文另外说，这次放了 10 份推理过程的缩写，并说平均每个结果用掉的计算量大约等于 ChatGPT Pro 思考 3 小时。这句话是官方的估算，本库没有重算。",
+        "whatEn": "This is a release of math results, not a new model you can call from a chat box. OpenAI says the papers come from an internal model that is not released yet. The public place is the GitHub repo openai/math, under Apache-2.0. The repo’s own catalogue says 722 manuscripts and 372 families. A family is a group of related papers: a main result, companion arguments, or another proof. Lean proofs sit beside them. A computer can check whether those proofs hold. The repo is direct: not every paper has Lean, results without that check could be wrong, and they intend to fix problems they find. The post also says this release includes 10 shortened reasoning write-ups, and that the average result used about three hours of ChatGPT Pro thinking. That is the vendor’s estimate. This library did not recompute it.",
+        "contrast": {
+          "caption": "左列是公告和仓库写明的事实。右列是本站口径：为什么放在 Cases 的资讯里，而不是模型板。",
+          "captionEn": "Left: what the post and the repo state. Right: why this sits in Cases as news, not on the model board.",
+          "leftLabel": "OpenAI 的公告和仓库",
+          "leftLabelEn": "OpenAI’s post and repo",
+          "rightLabel": "对照本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "公开了什么",
+              "aspectEn": "What was published",
+              "left": "722 篇文稿、372 个族，外加一部分 Lean 证明和 10 份推理摘要。",
+              "leftEn": "722 manuscripts, 372 families, plus some Lean proofs and 10 reasoning summaries.",
+              "right": "篇数和族数来自仓库 README 与 CONTENTS.md，不是新闻标题里的约数。",
+              "rightEn": "The manuscript and family counts come from the repo README and CONTENTS.md, not from a rounded figure in a headline."
+            },
+            {
+              "aspect": "模型能不能用",
+              "aspectEn": "Can you use the model",
+              "left": "博文说还在准备发布做出这些结果的模型。仓库里是文稿和证明，不是模型权重。",
+              "leftEn": "The post says the model that produced the results is still being prepared for release. The repo holds papers and proofs, not weights.",
+              "right": "所以这条进 Cases 的资讯，不进模型板。本库也不能替你调用它。",
+              "rightEn": "That is why this is a Cases news note and not a model card. This library also cannot call it for you."
+            },
+            {
+              "aspect": "证明是否都查过",
+              "aspectEn": "Are the proofs all checked",
+              "left": "仓库写许多篇有 Lean，但不是全部；没有形式化的结果可能有问题。",
+              "leftEn": "The repo says many papers have Lean, not all of them, and unformalized results could have issues.",
+              "right": "本库没有跑 Lean，也没有把 722 篇逐篇读完。",
+              "rightEn": "This library did not run Lean and did not read all 722 papers."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看公告在承诺什么",
+            "titleEn": "Read what the announcement commits to",
+            "body": "公告页在有些网络环境下会先出浏览器校验。打得开的话，看它怎么讲内部模型、Lean，以及大约 3 小时 Pro 思考这个估算。HN 讨论在 item 49984923。",
+            "bodyEn": "The announcement URL shows a browser check on some networks. If it opens, read how it describes the internal model, Lean, and the estimate of about three hours of Pro thinking. The HN thread is item 49984923.",
+            "links": [
+              {
+                "href": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+                "label": "OpenAI 公告",
+                "labelEn": "OpenAI announcement"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=49984923",
+                "label": "HN 讨论",
+                "labelEn": "HN thread"
+              }
+            ]
+          },
+          {
+            "title": "用仓库核对数量和许可",
+            "titleEn": "Check the count and the license in the repo",
+            "body": "README 和 CONTENTS.md 都写 722 篇、372 个族。许可是 Apache-2.0。先看总览 PDF 和目录，再决定要不要读某一族。",
+            "bodyEn": "The README and CONTENTS.md both say 722 manuscripts and 372 families. The license is Apache-2.0. Start with the overview PDF and the catalogue, then decide whether to read one family.",
+            "links": [
+              {
+                "href": "https://github.com/openai/math",
+                "label": "GitHub 仓库",
+                "labelEn": "GitHub repo"
+              },
+              {
+                "href": "https://github.com/openai/math/blob/main/CONTENTS.md",
+                "label": "文稿目录",
+                "labelEn": "Manuscript map"
+              }
+            ]
+          },
+          {
+            "title": "把 Lean 当成检查工具，而不是已经全部通过",
+            "titleEn": "Treat Lean as the checker, not as a stamp on every paper",
+            "body": "仓库的 lean 目录说明哪些证明可以让电脑检查。没有 Lean 的那部分，仓库自己说可能有问题。本库没有在本地跑过检查。",
+            "bodyEn": "The lean directory says which proofs a computer can check. For the papers without Lean, the repo itself says there could be issues. This library did not run the check locally.",
+            "links": [
+              {
+                "href": "https://github.com/openai/math",
+                "label": "仓库里的 Lean 说明",
+                "labelEn": "Lean notes in the repo"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库没有读完论文，没有运行 Lean，没有重算“大约 3 小时 ChatGPT Pro”这个官方估算。",
+            "textEn": "This library did not finish the papers, did not run Lean, and did not recompute the vendor estimate of about three hours of ChatGPT Pro thinking."
+          },
+          {
+            "text": "722 与 372 来自仓库 README 和 CONTENTS.md。公告正文的可读副本没有再写这两个数。",
+            "textEn": "722 and 372 come from the repo README and CONTENTS.md. The readable copy of the announcement did not restate those two numbers."
+          },
+          {
+            "text": "做出这些结果的模型还没有发布。这条不是模型卡，也不能当成你已经可以调用的接口。",
+            "textEn": "The model that produced the results is not released. This is not a model card, and it is not an API you can call."
+          },
+          {
+            "text": "公告页在本环境直接请求返回 403。正文通过阅读代理核对，HN 外链指向同一 URL。",
+            "textEn": "A direct request to the announcement returned 403 in this environment. The body was checked through a reader proxy, and the HN link points at the same URL."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 github.com/openai/math 首屏",
+        "previewCreditEn": "Preview: Chrome capture of github.com/openai/math above the fold"
+      }
+    },
+    {
       "id": "artcraft-crafting-apps",
       "slug": "artcraft-crafting-apps",
       "title": "工具：ArtCraft Crafting Apps — 七款对标 Adobe 的开源创作软件，AI 助手能直接操作",
@@ -7713,11 +8449,38 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T11:00:00Z",
+    "updatedAt": "2026-10-07T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.47",
-    "count": 152,
+    "version": "1.4.48",
+    "count": 157,
     "sourcesCrawled": [
+      "https://www.graphicalui.com/",
+      "https://news.ycombinator.com/item?id=49971356",
+      "https://www.protopie.io/blog/protopie-mcp-official",
+      "https://www.protopie.io/features/protopie-mcp",
+      "https://www.figma.com/release-notes/",
+      "https://www.figma.com/blog/figma-agent-and-design-systems/",
+      "https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files",
+      "https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ",
+      "https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma",
+      "https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai",
+      "https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma",
+      "https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma",
+      "https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them",
+      "https://gamma.app/",
+      "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+      "https://github.com/openai/math",
+      "https://news.ycombinator.com/item?id=49984923",
+      "https://strandsagents.com/blog/introducing-strands-decider/",
+      "https://github.com/strands-labs/strands-decider",
+      "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v21",
+      "https://huggingface.co/StrandsAgents/strands-decider-2B-hobson-v19",
+      "https://news.ycombinator.com/item?id=49987076",
+      "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "https://huggingface.co/google/embeddinggemma-2",
+      "https://ai.google.dev/gemma/docs/embeddinggemma",
+      "https://ai.google.dev/gemma/apache_2",
+      "https://news.ycombinator.com/item?id=49980487",
       "https://x.com/math_fournity/status/2107554211529724384",
       "https://getartcraft.com/apps",
       "https://getartcraft.com/apps/photocraft",
