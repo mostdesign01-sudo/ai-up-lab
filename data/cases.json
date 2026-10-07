@@ -1,6 +1,420 @@
 {
   "cases": [
     {
+      "id": "google-stitch",
+      "slug": "google-stitch",
+      "title": "工具：Google Stitch — 用提示词在画布上生成可点的 UI",
+      "titleEn": "Tool: Google Stitch — prompt-to-UI on an AI-native design canvas",
+      "summary": "Google Labs 的 Stitch 是一个免费可试的 AI 界面设计工具：你用自然语言（也可配合语音、图片或已有设计/代码）描述想要的移动端或网页界面，它在无限画布上生成高保真 UI，还能把多屏「缝」成可点击的原型。站点与官博写明支持设计系统上下文（含可导入导出的 DESIGN.md）、可导出到 AI Studio / Antigravity / Netlify，并提供 MCP 与技能给编程助手接。需要 Google 账号；额度与每日限额以你打开当天的产品页为准。这是一条工具笔记：本库没有登录，也没有生成过一屏。",
+      "summaryEn": "Google Labs’ Stitch is a free-to-try AI UI design tool: describe a mobile or web interface in natural language (voice, images, or existing design/code also work), and it builds high-fidelity UI on an infinite canvas, then can stitch screens into a clickable prototype. The site and Google blogs describe design-system context (including import/export via DESIGN.md), exports to AI Studio / Antigravity / Netlify, and an MCP plus skills for coding agents. A Google account is required; credits and daily limits are whatever the product shows the day you open it. This is a tool tip. This library did not sign in and did not generate a screen.",
+      "hook": "Google Labs 免费可试：提示词直接变成可点的 UI。",
+      "hookEn": "Google Labs, free to try: prompts become clickable UI.",
+      "categories": [
+        "content",
+        "engineering",
+        "productivity"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://stitch.withgoogle.com/",
+      "secondaryUrls": [
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+        "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/",
+        "https://developers.googleblog.com/stitch-a-new-way-to-design-uis/",
+        "https://news.ycombinator.com/item?id=47429153"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源 https://stitch.withgoogle.com/ ，撰写时本机 Chrome / Playwright 打开 HTTP 200，标题 Stitch - Design with AI，首屏有 Try now、App/Web 切换与提示词输入。官博 Introducing vibe design with Stitch（2026-03-18）与 real time design 更新（2026-05-19）撰写时可读；写 DESIGN.md、Agent、MCP/技能、导出到 AI Studio / Antigravity / Netlify、语音协作。HN item 47429153（\"Vibe Design\" with Stitch，撰写时 Algolia 5pts）及 47810474（Stitch – Google's AI design tool，2pts）作旁证。免费额度、每日限额与是否需排队以产品页当日为准，第三方博客数字本库未核。本库未登录 Google、未点 Try now、未生成界面。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source https://stitch.withgoogle.com/; local Chrome / Playwright opened it at HTTP 200 at write time, title Stitch - Design with AI, with Try now, App/Web toggle, and a prompt field above the fold. Google blogs Introducing vibe design with Stitch (2026-03-18) and the real-time design update (2026-05-19) were readable and describe DESIGN.md, the Agent, MCP/skills, exports to AI Studio / Antigravity / Netlify, and voice. HN item 47429153 (“Vibe Design” with Stitch, 5pts on Algolia at write time) and 47810474 (Stitch – Google's AI design tool, 2pts) are side evidence. Free credits, daily limits, and any waitlist are whatever the product shows that day; third-party blog numbers were not verified here. This library did not sign into Google, did not click Try now, and did not generate UI. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "用自己的 Google 账号登录、生成界面或导出到外部工具之前，自己确认。本库没有代登。",
+      "approvalBoundaryEn": "Confirm before signing in with your Google account, generating UI, or exporting elsewhere. This library did not sign in for you.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-03-18",
+      "updatedAt": "2026-10-07T02:00:00Z",
+      "previewImage": "/previews/google-stitch.webp",
+      "landing": {
+        "what": "Stitch 是 Google Labs 的 AI 界面设计画布。你在首页选 App 或 Web，用一句话描述要做什么屏，它在无限画布上给出高保真界面；官博还写了能把多屏缝成可点原型、用 DESIGN.md 带设计系统规则、以及用 MCP/技能接到编程助手。适合想快速试界面方向、又不想先开一整套设计软件的人。",
+        "whatEn": "Stitch is Google Labs’ AI UI design canvas. On the homepage you pick App or Web, describe a screen in one sentence, and it lays high-fidelity UI on an infinite canvas. Google’s blogs also describe stitching screens into a clickable prototype, carrying design-system rules via DESIGN.md, and wiring coding agents through MCP/skills. It is for people who want to try UI directions fast without opening a full design suite first.",
+        "steps": [
+          {
+            "title": "先打开产品页和两篇官博",
+            "titleEn": "Open the product page and the two Google blogs first",
+            "body": "首页 stitch.withgoogle.com 看提示词栏和 Try now。2026-03-18 的 vibe design 博文讲画布与 DESIGN.md；2026-05-19 的更新讲实时流式生成、导出到 AI Studio / Antigravity / Netlify。点数与功能以你打开当天为准。",
+            "bodyEn": "On stitch.withgoogle.com check the prompt bar and Try now. The 2026-03-18 vibe design post covers the canvas and DESIGN.md; the 2026-05-19 update covers live streaming generation and exports to AI Studio / Antigravity / Netlify. Points and features are whatever you see that day.",
+            "links": [
+              {
+                "href": "https://stitch.withgoogle.com/",
+                "label": "Stitch 产品页",
+                "labelEn": "Stitch product page"
+              },
+              {
+                "href": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+                "label": "vibe design 官博",
+                "labelEn": "vibe design blog"
+              },
+              {
+                "href": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/",
+                "label": "实时设计更新",
+                "labelEn": "Real-time design update"
+              }
+            ]
+          },
+          {
+            "title": "用 Google 账号自己试一屏",
+            "titleEn": "Try one screen with your own Google account",
+            "body": "点 Try now，选 App 或 Web，用首页示例提示词或自己的一句话生成。本库没有登录，也没有消耗你的额度。",
+            "bodyEn": "Click Try now, pick App or Web, and generate with a homepage sample prompt or your own sentence. This library did not sign in and did not spend your credits.",
+            "links": [
+              {
+                "href": "https://stitch.withgoogle.com/",
+                "label": "Try now",
+                "labelEn": "Try now"
+              }
+            ]
+          },
+          {
+            "title": "若要交给编程助手，再看 MCP / 导出",
+            "titleEn": "If you hand work to a coding agent, check MCP / export next",
+            "body": "官博写了 Stitch MCP、技能，以及导出到 AI Studio、Antigravity、Netlify。具体安装步骤以当日文档为准；本库没有接过 MCP。",
+            "bodyEn": "The blogs name a Stitch MCP, skills, and exports to AI Studio, Antigravity, and Netlify. Install steps are whatever today’s docs say. This library did not wire the MCP.",
+            "links": [
+              {
+                "href": "https://developers.googleblog.com/stitch-a-new-way-to-design-uis/",
+                "label": "开发者博文",
+                "labelEn": "Developers blog post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未登录 Google、未生成任何界面、未导出、未安装 MCP。",
+            "textEn": "This library did not sign into Google, generate UI, export, or install the MCP."
+          },
+          {
+            "text": "需要 Google 账号。免费额度与每日限额是产品当日规则，不是本库保证。",
+            "textEn": "A Google account is required. Free credits and daily limits are the product’s rules that day, not a promise from this library."
+          },
+          {
+            "text": "DESIGN.md、语音、多 Agent 并行等是官博描述；本库没有逐项复测。",
+            "textEn": "DESIGN.md, voice, and parallel agents are described in Google’s blogs; this library did not re-test each one."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 stitch.withgoogle.com 首屏",
+        "previewCreditEn": "Preview: Chrome capture of stitch.withgoogle.com above the fold"
+      }
+    },
+    {
+      "id": "brilliant-design",
+      "slug": "brilliant-design",
+      "title": "工具：Brilliant — 免费画布，让 MCP 助手直接改真矢量",
+      "titleEn": "Tool: Brilliant — a free canvas where MCP agents edit real vectors",
+      "summary": "Brilliant 是一个面向人和 AI 助手的专业设计画布：自动布局、组件、矢量编辑、Figma 导入导出都有；首页写编辑器免费，定价页写 Free 档 $0 forever。亮点是可把 Claude Code、Cursor 等 MCP 助手指到真矢量节点上改，而不是只吐 HTML 预览。Free 含全部设计功能、公开项目、MCP 无限画布操作，以及每月少量内置 Brilliant AI 与「自带密钥每天 10 条」内置聊天上限；私有项目与更多 AI 额度在付费档。这是工具笔记：本库没有下载安装，也没有接过 MCP。",
+      "summaryEn": "Brilliant is a pro design canvas for people and AI agents: auto layout, components, vector editing, and Figma import/export. The homepage says the editor is free; the pricing page says Free is $0 forever. The point is you can point Claude Code, Cursor, or any MCP agent at real vector nodes, not just an HTML preview. Free includes every design feature, public projects, unlimited canvas work over MCP, a small monthly Brilliant AI allowance, and a 10-message/day cap on the built-in chat when you bring your own key; private projects and more AI sit on paid plans. This is a tool tip. This library did not download it and did not wire MCP.",
+      "hook": "免费设计画布，MCP 助手改的是真矢量，不是假预览。",
+      "hookEn": "A free design canvas where MCP agents edit real vectors, not a fake preview.",
+      "categories": [
+        "engineering",
+        "content",
+        "multi-agent"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://brilliant.design/",
+      "secondaryUrls": [
+        "https://brilliant.design/pricing",
+        "https://brilliant.design/docs/platform/plans-and-billing",
+        "https://brilliant.design/mcp",
+        "https://brilliant.design/manifesto",
+        "https://news.ycombinator.com/item?id=47935328"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源 https://brilliant.design/ ，撰写时 HTTP 200，标题 Brilliant | Design, With Superpowers；首屏写 The editor is free、Download for macOS，并提到 Claude Code / Cursor / MCP。定价页与 docs/platform/plans-and-billing 撰写时 200：Free $0 forever，全部设计功能不设功能墙；公开项目与 drops、2 GB；MCP 外部助手画布操作无限；Brilliant AI 每月少量额度；自带密钥内置聊天每天 10 条（UTC 午夜重置）。Personal $20/月起有私有项目与更多 AI。Show HN item 47935328（2026-04-28，撰写时 Algolia 9pts）。本环境截图时出现 WebGPU 被拦提示，功能以你本机浏览器/桌面端为准。本库未下载、未注册、未接 MCP、未付款。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source https://brilliant.design/, HTTP 200 at write time, title Brilliant | Design, With Superpowers; above the fold it says The editor is free, Download for macOS, and names Claude Code / Cursor / MCP. Pricing and docs/platform/plans-and-billing were HTTP 200: Free is $0 forever with every design feature unlocked; public projects and drops, 2 GB; unlimited canvas work for external MCP agents; a small monthly Brilliant AI allowance; 10 built-in chat messages/day on your own key (resets midnight UTC). Personal from $20/mo adds private projects and more AI. Show HN item 47935328 (2026-04-28, 9pts on Algolia at write time). This environment’s screenshot showed a WebGPU blocked notice; capabilities depend on your browser or desktop app. This library did not download, sign up, wire MCP, or pay. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "下载安装、接入自己的模型密钥或 MCP 助手、以及把私有设计放上去之前，自己确认。本库没有代装。",
+      "approvalBoundaryEn": "Confirm before downloading, connecting your own model keys or MCP agents, or putting private designs on it. This library did not install it.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-04-28",
+      "updatedAt": "2026-10-07T02:00:00Z",
+      "previewImage": "/previews/brilliant-design.webp",
+      "landing": {
+        "what": "Brilliant 把设计和编程助手放在同一张真矢量画布上。你手动能改的自动布局、组件、布尔运算，助手通过 MCP 也能改；文件是可读的纯文本设计格式，方便进 Git。适合已经在用 Claude Code / Cursor、又希望助手别只吐一堆前端代码预览的人。",
+        "whatEn": "Brilliant puts design and coding agents on the same real vector canvas. Auto layout, components, and boolean ops you can edit by hand, an MCP agent can edit too. Files are a readable plain-text design format that fits Git. It is for people already on Claude Code / Cursor who do not want the agent stuck emitting HTML previews.",
+        "steps": [
+          {
+            "title": "先看首页、定价和 Plans 文档",
+            "titleEn": "Read the homepage, pricing, and Plans docs first",
+            "body": "首页强调编辑器免费、MCP 可驱动画布。定价页与 plans-and-billing 把 Free / Personal / Max / Team 写清楚：设计功能本身不设墙，付费主要买私有空间和更多内置 AI。",
+            "bodyEn": "The homepage stresses a free editor and MCP-driven canvas. Pricing and plans-and-billing spell Free / Personal / Max / Team: design features themselves are not gated; you pay mainly for private work and more built-in AI.",
+            "links": [
+              {
+                "href": "https://brilliant.design/",
+                "label": "Brilliant 首页",
+                "labelEn": "Brilliant homepage"
+              },
+              {
+                "href": "https://brilliant.design/pricing",
+                "label": "定价",
+                "labelEn": "Pricing"
+              },
+              {
+                "href": "https://brilliant.design/docs/platform/plans-and-billing",
+                "label": "Plans and billing",
+                "labelEn": "Plans and billing"
+              }
+            ]
+          },
+          {
+            "title": "再看 MCP 页，决定从网页还是桌面进",
+            "titleEn": "Check the MCP page, then pick web or desktop",
+            "body": "MCP 页写如何把 Claude Code、Cursor 等指过来。下载页有桌面端；网页端可能要 WebGPU。本库没有装过。",
+            "bodyEn": "The MCP page covers pointing Claude Code, Cursor, and others at it. The download page has a desktop app; the web editor may need WebGPU. This library did not install either.",
+            "links": [
+              {
+                "href": "https://brilliant.design/mcp",
+                "label": "MCP",
+                "labelEn": "MCP"
+              },
+              {
+                "href": "https://brilliant.design/download",
+                "label": "Download",
+                "labelEn": "Download"
+              }
+            ]
+          },
+          {
+            "title": "自己决定要不要接密钥或升级",
+            "titleEn": "Decide yourself about keys or upgrading",
+            "body": "Free 可先用公开项目和 MCP。内置 Brilliant AI 有月度用量；自带密钥走内置聊天有每日 10 条上限，但外部 MCP 画布操作文档写明不计入该上限（助手用 Brilliant AI 出的图仍算用量）。本库未付款。",
+            "bodyEn": "Free is enough for public projects and MCP. Built-in Brilliant AI has a monthly allowance; own-key built-in chat is capped at 10/day, while external MCP canvas work is documented as not counting against that cap (images an agent generates on Brilliant AI still use the allowance). This library did not pay.",
+            "links": [
+              {
+                "href": "https://brilliant.design/pricing/your-own-keys",
+                "label": "自带密钥说明",
+                "labelEn": "Your own keys"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未下载、未注册、未接 MCP、未付款，也没有把任何设计文件交给助手。",
+            "textEn": "This library did not download, sign up, wire MCP, pay, or hand any design file to an agent."
+          },
+          {
+            "text": "「编辑器免费 / Free forever」指设计功能与公开协作；私有项目与更高 AI 额度在付费档。数字以定价页当日为准。",
+            "textEn": "“Editor free / Free forever” means design features and public work; private projects and higher AI allowances are paid. Numbers are whatever pricing shows that day."
+          },
+          {
+            "text": "本环境截图时 WebGPU 被拦；你本机是否可用以浏览器或桌面端为准。",
+            "textEn": "This environment’s screenshot hit a WebGPU block; whether it runs for you depends on your browser or desktop app."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 brilliant.design 首屏",
+        "previewCreditEn": "Preview: Chrome capture of brilliant.design above the fold"
+      }
+    },
+    {
+      "id": "magic-patterns",
+      "slug": "magic-patterns",
+      "title": "工具：Magic Patterns — 给产品团队的提示词 → 可点原型",
+      "titleEn": "Tool: Magic Patterns — prompt-to-clickable prototype for product teams",
+      "summary": "Magic Patterns（YC W23）是面向产品团队的 AI 设计/原型工具：用提示词、需求或想法生成高保真可交互界面，强调贴合已有设计系统与截图，并支持多人实时改。Launch HN 写过可用「Coming from Hackernews?」先试几条消息；站点 FAQ 写有免费档（有限）以及按席位付费（Starter 约 $20/席/月等，以定价页为准）。偏产品经理和设计师快速试功能方向，而不是一键生成全栈应用。本库没有注册，也没有生成过原型。",
+      "summaryEn": "Magic Patterns (YC W23) is an AI design/prototyping tool for product teams: turn a prompt, a requirement, or an idea into high-fidelity interactive UI, with emphasis on matching an existing design system or screenshots, plus live multiplayer. The Launch HN post described a “Coming from Hackernews?” try path with a few free messages; the site FAQ names a limited free tier and per-seat plans (Starter about $20/seat/month and up — use today’s pricing page). It is for PMs and designers exploring feature directions fast, not one-click full-stack apps. This library did not sign up and did not generate a prototype.",
+      "hook": "产品团队用的提示词原型工具，先对齐你的设计系统。",
+      "hookEn": "A prompt-to-prototype tool for product teams that matches your design system.",
+      "categories": [
+        "content",
+        "productivity",
+        "engineering"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://www.magicpatterns.com/",
+      "secondaryUrls": [
+        "https://www.magicpatterns.com/pricing",
+        "https://news.ycombinator.com/item?id=43752176"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源 https://www.magicpatterns.com/ ，撰写时 HTTP 200。FAQ 写 free tier (limited)，付费 Starter $20/seat/month、Business $100/seat/month、Enterprise 定制。Launch HN item 43752176（2025-04-21，撰写时 Algolia 185pts / 114 评论）作者自述当时可用 HN 入口试 5 条消息、计划从 $19/mo 起——具体数字以你打开当日定价页为准，本库不把旧帖价格当现行价。站点自称 SOC 2 / ISO 27001、「500K+」「1 million designs」均为厂商自述，未核。本库未注册、未生成。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Primary source https://www.magicpatterns.com/, HTTP 200 at write time. The FAQ names a limited free tier and paid Starter $20/seat/month, Business $100/seat/month, Enterprise custom. Launch HN item 43752176 (2025-04-21, 185pts / 114 comments on Algolia at write time) described an HN try path with 5 messages and plans from $19/mo then — treat today’s pricing page as source of truth, not the old thread. Site claims of SOC 2 / ISO 27001, “500K+”, and “1 million designs” are vendor statements, not verified here. This library did not sign up or generate. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "注册账号、粘贴公司设计系统或客户原型之前，自己确认。本库没有代注册。",
+      "approvalBoundaryEn": "Confirm before creating an account or pasting a company design system or customer prototype. This library did not sign up for you.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2025-04-21",
+      "updatedAt": "2026-10-07T02:00:00Z",
+      "previewImage": "/previews/magic-patterns.webp",
+      "landing": {
+        "what": "Magic Patterns 帮产品经理和设计师把「这个功能长什么样」先做成可点的高保真原型，再拿去找用户或工程师对齐。你可以带上现有截图、组件和设计规则，让生成结果更贴自家产品，而不是又一张通用模板。",
+        "whatEn": "Magic Patterns helps PMs and designers turn “what should this feature look like?” into a clickable high-fidelity prototype before aligning with users or engineers. You can bring existing screenshots, components, and design rules so the output tracks your product, not another generic template.",
+        "steps": [
+          {
+            "title": "打开首页和 Launch HN",
+            "titleEn": "Open the homepage and the Launch HN thread",
+            "body": "magicpatterns.com 看产品怎么讲原型与设计系统。Launch HN item 43752176 有作者说明和社区讨论；免费试用入口可能已变，以首页当日为准。",
+            "bodyEn": "On magicpatterns.com see how they describe prototypes and design systems. Launch HN item 43752176 has the founders’ write-up and discussion; any free try path may have changed — use whatever the homepage shows today.",
+            "links": [
+              {
+                "href": "https://www.magicpatterns.com/",
+                "label": "Magic Patterns 首页",
+                "labelEn": "Magic Patterns homepage"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=43752176",
+                "label": "Launch HN",
+                "labelEn": "Launch HN"
+              }
+            ]
+          },
+          {
+            "title": "对照定价再决定是否注册",
+            "titleEn": "Check pricing before you sign up",
+            "body": "定价页写免费档有限、付费按席位。不要沿用旧帖里的美元数字当现行价。本库没有注册。",
+            "bodyEn": "The pricing page names a limited free tier and per-seat paid plans. Do not treat dollar figures from an old thread as current. This library did not sign up.",
+            "links": [
+              {
+                "href": "https://www.magicpatterns.com/pricing",
+                "label": "定价",
+                "labelEn": "Pricing"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未注册、未导入设计系统、未生成原型。",
+            "textEn": "This library did not sign up, import a design system, or generate a prototype."
+          },
+          {
+            "text": "偏前端原型，不是一键全栈应用生成器；站点自己也强调 frontend-only。",
+            "textEn": "It is frontend prototyping, not one-click full-stack app generation; the site itself stresses frontend-only."
+          },
+          {
+            "text": "合规认证与用户规模数字是厂商自述。",
+            "textEn": "Compliance badges and user-count figures are vendor statements."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 magicpatterns.com 首屏",
+        "previewCreditEn": "Preview: Chrome capture of magicpatterns.com above the fold"
+      }
+    },
+    {
+      "id": "figma-use",
+      "slug": "figma-use",
+      "title": "工具：figma-use — 让编程助手用命令行读写 Figma",
+      "titleEn": "Tool: figma-use — a CLI so coding agents can read and write Figma",
+      "summary": "figma-use 是 MIT 开源的命令行工具：给 AI 编程助手 100+ 条命令，在 Figma 里创建形状、文字、画框、组件、改样式、导出资源，也支持 JSX 导入。作者在 Show HN 写明动机是官方 Figma MCP 当时偏读取，自己需要助手真的能画。npm 包名 figma-use。适合已有 Figma、又想让 Cursor / Claude 等助手直接改稿的人。本库没有安装，也没有连过你的 Figma。",
+      "summaryEn": "figma-use is an MIT open-source CLI: 100+ commands so coding agents can create shapes, text, frames, and components in Figma, change styles, export assets, and import JSX. The Show HN post says the official Figma MCP was read-heavy at the time and the author wanted agents that can actually draw. The npm package is figma-use. It is for people who already live in Figma and want Cursor / Claude / similar agents to edit files directly. This library did not install it and did not connect to your Figma.",
+      "hook": "开源 CLI：让助手在 Figma 里真的画，不只是读。",
+      "hookEn": "Open-source CLI: let agents actually draw in Figma, not only read.",
+      "categories": [
+        "engineering",
+        "coding",
+        "automation"
+      ],
+      "role": "AI tool tip",
+      "sourceUrl": "https://github.com/dannote/figma-use",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/figma-use",
+        "https://news.ycombinator.com/item?id=46665169"
+      ],
+      "sourceType": "community",
+      "qualityNote": "仓库 dannote/figma-use，撰写时 gh api：MIT、607★，描述 Control Figma from the command line… 100+ commands。npm figma-use 撰写时页面可读（见 0.13.5 等版本号以 npm 当日为准）。Show HN item 46665169（2026-01-18，撰写时 Algolia 115pts / 37 评论）。README 提到 Figma 插件 + CLI；部分新版本 Figma 可能限制远程能力，以仓库当日 README 警告为准。本库未执行 bun/npm 安装，未开 Figma，未跑任何命令。预览为 Chrome 实拍 GitHub 仓库页首屏裁 3:2 WebP。不打星。",
+      "qualityNoteEn": "Repo dannote/figma-use; at write time gh api reported MIT and 607★, description Control Figma from the command line… 100+ commands. The npm figma-use page was readable (treat the version you see that day, e.g. 0.13.5 notes, as current). Show HN item 46665169 (2026-01-18, 115pts / 37 comments on Algolia at write time). The README describes a Figma plugin plus CLI; newer Figma builds may restrict remote capabilities — follow whatever warning the README shows that day. This library did not run bun/npm install, open Figma, or execute a command. Preview is a Chrome capture of the GitHub repo page above the fold, cropped to 3:2 WebP. Unrated.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "安装 CLI、在 Figma 里装插件、以及让助手改你的设计文件之前，自己确认。本库没有代装。",
+      "approvalBoundaryEn": "Confirm before installing the CLI, adding the Figma plugin, or letting an agent edit your design files. This library did not install it.",
+      "connectors": [
+        "computer"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-01-18",
+      "updatedAt": "2026-10-07T02:00:00Z",
+      "previewImage": "/previews/figma-use.webp",
+      "landing": {
+        "what": "figma-use 给编程助手一条进 Figma 的命令行通道：创建和修改图层、组件、样式，导出图片，还能用 JSX 快速铺结构。它补的是「助手不只读设计文件，还能动手改」。你需要本机 Figma 与助手环境都装好，并自己承担误改文件的风险。",
+        "whatEn": "figma-use gives coding agents a CLI path into Figma: create and edit layers, components, and styles, export images, and scaffold structure with JSX. It fills “the agent should edit the file, not only read it.” You need Figma and your agent environment set up locally, and you own the risk of bad edits.",
+        "steps": [
+          {
+            "title": "先读仓库 README 和 Show HN",
+            "titleEn": "Read the README and the Show HN first",
+            "body": "看安装方式、插件如何配对、以及当日对 Figma 版本的警告。讨论在 item 46665169。",
+            "bodyEn": "Check install steps, how the plugin pairs, and any Figma-version warnings that day. Discussion is item 46665169.",
+            "links": [
+              {
+                "href": "https://github.com/dannote/figma-use",
+                "label": "GitHub 仓库",
+                "labelEn": "GitHub repo"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=46665169",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          },
+          {
+            "title": "在自己的草稿文件上试，不要一上来就改正式设计系统",
+            "titleEn": "Try on a scratch file first, not your production design system",
+            "body": "npm/bun 安装与插件启用步骤以 README 为准。先在副本文件跑只读或小范围写入。本库没有替你跑。",
+            "bodyEn": "Follow the README for npm/bun install and plugin setup. Start with read-only or small writes on a copy. This library did not run it for you.",
+            "links": [
+              {
+                "href": "https://www.npmjs.com/package/figma-use",
+                "label": "npm 包",
+                "labelEn": "npm package"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "本库未安装 CLI、未装 Figma 插件、未连接任何 Figma 文件。",
+            "textEn": "This library did not install the CLI, the Figma plugin, or connect any Figma file."
+          },
+          {
+            "text": "需要你已有可用的 Figma，以及会执行命令的编程助手；不是浏览器里即点即用的生成器。",
+            "textEn": "You need a working Figma setup and a coding agent that can run commands; it is not a click-to-try generator in the browser."
+          },
+          {
+            "text": "官方 Figma MCP 与第三方写入能力都在变；以仓库当日说明为准，不要假设与 2026-01 发帖时完全相同。",
+            "textEn": "Official Figma MCP and third-party write paths keep changing; follow the repo that day, and do not assume parity with the January 2026 post."
+          }
+        ],
+        "previewCredit": "预览：Chrome 实拍 github.com/dannote/figma-use 首屏",
+        "previewCreditEn": "Preview: Chrome capture of github.com/dannote/figma-use above the fold"
+      }
+    },
+    {
       "id": "james-pember-grok-bot-team",
       "slug": "james-pember-grok-bot-team",
       "title": "James Pember：让 Bot 先接 Slack 里的产品问题，再替你备好双周会材料",
@@ -7540,10 +7954,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T01:00:00Z",
+    "updatedAt": "2026-10-07T02:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.46",
-    "count": 151,
+    "version": "1.4.47",
+    "count": 155,
     "sourcesCrawled": [
       "https://news.ycombinator.com/item?id=49969183",
       "https://reflection.ai/blog/introducing-beam",
@@ -7797,7 +8211,32 @@
       "https://x.com/bot/status/2105713240701538538",
       "https://www.grokati.com/articles/2026-10-01-grok-bot-proactive-suggestions",
       "https://jamespember.substack.com/p/grok-bot-is-really-good",
-      "https://news.ycombinator.com/item?id=49960401"
+      "https://news.ycombinator.com/item?id=49960401",
+      "https://stitch.withgoogle.com/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/",
+      "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-updates/",
+      "https://brilliant.design/",
+      "https://brilliant.design/pricing",
+      "https://brilliant.design/docs/platform/plans-and-billing",
+      "https://brilliant.design/mcp",
+      "https://www.magicpatterns.com/",
+      "https://www.magicpatterns.com/pricing",
+      "https://news.ycombinator.com/item?id=43752176",
+      "https://github.com/dannote/figma-use",
+      "https://www.npmjs.com/package/figma-use",
+      "https://news.ycombinator.com/item?id=46665169",
+      "https://www.onlook.com/",
+      "https://github.com/onlook-dev/onlook",
+      "https://news.ycombinator.com/item?id=44127653",
+      "https://tegaki.ink/",
+      "https://tegaki.ink/studio/",
+      "https://github.com/gkurt/tegaki",
+      "https://news.ycombinator.com/item?id=49921939",
+      "https://www.banani.co/pricing",
+      "https://diffui.ai/",
+      "https://uxpilot.ai/",
+      "https://www.relume.ai/",
+      "https://v0.app/"
     ]
   }
 }

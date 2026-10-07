@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "onlook",
+      "slug": "onlook",
+      "title": "Onlook：开源的「设计师向开发工具」，在真代码画布上改 UI",
+      "titleEn": "Onlook: an open-source developer tool for designers on a real-code canvas",
+      "summary": "Onlook 是 Apache-2.0 开源的可视化编辑器：在无限画布上直接改 React/代码里的界面，拖拽、改样式、用 AI 迭代，源码即真相。官网写可免费在 GitHub 自托管；云托管需联系团队。适合想用设计工具手感改真实前端、又希望仓库透明可改的人。和本库 Agent UI 相关的是：你可以在真组件上点选，再让编程助手接着改同一份代码。",
+      "summaryEn": "Onlook is an Apache-2.0 open-source visual editor: edit React/UI on an infinite canvas with drag, style controls, and AI iteration, with code as the source of truth. The site says you can self-host free from GitHub; the hosted cloud version needs contacting the team. It is for people who want design-tool ergonomics on a real frontend, with a transparent repo. The Agent UI angle: select real components visually, then let a coding agent keep editing the same code.",
+      "sourceUrl": "https://www.onlook.com/",
+      "secondaryUrls": [
+        "https://github.com/onlook-dev/onlook",
+        "https://news.ycombinator.com/item?id=44127653"
+      ],
+      "previewImage": "/previews/onlook.webp",
+      "promptHint": "先按 Onlook 仓库 README 自托管或本地跑起来，在画布上点选真实 React 组件再改样式；不要默认云托管已开通。",
+      "promptHintEn": "Follow the Onlook README to self-host or run locally, select real React components on the canvas, then restyle; do not assume the hosted cloud is already on.",
+      "types": [
+        "library",
+        "tool",
+        "agent-api"
+      ],
+      "tags": [
+        "open-source",
+        "design",
+        "react",
+        "figma-like",
+        "hacker-news",
+        "apache-2"
+      ],
+      "qualityNote": "Show HN item 44127653（撰写时 Algolia 408pts / 81 评论）。仓库 onlook-dev/onlook：Apache-2.0，撰写时 gh api 26869★。官网 FAQ：可免费自托管；云版本需联系或预约演示。GitHub 导航星数展示可能与 api 略有出入，以 api/页面当日为准。本库未自托管、未注册云、未导入代码库。预览为 Chrome 实拍官网首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Show HN item 44127653 (408pts / 81 comments on Algolia at write time). Repo onlook-dev/onlook is Apache-2.0 with 26869★ on gh api at write time. Site FAQ: free self-host; cloud needs contact or a demo. The star count in the site nav may differ slightly from the API — use whatever you see that day. This library did not self-host, sign up for cloud, or import a codebase. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2025-05-30",
+      "updatedAt": "2026-10-07T02:00:00Z",
+      "hook": "开源可视化编辑器：改的是真 React 代码，不是假画板。",
+      "hookEn": "Open-source visual editor: you edit real React code, not a fake artboard."
+    },
+    {
       "id": "shaders-com",
       "slug": "shaders-com",
       "title": "Shaders：200+ 个开源 WebGPU 特效组件，编程助手可直接接",
@@ -2029,9 +2065,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T01:00:00Z",
+    "updatedAt": "2026-10-07T02:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.22",
-    "count": 58
+    "version": "1.4.23",
+    "count": 59
   }
 }
