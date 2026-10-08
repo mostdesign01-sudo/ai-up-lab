@@ -37,7 +37,7 @@ import { benchmarkStudies, brandMonogram, referenceGaps, referenceGroups } from 
             <article class="bc-card">
               <p class:list={["bc-logo", { "is-ink": card.ink }]}>
                 {card.logo
-                  ? <img src={assetUrl(card.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
+                  ? <img src={assetUrl(card.logo)} alt="" width="320" height="180" loading="lazy" decoding="async" />
                   : <span class="bc-mono" aria-hidden="true">{brandMonogram(card.name)}</span>}
               </p>
               <h3>{card.name}</h3>
@@ -108,7 +108,7 @@ import { benchmarkStudies, brandMonogram, referenceGaps, referenceGroups } from 
           <article class="bc-card">
             <p class:list={["bc-logo", { "is-ink": study.ink }]}>
               {study.logo
-                ? <img src={assetUrl(study.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
+                ? <img src={assetUrl(study.logo)} alt="" width="320" height="180" loading="lazy" decoding="async" />
                 : <span class="bc-mono" aria-hidden="true">{brandMonogram(study.title.zh)}</span>}
             </p>
             <h3><Loc zh={study.title.zh} en={study.title.en} /></h3>
