@@ -11,10 +11,10 @@
 .bc-card { display: flex; flex-direction: column; gap: 10px; min-width: 0; min-height: 100%; padding: 16px; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--lab-radius-card); }
 .bc-card h3 { margin: 0; font-size: 17px; line-height: 1.4; }
 .bc-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
-.bc-logo { display: flex; align-items: center; justify-content: center; aspect-ratio: 16 / 9; width: 100%; height: auto; margin: 0; padding: 12px 16px; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-sizing: border-box; }
+.bc-logo { position: relative; display: block; aspect-ratio: 16 / 9; width: 100%; height: auto; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-sizing: border-box; overflow: hidden; }
 .bc-logo.is-ink { background: #111; }
-.bc-logo img { display: block; max-width: 72%; max-height: 58%; width: auto; height: auto; object-fit: contain; object-position: center; }
-.bc-mono { font-size: 28px; font-weight: 650; line-height: 1; color: #17151b; }
+.bc-logo img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; max-width: 72%; max-height: 58%; width: auto; height: auto; object-fit: contain; object-position: center; }
+.bc-mono { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 650; line-height: 1; color: #17151b; }
 .bc-logo.is-ink .bc-mono { color: #f5f2fa; }
 .bc-card-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; font-size: 13px; }
 .bc-card-links a { color: var(--brass); }
