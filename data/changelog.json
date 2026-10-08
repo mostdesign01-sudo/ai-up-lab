@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-08",
+      "title": "晚间收录：Cases +2（Krea Photoshop 插件 / Framer 技能做设计规范）、HTML +2（时区文件数据故事 / demoscene-recomp）",
+      "titleEn": "Evening catalog: Cases +2 (Krea Photoshop plugin / Framer Skills as a design system), HTML +2 (time zone data story / demoscene-recomp)",
+      "body": "Cases：krea-photoshop-plugin（@krea_ai 10-07 发布，插件页 krea.ai/plugins/photoshop，AI×设计）、framer-skills-design-system（Framer Skills 9-22 上线，10-07 官方玩法帖，把设计规范写成技能让助手做新页面，AI×设计）。HTML：holding-up-the-internet（HN item 50002494，滚动数据故事）、demoscene-recomp（HN item 50002426，DOS 演示片重编译为 WebAssembly）。全部新条目都有 3:2 自托管预览。均未实测。cases 160→162，html-items 124→126。未改首页精选、Agent UI、Models。",
+      "bodyEn": "Cases: krea-photoshop-plugin (@krea_ai launch on 10-07, plugin page krea.ai/plugins/photoshop, AI×design) and framer-skills-design-system (Framer Skills launched 9-22; official how-to post 10-07 on writing your design system as a Skill so the agent builds new pages, AI×design). HTML: holding-up-the-internet (HN item 50002494, a scrolling data story) and demoscene-recomp (HN item 50002426, DOS demos recompiled to WebAssembly). Every new entry has a self-hosted 3:2 preview. Nothing tested hands-on. cases 160→162, html-items 124→126. Homepage picks, Agent UI, and Models unchanged."
+    },
+    {
+      "date": "2026-10-08",
       "title": "早间收录：Cases +3（X 内置读取 / 幻灯片 / AI×设计对照）、HTML +3（ascii.rest / 艺术史博物馆 / BIGWORDS）、Models +2（GPT-6 Intelligent UI / Claude Haiku 5.5）",
       "titleEn": "Morning catalog: Cases +3 (built-in X reading / slide decks / AI×design comparison), HTML +3 (ascii.rest / art-history museum / BIGWORDS), Models +2 (GPT-6 Intelligent UI / Claude Haiku 5.5)",
       "body": "Cases：grok-bot-x-built-in 来自官方 @bot 推文 https://x.com/bot/status/2107949161878606089 （10-08 05:40 北京时间），Grok Bot 不连 X 也能搜、读、盯公开帖子；grok-bot-slide-decks 来自官方更新日志 v0.68.1（10-07），Bot 先给样张再出 PPT 或 Google Slides；quesma-opus-5-5-design 是 AI×设计对照文，同一句提示词让 Opus 5.5 和 GPT-6 Astra 各做一个 three.js 可视化，线索 HN item 49991903。HTML：ascii-rest（HN item 49993857，MIT 动态字符画组件，偏设计）、walkable-art-history（Show HN item 49992057）、bigwords-page（Show HN item 49994443）。Models：gpt-6-intelligent-ui（HN item 49996425，回答直接生成可交互界面，属 AI×设计）、claude-haiku-5-5（HN item 49996437）。全部新条目都有 3:2 自托管预览。均未实测，数字为官方或作者自述。cases 157→160，html-items 121→124，models 25→27。未改首页精选。",

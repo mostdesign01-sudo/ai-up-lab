@@ -1,6 +1,79 @@
 {
   "cases": [
     {
+      "id": "krea-photoshop-plugin",
+      "slug": "krea-photoshop-plugin",
+      "title": "工具：Krea 出了 Photoshop 插件，在 PS 里直接调 Nano Banana、Krea 2、GPT IMG 2.5",
+      "titleEn": "Tool: Krea's Photoshop plugin puts Nano Banana, Krea 2, and GPT IMG 2.5 inside Photoshop",
+      "hook": "不用来回导图，在 Photoshop 面板里就能出图、改图、放大。",
+      "hookEn": "Generate, edit, and upscale from a Photoshop panel, no exporting back and forth.",
+      "summary": "Krea 2026-10-07 发帖：Krea Plugin for Photoshop 上线，Nano Banana、Krea 2、GPT IMG 2.5 以及 Krea 上的其他模型都能在 Photoshop 里用。插件页写的用法：下载安装包（macOS 和 Windows 都有），双击后由 Creative Cloud 装好，再在 Photoshop 里点「窗口 → 插件 → Krea」打开。面板里列的功能有：用 Krea 2 出图、用 Nano Banana Pro 打字改图、用 Krea Enhancer 放大（页面写最高 21K）、用 Seedance 2.5 出视频，官方说一共 20 多个工具。适合本来就在 PS 里修图、做海报和电商图的设计师：不用在网页和 PS 之间来回导出导入。插件页没写价格，用量大概率按你的 Krea 账号额度算，这点本库没核实。",
+      "summaryEn": "Krea posted on 2026-10-07: Krea Plugin for Photoshop is live, bringing Nano Banana, Krea 2, GPT IMG 2.5, and the other models on Krea into Photoshop. The plugin page's steps: download the installer (macOS and Windows), double-click it so Creative Cloud installs Krea, then open it in Photoshop via Window → Plugins → Krea. The panel lists image generation with Krea 2, edit-by-typing with Nano Banana Pro, upscaling with Krea Enhancer (the page says up to 21K), and video with Seedance 2.5, 20+ tools in all. Good for designers who already retouch, make posters, or build product shots in Photoshop and are tired of exporting between a web app and PS. The plugin page lists no price; usage is likely billed to your Krea account, which this library did not verify.",
+      "categories": [
+        "content",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.krea.ai/plugins/photoshop",
+      "secondaryUrls": [
+        "https://x.com/krea_ai/status/2107848434128752777",
+        "https://www.krea.ai/plugins"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 Krea 插件页 https://www.krea.ai/plugins/photoshop ，晚间 HTTP 200，页面标题 Krea for Photoshop | Generate images and video inside Photoshop，安装步骤、面板里的模型名和「最高 21K」都照页面写。发布帖是 @krea_ai 2026-10-07T15:00Z（约 10-07 23:00 北京时间），晚间约 8500 次浏览、152 赞，附 1 分钟内演示视频。收录理由：AI×设计，直接进了设计师天天用的软件。本库没有下载安装，没有登录 Krea，没有核对价格、额度和 Photoshop 版本要求。同一插件目录还有 After Effects 和 ChatGPT 插件，这条只写 Photoshop。预览为 Playwright 实拍插件页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is Krea's plugin page https://www.krea.ai/plugins/photoshop, HTTP 200 this evening, titled Krea for Photoshop | Generate images and video inside Photoshop; install steps, model names, and the “up to 21K” claim are as the page states. The launch post is @krea_ai at 2026-10-07T15:00Z (about 23:00 on 10-07 Beijing time), about 8,500 views and 152 likes this evening, with a short demo video. Why it is listed: AI×design, landing inside the software designers already use daily. This library did not download or install it, did not sign in to Krea, and did not check pricing, credits, or Photoshop version requirements. The same plugin directory also has After Effects and ChatGPT plugins; this entry covers Photoshop only. Preview is a Playwright capture of the plugin page above the fold, cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "装插件要登录 Krea 账号，出图和放大会用掉账号里的额度，先看清计费再大量跑。",
+      "approvalBoundaryEn": "The plugin needs a Krea account and generations or upscales use its credits; check billing before running a lot.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "previewImage": "/previews/krea-photoshop-plugin.webp"
+    },
+    {
+      "id": "framer-skills-design-system",
+      "slug": "framer-skills-design-system",
+      "title": "玩法：把 Framer 网站变成一套设计规范，写成「技能」让 AI 照着做新页面",
+      "titleEn": "How-to: turn a Framer site into a design system and a Skill so the agent builds new pages in your style",
+      "hook": "把配色、字体、间距写成一条技能，AI 做的新页面就不跑偏。",
+      "hookEn": "Write your colors, type, and spacing into one Skill so new AI pages stay on brand.",
+      "summary": "Framer 2026-09-22 上线 Skills（技能）：把你做设计的规矩存成一段说明，以后让 Framer 自带的 AI 助手做事时直接调用。2026-10-07 官方又发了一条玩法：先把现有项目整理成一套可复用的设计规范，再写一条技能，之后用 /design-system 让助手做新页面，它会沿用项目里的字体、颜色、间距、版式和组件。官方页给了一条完整示例：只用深色、不许自己发明新颜色和字号、正文每行 50 到 75 个字符、唯一的强调色每段最多用一次。还附了几条可以直接复制的技能：品牌语气、去 AI 腔（删掉空话套话）、SEO 检查、上线前检查。用法：在助手对话框里输入 /skills 粘贴，之后用 /技能名 调用，在设置里能改。项目被别人 remix 时技能会跟着走，所以模板作者也能把「怎么加新页面」写进去。",
+      "summaryEn": "Framer launched Skills on 2026-09-22: save the rules of how you design as instructions, then have Framer's built-in agent apply them. On 2026-10-07 Framer posted a how-to: first turn an existing project into a reusable design system, then write a Skill, and use /design-system to have the agent build new pages that reuse the project's typography, colors, spacing, layouts, and components. The official page shows a full example: dark scheme only, never invent new colors or text styles, 50–75 characters per line of body text, and the single accent color at most once per section. It also offers copy-paste Skills for brand voice, removing AI writing (cutting filler and vague claims), SEO checks, and a pre-launch check. To use one, type /skills in the agent chat and paste it, then call it with /skill-name; edit it in Settings. Skills travel with a project when someone remixes it, so template makers can ship guidance for adding pages too.",
+      "categories": [
+        "content",
+        "skills",
+        "templates"
+      ],
+      "role": "AI design workflow",
+      "sourceUrl": "https://www.framer.com/skills",
+      "secondaryUrls": [
+        "https://www.framer.com/updates/skills",
+        "https://x.com/framer/status/2107962735673872818"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是 Framer 官方 Skills 页 https://www.framer.com/skills ，晚间 HTTP 200，示例规则（深色、不新增颜色和字号、每行 50–75 字符目标 65、强调色每段最多一次）和四条可复制技能都照页面写。上线日期取更新日志 https://www.framer.com/updates/skills 的 Published September 22, 2026。新的玩法帖是 @framer 2026-10-07T22:34Z（约 10-08 06:34 北京时间），晚间约 4900 次浏览，附演示视频。收录理由：本库之前没有 Framer，这条是「设计规范交给 AI 照做」的 AI×设计做法，和库里的 Graphical、figma-use 思路相近，但直接在 Framer 画布里用。本库没有登录 Framer，没有实际写技能、做页面，也没有核对哪些套餐能用 Skills。演示页里的模型选择显示 GPT 6 Sol，只是页面截图里的字样。预览为 Playwright 实拍 Skills 页演示区裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is Framer's official Skills page https://www.framer.com/skills, HTTP 200 this evening; the example rules (dark scheme, no new colors or text styles, 50–75 characters per line targeting 65, accent at most once per section) and the four copy-paste Skills are as the page states. The launch date comes from the changelog https://www.framer.com/updates/skills, Published September 22, 2026. The new how-to post is @framer at 2026-10-07T22:34Z (about 06:34 on 10-08 Beijing time), about 4,900 views this evening, with a demo video. Why it is listed: the library had no Framer entry, and this is an AI×design pattern of handing your design system to an agent, close to Graphical and figma-use already in the library but used directly on the Framer canvas. This library did not sign in to Framer, write a Skill, or build a page, and did not check which plans include Skills. The model picker in the demo shows GPT 6 Sol; that is only text in the page's demo. Preview is a Playwright capture of the Skills page demo area, cropped to 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手改的是你的线上项目，发布前自己在画布上看一遍；技能只是规则，结果仍要人把关。",
+      "approvalBoundaryEn": "The agent edits your live project; review the canvas before publishing. A Skill is only rules, and a person still checks the result.",
+      "connectors": [],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "previewImage": "/previews/framer-skills-design-system.webp"
+    },
+    {
       "id": "grok-bot-x-built-in",
       "slug": "grok-bot-x-built-in",
       "title": "官方更新：Grok Bot 不用连 X 也能搜、读、盯 X",
@@ -8568,11 +8641,15 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-08T01:30:00Z",
+    "updatedAt": "2026-10-08T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.49",
-    "count": 160,
+    "version": "1.4.50",
+    "count": 162,
     "sourcesCrawled": [
+      "https://x.com/framer/status/2107962735673872818",
+      "https://www.framer.com/skills",
+      "https://x.com/krea_ai/status/2107848434128752777",
+      "https://www.krea.ai/plugins/photoshop",
       "https://news.ycombinator.com/item?id=49991903",
       "https://quesma.com/blog/invisible-cities-one-shot/",
       "https://x.com/bot/status/2107949161878606089",
