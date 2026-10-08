@@ -22,8 +22,14 @@ export interface ReferenceCard {
   anchor: string;
   url?: string;
   logo?: string;
-  /** light: white chip for dark artwork. plain: the file already includes its background. */
-  well?: "light" | "plain";
+  /** Dark chip for artwork drawn in white. */
+  ink?: boolean;
+}
+
+/** First grapheme of the display name; Latin letters are uppercased. */
+export function brandMonogram(name: string): string {
+  const ch = Array.from(name.trim())[0] ?? "";
+  return /[a-z]/i.test(ch) ? ch.toUpperCase() : ch;
 }
 
 export const referenceGroups: { id: string; title: { zh: string; en: string }; cards: ReferenceCard[] }[] = [
@@ -31,14 +37,14 @@ export const referenceGroups: { id: string; title: { zh: string; en: string }; c
     id: "overseas",
     title: { zh: "海外 AI 品牌", en: "Overseas AI brands" },
     cards: [
-      { id: "openai", name: "OpenAI", anchor: "openai", url: "https://openai.com/brand/", notable: "词标优先、Blossom 不作主品牌、禁止变形/效果/商品化；专属字体 OpenAI Sans", logo: "brand-collection/assets/references/openai/openai-blossom-light.svg", well: "light" },
+      { id: "openai", name: "OpenAI", anchor: "openai", url: "https://openai.com/brand/", notable: "词标优先、Blossom 不作主品牌、禁止变形/效果/商品化；专属字体 OpenAI Sans" },
       { id: "anthropic", name: "Anthropic / Claude", anchor: "anthropic", url: "https://www.anthropic.com/news", notable: "偏人文编辑气质；公开侧以媒体包为主，非完整对外 Brand Book 网页" },
       { id: "gemini", name: "Google Gemini", anchor: "gemini", url: "https://design.google/library/gemini-ai-visual-design", notable: "AI 产品用「软渐变 + 意图动效」建立信任，而不是硬科技冷感" },
       { id: "mistral", name: "Mistral AI", anchor: "mistral", url: "https://mistral.ai/brand/", notable: "模型级像素插画系统与 M 符号一体；偏好渐变版徽章" },
-      { id: "elevenlabs", name: "ElevenLabs", anchor: "elevenlabs", url: "https://elevenlabs.io/brand", notable: "子产品分色分图形（Agents 圆/球体、Creative/API 用 Chladni 纹等），适合多产品线 AI 公司参考", logo: "brand-collection/assets/references/elevenlabs/elevenlabs-logo-black.svg", well: "light" },
-      { id: "cursor", name: "Cursor", anchor: "cursor", url: "https://cursor.com/brand", notable: "开发者工具品牌把「立方体」做成可缩放的立体资产系统", logo: "brand-collection/assets/references/cursor/cursor-logo.svg", well: "plain" },
+      { id: "elevenlabs", name: "ElevenLabs", anchor: "elevenlabs", url: "https://elevenlabs.io/brand", notable: "子产品分色分图形（Agents 圆/球体、Creative/API 用 Chladni 纹等），适合多产品线 AI 公司参考", logo: "brand-collection/assets/references/elevenlabs/elevenlabs-logo-black.svg" },
+      { id: "cursor", name: "Cursor", anchor: "cursor", url: "https://cursor.com/brand", notable: "开发者工具品牌把「立方体」做成可缩放的立体资产系统", logo: "brand-collection/assets/references/cursor/cursor-icon.webp" },
       { id: "runway", name: "Runway", anchor: "runway", url: "https://runway.com/brand-guidelines", notable: "词标独立、禁止把 Symbol 塞进词标或替换字母" },
-      { id: "huggingface", name: "Hugging Face", anchor: "huggingface", url: "https://huggingface.co/brand", notable: "开源社区友好、资产直接挂 Hub；气质活泼而非「企业冷白皮」", logo: "brand-collection/assets/references/huggingface/huggingface-logo.svg", well: "light" },
+      { id: "huggingface", name: "Hugging Face", anchor: "huggingface", url: "https://huggingface.co/brand", notable: "开源社区友好、资产直接挂 Hub；气质活泼而非「企业冷白皮」", logo: "brand-collection/assets/references/huggingface/huggingface-logo.svg", ink: true },
       { id: "xai", name: "xAI / Grok", anchor: "xai", url: "https://x.ai/legal/brand-guidelines", notable: "偏法律/商标条款型指南，不是视觉系统说明书；注明与 X（Twitter）为不同公司" },
       { id: "meta", name: "Meta", anchor: "meta", url: "https://www.meta.com/brand/resources/", notable: "集团级品牌管控严格；未找到「Meta AI」单独完整公开 Brand Book" },
       { id: "notion", name: "Notion", anchor: "notion", url: "https://notion.notion.site/Media-Kit-205535b1d9c4440497a3d7a2ac096286", notable: "未找到独立「Notion AI」VI；沿用 Notion 母品牌" },
@@ -63,7 +69,7 @@ export const referenceGroups: { id: string; title: { zh: string; en: string }; c
       { id: "carbon-ai", name: "IBM Carbon for AI", anchor: "carbon-ai", url: "https://carbondesignsystem.com/building-blocks/foundations/carbon-for-ai", notable: "AI Label、可解释性、AI 态组件——做「产品内 AI 标识」必看" },
       { id: "fluent", name: "Microsoft Fluent 2", anchor: "fluent", url: "https://fluent2.microsoft.design/", notable: "把 Copilot 当作 Fluent 的 AI 扩展层，强调组件一致性而非独立「炫彩 AI」皮肤" },
       { id: "material", name: "Google Material 3", anchor: "material", url: "https://m3.material.io/", notable: "动态色、语义角色、动效" },
-      { id: "stripe", name: "Stripe", anchor: "stripe", url: "https://stripe.com/newsroom/information", notable: "Logo kit / Powered by 徽章；slate & blurple 规则", logo: "brand-collection/assets/references/stripe/stripe-powered-by.svg", well: "light" },
+      { id: "stripe", name: "Stripe", anchor: "stripe", url: "https://stripe.com/newsroom/information", notable: "Logo kit / Powered by 徽章；slate & blurple 规则", logo: "brand-collection/assets/references/stripe/stripe-powered-by.svg" },
       { id: "atlassian", name: "Atlassian Design", anchor: "atlassian", url: "https://atlassian.design/", notable: "企业协作产品规范完整" },
       { id: "apple-hig", name: "Apple HIG", anchor: "apple-hig", url: "https://developer.apple.com/design/human-interface-guidelines/", notable: "平台交互与视觉原则" },
     ],
@@ -83,10 +89,10 @@ export const referenceGaps: { name: string; notable: string; anchor: string; url
   { name: "科大讯飞", anchor: "iflytek", url: "https://www.iflytek.com/", notable: "未见完整消费级 AI 产品 Brand Book" },
 ];
 
-export const benchmarkStudies: { href: string; title: { zh: string; en: string }; line: string; logo?: string; well?: "light" | "plain" }[] = [
-  { href: "brand-collection/dewu/", title: { zh: "得物 / POIZON 参考对标", en: "Dewu / POIZON benchmark" }, line: "借 AI 品牌的规范方法、资产管理和数字体验，不借它们的「AI 气质」。网页色值来自官网 CSS 实测。", logo: "brand-collection/assets/dewu/dewu-logo-120.webp", well: "light" },
-  { href: "brand-collection/ai-up-lab/", title: { zh: "AI UP LAB 参考对标", en: "AI UP LAB benchmark" }, line: "不重做体系，只记录规范和线上实际不一致的地方，以及规范还没覆盖的触点。", logo: "brand-collection/assets/ai-up-lab/logo.svg", well: "light" },
-  { href: "brand-collection/joma/", title: { zh: "JOMA 品牌调研", en: "JOMA overview" }, line: "公开资料：品牌基本信息、定位口号、中国业务、渠道与赞助、竞品。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg", well: "light" },
-  { href: "brand-collection/joma/visual-audit/", title: { zh: "JOMA 视觉审计", en: "JOMA visual audit" }, line: "标志、色彩、字体、官网视觉；以及升级时可保留与可改之处。", logo: "brand-collection/assets/joma/logo-joma-favicon-official-196.webp", well: "light" },
-  { href: "brand-collection/joma/china-ecommerce/", title: { zh: "JOMA 中国电商视觉", en: "JOMA China commerce" }, line: "京东、天猫等中国电商渠道的视觉与文案。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg", well: "light" },
+export const benchmarkStudies: { href: string; title: { zh: string; en: string }; line: string; logo?: string; ink?: boolean }[] = [
+  { href: "brand-collection/dewu/", title: { zh: "得物 / POIZON 参考对标", en: "Dewu / POIZON benchmark" }, line: "借 AI 品牌的规范方法、资产管理和数字体验，不借它们的「AI 气质」。网页色值来自官网 CSS 实测。", logo: "brand-collection/assets/dewu/dewu-logo-120.webp" },
+  { href: "brand-collection/ai-up-lab/", title: { zh: "AI UP LAB 参考对标", en: "AI UP LAB benchmark" }, line: "不重做体系，只记录规范和线上实际不一致的地方，以及规范还没覆盖的触点。", logo: "brand-collection/assets/ai-up-lab/logo.svg" },
+  { href: "brand-collection/joma/", title: { zh: "JOMA 品牌调研", en: "JOMA overview" }, line: "公开资料：品牌基本信息、定位口号、中国业务、渠道与赞助、竞品。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
+  { href: "brand-collection/joma/visual-audit/", title: { zh: "JOMA 视觉审计", en: "JOMA visual audit" }, line: "标志、色彩、字体、官网视觉；以及升级时可保留与可改之处。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
+  { href: "brand-collection/joma/china-ecommerce/", title: { zh: "JOMA 中国电商视觉", en: "JOMA China commerce" }, line: "京东、天猫等中国电商渠道的视觉与文案。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
 ];
