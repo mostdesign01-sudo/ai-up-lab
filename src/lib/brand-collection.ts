@@ -37,7 +37,7 @@ export const referenceGroups: { id: string; title: { zh: string; en: string }; c
     id: "overseas",
     title: { zh: "海外 AI 品牌", en: "Overseas AI brands" },
     cards: [
-      { id: "openai", name: "OpenAI", anchor: "openai", url: "https://openai.com/brand/", notable: "词标优先、Blossom 不作主品牌、禁止变形/效果/商品化；专属字体 OpenAI Sans", logo: "brand-collection/assets/references/openai/openai-wordmark-dark.svg", ink: true },
+      { id: "openai", name: "OpenAI", anchor: "openai", url: "https://openai.com/brand/", notable: "词标优先、Blossom 不作主品牌、禁止变形/效果/商品化；专属字体 OpenAI Sans", logo: "brand-collection/assets/references/openai/openai-blossom-mark.svg" },
       { id: "anthropic", name: "Anthropic / Claude", anchor: "anthropic", url: "https://www.anthropic.com/news", notable: "偏人文编辑气质；公开侧以媒体包为主，非完整对外 Brand Book 网页", logo: "brand-collection/assets/references/anthropic/anthropic-logo-slate.svg" },
       { id: "gemini", name: "Google Gemini", anchor: "gemini", url: "https://design.google/library/gemini-ai-visual-design", notable: "AI 产品用「软渐变 + 意图动效」建立信任，而不是硬科技冷感", logo: "brand-collection/assets/references/google/gemini-sparkle.svg" },
       { id: "mistral", name: "Mistral AI", anchor: "mistral", url: "https://mistral.ai/brand/", notable: "模型级像素插画系统与 M 符号一体；偏好渐变版徽章", logo: "brand-collection/assets/references/mistral/mistral-icon.png" },
