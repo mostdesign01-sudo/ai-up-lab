@@ -713,12 +713,12 @@
     {
       "id": "openai-math-progress",
       "slug": "openai-math-progress",
-      "title": "资讯：OpenAI 公开一批数学文稿，附带可检查的证明文件",
-      "titleEn": "News: OpenAI published a batch of math papers, with proof files you can check",
-      "summary": "OpenAI 发了一篇《Sharing AI progress in mathematics》，并在 GitHub 仓库 openai/math 放出一批由内部模型写出的数学文稿。仓库说明写，当前目录有 722 篇文稿，分成 372 个结果族。一篇族可以把主结果、伴随论证和另一种证法放在一起。仓库同时放了 Lean 证明。Lean 是一种可以用电脑检查证明对不对的语言。说明写，不是每一篇都有 Lean，没有形式化的结果里可能有问题，他们会尽快改。博文还写，这次附了 10 份推理过程的缩写，以及按 ChatGPT Pro 思考时长估算的计算量：平均每个结果大约相当于 3 小时。模型本身还没有放出。本库没有读这些论文，也没有跑过 Lean。",
-      "summaryEn": "OpenAI published “Sharing AI progress in mathematics” and put a batch of math papers from an internal model in the GitHub repo openai/math. The repo says the catalogue has 722 manuscripts in 372 families. A family can hold a main result, companion arguments, and another proof. The repo also includes Lean proofs. Lean is a language a computer can use to check whether a proof holds. The readme says not every paper has Lean, that some results without it could have issues, and that they will try to fix those quickly. The post also says this release includes 10 shortened reasoning summaries and a compute estimate in ChatGPT Pro thinking time: about three hours for the average result. The model itself is not released. This library did not read the papers and did not run Lean.",
-      "hook": "OpenAI 公开一批数学文稿，并附上可以核对的证明。",
-      "hookEn": "OpenAI published a batch of math papers, plus proofs you can check.",
+      "title": "资讯：OpenAI 公开 719 篇 AI 写的数学文稿，附可检查的证明",
+      "titleEn": "News: OpenAI published 719 AI-written math papers, with proofs you can check",
+      "summary": "OpenAI 官方账号在 X 上发帖（北京时间 10 月 7 日 06:19），同时发了博文《Sharing AI progress in mathematics》：一个还没发布的内部模型做出了一大批新的数学结果，放在 GitHub 仓库 openai/math，许可 Apache-2.0。首发时仓库写 722 篇文稿、372 个结果族；10 月 7 日的更新撤回了 3 篇（其中一篇有符号错误，连带两篇依赖它的论文），修了 14 篇，现在是 719 篇。仓库同时放了 Lean 证明，Lean 是一种能让电脑检查证明对不对的语言。仓库说现在约 42% 的主结果（300/719）有 Lean，没形式化的结果可能有问题。官方还说，评测时一共给模型出了约 4000 道题，平均每个结果大约相当于 ChatGPT Pro 思考 3 小时，这些都是官方口径。模型本身没有放出。本库没有读这些论文，也没有跑过 Lean。",
+      "summaryEn": "OpenAI posted on X (06:19 Beijing time on October 7) alongside the blog post “Sharing AI progress in mathematics”: an unreleased internal model produced a broad set of new math results, published in the GitHub repo openai/math under Apache-2.0. At launch the repo listed 722 manuscripts in 372 families. An October 7 update withdrew 3 papers (a sign error in one, plus two papers that depended on it) and revised 14, so the count is now 719. The repo also ships Lean proofs; Lean is a language a computer can use to check a proof. The repo says about 42% of top-line results (300/719) are formalized, and unformalized results could have issues. OpenAI also says the model was posed about 4,000 problems and the average result used roughly three hours of ChatGPT Pro thinking; those are vendor figures. The model itself is not released. This library did not read the papers or run Lean.",
+      "hook": "OpenAI 放出 700 多篇 AI 数学文稿，次日撤回 3 篇。",
+      "hookEn": "OpenAI released 700+ AI-written math papers, then withdrew 3 the next day.",
       "categories": [
         "research"
       ],
@@ -727,11 +727,14 @@
       "secondaryUrls": [
         "https://github.com/openai/math",
         "https://github.com/openai/math/blob/main/CONTENTS.md",
-        "https://news.ycombinator.com/item?id=49984923"
+        "https://news.ycombinator.com/item?id=49984923",
+        "https://x.com/OpenAI/status/2107596713791767021",
+        "https://github.com/openai/math/blob/main/history.md",
+        "https://agmai.org/general-sep29/"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "公告页 https://openai.com/index/sharing-ai-progress-in-mathematics/ 在本环境 curl 为 403（要过浏览器校验）。可读文本来自 r.jina.ai 对同一 URL 的抓取，标题 Sharing AI progress in mathematics。HN item 49984923 的外链就是这个 URL，作者 OfficialTurkey，2026-10-06T22:17:21.000Z（约 2026-10-07 06:17 CST），撰写时 Algolia 981pts。博文写：结果来自一个内部前沿模型；与普林斯顿高等研究院的数学与人工智能顾问组商量过发布方式；材料放在 GitHub，含修订和引用约定；许多证明有 Lean 形式化，以后继续补；另有 10 份推理摘要、按 ChatGPT Pro 用量估算的计算量，以及尝试过多少问题的统计。博文给出的计算量原句是 The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking。博文说会资助研讨会，细节以后再说；模型还在准备负责任地发布，本条不把它写成已上线的模型。仓库 https://github.com/openai/math 撰写时 gh api：Apache-2.0，创建于 2026-10-06T21:47:02Z，6913★。README 与 CONTENTS.md 都写 722 manuscripts、372 families。README 写并非都有 Lean，未形式化的结果可能有问题。本库没有逐篇打开 PDF，没有运行 Lean，没有核对“大约三小时”的换算，也没有打开博文里指向的 Navier-Stokes 模型页。预览为 Chrome 实拍 GitHub 仓库首屏裁 3:2 WebP，因为公告页在无头浏览器里仍是校验页。不打星。",
-      "qualityNoteEn": "A curl of https://openai.com/index/sharing-ai-progress-in-mathematics/ returned 403 in this environment (a browser check). The readable text is a fetch of that same URL through r.jina.ai, title Sharing AI progress in mathematics. HN item 49984923 links that URL, author OfficialTurkey, 2026-10-06T22:17:21.000Z (about 06:17 CST on 2026-10-07), 981pts on Algolia at write time. The post says the results come from an internal frontier model, that release practice was discussed with the Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study, that the materials are on GitHub with revision and citation protocols, that many proofs have Lean formalizations and more will be added, and that the release includes 10 reasoning summaries, a compute estimate in ChatGPT Pro usage, and statistics on how many problems were attempted. The compute sentence is: The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking. The post says workshops will be funded later, without details. It says the model is still being prepared for a responsible release, so this note does not treat it as a model you can call. Repo https://github.com/openai/math via gh api at write time: Apache-2.0, created 2026-10-06T21:47:02Z, 6913★. Both the README and CONTENTS.md say 722 manuscripts and 372 families. The README says not every paper has Lean and that some unformalized results could have issues. This library did not open the PDFs one by one, did not run Lean, did not check the “about three hours” conversion, and did not open the Navier-Stokes model page linked from the post. Preview is a Chrome capture of the GitHub repo above the fold, cropped to 3:2 WebP, because the announcement URL still showed a browser check in headless Chrome. Unrated.",
+      "qualityNote": "公告页 https://openai.com/index/sharing-ai-progress-in-mathematics/ 在本环境 curl 为 403（要过浏览器校验）。可读文本来自 r.jina.ai 对同一 URL 的抓取，标题 Sharing AI progress in mathematics。HN item 49984923 的外链就是这个 URL，作者 OfficialTurkey，2026-10-06T22:17:21.000Z（约 2026-10-07 06:17 CST），撰写时 Algolia 981pts。博文写：结果来自一个内部前沿模型；与普林斯顿高等研究院的数学与人工智能顾问组商量过发布方式；材料放在 GitHub，含修订和引用约定；许多证明有 Lean 形式化，以后继续补；另有 10 份推理摘要、按 ChatGPT Pro 用量估算的计算量，以及尝试过多少问题的统计。博文给出的计算量原句是 The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking。博文说会资助研讨会，细节以后再说；模型还在准备负责任地发布，本条不把它写成已上线的模型。仓库 https://github.com/openai/math 撰写时 gh api：Apache-2.0，创建于 2026-10-06T21:47:02Z，6913★。README 与 CONTENTS.md 都写 722 manuscripts、372 families。README 写并非都有 Lean，未形式化的结果可能有问题。本库没有逐篇打开 PDF，没有运行 Lean，没有核对“大约三小时”的换算，也没有打开博文里指向的 Navier-Stokes 模型页。预览为 Chrome 实拍 GitHub 仓库首屏裁 3:2 WebP，因为公告页在无头浏览器里仍是校验页。不打星。 【10-08 更新】Hao 转来 OpenAI 官方推文 https://x.com/OpenAI/status/2107596713791767021，经 api.fxtwitter.com 读取：2026-10-06T22:19:48Z（北京时间 10-07 06:19），无图无视频，只有 github.com/openai/math 链接卡片；正文就是博文首段加 IAS 顾问组一句，和本条是同一件事，所以补进本条，不另开条目。13:25 前后重新核对：博文经 r.jina.ai 读取，正文与 10-07 一致；openai.com 直连这次返回 200。仓库在 2026-10-08T05:20:00Z（北京时间 13:20）合并了 openai/math#1「Update manuscripts and Lean formalizations」，新增 history.md：10 月 7 日撤回 3 篇（Algebraicity of Weil classes on split abelian eightfolds 的符号错误，连带 Kuga–Satake 与 K3 乘积 Hodge 猜想两篇），修订 14 篇，另有 13 篇只改引用；新增 6 个形式化和 5 个支撑结果，写成 300 / 719 = ~42%。README 与 overview.pdf 现写 719 篇、372 族；README 写评测共出约 4000 题，平均每个结果三小时 ChatGPT Pro 思考算力。该 PR 自述这次同步没有跑 Lean 构建。博文里「internal frontier model」链接到 OpenAI 的 Navier–Stokes 博文，那篇写所用内部模型明显强于 GPT-6 Astra；本库没有核对 Navier–Stokes 证明。IAS 顾问组 9 月 29 日的建议原文还写了不赞成在不公开的模型上测高难数学题。gh api 读到 10279★、1028 fork（北京时间 10-08 13:25 前后）。预览换成 overview.pdf 首页（Poppler 渲染后裁 3:2 WebP），原来的 GitHub 首屏截图还写着旧的 7k 星。不打星。",
+      "qualityNoteEn": "A curl of https://openai.com/index/sharing-ai-progress-in-mathematics/ returned 403 in this environment (a browser check). The readable text is a fetch of that same URL through r.jina.ai, title Sharing AI progress in mathematics. HN item 49984923 links that URL, author OfficialTurkey, 2026-10-06T22:17:21.000Z (about 06:17 CST on 2026-10-07), 981pts on Algolia at write time. The post says the results come from an internal frontier model, that release practice was discussed with the Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study, that the materials are on GitHub with revision and citation protocols, that many proofs have Lean formalizations and more will be added, and that the release includes 10 reasoning summaries, a compute estimate in ChatGPT Pro usage, and statistics on how many problems were attempted. The compute sentence is: The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking. The post says workshops will be funded later, without details. It says the model is still being prepared for a responsible release, so this note does not treat it as a model you can call. Repo https://github.com/openai/math via gh api at write time: Apache-2.0, created 2026-10-06T21:47:02Z, 6913★. Both the README and CONTENTS.md say 722 manuscripts and 372 families. The README says not every paper has Lean and that some unformalized results could have issues. This library did not open the PDFs one by one, did not run Lean, did not check the “about three hours” conversion, and did not open the Navier-Stokes model page linked from the post. Preview is a Chrome capture of the GitHub repo above the fold, cropped to 3:2 WebP, because the announcement URL still showed a browser check in headless Chrome. Unrated. [10-08 update] Hao forwarded the official OpenAI post https://x.com/OpenAI/status/2107596713791767021, read via api.fxtwitter.com: 2026-10-06T22:19:48Z (06:19 on 10-07 Beijing time), no images or video, only a github.com/openai/math link card; the text is the blog’s first paragraph plus the IAS advisory-group sentence. It is the same announcement as this entry, so it is added here rather than as a new entry. Re-checked around 13:25 Beijing time: the blog body via r.jina.ai matches 10-07; a direct openai.com request returned 200 this time. At 2026-10-08T05:20:00Z (13:20 Beijing) the repo merged openai/math#1 “Update manuscripts and Lean formalizations”, adding history.md: on October 7 three papers were withdrawn (a sign error in Algebraicity of Weil classes on split abelian eightfolds, plus the Kuga–Satake and K3-product Hodge papers built on it), 14 were revised, and 13 more only had citations updated; 6 formalizations and 5 supporting results were added, stated as 300 / 719 = ~42%. README and overview.pdf now say 719 manuscripts and 372 families; the README says about 4,000 problems were posed and the average result used three hours of ChatGPT Pro thinking compute. That PR says Lean builds were not run for the sync. The blog’s “internal frontier model” links to OpenAI’s Navier–Stokes post, which says the internal model is significantly more capable than GPT-6 Astra; this library did not check the Navier–Stokes proof. The IAS advisory group’s September 29 recommendations also say it does not endorse testing advanced math on proprietary models. gh api showed 10279★ and 1028 forks (around 13:25 Beijing time on 10-08). Preview is now the first page of overview.pdf (rendered with Poppler, cropped 3:2 WebP); the old GitHub screenshot still showed 7k stars. Unrated.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -743,11 +746,11 @@
       "language": "zh",
       "featured": false,
       "publishedAt": "2026-10-06",
-      "updatedAt": "2026-10-07T12:30:00Z",
+      "updatedAt": "2026-10-08T05:40:00Z",
       "previewImage": "/previews/openai-math-progress.webp",
       "landing": {
-        "what": "这是一次数学结果的公开，不是一个你能在聊天框里调用的新模型。OpenAI 说这些文稿来自他们内部还没发布的模型。公开的位置是 GitHub 仓库 openai/math，许可 Apache-2.0。仓库自己的目录写着 722 篇文稿、372 个结果族。一个族是一组相关论文，可以包括主结果、配套论证或另一种证法。旁边有 Lean 证明，电脑可以检查这些证明是否成立。仓库写得很直：不是每篇都有 Lean，没做形式化的结果里可能有错，发现了会改。博文另外说，这次放了 10 份推理过程的缩写，并说平均每个结果用掉的计算量大约等于 ChatGPT Pro 思考 3 小时。这句话是官方的估算，本库没有重算。",
-        "whatEn": "This is a release of math results, not a new model you can call from a chat box. OpenAI says the papers come from an internal model that is not released yet. The public place is the GitHub repo openai/math, under Apache-2.0. The repo’s own catalogue says 722 manuscripts and 372 families. A family is a group of related papers: a main result, companion arguments, or another proof. Lean proofs sit beside them. A computer can check whether those proofs hold. The repo is direct: not every paper has Lean, results without that check could be wrong, and they intend to fix problems they find. The post also says this release includes 10 shortened reasoning write-ups, and that the average result used about three hours of ChatGPT Pro thinking. That is the vendor’s estimate. This library did not recompute it.",
+        "what": "这是一次数学结果的公开，不是一个你能在聊天框里调用的新模型。适合想了解“AI 现在能做到哪一步”的人，也适合想自己翻原文、看证明的数学和理工科读者。OpenAI 说这些文稿来自他们内部还没发布的模型，全部放在 GitHub 仓库 openai/math，许可 Apache-2.0。现在仓库写 719 篇文稿、372 个结果族（首发是 722 篇，10 月 7 日撤回了 3 篇）。一个族是一组相关论文，可以包括主结果、配套论证或另一种证法。旁边有 Lean 证明，电脑可以检查这些证明是否成立；仓库说约 42% 的主结果有 Lean，其余没形式化的可能有错，发现了会改，改动都记在 history.md。官方另外说：评测时一共出了约 4000 道题，放了 10 份推理过程的缩写，平均每个结果的算力大约等于 ChatGPT Pro 思考 3 小时。这些是官方口径，本库没有重算。",
+        "whatEn": "This is a release of math results, not a new model you can call from a chat box. It suits readers who want to see how far AI has got, and math or science readers who want to open the papers and proofs themselves. OpenAI says the papers come from an internal model that is not released yet; everything is in the GitHub repo openai/math under Apache-2.0. The repo now lists 719 manuscripts in 372 families (722 at launch; 3 were withdrawn on October 7). A family is a group of related papers: a main result, companion arguments, or another proof. Lean proofs sit beside them so a computer can check them; the repo says about 42% of top-line results have Lean, the rest could contain errors, and fixes are logged in history.md. OpenAI also says about 4,000 problems were posed, 10 shortened reasoning write-ups are included, and the average result used about three hours of ChatGPT Pro thinking. These are vendor figures; this library did not recompute them.",
         "contrast": {
           "caption": "左列是公告和仓库写明的事实。右列是本站口径：为什么放在 Cases 的资讯里，而不是模型板。",
           "captionEn": "Left: what the post and the repo state. Right: why this sits in Cases as news, not on the model board.",
@@ -759,10 +762,10 @@
             {
               "aspect": "公开了什么",
               "aspectEn": "What was published",
-              "left": "722 篇文稿、372 个族，外加一部分 Lean 证明和 10 份推理摘要。",
-              "leftEn": "722 manuscripts, 372 families, plus some Lean proofs and 10 reasoning summaries.",
-              "right": "篇数和族数来自仓库 README 与 CONTENTS.md，不是新闻标题里的约数。",
-              "rightEn": "The manuscript and family counts come from the repo README and CONTENTS.md, not from a rounded figure in a headline."
+              "left": "首发 722 篇，10 月 7 日撤回 3 篇、修订 14 篇，现在 719 篇、372 个族，外加一部分 Lean 证明和 10 份推理摘要。",
+              "leftEn": "722 at launch; on October 7, 3 were withdrawn and 14 revised. Now 719 manuscripts, 372 families, plus some Lean proofs and 10 reasoning summaries.",
+              "right": "篇数和族数来自仓库 README、overview.pdf 和 history.md，不是新闻标题里的约数；数字以后还可能变。",
+              "rightEn": "The counts come from the repo README, overview.pdf, and history.md, not from a rounded headline figure, and they may change again."
             },
             {
               "aspect": "模型能不能用",
@@ -775,10 +778,10 @@
             {
               "aspect": "证明是否都查过",
               "aspectEn": "Are the proofs all checked",
-              "left": "仓库写许多篇有 Lean，但不是全部；没有形式化的结果可能有问题。",
-              "leftEn": "The repo says many papers have Lean, not all of them, and unformalized results could have issues.",
-              "right": "本库没有跑 Lean，也没有把 722 篇逐篇读完。",
-              "rightEn": "This library did not run Lean and did not read all 722 papers."
+              "left": "仓库写约 42% 的主结果（300/719）有 Lean；没有形式化的结果可能有问题。上线第二天就因为一个符号错误撤回了 3 篇。",
+              "leftEn": "The repo says about 42% of top-line results (300/719) have Lean; unformalized results could have issues. Three papers were withdrawn on day two over one sign error.",
+              "right": "撤回说明它确实在改错，也说明没有 Lean 的部分要谨慎看。本库没有跑 Lean，也没有逐篇读。",
+              "rightEn": "The withdrawals show errors are being fixed, and also that the parts without Lean deserve caution. This library did not run Lean or read the papers one by one."
             }
           ]
         },
@@ -786,9 +789,14 @@
           {
             "title": "先看公告在承诺什么",
             "titleEn": "Read what the announcement commits to",
-            "body": "公告页在有些网络环境下会先出浏览器校验。打得开的话，看它怎么讲内部模型、Lean，以及大约 3 小时 Pro 思考这个估算。HN 讨论在 item 49984923。",
-            "bodyEn": "The announcement URL shows a browser check on some networks. If it opens, read how it describes the internal model, Lean, and the estimate of about three hours of Pro thinking. The HN thread is item 49984923.",
+            "body": "OpenAI 在 X 上的原帖只有一句话加仓库链接，细节在博文里：怎么讲内部模型、Lean、IAS 顾问组，以及大约 3 小时 Pro 思考这个估算。HN 讨论在 item 49984923。",
+            "bodyEn": "OpenAI’s post on X is one paragraph plus the repo link; the details are in the blog: the internal model, Lean, the IAS advisory group, and the estimate of about three hours of Pro thinking. The HN thread is item 49984923.",
             "links": [
+              {
+                "href": "https://x.com/OpenAI/status/2107596713791767021",
+                "label": "OpenAI 原帖（X）",
+                "labelEn": "OpenAI post on X"
+              },
               {
                 "href": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
                 "label": "OpenAI 公告",
@@ -804,8 +812,8 @@
           {
             "title": "用仓库核对数量和许可",
             "titleEn": "Check the count and the license in the repo",
-            "body": "README 和 CONTENTS.md 都写 722 篇、372 个族。许可是 Apache-2.0。先看总览 PDF 和目录，再决定要不要读某一族。",
-            "bodyEn": "The README and CONTENTS.md both say 722 manuscripts and 372 families. The license is Apache-2.0. Start with the overview PDF and the catalogue, then decide whether to read one family.",
+            "body": "README 和 overview.pdf 现在写 719 篇、372 个族，许可 Apache-2.0。先翻 overview.pdf 按学科找感兴趣的，再用 CONTENTS.md 找具体论文。",
+            "bodyEn": "The README and overview.pdf now say 719 manuscripts and 372 families, under Apache-2.0. Browse overview.pdf by subject first, then use CONTENTS.md to find a paper.",
             "links": [
               {
                 "href": "https://github.com/openai/math",
@@ -816,6 +824,24 @@
                 "href": "https://github.com/openai/math/blob/main/CONTENTS.md",
                 "label": "文稿目录",
                 "labelEn": "Manuscript map"
+              },
+              {
+                "href": "https://github.com/openai/math/blob/main/overview.pdf",
+                "label": "总览 PDF",
+                "labelEn": "Overview PDF"
+              }
+            ]
+          },
+          {
+            "title": "看 history.md：哪些撤了、哪些改了",
+            "titleEn": "Read history.md: what was withdrawn and revised",
+            "body": "10 月 7 日的记录写了撤回的 3 篇和原因、修订的 14 篇，以及新增的形式化。撤回的论文目录里有说明和旧版链接。以后有改动也会记在这里。",
+            "bodyEn": "The October 7 entry lists the 3 withdrawn papers and why, the 14 revised papers, and new formalizations. Withdrawn papers keep a notice and a link to the old version. Future changes go here too.",
+            "links": [
+              {
+                "href": "https://github.com/openai/math/blob/main/history.md",
+                "label": "更新记录 history.md",
+                "labelEn": "history.md"
               }
             ]
           },
@@ -839,20 +865,24 @@
             "textEn": "This library did not finish the papers, did not run Lean, and did not recompute the vendor estimate of about three hours of ChatGPT Pro thinking."
           },
           {
-            "text": "722 与 372 来自仓库 README 和 CONTENTS.md。公告正文的可读副本没有再写这两个数。",
-            "textEn": "722 and 372 come from the repo README and CONTENTS.md. The readable copy of the announcement did not restate those two numbers."
+            "text": "722、719、42%、约 4000 题都来自仓库 README、history.md 和 overview.pdf；这些数字在 10 月 8 日已经变过一次，以仓库最新版为准。",
+            "textEn": "722, 719, 42%, and about 4,000 problems come from the repo README, history.md, and overview.pdf; they already changed once on October 8, so trust the latest repo."
           },
           {
             "text": "做出这些结果的模型还没有发布。这条不是模型卡，也不能当成你已经可以调用的接口。",
             "textEn": "The model that produced the results is not released. This is not a model card, and it is not an API you can call."
           },
           {
-            "text": "公告页在本环境直接请求返回 403。正文通过阅读代理核对，HN 外链指向同一 URL。",
-            "textEn": "A direct request to the announcement returned 403 in this environment. The body was checked through a reader proxy, and the HN link points at the same URL."
+            "text": "公告页 10 月 7 日直连返回 403，10 月 8 日返回 200；正文两次都经阅读代理核对，内容一致。",
+            "textEn": "The announcement returned 403 on October 7 and 200 on October 8; the body was checked through a reader proxy both times and matched."
+          },
+          {
+            "text": "OpenAI 说做出这些结果的内部模型比 GPT-6 Astra 强很多，这是它自己的说法；IAS 顾问组也公开表示不赞成在不公开的模型上测高难数学题。",
+            "textEn": "OpenAI says the internal model is far more capable than GPT-6 Astra; that is its own claim. The IAS advisory group has also said it does not endorse testing advanced math on proprietary models."
           }
         ],
-        "previewCredit": "预览：Chrome 实拍 github.com/openai/math 首屏",
-        "previewCreditEn": "Preview: Chrome capture of github.com/openai/math above the fold"
+        "previewCredit": "预览：openai/math 仓库 overview.pdf 首页（719 篇版本）",
+        "previewCreditEn": "Preview: first page of overview.pdf in openai/math (719-manuscript edition)"
       }
     },
     {
@@ -8568,11 +8598,17 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-08T01:30:00Z",
+    "updatedAt": "2026-10-08T05:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.49",
+    "version": "1.4.50",
     "count": 160,
     "sourcesCrawled": [
+      "https://api.fxtwitter.com/OpenAI/status/2107596713791767021",
+      "https://agmai.org/general-sep29/",
+      "https://openai.com/index/navier-stokes-solution/",
+      "https://github.com/openai/math/pull/1",
+      "https://github.com/openai/math/blob/main/history.md",
+      "https://x.com/OpenAI/status/2107596713791767021",
       "https://news.ycombinator.com/item?id=49991903",
       "https://quesma.com/blog/invisible-cities-one-shot/",
       "https://x.com/bot/status/2107949161878606089",
