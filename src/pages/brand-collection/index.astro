@@ -2,7 +2,7 @@
 import BrandCollectionFrame from "../../components/BrandCollectionFrame.astro";
 import Loc from "../../components/Loc.astro";
 import { assetUrl, withBase } from "../../lib/paths";
-import { benchmarkStudies, brandMonogram, referenceGaps, referenceGroups } from "../../lib/brand-collection";
+import { benchmarkStudies, brandCollectionPdf, brandMonogram, referenceGaps, referenceGroups } from "../../lib/brand-collection";
 ---
 
 <BrandCollectionFrame
@@ -50,6 +50,9 @@ import { benchmarkStudies, brandMonogram, referenceGaps, referenceGroups } from 
                 )}
                 <a href={withBase(`brand-collection/references/#${card.anchor}`)}>
                   <Loc zh="查看条目" en="Read the note" />
+                </a>
+                <a href={assetUrl(brandCollectionPdf(card.id))} download={`${card.id}-brand-note.pdf`}>
+                  <Loc zh="下载 PDF" en="Download PDF" />
                 </a>
               </p>
             </article>
@@ -115,6 +118,9 @@ import { benchmarkStudies, brandMonogram, referenceGaps, referenceGroups } from 
             <p>{study.line}</p>
             <p class="bc-card-links">
               <a href={withBase(study.href)}><Loc zh="打开笔记" en="Open the note" /></a>
+              <a href={assetUrl(brandCollectionPdf(study.id))} download={`${study.id}-brand-note.pdf`}>
+                <Loc zh="下载 PDF" en="Download PDF" />
+              </a>
             </p>
           </article>
         ))

@@ -170,7 +170,8 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 - **可下载**：页内有壁纸生成器等；完整矢量包需按联系方式申请
 - **亮点**：国内少见的「完整公开 Brand System 网页」——科学人文 + De-coding 质感 + 生成式资产
 
-<h3 id="minimax">2. MiniMax — Brand VI / Brand Book（已核实 200）⭐</h3>
+<a id="minimax"></a>
+### 2. MiniMax — Brand VI（已核实 200）⭐
 - **资源名**：Brand VI — MiniMax Brand Book
 - **官方 URL**：https://www.minimax.io/brand-vi  
 - **PDF**：https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf （已核实 200，%PDF-1.7）
@@ -280,7 +281,8 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 ## 五、本站预览素材
 
-> 素材均来自各品牌公开发布的资料，版权归原品牌所有，仅作学习与参考。
+> 素材均来自各品牌公开发布的资料，版权归原品牌所有，仅作学习与参考。  
+> 总览卡片另提供 **本站整理笔记 PDF**（`/brand-collection/pdfs/`），便于离线阅读；内容来自本清单与对标笔记，**不是**官方完整规范原件。重新生成：`node scripts/generate-brand-pdfs.mjs`。
 
 | 本站路径 | 来源 |
 |------|------|
