@@ -1,11 +1,131 @@
 {
   "meta": {
-    "updatedAt": "2026-10-07T12:30:00Z",
+    "updatedAt": "2026-10-08T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.19",
-    "count": 25
+    "version": "1.1.20",
+    "count": 27
   },
   "models": [
+    {
+      "id": "gpt-6-intelligent-ui",
+      "slug": "gpt-6-intelligent-ui",
+      "name": "GPT-6（ChatGPT · Intelligent UI）",
+      "vendor": "OpenAI",
+      "title": "GPT-6 进 ChatGPT 聊天：回答会直接长出可点的界面（Intelligent UI）",
+      "titleEn": "GPT-6 comes to ChatGPT chat: answers can arrive as interactive interfaces (Intelligent UI)",
+      "summary": "OpenAI 2026-10-07 发布：GPT-6 进入 ChatGPT 的聊天页，免费用户也有。最大的变化叫 Intelligent UI：回答不再只是文字，模型会自己决定要不要配图表、按钮、表单、地图或可交互的示意图，比如拆解一辆 7 速自行车的结构可以点着看，也能当场做一个存钱计算器或分账小工具。官方说背后是一套能边生成边显示的原生组件库加一个编译器，并专门训练了模型做版式和交互的取舍，什么时候纯文字就够也算在内。付费档（Plus、Pro、Business、Enterprise）用 GPT-6 Sol，免费和 Go 档用 GPT-6 Luna；10-07 起付费档上线，次日扩到免费档。官方还说 GPT-6 能边想边答，联网问题的 Instant 版平均早 44% 开始出字。Work 和 Codex 里的模型这次不变。",
+      "summaryEn": "OpenAI, 2026-10-07: GPT-6 comes to ChatGPT's chat tab, free users included. The headline change is Intelligent UI: instead of text only, the model decides whether to add charts, buttons, forms, maps, or interactive diagrams, so a breakdown of a 7-speed bike becomes something you tap through, and it can build a savings calculator or bill splitter on the spot. OpenAI says this runs on a library of native, streamable components plus a compiler, and that the model was trained to make layout and interaction choices, including when plain text is enough. Paid tiers (Plus, Pro, Business, Enterprise) get GPT-6 Sol; Free and Go get GPT-6 Luna. Paid rollout starts 10-07 and expands to Free the next day. OpenAI also says GPT-6 can start answering while it keeps thinking, with Instant starting 44% sooner on average for web-search questions. Models in Work and Codex are unchanged.",
+      "announcedAt": "2026-10-07",
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "OpenAI：GPT‑6 and Intelligent UI for everyone",
+          "labelEn": "OpenAI: GPT‑6 and Intelligent UI for everyone",
+          "url": "https://openai.com/index/gpt-6-for-everyone/",
+          "by": "OpenAI",
+          "date": "2026-10-07"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=49996425",
+          "by": "Hacker News",
+          "date": "2026-10-07"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "Intelligent UI 是什么：回答里可以有图、可点的按钮、表单、图表和能操作的小工具。比较类问题可能并排放，原理类可能给一张能拖动参数的示意图，简单问题仍然只回一段字。这对做设计的人值得看：聊天界面开始由模型自己排版。",
+          "textEn": "What Intelligent UI is: answers can contain graphics, tappable buttons, forms, charts, and small working tools. A comparison may sit side by side, an explanation may become a diagram you can adjust, and a simple question still gets a paragraph. Worth a look for designers: the chat interface is now laid out by the model itself."
+        },
+        {
+          "text": "官方说的做法：做了一套能流式显示的原生组件库，再加一个编译器，让界面边生成边出现；训练时专门评估模型做出的界面清不清楚、有没有用、完不完整。官方也承认模型的设计判断还要继续改进。",
+          "textEn": "How OpenAI says it works: a library of native, streamable components plus a compiler so the interface appears while it is generated; training evaluated the interfaces for clarity, usefulness, and completeness. OpenAI also says the model's design judgment still needs work."
+        },
+        {
+          "text": "谁用哪个：Plus、Pro、Business、Enterprise 用 GPT-6 Sol，Free 和 Go 用 GPT-6 Luna，两者都针对日常对话调过。只改聊天页，Work 和 Codex 不变。企业版是否可用看管理员设置。",
+          "textEn": "Who gets what: Plus, Pro, Business, and Enterprise get GPT-6 Sol; Free and Go get GPT-6 Luna, both tuned for everyday conversation. Chat only; Work and Codex are unchanged. Enterprise depends on admin settings."
+        },
+        {
+          "text": "官方自测，本库未复跑：联网问题上 GPT-6 Instant 平均比 GPT-5.6 Instant 早 44% 开始回答；内部日常任务评测里，GPT-6 Extra High 开始回答的时间和 GPT-5.6 Medium 差不多，总分高于 GPT-5.6 Extra High。",
+          "textEn": "Vendor tests, not re-run here: for web-search questions GPT-6 Instant starts answering 44% sooner on average than GPT-5.6 Instant; in an internal everyday-task eval, GPT-6 Extra High starts answering about as fast as GPT-5.6 Medium while scoring above GPT-5.6 Extra High."
+        }
+      ],
+      "qualityNote": "收录理由：官方发布当天上 HN 首页（item 49996425，2026-10-07T18:00Z，约 10-08 02:00 北京时间，撰写时 482pts），而且 Intelligent UI 正好是生成式界面，属于本站优先的 AI×设计方向。官方页早间 HTTP 200。所有能力、分档和数字都是 OpenAI 自述，本库没有登录 ChatGPT 实际试用，也没有核对免费档何时真正到账。官方页没有给 API 模型名，所以这里不写。同板已有 gpt-6-astra 和 gpt-6-1-sol，互链只表示同家族。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Why: the official launch hit the HN front page the same day (item 49996425, 2026-10-07T18:00Z, about 02:00 on 10-08 Beijing time, 482pts at write time), and Intelligent UI is generative UI, which is this site's AI×design priority. Official page HTTP 200 this morning. All capabilities, tiers, and numbers are OpenAI's claims; this library did not sign in to ChatGPT to try it or check when the Free tier actually gets it. The page gives no API model name, so none is listed. The board already has gpt-6-astra and gpt-6-1-sol; cross-links mean same family only. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-1-sol",
+        "gpt-6-astra",
+        "claude-haiku-5-5"
+      ],
+      "previewImage": "/previews/gpt-6-intelligent-ui.webp",
+      "previewCredit": "预览：Playwright 实拍 openai.com/index/gpt-6-for-everyone 首屏",
+      "previewCreditEn": "Preview: Playwright capture of openai.com/index/gpt-6-for-everyone above the fold",
+      "featured": true,
+      "stars": 4
+    },
+    {
+      "id": "claude-haiku-5-5",
+      "slug": "claude-haiku-5-5",
+      "name": "Claude Haiku 5.5",
+      "vendor": "Anthropic",
+      "title": "Claude Haiku 5.5：Anthropic 最便宜、最快的小模型，价格约降四分之三",
+      "titleEn": "Claude Haiku 5.5: Anthropic's cheapest, fastest small model, about 75% cheaper to run",
+      "summary": "Anthropic 2026-10-07 发布 Claude Haiku 5.5，定位是量大、怕贵、要快的活：摘要、分类、数据库查询、在线客服、操作浏览器，或者给 Opus 5.5、Sonnet 5.5 当写代码时的小帮手。官方说平均跑起来比 Haiku 4.5 便宜约 75%。价格按每百万 token 算，提示词在 10 万 token 以内时输入 0.10 美元、输出 0.50 美元，超过 10 万时是 0.50 和 2.50。这是第一款能调「思考力度」的 Haiku。同一天 Sonnet 5.5 的缓存读取降价一半，Max 和 Team 订阅也开始送每月 API 额度。平台模型名 claude-haiku-5-5，各大云平台都能用。",
+      "summaryEn": "Anthropic released Claude Haiku 5.5 on 2026-10-07 for high-volume, cost- and speed-sensitive work: summaries, classification, database queries, live customer support, browser use, or helping Opus 5.5 and Sonnet 5.5 as a coding subagent. Anthropic says it costs about 75% less to run than Haiku 4.5 on average. Per million tokens, prompts up to 100K are $0.10 input and $0.50 output; over 100K, $0.50 and $2.50. It is the first Haiku with an adjustable effort setting. The same day, Sonnet 5.5 cache reads were halved and Max and Team subscriptions got a monthly API credit. Platform model id claude-haiku-5-5, available on the major clouds.",
+      "announcedAt": "2026-10-07",
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Anthropic：Introducing Claude Haiku 5.5",
+          "labelEn": "Anthropic: Introducing Claude Haiku 5.5",
+          "url": "https://www.anthropic.com/claude-haiku-5-5",
+          "by": "Anthropic",
+          "date": "2026-10-07"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Claude Haiku 5.5",
+          "labelEn": "Hacker News: Claude Haiku 5.5",
+          "url": "https://news.ycombinator.com/item?id=49996437",
+          "by": "Hacker News",
+          "date": "2026-10-07"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "适合干什么：大量的短活，比如摘要、压缩上下文、查库、分类、在线客服、操作浏览器；或者大模型做主力、它当子代理去查资料。官方自己也写：复杂的代码任务还是 Sonnet 5.5、Opus 5.5 更合适。",
+          "textEn": "What it's for: lots of short jobs such as summaries, context compaction, database queries, classification, live support, and browser use, or serving as a subagent that fetches facts for a bigger model. Anthropic itself says Sonnet 5.5 and Opus 5.5 remain better for complex coding."
+        },
+        {
+          "text": "价格（每百万 token，提示词 ≤10 万 / >10 万）：输入 0.10 / 0.50 美元，输出 0.50 / 2.50 美元，缓存读取 0.01 / 0.05 美元，缓存写入 0.125 / 0.625 美元。对照 Haiku 4.5：输入 1 美元、输出 5 美元。官方说以前 Haiku 约九成请求在 10 万 token 以内。",
+          "textEn": "Pricing (per million tokens, prompts ≤100K / >100K): input $0.10 / $0.50, output $0.50 / $2.50, cache reads $0.01 / $0.05, cache writes $0.125 / $0.625. For comparison, Haiku 4.5 is $1 input and $5 output. Anthropic says about 90% of previous Haiku requests were under 100K tokens."
+        },
+        {
+          "text": "官方表节选，本库未复跑（列 Haiku 5.5 / Haiku 4.5 / GPT-6 Luna / Sonnet 5.5）：OSWorld 2.1 离线子集 72.4% / 15.7% / 48.9% / 83.9%；Terminal-Bench 4.0 39.2% / 0.0% / 16.4% / 70.6%；GDPval-AA v2.1 1620 / 735 / 1437 / 1840。",
+          "textEn": "Vendor table excerpt, not re-run here (columns Haiku 5.5 / Haiku 4.5 / GPT-6 Luna / Sonnet 5.5): OSWorld 2.1 offline subset 72.4% / 15.7% / 48.9% / 83.9%; Terminal-Bench 4.0 39.2% / 0.0% / 16.4% / 70.6%; GDPval-AA v2.1 1620 / 735 / 1437 / 1840."
+        }
+      ],
+      "qualityNote": "收录理由：官方发布当天上 HN 首页（item 49996437，2026-10-07T18:01Z，约 10-08 02:01 北京时间，撰写时约 654pts）。官方页早间 HTTP 200。75% 降价、价格、基准表和客户评价都是官方页自述，本库没有调 API 实测。官方页在对照表里列了 GPT-6 Luna，这里照抄，不代表本库做过对比。同板已有 claude-sonnet-5-5 和 claude-opus-5-5。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Why: the official launch hit the HN front page the same day (item 49996437, 2026-10-07T18:01Z, about 02:01 on 10-08 Beijing time, about 654pts at write time). Official page HTTP 200 this morning. The 75% figure, prices, benchmark table, and customer quotes are all from the official page; the API was not tested here. The vendor table includes GPT-6 Luna; it is copied as is, not a comparison run here. The board already has claude-sonnet-5-5 and claude-opus-5-5. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "claude-sonnet-5-5",
+        "claude-opus-5-5",
+        "gpt-6-intelligent-ui"
+      ],
+      "previewImage": "/previews/claude-haiku-5-5.webp",
+      "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-haiku-5-5 首屏",
+      "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-haiku-5-5 above the fold",
+      "featured": true,
+      "stars": 4
+    },
     {
       "id": "strands-decider-2b",
       "slug": "strands-decider-2b",

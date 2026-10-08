@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-08",
+      "title": "早间收录：Cases +3（X 内置读取 / 幻灯片 / AI×设计对照）、HTML +3（ascii.rest / 艺术史博物馆 / BIGWORDS）、Models +2（GPT-6 Intelligent UI / Claude Haiku 5.5）",
+      "titleEn": "Morning catalog: Cases +3 (built-in X reading / slide decks / AI×design comparison), HTML +3 (ascii.rest / art-history museum / BIGWORDS), Models +2 (GPT-6 Intelligent UI / Claude Haiku 5.5)",
+      "body": "Cases：grok-bot-x-built-in 来自官方 @bot 推文 https://x.com/bot/status/2107949161878606089 （10-08 05:40 北京时间），Grok Bot 不连 X 也能搜、读、盯公开帖子；grok-bot-slide-decks 来自官方更新日志 v0.68.1（10-07），Bot 先给样张再出 PPT 或 Google Slides；quesma-opus-5-5-design 是 AI×设计对照文，同一句提示词让 Opus 5.5 和 GPT-6 Astra 各做一个 three.js 可视化，线索 HN item 49991903。HTML：ascii-rest（HN item 49993857，MIT 动态字符画组件，偏设计）、walkable-art-history（Show HN item 49992057）、bigwords-page（Show HN item 49994443）。Models：gpt-6-intelligent-ui（HN item 49996425，回答直接生成可交互界面，属 AI×设计）、claude-haiku-5-5（HN item 49996437）。全部新条目都有 3:2 自托管预览。均未实测，数字为官方或作者自述。cases 157→160，html-items 121→124，models 25→27。未改首页精选。",
+      "bodyEn": "Cases: grok-bot-x-built-in from the official @bot post https://x.com/bot/status/2107949161878606089 (05:40 on 10-08 Beijing time): Grok Bot can search, read, and monitor public X posts without the X connector; grok-bot-slide-decks from the official changelog v0.68.1 (10-07): Bots show sample slides, then deliver PowerPoint or Google Slides; quesma-opus-5-5-design, an AI×design comparison where one prompt had Opus 5.5 and GPT-6 Astra each build a three.js visualization, lead HN item 49991903. HTML: ascii-rest (HN item 49993857, MIT animated ASCII components, design-leaning), walkable-art-history (Show HN item 49992057), bigwords-page (Show HN item 49994443). Models: gpt-6-intelligent-ui (HN item 49996425; answers generate interactive UI, AI×design) and claude-haiku-5-5 (HN item 49996437). Every new entry has a self-hosted 3:2 preview. Nothing tested hands-on; figures are vendor or author claims. cases 157→160, html-items 121→124, models 25→27. Homepage featured picks unchanged."
+    },
+    {
       "date": "2026-10-07",
       "title": "晚间收录：Cases +5（Graphical / ProtoPie MCP / Figma 助手 / Gamma 5 / OpenAI 数学文稿）、Models +2（Strands Decider 2B / EmbeddingGemma 2）",
       "titleEn": "Evening catalog: Cases +5 (Graphical / ProtoPie MCP / Figma agent / Gamma 5 / OpenAI math papers), Models +2 (Strands Decider 2B / EmbeddingGemma 2)",

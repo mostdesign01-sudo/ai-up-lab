@@ -1,6 +1,125 @@
 {
   "cases": [
     {
+      "id": "grok-bot-x-built-in",
+      "slug": "grok-bot-x-built-in",
+      "title": "官方更新：Grok Bot 不用连 X 也能搜、读、盯 X",
+      "titleEn": "Official update: Grok Bot can search, read, and monitor X without connecting X",
+      "hook": "不用登录 X，直接让 Bot 帮你盯产品反馈或一条正在发酵的新闻。",
+      "hookEn": "No X sign-in needed: have a Bot watch product feedback or a breaking story.",
+      "summary": "官方 @bot 2026-10-07T21:40Z（约 10-08 05:40 北京时间）发帖：Grok Bot 现在可以搜索、阅读和持续关注 X 上的公开内容。同串第二条说：可以让它追踪大家对你产品的反馈、跟进一条突发新闻，或者每周给你发一份行业汇总；所有用户都能用，不需要先设置 X 连接器。和 8 月那次「X 连接器」不同：那次要用你的 X 账号登录，能读你自己的时间线、提及和书签；这次只读公开内容，你的私信、书签、发帖仍要连自己的账号。怎么用：直接跟 Bot 说「每周一早上帮我汇总 X 上关于某某产品的讨论」，它会建一个定时任务。",
+      "summaryEn": "Official @bot post at 2026-10-07T21:40Z (about 05:40 on 10-08 Beijing time): Grok Bot can now search, read, and monitor public posts on X. The second post in the thread says you can ask it to track feedback on your product, follow a breaking story, or send a weekly roundup of your industry, and that it is available for all users with no need to set up the X connector. This differs from the August X connector: that one signs in with your own X account to read your timeline, mentions, and bookmarks; this one reads public content only, and DMs, bookmarks, and posting still need your own account. How to use it: tell a Bot something like “every Monday morning, summarize what people on X are saying about product Y,” and it sets up a routine.",
+      "categories": [
+        "content",
+        "automation",
+        "daily-digest",
+        "research"
+      ],
+      "role": "Built-in X reading",
+      "sourceUrl": "https://x.com/bot/status/2107949161878606089",
+      "secondaryUrls": [
+        "https://x.com/bot/status/2107949163191353358",
+        "https://x.ai/news/grok-bot-and-x",
+        "https://x.ai/bot"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是官方 @bot 两条推文，X API 和 fxtwitter 早间都能读到（主帖附 12 秒演示视频，早间约 60 万浏览、5954 赞）。收录理由：门槛变低，以前要先连 X 账号，现在所有用户直接能让 Bot 读公开帖子。本库这次收录时，Bot 就是用这套内置的 X 读取查到 @bot 这两条帖子的；运行中看到的额度提示是每分钟 30 次、每天 1000 次，这是本库这次实际看到的数字，官方帖子没写额度，以后可能会变。边界：只读公开内容，不代你发帖；私信、书签、你自己的首页时间线仍要连 X 账号。预览为官方演示视频的封面图裁 3:2 WebP。",
+      "qualityNoteEn": "Primary sources are the two official @bot posts, readable this morning via the X API and fxtwitter (the main post has a 12-second demo video; about 600K views and 5,954 likes this morning). Why it is listed: the barrier dropped, from connecting your X account first to every user having a Bot read public posts directly. While cataloging this entry, the Bot found these two @bot posts through this same built-in X reading; the quota notice seen during the run was 30 reads per minute and 1,000 per day. Those are the numbers seen in this run, not stated in the official posts, and they may change. Boundary: public content only, no posting on your behalf; DMs, bookmarks, and your own home timeline still need your X account. Preview is the official demo video's cover frame cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "读公开帖子不用你点头；要用你的账号发帖、回复或读私信时，仍要你自己连账号并确认。",
+      "approvalBoundaryEn": "Reading public posts needs no approval; posting, replying, or reading DMs from your account still needs you to connect it and confirm.",
+      "connectors": [
+        "x"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "previewImage": "/previews/grok-bot-x-built-in.webp"
+    },
+    {
+      "id": "grok-bot-slide-decks",
+      "slug": "grok-bot-slide-decks",
+      "title": "官方更新：让 Bot 陪你做幻灯片，先挑样张再出 PPT 或 Google Slides",
+      "titleEn": "Official update: build slide decks with a Bot, pick sample slides, get PowerPoint or Google Slides",
+      "hook": "先看几张样张选风格，再让 Bot 交一份 PPT 或 Google Slides。",
+      "hookEn": "Pick a style from sample slides, then get a PowerPoint or Google Slides file.",
+      "summary": "Grok Bot 官方更新日志 v0.68.1（2026-10-07）写：Bot 可以和你一起做幻灯片，会先给你看几张样张让你挑，最后交 PowerPoint 文件或 Google Slides。同一版还有：1 对 1 聊天里你的消息会变成那只 Bot 的颜色（设置里可关）；Bot 能从草稿卡发带标题、加粗、列表的格式化邮件；Bot 的云电脑屏幕从 1280×800 变成 1920×1200。适合要做周报、提案、课程讲义但不想从空白页开始的人。怎么用：跟 Bot 说清主题、页数和给谁看，先选样张，再让它出文件。",
+      "summaryEn": "The official Grok Bot changelog, v0.68.1 (2026-10-07), says Bots can build slide decks with you, showing sample slides to choose from, and deliver them as PowerPoint files or Google Slides. The same release: your messages in a 1:1 Bot chat take that Bot's color (can be turned off in Settings); Bots can send formatted emails with headings, bold, and lists from a draft card; and the Bot's cloud computer screen grows from 1280×800 to 1920×1200. Good for weekly reports, proposals, or course handouts when you don't want to start from a blank page. How to use it: tell the Bot the topic, slide count, and audience, pick a sample, then ask for the file.",
+      "categories": [
+        "content",
+        "productivity",
+        "getting-started"
+      ],
+      "role": "Slide decks",
+      "sourceUrl": "https://x.ai/changelog/bot",
+      "secondaryUrls": [
+        "https://x.ai/bot"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是官方更新日志 https://x.ai/changelog/bot ，早间 HTTP 200，最新版 v0.68.1，日期 Oct 7, 2026，标题 Slide decks and Bot-colored chats。收录理由：做幻灯片是很常见的活，而且是先挑样张、再出文件的流程，对设计向用户有用。本库这次没有实际让 Bot 做一份幻灯片，样张数量、版式风格和能否改字体配色，日志里没写。预览为 Playwright 实拍更新日志首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is the official changelog https://x.ai/changelog/bot, HTTP 200 this morning, latest v0.68.1 dated Oct 7, 2026, titled Slide decks and Bot-colored chats. Why it is listed: decks are a common job, and the pick-a-sample-then-export flow is useful for design-minded users. This library did not have a Bot build a deck this time; the changelog does not say how many samples you get, which layouts exist, or whether fonts and colors are editable. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "写进你的 Google Drive 或发给别人之前，先自己看一遍成品。",
+      "approvalBoundaryEn": "Review the deck yourself before it goes into your Google Drive or to anyone else.",
+      "connectors": [
+        "google-slides"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "previewImage": "/previews/grok-bot-slide-decks.webp"
+    },
+    {
+      "id": "quesma-opus-5-5-design",
+      "slug": "quesma-opus-5-5-design",
+      "title": "AI × 设计对照：同一句提示词，Opus 5.5 和 GPT-6 Astra 各做一个 3D 可视化",
+      "titleEn": "AI × design comparison: one prompt, Opus 5.5 and GPT-6 Astra each build a 3D visualization",
+      "hook": "同一句提示词交给两个模型做 3D 可视化，成品都能点开对比。",
+      "hookEn": "One prompt, two models, two 3D visualizations you can open side by side.",
+      "summary": "Quesma 的 Piotr Migdał 2026-10-07 发文：用同一句提示词，让 GPT-6 Astra（在 Codex 里）和 Claude Opus 5.5（在 Claude Code 里）一次做完卡尔维诺《看不见的城市》全部城市的 three.js 可视化。作者自己的记录是：Astra 用 53 分钟、约 10 美元，能跑通，但他觉得堆了很多没必要的说明和装饰；Opus 5.5 用 1 小时 25 分、6 个子代理并行、约 74 美元，他看完很惊艳。两个成品和源码都公开，可以自己点开比。适合想知道「现在的模型做交互设计能到什么程度」的设计师，也可以直接拿他的提示词去试别的模型。",
+      "summaryEn": "Piotr Migdał at Quesma, 2026-10-07: the same prompt asked GPT-6 Astra (in Codex) and Claude Opus 5.5 (in Claude Code) to build, in one shot, a three.js visualization of every city in Italo Calvino's Invisible Cities. His notes: Astra took 53 minutes and about $10 and worked end to end, but he found it full of unnecessary notes and decoration; Opus 5.5 took 1 hour 25 minutes with 6 parallel subagents and about $74, and he was wowed. Both results and their source code are public, so you can compare them yourself. Good for designers who want to see how far models get on interactive design, and the prompt is reusable on other models.",
+      "categories": [
+        "research",
+        "content",
+        "coding"
+      ],
+      "role": "AI design comparison",
+      "sourceUrl": "https://quesma.com/blog/invisible-cities-one-shot/",
+      "secondaryUrls": [
+        "https://p.migdal.pl/invisible-cities-opus-5.5/",
+        "https://github.com/stared/invisible-cities-opus-5.5",
+        "https://p.migdal.pl/invisible-cities-astra/",
+        "https://github.com/stared/invisible-cities-astra",
+        "https://news.ycombinator.com/item?id=49991903"
+      ],
+      "sourceType": "community",
+      "qualityNote": "主源是 Quesma 博客，早间 HTTP 200，作者 Piotr Migdał，页内日期 7 October 2026。提示词原文：Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. 用时和花费都是作者自述，本库没有复跑。好不好看是作者的主观判断，只有一个提示词、一次运行，不能当成模型排名。Opus 5.5 成品页早间 HTTP 200。线索来自 HN item 49991903（撰写时 5pts，热度不高，按 AI×设计偏好收录）。预览为 Playwright 实拍博客首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is the Quesma blog, HTTP 200 this morning, by Piotr Migdał, dated 7 October 2026. The prompt, verbatim: Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. Times and costs are the author's own; not re-run here. Which looks better is his opinion, from one prompt and one run, so it is not a model ranking. The Opus 5.5 result page was HTTP 200 this morning. Lead: HN item 49991903 (5pts at write time; low traction, kept for the AI×design focus). Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": false,
+      "approvalBoundary": "自己复跑时注意花费：作者那次 Opus 5.5 约 74 美元 API 费用。",
+      "approvalBoundaryEn": "Mind the cost if you re-run it: the author's Opus 5.5 run cost about $74 in API tokens.",
+      "connectors": [],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "previewImage": "/previews/quesma-opus-5-5-design.webp"
+    },
+    {
       "id": "graphical",
       "slug": "graphical",
       "title": "工具：Graphical — 调一套视觉主题，再交给编程助手用",
@@ -8449,11 +8568,14 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T12:30:00Z",
+    "updatedAt": "2026-10-08T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.48",
-    "count": 157,
+    "version": "1.4.49",
+    "count": 160,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=49991903",
+      "https://quesma.com/blog/invisible-cities-one-shot/",
+      "https://x.com/bot/status/2107949161878606089",
       "https://www.graphicalui.com/",
       "https://news.ycombinator.com/item?id=49971356",
       "https://www.protopie.io/blog/protopie-mcp-official",

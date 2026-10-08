@@ -1,6 +1,107 @@
 {
   "items": [
     {
+      "id": "ascii-rest",
+      "slug": "ascii-rest",
+      "title": "ascii.rest：191 个会动的 ASCII 字符画，一行标签放进网页",
+      "titleEn": "ascii.rest: 191 animated ASCII pieces you can drop into a page with one tag",
+      "summary": "一套给网页用的动态字符画：13 个彩色风景（极光峡湾、京都黄昏、夜海灯塔等）、加载动画、进度条、图表、日历、终端、404 页，还有编程语言 logo、Linux 发行版 logo、3D 形状和小动物。每个都是不依赖任何库的 TypeScript 小模块，React、Next.js、Astro 都能用，最省事的是引一个 ascii.js 再写一个 <ascii-art> 标签。会照顾「减少动态效果」的系统设置，只停在第一帧。MIT 许可，可以随便改。适合想给个人站、作品集或开发者产品加点复古终端味的人。",
+      "summaryEn": "Animated ASCII art for web pages: 13 full-color scenes (aurora fjord, Kyoto dusk, a lighthouse at night, and more), loaders, progress bars, charts, a calendar, a terminal, a 404 page, plus language logos, Linux distro logos, 3D shapes, and creatures. Each is a small dependency-free TypeScript module for React, Next.js, or Astro; the easiest path is loading ascii.js and writing one <ascii-art> tag. It respects reduced-motion settings by holding the first frame. MIT licensed. Good for adding a retro terminal feel to a personal site, portfolio, or developer product.",
+      "sourceUrl": "https://ascii.rest/",
+      "secondaryUrls": [
+        "https://github.com/bas3line/ascii",
+        "https://news.ycombinator.com/item?id=49993857"
+      ],
+      "previewImage": "/previews/ascii-rest.webp",
+      "types": [
+        "component",
+        "motion",
+        "library"
+      ],
+      "tags": [
+        "ascii",
+        "animation",
+        "typescript",
+        "react",
+        "astro",
+        "mit",
+        "design"
+      ],
+      "qualityNote": "HN 首页（item 49993857，2026-10-07，撰写时 284pts）。官网早间 HTTP 200，页面写 191 个作品、MIT；GitHub bas3line/ascii 许可 MIT、171★（10-07 新建）。本库没有装进项目试。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "HN front page (item 49993857, 2026-10-07, 284pts at write time). Site HTTP 200 this morning, says 191 pieces, MIT; GitHub bas3line/ascii is MIT with 171★ (created 10-07). Not installed into a project here. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "hook": "挑一个会动的字符画，一个标签放进网页。",
+      "hookEn": "Pick an animated ASCII piece and drop it in with one tag."
+    },
+    {
+      "id": "walkable-art-history",
+      "slug": "walkable-art-history",
+      "title": "A Walkable History of Art：从维基百科搭出来的 3D 艺术史博物馆",
+      "titleEn": "A Walkable History of Art: a 3D art-history museum built from Wikipedia",
+      "summary": "一条能缩放的艺术史时间轴：滚动或双指缩放在一千多年里穿梭，点一个时期就钻进去，再以第一人称走进画廊，看墙上挂的真实画作。画作和资料都来自维基百科，作者在 Show HN 里写「从李成到班克斯」。顶部可以切换画廊墙、星图和全部艺术家。源码在 GitHub 上公开（MIT）。适合想找沉浸式信息可视化参考、或者就是想逛一逛的人。",
+      "summaryEn": "A zoomable art-history timeline: scroll or pinch to travel through more than a thousand years, click a period to dive in, then walk first-person galleries hung with real paintings. Works and data come from Wikipedia; the Show HN post says “From Li Cheng to Banksy.” The top bar switches between Gallery Wall, Star Map, and All artists. Source is public on GitHub (MIT). Good as a reference for immersive data visualization, or just for wandering.",
+      "sourceUrl": "https://artmuseum.artfrompixels.com/",
+      "secondaryUrls": [
+        "https://github.com/justdataplease/art-history-museum",
+        "https://news.ycombinator.com/item?id=49992057"
+      ],
+      "previewImage": "/previews/walkable-art-history.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "threejs",
+        "3d",
+        "art-history",
+        "timeline",
+        "wikipedia",
+        "data-viz",
+        "show-hn"
+      ],
+      "qualityNote": "Show HN（item 49992057，2026-10-07，撰写时 142pts）。页面早间 HTTP 200，页脚写 All credit goes to Wikipedia、仅作教育用途；仓库 justdataplease/art-history-museum 为 MIT。画作版权按维基百科各自说明，本库不做判断。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Show HN (item 49992057, 2026-10-07, 142pts at write time). Page HTTP 200 this morning; the footer credits Wikipedia and says educational use only; repo justdataplease/art-history-museum is MIT. Artwork rights follow each Wikipedia page; not judged here. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "hook": "在时间轴上缩放穿越，再走进画廊看真画。",
+      "hookEn": "Zoom through a timeline, then walk into galleries of real paintings."
+    },
+    {
+      "id": "bigwords-page",
+      "slug": "bigwords-page",
+      "title": "BIGWORDS.PAGE：把任何屏幕变成大字牌，链接就是整个页面",
+      "titleEn": "BIGWORDS.PAGE: turn any screen into a big sign, and the link is the whole page",
+      "summary": "打一句话，它就铺满整个屏幕：接机牌、倒计时、咖啡店 Wi-Fi 密码、直播中提示都行。所有内容都写在网址里（# 后面是文字，&bg= &fg= &font= 是颜色和字体，|| 分成轮播的几页），服务器上什么都不存，不用登录、不用装 App，发链接或收藏就能再打开。也可以用自带编辑器调。适合活动现场、店面、教室临时要一块大字牌的人，也是一个「把状态写进 URL」的干净设计范例。",
+      "summaryEn": "Type a message and it fills the screen: arrivals signs, countdowns, café Wi-Fi passwords, on-air lights. Everything lives in the URL (text after #, colors and font via &bg= &fg= &font=, slides split by ||), nothing is stored on a server, and there's no login or app; share or bookmark the link to reopen it. A built-in editor helps too. Good for events, shops, or classrooms that need a quick big sign, and a clean example of keeping state in the URL.",
+      "sourceUrl": "https://bigwords.page/",
+      "secondaryUrls": [
+        "https://bigwords.page/docs",
+        "https://news.ycombinator.com/item?id=49994443"
+      ],
+      "previewImage": "/previews/bigwords-page.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "signage",
+        "url-state",
+        "typography",
+        "fullscreen",
+        "show-hn"
+      ],
+      "qualityNote": "Show HN（item 49994443，2026-10-07，撰写时 344pts）。首页与 /docs 早间 HTTP 200；页面写免费、无账号、不在服务器存数据，本库只核对了页面说法。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Show HN (item 49994443, 2026-10-07, 344pts at write time). Home and /docs HTTP 200 this morning; the page says free, no account, nothing stored on a server; only the page's claims were checked. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T01:30:00Z",
+      "hook": "打一句话铺满屏幕，链接就是整块牌子。",
+      "hookEn": "Type a line to fill the screen; the link is the whole sign."
+    },
+    {
       "id": "banyan",
       "slug": "banyan",
       "title": "Banyan：一个 HTML 文件里长出的程序化榕树",
@@ -3841,9 +3942,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-07T01:00:00Z",
+    "updatedAt": "2026-10-08T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.56",
-    "count": 121
+    "version": "1.3.57",
+    "count": 124
   }
 }
