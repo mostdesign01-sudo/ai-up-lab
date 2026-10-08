@@ -46,7 +46,7 @@
       "slug": "grok-bot-slide-decks",
       "title": "官方更新：让 Bot 陪你做幻灯片，先挑样张再出 PPT 或 Google Slides",
       "titleEn": "Official update: build slide decks with a Bot, pick sample slides, get PowerPoint or Google Slides",
-      "hook": "先看几张样张选风格，再让 Bot 交一份 PPT 或 Google Slides。",
+      "hook": "先挑样张定风格，再让 Bot 交 PPT 或 Google Slides。",
       "hookEn": "Pick a style from sample slides, then get a PowerPoint or Google Slides file.",
       "summary": "Grok Bot 官方更新日志 v0.68.1（2026-10-07）写：Bot 可以和你一起做幻灯片，会先给你看几张样张让你挑，最后交 PowerPoint 文件或 Google Slides。同一版还有：1 对 1 聊天里你的消息会变成那只 Bot 的颜色（设置里可关）；Bot 能从草稿卡发带标题、加粗、列表的格式化邮件；Bot 的云电脑屏幕从 1280×800 变成 1920×1200。适合要做周报、提案、课程讲义但不想从空白页开始的人。怎么用：跟 Bot 说清主题、页数和给谁看，先选样张，再让它出文件。",
       "summaryEn": "The official Grok Bot changelog, v0.68.1 (2026-10-07), says Bots can build slide decks with you, showing sample slides to choose from, and deliver them as PowerPoint files or Google Slides. The same release: your messages in a 1:1 Bot chat take that Bot's color (can be turned off in Settings); Bots can send formatted emails with headings, bold, and lists from a draft card; and the Bot's cloud computer screen grows from 1280×800 to 1920×1200. Good for weekly reports, proposals, or course handouts when you don't want to start from a blank page. How to use it: tell the Bot the topic, slide count, and audience, pick a sample, then ask for the file.",
