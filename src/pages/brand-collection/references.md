@@ -170,7 +170,8 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 - **可下载**：页内有壁纸生成器等；完整矢量包需按联系方式申请
 - **亮点**：国内少见的「完整公开 Brand System 网页」——科学人文 + De-coding 质感 + 生成式资产
 
-<h3 id="minimax">2. MiniMax — Brand VI / Brand Book（已核实 200）⭐</h3>
+<a id="minimax"></a>
+### 2. MiniMax — Brand VI（已核实 200）⭐
 - **资源名**：Brand VI — MiniMax Brand Book
 - **官方 URL**：https://www.minimax.io/brand-vi  
 - **PDF**：https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf （已核实 200，%PDF-1.7）
@@ -280,20 +281,35 @@ descriptionEn: "Public AI brand identity, brand guidelines, and web design-syste
 
 ## 五、本站预览素材
 
-> 素材均来自各品牌公开发布的资料，版权归原品牌所有，仅作学习与参考。
+> 素材均来自各品牌公开发布的资料，版权归原品牌所有，仅作学习与参考。  
+> 总览卡片另提供 **本站整理笔记 PDF**（`/brand-collection/pdfs/`），便于离线阅读；内容来自本清单与对标笔记，**不是**官方完整规范原件。重新生成：`node scripts/generate-brand-pdfs.mjs`。
 
 | 本站路径 | 来源 |
 |------|------|
-| [`assets/openai/openai-blossom-light.svg`](/brand-collection/assets/references/openai/openai-blossom-light.svg) | OpenAI brand 页公开 SVG |
-| [`assets/openai/openai-wordmark-dark.svg`](/brand-collection/assets/references/openai/openai-wordmark-dark.svg) | OpenAI brand 页公开 SVG |
+| [`assets/openai/openai-blossom-light.svg`](/brand-collection/assets/references/openai/openai-blossom-light.svg) / [`openai-wordmark-dark.svg`](/brand-collection/assets/references/openai/openai-wordmark-dark.svg) / [`openai-blossom-mark.svg`](/brand-collection/assets/references/openai/openai-blossom-mark.svg) | OpenAI brand 页公开 SVG |
+| [`assets/anthropic/anthropic-logo-slate.svg`](/brand-collection/assets/references/anthropic/anthropic-logo-slate.svg) 等 | Anthropic media resources zip |
+| [`assets/google/gemini-sparkle.svg`](/brand-collection/assets/references/google/gemini-sparkle.svg) / [`material-favicon.svg`](/brand-collection/assets/references/google/material-favicon.svg) | Google Design / Material 公开资产 |
+| [`assets/mistral/mistral-icon.png`](/brand-collection/assets/references/mistral/mistral-icon.png) | mistral.ai favicon（CDN logo 直链对本环境 403） |
 | [`assets/huggingface/huggingface-logo.svg`](/brand-collection/assets/references/huggingface/huggingface-logo.svg) / [`huggingface-logo-title.svg`](/brand-collection/assets/references/huggingface/huggingface-logo-title.svg) | HF brand-assets dataset |
-| [`assets/cursor/cursor-logo.svg`](/brand-collection/assets/references/cursor/cursor-logo.svg) / [`cursor-icon.png`](/brand-collection/assets/references/cursor/cursor-icon.webp) | cursor.com/brand 公开资产 |
+| [`assets/cursor/cursor-logo.svg`](/brand-collection/assets/references/cursor/cursor-logo.svg) / [`cursor-icon.webp`](/brand-collection/assets/references/cursor/cursor-icon.webp) | cursor.com/brand 公开资产 |
 | [`assets/elevenlabs/elevenlabs-logo-black.svg`](/brand-collection/assets/references/elevenlabs/elevenlabs-logo-black.svg) | elevenlabs.io/brand |
-| [`assets/runway/runway-dont-01.png`](/brand-collection/assets/references/runway/runway-dont-01.webp) | runway brand 误用示例 |
-| [`assets/stripe/stripe-powered-by.svg`](/brand-collection/assets/references/stripe/stripe-powered-by.svg) | Stripe newsroom |
+| [`assets/runway/runway-logo.png`](/brand-collection/assets/references/runway/runway-logo.png) / [`runway-dont-01.webp`](/brand-collection/assets/references/runway/runway-dont-01.webp) | runway.com 站内 logo / brand 误用示例 |
+| [`assets/xai/xai-mark.png`](/brand-collection/assets/references/xai/xai-mark.png) | x.ai 站点标志（公开 favicon 缓存） |
+| [`assets/meta/meta-mark.jpg`](/brand-collection/assets/references/meta/meta-mark.jpg) | meta.com 站点标志（公开 favicon 缓存；完整 Brand kit 需 Brand Review） |
+| [`assets/notion/notion-logo.png`](/brand-collection/assets/references/notion/notion-logo.png) | Notion Media Kit / 站内资产 |
+| [`assets/kimi/kimi-logo.png`](/brand-collection/assets/references/kimi/kimi-logo.png) | kimi.ai Brand System 页 |
+| [`assets/minimax/minimax-logo-1.webp`](/brand-collection/assets/references/minimax/minimax-logo-1.webp) | minimax.io Brand VI 页 |
+| [`assets/tencent/tencent-logo.png`](/brand-collection/assets/references/tencent/tencent-logo.png) | 腾讯品牌与使用规范公开页 |
+| [`assets/vercel/vercel-logo.png`](/brand-collection/assets/references/vercel/vercel-logo.png) | Vercel 公开资产 CDN |
+| [`assets/linear/linear-wordmark-dark.svg`](/brand-collection/assets/references/linear/linear-wordmark-dark.svg) 等 | linear.app/brand Brand Assets zip |
+| [`assets/ibm/ibm-mark.png`](/brand-collection/assets/references/ibm/ibm-mark.png) / [`carbon-favicon.svg`](/brand-collection/assets/references/ibm/carbon-favicon.svg) | IBM / Carbon 公开站点标志 |
+| [`assets/fluent/fluent-logo-light.svg`](/brand-collection/assets/references/fluent/fluent-logo-light.svg) | Fluent 2 站点 CDN |
+| [`assets/stripe/stripe-mark.svg`](/brand-collection/assets/references/stripe/stripe-mark.svg) / [`stripe-powered-by.svg`](/brand-collection/assets/references/stripe/stripe-powered-by.svg) | Stripe newsroom / 站内资产 |
+| [`assets/atlassian/atlassian-mark-192.png`](/brand-collection/assets/references/atlassian/atlassian-mark-192.png) | Atlassian 官方 CDN favicon |
+| [`assets/apple/apple-logo.png`](/brand-collection/assets/references/apple/apple-logo.png) | Apple 公开站点标志 |
 | MiniMax Brand Book PDF | 官方约 22MB，本页不托管该文件；请从 https://file.cdn.minimax.io/public/brand-vi/20260914/MiniMax_Brand_Book.pdf 下载 |
 
-未成功落地：Mistral CDN 直链对本环境 403（请从 https://mistral.ai/brand/ 浏览器下载）；Anthropic press kit zip 约 26MB 未整包拉取（URL 已核实 200）。
+总览卡片 logo 放在 **16:9** 白底（或反白）标牌内居中。Mistral 完整品牌包 CDN 直链对本环境仍可能 403（请从 https://mistral.ai/brand/ 浏览器下载）；Anthropic 已从 media resources zip 抽取 logo SVG，整包未托管。
 
 ---
 

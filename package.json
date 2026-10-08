@@ -8,7 +8,8 @@
     "dev": "astro dev",
     "build": "astro build && node scripts/verify-build.mjs",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "brand-pdfs": "node scripts/generate-brand-pdfs.mjs"
   },
   "engines": {
     "node": ">=20"

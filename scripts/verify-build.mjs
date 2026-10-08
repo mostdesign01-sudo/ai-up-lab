@@ -608,4 +608,16 @@ const brandCollectionIndex = await readFile(new URL("../dist/brand-collection/in
 if (!brandCollectionIndex.includes("https://openai.com/brand/") || !brandCollectionIndex.includes("对标研究")) {
   throw new Error("Brand collection index is missing the reference grid or benchmark block.");
 }
-console.log("Brand collection verified: public pages, navigation, sitemap, and no internal-source wording.");
+if (!brandCollectionIndex.includes("下载 PDF") || !brandCollectionIndex.includes("brand-collection/pdfs/openai.pdf")) {
+  throw new Error("Brand collection index is missing PDF download links.");
+}
+const brandPdfManifest = JSON.parse(await readFile(new URL("../public/brand-collection/pdfs/manifest.json", import.meta.url), "utf8"));
+for (const item of brandPdfManifest.items) {
+  if (!existsSync(new URL(`../public/${item.path}`, import.meta.url))) {
+    throw new Error(`Brand collection PDF missing: ${item.path}`);
+  }
+  if (!existsSync(new URL(`../dist/${item.path}`, import.meta.url))) {
+    throw new Error(`Brand collection PDF not copied to dist: ${item.path}`);
+  }
+}
+console.log(`Brand collection verified: public pages, navigation, sitemap, ${brandPdfManifest.items.length} note PDFs, and no internal-source wording.`);

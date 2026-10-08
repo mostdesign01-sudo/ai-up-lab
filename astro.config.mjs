@@ -24,6 +24,20 @@ function prefixBrandCollectionAssets() {
   };
 }
 
+/** Marks sit in a chip; specimen sheets and photography use a shot frame. */
+function brandCollectionFigureClass(href) {
+  const file = href.split("/").pop() ?? "";
+  const shot = /openai-blossom|openai-wordmark|cursor-logo\.svg|history|evolution|1000logos|logos-world|emblem-eagle|runway-dont|china-ecommerce\//i.test(href);
+  if (shot) {
+    return /openai-wordmark-dark\.svg/i.test(href) ? ["bc-figure", "is-shot", "is-on-dark"] : ["bc-figure", "is-shot"];
+  }
+  if (/logo|wordmark|icon|favicon|powered-by/i.test(file)) {
+    const ink = /(?:^|\/)huggingface-logo\.svg$/i.test(href) || /logo-inverse\./i.test(file);
+    return ink ? ["bc-figure", "is-mark", "is-ink"] : ["bc-figure", "is-mark"];
+  }
+  return ["bc-figure", "is-shot"];
+}
+
 /** Open external notes in a new tab, and show hosted images instead of bare file links. */
 function brandCollectionLinkAttrs() {
   const image = /\.(?:svg|webp|png|jpe?g|gif)(?:\?.*)?$/i;
@@ -40,8 +54,7 @@ function brandCollectionLinkAttrs() {
       }
       if (href.includes("/brand-collection/assets/") && image.test(href)) {
         const label = textOf(node).trim();
-        const onDark = /(?:wordmark-dark|logo-inverse)\./i.test(href);
-        node.properties.className = onDark ? ["bc-figure", "is-on-dark"] : ["bc-figure"];
+        node.properties.className = brandCollectionFigureClass(href);
         node.children = [
           { type: "element", tagName: "img", properties: { src: href, alt: label, loading: "lazy", decoding: "async" }, children: [] },
           { type: "element", tagName: "span", properties: { className: ["bc-figure-label"] }, children: [{ type: "text", value: label }] },
