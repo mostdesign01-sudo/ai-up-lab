@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "id": "svg-spark",
+      "slug": "svg-spark",
+      "title": "SVG Spark：浏览器里的 10 个本地小工具（SVG 转图、对比度、社交图裁切…）",
+      "titleEn": "SVG Spark: 10 client-side tools (SVG convert, contrast, social crop, and more)",
+      "summary": "一页集合了十个完全在浏览器里跑的小工具，文件不上传。和设计相关的包括：SVG 批量转 PNG/WebP、带平台安全区的社交图裁切、WCAG 对比度检查；另外还有正则可视化、PDF 拆合、JSON 转 CSV/Excel、字幕去时间码、UTM 链接、SQL 格式化、Markdown 预览。适合做图标、海报和落地页素材时顺手转换和检查的人，整站本地处理，适合不想把图传到第三方的场景。",
+      "summaryEn": "One page with ten utilities that run entirely in the browser—nothing uploads. Design-related ones include batch SVG→PNG/WebP, social-image crop with platform safe zones, and a WCAG contrast checker; also regex visualizer, PDF split/merge, JSON→CSV/Excel, SRT cleanup, UTM builder, SQL formatter, and Markdown preview. Handy when you are converting icons or poster assets and checking contrast without sending files to a third party.",
+      "sourceUrl": "https://svg-spark.vercel.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50013931"
+      ],
+      "previewImage": "/previews/svg-spark.webp",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "tags": [
+        "svg",
+        "design",
+        "browser",
+        "privacy",
+        "show-hn",
+        "contrast",
+        "social-image"
+      ],
+      "qualityNote": "线索 HN item 50013931（2026-10-08T23:32Z，约 10-09 07:32 北京时间，撰写时 25pts）。页面早间 HTTP 200，十个工具名称和「Nothing ever leaves your device」照首页写。本库没有逐个点开实测转换结果。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Lead: HN item 50013931 (2026-10-08T23:32Z, about 07:32 on 10-09 Beijing time, 25pts at write time). Page HTTP 200 this morning; the ten tool names and “Nothing ever leaves your device” follow the homepage. This library did not run each tool end-to-end. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-09T01:45:00Z",
+      "hook": "SVG 转图、对比度、社交裁切，全在本地浏览器里完成。",
+      "hookEn": "SVG convert, contrast, and social crop—all local in the browser."
+    },
+    {
       "id": "holding-up-the-internet",
       "slug": "holding-up-the-internet",
       "title": "The people holding up the internet：一页滚动数据故事，40 亿部手机靠一个人维护的时区文件",
@@ -4005,9 +4038,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-08T12:30:00Z",
+    "updatedAt": "2026-10-09T01:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.58",
-    "count": 126
+    "version": "1.3.59",
+    "count": 127
   }
 }

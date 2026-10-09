@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-09",
+      "title": "早间收录：Cases +3（Claude Design / Flowstep / Shopify 连接器）、HTML +1（SVG Spark）",
+      "titleEn": "Morning catalog: Cases +3 (Claude Design / Flowstep / Shopify connector), HTML +1 (SVG Spark)",
+      "body": "Cases：claude-design（Anthropic Labs AI 设计工具，产品页 + 2026-09 设计系统更新，AI×设计）、flowstep（给编程助手的设计画布 + MCP，AI×设计）、grok-bot-shopify（官方 @bot https://x.com/bot/status/2108228871938359347 ，连 Shopify 查单/库存/商品）。HTML：svg-spark（HN item 50013931，10 个本地浏览器设计/开发小工具）。全部新条目有 3:2 自托管预览；三条 Case 已进 caseTools。均未实测。cases 162→165，html-items 126→127。未改首页精选、Agent UI、Models。",
+      "bodyEn": "Cases: claude-design (Anthropic Labs AI design tool; product page + September 2026 design-system update; AI×design), flowstep (design canvas + MCP for coding agents; AI×design), grok-bot-shopify (official @bot https://x.com/bot/status/2108228871938359347 — Shopify for orders/inventory/listings). HTML: svg-spark (HN item 50013931, 10 local browser design/dev utilities). Every new entry has a self-hosted 3:2 preview; three Cases added to caseTools. Nothing tested hands-on. cases 162→165, html-items 126→127. Homepage picks, Agent UI, and Models unchanged."
+    },
+    {
       "date": "2026-10-08",
       "title": "晚间收录：Cases +2（Krea Photoshop 插件 / Framer 技能做设计规范）、HTML +2（时区文件数据故事 / demoscene-recomp）",
       "titleEn": "Evening catalog: Cases +2 (Krea Photoshop plugin / Framer Skills as a design system), HTML +2 (time zone data story / demoscene-recomp)",
