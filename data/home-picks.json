@@ -1,8 +1,6 @@
 {
   "picks": [
-    {"key": "grok:pi-1-0", "section": "tools", "title": {"zh": "Pi 1.0：搭建自己的\n编程工作流", "en": "Pi 1.0: build your own coding workflow"}, "reason": {"zh": "适合想按自己的方式扩展编程助手的人。", "en": "For people who want to shape a coding assistant around their own workflow."}},
-    {"key": "html:transformer-explainer", "section": "learn", "title": {"zh": "Transformer Explainer", "en": "Transformer Explainer"}, "reason": {"zh": "在浏览器里跑 GPT-2，探索注意力与概率。", "en": "Run GPT-2 in your browser and explore attention and probabilities."}},
-    {"key": "html:taste-skill", "section": "tools", "title": {"zh": "Taste Skill", "en": "Taste Skill"}, "reason": {"zh": "给编程助手装上设计品味。", "en": "Give your coding assistant design taste."}}
+    {"key": "grok:pi-1-0", "section": "tools", "title": {"zh": "Pi 1.0：搭建自己的\n编程工作流", "en": "Pi 1.0: build your own coding workflow"}, "reason": {"zh": "适合想按自己的方式扩展编程助手的人。", "en": "For people who want to shape a coding assistant around their own workflow."}}
   ],
   "titles": [
     {"key": "html:css-bed", "title": {"zh": "CSS Bed", "en": "CSS Bed"}},
