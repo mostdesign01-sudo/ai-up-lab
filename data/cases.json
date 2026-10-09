@@ -1,14 +1,50 @@
 {
   "cases": [
     {
+      "id": "claude-dashboards-motion",
+      "slug": "claude-dashboards-motion",
+      "title": "工具：Claude Motion 和 Claude Dashboards — 一句话做动画讲解短片，连上数据出实时看板",
+      "titleEn": "Tool: Claude Motion and Claude Dashboards — animated explainers from a prompt, live dashboards from your data",
+      "hook": "一句话把报告做成动画短片，每个字和数字都能改。",
+      "hookEn": "Turn a report into a short animated explainer where every word and number stays editable.",
+      "summary": "Anthropic 2026-10-08 同时上线两个 beta 功能。Claude Motion：让 Claude 把季度报告做成 30 秒讲解动画、给演示里的图表加动效、或做一段客户上手演示，播放起来像短视频，可以在编辑器里调，也可以接着对话改，最后下载成 MP4。它不是视频生成模型，而是写代码去动你的文字、图表、形状和图片，所以没有生成画面、没有 AI 人物，任何一个字、数字、节奏都能改；做完还能拿去 Adobe、Descript、HeyGen、Luma AI、Runway 等工具继续做（Canva 和 Captions 写着即将支持）。Claude Dashboards：连上 BigQuery、Databricks、Snowflake、Redshift、ClickHouse 或 Salesforce，用大白话提问，Claude 出一张会自动刷新的看板，点任何数字能看到背后的查询，深入分析时可发到 Amplitude、Grafana、Hex、Mixpanel、PostHog 等。套餐：Motion 只在 Team 和 Enterprise，Dashboards 在付费档；同一篇公告说 Docs、Slides、Design 去掉 beta，所有套餐含免费档都能用。适合要做汇报动效、产品讲解、数据周报的设计和运营。",
+      "summaryEn": "Anthropic launched two beta features on 2026-10-08. Claude Motion: ask Claude to turn a quarterly report into a 30-second explainer, add motion to a chart in a deck, or make a customer onboarding walkthrough. It plays like a short video; tweak it in the editor or by chatting, then download an MP4. It is not a video generation model: Claude writes code that animates your text, charts, shapes, and images, so there is no generated footage or AI-generated people and any word, number, or timing can change. You can take it further in Adobe, Descript, HeyGen, Luma AI, Runway, and others (Canva and Captions listed as coming soon). Claude Dashboards: connect BigQuery, Databricks, Snowflake, Redshift, ClickHouse, or Salesforce, ask in plain language, and get a dashboard that stays current; click any number to see its query, and send it on to Amplitude, Grafana, Hex, Mixpanel, PostHog, and more. Plans: Motion is Team and Enterprise only, Dashboards is on paid plans; the same post takes Docs, Slides, and Design out of beta on every plan including Free. Good for designers and ops people who make presentation motion, product explainers, or weekly data reports.",
+      "categories": [
+        "content",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://claude.com/resources/articles/dashboards-and-motion",
+      "secondaryUrls": [
+        "https://x.com/claudeai/status/2108271552991252810",
+        "https://x.com/runwayml/status/2108287937272266800"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 Claude 官方文章 https://claude.com/resources/articles/dashboards-and-motion （日期 2026-10-08），晚间 HTTP 200；Motion 不用视频生成模型、导出 MP4、可接的外部工具名单，Dashboards 的数据源和可转发工具，以及套餐范围都照文章写。发布帖 @claudeai 2026-10-08T19:01Z（约 10-09 03:01 北京时间），晚间约 505 万次浏览、4.1 万赞；Runway 同日发帖说可把 Motion 的作品拿去 Runway 继续做。收录理由：AI×设计，动效讲解是设计和运营常做的活，这条把它变成对话加可编辑代码。本库没有 Team/Enterprise 账号，没有实际做动画、连数据源或导出 MP4。预览为 Playwright 实拍文章首屏缩成 3:2 WebP。",
+      "qualityNoteEn": "Primary source is Claude's official article https://claude.com/resources/articles/dashboards-and-motion (dated 2026-10-08), HTTP 200 this evening; Motion not using a video model, MP4 export, the list of follow-on tools, Dashboards' data sources and send-to tools, and plan coverage all follow the article. Launch post is @claudeai at 2026-10-08T19:01Z (about 03:01 on 10-09 Beijing time), about 5.05M views and 41K likes this evening; Runway posted the same day that Motion work can continue in Runway. Why it is listed: AI×design, since motion explainers are everyday work for designers and ops, now done by chatting with editable code. This library has no Team/Enterprise seat and did not make an animation, connect a data source, or export an MP4. Preview is a Playwright capture of the article above the fold, scaled to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "Dashboards 要连公司数据源，先让管理员确认权限；看板和动画可以分享到组织外，发出去前看清分享范围。",
+      "approvalBoundaryEn": "Dashboards connect to company data, so have an admin confirm access first; dashboards and animations can be shared outside the org, so check sharing scope before sending.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-09T12:20:00Z",
+      "previewImage": "/previews/claude-dashboards-motion.webp"
+    },
+    {
       "id": "claude-design",
       "slug": "claude-design",
       "title": "工具：Claude Design — 用对话出设计稿，还能套上你自己的设计系统",
       "titleEn": "Tool: Claude Design — prompt for designs that stay on your design system",
       "hook": "跟 Claude 说需求，它按你的组件配色先出一版。",
       "hookEn": "Describe it; Claude drafts on your design system, then you refine.",
-      "summary": "Anthropic Labs 的 Claude Design：用对话做设计稿、可点原型、一页纸和演示相关视觉。产品页写你可以说需求，Claude 先出一版，再通过继续聊、批注、直接改画布或滑杆微调。能从 GitHub、设计文件或本机代码库导入设计系统，让输出用真实组件、颜色和字体，而不是一套通用模板。和 Claude Code 之间可用 /design-sync 把设计系统拉过去，或用 /design 在终端里建、改、同步设计项目；做完也能交给 Claude Code 接着写代码。导出写的有 PDF、PPTX、HTML，以及 Adobe、Canva、Gamma、Lovable、Miro、Replit、Vercel、Wix 等连接。帮助中心写的是付费档 beta；产品页 FAQ 另写 Claude Design / Slides / Docs 也包含在含免费档在内的套餐里，两处口径不一致，这条都记上。企业组织默认关闭，管理员可开。独立站 claude.ai/design 写明开到 2026-12-14，之后迁到对话里的 Artifacts。",
-      "summaryEn": "Claude Design from Anthropic Labs: make designs, clickable prototypes, one-pagers, and presentation visuals by chatting. The product page says you describe what you need, Claude builds a first version, then you refine through conversation, comments, direct canvas edits, or sliders. You can import a design system from GitHub, design files, or a local codebase so output uses your real components, colors, and type instead of a generic template. With Claude Code you can /design-sync to pull the system in, or /design from the terminal to create, edit, and sync design projects; when ready you can hand off to Claude Code to implement. Exports listed include PDF, PPTX, HTML, plus connectors to Adobe, Canva, Gamma, Lovable, Miro, Replit, Vercel, and Wix. Help Center calls it beta on paid plans; the product FAQ also says Claude Design, Slides, and Docs are included on every plan including Free. Both wordings are recorded. Enterprise orgs default off until an admin enables them. The standalone claude.ai/design site stays open until 2026-12-14, then work moves into Artifacts in any Claude chat.",
+      "summary": "Anthropic Labs 的 Claude Design：用对话做设计稿、可点原型、一页纸和演示相关视觉。产品页写你可以说需求，Claude 先出一版，再通过继续聊、批注、直接改画布或滑杆微调。能从 GitHub、设计文件或本机代码库导入设计系统，让输出用真实组件、颜色和字体，而不是一套通用模板。和 Claude Code 之间可用 /design-sync 把设计系统拉过去，或用 /design 在终端里建、改、同步设计项目；做完也能交给 Claude Code 接着写代码。导出写的有 PDF、PPTX、HTML，以及 Adobe、Canva、Gamma、Lovable、Miro、Replit、Vercel、Wix 等连接。2026-10-08 官方公告：Claude Design 连同 Docs、Slides 去掉 beta，所有套餐（含免费档）都能用。企业组织默认关闭，管理员可开。独立站 claude.ai/design 写明开到 2026-12-14，之后迁到对话里的 Artifacts。",
+      "summaryEn": "Claude Design from Anthropic Labs: make designs, clickable prototypes, one-pagers, and presentation visuals by chatting. The product page says you describe what you need, Claude builds a first version, then you refine through conversation, comments, direct canvas edits, or sliders. You can import a design system from GitHub, design files, or a local codebase so output uses your real components, colors, and type instead of a generic template. With Claude Code you can /design-sync to pull the system in, or /design from the terminal to create, edit, and sync design projects; when ready you can hand off to Claude Code to implement. Exports listed include PDF, PPTX, HTML, plus connectors to Adobe, Canva, Gamma, Lovable, Miro, Replit, Vercel, and Wix. Anthropic's 2026-10-08 post took Claude Design, Docs, and Slides out of beta on every plan, including Free. Enterprise orgs default off until an admin enables them. The standalone claude.ai/design site stays open until 2026-12-14, then work moves into Artifacts in any Claude chat.",
       "categories": [
         "content",
         "productivity",
@@ -17,6 +53,7 @@
       "role": "AI design tool",
       "sourceUrl": "https://claude.com/product/design",
       "secondaryUrls": [
+        "https://claude.com/resources/articles/dashboards-and-motion",
         "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
         "https://www.anthropic.com/news/claude-design-anthropic-labs",
         "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
@@ -35,7 +72,7 @@
       "language": "zh",
       "featured": true,
       "publishedAt": "2026-04-17",
-      "updatedAt": "2026-10-09T01:45:00Z",
+      "updatedAt": "2026-10-09T12:20:00Z",
       "previewImage": "/previews/claude-design.webp"
     },
     {
@@ -9098,11 +9135,15 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-09T01:45:00Z",
+    "updatedAt": "2026-10-09T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.51",
-    "count": 165,
+    "version": "1.4.52",
+    "count": 166,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=50016312",
+      "https://quake-srp.pages.dev/",
+      "https://x.com/claudeai/status/2108271552991252810",
+      "https://claude.com/resources/articles/dashboards-and-motion",
       "https://news.ycombinator.com/item?id=50013931",
       "https://svg-spark.vercel.app/",
       "https://x.com/bot/status/2108228871938359347",
