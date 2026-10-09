@@ -1,5 +1,6 @@
 {
   "caseTools": [
+    "claude-dashboards-motion",
     "grok-bot-shopify",
     "flowstep",
     "claude-design",

@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "quake-srp",
+      "slug": "quake-srp",
+      "title": "Quake-SRP：1996 年的《雷神之锤》用纯安全 Rust 重写，浏览器里直接玩，代码几乎全由 Claude Code 写",
+      "titleEn": "Quake-SRP: 1996's Quake ported to dependency-free safe Rust, playable in the browser, written mostly by Claude Code",
+      "summary": "打开网页点一下就能玩《雷神之锤》共享版第一章，手机也能跑（有触屏按键，能加到主屏幕）。它把 id Software 的 WinQuake C 源码逐个文件移植成 Rust，只用标准库、不写 unsafe，再编译成 WebAssembly。默认是给 2026 年屏幕调过的画面，也能切回 320x200 的经典模式；作者拿 id 原版 C 代码当对照，逐像素、逐采样、逐帧比对，差异写在 AUDIT.md。仓库 README 写明：代码和文档由 Claude 在 Claude Code 里写，人只定规则、试玩和报错；大部分工作是一群智能体各开分支、按书面任务干活，由一个总控智能体在全部检查通过后才合并。适合想看「智能体团队能把多大的老项目搬到网页上」的人，也是一个好玩的浏览器游戏。",
+      "summaryEn": "Click the page and play Quake's shareware first episode; it runs on phones too (touch controls, installable to the home screen). id Software's WinQuake C source was ported file by file to Rust with only the standard library and no unsafe code, then compiled to WebAssembly. The default look is tuned for 2026 screens, and a Classic mode restores 320x200; the author checks it against id's own C pixel by pixel, sample by sample, and frame by frame, listing known differences in AUDIT.md. The README says Claude wrote the code and docs in Claude Code while the person set rules, played, and reported bugs; most work ran as fleets of agents on their own branches with written briefs, and a chair agent merged only after the full check passed. Good for anyone curious how big an old codebase an agent team can bring to the web, and a fun browser game.",
+      "sourceUrl": "https://quake-srp.pages.dev/",
+      "secondaryUrls": [
+        "https://github.com/terrapapagalli1516/quake-srp",
+        "https://news.ycombinator.com/item?id=50016312",
+        "https://youtu.be/8TvVMzyxACc"
+      ],
+      "previewImage": "/previews/quake-srp.webp",
+      "types": [
+        "game",
+        "interactive"
+      ],
+      "tags": [
+        "webassembly",
+        "rust",
+        "game",
+        "retro",
+        "open-source",
+        "ai-built"
+      ],
+      "qualityNote": "线索 Show HN item 50016312（2026-10-09T05:22Z，约 13:22 北京时间，撰写时 181pts）。页面晚间 HTTP 200，无头浏览器能加载到开始画面。仓库 terrapapagalli1516/quake-srp，GPL-2.0，2026-10-08 创建；Claude Code 与智能体分工、对照 id 原版 C 的检查方法都照 README 写，本库没有复跑检查。README 写已在 Linux 的 Chromium/Firefox、macOS Chrome、安卓手机试过，Safari 和 iPhone 未测；需要浏览器支持共享内存和多线程。共享版游戏数据来自 id 的免费章节。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Lead: Show HN item 50016312 (2026-10-09T05:22Z, about 13:22 Beijing time, 181pts at write time). Page HTTP 200 this evening and a headless browser reaches the start screen. Repo terrapapagalli1516/quake-srp, GPL-2.0, created 2026-10-08; the Claude Code and agent workflow and the checks against id's C follow the README, and this library did not re-run them. README says it was tried in Chromium/Firefox on Linux, Chrome on macOS, and an Android phone, with Safari and iPhone untested; the browser must allow shared memory and worker threads. Game data is id's free shareware episode. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-09T12:20:00Z",
+      "hook": "点开就能玩雷神之锤，整套移植由一群智能体完成。",
+      "hookEn": "Play Quake in the browser, ported to safe Rust by a fleet of Claude Code agents."
+    },
+    {
       "id": "svg-spark",
       "slug": "svg-spark",
       "title": "SVG Spark：浏览器里的 10 个本地小工具（SVG 转图、对比度、社交图裁切…）",
@@ -4038,9 +4072,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-09T01:45:00Z",
+    "updatedAt": "2026-10-09T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.59",
-    "count": 127
+    "version": "1.3.60",
+    "count": 128
   }
 }
