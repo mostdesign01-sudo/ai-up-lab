@@ -1,6 +1,102 @@
 {
   "items": [
     {
+      "id": "svg-spark",
+      "slug": "svg-spark",
+      "title": "SVG Spark：浏览器里的 10 个本地小工具（SVG 转图、对比度、社交图裁切…）",
+      "titleEn": "SVG Spark: 10 client-side tools (SVG convert, contrast, social crop, and more)",
+      "summary": "一页集合了十个完全在浏览器里跑的小工具，文件不上传。和设计相关的包括：SVG 批量转 PNG/WebP、带平台安全区的社交图裁切、WCAG 对比度检查；另外还有正则可视化、PDF 拆合、JSON 转 CSV/Excel、字幕去时间码、UTM 链接、SQL 格式化、Markdown 预览。适合做图标、海报和落地页素材时顺手转换和检查的人，整站本地处理，适合不想把图传到第三方的场景。",
+      "summaryEn": "One page with ten utilities that run entirely in the browser—nothing uploads. Design-related ones include batch SVG→PNG/WebP, social-image crop with platform safe zones, and a WCAG contrast checker; also regex visualizer, PDF split/merge, JSON→CSV/Excel, SRT cleanup, UTM builder, SQL formatter, and Markdown preview. Handy when you are converting icons or poster assets and checking contrast without sending files to a third party.",
+      "sourceUrl": "https://svg-spark.vercel.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50013931"
+      ],
+      "previewImage": "/previews/svg-spark.webp",
+      "types": [
+        "tool",
+        "demo"
+      ],
+      "tags": [
+        "svg",
+        "design",
+        "browser",
+        "privacy",
+        "show-hn",
+        "contrast",
+        "social-image"
+      ],
+      "qualityNote": "线索 HN item 50013931（2026-10-08T23:32Z，约 10-09 07:32 北京时间，撰写时 25pts）。页面早间 HTTP 200，十个工具名称和「Nothing ever leaves your device」照首页写。本库没有逐个点开实测转换结果。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Lead: HN item 50013931 (2026-10-08T23:32Z, about 07:32 on 10-09 Beijing time, 25pts at write time). Page HTTP 200 this morning; the ten tool names and “Nothing ever leaves your device” follow the homepage. This library did not run each tool end-to-end. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-09T01:45:00Z",
+      "hook": "SVG 转图、对比度、社交裁切，全在本地浏览器里完成。",
+      "hookEn": "SVG convert, contrast, and social crop—all local in the browser."
+    },
+    {
+      "id": "holding-up-the-internet",
+      "slug": "holding-up-the-internet",
+      "title": "The people holding up the internet：一页滚动数据故事，40 亿部手机靠一个人维护的时区文件",
+      "titleEn": "The people holding up the internet: a scrolling data story on the time zone file four billion phones rely on",
+      "summary": "sheets.works 的一篇滚动式数据新闻：你手机上所有跟时间有关的东西（闹钟、登机牌、跨国会议）都要查同一个时区数据文件，而这个文件由 UCLA 讲师 Paul Eggert 业余维护。页面一边往下滑一边讲：版本 2026e 改了什么、过去一年 251 处改动里 218 处出自他手、2011 年被起诉又撤诉的经过，并引用了 xkcd 那张「整座数字基建立在一块小积木上」的漫画。也提供「按普通网页阅读」的版本。适合想学「大字号 + 留白 + 边滑边出数据」这种叙事版式的人，内容本身也值得一读。",
+      "summaryEn": "A scrolling data story from sheets.works: everything on your phone that shows a time (alarms, boarding passes, meetings abroad) reads one time zone database, kept up to date in his spare time by UCLA lecturer Paul Eggert. As you scroll it walks through what release 2026e changed, that 218 of the file's 251 changes in the past year were his, and the 2011 lawsuit that was later dropped, and it cites xkcd's tower-on-one-small-block comic. A plain-page version is offered too. Good for anyone studying big type, generous whitespace, and data that appears as you scroll, and the story is worth reading on its own.",
+      "sourceUrl": "https://sheets.works/data-viz/holding-up-the-internet",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50002494"
+      ],
+      "previewImage": "/previews/holding-up-the-internet.webp",
+      "types": [
+        "interactive",
+        "other"
+      ],
+      "tags": [
+        "data-viz",
+        "scrollytelling",
+        "typography",
+        "open-source",
+        "editorial"
+      ],
+      "qualityNote": "线索 HN item 50002494（2026-10-08T06:41Z，约 14:41 北京时间，撰写时 136pts）。页面晚间 HTTP 200，文中数字（40 亿部手机、251 处改动里 218 处）都是作者从代码仓库统计的说法，本库没有复核。HN 评论里有人觉得手机上读着费劲，作者也给了纯网页版。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Lead: HN item 50002494 (2026-10-08T06:41Z, about 14:41 Beijing time, 136pts at write time). Page HTTP 200 this evening; the figures (four billion phones, 218 of 251 changes) are the author's counts from the code and were not re-checked here. Some HN commenters found it hard to read on mobile; the author offers a plain-page version. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "hook": "边往下滑边出数据，讲清一个人撑起全世界手机的时间。",
+      "hookEn": "Data appears as you scroll: how one person keeps the world's phone clocks right."
+    },
+    {
+      "id": "demoscene-recomp",
+      "slug": "demoscene-recomp",
+      "title": "demoscene-recomp：把 90 年代 DOS 经典演示片逐条指令重编译，直接在浏览器里跑",
+      "titleEn": "demoscene-recomp: classic 1990s DOS demos recompiled instruction by instruction to run in the browser",
+      "summary": "四部 PC 演示片名作（Future Crew 的 Unreal 和 Second Reality、Triton 的 Crystal Dream 2、NoooN 的 Stars）在网页里原样播放。做法不是普通模拟器：先在 x86 模拟器里记录演示实际执行过的每段代码，翻译成 C，再连同计时器、VGA 显卡和 Sound Blaster 声卡的软件模型一起编译成 WebAssembly，并和模拟器逐帧对照。页面可选章节、全屏 4:3、CRT 扫描线，暂停后能按原分辨率存 PNG；网站本身还有 Retro 和 Modern 两种界面风格，是很好看的 BBS 复古界面。",
+      "summaryEn": "Four classic PC demos (Future Crew's Unreal and Second Reality, Triton's Crystal Dream 2, NoooN's Stars) play in the page as they originally did. It is not a plain emulator: the code each demo actually ran was recorded on an x86 emulator, translated to C, then compiled to WebAssembly with software models of the timer, VGA card, and Sound Blaster, and checked against the emulator frame by frame. You can pick sections, go fullscreen at 4:3, add CRT scanlines, and save a paused frame as a PNG at native resolution; the site itself switches between Retro and Modern styles, with a handsome BBS-style retro interface.",
+      "sourceUrl": "https://treylorswift.github.io/demoscene-recomp/web/",
+      "secondaryUrls": [
+        "https://github.com/treylorswift/demoscene-recomp",
+        "https://news.ycombinator.com/item?id=50002426"
+      ],
+      "previewImage": "/previews/demoscene-recomp.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "demoscene",
+        "webassembly",
+        "retro",
+        "pixel-art",
+        "bbs-ui"
+      ],
+      "qualityNote": "线索 HN item 50002426（2026-10-08T06:29Z，约 14:29 北京时间，撰写时约 95pts）。页面晚间 HTTP 200；做法、选项和署名都照仓库 README 写。GitHub 仓库没有标注开源许可，README 写原演示片是当年免费发布给演示场景的，原始文件不做修改。本库没有逐部播放核对。已配 Playwright 实拍 3:2 自托管预览。",
+      "qualityNoteEn": "Lead: HN item 50002426 (2026-10-08T06:29Z, about 14:29 Beijing time, about 95pts at write time). Page HTTP 200 this evening; the method, options, and credits follow the repo README. The GitHub repo has no license set; the README says the original demos were released free to the demoscene and their files are served unmodified. This library did not play through each demo. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "featured": false,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "hook": "Second Reality 原样在网页里跑，还能切 CRT 扫描线。",
+      "hookEn": "Second Reality runs in the page as it did in 1993, CRT scanlines optional."
+    },
+    {
       "id": "ascii-rest",
       "slug": "ascii-rest",
       "title": "ascii.rest：191 个会动的 ASCII 字符画，一行标签放进网页",
@@ -3942,9 +4038,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-08T01:30:00Z",
+    "updatedAt": "2026-10-09T01:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.57",
-    "count": 124
+    "version": "1.3.59",
+    "count": 127
   }
 }

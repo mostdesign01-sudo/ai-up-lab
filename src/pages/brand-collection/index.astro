@@ -2,7 +2,7 @@
 import BrandCollectionFrame from "../../components/BrandCollectionFrame.astro";
 import Loc from "../../components/Loc.astro";
 import { assetUrl, withBase } from "../../lib/paths";
-import { benchmarkStudies, referenceGaps, referenceGroups } from "../../lib/brand-collection";
+import { benchmarkStudies, brandCollectionPdf, brandMonogram, referenceGaps, referenceGroups } from "../../lib/brand-collection";
 ---
 
 <BrandCollectionFrame
@@ -35,11 +35,11 @@ import { benchmarkStudies, referenceGaps, referenceGroups } from "../../lib/bran
         <div class="bc-grid">
           {group.cards.map((card) => (
             <article class="bc-card">
-              {card.logo && (
-                <p class:list={["bc-logo", { "is-plain": card.well === "plain" }]}>
-                  <img src={assetUrl(card.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
-                </p>
-              )}
+              <p class:list={["bc-logo", { "is-ink": card.ink }]}>
+                {card.logo
+                  ? <img src={assetUrl(card.logo)} alt="" width="320" height="180" loading="lazy" decoding="async" />
+                  : <span class="bc-mono" aria-hidden="true">{brandMonogram(card.name)}</span>}
+              </p>
               <h3>{card.name}</h3>
               <p>{card.notable}</p>
               <p class="bc-card-links">
@@ -50,6 +50,9 @@ import { benchmarkStudies, referenceGaps, referenceGroups } from "../../lib/bran
                 )}
                 <a href={withBase(`brand-collection/references/#${card.anchor}`)}>
                   <Loc zh="查看条目" en="Read the note" />
+                </a>
+                <a href={assetUrl(brandCollectionPdf(card.id))} download={`${card.id}-brand-note.pdf`}>
+                  <Loc zh="下载 PDF" en="Download PDF" />
                 </a>
               </p>
             </article>
@@ -106,15 +109,18 @@ import { benchmarkStudies, referenceGaps, referenceGroups } from "../../lib/bran
       {
         benchmarkStudies.map((study) => (
           <article class="bc-card">
-            {study.logo && (
-              <p class:list={["bc-logo", { "is-plain": study.well === "plain" }]}>
-                <img src={assetUrl(study.logo)} alt="" width="160" height="48" loading="lazy" decoding="async" />
-              </p>
-            )}
+            <p class:list={["bc-logo", { "is-ink": study.ink }]}>
+              {study.logo
+                ? <img src={assetUrl(study.logo)} alt="" width="320" height="180" loading="lazy" decoding="async" />
+                : <span class="bc-mono" aria-hidden="true">{brandMonogram(study.title.zh)}</span>}
+            </p>
             <h3><Loc zh={study.title.zh} en={study.title.en} /></h3>
             <p>{study.line}</p>
             <p class="bc-card-links">
               <a href={withBase(study.href)}><Loc zh="打开笔记" en="Open the note" /></a>
+              <a href={assetUrl(brandCollectionPdf(study.id))} download={`${study.id}-brand-note.pdf`}>
+                <Loc zh="下载 PDF" en="Download PDF" />
+              </a>
             </p>
           </article>
         ))

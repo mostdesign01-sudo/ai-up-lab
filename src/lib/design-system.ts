@@ -62,7 +62,7 @@ export const designTokenCSS = `:root{${declarations("dark")}${foundationCSS}}htm
 
 export const designRules = [
   { zh: "先展示内容，再提供操作。分类页保留标题、简介、数量与最新列表；搜索和筛选进入独立搜索页。", en: "Show content first. Category pages have a title, a short description, a count, and the newest entries. Search and filters live on the search page." },
-  { zh: "首页采用一条主推、两条补充，再接最新更新和目录入口。精选应说明具体用途与适用人群。", en: "Use one editorial lead and two supporting picks, followed by recent entries and section links. Explain a concrete purpose and audience." },
+  { zh: "首页采用一条主推，右侧放提示词与 AIGC 创意轨，再接最新更新和目录入口。精选应说明具体用途与适用人群。", en: "Use one editorial lead, a right-rail of prompt and AIGC creative picks, then recent entries and section links. Explain a concrete purpose and audience." },
   { zh: "白底承载信息，紫色引导行动。每个局部只突出一个主操作，次操作用描边或文字链接。", en: "Use neutral surfaces for information and violet for action. Give each area one primary action; use outlines or text links for secondary actions." },
   { zh: "沿用六边形标志与 45% 中心三角形；等比缩放，深色背景用反白版本。", en: "Keep the hexagonal mark and its 45% central triangle. Scale proportionally and reverse the mark on dark surfaces." },
   { zh: "优先使用资源的真实预览；生成插图应明确用于概念表达，不代替产品截图或操作证据。", en: "Prefer real resource previews. Generated illustrations communicate concepts and do not replace product screenshots or evidence." },

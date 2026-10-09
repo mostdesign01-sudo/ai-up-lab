@@ -9,12 +9,12 @@ const COVER_BY_CATEGORY: Record<string, string> = {
   "multi-agent": "multi-agent",
   ops: "ops",
   "project-management": "ops",
-  support: "ops",
-  "customer-success": "ops",
+  support: "support",
+  "customer-success": "support",
   research: "research",
   "daily-digest": "research",
   finance: "finance",
-  recruiting: "finance",
+  recruiting: "recruiting",
 };
 
 /** Site-root path. Pass through `assetUrl` before putting it in `src`. */

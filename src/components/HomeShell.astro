@@ -1,12 +1,12 @@
 ---
-import Header from "./Header.astro";
-import Footer from "./Footer.astro";
 import Loc from "./Loc.astro";
+import CreativeRail from "./CreativeRail.astro";
 import EditorialPreview from "./EditorialPreview.astro";
 import FavButton from "./FavButton.astro";
 import Icon from "./Icon.astro";
 import GitHubStar from "./GitHubStar.astro";
 import { sections, entries, sectionEntries, tasks } from "../lib/directory";
+import { homeCreative } from "../lib/home-creative";
 import { homePicks, homeTitles, sourceHost } from "../lib/home-picks";
 import { starterCases } from "../lib/starters";
 import { changelogNotes } from "../lib/cases";
@@ -14,15 +14,14 @@ import { withBase, assetUrl } from "../lib/paths";
 import { shanghaiDateKey } from "../lib/format";
 interface Props { dateKey?: string; }
 const { dateKey } = Astro.props;
-const [lead, ...supporting] = homePicks;
-const pickKeys = new Set(homePicks.map(pick => pick.entry.key));
+const [lead] = homePicks;
+const pickKeys = new Set([...homePicks, ...homeCreative].map(pick => pick.entry.key));
 const recent = dateKey ? entries.filter(entry => shanghaiDateKey(entry.updatedAt) === dateKey) : entries.filter(entry => !pickKeys.has(entry.key)).slice(0, 2);
 const starters = starterCases().map(item => entries.find(entry => entry.key === `grok:${item.id}`)!).filter(Boolean);
 const archive = [...new Set(changelogNotes.map(note => note.date))].sort((a, b) => b.localeCompare(a)).slice(0, 8);
 const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "graph", prompts: "note" } as const;
 ---
-<Header />
-<main class="directory-home editorial-home wrap-wide">
+<div class="directory-home editorial-home wrap-wide">
   {!dateKey && <section class="editorial-feature" id="home-picks" aria-labelledby="editorial-title">
     <article class="editorial-lead" data-editorial-entry={lead.entry.key}>
       <div class="editorial-lead-copy">
@@ -35,7 +34,7 @@ const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "
       </div>
       <a class="editorial-art" href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={assetUrl("/editorial/agent-workflow.webp")} alt="" width="1190" height="1322" fetchpriority="high" loading="eager" decoding="async" /></a>
     </article>
-    <aside class="editorial-supporting" aria-label="更多精选 / More editorial picks">{supporting.map(pick => <EditorialPreview entry={pick.entry} title={pick.title} line={pick.reason} sectionId={pick.section.id} kind="support" />)}</aside>
+    <CreativeRail />
   </section>}
   {dateKey && <section class="editorial-archive-intro"><p class="editorial-eyebrow"><Loc zh="更新存档" en="UPDATE ARCHIVE" /></p><h1><Loc zh={`${dateKey} 的更新`} en={`Updates for ${dateKey}`} /></h1><a class="editorial-text-link" href={withBase("/")}><Loc zh="回到最新精选" en="Back to the latest picks" /><Icon name="arrow" size={18} /></a></section>}
   <section class="editorial-recent" id="home-recent" aria-labelledby="recent-title">
@@ -51,5 +50,4 @@ const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "
   <section class="editorial-task-section" aria-label="按任务探索 / Explore by task"><h2><Loc zh="按任务探索" en="Explore by task" /></h2><div class="directory-task-links">{tasks.map(task => <a href={withBase(`search/?task=${task.id}`)}><Loc zh={task.title.zh} en={task.title.en} /></a>)}</div></section>
   <section class="directory-home-archive"><h2><Loc zh="按日期回看" en="Browse past updates" /></h2><div class="directory-task-links">{archive.map(date => <a href={withBase(`d/${date}/`)}>{date}</a>)}<a href={withBase("changelog/")}><Loc zh="全部更新记录" en="All update notes" /><Icon name="arrow" size={14} /></a></div></section>
   <GitHubStar variant="rail" />
-</main>
-<Footer />
+</div>

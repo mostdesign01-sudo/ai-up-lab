@@ -55,7 +55,9 @@ npm run preview
 3. 维护 `meta.updatedAt`、`meta.version`、`meta.count` 和条目日期。日期表示整理时间，不是实测证明。
 4. Cases / HTML / Agent UI 要写成对的 `hook` / `hookEn`：一句话说读者能做什么。中文最多 36 字、英文最多 90 字，不放抓取日志、HTTP 状态、互动数字或日期；缺失或格式错误会阻断构建。
 5. 必要时更新 `data/directory.json` 的跨库归属。不同来源讲同一个资源时，优先补充已有条目的来源与步骤，避免重复收录。
-6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。
+6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。缺图时可用：
+   - `node scripts/capture-case-previews.mjs --write`（或 `--unique` / `--only=id1,id2` / `--force`）抓来源页实拍；
+   - `node scripts/generate-case-covers.mjs --write` 为仍缺图的 Case 生成互不重复的条目封面，并刷新 `public/covers/case-*.webp` 回退图。不要再共用粘土风分类插画充数。
 7. 更新 `data/changelog.json` 的中英说明，运行 `npm run build` 并检查受影响的页面。
 
 字段说明见 `data/schema.md`、`data/html-schema.md`、`data/agent-ui-schema.md`、`data/models-schema.md`、`data/image-prompts-schema.md`。
@@ -78,11 +80,13 @@ AIHOT 的代码是 MIT；复制代码或实质部分时保留对应版权和许�
 
 ## 读取与检索
 
-首页采用编辑精选：一条主推、两条补充，接两条最新更新、五个目录和入门教程。搜索收在“更多”菜单中，支持键盘、Esc 关闭和点击外部关闭，禁用 JavaScript 时仍可展开。
+首页采用编辑精选：一条主推，右侧为提示词 / AIGC 创意轨，再接两条最新更新、五个目录和入门教程。搜索收在“更多”菜单中，支持键盘、Esc 关闭和点击外部关闭，禁用 JavaScript 时仍可展开。
 
-`data/home-picks.json` 管理主推和补充条目的原始收藏键、展示目录、短标题与推荐理由。更新时必须引用已收录资源，展示目录须属于条目实际归属，标题和理由必须中英成对；错误配置会阻断构建。主推应有具体用途、可读来源与足够的操作信息，补充条目应提供不同角度；收录时间和热度不能代替内容质量。`titles` 只缩短首页标题，详情原文保留。
+`data/home-picks.json` 管理主推的原始收藏键、展示目录、短标题与推荐理由。更新时必须引用已收录资源，展示目录须属于条目实际归属，标题和理由必须中英成对；错误配置会阻断构建。主推应有具体用途、可读来源与足够的操作信息；收录时间和热度不能代替内容质量。`titles` 只缩短首页标题，详情原文保留。
 
-主推插画是概念封面，来自 Image Gen，不表示产品实拍或操作实测；补充和最新条目使用原有真实预览，缺图时用文字。最新更新按数据时间排序并排除当期精选，具体条目可以与设计稿示例不同。Phosphor 标准图标的许可随站点放在 `public/licenses/phosphor-icons.txt`。
+`data/home-creative.json` 管理右侧创意轨：提示词画廊、动效演示与 AIGC 创作素材。每条需已收录、带预览图，并标注 `gallery` / `motion` / `video` / `prompt` 之一；标题与理由中英成对。不写点赞、浏览等互动数字，预览用站内 WebP（可加轻微动效），不假装成站外热门排行。
+
+主推插画是概念封面，来自 Image Gen，不表示产品实拍或操作实测；创意轨和最新条目使用原有真实预览，缺图时不可进入创意轨。最新更新按数据时间排序并排除当期主推与创意轨条目，具体条目可以与设计稿示例不同。Phosphor 标准图标的许可随站点放在 `public/licenses/phosphor-icons.txt`。
 
 默认采用浅色编辑视觉，保留用户已选择的深浅主题。桌面端单行导航，手机端两行导航，收藏入口移入“更多”，GitHub Star 入口保留在页面底部。内容与任务分类更完整后，再评估侧栏工作台；当前不新增空栏目。选定设计与实现的对照记录见 `design-qa.md`。
 

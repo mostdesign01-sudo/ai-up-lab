@@ -1,5 +1,10 @@
 {
   "caseTools": [
+    "grok-bot-shopify",
+    "flowstep",
+    "claude-design",
+    "krea-photoshop-plugin",
+    "framer-skills-design-system",
     "gamma-5",
     "protopie-mcp",
     "graphical",

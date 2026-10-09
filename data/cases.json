@@ -1,6 +1,194 @@
 {
   "cases": [
     {
+      "id": "claude-design",
+      "slug": "claude-design",
+      "title": "工具：Claude Design — 用对话出设计稿，还能套上你自己的设计系统",
+      "titleEn": "Tool: Claude Design — prompt for designs that stay on your design system",
+      "hook": "跟 Claude 说需求，它按你的组件配色先出一版。",
+      "hookEn": "Describe it; Claude drafts on your design system, then you refine.",
+      "summary": "Anthropic Labs 的 Claude Design：用对话做设计稿、可点原型、一页纸和演示相关视觉。产品页写你可以说需求，Claude 先出一版，再通过继续聊、批注、直接改画布或滑杆微调。能从 GitHub、设计文件或本机代码库导入设计系统，让输出用真实组件、颜色和字体，而不是一套通用模板。和 Claude Code 之间可用 /design-sync 把设计系统拉过去，或用 /design 在终端里建、改、同步设计项目；做完也能交给 Claude Code 接着写代码。导出写的有 PDF、PPTX、HTML，以及 Adobe、Canva、Gamma、Lovable、Miro、Replit、Vercel、Wix 等连接。帮助中心写的是付费档 beta；产品页 FAQ 另写 Claude Design / Slides / Docs 也包含在含免费档在内的套餐里，两处口径不一致，这条都记上。企业组织默认关闭，管理员可开。独立站 claude.ai/design 写明开到 2026-12-14，之后迁到对话里的 Artifacts。",
+      "summaryEn": "Claude Design from Anthropic Labs: make designs, clickable prototypes, one-pagers, and presentation visuals by chatting. The product page says you describe what you need, Claude builds a first version, then you refine through conversation, comments, direct canvas edits, or sliders. You can import a design system from GitHub, design files, or a local codebase so output uses your real components, colors, and type instead of a generic template. With Claude Code you can /design-sync to pull the system in, or /design from the terminal to create, edit, and sync design projects; when ready you can hand off to Claude Code to implement. Exports listed include PDF, PPTX, HTML, plus connectors to Adobe, Canva, Gamma, Lovable, Miro, Replit, Vercel, and Wix. Help Center calls it beta on paid plans; the product FAQ also says Claude Design, Slides, and Docs are included on every plan including Free. Both wordings are recorded. Enterprise orgs default off until an admin enables them. The standalone claude.ai/design site stays open until 2026-12-14, then work moves into Artifacts in any Claude chat.",
+      "categories": [
+        "content",
+        "productivity",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://claude.com/product/design",
+      "secondaryUrls": [
+        "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
+        "https://www.anthropic.com/news/claude-design-anthropic-labs",
+        "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是产品页 https://claude.com/product/design ，早间 HTTP 200；设计系统导入、/design-sync、导出格式和连接器名单都照页面与 2026-09 博客「Claude Design now stays on brand for daily work」写。首发新闻是 2026-04-17 Anthropic Labs 帖。帮助中心「Get started with Claude Design」写付费档 beta；产品页 FAQ 写 Design/Slides/Docs 含免费档，两处不一致，都记。收录理由：AI×设计，和库里的 Figma 助手、Framer Skills、Graphical 同一类「按设计系统出稿」，但挂在 Claude 对话和 Claude Code 上。本库没有登录 Claude，没有导入设计系统，没有实测导出或连接器。预览为 Playwright 实拍产品页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is the product page https://claude.com/product/design, HTTP 200 this morning; design-system import, /design-sync, export formats, and the connector list follow that page and the September 2026 blog “Claude Design now stays on brand for daily work.” The launch post is Anthropic Labs on 2026-04-17. Help Center “Get started with Claude Design” says beta on paid plans; the product FAQ says Design/Slides/Docs are included on every plan including Free. Both are recorded. Why it is listed: AI×design, same family as the library’s Figma agent, Framer Skills, and Graphical entries—generate against a design system—but inside Claude chat and Claude Code. This library did not sign in to Claude, import a design system, or test exports or connectors. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "导出或推到 Canva / Gamma / Vercel 等外部工具前，先确认分享范围和组织设置。",
+      "approvalBoundaryEn": "Before exporting or sending work to Canva, Gamma, Vercel, or similar, check sharing scope and org settings.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-04-17",
+      "updatedAt": "2026-10-09T01:45:00Z",
+      "previewImage": "/previews/claude-design.webp"
+    },
+    {
+      "id": "flowstep",
+      "slug": "flowstep",
+      "title": "工具：Flowstep — 给编程助手用的设计画布，出屏、改稿、再拷进 Figma",
+      "titleEn": "Tool: Flowstep — a design canvas for coding agents; generate screens, edit, paste into Figma",
+      "hook": "助手在画布上出界面，改完还能直接粘进 Figma。",
+      "hookEn": "Have Cursor or Claude Code generate UI onto an editable canvas, then paste into Figma.",
+      "summary": "Flowstep 自称「给 agent 用的设计画布」。官网写：把颜色、字体、间距写进设计指南，之后每次生成和修改都跟这套走；也可以说「以后都用我们的蓝」，它会自己改规则。MCP 服务器地址是 https://api.flowstep.ai/mcp，文档写可接 Cursor、Claude Code、Windsurf、Codex：助手能生成屏幕、看渲染图、改稿，并和指南同步。画布上的帧可用 ⌘⇧C / ⌘V 拷进 Figma，也能从 Figma 导入成可编辑屏幕，不装插件。导出写的是 React、TypeScript、Tailwind。官网首页写 No credit card required；具体免费额度和付费档本库没在价格页核对。适合已经在用编程助手、又想先有可改视觉稿再写代码的人。",
+      "summaryEn": "Flowstep calls itself a design canvas for agents. The site says you write colors, typography, and spacing into design guidelines so every generation and edit follows them, and you can say “from now on, use our blue” for it to update the rules. Its MCP server is at https://api.flowstep.ai/mcp; docs say it connects to Cursor, Claude Code, Windsurf, and Codex so an agent can generate screens, view renders, edit them, and keep guidelines in sync. Frames paste into Figma with ⌘⇧C / ⌘V, and Figma frames import as editable screens with no plugin. Export is listed as React, TypeScript, and Tailwind. The homepage says no credit card required; free quotas and paid tiers were not checked on a pricing page. Good for people already using a coding agent who want editable UI mockups before code.",
+      "categories": [
+        "content",
+        "engineering",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://flowstep.ai/",
+      "secondaryUrls": [
+        "https://flowstep.ai/mcp",
+        "https://docs.flowstep.ai/mcp/quickstart",
+        "https://docs.flowstep.ai/mcp/tools"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是官网 https://flowstep.ai/ 与 MCP 页 https://flowstep.ai/mcp ，早间均 HTTP 200；Cursor / Claude Code 配置片段和「先 list-files 再 create-new-design」步骤照 https://docs.flowstep.ai/mcp/quickstart 。收录理由：AI×设计，把出屏能力直接塞进编程助手，和库里的 ProtoPie MCP、Figma 助手互补。本库没有注册 Flowstep，没有连 MCP，没有生成屏幕，也没有核对价格与额度。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary sources are https://flowstep.ai/ and https://flowstep.ai/mcp, both HTTP 200 this morning; Cursor / Claude Code config snippets and the list-files then create-new-design steps follow https://docs.flowstep.ai/mcp/quickstart. Why it is listed: AI×design that puts screen generation inside a coding agent, complementary to ProtoPie MCP and the Figma agent already in the library. This library did not sign up for Flowstep, connect MCP, generate a screen, or check pricing and quotas. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "连 MCP 要登录 Flowstep；生成会占额度。往正式 Figma 文件粘贴前自己先看一眼。",
+      "approvalBoundaryEn": "Connecting MCP needs a Flowstep login and generations use quota. Review before pasting into a production Figma file.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-09T01:45:00Z",
+      "previewImage": "/previews/flowstep.webp"
+    },
+    {
+      "id": "grok-bot-shopify",
+      "slug": "grok-bot-shopify",
+      "title": "官方更新：Grok Bot 能连 Shopify，查订单、盯库存、改商品信息",
+      "titleEn": "Official update: Grok Bot connects to Shopify for orders, inventory, and listings",
+      "hook": "连上 Shopify 之后，直接让 Bot 帮你看订单、库存和商品页。",
+      "hookEn": "Connect Shopify, then ask a Bot to check orders, inventory, and product listings.",
+      "summary": "官方 @bot 2026-10-08T16:11Z（约 10-09 00:11 北京时间）发帖：Grok Bot 现在可以帮你管 Shopify 店。帖子原文：先连接 Shopify，再让它查订单、跟踪库存、更新商品信息。帖子引用了 Shopify 官方账号的相关说明，并附了一张产品图。怎么用：在 Grok Bot 里加上 Shopify 连接器（帖子语境是问 @bot 或在连接器里选 Shopify），授权后用自然语言下任务。适合已经在用 Shopify 开店、又想把查单和改商品这类重复活交给 Bot 的人。本库没有在官方 Grok Bot 文档里找到单独的 Shopify 连接器说明页；以这条官方推文为准。",
+      "summaryEn": "Official @bot post at 2026-10-08T16:11Z (about 00:11 on 10-09 Beijing time): Grok Bot can now help run a Shopify store. The post says to connect Shopify, then ask it to check orders, track inventory, and keep product listings up to date. It quotes a related Shopify account post and includes a product image. How to use it: add the Shopify connector in Grok Bot (the post’s framing is asking @bot or picking Shopify in connectors), authorize, then give tasks in plain language. Good for Shopify merchants who want a Bot to handle repetitive order checks and listing updates. This library did not find a separate Shopify connector doc page in the official Grok Bot docs; the official tweet is the source of truth here.",
+      "categories": [
+        "automation",
+        "productivity",
+        "content"
+      ],
+      "role": "Shopify connector",
+      "sourceUrl": "https://x.com/bot/status/2108228871938359347",
+      "secondaryUrls": [
+        "https://x.ai/bot",
+        "https://docs.x.ai/grok-bot/overview"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是官方 @bot 推文 https://x.com/bot/status/2108228871938359347 ，早间经 X API 与 fxtwitter 可读（约 698 万浏览、2151 赞，附产品图）。收录理由：可复现的官方能力更新，电商店主能直接用。docs.x.ai/grok/connectors 列的是聊天版 Grok 连接器，未出现 Shopify；Grok Bot overview 页早间也未检出 Shopify 字样，故边界写清：以推文为准，具体权限、计费和可改字段本库未实测。预览为官方推文配图裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is the official @bot post https://x.com/bot/status/2108228871938359347, readable this morning via the X API and fxtwitter (about 6.98M views and 2,151 likes, with a product image). Why it is listed: a reproducible official capability update shop owners can use. docs.x.ai/grok/connectors lists chat-Grok connectors and does not show Shopify; the Grok Bot overview page also had no Shopify mention this morning, so the boundary is clear: the tweet is authoritative, and permissions, billing, and which fields can be edited were not tested. Preview is the official tweet image cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": true,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "改库存、改价格、改商品文案前要你点头；先用只读查单试，确认权限范围。",
+      "approvalBoundaryEn": "Confirm before changing inventory, prices, or listing copy; start with read-only order checks and verify scopes.",
+      "connectors": [
+        "shopify"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-09T01:45:00Z",
+      "previewImage": "/previews/grok-bot-shopify.webp"
+    },
+    {
+      "id": "krea-photoshop-plugin",
+      "slug": "krea-photoshop-plugin",
+      "title": "工具：Krea 出了 Photoshop 插件，在 PS 里直接调 Nano Banana、Krea 2、GPT IMG 2.5",
+      "titleEn": "Tool: Krea's Photoshop plugin puts Nano Banana, Krea 2, and GPT IMG 2.5 inside Photoshop",
+      "hook": "不用来回导图，在 Photoshop 面板里就能出图、改图、放大。",
+      "hookEn": "Generate, edit, and upscale from a Photoshop panel, no exporting back and forth.",
+      "summary": "Krea 2026-10-07 发帖：Krea Plugin for Photoshop 上线，Nano Banana、Krea 2、GPT IMG 2.5 以及 Krea 上的其他模型都能在 Photoshop 里用。插件页写的用法：下载安装包（macOS 和 Windows 都有），双击后由 Creative Cloud 装好，再在 Photoshop 里点「窗口 → 插件 → Krea」打开。面板里列的功能有：用 Krea 2 出图、用 Nano Banana Pro 打字改图、用 Krea Enhancer 放大（页面写最高 21K）、用 Seedance 2.5 出视频，官方说一共 20 多个工具。适合本来就在 PS 里修图、做海报和电商图的设计师：不用在网页和 PS 之间来回导出导入。插件页没写价格，用量大概率按你的 Krea 账号额度算，这点本库没核实。",
+      "summaryEn": "Krea posted on 2026-10-07: Krea Plugin for Photoshop is live, bringing Nano Banana, Krea 2, GPT IMG 2.5, and the other models on Krea into Photoshop. The plugin page's steps: download the installer (macOS and Windows), double-click it so Creative Cloud installs Krea, then open it in Photoshop via Window → Plugins → Krea. The panel lists image generation with Krea 2, edit-by-typing with Nano Banana Pro, upscaling with Krea Enhancer (the page says up to 21K), and video with Seedance 2.5, 20+ tools in all. Good for designers who already retouch, make posters, or build product shots in Photoshop and are tired of exporting between a web app and PS. The plugin page lists no price; usage is likely billed to your Krea account, which this library did not verify.",
+      "categories": [
+        "content",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.krea.ai/plugins/photoshop",
+      "secondaryUrls": [
+        "https://x.com/krea_ai/status/2107848434128752777",
+        "https://www.krea.ai/plugins"
+      ],
+      "sourceType": "official-launch",
+      "qualityNote": "主源是 Krea 插件页 https://www.krea.ai/plugins/photoshop ，晚间 HTTP 200，页面标题 Krea for Photoshop | Generate images and video inside Photoshop，安装步骤、面板里的模型名和「最高 21K」都照页面写。发布帖是 @krea_ai 2026-10-07T15:00Z（约 10-07 23:00 北京时间），晚间约 8500 次浏览、152 赞，附 1 分钟内演示视频。收录理由：AI×设计，直接进了设计师天天用的软件。本库没有下载安装，没有登录 Krea，没有核对价格、额度和 Photoshop 版本要求。同一插件目录还有 After Effects 和 ChatGPT 插件，这条只写 Photoshop。预览为 Playwright 实拍插件页首屏裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is Krea's plugin page https://www.krea.ai/plugins/photoshop, HTTP 200 this evening, titled Krea for Photoshop | Generate images and video inside Photoshop; install steps, model names, and the “up to 21K” claim are as the page states. The launch post is @krea_ai at 2026-10-07T15:00Z (about 23:00 on 10-07 Beijing time), about 8,500 views and 152 likes this evening, with a short demo video. Why it is listed: AI×design, landing inside the software designers already use daily. This library did not download or install it, did not sign in to Krea, and did not check pricing, credits, or Photoshop version requirements. The same plugin directory also has After Effects and ChatGPT plugins; this entry covers Photoshop only. Preview is a Playwright capture of the plugin page above the fold, cropped to 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "装插件要登录 Krea 账号，出图和放大会用掉账号里的额度，先看清计费再大量跑。",
+      "approvalBoundaryEn": "The plugin needs a Krea account and generations or upscales use its credits; check billing before running a lot.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "previewImage": "/previews/krea-photoshop-plugin.webp"
+    },
+    {
+      "id": "framer-skills-design-system",
+      "slug": "framer-skills-design-system",
+      "title": "玩法：把 Framer 网站变成一套设计规范，写成「技能」让 AI 照着做新页面",
+      "titleEn": "How-to: turn a Framer site into a design system and a Skill so the agent builds new pages in your style",
+      "hook": "把配色、字体、间距写成一条技能，AI 做的新页面就不跑偏。",
+      "hookEn": "Write your colors, type, and spacing into one Skill so new AI pages stay on brand.",
+      "summary": "Framer 2026-09-22 上线 Skills（技能）：把你做设计的规矩存成一段说明，以后让 Framer 自带的 AI 助手做事时直接调用。2026-10-07 官方又发了一条玩法：先把现有项目整理成一套可复用的设计规范，再写一条技能，之后用 /design-system 让助手做新页面，它会沿用项目里的字体、颜色、间距、版式和组件。官方页给了一条完整示例：只用深色、不许自己发明新颜色和字号、正文每行 50 到 75 个字符、唯一的强调色每段最多用一次。还附了几条可以直接复制的技能：品牌语气、去 AI 腔（删掉空话套话）、SEO 检查、上线前检查。用法：在助手对话框里输入 /skills 粘贴，之后用 /技能名 调用，在设置里能改。项目被别人 remix 时技能会跟着走，所以模板作者也能把「怎么加新页面」写进去。",
+      "summaryEn": "Framer launched Skills on 2026-09-22: save the rules of how you design as instructions, then have Framer's built-in agent apply them. On 2026-10-07 Framer posted a how-to: first turn an existing project into a reusable design system, then write a Skill, and use /design-system to have the agent build new pages that reuse the project's typography, colors, spacing, layouts, and components. The official page shows a full example: dark scheme only, never invent new colors or text styles, 50–75 characters per line of body text, and the single accent color at most once per section. It also offers copy-paste Skills for brand voice, removing AI writing (cutting filler and vague claims), SEO checks, and a pre-launch check. To use one, type /skills in the agent chat and paste it, then call it with /skill-name; edit it in Settings. Skills travel with a project when someone remixes it, so template makers can ship guidance for adding pages too.",
+      "categories": [
+        "content",
+        "skills",
+        "templates"
+      ],
+      "role": "AI design workflow",
+      "sourceUrl": "https://www.framer.com/skills",
+      "secondaryUrls": [
+        "https://www.framer.com/updates/skills",
+        "https://x.com/framer/status/2107962735673872818"
+      ],
+      "sourceType": "official-docs",
+      "qualityNote": "主源是 Framer 官方 Skills 页 https://www.framer.com/skills ，晚间 HTTP 200，示例规则（深色、不新增颜色和字号、每行 50–75 字符目标 65、强调色每段最多一次）和四条可复制技能都照页面写。上线日期取更新日志 https://www.framer.com/updates/skills 的 Published September 22, 2026。新的玩法帖是 @framer 2026-10-07T22:34Z（约 10-08 06:34 北京时间），晚间约 4900 次浏览，附演示视频。收录理由：本库之前没有 Framer，这条是「设计规范交给 AI 照做」的 AI×设计做法，和库里的 Graphical、figma-use 思路相近，但直接在 Framer 画布里用。本库没有登录 Framer，没有实际写技能、做页面，也没有核对哪些套餐能用 Skills。演示页里的模型选择显示 GPT 6 Sol，只是页面截图里的字样。预览为 Playwright 实拍 Skills 页演示区裁 3:2 WebP。",
+      "qualityNoteEn": "Primary source is Framer's official Skills page https://www.framer.com/skills, HTTP 200 this evening; the example rules (dark scheme, no new colors or text styles, 50–75 characters per line targeting 65, accent at most once per section) and the four copy-paste Skills are as the page states. The launch date comes from the changelog https://www.framer.com/updates/skills, Published September 22, 2026. The new how-to post is @framer at 2026-10-07T22:34Z (about 06:34 on 10-08 Beijing time), about 4,900 views this evening, with a demo video. Why it is listed: the library had no Framer entry, and this is an AI×design pattern of handing your design system to an agent, close to Graphical and figma-use already in the library but used directly on the Framer canvas. This library did not sign in to Framer, write a Skill, or build a page, and did not check which plans include Skills. The model picker in the demo shows GPT 6 Sol; that is only text in the page's demo. Preview is a Playwright capture of the Skills page demo area, cropped to 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手改的是你的线上项目，发布前自己在画布上看一遍；技能只是规则，结果仍要人把关。",
+      "approvalBoundaryEn": "The agent edits your live project; review the canvas before publishing. A Skill is only rules, and a person still checks the result.",
+      "connectors": [],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-08T12:30:00Z",
+      "previewImage": "/previews/framer-skills-design-system.webp"
+    },
+    {
       "id": "grok-bot-x-built-in",
       "slug": "grok-bot-x-built-in",
       "title": "官方更新：Grok Bot 不用连 X 也能搜、读、盯 X",
@@ -1293,7 +1481,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "四只 Bot 管邮件、日历、消息，你只跟总管说话。",
-      "hookEn": "Four bots handle mail, calendar, and news; you only talk to the boss bot."
+      "hookEn": "Four bots handle mail, calendar, and news; you only talk to the boss bot.",
+      "previewImage": "/previews/grok-bot-for-work.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-post-sales",
@@ -1334,7 +1525,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "只跟一个参谋长 Bot 说话，其余 Bot 向它汇报。",
-      "hookEn": "Talk to one chief-of-staff bot; the rest report to it."
+      "hookEn": "Talk to one chief-of-staff bot; the rest report to it.",
+      "previewImage": "/previews/grok-bot-for-post-sales.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-recruiting",
@@ -1374,7 +1568,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "面前简报、面后评分表，Bot 先起草你再拍板。",
-      "hookEn": "Briefs before, scorecards after: the bot drafts, you decide."
+      "hookEn": "Briefs before, scorecards after: the bot drafts, you decide.",
+      "previewImage": "/previews/grok-bot-for-recruiting.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-sdrs",
@@ -1415,7 +1612,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "干净的名单往前走，有疑问的停下等你。",
-      "hookEn": "Clean contacts move ahead; questionable ones wait for you."
+      "hookEn": "Clean contacts move ahead; questionable ones wait for you.",
+      "previewImage": "/previews/grok-bot-for-sdrs.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-legal-ops",
@@ -1455,7 +1655,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "法务的会前准备和跟踪表，交给 Bot 维护。",
-      "hookEn": "Let a bot keep legal’s prep and trackers current."
+      "hookEn": "Let a bot keep legal’s prep and trackers current.",
+      "previewImage": "/previews/grok-bot-for-legal-ops.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "haggle-bot-procurement",
@@ -1496,7 +1699,10 @@
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "让 Bot 找出没人用的订阅席位。",
-      "hookEn": "Let a bot find the seats nobody uses."
+      "hookEn": "Let a bot find the seats nobody uses.",
+      "previewImage": "/previews/haggle-bot-procurement.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-scale-customer-support",
@@ -1538,7 +1744,10 @@
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "客服先只写内部备注，靠得住了再放开。",
-      "hookEn": "Start with internal notes only; widen once it’s reliable."
+      "hookEn": "Start with internal notes only; widen once it’s reliable.",
+      "previewImage": "/previews/grok-bot-scale-customer-support.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "scm-screen-memories",
@@ -2044,7 +2253,10 @@
       "publishedAt": "2026-10-01",
       "updatedAt": "2026-10-05T01:10:00Z",
       "hook": "设一个主 Bot，让它主动找活、替你分派。",
-      "hookEn": "Pick a Main Bot that finds work and routes it for you."
+      "hookEn": "Pick a Main Bot that finds work and routes it for you.",
+      "previewImage": "/previews/main-bot-proactive.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "television",
@@ -2849,7 +3061,10 @@
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-10-01T01:00:00Z",
       "hook": "让团队 Bot 在共享上下文里协作。",
-      "hookEn": "Coordinate team Bots with shared context."
+      "hookEn": "Coordinate team Bots with shared context.",
+      "previewImage": "/previews/team-bots.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-marketing",
@@ -2889,7 +3104,10 @@
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-09-30T01:20:00Z",
       "hook": "用六席 Agent 分工处理营销任务。",
-      "hookEn": "Split marketing tasks across a six-Agent team."
+      "hookEn": "Split marketing tasks across a six-Agent team.",
+      "previewImage": "/previews/grok-bot-for-marketing.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "jeff",
@@ -3581,7 +3799,10 @@
         "previewCreditEn": "No self-hosted preview image; refer to the repo README and the site."
       },
       "hook": "用本机语音桌面编排 Agent。",
-      "hookEn": "Orchestrate Agents through a local voice desktop."
+      "hookEn": "Orchestrate Agents through a local voice desktop.",
+      "previewImage": "/previews/personal-jarvis.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "us-paypal-cn-visa",
@@ -3964,7 +4185,10 @@
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "按领域拆开 Bot，向越南面料厂询价并出样。",
-      "hookEn": "Split Bots by domain to ask Vietnam fabric mills for samples."
+      "hookEn": "Split Bots by domain to ask Vietnam fabric mills for samples.",
+      "previewImage": "/previews/hn-jjcm-fabric-swag-sourcing.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "openbot-opensource",
@@ -4004,7 +4228,10 @@
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "开源同事席：每席一台电脑，可接任意 Agent。",
-      "hookEn": "Open-source coworkers, each with a computer and any agent harness."
+      "hookEn": "Open-source coworkers, each with a computer and any agent harness.",
+      "previewImage": "/previews/openbot-opensource.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "designing-grok-bot-with-grok-bot",
@@ -4046,7 +4273,10 @@
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "官方指南：用常驻 Bot 小队把想法做成可试原型。",
-      "hookEn": "Official guide: an always-on Bot squad turns ideas into prototypes."
+      "hookEn": "Official guide: an always-on Bot squad turns ideas into prototypes.",
+      "previewImage": "/previews/designing-grok-bot-with-grok-bot.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "bot-store-academy-teach-a-task",
@@ -4085,7 +4315,10 @@
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "免费课：演示教学先变成草稿技能，再挂例行。",
-      "hookEn": "Free lesson: a live demo becomes a draft skill, then a routine."
+      "hookEn": "Free lesson: a live demo becomes a draft skill, then a routine.",
+      "previewImage": "/previews/bot-store-academy-teach-a-task.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "datacamp-grok-bot-skills-routines",
@@ -4124,7 +4357,10 @@
       "publishedAt": "2026-09-01",
       "updatedAt": "2026-09-17T01:23:00Z",
       "hook": "建一个学习 Bot，核对课程页后只出周一计划。",
-      "hookEn": "A learning Bot that checks course pages and only outputs a Monday plan."
+      "hookEn": "A learning Bot that checks course pages and only outputs a Monday plan.",
+      "previewImage": "/previews/datacamp-grok-bot-skills-routines.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "developersdigest-grok-bot-routines",
@@ -4163,7 +4399,10 @@
       "publishedAt": "2026-08-23",
       "updatedAt": "2026-09-17T01:23:00Z",
       "hook": "先把活做完再排期，而不是先搭触发器。",
-      "hookEn": "Finish the job, then schedule it, instead of building the trigger first."
+      "hookEn": "Finish the job, then schedule it, instead of building the trigger first.",
+      "previewImage": "/previews/developersdigest-grok-bot-routines.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-gtm",
@@ -4203,7 +4442,10 @@
       "publishedAt": "2026-08-16",
       "updatedAt": "2026-09-16T01:10:52Z",
       "hook": "官方销售小队：会前准备、过夜拓客，再写回 Salesforce。",
-      "hookEn": "Official sales squad: prep the meeting, prospect overnight, write back to Salesforce."
+      "hookEn": "Official sales squad: prep the meeting, prospect overnight, write back to Salesforce.",
+      "previewImage": "/previews/grok-bot-for-gtm.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-pms",
@@ -4242,7 +4484,10 @@
       "publishedAt": "2026-08-15",
       "updatedAt": "2026-09-16T01:10:52Z",
       "hook": "给产品经理的汇报小队，用活的注意力清单代替周目标。",
-      "hookEn": "A product-manager squad that uses a living attention list instead of weekly goals."
+      "hookEn": "A product-manager squad that uses a living attention list instead of weekly goals.",
+      "previewImage": "/previews/grok-bot-for-pms.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "ronglecat-awesome-grok-bot",
@@ -4276,7 +4521,10 @@
       "publishedAt": "2026-09-15",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "中英日三语的资源目录，教程、技能和踩坑都在。",
-      "hookEn": "A directory in three languages, covering tutorials, skills, and pitfalls."
+      "hookEn": "A directory in three languages, covering tutorials, skills, and pitfalls.",
+      "previewImage": "/previews/ronglecat-awesome-grok-bot.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-ship",
@@ -4315,7 +4563,10 @@
       "publishedAt": "2026-09-14",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "在共享电脑上装软件工厂：侦察只出报告，改动要授权。",
-      "hookEn": "A software factory on the shared computer: scouts report, and changes need a go-ahead."
+      "hookEn": "A software factory on the shared computer: scouts report, and changes need a go-ahead.",
+      "previewImage": "/previews/grok-ship.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "rosterroom-prompts",
@@ -4350,7 +4601,10 @@
       "publishedAt": "2026-09-02",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "可粘贴的小队配方，默认可读可草稿，发送必须人批。",
-      "hookEn": "Paste-ready team recipes that read and draft by default, and wait before sending."
+      "hookEn": "Paste-ready team recipes that read and draft by default, and wait before sending.",
+      "previewImage": "/previews/rosterroom-prompts.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "how-i-run-multiple-teams",
@@ -4387,7 +4641,10 @@
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "一个项目一个频道，由项目经理 Bot 来组班。",
-      "hookEn": "One project, one channel, staffed by a projects-manager Bot."
+      "hookEn": "One project, one channel, staffed by a projects-manager Bot.",
+      "previewImage": "/previews/how-i-run-multiple-teams.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "templates-for-grok-bot",
@@ -4424,7 +4681,10 @@
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "模板是菜谱：打包技能和例行，不含密钥。",
-      "hookEn": "A template is a recipe of skills and routines, with no secrets inside."
+      "hookEn": "A template is a recipe of skills and routines, with no secrets inside.",
+      "previewImage": "/previews/templates-for-grok-bot.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-support",
@@ -4461,7 +4721,10 @@
       "publishedAt": "2026-09-09",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "客服五类活：跟踪发版、复现缺陷，退款等人批。",
-      "hookEn": "Five support jobs: track releases, reproduce bugs, and hold refunds for approval."
+      "hookEn": "Five support jobs: track releases, reproduce bugs, and hold refunds for approval.",
+      "previewImage": "/previews/grok-bot-for-support.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-101",
@@ -4503,7 +4766,10 @@
       "publishedAt": "2026-09-11",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "把 Bot 当有持久桌面的同事，从聊天走到例行。",
-      "hookEn": "Treat a Bot as a colleague with a persistent desk, from chat through to a routine."
+      "hookEn": "Treat a Bot as a colleague with a persistent desk, from chat through to a routine.",
+      "previewImage": "/previews/grok-bot-101.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grok-bot-for-engineering",
@@ -4544,7 +4810,10 @@
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "专科工程 Bot 拉起云端 Agent，人守高后果的闸门。",
-      "hookEn": "Specialist engineer Bots launch cloud agents, and a person holds the high-stakes gate."
+      "hookEn": "Specialist engineer Bots launch cloud agents, and a person holds the high-stakes gate.",
+      "previewImage": "/previews/grok-bot-for-engineering.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "moclaw-cloud-vs-grok",
@@ -4583,7 +4852,10 @@
       "publishedAt": "2026-08-20",
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "按活来选：隔离的云端 Agent，还是共享的那台电脑。",
-      "hookEn": "Pick by the job: an isolated cloud agent, or the one shared computer."
+      "hookEn": "Pick by the job: an isolated cloud agent, or the one shared computer.",
+      "previewImage": "/previews/moclaw-cloud-vs-grok.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "saily-us-number-esim",
@@ -4701,7 +4973,10 @@
       "publishedAt": "2026-09-11",
       "updatedAt": "2026-09-11T01:10:00Z",
       "hook": "先给幕僚长一个窄任务，再把它和聊天、自动化分开。",
-      "hookEn": "Start with one narrow chief-of-staff task, kept apart from chat and automations."
+      "hookEn": "Start with one narrow chief-of-staff task, kept apart from chat and automations.",
+      "previewImage": "/previews/youngurban-how-to-use-grok-bot.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "compound-engineering-plugin",
@@ -4739,7 +5014,10 @@
       "publishedAt": "2026-09-11",
       "updatedAt": "2026-09-11T01:10:00Z",
       "hook": "把写码循环做成可调用技能，Bot 共用你的插件库。",
-      "hookEn": "Turn the coding loop into callable skills the Bot loads from your plugin library."
+      "hookEn": "Turn the coding loop into callable skills the Bot loads from your plugin library.",
+      "previewImage": "/previews/compound-engineering-plugin.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "gbdl-definition-language",
@@ -4778,7 +5056,10 @@
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-10T01:40:00Z",
       "hook": "用一份文件记下整支 Bot 小队，方便进版本库。",
-      "hookEn": "Save a whole Bot squad in one file so it can live in version control."
+      "hookEn": "Save a whole Bot squad in one file so it can live in version control.",
+      "previewImage": "/previews/gbdl-definition-language.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "shrdgn-grokbot-skills",
@@ -4812,7 +5093,10 @@
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-10T01:40:00Z",
       "hook": "可直接粘贴的技能配方，审批优先，安静为默认。",
-      "hookEn": "Paste-ready skill recipes that ask before acting and stay quiet by default."
+      "hookEn": "Paste-ready skill recipes that ask before acting and stay quiet by default.",
+      "previewImage": "/previews/shrdgn-grokbot-skills.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "awesome-grokbot-shares",
@@ -4849,7 +5133,10 @@
       "publishedAt": "2026-09-09",
       "updatedAt": "2026-09-09T01:15:00Z",
       "hook": "可点进的公开 Bot 分享目录，导入前有一份核对清单。",
-      "hookEn": "A catalog of public Bot shares you can open, with a checklist before you import one."
+      "hookEn": "A catalog of public Bot shares you can open, with a checklist before you import one.",
+      "previewImage": "/previews/awesome-grokbot-shares.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "continuum-routines-guide",
@@ -4886,7 +5173,10 @@
       "publishedAt": "2026-09-09",
       "updatedAt": "2026-09-09T01:15:00Z",
       "hook": "讲清例行和技能怎么不同，以及和自动化的分界。",
-      "hookEn": "How routines differ from skills, and where they split from automations."
+      "hookEn": "How routines differ from skills, and where they split from automations.",
+      "previewImage": "/previews/continuum-routines-guide.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "aibuilderclub-practical-guide",
@@ -4927,7 +5217,10 @@
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-03T01:10:00Z",
       "hook": "幕僚长模式加来源账本，并纠正「每 Bot 一台电脑」。",
-      "hookEn": "A chief-of-staff pattern with a source ledger, and a correction of one computer per Bot."
+      "hookEn": "A chief-of-staff pattern with a source ledger, and a correction of one computer per Bot.",
+      "previewImage": "/previews/aibuilderclub-practical-guide.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "gauraw-grok-bot-control-guide",
@@ -4965,7 +5258,10 @@
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-03T01:10:00Z",
       "hook": "先跑一次安全的窄任务，再把小队扩出去。",
-      "hookEn": "Run one safe, narrow task before you grow the squad."
+      "hookEn": "Run one safe, narrow task before you grow the squad.",
+      "previewImage": "/previews/gauraw-grok-bot-control-guide.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "gawkbot-opensource",
@@ -4999,7 +5295,10 @@
       "publishedAt": "2026-09-01",
       "updatedAt": "2026-09-03T01:10:00Z",
       "hook": "本机多 Bot，外发和删除都要逐次批准。",
-      "hookEn": "Local bots where every send or delete waits for approval."
+      "hookEn": "Local bots where every send or delete waits for approval.",
+      "previewImage": "/previews/gawkbot-opensource.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "howdoiuseai-agent-teams",
@@ -5038,7 +5337,10 @@
       "publishedAt": "2026-08-23",
       "updatedAt": "2026-09-02T01:10:00Z",
       "hook": "给非技术运营者：先技能，再例行，再一份日报。",
-      "hookEn": "For a non-technical operator: a skill, then a routine, then a daily debrief."
+      "hookEn": "For a non-technical operator: a skill, then a routine, then a daily debrief.",
+      "previewImage": "/previews/howdoiuseai-agent-teams.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "awesome-grok-bot",
@@ -5075,7 +5377,10 @@
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-09-02T01:10:00Z",
       "hook": "已对照一手源的技能、插件和连接器目录。",
-      "hookEn": "A directory of skills, plugins, and connectors, each checked against a primary source."
+      "hookEn": "A directory of skills, plugins, and connectors, each checked against a primary source.",
+      "previewImage": "/previews/awesome-grok-bot.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "flavio-grok-bot-deep-dive",
@@ -5115,7 +5420,10 @@
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-31T01:28:18Z",
       "hook": "先跑通再存技能，并写清审批停在哪里。",
-      "hookEn": "Run the job once, save it as a skill, and write down where approval stops."
+      "hookEn": "Run the job once, save it as a skill, and write down where approval stops.",
+      "previewImage": "/previews/flavio-grok-bot-deep-dive.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grokbot-explorers-21",
@@ -5234,7 +5542,10 @@
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T01:10:00Z",
       "hook": "社区把桌面端搬到 Linux，云端电脑仍然是原来那台。",
-      "hookEn": "A community desktop build for Linux; the cloud computer stays the same one."
+      "hookEn": "A community desktop build for Linux; the cloud computer stays the same one.",
+      "previewImage": "/previews/grokbot-linux-unofficial.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "mobile-game-studio-rankem",
@@ -5276,7 +5587,10 @@
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-08-28T01:10:00Z",
       "hook": "六个 Bot 分工跑一款手游，从发行到修缺陷。",
-      "hookEn": "Six Bots split a mobile game, from release work through bug fixes."
+      "hookEn": "Six Bots split a mobile game, from release work through bug fixes.",
+      "previewImage": "/previews/mobile-game-studio-rankem.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grokbot-getting-started",
@@ -5355,7 +5669,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest in the morning 65-case ingest. Chief of Staff maps Slack/email/calendar to priorities; this is a news/story brief.",
       "approvalBoundaryEn": "Do not send the brief or change the calendar; return a review-only shortlist of stories.",
       "hook": "只交真正重要的故事，一份收紧的每日简报。",
-      "hookEn": "A tight daily brief of only the stories that matter."
+      "hookEn": "A tight daily brief of only the stories that matter.",
+      "previewImage": "/previews/daily-briefing-writer.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "executive-assistant",
@@ -5393,7 +5710,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-stand-in in the morning 65-case ingest. Chief of Staff is a priority map; Meeting Stand-in joins when you are absent; this is a morning brief plus in-room catch-up.",
       "approvalBoundaryEn": "Do not send messages, change meetings, or make commitments; return the morning briefing and in-room catch-up only.",
       "hook": "晨间简报，并在你进新房间时补一份上下文。",
-      "hookEn": "A morning briefing, plus a catch-up when you walk into a new room."
+      "hookEn": "A morning briefing, plus a catch-up when you walk into a new room.",
+      "previewImage": "/previews/executive-assistant.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "newsletter-writer",
@@ -5431,7 +5751,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of one-person-company-stack in the morning 65-case ingest. The one-person stack is a multi-agent ops model that happens to include a newsletter; this is a standalone monthly Newsletter Writer.",
       "approvalBoundaryEn": "Do not send the newsletter or change published dates; return the parked issue draft only.",
       "hook": "按你的声音写月度更新，停在待审，不自己发。",
-      "hookEn": "Writes the monthly update in your voice and parks it for review."
+      "hookEn": "Writes the monthly update in your voice and parks it for review.",
+      "previewImage": "/previews/newsletter-writer.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "prospecting-plan-builder",
@@ -5469,7 +5792,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of sales-outbound-overnight / account-research-specialist in the morning 65-case ingest. Outbound is overnight scoring plus drafts; Account Research is a pre-touch pack; this is the week's prospecting list and tracker.",
       "approvalBoundaryEn": "Do not send outreach, edit the CRM, or add to sequences; return the seeded list, enrichments, and review-only tracker.",
       "hook": "播下联系人并补全方式，交出本周可开工的追踪表。",
-      "hookEn": "Seeds contacts, fills in how to reach them, and hands you this week's tracker."
+      "hookEn": "Seeds contacts, fills in how to reach them, and hands you this week's tracker.",
+      "previewImage": "/previews/prospecting-plan-builder.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "status-report-writer",
@@ -5507,7 +5833,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of chief-of-staff-digest / meeting-notes-tasks in the morning 65-case ingest. Chief of Staff maps channels to priorities; meeting notes drop tasks; this is a living action list plus morning digest.",
       "approvalBoundaryEn": "Do not send the digest, change others' tasks, or close items; return the living list and review-only morning digest.",
       "hook": "把散落的未完成事项收成一份活清单和晨间摘要。",
-      "hookEn": "Pulls open actions into one living list and a morning digest."
+      "hookEn": "Pulls open actions into one living list and a morning digest.",
+      "previewImage": "/previews/status-report-writer.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "crm-operations-manager",
@@ -5545,7 +5874,10 @@
       "qualityNoteEn": "Official catalog role missed as a near-dupe of crm-monday-scoreboard (Pipeline Analyst) in the morning 65-case ingest. The Monday scoreboard is a stall/commit-risk board; this is pre- and post-meeting CRM and org-chart hygiene.",
       "approvalBoundaryEn": "Do not write to the CRM or org chart, and do not send updates; park hygiene edits for approval.",
       "hook": "会前会后打扫记录，写入先停在审批。",
-      "hookEn": "Cleans records before and after meetings, and holds writes for approval."
+      "hookEn": "Cleans records before and after meetings, and holds writes for approval.",
+      "previewImage": "/previews/crm-operations-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "apartment-scout",
@@ -5583,7 +5915,10 @@
       "qualityNoteEn": "New official catalog role. Reproducible life-admin flow: filter → book tours → apply only after you pick. Distinct from grocery shopping and website builder.",
       "approvalBoundaryEn": "Do not book tours, submit applications, or send email; return only an eligible shortlist and draft booking messages.",
       "hook": "房源一上架就筛短名单，申请只对你点头的那几套。",
-      "hookEn": "Filters new listings into a shortlist and applies only for the ones you pick."
+      "hookEn": "Filters new listings into a shortlist and applies only for the ones you pick.",
+      "previewImage": "/previews/apartment-scout.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "travel-coordinator",
@@ -5621,7 +5956,10 @@
       "qualityNoteEn": "Official catalog is explicit: hold first, book after confirm. Distinct from meeting stand-in and office-manager scheduling.",
       "approvalBoundaryEn": "Do not pay, ticket, or change bookings; return only the comparison, a recommended hold, and a confirm request.",
       "hook": "先比价占位，你确认之后才预订。",
-      "hookEn": "Compares options and holds one, then books only after you confirm."
+      "hookEn": "Compares options and holds one, then books only after you confirm.",
+      "previewImage": "/previews/travel-coordinator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "calendar-coordinator",
@@ -5659,7 +5997,10 @@
       "qualityNoteEn": "New official role. Existing meeting-notes and meeting-stand-in do not cover cross-calendar convening and hold-chasing.",
       "approvalBoundaryEn": "Do not send invites or change others’ calendars; return feasible slots, conflicts, and draft invites only.",
       "hook": "跨日历把人约到一起，并追那些没人去追的占位。",
-      "hookEn": "Gets people into one room across calendars, and chases the holds nobody else will."
+      "hookEn": "Gets people into one room across calendars, and chases the holds nobody else will.",
+      "previewImage": "/previews/calendar-coordinator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "hiring-screener",
@@ -5697,7 +6038,10 @@
       "qualityNoteEn": "Official catalog splits sourcing (Talent Scout) from screening. The existing 29 only cover sourcing.",
       "approvalBoundaryEn": "Do not contact candidates, change ATS status, reject, or advance anyone; return a scored, evidence-backed review list only.",
       "hook": "按既定标准给已投递的材料打分，不联系候选人。",
-      "hookEn": "Scores applications already in hand, and does not contact candidates."
+      "hookEn": "Scores applications already in hand, and does not contact candidates.",
+      "previewImage": "/previews/hiring-screener.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "onboarding-manager",
@@ -5737,7 +6081,10 @@
       "qualityNoteEn": "New official People role. Talent Scout and Office Manager do not cover a new-hire path.",
       "approvalBoundaryEn": "Do not provision accounts, change permissions, or send welcome mail; return the checklist, doc pack, and routed questions only.",
       "hook": "给新人一条路径，卡住的事转给能解开的人。",
-      "hookEn": "Gives a new hire one path, and routes each stuck ask to someone who can unblock it."
+      "hookEn": "Gives a new hire one path, and routes each stuck ask to someone who can unblock it.",
+      "previewImage": "/previews/onboarding-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "account-research-specialist",
@@ -5775,7 +6122,10 @@
       "qualityNoteEn": "Official catalog splits overnight outbound from pre-touch research packs. Existing sales-outbound covers drafts, not a standalone research pack.",
       "approvalBoundaryEn": "Do not contact accounts, edit the CRM, or add to sequences; return tiers, scores, and sourced research packs only.",
       "hook": "你出手之前，先给每个客户一份可分享的研究包。",
-      "hookEn": "Builds a shareable research pack on each account before you reach out."
+      "hookEn": "Builds a shareable research pack on each account before you reach out.",
+      "previewImage": "/previews/account-research-specialist.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "meeting-prep-buddy",
@@ -5814,7 +6164,10 @@
       "qualityNoteEn": "New official Sales role. Existing meeting cases are in-meeting stand-in or post-meeting tasks, not a prep pack.",
       "approvalBoundaryEn": "Do not change meetings, send pre-reads, or update the CRM; return the prep pack only.",
       "hook": "会前拼好谁在场、上次接触和未结事项。",
-      "hookEn": "Before the meeting, packs who is there, the last touch, and what is still open."
+      "hookEn": "Before the meeting, packs who is there, the last touch, and what is still open.",
+      "previewImage": "/previews/meeting-prep-buddy.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "sales-call-coach",
@@ -5851,7 +6204,10 @@
       "qualityNoteEn": "New official role. Owns call coaching, not outbound or account follow-up.",
       "approvalBoundaryEn": "Do not share coaching outside the seller, edit the CRM, or contact the customer; return timestamped notes and a score only.",
       "hook": "复盘通话并留下作业，不改记录、不跟进客户。",
-      "hookEn": "Reviews the call and leaves homework, without editing records or following up."
+      "hookEn": "Reviews the call and leaves homework, without editing records or following up.",
+      "previewImage": "/previews/sales-call-coach.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "deal-desk-coordinator",
@@ -5889,7 +6245,10 @@
       "qualityNoteEn": "Official copy is explicit: draft first, write to Salesforce after approval. The Monday scoreboard does not cover deal-desk paper.",
       "approvalBoundaryEn": "Do not submit to Salesforce, change price or terms, or commit externally; return the internal deal-note draft only.",
       "hook": "先拟内部交易说明，你批准后再写入 Salesforce。",
-      "hookEn": "Drafts the internal deal note, then writes it to Salesforce only after you approve."
+      "hookEn": "Drafts the internal deal note, then writes it to Salesforce only after you approve.",
+      "previewImage": "/previews/deal-desk-coordinator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "renewal-desk-operator",
@@ -5927,7 +6286,10 @@
       "qualityNoteEn": "Official catalog splits renewal desk from account-health watch: the output is a 90-day commercial pack, not a risk list.",
       "approvalBoundaryEn": "Do not contact the customer, change contracts or quotes, or ping anyone but legal when stuck; return the pack and draft commercial note only.",
       "hook": "带着续约材料包走进每场续约，不联系客户。",
-      "hookEn": "Walks into each renewal with a prepared pack, and does not contact the customer."
+      "hookEn": "Walks into each renewal with a prepared pack, and does not contact the customer.",
+      "previewImage": "/previews/renewal-desk-operator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "deck-updater",
@@ -5964,7 +6326,10 @@
       "qualityNoteEn": "New official Sales role. Existing content cases are ad video / site build, not mid-call deck updates.",
       "approvalBoundaryEn": "Do not send the deck to the customer or change the master template; update this meeting’s copy and mark the diffs.",
       "hook": "把会中发现写进下一页，离开房间时幻灯片已经在动。",
-      "hookEn": "Writes mid-meeting findings onto the next slide before you leave the room."
+      "hookEn": "Writes mid-meeting findings onto the next slide before you leave the room.",
+      "previewImage": "/previews/deck-updater.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "beta-adoption-watcher",
@@ -6003,7 +6368,10 @@
       "qualityNoteEn": "New official Product role. Account Health is churn/expansion; this is “who is actually using the new feature.”",
       "approvalBoundaryEn": "Do not contact customers or change flags/experiments; return the adoption list and evidence links only.",
       "hook": "看哪些客户真的在用新功能，方便团队跟进。",
-      "hookEn": "Shows which customers are actually using the new feature, so the team can follow up."
+      "hookEn": "Shows which customers are actually using the new feature, so the team can follow up.",
+      "previewImage": "/previews/beta-adoption-watcher.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "call-faq-miner",
@@ -6040,7 +6408,10 @@
       "qualityNoteEn": "New official Product role. Meeting-notes→tasks does not cover mining FAQs with timestamped source recordings.",
       "approvalBoundaryEn": "Do not publish to the help center or external scripts; return a FAQ draft with timestamps and source links only.",
       "hook": "从真实通话里抽出问题，并链回原来的录音。",
-      "hookEn": "Pulls questions out of real calls and links each answer back to the recording."
+      "hookEn": "Pulls questions out of real calls and links each answer back to the recording.",
+      "previewImage": "/previews/call-faq-miner.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "docs-auditor",
@@ -6078,7 +6449,10 @@
       "qualityNoteEn": "New official Product role. Product-performance investigation does not cover stale-docs audit.",
       "approvalBoundaryEn": "Do not edit the live help center or public docs; return the stale-page list and rewrite drafts only.",
       "hook": "对照刚发版的功能，标出已经过期的说明页。",
-      "hookEn": "Checks the docs against what just shipped and flags the pages that went stale."
+      "hookEn": "Checks the docs against what just shipped and flags the pages that went stale.",
+      "previewImage": "/previews/docs-auditor.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "feature-request-tracker",
@@ -6116,7 +6490,10 @@
       "qualityNoteEn": "New official Product role. Support refunds / ticket triage do not cover a customer-tied demand trail.",
       "approvalBoundaryEn": "Do not file tickets, promise a schedule, or reply to customers; return a customer-tied request list with sources only.",
       "hook": "把谁提过这个功能收成一份绑到客户的清单。",
-      "hookEn": "Keeps a living list of who asked for each feature, tied to the customer."
+      "hookEn": "Keeps a living list of who asked for each feature, tied to the customer.",
+      "previewImage": "/previews/feature-request-tracker.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "product-feedback-analyst",
@@ -6155,7 +6532,10 @@
       "qualityNoteEn": "Official catalog splits clustered feedback routing from request tracking and performance investigation.",
       "approvalBoundaryEn": "Do not change the roadmap, reply to users, or file tickets; return clusters, evidence, and routing drafts only.",
       "hook": "把散落反馈收成聚类，路由建议等人批准。",
-      "hookEn": "Clusters scattered feedback and drafts where it should go, for you to approve."
+      "hookEn": "Clusters scattered feedback and drafts where it should go, for you to approve.",
+      "previewImage": "/previews/product-feedback-analyst.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "playtest-operator",
@@ -6194,7 +6574,10 @@
       "qualityNoteEn": "New official Engineering role. Existing bug-repro follows a report; this proactively playtests a path.",
       "approvalBoundaryEn": "Do not change production, touch real customer data, or open a PR; return steps, screenshots, and a findings pack only.",
       "hook": "接口不够时，就在界面上把路径走一遍并记下失败。",
-      "hookEn": "When there is no interface, it walks the product path and writes down what failed."
+      "hookEn": "When there is no interface, it walks the product path and writes down what failed.",
+      "previewImage": "/previews/playtest-operator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "prototype-builder",
@@ -6232,7 +6615,10 @@
       "qualityNoteEn": "New official Engineering role. Website Builder buys a domain and ships live; this stops at a clickable prototype.",
       "approvalBoundaryEn": "Do not buy a domain, attach production, or promote publicly; return the prototype URL, screenshots, and known limits.",
       "hook": "从一句话做出可点的东西，回来时带上地址。",
-      "hookEn": "Turns a sentence into something you can click, and comes back with the address."
+      "hookEn": "Turns a sentence into something you can click, and comes back with the address.",
+      "previewImage": "/previews/prototype-builder.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "cloud-agent-orchestrator",
@@ -6272,7 +6658,10 @@
       "qualityNoteEn": "New official Engineering role. Cursor Automations is adjacent; this is Grok Bot owning a fleet of cloud-agent runs.",
       "approvalBoundaryEn": "Do not change production, expand permissions, or merge unreviewed results; start runs, chase stuck ones, and return the summary.",
       "hook": "同时盯一堆云端任务，卡住的再去催。",
-      "hookEn": "Watches many cloud runs at once and chases the ones that stall."
+      "hookEn": "Watches many cloud runs at once and chases the ones that stall.",
+      "previewImage": "/previews/cloud-agent-orchestrator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "security-questionnaire-filler",
@@ -6311,7 +6700,10 @@
       "qualityNoteEn": "New official Ops role and a canonical computer-use job: portals with no clean API. None of the existing 29 cover security questionnaires.",
       "approvalBoundaryEn": "Do not submit or sign, and do not invent unsourced answers; mark gaps as needs-input.",
       "hook": "先把安全问卷填满，提交按钮留给你。",
-      "hookEn": "Fills the security questionnaire and leaves the submit button for you."
+      "hookEn": "Fills the security questionnaire and leaves the submit button for you.",
+      "previewImage": "/previews/security-questionnaire-filler.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "vendor-portal-operator",
@@ -6350,7 +6742,10 @@
       "qualityNoteEn": "New official Ops role. Office Manager is work-order portals; this is vendor renewal and procurement portals.",
       "approvalBoundaryEn": "Do not place orders, change seats, or pay; return this week’s exceptions and a pending-action list.",
       "hook": "在没有接口的门户上走同一条路，只把例外带回来。",
-      "hookEn": "Clicks the same path on a portal with no clean interface, and brings back only exceptions."
+      "hookEn": "Clicks the same path on a portal with no clean interface, and brings back only exceptions.",
+      "previewImage": "/previews/vendor-portal-operator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "contract-desk",
@@ -6388,7 +6783,10 @@
       "qualityNoteEn": "New official Finance role. Invoice pipeline and expense manager do not cover contract stages or term extraction.",
       "approvalBoundaryEn": "Do not edit terms, sign, or send contracts; return the stage table, key terms, and blockers only.",
       "hook": "本周合同按阶段和负责人摊开，卡住的评审标出来。",
-      "hookEn": "Lays out this week's contracts by stage and owner, and flags reviews that are stuck."
+      "hookEn": "Lays out this week's contracts by stage and owner, and flags reviews that are stuck.",
+      "previewImage": "/previews/contract-desk.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "refunds-manager-claims",
@@ -6427,7 +6825,10 @@
       "qualityNoteEn": "New official “Jobs Bots are doing today” role. Existing support-in-policy-refunds issues refunds to customers; this files claims on your behalf.",
       "approvalBoundaryEn": "Do not file a claim, accept a settlement, or change payment methods; return the recoverable list, draft packets, and follow-up status.",
       "hook": "找到该追的索赔，提交并跟到退款或折扣回来。",
-      "hookEn": "Finds the claim, files it, and follows it until a refund or discount comes back."
+      "hookEn": "Finds the claim, files it, and follows it until a refund or discount comes back.",
+      "previewImage": "/previews/refunds-manager-claims.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "seo-aeo-auditor",
@@ -6464,7 +6865,10 @@
       "qualityNoteEn": "New official Marketing role. Competitive-intel swarm is a company simulation, not a site SEO/AEO audit.",
       "approvalBoundaryEn": "Do not edit live pages, publish, or buy links; return the audit and the plan only.",
       "hook": "把关键词、站点和对手动向收在一处，并给出可执行计划。",
-      "hookEn": "Tracks keywords, the site, and competitors together, and returns a plan you can act on."
+      "hookEn": "Tracks keywords, the site, and competitors together, and returns a plan you can act on.",
+      "previewImage": "/previews/seo-aeo-auditor.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "social-media-manager",
@@ -6501,7 +6905,10 @@
       "qualityNoteEn": "New official Marketing role. The one-person newsletter stack is not a dedicated social queue Bot.",
       "approvalBoundaryEn": "Do not publish, like, or reply; return drafts and a suggested post window only.",
       "hook": "按你的声音起草，帖子停在队列里等人点发布。",
-      "hookEn": "Drafts in your voice and parks each post until you publish it."
+      "hookEn": "Drafts in your voice and parks each post until you publish it.",
+      "previewImage": "/previews/social-media-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "paid-media-creative-strategist",
@@ -6538,7 +6945,10 @@
       "qualityNoteEn": "Official catalog splits creative strategy from budget monitoring. Existing paid-media-monitor only reallocates spend/CAC.",
       "approvalBoundaryEn": "Do not change ads or budgets, and do not invent metrics; return the hypothesis, evidence, and next-test plan.",
       "hook": "在赢家变明显之前写下为什么有效，并提议下一轮测试。",
-      "hookEn": "Writes why an early winner works, and proposes the next test."
+      "hookEn": "Writes why an early winner works, and proposes the next test.",
+      "previewImage": "/previews/paid-media-creative-strategist.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "linkedin-campaign-manager",
@@ -6576,7 +6986,10 @@
       "qualityNoteEn": "New official Marketing role. Paid Media is cross-channel budget; this owns LinkedIn funnel consistency.",
       "approvalBoundaryEn": "Do not enable ads, change budgets, or send follow-up; return campaign drafts, UTMs, and the handoff list.",
       "hook": "把广告、表单和跟进对齐，活动先起草等人批。",
-      "hookEn": "Lines up ads, forms, and follow-up, and drafts the campaign for approval."
+      "hookEn": "Lines up ads, forms, and follow-up, and drafts the campaign for approval.",
+      "previewImage": "/previews/linkedin-campaign-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "marketing-calendar-owner",
@@ -6614,7 +7027,10 @@
       "qualityNoteEn": "New official Marketing role. The one-person stack has a newsletter, not a regional/global marketing-calendar owner.",
       "approvalBoundaryEn": "Do not send public announcements or change published dates; return conflicts, gaps, and pending calendar updates.",
       "hook": "让区域和全球的内容与活动日历保持同步。",
-      "hookEn": "Keeps regional and global content and event calendars in sync."
+      "hookEn": "Keeps regional and global content and event calendars in sync.",
+      "previewImage": "/previews/marketing-calendar-owner.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "merch-fulfillment-operator",
@@ -6653,7 +7069,10 @@
       "qualityNoteEn": "New official Marketing role with the approval gate written in (approve/reject in chat). None of the 29 cover merch fulfillment.",
       "approvalBoundaryEn": "Do not approve redemptions, place vendor orders, or ship merch; return pending submissions and a daily order-form draft.",
       "hook": "兑换先等你点头，再给供应商发当天的发货单。",
-      "hookEn": "Waits for your yes on each redemption, then sends the vendor that day's order."
+      "hookEn": "Waits for your yes on each redemption, then sends the vendor that day's order.",
+      "previewImage": "/previews/merch-fulfillment-operator.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "community-operations-manager",
@@ -6691,7 +7110,10 @@
       "qualityNoteEn": "New official Marketing role. Support refunds and inbox triage do not cover an ambassador loop.",
       "approvalBoundaryEn": "Do not accept or reject applicants, and do not send DMs; return the screen, triage queue, and nurture drafts.",
       "hook": "筛申请、分拣私信，并按节奏起草培育，不自己通过。",
-      "hookEn": "Screens applications, sorts messages, and drafts nurture, without approving anyone."
+      "hookEn": "Screens applications, sorts messages, and drafts nurture, without approving anyone.",
+      "previewImage": "/previews/community-operations-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "compelling-events-monitor",
@@ -6730,7 +7152,10 @@
       "qualityNoteEn": "New official Marketing role. Paid-media monitor and competitive intel do not cover a leadership-trigger engagement digest.",
       "approvalBoundaryEn": "Do not post, comment, or quote-repost; return the trigger digest and draft engagements only.",
       "hook": "有真实由头才建议互动，评论先起草，不自己发。",
-      "hookEn": "Suggests a reply only when there is a real reason, and does not post it."
+      "hookEn": "Suggests a reply only when there is a real reason, and does not post it.",
+      "previewImage": "/previews/compelling-events-monitor.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "event-guest-screener",
@@ -6768,7 +7193,10 @@
       "qualityNoteEn": "New official Marketing role. Hiring Screener scores job applications; this scores event applicants.",
       "approvalBoundaryEn": "Do not send invites or batch-approve; return ICP scores and a pending list only.",
       "hook": "按目标客户给申请打分，邀请先停在待批。",
-      "hookEn": "Scores applicants against the customers you want, and holds invites for approval."
+      "hookEn": "Scores applicants against the customers you want, and holds invites for approval.",
+      "previewImage": "/previews/event-guest-screener.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "enablement-fulfillment-specialist",
@@ -6807,7 +7235,10 @@
       "qualityNoteEn": "New official CS role. Meeting-notes→tasks does not cover Zoom→one-pager→Drive→draft reply.",
       "approvalBoundaryEn": "Do not send email or share recordings with unapproved recipients; return asset links and a draft reply.",
       "hook": "找到录音、做成一页纸，并把带链接的回复停在草稿。",
-      "hookEn": "Finds the recording, makes a one-pager, and parks a reply that includes the link."
+      "hookEn": "Finds the recording, makes a one-pager, and parks a reply that includes the link.",
+      "previewImage": "/previews/enablement-fulfillment-specialist.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "ticket-triage-specialist",
@@ -6845,7 +7276,10 @@
       "qualityNoteEn": "New official CS role. Existing support-in-policy-refunds handles refunds; this is queue triage with draft-only replies.",
       "approvalBoundaryEn": "Do not send replies, close tickets, or issue refunds; return triage and drafts only.",
       "hook": "盯支持队列，只起草回复，干净时保持安静。",
-      "hookEn": "Watches the support queue, drafts replies only, and stays quiet when it is clean."
+      "hookEn": "Watches the support queue, drafts replies only, and stays quiet when it is clean.",
+      "previewImage": "/previews/ticket-triage-specialist.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "presentation-designer",
@@ -6881,7 +7315,10 @@
       "qualityNoteEn": "New official General role. Deck Updater edits an existing deck mid-call; this builds a new one from the master.",
       "approvalBoundaryEn": "Do not send the deck externally or change the brand master; return an editable link only.",
       "hook": "从主模板做出可继续改的演示，不从空白页开始。",
-      "hookEn": "Builds the deck from your master template, not from a blank slide."
+      "hookEn": "Builds the deck from your master template, not from a blank slide.",
+      "previewImage": "/previews/presentation-designer.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "internal-communications-manager",
@@ -6919,7 +7356,10 @@
       "qualityNoteEn": "New official Marketing role with review-only in the copy. Chief of Staff is a digest, not internal comms drafting.",
       "approvalBoundaryEn": "Do not send any internal or external message; return audience- and channel-matched drafts only.",
       "hook": "按对象和渠道起草对内文案，只审不发。",
-      "hookEn": "Drafts internal copy for each audience and channel, and never sends it."
+      "hookEn": "Drafts internal copy for each audience and channel, and never sends it.",
+      "previewImage": "/previews/internal-communications-manager.webp",
+      "previewCredit": "预览：Playwright 实拍 x.ai use-cases 对应卡片区域，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching x.ai use-cases card, cropped to 3:2 WebP"
     },
     {
       "id": "sales-outbound-overnight",
@@ -6959,7 +7399,10 @@
       "qualityNoteEn": "Official canonical flow, with a starter prompt and a clear approval boundary.",
       "approvalBoundaryEn": "Do not send or add to sequences; stop at the review list",
       "hook": "过夜研究客户并起草外呼，发送必须等人批。",
-      "hookEn": "Researches accounts overnight and drafts the outreach, which waits for approval."
+      "hookEn": "Researches accounts overnight and drafts the outreach, which waits for approval.",
+      "previewImage": "/previews/sales-outbound-overnight.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "demo-env-readiness",
@@ -6992,7 +7435,10 @@
       "summaryEn": "Demo Bot stands up the environment overnight, checks product UI/demo data, fixes bad seeds and stale data, and hands over a “demo-ready” checklist before the customer call.",
       "qualityNoteEn": "Binary, clear outcome: demo-ready. A good sales + engineering collaboration story.",
       "hook": "通话前把演示环境和数据检查一遍，交出就绪清单。",
-      "hookEn": "Checks the demo environment and its data before the call, then hands over a ready list."
+      "hookEn": "Checks the demo environment and its data before the call, then hands over a ready list.",
+      "previewImage": "/previews/demo-env-readiness.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "crm-monday-scoreboard",
@@ -7025,7 +7471,10 @@
       "summaryEn": "The Bot keeps CRM and org hygiene, flags stalled deals and commitment risk, and posts a Monday scoreboard so the team starts aligned.",
       "qualityNoteEn": "A typical recurring ops-digest pattern.",
       "hook": "标出停滞的交易，周一交出一份让团队对齐的记分板。",
-      "hookEn": "Flags stalled deals and posts a Monday scoreboard so the team starts aligned."
+      "hookEn": "Flags stalled deals and posts a Monday scoreboard so the team starts aligned.",
+      "previewImage": "/previews/crm-monday-scoreboard.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "account-followup-warmth",
@@ -7058,7 +7507,10 @@
       "summaryEn": "Updates CRM notes from call recaps, drafts product updates, opens support tickets, and syncs next steps in the tools the team already uses — work lands in real systems, not only in chat.",
       "qualityNoteEn": "An internal practice case that stresses “results land in the systems people use.”",
       "hook": "把下一步写进团队已经在用的系统，而不只停在聊天。",
-      "hookEn": "Lands the next step in the tools the team already uses, not only in chat."
+      "hookEn": "Lands the next step in the tools the team already uses, not only in chat.",
+      "previewImage": "/previews/account-followup-warmth.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "talent-scout",
@@ -7094,7 +7546,10 @@
       "qualityNoteEn": "Official role with privacy/compliance notes. Fits “draft outreach only.”",
       "approvalBoundaryEn": "Do not contact candidates",
       "hook": "找出符合条件的人并起草外联，不主动联系。",
-      "hookEn": "Finds people who fit and drafts the note, without contacting them."
+      "hookEn": "Finds people who fit and drafts the note, without contacting them.",
+      "previewImage": "/previews/talent-scout.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "paid-media-monitor",
@@ -7129,7 +7584,10 @@
       "qualityNoteEn": "A clear analyze → recommend → approve loop.",
       "approvalBoundaryEn": "Do not change budgets or send",
       "hook": "对照预算给出再分配建议，不改花费、不自己发。",
-      "hookEn": "Recommends where to move spend against the budget, without changing it or sending."
+      "hookEn": "Recommends where to move spend against the budget, without changing it or sending.",
+      "previewImage": "/previews/paid-media-monitor.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "weekly-expense-manager",
@@ -7165,7 +7623,10 @@
       "summaryEn": "Builds a weekly report from the expense system + policy, matches receipts in the finance inbox, flags missing categories and policy exceptions with sources, and drafts one follow-up per owner — returns only the summary and drafts.",
       "qualityNoteEn": "High-repetition finance chores; the docs stress reconciling against source data.",
       "hook": "汇总一周费用，标出缺收据和例外，并起草跟进。",
-      "hookEn": "Summarizes the week's expenses, flags what is missing, and drafts the follow-up."
+      "hookEn": "Summarizes the week's expenses, flags what is missing, and drafts the follow-up.",
+      "previewImage": "/previews/weekly-expense-manager.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "product-perf-investigation",
@@ -7199,7 +7660,10 @@
       "qualityNoteEn": "An evidence-first engineering investigation pattern.",
       "approvalBoundaryEn": "Do not change production/alerts",
       "hook": "查延迟并交回短报告，把事实和猜测分开，不改生产。",
-      "hookEn": "Investigates the slowdown and returns a short report that separates facts from guesses."
+      "hookEn": "Investigates the slowdown and returns a short report that separates facts from guesses.",
+      "previewImage": "/previews/product-perf-investigation.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "bug-repro-staging",
@@ -7235,7 +7699,10 @@
       "summaryEn": "Reads the bug report, reproduces it on staging with a fresh test account, and returns exact steps, expected/actual, screenshots, browser/OS, console and network notes, and a minimal case. Example trigger: Slack #customer-escalations + “needs repro.”",
       "qualityNoteEn": "The best official event-triggered engineering workflow.",
       "hook": "在预发用新账号复现缺陷，交回步骤和截图。",
-      "hookEn": "Reproduces the bug on staging with a fresh account, and returns the steps and shots."
+      "hookEn": "Reproduces the bug on staging with a fresh account, and returns the steps and shots.",
+      "previewImage": "/previews/bug-repro-staging.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "account-health-watch",
@@ -7274,7 +7741,10 @@
       "qualityNoteEn": "The docs’ flagship “skill → routine” example.",
       "approvalBoundaryEn": "Do not contact customers or edit CRM",
       "hook": "按用量和续约时点给客户打分，不联系、不改记录。",
-      "hookEn": "Scores accounts by usage and renewal timing, without contacting them or editing records."
+      "hookEn": "Scores accounts by usage and renewal timing, without contacting them or editing records.",
+      "previewImage": "/previews/account-health-watch.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "chief-of-staff-digest",
@@ -7311,7 +7781,10 @@
       "summaryEn": "Against a priority doc, reviews Slack/email/calendar/meeting notes since yesterday; returns only matches, with source, why it matters, a suggested next step, and whether you owe a decision — does not send or change meetings.",
       "qualityNoteEn": "The most-cited “first Bot” role.",
       "hook": "对照优先级，只交相关的事，并标出你是否欠一个决定。",
-      "hookEn": "Against your priorities, returns only what matches, and whether you owe a decision."
+      "hookEn": "Against your priorities, returns only what matches, and whether you owe a decision.",
+      "previewImage": "/previews/chief-of-staff-digest.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "inbox-triage-clickup",
@@ -7345,7 +7818,10 @@
       "summaryEn": "A scheduled Inbox Triage Bot pulls Gmail (+ calendar), flags urgent items, and hands a structured brief to the chief of staff, who creates dated, prioritized ClickUp tasks — the team looks at a board, not only chat.",
       "qualityNoteEn": "A strong community demo: two narrow Agents + an existing PM tool as system of record.",
       "hook": "收件箱里的急事交给幕僚长，落到看板上而不是只留在聊天。",
-      "hookEn": "Hands urgent inbox items to the chief of staff, who puts them on the board."
+      "hookEn": "Hands urgent inbox items to the chief of staff, who puts them on the board.",
+      "previewImage": "/previews/inbox-triage-clickup.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "invoice-agent-pipeline",
@@ -7378,7 +7854,10 @@
       "summaryEn": "Upload a reference invoice PDF. Invoice Agent drafts a matching invoice, a Gmail reply draft with attachment, and tracks status on the ClickUp “Invoices and Payments” board. Can hand off in a group chat with Inbox Triage so invoice mail routes automatically.",
       "qualityNoteEn": "End-to-end SMB ops loop; sending in production still needs approval.",
       "hook": "照着样张起草发票和回复，并在看板上跟踪状态。",
-      "hookEn": "Drafts a matching invoice and reply from a sample, and tracks it on the board."
+      "hookEn": "Drafts a matching invoice and reply from a sample, and tracks it on the board.",
+      "previewImage": "/previews/invoice-agent-pipeline.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "meeting-notes-tasks",
@@ -7410,7 +7889,10 @@
       "summaryEn": "A 17:00 daily routine pulls Granola notes, extracts action items, routes them to the right ClickUp board (e.g. agency vs YouTube) by rule, and fills owner, priority, and due date.",
       "qualityNoteEn": "A high-leverage “meeting debt” killer.",
       "hook": "从会议笔记抽出行动项，按规则送到对应看板。",
-      "hookEn": "Pulls action items from meeting notes and routes each one to the right board."
+      "hookEn": "Pulls action items from meeting notes and routes each one to the right board.",
+      "previewImage": "/previews/meeting-notes-tasks.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "product-ad-video",
@@ -7441,7 +7923,10 @@
       "summaryEn": "Video Agent + Higgsfield plugin + a saved product-ad skill: shoot the product on iOS, prompt “generate a product ad,” and get a finished cut in minutes. The skill can be invoked with /.",
       "qualityNoteEn": "A concrete creator-side teach/skill pattern.",
       "hook": "用手机拍产品，几分钟得到一条广告成片。",
-      "hookEn": "Shoot the product on your phone and get a finished ad back in minutes."
+      "hookEn": "Shoot the product on your phone and get a finished ad back in minutes.",
+      "previewImage": "/previews/product-ad-video.webp",
+      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
     },
     {
       "id": "competitive-intel-swarm",
@@ -7473,7 +7958,10 @@
       "summaryEn": "Several role Bots (research, verify, strategy, engineering, marketing) share context in a group chat; Composio can connect multiple apps. Example: parallel owners comparing coding-agent evals, or a competitor pricing/feature swarm → exec brief.",
       "qualityNoteEn": "The best-written multi-agent architecture guide, including token and shared-computer safety notes.",
       "hook": "多个角色在同一群里分工，最后交一份高管简报。",
-      "hookEn": "Several roles share one chat and come back with a briefing for leadership."
+      "hookEn": "Several roles share one chat and come back with a briefing for leadership.",
+      "previewImage": "/previews/competitive-intel-swarm.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "one-person-company-stack",
@@ -7510,7 +7998,10 @@
       "summaryEn": "Chief of staff audits the business and names the first Agents (research, sales, platform specialist); one account per project to control context/tokens; routines move newsletter, directory, and Shopify work into the night.",
       "qualityNoteEn": "An executable founder ops model: audit → hire Agents → weekly report.",
       "hook": "先点名第一批 Agent，再把重复的活挪到夜里。",
-      "hookEn": "Names the first agents, then moves the repeating work into the night."
+      "hookEn": "Names the first agents, then moves the repeating work into the night.",
+      "previewImage": "/previews/one-person-company-stack.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "website-launch-group",
@@ -7540,7 +8031,10 @@
       "summaryEn": "Docs pattern: a Website Launch group with launch coordination, content editing, and analytics review; the coordinator assigns work, and handoffs stay visible in the same thread. Community examples also have an EA handing site-building to an engineering Bot in natural language.",
       "qualityNoteEn": "A clear “project pod” collaboration IA.",
       "hook": "上线小组里，协调员分派，交接留在同一段对话。",
-      "hookEn": "In a launch group the coordinator assigns work, and handoffs stay in the same thread."
+      "hookEn": "In a launch group the coordinator assigns work, and handoffs stay in the same thread.",
+      "previewImage": "/previews/website-launch-group.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "slack-repro-escalation",
@@ -7573,7 +8067,10 @@
       "summaryEn": "A narrow event rule: when #customer-escalations has a ticket link + “needs repro,” the Bot opens the ticket, reproduces on staging, and posts the repro pack in the thread — does not reply in Slack without approval. Avoid listening to “every new message.”",
       "qualityNoteEn": "Gold standard for event-trigger design: narrow match, approval, failure policy.",
       "hook": "看到需要复现才动手，未经批准不回帖。",
-      "hookEn": "Acts only when a thread asks for a reproduction, and does not reply until you approve."
+      "hookEn": "Acts only when a thread asks for a reproduction, and does not reply until you approve.",
+      "previewImage": "/previews/slack-repro-escalation.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "cursor-automations-eng-factory",
@@ -7612,7 +8109,10 @@
       "summaryEn": "Same-ecosystem Cursor cloud Agents: main-push security review→Slack; PR agentic codeowners; PagerDuty→Datadog investigation→Slack+fix PR; weekly repo digest; morning coverage PR; Slack bug triage→Linear→attempted fix.",
       "qualityNoteEn": "Not the Grok Bot UI, but the same Cursor-ecosystem “always-on Agent” pattern. Useful when filtering for Coding/DevOps.",
       "hook": "推送做安全审查，告警去调查，缺陷尝试修好再提。",
-      "hookEn": "Reviews a push for security, investigates an alert, and tries a fix for a bug."
+      "hookEn": "Reviews a push for security, investigates an alert, and tries a fix for a bug.",
+      "previewImage": "/previews/cursor-automations-eng-factory.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "teach-a-task-skill",
@@ -7651,7 +8151,10 @@
       "qualityNoteEn": "The official “one-off task → Skill → Routine” loop. Complements the business-role cases and can be followed from the docs.",
       "approvalBoundaryEn": "Keep writes and outbound behind approval; do not expose secrets during the demo",
       "hook": "演示一遍浏览器流程，Bot 先写成草稿技能。",
-      "hookEn": "Demo a browser flow once, and the Bot writes it up as a draft skill."
+      "hookEn": "Demo a browser flow once, and the Bot writes it up as a draft skill.",
+      "previewImage": "/previews/teach-a-task-skill.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "kanekoa-video-research",
@@ -7727,7 +8230,10 @@
       "qualityNoteEn": "A new official “Jobs Bots are doing today” role. The approval bound is very clear: audit and list only; canceling needs a human. A good first life-admin Routine.",
       "approvalBoundaryEn": "Do not discard files, unsubscribe, or delete accounts; return only the audit list.",
       "hook": "审计邮箱、网盘和订阅，取消之前先等你点头。",
-      "hookEn": "Audits mail, files, and subscriptions, and cancels only after you say yes."
+      "hookEn": "Audits mail, files, and subscriptions, and cancels only after you say yes.",
+      "previewImage": "/previews/digital-declutterer.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "meeting-stand-in",
@@ -7762,7 +8268,10 @@
       "qualityNoteEn": "Different from “meeting notes → tasks”: this is a stand-in when a person is absent. Calendar/meeting permissions are sensitive; sending the summary needs approval.",
       "approvalBoundaryEn": "Joining and sending the summary need human review; do not make commitments or change the calendar.",
       "hook": "你去不了时由它入会，回来带一份摘要。",
-      "hookEn": "Joins the meeting when you cannot, and comes back with a summary."
+      "hookEn": "Joins the meeting when you cannot, and comes back with a summary.",
+      "previewImage": "/previews/meeting-stand-in.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "website-builder-bot",
@@ -7797,7 +8306,10 @@
       "qualityNoteEn": "Officially named as buying domains and deploying — high-consequence actions. Build in a draft environment first; domain purchase and DNS/redirects must be approved.",
       "approvalBoundaryEn": "Do not buy a domain, change DNS, or deploy to production; hand over a preview site and a checklist first.",
       "hook": "做站、买域名并部署，交出可访问的地址。",
-      "hookEn": "Builds the site, buys the domain, deploys it, and hands over an address you can open."
+      "hookEn": "Builds the site, buys the domain, deploys it, and hands over an address you can open.",
+      "previewImage": "/previews/website-builder-bot.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "game-artist-pipeline",
@@ -7832,7 +8344,10 @@
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "按你的方向出游戏素材，入库之前要人审。",
-      "hookEn": "Makes game art in the direction you set, and waits for a person before it ships."
+      "hookEn": "Makes game art in the direction you set, and waits for a person before it ships.",
+      "previewImage": "/previews/game-artist-pipeline.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "office-manager-work-orders",
@@ -7867,7 +8382,10 @@
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "在几个门户之间代点工单和排班，对外消息先等人批。",
-      "hookEn": "Clicks through work orders across portals, and holds outbound notes for approval."
+      "hookEn": "Clicks through work orders across portals, and holds outbound notes for approval.",
+      "previewImage": "/previews/office-manager-work-orders.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "support-in-policy-refunds",
@@ -7905,7 +8423,10 @@
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "政策内的退款先拟好，打款前在界面里等你确认。",
-      "hookEn": "Drafts in-policy refunds and waits on screen for you to confirm the payment."
+      "hookEn": "Drafts in-policy refunds and waits on screen for you to confirm the payment.",
+      "previewImage": "/previews/support-in-policy-refunds.webp",
+      "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
     },
     {
       "id": "mobile-grocery-shopping",
@@ -7939,7 +8460,10 @@
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "边走边用语音往购物车加东西，付款仍由你点头。",
-      "hookEn": "Adds to the grocery cart by voice while you walk, and leaves payment for you."
+      "hookEn": "Adds to the grocery cart by voice while you walk, and leaves payment for you.",
+      "previewImage": "/previews/mobile-grocery-shopping.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "grokbot-boring-directory",
@@ -8555,7 +9079,10 @@
       "publishedAt": "2026-08-28",
       "updatedAt": "2026-09-21T01:20:00Z",
       "hook": "把聊天和 Bot 拆开，列出可以谨慎试跑的工作流。",
-      "hookEn": "Separates chat from Bot and lists workflows you can try carefully."
+      "hookEn": "Separates chat from Bot and lists workflows you can try carefully.",
+      "previewImage": "/previews/6yuwei-grok-bot-six-workflows.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     },
     {
       "id": "cursor-docs-grok-bot-get-started",
@@ -8594,15 +9121,31 @@
       "publishedAt": "2026-09-21",
       "updatedAt": "2026-09-21T01:20:00Z",
       "hook": "官方入门：装上桌面端，审完第一次任务再存技能。",
-      "hookEn": "Official start: install the desktop app, review a task, then save a skill."
+      "hookEn": "Official start: install the desktop app, review a task, then save a skill.",
+      "previewImage": "/previews/cursor-docs-grok-bot-get-started.webp",
+      "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-08T05:40:00Z",
+    "updatedAt": "2026-10-09T01:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.50",
-    "count": 160,
+    "version": "1.4.52",
+    "count": 165,
     "sourcesCrawled": [
+      "https://news.ycombinator.com/item?id=50013931",
+      "https://svg-spark.vercel.app/",
+      "https://x.com/bot/status/2108228871938359347",
+      "https://docs.flowstep.ai/mcp/quickstart",
+      "https://flowstep.ai/mcp",
+      "https://flowstep.ai/",
+      "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "https://claude.com/blog/claude-design-stays-on-brand-for-daily-work",
+      "https://claude.com/product/design",
+      "https://x.com/framer/status/2107962735673872818",
+      "https://www.framer.com/skills",
+      "https://x.com/krea_ai/status/2107848434128752777",
+      "https://www.krea.ai/plugins/photoshop",
       "https://api.fxtwitter.com/OpenAI/status/2107596713791767021",
       "https://agmai.org/general-sep29/",
       "https://openai.com/index/navier-stokes-solution/",

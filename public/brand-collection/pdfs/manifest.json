@@ -1,0 +1,173 @@
+{
+  "generatedAt": "2026-10-08T06:58:16.442Z",
+  "items": [
+    {
+      "id": "openai",
+      "title": "OpenAI",
+      "path": "brand-collection/pdfs/openai.pdf",
+      "bytes": 112473
+    },
+    {
+      "id": "anthropic",
+      "title": "Anthropic / Claude",
+      "path": "brand-collection/pdfs/anthropic.pdf",
+      "bytes": 106040
+    },
+    {
+      "id": "gemini",
+      "title": "Google Gemini",
+      "path": "brand-collection/pdfs/gemini.pdf",
+      "bytes": 87172
+    },
+    {
+      "id": "mistral",
+      "title": "Mistral AI",
+      "path": "brand-collection/pdfs/mistral.pdf",
+      "bytes": 105205
+    },
+    {
+      "id": "elevenlabs",
+      "title": "ElevenLabs",
+      "path": "brand-collection/pdfs/elevenlabs.pdf",
+      "bytes": 105959
+    },
+    {
+      "id": "cursor",
+      "title": "Cursor",
+      "path": "brand-collection/pdfs/cursor.pdf",
+      "bytes": 110379
+    },
+    {
+      "id": "runway",
+      "title": "Runway",
+      "path": "brand-collection/pdfs/runway.pdf",
+      "bytes": 107169
+    },
+    {
+      "id": "huggingface",
+      "title": "Hugging Face",
+      "path": "brand-collection/pdfs/huggingface.pdf",
+      "bytes": 111825
+    },
+    {
+      "id": "xai",
+      "title": "xAI / Grok",
+      "path": "brand-collection/pdfs/xai.pdf",
+      "bytes": 98773
+    },
+    {
+      "id": "meta",
+      "title": "Meta",
+      "path": "brand-collection/pdfs/meta.pdf",
+      "bytes": 132831
+    },
+    {
+      "id": "notion",
+      "title": "Notion",
+      "path": "brand-collection/pdfs/notion.pdf",
+      "bytes": 68153
+    },
+    {
+      "id": "kimi",
+      "title": "月之暗面 Kimi",
+      "path": "brand-collection/pdfs/kimi.pdf",
+      "bytes": 142154
+    },
+    {
+      "id": "minimax",
+      "title": "MiniMax",
+      "path": "brand-collection/pdfs/minimax.pdf",
+      "bytes": 110283
+    },
+    {
+      "id": "tencent",
+      "title": "腾讯",
+      "path": "brand-collection/pdfs/tencent.pdf",
+      "bytes": 137060
+    },
+    {
+      "id": "geist",
+      "title": "Vercel Geist",
+      "path": "brand-collection/pdfs/geist.pdf",
+      "bytes": 108848
+    },
+    {
+      "id": "linear",
+      "title": "Linear",
+      "path": "brand-collection/pdfs/linear.pdf",
+      "bytes": 54464
+    },
+    {
+      "id": "carbon",
+      "title": "IBM Carbon",
+      "path": "brand-collection/pdfs/carbon.pdf",
+      "bytes": 54717
+    },
+    {
+      "id": "carbon-ai",
+      "title": "IBM Carbon for AI",
+      "path": "brand-collection/pdfs/carbon-ai.pdf",
+      "bytes": 87614
+    },
+    {
+      "id": "fluent",
+      "title": "Microsoft Fluent 2",
+      "path": "brand-collection/pdfs/fluent.pdf",
+      "bytes": 109087
+    },
+    {
+      "id": "material",
+      "title": "Google Material 3",
+      "path": "brand-collection/pdfs/material.pdf",
+      "bytes": 54685
+    },
+    {
+      "id": "stripe",
+      "title": "Stripe",
+      "path": "brand-collection/pdfs/stripe.pdf",
+      "bytes": 54832
+    },
+    {
+      "id": "atlassian",
+      "title": "Atlassian Design",
+      "path": "brand-collection/pdfs/atlassian.pdf",
+      "bytes": 53879
+    },
+    {
+      "id": "apple-hig",
+      "title": "Apple HIG",
+      "path": "brand-collection/pdfs/apple-hig.pdf",
+      "bytes": 54138
+    },
+    {
+      "id": "dewu",
+      "title": "得物 / POIZON 参考对标",
+      "path": "brand-collection/pdfs/dewu.pdf",
+      "bytes": 872710
+    },
+    {
+      "id": "ai-up-lab",
+      "title": "AI UP LAB 参考对标",
+      "path": "brand-collection/pdfs/ai-up-lab.pdf",
+      "bytes": 750628
+    },
+    {
+      "id": "joma",
+      "title": "JOMA 品牌调研",
+      "path": "brand-collection/pdfs/joma.pdf",
+      "bytes": 718301
+    },
+    {
+      "id": "joma-visual-audit",
+      "title": "JOMA 视觉审计",
+      "path": "brand-collection/pdfs/joma-visual-audit.pdf",
+      "bytes": 998687
+    },
+    {
+      "id": "joma-china-ecommerce",
+      "title": "JOMA 中国电商视觉",
+      "path": "brand-collection/pdfs/joma-china-ecommerce.pdf",
+      "bytes": 810402
+    }
+  ]
+}

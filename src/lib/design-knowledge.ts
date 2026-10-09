@@ -153,7 +153,7 @@ export const designKnowledge: DesignSpec[] = [
     definition: c("按用户意图选择最小必要结构：发现内容、直接浏览、定向查找或理解用法。", "Choose the smallest useful structure for discovery, browsing, targeted search, or understanding a resource."),
     anatomy: [c("首页：主推与补充 → 最近更新 → 目录 → 入门入口。", "Home: lead and supporting picks → recent updates → sections → starter guides."), c("分类：标题与简介 → 数量 → 最新列表 → 继续展开。", "Category: title and description → count → newest entries → progressive reveal."), c("详情：用途 → 来源与日期 → 用法与限制 → 相关资源。", "Detail: purpose → source and dates → usage and limits → related resources."), c("搜索：查询与筛选 → 结果数量 → 结果 / 空状态。", "Search: query and filters → count → results or empty state.")],
     parameters: [
-      { name: "home.featured", value: "1 lead + 2 supporting", usage: c("仅为首页精选分配强层级。", "Reserve strong editorial hierarchy for homepage picks.") },
+      { name: "home.featured", value: "1 lead + creative rail", usage: c("仅为首页主推与创意轨分配强层级。", "Reserve strong editorial hierarchy for the homepage lead and creative rail.") },
       { name: "category.order", value: "updatedAt desc / key asc", usage: c("按已有更新日期排序，相同日期保持稳定顺序。", "Sort by existing update date, then stable key for ties.") },
       { name: "detail.evidence", value: "source + context", usage: c("区分来源核对、作者声称与操作实测。", "Distinguish source checks, author claims, and hands-on testing.") },
     ],
