@@ -96,7 +96,7 @@ const downloads = [
     <section id="layout" class="brand-guide-section">
       <div class="brand-guide-heading"><p>06 / PAGE PATTERNS</p><h2><Loc zh="三种页面，三个重点" en="Three patterns, three priorities" /></h2></div>
       <div class="brand-guide-three">{[
-        { zh: "首页：发现值得看的内容", en: "Home: discover useful picks", list: [{zh:"一条主推与两条补充",en:"One lead, two supporting picks"},{zh:"最新更新与目录入口",en:"Recent entries and section links"},{zh:"主推给出用途和推荐理由",en:"A clear purpose and editorial reason"}] },
+        { zh: "首页：发现值得看的内容", en: "Home: discover useful picks", list: [{zh:"一条主推与右侧创意轨",en:"One lead plus a creative rail"},{zh:"最新更新与目录入口",en:"Recent entries and section links"},{zh:"主推给出用途和推荐理由",en:"A clear purpose and editorial reason"}] },
         { zh: "分类页：直接浏览", en: "Sections: start browsing", list: [{zh:"标题、简介、资源数量",en:"Title, description, resource count"},{zh:"最新在前，按需展开",en:"Newest first, progressively revealed"},{zh:"搜索与筛选进入独立搜索页",en:"Search and filters on the search page"}] },
         { zh: "详情页：理解并开始使用", en: "Details: understand and try", list: [{zh:"是什么、适合谁、如何获取",en:"Purpose, audience, and access"},{zh:"真实来源、步骤与限制",en:"Sources, steps, and limitations"},{zh:"保留收藏与相关资源入口",en:"Favorites and related resources"}] },
       ].map(pattern => <article><h3><Loc zh={pattern.zh} en={pattern.en} /></h3><ul>{pattern.list.map(item => <li><Loc zh={item.zh} en={item.en} /></li>)}</ul></article>)}</div>

@@ -1,0 +1,48 @@
+{
+  "eyebrow": {
+    "zh": "提示词与创意",
+    "en": "PROMPTS & CREATIVE"
+  },
+  "line": {
+    "zh": "图像提示词、动效演示与 AIGC 创作素材，打开即可复制用法。",
+    "en": "Image prompts, motion demos, and AIGC creative resources you can open and reuse."
+  },
+  "items": [
+    {
+      "key": "image-prompts:dsxzai-image-25-gallery",
+      "kind": "gallery",
+      "title": {
+        "zh": "Image 2.5 提示词画廊",
+        "en": "Image 2.5 prompt gallery"
+      },
+      "reason": {
+        "zh": "案例带完整提示词与来源，复制即可试生成。",
+        "en": "Each case ships with a full prompt and source — copy and try it."
+      }
+    },
+    {
+      "key": "html:meigen",
+      "kind": "gallery",
+      "title": {
+        "zh": "MeiGen 提示画廊",
+        "en": "MeiGen prompt gallery"
+      },
+      "reason": {
+        "zh": "广告、品牌、视频与海报提示，按类浏览后复制。",
+        "en": "Browse ad, brand, video, and poster prompts, then copy to reuse."
+      }
+    },
+    {
+      "key": "html:motionsites",
+      "kind": "motion",
+      "title": {
+        "zh": "MotionSites 动效落地页",
+        "en": "MotionSites motion landings"
+      },
+      "reason": {
+        "zh": "电影感与 3D 动效落地页提示，适合给生成式建站工具。",
+        "en": "Cinematic and 3D motion landing prompts for generative site builders."
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+---
+import FavButton from "./FavButton.astro";
+import Icon from "./Icon.astro";
+import Loc from "./Loc.astro";
+import { creativeKindLabel, homeCreative, homeCreativeMeta } from "../lib/home-creative";
+import { sourceHost } from "../lib/home-picks";
+import { withBase } from "../lib/paths";
+---
+<aside class="editorial-creative" aria-labelledby="creative-rail-title">
+  <div class="editorial-creative-head">
+    <p class="editorial-eyebrow" id="creative-rail-title"><Loc zh={homeCreativeMeta.eyebrow.zh} en={homeCreativeMeta.eyebrow.en} /></p>
+    <p class="editorial-creative-line"><Loc zh={homeCreativeMeta.line.zh} en={homeCreativeMeta.line.en} /></p>
+  </div>
+  <div class="editorial-creative-list">
+    {homeCreative.map((item, index) => {
+      const kind = creativeKindLabel(item.kind);
+      return (
+        <article class="editorial-creative-card" data-creative-kind={item.kind} data-editorial-entry={item.entry.key} style={`--creative-delay: ${index * 0.12}s`}>
+          <a class="editorial-creative-media" href={item.entry.href} tabindex="-1" aria-hidden="true">
+            <img src={item.entry.thumb} alt="" width="600" height="360" loading={index === 0 ? "eager" : "lazy"} decoding="async" />
+          </a>
+          <div class="editorial-creative-copy">
+            <p class="editorial-creative-kind"><Loc zh={kind.zh} en={kind.en} /></p>
+            <h3><a href={item.entry.href}><Loc zh={item.title.zh} en={item.title.en} /></a></h3>
+            <p><Loc zh={item.reason.zh} en={item.reason.en} /></p>
+            <div class="editorial-meta">
+              <a href={withBase(`${item.section.id}/`)}><Loc zh={item.section.title.zh} en={item.section.title.en} /></a>
+              <span>{sourceHost(item.entry.sourceUrl)}</span>
+            </div>
+          </div>
+          <FavButton lib={item.entry.lib} id={item.entry.id} />
+        </article>
+      );
+    })}
+  </div>
+  <a class="editorial-text-link editorial-creative-more" href={withBase("prompts/")}>
+    <Loc zh="浏览提示词与素材" en="Browse prompts & resources" />
+    <Icon name="arrow" size={18} />
+  </a>
+</aside>

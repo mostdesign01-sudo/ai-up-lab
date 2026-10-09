@@ -22,7 +22,7 @@ const { spec } = Astro.props as {spec:DesignSpec};
 {zh:"示例已加载",en:"Example loaded",line:{zh:"内容区域恢复，其他操作可继续。",en:"The content area has recovered and remains usable."}}
 ].map((s,i)=><div data-feedback-panel={i} hidden={i!==0}><h3><Loc zh={s.zh} en={s.en} /></h3><p><Loc {...s.line} /></p>{i===1&&<a href={withBase("search/")} class="brand-guide-link"><Loc zh="查看全部资源" en="See all resources" /></a>}{i===2&&<button type="button" data-feedback-retry class="brand-guide-secondary"><Loc zh="重试演示" en="Retry demo" /></button>}</div>)}</div><p role="status" data-feedback-status></p><noscript><p><Loc zh="状态切换需 JavaScript；完整状态说明见下方表格。" en="State switching requires JavaScript. The table below describes all states." /></p></noscript></>}
 {(spec.id === "layout" || spec.id === "page-patterns") && <div class="pattern-previews">{[
-{title:{zh:"首页 · 发现",en:"Home · Discover"},blocks:[{zh:"主推 + 两条补充",en:"Lead + two supporting picks"},{zh:"最近更新",en:"Recent entries"},{zh:"任务目录",en:"Task sections"}],href:""},
+{title:{zh:"首页 · 发现",en:"Home · Discover"},blocks:[{zh:"主推 + 创意轨",en:"Lead + creative rail"},{zh:"最近更新",en:"Recent entries"},{zh:"任务目录",en:"Task sections"}],href:""},
 {title:{zh:"分类 · 浏览",en:"Category · Browse"},blocks:[{zh:"标题 / 简介 / 数量",en:"Title / description / count"},{zh:"最新资源列表",en:"Recent resource list"},{zh:"展开更多",en:"Reveal more"}],href:"learn/"},
 {title:{zh:"详情 · 理解",en:"Detail · Understand"},blocks:[{zh:"用途 / 来源 / 日期",en:"Purpose / source / date"},{zh:"用法与限制",en:"Usage and limits"},{zh:"相关资源",en:"Related resources"}],href:entries.find(e=>e.key==="html:css-bed")!.href},
 {title:{zh:"搜索 · 查找",en:"Search · Find"},blocks:[{zh:"查询与筛选",en:"Query and filters"},{zh:"结果 / 空状态",en:"Results / empty state"},{zh:"结果数量",en:"Result count"}],href:"search/"}

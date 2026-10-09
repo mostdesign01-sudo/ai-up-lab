@@ -27,7 +27,7 @@ descriptionEn: "How the live AI UP LAB site compares with /brand/ v1.2.1, includ
 | 色彩规则 | 「紫色表示重点和动作，不表示质量高低」。品牌紫压底色的对比度：浅色 6.7:1，深色 7.93:1（本地按 WCAG 公式计算） |
 | 尺度 | 间距 4/8/12/16/20/24/32/48/64；**控件圆角 7px、卡片 8px**；内容最大宽 1344px；默认浅色主题（实测 `data-theme=light`，body 底色 `rgb(255,254,253)`） |
 | 图标 / 动效 | Phosphor regular 18/20/24px；反馈动效 160ms ease-out，遵循减少动态效果设置 |
-| 首页结构 | 编辑精选（1 主 + 2 补充）→ 最近更新 → 目录（学习与工作流 117 / 工具与应用 82 / 界面与范例 150 / 模型与能力 21 / 提示词与素材 12 条）→ 新手入门 → 按任务 → 按日期 |
+| 首页结构 | 编辑精选（1 主推 + 右侧提示词/AIGC 创意轨）→ 最近更新 → 目录（学习与工作流 / 工具与应用 / 界面与范例 / 模型与能力 / 提示词与素材）→ 新手入门 → 按任务 → 按日期 |
 | 方法参考 | 页面注明借鉴 [Tmall Design](https://tmall-design.com/#blog/building-design-wiki-for-aigui) 的「规则 → 结构化映射 → 代码」做法 |
 
 截图：[首页](https://mostdesign01-sudo.github.io/ai-up-lab/) 1440/390 宽、[`/brand/`](https://mostdesign01-sudo.github.io/ai-up-lab/brand/) 1440 宽：[home-1440.png](/brand-collection/assets/ai-up-lab/home-1440.webp)、[home-390.png](/brand-collection/assets/ai-up-lab/home-390.webp)、[brand-1440.png](/brand-collection/assets/ai-up-lab/brand-1440.webp)。标志与分享图：[logo.svg](/brand-collection/assets/ai-up-lab/logo.svg)、[logo-inverse.svg](/brand-collection/assets/ai-up-lab/logo-inverse.svg)、[favicon.svg](/brand-collection/assets/ai-up-lab/favicon.svg)、[og.png](/brand-collection/assets/ai-up-lab/og.webp)。
