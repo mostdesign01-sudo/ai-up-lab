@@ -55,7 +55,9 @@ npm run preview
 3. 维护 `meta.updatedAt`、`meta.version`、`meta.count` 和条目日期。日期表示整理时间，不是实测证明。
 4. Cases / HTML / Agent UI 要写成对的 `hook` / `hookEn`：一句话说读者能做什么。中文最多 36 字、英文最多 90 字，不放抓取日志、HTTP 状态、互动数字或日期；缺失或格式错误会阻断构建。
 5. 必要时更新 `data/directory.json` 的跨库归属。不同来源讲同一个资源时，优先补充已有条目的来源与步骤，避免重复收录。
-6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。
+6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。缺图时可用：
+   - `node scripts/capture-case-previews.mjs --write`（或 `--unique` / `--only=id1,id2` / `--force`）抓来源页实拍；
+   - `node scripts/generate-case-covers.mjs --write` 为仍缺图的 Case 生成互不重复的条目封面，并刷新 `public/covers/case-*.webp` 回退图。不要再共用粘土风分类插画充数。
 7. 更新 `data/changelog.json` 的中英说明，运行 `npm run build` 并检查受影响的页面。
 
 字段说明见 `data/schema.md`、`data/html-schema.md`、`data/agent-ui-schema.md`、`data/models-schema.md`、`data/image-prompts-schema.md`。
