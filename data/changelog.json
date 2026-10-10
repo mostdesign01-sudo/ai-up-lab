@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-10",
+      "title": "晚间收录：Agent UI +1（Open Intelligent UI）、HTML +2（CUBE Type、Triple-A Minesweeper）",
+      "titleEn": "Evening catalog: Agent UI +1 (Open Intelligent UI), HTML +2 (CUBE Type, Triple-A Minesweeper)",
+      "body": "Agent UI：open-intelligent-ui（CopilotKit 开源的生成式界面聊天模板，MIT，可换自己的设计系统和组件；线索 @ataiiam 2026-10-09 发布帖）。HTML：cube-type（等距方块字生成器，排版设计小工具，HN 50010986）；triple-a-minesweeper（把扫雷恶搞成 3A 大作的网页游戏，HN 50022292）。三条都有 3:2 自托管预览，均未完整实测（Open Intelligent UI 需自带 OpenAI 与 Jev key）。agent-ui 58→59，html-items 128→130。未改首页精选、Cases、Models。",
+      "bodyEn": "Agent UI: open-intelligent-ui (CopilotKit's open-source generative UI chat template, MIT, bring your own design system and components; lead: @ataiiam launch post on 2026-10-09). HTML: cube-type (isometric block-letter generator, a typography design tool, HN 50010986); triple-a-minesweeper (Minesweeper parodied as a AAA blockbuster, HN 50022292). All three have self-hosted 3:2 previews; none fully tested hands-on (Open Intelligent UI needs your own OpenAI and Jev keys). agent-ui 58→59, html-items 128→130. Homepage picks, Cases, and Models unchanged."
+    },
+    {
       "date": "2026-10-09",
       "title": "晚间收录：Cases +1（Claude Motion / Dashboards）、HTML +1（Quake-SRP）",
       "titleEn": "Evening catalog: Cases +1 (Claude Motion / Dashboards), HTML +1 (Quake-SRP)",

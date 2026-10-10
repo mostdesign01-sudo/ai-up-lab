@@ -1,6 +1,72 @@
 {
   "items": [
     {
+      "id": "cube-type",
+      "slug": "cube-type",
+      "title": "CUBE Type：打几个字，变成等距方块字，免费导出图片或循环动图",
+      "titleEn": "CUBE Type: type a few words and get isometric block letters, free image or loop export",
+      "summary": "一个做等距（isometric）立体字的网页小工具：在左边打几个字，右边就把每个字母印在一块块方块上，叠成一段立体字。可以选五种摆法（顶面朝左、贴左墙、贴右墙、顶面朝右、平铺），叠加间距、投影、空心方块、台阶等效果，从 16 套配色（Paper、Klein 蓝、Riso、Matcha、Blueprint、Ink 等）里挑，也能用自己的品牌色；画幅有横版、方形、竖版，背景可调。做完可以下载成图片或一段短循环动画，也能直接发链接。作者是奥克兰的产品设计师 Bear Liu，他在 About 里写：创意工作越来越变成「输入提示、等它生成」，这个小工具是他对「约束、玩和手艺」的一次实验，导出的东西个人和商用都能随便用。适合做海报标题、社媒封面、活动主视觉，想要一点立体字效果又不想开 3D 软件的人。",
+      "summaryEn": "A small web tool for isometric type: type a few words on the left and each letter lands on a cube on the right, stacked into dimensional lettering. Pick one of five compositions (top left, wall left, wall right, top right, flat), add spacing, shadow, empty cubes, or stairs, choose from 16 palettes (Paper, Klein, Riso, Matcha, Blueprint, Ink, and more) or your own brand colors, and set landscape, square, or portrait with an adjustable background. Download an image or a short loop, or share a link. It is by Auckland product designer Bear Liu, whose About page says that as more creative work turns into prompt-and-generate, this is his experiment in constraints, play, and craft, and that exports are free for personal or commercial use. Good for poster headlines, social covers, and event key visuals when you want dimensional type without opening 3D software.",
+      "sourceUrl": "https://typeincube.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50010986",
+        "https://bearliu.com/"
+      ],
+      "previewImage": "/previews/cube-type.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "typography",
+        "isometric",
+        "design",
+        "poster",
+        "generator",
+        "free",
+        "hacker-news"
+      ],
+      "qualityNote": "线索 HN item 50010986（2026-10-08T19:41Z，约 10-09 03:41 北京时间，撰写时 24pts）。页面晚间 HTTP 200，页脚写 v1.3 · October 2026。五种摆法、四种效果、16 套配色、三种画幅、导出图片或短循环动画、可分享链接、导出物个人和商用都可用，以及作者 Bear Liu 的自述，都照首页和 About 写。本库用 Playwright 打了一段字、选了 Klein 配色和投影确认能实时出图，没有实际下载图片或动画，没核对导出分辨率和格式。不是 AI 工具，收录理由是字体/排版向的设计小工具，作者明确把它当作 AI 生成时代的手作对照。预览为 Playwright 实拍编辑器（文字「MAKE WORDS DIMENSIONAL」+ Klein 配色 + 投影），缩成 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: HN item 50010986 (2026-10-08T19:41Z, about 03:41 on 10-09 Beijing time, 24pts at write time). Page HTTP 200 this evening; footer reads v1.3 · October 2026. The five compositions, four effects, 16 palettes, three aspect ratios, image or short-loop export, shareable links, free personal and commercial use of exports, and Bear Liu's own note all follow the homepage and About. This library typed text in Playwright and picked the Klein palette and shadow to confirm the live render, but did not download an image or loop or check export resolution and format. Not an AI tool; it is listed as a typography design tool that the author frames as a hands-on counterpoint to AI generation. Preview is a Playwright capture of the editor (text “MAKE WORDS DIMENSIONAL”, Klein palette, shadow), scaled to a self-hosted 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-10T12:30:00Z",
+      "hook": "打几个字变成等距方块字，配色画幅随便调，导出免费商用。",
+      "hookEn": "Type a few words, get isometric block letters, and export them free for commercial use."
+    },
+    {
+      "id": "triple-a-minesweeper",
+      "slug": "triple-a-minesweeper",
+      "title": "Triple-A Minesweeper：把扫雷做成「3A 大作」的恶搞网页游戏",
+      "titleEn": "Triple-A Minesweeper: classic Minesweeper parodied as a AAA blockbuster in the browser",
+      "summary": "打开是一张 Windows 95 风格的桌面，双击「Triple-A Minesweeper」图标，先看一串引擎和中间件开场画面（Unreal Engine、NVIDIA、Bink Video、Wwise），再看大字片头，然后才进到一盘普普通通的扫雷。笑点全在「3A 游戏味」：棋盘右上角有通讯窗，角色 NORA 自称「接入了你的神经 HUD」，一句接一句全程配音加字幕，提醒你「看到黄色标记了吗，它会引导你」；主角不停念叨「我得扫这些雷」；还有黑帮老大 THE DON、老熟人 CLYDE 轮番来电讲剧情，清完一盘还有结尾和片尾字幕。HN 上 1000 多分，评论都在接梗：缺支线任务、缺成就、缺开箱、想要开放世界扫雷。对做产品和游戏的人来说，它是一面镜子：新手引导、强制剧情、满屏提示叠到一个本来一眼就懂的小游戏上，会变成什么样。",
+      "summaryEn": "It opens on a Windows 95-style desktop; double-click the “Triple-A Minesweeper” icon and sit through engine and middleware splash screens (Unreal Engine, NVIDIA, Bink Video, Wwise) and a big title card before reaching a perfectly ordinary Minesweeper board. The joke is the AAA treatment: a comms window on the board where NORA says she is “patched into your neural HUD,” fully voiced lines with subtitles telling you to follow the yellow marker, a protagonist who keeps saying he needs to sweep these mines, calls from a mob boss called THE DON and an old contact called CLYDE, and an ending with credits once you clear the board. It passed 1,000 points on HN, where commenters kept the bit going: no side quests, no achievements, no loot boxes, make it open world. For product and game people it is a mirror of what onboarding, forced story, and nonstop hints do to a game anyone already understands.",
+      "sourceUrl": "https://minesweeper.mikelacher.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50022292"
+      ],
+      "previewImage": "/previews/triple-a-minesweeper.webp",
+      "types": [
+        "game",
+        "interactive"
+      ],
+      "tags": [
+        "game",
+        "parody",
+        "minesweeper",
+        "ux",
+        "retro",
+        "hacker-news"
+      ],
+      "qualityNote": "线索 HN item 50022292（2026-10-09T15:51Z，约 10-09 23:51 北京时间，撰写时 1051pts、201 条评论）。页面晚间 HTTP 200，标题与描述「Sweep to survive in the action-packed, AAA reboot of the classic puzzle game」、页脚「A game by Mike Lacher」照页面写。开场画面顺序、NORA / THE DON / CLYDE 的台词和字幕、黄色引导标记，都是本库用 Playwright 双击图标后约 100 秒内实际看到的；结尾和片尾字幕来自站内 data/ending.js 的注释，本库没有通关。页面有声音，建议开声玩；手机上能不能玩没测，作者也没写是否用 AI 制作。预览为 Playwright 实拍游戏画面（NORA 提示黄色标记那一句），3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: HN item 50022292 (2026-10-09T15:51Z, about 23:51 on 10-09 Beijing time, 1051pts and 201 comments at write time). Page HTTP 200 this evening; the title, the description “Sweep to survive in the action-packed, AAA reboot of the classic puzzle game,” and the footer “A game by Mike Lacher” follow the page. The splash order, NORA / THE DON / CLYDE lines and subtitles, and the yellow guide marker are what this library saw in about 100 seconds after double-clicking the icon in Playwright; the ending and credits come from comments in the site's data/ending.js, and this library did not clear the board. The page has audio, so play with sound on; mobile was not tested, and the author does not say whether AI was used. Preview is a Playwright capture of gameplay (NORA pointing at the yellow marker), a self-hosted 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-10T12:30:00Z",
+      "hook": "一盘普通扫雷，硬塞进开场动画、全程配音和剧情电话。",
+      "hookEn": "Plain Minesweeper stuffed with splash screens, nonstop voice lines, and story calls."
+    },
+    {
       "id": "quake-srp",
       "slug": "quake-srp",
       "title": "Quake-SRP：1996 年的《雷神之锤》用纯安全 Rust 重写，浏览器里直接玩，代码几乎全由 Claude Code 写",
@@ -4072,9 +4138,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-09T12:20:00Z",
+    "updatedAt": "2026-10-10T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.60",
-    "count": 128
+    "version": "1.3.61",
+    "count": 130
   }
 }
