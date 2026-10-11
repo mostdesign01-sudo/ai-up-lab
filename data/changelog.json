@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-11",
+      "title": "晚间收录：HTML +3（Oil UI、M3E Canvas、Prompt Motion）、Agent UI +1（Agent Standup）",
+      "titleEn": "Evening catalog: HTML +3 (Oil UI, M3E Canvas, Prompt Motion), Agent UI +1 (Agent Standup)",
+      "body": "HTML：oil-ui（给 AI Agent 的界面设计 Skill，先出几版风格不同的小样再细化，MIT；线索 @I_am_oil_oil 10-11 帖）；m3e-canvas（浏览器里拖 Material 3 Expressive 界面草图并生成给 AI 编程工具的提示词，MIT；线索 @lnkiai 10-11 帖）；prompt-motion（200 多条 Claude 动效视频与对应提示词合集，10-10 新增自定义提示词）。Agent UI：agent-standup（把 Claude Code 子 Agent 画成带配音的视频站会，MIT，HN 50039630）。四条都有 3:2 自托管预览，均未完整实测。html-items 130→133，agent-ui 59→60。未改首页精选、Cases、Models。",
+      "bodyEn": "HTML: oil-ui (a UI design skill for AI agents that mocks up distinct directions before refining, MIT; lead: @I_am_oil_oil post on 10-11); m3e-canvas (sketch Material 3 Expressive screens in the browser and generate a prompt for AI coding tools, MIT; lead: @lnkiai post on 10-11); prompt-motion (200+ Claude-made motion videos with their prompts, customizable prompts added 10-10). Agent UI: agent-standup (Claude Code sub-agents drawn as a voiced video stand-up, MIT, HN 50039630). All four have self-hosted 3:2 previews; none fully tested hands-on. html-items 130→133, agent-ui 59→60. Homepage picks, Cases, and Models unchanged."
+    },
+    {
       "date": "2026-10-10",
       "title": "晚间收录：Agent UI +1（Open Intelligent UI）、HTML +2（CUBE Type、Triple-A Minesweeper）",
       "titleEn": "Evening catalog: Agent UI +1 (Open Intelligent UI), HTML +2 (CUBE Type, Triple-A Minesweeper)",

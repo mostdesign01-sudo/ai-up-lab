@@ -1,6 +1,113 @@
 {
   "items": [
     {
+      "id": "oil-ui",
+      "slug": "oil-ui",
+      "title": "Oil UI：装给 AI Agent 的界面设计 Skill，先做几版风格不同的小样让你挑",
+      "titleEn": "Oil UI: a UI design skill for AI agents that mocks up several truly different directions for you to pick",
+      "summary": "中文作者 oil-oil 做的开源界面设计 Skill（Skill 可以理解成「装给 AI 编程助手的一套做事方法」）。装好后，你让 Claude Code、Codex 这类 Agent 设计网页、App、后台或组件，它不会直接出一版就交差，而是先认清这是哪类产品、找同类里风格最鲜明的两三家参考，把「高级」「简洁」这种空话翻成具体的字体、留白和配色决定，再做出几份真正不一样的小样——规则写得很死：版式、字体、配色、主视觉四样里，任意两版最多只能有一样相同。几份小样会放进一个自带的风格对比页，能切电脑和手机尺寸、用方向键翻看，你点「选择」后把复制出的一句话发回 Agent，它再接着细化；做完还会在两种尺寸下截图自查，最后做一轮减法。官网 ui.oiloil.org 有一面作品墙（撰写时 65 件，大多标注用 GPT 6.1 Sol 生成），能看到学英语 App、硬件官网、项目管理工具等成品。开源版 MIT 免费；另有付费的 Oil UI Pro，多了可用性、老项目改造、特效等内容。适合想让 AI 做出来的界面别千篇一律的设计师和独立开发者。",
+      "summaryEn": "An open-source UI design skill by Chinese creator oil-oil (a skill is a packaged way of working you install into an AI coding agent). Once installed, when you ask Claude Code, Codex, or similar agents to design a site, app, dashboard, or component, it does not ship one version and stop: it identifies the product category, studies the two or three most distinctive players, turns vague words like “premium” or “clean” into concrete type, spacing, and color decisions, then produces several genuinely different mockups, with a strict rule that any two directions may share at most one of layout, type, palette, and key visual. The mockups land in a built-in comparison page where you switch desktop and mobile sizes and flip through with arrow keys; click “Select,” paste the copied line back to the agent, and it refines from there, then screenshots both sizes to self-check and does a final pass of subtraction. The gallery at ui.oiloil.org (65 pieces at write time, most labeled GPT 6.1 Sol) shows results like a language-learning app, a hardware site, and a project tool. The open-source edition is MIT and free; a paid Oil UI Pro adds usability, legacy-project, and effects material. Good for designers and indie builders who want AI-made interfaces that don’t all look the same.",
+      "sourceUrl": "https://github.com/oil-oil/oil-ui",
+      "secondaryUrls": [
+        "https://ui.oiloil.org/",
+        "https://x.com/I_am_oil_oil/status/2109157633898979682",
+        "https://ui.oiloil.org/pro/"
+      ],
+      "previewImage": "/previews/oil-ui.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "skill",
+        "open-source",
+        "mit",
+        "ui-design",
+        "agent"
+      ],
+      "qualityNote": "线索：作者 @I_am_oil_oil 的更新帖 https://x.com/I_am_oil_oil/status/2109157633898979682 （2026-10-11T05:42Z，约 10-11 13:42 北京时间，撰写时 28 赞），帖里的图都写明由 GPT 6.1 sol + 简单提示词 + Oil UI Pro 做出。仓库 oil-oil/oil-ui 晚间 gh api：MIT、1239★，2026-09-30 创建，最近推送 2026-10-11，最新 release v0.21.0。八步设计方法、「四样里最多一样相同」的规则、风格对比页、截图自查、版本检查只读公开版本列表（可用 OIL_NO_UPDATE_CHECK=1 关闭），都照中文 README 写。价格两处写法不一：官网英文页写 Pro $9.99 一次买断，中文 README 写 69 元一次买断，以购买页为准。作品墙数量和模型标注是撰写时页面上看到的。官网与仓库晚间 HTTP 200。本库没有安装这个 Skill、没有让 Agent 实际跑一遍，没买 Pro。预览为 Playwright 实拍官网作品墙首屏，缩成 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: creator @I_am_oil_oil’s update post https://x.com/I_am_oil_oil/status/2109157633898979682 (2026-10-11T05:42Z, about 13:42 on 10-11 Beijing time, 28 likes at write time); the post says its images were made with GPT 6.1 sol + a simple prompt + Oil UI Pro. Repo oil-oil/oil-ui on this evening’s gh api: MIT, 1239★, created 2026-09-30, last push 2026-10-11, latest release v0.21.0. The eight-step method, the “share at most one of four” rule, the comparison page, screenshot self-checks, and the update check that only reads a public version list (disable with OIL_NO_UPDATE_CHECK=1) follow the Chinese README. Pricing differs by page: the English site says Pro is a $9.99 one-time purchase, the Chinese README says ¥69 one-time; the checkout page is authoritative. Gallery count and model labels are what the page showed at write time. Site and repo HTTP 200 this evening. This library did not install the skill, did not run it through an agent, and did not buy Pro. Preview is a Playwright capture of the site’s gallery above the fold, scaled to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11T12:30:00Z",
+      "hook": "让 AI 先做几版真不一样的界面小样，你挑完它再细化。",
+      "hookEn": "Your AI agent mocks up genuinely different UI directions, you pick, it refines."
+    },
+    {
+      "id": "m3e-canvas",
+      "slug": "m3e-canvas",
+      "title": "M3E Canvas：在浏览器里拖出 Material 3 界面草图，一键变成给 AI 写 App 的提示词",
+      "titleEn": "M3E Canvas: sketch Material 3 Expressive screens in the browser and turn them into a prompt for your AI coding tool",
+      "summary": "一个免费开源的网页画板：左边是按谷歌 Material 3 Expressive（安卓最新一代设计语言）画好的零件，按钮、导航栏、卡片、列表、对话框、开关、滑块、搜索栏都有，拖到手机或电脑画框里就能拼出界面；两个按钮靠近会像磁铁一样粘成一组。可以加好几个页面，给按钮设「点了跳到哪页、用什么转场」，再按预览像真 App 一样点着走一遍。主题面板一次调完颜色（选一个主色自动生成整套配色、深浅色、对比度）、圆角、字体和动效。最关键的一步是「Prompt」：它把整套草图写成一段自然语言说明，可选中文、英文、日文、韩文，目标选安卓或网页，复制后贴进 Claude Code、Codex、Cursor 这类 AI 编程工具，让它照着把 App 写出来。也能导出 PNG、发分享链接。作品存在你自己的浏览器里，没有后台；想让 AI 帮写说明文字的话可以填自己的 OpenAI、Claude、Gemini 或 DeepSeek key。适合想把「脑子里的界面」讲清楚再交给 AI 的设计师和产品经理。",
+      "summaryEn": "A free, open-source web canvas: the left panel holds parts drawn to Google’s Material 3 Expressive (Android’s newest design language), from buttons, navigation bars, cards, and lists to dialogs, switches, sliders, and search bars; drag them into a phone or desktop frame to build screens, and two buttons placed close together snap into a connected group. Add several screens, give any part a target screen and transition, then hit preview and tap through like a real app. One theme panel sets color (one seed color becomes a full scheme with light/dark and contrast levels), corner shape, type, and motion. The key step is “Prompt”: it writes the whole sketch up as a natural-language brief in Chinese, English, Japanese, or Korean, targeting Android or the web, ready to paste into Claude Code, Codex, Cursor, or another AI coding tool to build the app. You can also export PNGs or share a link. Work is saved in your own browser with no backend; an optional AI helper uses your own OpenAI, Claude, Gemini, or DeepSeek key to write part descriptions. Good for designers and PMs who want to spell out the interface in their head before handing it to AI.",
+      "sourceUrl": "https://lnkiai.github.io/m3e-canvas/",
+      "secondaryUrls": [
+        "https://github.com/lnkiai/m3e-canvas",
+        "https://x.com/lnkiai/status/2109221196600643765"
+      ],
+      "previewImage": "/previews/m3e-canvas.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "material-3",
+        "prompts",
+        "wireframe",
+        "open-source",
+        "mit"
+      ],
+      "qualityNote": "线索：作者 @lnkiai 的帖 https://x.com/lnkiai/status/2109221196600643765 （2026-10-11T09:54Z，约 10-11 17:54 北京时间），庆祝仓库过 9000 星。仓库 lnkiai/m3e-canvas 晚间 gh api：MIT、9148★，2026-09-02 创建，最近推送 2026-10-08；README 顶部挂着 Trendshift「当日第一」徽章。零件清单、磁吸成组、多页面跳转与转场、主题四项、四种语言的 Prompt 输出、安卓/网页两种目标、本地存储无后台、可选自带 key 的 AI 助手，都照 README 写。本库用 Playwright 打开线上版，确认默认示例页能显示，并点开 Prompt 面板看到英文、安卓目标的说明文字（含整套颜色值）；没有自己拖零件拼页面，没有把提示词交给 AI 工具实际生成 App，也没测手机版编辑器。预览即这张 Prompt 面板实拍，1440×960 缩成 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: creator @lnkiai’s post https://x.com/lnkiai/status/2109221196600643765 (2026-10-11T09:54Z, about 17:54 on 10-11 Beijing time) celebrating 9,000 stars. Repo lnkiai/m3e-canvas on this evening’s gh api: MIT, 9148★, created 2026-09-02, last push 2026-10-08; the README shows a Trendshift “#1 repository of the day” badge. The parts list, magnetic grouping, multi-screen navigation and transitions, the four theme axes, prompt output in four languages, Android/web targets, localStorage with no backend, and the optional bring-your-own-key AI helper follow the README. This library opened the live app in Playwright, confirmed the default sample screen renders, and opened the Prompt panel to see an English, Android-target brief including the full color values; it did not build screens itself, did not hand the prompt to an AI tool to generate an app, and did not test the phone editor. Preview is that Prompt panel capture, 1440×960 scaled to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-11T12:30:00Z",
+      "hook": "拖零件拼 Material 3 界面，一键写成给 AI 的提示词。",
+      "hookEn": "Drag Material 3 parts into screens, then copy one prompt for your AI coding tool."
+    },
+    {
+      "id": "prompt-motion",
+      "slug": "prompt-motion",
+      "title": "Prompt Motion：200 多条 Claude 做的动效视频，每条都附上做它的提示词",
+      "titleEn": "Prompt Motion: 200+ motion videos made with Claude, each with the prompt behind it",
+      "summary": "一个收集「用 AI 做动效视频」的网站：作者 @p4nthera_ 把 X 上大家用 Claude Opus 5.5 做出来的动效片整理到一起，每条视频旁边都放着做出它的那段提示词或 Skill，标明原作者、模型和制作方式，能一键复制。首页按题材分类筛选：产品界面、手机、图表、示意图、动态文字、几何图形、粒子、角色、照片、音乐、代码。点开一条，比如「一个形状在各种界面状态之间变形」，能看到完整提示词怎么写：先问你要哪些状态和配乐、规定只用黑白、弹簧动效不许乱弹、按 120 BPM 每拍都有动作，最后用 HTML + Playwright 渲成视频。10 月 10 日起还多了「Customize」：选一条喜欢的，填上你的产品、颜色和时长，它给你改写一版提示词，说是免费、信息只存在你浏览器里。对设计师来说，最大的用处是对照着看——成片的节奏、缓动、转场，分别是提示词里哪一句控制的。",
+      "summaryEn": "A site collecting AI-made motion videos: curator @p4nthera_ gathers motion pieces people made with Claude Opus 5.5 on X and puts the prompt or skill behind each one right beside the video, credited with author, model, and stack, ready to copy. The home grid filters by theme: product UI, phone, charts, diagrams, kinetic type, shapes, particles, characters, photos, music, and code. Open one, such as “Shape morphing through UI states,” and you see the full prompt: ask the user for the states and a track, stay black and white, use springs with no bouncy easing, make something happen on every beat at 120 BPM, then render with HTML + Playwright. Since October 10 there is also “Customize”: pick a video you like, add your product, colors, and length, and get a rewritten prompt, described as free with your details kept in your browser. For designers the real value is side-by-side study: which line of the prompt drives the rhythm, easing, and transitions you see.",
+      "sourceUrl": "https://prompt-motion.com/",
+      "secondaryUrls": [
+        "https://prompt-motion.com/customize",
+        "https://x.com/p4nthera_/status/2108996225437438453",
+        "https://x.com/TeddyinMedia/status/2109239627458466261"
+      ],
+      "previewImage": "/previews/prompt-motion.webp",
+      "types": [
+        "tool",
+        "library",
+        "motion"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "motion",
+        "prompts",
+        "claude",
+        "video",
+        "library"
+      ],
+      "qualityNote": "线索：@TeddyinMedia 今天的转介帖 https://x.com/TeddyinMedia/status/2109239627458466261 （2026-10-11T11:08Z，约 10-11 19:08 北京时间）；站长 @p4nthera_ 10-10T19:00Z（约 10-11 03:00 北京时间）发帖宣布可自定义任意提示词。站点 10-07 起在 X 上被多次转发，当时有人说收录 226 条。本库晚间用 Playwright 打开首页，数到 233 个作品链接，分类计数（如产品界面 100、动态文字 97）是页面当时显示的；打开了「Shape morphing through UI states」（@twoclipping，标注 Opus 5.5、HTML + Playwright、2026-09-24）看完整提示词，也打开了 Customize 页看到两个模板和按题材挑选。没有实际填表生成自定义提示词，没有拿提示词去让 Claude 做视频。页脚写明视频和提示词归各自作者所有，转用前请看原帖；本站未标注统一许可。站点晚间 HTTP 200。预览为 Playwright 实拍该条目页（视频 + 提示词），3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: @TeddyinMedia’s referral post today https://x.com/TeddyinMedia/status/2109239627458466261 (2026-10-11T11:08Z, about 19:08 on 10-11 Beijing time); curator @p4nthera_ announced customizable prompts at 10-10T19:00Z (about 03:00 on 10-11 Beijing time). The site has been reshared on X since 10-07, when one post put it at 226 entries. This evening this library opened the home page in Playwright and counted 233 entry links; category counts (e.g. Product UI 100, Kinetic type 97) are what the page showed then. It opened “Shape morphing through UI states” (@twoclipping, labeled Opus 5.5, HTML + Playwright, 2026-09-24) to read the full prompt, and the Customize page showing two templates and pick-by-theme. It did not fill in the form to generate a custom prompt or use any prompt to make a video with Claude. The footer says videos and prompts belong to their creators, so check the original post before reuse; the site states no blanket license. Site HTTP 200 this evening. Preview is a Playwright capture of that entry page (video + prompt), a self-hosted 3:2 WebP.",
+      "featured": false,
+      "publishedAt": "2026-10-07",
+      "updatedAt": "2026-10-11T12:30:00Z",
+      "hook": "200 多条 AI 动效片，每条旁边都摆着做它的提示词。",
+      "hookEn": "200+ AI motion videos, each shown next to the prompt that made it."
+    },
+    {
       "id": "cube-type",
       "slug": "cube-type",
       "title": "CUBE Type：打几个字，变成等距方块字，免费导出图片或循环动图",
@@ -4138,9 +4245,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-10T12:30:00Z",
+    "updatedAt": "2026-10-11T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.61",
-    "count": 130
+    "version": "1.3.62",
+    "count": 133
   }
 }
