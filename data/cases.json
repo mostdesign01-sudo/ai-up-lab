@@ -44,8 +44,8 @@
       "slug": "css-studio",
       "title": "工具：CSS Studio — 在自己网站上改样式，改完交给现有编程助手写回代码",
       "titleEn": "Tool: CSS Studio — edit styles on your live site; your coding agent writes them back",
-      "hook": "在真实网页上拖样式、改文案，一点就把改动发给 Cursor 或 Claude Code。",
-      "hookEn": "Tweak styles and copy on the real page, then one click sends the edits to Cursor or Claude Code.",
+      "hook": "在真网页上改样式文案，一点就交给编程助手写回。",
+      "hookEn": "Edit the live page; one click sends changes to your coding agent.",
       "summary": "CSS Studio（Motion 团队出品）是装在你自己网站上的可视化设计层：在浏览器里改文案、样式、布局和动画时间轴，再通过 MCP / skill 把变更交给你本来就在用的编程助手（文档写支持 Cursor、Claude Code、VS Code、Codex、Windsurf 等），由助手改对源文件——HTML/CSS、Tailwind、React 等随你现有技术栈。站点强调「不是从零生成整站」，而是设计已经跑起来的页面；支持一键出多版变体、按断点改、后台并行子任务。定价页写编辑器可免费用，接 AI 助手要一次性买断（页面写 $99）。Show HN（2026-04-09）约 175 分。适合已经有站、想在真页面上精修视觉再让助手落盘的人。",
       "summaryEn": "CSS Studio (from the Motion team) is a visual design layer on your own site: edit copy, styles, layout, and animation timelines in the browser, then send changes over MCP / a skill to the coding agent you already use (docs list Cursor, Claude Code, VS Code, Codex, Windsurf, and more) so it patches the right source files—HTML/CSS, Tailwind, React, whatever your stack already is. The site stresses it is not a from-scratch site generator; you design the page that is already running. It supports one-click variants, breakpoint edits, and parallel background tasks. Pricing says the editor is free; AI agent connection is a one-time purchase (listed as $99). Show HN on 2026-04-09 landed around 175 points. Good if you already have a site and want to polish on the real page before an agent commits.",
       "categories": [
@@ -84,8 +84,8 @@
       "slug": "wunderui",
       "title": "工具：WunderUI — 同一套 Figma + React 设计系统，专给编程助手备好 MCP / llms.txt",
       "titleEn": "Tool: WunderUI — one Figma + React design system with MCP / llms.txt for coding agents",
-      "hook": "组件名在 Figma 和代码里一样；助手用 MCP 查真实 props，少瞎编一套 UI。",
-      "hookEn": "Same names in Figma and React; agents read real props over MCP instead of inventing UI.",
+      "hook": "Figma 和代码同名；助手用 MCP 查真实组件，少瞎编。",
+      "hookEn": "Same names in Figma and code; agents read real components over MCP.",
       "summary": "WunderUI 是面向后台、看板、设置页和 AI 聊天界面的设计系统：文档写有 204 个 React 组件、与代码同名的 Figma 库、以及给编程助手用的 MCP、DESIGN.md、design.json 和 llms.txt。免费档约 80 个 Core 组件 MIT 开源（GitHub wunder-ui/wunderui）；Pro 才解锁图表、AI & Agents、UI Blocks 等。Build with AI 页写 MCP 可本地跑、读库存无需密钥；`claude mcp add wunderui -- npx -y wunderui-mcp`。Agent 上下文四件套免费可读。适合已经在用 Cursor / Claude Code、又想助手按真实设计系统出界面的团队。",
       "summaryEn": "WunderUI is a design system aimed at dashboards, boards, settings, and AI chat UIs: docs list 204 React components, a Figma library named like the code, plus MCP, DESIGN.md, design.json, and llms.txt for coding agents. About 80 Core components are MIT on GitHub (wunder-ui/wunderui); Pro unlocks charts, AI & Agents, UI Blocks, and more. The Build with AI page says the MCP server runs locally with no key to read the inventory (`claude mcp add wunderui -- npx -y wunderui-mcp`). The four agent-context artifacts are free to read. Good for teams on Cursor / Claude Code who want agents to build against a real design system.",
       "categories": [

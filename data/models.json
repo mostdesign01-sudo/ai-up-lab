@@ -83,10 +83,11 @@
       "relatedCaseIds": [],
       "relatedModelIds": [
         "strands-decider-2b",
-        "jeff",
+        "gutsy",
         "clef",
         "typesafe-jev",
-        "gutsy"
+        "jeeves",
+        "laya-system-one"
       ],
       "previewImage": "/previews/thx-01.webp",
       "previewCredit": "预览截自 Hugging Face 博文页",
