@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-12",
+      "title": "早间收录：Cases +3（Diffui、CSS Studio、WunderUI）、Agent UI +1（Moodi）、Models +1（THX-01）",
+      "titleEn": "Morning catalog: Cases +3 (Diffui, CSS Studio, WunderUI), Agent UI +1 (Moodi), Models +1 (THX-01)",
+      "body": "Cases（AI×设计优先）：diffui（扩散模型一次出多版界面再交助手落地；Show HN https://news.ycombinator.com/item?id=48995754）；css-studio（在真实网站上改样式，经 MCP 交给现有编程助手写回；Show HN https://news.ycombinator.com/item?id=47702196）；wunderui（Figma+React 同名设计系统，免费 MCP / DESIGN.md / llms.txt 给助手读）。Agent UI：moodi（MIT 小 3D 状态角色；Show HN https://news.ycombinator.com/item?id=50047937）。Models：thx-01（HAL-X 322M 开源决策模型，HF 博文 2026-10-10）。各条均为 Playwright 实拍 3:2 WebP 预览；本库未登录付费档、未复跑作者基准。",
+      "bodyEn": "Cases (AI×design first): diffui (diffusion multi-option UI then agent handoff; Show HN https://news.ycombinator.com/item?id=48995754); css-studio (edit the live site, MCP to your coding agent; Show HN https://news.ycombinator.com/item?id=47702196); wunderui (matching Figma+React design system with free MCP / DESIGN.md / llms.txt). Agent UI: moodi (MIT tiny 3D state character; Show HN https://news.ycombinator.com/item?id=50047937). Models: thx-01 (HAL-X 322M open decision model; HF blog 2026-10-10). Each has a Playwright 3:2 WebP preview; this library did not use paid tiers or re-run author benchmarks."
+    },
+    {
       "date": "2026-10-11",
       "title": "晚间收录：HTML +3（Oil UI、M3E Canvas、Prompt Motion）、Agent UI +1（Agent Standup）",
       "titleEn": "Evening catalog: HTML +3 (Oil UI, M3E Canvas, Prompt Motion), Agent UI +1 (Agent Standup)",

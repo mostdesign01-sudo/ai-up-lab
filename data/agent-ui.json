@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "moodi",
+      "slug": "moodi",
+      "title": "Moodi：给界面状态用的小 3D 角色（加载、思考、出错…）",
+      "titleEn": "Moodi: a tiny 3D character for UI states (loading, thinking, error…)",
+      "summary": "免费开源（MIT）的小 3D「心情伙伴」：用 React、Web Component 或 CDN 塞进页面，根据 Idle / Thinking / Loading / Error 等状态换表情和动作。官网 playground 可选 Ghost、Pebble、Blob 等外形和配色，还能跟鼠标、开声音，并直接拷出代码。Show HN 2026-10-11；npm 包名 moodi。适合想把冷冰冰的加载圈换成可复制角色的 Agent / 产品界面。",
+      "summaryEn": "A free MIT 3D “mood buddy” for UI states: drop it in via React, Web Component, or CDN and switch Idle / Thinking / Loading / Error (and more). The playground lets you pick shapes like Ghost / Pebble / Blob, colors, cursor follow, sound, and copy the snippet. Show HN 2026-10-11; npm package moodi. Good when you want something warmer than a spinner in an agent or product UI.",
+      "sourceUrl": "https://www.getmoodi.dev/",
+      "secondaryUrls": [
+        "https://github.com/korneXD/moodi",
+        "https://www.npmjs.com/package/moodi",
+        "https://news.ycombinator.com/item?id=50047937"
+      ],
+      "previewImage": "/previews/moodi.webp",
+      "promptHint": "先在 https://www.getmoodi.dev/ 调好外形和心情，再 `npm i moodi`，按 playground 里 React / Web Component / CDN 片段接到加载或思考状态。",
+      "promptHintEn": "Tune shape and mood on https://www.getmoodi.dev/, then `npm i moodi` and paste the React / Web Component / CDN snippet for loading or thinking states.",
+      "types": [
+        "interactive",
+        "3d",
+        "component"
+      ],
+      "tags": [
+        "three",
+        "react",
+        "web-component",
+        "loading",
+        "agent-ui",
+        "open-source"
+      ],
+      "npmPackage": "moodi",
+      "qualityNote": "主源是 https://www.getmoodi.dev/ 与 GitHub korneXD/moodi（MIT），早间 HTTP 200；npm moodi@0.5.0。Show HN https://news.ycombinator.com/item?id=50047937 （2026-10-11）。免费开源，非 Pro。本库没有在生产项目安装，只打开了 playground。预览为 Playwright 实拍 playground 裁 3:2 WebP。",
+      "qualityNoteEn": "Primary sources are https://www.getmoodi.dev/ and GitHub korneXD/moodi (MIT), HTTP 200 this morning; npm moodi@0.5.0. Show HN https://news.ycombinator.com/item?id=50047937 (2026-10-11). Free/open, not Pro. This library did not install it in a production app; only opened the playground. Preview is a Playwright capture of the playground, cropped to 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-12T01:05:00Z",
+      "hook": "加载圈换成会眨眼的小 3D 角色，状态一变表情跟着变。",
+      "hookEn": "Swap the spinner for a blinking 3D buddy that changes with UI state."
+    },
+    {
       "id": "agent-standup",
       "slug": "agent-standup",
       "title": "Agent Standup：把 Claude Code 的子 Agent 变成一场带配音的视频站会",
@@ -2106,9 +2144,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-11T12:30:00Z",
+    "updatedAt": "2026-10-12T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.24",
-    "count": 60
+    "version": "1.4.25",
+    "count": 61
   }
 }

@@ -1,11 +1,98 @@
 {
   "meta": {
-    "updatedAt": "2026-10-08T01:30:00Z",
+    "updatedAt": "2026-10-12T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.20",
-    "count": 27
+    "version": "1.1.21",
+    "count": 28
   },
   "models": [
+    {
+      "id": "thx-01",
+      "slug": "thx-01",
+      "name": "THX-01",
+      "vendor": "HAL-X AI",
+      "title": "THX-01：322M 开源决策模型，一次前向给出带校准概率的选项",
+      "titleEn": "THX-01: a 322M open decision model that returns calibrated choices in one forward pass",
+      "summary": "HAL-X AI（阿塞拜疆）在 2026-10-10 开源的 THX-01：约 3.22 亿参数的非自回归决策模型，不写长文，只对你给出的现状和若干类型化问题（选择题、是否、打分、抽数字、摘原文、找依据）一次前向返回带校准概率的结构化答案。权重与 Python 包 `thx01` 为 Apache-2.0；另有托管 API 与 Hugging Face Space 演示。作者在 HF 博文里用内部多语工单基准对比 TypeSafe Jev，并给出延迟等数字——本库没有复跑。适合路由、分流、抽取这类「只要一个决定」的 Agent 环节。",
+      "summaryEn": "THX-01 from HAL-X AI (Azerbaijan), open-sourced 2026-10-10: a ~322M non-autoregressive decision model that does not write long prose. You pass a state plus typed questions (choice, yes/no, score, number extract, excerpt, citation) and get structured answers with calibrated probabilities in one forward pass. Weights and the Python package `thx01` are Apache-2.0; there is also a hosted API and a Hugging Face Space demo. The HF blog compares it to TypeSafe Jev on an internal multilingual ticket benchmark with latency figures—this library did not re-run them. Good for agent steps that only need a decision: routing, triage, extraction.",
+      "announcedAt": "2026-10-10",
+      "publishedAt": "2026-10-12",
+      "updatedAt": "2026-10-12T01:05:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Hugging Face 博文：THX-01 开源说明",
+          "labelEn": "Hugging Face blog: THX-01 open-source announcement",
+          "url": "https://huggingface.co/blog/doofz/thx-01-we-open-sourced-a-322m-decision-model-that",
+          "by": "Farid Aghayev (doofz)",
+          "date": "2026-10-10"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型：doofz/THX-01（Apache-2.0）",
+          "labelEn": "Hugging Face model: doofz/THX-01 (Apache-2.0)",
+          "url": "https://huggingface.co/doofz/THX-01",
+          "by": "doofz / HAL-X AI",
+          "date": "2026-10-10"
+        },
+        {
+          "kind": "official",
+          "label": "托管 API 文档",
+          "labelEn": "Hosted API docs",
+          "url": "https://api.hal-x.ai/docs/thx-01/",
+          "by": "HAL-X",
+          "date": "2026-10-10"
+        },
+        {
+          "kind": "demo",
+          "label": "Hugging Face Space 演示",
+          "labelEn": "Hugging Face Space demo",
+          "url": "https://huggingface.co/spaces/doofz/THX-01-demo",
+          "by": "doofz",
+          "date": "2026-10-10"
+        },
+        {
+          "kind": "community",
+          "label": "Show HN / X 线索（开源决策模型）",
+          "labelEn": "Show HN / X pointer (open decision model)",
+          "url": "https://news.ycombinator.com/item?id=50048015",
+          "by": "lebagetdefrance",
+          "date": "2026-10-11"
+        }
+      ],
+      "highlights": [
+        {
+          "label": "约 322M 参数，非自回归一次前向",
+          "labelEn": "~322M params, one non-autoregressive forward pass"
+        },
+        {
+          "label": "类型化问题：choice / noul / score / number / excerpt / citation",
+          "labelEn": "Typed questions: choice / noul / score / number / excerpt / citation"
+        },
+        {
+          "label": "Apache-2.0 权重 + pip install thx01",
+          "labelEn": "Apache-2.0 weights + pip install thx01"
+        },
+        {
+          "label": "作者称可在合适运行时上手机本地跑",
+          "labelEn": "Authors say it can run on-device with a suitable runtime"
+        }
+      ],
+      "qualityNote": "主源是 2026-10-10 HF 博文与模型卡 doofz/THX-01，早间 HTTP 200；能力表、Apache-2.0、pip 与 API 链接照博文。与 Jev 的对比数字来自作者内部基准，本库没有安装 thx01，也没有复跑。收录进 Models，与库内 Strands Decider、Jeff、Clef、Jev 同属「决策小模型」一条线。预览为 Playwright 实拍博文页裁 3:2 WebP。",
+      "qualityNoteEn": "Primary sources are the 2026-10-10 HF blog and model card doofz/THX-01, HTTP 200 this morning; capability table, Apache-2.0, pip, and API links follow the blog. Jev comparison numbers are the authors’ internal benchmarks; this library did not install thx01 or re-run them. Listed in Models alongside Strands Decider, Jeff, Clef, and Jev as another small decision model. Preview is a Playwright capture of the blog page, cropped to 3:2 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "strands-decider-2b",
+        "jeff",
+        "clef",
+        "typesafe-jev",
+        "gutsy"
+      ],
+      "previewImage": "/previews/thx-01.webp",
+      "previewCredit": "预览截自 Hugging Face 博文页",
+      "previewCreditEn": "Preview cropped from the Hugging Face blog page",
+      "featured": true
+    },
     {
       "id": "gpt-6-intelligent-ui",
       "slug": "gpt-6-intelligent-ui",
