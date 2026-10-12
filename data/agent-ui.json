@@ -1,6 +1,47 @@
 {
   "items": [
     {
+      "id": "ns-ui",
+      "slug": "ns-ui",
+      "title": "NS UI：542 个可给 Agent 装的 React 组件登记处（带 MCP 与 CLI）",
+      "titleEn": "NS UI: a 542-component React registry agents can install via MCP and CLI",
+      "summary": "一个免费开源（MIT）的个人 React 组件库登记处：撰写时首页写有 542 个组件，按交互拆开，能在真实页面上点开预览。安装是把源码拷进你的项目（shadcn 风格的一条 npx 命令），不绑运行时包、不用账号和 API key。颜色走你自己的 CSS 变量，支持亮暗色。给 Agent 用的入口齐：llms.txt、完整说明、MCP（可搜组件、取源码、列分类、给安装命令）、HTTP MCP 端点，以及 npm 上的 CLI。适合已经在用编程助手做前端、又想要「可安装、可主题化」的现成零件，而不是再出一版千篇一律的卡片。",
+      "summaryEn": "A free MIT personal React component registry: the home page listed 542 components at write time, each built around one interaction, previewable live on the site. Install copies source into your project with a single shadcn-style npx command—no runtime package, no account, no API key. Colors come from your own CSS tokens and support light/dark. Agent surfaces include llms.txt, full docs, an MCP server (search, fetch source, list categories, install command), an HTTP MCP endpoint, and an npm CLI. Good when your coding agent builds frontends and you want installable, themeable parts instead of another generic card stack.",
+      "sourceUrl": "https://design.helpmarq.com/",
+      "secondaryUrls": [
+        "https://github.com/nikolas-sapa/ns-ui",
+        "https://design.helpmarq.com/llms.txt",
+        "https://design.helpmarq.com/connect",
+        "https://news.ycombinator.com/item?id=50011077"
+      ],
+      "previewImage": "/previews/ns-ui.webp",
+      "promptHint": "先打开 https://design.helpmarq.com/llms.txt 或让助手接 MCP（`npx -y @nikolas.sapa/ns-ui-mcp`，说明见 /connect）。选定组件后用 `npx shadcn add https://design.helpmarq.com/r/<name>.json` 装进项目；确保 globals 里已有 --background、--foreground、--ns-muted、--border、--ns-accent 等 token。",
+      "promptHintEn": "Start at https://design.helpmarq.com/llms.txt or wire the MCP (`npx -y @nikolas.sapa/ns-ui-mcp`; see /connect). Install with `npx shadcn add https://design.helpmarq.com/r/<name>.json`. Host apps need tokens like --background, --foreground, --ns-muted, --border, and --ns-accent.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "open-source",
+        "mit",
+        "react",
+        "shadcn",
+        "mcp",
+        "cli",
+        "component-library",
+        "agent-ui",
+        "hacker-news"
+      ],
+      "npmPackage": "@nikolas.sapa/ns-ui-mcp",
+      "qualityNote": "线索 Show HN https://news.ycombinator.com/item?id=50011077 （2026-10-08T19:48Z，约 10-09 03:48 北京时间，撰写时 2 分）。仓库 nikolas-sapa/ns-ui 晚间 gh api：MIT、25★，最近推送 2026-10-12。542 组件、源码安装、MCP/CLI/llms.txt、CSS token 要求都照官网与 llms.txt（标注 Generated 2026-10-11、License MIT）写。官网晚间 HTTP 200。本库没有实际 npx 安装组件，也没接 MCP 跑通搜索。预览为 Playwright 实拍首页组件墙，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: Show HN https://news.ycombinator.com/item?id=50011077 (2026-10-08T19:48Z, about 03:48 on 10-09 Beijing time, 2 points at write time). Repo nikolas-sapa/ns-ui on this evening’s gh api: MIT, 25★, last push 2026-10-12. The 542 components, source install, MCP/CLI/llms.txt, and CSS token requirements follow the site and llms.txt (Generated 2026-10-11, License MIT). Site HTTP 200 this evening. This library did not run npx installs or exercise the MCP search tools. Preview is a Playwright capture of the home catalog, cropped to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-12T12:25:00Z",
+      "hook": "五百多个可装进项目的 React 零件，助手也能搜着装。",
+      "hookEn": "500+ install-as-source React parts your agent can search and add."
+    },
+    {
       "id": "moodi",
       "slug": "moodi",
       "title": "Moodi：给界面状态用的小 3D 角色（加载、思考、出错…）",
@@ -2144,9 +2185,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-12T12:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.25",
-    "count": 61
+    "version": "1.4.26",
+    "count": 62
   }
 }

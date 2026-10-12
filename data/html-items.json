@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "suta",
+      "slug": "suta",
+      "title": "Suta：给 Claude Code / Codex 用的界面 Skill，用来压掉 AI 界面「同质化」",
+      "titleEn": "Suta: a UI skill for Claude Code / Codex that pushes back on AI-slop interfaces",
+      "summary": "一个免费开源（MIT）的界面 Skill：装进 Claude Code 或 Codex 后，再让助手做登录页、列表、弹层这类界面时，它会先读布局、配色和动效的指南，再套用仓库里的几十种模式代码（撰写时 README 写 57 种；演示站按进入过渡、加载、反馈、导航、手势等分组展示）。作者说做它是因为常看到 AI 出的界面卡片重复、颜色过多、装饰多余。装法：Claude Code 用插件市场加 Guksu/suta；Codex 用插件命令；其他助手可用 npx skills add。有英文使用说明和在线演示站，插件还能在改完后做静态检查，但作者也提醒浏览器里还要自己看一眼。适合经常让编程助手出界面、又嫌结果千篇一律的人。",
+      "summaryEn": "A free MIT UI skill for Claude Code or Codex: after install, when the agent builds screens like login, lists, or modals, it reads layout, color, and motion guidelines, then adapts pattern code from the repo (README lists 57 patterns at write time; the demo groups enter/transition, loading, feedback, navigation, and gestures). The author built it after seeing repetitive cards, too many colors, and extra decoration in AI-made UI. Install via the Claude Code plugin marketplace (Guksu/suta), Codex plugin commands, or npx skills add for other agents. English usage notes and a live demo are included; the plugin can run static checks after edits, though the author still asks you to verify in the browser. Good if your coding agent often ships UI that all looks the same.",
+      "sourceUrl": "https://github.com/Guksu/suta",
+      "secondaryUrls": [
+        "https://guksu.github.io/suta/",
+        "https://news.ycombinator.com/item?id=50040224",
+        "https://skills.sh/guksu/suta/suta"
+      ],
+      "previewImage": "/previews/suta.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "skill",
+        "open-source",
+        "mit",
+        "ui-design",
+        "agent",
+        "claude-code",
+        "codex"
+      ],
+      "qualityNote": "线索 Show HN https://news.ycombinator.com/item?id=50040224 （2026-10-11T06:10Z，约 10-11 14:10 北京时间，撰写时 1 分）。仓库 Guksu/suta 晚间 gh api：MIT、12★，2026-08-19 创建，最近推送 2026-10-12；最新 release v0.10.0（2026-10-11）。57 patterns、Claude Code / Codex / npx skills 三种装法、演示站与「浏览器仍需自查」都照 README 写。官网与仓库晚间 HTTP 200。本库没有安装插件、没有让 Agent 实际跑生成对比。预览为 Playwright 实拍演示站首屏，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: Show HN https://news.ycombinator.com/item?id=50040224 (2026-10-11T06:10Z, about 14:10 on 10-11 Beijing time, 1 point at write time). Repo Guksu/suta on this evening’s gh api: MIT, 12★, created 2026-08-19, last push 2026-10-12; latest release v0.10.0 (2026-10-11). The 57 patterns, Claude Code / Codex / npx skills install paths, demo site, and “still check in the browser” note follow the README. Site and repo HTTP 200 this evening. This library did not install the plugin or run an agent generation comparison. Preview is a Playwright capture of the demo above the fold, cropped to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-11",
+      "updatedAt": "2026-10-12T12:25:00Z",
+      "hook": "装给编程助手的界面指南，少一点 AI 同质化。",
+      "hookEn": "UI guidelines for your coding agent, so fewer look-alike AI screens."
+    },
+    {
       "id": "oil-ui",
       "slug": "oil-ui",
       "title": "Oil UI：装给 AI Agent 的界面设计 Skill，先做几版风格不同的小样让你挑",
@@ -4245,9 +4283,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-11T12:30:00Z",
+    "updatedAt": "2026-10-12T12:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.62",
-    "count": 133
+    "version": "1.3.63",
+    "count": 134
   }
 }

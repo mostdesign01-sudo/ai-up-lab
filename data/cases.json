@@ -1,6 +1,44 @@
 {
   "cases": [
     {
+      "id": "editui",
+      "slug": "editui",
+      "title": "工具：EditUI — 在 Chrome 里点界面元素，批量改完再贴给编程助手",
+      "titleEn": "Tool: EditUI — click UI in Chrome, batch the notes, paste to your coding agent",
+      "hook": "在真网页上点选要改的地方，一次拷给编程助手。",
+      "hookEn": "Click what to change on the live page, then paste one batch to Claude Code or Cursor.",
+      "summary": "EditUI 是免费的 Chrome 扩展（MIT 开源）：打开正在跑的页面（含 localhost），开编辑模式后点元素、写下想改成什么样，可以连点多处，最后「Copy all」生成一份带 URL、视口、DOM 上下文和你的备注的提示词，粘贴进 Claude Code、Cursor、Codex 或任意能吃粘贴的助手。它不直接改代码、不接 MCP、不替你调模型，只负责把「你指的是哪一块」说清楚。官网写 Free、不用账号、不用先配仓库。适合做界面走查、又懒得口头描述「左上角那个按钮」的人。",
+      "summaryEn": "EditUI is a free Chrome extension (MIT): open a running page (localhost included), turn on edit mode, click elements and write the change you want, collect several notes, then Copy all builds one prompt with URL, viewport, DOM context, and your notes for Claude Code, Cursor, Codex, or any paste-friendly agent. It does not edit code, speak MCP, or call a model—it only makes “which element” unambiguous. The site says free, no account, no repo setup. Good for UI review when you are tired of describing “the button at the top left.”",
+      "categories": [
+        "content",
+        "engineering",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.editui.app/",
+      "secondaryUrls": [
+        "https://github.com/junetic/editui",
+        "https://chromewebstore.google.com/detail/editui/kolehloegjbpkeehflbdkjkdmljobfak",
+        "https://www.editui.app/chrome-extension"
+      ],
+      "sourceType": "community-show",
+      "qualityNote": "主源官网 https://www.editui.app/ 与仓库 junetic/editui；晚间 HTTP 200，gh api：MIT、3★，2026-09-29 创建，最近推送 2026-10-11。点选→备注→Copy all、agent-agnostic、不直接改代码，都照官网与扩展说明页写；结构化数据标价 0 USD。Chrome Web Store 链接来自官网 CTA。本库没有安装扩展、没有在 localhost 实测走查。预览为 Playwright 实拍官网 Demo 区，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Primary sources are https://www.editui.app/ and junetic/editui; HTTP 200 this evening; gh api: MIT, 3★, created 2026-09-29, last push 2026-10-11. Click→note→Copy all, agent-agnostic paste, and no direct code edits follow the site and extension page; structured data lists price 0 USD. Chrome Web Store link is from the site CTA. This library did not install the extension or run a localhost review. Preview is a Playwright capture of the home Demo, cropped to a self-hosted 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "扩展只生成提示词；真正改代码的是你粘贴进去的助手，合并前自己看 diff。",
+      "approvalBoundaryEn": "The extension only builds a prompt; your pasted agent edits the code—review the diff before merge.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-09-29",
+      "updatedAt": "2026-10-12T12:25:00Z",
+      "previewImage": "/previews/editui.webp"
+    },
+    {
       "id": "diffui",
       "slug": "diffui",
       "title": "工具：Diffui — 用扩散模型一次出多版界面，再交给编程助手落地",
@@ -9254,11 +9292,20 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-12T12:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.53",
-    "count": 169,
+    "version": "1.4.54",
+    "count": 170,
     "sourcesCrawled": [
+      "https://www.editui.app/",
+      "https://github.com/junetic/editui",
+      "https://github.com/Guksu/suta",
+      "https://guksu.github.io/suta/",
+      "https://news.ycombinator.com/item?id=50040224",
+      "https://design.helpmarq.com/",
+      "https://github.com/nikolas-sapa/ns-ui",
+      "https://design.helpmarq.com/llms.txt",
+      "https://news.ycombinator.com/item?id=50011077",
       "https://huggingface.co/doofz/THX-01",
       "https://huggingface.co/blog/doofz/thx-01-we-open-sourced-a-322m-decision-model-that",
       "https://news.ycombinator.com/item?id=50047937",

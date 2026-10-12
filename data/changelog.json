@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-12",
+      "title": "晚间收录：HTML +1（Suta）、Agent UI +1（NS UI）、Cases +1（EditUI）",
+      "titleEn": "Evening catalog: HTML +1 (Suta), Agent UI +1 (NS UI), Cases +1 (EditUI)",
+      "body": "AI×设计优先：suta（给 Claude Code/Codex 的界面 Skill，压 AI 同质化；Show HN https://news.ycombinator.com/item?id=50040224）；ns-ui（542 组件登记处，源码安装 + MCP/CLI；Show HN https://news.ycombinator.com/item?id=50011077）；editui（Chrome 扩展点选界面批量改完贴给助手，MIT）。三条均为 Playwright 3:2 WebP 预览；本库未装插件/扩展、未接 MCP 实测。html-items 133→134，agent-ui 61→62，cases 169→170。未改首页精选、Models。",
+      "bodyEn": "AI×design first: suta (UI skill for Claude Code/Codex against AI-slop; Show HN https://news.ycombinator.com/item?id=50040224); ns-ui (542-component registry with source install + MCP/CLI; Show HN https://news.ycombinator.com/item?id=50011077); editui (Chrome extension to batch UI notes for coding agents, MIT). All three have Playwright 3:2 WebP previews; this library did not install plugins/extensions or exercise MCP. html-items 133→134, agent-ui 61→62, cases 169→170. Homepage picks and Models unchanged."
+    },
+    {
+      "date": "2026-10-12",
       "title": "早间收录：Cases +3（Diffui、CSS Studio、WunderUI）、Agent UI +1（Moodi）、Models +1（THX-01）",
       "titleEn": "Morning catalog: Cases +3 (Diffui, CSS Studio, WunderUI), Agent UI +1 (Moodi), Models +1 (THX-01)",
       "body": "Cases（AI×设计优先）：diffui（扩散模型一次出多版界面再交助手落地；Show HN https://news.ycombinator.com/item?id=48995754）；css-studio（在真实网站上改样式，经 MCP 交给现有编程助手写回；Show HN https://news.ycombinator.com/item?id=47702196）；wunderui（Figma+React 同名设计系统，免费 MCP / DESIGN.md / llms.txt 给助手读）。Agent UI：moodi（MIT 小 3D 状态角色；Show HN https://news.ycombinator.com/item?id=50047937）。Models：thx-01（HAL-X 322M 开源决策模型，HF 博文 2026-10-10）。各条均为 Playwright 实拍 3:2 WebP 预览；本库未登录付费档、未复跑作者基准。",
