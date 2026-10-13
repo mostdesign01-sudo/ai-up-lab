@@ -14,6 +14,7 @@ import {
   listImagePrompts,
 } from "../../lib/image-prompts";
 import { assetUrl, withBase } from "../../lib/paths";
+import "../../styles/prompt-gallery.css";
 
 export function getStaticPaths() {
   return imagePrompts.map((item) => ({
@@ -30,6 +31,8 @@ const preview = assetUrl(item.previewImage);
 const modelTag = imageModelTag(item);
 const sourceLabel = item.sourceLabel ?? item.sourceUrl;
 const sourceLabelEn = item.sourceLabelEn ?? item.sourceLabel ?? item.sourceUrl;
+const promptText = item.prompt?.trim() ?? "";
+const promptTextEn = item.promptEn?.trim() || promptText;
 const others = listImagePrompts().filter((other) => other.id !== item.id);
 ---
 
@@ -132,6 +135,15 @@ const others = listImagePrompts().filter((other) => other.id !== item.id);
             <span class="loc-en">{item.qualityNoteEn}</span>
           </p>
         </section>
+
+        {
+          (promptText || promptTextEn) && (
+            <section class="panel">
+              <h2><Loc zh={ui.promptBoard.prompt.zh} en={ui.promptBoard.prompt.en} /></h2>
+              <pre class="prompt-stored"><span class="loc-zh">{promptText || promptTextEn}</span><span class="loc-en">{promptTextEn || promptText}</span></pre>
+            </section>
+          )
+        }
 
         {
           highlights.length > 0 && (

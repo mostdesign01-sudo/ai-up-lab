@@ -45,6 +45,27 @@ export interface ImagePromptItem {
   featured?: boolean;
   /** Curator quality stars 1–5 (editorial; not a benchmark score). Unset = no rating shown. */
   stars?: number;
+  /**
+   * Full prompt text stored by this library. Omit when we have not recorded it.
+   * Never fill this from a summary or from another site’s gallery.
+   */
+  prompt?: string;
+  promptEn?: string;
+  /** More than one picture. When set, this list is the lightbox order; the first image is the card hero. */
+  images?: string[];
+  /** Generation settings actually recorded for this prompt. Omit rather than guessing. */
+  params?: ImagePromptParam[];
+  /** Author credit when it differs from `sourceBy`, or a bilingual byline. */
+  author?: string;
+  authorEn?: string;
+  /** Optional “make the same” destination. Omit to fall back to the tools directory when that page exists. */
+  recreateUrl?: string;
+}
+
+export interface ImagePromptParam {
+  label: string;
+  labelEn?: string;
+  value: string;
 }
 
 export interface ImagePromptsMeta {

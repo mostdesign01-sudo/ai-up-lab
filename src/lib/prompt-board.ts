@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import membership from "../../data/directory.json";
 import { cases, type CaseItem } from "./cases";
+import { sections } from "./directory";
 import { htmlItems, type HtmlItem } from "./html";
 import type { Copy } from "./i18n";
 import { imageModelTag, imagePrompts, type ImagePromptItem } from "./image-prompts";
@@ -9,6 +10,9 @@ import { categoryLabels, categoryLabelsEn } from "./labels";
 import { models } from "./models";
 import { assetUrl, withBase } from "./paths";
 import type { FavLib } from "./stars";
+
+/** On-site tools directory. Used as the “做同款” fallback only because that page exists. */
+const toolsHref = sections.some((section) => section.id === "tools") ? withBase("tools/") : null;
 
 /** Sidebar id for records that have no tags (or, for cases, no categories). */
 export const OTHER_TAG = "other";
@@ -40,6 +44,27 @@ export interface PromptBoardCard {
   /** Set only when the record lists more than one image. The card shows the first. */
   imageTotal?: number;
   popularity?: number;
+  images: PromptSheetImage[];
+  /** Stored prompt text. Null when the record does not include one. */
+  prompt: Copy | null;
+  params: PromptSheetParam[];
+  author: Copy | null;
+  sourceUrl: string;
+  sourceLabel: Copy;
+  credit: Copy | null;
+  /** “做同款” destination. Null when there is no record link and no tools page. */
+  recreateHref: string | null;
+}
+
+export interface PromptSheetImage {
+  src: string;
+  width?: number;
+  height?: number;
+}
+
+export interface PromptSheetParam {
+  label: Copy;
+  value: string;
 }
 
 export interface PromptFacet {
@@ -162,17 +187,85 @@ function webpSize(publicPath: string): { width: number; height: number } | undef
   return undefined;
 }
 
-function cardImages(record: { previewImage?: string }): Pick<PromptBoardCard, "image" | "width" | "height" | "imageTotal"> {
-  const list = readImageList(record);
-  const first = list[0];
-  if (!first) return {};
-  const size = first.startsWith("/") ? webpSize(first) : undefined;
+function sheetImages(record: { previewImage?: string }): PromptSheetImage[] {
+  return readImageList(record).flatMap((path) => {
+    const src = assetUrl(path);
+    if (!src) return [];
+    const size = path.startsWith("/") ? webpSize(path) : undefined;
+    return [{ src, width: size?.width, height: size?.height }];
+  });
+}
+
+function cardImages(record: { previewImage?: string }): Pick<PromptBoardCard, "image" | "width" | "height" | "imageTotal" | "images"> {
+  const images = sheetImages(record);
+  const first = images[0];
+  if (!first) return { images };
   return {
-    image: assetUrl(first),
-    width: size?.width,
-    height: size?.height,
-    imageTotal: list.length > 1 ? list.length : undefined,
+    image: first.src,
+    width: first.width,
+    height: first.height,
+    imageTotal: images.length > 1 ? images.length : undefined,
+    images,
   };
+}
+
+function textOf(value: unknown): string {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+function pair(zh: string, en: string): Copy | null {
+  if (!zh && !en) return null;
+  return { zh: zh || en, en: en || zh };
+}
+
+function readPrompt(record: object): Copy | null {
+  const source = record as { prompt?: unknown; promptEn?: unknown };
+  const zh = textOf(source.prompt);
+  const en = textOf(source.promptEn);
+  if (!zh && !en) return null;
+  return { zh, en };
+}
+
+function readParams(record: object): PromptSheetParam[] {
+  const raw = (record as { params?: unknown }).params;
+  if (!Array.isArray(raw)) return [];
+  const params: PromptSheetParam[] = [];
+  for (const entry of raw) {
+    if (!entry || typeof entry !== "object") continue;
+    const row = entry as { label?: unknown; labelEn?: unknown; value?: unknown };
+    const label = textOf(row.label);
+    const value = textOf(row.value);
+    if (!label || !value) continue;
+    params.push({ label: { zh: label, en: textOf(row.labelEn) || label }, value });
+  }
+  return params;
+}
+
+function readAuthor(record: object): Copy | null {
+  const source = record as { author?: unknown; authorEn?: unknown; sourceBy?: unknown };
+  return pair(textOf(source.author) || textOf(source.sourceBy), textOf(source.authorEn) || textOf(source.author) || textOf(source.sourceBy));
+}
+
+function readCredit(record: object): Copy | null {
+  const source = record as { previewCredit?: unknown; previewCreditEn?: unknown };
+  return pair(textOf(source.previewCredit), textOf(source.previewCreditEn));
+}
+
+function readRecreate(record: object): string | null {
+  const value = textOf((record as { recreateUrl?: unknown }).recreateUrl);
+  if (value) {
+    if (/^https?:\/\//i.test(value)) return value;
+    if (value.startsWith("/")) return withBase(value);
+  }
+  return toolsHref;
+}
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
 }
 
 function baseCard(
@@ -188,11 +281,15 @@ function baseCard(
     updatedAt: string;
     stars?: number;
     previewImage?: string;
+    sourceUrl: string;
+    sourceLabel?: string;
+    sourceLabelEn?: string;
   },
   tags: string[],
   model?: string,
 ): PromptBoardCard {
   const trimmed = model?.trim();
+  const sourceLabel = pair(textOf(item.sourceLabel), textOf(item.sourceLabelEn)) ?? { zh: hostOf(item.sourceUrl), en: hostOf(item.sourceUrl) };
   return {
     key: `${lib}:${item.id}`,
     href: withBase(`${path}/${item.slug}/`),
@@ -207,6 +304,13 @@ function baseCard(
     updatedAt: item.updatedAt,
     stars: item.stars,
     popularity: readPopularity(item),
+    prompt: readPrompt(item),
+    params: readParams(item),
+    author: readAuthor(item),
+    sourceUrl: item.sourceUrl,
+    sourceLabel,
+    credit: readCredit(item),
+    recreateHref: readRecreate(item),
     ...cardImages(item),
   };
 }

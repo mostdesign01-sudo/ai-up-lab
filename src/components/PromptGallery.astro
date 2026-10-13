@@ -25,6 +25,24 @@ const tags = tagFacets(cards);
 const showHot = boardHasPopularity(cards);
 const countZh = ui.promptBoard.count.zh.replace("{n}", String(cards.length));
 const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
+const catalogJson = JSON.stringify(
+  cards.map((card) => ({
+    key: card.key,
+    href: card.href,
+    title: card.title,
+    model: card.model ?? "",
+    modelLabel: card.modelLabel,
+    tags: card.tags,
+    images: card.images,
+    prompt: card.prompt,
+    params: card.params,
+    author: card.author,
+    sourceUrl: card.sourceUrl,
+    sourceLabel: card.sourceLabel,
+    credit: card.credit,
+    recreateHref: card.recreateHref,
+  })),
+).replace(/</g, "\\u003c");
 ---
 
 <section
@@ -99,7 +117,7 @@ const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
               data-updated={card.updatedAt}
               data-popularity={card.popularity}
             >
-              <a class="prompt-board-link" href={card.href}>
+              <a class="prompt-board-link" href={card.href} data-prompt-open={card.key}>
                 {
                   card.image && (
                     <span class="prompt-board-media">
@@ -144,12 +162,114 @@ const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
       </p>
     </div>
   </div>
+
+  <script type="application/json" data-prompt-catalog set:html={catalogJson}></script>
+
+  <div
+    class="prompt-sheet"
+    data-prompt-sheet
+    hidden
+    data-missing-zh={ui.promptBoard.promptMissing.zh}
+    data-missing-en={ui.promptBoard.promptMissing.en}
+    data-copied-zh={ui.promptBoard.copied.zh}
+    data-copied-en={ui.promptBoard.copied.en}
+    data-failed-zh={ui.promptBoard.copyFailed.zh}
+    data-failed-en={ui.promptBoard.copyFailed.en}
+  >
+    <div class="prompt-sheet-backdrop" data-prompt-backdrop>
+      <button type="button" class="prompt-sheet-nav is-prev" data-prompt-prev aria-label={ui.promptBoard.prevItem.zh} data-aria-zh={ui.promptBoard.prevItem.zh} data-aria-en={ui.promptBoard.prevItem.en}>‹</button>
+      <div
+        class="prompt-sheet-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="prompt-sheet-title"
+        data-prompt-panel
+      >
+        <div class="prompt-sheet-stage" data-prompt-stage>
+          <img data-prompt-photo alt="" />
+          <span class="prompt-sheet-frame" data-prompt-frame hidden></span>
+          <button type="button" class="prompt-sheet-frame-nav is-prev" data-prompt-frame-prev hidden aria-label={ui.promptBoard.prevImage.zh} data-aria-zh={ui.promptBoard.prevImage.zh} data-aria-en={ui.promptBoard.prevImage.en}>‹</button>
+          <button type="button" class="prompt-sheet-frame-nav is-next" data-prompt-frame-next hidden aria-label={ui.promptBoard.nextImage.zh} data-aria-zh={ui.promptBoard.nextImage.zh} data-aria-en={ui.promptBoard.nextImage.en}>›</button>
+        </div>
+        <div class="prompt-sheet-copy">
+          <div class="prompt-sheet-toolbar">
+            <div class="prompt-sheet-mobile-nav">
+              <button type="button" class="prompt-sheet-text-btn" data-prompt-prev><Loc zh={ui.promptBoard.prevItem.zh} en={ui.promptBoard.prevItem.en} /></button>
+              <button type="button" class="prompt-sheet-text-btn" data-prompt-next><Loc zh={ui.promptBoard.nextItem.zh} en={ui.promptBoard.nextItem.en} /></button>
+            </div>
+            <button type="button" class="prompt-sheet-close" data-prompt-close><Loc zh={ui.promptBoard.close.zh} en={ui.promptBoard.close.en} /></button>
+          </div>
+          <h2 id="prompt-sheet-title">
+            <span class="loc-zh" data-prompt-title-zh></span><span class="loc-en" data-prompt-title-en></span>
+          </h2>
+          <dl class="prompt-sheet-meta">
+            <div data-prompt-model-row hidden>
+              <dt><Loc zh={ui.promptBoard.model.zh} en={ui.promptBoard.model.en} /></dt>
+              <dd data-prompt-model-value></dd>
+            </div>
+            <div data-prompt-author-row hidden>
+              <dt><Loc zh={ui.promptBoard.author.zh} en={ui.promptBoard.author.en} /></dt>
+              <dd>
+                <span class="loc-zh" data-prompt-author-zh></span><span class="loc-en" data-prompt-author-en></span>
+              </dd>
+            </div>
+            <div data-prompt-credit-row hidden>
+              <dt><Loc zh={ui.promptBoard.credit.zh} en={ui.promptBoard.credit.en} /></dt>
+              <dd>
+                <span class="loc-zh" data-prompt-credit-zh></span><span class="loc-en" data-prompt-credit-en></span>
+              </dd>
+            </div>
+          </dl>
+          <div data-prompt-params-wrap hidden>
+            <h3 class="prompt-sheet-kicker"><Loc zh={ui.promptBoard.params.zh} en={ui.promptBoard.params.en} /></h3>
+            <dl class="prompt-sheet-meta" data-prompt-params></dl>
+          </div>
+          <h3 class="prompt-sheet-kicker"><Loc zh={ui.promptBoard.prompt.zh} en={ui.promptBoard.prompt.en} /></h3>
+          <pre class="prompt-sheet-prompt" data-prompt-body></pre>
+          <div class="prompt-sheet-actions">
+            <button type="button" class="prompt-sheet-copy-btn" data-prompt-copy disabled>
+              <Loc zh={ui.promptBoard.copy.zh} en={ui.promptBoard.copy.en} />
+            </button>
+            <a class="prompt-sheet-recreate" data-prompt-recreate hidden><Loc zh={ui.promptBoard.recreate.zh} en={ui.promptBoard.recreate.en} /></a>
+            <a class="prompt-sheet-source" data-prompt-source target="_blank" rel="noreferrer noopener"></a>
+            <a class="prompt-sheet-detail" data-prompt-detail><Loc zh={ui.promptBoard.detailPage.zh} en={ui.promptBoard.detailPage.en} /></a>
+          </div>
+          <p class="prompt-sheet-copy-status" data-prompt-copy-status role="status"></p>
+        </div>
+        <section class="prompt-sheet-related" data-prompt-related hidden>
+          <h3><Loc zh={ui.promptBoard.similar.zh} en={ui.promptBoard.similar.en} /></h3>
+          <div class="prompt-sheet-related-list" data-prompt-related-list></div>
+        </section>
+      </div>
+      <button type="button" class="prompt-sheet-nav is-next" data-prompt-next aria-label={ui.promptBoard.nextItem.zh} data-aria-zh={ui.promptBoard.nextItem.zh} data-aria-en={ui.promptBoard.nextItem.en}>›</button>
+    </div>
+  </div>
 </section>
 
 <script>
-  const OTHER = "other";
+  interface SheetCopy { zh: string; en: string; }
+  interface SheetImage { src: string; width?: number; height?: number; }
+  interface SheetParam { label: SheetCopy; value: string; }
+  interface SheetItem {
+    key: string;
+    href: string;
+    title: SheetCopy;
+    model: string;
+    modelLabel: string;
+    tags: string[];
+    images: SheetImage[];
+    prompt: SheetCopy | null;
+    params: SheetParam[];
+    author: SheetCopy | null;
+    sourceUrl: string;
+    sourceLabel: SheetCopy;
+    credit: SheetCopy | null;
+    recreateHref: string | null;
+  }
 
+  const OTHER = "other";
   const boards = [...document.querySelectorAll<HTMLElement>("[data-prompt-board]")];
+  let pushed = false;
 
   const selected = (board: HTMLElement, selector: string) =>
     board.querySelector<HTMLButtonElement>(`${selector}[aria-pressed="true"]`);
@@ -229,6 +349,39 @@ const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
     apply(board, false);
   };
 
+  const english = () => document.documentElement.dataset.locale === "en";
+  const pick = (copy: SheetCopy | null | undefined) => {
+    if (!copy) return "";
+    return (english() ? copy.en || copy.zh : copy.zh || copy.en) || "";
+  };
+  const message = (sheet: HTMLElement, name: "missing" | "copied" | "failed") =>
+    sheet.getAttribute(english() ? `data-${name}-en` : `data-${name}-zh`) ?? "";
+
+  const loadCatalog = (board: HTMLElement) => {
+    const catalog = new Map<string, SheetItem>();
+    const raw = board.querySelector("[data-prompt-catalog]")?.textContent;
+    if (!raw) return catalog;
+    const items = JSON.parse(raw) as SheetItem[];
+    for (const item of items) catalog.set(item.key, item);
+    return catalog;
+  };
+
+  const visibleKeys = (board: HTMLElement) =>
+    [...board.querySelectorAll<HTMLElement>("[data-prompt-card]")]
+      .filter((card) => !card.hidden)
+      .map((card) => card.querySelector<HTMLElement>("[data-prompt-open]")?.dataset.promptOpen ?? "")
+      .filter(Boolean);
+
+  const writeItem = (key: string | null, frame: number, mode: "push" | "replace") => {
+    const url = new URL(location.href);
+    if (key) url.searchParams.set("item", key);
+    else url.searchParams.delete("item");
+    if (key && frame > 0) url.searchParams.set("frame", String(frame));
+    else url.searchParams.delete("frame");
+    if (mode === "push") history.pushState({ promptItem: key }, "", url);
+    else history.replaceState({ promptItem: key }, "", url);
+  };
+
   for (const board of boards) {
     const params = new URLSearchParams(location.search);
     const legacy = new URLSearchParams();
@@ -241,7 +394,238 @@ const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
       location.replace(`${board.dataset.searchUrl}?${legacy}`);
       continue;
     }
+
+    const catalog = loadCatalog(board);
+    const sheet = board.querySelector<HTMLElement>("[data-prompt-sheet]");
+    if (!sheet) continue;
+    let currentKey = "";
+    let frame = 0;
+    let returnFocus: HTMLElement | null = null;
+
+    const hide = () => {
+      sheet.hidden = true;
+      document.documentElement.classList.remove("prompt-sheet-open");
+      currentKey = "";
+      returnFocus?.focus();
+      returnFocus = null;
+    };
+
+    const relatedTo = (item: SheetItem) =>
+      [...catalog.values()]
+        .filter((other) => other.key !== item.key)
+        .map((other) => {
+          const shared = other.tags.filter((tag) => item.tags.includes(tag)).length;
+          const score = shared + (item.model && item.model === other.model ? 3 : 0);
+          return { other, score };
+        })
+        .filter((row) => row.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .slice(0, 8)
+        .map((row) => row.other);
+
+    const paint = () => {
+      const item = catalog.get(currentKey);
+      if (!item) return;
+      const titleZh = sheet.querySelector<HTMLElement>("[data-prompt-title-zh]");
+      const titleEn = sheet.querySelector<HTMLElement>("[data-prompt-title-en]");
+      if (titleZh) titleZh.textContent = item.title.zh || item.title.en;
+      if (titleEn) titleEn.textContent = item.title.en || item.title.zh;
+
+      const modelRow = sheet.querySelector<HTMLElement>("[data-prompt-model-row]");
+      const modelValue = sheet.querySelector<HTMLElement>("[data-prompt-model-value]");
+      if (modelRow && modelValue) {
+        modelRow.hidden = !item.modelLabel;
+        modelValue.textContent = item.modelLabel;
+      }
+
+      const authorRow = sheet.querySelector<HTMLElement>("[data-prompt-author-row]");
+      const authorZh = sheet.querySelector<HTMLElement>("[data-prompt-author-zh]");
+      const authorEn = sheet.querySelector<HTMLElement>("[data-prompt-author-en]");
+      if (authorRow && authorZh && authorEn) {
+        authorRow.hidden = !item.author;
+        authorZh.textContent = item.author?.zh || item.author?.en || "";
+        authorEn.textContent = item.author?.en || item.author?.zh || "";
+      }
+
+      const creditRow = sheet.querySelector<HTMLElement>("[data-prompt-credit-row]");
+      const creditZh = sheet.querySelector<HTMLElement>("[data-prompt-credit-zh]");
+      const creditEn = sheet.querySelector<HTMLElement>("[data-prompt-credit-en]");
+      if (creditRow && creditZh && creditEn) {
+        creditRow.hidden = !item.credit;
+        creditZh.textContent = item.credit?.zh || item.credit?.en || "";
+        creditEn.textContent = item.credit?.en || item.credit?.zh || "";
+      }
+
+      const paramsWrap = sheet.querySelector<HTMLElement>("[data-prompt-params-wrap]");
+      const paramsList = sheet.querySelector<HTMLElement>("[data-prompt-params]");
+      if (paramsWrap && paramsList) {
+        paramsWrap.hidden = item.params.length === 0;
+        paramsList.replaceChildren();
+        for (const param of item.params) {
+          const row = document.createElement("div");
+          const label = document.createElement("dt");
+          label.textContent = pick(param.label);
+          const value = document.createElement("dd");
+          value.textContent = param.value;
+          row.append(label, value);
+          paramsList.append(row);
+        }
+      }
+
+      const stored = pick(item.prompt);
+      const body = sheet.querySelector<HTMLElement>("[data-prompt-body]");
+      const copy = sheet.querySelector<HTMLButtonElement>("[data-prompt-copy]");
+      if (body) {
+        body.textContent = stored || message(sheet, "missing");
+        body.classList.toggle("is-missing", !stored);
+      }
+      if (copy) {
+        copy.disabled = !stored;
+        copy.dataset.copyText = stored;
+      }
+      const status = sheet.querySelector<HTMLElement>("[data-prompt-copy-status]");
+      if (status) status.textContent = "";
+
+      const source = sheet.querySelector<HTMLAnchorElement>("[data-prompt-source]");
+      if (source) {
+        source.hidden = !item.sourceUrl;
+        if (item.sourceUrl) {
+          source.href = item.sourceUrl;
+          source.textContent = pick(item.sourceLabel);
+        }
+      }
+      const detail = sheet.querySelector<HTMLAnchorElement>("[data-prompt-detail]");
+      if (detail) detail.href = item.href;
+      const recreate = sheet.querySelector<HTMLAnchorElement>("[data-prompt-recreate]");
+      if (recreate) {
+        const href = item.recreateHref ?? "";
+        recreate.hidden = !href;
+        if (href) {
+          recreate.href = href;
+          const external = /^https?:/i.test(href);
+          if (external) {
+            recreate.target = "_blank";
+            recreate.rel = "noreferrer noopener";
+          } else {
+            recreate.removeAttribute("target");
+            recreate.removeAttribute("rel");
+          }
+        }
+      }
+
+      const photo = sheet.querySelector<HTMLImageElement>("[data-prompt-photo]");
+      const images = item.images;
+      frame = Math.min(Math.max(frame, 0), Math.max(images.length - 1, 0));
+      const shot = images[frame];
+      if (photo) {
+        photo.hidden = !shot;
+        photo.alt = pick(item.title);
+        if (shot) {
+          photo.src = shot.src;
+          if (shot.width) photo.width = shot.width;
+          else photo.removeAttribute("width");
+          if (shot.height) photo.height = shot.height;
+          else photo.removeAttribute("height");
+        }
+      }
+      const multi = images.length > 1;
+      const badge = sheet.querySelector<HTMLElement>("[data-prompt-frame]");
+      if (badge) {
+        badge.hidden = !multi;
+        badge.textContent = multi ? `${frame + 1}/${images.length}` : "";
+      }
+      for (const button of sheet.querySelectorAll<HTMLButtonElement>("[data-prompt-frame-prev], [data-prompt-frame-next]")) {
+        button.hidden = !multi;
+      }
+
+      const list = visibleKeys(board);
+      const index = list.indexOf(item.key);
+      for (const button of sheet.querySelectorAll<HTMLButtonElement>("[data-prompt-prev]")) {
+        button.disabled = index <= 0;
+      }
+      for (const button of sheet.querySelectorAll<HTMLButtonElement>("[data-prompt-next]")) {
+        button.disabled = index === -1 ? list.length === 0 : index >= list.length - 1;
+      }
+
+      const related = relatedTo(item);
+      const relatedWrap = sheet.querySelector<HTMLElement>("[data-prompt-related]");
+      const relatedList = sheet.querySelector<HTMLElement>("[data-prompt-related-list]");
+      if (relatedWrap && relatedList) {
+        relatedWrap.hidden = related.length === 0;
+        relatedList.replaceChildren();
+        for (const other of related) {
+          const button = document.createElement("button");
+          button.type = "button";
+          button.className = "prompt-sheet-related-card";
+          button.dataset.promptRelated = other.key;
+          const thumb = other.images[0];
+          if (thumb) {
+            const img = document.createElement("img");
+            img.src = thumb.src;
+            img.alt = "";
+            img.loading = "lazy";
+            button.append(img);
+          }
+          const label = document.createElement("span");
+          label.textContent = pick(other.title);
+          button.append(label);
+          relatedList.append(button);
+        }
+      }
+    };
+
+    const openItem = (key: string, historyMode: "push" | "replace" | "silent", frameIndex?: number) => {
+      if (!catalog.has(key)) return;
+      if (typeof frameIndex === "number" && Number.isFinite(frameIndex)) frame = frameIndex;
+      else if (historyMode === "silent") {
+        const requested = Number(new URLSearchParams(location.search).get("frame") ?? "0");
+        frame = Number.isFinite(requested) ? requested : 0;
+      } else frame = 0;
+      currentKey = key;
+      paint();
+      sheet.hidden = false;
+      document.documentElement.classList.add("prompt-sheet-open");
+      if (historyMode === "push") {
+        writeItem(key, frame, "push");
+        pushed = true;
+      } else if (historyMode === "replace") {
+        writeItem(key, frame, "replace");
+      }
+      if (historyMode !== "silent") sheet.querySelector<HTMLButtonElement>("[data-prompt-close]")?.focus();
+    };
+
+    const stepItem = (delta: number) => {
+      const list = visibleKeys(board);
+      const index = list.indexOf(currentKey);
+      const next = index === -1 ? list[delta > 0 ? 0 : list.length - 1] : list[index + delta];
+      if (next) openItem(next, "replace");
+    };
+
+    const stepFrame = (delta: number) => {
+      const item = catalog.get(currentKey);
+      if (!item || item.images.length < 2) return;
+      frame = (frame + delta + item.images.length) % item.images.length;
+      paint();
+      writeItem(currentKey, frame, "replace");
+    };
+
+    const closeFromUi = () => {
+      const shouldBack = pushed;
+      pushed = false;
+      hide();
+      if (shouldBack) history.back();
+      else writeItem(null, 0, "replace");
+    };
+
     board.addEventListener("click", (event) => {
+      const opener = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>("[data-prompt-open]");
+      if (opener && board.contains(opener)) {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+        event.preventDefault();
+        returnFocus = opener;
+        openItem(opener.dataset.promptOpen ?? "", "push");
+        return;
+      }
       const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>(
         "[data-prompt-model], [data-prompt-tag], [data-prompt-order]",
       );
@@ -255,14 +639,125 @@ const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
         peer.setAttribute("aria-pressed", peer === button ? "true" : "false");
       }
       apply(board, true);
+      if (!sheet.hidden) paint();
     });
-    readUrl(board);
-  }
 
-  window.addEventListener("popstate", () => {
-    for (const board of boards) readUrl(board);
-  });
-  document.addEventListener("localechange", () => {
-    for (const board of boards) paintCount(board);
-  });
+    sheet.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement | null;
+      if (!target) return;
+      if (target === sheet.querySelector("[data-prompt-backdrop]")) {
+        closeFromUi();
+        return;
+      }
+      if (target.closest("[data-prompt-close]")) {
+        closeFromUi();
+        return;
+      }
+      if (target.closest("[data-prompt-prev]")) stepItem(-1);
+      else if (target.closest("[data-prompt-next]")) stepItem(1);
+      else if (target.closest("[data-prompt-frame-prev]")) stepFrame(-1);
+      else if (target.closest("[data-prompt-frame-next]")) stepFrame(1);
+      else if (target.closest("[data-prompt-copy]")) {
+        const copy = sheet.querySelector<HTMLButtonElement>("[data-prompt-copy]");
+        const text = copy?.dataset.copyText ?? "";
+        const status = sheet.querySelector<HTMLElement>("[data-prompt-copy-status]");
+        if (!text || !copy || copy.disabled) return;
+        navigator.clipboard.writeText(text).then(() => {
+          if (status) status.textContent = message(sheet, "copied");
+        }).catch(() => {
+          const body = sheet.querySelector<HTMLElement>("[data-prompt-body]");
+          if (body) {
+            const range = document.createRange();
+            range.selectNodeContents(body);
+            const selection = window.getSelection();
+            selection?.removeAllRanges();
+            selection?.addRange(range);
+          }
+          if (status) status.textContent = message(sheet, "failed");
+        });
+      } else {
+        const related = target.closest<HTMLButtonElement>(".prompt-sheet-related-card");
+        const key = related?.dataset.promptRelated;
+        if (key) openItem(key, "replace");
+      }
+    });
+
+    const stage = sheet.querySelector<HTMLElement>("[data-prompt-stage]");
+    let swipeX = 0;
+    let swipeY = 0;
+    stage?.addEventListener("pointerdown", (event) => {
+      if ((event.target as HTMLElement | null)?.closest("button")) {
+        swipeX = 0;
+        swipeY = 0;
+        return;
+      }
+      swipeX = event.clientX;
+      swipeY = event.clientY;
+    });
+    stage?.addEventListener("pointerup", (event) => {
+      const dx = event.clientX - swipeX;
+      const dy = event.clientY - swipeY;
+      if (Math.abs(dx) < 48 || Math.abs(dx) < Math.abs(dy)) return;
+      stepFrame(dx < 0 ? 1 : -1);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (sheet.hidden) return;
+      const typing = event.target instanceof HTMLElement && (event.target.isContentEditable || event.target.closest("input, textarea"));
+      if (typing) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeFromUi();
+        return;
+      }
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        const delta = event.key === "ArrowRight" ? 1 : -1;
+        const onStage = (event.target as HTMLElement | null)?.closest("[data-prompt-stage], [data-prompt-frame-prev], [data-prompt-frame-next]");
+        const item = catalog.get(currentKey);
+        event.preventDefault();
+        if (onStage && item && item.images.length > 1) stepFrame(delta);
+        else stepItem(delta);
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const focusable = [...sheet.querySelectorAll<HTMLElement>("a[href], button:not([disabled])")].filter((el) => !el.hidden && el.getClientRects().length > 0);
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    readUrl(board);
+    const initialParams = new URLSearchParams(location.search);
+    const initial = initialParams.get("item");
+    const initialFrame = Number(initialParams.get("frame") ?? "0");
+    if (initial && catalog.has(initial)) {
+      const clean = new URL(location.href);
+      clean.searchParams.delete("item");
+      clean.searchParams.delete("frame");
+      history.replaceState({ promptItem: null }, "", clean);
+      openItem(initial, "push", Number.isFinite(initialFrame) ? initialFrame : 0);
+    }
+
+    board.dataset.promptReady = "true";
+    sheet.dataset.paint = "1";
+    const repaint = () => {
+      paintCount(board);
+      if (!sheet.hidden) paint();
+    };
+    document.addEventListener("localechange", repaint);
+    window.addEventListener("popstate", () => {
+      pushed = false;
+      readUrl(board);
+      const item = new URLSearchParams(location.search).get("item");
+      if (item && catalog.has(item)) openItem(item, "silent");
+      else hide();
+    });
+  }
 </script>
