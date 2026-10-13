@@ -1,6 +1,41 @@
 {
   "cases": [
     {
+      "id": "bigarrow",
+      "slug": "bigarrow",
+      "title": "工具：bigarrow — 让编程助手在你 Mac 屏幕上画大箭头，指给你该点哪",
+      "titleEn": "Tool: bigarrow — let your coding agent draw big arrows on your Mac screen to show what to click",
+      "hook": "助手要你点按钮时，直接在屏幕上指给你看。",
+      "hookEn": "When the agent needs you to click, it points right at the button.",
+      "summary": "bigarrow 是一个免费开源（MIT）的 macOS 命令行工具，附带给 Claude Code 和 Codex 用的 Skill。助手需要你亲手点某个按钮（比如系统设置里的「允许」）时，不再只在终端里打一行字，而是在所有窗口最上层画一个箭头加说明文字；点击会穿透，键盘焦点不变，箭头会自己消失。作者写明画箭头不需要任何 macOS 权限，单个 Swift 程序，没有后台常驻、没有账号、没有遥测，也不含 AI。装法：brew install franzenzenhofer/tap/bigarrow，再跑 bigarrow install-skill。适合常让助手带你做系统设置、授权弹窗这类必须人点的步骤。",
+      "summaryEn": "bigarrow is a free MIT macOS CLI with a skill for Claude Code and Codex. When the agent needs you to click something (like Allow in System Settings), it draws an arrow and a label above every window instead of printing a line in the terminal; clicks pass through, focus stays put, and the arrow removes itself. The author says drawing needs no macOS permission; it is one Swift binary with no daemon, account, telemetry, or AI inside. Install: brew install franzenzenhofer/tap/bigarrow, then bigarrow install-skill. Good when agents walk you through settings or permission dialogs only a human can click.",
+      "categories": [
+        "engineering",
+        "productivity"
+      ],
+      "role": "Agent UI tool",
+      "sourceUrl": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50018817"
+      ],
+      "sourceType": "community-show",
+      "qualityNote": "线索 Show HN https://news.ycombinator.com/item?id=50018817 （2026-10-09T11:03Z，约 10-09 19:03 北京时间，撰写时 417 分）。gh api：MIT、670★，2026-10-08 创建，最近推送 2026-10-12。安装命令、无需权限、点击穿透、无 AI 都照 README 写。本库没有在 Mac 上安装实测。预览为 README 首图裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Lead: Show HN https://news.ycombinator.com/item?id=50018817 (2026-10-09T11:03Z, about 19:03 on 10-09 Beijing time, 417 points at write time). gh api: MIT, 670★, created 2026-10-08, last push 2026-10-12. Install commands, no-permission drawing, click-through, and no AI follow the README. This library did not install or test it on a Mac. Preview is the README hero image cropped to a self-hosted 3:2 WebP.",
+      "difficulty": "beginner",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "箭头只负责指路；真正点「允许」授权的是你自己，点之前看清楚授给谁。",
+      "approvalBoundaryEn": "The arrow only points; you make the actual Allow click—check what you are granting first.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-13T01:50:00Z",
+      "previewImage": "/previews/bigarrow.webp"
+    },
+    {
       "id": "editui",
       "slug": "editui",
       "title": "工具：EditUI — 在 Chrome 里点界面元素，批量改完再贴给编程助手",
@@ -9292,11 +9327,17 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T12:25:00Z",
+    "updatedAt": "2026-10-13T01:50:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.54",
-    "count": 170,
+    "version": "1.4.55",
+    "count": 171,
     "sourcesCrawled": [
+      "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+      "https://news.ycombinator.com/item?id=50018817",
+      "https://hangul.ink/",
+      "https://hangul.ink/blog/hangul-day",
+      "https://github.com/Hilokal/korean-handwriting",
+      "https://news.ycombinator.com/item?id=50015833",
       "https://www.editui.app/",
       "https://github.com/junetic/editui",
       "https://github.com/Guksu/suta",
