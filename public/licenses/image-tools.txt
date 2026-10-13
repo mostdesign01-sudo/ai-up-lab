@@ -1,0 +1,32 @@
+AI UP LAB image tools — model and library notices
+
+Weights are downloaded in the browser from the model host on first use.
+This site does not redistribute those weight files.
+
+Included
+- MODNet (Xenova/modnet), portrait matting. Apache License 2.0.
+  Code: https://github.com/ZHKKKe/MODNet
+  Weights: https://huggingface.co/Xenova/modnet
+- BiRefNet_lite, general matting. MIT.
+  Code: https://github.com/ZhengPeng7/BiRefNet
+  Weights: https://huggingface.co/ZhengPeng7/BiRefNet_lite
+  Browser ONNX (512 px, same weights): https://huggingface.co/studioludens/birefnet-lite-512
+  The 1024 px onnx-community export is not loaded; it exhausts browser memory.
+- Transformers.js (@huggingface/transformers). Apache License 2.0.
+  https://github.com/huggingface/transformers.js
+- ONNX Runtime Web. MIT.
+  https://github.com/microsoft/onnxruntime
+- UpscalerJS. MIT. Copyright Kevin Scott.
+  https://github.com/thekevinscott/upscaler
+- @upscalerjs/esrgan-slim 2x. MIT. Copyright Kevin Scott.
+  The original ESRGAN repository is Apache License 2.0.
+  https://github.com/xinntao/ESRGAN
+- TensorFlow.js. Apache License 2.0.
+  https://github.com/tensorflow/tfjs
+
+Not included
+BRIA RMBG (non-commercial), and any AGPL-licensed matting or upscaling weights.
+
+Sample photograph
+Pexels photo 5965592, used as the built-in example only.
+https://www.pexels.com/photo/5965592/

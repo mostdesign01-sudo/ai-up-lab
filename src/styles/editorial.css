@@ -1,4 +1,6 @@
 /* Editorial palette and homepage from the selected Product Design direction. */
+.section-callout { margin: 14px 0 0; color: var(--muted); max-width: 40rem; }
+.section-callout a { color: var(--brass); font-weight: 600; }
 :root { --max-wide: var(--lab-width-content); --bg: var(--lab-color-background); --bg-elev: var(--lab-color-elevated); --bg-card: var(--lab-color-surface); --bg-soft: var(--lab-color-soft); --ink: var(--lab-color-text); --muted: var(--lab-color-muted); --faint: var(--lab-color-subtle); --line: var(--lab-color-border); --line-strong: var(--lab-color-borderStrong); --brass: var(--lab-color-brand); --brass-soft: var(--lab-color-brandSoft); --accent-ink: var(--lab-color-onBrand); }
 html[data-theme="light"] { --bg: var(--lab-color-background); --bg-elev: var(--lab-color-elevated); --bg-card: var(--lab-color-surface); --bg-soft: var(--lab-color-soft); --ink: var(--lab-color-text); --muted: var(--lab-color-muted); --faint: var(--lab-color-subtle); --line: var(--lab-color-border); --line-strong: var(--lab-color-borderStrong); --brass: var(--lab-color-brand); --brass-soft: var(--lab-color-brandSoft); --accent-ink: var(--lab-color-onBrand); --shadow: none; --shadow-sm: none; }
 html[data-collection="lab"] { --accent: var(--brass); --accent-ink: var(--lab-color-onBrand); }
