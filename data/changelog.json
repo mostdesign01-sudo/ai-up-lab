@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-13",
+      "title": "每日更新：HTML +1（hangul.ink）、Cases +1（bigarrow）",
+      "titleEn": "Daily update: HTML +1 (hangul.ink), Cases +1 (bigarrow)",
+      "body": "hangul.ink（浏览器里手写韩文的小模型，已实际点开生成；Show HN https://news.ycombinator.com/item?id=50015833）；bigarrow（让 Claude Code/Codex 在 Mac 屏幕上画箭头指路，MIT；Show HN https://news.ycombinator.com/item?id=50018817，未在 Mac 实测）。html-items 134→135，cases 170→171。Agent UI 今日无新增。",
+      "bodyEn": "hangul.ink (tiny in-browser Korean handwriting model, generation tried; Show HN https://news.ycombinator.com/item?id=50015833); bigarrow (lets Claude Code/Codex draw arrows on a Mac screen, MIT; Show HN https://news.ycombinator.com/item?id=50018817, not tested on a Mac). html-items 134→135, cases 170→171. No Agent UI additions today."
+    },
+    {
       "date": "2026-10-12",
       "title": "晚间收录：HTML +1（Suta）、Agent UI +1（NS UI）、Cases +1（EditUI）",
       "titleEn": "Evening catalog: HTML +1 (Suta), Agent UI +1 (NS UI), Cases +1 (EditUI)",
