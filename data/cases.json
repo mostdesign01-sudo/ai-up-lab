@@ -1,6 +1,45 @@
 {
   "cases": [
     {
+      "id": "doop",
+      "slug": "doop",
+      "title": "工具：Doop — 人和 AI Agent 一起用的开源设计画布（自带 MCP）",
+      "titleEn": "Tool: Doop — open-source multiplayer design canvas with built-in MCP for agents",
+      "hook": "Agent 在画布上直接画帧，你和它共用同一份设计记忆。",
+      "hookEn": "Agents sketch frames on a shared canvas with one design memory.",
+      "summary": "Doop 自称 Paper.design 的开源替代：无限画布上的帧是真实 HTML（沙箱 iframe），人在浏览器里改，Claude Code / Codex 等任意 MCP 客户端通过内置 MCP（云端 `https://doop.design/mcp`，自托管也有）连上后，可以边画边流式更新、自评截图、接评论当任务。画布带多人光标、批注、活动流和「设计记忆」（钉住范例帧、沉淀风格规则给后来的 Agent）。官网写 Free in beta；仓库 AGPL-3.0，可用 `bun run dev` 或 Docker 自托管，也可用 doop.design 托管版。助手用你已有的模型订阅连 MCP，不必再交一套 AI 密钥。适合想和编程助手在同一张设计画布上改界面、又不愿只靠「截图→粘贴→再说一遍」的人。",
+      "summaryEn": "Doop calls itself an open-source Paper.design alternative: frames on an infinite canvas render real HTML in sandboxed iframes; people edit in the browser while Claude Code, Codex, or any MCP client joins via the built-in MCP (cloud `https://doop.design/mcp`, also self-hosted) to stream frames, self-review screenshots, and turn comments into tasks. The canvas has live cursors, comments, an activity feed, and design memory (pinned exemplars and distilled style rules for later agents). The site says free in beta; the repo is AGPL-3.0 and runs with `bun run dev` or Docker, or on doop.design hosted. Agents keep your existing model subscription—no second AI key for Doop itself. Good when you want to co-design UI on one canvas instead of screenshot-and-paste loops.",
+      "categories": [
+        "content",
+        "engineering",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://doop.design/",
+      "secondaryUrls": [
+        "https://github.com/kgoedecke/doop",
+        "https://x.com/AverageAiBro/status/2109822177621262758"
+      ],
+      "sourceType": "community-show",
+      "qualityNote": "主源官网 https://doop.design/ 与仓库 kgoedecke/doop；晚间 HTTP 200，gh api：AGPL-3.0、851★，2026-08-22 创建，最近推送 2026-10-09。MCP 连接、自托管、设计记忆、Free in beta 均照官网与 README。X 线索 https://x.com/AverageAiBro/status/2109822177621262758（2026-10-13）。本库没有注册 Doop、没有连 MCP、没有自托管实测。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Primary sources are https://doop.design/ and kgoedecke/doop; HTTP 200 this evening; gh api: AGPL-3.0, 851★, created 2026-08-22, last push 2026-10-09. MCP connect, self-host, design memory, and free-in-beta follow the site and README. X lead https://x.com/AverageAiBro/status/2109822177621262758 (2026-10-13). This library did not sign up, connect MCP, or self-host. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "Agent 会在画布上改帧与导出；合并进产品代码或对外发布前，自己过一遍视觉与文案。",
+      "approvalBoundaryEn": "Agents can edit frames and exports on the canvas; review visuals and copy yourself before shipping product code or public links.",
+      "connectors": [
+        "mcp"
+      ],
+      "language": "en",
+      "featured": true,
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13T12:20:00Z",
+      "previewImage": "/previews/doop.webp"
+    },
+    {
       "id": "editui",
       "slug": "editui",
       "title": "工具：EditUI — 在 Chrome 里点界面元素，批量改完再贴给编程助手",
@@ -9292,11 +9331,18 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T12:25:00Z",
+    "updatedAt": "2026-10-13T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.54",
-    "count": 170,
+    "version": "1.4.55",
+    "count": 171,
     "sourcesCrawled": [
+      "https://x.com/AverageAiBro/status/2109822177621262758",
+      "https://github.com/cathrynlavery/diagram-design",
+      "https://diagramdesign.dev/",
+      "https://github.com/LeulAria/Aria-Icons",
+      "https://icons.leularia.com/",
+      "https://github.com/kgoedecke/doop",
+      "https://doop.design/",
       "https://www.editui.app/",
       "https://github.com/junetic/editui",
       "https://github.com/Guksu/suta",

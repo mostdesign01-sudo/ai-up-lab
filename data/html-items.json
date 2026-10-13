@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "id": "diagram-design",
+      "slug": "diagram-design",
+      "title": "Diagram Design：让编程助手画出「设计师不会嫌弃」的编辑级图示",
+      "titleEn": "Diagram Design: editorial diagrams your coding agent draws (and designers won’t hate)",
+      "hook": "44 种图示，一页自含 HTML+SVG，还能贴合你站点的品牌色。",
+      "hookEn": "44 diagram types as one HTML+SVG file, brand-matched to your site.",
+      "summary": "一个免费开源（MIT）的 Agent Skill：装进 Claude Code、Codex、Cursor、Copilot、Pi 等之后，用一句话描述架构、泳道、象限、桑基、爆炸轴测之类需求，助手会按图示类型规则画出一整页可双击打开的 HTML+SVG（默认静态、可无障碍朗读），不必再开 Figma，也不走常见的圆角方块「AI 味」图。官网写撰写时 44 种类型；可指向你的网站自动读色与字体做品牌对齐；还能从 draw.io、Mermaid、Excalidraw 重画（不是简单转格式）。装法一行 `npx skills add cathrynlavery/diagram-design`，也有各宿主的插件命令。适合写方案、架构说明、演示稿，又嫌默认图示丑的人。",
+      "summaryEn": "A free MIT agent skill: after install into Claude Code, Codex, Cursor, Copilot, Pi, and similar hosts, one plain-language ask for architecture, swimlane, quadrant, Sankey, exploded axonometric, and more yields a double-clickable self-contained HTML+SVG page (static by default, with accessible titles), without Figma and without rounded-box AI slop. The site lists 44 types at write time; point it at your site to pull colors and fonts; it can redraw (not merely convert) draw.io, Mermaid, and Excalidraw sources. Install with `npx skills add cathrynlavery/diagram-design` or the host’s plugin commands. Good for proposals, architecture notes, and decks when default diagrams look cheap.",
+      "sourceUrl": "https://diagramdesign.dev/",
+      "secondaryUrls": [
+        "https://github.com/cathrynlavery/diagram-design",
+        "https://cathrynlavery.github.io/diagram-design/",
+        "https://skills.sh/cathrynlavery/diagram-design/diagram-design"
+      ],
+      "previewImage": "/previews/diagram-design.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "skill",
+        "open-source",
+        "mit",
+        "diagram",
+        "svg",
+        "agent",
+        "claude-code",
+        "codex",
+        "cursor"
+      ],
+      "qualityNote": "主源官网 https://diagramdesign.dev/ 与仓库 cathrynlavery/diagram-design；晚间 HTTP 200，gh api：MIT、约 53415★，2026-04-16 创建，最近推送 2026-10-13。44 种图示、自含 HTML+SVG、品牌对齐、draw.io/Mermaid/Excalidraw 重画与各宿主装法均照官网与 README。本库没有安装 skill、没有让助手实测出图。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Primary sources are https://diagramdesign.dev/ and cathrynlavery/diagram-design; HTTP 200 this evening; gh api: MIT, ~53415★, created 2026-04-16, last push 2026-10-13. The 44 types, self-contained HTML+SVG, brand match, draw.io/Mermaid/Excalidraw redraw, and install paths follow the site and README. This library did not install the skill or run a live diagram generation. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-13T12:20:00Z"
+    },
+    {
       "id": "suta",
       "slug": "suta",
       "title": "Suta：给 Claude Code / Codex 用的界面 Skill，用来压掉 AI 界面「同质化」",
@@ -4283,9 +4323,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T12:25:00Z",
+    "updatedAt": "2026-10-13T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.63",
-    "count": 134
+    "version": "1.3.64",
+    "count": 135
   }
 }

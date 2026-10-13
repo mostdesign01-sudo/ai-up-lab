@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-13",
+      "title": "晚间收录：HTML +1（Diagram Design）、Agent UI +1（Aria Icons）、Cases +1（Doop）",
+      "titleEn": "Evening catalog: HTML +1 (Diagram Design), Agent UI +1 (Aria Icons), Cases +1 (Doop)",
+      "body": "今早「每日更新」失败，晚间补 AI×设计：diagram-design（编辑级图示 Skill，自含 HTML+SVG，MIT，仓库当日有推送）；aria-icons（百万级 SVG + MCP/CLI，MIT）；doop（开源多人设计画布，内置 MCP，AGPL，X 当日线索）。三条均为 Playwright 3:2 WebP；本库未装 skill/MCP、未自托管实测。html-items 134→135，agent-ui 62→63，cases 170→171。未改首页精选、Models。",
+      "bodyEn": "Morning daily update failed; evening AI×design catch-up: diagram-design (editorial diagram skill → self-contained HTML+SVG, MIT, push today); aria-icons (1M+ SVGs + MCP/CLI, MIT); doop (open multiplayer design canvas with MCP, AGPL, X lead today). All three have Playwright 3:2 WebP previews; this library did not install skills/MCP or self-host. html-items 134→135, agent-ui 62→63, cases 170→171. Homepage picks and Models unchanged."
+    },
+    {
       "date": "2026-10-12",
       "title": "晚间收录：HTML +1（Suta）、Agent UI +1（NS UI）、Cases +1（EditUI）",
       "titleEn": "Evening catalog: HTML +1 (Suta), Agent UI +1 (NS UI), Cases +1 (EditUI)",

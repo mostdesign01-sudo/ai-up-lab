@@ -1,6 +1,49 @@
 {
   "items": [
     {
+      "id": "aria-icons",
+      "slug": "aria-icons",
+      "title": "Aria Icons：百万级开源 SVG 图标，给 Agent 配好 MCP / CLI",
+      "titleEn": "Aria Icons: 1M+ open SVG icons with MCP and CLI for coding agents",
+      "hook": "搜图标别让助手手画：MCP 直接把 SVG 装进项目。",
+      "hookEn": "Stop freehanding icons—MCP searches and installs real SVGs.",
+      "summary": "免费开源（MIT）的图标工具：网站可浏览撰写时显示约 126 万枚 SVG（聚合 Lucide、Tabler、Heroicons、Feather 等多个集合），能改尺寸、描边和颜色再复制或下载。给编程助手的入口是 MCP 与 CLI（npm 包 `aria-icons`）：`npx -y aria-icons@latest setup` 可写入 Cursor / Claude 等配置；助手能搜索、按 `collection:name` 取源码、把图标文件写进仓库，也能迁移混用的图标包。另有远程 MCP 测试入口。适合做界面时需要一致图标、又不想让模型现场「画」一个的人。",
+      "summaryEn": "A free MIT icon toolkit: the site browsed about 1.26M SVGs at write time across sets such as Lucide, Tabler, Heroicons, and Feather, with size, stroke, and color controls before copy or download. Agent surfaces are MCP plus a CLI (`aria-icons` on npm): `npx -y aria-icons@latest setup` writes Cursor / Claude configs; agents can search, fetch by `collection:name`, write icon files into the repo, and migrate mixed icon packages. A remote MCP playground is also linked. Good when UI work needs consistent glyphs instead of model-drawn SVGs.",
+      "sourceUrl": "https://icons.leularia.com/",
+      "secondaryUrls": [
+        "https://github.com/LeulAria/Aria-Icons",
+        "https://www.npmjs.com/package/aria-icons",
+        "https://news.ycombinator.com/item?id=49717692",
+        "https://mcpplaygroundonline.com/mcp-test-server?url=https%3A%2F%2Ficons.leularia.com%2Fapi%2Fmcp"
+      ],
+      "previewImage": "/previews/aria-icons.webp",
+      "promptHint": "先 `npx -y aria-icons@latest setup` 接 MCP，或让助手按 `collection:name`（如 lucide:house）搜索后把 SVG 源码写进项目；不要让模型手画图标。",
+      "promptHintEn": "Run `npx -y aria-icons@latest setup` for MCP, or have the agent search by `collection:name` (e.g. lucide:house) and write SVG source into the repo—do not freehand icons.",
+      "types": [
+        "ui",
+        "library",
+        "component",
+        "agent-api"
+      ],
+      "tags": [
+        "icons",
+        "svg",
+        "mcp",
+        "cli",
+        "open-source",
+        "mit",
+        "agent-ui",
+        "lucide",
+        "design"
+      ],
+      "npmPackage": "aria-icons",
+      "qualityNote": "主源 https://icons.leularia.com/ 与 GitHub LeulAria/Aria-Icons；晚间 HTTP 200，gh api：MIT、88★，2025-12-13 创建，最近推送 2026-10-11。npm aria-icons@0.1.0。Show HN https://news.ycombinator.com/item?id=49717692（约 2026-09-15）。首页撰写时显示 All Icons 约 1,267,498。免费开源；本库没有把 MCP 接到本机助手、没有在真实项目里 add 图标。预览为 Playwright 关掉引导层后实拍图标浏览页，裁 3:2 WebP。",
+      "qualityNoteEn": "Primary sources are https://icons.leularia.com/ and LeulAria/Aria-Icons; HTTP 200 this evening; gh api: MIT, 88★, created 2025-12-13, last push 2026-10-11. npm aria-icons@0.1.0. Show HN https://news.ycombinator.com/item?id=49717692 (~2026-09-15). Home UI showed ~1,267,498 All Icons at write time. Free/open; this library did not wire MCP into a local agent or add icons in a real app. Preview is a Playwright capture of the browse UI after dismissing the intro, cropped to 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-10-13T12:20:00Z"
+    },
+    {
       "id": "ns-ui",
       "slug": "ns-ui",
       "title": "NS UI：542 个可给 Agent 装的 React 组件登记处（带 MCP 与 CLI）",
@@ -2185,9 +2228,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T12:25:00Z",
+    "updatedAt": "2026-10-13T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.26",
-    "count": 62
+    "version": "1.4.27",
+    "count": 63
   }
 }
