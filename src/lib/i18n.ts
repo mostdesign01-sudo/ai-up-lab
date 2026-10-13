@@ -512,6 +512,19 @@ export const ui = {
       en: "This board tracks prompts and case sources only. For the model itself and official announcements, see",
     },
   },
+  promptBoard: {
+    region: { zh: "提示词库", en: "Prompt library" },
+    models: { zh: "按模型筛选", en: "Filter by model" },
+    categories: { zh: "按分类筛选", en: "Filter by category" },
+    sort: { zh: "排序", en: "Sort" },
+    all: { zh: "全部", en: "All" },
+    featured: { zh: "精选", en: "Featured" },
+    newest: { zh: "最新", en: "Newest" },
+    hot: { zh: "最热", en: "Popular" },
+    count: { zh: "共 {n} 条", en: "{n} entries" },
+    empty: { zh: "这个筛选下还没有条目。", en: "Nothing matches this filter." },
+    imageCount: { zh: "第 {i} 张，共 {n} 张", en: "Image {i} of {n}" },
+  },
   grok: {
     featuredH1: { zh: "精选案例", en: "Featured cases" },
     featuredLede: {

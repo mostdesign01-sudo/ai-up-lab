@@ -1,0 +1,268 @@
+---
+import FavButton from "./FavButton.astro";
+import Icon from "./Icon.astro";
+import Loc from "./Loc.astro";
+import Stars from "./Stars.astro";
+import { ui } from "../lib/i18n";
+import {
+  boardHasPopularity,
+  modelFacets,
+  tagFacets,
+  type PromptBoardCard,
+} from "../lib/prompt-board";
+import "../styles/prompt-gallery.css";
+
+interface Props {
+  cards: PromptBoardCard[];
+  /** When set, legacy search query params leave this page for the site search. */
+  searchUrl?: string;
+  sectionId?: string;
+}
+
+const { cards, searchUrl, sectionId } = Astro.props;
+const models = modelFacets(cards);
+const tags = tagFacets(cards);
+const showHot = boardHasPopularity(cards);
+const countZh = ui.promptBoard.count.zh.replace("{n}", String(cards.length));
+const countEn = ui.promptBoard.count.en.replace("{n}", String(cards.length));
+---
+
+<section
+  class="prompt-board"
+  data-prompt-board
+  data-search-url={searchUrl}
+  data-section={sectionId}
+  aria-label={ui.promptBoard.region.zh}
+  data-aria-zh={ui.promptBoard.region.zh}
+  data-aria-en={ui.promptBoard.region.en}
+>
+  <div class="prompt-board-toolbar">
+    <div class="prompt-board-models" role="group" aria-label={ui.promptBoard.models.zh} data-aria-zh={ui.promptBoard.models.zh} data-aria-en={ui.promptBoard.models.en}>
+      <button type="button" class="prompt-board-pill" data-prompt-model="" aria-pressed="true">
+        <Icon name="grid" size={16} />
+        <Loc zh={ui.promptBoard.all.zh} en={ui.promptBoard.all.en} />
+      </button>
+      {
+        models.map((model) => (
+          <button type="button" class="prompt-board-pill" data-prompt-model={model.id} aria-pressed="false">
+            <span class="prompt-board-mark" aria-hidden="true">{model.label.zh.slice(0, 1)}</span>
+            <Loc zh={model.label.zh} en={model.label.en} />
+          </button>
+        ))
+      }
+    </div>
+    <div class="prompt-board-sort" role="group" aria-label={ui.promptBoard.sort.zh} data-aria-zh={ui.promptBoard.sort.zh} data-aria-en={ui.promptBoard.sort.en}>
+      <button type="button" data-prompt-order="featured" aria-pressed="true">
+        <Loc zh={ui.promptBoard.featured.zh} en={ui.promptBoard.featured.en} />
+      </button>
+      <button type="button" data-prompt-order="newest" aria-pressed="false">
+        <Loc zh={ui.promptBoard.newest.zh} en={ui.promptBoard.newest.en} />
+      </button>
+      {
+        showHot && (
+          <button type="button" data-prompt-order="hot" aria-pressed="false">
+            <Loc zh={ui.promptBoard.hot.zh} en={ui.promptBoard.hot.en} />
+          </button>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="prompt-board-body">
+    <nav class="prompt-board-cats" aria-label={ui.promptBoard.categories.zh} data-aria-zh={ui.promptBoard.categories.zh} data-aria-en={ui.promptBoard.categories.en}>
+      <button type="button" class="prompt-board-cat" data-prompt-tag="" aria-pressed="true">
+        <Loc zh={ui.promptBoard.all.zh} en={ui.promptBoard.all.en} />
+      </button>
+      {
+        tags.map((tag) => (
+          <button type="button" class="prompt-board-cat" data-prompt-tag={tag.id} aria-pressed="false">
+            <Loc zh={tag.label.zh} en={tag.label.en} />
+          </button>
+        ))
+      }
+    </nav>
+
+    <div>
+      <p class="prompt-board-count" data-prompt-count data-count-zh={ui.promptBoard.count.zh} data-count-en={ui.promptBoard.count.en}>
+        <span class="loc-zh">{countZh}</span><span class="loc-en">{countEn}</span>
+      </p>
+      <div class="prompt-board-masonry" data-prompt-masonry>
+        {
+          cards.map((card) => (
+            <article
+              class="prompt-board-card card-shell"
+              data-prompt-card
+              data-model={card.model ?? ""}
+              data-tags={card.tags.join(" ")}
+              data-featured={card.featured ? "true" : "false"}
+              data-published={card.publishedAt}
+              data-updated={card.updatedAt}
+              data-popularity={card.popularity}
+            >
+              <a class="prompt-board-link" href={card.href}>
+                {
+                  card.image && (
+                    <span class="prompt-board-media">
+                      <img
+                        src={card.image}
+                        alt=""
+                        width={card.width}
+                        height={card.height}
+                        style={card.width && card.height ? `--prompt-ratio:${card.width} / ${card.height}` : undefined}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      {
+                        card.imageTotal && card.imageTotal > 1 && (
+                          <span
+                            class="prompt-board-count-badge"
+                            aria-label={ui.promptBoard.imageCount.zh.replace("{i}", "1").replace("{n}", String(card.imageTotal))}
+                            data-aria-zh={ui.promptBoard.imageCount.zh.replace("{i}", "1").replace("{n}", String(card.imageTotal))}
+                            data-aria-en={ui.promptBoard.imageCount.en.replace("{i}", "1").replace("{n}", String(card.imageTotal))}
+                          >
+                            1/{card.imageTotal}
+                          </span>
+                        )
+                      }
+                    </span>
+                  )
+                }
+                <span class="prompt-board-caption">
+                  <span class="prompt-board-title">
+                    <Loc zh={card.title.zh} en={card.title.en} />
+                  </span>
+                  {card.stars ? <Stars value={card.stars} /> : null}
+                </span>
+              </a>
+              <FavButton lib={card.lib} id={card.id} />
+            </article>
+          ))
+        }
+      </div>
+      <p class="prompt-board-empty" data-prompt-empty hidden>
+        <Loc zh={ui.promptBoard.empty.zh} en={ui.promptBoard.empty.en} />
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const OTHER = "other";
+
+  const boards = [...document.querySelectorAll<HTMLElement>("[data-prompt-board]")];
+
+  const selected = (board: HTMLElement, selector: string) =>
+    board.querySelector<HTMLButtonElement>(`${selector}[aria-pressed="true"]`);
+
+  const press = (board: HTMLElement, selector: string, value: string | null) => {
+    if (value === null) return;
+    const buttons = [...board.querySelectorAll<HTMLButtonElement>(selector)];
+    const match = buttons.find((button) => button.getAttribute(selector.slice(1, -1)) === value);
+    if (!match) return;
+    for (const button of buttons) button.setAttribute("aria-pressed", button === match ? "true" : "false");
+  };
+
+  const visibleCount = (board: HTMLElement) =>
+    [...board.querySelectorAll<HTMLElement>("[data-prompt-card]")].filter((card) => !card.hidden).length;
+
+  const paintCount = (board: HTMLElement) => {
+    const count = board.querySelector<HTMLElement>("[data-prompt-count]");
+    if (!count) return;
+    const english = document.documentElement.dataset.locale === "en";
+    const template = count.getAttribute(english ? "data-count-en" : "data-count-zh") ?? "";
+    count.textContent = template.replaceAll("{n}", String(visibleCount(board)));
+  };
+
+  const apply = (board: HTMLElement, writeUrl: boolean) => {
+    const model = selected(board, "[data-prompt-model]")?.dataset.promptModel ?? "";
+    const tag = selected(board, "[data-prompt-tag]")?.dataset.promptTag ?? "";
+    const order = selected(board, "[data-prompt-order]")?.dataset.promptOrder ?? "featured";
+    const masonry = board.querySelector<HTMLElement>("[data-prompt-masonry]");
+    const cards = [...board.querySelectorAll<HTMLElement>("[data-prompt-card]")];
+    cards.sort((a, b) => {
+      if (order === "hot") {
+        const hot = Number(b.dataset.popularity ?? "-1") - Number(a.dataset.popularity ?? "-1");
+        if (hot !== 0) return hot;
+      }
+      if (order === "featured") {
+        const featured = Number(b.dataset.featured === "true") - Number(a.dataset.featured === "true");
+        if (featured !== 0) return featured;
+      }
+      return (
+        (b.dataset.published ?? "").localeCompare(a.dataset.published ?? "") ||
+        (b.dataset.updated ?? "").localeCompare(a.dataset.updated ?? "")
+      );
+    });
+    if (masonry) {
+      for (const card of cards) masonry.append(card);
+    }
+    let shown = 0;
+    for (const card of cards) {
+      const cardModel = card.dataset.model ?? "";
+      const tags = (card.dataset.tags ?? "").split(" ").filter(Boolean);
+      const modelOk = model === "" || cardModel === model;
+      const tagOk = tag === "" || (tag === OTHER ? tags.length === 0 : tags.includes(tag));
+      const visible = modelOk && tagOk;
+      card.hidden = !visible;
+      if (visible) shown += 1;
+    }
+    const empty = board.querySelector<HTMLElement>("[data-prompt-empty]");
+    if (empty) empty.hidden = shown !== 0;
+    paintCount(board);
+    if (writeUrl) {
+      const url = new URL(location.href);
+      if (model) url.searchParams.set("model", model);
+      else url.searchParams.delete("model");
+      if (tag) url.searchParams.set("tag", tag);
+      else url.searchParams.delete("tag");
+      if (order && order !== "featured") url.searchParams.set("order", order);
+      else url.searchParams.delete("order");
+      history.replaceState(null, "", url);
+    }
+  };
+
+  const readUrl = (board: HTMLElement) => {
+    const params = new URLSearchParams(location.search);
+    press(board, "[data-prompt-model]", params.get("model"));
+    press(board, "[data-prompt-tag]", params.get("tag"));
+    press(board, "[data-prompt-order]", params.get("order"));
+    apply(board, false);
+  };
+
+  for (const board of boards) {
+    const params = new URLSearchParams(location.search);
+    const legacy = new URLSearchParams();
+    for (const key of ["q", "task", "difficulty", "sort", "lib"]) {
+      const value = params.get(key);
+      if (value && board.dataset.searchUrl && board.dataset.section) legacy.set(key, value);
+    }
+    if (legacy.size) {
+      legacy.set("section", board.dataset.section!);
+      location.replace(`${board.dataset.searchUrl}?${legacy}`);
+      continue;
+    }
+    board.addEventListener("click", (event) => {
+      const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>(
+        "[data-prompt-model], [data-prompt-tag], [data-prompt-order]",
+      );
+      if (!button || !board.contains(button)) return;
+      const selector = button.hasAttribute("data-prompt-model")
+        ? "[data-prompt-model]"
+        : button.hasAttribute("data-prompt-tag")
+          ? "[data-prompt-tag]"
+          : "[data-prompt-order]";
+      for (const peer of board.querySelectorAll<HTMLButtonElement>(selector)) {
+        peer.setAttribute("aria-pressed", peer === button ? "true" : "false");
+      }
+      apply(board, true);
+    });
+    readUrl(board);
+  }
+
+  window.addEventListener("popstate", () => {
+    for (const board of boards) readUrl(board);
+  });
+  document.addEventListener("localechange", () => {
+    for (const board of boards) paintCount(board);
+  });
+</script>
