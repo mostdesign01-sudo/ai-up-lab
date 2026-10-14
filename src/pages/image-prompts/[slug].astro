@@ -2,6 +2,7 @@
 import Badge from "../../components/Badge.astro";
 import FavButton from "../../components/FavButton.astro";
 import Loc from "../../components/Loc.astro";
+import VerifyLog from "../../components/VerifyLog.astro";
 import ModelCard from "../../components/ModelCard.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
@@ -131,6 +132,7 @@ const others = listImagePrompts().filter((other) => other.id !== item.id);
             <span class="loc-zh">{item.qualityNote}</span>
             <span class="loc-en">{item.qualityNoteEn}</span>
           </p>
+          <VerifyLog log={item.verifyLog} logEn={item.verifyLogEn} />
         </section>
 
         {

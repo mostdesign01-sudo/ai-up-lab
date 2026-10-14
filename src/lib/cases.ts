@@ -27,6 +27,8 @@ export interface CaseItem {
   sourceType: SourceType;
   qualityNote: string;
   qualityNoteEn?: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   difficulty: Difficulty;
   hasRoutine: boolean;
   hasSkill: boolean;

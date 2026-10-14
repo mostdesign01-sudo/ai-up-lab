@@ -4082,3 +4082,26 @@ html[data-theme="light"] .home-pill {
 
 .directory-nav a, .directory-section-card, .directory-card-link, .directory-task-links a, .directory-header-tools a { text-decoration: none; }
 .directory-card:not(:has(.directory-thumb)) .directory-card-copy { padding-right: 42px; }
+
+.verify-log {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.verify-log > summary {
+  cursor: pointer;
+  width: fit-content;
+  padding: 4px 0;
+  color: var(--muted);
+}
+
+.verify-log > summary:hover {
+  color: var(--ink);
+}
+
+.verify-log > p {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}

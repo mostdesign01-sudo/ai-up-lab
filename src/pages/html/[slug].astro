@@ -3,6 +3,7 @@ import Badge from "../../components/Badge.astro";
 import FavButton from "../../components/FavButton.astro";
 import HtmlCard from "../../components/HtmlCard.astro";
 import Loc from "../../components/Loc.astro";
+import VerifyLog from "../../components/VerifyLog.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
@@ -113,6 +114,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
             <span class="loc-zh">{item.qualityNote}</span>
             <span class="loc-en">{qualityEn}</span>
           </p>
+          <VerifyLog log={item.verifyLog} logEn={item.verifyLogEn} />
         </section>
         {
           related.length > 0 && (

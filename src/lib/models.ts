@@ -34,6 +34,8 @@ export interface ModelItem {
   highlights?: ModelHighlight[];
   qualityNote: string;
   qualityNoteEn: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   relatedCaseIds: string[];
   /** Other cards on this board (e.g. a community demo → the model it ran on). Must resolve to existing model ids. */
   relatedModelIds?: string[];

@@ -31,6 +31,8 @@ export interface AgentUiItem {
   updatedAt: string;
   qualityNote: string;
   qualityNoteEn?: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   tags: string[];
   npmPackage?: string;
   promptHint?: string;

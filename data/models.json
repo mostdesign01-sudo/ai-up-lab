@@ -78,8 +78,8 @@
           "labelEn": "Authors say it can run on-device with a suitable runtime"
         }
       ],
-      "qualityNote": "主源是 2026-10-10 HF 博文与模型卡 doofz/THX-01，早间 HTTP 200；能力表、Apache-2.0、pip 与 API 链接照博文。与 Jev 的对比数字来自作者内部基准，本库没有安装 thx01，也没有复跑。收录进 Models，与库内 Strands Decider、Jeff、Clef、Jev 同属「决策小模型」一条线。预览为 Playwright 实拍博文页裁 3:2 WebP。",
-      "qualityNoteEn": "Primary sources are the 2026-10-10 HF blog and model card doofz/THX-01, HTTP 200 this morning; capability table, Apache-2.0, pip, and API links follow the blog. Jev comparison numbers are the authors’ internal benchmarks; this library did not install thx01 or re-run them. Listed in Models alongside Strands Decider, Jeff, Clef, and Jev as another small decision model. Preview is a Playwright capture of the blog page, cropped to 3:2 WebP.",
+      "qualityNote": "与 Jev 的对比数字来自作者内部基准，本库没有安装 thx01，也没有复跑。收录进 Models，与库内 Strands Decider、Jeff、Clef、Jev 同属「决策小模型」一条线。",
+      "qualityNoteEn": "Jev comparison numbers are the authors’ internal benchmarks; this library did not install thx01 or re-run them. Listed in Models alongside Strands Decider, Jeff, Clef, and Jev as another small decision model.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "strands-decider-2b",
@@ -92,7 +92,9 @@
       "previewImage": "/previews/thx-01.webp",
       "previewCredit": "预览截自 Hugging Face 博文页",
       "previewCreditEn": "Preview cropped from the Hugging Face blog page",
-      "featured": true
+      "featured": true,
+      "verifyLog": "主源是 2026-10-10 HF 博文与模型卡 doofz/THX-01，早间 HTTP 200；能力表、Apache-2.0、pip 与 API 链接照博文。预览为 Playwright 实拍博文页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are the 2026-10-10 HF blog and model card doofz/THX-01, HTTP 200 this morning; capability table, Apache-2.0, pip, and API links follow the blog. Preview is a Playwright capture of the blog page, cropped to 3:2 WebP."
     },
     {
       "id": "gpt-6-intelligent-ui",
@@ -142,8 +144,8 @@
           "textEn": "Vendor tests, not re-run here: for web-search questions GPT-6 Instant starts answering 44% sooner on average than GPT-5.6 Instant; in an internal everyday-task eval, GPT-6 Extra High starts answering about as fast as GPT-5.6 Medium while scoring above GPT-5.6 Extra High."
         }
       ],
-      "qualityNote": "收录理由：官方发布当天上 HN 首页（item 49996425，2026-10-07T18:00Z，约 10-08 02:00 北京时间，撰写时 482pts），而且 Intelligent UI 正好是生成式界面，属于本站优先的 AI×设计方向。官方页早间 HTTP 200。所有能力、分档和数字都是 OpenAI 自述，本库没有登录 ChatGPT 实际试用，也没有核对免费档何时真正到账。官方页没有给 API 模型名，所以这里不写。同板已有 gpt-6-astra 和 gpt-6-1-sol，互链只表示同家族。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Why: the official launch hit the HN front page the same day (item 49996425, 2026-10-07T18:00Z, about 02:00 on 10-08 Beijing time, 482pts at write time), and Intelligent UI is generative UI, which is this site's AI×design priority. Official page HTTP 200 this morning. All capabilities, tiers, and numbers are OpenAI's claims; this library did not sign in to ChatGPT to try it or check when the Free tier actually gets it. The page gives no API model name, so none is listed. The board already has gpt-6-astra and gpt-6-1-sol; cross-links mean same family only. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "所有能力、分档和数字都是 OpenAI 自述，本库没有登录 ChatGPT 实际试用，也没有核对免费档何时真正到账。官方页没有给 API 模型名，所以这里不写。同板已有 gpt-6-astra 和 gpt-6-1-sol，互链只表示同家族。",
+      "qualityNoteEn": "All capabilities, tiers, and numbers are OpenAI's claims; this library did not sign in to ChatGPT to try it or check when the Free tier actually gets it. The page gives no API model name, so none is listed. The board already has gpt-6-astra and gpt-6-1-sol; cross-links mean same family only.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-1-sol",
@@ -154,7 +156,9 @@
       "previewCredit": "预览：Playwright 实拍 openai.com/index/gpt-6-for-everyone 首屏",
       "previewCreditEn": "Preview: Playwright capture of openai.com/index/gpt-6-for-everyone above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：官方发布当天上 HN 首页（item 49996425，2026-10-07T18:00Z，约 10-08 02:00 北京时间，撰写时 482pts），而且 Intelligent UI 正好是生成式界面，属于本站优先的 AI×设计方向。官方页早间 HTTP 200。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Why: the official launch hit the HN front page the same day (item 49996425, 2026-10-07T18:00Z, about 02:00 on 10-08 Beijing time, 482pts at write time), and Intelligent UI is generative UI, which is this site's AI×design priority. Official page HTTP 200 this morning. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "claude-haiku-5-5",
@@ -200,8 +204,8 @@
           "textEn": "Vendor table excerpt, not re-run here (columns Haiku 5.5 / Haiku 4.5 / GPT-6 Luna / Sonnet 5.5): OSWorld 2.1 offline subset 72.4% / 15.7% / 48.9% / 83.9%; Terminal-Bench 4.0 39.2% / 0.0% / 16.4% / 70.6%; GDPval-AA v2.1 1620 / 735 / 1437 / 1840."
         }
       ],
-      "qualityNote": "收录理由：官方发布当天上 HN 首页（item 49996437，2026-10-07T18:01Z，约 10-08 02:01 北京时间，撰写时约 654pts）。官方页早间 HTTP 200。75% 降价、价格、基准表和客户评价都是官方页自述，本库没有调 API 实测。官方页在对照表里列了 GPT-6 Luna，这里照抄，不代表本库做过对比。同板已有 claude-sonnet-5-5 和 claude-opus-5-5。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Why: the official launch hit the HN front page the same day (item 49996437, 2026-10-07T18:01Z, about 02:01 on 10-08 Beijing time, about 654pts at write time). Official page HTTP 200 this morning. The 75% figure, prices, benchmark table, and customer quotes are all from the official page; the API was not tested here. The vendor table includes GPT-6 Luna; it is copied as is, not a comparison run here. The board already has claude-sonnet-5-5 and claude-opus-5-5. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "75% 降价、价格、基准表和客户评价都是官方页自述，本库没有调 API 实测。官方页在对照表里列了 GPT-6 Luna，这里照抄，不代表本库做过对比。同板已有 claude-sonnet-5-5 和 claude-opus-5-5。",
+      "qualityNoteEn": "The 75% figure, prices, benchmark table, and customer quotes are all from the official page; the API was not tested here. The vendor table includes GPT-6 Luna; it is copied as is, not a comparison run here. The board already has claude-sonnet-5-5 and claude-opus-5-5.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "claude-sonnet-5-5",
@@ -212,7 +216,9 @@
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-haiku-5-5 首屏",
       "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-haiku-5-5 above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：官方发布当天上 HN 首页（item 49996437，2026-10-07T18:01Z，约 10-08 02:01 北京时间，撰写时约 654pts）。官方页早间 HTTP 200。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Why: the official launch hit the HN front page the same day (item 49996437, 2026-10-07T18:01Z, about 02:01 on 10-08 Beijing time, about 654pts at write time). Official page HTTP 200 this morning. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "strands-decider-2b",
@@ -280,8 +286,8 @@
           "textEn": "Repo self-test, not re-run here, and not treated as a ranking. The README table: on the 231-task public JevBench set, v21 accuracy is 0.762 (176/231) and v19 is 0.723 (167/231). The same table says a six-seed average of the v21 recipe and the v19 recipe land in the same place, and a gap under about 10 tasks between two single runs is unresolved. The latency column is on v19: median 115 ms on an RTX 3090. The October 1 blog also has a “place in the 2B class” claim. This card does not repeat it, because the repo’s later table says small gaps are not reliable."
         }
       ],
-      "qualityNote": "收录理由：HN item 49987076，标题 Strands Decider 2B: a small, open-source, decision model，作者 gmays，2026-10-07T02:02:11.000Z（约 10:02 CST），撰写时 Algolia 208pts，外链即官博。官博 https://strandsagents.com/blog/introducing-strands-decider/ 撰写时 HTTP 200，页内日期 October 1, 2026，作者 Marc Brooker、Mike Chambers、Fabio Nonato de Paula。博文命令示例仍写 v19。仓库 README 撰写时已把参考模型写成 v21（strands-decider-2B-hobson-v21），并写 v19 仍发布。规格和分数以 README 为准，博文里的名次不转抄。gh api：strands-labs/strands-decider，Apache-2.0，475★，创建于 2026-09-29T16:36:38Z。HF 的 v19 与 v21 页面撰写时均为 HTTP 200。本库未 pip install，未下载权重，未复跑 JevBench，未在 RTX 3090 或 Mac 上计时。同板与 Clef、Gutsy、Jeeves、Jev、Laya、Ollaya 互链；Cases 里已有本机 Jeff 和命令行 Onesie。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Why: HN item 49987076, title Strands Decider 2B: a small, open-source, decision model, author gmays, 2026-10-07T02:02:11.000Z (about 10:02 CST), 208pts on Algolia at write time, linking the blog. The blog https://strandsagents.com/blog/introducing-strands-decider/ returned HTTP 200, dated October 1, 2026, by Marc Brooker, Mike Chambers, and Fabio Nonato de Paula. The blog’s command examples still say v19. The README at write time names v21 (strands-decider-2B-hobson-v21) as the reference and says v19 stays published. Specs and scores follow the README. The blog’s class ranking is not copied. gh api: strands-labs/strands-decider, Apache-2.0, 475★, created 2026-09-29T16:36:38Z. The HF pages for v19 and v21 both returned HTTP 200. This library did not pip install, did not download weights, did not re-run JevBench, and did not time it on an RTX 3090 or a Mac. Cross-linked on this board with Clef, Gutsy, Jeeves, Jev, Laya, and Ollaya. Cases already lists local Jeff and the Onesie CLI. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "博文命令示例仍写 v19。规格和分数以 README 为准，博文里的名次不转抄。本库未 pip install，未下载权重，未复跑 JevBench，未在 RTX 3090 或 Mac 上计时。同板与 Clef、Gutsy、Jeeves、Jev、Laya、Ollaya 互链；Cases 里已有本机 Jeff 和命令行 Onesie。",
+      "qualityNoteEn": "The blog’s command examples still say v19. Specs and scores follow the README. This library did not pip install, did not download weights, did not re-run JevBench, and did not time it on an RTX 3090 or a Mac. Cross-linked on this board with Clef, Gutsy, Jeeves, Jev, Laya, and Ollaya. Cases already lists local Jeff and the Onesie CLI.",
       "relatedCaseIds": [
         "jeff",
         "onesie"
@@ -297,7 +303,9 @@
       "previewImage": "/previews/strands-decider-2b.webp",
       "previewCredit": "预览：Chrome 实拍 strandsagents.com 官博首屏",
       "previewCreditEn": "Preview: Chrome capture of the strandsagents.com blog above the fold",
-      "featured": false
+      "featured": false,
+      "verifyLog": "收录理由：HN item 49987076，标题 Strands Decider 2B: a small, open-source, decision model，作者 gmays，2026-10-07T02:02:11.000Z（约 10:02 CST），撰写时 Algolia 208pts，外链即官博。官博 https://strandsagents.com/blog/introducing-strands-decider/ 撰写时 HTTP 200，页内日期 October 1, 2026，作者 Marc Brooker、Mike Chambers、Fabio Nonato de Paula。仓库 README 撰写时已把参考模型写成 v21（strands-decider-2B-hobson-v21），并写 v19 仍发布。gh api：strands-labs/strands-decider，Apache-2.0，475★，创建于 2026-09-29T16:36:38Z。HF 的 v19 与 v21 页面撰写时均为 HTTP 200。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Why: HN item 49987076, title Strands Decider 2B: a small, open-source, decision model, author gmays, 2026-10-07T02:02:11.000Z (about 10:02 CST), 208pts on Algolia at write time, linking the blog. The blog https://strandsagents.com/blog/introducing-strands-decider/ returned HTTP 200, dated October 1, 2026, by Marc Brooker, Mike Chambers, and Fabio Nonato de Paula. The README at write time names v21 (strands-decider-2B-hobson-v21) as the reference and says v19 stays published. The blog’s class ranking is not copied. gh api: strands-labs/strands-decider, Apache-2.0, 475★, created 2026-09-29T16:36:38Z. The HF pages for v19 and v21 both returned HTTP 200. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "embeddinggemma-2",
@@ -365,14 +373,16 @@
           "textEn": "Where to get it (official channels, not downloaded here): weights are at google/embeddinggemma-2 on Hugging Face. Docs are the EmbeddingGemma page on ai.google.dev. The model card says it loads with common libraries such as transformers and sentence-transformers, and that it is meant for devices. The blog also states phone memory and how many minutes of audio fit. Those device figures are not in the model card’s spec table, so this card does not copy a second set."
         }
       ],
-      "qualityNote": "收录理由：HN item 49980487，标题 EmbeddingGemma 2: An open, lightweight multimodal embedding model，作者 ilreb，2026-10-06T16:03:49.000Z（约 2026-10-07 00:03 CST），撰写时 Algolia 352pts。官博 https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ 撰写时 HTTP 200，页内日期 Oct 06, 2026，作者 Sahil Dua 与 Henrique Schechter Vera。模型卡 https://huggingface.co/google/embeddinggemma-2 撰写时 HTTP 200，front matter 写 license apache-2.0。卡内许可链接 https://ai.google.dev/gemma/docs/gemma_4_license 撰写时 301 到 https://ai.google.dev/gemma/apache_2 ，该页 HTTP 200，标题 Apache License 2.0。文档 https://ai.google.dev/gemma/docs/embeddinggemma HTTP 200。规格和表内分数以模型卡为准。官博另有 Pixel 机型内存、5.5 分钟音频、29 张图、58 帧视频等说法，未写入要点，避免和模型卡的“数分钟音视频”并成两套数字。本库未下载权重，未做检索实验，未复跑 MTEB。同板没有另一张嵌入模型卡，因此 relatedModelIds 留空。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Why: HN item 49980487, title EmbeddingGemma 2: An open, lightweight multimodal embedding model, author ilreb, 2026-10-06T16:03:49.000Z (about 00:03 CST on 2026-10-07), 352pts on Algolia at write time. The blog https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ returned HTTP 200, dated Oct 06, 2026, by Sahil Dua and Henrique Schechter Vera. The model card https://huggingface.co/google/embeddinggemma-2 returned HTTP 200, with license apache-2.0 in the front matter. The card’s license link https://ai.google.dev/gemma/docs/gemma_4_license returned 301 to https://ai.google.dev/gemma/apache_2, which returned HTTP 200 and is titled Apache License 2.0. Docs https://ai.google.dev/gemma/docs/embeddinggemma returned HTTP 200. Specs and in-table scores follow the model card. The blog also states Pixel memory, 5.5 minutes of audio, 29 images, and 58 video frames. Those are not copied into the highlights, so they do not sit beside the model card’s “minutes of audio or video” as a second set of numbers. This library did not download weights, did not run a search experiment, and did not re-run MTEB. There is no other embedding card on this board, so relatedModelIds is empty. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "规格和表内分数以模型卡为准。官博另有 Pixel 机型内存、5.5 分钟音频、29 张图、58 帧视频等说法，未写入要点，避免和模型卡的“数分钟音视频”并成两套数字。本库未下载权重，未做检索实验，未复跑 MTEB。同板没有另一张嵌入模型卡，因此 relatedModelIds 留空。",
+      "qualityNoteEn": "Specs and in-table scores follow the model card. The blog also states Pixel memory, 5.5 minutes of audio, 29 images, and 58 video frames. Those are not copied into the highlights, so they do not sit beside the model card’s “minutes of audio or video” as a second set of numbers. This library did not download weights, did not run a search experiment, and did not re-run MTEB. There is no other embedding card on this board, so relatedModelIds is empty.",
       "relatedCaseIds": [],
       "relatedModelIds": [],
       "previewImage": "/previews/embeddinggemma-2.webp",
       "previewCredit": "预览：Chrome 实拍 Google 官博首屏",
       "previewCreditEn": "Preview: Chrome capture of the Google blog above the fold",
-      "featured": false
+      "featured": false,
+      "verifyLog": "收录理由：HN item 49980487，标题 EmbeddingGemma 2: An open, lightweight multimodal embedding model，作者 ilreb，2026-10-06T16:03:49.000Z（约 2026-10-07 00:03 CST），撰写时 Algolia 352pts。官博 https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ 撰写时 HTTP 200，页内日期 Oct 06, 2026，作者 Sahil Dua 与 Henrique Schechter Vera。模型卡 https://huggingface.co/google/embeddinggemma-2 撰写时 HTTP 200，front matter 写 license apache-2.0。卡内许可链接 https://ai.google.dev/gemma/docs/gemma_4_license 撰写时 301 到 https://ai.google.dev/gemma/apache_2 ，该页 HTTP 200，标题 Apache License 2.0。文档 https://ai.google.dev/gemma/docs/embeddinggemma HTTP 200。预览为 Chrome 实拍官博首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Why: HN item 49980487, title EmbeddingGemma 2: An open, lightweight multimodal embedding model, author ilreb, 2026-10-06T16:03:49.000Z (about 00:03 CST on 2026-10-07), 352pts on Algolia at write time. The blog https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/ returned HTTP 200, dated Oct 06, 2026, by Sahil Dua and Henrique Schechter Vera. The model card https://huggingface.co/google/embeddinggemma-2 returned HTTP 200, with license apache-2.0 in the front matter. The card’s license link https://ai.google.dev/gemma/docs/gemma_4_license returned 301 to https://ai.google.dev/gemma/apache_2, which returned HTTP 200 and is titled Apache License 2.0. Docs https://ai.google.dev/gemma/docs/embeddinggemma returned HTTP 200. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "nano-banana-2-1",
@@ -471,8 +481,8 @@
           "textEn": "Limits (from the model card itself): small text often blurs, especially at 1K, and long paragraphs or full pages do not work well; people in the input and output images are not always consistent; masked or doodle edits sometimes follow only part of the instruction, and scribbles can remain; edits occasionally keep the original pose; left and right sometimes get mixed up; 3D reasoning and factual accuracy are still limited. For print work that needs crisp small text, do not ship 1K output as is. The older gemini-3.1-flash-image is marked deprecated on the API; at write time the release notes say no shutdown date has been announced."
         }
       ],
-      "qualityNote": "收录理由：Hao 转来的 Google 官方 X 帖（@Google，status 2107501209154204148，2026-10-06T16:00:18Z / 北京时间 2026-10-07 00:00），本库偏重 AI×设计，这是 Google 主力出图模型的更新，而且主打版式设计和改图。核对（撰写时，2026-10-07 北京时间中午）：Gemini API 模型页、DeepMind 模型卡（页内 Published 6 October 2026）、出图指南、价格页、更新日志均 HTTP 200；更新日志 10 月 6 日写正式发布（GA），并写旧版 gemini-3.1-flash-image 弃用、还没定关停日期（S5 Labs 等第三方写 10 月 29 日关停，与官方页当前文字不符，未采用）。价格以官方价格页为准（4K 约 0.113 美元/张）。没有找到 blog.google 上的发布博文，所以官方来源是 X 帖、模型卡和开发者文档。Gemini App 是否已在某个账号里切到 2.1，本库没有登录确认。本库没有实际出图、没有调用 API、没有复跑模型卡评分；遮罩改图、14 张参考图、搜索查资料等功能都没有实测。预览是 X 帖宣传短片（原片 800×800）按 2 倍速转成 3:2 动图 WebP，样片由 Google 挑选。精选，不打星。",
-      "qualityNoteEn": "Why: the official Google X post Hao shared (@Google, status 2107501209154204148, 2026-10-06T16:00:18Z / 00:00 on 2026-10-07 Beijing time). This library leans AI × design, and this is an update to Google’s main image model with layout design and editing as headline features. Checks at write time (around noon Beijing time on 2026-10-07): the Gemini API model page, the DeepMind model card (Published 6 October 2026), the image generation guide, the pricing page, and the release notes all returned HTTP 200. The release notes mark it GA on 6 October and say the older gemini-3.1-flash-image is deprecated with no shutdown date announced (S5 Labs and others reported 29 October, which does not match the official page’s current wording, so it is not used). Prices follow the official pricing page (about $0.113 per 4K image). No launch post was found on blog.google, so the official sources are the X post, the model card, and developer docs. Whether a given Gemini app account has switched to 2.1 was not checked (no sign-in). This library did not generate images, call the API, or re-run model-card scores; masked editing, 14 reference images, and search grounding were not tested. The preview is the X promo clip (800×800 original) at 2× speed, cropped to a 3:2 animated WebP; the samples are Google’s picks. Featured, unrated.",
+      "qualityNote": "价格以官方价格页为准（4K 约 0.113 美元/张）。没有找到 blog.google 上的发布博文，所以官方来源是 X 帖、模型卡和开发者文档。Gemini App 是否已在某个账号里切到 2.1，本库没有登录确认。本库没有实际出图、没有调用 API、没有复跑模型卡评分；遮罩改图、14 张参考图、搜索查资料等功能都没有实测。预览是 X 帖宣传短片（原片 800×800）按 2 倍速转成 3:2 动图 WebP，样片由 Google 挑选。",
+      "qualityNoteEn": "This library leans AI × design, and this is an update to Google’s main image model with layout design and editing as headline features. The release notes mark it GA on 6 October and say the older gemini-3.1-flash-image is deprecated with no shutdown date announced (S5 Labs and others reported 29 October, which does not match the official page’s current wording, so it is not used). Prices follow the official pricing page (about $0.113 per 4K image). No launch post was found on blog.google, so the official sources are the X post, the model card, and developer docs. Whether a given Gemini app account has switched to 2.1 was not checked (no sign-in). This library did not generate images, call the API, or re-run model-card scores; masked editing, 14 reference images, and search grounding were not tested. Featured, unrated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gemini-4-argon"
@@ -480,7 +490,9 @@
       "previewImage": "/previews/nano-banana-2-1.webp",
       "previewCredit": "预览：Google 官方 X 帖宣传短片，2 倍速、裁 3:2 动图（样片由 Google 挑选）",
       "previewCreditEn": "Preview: Google’s official X promo clip at 2× speed, cropped to a 3:2 animation (samples picked by Google)",
-      "featured": true
+      "featured": true,
+      "verifyLog": "收录理由：Hao 转来的 Google 官方 X 帖（@Google，status 2107501209154204148，2026-10-06T16:00:18Z / 北京时间 2026-10-07 00:00），本库偏重 AI×设计，这是 Google 主力出图模型的更新，而且主打版式设计和改图。核对（撰写时，2026-10-07 北京时间中午）：Gemini API 模型页、DeepMind 模型卡（页内 Published 6 October 2026）、出图指南、价格页、更新日志均 HTTP 200；更新日志 10 月 6 日写正式发布（GA），并写旧版 gemini-3.1-flash-image 弃用、还没定关停日期（S5 Labs 等第三方写 10 月 29 日关停，与官方页当前文字不符，未采用）。精选，不打星。",
+      "verifyLogEn": "Why: the official Google X post Hao shared (@Google, status 2107501209154204148, 2026-10-06T16:00:18Z / 00:00 on 2026-10-07 Beijing time). Checks at write time (around noon Beijing time on 2026-10-07): the Gemini API model page, the DeepMind model card (Published 6 October 2026), the image generation guide, the pricing page, and the release notes all returned HTTP 200. The preview is the X promo clip (800×800 original) at 2× speed, cropped to a 3:2 animated WebP; the samples are Google’s picks."
     },
     {
       "id": "beam",
@@ -534,8 +546,8 @@
           "textEn": "Vendor claim: pretraining used 23.8 trillion tokens and finished in under four weeks on 6,144 NVIDIA GB300 NVL72 GPUs. Reinforcement learning used 10,500 NVIDIA GB300 GPUs, produced more than 100 million rollouts over four weeks, and allowed up to 256K tokens of context; the post says midtraining extends usable context to 1 million tokens. All of that is the vendor’s account. This library did not reproduce the training."
         }
       ],
-      "qualityNote": "收录理由：HN item 49969183（标题 Beam: Reflection's 501B open-weight model，提交者 Philpax，2026-10-05T19:16:35.000Z / 约 2026-10-06 03:16 CST）。撰写时 HN 页面与 Algolia 都是 478pts。官博 https://reflection.ai/blog/introducing-beam 撰写时 HTTP 200，页内日期 October 5, 2026，8 min read。提前试用链接指向 https://platform.reflection.ai/ ，撰写时 HTTP 200，但是一个要脚本才能画出的平台页；静态 HTML 里看不到权重下载，本库没有登记账号。博文写明：仍在最终 red-teaming（安全对抗测试）和评测中；权重、技术报告、模型卡和 developer artifacts 这个月晚些时候才发布，许可写的是 Apache 2.0。所以现在不能当已可下载的开源模型。表格数字、3–4 倍推理计算量、23.8 万亿 token、GPU 数量、1 亿次尝试、256K / 1M 上下文都是厂商自述，本库未复跑、未下权重。Artificial Analysis 的 https://artificialanalysis.ai/models/beam 与 https://artificialanalysis.ai/models/reflection-beam 撰写时均为 HTTP 404，不编第三方榜链接。预览为 Chrome 实拍官博首屏裁 3:2 WebP。精选，不打星。与 gemini-4-argon、gpt-6-astra、claude-opus-5-5 互链。",
-      "qualityNoteEn": "Why: HN item 49969183 (title Beam: Reflection's 501B open-weight model, submitter Philpax, 2026-10-05T19:16:35.000Z / about 03:16 CST on 2026-10-06). At write time the HN page and Algolia both showed 478pts. The blog https://reflection.ai/blog/introducing-beam returned HTTP 200; the page is dated October 5, 2026, 8 min read. Early access points at https://platform.reflection.ai/, which returned HTTP 200 but is a script-drawn platform page. The static HTML shows no weight download, and this library did not sign up. The post says final red-teaming and evaluations are still underway, and that the weights, technical report, model card, and developer artifacts come later this month under Apache 2.0. It is not a downloadable open model today. The table, the 3–4× inference-compute claim, 23.8 trillion tokens, the GPU counts, the 100 million rollouts, and the 256K / 1M context figures are vendor claims — not re-run here, weights not downloaded. Artificial Analysis URLs https://artificialanalysis.ai/models/beam and https://artificialanalysis.ai/models/reflection-beam both returned HTTP 404, so no third-party board link is invented. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Featured, unrated. Cross-linked with gemini-4-argon, gpt-6-astra, and claude-opus-5-5.",
+      "qualityNote": "博文写明：仍在最终 red-teaming（安全对抗测试）和评测中；权重、技术报告、模型卡和 developer artifacts 这个月晚些时候才发布，许可写的是 Apache 2.0。所以现在不能当已可下载的开源模型。表格数字、3–4 倍推理计算量、23.8 万亿 token、GPU 数量、1 亿次尝试、256K / 1M 上下文都是厂商自述，本库未复跑、未下权重。与 gemini-4-argon、gpt-6-astra、claude-opus-5-5 互链。",
+      "qualityNoteEn": "The static HTML shows no weight download, and this library did not sign up. The post says final red-teaming and evaluations are still underway, and that the weights, technical report, model card, and developer artifacts come later this month under Apache 2.0. It is not a downloadable open model today. The table, the 3–4× inference-compute claim, 23.8 trillion tokens, the GPU counts, the 100 million rollouts, and the 256K / 1M context figures are vendor claims — not re-run here, weights not downloaded. Featured, unrated. Cross-linked with gemini-4-argon, gpt-6-astra, and claude-opus-5-5.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gemini-4-argon",
@@ -545,7 +557,9 @@
       "previewImage": "/previews/beam.webp",
       "previewCredit": "预览：Chrome 实拍 reflection.ai/blog/introducing-beam 首屏",
       "previewCreditEn": "Preview: Chrome capture of reflection.ai/blog/introducing-beam above the fold",
-      "featured": true
+      "featured": true,
+      "verifyLog": "收录理由：HN item 49969183（标题 Beam: Reflection's 501B open-weight model，提交者 Philpax，2026-10-05T19:16:35.000Z / 约 2026-10-06 03:16 CST）。撰写时 HN 页面与 Algolia 都是 478pts。官博 https://reflection.ai/blog/introducing-beam 撰写时 HTTP 200，页内日期 October 5, 2026，8 min read。提前试用链接指向 https://platform.reflection.ai/ ，撰写时 HTTP 200，但是一个要脚本才能画出的平台页；静态 HTML 里看不到权重下载，本库没有登记账号。Artificial Analysis 的 https://artificialanalysis.ai/models/beam 与 https://artificialanalysis.ai/models/reflection-beam 撰写时均为 HTTP 404，不编第三方榜链接。预览为 Chrome 实拍官博首屏裁 3:2 WebP。精选，不打星。",
+      "verifyLogEn": "Why: HN item 49969183 (title Beam: Reflection's 501B open-weight model, submitter Philpax, 2026-10-05T19:16:35.000Z / about 03:16 CST on 2026-10-06). At write time the HN page and Algolia both showed 478pts. The blog https://reflection.ai/blog/introducing-beam returned HTTP 200; the page is dated October 5, 2026, 8 min read. Early access points at https://platform.reflection.ai/, which returned HTTP 200 but is a script-drawn platform page. Artificial Analysis URLs https://artificialanalysis.ai/models/beam and https://artificialanalysis.ai/models/reflection-beam both returned HTTP 404, so no third-party board link is invented. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "gutsy",
@@ -599,8 +613,8 @@
           "textEn": "Author self-test (not re-run): on the public 231-item JevBench set, v0.4 Q8_0 totals 169/231 (0.732); the README also tables comparisons versus Jev / Jeff / Laya and others. It documents weak spots on date arithmetic, long policies, world knowledge, and hard-item calibration. Median / tail latency figures are from the author’s machine."
         }
       ],
-      "qualityNote": "收录理由：Show HN item 49923223（2026-10-01T15:44:42Z / 约 23:44 CST，Algolia 晚间核对 9pts）之后权重与 README 仍在更新（仓库晚间 gh api 20★ / Apache-2.0；HF kouhxp/gutsy likes 2 / downloads 69）。与昨日收入的 Clef 同属决策模型线，但这条强调普通 CPU、0.8B GGUF、本机无网络调用。核实边界：JevBench 与各面板分数、校准误差、延迟一律作者 README 自测；未代下 GGUF、未起 serve、未打真实工单。官方源以 GitHub README + HF 卡为准（无单独公司官博）。预览 Playwright 实拍 GitHub 仓库首屏 3:2。不打星。",
-      "qualityNoteEn": "Why: after Show HN item 49923223 (2026-10-01T15:44:42Z / about 23:44 CST, 9pts on Algolia at the evening check) the weights and README kept moving (evening gh api 20★ / Apache-2.0; HF kouhxp/gutsy likes 2 / downloads 69). Same decision-model line as yesterday’s Clef, but this one stresses ordinary CPU, a 0.8B GGUF, and no network calls on box. Boundary: JevBench and panel scores, calibration error, and latency are author README self-tests; GGUF not downloaded, serve not started, real tickets not sent. Official sources are the GitHub README + HF card (no separate company blog). Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated.",
+      "qualityNote": "与昨日收入的 Clef 同属决策模型线，但这条强调普通 CPU、0.8B GGUF、本机无网络调用。核实边界：JevBench 与各面板分数、校准误差、延迟一律作者 README 自测；未代下 GGUF、未起 serve、未打真实工单。官方源以 GitHub README + HF 卡为准（无单独公司官博）。",
+      "qualityNoteEn": "Same decision-model line as yesterday’s Clef, but this one stresses ordinary CPU, a 0.8B GGUF, and no network calls on box. Boundary: JevBench and panel scores, calibration error, and latency are author README self-tests; GGUF not downloaded, serve not started, real tickets not sent. Official sources are the GitHub README + HF card (no separate company blog).",
       "relatedCaseIds": [
         "jeff",
         "onesie"
@@ -616,7 +630,9 @@
       "previewImage": "/previews/gutsy.webp",
       "previewCredit": "预览：Playwright 实拍 github.com/kouhxp/gutsy 首屏",
       "previewCreditEn": "Preview: Playwright capture of github.com/kouhxp/gutsy above the fold",
-      "featured": true
+      "featured": true,
+      "verifyLog": "收录理由：Show HN item 49923223（2026-10-01T15:44:42Z / 约 23:44 CST，Algolia 晚间核对 9pts）之后权重与 README 仍在更新（仓库晚间 gh api 20★ / Apache-2.0；HF kouhxp/gutsy likes 2 / downloads 69）。预览 Playwright 实拍 GitHub 仓库首屏 3:2。不打星。",
+      "verifyLogEn": "Why: after Show HN item 49923223 (2026-10-01T15:44:42Z / about 23:44 CST, 9pts on Algolia at the evening check) the weights and README kept moving (evening gh api 20★ / Apache-2.0; HF kouhxp/gutsy likes 2 / downloads 69). Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated."
     },
     {
       "id": "clef",
@@ -698,8 +714,8 @@
           "textEn": "Vendor claim: an RL fine-tuning offer ships alongside the models. Today that is a forward-deployed engineer tuning Clef with the customer; later a self-serve platform (the post mentions AI Gateway capture, Workers AI rollouts, Containers as the sandbox, a Trainer for weights, and BYO Model redeploy). This card records the roadmap only and does not treat self-serve ordering as verified. Weights are Apache-2.0 on HF; this library did not download them."
         }
       ],
-      "qualityNote": "收录理由：晨间波次跳过非 A/B/C 头条，晚间补 Models 上的开源决策模型。主源是官博 https://blog.cloudflare.com/clef-decision-models/（晚间 HTTP 200）、Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/（HTTP 200）、HF Cloudflare/clef 与 Cloudflare/clef-flash（Apache-2.0，GET 200；晚间 likes 547 / 183）、Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/（HTTP 200）。HN item 49923692，标题 “Clef: Open-weight decision models, and new RL fine-tuning platform”，2026-10-01T16:18:57Z / 约 2026-10-02 00:18 CST，Algolia 晚间核对 536pts。核实边界：64K、视觉、Jev API 兼容、延迟表、Decision Index / 工作流分数、Qwen 骨干一律是厂商或 HF 卡自述，本库未复跑、未代下权重、未打 Workers AI。RL 微调按「先 FDE、后自助」记路线图，未核产品深度。Artificial Analysis https://artificialanalysis.ai/models/clef 晚间 HTTP 404，不编第三方榜链接。预览为 Playwright 实拍官博首屏裁 3:2 WebP。精选，不打星。",
-      "qualityNoteEn": "Why: the morning wave skipped non-A/B/C headlines; this evening Models board adds the open-weight decision models. Primary sources are the blog https://blog.cloudflare.com/clef-decision-models/ (evening HTTP 200), the Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/ (HTTP 200), HF Cloudflare/clef and Cloudflare/clef-flash (Apache-2.0, GET 200; evening likes 547 / 183), and the Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/ (HTTP 200). HN item 49923692, title “Clef: Open-weight decision models, and new RL fine-tuning platform”, 2026-10-01T16:18:57Z / about 2026-10-02 00:18 CST, 536pts on Algolia at the evening check. Boundary: 64K context, vision, Jev API compatibility, the latency table, Decision Index / workflow scores, and the Qwen backbone are vendor or HF-card claims — not re-run here, weights not downloaded, Workers AI not called. RL fine-tuning is recorded as FDE-first, self-serve later, without verified product depth. Artificial Analysis https://artificialanalysis.ai/models/clef returned HTTP 404 this evening, so no third-party board link is invented. Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP. Featured, unrated.",
+      "qualityNote": "收录理由：晨间波次跳过非 A/B/C 头条，晚间补 Models 上的开源决策模型。核实边界：64K、视觉、Jev API 兼容、延迟表、Decision Index / 工作流分数、Qwen 骨干一律是厂商或 HF 卡自述，本库未复跑、未代下权重、未打 Workers AI。RL 微调按「先 FDE、后自助」记路线图，未核产品深度。",
+      "qualityNoteEn": "Why: the morning wave skipped non-A/B/C headlines; this evening Models board adds the open-weight decision models. Boundary: 64K context, vision, Jev API compatibility, the latency table, Decision Index / workflow scores, and the Qwen backbone are vendor or HF-card claims — not re-run here, weights not downloaded, Workers AI not called. RL fine-tuning is recorded as FDE-first, self-serve later, without verified product depth. Featured, unrated.",
       "relatedCaseIds": [
         "jeff",
         "onesie"
@@ -715,7 +731,9 @@
       "previewImage": "/previews/clef.webp",
       "previewCredit": "预览：Playwright 实拍 blog.cloudflare.com/clef-decision-models 首屏",
       "previewCreditEn": "Preview: Playwright capture of blog.cloudflare.com/clef-decision-models above the fold",
-      "featured": true
+      "featured": true,
+      "verifyLog": "主源是官博 https://blog.cloudflare.com/clef-decision-models/（晚间 HTTP 200）、Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/（HTTP 200）、HF Cloudflare/clef 与 Cloudflare/clef-flash（Apache-2.0，GET 200；晚间 likes 547 / 183）、Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/（HTTP 200）。HN item 49923692，标题 “Clef: Open-weight decision models, and new RL fine-tuning platform”，2026-10-01T16:18:57Z / 约 2026-10-02 00:18 CST，Algolia 晚间核对 536pts。Artificial Analysis https://artificialanalysis.ai/models/clef 晚间 HTTP 404，不编第三方榜链接。预览为 Playwright 实拍官博首屏裁 3:2 WebP。精选，不打星。",
+      "verifyLogEn": "Primary sources are the blog https://blog.cloudflare.com/clef-decision-models/ (evening HTTP 200), the Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/ (HTTP 200), HF Cloudflare/clef and Cloudflare/clef-flash (Apache-2.0, GET 200; evening likes 547 / 183), and the Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/ (HTTP 200). HN item 49923692, title “Clef: Open-weight decision models, and new RL fine-tuning platform”, 2026-10-01T16:18:57Z / about 2026-10-02 00:18 CST, 536pts on Algolia at the evening check. Artificial Analysis https://artificialanalysis.ai/models/clef returned HTTP 404 this evening, so no third-party board link is invented. Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "gemini-4-argon",
@@ -782,8 +800,8 @@
       "previewImage": "/previews/gemini-4-argon.webp",
       "previewCredit": "预览：Playwright 实拍 blog.google Gemini 4 Argon 首屏",
       "previewCreditEn": "Preview: Playwright capture of the blog.google Gemini 4 Argon above-the-fold",
-      "qualityNote": "主源是 Google 官方博文与 Artificial Analysis 第三方榜 / 文章，外加 HN 49913571。收录理由：当日 HN 头条级前沿模型（Algolia 1447pts），且晨间未进 Models。边界：首发仅 Fairwind；官方评测与内部用例数字均为厂商叙述，本库未复跑；AA 速度 N/A；入门价有时效。不打星以外的主观排名。",
-      "qualityNoteEn": "Primary sources are Google’s official blog and Artificial Analysis’s third-party board / article, plus HN 49913571. Listing rationale: same-day HN front-page frontier model (1447pts on Algolia) missed by the morning Models pass. Boundary: Fairwind-only at launch; vendor evals and internal-use figures are vendor narration, not re-run here; AA speed is N/A; introductory pricing is time-limited. No subjective ranking beyond the board’s stars field.",
+      "qualityNote": "边界：首发仅 Fairwind；官方评测与内部用例数字均为厂商叙述，本库未复跑；AA 速度 N/A；入门价有时效。",
+      "qualityNoteEn": "Boundary: Fairwind-only at launch; vendor evals and internal-use figures are vendor narration, not re-run here; AA speed is N/A; introductory pricing is time-limited. No subjective ranking beyond the board’s stars field.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "beam",
@@ -791,7 +809,9 @@
         "gpt-6-astra",
         "claude-sonnet-5-5",
         "claude-opus-5-5"
-      ]
+      ],
+      "verifyLog": "主源是 Google 官方博文与 Artificial Analysis 第三方榜 / 文章，外加 HN 49913571。收录理由：当日 HN 头条级前沿模型（Algolia 1447pts），且晨间未进 Models。不打星以外的主观排名。",
+      "verifyLogEn": "Primary sources are Google’s official blog and Artificial Analysis’s third-party board / article, plus HN 49913571. Listing rationale: same-day HN front-page frontier model (1447pts on Algolia) missed by the morning Models pass."
     },
     {
       "id": "gpt-6-1-sol",
@@ -865,8 +885,8 @@
           "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): GPT-6.1 Sol (max) Intelligence Index 52 (#10/222), 67.8 tok/s (#107/222), $2 input / $10 output, Cache Discount 95%, $0.72 per Intelligence Index task, 1M context, released 2026-09-29. The same site’s article says GPT-6 Sol was replaced by 6.1 Sol after 7 days, about 1 point below Astra II at under a quarter of the cost per task. AA figures are not merged with the vendor evals into a new metric."
         }
       ],
-      "qualityNote": "收录理由：2026-09-29 官方发布、HN item 49896586（晚间 Algolia 核对约 974pts）与 AA 模型页、AA 文章均可核；晨间 changelog 明确跳过通用 DevDay 新闻、不进 A/B/C，Models 板当时有 gpt-6-astra、没有 gpt-6-1-sol，晚间补上。核实边界：五分之一价格、缓存 $0.10、95% / 50%、评测摘录、可用性、API id、Ultrafast 8 倍一律为官方页自述（openai.com/index/introducing-gpt-6-1-sol/，晚间 Playwright GET HTTP 200），本库未复跑、未实测 API。页内写 Astra 在最难科学任务上仍最高（Terminal-Bench Science 0.1 68.1%），故不把 “Near-Astra” 写成全面第一。Intelligence Index 52、#10/222、67.8 tok/s、#107/222、$0.72/任务、95% 缓存折扣、1M 上下文，以及「约低 1 分 / 不到四分之一成本」来自 AA（晚间 HTTP 200），非本库复跑。系统卡附录 https://deploymentsafety.openai.com/gpt-6-1-sol 晚间 HTTP 200，只作安全部署入口，本库未逐条核对其中评测。同板互链 gpt-6-astra、astra-openai-showcase、claude-sonnet-5-5 只表示同板相关（Sonnet 官方表对照过 GPT-6 Sol），不表示评测对齐。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: official 2026-09-29 launch, HN item 49896586 (about 974pts on Algolia at the evening check), and the AA model page plus AA article are all verifiable; the morning changelog explicitly skipped generic DevDay news for A/B/C, and the Models board had gpt-6-astra but not gpt-6-1-sol, so evening adds it. Boundary: the one-fifth price, $0.10 cached input, 95% / 50%, eval excerpts, availability, API id, and Ultrafast 8× are vendor claims from openai.com/index/introducing-gpt-6-1-sol/ (evening Playwright GET HTTP 200); nothing re-run, API untested. The page says Astra is still highest on the hardest science (Terminal-Bench Science 0.1 at 68.1%), so “Near-Astra” is not framed as first everywhere. Intelligence Index 52, #10/222, 67.8 tok/s, #107/222, $0.72/task, the 95% cache discount, 1M context, and “about 1 point below / under a quarter of the cost” come from AA (evening HTTP 200), not re-run here. The system card addendum at https://deploymentsafety.openai.com/gpt-6-1-sol returned HTTP 200 in the evening and is only a deployment-safety entry point; its evals were not checked line by line. Cross-links to gpt-6-astra, astra-openai-showcase, and claude-sonnet-5-5 are same-board only (Sonnet’s vendor table already contrasts GPT-6 Sol), not an aligned-eval claim. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "页内写 Astra 在最难科学任务上仍最高（Terminal-Bench Science 0.1 68.1%），故不把 “Near-Astra” 写成全面第一。同板互链 gpt-6-astra、astra-openai-showcase、claude-sonnet-5-5 只表示同板相关（Sonnet 官方表对照过 GPT-6 Sol），不表示评测对齐。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "The page says Astra is still highest on the hardest science (Terminal-Bench Science 0.1 at 68.1%), so “Near-Astra” is not framed as first everywhere. Cross-links to gpt-6-astra, astra-openai-showcase, and claude-sonnet-5-5 are same-board only (Sonnet’s vendor table already contrasts GPT-6 Sol), not an aligned-eval claim.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra",
@@ -877,7 +897,9 @@
       "previewCredit": "预览：Playwright 实拍 openai.com/index/introducing-gpt-6-1-sol/ 首屏",
       "previewCreditEn": "Preview: Playwright capture of openai.com/index/introducing-gpt-6-1-sol/ above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：2026-09-29 官方发布、HN item 49896586（晚间 Algolia 核对约 974pts）与 AA 模型页、AA 文章均可核；晨间 changelog 明确跳过通用 DevDay 新闻、不进 A/B/C，Models 板当时有 gpt-6-astra、没有 gpt-6-1-sol，晚间补上。核实边界：五分之一价格、缓存 $0.10、95% / 50%、评测摘录、可用性、API id、Ultrafast 8 倍一律为官方页自述（openai.com/index/introducing-gpt-6-1-sol/，晚间 Playwright GET HTTP 200），本库未复跑、未实测 API。Intelligence Index 52、#10/222、67.8 tok/s、#107/222、$0.72/任务、95% 缓存折扣、1M 上下文，以及「约低 1 分 / 不到四分之一成本」来自 AA（晚间 HTTP 200），非本库复跑。系统卡附录 https://deploymentsafety.openai.com/gpt-6-1-sol 晚间 HTTP 200，只作安全部署入口，本库未逐条核对其中评测。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Why: official 2026-09-29 launch, HN item 49896586 (about 974pts on Algolia at the evening check), and the AA model page plus AA article are all verifiable; the morning changelog explicitly skipped generic DevDay news for A/B/C, and the Models board had gpt-6-astra but not gpt-6-1-sol, so evening adds it. Boundary: the one-fifth price, $0.10 cached input, 95% / 50%, eval excerpts, availability, API id, and Ultrafast 8× are vendor claims from openai.com/index/introducing-gpt-6-1-sol/ (evening Playwright GET HTTP 200); nothing re-run, API untested. Intelligence Index 52, #10/222, 67.8 tok/s, #107/222, $0.72/task, the 95% cache discount, 1M context, and “about 1 point below / under a quarter of the cost” come from AA (evening HTTP 200), not re-run here. The system card addendum at https://deploymentsafety.openai.com/gpt-6-1-sol returned HTTP 200 in the evening and is only a deployment-safety entry point; its evals were not checked line by line. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating."
     },
     {
       "id": "claude-sonnet-5-5",
@@ -935,8 +957,8 @@
           "textEn": "Third-party board (Artificial Analysis — neither vendor nor this library): page title “Claude Sonnet 5.5 (max with fallback)”, variant Adaptive Reasoning, Max Effort, Default Fallback; Intelligence Index 56; 138.7 tok/s (#29/216); $2.00 input / $10.00 output, Cache Discount 90%, $7.60 per Intelligence Index task; verbosity 410M output tokens (#102/216); 1M context; release month September 2026 / FAQ says released September 28, 2026. AA figures are not merged with the vendor table into a new metric."
         }
       ],
-      "qualityNote": "收录理由：2026-09-28 官方发布、HN item 49881850（晚间 Algolia 核对 825pts）与 AA 第三方榜均可核；晨间只收 Jeff + HTML，晚间补 Models 头条。核实边界：30%+ 速度、最多 30% 花费、价目、基准表、全平台可用、cyber/生物保障一律为官方页自述（anthropic.com/claude-sonnet-5-5，晚间 HTTP 200），本库未复跑、未实测 API。页内写 Opus 5.5 在复杂开放工作上仍更强，故不把 Sonnet 写成「全面第一」。Intelligence Index 56、138.7 tok/s、$7.60/任务、90% 缓存折扣、1M 上下文来自 AA（晚间 HTTP 200），非本库复跑。同板已有 claude-opus-5-5；互链只表示同家族，不表示评测对齐。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: official 2026-09-28 launch, HN item 49881850 (825pts on Algolia at evening check), and the AA board are all verifiable; morning only shipped Jeff + HTML, so evening adds the Models headline. Boundary: 30%+ speed, up to 30% cost, prices, benchmarks, platform availability, and cyber/biology safeguards are vendor claims from anthropic.com/claude-sonnet-5-5 (evening HTTP 200); nothing re-run, API untested. The page itself says Opus 5.5 remains stronger on complex open-ended work — Sonnet is not framed as first everywhere. Intelligence Index 56, 138.7 tok/s, $7.60/task, 90% cache discount, and 1M context come from AA (evening HTTP 200), not re-run here. Same-board claude-opus-5-5 cross-link is family-only, not an aligned eval claim. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "页内写 Opus 5.5 在复杂开放工作上仍更强，故不把 Sonnet 写成「全面第一」。同板已有 claude-opus-5-5；互链只表示同家族，不表示评测对齐。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "The page itself says Opus 5.5 remains stronger on complex open-ended work — Sonnet is not framed as first everywhere. Same-board claude-opus-5-5 cross-link is family-only, not an aligned eval claim.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "claude-opus-5-5",
@@ -947,7 +969,9 @@
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-sonnet-5-5 首屏",
       "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-sonnet-5-5 above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：2026-09-28 官方发布、HN item 49881850（晚间 Algolia 核对 825pts）与 AA 第三方榜均可核；晨间只收 Jeff + HTML，晚间补 Models 头条。核实边界：30%+ 速度、最多 30% 花费、价目、基准表、全平台可用、cyber/生物保障一律为官方页自述（anthropic.com/claude-sonnet-5-5，晚间 HTTP 200），本库未复跑、未实测 API。Intelligence Index 56、138.7 tok/s、$7.60/任务、90% 缓存折扣、1M 上下文来自 AA（晚间 HTTP 200），非本库复跑。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Why: official 2026-09-28 launch, HN item 49881850 (825pts on Algolia at evening check), and the AA board are all verifiable; morning only shipped Jeff + HTML, so evening adds the Models headline. Boundary: 30%+ speed, up to 30% cost, prices, benchmarks, platform availability, and cyber/biology safeguards are vendor claims from anthropic.com/claude-sonnet-5-5 (evening HTTP 200); nothing re-run, API untested. Intelligence Index 56, 138.7 tok/s, $7.60/task, 90% cache discount, and 1M context come from AA (evening HTTP 200), not re-run here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating."
     },
     {
       "id": "jeeves",
@@ -1001,8 +1025,8 @@
           "textEn": "Jev-shaped API: after `python -m inference.serve`, hit `/v1/systemone`; supports choice / noul / score. Latency claim: ~0.3 s without thinking, ~3.3 s median with it (H100); CUDA required."
         }
       ],
-      "qualityNote": "收录理由：晨间已收 Jeff（本机小决策模型），晚间 HN 出现 PostHog 开源、带推理的 Jev 风格 9B，补上 System One 线的「会想」一档。边界：基准与延迟是 README 自述 / Kev 公布对照，本库未复跑；需 CUDA GPU，未代装。Inspired by Kev，非 TypeSafe 官方。预览为 Playwright 实拍 GitHub README 首屏裁 3:2。",
-      "qualityNoteEn": "Why: morning already catalogued Jeff (tiny local decision models); evening HN brought PostHog’s open reasoning Jev-style 9B — the “thinks first” tier on the System One line. Boundary: benchmarks and latency are README / Kev-published claims, not re-run here; CUDA GPU required, not installed for you. Inspired by Kev; not TypeSafe official. Preview is a Playwright capture of the GitHub README above the fold, cropped to 3:2.",
+      "qualityNote": "收录理由：晨间已收 Jeff（本机小决策模型），晚间 HN 出现 PostHog 开源、带推理的 Jev 风格 9B，补上 System One 线的「会想」一档。边界：基准与延迟是 README 自述 / Kev 公布对照，本库未复跑；需 CUDA GPU，未代装。Inspired by Kev，非 TypeSafe 官方。",
+      "qualityNoteEn": "Why: morning already catalogued Jeff (tiny local decision models); evening HN brought PostHog’s open reasoning Jev-style 9B — the “thinks first” tier on the System One line. Boundary: benchmarks and latency are README / Kev-published claims, not re-run here; CUDA GPU required, not installed for you. Inspired by Kev; not TypeSafe official.",
       "relatedCaseIds": [
         "jeff",
         "onesie"
@@ -1019,7 +1043,9 @@
       "previewCredit": "预览：Playwright 实拍 github.com/PostHog/jeeves README 首屏",
       "previewCreditEn": "Preview: Playwright capture of github.com/PostHog/jeeves README above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "预览为 Playwright 实拍 GitHub README 首屏裁 3:2。",
+      "verifyLogEn": "Preview is a Playwright capture of the GitHub README above the fold, cropped to 3:2."
     },
     {
       "id": "ember-1",
@@ -1077,14 +1103,16 @@
           "textEn": "The blog also includes vendor benchmark tables and customer A/B notes (for example about 35%–50% tokens, Bedside Bench / Terminal Bench / SWE-bench, and others). Those scores and dollar savings are vendor claims only — not re-run here, and not restated as figures on this card, so they are not mixed with a missing third-party board. The Artificial Analysis ember-1 URL returned HTTP 404 this evening."
         }
       ],
-      "qualityNote": "收录理由：HN 首页热帖（写入时 Algolia 核对 494pts；研究笔记快照 493pts）的 Fireworks 专用模型，官博与模型页均可核，晨间目录跳过、晚间补上。核实边界：约 40% token、Serverless 价、2.78T、1040k、MoE、函数调用、图像输入、微调开关一律为官方自述（官博 PUBLISHED 9/23/2026，模型页 Created on 9/22/2026）。官博基准表与 A/B 数字不在本卡复述。Artificial Analysis ember-1 页 HTTP 404，故无第三方榜链接。官博 “training support” 与模型页 Fine-tuning Not supported 不一致，能力开关以模型页为准。本库未实测 API / Playground。预览为 Playwright 实拍模型页首屏裁 3:2 WebP。不打星（厂商数字未独立复核，且没有可挂的第三方榜）。",
-      "qualityNoteEn": "Why: a Fireworks specialized model on the HN front page (494pts on Algolia at write time; the research-note snapshot was 493pts), with a checkable blog and model page. The morning catalog skipped it; this evening wave adds it. Boundary: the ~40% token claim, serverless price, 2.78T, 1040k context, MoE, function calling, image input, and the fine-tuning flag are vendor claims (blog PUBLISHED 9/23/2026; model page Created on 9/22/2026). Vendor benchmark tables and A/B figures are not restated on this card. The Artificial Analysis ember-1 page returned HTTP 404, so there is no third-party board link. The blog’s “training support” line disagrees with Fine-tuning Not supported on the model page; capability flags follow the model page. API / Playground were not tested here. Preview is a Playwright capture of the model page above the fold, cropped to 3:2 WebP. Unrated — vendor figures were not independently re-run, and no third-party board is available to link.",
+      "qualityNote": "核实边界：约 40% token、Serverless 价、2.78T、1040k、MoE、函数调用、图像输入、微调开关一律为官方自述（官博 PUBLISHED 9/23/2026，模型页 Created on 9/22/2026）。官博基准表与 A/B 数字不在本卡复述。官博 “training support” 与模型页 Fine-tuning Not supported 不一致，能力开关以模型页为准。本库未实测 API / Playground。",
+      "qualityNoteEn": "The morning catalog skipped it; this evening wave adds it. Boundary: the ~40% token claim, serverless price, 2.78T, 1040k context, MoE, function calling, image input, and the fine-tuning flag are vendor claims (blog PUBLISHED 9/23/2026; model page Created on 9/22/2026). Vendor benchmark tables and A/B figures are not restated on this card. The blog’s “training support” line disagrees with Fine-tuning Not supported on the model page; capability flags follow the model page. API / Playground were not tested here. Unrated — vendor figures were not independently re-run, and no third-party board is available to link.",
       "relatedCaseIds": [],
       "relatedModelIds": [],
       "previewImage": "/previews/ember-1.webp",
       "previewCredit": "Playwright 实拍 fireworks.ai/models/fireworks/ember-1 首屏，裁 3:2",
       "previewCreditEn": "Playwright capture of fireworks.ai/models/fireworks/ember-1 above the fold, cropped to 3:2",
-      "featured": true
+      "featured": true,
+      "verifyLog": "收录理由：HN 首页热帖（写入时 Algolia 核对 494pts；研究笔记快照 493pts）的 Fireworks 专用模型，官博与模型页均可核，晨间目录跳过、晚间补上。Artificial Analysis ember-1 页 HTTP 404，故无第三方榜链接。预览为 Playwright 实拍模型页首屏裁 3:2 WebP。不打星（厂商数字未独立复核，且没有可挂的第三方榜）。",
+      "verifyLogEn": "Why: a Fireworks specialized model on the HN front page (494pts on Algolia at write time; the research-note snapshot was 493pts), with a checkable blog and model page. The Artificial Analysis ember-1 page returned HTTP 404, so there is no third-party board link. Preview is a Playwright capture of the model page above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "maniac-mansion-3d",
@@ -1145,8 +1173,8 @@
           "textEn": "Live Pages and repo HTTP 200 (checked evening 2026-09-27). Not a playable remake: no puzzles, no character control."
         }
       ],
-      "qualityNote": "社区 demo 卡，不是模型本体卡（本体见 gpt-6-astra）。主源是作者 Show HN 正文对 Astra 的自述 + 可打开的 Pages 漫步；本库未复跑 Blender 构建，也未审计每个房间几何是否「正确」。仓库无 SPDX license（fan project）；原作美术属 Lucasfilm / Disney 体系——本卡只链公开 walkthrough，不分发 ROM/原画包。1★ 是收录时快照。预览建议 Playwright 实拍 live 首屏或仓库 walkthrough-preview.jpg 裁 3:2。不打星。",
-      "qualityNoteEn": "Community-demo card, not the model card (see gpt-6-astra). Primary sources are the author’s Show HN Astra claim plus the open Pages walkthrough; this library did not re-run the Blender build or audit every room’s geometry. No SPDX license (fan project); original art is Lucasfilm / Disney — this card only links the public walkthrough and redistributes no ROM/artwork pack. 1★ is a snapshot at listing time. Prefer a Playwright capture of the live first screen or the repo walkthrough-preview.jpg cropped 3:2. Unrated.",
+      "qualityNote": "社区 demo 卡，不是模型本体卡（本体见 gpt-6-astra）。主源是作者 Show HN 正文对 Astra 的自述 + 可打开的 Pages 漫步；本库未复跑 Blender 构建，也未审计每个房间几何是否「正确」。仓库无 SPDX license（fan project）；原作美术属 Lucasfilm / Disney 体系——本卡只链公开 walkthrough，不分发 ROM/原画包。",
+      "qualityNoteEn": "Community-demo card, not the model card (see gpt-6-astra). Primary sources are the author’s Show HN Astra claim plus the open Pages walkthrough; this library did not re-run the Blender build or audit every room’s geometry.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra",
@@ -1156,7 +1184,9 @@
       "previewImage": "/previews/maniac-mansion-3d.webp",
       "previewCredit": "预览：live 漫步首屏 / 仓库 walkthrough-preview（3:2 自托管）",
       "previewCreditEn": "Preview: live walkthrough above-the-fold / repo walkthrough-preview (3:2 self-hosted)",
-      "featured": true
+      "featured": true,
+      "verifyLog": "1★ 是收录时快照。预览建议 Playwright 实拍 live 首屏或仓库 walkthrough-preview.jpg 裁 3:2。不打星。",
+      "verifyLogEn": "No SPDX license (fan project); original art is Lucasfilm / Disney — this card only links the public walkthrough and redistributes no ROM/artwork pack. 1★ is a snapshot at listing time. Prefer a Playwright capture of the live first screen or the repo walkthrough-preview.jpg cropped 3:2. Unrated."
     },
     {
       "id": "claude-opus-5-5",
@@ -1218,8 +1248,8 @@
           "textEn": "Community demo (echohive page self-description, not re-run here, and not a separate Models demo card): https://www.echohive.ai/experiments/dinosaurs “The Last Day” calls itself “A 2.5D PAINTING · MADE BY OPUS 5.5”. The entry lives in the HTML library as last-day-dinosaurs, not on this board."
         }
       ],
-      "qualityNote": "收录理由：2026-09-22 发布的 Anthropic 前沿卡，官方页、AA 第三方榜与 HN item 49803892（Algolia 核对 1793pts）当晚均可核，适合 Models 看板头条。核实边界：定位、40% 成本、价目、$4/$20/$0.20、fast mode、基准表与「全平台可用」一律为官方页自述（anthropic.com/claude-opus-5-5，2026-09-25 HTTP 200），本库未复跑、未实测 API；官方表里 Astra 在 Terminal-Bench-Science 0.1 与 AutomationBench 上高于 Opus 5.5，故不把 meta 里的 “leads” 当成全表第一。Intelligence Index 58、#1/211、$5.98/任务、95% 缓存折扣、速度 N/A、1M 上下文来自 Artificial Analysis 页面（2026-09-25 HTTP 200），非本库复跑。同板 step-5-preview 的官方对照表写的是 Claude Opus 5（不是 5.5），互链只表示同板相关，不表示阶跃评过 Opus 5.5。社区绘画演示只在 HTML 库。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "同板 step-5-preview 的官方对照表写的是 Claude Opus 5（不是 5.5），互链只表示同板相关，不表示阶跃评过 Opus 5.5。社区绘画演示只在 HTML 库。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "On the vendor table Astra is ahead of Opus 5.5 on Terminal-Bench-Science 0.1 and AutomationBench, so the meta “leads” line is not treated as first on every row. The step-5-preview card’s vendor table names Claude Opus 5 (not 5.5); the cross-link is same-board only and does not mean StepFun evaluated Opus 5.5. The community painting demo stays in the HTML library.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "beam",
@@ -1231,7 +1261,9 @@
       "previewCredit": "预览：Playwright 实拍 anthropic.com/claude-opus-5-5 首屏",
       "previewCreditEn": "Preview: Playwright capture of anthropic.com/claude-opus-5-5 above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：2026-09-22 发布的 Anthropic 前沿卡，官方页、AA 第三方榜与 HN item 49803892（Algolia 核对 1793pts）当晚均可核，适合 Models 看板头条。核实边界：定位、40% 成本、价目、$4/$20/$0.20、fast mode、基准表与「全平台可用」一律为官方页自述（anthropic.com/claude-opus-5-5，2026-09-25 HTTP 200），本库未复跑、未实测 API；官方表里 Astra 在 Terminal-Bench-Science 0.1 与 AutomationBench 上高于 Opus 5.5，故不把 meta 里的 “leads” 当成全表第一。Intelligence Index 58、#1/211、$5.98/任务、95% 缓存折扣、速度 N/A、1M 上下文来自 Artificial Analysis 页面（2026-09-25 HTTP 200），非本库复跑。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Why: an Anthropic frontier card announced 2026-09-22, with the official page, the AA third-party board, and HN item 49803892 (1793pts on Algolia at check time) all reachable tonight — a Models-board headline. Boundary: positioning, the 40% cost claim, the price table, $4/$20/$0.20, fast mode, the benchmark table, and “available on all platforms” are vendor claims from anthropic.com/claude-opus-5-5 (HTTP 200 on 2026-09-25); nothing re-run here, API untested. Intelligence Index 58, #1/211, $5.98/task, the 95% cache discount, speed N/A, and the 1M context come from the Artificial Analysis page (HTTP 200 on 2026-09-25), not re-run here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating."
     },
     {
       "id": "ollaya",
@@ -1295,8 +1327,8 @@
           "textEn": "Repo is Apache-2.0; weights are pulled from each author’s Hugging Face repo pinned by commit + sha256 — Ollaya says it does not re-host them. Desktop / CLI / Docker are listed on the site Platforms table."
         }
       ],
-      "qualityNote": "收录理由：HN 首页热帖（核对 483pts），把站内已收的 Jev / Laya 补上「本机 Ollama 式」运行时，可直接试。边界：速度 / 对照数字是官网与第三方基准自述，本库未复跑；未实测 MCP / 桌面端。第三方 Ollaya Web UI 无 license，不另开卡。预览为 Playwright 实拍官网首屏裁 3:2。",
-      "qualityNoteEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2.",
+      "qualityNote": "边界：速度 / 对照数字是官网与第三方基准自述，本库未复跑；未实测 MCP / 桌面端。第三方 Ollaya Web UI 无 license，不另开卡。",
+      "qualityNoteEn": "Boundary: speed / comparison figures are site or third-party claims, not re-run here; MCP / desktop app not tested. Third-party Ollaya Web UI has no license — no separate card.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "strands-decider-2b",
@@ -1310,7 +1342,9 @@
       "previewCredit": "Playwright 实拍 ollaya.dev 首屏，裁 3:2",
       "previewCreditEn": "Playwright capture of ollaya.dev above the fold, cropped to 3:2",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：HN 首页热帖（核对 483pts），把站内已收的 Jev / Laya 补上「本机 Ollama 式」运行时，可直接试。预览为 Playwright 实拍官网首屏裁 3:2。",
+      "verifyLogEn": "Why: HN front-page post (483pts at check time) that adds a local Ollama-style runtime next to catalogued Jev / Laya — tryable. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2."
     },
     {
       "id": "jev-plays-pokemon",
@@ -1371,8 +1405,8 @@
           "textEn": "README cost claim: real Jev at real-time speed about 800–1,300 calls/hour, about $1–1.70 per 24h (author figures at $0.042/MTok input, free output). Not re-run here."
         }
       ],
-      "qualityNote": "收录理由：Show HN 热帖（核对 214pts）+ 可打开的 live 页，是站内 typesafe-jev 的社区能力展示（对齐 Astra 迷你 LOL 卡形态）。边界：不附 ROM、与任天堂无关；页内有第三方推广；成本与「无脚本」均为作者自述，本库未复跑全程。预览为 Playwright 实拍直播页首屏裁 3:2。",
-      "qualityNoteEn": "Why: Show HN hit (214pts at check time) plus a tryable live page — a community capability showcase for catalogued typesafe-jev (same shape as the Astra mini-LoL card). Boundary: no ROM shipped, not affiliated with Nintendo; page carries a third-party promo; cost and “no scripts” claims are the author’s, full run not re-played here. Preview is a Playwright capture of the live page above the fold, cropped to 3:2.",
+      "qualityNote": "边界：不附 ROM、与任天堂无关；页内有第三方推广；成本与「无脚本」均为作者自述，本库未复跑全程。",
+      "qualityNoteEn": "Boundary: no ROM shipped, not affiliated with Nintendo; page carries a third-party promo; cost and “no scripts” claims are the author’s, full run not re-played here.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "typesafe-jev",
@@ -1383,7 +1417,9 @@
       "previewCredit": "Playwright 实拍 jev-pokemon.vercel.app 首屏，裁 3:2",
       "previewCreditEn": "Playwright capture of jev-pokemon.vercel.app above the fold, cropped to 3:2",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "收录理由：Show HN 热帖（核对 214pts）+ 可打开的 live 页，是站内 typesafe-jev 的社区能力展示（对齐 Astra 迷你 LOL 卡形态）。预览为 Playwright 实拍直播页首屏裁 3:2。",
+      "verifyLogEn": "Why: Show HN hit (214pts at check time) plus a tryable live page — a community capability showcase for catalogued typesafe-jev (same shape as the Astra mini-LoL card). Preview is a Playwright capture of the live page above the fold, cropped to 3:2."
     },
     {
       "id": "mimo-v2-6",
@@ -1468,15 +1504,17 @@
           "textEn": "The HF model card also includes a vendor evaluation table (DeepSWE / AutomationBench / Terminal Bench and peers vs Claude Opus 5, GPT-5.6 Sol, Claude Fable 5, etc.). Those scores are vendor claims only — none re-run here, and individual numbers are not restated on this card to avoid mixing them with the AA board."
         }
       ],
-      "qualityNote": "收录理由：2026-09-22 HN 首页出现的小米 MiMo 新系列旗舰，官方页 + HF 开源卡（MIT）+ AA 第三方榜同日可核，适合 Models 看板头条。核实边界：架构参数、模态、1M 上下文、RL 主题与系列定位一律为官方自述（取自 mimo.xiaomi.com/mimo-v2-6 meta 与 HF 卡 XiaomiMiMo/MiMo-V2.6-Pro-RL）；Intelligence Index 46 及 AA 页速度/定价为 Artificial Analysis 第三方榜数据，非本库复跑；HF 卡内厂商对照表分数不在本卡复述。官方页、HF Pro 卡、Flash/Distill 同系列仓、AA、API 平台、HN item 49792730 / 49796660 于 2026-09-22 均核到 200。本库未实测 API / Studio。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（来源齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: Xiaomi MiMo’s new-series flagship landing on the HN front page on 2026-09-22, with a verifiable official page, MIT HF card, and same-day AA third-party coverage — a strong Models-board headline. Boundary: architecture, modalities, 1M context, RL theme, and series positioning are vendor claims from mimo.xiaomi.com/mimo-v2-6 meta and the HF card XiaomiMiMo/MiMo-V2.6-Pro-RL; Intelligence Index 46 and AA speed/pricing are Artificial Analysis board figures, not re-run here; individual vendor-table scores from the HF card are not restated on this card. Official page, HF Pro card, Flash/Distill sibling repos, AA, API platform, and HN items 49792730 / 49796660 all returned 200 on 2026-09-22. API / Studio not tested here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "收录理由：2026-09-22 HN 首页出现的小米 MiMo 新系列旗舰，官方页 + HF 开源卡（MIT）+ AA 第三方榜同日可核，适合 Models 看板头条。核实边界：架构参数、模态、1M 上下文、RL 主题与系列定位一律为官方自述（取自 mimo.xiaomi.com/mimo-v2-6 meta 与 HF 卡 XiaomiMiMo/MiMo-V2.6-Pro-RL）；Intelligence Index 46 及 AA 页速度/定价为 Artificial Analysis 第三方榜数据，非本库复跑；HF 卡内厂商对照表分数不在本卡复述。本库未实测 API / Studio。整理质量 4 星（来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: Xiaomi MiMo’s new-series flagship landing on the HN front page on 2026-09-22, with a verifiable official page, MIT HF card, and same-day AA third-party coverage — a strong Models-board headline. Boundary: architecture, modalities, 1M context, RL theme, and series positioning are vendor claims from mimo.xiaomi.com/mimo-v2-6 meta and the HF card XiaomiMiMo/MiMo-V2.6-Pro-RL; Intelligence Index 46 and AA speed/pricing are Artificial Analysis board figures, not re-run here; individual vendor-table scores from the HF card are not restated on this card. Official page, HF Pro card, Flash/Distill sibling repos, AA, API platform, and HN items 49792730 / 49796660 all returned 200 on 2026-09-22. API / Studio not tested here.",
       "relatedCaseIds": [],
       "relatedModelIds": [],
       "featured": true,
       "stars": 4,
       "previewImage": "/previews/mimo-v2-6.webp",
       "previewCredit": "预览：Playwright 实拍 mimo.xiaomi.com/mimo-v2-6 首屏",
-      "previewCreditEn": "Preview: Playwright capture of mimo.xiaomi.com/mimo-v2-6 above the fold"
+      "previewCreditEn": "Preview: Playwright capture of mimo.xiaomi.com/mimo-v2-6 above the fold",
+      "verifyLog": "官方页、HF Pro 卡、Flash/Distill 同系列仓、AA、API 平台、HN item 49792730 / 49796660 于 2026-09-22 均核到 200。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete sources, clear boundaries) — not a benchmark rating."
     },
     {
       "id": "step-5-preview",
@@ -1546,8 +1584,8 @@
           "textEn": "Official-page demos, as described by the vendor (unverified): a Room Planner that turns a bedroom photo into an editable 3D room; Blender + Three.js for 3D assets and browser games; a 24-hour automated post-training run lifting Qwen3-30B-A3B’s AIME24 from 53.3% to 60%; a Pokémon run past 3,000 turns / 6M tokens without game-specific tuning. All vendor showcases, not reproduced here."
         }
       ],
-      "qualityNote": "收录理由：9/20 当日发布的中国厂商前沿旗舰，官方页信息完整（架构、上下文、基准表、可用性与开源排期），HN 与第三方榜同日有据可查，是今晚 Models 看板的头条卡。核实边界：参数量、上下文、基准分、开源日期一律为官方自述（取自 stepfun.com/step-5-preview 页面原文），本库未复跑任何基准；Intelligence Index 44、tok/s、$1 / $2.70 定价与 95% 缓存折扣来自 Artificial Analysis 第三方榜（官方公告页未列价，定价以阶跃 API 平台当日页为准）；OrcaRouter 博文是第三方产品博客，只作「权重仓为占位」这一事实的旁证，不为其路由产品背书。四条来源 URL（官方页、AA、OrcaRouter、HN item 49772532）于 2026-09-20 均核到 200；Hugging Face 仓库 stepfun-ai/Step-5-Preview-BF16 返回 401 / 空仓，故不列为来源——权重尚不可下载，10-15 为厂商排期。本库未实测 API 与 Studio。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。整理质量 4 星（信息齐、边界清），不代表基准分。",
-      "qualityNoteEn": "Why: a Chinese lab’s frontier flagship launched today (9/20) with a complete official page (architecture, context, benchmark table, availability, open-weights schedule), plus same-day HN and third-party-board coverage — tonight’s headline card on the Models board. Boundary: parameter counts, context window, benchmark scores, and the open-weights date are all vendor claims quoted from stepfun.com/step-5-preview; no benchmark was re-run here. Intelligence Index 44, tok/s, the $1 / $2.70 pricing, and the 95% cache discount come from the Artificial Analysis third-party board (the announcement page lists no prices; treat pricing per StepFun’s API platform page on the day). The OrcaRouter post is a third-party product blog, cited only as corroboration that the weights repo is a placeholder — no endorsement of its routing product. All four source URLs (official page, AA, OrcaRouter, HN item 49772532) returned 200 on 2026-09-20; the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 / empty and is therefore not listed as a source — weights are not downloadable yet, and 10-15 is a vendor schedule. API and Studio were not tested here. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete info, clear boundaries) — not a benchmark rating.",
+      "qualityNote": "收录理由：9/20 当日发布的中国厂商前沿旗舰，官方页信息完整（架构、上下文、基准表、可用性与开源排期），HN 与第三方榜同日有据可查，是今晚 Models 看板的头条卡。核实边界：参数量、上下文、基准分、开源日期一律为官方自述（取自 stepfun.com/step-5-preview 页面原文），本库未复跑任何基准；Intelligence Index 44、tok/s、$1 / $2.70 定价与 95% 缓存折扣来自 Artificial Analysis 第三方榜（官方公告页未列价，定价以阶跃 API 平台当日页为准）；OrcaRouter 博文是第三方产品博客，只作「权重仓为占位」这一事实的旁证，不为其路由产品背书。本库未实测 API 与 Studio。整理质量 4 星（信息齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why: a Chinese lab’s frontier flagship launched today (9/20) with a complete official page (architecture, context, benchmark table, availability, open-weights schedule), plus same-day HN and third-party-board coverage — tonight’s headline card on the Models board. Boundary: parameter counts, context window, benchmark scores, and the open-weights date are all vendor claims quoted from stepfun.com/step-5-preview; no benchmark was re-run here. Intelligence Index 44, tok/s, the $1 / $2.70 pricing, and the 95% cache discount come from the Artificial Analysis third-party board (the announcement page lists no prices; treat pricing per StepFun’s API platform page on the day). The OrcaRouter post is a third-party product blog, cited only as corroboration that the weights repo is a placeholder — no endorsement of its routing product. API and Studio were not tested here.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra",
@@ -1558,7 +1596,9 @@
       "previewCredit": "预览：Playwright 实拍 stepfun.com/step-5-preview 首屏",
       "previewCreditEn": "Preview: Playwright capture of stepfun.com/step-5-preview above the fold",
       "featured": true,
-      "stars": 4
+      "stars": 4,
+      "verifyLog": "四条来源 URL（官方页、AA、OrcaRouter、HN item 49772532）于 2026-09-20 均核到 200；Hugging Face 仓库 stepfun-ai/Step-5-Preview-BF16 返回 401 / 空仓，故不列为来源——权重尚不可下载，10-15 为厂商排期。预览为 Playwright 实拍官方页首屏裁 3:2 WebP。",
+      "verifyLogEn": "All four source URLs (official page, AA, OrcaRouter, HN item 49772532) returned 200 on 2026-09-20; the Hugging Face repo stepfun-ai/Step-5-Preview-BF16 returned 401 / empty and is therefore not listed as a source — weights are not downloadable yet, and 10-15 is a vendor schedule. Preview is a Playwright capture of the official page above the fold, cropped to 3:2 WebP. 4 stars for curation quality (complete info, clear boundaries) — not a benchmark rating."
     },
     {
       "id": "laya-system-one",
@@ -1630,8 +1670,8 @@
           "textEn": "Author-stated limits: choice degrades beyond ~20 options; out-of-the-box base models score near random on the typed-decisions benchmark, and the published score comes after fine-tuning on that benchmark’s train split (per the author)."
         }
       ],
-      "qualityNote": "收录理由：与站内 TypeSafe Jev 同类的 System One / 非自回归结构化决策模型，但权重开源（HF 模型页 2026-09-19 核到 license: apache-2.0），HN 当日有讨论，适合 Models 看板对照阅读。核实边界：作者长文对「谁先提出」与 TypeSafe Jev 存在争议，本库不站队、只记双方公开页可达；延迟、基准、与 Jev 的对比表数字全部为作者自述或作者引用的第三方整理（AbdelStark、nibzard 等），本库未复跑，亦未实测 pip 包或 HF Space。五条来源 URL（HF 模型页、作者长文页、HN、GitHub 仓库、HF Space）于 2026-09-19 均核到 200。预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19. Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "收录理由：与站内 TypeSafe Jev 同类的 System One / 非自回归结构化决策模型，但权重开源（HF 模型页 2026-09-19 核到 license: apache-2.0），HN 当日有讨论，适合 Models 看板对照阅读。核实边界：作者长文对「谁先提出」与 TypeSafe Jev 存在争议，本库不站队、只记双方公开页可达；延迟、基准、与 Jev 的对比表数字全部为作者自述或作者引用的第三方整理（AbdelStark、nibzard 等），本库未复跑，亦未实测 pip 包或 HF Space。五条来源 URL（HF 模型页、作者长文页、HN、GitHub 仓库、HF Space）于 2026-09-19 均核到 200。",
+      "qualityNoteEn": "Why: a System One / non-autoregressive structured-decision model in the same class as the catalogued TypeSafe Jev, but with open weights (the HF model page showed license: apache-2.0 on 2026-09-19) and a same-day HN thread — useful as a side-by-side read on the Models board. Boundary: the author’s long-form page disputes “who proposed it first” with TypeSafe Jev; this library takes no side and only records that both public pages are reachable. All latency, benchmark, and Jev-comparison figures are author claims or third-party write-ups the author cites (AbdelStark, nibzard, etc.) — not re-run here; the pip package and HF Space were not tested. All five source URLs (HF model page, author page, HN, GitHub repo, HF Space) returned 200 on 2026-09-19.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "strands-decider-2b",
@@ -1645,7 +1685,9 @@
       "previewImage": "/previews/laya-system-one.webp",
       "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
       "previewCreditEn": "Preview: Playwright capture of laya.convaiinnovations.com above the fold",
-      "featured": true
+      "featured": true,
+      "verifyLog": "预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "deepseek-v4-1-flash",
@@ -1720,12 +1762,14 @@
         }
       ],
       "qualityNote": "来源为 DeepSeek 官方文档（新闻页与 API Change Log）与 Hugging Face 模型页；基准与架构数字均为厂商自述，本库未独立复测；定价以 Models & Pricing 当日页为准。HN 讨论帖只作社区热度参考，其链接指向 DeepSeek 官方 X 帖。预览图取自 DeepSeek 官方文档社交卡，非本模型专图。",
-      "qualityNoteEn": "Sources are DeepSeek’s official docs (news page and API Change Log) plus the Hugging Face model page; benchmark and architecture figures are vendor claims, not independently re-tested here; pricing per the Models & Pricing page on the day. The HN thread is only a community-interest pointer and links to DeepSeek’s official X post. Preview is DeepSeek’s docs social card, not a model-specific image.",
+      "qualityNoteEn": "Sources are DeepSeek’s official docs (news page and API Change Log) plus the Hugging Face model page; benchmark and architecture figures are vendor claims, not independently re-tested here; pricing per the Models & Pricing page on the day. The HN thread is only a community-interest pointer and links to DeepSeek’s official X post.",
       "relatedCaseIds": [],
       "previewImage": "/previews/deepseek-v4-1-flash.webp",
       "previewCredit": "预览：DeepSeek 官方文档社交卡",
       "previewCreditEn": "Preview: DeepSeek docs social card",
-      "featured": true
+      "featured": true,
+      "verifyLog": "",
+      "verifyLogEn": "Preview is DeepSeek’s docs social card, not a model-specific image."
     },
     {
       "id": "gpt-6-astra",
@@ -1811,7 +1855,7 @@
         }
       ],
       "qualityNote": "两类来源分开看。官方模型页是 OpenAI 公告与安全综述：基准分、推出节奏、价格均为厂商自述，本库未独立核实。社区 showcase 是 YouWare 的 X 视频帖：「720+ 条作品」是 YouWare 自己的说法，帖内 t.co 只指向该视频，没有独立画廊链接；视频里的 Astra Replay 页面未能确认公开 URL，故不写深链，只列 YouWare 产品主页。预览图取自该 X 视频封面（YouWare 页面，非 OpenAI 官方图）。本条是最新模型看板的第一张卡，不是 Grok Bot 用法。",
-      "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. Preview is the X video poster (a YouWare page, not an OpenAI image). First card on the latest-models board; not a Grok Bot playbook.",
+      "qualityNoteEn": "Two kinds of source, kept apart. The official model page is OpenAI’s announcement and safety overview: benchmarks, rollout, and pricing are vendor claims, unverified here. The community showcase is YouWare’s X video post: “720+ builds” is YouWare’s own count; the post’s t.co resolves to the video itself, not a separate gallery. The Astra Replay page in the video has no confirmed public URL, so no deep link — only the YouWare product home. First card on the latest-models board; not a Grok Bot playbook.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "beam",
@@ -1825,7 +1869,9 @@
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
       "previewCreditEn": "Preview: YouWare X video poster (Astra Replay page)",
-      "featured": true
+      "featured": true,
+      "verifyLog": "",
+      "verifyLogEn": "Preview is the X video poster (a YouWare page, not an OpenAI image)."
     },
     {
       "id": "astra-openai-showcase",
@@ -1887,8 +1933,8 @@
           "textEn": "OpenAIDevs’ roundup, in its own words (not verified item by item): “We shipped GPT-6 Astra. Builders took it from there,” followed by embedded builds — 3D anatomical parts, a Manhattan recreation in Unreal Engine, six Van Gogh paintings as a walkable Three.js town, AR vacuum-coverage mapping, an old train drawing turned Blender model, an underwater browser game built with Astra + Blender, a LEGO-design prototype, a mixed-reality air-traffic simulator in Unity, screen recording to interactive interface, a Three.js browser racing game, a Blender Backrooms scene, an ESP32 workbench prototype, and a Swift port of a C++ ray tracer to the iPhone GPU; it closes with “Want to be featured? Share your build and tag @OpenAIDevs.”"
         }
       ],
-      "qualityNote": "这是社区 showcase 卡，不是模型卡：模型本体见同板的 GPT-6 Astra。官方源是 OpenAI Developers 的 Showcase 页，2026-09-13 本库打开返回 200，并核到页面分栏与 GPT-6 Astra 模型筛选；它是官方通用 demo 墙，不是 Astra 专属画廊，条数本库未复数。宝玉（@dotey）9 月 12 日帖只作中文入口：帖子本身无作品清单，引用的 OpenAIDevs 文章帖（x.com/OpenAIDevs/status/2098827327832822014）可达，但文章直链 x.com/i/article/2098531824528220160 本库未登录状态下返回 404，故不写。OpenAIDevs 文内每条作品的描述与数字（如「2,234 个解剖部件」「3,295 个可编辑对象」）均为官方社区文自述，本库未逐条打开、不复述未核条数。预览图取自 OpenAIDevs 文章封面（「GPT-6 Astra · Community Builds」星系图，上下补黑边成 3:2），非 Showcase 页截图。不打星。",
-      "qualityNoteEn": "A community-showcase card, not a model card: the model itself is the GPT-6 Astra card on this board. The official source is OpenAI Developers’ Showcase page — returned 200 when this library opened it on 2026-09-13, with the category tabs and the GPT-6 Astra model filter confirmed; it is OpenAI’s general demo wall, not an Astra-only gallery, and the count is not re-tallied here. 宝玉’s (@dotey) 12 Sept post is the Chinese entry point only: it lists no builds itself. The OpenAIDevs article post it quotes (x.com/OpenAIDevs/status/2098827327832822014) is reachable, but the article deep link x.com/i/article/2098531824528220160 returned 404 to this library while logged out, so it is not listed. Every build description and figure in the OpenAIDevs article (e.g. “2,234 anatomical parts,” “3,295 editable objects”) is the official community article’s own claim — not opened one by one here, and unverified counts are not repeated. Preview is the OpenAIDevs article cover (the “GPT-6 Astra · Community Builds” galaxy image, letterboxed to 3:2), not a Showcase-page screenshot. Unrated.",
+      "qualityNote": "这是社区 showcase 卡，不是模型卡：模型本体见同板的 GPT-6 Astra。官方源是 OpenAI Developers 的 Showcase 页，2026-09-13 本库打开返回 200，并核到页面分栏与 GPT-6 Astra 模型筛选；它是官方通用 demo 墙，不是 Astra 专属画廊，条数本库未复数。宝玉（@dotey）9 月 12 日帖只作中文入口：帖子本身无作品清单，引用的 OpenAIDevs 文章帖（x.com/OpenAIDevs/status/2098827327832822014）可达，但文章直链 x.com/i/article/2098531824528220160 本库未登录状态下返回 404，故不写。OpenAIDevs 文内每条作品的描述与数字（如「2,234 个解剖部件」「3,295 个可编辑对象」）均为官方社区文自述，本库未逐条打开、不复述未核条数。预览图取自 OpenAIDevs 文章封面（「GPT-6 Astra · Community Builds」星系图，上下补黑边成 3:2），非 Showcase 页截图。",
+      "qualityNoteEn": "A community-showcase card, not a model card: the model itself is the GPT-6 Astra card on this board. The official source is OpenAI Developers’ Showcase page — returned 200 when this library opened it on 2026-09-13, with the category tabs and the GPT-6 Astra model filter confirmed; it is OpenAI’s general demo wall, not an Astra-only gallery, and the count is not re-tallied here. 宝玉’s (@dotey) 12 Sept post is the Chinese entry point only: it lists no builds itself. The OpenAIDevs article post it quotes (x.com/OpenAIDevs/status/2098827327832822014) is reachable, but the article deep link x.com/i/article/2098531824528220160 returned 404 to this library while logged out, so it is not listed. Every build description and figure in the OpenAIDevs article (e.g. “2,234 anatomical parts,” “3,295 editable objects”) is the official community article’s own claim — not opened one by one here, and unverified counts are not repeated.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "maniac-mansion-3d",
@@ -1897,7 +1943,9 @@
       "previewImage": "/previews/astra-openai-showcase.webp",
       "previewCredit": "预览：OpenAIDevs 文章封面（GPT-6 Astra · Community Builds）",
       "previewCreditEn": "Preview: OpenAIDevs article cover (GPT-6 Astra · Community Builds)",
-      "featured": true
+      "featured": true,
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the OpenAIDevs article cover (the “GPT-6 Astra · Community Builds” galaxy image, letterboxed to 3:2), not a Showcase-page screenshot. Unrated."
     },
     {
       "id": "astra-mini-lol",
@@ -1955,8 +2003,8 @@
           "textEn": "Visible in the poster frame: a champion-select screen listing Garen (fighter) / Ashe (marksman) / Ahri (mage) / Lux (mage · support) / Lee Sin (fighter · jungle); Ahri’s panel reads health 590 / attack damage 53 / range 550 / movement speed 330 / armor 21 / magic resist 30; summoner spells Flash + Heal; 5v5 “you + 4 allies · 5 enemy bots.”"
         }
       ],
-      "qualityNote": "这是社区 demo 卡，不是模型卡：模型本体见同板的 GPT-6 Astra。主源是作者 @konstiwohlwend 的 X 视频帖，「Astra 真做出来了」是作者自述，本库只看了约 44 秒视频与封面帧，没有拿到可玩的构建或下载，玩法深度、是否完整 5v5 均未核实。作者说提示词在回复里，本库抓不到该回复，因此提示词只能引 @LufzzLiz（岚叔）的中文转述，标为「岚叔中文转述」，非作者原文。OpenAI 公告只是所用模型的官方页，不涉及此 demo。英雄联盟 IP 属 Riot Games：本卡只记「模型能力展示」，不收录、不分发任何游戏文件。封面帧里的英雄名与属性数字是画面原样抄录，不是本库的判断。预览图为作者 X 视频封面（已裁掉下方黑边）。不打星。",
-      "qualityNoteEn": "A community-demo card, not a model card: the model itself is the GPT-6 Astra card on this board. Primary source is the author @konstiwohlwend’s X video post; “Astra actually did it” is the author’s claim — this library only watched the ~44s video and poster frame, has no playable build or download, and has not verified depth of play or a full 5v5. The author says the prompt sits in a reply this library could not fetch, so the prompt is quoted from @LufzzLiz’s Chinese rendering and labelled as such, not as the author’s original wording. The OpenAI announcement is only the official page for the model used; it does not cover this demo. League of Legends IP belongs to Riot Games: this card records a model-capability showcase and neither hosts nor distributes any game files. Champion names and stat numbers are transcribed as shown in the frame, not a judgement by this library. Preview is the author’s X video poster with the bottom black band cropped. Unrated.",
+      "qualityNote": "这是社区 demo 卡，不是模型卡：模型本体见同板的 GPT-6 Astra。主源是作者 @konstiwohlwend 的 X 视频帖，「Astra 真做出来了」是作者自述，本库只看了约 44 秒视频与封面帧，没有拿到可玩的构建或下载，玩法深度、是否完整 5v5 均未核实。作者说提示词在回复里，本库抓不到该回复，因此提示词只能引 @LufzzLiz（岚叔）的中文转述，标为「岚叔中文转述」，非作者原文。OpenAI 公告只是所用模型的官方页，不涉及此 demo。英雄联盟 IP 属 Riot Games：本卡只记「模型能力展示」，不收录、不分发任何游戏文件。封面帧里的英雄名与属性数字是画面原样抄录，不是本库的判断。预览图为作者 X 视频封面（已裁掉下方黑边）。",
+      "qualityNoteEn": "A community-demo card, not a model card: the model itself is the GPT-6 Astra card on this board. Primary source is the author @konstiwohlwend’s X video post; “Astra actually did it” is the author’s claim — this library only watched the ~44s video and poster frame, has no playable build or download, and has not verified depth of play or a full 5v5. The author says the prompt sits in a reply this library could not fetch, so the prompt is quoted from @LufzzLiz’s Chinese rendering and labelled as such, not as the author’s original wording. The OpenAI announcement is only the official page for the model used; it does not cover this demo. League of Legends IP belongs to Riot Games: this card records a model-capability showcase and neither hosts nor distributes any game files. Champion names and stat numbers are transcribed as shown in the frame, not a judgement by this library.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra"
@@ -1964,7 +2012,9 @@
       "previewImage": "/previews/astra-mini-lol.webp",
       "previewCredit": "预览：@konstiwohlwend X 视频封面（选人界面 · Ahri）",
       "previewCreditEn": "Preview: @konstiwohlwend X video poster (champion select · Ahri)",
-      "featured": false
+      "featured": false,
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the author’s X video poster with the bottom black band cropped. Unrated."
     },
     {
       "id": "astra-tripo-3d-prompts",
@@ -2021,8 +2071,8 @@
           "textEn": "“Free”: the poster’s wording; the page itself also says “reproduce and adapt with the free prompts above,” but Tripo3D’s core business is a 3D-asset generation product and the page carries its product entry points. Not tested here for sign-up or paywall gates."
         }
       ],
-      "qualityNote": "这是社区资源卡，不是模型卡：模型本体见同板的 GPT-6 Astra。主源是 @cnyzgkc（木马人）的 X 视频帖（约 28 秒录屏），「200+ 提示词、完全免费」是发帖人自述；产品源是 Tripo3D 的 Astra 提示词页（中文路径，2026-09-11 本库打开可达），条数以页面当日显示为准，本库未逐条复数，也未核实每条提示词与作品的对应关系。Tripo3D 是第三方 3D 生成产品的提示词画廊，页面带其自家产品入口，本库不为其背书，也未测试账号或付费门槛。OpenAI 公告只是所用模型的官方页，不涉及该画廊。预览图为发帖人 X 录屏封面（Tripo3D Astra 提示词页首屏，右上角可见「201 条提示词」）。不打星。",
-      "qualityNoteEn": "A community-resource card, not a model card: the model itself is the GPT-6 Astra card on this board. Primary source is @cnyzgkc’s (木马人) X video post (~28s screen recording); “200+ prompts, completely free” is the poster’s claim. The product source is Tripo3D’s Astra prompts page (Chinese path, reachable when this library opened it on 2026-09-11); the count is whatever the page shows on the day — not re-counted item by item here, and the mapping of each prompt to its showcased build is unverified. Tripo3D is a third-party prompt gallery run by a 3D-generation product, with its own product entry points on the page; this library does not endorse it and has not tested sign-up or paywall gates. The OpenAI announcement is only the official page for the model used; it does not cover this gallery. Preview is the poster’s X recording poster frame (top of the Tripo3D Astra prompts page, “201 prompts” visible top right). Unrated.",
+      "qualityNote": "这是社区资源卡，不是模型卡：模型本体见同板的 GPT-6 Astra。主源是 @cnyzgkc（木马人）的 X 视频帖（约 28 秒录屏），「200+ 提示词、完全免费」是发帖人自述；产品源是 Tripo3D 的 Astra 提示词页（中文路径，2026-09-11 本库打开可达），条数以页面当日显示为准，本库未逐条复数，也未核实每条提示词与作品的对应关系。Tripo3D 是第三方 3D 生成产品的提示词画廊，页面带其自家产品入口，本库不为其背书，也未测试账号或付费门槛。OpenAI 公告只是所用模型的官方页，不涉及该画廊。预览图为发帖人 X 录屏封面（Tripo3D Astra 提示词页首屏，右上角可见「201 条提示词」）。",
+      "qualityNoteEn": "A community-resource card, not a model card: the model itself is the GPT-6 Astra card on this board. Primary source is @cnyzgkc’s (木马人) X video post (~28s screen recording); “200+ prompts, completely free” is the poster’s claim. The product source is Tripo3D’s Astra prompts page (Chinese path, reachable when this library opened it on 2026-09-11); the count is whatever the page shows on the day — not re-counted item by item here, and the mapping of each prompt to its showcased build is unverified. Tripo3D is a third-party prompt gallery run by a 3D-generation product, with its own product entry points on the page; this library does not endorse it and has not tested sign-up or paywall gates. The OpenAI announcement is only the official page for the model used; it does not cover this gallery.",
       "relatedCaseIds": [],
       "relatedModelIds": [
         "gpt-6-astra"
@@ -2030,7 +2080,9 @@
       "previewImage": "/previews/astra-tripo-3d-prompts.webp",
       "previewCredit": "预览：@cnyzgkc X 录屏封面（Tripo3D Astra 提示词页首屏）",
       "previewCreditEn": "Preview: @cnyzgkc X recording poster (top of the Tripo3D Astra prompts page)",
-      "featured": false
+      "featured": false,
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the poster’s X recording poster frame (top of the Tripo3D Astra prompts page, “201 prompts” visible top right). Unrated."
     },
     {
       "id": "claude-fable-5-1",

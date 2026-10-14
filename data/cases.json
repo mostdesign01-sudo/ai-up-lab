@@ -21,8 +21,8 @@
         "https://x.com/AverageAiBro/status/2109822177621262758"
       ],
       "sourceType": "community-show",
-      "qualityNote": "主源官网 https://doop.design/ 与仓库 kgoedecke/doop；晚间 HTTP 200，gh api：AGPL-3.0、851★，2026-08-22 创建，最近推送 2026-10-09。MCP 连接、自托管、设计记忆、Free in beta 均照官网与 README。X 线索 https://x.com/AverageAiBro/status/2109822177621262758（2026-10-13）。本库没有注册 Doop、没有连 MCP、没有自托管实测。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
-      "qualityNoteEn": "Primary sources are https://doop.design/ and kgoedecke/doop; HTTP 200 this evening; gh api: AGPL-3.0, 851★, created 2026-08-22, last push 2026-10-09. MCP connect, self-host, design memory, and free-in-beta follow the site and README. X lead https://x.com/AverageAiBro/status/2109822177621262758 (2026-10-13). This library did not sign up, connect MCP, or self-host. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP.",
+      "qualityNote": "MCP 连接、自托管、设计记忆、Free in beta 均照官网与 README。本库没有注册 Doop、没有连 MCP、没有自托管实测。",
+      "qualityNoteEn": "MCP connect, self-host, design memory, and free-in-beta follow the site and README. This library did not sign up, connect MCP, or self-host.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -37,7 +37,9 @@
       "featured": true,
       "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-13T12:20:00Z",
-      "previewImage": "/previews/doop.webp"
+      "previewImage": "/previews/doop.webp",
+      "verifyLog": "主源官网 https://doop.design/ 与仓库 kgoedecke/doop；晚间 HTTP 200，gh api：AGPL-3.0、851★，2026-08-22 创建，最近推送 2026-10-09。X 线索 https://x.com/AverageAiBro/status/2109822177621262758（2026-10-13）。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
+      "verifyLogEn": "Primary sources are https://doop.design/ and kgoedecke/doop; HTTP 200 this evening; gh api: AGPL-3.0, 851★, created 2026-08-22, last push 2026-10-09. X lead https://x.com/AverageAiBro/status/2109822177621262758 (2026-10-13). Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP."
     },
     {
       "id": "editui",
@@ -61,8 +63,8 @@
         "https://www.editui.app/chrome-extension"
       ],
       "sourceType": "community-show",
-      "qualityNote": "主源官网 https://www.editui.app/ 与仓库 junetic/editui；晚间 HTTP 200，gh api：MIT、3★，2026-09-29 创建，最近推送 2026-10-11。点选→备注→Copy all、agent-agnostic、不直接改代码，都照官网与扩展说明页写；结构化数据标价 0 USD。Chrome Web Store 链接来自官网 CTA。本库没有安装扩展、没有在 localhost 实测走查。预览为 Playwright 实拍官网 Demo 区，裁 3:2 WebP 自托管。",
-      "qualityNoteEn": "Primary sources are https://www.editui.app/ and junetic/editui; HTTP 200 this evening; gh api: MIT, 3★, created 2026-09-29, last push 2026-10-11. Click→note→Copy all, agent-agnostic paste, and no direct code edits follow the site and extension page; structured data lists price 0 USD. Chrome Web Store link is from the site CTA. This library did not install the extension or run a localhost review. Preview is a Playwright capture of the home Demo, cropped to a self-hosted 3:2 WebP.",
+      "qualityNote": "点选→备注→Copy all、agent-agnostic、不直接改代码，都照官网与扩展说明页写；结构化数据标价 0 USD。Chrome Web Store 链接来自官网 CTA。本库没有安装扩展、没有在 localhost 实测走查。",
+      "qualityNoteEn": "Click→note→Copy all, agent-agnostic paste, and no direct code edits follow the site and extension page; structured data lists price 0 USD. Chrome Web Store link is from the site CTA. This library did not install the extension or run a localhost review.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -75,7 +77,9 @@
       "featured": true,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-10-12T12:25:00Z",
-      "previewImage": "/previews/editui.webp"
+      "previewImage": "/previews/editui.webp",
+      "verifyLog": "主源官网 https://www.editui.app/ 与仓库 junetic/editui；晚间 HTTP 200，gh api：MIT、3★，2026-09-29 创建，最近推送 2026-10-11。预览为 Playwright 实拍官网 Demo 区，裁 3:2 WebP 自托管。",
+      "verifyLogEn": "Primary sources are https://www.editui.app/ and junetic/editui; HTTP 200 this evening; gh api: MIT, 3★, created 2026-09-29, last push 2026-10-11. Preview is a Playwright capture of the home Demo, cropped to a self-hosted 3:2 WebP."
     },
     {
       "id": "diffui",
@@ -100,8 +104,8 @@
         "https://news.ycombinator.com/item?id=48995754"
       ],
       "sourceType": "community-show",
-      "qualityNote": "主源是官网 https://diffui.ai/ ，早间 HTTP 200；多选项生成、截图学品牌、Web Components / agent 交接与按张计价照官网、定价页与 changelog 写。Show HN https://news.ycombinator.com/item?id=48995754 （2026-07-21，约 80 分）作者自述离开 Figma 做扩散式出稿。收录理由：AI×设计，和库里的 Flowstep、Claude Design、Figma 助手同一类「先出视觉再交助手」，但引擎是扩散不是对话 LLM。本库没有注册 Diffui，没有出图，没有实测 MCP / Codex 插件或转代码。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is https://diffui.ai/, HTTP 200 this morning; multi-option generation, screenshot brand learning, Web Components / agent handoff, and per-image pricing follow the site, pricing page, and changelog. Show HN https://news.ycombinator.com/item?id=48995754 (2026-07-21, ~80 points) is the founder’s own post after leaving Figma. Why listed: AI×design in the same family as Flowstep, Claude Design, and the Figma agent—visual first, then agent—but driven by diffusion rather than a chat LLM. This library did not sign up, generate images, or test MCP / Codex plugins or code export. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：AI×设计，和库里的 Flowstep、Claude Design、Figma 助手同一类「先出视觉再交助手」，但引擎是扩散不是对话 LLM。本库没有注册 Diffui，没有出图，没有实测 MCP / Codex 插件或转代码。",
+      "qualityNoteEn": "Why listed: AI×design in the same family as Flowstep, Claude Design, and the Figma agent—visual first, then agent—but driven by diffusion rather than a chat LLM. This library did not sign up, generate images, or test MCP / Codex plugins or code export.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -114,7 +118,9 @@
       "featured": true,
       "publishedAt": "2026-07-21",
       "updatedAt": "2026-10-12T01:05:00Z",
-      "previewImage": "/previews/diffui.webp"
+      "previewImage": "/previews/diffui.webp",
+      "verifyLog": "主源是官网 https://diffui.ai/ ，早间 HTTP 200；多选项生成、截图学品牌、Web Components / agent 交接与按张计价照官网、定价页与 changelog 写。Show HN https://news.ycombinator.com/item?id=48995754 （2026-07-21，约 80 分）作者自述离开 Figma 做扩散式出稿。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is https://diffui.ai/, HTTP 200 this morning; multi-option generation, screenshot brand learning, Web Components / agent handoff, and per-image pricing follow the site, pricing page, and changelog. Show HN https://news.ycombinator.com/item?id=48995754 (2026-07-21, ~80 points) is the founder’s own post after leaving Figma. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "css-studio",
@@ -140,8 +146,8 @@
         "https://www.npmjs.com/package/cssstudio"
       ],
       "sourceType": "community-show",
-      "qualityNote": "主源是官网 https://cssstudio.ai/ ，早间 HTTP 200；「在真站上设计、助手写回代码」、MCP 对接名单和变体/断点能力照首页与学习中心。定价页写编辑器免费、接 AI 一次性 $99。Show HN https://news.ycombinator.com/item?id=47702196 （2026-04-09，约 175 分）。收录理由：AI×设计，和 Flowstep「画布出屏」互补——这边是改已上线页面。本库没有安装 CSS Studio，没有连 MCP，没有在真实项目里点 Apply。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is https://cssstudio.ai/, HTTP 200 this morning; design-on-the-live-site plus agent write-back, MCP agent list, and variants/breakpoints follow the homepage and learn center. Pricing lists a free editor and a one-time $99 for AI connection. Show HN https://news.ycombinator.com/item?id=47702196 (2026-04-09, ~175 points). Why listed: AI×design complementary to Flowstep’s canvas generation—here you edit an already-running page. This library did not install CSS Studio, connect MCP, or click Apply on a real project. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "定价页写编辑器免费、接 AI 一次性 $99。收录理由：AI×设计，和 Flowstep「画布出屏」互补——这边是改已上线页面。本库没有安装 CSS Studio，没有连 MCP，没有在真实项目里点 Apply。",
+      "qualityNoteEn": "Pricing lists a free editor and a one-time $99 for AI connection. Why listed: AI×design complementary to Flowstep’s canvas generation—here you edit an already-running page. This library did not install CSS Studio, connect MCP, or click Apply on a real project.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": true,
@@ -154,7 +160,9 @@
       "featured": true,
       "publishedAt": "2026-04-09",
       "updatedAt": "2026-10-12T01:05:00Z",
-      "previewImage": "/previews/css-studio.webp"
+      "previewImage": "/previews/css-studio.webp",
+      "verifyLog": "主源是官网 https://cssstudio.ai/ ，早间 HTTP 200；「在真站上设计、助手写回代码」、MCP 对接名单和变体/断点能力照首页与学习中心。Show HN https://news.ycombinator.com/item?id=47702196 （2026-04-09，约 175 分）。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is https://cssstudio.ai/, HTTP 200 this morning; design-on-the-live-site plus agent write-back, MCP agent list, and variants/breakpoints follow the homepage and learn center. Show HN https://news.ycombinator.com/item?id=47702196 (2026-04-09, ~175 points). Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "wunderui",
@@ -180,8 +188,8 @@
         "https://wunderui.com/DESIGN.md"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是 https://wunderui.com/introduction 与 https://wunderui.com/agents ，早间 HTTP 200；组件数量、Free/Pro 分界、MCP 与 DESIGN.md / llms.txt 照文档写。GitHub https://github.com/wunder-ui/wunderui 早间可见，MIT，星很少（收录时约 1）。收录理由：AI×设计，组件库 + Figma + 给 Agent 的可读上下文，和库里 Framer Skills、Oil UI 一类「让助手跟设计系统走」同向。本库没有 npm install，没有连 MCP，没有买 Pro，也没有在 Figma 里打开社区文件。预览为 Playwright 实拍 Introduction 页裁 3:2 WebP。",
-      "qualityNoteEn": "Primary sources are https://wunderui.com/introduction and https://wunderui.com/agents, HTTP 200 this morning; component counts, Free/Pro split, MCP, and DESIGN.md / llms.txt follow the docs. GitHub https://github.com/wunder-ui/wunderui is reachable (MIT, very few stars at catalog time, about 1). Why listed: AI×design—component library + matching Figma + agent-readable context—same direction as Framer Skills and Oil UI. This library did not npm install, connect MCP, buy Pro, or open the Figma Community file. Preview is a Playwright capture of the Introduction page, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：AI×设计，组件库 + Figma + 给 Agent 的可读上下文，和库里 Framer Skills、Oil UI 一类「让助手跟设计系统走」同向。本库没有 npm install，没有连 MCP，没有买 Pro，也没有在 Figma 里打开社区文件。",
+      "qualityNoteEn": "Why listed: AI×design—component library + matching Figma + agent-readable context—same direction as Framer Skills and Oil UI. This library did not npm install, connect MCP, buy Pro, or open the Figma Community file.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": true,
@@ -194,7 +202,9 @@
       "featured": true,
       "publishedAt": "2026-10-12",
       "updatedAt": "2026-10-12T01:05:00Z",
-      "previewImage": "/previews/wunderui.webp"
+      "previewImage": "/previews/wunderui.webp",
+      "verifyLog": "主源是 https://wunderui.com/introduction 与 https://wunderui.com/agents ，早间 HTTP 200；组件数量、Free/Pro 分界、MCP 与 DESIGN.md / llms.txt 照文档写。GitHub https://github.com/wunder-ui/wunderui 早间可见，MIT，星很少（收录时约 1）。预览为 Playwright 实拍 Introduction 页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are https://wunderui.com/introduction and https://wunderui.com/agents, HTTP 200 this morning; component counts, Free/Pro split, MCP, and DESIGN.md / llms.txt follow the docs. GitHub https://github.com/wunder-ui/wunderui is reachable (MIT, very few stars at catalog time, about 1). Preview is a Playwright capture of the Introduction page, cropped to 3:2 WebP."
     },
     {
       "id": "claude-dashboards-motion",
@@ -216,8 +226,8 @@
         "https://x.com/runwayml/status/2108287937272266800"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是 Claude 官方文章 https://claude.com/resources/articles/dashboards-and-motion （日期 2026-10-08），晚间 HTTP 200；Motion 不用视频生成模型、导出 MP4、可接的外部工具名单，Dashboards 的数据源和可转发工具，以及套餐范围都照文章写。发布帖 @claudeai 2026-10-08T19:01Z（约 10-09 03:01 北京时间），晚间约 505 万次浏览、4.1 万赞；Runway 同日发帖说可把 Motion 的作品拿去 Runway 继续做。收录理由：AI×设计，动效讲解是设计和运营常做的活，这条把它变成对话加可编辑代码。本库没有 Team/Enterprise 账号，没有实际做动画、连数据源或导出 MP4。预览为 Playwright 实拍文章首屏缩成 3:2 WebP。",
-      "qualityNoteEn": "Primary source is Claude's official article https://claude.com/resources/articles/dashboards-and-motion (dated 2026-10-08), HTTP 200 this evening; Motion not using a video model, MP4 export, the list of follow-on tools, Dashboards' data sources and send-to tools, and plan coverage all follow the article. Launch post is @claudeai at 2026-10-08T19:01Z (about 03:01 on 10-09 Beijing time), about 5.05M views and 41K likes this evening; Runway posted the same day that Motion work can continue in Runway. Why it is listed: AI×design, since motion explainers are everyday work for designers and ops, now done by chatting with editable code. This library has no Team/Enterprise seat and did not make an animation, connect a data source, or export an MP4. Preview is a Playwright capture of the article above the fold, scaled to 3:2 WebP.",
+      "qualityNote": "收录理由：AI×设计，动效讲解是设计和运营常做的活，这条把它变成对话加可编辑代码。本库没有 Team/Enterprise 账号，没有实际做动画、连数据源或导出 MP4。",
+      "qualityNoteEn": "Why it is listed: AI×design, since motion explainers are everyday work for designers and ops, now done by chatting with editable code. This library has no Team/Enterprise seat and did not make an animation, connect a data source, or export an MP4.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -230,7 +240,9 @@
       "featured": true,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-09T12:20:00Z",
-      "previewImage": "/previews/claude-dashboards-motion.webp"
+      "previewImage": "/previews/claude-dashboards-motion.webp",
+      "verifyLog": "主源是 Claude 官方文章 https://claude.com/resources/articles/dashboards-and-motion （日期 2026-10-08），晚间 HTTP 200；Motion 不用视频生成模型、导出 MP4、可接的外部工具名单，Dashboards 的数据源和可转发工具，以及套餐范围都照文章写。发布帖 @claudeai 2026-10-08T19:01Z（约 10-09 03:01 北京时间），晚间约 505 万次浏览、4.1 万赞；Runway 同日发帖说可把 Motion 的作品拿去 Runway 继续做。预览为 Playwright 实拍文章首屏缩成 3:2 WebP。",
+      "verifyLogEn": "Primary source is Claude's official article https://claude.com/resources/articles/dashboards-and-motion (dated 2026-10-08), HTTP 200 this evening; Motion not using a video model, MP4 export, the list of follow-on tools, Dashboards' data sources and send-to tools, and plan coverage all follow the article. Launch post is @claudeai at 2026-10-08T19:01Z (about 03:01 on 10-09 Beijing time), about 5.05M views and 41K likes this evening; Runway posted the same day that Motion work can continue in Runway. Preview is a Playwright capture of the article above the fold, scaled to 3:2 WebP."
     },
     {
       "id": "claude-design",
@@ -255,8 +267,8 @@
         "https://support.claude.com/en/articles/14604416-get-started-with-claude-design"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是产品页 https://claude.com/product/design ，早间 HTTP 200；设计系统导入、/design-sync、导出格式和连接器名单都照页面与 2026-09 博客「Claude Design now stays on brand for daily work」写。首发新闻是 2026-04-17 Anthropic Labs 帖。帮助中心「Get started with Claude Design」写付费档 beta；产品页 FAQ 写 Design/Slides/Docs 含免费档，两处不一致，都记。收录理由：AI×设计，和库里的 Figma 助手、Framer Skills、Graphical 同一类「按设计系统出稿」，但挂在 Claude 对话和 Claude Code 上。本库没有登录 Claude，没有导入设计系统，没有实测导出或连接器。预览为 Playwright 实拍产品页首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is the product page https://claude.com/product/design, HTTP 200 this morning; design-system import, /design-sync, export formats, and the connector list follow that page and the September 2026 blog “Claude Design now stays on brand for daily work.” The launch post is Anthropic Labs on 2026-04-17. Help Center “Get started with Claude Design” says beta on paid plans; the product FAQ says Design/Slides/Docs are included on every plan including Free. Both are recorded. Why it is listed: AI×design, same family as the library’s Figma agent, Framer Skills, and Graphical entries—generate against a design system—but inside Claude chat and Claude Code. This library did not sign in to Claude, import a design system, or test exports or connectors. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "首发新闻是 2026-04-17 Anthropic Labs 帖。帮助中心「Get started with Claude Design」写付费档 beta；产品页 FAQ 写 Design/Slides/Docs 含免费档，两处不一致，都记。收录理由：AI×设计，和库里的 Figma 助手、Framer Skills、Graphical 同一类「按设计系统出稿」，但挂在 Claude 对话和 Claude Code 上。本库没有登录 Claude，没有导入设计系统，没有实测导出或连接器。",
+      "qualityNoteEn": "Help Center “Get started with Claude Design” says beta on paid plans; the product FAQ says Design/Slides/Docs are included on every plan including Free. Both are recorded. Why it is listed: AI×design, same family as the library’s Figma agent, Framer Skills, and Graphical entries—generate against a design system—but inside Claude chat and Claude Code. This library did not sign in to Claude, import a design system, or test exports or connectors.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -269,7 +281,9 @@
       "featured": true,
       "publishedAt": "2026-04-17",
       "updatedAt": "2026-10-09T12:20:00Z",
-      "previewImage": "/previews/claude-design.webp"
+      "previewImage": "/previews/claude-design.webp",
+      "verifyLog": "主源是产品页 https://claude.com/product/design ，早间 HTTP 200；设计系统导入、/design-sync、导出格式和连接器名单都照页面与 2026-09 博客「Claude Design now stays on brand for daily work」写。预览为 Playwright 实拍产品页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is the product page https://claude.com/product/design, HTTP 200 this morning; design-system import, /design-sync, export formats, and the connector list follow that page and the September 2026 blog “Claude Design now stays on brand for daily work.” The launch post is Anthropic Labs on 2026-04-17. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "flowstep",
@@ -293,8 +307,8 @@
         "https://docs.flowstep.ai/mcp/tools"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是官网 https://flowstep.ai/ 与 MCP 页 https://flowstep.ai/mcp ，早间均 HTTP 200；Cursor / Claude Code 配置片段和「先 list-files 再 create-new-design」步骤照 https://docs.flowstep.ai/mcp/quickstart 。收录理由：AI×设计，把出屏能力直接塞进编程助手，和库里的 ProtoPie MCP、Figma 助手互补。本库没有注册 Flowstep，没有连 MCP，没有生成屏幕，也没有核对价格与额度。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary sources are https://flowstep.ai/ and https://flowstep.ai/mcp, both HTTP 200 this morning; Cursor / Claude Code config snippets and the list-files then create-new-design steps follow https://docs.flowstep.ai/mcp/quickstart. Why it is listed: AI×design that puts screen generation inside a coding agent, complementary to ProtoPie MCP and the Figma agent already in the library. This library did not sign up for Flowstep, connect MCP, generate a screen, or check pricing and quotas. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：AI×设计，把出屏能力直接塞进编程助手，和库里的 ProtoPie MCP、Figma 助手互补。本库没有注册 Flowstep，没有连 MCP，没有生成屏幕，也没有核对价格与额度。",
+      "qualityNoteEn": "Why it is listed: AI×design that puts screen generation inside a coding agent, complementary to ProtoPie MCP and the Figma agent already in the library. This library did not sign up for Flowstep, connect MCP, generate a screen, or check pricing and quotas.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -307,7 +321,9 @@
       "featured": true,
       "publishedAt": "2026-10-09",
       "updatedAt": "2026-10-09T01:45:00Z",
-      "previewImage": "/previews/flowstep.webp"
+      "previewImage": "/previews/flowstep.webp",
+      "verifyLog": "主源是官网 https://flowstep.ai/ 与 MCP 页 https://flowstep.ai/mcp ，早间均 HTTP 200；Cursor / Claude Code 配置片段和「先 list-files 再 create-new-design」步骤照 https://docs.flowstep.ai/mcp/quickstart 。预览为 Playwright 实拍官网首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are https://flowstep.ai/ and https://flowstep.ai/mcp, both HTTP 200 this morning; Cursor / Claude Code config snippets and the list-files then create-new-design steps follow https://docs.flowstep.ai/mcp/quickstart. Preview is a Playwright capture of the homepage above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "grok-bot-shopify",
@@ -330,8 +346,8 @@
         "https://docs.x.ai/grok-bot/overview"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是官方 @bot 推文 https://x.com/bot/status/2108228871938359347 ，早间经 X API 与 fxtwitter 可读（约 698 万浏览、2151 赞，附产品图）。收录理由：可复现的官方能力更新，电商店主能直接用。docs.x.ai/grok/connectors 列的是聊天版 Grok 连接器，未出现 Shopify；Grok Bot overview 页早间也未检出 Shopify 字样，故边界写清：以推文为准，具体权限、计费和可改字段本库未实测。预览为官方推文配图裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is the official @bot post https://x.com/bot/status/2108228871938359347, readable this morning via the X API and fxtwitter (about 6.98M views and 2,151 likes, with a product image). Why it is listed: a reproducible official capability update shop owners can use. docs.x.ai/grok/connectors lists chat-Grok connectors and does not show Shopify; the Grok Bot overview page also had no Shopify mention this morning, so the boundary is clear: the tweet is authoritative, and permissions, billing, and which fields can be edited were not tested. Preview is the official tweet image cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：可复现的官方能力更新，电商店主能直接用。docs.x.ai/grok/connectors 列的是聊天版 Grok 连接器，未出现 Shopify；Grok Bot overview 页早间也未检出 Shopify 字样，故边界写清：以推文为准，具体权限、计费和可改字段本库未实测。",
+      "qualityNoteEn": "Why it is listed: a reproducible official capability update shop owners can use. docs.x.ai/grok/connectors lists chat-Grok connectors and does not show Shopify; the Grok Bot overview page also had no Shopify mention this morning, so the boundary is clear: the tweet is authoritative, and permissions, billing, and which fields can be edited were not tested.",
       "difficulty": "beginner",
       "hasRoutine": true,
       "hasSkill": false,
@@ -346,7 +362,9 @@
       "featured": true,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-09T01:45:00Z",
-      "previewImage": "/previews/grok-bot-shopify.webp"
+      "previewImage": "/previews/grok-bot-shopify.webp",
+      "verifyLog": "主源是官方 @bot 推文 https://x.com/bot/status/2108228871938359347 ，早间经 X API 与 fxtwitter 可读（约 698 万浏览、2151 赞，附产品图）。预览为官方推文配图裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is the official @bot post https://x.com/bot/status/2108228871938359347, readable this morning via the X API and fxtwitter (about 6.98M views and 2,151 likes, with a product image). Preview is the official tweet image cropped to 3:2 WebP."
     },
     {
       "id": "krea-photoshop-plugin",
@@ -368,8 +386,8 @@
         "https://www.krea.ai/plugins"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是 Krea 插件页 https://www.krea.ai/plugins/photoshop ，晚间 HTTP 200，页面标题 Krea for Photoshop | Generate images and video inside Photoshop，安装步骤、面板里的模型名和「最高 21K」都照页面写。发布帖是 @krea_ai 2026-10-07T15:00Z（约 10-07 23:00 北京时间），晚间约 8500 次浏览、152 赞，附 1 分钟内演示视频。收录理由：AI×设计，直接进了设计师天天用的软件。本库没有下载安装，没有登录 Krea，没有核对价格、额度和 Photoshop 版本要求。同一插件目录还有 After Effects 和 ChatGPT 插件，这条只写 Photoshop。预览为 Playwright 实拍插件页首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is Krea's plugin page https://www.krea.ai/plugins/photoshop, HTTP 200 this evening, titled Krea for Photoshop | Generate images and video inside Photoshop; install steps, model names, and the “up to 21K” claim are as the page states. The launch post is @krea_ai at 2026-10-07T15:00Z (about 23:00 on 10-07 Beijing time), about 8,500 views and 152 likes this evening, with a short demo video. Why it is listed: AI×design, landing inside the software designers already use daily. This library did not download or install it, did not sign in to Krea, and did not check pricing, credits, or Photoshop version requirements. The same plugin directory also has After Effects and ChatGPT plugins; this entry covers Photoshop only. Preview is a Playwright capture of the plugin page above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：AI×设计，直接进了设计师天天用的软件。本库没有下载安装，没有登录 Krea，没有核对价格、额度和 Photoshop 版本要求。同一插件目录还有 After Effects 和 ChatGPT 插件，这条只写 Photoshop。",
+      "qualityNoteEn": "Why it is listed: AI×design, landing inside the software designers already use daily. This library did not download or install it, did not sign in to Krea, and did not check pricing, credits, or Photoshop version requirements. The same plugin directory also has After Effects and ChatGPT plugins; this entry covers Photoshop only.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -382,7 +400,9 @@
       "featured": true,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T12:30:00Z",
-      "previewImage": "/previews/krea-photoshop-plugin.webp"
+      "previewImage": "/previews/krea-photoshop-plugin.webp",
+      "verifyLog": "主源是 Krea 插件页 https://www.krea.ai/plugins/photoshop ，晚间 HTTP 200，页面标题 Krea for Photoshop | Generate images and video inside Photoshop，安装步骤、面板里的模型名和「最高 21K」都照页面写。发布帖是 @krea_ai 2026-10-07T15:00Z（约 10-07 23:00 北京时间），晚间约 8500 次浏览、152 赞，附 1 分钟内演示视频。预览为 Playwright 实拍插件页首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is Krea's plugin page https://www.krea.ai/plugins/photoshop, HTTP 200 this evening, titled Krea for Photoshop | Generate images and video inside Photoshop; install steps, model names, and the “up to 21K” claim are as the page states. The launch post is @krea_ai at 2026-10-07T15:00Z (about 23:00 on 10-07 Beijing time), about 8,500 views and 152 likes this evening, with a short demo video. Preview is a Playwright capture of the plugin page above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "framer-skills-design-system",
@@ -405,8 +425,8 @@
         "https://x.com/framer/status/2107962735673872818"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是 Framer 官方 Skills 页 https://www.framer.com/skills ，晚间 HTTP 200，示例规则（深色、不新增颜色和字号、每行 50–75 字符目标 65、强调色每段最多一次）和四条可复制技能都照页面写。上线日期取更新日志 https://www.framer.com/updates/skills 的 Published September 22, 2026。新的玩法帖是 @framer 2026-10-07T22:34Z（约 10-08 06:34 北京时间），晚间约 4900 次浏览，附演示视频。收录理由：本库之前没有 Framer，这条是「设计规范交给 AI 照做」的 AI×设计做法，和库里的 Graphical、figma-use 思路相近，但直接在 Framer 画布里用。本库没有登录 Framer，没有实际写技能、做页面，也没有核对哪些套餐能用 Skills。演示页里的模型选择显示 GPT 6 Sol，只是页面截图里的字样。预览为 Playwright 实拍 Skills 页演示区裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is Framer's official Skills page https://www.framer.com/skills, HTTP 200 this evening; the example rules (dark scheme, no new colors or text styles, 50–75 characters per line targeting 65, accent at most once per section) and the four copy-paste Skills are as the page states. The launch date comes from the changelog https://www.framer.com/updates/skills, Published September 22, 2026. The new how-to post is @framer at 2026-10-07T22:34Z (about 06:34 on 10-08 Beijing time), about 4,900 views this evening, with a demo video. Why it is listed: the library had no Framer entry, and this is an AI×design pattern of handing your design system to an agent, close to Graphical and figma-use already in the library but used directly on the Framer canvas. This library did not sign in to Framer, write a Skill, or build a page, and did not check which plans include Skills. The model picker in the demo shows GPT 6 Sol; that is only text in the page's demo. Preview is a Playwright capture of the Skills page demo area, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：本库之前没有 Framer，这条是「设计规范交给 AI 照做」的 AI×设计做法，和库里的 Graphical、figma-use 思路相近，但直接在 Framer 画布里用。本库没有登录 Framer，没有实际写技能、做页面，也没有核对哪些套餐能用 Skills。演示页里的模型选择显示 GPT 6 Sol，只是页面截图里的字样。",
+      "qualityNoteEn": "Why it is listed: the library had no Framer entry, and this is an AI×design pattern of handing your design system to an agent, close to Graphical and figma-use already in the library but used directly on the Framer canvas. This library did not sign in to Framer, write a Skill, or build a page, and did not check which plans include Skills. The model picker in the demo shows GPT 6 Sol; that is only text in the page's demo.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": true,
@@ -419,7 +439,9 @@
       "featured": false,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T12:30:00Z",
-      "previewImage": "/previews/framer-skills-design-system.webp"
+      "previewImage": "/previews/framer-skills-design-system.webp",
+      "verifyLog": "主源是 Framer 官方 Skills 页 https://www.framer.com/skills ，晚间 HTTP 200，示例规则（深色、不新增颜色和字号、每行 50–75 字符目标 65、强调色每段最多一次）和四条可复制技能都照页面写。上线日期取更新日志 https://www.framer.com/updates/skills 的 Published September 22, 2026。新的玩法帖是 @framer 2026-10-07T22:34Z（约 10-08 06:34 北京时间），晚间约 4900 次浏览，附演示视频。预览为 Playwright 实拍 Skills 页演示区裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is Framer's official Skills page https://www.framer.com/skills, HTTP 200 this evening; the example rules (dark scheme, no new colors or text styles, 50–75 characters per line targeting 65, accent at most once per section) and the four copy-paste Skills are as the page states. The launch date comes from the changelog https://www.framer.com/updates/skills, Published September 22, 2026. The new how-to post is @framer at 2026-10-07T22:34Z (about 06:34 on 10-08 Beijing time), about 4,900 views this evening, with a demo video. Preview is a Playwright capture of the Skills page demo area, cropped to 3:2 WebP."
     },
     {
       "id": "grok-bot-x-built-in",
@@ -444,8 +466,8 @@
         "https://x.ai/bot"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是官方 @bot 两条推文，X API 和 fxtwitter 早间都能读到（主帖附 12 秒演示视频，早间约 60 万浏览、5954 赞）。收录理由：门槛变低，以前要先连 X 账号，现在所有用户直接能让 Bot 读公开帖子。本库这次收录时，Bot 就是用这套内置的 X 读取查到 @bot 这两条帖子的；运行中看到的额度提示是每分钟 30 次、每天 1000 次，这是本库这次实际看到的数字，官方帖子没写额度，以后可能会变。边界：只读公开内容，不代你发帖；私信、书签、你自己的首页时间线仍要连 X 账号。预览为官方演示视频的封面图裁 3:2 WebP。",
-      "qualityNoteEn": "Primary sources are the two official @bot posts, readable this morning via the X API and fxtwitter (the main post has a 12-second demo video; about 600K views and 5,954 likes this morning). Why it is listed: the barrier dropped, from connecting your X account first to every user having a Bot read public posts directly. While cataloging this entry, the Bot found these two @bot posts through this same built-in X reading; the quota notice seen during the run was 30 reads per minute and 1,000 per day. Those are the numbers seen in this run, not stated in the official posts, and they may change. Boundary: public content only, no posting on your behalf; DMs, bookmarks, and your own home timeline still need your X account. Preview is the official demo video's cover frame cropped to 3:2 WebP.",
+      "qualityNote": "主源是官方 @bot 两条推文，X API 和 fxtwitter 早间都能读到（主帖附 12 秒演示视频，早间约 60 万浏览、5954 赞）。收录理由：门槛变低，以前要先连 X 账号，现在所有用户直接能让 Bot 读公开帖子。本库这次收录时，Bot 就是用这套内置的 X 读取查到 @bot 这两条帖子的；运行中看到的额度提示是每分钟 30 次、每天 1000 次，这是本库这次实际看到的数字，官方帖子没写额度，以后可能会变。边界：只读公开内容，不代你发帖；私信、书签、你自己的首页时间线仍要连 X 账号。",
+      "qualityNoteEn": "Primary sources are the two official @bot posts, readable this morning via the X API and fxtwitter (the main post has a 12-second demo video; about 600K views and 5,954 likes this morning). Why it is listed: the barrier dropped, from connecting your X account first to every user having a Bot read public posts directly. While cataloging this entry, the Bot found these two @bot posts through this same built-in X reading; the quota notice seen during the run was 30 reads per minute and 1,000 per day. Those are the numbers seen in this run, not stated in the official posts, and they may change. Boundary: public content only, no posting on your behalf; DMs, bookmarks, and your own home timeline still need your X account.",
       "difficulty": "beginner",
       "hasRoutine": true,
       "hasSkill": false,
@@ -460,7 +482,9 @@
       "featured": true,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T01:30:00Z",
-      "previewImage": "/previews/grok-bot-x-built-in.webp"
+      "previewImage": "/previews/grok-bot-x-built-in.webp",
+      "verifyLog": "预览为官方演示视频的封面图裁 3:2 WebP。",
+      "verifyLogEn": "Preview is the official demo video's cover frame cropped to 3:2 WebP."
     },
     {
       "id": "grok-bot-slide-decks",
@@ -482,8 +506,8 @@
         "https://x.ai/bot"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是官方更新日志 https://x.ai/changelog/bot ，早间 HTTP 200，最新版 v0.68.1，日期 Oct 7, 2026，标题 Slide decks and Bot-colored chats。收录理由：做幻灯片是很常见的活，而且是先挑样张、再出文件的流程，对设计向用户有用。本库这次没有实际让 Bot 做一份幻灯片，样张数量、版式风格和能否改字体配色，日志里没写。预览为 Playwright 实拍更新日志首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is the official changelog https://x.ai/changelog/bot, HTTP 200 this morning, latest v0.68.1 dated Oct 7, 2026, titled Slide decks and Bot-colored chats. Why it is listed: decks are a common job, and the pick-a-sample-then-export flow is useful for design-minded users. This library did not have a Bot build a deck this time; the changelog does not say how many samples you get, which layouts exist, or whether fonts and colors are editable. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "收录理由：做幻灯片是很常见的活，而且是先挑样张、再出文件的流程，对设计向用户有用。本库这次没有实际让 Bot 做一份幻灯片，样张数量、版式风格和能否改字体配色，日志里没写。",
+      "qualityNoteEn": "Why it is listed: decks are a common job, and the pick-a-sample-then-export flow is useful for design-minded users. This library did not have a Bot build a deck this time; the changelog does not say how many samples you get, which layouts exist, or whether fonts and colors are editable.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -498,7 +522,9 @@
       "featured": false,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T01:30:00Z",
-      "previewImage": "/previews/grok-bot-slide-decks.webp"
+      "previewImage": "/previews/grok-bot-slide-decks.webp",
+      "verifyLog": "主源是官方更新日志 https://x.ai/changelog/bot ，早间 HTTP 200，最新版 v0.68.1，日期 Oct 7, 2026，标题 Slide decks and Bot-colored chats。预览为 Playwright 实拍更新日志首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is the official changelog https://x.ai/changelog/bot, HTTP 200 this morning, latest v0.68.1 dated Oct 7, 2026, titled Slide decks and Bot-colored chats. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "quesma-opus-5-5-design",
@@ -524,8 +550,8 @@
         "https://news.ycombinator.com/item?id=49991903"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 Quesma 博客，早间 HTTP 200，作者 Piotr Migdał，页内日期 7 October 2026。提示词原文：Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. 用时和花费都是作者自述，本库没有复跑。好不好看是作者的主观判断，只有一个提示词、一次运行，不能当成模型排名。Opus 5.5 成品页早间 HTTP 200。线索来自 HN item 49991903（撰写时 5pts，热度不高，按 AI×设计偏好收录）。预览为 Playwright 实拍博客首屏裁 3:2 WebP。",
-      "qualityNoteEn": "Primary source is the Quesma blog, HTTP 200 this morning, by Piotr Migdał, dated 7 October 2026. The prompt, verbatim: Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. Times and costs are the author's own; not re-run here. Which looks better is his opinion, from one prompt and one run, so it is not a model ranking. The Opus 5.5 result page was HTTP 200 this morning. Lead: HN item 49991903 (5pts at write time; low traction, kept for the AI×design focus). Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP.",
+      "qualityNote": "提示词原文：Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. 用时和花费都是作者自述，本库没有复跑。好不好看是作者的主观判断，只有一个提示词、一次运行，不能当成模型排名。",
+      "qualityNoteEn": "The prompt, verbatim: Make a three.js (pnpm) visualization of all Invisible Cities by Italo Calvino. Don’t ask questions, it is a one-shot task. You have 6h of work, use it until it becomes a masterpiece. Times and costs are the author's own; not re-run here. Which looks better is his opinion, from one prompt and one run, so it is not a model ranking.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -538,7 +564,9 @@
       "featured": false,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T01:30:00Z",
-      "previewImage": "/previews/quesma-opus-5-5-design.webp"
+      "previewImage": "/previews/quesma-opus-5-5-design.webp",
+      "verifyLog": "主源是 Quesma 博客，早间 HTTP 200，作者 Piotr Migdał，页内日期 7 October 2026。Opus 5.5 成品页早间 HTTP 200。线索来自 HN item 49991903（撰写时 5pts，热度不高，按 AI×设计偏好收录）。预览为 Playwright 实拍博客首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary source is the Quesma blog, HTTP 200 this morning, by Piotr Migdał, dated 7 October 2026. The Opus 5.5 result page was HTTP 200 this morning. Lead: HN item 49991903 (5pts at write time; low traction, kept for the AI×design focus). Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "graphical",
@@ -562,8 +590,8 @@
         "https://x.com/soopa"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是产品页 https://www.graphicalui.com/ ，撰写时 curl HTTP 200。页脚写 Created with care in California by Josh Puckett 与 Adam Michela，链接分别是 https://x.com/joshpuckett 与 https://x.com/soopa 。版权年份组件的 initialYear 是 2026。本环境的 X 连接未授权，没有打开这两人的帖子，作者名以页脚为准。页面 meta 描述是 “A tool to create visual themes, customize components, and build interfaces with your coding agent.” 首屏把 ChatGPT、Claude、Cursor、Grok 写成可切换的对象，意思是交给你已经在用的编程助手。FAQ 写明：给设计师、开发者和用编程助手做应用的人；包含主题编辑器、5 套可改的样式、主题 token、React 组件源码；每份下载含 GUI.md、浅色和深色主题说明、安装步骤和三个 coding-agent skills；组件编辑器对着 Base UI，React 源码可直接用；问「是否必须用 React 或 Base UI」，页面答 No，主题文件可以用于任何框架、组件库或语言。购买区标题 One-time purchase，正文写主题编辑器、一套起始样式和基础组件可用于不限数量的项目，主题编辑器的后续更新包含在内。按钮文字是 Buy for $49，另有仅供读屏的 previously $99，并链到 https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00 。本库没有下单，没有核对 Stripe 结账页的税额或地区限制。站点 HTML 没有写公开日期。HN item 49971356，标题 Graphical UI，作者 handfuloflight，2026-10-05T21:51:09.000Z（约 2026-10-06 05:51 CST），撰写时 Algolia 34pts。未购买、未下载、未把 GUI.md 或技能文件交给 Cursor、Claude、ChatGPT 或 Grok。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Primary source is https://www.graphicalui.com/, curl HTTP 200 at write time. The footer says Created with care in California by Josh Puckett and Adam Michela, linking https://x.com/joshpuckett and https://x.com/soopa. The copyright widget’s initialYear is 2026. X was not authorized in this environment, so those posts were not opened; the names follow the footer. The meta description is “A tool to create visual themes, customize components, and build interfaces with your coding agent.” The hero swaps ChatGPT, Claude, Cursor, and Grok, meaning the agent you already use. The FAQ says it is for designers, developers, and anyone building an app with a coding agent; it includes the theme builder, 5 customizable styles, theme tokens, and React component source; each download includes GUI.md, light and dark theme references, setup instructions, and three coding-agent skills; the editor targets Base UI components and ships React source; asked “Do I have to use React or Base UI?”, the page answers No, and says the theme files can be used with any framework, component library, or language. The purchase block is titled One-time purchase and says the theme builder, launch collection of styles, and foundation components can be used in unlimited projects, with ongoing updates to the theme builder included. The button reads Buy for $49, with screen-reader text previously $99, and points at https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00. This library did not check out and did not verify tax or regional limits on the Stripe page. The HTML states no public launch date. HN item 49971356, title Graphical UI, author handfuloflight, 2026-10-05T21:51:09.000Z (about 05:51 CST on 2026-10-06), 34pts on Algolia at write time. Not purchased, not downloaded, and GUI.md and the skill files were not given to Cursor, Claude, ChatGPT, or Grok. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "版权年份组件的 initialYear 是 2026。本环境的 X 连接未授权，没有打开这两人的帖子，作者名以页脚为准。页面 meta 描述是 “A tool to create visual themes, customize components, and build interfaces with your coding agent.” 首屏把 ChatGPT、Claude、Cursor、Grok 写成可切换的对象，意思是交给你已经在用的编程助手。FAQ 写明：给设计师、开发者和用编程助手做应用的人；包含主题编辑器、5 套可改的样式、主题 token、React 组件源码；每份下载含 GUI.md、浅色和深色主题说明、安装步骤和三个 coding-agent skills；组件编辑器对着 Base UI，React 源码可直接用；问「是否必须用 React 或 Base UI」，页面答 No，主题文件可以用于任何框架、组件库或语言。购买区标题 One-time purchase，正文写主题编辑器、一套起始样式和基础组件可用于不限数量的项目，主题编辑器的后续更新包含在内。本库没有下单，没有核对 Stripe 结账页的税额或地区限制。站点 HTML 没有写公开日期。未购买、未下载、未把 GUI.md 或技能文件交给 Cursor、Claude、ChatGPT 或 Grok。",
+      "qualityNoteEn": "The copyright widget’s initialYear is 2026. X was not authorized in this environment, so those posts were not opened; the names follow the footer. The meta description is “A tool to create visual themes, customize components, and build interfaces with your coding agent.” The hero swaps ChatGPT, Claude, Cursor, and Grok, meaning the agent you already use. The FAQ says it is for designers, developers, and anyone building an app with a coding agent; it includes the theme builder, 5 customizable styles, theme tokens, and React component source; each download includes GUI.md, light and dark theme references, setup instructions, and three coding-agent skills; the editor targets Base UI components and ships React source; asked “Do I have to use React or Base UI?”, the page answers No, and says the theme files can be used with any framework, component library, or language. The purchase block is titled One-time purchase and says the theme builder, launch collection of styles, and foundation components can be used in unlimited projects, with ongoing updates to the theme builder included. This library did not check out and did not verify tax or regional limits on the Stripe page. The HTML states no public launch date. Not purchased, not downloaded, and GUI.md and the skill files were not given to Cursor, Claude, ChatGPT, or Grok.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": true,
@@ -682,7 +710,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 graphicalui.com 首屏",
         "previewCreditEn": "Preview: Chrome capture of graphicalui.com above the fold"
-      }
+      },
+      "verifyLog": "主源是产品页 https://www.graphicalui.com/ ，撰写时 curl HTTP 200。页脚写 Created with care in California by Josh Puckett 与 Adam Michela，链接分别是 https://x.com/joshpuckett 与 https://x.com/soopa 。按钮文字是 Buy for $49，另有仅供读屏的 previously $99，并链到 https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00 。HN item 49971356，标题 Graphical UI，作者 handfuloflight，2026-10-05T21:51:09.000Z（约 2026-10-06 05:51 CST），撰写时 Algolia 34pts。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Primary source is https://www.graphicalui.com/, curl HTTP 200 at write time. The footer says Created with care in California by Josh Puckett and Adam Michela, linking https://x.com/joshpuckett and https://x.com/soopa. The button reads Buy for $49, with screen-reader text previously $99, and points at https://buy.stripe.com/00wcN72rffd1bSl8dFc3m00. HN item 49971356, title Graphical UI, author handfuloflight, 2026-10-05T21:51:09.000Z (about 05:51 CST on 2026-10-06), 34pts on Algolia at write time. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "protopie-mcp",
@@ -704,8 +734,8 @@
         "https://www.protopie.io/features/protopie-mcp"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是官方博客 https://www.protopie.io/blog/protopie-mcp-official ，撰写时 HTTP 200。作者 Iulia Sorodoc，头衔 Product Marketing Manager at ProtoPie，页内日期 Oct 7, 2026，文首标 3 min read。博客写 Studio MCP 可浏览已启用的 ProtoPie 库并把库组件作为实例放进原型；可复制 Layer、Scene、Variable、Component、Trigger、Response 或其他受支持元素的 ID 放进提示词。Code MCP 官方支持列表为 React、React Native、Qt / QML、Flutter、SwiftUI、Compose、ArkTS，文中把 React Native 写成这次新增。套餐原文：MCP Core（Studio MCP）在 Pro plan；MCP Enterprise（Studio MCP、Code MCP、Dev View）在 Enterprise plan。文中还提到 2026-10-13 19:00 EDT 的一场汽车 HMI 网络研讨会，本库没有报名。产品功能页 https://www.protopie.io/features/protopie-mcp 撰写时可读，标题 From Prompt to Production。该页把 Studio MCP 写成自带 AI（列出 Claude Code、Cursor、VS Code、Codex 等），并写 manually perfect every detail, token-free。token-free 只按页面用词记录，本库没有核对它是否完全不消耗 ProtoPie 的 AI 额度。功能页把 MCP Core 写成给个人跨职能的人做原型，把 MCP Enterprise 写成给组织出代码；Pro 与 Enterprise 的计划名以博客原文为准，功能页没有再写 Pro 这个词。功能页 FAQ 在抓取时是折叠的，答案没有展开，不引用。本库没有 ProtoPie 账号，没有安装 Studio，没有连接 MCP，没有生成 React Native 或其他框架的代码，也没有打开 Dev View。预览为 Chrome 实拍这篇官方博客首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Primary source is the official blog https://www.protopie.io/blog/protopie-mcp-official, HTTP 200 at write time. Author Iulia Sorodoc, Product Marketing Manager at ProtoPie, on-page date Oct 7, 2026, labeled 3 min read. The post says Studio MCP can browse enabled ProtoPie libraries and add library components as instances; you can copy the ID of a Layer, Scene, Variable, Component, Trigger, Response, or other supported element into the prompt. Code MCP’s official list is React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS, and the post calls React Native the addition. Plans, in the post’s words: MCP Core (Studio MCP) on the Pro plan; MCP Enterprise (Studio MCP, Code MCP, and Dev View) on the Enterprise plan. The post also names an automotive HMI webinar on 2026-10-13 at 7:00 PM EDT. This library did not register. The product page https://www.protopie.io/features/protopie-mcp was readable at write time, titled From Prompt to Production. It describes Studio MCP as bring-your-own AI (Claude Code, Cursor, VS Code, Codex, and more) and says “manually perfect every detail, token-free.” token-free is recorded as the page’s wording; this library did not check whether that means zero ProtoPie AI credits. The page frames MCP Core for solo cross-functional builders and MCP Enterprise for organizations generating code. The plan names Pro and Enterprise follow the blog; the features page does not repeat the word Pro. Its FAQ was collapsed in the fetch, so those answers are not quoted. This library has no ProtoPie account, did not install Studio, did not connect MCP, did not generate React Native or any other code, and did not open Dev View. Preview is a Chrome capture of the official blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "作者 Iulia Sorodoc，头衔 Product Marketing Manager at ProtoPie，页内日期 Oct 7, 2026，文首标 3 min read。博客写 Studio MCP 可浏览已启用的 ProtoPie 库并把库组件作为实例放进原型；可复制 Layer、Scene、Variable、Component、Trigger、Response 或其他受支持元素的 ID 放进提示词。Code MCP 官方支持列表为 React、React Native、Qt / QML、Flutter、SwiftUI、Compose、ArkTS，文中把 React Native 写成这次新增。套餐原文：MCP Core（Studio MCP）在 Pro plan；MCP Enterprise（Studio MCP、Code MCP、Dev View）在 Enterprise plan。文中还提到 2026-10-13 19:00 EDT 的一场汽车 HMI 网络研讨会，本库没有报名。该页把 Studio MCP 写成自带 AI（列出 Claude Code、Cursor、VS Code、Codex 等），并写 manually perfect every detail, token-free。token-free 只按页面用词记录，本库没有核对它是否完全不消耗 ProtoPie 的 AI 额度。功能页把 MCP Core 写成给个人跨职能的人做原型，把 MCP Enterprise 写成给组织出代码；Pro 与 Enterprise 的计划名以博客原文为准，功能页没有再写 Pro 这个词。功能页 FAQ 在抓取时是折叠的，答案没有展开，不引用。本库没有 ProtoPie 账号，没有安装 Studio，没有连接 MCP，没有生成 React Native 或其他框架的代码，也没有打开 Dev View。",
+      "qualityNoteEn": "Author Iulia Sorodoc, Product Marketing Manager at ProtoPie, on-page date Oct 7, 2026, labeled 3 min read. The post says Studio MCP can browse enabled ProtoPie libraries and add library components as instances; you can copy the ID of a Layer, Scene, Variable, Component, Trigger, Response, or other supported element into the prompt. Code MCP’s official list is React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS, and the post calls React Native the addition. Plans, in the post’s words: MCP Core (Studio MCP) on the Pro plan; MCP Enterprise (Studio MCP, Code MCP, and Dev View) on the Enterprise plan. The post also names an automotive HMI webinar on 2026-10-13 at 7:00 PM EDT. This library did not register. It describes Studio MCP as bring-your-own AI (Claude Code, Cursor, VS Code, Codex, and more) and says “manually perfect every detail, token-free.” token-free is recorded as the page’s wording; this library did not check whether that means zero ProtoPie AI credits. The page frames MCP Core for solo cross-functional builders and MCP Enterprise for organizations generating code. The plan names Pro and Enterprise follow the blog; the features page does not repeat the word Pro. Its FAQ was collapsed in the fetch, so those answers are not quoted. This library has no ProtoPie account, did not install Studio, did not connect MCP, did not generate React Native or any other code, and did not open Dev View.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -824,7 +854,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 ProtoPie 官方博客首屏",
         "previewCreditEn": "Preview: Chrome capture of the official ProtoPie blog above the fold"
-      }
+      },
+      "verifyLog": "主源是官方博客 https://www.protopie.io/blog/protopie-mcp-official ，撰写时 HTTP 200。产品功能页 https://www.protopie.io/features/protopie-mcp 撰写时可读，标题 From Prompt to Production。预览为 Chrome 实拍这篇官方博客首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Primary source is the official blog https://www.protopie.io/blog/protopie-mcp-official, HTTP 200 at write time. The product page https://www.protopie.io/features/protopie-mcp was readable at write time, titled From Prompt to Production. Preview is a Chrome capture of the official blog above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "figma-agent-ga",
@@ -849,8 +881,8 @@
         "https://mostdesign01-sudo.github.io/ai-up-lab/cases/figma-bro/"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "主源是 https://www.figma.com/release-notes/ ，撰写时 HTTP 200，2026-10-06 条目标题 The Figma agent is generally available。同日博客 https://www.figma.com/blog/figma-agent-and-design-systems/ HTTP 200，作者 Wayne Lin，Product Manager, Figma，日期 October 6, 2026。帮助中心 https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files HTTP 200，页首 Who can use this feature 写 Available on all plans，并写明 Full 席位加编辑权才能让助手改文件，View / Dev / Collab 或仅查看可以聊天不能改该文件，任何人可在自己的 Draft 里聊天并改。博客末段写：Full seat on Professional, Organization, Enterprise, and some Education plans, limited availability on the Starter plan；Collab, Dev, and View seats can use the agent in their drafts。两套说法同时保留。额度 FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ HTTP 200，写明 Design 与 Weave 里的助手于 October 6, 2026 从 open beta 转为 general availability，并开始消耗 Figma AI credits；公测期间不消耗。具体每月额度数字在另一篇价格表，本条不转抄没有逐格核对的数字。发布说明还写：库的 markdown 指南、看同事助手、搜文件、生成式插件 GA、自定义技能在 starter 可用。旧的公测帮助页仍写 beta，与 10 月 6 日的发布说明冲突，不采用。本库未登录，未在文件里发过提示，未上传库指南，未跟过同事的助手。和库内 figma-bro 不是同一件事：那条是社区的 Grok Bot 模板。预览为 Chrome 实拍上述博客首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Primary source is https://www.figma.com/release-notes/, HTTP 200 at write time. The 2026-10-06 item is titled The Figma agent is generally available. The same-day blog https://www.figma.com/blog/figma-agent-and-design-systems/ returned HTTP 200, by Wayne Lin, Product Manager at Figma, dated October 6, 2026. Help center https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files returned HTTP 200. Its “Who can use this feature” line says Available on all plans, then says a Full seat plus edit access is required for the agent to edit that file, View / Dev / Collab or view-only can chat without editing it, and anyone can chat and edit in their own drafts. The blog’s closing lines say Full seats on Professional, Organization, Enterprise, and some Education plans, limited availability on Starter, and Collab, Dev, and View seats can use the agent in drafts. Both wordings are kept. The credits FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ returned HTTP 200 and says the agent in Design and Weave tools moved from open beta to general availability on October 6, 2026 and now consumes Figma AI credits; beta usage did not. Monthly credit amounts live on another pricing table and are not copied here without a cell-by-cell check. The release notes also list markdown library guidelines, watching teammates’ agents, file search, generative plugins GA, and custom skills on Starter. An older help page still says beta and conflicts with the October 6 notes, so it is not used. This library did not sign in, did not send a prompt in a file, did not upload library guidelines, and did not follow a teammate’s agent. This is not the in-library figma-bro entry, which is a community Grok Bot template. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "博客末段写：Full seat on Professional, Organization, Enterprise, and some Education plans, limited availability on the Starter plan；Collab, Dev, and View seats can use the agent in their drafts。两套说法同时保留。具体每月额度数字在另一篇价格表，本条不转抄没有逐格核对的数字。发布说明还写：库的 markdown 指南、看同事助手、搜文件、生成式插件 GA、自定义技能在 starter 可用。旧的公测帮助页仍写 beta，与 10 月 6 日的发布说明冲突，不采用。本库未登录，未在文件里发过提示，未上传库指南，未跟过同事的助手。和库内 figma-bro 不是同一件事：那条是社区的 Grok Bot 模板。",
+      "qualityNoteEn": "The 2026-10-06 item is titled The Figma agent is generally available. Its “Who can use this feature” line says Available on all plans, then says a Full seat plus edit access is required for the agent to edit that file, View / Dev / Collab or view-only can chat without editing it, and anyone can chat and edit in their own drafts. The blog’s closing lines say Full seats on Professional, Organization, Enterprise, and some Education plans, limited availability on Starter, and Collab, Dev, and View seats can use the agent in drafts. Both wordings are kept. Monthly credit amounts live on another pricing table and are not copied here without a cell-by-cell check. The release notes also list markdown library guidelines, watching teammates’ agents, file search, generative plugins GA, and custom skills on Starter. An older help page still says beta and conflicts with the October 6 notes, so it is not used. This library did not sign in, did not send a prompt in a file, did not upload library guidelines, and did not follow a teammate’s agent. This is not the in-library figma-bro entry, which is a community Grok Bot template.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": true,
@@ -974,7 +1006,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 Figma 博客首屏",
         "previewCreditEn": "Preview: Chrome capture of the Figma blog above the fold"
-      }
+      },
+      "verifyLog": "主源是 https://www.figma.com/release-notes/ ，撰写时 HTTP 200，2026-10-06 条目标题 The Figma agent is generally available。同日博客 https://www.figma.com/blog/figma-agent-and-design-systems/ HTTP 200，作者 Wayne Lin，Product Manager, Figma，日期 October 6, 2026。帮助中心 https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files HTTP 200，页首 Who can use this feature 写 Available on all plans，并写明 Full 席位加编辑权才能让助手改文件，View / Dev / Collab 或仅查看可以聊天不能改该文件，任何人可在自己的 Draft 里聊天并改。额度 FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ HTTP 200，写明 Design 与 Weave 里的助手于 October 6, 2026 从 open beta 转为 general availability，并开始消耗 Figma AI credits；公测期间不消耗。预览为 Chrome 实拍上述博客首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Primary source is https://www.figma.com/release-notes/, HTTP 200 at write time. The same-day blog https://www.figma.com/blog/figma-agent-and-design-systems/ returned HTTP 200, by Wayne Lin, Product Manager at Figma, dated October 6, 2026. Help center https://help.figma.com/hc/en-us/articles/37998629035799-Work-with-the-Figma-agent-in-design-files returned HTTP 200. The credits FAQ https://help.figma.com/hc/en-us/articles/42614902212887-AI-credit-updates-FAQ returned HTTP 200 and says the agent in Design and Weave tools moved from open beta to general availability on October 6, 2026 and now consumes Figma AI credits; beta usage did not. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "gamma-5",
@@ -999,8 +1033,8 @@
         "https://gamma.app/"
       ],
       "sourceType": "official-docs",
-      "qualityNote": "没有找到 gamma.app/insights 上的 Gamma 5 发布文。检索到的 gamma.app 自己的文章仍是 2025-09-15 的 Gamma 3.0。撰写时 gamma.app 首页 HTML 也没有 Gamma 5 这几个字。因此本条只采用帮助中心，不采用通讯社稿里的用户规模和准确率。帮助中心撰写时均为 HTTP 200：新建文 https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma （页内 Updated yesterday，相对 2026-10-07 的抓取）写明 Creating in Gamma 5 starts with a conversation，经典生成器仍在。编辑文 https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai 页内 Updated today，写 AI editing has been rebuilt，记住最初目标，小改不重做整份；Gamma 5 编辑器有 manual editing 与 AI editing 两种模式，左上角切换；改完可用 Original / Modified 对比，一次请求的改动一起接受，不能逐条挑。导入文 https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma 写 Gamma 5 的导入重做过，PowerPoint 与 PDF 保留版式且可编辑；pptx / docx 单文件上限 200 MB，PDF 100 MB；部分图表会变成静态图；经典生成器只导入文字；Excel 与 Keynote 不能直接导入。主题文 https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma 写主题跟文件走，可调颜色、字体、标志、形状描边阴影和 AI 图片风格。形状文 https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them 写形状是 freeform block，可拖到任意位置。这些页面没有标出一份统一的发布日期，也没有 Gamma 5 的价格。本库未登录、未生成、未导入文件。预览为 Chrome 实拍导入帮助文首屏裁 3:2 WebP，图中能看到 Gamma 5 和 Updated yesterday。不打星。",
-      "qualityNoteEn": "No Gamma 5 launch post was found on gamma.app/insights. The Gamma article that search returned on gamma.app itself is still Gamma 3.0 from 2025-09-15. The gamma.app homepage HTML at write time also did not contain the words Gamma 5. This entry therefore follows the help center only, and does not use user counts or accuracy figures from press republications. Help pages returned HTTP 200 at write time. The create article https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma (on-page Updated yesterday, relative to a fetch on 2026-10-07) says creating in Gamma 5 starts with a conversation, and the classic generator remains. The edit article https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai says Updated today, that AI editing has been rebuilt, that the original goal is kept, and that a small fix does not redo the whole piece. It says the Gamma 5 editor has manual editing and AI editing, toggled at the top left, with an Original / Modified compare. Changes from one request are accepted together. The import article https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma says Gamma 5 import was rebuilt, PowerPoint and PDF keep their layouts and stay editable, pptx / docx are up to 200 MB, PDFs up to 100 MB, some charts arrive as static images, the classic generator imports text only, and Excel and Keynote cannot be imported directly. The theme article https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma says themes live on the file and cover colors, fonts, logos, shape strokes and shadows, and AI image styles. The shapes article https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them says a shape is a freeform block you can drag. These pages do not share one launch date, and they do not state a Gamma 5 price. This library did not sign in, did not generate a deck, and did not import a file. Preview is a Chrome capture of the import article above the fold, cropped to 3:2 WebP; the shot shows Gamma 5 and Updated yesterday. Unrated.",
+      "qualityNote": "没有找到 gamma.app/insights 上的 Gamma 5 发布文。检索到的 gamma.app 自己的文章仍是 2025-09-15 的 Gamma 3.0。因此本条只采用帮助中心，不采用通讯社稿里的用户规模和准确率。这些页面没有标出一份统一的发布日期，也没有 Gamma 5 的价格。本库未登录、未生成、未导入文件。",
+      "qualityNoteEn": "No Gamma 5 launch post was found on gamma.app/insights. The Gamma article that search returned on gamma.app itself is still Gamma 3.0 from 2025-09-15. This entry therefore follows the help center only, and does not use user counts or accuracy figures from press republications. It says the Gamma 5 editor has manual editing and AI editing, toggled at the top left, with an Original / Modified compare. Changes from one request are accepted together. These pages do not share one launch date, and they do not state a Gamma 5 price. This library did not sign in, did not generate a deck, and did not import a file.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -1129,7 +1163,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 Gamma 导入帮助首屏",
         "previewCreditEn": "Preview: Chrome capture of Gamma’s import help article above the fold"
-      }
+      },
+      "verifyLog": "撰写时 gamma.app 首页 HTML 也没有 Gamma 5 这几个字。帮助中心撰写时均为 HTTP 200：新建文 https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma （页内 Updated yesterday，相对 2026-10-07 的抓取）写明 Creating in Gamma 5 starts with a conversation，经典生成器仍在。编辑文 https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai 页内 Updated today，写 AI editing has been rebuilt，记住最初目标，小改不重做整份；Gamma 5 编辑器有 manual editing 与 AI editing 两种模式，左上角切换；改完可用 Original / Modified 对比，一次请求的改动一起接受，不能逐条挑。导入文 https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma 写 Gamma 5 的导入重做过，PowerPoint 与 PDF 保留版式且可编辑；pptx / docx 单文件上限 200 MB，PDF 100 MB；部分图表会变成静态图；经典生成器只导入文字；Excel 与 Keynote 不能直接导入。主题文 https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma 写主题跟文件走，可调颜色、字体、标志、形状描边阴影和 AI 图片风格。形状文 https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them 写形状是 freeform block，可拖到任意位置。预览为 Chrome 实拍导入帮助文首屏裁 3:2 WebP，图中能看到 Gamma 5 和 Updated yesterday。不打星。",
+      "verifyLogEn": "The gamma.app homepage HTML at write time also did not contain the words Gamma 5. Help pages returned HTTP 200 at write time. The create article https://help.gamma.app/en/articles/7838093-how-do-i-create-a-new-presentation-document-or-webpage-in-gamma (on-page Updated yesterday, relative to a fetch on 2026-10-07) says creating in Gamma 5 starts with a conversation, and the classic generator remains. The edit article https://help.gamma.app/en/articles/8033284-how-do-i-edit-my-content-with-ai says Updated today, that AI editing has been rebuilt, that the original goal is kept, and that a small fix does not redo the whole piece. The import article https://help.gamma.app/en/articles/11047840-how-can-i-import-slides-or-content-into-gamma says Gamma 5 import was rebuilt, PowerPoint and PDF keep their layouts and stay editable, pptx / docx are up to 200 MB, PDFs up to 100 MB, some charts arrive as static images, the classic generator imports text only, and Excel and Keynote cannot be imported directly. The theme article https://help.gamma.app/en/articles/11029150-how-do-i-customize-themes-colors-and-fonts-in-gamma says themes live on the file and cover colors, fonts, logos, shape strokes and shadows, and AI image styles. The shapes article https://help.gamma.app/en/articles/16951068-what-are-shapes-and-how-do-i-use-them says a shape is a freeform block you can drag. Preview is a Chrome capture of the import article above the fold, cropped to 3:2 WebP; the shot shows Gamma 5 and Updated yesterday. Unrated."
     },
     {
       "id": "openai-math-progress",
@@ -1151,8 +1187,8 @@
         "https://news.ycombinator.com/item?id=49984923"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "公告页 https://openai.com/index/sharing-ai-progress-in-mathematics/ 在本环境 curl 为 403（要过浏览器校验）。可读文本来自 r.jina.ai 对同一 URL 的抓取，标题 Sharing AI progress in mathematics。HN item 49984923 的外链就是这个 URL，作者 OfficialTurkey，2026-10-06T22:17:21.000Z（约 2026-10-07 06:17 CST），撰写时 Algolia 981pts。博文写：结果来自一个内部前沿模型；与普林斯顿高等研究院的数学与人工智能顾问组商量过发布方式；材料放在 GitHub，含修订和引用约定；许多证明有 Lean 形式化，以后继续补；另有 10 份推理摘要、按 ChatGPT Pro 用量估算的计算量，以及尝试过多少问题的统计。博文给出的计算量原句是 The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking。博文说会资助研讨会，细节以后再说；模型还在准备负责任地发布，本条不把它写成已上线的模型。仓库 https://github.com/openai/math 撰写时 gh api：Apache-2.0，创建于 2026-10-06T21:47:02Z，6913★。README 与 CONTENTS.md 都写 722 manuscripts、372 families。README 写并非都有 Lean，未形式化的结果可能有问题。本库没有逐篇打开 PDF，没有运行 Lean，没有核对“大约三小时”的换算，也没有打开博文里指向的 Navier-Stokes 模型页。预览为 Chrome 实拍 GitHub 仓库首屏裁 3:2 WebP，因为公告页在无头浏览器里仍是校验页。不打星。",
-      "qualityNoteEn": "A curl of https://openai.com/index/sharing-ai-progress-in-mathematics/ returned 403 in this environment (a browser check). The readable text is a fetch of that same URL through r.jina.ai, title Sharing AI progress in mathematics. HN item 49984923 links that URL, author OfficialTurkey, 2026-10-06T22:17:21.000Z (about 06:17 CST on 2026-10-07), 981pts on Algolia at write time. The post says the results come from an internal frontier model, that release practice was discussed with the Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study, that the materials are on GitHub with revision and citation protocols, that many proofs have Lean formalizations and more will be added, and that the release includes 10 reasoning summaries, a compute estimate in ChatGPT Pro usage, and statistics on how many problems were attempted. The compute sentence is: The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking. The post says workshops will be funded later, without details. It says the model is still being prepared for a responsible release, so this note does not treat it as a model you can call. Repo https://github.com/openai/math via gh api at write time: Apache-2.0, created 2026-10-06T21:47:02Z, 6913★. Both the README and CONTENTS.md say 722 manuscripts and 372 families. The README says not every paper has Lean and that some unformalized results could have issues. This library did not open the PDFs one by one, did not run Lean, did not check the “about three hours” conversion, and did not open the Navier-Stokes model page linked from the post. Preview is a Chrome capture of the GitHub repo above the fold, cropped to 3:2 WebP, because the announcement URL still showed a browser check in headless Chrome. Unrated.",
+      "qualityNote": "可读文本来自 r.jina.ai 对同一 URL 的抓取，标题 Sharing AI progress in mathematics。博文写：结果来自一个内部前沿模型；与普林斯顿高等研究院的数学与人工智能顾问组商量过发布方式；材料放在 GitHub，含修订和引用约定；许多证明有 Lean 形式化，以后继续补；另有 10 份推理摘要、按 ChatGPT Pro 用量估算的计算量，以及尝试过多少问题的统计。博文给出的计算量原句是 The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking。博文说会资助研讨会，细节以后再说；模型还在准备负责任地发布，本条不把它写成已上线的模型。README 与 CONTENTS.md 都写 722 manuscripts、372 families。README 写并非都有 Lean，未形式化的结果可能有问题。本库没有逐篇打开 PDF，没有运行 Lean，没有核对“大约三小时”的换算，也没有打开博文里指向的 Navier-Stokes 模型页。",
+      "qualityNoteEn": "The readable text is a fetch of that same URL through r.jina.ai, title Sharing AI progress in mathematics. The post says the results come from an internal frontier model, that release practice was discussed with the Advisory Group on Mathematics and Artificial Intelligence at the Institute for Advanced Study, that the materials are on GitHub with revision and citation protocols, that many proofs have Lean formalizations and more will be added, and that the release includes 10 reasoning summaries, a compute estimate in ChatGPT Pro usage, and statistics on how many problems were attempted. The compute sentence is: The average result used the equivalent compute of roughly three hours of ChatGPT Pro thinking. The post says workshops will be funded later, without details. It says the model is still being prepared for a responsible release, so this note does not treat it as a model you can call. Both the README and CONTENTS.md say 722 manuscripts and 372 families. The README says not every paper has Lean and that some unformalized results could have issues. This library did not open the PDFs one by one, did not run Lean, did not check the “about three hours” conversion, and did not open the Navier-Stokes model page linked from the post.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -1274,7 +1310,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 github.com/openai/math 首屏",
         "previewCreditEn": "Preview: Chrome capture of github.com/openai/math above the fold"
-      }
+      },
+      "verifyLog": "公告页 https://openai.com/index/sharing-ai-progress-in-mathematics/ 在本环境 curl 为 403（要过浏览器校验）。HN item 49984923 的外链就是这个 URL，作者 OfficialTurkey，2026-10-06T22:17:21.000Z（约 2026-10-07 06:17 CST），撰写时 Algolia 981pts。仓库 https://github.com/openai/math 撰写时 gh api：Apache-2.0，创建于 2026-10-06T21:47:02Z，6913★。预览为 Chrome 实拍 GitHub 仓库首屏裁 3:2 WebP，因为公告页在无头浏览器里仍是校验页。不打星。",
+      "verifyLogEn": "A curl of https://openai.com/index/sharing-ai-progress-in-mathematics/ returned 403 in this environment (a browser check). HN item 49984923 links that URL, author OfficialTurkey, 2026-10-06T22:17:21.000Z (about 06:17 CST on 2026-10-07), 981pts on Algolia at write time. Repo https://github.com/openai/math via gh api at write time: Apache-2.0, created 2026-10-06T21:47:02Z, 6913★. Preview is a Chrome capture of the GitHub repo above the fold, cropped to 3:2 WebP, because the announcement URL still showed a browser check in headless Chrome. Unrated."
     },
     {
       "id": "artcraft-crafting-apps",
@@ -1306,8 +1344,8 @@
         "https://x.com/math_fournity/status/2107554211529724384"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "线索来自 X 帖 @math_fournity（2026-10-06T19:30:55Z / 北京时间 2026-10-07 03:30），原文「🚨 Adobe 天塌了，全套Adobe软件，开源实现」，附官网总览页截图，撰写时约 72 万浏览、9.7k 赞、1.1 万收藏。帖子说法偏夸张，本条以官方来源为准。主源是 ArtCraft 官网总览页 https://getartcraft.com/apps（撰写时 HTTP 200，标题 Crafting Apps: open-source creative tools — ArtCraft），写的是七款应用、纯 Rust、开源免费，原则里列了「Agent-ready：CLI、JSON 控制通道或 MCP 服务器驱动每个应用」。七个仓库都在 GitHub 组织 storytold 下（ArtCraft 主仓库 storytold/artcraft 也在此，官网页脚写 hello@storyteller.ai），各自 README 都写 clean-room（只依据公开规范和观察到的行为实现，不含 Adobe 代码或素材）、MIT 或 Apache-2.0 双许可，并写明与 Adobe 无关联。gh api 撰写时 star 数：photocraft 约 11.7k、filmcraft 约 2.3k、lightcraft 约 1.8k、printcraft 约 1.6k、vectorcraft 约 1.5k、effectcraft 约 1.1k、designcraft 约 0.7k；仓库建于 2026-09-30 至 10-01（UTC），最早的正式发布是 photocraft 2026-10-02T00:09Z，其余六个 2026-10-02T22:31Z 左右。撰写时 PhotoCraft 最新 v0.3.0（2026-10-07T10:33Z），官网下载区仍显示 0.2.0。官网状态标签：PhotoCraft、PrintCraft 为 Early alpha，其余为 In development。PhotoCraft README：500+ 条命令同时供界面、CLI、JSON 控制通道和 MCP 使用；`photocraft-cli mcp` 可无界面运行，也可桥接到正在运行的应用；docs/control-protocol.md 写桥接只监听本机回环地址并要令牌，文件读写范围用 --automation-read-root / --automation-write-root 限定。PrintCraft README 写 MCP 默认不启动、不开网络端口，只在助手启动 printcraft-cli mcp 时经 stdin/stdout 运行。PhotoCraft README 状态段原话大意：还不是日常专业工作的 Photoshop 替代品，最大缺口是 AI/生成式功能、约二十个工具、排版深度和插件兼容。PSD：官网写 135 个真实文件里 134 个逐字节往返；README 更细：psd-tools 测试集 309 个文件里 307 个打开再保存后渲染一致，重新保存的文件并非逐字节相同，只有独立的 photocraft-psd 库能逐字节还原。两处口径不同，本条按 README。组织里 10-07 还新建了 gridcraft（Excel）、cadcraft（AutoCAD）、deckcraft（PowerPoint）、soundcraft（Pro Tools），不在官网七款之列，本条不收。本库未下载、未安装、未从源码编译、未接 MCP。预览为官网四款应用官方截图（PhotoCraft / VectorCraft / FilmCraft / PrintCraft）拼成 3:2 WebP。不打星。",
-      "qualityNoteEn": "Lead: X post by @math_fournity (2026-10-06T19:30:55Z / 03:30 on 2026-10-07 Beijing time), text “🚨 Adobe is done for — the whole Adobe suite, open-source,” with a screenshot of the official overview page; about 724k views, 9.7k likes, and 11k bookmarks at write time. The post overstates things, so this entry follows the official sources. Primary source is the ArtCraft overview page https://getartcraft.com/apps (HTTP 200 at write time, title Crafting Apps: open-source creative tools — ArtCraft): seven apps, pure Rust, open source and free, and an “Agent-ready” principle — drive every app from a CLI, a JSON control channel, or an MCP server. All seven repos live in the GitHub org storytold (alongside the main ArtCraft repo storytold/artcraft; the site footer lists hello@storyteller.ai). Each README says clean-room (built from public specs and observed behaviour only, no Adobe code or assets), dual MIT or Apache-2.0, and not affiliated with Adobe. Stars via gh api at write time: photocraft about 11.7k, filmcraft about 2.3k, lightcraft about 1.8k, printcraft about 1.6k, vectorcraft about 1.5k, effectcraft about 1.1k, designcraft about 0.7k. Repos were created 2026-09-30 to 10-01 (UTC); the first release was photocraft at 2026-10-02T00:09Z, the other six around 2026-10-02T22:31Z. At write time PhotoCraft’s latest is v0.3.0 (2026-10-07T10:33Z) while the site’s download area still shows 0.2.0. Site status labels: PhotoCraft and PrintCraft are Early alpha, the rest In development. PhotoCraft README: 500+ commands shared by the UI, CLI, JSON control channel, and MCP; `photocraft-cli mcp` runs headless or bridges to the running app; docs/control-protocol.md says the bridge listens on loopback only and needs a token, and file access is limited with --automation-read-root / --automation-write-root. PrintCraft README says its MCP server never starts on its own, opens no network port, and runs over stdin/stdout only while an agent launches printcraft-cli mcp. PhotoCraft README status, paraphrased: not yet a Photoshop replacement for daily professional work; the biggest gaps are AI/generative features, about twenty tools, typography depth, and plug-in compatibility. PSD: the site says 134 of 135 real files round-trip byte for byte; the README is more specific — 307 of 309 psd-tools files render the same after open-and-save, a re-saved file is not byte-identical, and only the standalone photocraft-psd crate reproduces files byte for byte. The two differ; this entry follows the README. On 10-07 the org also created gridcraft (Excel), cadcraft (AutoCAD), deckcraft (PowerPoint), and soundcraft (Pro Tools); they are not among the site’s seven and are not covered here. This library did not download, install, build from source, or connect MCP. Preview is a 3:2 WebP collage of four official app screenshots from the site (PhotoCraft / VectorCraft / FilmCraft / PrintCraft). Unrated.",
+      "qualityNote": "帖子说法偏夸张，本条以官方来源为准。七个仓库都在 GitHub 组织 storytold 下（ArtCraft 主仓库 storytold/artcraft 也在此，官网页脚写 hello@storyteller.ai），各自 README 都写 clean-room（只依据公开规范和观察到的行为实现，不含 Adobe 代码或素材）、MIT 或 Apache-2.0 双许可，并写明与 Adobe 无关联。官网状态标签：PhotoCraft、PrintCraft 为 Early alpha，其余为 In development。PhotoCraft README：500+ 条命令同时供界面、CLI、JSON 控制通道和 MCP 使用；`photocraft-cli mcp` 可无界面运行，也可桥接到正在运行的应用；docs/control-protocol.md 写桥接只监听本机回环地址并要令牌，文件读写范围用 --automation-read-root / --automation-write-root 限定。PrintCraft README 写 MCP 默认不启动、不开网络端口，只在助手启动 printcraft-cli mcp 时经 stdin/stdout 运行。PhotoCraft README 状态段原话大意：还不是日常专业工作的 Photoshop 替代品，最大缺口是 AI/生成式功能、约二十个工具、排版深度和插件兼容。PSD：官网写 135 个真实文件里 134 个逐字节往返；README 更细：psd-tools 测试集 309 个文件里 307 个打开再保存后渲染一致，重新保存的文件并非逐字节相同，只有独立的 photocraft-psd 库能逐字节还原。两处口径不同，本条按 README。组织里 10-07 还新建了 gridcraft（Excel）、cadcraft（AutoCAD）、deckcraft（PowerPoint）、soundcraft（Pro Tools），不在官网七款之列，本条不收。本库未下载、未安装、未从源码编译、未接 MCP。",
+      "qualityNoteEn": "The post overstates things, so this entry follows the official sources. All seven repos live in the GitHub org storytold (alongside the main ArtCraft repo storytold/artcraft; the site footer lists hello@storyteller.ai). Each README says clean-room (built from public specs and observed behaviour only, no Adobe code or assets), dual MIT or Apache-2.0, and not affiliated with Adobe. Site status labels: PhotoCraft and PrintCraft are Early alpha, the rest In development. PhotoCraft README: 500+ commands shared by the UI, CLI, JSON control channel, and MCP; `photocraft-cli mcp` runs headless or bridges to the running app; docs/control-protocol.md says the bridge listens on loopback only and needs a token, and file access is limited with --automation-read-root / --automation-write-root. PrintCraft README says its MCP server never starts on its own, opens no network port, and runs over stdin/stdout only while an agent launches printcraft-cli mcp. PhotoCraft README status, paraphrased: not yet a Photoshop replacement for daily professional work; the biggest gaps are AI/generative features, about twenty tools, typography depth, and plug-in compatibility. PSD: the site says 134 of 135 real files round-trip byte for byte; the README is more specific — 307 of 309 psd-tools files render the same after open-and-save, a re-saved file is not byte-identical, and only the standalone photocraft-psd crate reproduces files byte for byte. The two differ; this entry follows the README. On 10-07 the org also created gridcraft (Excel), cadcraft (AutoCAD), deckcraft (PowerPoint), and soundcraft (Pro Tools); they are not among the site’s seven and are not covered here. This library did not download, install, build from source, or connect MCP.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -1447,7 +1485,9 @@
         ],
         "previewCredit": "预览：getartcraft.com 官方截图拼图（PhotoCraft / VectorCraft / FilmCraft / PrintCraft）",
         "previewCreditEn": "Preview: collage of official screenshots from getartcraft.com (PhotoCraft / VectorCraft / FilmCraft / PrintCraft)"
-      }
+      },
+      "verifyLog": "线索来自 X 帖 @math_fournity（2026-10-06T19:30:55Z / 北京时间 2026-10-07 03:30），原文「🚨 Adobe 天塌了，全套Adobe软件，开源实现」，附官网总览页截图，撰写时约 72 万浏览、9.7k 赞、1.1 万收藏。主源是 ArtCraft 官网总览页 https://getartcraft.com/apps（撰写时 HTTP 200，标题 Crafting Apps: open-source creative tools — ArtCraft），写的是七款应用、纯 Rust、开源免费，原则里列了「Agent-ready：CLI、JSON 控制通道或 MCP 服务器驱动每个应用」。gh api 撰写时 star 数：photocraft 约 11.7k、filmcraft 约 2.3k、lightcraft 约 1.8k、printcraft 约 1.6k、vectorcraft 约 1.5k、effectcraft 约 1.1k、designcraft 约 0.7k；仓库建于 2026-09-30 至 10-01（UTC），最早的正式发布是 photocraft 2026-10-02T00:09Z，其余六个 2026-10-02T22:31Z 左右。撰写时 PhotoCraft 最新 v0.3.0（2026-10-07T10:33Z），官网下载区仍显示 0.2.0。预览为官网四款应用官方截图（PhotoCraft / VectorCraft / FilmCraft / PrintCraft）拼成 3:2 WebP。不打星。",
+      "verifyLogEn": "Lead: X post by @math_fournity (2026-10-06T19:30:55Z / 03:30 on 2026-10-07 Beijing time), text “🚨 Adobe is done for — the whole Adobe suite, open-source,” with a screenshot of the official overview page; about 724k views, 9.7k likes, and 11k bookmarks at write time. Primary source is the ArtCraft overview page https://getartcraft.com/apps (HTTP 200 at write time, title Crafting Apps: open-source creative tools — ArtCraft): seven apps, pure Rust, open source and free, and an “Agent-ready” principle — drive every app from a CLI, a JSON control channel, or an MCP server. Stars via gh api at write time: photocraft about 11.7k, filmcraft about 2.3k, lightcraft about 1.8k, printcraft about 1.6k, vectorcraft about 1.5k, effectcraft about 1.1k, designcraft about 0.7k. Repos were created 2026-09-30 to 10-01 (UTC); the first release was photocraft at 2026-10-02T00:09Z, the other six around 2026-10-02T22:31Z. At write time PhotoCraft’s latest is v0.3.0 (2026-10-07T10:33Z) while the site’s download area still shows 0.2.0. Preview is a 3:2 WebP collage of four official app screenshots from the site (PhotoCraft / VectorCraft / FilmCraft / PrintCraft). Unrated."
     },
     {
       "id": "james-pember-grok-bot-team",
@@ -1469,8 +1509,8 @@
         "https://news.ycombinator.com/item?id=49960401"
       ],
       "sourceType": "community",
-      "qualityNote": "作者个人 Substack，2026-10-04 发布（撰写时 HTTP 200）。HN item 49960401，撰写时 Algolia 3pts。两个用法（Slack 分诊、双周会前阅读材料）是作者自述的真实工作流，文中有截图，但没有公开提示词或技能文件；本库没有复跑。他提到 Gmail、日历、Drive、Slack、GitHub 五个原生连接器占他约八成工作，这是他个人的估计。预览为 Chrome 实拍文章首屏，裁 3:2 WebP。",
-      "qualityNoteEn": "Author’s own Substack, published 2026-10-04 (HTTP 200 at write time). HN item 49960401, 3pts on Algolia at write time. The two workflows (Slack triage, fortnightly pre-read) are the author’s own account with screenshots; no prompts or skill files are published, and this library did not re-run them. His “about 80% of my work” for Gmail, Calendar, Drive, Slack, and GitHub is his personal estimate. Preview is a Chrome capture of the article’s first screen, cropped to 3:2 WebP.",
+      "qualityNote": "两个用法（Slack 分诊、双周会前阅读材料）是作者自述的真实工作流，文中有截图，但没有公开提示词或技能文件；本库没有复跑。他提到 Gmail、日历、Drive、Slack、GitHub 五个原生连接器占他约八成工作，这是他个人的估计。",
+      "qualityNoteEn": "The two workflows (Slack triage, fortnightly pre-read) are the author’s own account with screenshots; no prompts or skill files are published, and this library did not re-run them. His “about 80% of my work” for Gmail, Calendar, Drive, Slack, and GitHub is his personal estimate.",
       "difficulty": "beginner",
       "hasRoutine": true,
       "hasSkill": true,
@@ -1489,7 +1529,9 @@
       "featured": false,
       "publishedAt": "2026-10-04",
       "updatedAt": "2026-10-07T01:00:00Z",
-      "previewImage": "/previews/james-pember-grok-bot-team.webp"
+      "previewImage": "/previews/james-pember-grok-bot-team.webp",
+      "verifyLog": "作者个人 Substack，2026-10-04 发布（撰写时 HTTP 200）。HN item 49960401，撰写时 Algolia 3pts。预览为 Chrome 实拍文章首屏，裁 3:2 WebP。",
+      "verifyLogEn": "Author’s own Substack, published 2026-10-04 (HTTP 200 at write time). HN item 49960401, 3pts on Algolia at write time. Preview is a Chrome capture of the article’s first screen, cropped to 3:2 WebP."
     },
     {
       "id": "coisland",
@@ -1514,8 +1556,8 @@
         "https://coisland.app/privacy/"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是产品页 https://coisland.app/ 。本环境 curl 直接请求会被 Cloudflare 拦成 403；撰写时用本机 Chrome 打开首页为 HTTP 200，标题 CoIsland: your whole engineering stack centralized。连接器页、助手页、隐私政策经可读文本抓取均为 200（https://coisland.app/connectors/ 、/agents/ 、/privacy/）。Show HN item 49970043（标题 Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you，作者 LeDonT，2026-10-05T20:14:52.000Z / 约 2026-10-06 04:14 CST）。撰写时 HN 页面与 Algolia 都是 9pts。评论 49971029 问会不会加 Cursor，作者回复 49971033「Yes We can! Will work on it.」——所以今天的助手名单里还没有 Cursor。首页 FAQ 写：连接器 35+；免费是最早的 2 条监控一直可用、不限时间、不用账号；许可证一次买断，早鸟价 $29.99 到 10 月 25 日，之后 $49.99，最多 2 台 Mac，含一年更新，这一年里的版本以后仍归你，再续一年更新是 $5.99，无订阅，30 天内可一键退款。页面还列了早鸟合计 $50.99（每把钥匙 $25.49）和 $112.49（每把钥匙 $22.49），每把钥匙仍是最多 2 台 Mac；页文没有把套装写成「几把」，这里不替它补数量。系统要求：苹果自研芯片（M1 或更新）、macOS 14 及以上，不支持 Intel；原生 Swift。隐私政策写开发者是蒙特利尔的 DonTizi；首页作者自述是蒙特利尔的应用 AI 工程师，并称自己从 2026 年 7 月起每天用刘海办公。本库没有把这两个名字核成同一个人。隐私政策比首页那句「没有 CoIsland 服务器」更细：工具数据留在本机，应用还会问更新服务器，买了之后还会问许可证服务器，这两处都不接收工具里的数据；「匿名上报我加了哪类连接器」默认关闭。把告警交给助手时，那份简报会进 Anthropic、OpenAI 或 Snowflake 你自己的账号。本库未下载、未安装、未接任何连接器、未把告警交给助手。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Primary source is https://coisland.app/. A direct curl from this environment is blocked by Cloudflare with 403; local Chrome opened the homepage at HTTP 200, title CoIsland: your whole engineering stack centralized. The connectors, agents, and privacy pages were fetched as readable text at HTTP 200 (https://coisland.app/connectors/, /agents/, /privacy/). Show HN item 49970043 (title Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you, author LeDonT, 2026-10-05T20:14:52.000Z / about 04:14 CST on 2026-10-06). At write time the HN page and Algolia both showed 9pts. Comment 49971029 asks about Cursor; the author replied in 49971033 “Yes We can! Will work on it.” Cursor is not in today’s agent list. The homepage FAQ says 35+ connectors; the free tier is the 2 oldest monitors, forever, no account; a license is paid once, early bird $29.99 until October 25 then $49.99, for up to 2 Macs, with a year of updates, and the versions from that year stay yours. Another year of updates is $5.99. No subscription. 30 days to refund in one click. The page also lists early-bird totals of $50.99 ($25.49 a key) and $112.49 ($22.49 a key), each key still covering up to 2 Macs. The page does not spell the bundle as a key count, so none is added here. Requirements: Apple silicon (M1 or later), macOS 14 or newer, not Intel; native Swift. The privacy policy names DonTizi, an independent developer in Montreal. The homepage author describes themself as an applied AI engineer in Montréal and says they have run their days from the notch since July 2026. This library did not verify that those names are the same person. The privacy policy is more specific than the homepage line “no CoIsland server”: tool data stays on the Mac, while the app also contacts an update server and, after purchase, a license server. Neither receives tool data. “Share which connector types I add, anonymously” is off until you turn it on. Handing an alert to an agent sends that brief to Anthropic, OpenAI, or Snowflake under your own account. This library did not download, install, connect a tool, or hand over an alert. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "评论 49971029 问会不会加 Cursor，作者回复 49971033「Yes We can! Will work on it.」——所以今天的助手名单里还没有 Cursor。首页 FAQ 写：连接器 35+；免费是最早的 2 条监控一直可用、不限时间、不用账号；许可证一次买断，早鸟价 $29.99 到 10 月 25 日，之后 $49.99，最多 2 台 Mac，含一年更新，这一年里的版本以后仍归你，再续一年更新是 $5.99，无订阅，30 天内可一键退款。页面还列了早鸟合计 $50.99（每把钥匙 $25.49）和 $112.49（每把钥匙 $22.49），每把钥匙仍是最多 2 台 Mac；页文没有把套装写成「几把」，这里不替它补数量。系统要求：苹果自研芯片（M1 或更新）、macOS 14 及以上，不支持 Intel；原生 Swift。隐私政策写开发者是蒙特利尔的 DonTizi；首页作者自述是蒙特利尔的应用 AI 工程师，并称自己从 2026 年 7 月起每天用刘海办公。本库没有把这两个名字核成同一个人。隐私政策比首页那句「没有 CoIsland 服务器」更细：工具数据留在本机，应用还会问更新服务器，买了之后还会问许可证服务器，这两处都不接收工具里的数据；「匿名上报我加了哪类连接器」默认关闭。把告警交给助手时，那份简报会进 Anthropic、OpenAI 或 Snowflake 你自己的账号。本库未下载、未安装、未接任何连接器、未把告警交给助手。",
+      "qualityNoteEn": "Comment 49971029 asks about Cursor; the author replied in 49971033 “Yes We can! Will work on it.” Cursor is not in today’s agent list. The homepage FAQ says 35+ connectors; the free tier is the 2 oldest monitors, forever, no account; a license is paid once, early bird $29.99 until October 25 then $49.99, for up to 2 Macs, with a year of updates, and the versions from that year stay yours. Another year of updates is $5.99. No subscription. 30 days to refund in one click. The page also lists early-bird totals of $50.99 ($25.49 a key) and $112.49 ($22.49 a key), each key still covering up to 2 Macs. The page does not spell the bundle as a key count, so none is added here. Requirements: Apple silicon (M1 or later), macOS 14 or newer, not Intel; native Swift. The privacy policy names DonTizi, an independent developer in Montreal. The homepage author describes themself as an applied AI engineer in Montréal and says they have run their days from the notch since July 2026. This library did not verify that those names are the same person. The privacy policy is more specific than the homepage line “no CoIsland server”: tool data stays on the Mac, while the app also contacts an update server and, after purchase, a license server. Neither receives tool data. “Share which connector types I add, anonymously” is off until you turn it on. Handing an alert to an agent sends that brief to Anthropic, OpenAI, or Snowflake under your own account. This library did not download, install, connect a tool, or hand over an alert.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -1644,7 +1686,9 @@
         ],
         "previewCredit": "预览：Chrome 实拍 coisland.app 首屏",
         "previewCreditEn": "Preview: Chrome capture of coisland.app above the fold"
-      }
+      },
+      "verifyLog": "主源是产品页 https://coisland.app/ 。本环境 curl 直接请求会被 Cloudflare 拦成 403；撰写时用本机 Chrome 打开首页为 HTTP 200，标题 CoIsland: your whole engineering stack centralized。连接器页、助手页、隐私政策经可读文本抓取均为 200（https://coisland.app/connectors/ 、/agents/ 、/privacy/）。Show HN item 49970043（标题 Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you，作者 LeDonT，2026-10-05T20:14:52.000Z / 约 2026-10-06 04:14 CST）。撰写时 HN 页面与 Algolia 都是 9pts。预览为 Chrome 实拍首页首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Primary source is https://coisland.app/. A direct curl from this environment is blocked by Cloudflare with 403; local Chrome opened the homepage at HTTP 200, title CoIsland: your whole engineering stack centralized. The connectors, agents, and privacy pages were fetched as readable text at HTTP 200 (https://coisland.app/connectors/, /agents/, /privacy/). Show HN item 49970043 (title Show HN: CoIsland – A local Mac app that monitors your dev tools and alerts you, author LeDonT, 2026-10-05T20:14:52.000Z / about 04:14 CST on 2026-10-06). At write time the HN page and Algolia both showed 9pts. Preview is a Chrome capture of the homepage above the fold, cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "grok-bot-for-work",
@@ -1974,8 +2018,8 @@
         "https://github.com/allenv0/homebrew-scm"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是产品页 https://scm.allenlee.site（撰写时 HTTP 200）、仓库 allenv0/SCM（撰写时 gh api：MIT、主语言 JavaScript、创建于 2026-10-03T16:11:55Z、329★、GitHub Releases 列表长度 0；package.json 版本号 0.2.4，依赖 electron ^43.7.0。Electron 是把网页技术包成桌面程序的壳）。Show HN item 49952111（标题 Show HN: AI search for every photo and every frame of video on macOS，2026-10-04T09:24:52.000Z / 约 2026-10-04 17:24 CST，撰写时 HN 页面与 Algolia 均为 154pts；当时不在 HN 首页 HTML 里（产品页仍写着上过首页））。Homebrew tap 仓库 https://github.com/allenv0/homebrew-scm 可打开。README 与产品页列出的安装命令是 brew tap allenv0/scm；brew trust allenv0/scm；brew install --cask allenv0/scm/scm。五种搜索是 README 表格：Files（整张照片/视频按意思找，用 CLIP，也就是把一句话和画面配对的视觉模型）、Scenes（视频里的镜头，点开跳到时间码）、OCR（认出画面上的字；引擎是 Tesseract，这个开源程序负责认字；README 写英语加 35 种语言开关）、Dialogue（视频里的原话，用 Whisper，也就是把人话转成文字的模型）、LLMs（可选；对已经抽出的对白、画面文字和文件名做本地对话，回答带引用。README 写没在设置里打开就不会下载聊天模型）。收录理由：本机、无账号、用一句话搜照片和视频镜头，是具体能用的找图工具。边界：只按 README 的 Mac 安装路径记；默认权重大小、语言数量和聊天模型体积都是 README 数字，本库没有自己称过。未执行 brew、未安装、未索引任何相册。预览为 Playwright 实拍产品页首屏裁 3:2 WebP（截图时页面角标为 328★，撰写时 gh api 为 329★）。不打星。",
-      "qualityNoteEn": "Primary sources are https://scm.allenlee.site (HTTP 200 at write time) and repo allenv0/SCM (gh api at write time: MIT, primary language JavaScript, created 2026-10-03T16:11:55Z, 329★, GitHub Releases list length 0; package.json version 0.2.4, dependency electron ^43.7.0. Electron is the shell that wraps web tech into a desktop app). Show HN item 49952111 (title Show HN: AI search for every photo and every frame of video on macOS, 2026-10-04T09:24:52.000Z / about 17:24 CST on 2026-10-04, 154pts on both the HN page and Algolia at write time; not in the HN front-page HTML then (the product page still says it made the front page)). The Homebrew tap repo https://github.com/allenv0/homebrew-scm opens. The install lines on the README and the product page are brew tap allenv0/scm; brew trust allenv0/scm; brew install --cask allenv0/scm/scm. The five modes are the README table: Files (whole photos/videos by meaning, using CLIP — a vision model that pairs a sentence with a picture), Scenes (a shot inside a video, open it and jump to the timecode), OCR (read words painted on the frame; the engine is Tesseract, the open-source program that does that reading; the README says English plus 35 language toggles), Dialogue (exact spoken words, via Whisper — a model that turns speech into text), LLMs (opt-in local chat over dialogue, on-screen text, and filenames already extracted, with citations. The README says the chat model is not downloaded until you turn it on in Settings). Why: a concrete local photo-and-video finder with no account. Boundary: the Mac install path is recorded as the README states it; default weight size, language count, and chat-model size are README figures, not measured here. brew was not run, the app was not installed, and no photo library was indexed. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP (the page badge read 328★ in that shot; gh api at write time was 329★). Unrated.",
+      "qualityNote": "Electron 是把网页技术包成桌面程序的壳）。README 与产品页列出的安装命令是 brew tap allenv0/scm；brew trust allenv0/scm；brew install --cask allenv0/scm/scm。五种搜索是 README 表格：Files（整张照片/视频按意思找，用 CLIP，也就是把一句话和画面配对的视觉模型）、Scenes（视频里的镜头，点开跳到时间码）、OCR（认出画面上的字；引擎是 Tesseract，这个开源程序负责认字；README 写英语加 35 种语言开关）、Dialogue（视频里的原话，用 Whisper，也就是把人话转成文字的模型）、LLMs（可选；对已经抽出的对白、画面文字和文件名做本地对话，回答带引用。README 写没在设置里打开就不会下载聊天模型）。收录理由：本机、无账号、用一句话搜照片和视频镜头，是具体能用的找图工具。边界：只按 README 的 Mac 安装路径记；默认权重大小、语言数量和聊天模型体积都是 README 数字，本库没有自己称过。未执行 brew、未安装、未索引任何相册。",
+      "qualityNoteEn": "Electron is the shell that wraps web tech into a desktop app). The install lines on the README and the product page are brew tap allenv0/scm; brew trust allenv0/scm; brew install --cask allenv0/scm/scm. The five modes are the README table: Files (whole photos/videos by meaning, using CLIP — a vision model that pairs a sentence with a picture), Scenes (a shot inside a video, open it and jump to the timecode), OCR (read words painted on the frame; the engine is Tesseract, the open-source program that does that reading; the README says English plus 35 language toggles), Dialogue (exact spoken words, via Whisper — a model that turns speech into text), LLMs (opt-in local chat over dialogue, on-screen text, and filenames already extracted, with citations. The README says the chat model is not downloaded until you turn it on in Settings). Why: a concrete local photo-and-video finder with no account. Boundary: the Mac install path is recorded as the README states it; default weight size, language count, and chat-model size are README figures, not measured here. brew was not run, the app was not installed, and no photo library was indexed.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -2100,7 +2144,9 @@
         ],
         "previewCredit": "预览：Playwright 实拍 scm.allenlee.site 首屏",
         "previewCreditEn": "Preview: Playwright capture of scm.allenlee.site above the fold"
-      }
+      },
+      "verifyLog": "主源是产品页 https://scm.allenlee.site（撰写时 HTTP 200）、仓库 allenv0/SCM（撰写时 gh api：MIT、主语言 JavaScript、创建于 2026-10-03T16:11:55Z、329★、GitHub Releases 列表长度 0；package.json 版本号 0.2.4，依赖 electron ^43.7.0。Show HN item 49952111（标题 Show HN: AI search for every photo and every frame of video on macOS，2026-10-04T09:24:52.000Z / 约 2026-10-04 17:24 CST，撰写时 HN 页面与 Algolia 均为 154pts；当时不在 HN 首页 HTML 里（产品页仍写着上过首页））。Homebrew tap 仓库 https://github.com/allenv0/homebrew-scm 可打开。预览为 Playwright 实拍产品页首屏裁 3:2 WebP（截图时页面角标为 328★，撰写时 gh api 为 329★）。不打星。",
+      "verifyLogEn": "Primary sources are https://scm.allenlee.site (HTTP 200 at write time) and repo allenv0/SCM (gh api at write time: MIT, primary language JavaScript, created 2026-10-03T16:11:55Z, 329★, GitHub Releases list length 0; package.json version 0.2.4, dependency electron ^43.7.0. Show HN item 49952111 (title Show HN: AI search for every photo and every frame of video on macOS, 2026-10-04T09:24:52.000Z / about 17:24 CST on 2026-10-04, 154pts on both the HN page and Algolia at write time; not in the HN front-page HTML then (the product page still says it made the front page)). The Homebrew tap repo https://github.com/allenv0/homebrew-scm opens. Preview is a Playwright capture of the product page above the fold, cropped to 3:2 WebP (the page badge read 328★ in that shot; gh api at write time was 329★). Unrated."
     },
     {
       "id": "cloudflare-web-search-api",
@@ -2128,8 +2174,8 @@
         "https://mostdesign01-sudo.github.io/ai-up-lab/models/clef/"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是 Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/（页内日期 October 2, 2026，撰写时 HTTP 200）与用法文档 https://developers.cloudflare.com/web-search/how-to-use/（HTTP 200；页内 Last updated Oct 2, 2026，markdown 的 dateModified 为 2026-10-02）。HN item 49963171（标题 Web Search API，作者 tosh，2026-10-05T10:47:06.000Z / 约 2026-10-05 18:47 CST，链接指向上述 changelog）。撰写时该帖仍在 HN 首页 HTML 中；撰写时 HN 页面 score 为 65pts，Algolia 为 61pts（两边不一致，都写上，不并成一个数）。changelog 写明上线供应商为 Ceramic.ai、Exa、Linkup，三家都支持经 Cloudflare 的 Zero Data Retention（零数据保留：对方称请求做完后不留下你的搜索内容），并承诺遵守 Cloudflare 的 verified bot 抓取标准。用法文档写明：provider 只能是 ceramic、exa、linkup，不填则默认 ceramic；limit 为 1 到 10，默认 10；query 最长 1024 字符。REST 是 POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ ，token 需要 Account → Workers AI → Read 和 Account → AI Gateway → Read。Workers 是 env.AI.websearch({ gatewayId, query, provider, limit })。每个账号有一个名叫 default 的网关。收录理由：Agent 要搜现在的网页时，这是官方刚公开的接口。和本库已有的 Cloudflare Clef 决策模型不是同一件事。Cases 没有 relatedModelIds 字段，所以在来源和试步骤里链到已上线的 /models/clef/（撰写时该页 HTTP 200）和 Clef 官博。边界：beta；要账号、额度和 token；按各家标价扣费。本库未创建 token、未发出任何搜索请求。预览为 Playwright 实拍 changelog 首屏裁 3:2 WebP。不打星。未改 models.json。",
-      "qualityNoteEn": "Primary sources are the Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/ (on-page date October 2, 2026, HTTP 200 at write time) and the how-to https://developers.cloudflare.com/web-search/how-to-use/ (HTTP 200; on-page Last updated Oct 2, 2026, markdown dateModified 2026-10-02). HN item 49963171 (title Web Search API, author tosh, 2026-10-05T10:47:06.000Z / about 18:47 CST on 2026-10-05, URL is that changelog). The thread was still in the HN front-page HTML at write time. The HN page score was 65pts and Algolia was 61pts (the counters disagreed, so both numbers are written). The changelog says the launch providers are Ceramic.ai, Exa, and Linkup, that all three support Zero Data Retention for requests made through Cloudflare (they say the search text is not kept after the request), and that they committed to Cloudflare’s verified-bot crawling standards. The how-to says provider must be ceramic, exa, or linkup, and defaults to ceramic; limit is 1 to 10, default 10; query max length is 1024 characters. REST is POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ . The token needs Account → Workers AI → Read and Account → AI Gateway → Read. Workers is env.AI.websearch({ gatewayId, query, provider, limit }). Every account has a gateway named default. Why: an official, just-published way for an agent to search the live web. It is not the same product as Cloudflare Clef, the decision model already in this library. Cases have no relatedModelIds field, so the sources and the try-steps link the live /models/clef/ page (HTTP 200 at write time) and the Clef blog. Boundary: beta; needs an account, credits, and a token; billed at each provider’s list price. This library did not create a token and did not send a search. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP. Unrated. models.json was not edited.",
+      "qualityNote": "changelog 写明上线供应商为 Ceramic.ai、Exa、Linkup，三家都支持经 Cloudflare 的 Zero Data Retention（零数据保留：对方称请求做完后不留下你的搜索内容），并承诺遵守 Cloudflare 的 verified bot 抓取标准。用法文档写明：provider 只能是 ceramic、exa、linkup，不填则默认 ceramic；limit 为 1 到 10，默认 10；query 最长 1024 字符。Workers 是 env.AI.websearch({ gatewayId, query, provider, limit })。每个账号有一个名叫 default 的网关。收录理由：Agent 要搜现在的网页时，这是官方刚公开的接口。和本库已有的 Cloudflare Clef 决策模型不是同一件事。边界：beta；要账号、额度和 token；按各家标价扣费。本库未创建 token、未发出任何搜索请求。未改 models.json。",
+      "qualityNoteEn": "The changelog says the launch providers are Ceramic.ai, Exa, and Linkup, that all three support Zero Data Retention for requests made through Cloudflare (they say the search text is not kept after the request), and that they committed to Cloudflare’s verified-bot crawling standards. The how-to says provider must be ceramic, exa, or linkup, and defaults to ceramic; limit is 1 to 10, default 10; query max length is 1024 characters. The token needs Account → Workers AI → Read and Account → AI Gateway → Read. Workers is env.AI.websearch({ gatewayId, query, provider, limit }). Every account has a gateway named default. Why: an official, just-published way for an agent to search the live web. It is not the same product as Cloudflare Clef, the decision model already in this library. Boundary: beta; needs an account, credits, and a token; billed at each provider’s list price. This library did not create a token and did not send a search. Unrated. models.json was not edited.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -2263,7 +2309,9 @@
         ],
         "previewCredit": "预览：Playwright 实拍 Cloudflare changelog 首屏",
         "previewCreditEn": "Preview: Playwright capture of the Cloudflare changelog above the fold"
-      }
+      },
+      "verifyLog": "主源是 Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/（页内日期 October 2, 2026，撰写时 HTTP 200）与用法文档 https://developers.cloudflare.com/web-search/how-to-use/（HTTP 200；页内 Last updated Oct 2, 2026，markdown 的 dateModified 为 2026-10-02）。HN item 49963171（标题 Web Search API，作者 tosh，2026-10-05T10:47:06.000Z / 约 2026-10-05 18:47 CST，链接指向上述 changelog）。撰写时该帖仍在 HN 首页 HTML 中；撰写时 HN 页面 score 为 65pts，Algolia 为 61pts（两边不一致，都写上，不并成一个数）。REST 是 POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ ，token 需要 Account → Workers AI → Read 和 Account → AI Gateway → Read。Cases 没有 relatedModelIds 字段，所以在来源和试步骤里链到已上线的 /models/clef/（撰写时该页 HTTP 200）和 Clef 官博。预览为 Playwright 实拍 changelog 首屏裁 3:2 WebP。不打星。",
+      "verifyLogEn": "Primary sources are the Cloudflare changelog https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/ (on-page date October 2, 2026, HTTP 200 at write time) and the how-to https://developers.cloudflare.com/web-search/how-to-use/ (HTTP 200; on-page Last updated Oct 2, 2026, markdown dateModified 2026-10-02). HN item 49963171 (title Web Search API, author tosh, 2026-10-05T10:47:06.000Z / about 18:47 CST on 2026-10-05, URL is that changelog). The thread was still in the HN front-page HTML at write time. The HN page score was 65pts and Algolia was 61pts (the counters disagreed, so both numbers are written). REST is POST https://api.cloudflare.com/client/v4/accounts/{account_id}/ai/websearch/ . Cases have no relatedModelIds field, so the sources and the try-steps link the live /models/clef/ page (HTTP 200 at write time) and the Clef blog. Preview is a Playwright capture of the changelog above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "image-source-sites-0xczyan",
@@ -2290,8 +2338,8 @@
         "https://wallhaven.cc/"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 @0xCzyan 推文（api.fxtwitter.com 早间核对 200：作者「子砚」@0xCzyan，created_at Sun Oct 04 08:29:34 +0000 2026 / 约 2026-10-04 16:29 CST；帖内六链与配图 HTxet5AaYAAF3lf；撰写时 fxtwitter 显示约 3.4 万浏览、605 赞、140 转、596 收藏，数字会变）。六站公开页：knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com 晚间 curl 200；unsplash.com 本环境返回 401（常见反爬），站点本身为公开知名图库，以帖文与常识为准、未编通断结论。收录理由：内容创作 / 发帖找图是本站读者常见需求，清单短、链可点。边界：不是 AI 工具、不是官方推荐；各站许可与商业使用条件不同；配图版权归原作者/平台。预览用推文配图裁 3:2 WebP。不打星。",
-      "qualityNoteEn": "Primary source is the @0xCzyan post (api.fxtwitter.com morning check 200: author 「子砚」@0xCzyan, created_at Sun Oct 04 08:29:34 +0000 2026 / about 16:29 CST on 2026-10-04; six links plus media HTxet5AaYAAF3lf; at write time fxtwitter showed about 34k views, 605 likes, 140 reposts, 596 bookmarks — counts change). Public pages: knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com returned curl 200 this evening; unsplash.com returned 401 in this environment (common bot filter) — Unsplash is a well-known public library, so reachability is not invented beyond the post. Why: finding posting assets is a common need for this site’s readers, and the list is short with clickable links. Boundary: not an AI tool, not an official endorsement; licenses and commercial terms differ by site; image rights stay with authors/platforms. Preview is the tweet photo cropped to 3:2 WebP. Unrated.",
+      "qualityNote": "六站公开页：knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com 晚间 curl 200；unsplash.com 本环境返回 401（常见反爬），站点本身为公开知名图库，以帖文与常识为准、未编通断结论。收录理由：内容创作 / 发帖找图是本站读者常见需求，清单短、链可点。边界：不是 AI 工具、不是官方推荐；各站许可与商业使用条件不同；配图版权归原作者/平台。预览用推文配图裁 3:2 WebP。",
+      "qualityNoteEn": "Public pages: knowyourmeme.com / imgur.com / giphy.com / wallhaven.cc / pexels.com returned curl 200 this evening; unsplash.com returned 401 in this environment (common bot filter) — Unsplash is a well-known public library, so reachability is not invented beyond the post. Why: finding posting assets is a common need for this site’s readers, and the list is short with clickable links. Boundary: not an AI tool, not an official endorsement; licenses and commercial terms differ by site; image rights stay with authors/platforms.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -2418,7 +2466,9 @@
         ],
         "previewCredit": "预览：原帖配图裁 3:2（作者 @0xCzyan）",
         "previewCreditEn": "Preview: original post image cropped to 3:2 (author @0xCzyan)"
-      }
+      },
+      "verifyLog": "主源是 @0xCzyan 推文（api.fxtwitter.com 早间核对 200：作者「子砚」@0xCzyan，created_at Sun Oct 04 08:29:34 +0000 2026 / 约 2026-10-04 16:29 CST；帖内六链与配图 HTxet5AaYAAF3lf；撰写时 fxtwitter 显示约 3.4 万浏览、605 赞、140 转、596 收藏，数字会变）。不打星。",
+      "verifyLogEn": "Primary source is the @0xCzyan post (api.fxtwitter.com morning check 200: author 「子砚」@0xCzyan, created_at Sun Oct 04 08:29:34 +0000 2026 / about 16:29 CST on 2026-10-04; six links plus media HTxet5AaYAAF3lf; at write time fxtwitter showed about 34k views, 605 likes, 140 reposts, 596 bookmarks — counts change). Preview is the tweet photo cropped to 3:2 WebP. Unrated."
     },
     {
       "id": "main-bot-proactive",
@@ -2484,8 +2534,8 @@
         "https://television.run/install.md"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是产品页 https://television.run/（晚间 HTTP 200）、仓库 telepath-computer/television（晚间 gh api：描述与 homepage 对得上；GitHub license 字段为 NOASSERTION，README / badge 写 MIT，以 README 为准）、Show HN item 49939817（2026-10-02T23:25:04Z / 约 2026-10-03 07:25 CST，Algolia 晚间核对 6pts）、介绍博文 https://telepath.computer/blog/introducing-television/（HTTP 200，日期 2026-06-01，当时仍是邀请制 alpha）。收录理由：作者称今日刚把仓库公开；与本站 Agent 产物 / HTML artifact 兴趣相邻，又不是又一个聊天框。边界：Agent 需跑在 Linux / macOS；Windows harness 官方写暂不支持；macOS 客户端下载链指向 todesktop；浏览器模式有限制；contrib 仍走内部 spec 流程。本库未代装、未接真实 harness、未核 Discord。预览 Playwright 实拍产品页首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are https://television.run/ (evening HTTP 200), repo telepath-computer/television (evening gh api: description and homepage match; GitHub license field is NOASSERTION while README / badge say MIT — treat README as source of truth), Show HN item 49939817 (2026-10-02T23:25:04Z / about 2026-10-03 07:25 CST, 6pts on Algolia at the evening check), and https://telepath.computer/blog/introducing-television/ (HTTP 200, dated 2026-06-01, still invite-only alpha then). Why: the authors say the repo just opened to the public; it sits next to this site’s interest in agent artifacts / HTML without being another chat box. Boundary: the agent must run on Linux / macOS; Windows harnesses are officially unsupported for now; the macOS client download goes through todesktop; browser mode has limits; outside contributions still use an internal spec process. Not installed here, not wired to a real harness, Discord not checked. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "qualityNote": "收录理由：作者称今日刚把仓库公开；与本站 Agent 产物 / HTML artifact 兴趣相邻，又不是又一个聊天框。边界：Agent 需跑在 Linux / macOS；Windows harness 官方写暂不支持；macOS 客户端下载链指向 todesktop；浏览器模式有限制；contrib 仍走内部 spec 流程。本库未代装、未接真实 harness、未核 Discord。",
+      "qualityNoteEn": "Why: the authors say the repo just opened to the public; it sits next to this site’s interest in agent artifacts / HTML without being another chat box. Boundary: the agent must run on Linux / macOS; Windows harnesses are officially unsupported for now; the macOS client download goes through todesktop; browser mode has limits; outside contributions still use an internal spec process. Not installed here, not wired to a real harness, Discord not checked.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": true,
@@ -2608,7 +2658,9 @@
         ],
         "previewCredit": "预览：Playwright 实拍 television.run 首屏",
         "previewCreditEn": "Preview: Playwright capture of television.run above the fold"
-      }
+      },
+      "verifyLog": "主源是产品页 https://television.run/（晚间 HTTP 200）、仓库 telepath-computer/television（晚间 gh api：描述与 homepage 对得上；GitHub license 字段为 NOASSERTION，README / badge 写 MIT，以 README 为准）、Show HN item 49939817（2026-10-02T23:25:04Z / 约 2026-10-03 07:25 CST，Algolia 晚间核对 6pts）、介绍博文 https://telepath.computer/blog/introducing-television/（HTTP 200，日期 2026-06-01，当时仍是邀请制 alpha）。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are https://television.run/ (evening HTTP 200), repo telepath-computer/television (evening gh api: description and homepage match; GitHub license field is NOASSERTION while README / badge say MIT — treat README as source of truth), Show HN item 49939817 (2026-10-02T23:25:04Z / about 2026-10-03 07:25 CST, 6pts on Algolia at the evening check), and https://telepath.computer/blog/introducing-television/ (HTTP 200, dated 2026-06-01, still invite-only alpha then). Preview is a Playwright 3:2 capture of the product page above the fold. Unrated."
     },
     {
       "id": "deepseek-harness-desktop",
@@ -2632,8 +2684,8 @@
         "https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart"
       ],
       "sourceType": "official-launch",
-      "qualityNote": "主源是官方产品页 https://www.deepseek.com/en/harness/（晚间 HTTP 200）与仓库 deepseek-ai/deepseek-harness。页内下载为 https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg 与 dsh-latest-windows-x64.exe（晚间 HEAD 200）；快速开始文档 https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart HTTP 200。收录理由：官方桌面 harness，HN item 49929489（2026-10-02T03:11:20Z / 约 11:11 CST，Algolia 晚间核对 262pts）在早间波次之后上了首页。仓库晚间 gh api：MIT、242104★。边界：公开预览；Experimental 以页面标签为准；本库未安装桌面端、未登录、未核第三方促销。预览 Playwright 实拍产品页首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are the official product page https://www.deepseek.com/en/harness/ (evening HTTP 200) and the repo deepseek-ai/deepseek-harness. In-page downloads are https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg and dsh-latest-windows-x64.exe (evening HEAD 200); quickstart https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart returned HTTP 200. Why: an official desktop harness. HN item 49929489 (2026-10-02T03:11:20Z / about 11:11 CST, 262pts on Algolia at the evening check) hit the front page after the morning wave. Evening gh api: MIT, 242104★. Boundary: public preview; Experimental means the page’s label; this site did not install the desktop app, log in, or check third-party promos. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "qualityNote": "边界：公开预览；Experimental 以页面标签为准；本库未安装桌面端、未登录、未核第三方促销。",
+      "qualityNoteEn": "Why: an official desktop harness. Boundary: public preview; Experimental means the page’s label; this site did not install the desktop app, log in, or check third-party promos.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -2760,7 +2812,9 @@
         "previewCreditEn": "Preview: Playwright capture of deepseek.com/en/harness above the fold"
       },
       "hook": "用 DeepSeek 官方桌面 Agent，插件可组合。",
-      "hookEn": "Run DeepSeek’s official desktop Agent with composable plugins."
+      "hookEn": "Run DeepSeek’s official desktop Agent with composable plugins.",
+      "verifyLog": "主源是官方产品页 https://www.deepseek.com/en/harness/（晚间 HTTP 200）与仓库 deepseek-ai/deepseek-harness。页内下载为 https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg 与 dsh-latest-windows-x64.exe（晚间 HEAD 200）；快速开始文档 https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart HTTP 200。收录理由：官方桌面 harness，HN item 49929489（2026-10-02T03:11:20Z / 约 11:11 CST，Algolia 晚间核对 262pts）在早间波次之后上了首页。仓库晚间 gh api：MIT、242104★。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are the official product page https://www.deepseek.com/en/harness/ (evening HTTP 200) and the repo deepseek-ai/deepseek-harness. In-page downloads are https://download.deepseek.com/desktop/dsh-latest-macos-arm64.dmg and dsh-latest-windows-x64.exe (evening HEAD 200); quickstart https://deepseek-harness.github.io/deepseek-harness/en/guide/quickstart returned HTTP 200. HN item 49929489 (2026-10-02T03:11:20Z / about 11:11 CST, 262pts on Algolia at the evening check) hit the front page after the morning wave. Evening gh api: MIT, 242104★. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated."
     },
     {
       "id": "pi-1-0",
@@ -2784,8 +2838,8 @@
         "https://news.ycombinator.com/item?id=49925969"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 HN 49926069 / 49925969、Earendil 公告与 pi.dev / MIT 仓库。收录理由：本机 coding agent 底座是真实痛点，且与已收 Magnitude「一键接 Pi」相邻。边界：1.0 功能清单与「hundreds of thousands」用量是厂商文案；Pi Durable 标 experimental；本库未代装、未复跑 benchmark。预览 Playwright 实拍 pi.dev 首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are HN 49926069 / 49925969, the Earendil announce, pi.dev, and the MIT repo. Listing rationale: a local coding-agent harness is a real pain point, and it sits next to catalogued Magnitude’s “one-click Pi” claim. Boundary: the 1.0 feature list and “hundreds of thousands” usage are vendor copy; Pi Durable is marked experimental; this site did not install it or re-run benches. Preview is a Playwright 3:2 capture of pi.dev above the fold. Unrated.",
+      "qualityNote": "收录理由：本机 coding agent 底座是真实痛点，且与已收 Magnitude「一键接 Pi」相邻。边界：1.0 功能清单与「hundreds of thousands」用量是厂商文案；Pi Durable 标 experimental；本库未代装、未复跑 benchmark。",
+      "qualityNoteEn": "Listing rationale: a local coding-agent harness is a real pain point, and it sits next to catalogued Magnitude’s “one-click Pi” claim. Boundary: the 1.0 feature list and “hundreds of thousands” usage are vendor copy; Pi Durable is marked experimental; this site did not install it or re-run benches.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -2917,7 +2971,9 @@
         "previewCreditEn": "Preview: Playwright capture of pi.dev above the fold"
       },
       "hook": "用极简 Agent 底座搭自己的编程工作流。",
-      "hookEn": "Build your own coding workflow on a minimal Agent harness."
+      "hookEn": "Build your own coding workflow on a minimal Agent harness.",
+      "verifyLog": "主源是 HN 49926069 / 49925969、Earendil 公告与 pi.dev / MIT 仓库。预览 Playwright 实拍 pi.dev 首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are HN 49926069 / 49925969, the Earendil announce, pi.dev, and the MIT repo. Preview is a Playwright 3:2 capture of pi.dev above the fold. Unrated."
     },
     {
       "id": "magnitude",
@@ -2938,8 +2994,8 @@
         "https://news.ycombinator.com/item?id=49911995"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 Launch HN 49911995、Apache-2.0 仓库与 magnitude.dev。收录理由：本机跑 Agent 时推理引擎是真实痛点，且与 Pi/Codex/Claude Code 等已常见栈可对接。边界：官网/Launch HN 基准是厂商自测口径（HN 评论对 M5+/MLX 对比有异议）；本库未复跑；多 GPU / 部分机型检测仍有 issue。预览 Playwright 实拍 magnitude.dev 首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are Launch HN 49911995, the Apache-2.0 repo, and magnitude.dev. Listing rationale: local-agent inference engines are a real pain point, and it plugs into stacks people already run (Pi/Codex/Claude Code). Boundary: site/Launch HN benches are vendor self-tests (HN comments dispute M5+/MLX comparisons); not re-run here; multi-GPU / some hardware detection still has open issues. Preview is a Playwright 3:2 capture of magnitude.dev above the fold. Unrated.",
+      "qualityNote": "收录理由：本机跑 Agent 时推理引擎是真实痛点，且与 Pi/Codex/Claude Code 等已常见栈可对接。边界：官网/Launch HN 基准是厂商自测口径（HN 评论对 M5+/MLX 对比有异议）；本库未复跑；多 GPU / 部分机型检测仍有 issue。",
+      "qualityNoteEn": "Listing rationale: local-agent inference engines are a real pain point, and it plugs into stacks people already run (Pi/Codex/Claude Code). Boundary: site/Launch HN benches are vendor self-tests (HN comments dispute M5+/MLX comparisons); not re-run here; multi-GPU / some hardware detection still has open issues.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3066,7 +3122,9 @@
         "previewCreditEn": "Preview: Playwright capture of magnitude.dev above the fold"
       },
       "hook": "让本机 Agent 推理引擎按任务调优。",
-      "hookEn": "Tune a local Agent inference engine for your tasks."
+      "hookEn": "Tune a local Agent inference engine for your tasks.",
+      "verifyLog": "主源是 Launch HN 49911995、Apache-2.0 仓库与 magnitude.dev。预览 Playwright 实拍 magnitude.dev 首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are Launch HN 49911995, the Apache-2.0 repo, and magnitude.dev. Preview is a Playwright 3:2 capture of magnitude.dev above the fold. Unrated."
     },
     {
       "id": "weave-router",
@@ -3088,8 +3146,8 @@
         "https://weaveos.com/router"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 README、产品页 https://weaveos.com/products/router 与 https://weaveos.com/router（晚间均 HTTP 200）、仓库 weave-os/router。https://github.com/workweave/router 晚间 301 到 weave-os/router。收录理由：晨间 changelog 把它标为晚间候选；Show HN item 49911500（2026-09-30T16:58:24Z / 约 2026-10-01 00:58 CST，Algolia 晚间核对 105pts）无外链，正文指向该仓库。gh api 晚间 Apache-2.0、5525★。边界：Terminal-Bench 4.0 / SWE-Atlas 相对 GPT-6 Astra 的 pass@2、耗时与美元是产品页自述；英雄区 “Astra Level Quality / 2.3× / 51% of the cost” 同样是页面文案，不与两张表合成新指标。本库未复跑、未代跑 npx。预览 Playwright 实拍产品页首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are the README, https://weaveos.com/products/router and https://weaveos.com/router (both evening HTTP 200), and the repo weave-os/router. https://github.com/workweave/router returned 301 to weave-os/router this evening. Why: the morning changelog named it as an evening candidate. Show HN item 49911500 (2026-09-30T16:58:24Z / about 2026-10-01 00:58 CST, 105pts on Algolia at the evening check) has no external URL; the text points at that repo. Evening gh api: Apache-2.0, 5525★. Boundary: Terminal-Bench 4.0 / SWE-Atlas pass@2, time, and dollars versus GPT-6 Astra are product-page claims; the hero line “Astra Level Quality / 2.3× / 51% of the cost” is page copy too and is not merged with the two tables into a new metric. Not re-run here; npx was not run for you. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated.",
+      "qualityNote": "边界：Terminal-Bench 4.0 / SWE-Atlas 相对 GPT-6 Astra 的 pass@2、耗时与美元是产品页自述；英雄区 “Astra Level Quality / 2.3× / 51% of the cost” 同样是页面文案，不与两张表合成新指标。本库未复跑、未代跑 npx。",
+      "qualityNoteEn": "Why: the morning changelog named it as an evening candidate. Boundary: Terminal-Bench 4.0 / SWE-Atlas pass@2, time, and dollars versus GPT-6 Astra are product-page claims; the hero line “Astra Level Quality / 2.3× / 51% of the cost” is page copy too and is not merged with the two tables into a new metric. Not re-run here; npx was not run for you.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3216,7 +3274,9 @@
         "previewCreditEn": "Preview: Playwright capture of weaveos.com/products/router above the fold"
       },
       "hook": "给编程 Agent 按任务换更合适的模型。",
-      "hookEn": "Route each coding-agent task to a model that fits it."
+      "hookEn": "Route each coding-agent task to a model that fits it.",
+      "verifyLog": "主源是 README、产品页 https://weaveos.com/products/router 与 https://weaveos.com/router（晚间均 HTTP 200）、仓库 weave-os/router。https://github.com/workweave/router 晚间 301 到 weave-os/router。收录理由：晨间 changelog 把它标为晚间候选；Show HN item 49911500（2026-09-30T16:58:24Z / 约 2026-10-01 00:58 CST，Algolia 晚间核对 105pts）无外链，正文指向该仓库。gh api 晚间 Apache-2.0、5525★。预览 Playwright 实拍产品页首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are the README, https://weaveos.com/products/router and https://weaveos.com/router (both evening HTTP 200), and the repo weave-os/router. https://github.com/workweave/router returned 301 to weave-os/router this evening. Show HN item 49911500 (2026-09-30T16:58:24Z / about 2026-10-01 00:58 CST, 105pts on Algolia at the evening check) has no external URL; the text points at that repo. Evening gh api: Apache-2.0, 5525★. Preview is a Playwright 3:2 capture of the product page above the fold. Unrated."
     },
     {
       "id": "team-bots",
@@ -3331,8 +3391,8 @@
         "https://huggingface.co/mstrasser/Jeff-Qwen3.5-0.8B"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 HN 49883844 与 MIT 仓库 / Hugging Face 权重页。收录理由：与本站已收的 Jev / Onesie 同属 System One 决策线，但可本机跑、可脚本化 HTTP。边界：基准表与毫秒数是作者 README / 自测口径，本站未复跑；作者自述在推理向基准上仍明显弱于 Jev；独立非 TypeSafe 官方。下载权重与起服务会占磁盘与 GPU/CPU，本站未代装。预览 Playwright 实拍 GitHub 仓库首屏裁 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are HN 49883844 and the MIT repo / Hugging Face weight pages. Listing rationale: same System One decision line as catalogued Jev / Onesie, but runnable locally over a scriptable HTTP API. Boundary: benchmark tables and millisecond figures are the author’s README / self-test numbers, not re-run here; the author says reasoning-heavy benches stay well below Jev; independent, not TypeSafe-official. Downloading weights and serving uses disk and GPU/CPU; this site did not install it. Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated.",
+      "qualityNote": "收录理由：与本站已收的 Jev / Onesie 同属 System One 决策线，但可本机跑、可脚本化 HTTP。边界：基准表与毫秒数是作者 README / 自测口径，本站未复跑；作者自述在推理向基准上仍明显弱于 Jev；独立非 TypeSafe 官方。下载权重与起服务会占磁盘与 GPU/CPU，本站未代装。",
+      "qualityNoteEn": "Listing rationale: same System One decision line as catalogued Jev / Onesie, but runnable locally over a scriptable HTTP API. Boundary: benchmark tables and millisecond figures are the author’s README / self-test numbers, not re-run here; the author says reasoning-heavy benches stay well below Jev; independent, not TypeSafe-official. Downloading weights and serving uses disk and GPU/CPU; this site did not install it.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3444,7 +3504,9 @@
         ]
       },
       "hook": "在本机试用面向小决策的模型。",
-      "hookEn": "Try a small-decision model locally."
+      "hookEn": "Try a small-decision model locally.",
+      "verifyLog": "主源是 HN 49883844 与 MIT 仓库 / Hugging Face 权重页。预览 Playwright 实拍 GitHub 仓库首屏裁 3:2。不打星。",
+      "verifyLogEn": "Primary sources are HN 49883844 and the MIT repo / Hugging Face weight pages. Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated."
     },
     {
       "id": "onesie",
@@ -3464,8 +3526,8 @@
         "https://news.ycombinator.com/item?id=49876472"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 Show HN 49876472 与 MIT 仓库。收录理由：把已在 Models 的 Jev / System One 收成可管道化的 CLI，退出码和校准命令都能在 README 对上。边界：0★（2026-09-28 gh api，不虚构星数）；需要 TypeSafe / OpenRouter / Berget 的密钥，除非走 --print-request 或 ONESIE_MOCK。README 里的 AUC / 命中率是作者示例输出，本库未复跑。不要把密钥、工单原文或生产命令管道进模型，也不要只靠模型门禁当安全边界。本站未代装、未代跑。预览 Playwright 实拍 GitHub README 首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are Show HN 49876472 and the MIT repo. Listing rationale: a pipeable CLI next to Jev / System One already on the Models board; exit codes and the calibrate command are checkable in the README. Boundary: 0★ on the 2026-09-28 gh api (stars are not invented); a TypeSafe / OpenRouter / Berget key is required unless you use --print-request or ONESIE_MOCK. AUC / catch rates in the README are the author’s example output, not re-run here. Do not pipe secrets, raw tickets, or production commands into the model, and do not treat the model gate as a security boundary by itself. This site did not install or run it. Preview is a Playwright 3:2 capture of the GitHub README above the fold. Unrated.",
+      "qualityNote": "收录理由：把已在 Models 的 Jev / System One 收成可管道化的 CLI，退出码和校准命令都能在 README 对上。README 里的 AUC / 命中率是作者示例输出，本库未复跑。不要把密钥、工单原文或生产命令管道进模型，也不要只靠模型门禁当安全边界。本站未代装、未代跑。",
+      "qualityNoteEn": "Listing rationale: a pipeable CLI next to Jev / System One already on the Models board; exit codes and the calibrate command are checkable in the README. AUC / catch rates in the README are the author’s example output, not re-run here. Do not pipe secrets, raw tickets, or production commands into the model, and do not treat the model gate as a security boundary by itself. This site did not install or run it.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3580,7 +3642,9 @@
         ]
       },
       "hook": "用命令行调用 System One 模型。",
-      "hookEn": "Use System One models from the command line."
+      "hookEn": "Use System One models from the command line.",
+      "verifyLog": "主源是 Show HN 49876472 与 MIT 仓库。边界：0★（2026-09-28 gh api，不虚构星数）；需要 TypeSafe / OpenRouter / Berget 的密钥，除非走 --print-request 或 ONESIE_MOCK。预览 Playwright 实拍 GitHub README 首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are Show HN 49876472 and the MIT repo. Boundary: 0★ on the 2026-09-28 gh api (stars are not invented); a TypeSafe / OpenRouter / Berget key is required unless you use --print-request or ONESIE_MOCK. Preview is a Playwright 3:2 capture of the GitHub README above the fold. Unrated."
     },
     {
       "id": "leftovers",
@@ -3601,8 +3665,8 @@
         "https://news.ycombinator.com/item?id=49861159"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 Show HN 49861159 与 MIT 仓库 / 文档站。收录理由：agent 本机残留是真实痛点，菜单栏 + CLI 可核对。边界：只支持 macOS；清理动作不可逆，受保护进程会拒绝；本站未在你的 Mac 上安装或代清。星数仍低（核对 2★）。预览 Playwright 实拍文档首页 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are Show HN 49861159 and the MIT repo / docs site. Listing rationale: leftover local agent processes are a real pain; menu bar + CLI are checkable. Boundary: macOS only; cleanup is irreversible and protected processes are refused; this site did not install or clean on your Mac. Star count is still low (2★ at check time). Preview is a Playwright 3:2 capture of the docs home. Unrated.",
+      "qualityNote": "收录理由：agent 本机残留是真实痛点，菜单栏 + CLI 可核对。边界：只支持 macOS；清理动作不可逆，受保护进程会拒绝；本站未在你的 Mac 上安装或代清。",
+      "qualityNoteEn": "Listing rationale: leftover local agent processes are a real pain; menu bar + CLI are checkable. Boundary: macOS only; cleanup is irreversible and protected processes are refused; this site did not install or clean on your Mac.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3722,7 +3786,9 @@
         ]
       },
       "hook": "清理编程 Agent 遗留的进程与缓存。",
-      "hookEn": "Clean up processes and caches left by coding Agents."
+      "hookEn": "Clean up processes and caches left by coding Agents.",
+      "verifyLog": "主源是 Show HN 49861159 与 MIT 仓库 / 文档站。星数仍低（核对 2★）。预览 Playwright 实拍文档首页 3:2。不打星。",
+      "verifyLogEn": "Primary sources are Show HN 49861159 and the MIT repo / docs site. Star count is still low (2★ at check time). Preview is a Playwright 3:2 capture of the docs home. Unrated."
     },
     {
       "id": "shipwithmuse",
@@ -3744,8 +3810,8 @@
         "https://mostdesign01-sudo.github.io/ai-up-lab/cases/errand-opensource/"
       ],
       "sourceType": "community",
-      "qualityNote": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。1079 builds、分类数字是页面自述快照（2026-09-27 晚间）。独立非官方；赞助位页面有标价，收录不构成推荐。未逐条核 build 真实性。预览 Playwright 实拍目录首屏 3:2。不打星。",
-      "qualityNoteEn": "Primary sources are Show HN 49863641 and the public catalog; secondary is the DEV post. 1079 builds and category counts are page self-report snapshots (evening 2026-09-27). Independent, not official; sponsor slots show pricing on the page and are not endorsements. Individual builds were not verified one-by-one. Preview is a Playwright 3:2 capture of the catalog above the fold. Unrated.",
+      "qualityNote": "1079 builds、分类数字是页面自述快照（2026-09-27 晚间）。独立非官方；赞助位页面有标价，收录不构成推荐。未逐条核 build 真实性。",
+      "qualityNoteEn": "Independent, not official; sponsor slots show pricing on the page and are not endorsements. Individual builds were not verified one-by-one.",
       "difficulty": "beginner",
       "hasRoutine": false,
       "hasSkill": false,
@@ -3862,7 +3928,9 @@
         "previewCreditEn": "Preview: Playwright capture of catalog above-the-fold (3:2 self-hosted)"
       },
       "hook": "看看社区用 Muse 做出了什么。",
-      "hookEn": "Explore what the community has built with Muse."
+      "hookEn": "Explore what the community has built with Muse.",
+      "verifyLog": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。预览 Playwright 实拍目录首屏 3:2。不打星。",
+      "verifyLogEn": "Primary sources are Show HN 49863641 and the public catalog; secondary is the DEV post. 1079 builds and category counts are page self-report snapshots (evening 2026-09-27). Preview is a Playwright 3:2 capture of the catalog above the fold. Unrated."
     },
     {
       "id": "personal-jarvis",
@@ -3883,8 +3951,8 @@
         "https://news.ycombinator.com/item?id=49833292"
       ],
       "sourceType": "community",
-      "qualityNote": "Apache-2.0（2026-09-25 gh api，65★）。Show HN item 49833292。对照 README：本机桌面 + 语音编排 + agents/routines/MCP，不是「每席一云电脑」那条路；与 Errand / Open Bot 同属相邻对照，不当官方 Grok Bot 替代品宣传。",
-      "qualityNoteEn": "Apache-2.0 (gh api, 2026-09-25, 65★). Show HN item 49833292. Per the README: local desktop + voice orchestration + agents/routines/MCP — not the per-seat cloud-computer path; listed beside Errand / Open Bot as an adjacent comparison, not marketed as an official Grok Bot replacement.",
+      "qualityNote": "对照 README：本机桌面 + 语音编排 + agents/routines/MCP，不是「每席一云电脑」那条路；与 Errand / Open Bot 同属相邻对照，不当官方 Grok Bot 替代品宣传。",
+      "qualityNoteEn": "Per the README: local desktop + voice orchestration + agents/routines/MCP — not the per-seat cloud-computer path; listed beside Errand / Open Bot as an adjacent comparison, not marketed as an official Grok Bot replacement.",
       "difficulty": "advanced",
       "hasRoutine": true,
       "hasSkill": true,
@@ -4005,7 +4073,9 @@
       "hookEn": "Orchestrate Agents through a local voice desktop.",
       "previewImage": "/previews/personal-jarvis.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "Apache-2.0（2026-09-25 gh api，65★）。Show HN item 49833292。",
+      "verifyLogEn": "Apache-2.0 (gh api, 2026-09-25, 65★). Show HN item 49833292."
     },
     {
       "id": "us-paypal-cn-visa",
@@ -4028,8 +4098,8 @@
         "https://mostdesign01-sudo.github.io/ai-up-lab/cases/saily-us-number-esim/"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "作者自述。主源是 2026-09-23 短帖；2026-09-24（Asia/Shanghai）用 fxtwitter 镜像核对了正文和两张图：PayPal 钱包里招商银行 Visa 尾号 2852，以及美区 Apple ID 付款方式页。副源是同日长文（article 2102588711330590720）和引用帖 2102602033488634298。机房 IP、约一周再绑卡、Saily 约 1 美元、已用约 4 个月、能付 AI / VPS，都是作者自己的说法和截图。本站没有开设 PayPal 账户，也没有绑定任何银行卡。价格和优惠码与本条无关，不转载、不复核（Saily 另见 saily-us-number-esim）。有封号风险：作者写明账号可能被冻，卡若已经绑上且账号进不去，这张卡可能解不下来。完整步骤见作者长文。不构成购买建议，也不构成金融或法律建议；PayPal 官方页面优先。预览是作者短帖两张截图拼成 3:2。不打星。",
-      "qualityNoteEn": "Author self-report. Primary source is the 23 Sept 2026 post; on 24 Sept 2026 (Asia/Shanghai) the fxtwitter mirror was checked for the text and both images: a PayPal wallet with a China Merchants Bank Visa ending 2852, and a US Apple ID payment-method screen. Secondary sources are the same-day article (2102588711330590720) and quote post 2102602033488634298. Datacenter IP, waiting about a week before adding a card, Saily at about $1, roughly four months of use, and paying for AI / VPS are the author’s own claims and screenshots. This site did not open a PayPal account or bind any card. Prices and promo codes are unrelated to this entry and are neither copied nor re-checked (Saily is catalogued separately as saily-us-number-esim). Freeze risk: the author writes that the account can be locked, and a card already linked to an account he can no longer open may be stuck there. Full steps are in the author’s article. Not purchase advice and not financial or legal advice; PayPal’s own pages win. Preview is the author’s two post screenshots composited to 3:2. Unrated.",
+      "qualityNote": "作者自述。主源是 2026-09-23 短帖；2026-09-24（Asia/Shanghai）用 fxtwitter 镜像核对了正文和两张图：PayPal 钱包里招商银行 Visa 尾号 2852，以及美区 Apple ID 付款方式页。副源是同日长文（article 2102588711330590720）和引用帖 2102602033488634298。机房 IP、约一周再绑卡、Saily 约 1 美元、已用约 4 个月、能付 AI / VPS，都是作者自己的说法和截图。本站没有开设 PayPal 账户，也没有绑定任何银行卡。价格和优惠码与本条无关，不转载、不复核（Saily 另见 saily-us-number-esim）。有封号风险：作者写明账号可能被冻，卡若已经绑上且账号进不去，这张卡可能解不下来。完整步骤见作者长文。不构成购买建议，也不构成金融或法律建议；PayPal 官方页面优先。预览是作者短帖两张截图拼成 3:2。",
+      "qualityNoteEn": "Author self-report. Primary source is the 23 Sept 2026 post; on 24 Sept 2026 (Asia/Shanghai) the fxtwitter mirror was checked for the text and both images: a PayPal wallet with a China Merchants Bank Visa ending 2852, and a US Apple ID payment-method screen. Secondary sources are the same-day article (2102588711330590720) and quote post 2102602033488634298. Datacenter IP, waiting about a week before adding a card, Saily at about $1, roughly four months of use, and paying for AI / VPS are the author’s own claims and screenshots. This site did not open a PayPal account or bind any card. Prices and promo codes are unrelated to this entry and are neither copied nor re-checked (Saily is catalogued separately as saily-us-number-esim). Freeze risk: the author writes that the account can be locked, and a card already linked to an account he can no longer open may be stuck there. Full steps are in the author’s article. Not purchase advice and not financial or legal advice; PayPal’s own pages win.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -4198,7 +4268,9 @@
       "publishedAt": "2026-09-23",
       "updatedAt": "2026-09-24T12:24:19Z",
       "hook": "了解订阅支付旁路的条件与限制。",
-      "hookEn": "Understand the requirements and limits of a subscription payment workaround."
+      "hookEn": "Understand the requirements and limits of a subscription payment workaround.",
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the author’s two post screenshots composited to 3:2. Unrated."
     },
     {
       "id": "errand-opensource",
@@ -4220,8 +4292,8 @@
         "https://news.ycombinator.com/item?id=49803044"
       ],
       "sourceType": "community",
-      "qualityNote": "Apache-2.0（GitHub license API，2026-09-23）。已对照 HN item 49803044、仓库 README、官网 FAQ 与作者 2026-09-22 长文。预览裁自长文界面图 conversation-and-computer.webp，3:2 自托管。依赖 Runta；不当官方替代品。",
-      "qualityNoteEn": "Apache-2.0 (GitHub license API, 2026-09-23). Checked against HN item 49803044, the repo README, the site FAQ, and the author’s 2026-09-22 write-up. Preview is the write-up UI image conversation-and-computer.webp, cropped to 3:2 and self-hosted. Depends on Runta; not marketed as an official replacement.",
+      "qualityNote": "Apache-2.0（GitHub license API，2026-09-23）。预览裁自长文界面图 conversation-and-computer.webp，3:2 自托管。依赖 Runta；不当官方替代品。",
+      "qualityNoteEn": "Apache-2.0 (GitHub license API, 2026-09-23). Depends on Runta; not marketed as an official replacement.",
       "difficulty": "advanced",
       "hasRoutine": false,
       "hasSkill": false,
@@ -4348,7 +4420,9 @@
       "publishedAt": "2026-09-23",
       "updatedAt": "2026-09-23T06:45:00Z",
       "hook": "开源桌面壳：每人一台云电脑，用来对照 Grok Bot。",
-      "hookEn": "Open-source desk where each teammate gets a cloud computer beside Grok Bot."
+      "hookEn": "Open-source desk where each teammate gets a cloud computer beside Grok Bot.",
+      "verifyLog": "已对照 HN item 49803044、仓库 README、官网 FAQ 与作者 2026-09-22 长文。",
+      "verifyLogEn": "Checked against HN item 49803044, the repo README, the site FAQ, and the author’s 2026-09-22 write-up. Preview is the write-up UI image conversation-and-computer.webp, cropped to 3:2 and self-hosted."
     },
     {
       "id": "hn-jjcm-fabric-swag-sourcing",
@@ -4369,8 +4443,8 @@
         "https://x.ai/bot"
       ],
       "sourceType": "community",
-      "qualityNote": "HN 站点评论（item 49263241，父帖 49261514）。流程可复述：WhatsApp 询价、样本、与原型 Bot 协作出 .ai；本库不当 KPI，也不鼓励滥发询价。",
-      "qualityNoteEn": "HN site comment (item 49263241; parent 49261514). Reproducible steps: WhatsApp outreach, samples, prototyper Bot → .ai. Not a KPI; do not treat as a green light for spam RFQs.",
+      "qualityNote": "流程可复述：WhatsApp 询价、样本、与原型 Bot 协作出 .ai；本库不当 KPI，也不鼓励滥发询价。",
+      "qualityNoteEn": "Reproducible steps: WhatsApp outreach, samples, prototyper Bot → .ai. Not a KPI; do not treat as a green light for spam RFQs.",
       "difficulty": "intermediate",
       "hasRoutine": true,
       "hasSkill": false,
@@ -4391,7 +4465,9 @@
       "hookEn": "Split Bots by domain to ask Vietnam fabric mills for samples.",
       "previewImage": "/previews/hn-jjcm-fabric-swag-sourcing.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "HN 站点评论（item 49263241，父帖 49261514）。",
+      "verifyLogEn": "HN site comment (item 49263241; parent 49261514)."
     },
     {
       "id": "openbot-opensource",
@@ -4412,8 +4488,8 @@
         "https://news.ycombinator.com/item?id=49365575"
       ],
       "sourceType": "community",
-      "qualityNote": "MIT（2026-09-22 gh api）。Show HN item 49365575：alpha，路线图仍在推进；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。",
-      "qualityNoteEn": "MIT (gh api, 2026-09-22). Show HN item 49365575: alpha with an active roadmap; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement.",
+      "qualityNote": "来源已核对；本站没有实测，效果以原文为准。",
+      "qualityNoteEn": "Sources checked; not tested here. Results follow the original source.",
       "difficulty": "advanced",
       "hasRoutine": false,
       "hasSkill": false,
@@ -4434,7 +4510,9 @@
       "hookEn": "Open-source coworkers, each with a computer and any agent harness.",
       "previewImage": "/previews/openbot-opensource.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "MIT（2026-09-22 gh api）。Show HN item 49365575：alpha，路线图仍在推进；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。",
+      "verifyLogEn": "MIT (gh api, 2026-09-22). Show HN item 49365575: alpha with an active roadmap; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement."
     },
     {
       "id": "designing-grok-bot-with-grok-bot",
@@ -5078,8 +5156,8 @@
         "https://saily.com"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "主源是作者 9 月 13 日 X 帖（两张 Saily App 截图：包年 US$11.99 / 年、券后 US$6.99），副源是作者 6 月 15 日的 X 长文教程（9 月 13 日有修订）。价格、优惠码、KYC 要求、哪些 App 能收短信，全部是作者自述与作者截图，本站未购买、未测试；优惠码归属作者（作者文内称「选择低佣金」输入，属推广码）。saily.com 本站未登录抓取时返回 403（疑为反爬），只作产品主页指引，未核页面内容。收录理由：AI 工具与将来可能用到的实用工具可入库，但这是旁路工具笔记，不是 Grok Bot 案例；本站不担保可用性、不构成购买推荐。预览图为作者帖两张截图拼成 3:2。不打星。",
-      "qualityNoteEn": "Primary source is the author’s 13 Sept X post (two Saily app screenshots: annual US$11.99/yr, US$6.99 after coupon); secondary is the author’s 15 June X long-form tutorial (revised 13 Sept). Prices, the promo code, the KYC requirement, and which apps receive SMS are all the author’s claims and screenshots — not purchased or tested by this site. The promo code belongs to the author (the tutorial says to enter it under “choose low commission,” i.e. a referral code). saily.com returned 403 to this site’s logged-out fetch (likely bot protection), so it is listed only as the product home; page content not verified. Listing rationale: AI tools and future-useful utilities may be catalogued, but this is an adjacent tool note, not a Grok Bot case; no availability guarantee and no purchase recommendation. Preview is the author’s two screenshots composited to 3:2. Unrated.",
+      "qualityNote": "主源是作者 9 月 13 日 X 帖（两张 Saily App 截图：包年 US$11.99 / 年、券后 US$6.99），副源是作者 6 月 15 日的 X 长文教程（9 月 13 日有修订）。价格、优惠码、KYC 要求、哪些 App 能收短信，全部是作者自述与作者截图，本站未购买、未测试；优惠码归属作者（作者文内称「选择低佣金」输入，属推广码）。saily.com 本站未登录抓取时返回 403（疑为反爬），只作产品主页指引，未核页面内容。收录理由：AI 工具与将来可能用到的实用工具可入库，但这是旁路工具笔记，不是 Grok Bot 案例；本站不担保可用性、不构成购买推荐。预览图为作者帖两张截图拼成 3:2。",
+      "qualityNoteEn": "Primary source is the author’s 13 Sept X post (two Saily app screenshots: annual US$11.99/yr, US$6.99 after coupon); secondary is the author’s 15 June X long-form tutorial (revised 13 Sept). Prices, the promo code, the KYC requirement, and which apps receive SMS are all the author’s claims and screenshots — not purchased or tested by this site. The promo code belongs to the author (the tutorial says to enter it under “choose low commission,” i.e. a referral code). saily.com returned 403 to this site’s logged-out fetch (likely bot protection), so it is listed only as the product home; page content not verified. Listing rationale: AI tools and future-useful utilities may be catalogued, but this is an adjacent tool note, not a Grok Bot case; no availability guarantee and no purchase recommendation.",
       "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
@@ -5095,7 +5173,9 @@
       "publishedAt": "2026-09-13",
       "updatedAt": "2026-09-13T08:30:00Z",
       "hook": "用美国号码收短信，方便部分海外账号注册。",
-      "hookEn": "A US number that receives texts, for signups that ask for one."
+      "hookEn": "A US number that receives texts, for signups that ask for one.",
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the author’s two screenshots composited to 3:2. Unrated."
     },
     {
       "id": "native-subtitle-quote-image",
@@ -5291,15 +5371,17 @@
       "hasSkill": true,
       "requiresApproval": true,
       "connectors": [],
-      "qualityNote": "HN 49537739。2026-09-10 核对 README 自称 74 skills；公开页约 1 star。仓库未标 SPDX 许可证，收录为社区配方参考，使用前自行确认许可。",
-      "qualityNoteEn": "HN 49537739. README claims 74 skills (checked 2026-09-10); public page ~1 GitHub star. No SPDX license on the repo — treat as community recipes and confirm licensing before reuse.",
+      "qualityNote": "2026-09-10 核对 README 自称 74 skills；公开页约 1 star。仓库未标 SPDX 许可证，收录为社区配方参考，使用前自行确认许可。",
+      "qualityNoteEn": "README claims 74 skills (checked 2026-09-10); public page ~1 GitHub star. No SPDX license on the repo — treat as community recipes and confirm licensing before reuse.",
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-10T01:40:00Z",
       "hook": "可直接粘贴的技能配方，审批优先，安静为默认。",
       "hookEn": "Paste-ready skill recipes that ask before acting and stay quiet by default.",
       "previewImage": "/previews/shrdgn-grokbot-skills.webp",
       "previewCredit": "预览：站点生成的条目专用封面（非来源页实拍）",
-      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)"
+      "previewCreditEn": "Preview: site-generated per-entry cover (not a live source capture)",
+      "verifyLog": "HN 49537739。",
+      "verifyLogEn": "HN 49537739."
     },
     {
       "id": "awesome-grokbot-shares",
@@ -5485,8 +5567,8 @@
         "https://news.ycombinator.com/item?id=49531991"
       ],
       "sourceType": "community",
-      "qualityNote": "Show HN item 49531991（分低）。GitHub ~1253★（检索日）。本机凭据风险自负；收录不等于安全审计。",
-      "qualityNoteEn": "Show HN item 49531991 (low points). GitHub ~1253★ on lookup day. Local credentials are your risk; listing is not a security audit.",
+      "qualityNote": "本机凭据风险自负；收录不等于安全审计。",
+      "qualityNoteEn": "Local credentials are your risk; listing is not a security audit.",
       "difficulty": "intermediate",
       "hasRoutine": true,
       "hasSkill": false,
@@ -5501,7 +5583,9 @@
       "hookEn": "Local bots where every send or delete waits for approval.",
       "previewImage": "/previews/gawkbot-opensource.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "Show HN item 49531991（分低）。GitHub ~1253★（检索日）。",
+      "verifyLogEn": "Show HN item 49531991 (low points). GitHub ~1253★ on lookup day."
     },
     {
       "id": "howdoiuseai-agent-teams",
@@ -5730,8 +5814,8 @@
         "https://news.ycombinator.com/item?id=49467702"
       ],
       "sourceType": "community",
-      "qualityNote": "Show HN / HN item 49467702。可跟做的 Linux 构建步骤；官方仍不支持 Linux，自行承担风险，不要用它绕过账号条款。",
-      "qualityNoteEn": "Show HN / HN item 49467702. Follow-along Linux build steps; Linux remains unsupported officially — use at your own risk and do not treat it as a ToS bypass.",
+      "qualityNote": "可跟做的 Linux 构建步骤；官方仍不支持 Linux，自行承担风险，不要用它绕过账号条款。",
+      "qualityNoteEn": "Follow-along Linux build steps; Linux remains unsupported officially — use at your own risk and do not treat it as a ToS bypass.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -5748,7 +5832,9 @@
       "hookEn": "A community desktop build for Linux; the cloud computer stays the same one.",
       "previewImage": "/previews/grokbot-linux-unofficial.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "Show HN / HN item 49467702。",
+      "verifyLogEn": "Show HN / HN item 49467702."
     },
     {
       "id": "mobile-game-studio-rankem",
@@ -5770,8 +5856,8 @@
         "https://news.ycombinator.com/item?id=49447324"
       ],
       "sourceType": "case-study",
-      "qualityNote": "社区完整案例研究（HN item 49447324）：六个窄角色 + 真实手游下载过千。可复现的多 Bot 工作室搭法，付款/投放变更仍需人审。",
-      "qualityNoteEn": "Full community case study (HN item 49447324): six narrow seats on a live game past 1k downloads. A reproducible multi-bot studio pattern; still review spend and store changes.",
+      "qualityNote": "可复现的多 Bot 工作室搭法，付款/投放变更仍需人审。",
+      "qualityNoteEn": "A reproducible multi-bot studio pattern; still review spend and store changes.",
       "difficulty": "advanced",
       "hasRoutine": true,
       "hasSkill": true,
@@ -5793,7 +5879,9 @@
       "hookEn": "Six Bots split a mobile game, from release work through bug fixes.",
       "previewImage": "/previews/mobile-game-studio-rankem.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "社区完整案例研究（HN item 49447324）：六个窄角色 + 真实手游下载过千。",
+      "verifyLogEn": "Full community case study (HN item 49447324): six narrow seats on a live game past 1k downloads."
     },
     {
       "id": "grokbot-getting-started",
@@ -8809,8 +8897,8 @@
         "https://x.com/atmoio/status/2092286808440676733"
       ],
       "sourceType": "case-study",
-      "qualityNote": "来自 Hacker News item 49509728。作者说不是教程，但编制、例行、配额控制和公开 gist 人设都能复现，还有真实周末交付清单。",
-      "qualityNoteEn": "From Hacker News item 49509728. She says it is not a tutorial, but the roster, routines, quota control, public gist prompts, and weekend ship list are all reproducible.",
+      "qualityNote": "作者说不是教程，但编制、例行、配额控制和公开 gist 人设都能复现，还有真实周末交付清单。",
+      "qualityNoteEn": "She says it is not a tutorial, but the roster, routines, quota control, public gist prompts, and weekend ship list are all reproducible.",
       "difficulty": "intermediate",
       "hasRoutine": true,
       "hasSkill": true,
@@ -8828,7 +8916,9 @@
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-01T01:41:20Z",
       "hook": "一个周六，六席 Bot 把一个小站推上线。",
-      "hookEn": "One Saturday, six Bots shipped a small site."
+      "hookEn": "One Saturday, six Bots shipped a small site.",
+      "verifyLog": "来自 Hacker News item 49509728。",
+      "verifyLogEn": "From Hacker News item 49509728."
     },
     {
       "id": "figma-bro",
@@ -9069,8 +9159,8 @@
         "https://news.ycombinator.com/item?id=49583570"
       ],
       "sourceType": "tutorial",
-      "qualityNote": "2026-09-06 长文 + 公开 skill（HN 49583570）。非官方，但分层、静默、审批边界与官方 CoS/Routines 文档一致，可直接照抄运营纪律。",
-      "qualityNoteEn": "Long post dated 2026-09-06 with a public skill (HN 49583570). Unofficial, but layers, quiet default, and approval boundaries match official CoS/Routines docs — usable operating discipline.",
+      "qualityNote": "非官方，但分层、静默、审批边界与官方 CoS/Routines 文档一致，可直接照抄运营纪律。",
+      "qualityNoteEn": "Unofficial, but layers, quiet default, and approval boundaries match official CoS/Routines docs — usable operating discipline.",
       "difficulty": "intermediate",
       "hasRoutine": true,
       "hasSkill": true,
@@ -9088,7 +9178,9 @@
       "publishedAt": "2026-09-06",
       "updatedAt": "2026-09-07T01:23:22Z",
       "hook": "幕僚长、领域主、临时工三层，工单记在 Notion。",
-      "hookEn": "Three layers — chief of staff, domain owners, and temps — with tickets kept in Notion."
+      "hookEn": "Three layers — chief of staff, domain owners, and temps — with tickets kept in Notion.",
+      "verifyLog": "2026-09-06 长文 + 公开 skill（HN 49583570）。",
+      "verifyLogEn": "Long post dated 2026-09-06 with a public skill (HN 49583570)."
     },
     {
       "id": "greenlit-chief-of-staff",
@@ -9217,8 +9309,8 @@
         "https://github.com/mobile-next/mobilecli"
       ],
       "sourceType": "community",
-      "qualityNote": "由 @Ryrenz 2026-09-08 中文帖带来，主源是 GitHub README。当日核对：6468 star / 562 fork，最新版 1.0.3（帖内写 6353 star，已按实数）。需本机 Xcode 命令行工具或 Android Platform Tools，Node 20+。README 明写默认向 PostHog 发匿名遥测，MOBILEMCP_DISABLE_TELEMETRY=1 可关。mobilewright（Playwright 式移动测试）与 mobilecli（底层设备 CLI）在 README 核到，作次链接；Mobile Next Cloud 云真机是付费服务，本库未试。README 示例提示词里的注册、评分、发消息都会在真设备上真做。非 xAI / Grok Bot 官方件，能否接进 Grok Bot 以当日官方 MCP 文档为准。",
-      "qualityNoteEn": "Surfaced by @Ryrenz’s Chinese post on 2026-09-08; the primary source is the GitHub README. Checked that day: 6,468 stars / 562 forks, latest release 1.0.3 (the post said 6,353; we use the live count). Needs local Xcode CLT or Android Platform Tools and Node 20+. The README states anonymous PostHog telemetry is on by default; MOBILEMCP_DISABLE_TELEMETRY=1 turns it off. mobilewright (Playwright-style mobile tests) and mobilecli (the device CLI underneath) are verified in the README and linked as secondary; Mobile Next Cloud is a paid device service we did not try. The README’s sample prompts really register, rate, and message on the device. Not an xAI / Grok Bot first-party piece — whether it plugs into Grok Bot depends on the official MCP docs that day.",
+      "qualityNote": "由 @Ryrenz 2026-09-08 中文帖带来，主源是 GitHub README。当日核对：6468 star / 562 fork，最新版 1.0.3（帖内写 6353 star，已按实数）。需本机 Xcode 命令行工具或 Android Platform Tools，Node 20+。README 明写默认向 PostHog 发匿名遥测，MOBILEMCP_DISABLE_TELEMETRY=1 可关。README 示例提示词里的注册、评分、发消息都会在真设备上真做。非 xAI / Grok Bot 官方件，能否接进 Grok Bot 以当日官方 MCP 文档为准。",
+      "qualityNoteEn": "Surfaced by @Ryrenz’s Chinese post on 2026-09-08; the primary source is the GitHub README. Checked that day: 6,468 stars / 562 forks, latest release 1.0.3 (the post said 6,353; we use the live count). Needs local Xcode CLT or Android Platform Tools and Node 20+. The README’s sample prompts really register, rate, and message on the device. Not an xAI / Grok Bot first-party piece — whether it plugs into Grok Bot depends on the official MCP docs that day.",
       "difficulty": "intermediate",
       "hasRoutine": false,
       "hasSkill": false,
@@ -9239,7 +9331,9 @@
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T16:20:00Z",
       "hook": "让 Agent 直接点手机应用，读得到结构就不用猜坐标。",
-      "hookEn": "Lets an agent tap phone apps, reading the structure before it guesses a coordinate."
+      "hookEn": "Lets an agent tap phone apps, reading the structure before it guesses a coordinate.",
+      "verifyLog": "mobilewright（Playwright 式移动测试）与 mobilecli（底层设备 CLI）在 README 核到，作次链接；Mobile Next Cloud 云真机是付费服务，本库未试。",
+      "verifyLogEn": "The README states anonymous PostHog telemetry is on by default; MOBILEMCP_DISABLE_TELEMETRY=1 turns it off. mobilewright (Playwright-style mobile tests) and mobilecli (the device CLI underneath) are verified in the README and linked as secondary; Mobile Next Cloud is a paid device service we did not try."
     },
     {
       "id": "6yuwei-grok-bot-six-workflows",
