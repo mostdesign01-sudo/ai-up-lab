@@ -4,8 +4,15 @@
       "date": "2026-10-14",
       "title": "每日更新：HTML +2（Impeccable / XIAS）、Cases +1（SolidCraft）",
       "titleEn": "Daily update: HTML +2 (Impeccable / XIAS), Cases +1 (SolidCraft)",
-      "body": "AI×设计优先。HTML：impeccable（设计词表 + audit/polish 等命令 + 确定性检测，Apache-2.0，官网 impeccable.style）；ux-ui-agent-skills / XIAS（设计系统技能包 + 可失败验收闸门，MIT，演示站可先看）。Cases：solidcraft（开源参数化 CAD + MCP，Show HN https://news.ycombinator.com/item?id=50064840）。预览均为 Playwright 3:2 WebP。本库未安装 skill/插件、未连 MCP、未在 CAD 里实测建模。html-items 135→137，cases 171→172。未改首页精选、Agent UI、Models。等 Hao「合」。",
-      "bodyEn": "AI×design first. HTML: impeccable (design vocabulary plus audit/polish and other commands, plus deterministic detectors; Apache-2.0; site impeccable.style); ux-ui-agent-skills / XIAS (design-system skill pack with acceptance gates that can fail the build; MIT; demo you can open before installing). Cases: solidcraft (open-source parametric CAD with MCP; Show HN https://news.ycombinator.com/item?id=50064840). All previews are Playwright 3:2 WebP. This library did not install the skill or plugin, did not connect MCP, and did not model a part in CAD. html-items 135→137, cases 171→172. Homepage picks, Agent UI, and Models unchanged. Waiting for Hao to merge（合）."
+      "body": "AI×设计优先。HTML：impeccable（设计词表 + audit/polish 等命令 + 确定性检测，Apache-2.0，官网 impeccable.style）；ux-ui-agent-skills / XIAS（设计系统技能包 + 可失败验收闸门，MIT，演示站可先看）。Cases：solidcraft（开源参数化 CAD + MCP，Show HN https://news.ycombinator.com/item?id=50064840）。预览均为 Playwright 3:2 WebP。本库未安装 skill/插件、未连 MCP、未在 CAD 里实测建模。html-items 135→137，cases 172→173。未改首页精选、Agent UI、Models。等 Hao「合」。",
+      "bodyEn": "AI×design first. HTML: impeccable (design vocabulary plus audit/polish and other commands, plus deterministic detectors; Apache-2.0; site impeccable.style); ux-ui-agent-skills / XIAS (design-system skill pack with acceptance gates that can fail the build; MIT; demo you can open before installing). Cases: solidcraft (open-source parametric CAD with MCP; Show HN https://news.ycombinator.com/item?id=50064840). All previews are Playwright 3:2 WebP. This library did not install the skill or plugin, did not connect MCP, and did not model a part in CAD. html-items 135→137, cases 172→173. Homepage picks, Agent UI, and Models unchanged. Waiting for Hao to merge（合）."
+    },
+    {
+      "date": "2026-10-14",
+      "title": "收录：Cases +1（小王子 3D 剧情游戏）",
+      "titleEn": "Catalog: Cases +1 (The Little Prince 3D story game)",
+      "body": "Hao 指定收录 @Saccc_c 帖：16 天用 Opus 5.5 + Tripo + Blender 做的《小王子》3D 剧情网页游戏（littleprince.dev）。标题页可打开；无头浏览器无 WebGPU，未实玩；开源为作者计划，暂无仓库。Playwright 3:2 WebP 预览。cases 171→172。未改首页精选、Models。",
+      "bodyEn": "Hao-requested: @Saccc_c's Little Prince 3D story web game built in 16 days with Opus 5.5 + Tripo + Blender (littleprince.dev). Title page loads; not played (no WebGPU headless); open-source is planned, no repo yet. Playwright 3:2 WebP preview. cases 171→172. Homepage picks and Models unchanged."
     },
     {
       "date": "2026-10-13",
