@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "rayden-ui",
+      "slug": "rayden-ui",
+      "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
+      "titleEn": "Rayden UI: MIT React/Tailwind components with an MCP companion for coding agents",
+      "hook": "一套可主题化的 React 零件，助手能直接读组件与 token。",
+      "hookEn": "Themeable React parts your agent can read via MCP manifests and tokens.",
+      "summary": "Rayden UI 是 MIT 开源的 React 组件库：TypeScript 组件、页面 blocks、设计 token、亮暗色，以及 Next.js / Vite 起步模板。安装可用 npm 包 `@raydenui/ui`，也可用 `create-rayden-app`。官网另有 `@raydenui/ai` MCP：把组件 API、token 和布局配方交给兼容的编程助手。适合要统一视觉系统、又经常让 Cursor / Claude 写界面的人。本库没有接 MCP 实测。",
+      "summaryEn": "Rayden UI is an MIT React library: TypeScript components, page blocks, design tokens, light/dark themes, and Next.js / Vite starters. Install via `@raydenui/ui` or `create-rayden-app`. The site also ships `@raydenui/ai` MCP so compatible agents get component APIs, tokens, and layout recipes. Good when you want a shared visual system and often let Cursor / Claude build UI. This library did not wire the MCP.",
+      "sourceUrl": "https://www.rayden-ui.dev/",
+      "secondaryUrls": [
+        "https://github.com/playbookTV/Rayden",
+        "https://rayden-ui.dev/"
+      ],
+      "previewImage": "/previews/rayden-ui.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "react",
+        "tailwind",
+        "mit",
+        "component-library",
+        "mcp",
+        "design-tokens",
+        "ai"
+      ],
+      "featured": false,
+      "publishedAt": "2026-09-28",
+      "updatedAt": "2026-10-14T12:15:00Z",
+      "qualityNote": "主源官网与仓库 playbookTV/Rayden。组件/token/MCP 描述照官网 FAQ 与首页；未核对数十个组件的精确个数。本库未 npm 安装、未接 MCP。",
+      "qualityNoteEn": "Primary sources are the site and playbookTV/Rayden. Component/token/MCP claims follow the FAQ and home page; exact component counts were not audited. This library did not npm-install or wire MCP.",
+      "verifyLog": "2026-10-14 晚间：rayden-ui.dev / github.com/playbookTV/Rayden HTTP 200；gh api license=MIT stars=3；Playwright 3:2 WebP。晚间 gh api：MIT、3★，最近推送 2026-09-28。预览为 Playwright 实拍首页，裁 3:2 WebP。",
+      "verifyLogEn": "2026-10-14 evening: site/repo HTTP 200; gh api MIT stars=3; Playwright 3:2 WebP. Evening gh api: MIT, 3★, last push 2026-09-28. Preview is a Playwright home capture, cropped to a self-hosted 3:2 WebP."
+    },
+    {
       "id": "diagram-design",
       "slug": "diagram-design",
       "title": "Diagram Design：让编程助手画出「设计师不会嫌弃」的编辑级图示",
@@ -4525,9 +4561,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T12:20:00Z",
+    "updatedAt": "2026-10-14T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.64",
-    "count": 135
+    "version": "1.3.65",
+    "count": 136
   }
 }

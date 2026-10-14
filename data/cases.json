@@ -1,6 +1,46 @@
 {
   "cases": [
     {
+      "id": "geneva",
+      "slug": "geneva",
+      "title": "Geneva — 用 HTML/CSS 做字幕与动效的开源命令行视频编辑器（MIT）",
+      "titleEn": "Geneva — open-source CLI video editor with HTML/CSS titles and motion graphics (MIT)",
+      "kind": "tool",
+      "hook": "剪辑写成 JSON，字幕和动效用 HTML/CSS，不用开浏览器。",
+      "hookEn": "Edits are JSON; titles and motion graphics are HTML/CSS—no browser.",
+      "summary": "Geneva 是 MIT 开源的命令行视频工具：裁剪、拼接、转码、烧字幕等日常操作写成 JSON 时间线再渲染；片名卡和动效用普通 HTML/CSS（Flex、渐变、keyframes 等），官网写明不用浏览器也可出片。二进制覆盖 Linux / macOS Apple silicon / Windows，编码走 FFmpeg 库。文档有 `geneva guide`、JSON schema 和给脚本/Agent 用的说明。适合要批处理或让编程助手生成字幕条、片头，又不想上完整 NLE 的人。本库没有本机安装实测。",
+      "summaryEn": "Geneva is an MIT CLI for video: everyday cuts, concat, convert, and burn-in subtitles become JSON timelines; lower-thirds and motion graphics are plain HTML/CSS (flex, gradients, keyframes, …) and the site says you can render without a browser. Binaries cover Linux, macOS Apple silicon, and Windows; codecs come from FFmpeg libraries. Docs include `geneva guide`, a JSON schema, and agent-oriented notes. Good when you want batch or agent-written titles without a full NLE. This library did not install or benchmark it locally.",
+      "categories": [
+        "content",
+        "engineering",
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://genevarender.com/",
+      "secondaryUrls": [
+        "https://github.com/geneva-render/geneva",
+        "https://news.ycombinator.com/item?id=50086224"
+      ],
+      "sourceType": "community-show",
+      "previewImage": "/previews/geneva.webp",
+      "qualityNote": "主源官网与仓库 geneva-render/geneva。HTML/CSS 叠层、JSON 时间线、多平台二进制、Agent 文档均照官网。本库未安装二进制、未跑 benchmark。",
+      "qualityNoteEn": "Primary sources are the site and geneva-render/geneva. HTML/CSS overlays, JSON timelines, multi-platform binaries, and agent docs follow the site. This library did not install the binary or rerun benchmarks.",
+      "verifyLog": "2026-10-14 晚间：官网/仓库 HTTP 200；Algolia objectID 50086224；gh api stars=7 license=MIT；Playwright 截首屏→1200×800 WebP。Show HN https://news.ycombinator.com/item?id=50086224（2026-10-14T11:52Z，撰写时约 4 分）。晚间 gh api：MIT、7★，最近推送 2026-10-14。预览为 Playwright 实拍官网首屏，裁 3:2 WebP。",
+      "verifyLogEn": "2026-10-14 evening: site/repo HTTP 200; Algolia 50086224; gh api stars=7 MIT; Playwright hero → 1200×800 WebP. Show HN https://news.ycombinator.com/item?id=50086224 (2026-10-14T11:52Z, ~4 points at write time). Evening gh api: MIT, 7★, last push 2026-10-14. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "",
+      "approvalBoundaryEn": "",
+      "language": "zh",
+      "connectors": [],
+      "featured": false,
+      "publishedAt": "2026-10-14",
+      "updatedAt": "2026-10-14T12:15:00Z"
+    },
+    {
       "id": "little-prince-across-the-stars",
       "slug": "little-prince-across-the-stars",
       "title": "一个人 16 天，用 Opus 5.5 + Tripo + Blender 把《小王子》做成 3D 剧情网页游戏",
@@ -9636,11 +9676,14 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T16:30:00Z",
+    "updatedAt": "2026-10-14T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.56",
-    "count": 172,
+    "version": "1.4.57",
+    "count": 173,
     "sourcesCrawled": [
+      "https://genevarender.com/",
+      "https://github.com/geneva-render/geneva",
+      "https://news.ycombinator.com/item?id=50086224",
       "https://littleprince.dev/",
       "https://x.com/Saccc_c/status/2109962425512734739",
       "https://x.com/AverageAiBro/status/2109822177621262758",
