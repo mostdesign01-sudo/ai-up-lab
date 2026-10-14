@@ -1,4 +1,4 @@
-// One-off migration: give every case an explicit `kind` and drop the type prefix
+// Migration (safe to re-run for new entries): give every case an explicit `kind` and drop the type prefix
 // that used to live in the title. Usage: node scripts/classify-cases.mjs [--write]
 import fs from "node:fs";
 
@@ -16,13 +16,13 @@ const PREFIX = {
 
 // Launch posts filed as tools by the old mapping table.
 const OVERRIDE = { "grok-bot-shopify": "news", "grok-bot-and-x": "news" };
-const ZH_PREFIX = [...Object.values(PREFIX).map(([zh]) => zh), /^(玩法|清单)[：:]\s*/];
-const EN_PREFIX = [...Object.values(PREFIX).map(([, en]) => en), /^(Tool tip|How-to|List|Official case|HN case):\s*/i];
+const ZH_PREFIX = [...Object.values(PREFIX).map(([zh]) => zh), /^(玩法|清单|案例)[：:]\s*/];
+const EN_PREFIX = [...Object.values(PREFIX).map(([, en]) => en), /^(Tool tip|How-to|List|Official case|HN case|Case|Case study):\s*/i];
 
 function classify(item) {
   if (OVERRIDE[item.id]) return OVERRIDE[item.id];
   if (item.kind) return item.kind;
-  if (dir.caseTools.includes(item.id) || PREFIX.tool[0].test(item.title)) return "tool";
+  if ((dir.caseTools ?? []).includes(item.id) || PREFIX.tool[0].test(item.title)) return "tool";
   if (PREFIX.news[0].test(item.title)) return "news";
   if (PREFIX.guide[0].test(item.title) || item.sourceType === "tutorial") return "guide";
   if (item.sourceType === "official-docs" || item.sourceType === "official-launch") return "playbook";
