@@ -4121,3 +4121,16 @@ html[data-theme="light"] .home-pill {
 .model-grid--directory .model-card-media img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
 .directory-related { margin-top: 48px; }
 .directory-related h2 { font-size: var(--text-h2); margin: 0 0 16px; }
+
+/* Small colored text on tinted fills needs more weight than the base hue to reach 4.5:1 in light mode. */
+html[data-theme="light"] .badge.official { color: color-mix(in srgb, var(--teal) 72%, #000); }
+html[data-theme="light"] .badge.community { color: color-mix(in srgb, var(--sky) 82%, #000); }
+html[data-theme="light"] .badge.cursor { color: color-mix(in srgb, var(--violet) 82%, #000); }
+html[data-theme="light"] .badge.approval,
+html[data-theme="light"] .badge.featured { color: color-mix(in srgb, var(--amber) 70%, #000); }
+html[data-theme="light"] .badge.routine { color: color-mix(in srgb, var(--green) 78%, #000); }
+html[data-theme="light"] .badge.multi { color: color-mix(in srgb, var(--rose) 82%, #000); }
+.panel > .quality-note strong,
+.gh-star-repo { color: var(--muted); }
+/* The teal accent sits at 4.1:1 against light surfaces; a slightly deeper teal clears 4.5:1 for links and white button text. */
+html[data-theme="light"][data-collection="html"] { --accent: color-mix(in srgb, var(--teal) 82%, #000); }
