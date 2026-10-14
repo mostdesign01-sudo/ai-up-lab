@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-14",
+      "title": "晚间收录：HTML +1（Rayden UI）、Agent UI +1（affectUI）、Cases +1（Geneva）",
+      "titleEn": "Evening catalog: HTML +1 (Rayden UI), Agent UI +1 (affectUI), Cases +1 (Geneva)",
+      "body": "AI×设计优先，补今早之后出现的公开源：rayden-ui（MIT React/Tailwind + MCP）；affectui（AI 产品向 React 组件，仓库 MIT，条目只标免费路径）；geneva（当日 Show HN：JSON 时间线 + HTML/CSS 叠层的 MIT 命令行视频工具）。三条均为 Playwright 3:2 WebP。html-items 135→136，agent-ui 63→64，cases 172→173。未改首页精选、Models。未合并仍打开的晨更 PR #100（Impeccable / XIAS / SolidCraft）。",
+      "bodyEn": "AI×design-first catch-up after morning: rayden-ui (MIT React/Tailwind + MCP); affectui (AI-product React components, MIT repo, free path only); geneva (same-day Show HN: MIT CLI with JSON timelines and HTML/CSS overlays). All three use Playwright 3:2 WebP. html-items 135→136, agent-ui 63→64, cases 172→173. Home picks and Models unchanged. Did not merge still-open morning PR #100 (Impeccable / XIAS / SolidCraft)."
+    },
+    {
+      "date": "2026-10-14",
       "title": "整站梳理：分类、收录理由与页面一致性",
       "titleEn": "Site cleanup: categories, listing notes, and page consistency",
       "body": "Cases 新增 kind 字段（工具 / 教程 / 用法配方 / 资讯 / 实践案例），目录按它自动归档，标题去掉「工具：」等前缀；7 个放错到「学习」的新工具回到「工具与应用」，资讯不再混进教程。收录理由与摘要里的 HTTP 状态、star、HN 编号、截图方式移到详情页折叠的「核验记录」，构建会检查。精选按统一规则收紧到约 16%，难度 beginner 并入 starter。旧列表页标 noindex 并移出 sitemap，详情面包屑统一为「首页 / 目录 / 标题」，「品牌收集」移入「更多」。首页首屏与创意轨重排，模型页改用统一目录版式，补齐浅色模式的文字对比度。条目数量不变。",

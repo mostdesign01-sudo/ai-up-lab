@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "affectui",
+      "slug": "affectui",
+      "title": "affectUI：面向 AI 产品的 React 组件/屏幕块（可 shadcn 安装，带 MCP）",
+      "titleEn": "affectUI: React components and screens for AI products (shadcn install + MCP)",
+      "hook": "聊天、引用、审批卡这类 AI 界面零件，可拷贝或让助手装。",
+      "hookEn": "AI chat, citation, and approval UI you can copy—or let an agent install.",
+      "summary": "affectUI 提供面向 AI 产品的 React 组件、屏幕与动效：流式回答、引用芯片、思考态、Prompt 输入条等。安装可走 shadcn CLI，也可连接官网 MCP，让 Claude / Cursor 等搜索并写入单文件源码。仓库 MIT。官网同时售 Pro（有一次买断促销文案）；免费可拷贝的条目以官网 Library 标明为准，本库只标免费/开源路径，不替 Pro 站台。适合做 AI 聊天或 Agent 产品界面、又想少一点「默认灰卡片」的人。本库未登录、未购买 Pro、未实测 MCP。",
+      "summaryEn": "affectUI ships React components, screens, and motion for AI products—streamed answers, citation chips, thinking states, prompt bars, and more. Install via the shadcn CLI or connect the site MCP so Claude / Cursor can search and write one-file sources. The repo is MIT. The site also sells Pro (a founding one-time offer was on the home page); free copyable items are whatever the Library marks free—this entry covers the free/open path only. Good for AI chat or agent UIs that need less default gray-card look. This library did not log in, buy Pro, or exercise the MCP.",
+      "sourceUrl": "https://www.affectui.com/",
+      "secondaryUrls": [
+        "https://github.com/flohoeller/affectui"
+      ],
+      "previewImage": "/previews/affectui.webp",
+      "npmPackage": "",
+      "promptHint": "先打开 https://www.affectui.com/ 的 Library，只挑标明可免费拷贝的条目；或按官网 Docs 接 MCP / shadcn 安装。不要默认安装 Pro 专属件。",
+      "promptHintEn": "Open the Library on https://www.affectui.com/ and only take items marked free to copy; or follow Docs for MCP / shadcn install. Do not assume Pro pieces are free.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "ai-ui",
+        "mcp",
+        "shadcn",
+        "mit",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-14T12:15:00Z",
+      "qualityNote": "主源官网与仓库 flohoeller/affectui。首页可见 Pro 促销条与「97+」组件自述；免费条数以 Library 为准，未逐条核对。本库未登录、未购 Pro、未接 MCP。",
+      "qualityNoteEn": "Primary sources are the site and flohoeller/affectui. Home page showed a Pro founding offer and a “97+” component claim; free item counts follow the Library and were not audited item-by-item. This library did not log in, buy Pro, or wire MCP.",
+      "verifyLog": "2026-10-14 晚间：affectui.com / flohoeller/affectui HTTP 200；gh api MIT stars=30；首页有 Pro 促销；Playwright 3:2 WebP。晚间 gh api：MIT、30★，最近推送 2026-10-13。预览为 Playwright 实拍首页，裁 3:2 WebP。",
+      "verifyLogEn": "2026-10-14 evening: site/repo HTTP 200; gh api MIT stars=30; Pro offer on home; Playwright 3:2 WebP. Evening gh api: MIT, 30★, last push 2026-10-13. Preview is a Playwright home capture, cropped to a self-hosted 3:2 WebP."
+    },
+    {
       "id": "aria-icons",
       "slug": "aria-icons",
       "title": "Aria Icons：百万级开源 SVG 图标，给 Agent 配好 MCP / CLI",
@@ -2258,9 +2296,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T12:20:00Z",
+    "updatedAt": "2026-10-14T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.27",
-    "count": 63
+    "version": "1.4.28",
+    "count": 64
   }
 }
