@@ -6,7 +6,9 @@ import type { Copy } from "./i18n";
  *  (Asia/Shanghai); each build shows the latest issue whose week has started.
  *  Recency and popularity do not substitute for usefulness: every issue is chosen by hand.
  *  Supporting prompt / AIGC visuals live in `home-creative.json` (right rail). */
-export interface EditorialArt { src: string; width: number; height: number }
+/** `illustration` (default) is commissioned art in the house style; `source` is the recommended site's own
+ *  key visual (hero, OG image, product shot) and must credit where it came from. */
+export interface EditorialArt { src: string; width: number; height: number; kind?: "illustration" | "source"; credit?: Copy }
 export interface EditorialIssue {
   week: string;
   /** Monday and Sunday of the issue's week, YYYY-MM-DD. */
@@ -56,6 +58,7 @@ const issues: EditorialIssue[] = selection.issues.map((issue, index, list) => {
   if (!issue.title.zh.trim() || !issue.title.en.trim() || !issue.reason.zh.trim() || !issue.reason.en.trim()) throw new Error(`Homepage pick needs a bilingual title and reason: ${issue.week} ${issue.key}`);
   const monday = weekMonday(issue.week);
   const art = "art" in issue ? (issue.art as EditorialArt) : undefined;
+  if (art?.kind === "source" && (!art.credit?.zh.trim() || !art.credit?.en.trim())) throw new Error(`Homepage art taken from the source site needs a bilingual credit: ${issue.week} ${issue.key}`);
   return { week: issue.week, start: ymd(monday), end: ymd(new Date(monday.getTime() + 6 * DAY_MS)), entry, section, title: issue.title as Copy, reason: issue.reason as Copy, art };
 });
 
@@ -80,3 +83,6 @@ export const homeTitles = new Map(selection.titles.map(item => {
   if (!entries.some(entry => entry.key === item.key) || !item.title.zh.trim() || !item.title.en.trim()) throw new Error(`Invalid homepage short title: ${item.key}`);
   return [item.key, item.title] as const;
 }));
+
+/** Wide images (most site heroes) sit in a frame; portrait art fills the lead column. */
+export const artFits = (art: EditorialArt) => (art.width / art.height > 1.15 ? "frame" : "fill");

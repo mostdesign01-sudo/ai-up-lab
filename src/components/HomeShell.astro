@@ -7,7 +7,7 @@ import Icon from "./Icon.astro";
 import GitHubStar from "./GitHubStar.astro";
 import { sections, entries, sectionEntries, tasks } from "../lib/directory";
 import { homeCreative } from "../lib/home-creative";
-import { homePicks, homeTitles, sourceHost, pastIssues } from "../lib/home-picks";
+import { homePicks, homeTitles, sourceHost, pastIssues, artFits } from "../lib/home-picks";
 import { weekRange } from "../lib/format";
 import { STARTER_PRIMERS, starterCases } from "../lib/starters";
 import { changelogNotes } from "../lib/cases";
@@ -35,9 +35,12 @@ const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "
         <div class="editorial-lead-actions"><a class="editorial-primary" href={lead.entry.href}><Loc zh="阅读用法" en="Read the guide" /><Icon name="arrow" size={20} /></a><FavButton lib={lead.entry.lib} id={lead.entry.id} variant="button" /></div>
         {pastIssues.length > 0 && <a class="editorial-text-link editorial-past-link" href={withBase("picks/")}><Loc zh="往期精选" en="Past picks" /><Icon name="arrow" size={16} /></a>}
       </div>
-      {lead.art
-        ? <a class="editorial-art" href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={assetUrl(lead.art.src)} alt="" width={lead.art.width} height={lead.art.height} fetchpriority="high" loading="eager" decoding="async" /></a>
-        : <a class="editorial-art is-shot" href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={lead.entry.thumb} alt="" width="900" height="600" fetchpriority="high" loading="eager" decoding="async" /></a>}
+      <figure class="editorial-art-figure">
+        {lead.art
+          ? <a class:list={["editorial-art", { "is-shot is-source": artFits(lead.art) === "frame" }]} href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={assetUrl(lead.art.src)} alt="" width={lead.art.width} height={lead.art.height} fetchpriority="high" loading="eager" decoding="async" /></a>
+          : <a class="editorial-art is-shot" href={lead.entry.href} tabindex="-1" aria-hidden="true"><img src={lead.entry.thumb} alt="" width="900" height="600" fetchpriority="high" loading="eager" decoding="async" /></a>}
+        {lead.art?.credit && <figcaption class="editorial-art-credit"><Loc zh={`图片：${lead.art.credit.zh}`} en={`Image: ${lead.art.credit.en}`} /></figcaption>}
+      </figure>
     </article>
     <CreativeRail />
   </section>}

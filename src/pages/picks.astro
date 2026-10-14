@@ -28,6 +28,7 @@ const oneLine = (text: string) => text.replace(/([A-Za-z0-9])\n/g, "$1 ").replac
               <p class="picks-archive-week"><Loc zh={`${index === 0 ? "本周 · " : ""}${issue.week} · ${dates.zh}`} en={`${index === 0 ? "This week · " : ""}${issue.week} · ${dates.en}`} /> · <a href={withBase(`${issue.section.id}/`)}><Loc zh={issue.section.title.zh} en={issue.section.title.en} /></a></p>
               <h2><a href={issue.entry.href}><Loc zh={oneLine(issue.title.zh)} en={issue.title.en} /></a></h2>
               <p><Loc zh={issue.reason.zh} en={issue.reason.en} /></p>
+              {issue.art?.credit && <p class="picks-archive-credit"><Loc zh={`图片：${issue.art.credit.zh}`} en={`Image: ${issue.art.credit.en}`} /></p>}
               <a class="editorial-text-link" href={issue.entry.href}><Loc zh="阅读用法" en="Read the guide" /><Icon name="arrow" size={16} /></a>
             </div>
           </article>
