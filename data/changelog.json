@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-14",
+      "title": "收录：Cases +1（小王子 3D 剧情游戏）",
+      "titleEn": "Catalog: Cases +1 (The Little Prince 3D story game)",
+      "body": "Hao 指定收录 @Saccc_c 帖：16 天用 Opus 5.5 + Tripo + Blender 做的《小王子》3D 剧情网页游戏（littleprince.dev）。标题页可打开；无头浏览器无 WebGPU，未实玩；开源为作者计划，暂无仓库。Playwright 3:2 WebP 预览。cases 171→172。未改首页精选、Models。",
+      "bodyEn": "Hao-requested: @Saccc_c's Little Prince 3D story web game built in 16 days with Opus 5.5 + Tripo + Blender (littleprince.dev). Title page loads; not played (no WebGPU headless); open-source is planned, no repo yet. Playwright 3:2 WebP preview. cases 171→172. Homepage picks and Models unchanged."
+    },
+    {
       "date": "2026-10-13",
       "title": "晚间收录：HTML +1（Diagram Design）、Agent UI +1（Aria Icons）、Cases +1（Doop）",
       "titleEn": "Evening catalog: HTML +1 (Diagram Design), Agent UI +1 (Aria Icons), Cases +1 (Doop)",

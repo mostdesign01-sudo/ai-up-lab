@@ -1,6 +1,41 @@
 {
   "cases": [
     {
+      "id": "little-prince-across-the-stars",
+      "slug": "little-prince-across-the-stars",
+      "title": "案例：一个人 16 天，用 Opus 5.5 + Tripo + Blender 把《小王子》做成 3D 剧情网页游戏",
+      "titleEn": "Case: The Little Prince as a 3D story game in 16 days with Opus 5.5, Tripo and Blender",
+      "hook": "把每颗星球做成能走的 3D 场景，浏览器打开就能玩。",
+      "hookEn": "Each planet becomes a walkable 3D scene, playable in the browser.",
+      "summary": "X 用户 Sac（@Saccc_c）发帖说花 16 天，用 Opus 5.5 写代码，配合 Tripo（AI 生成 3D 模型）和 Blender，把《小王子》做成了 3D 剧情游戏《The Little Prince: Across the Stars》，每颗星球都是可以探索的场景。成品放在 littleprince.dev，是浏览器里跑的网页游戏（页面写着需要 WebGPU），有中/英/日三种语言。作者说之后会开源整个游戏和详细制作流程。适合想看「AI 写代码 + AI 出模型 + 传统 3D 软件」能把一个完整小游戏做到什么程度的人。",
+      "summaryEn": "X user Sac (@Saccc_c) says they spent 16 days turning The Little Prince into a 3D story game, The Little Prince: Across the Stars, with Opus 5.5 writing code plus Tripo (AI 3D models) and Blender; each planet is an explorable scene. It runs in the browser at littleprince.dev (the page mentions WebGPU) with Chinese, English and Japanese. The author plans to open-source the game and a detailed making-of later. Good for seeing how far AI coding + AI 3D assets + classic 3D tools can take a complete small game.",
+      "categories": [
+        "content",
+        "engineering"
+      ],
+      "role": "AI game build",
+      "sourceUrl": "https://littleprince.dev/",
+      "secondaryUrls": [
+        "https://x.com/Saccc_c/status/2109962425512734739"
+      ],
+      "sourceType": "community-show",
+      "qualityNote": "主源 https://littleprince.dev/（2026-10-14 HTTP 200，标题页能打开，有 EN/中/日 切换）。X 原帖 https://x.com/Saccc_c/status/2109962425512734739（2026-10-13）。16 天、Opus 5.5、Tripo + Blender、后续开源均为作者自述；目前没找到仓库。本库只打开了标题页，无头浏览器没有 WebGPU，没进游戏实玩；场景截图取自作者帖子视频。预览为 Playwright 实拍标题页，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Primary source https://littleprince.dev/ (HTTP 200 on 2026-10-14; title page loads with EN/ZH/JA switch). X post https://x.com/Saccc_c/status/2109962425512734739 (2026-10-13). 16 days, Opus 5.5, Tripo + Blender and the open-source plan are the author's claims; no repo found yet. This library only opened the title page—headless browser lacks WebGPU, so the game was not played; scene stills come from the author's video. Preview is a Playwright capture of the title page, cropped to a self-hosted 3:2 WebP.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "只是玩和参考做法；改编名著做公开发布前，自己确认版权和素材授权。",
+      "approvalBoundaryEn": "Play and study only; check rights and asset licenses before publishing your own adaptation.",
+      "connectors": [],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-14",
+      "updatedAt": "2026-10-13T16:30:00Z",
+      "previewImage": "/previews/little-prince-across-the-stars.webp"
+    },
+    {
       "id": "doop",
       "slug": "doop",
       "title": "工具：Doop — 人和 AI Agent 一起用的开源设计画布（自带 MCP）",
@@ -9331,11 +9366,13 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T12:20:00Z",
+    "updatedAt": "2026-10-13T16:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.55",
-    "count": 171,
+    "version": "1.4.56",
+    "count": 172,
     "sourcesCrawled": [
+      "https://littleprince.dev/",
+      "https://x.com/Saccc_c/status/2109962425512734739",
       "https://x.com/AverageAiBro/status/2109822177621262758",
       "https://github.com/cathrynlavery/diagram-design",
       "https://diagramdesign.dev/",
