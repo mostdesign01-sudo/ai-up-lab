@@ -7,8 +7,8 @@
       "titleEn": "Diagram Design: editorial diagrams your coding agent draws (and designers won’t hate)",
       "hook": "44 种图示，一页自含 HTML+SVG，还能贴合你站点的品牌色。",
       "hookEn": "44 diagram types as one HTML+SVG file, brand-matched to your site.",
-      "summary": "一个免费开源（MIT）的 Agent Skill：装进 Claude Code、Codex、Cursor、Copilot、Pi 等之后，用一句话描述架构、泳道、象限、桑基、爆炸轴测之类需求，助手会按图示类型规则画出一整页可双击打开的 HTML+SVG（默认静态、可无障碍朗读），不必再开 Figma，也不走常见的圆角方块「AI 味」图。官网写撰写时 44 种类型；可指向你的网站自动读色与字体做品牌对齐；还能从 draw.io、Mermaid、Excalidraw 重画（不是简单转格式）。装法一行 `npx skills add cathrynlavery/diagram-design`，也有各宿主的插件命令。适合写方案、架构说明、演示稿，又嫌默认图示丑的人。",
-      "summaryEn": "A free MIT agent skill: after install into Claude Code, Codex, Cursor, Copilot, Pi, and similar hosts, one plain-language ask for architecture, swimlane, quadrant, Sankey, exploded axonometric, and more yields a double-clickable self-contained HTML+SVG page (static by default, with accessible titles), without Figma and without rounded-box AI slop. The site lists 44 types at write time; point it at your site to pull colors and fonts; it can redraw (not merely convert) draw.io, Mermaid, and Excalidraw sources. Install with `npx skills add cathrynlavery/diagram-design` or the host’s plugin commands. Good for proposals, architecture notes, and decks when default diagrams look cheap.",
+      "summary": "一个免费开源（MIT）的 Agent Skill：装进 Claude Code、Codex、Cursor、Copilot、Pi 等之后，用一句话描述架构、泳道、象限、桑基、爆炸轴测之类需求，助手会按图示类型规则画出一整页可双击打开的 HTML+SVG（默认静态、可无障碍朗读），不必再开 Figma，也不走常见的圆角方块「AI 味」图。可指向你的网站自动读色与字体做品牌对齐；还能从 draw.io、Mermaid、Excalidraw 重画（不是简单转格式）。装法一行 `npx skills add cathrynlavery/diagram-design`，也有各宿主的插件命令。适合写方案、架构说明、演示稿，又嫌默认图示丑的人。",
+      "summaryEn": "A free MIT agent skill: after install into Claude Code, Codex, Cursor, Copilot, Pi, and similar hosts, one plain-language ask for architecture, swimlane, quadrant, Sankey, exploded axonometric, and more yields a double-clickable self-contained HTML+SVG page (static by default, with accessible titles), without Figma and without rounded-box AI slop. point it at your site to pull colors and fonts; it can redraw (not merely convert) draw.io, Mermaid, and Excalidraw sources. Install with `npx skills add cathrynlavery/diagram-design` or the host’s plugin commands. Good for proposals, architecture notes, and decks when default diagrams look cheap.",
       "sourceUrl": "https://diagramdesign.dev/",
       "secondaryUrls": [
         "https://github.com/cathrynlavery/diagram-design",
@@ -39,16 +39,16 @@
       "featured": false,
       "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-13T12:20:00Z",
-      "verifyLog": "主源官网 https://diagramdesign.dev/ 与仓库 cathrynlavery/diagram-design；晚间 HTTP 200，gh api：MIT、约 53415★，2026-04-16 创建，最近推送 2026-10-13。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
-      "verifyLogEn": "Primary sources are https://diagramdesign.dev/ and cathrynlavery/diagram-design; HTTP 200 this evening; gh api: MIT, ~53415★, created 2026-04-16, last push 2026-10-13. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP."
+      "verifyLog": "主源官网 https://diagramdesign.dev/ 与仓库 cathrynlavery/diagram-design；晚间 HTTP 200，gh api：MIT、约 53415★，2026-04-16 创建，最近推送 2026-10-13。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。 官网写撰写时 44 种类型；",
+      "verifyLogEn": "Primary sources are https://diagramdesign.dev/ and cathrynlavery/diagram-design; HTTP 200 this evening; gh api: MIT, ~53415★, created 2026-04-16, last push 2026-10-13. Preview is a Playwright capture of the home hero, cropped to a self-hosted 3:2 WebP. The site lists 44 types at write time;"
     },
     {
       "id": "suta",
       "slug": "suta",
       "title": "Suta：给 Claude Code / Codex 用的界面 Skill，用来压掉 AI 界面「同质化」",
       "titleEn": "Suta: a UI skill for Claude Code / Codex that pushes back on AI-slop interfaces",
-      "summary": "一个免费开源（MIT）的界面 Skill：装进 Claude Code 或 Codex 后，再让助手做登录页、列表、弹层这类界面时，它会先读布局、配色和动效的指南，再套用仓库里的几十种模式代码（撰写时 README 写 57 种；演示站按进入过渡、加载、反馈、导航、手势等分组展示）。作者说做它是因为常看到 AI 出的界面卡片重复、颜色过多、装饰多余。装法：Claude Code 用插件市场加 Guksu/suta；Codex 用插件命令；其他助手可用 npx skills add。有英文使用说明和在线演示站，插件还能在改完后做静态检查，但作者也提醒浏览器里还要自己看一眼。适合经常让编程助手出界面、又嫌结果千篇一律的人。",
-      "summaryEn": "A free MIT UI skill for Claude Code or Codex: after install, when the agent builds screens like login, lists, or modals, it reads layout, color, and motion guidelines, then adapts pattern code from the repo (README lists 57 patterns at write time; the demo groups enter/transition, loading, feedback, navigation, and gestures). The author built it after seeing repetitive cards, too many colors, and extra decoration in AI-made UI. Install via the Claude Code plugin marketplace (Guksu/suta), Codex plugin commands, or npx skills add for other agents. English usage notes and a live demo are included; the plugin can run static checks after edits, though the author still asks you to verify in the browser. Good if your coding agent often ships UI that all looks the same.",
+      "summary": "一个免费开源（MIT）的界面 Skill：装进 Claude Code 或 Codex 后，再让助手做登录页、列表、弹层这类界面时，它会先读布局、配色和动效的指南，再套用仓库里的几十种模式代码。作者说做它是因为常看到 AI 出的界面卡片重复、颜色过多、装饰多余。装法：Claude Code 用插件市场加 Guksu/suta；Codex 用插件命令；其他助手可用 npx skills add。有英文使用说明和在线演示站，插件还能在改完后做静态检查，但作者也提醒浏览器里还要自己看一眼。适合经常让编程助手出界面、又嫌结果千篇一律的人。",
+      "summaryEn": "A free MIT UI skill for Claude Code or Codex: after install, when the agent builds screens like login, lists, or modals, it reads layout, color, and motion guidelines, then adapts pattern code from the repo. The author built it after seeing repetitive cards, too many colors, and extra decoration in AI-made UI. Install via the Claude Code plugin marketplace (Guksu/suta), Codex plugin commands, or npx skills add for other agents. English usage notes and a live demo are included; the plugin can run static checks after edits, though the author still asks you to verify in the browser. Good if your coding agent often ships UI that all looks the same.",
       "sourceUrl": "https://github.com/Guksu/suta",
       "secondaryUrls": [
         "https://guksu.github.io/suta/",
@@ -79,16 +79,16 @@
       "updatedAt": "2026-10-12T12:25:00Z",
       "hook": "装给编程助手的界面指南，少一点 AI 同质化。",
       "hookEn": "UI guidelines for your coding agent, so fewer look-alike AI screens.",
-      "verifyLog": "线索 Show HN https://news.ycombinator.com/item?id=50040224 （2026-10-11T06:10Z，约 10-11 14:10 北京时间，撰写时 1 分）。仓库 Guksu/suta 晚间 gh api：MIT、12★，2026-08-19 创建，最近推送 2026-10-12；最新 release v0.10.0（2026-10-11）。官网与仓库晚间 HTTP 200。预览为 Playwright 实拍演示站首屏，裁 3:2 WebP 自托管。",
-      "verifyLogEn": "Lead: Show HN https://news.ycombinator.com/item?id=50040224 (2026-10-11T06:10Z, about 14:10 on 10-11 Beijing time, 1 point at write time). Repo Guksu/suta on this evening’s gh api: MIT, 12★, created 2026-08-19, last push 2026-10-12; latest release v0.10.0 (2026-10-11). Site and repo HTTP 200 this evening. Preview is a Playwright capture of the demo above the fold, cropped to a self-hosted 3:2 WebP."
+      "verifyLog": "线索 Show HN https://news.ycombinator.com/item?id=50040224 （2026-10-11T06:10Z，约 10-11 14:10 北京时间，撰写时 1 分）。仓库 Guksu/suta 晚间 gh api：MIT、12★，2026-08-19 创建，最近推送 2026-10-12；最新 release v0.10.0（2026-10-11）。官网与仓库晚间 HTTP 200。预览为 Playwright 实拍演示站首屏，裁 3:2 WebP 自托管。 （撰写时 README 写 57 种；演示站按进入过渡、加载、反馈、导航、手势等分组展示）",
+      "verifyLogEn": "Lead: Show HN https://news.ycombinator.com/item?id=50040224 (2026-10-11T06:10Z, about 14:10 on 10-11 Beijing time, 1 point at write time). Repo Guksu/suta on this evening’s gh api: MIT, 12★, created 2026-08-19, last push 2026-10-12; latest release v0.10.0 (2026-10-11). Site and repo HTTP 200 this evening. Preview is a Playwright capture of the demo above the fold, cropped to a self-hosted 3:2 WebP. (README lists 57 patterns at write time; the demo groups enter/transition, loading, feedback, navigation, and gestures)"
     },
     {
       "id": "oil-ui",
       "slug": "oil-ui",
       "title": "Oil UI：装给 AI Agent 的界面设计 Skill，先做几版风格不同的小样让你挑",
       "titleEn": "Oil UI: a UI design skill for AI agents that mocks up several truly different directions for you to pick",
-      "summary": "中文作者 oil-oil 做的开源界面设计 Skill（Skill 可以理解成「装给 AI 编程助手的一套做事方法」）。装好后，你让 Claude Code、Codex 这类 Agent 设计网页、App、后台或组件，它不会直接出一版就交差，而是先认清这是哪类产品、找同类里风格最鲜明的两三家参考，把「高级」「简洁」这种空话翻成具体的字体、留白和配色决定，再做出几份真正不一样的小样——规则写得很死：版式、字体、配色、主视觉四样里，任意两版最多只能有一样相同。几份小样会放进一个自带的风格对比页，能切电脑和手机尺寸、用方向键翻看，你点「选择」后把复制出的一句话发回 Agent，它再接着细化；做完还会在两种尺寸下截图自查，最后做一轮减法。官网 ui.oiloil.org 有一面作品墙（撰写时 65 件，大多标注用 GPT 6.1 Sol 生成），能看到学英语 App、硬件官网、项目管理工具等成品。开源版 MIT 免费；另有付费的 Oil UI Pro，多了可用性、老项目改造、特效等内容。适合想让 AI 做出来的界面别千篇一律的设计师和独立开发者。",
-      "summaryEn": "An open-source UI design skill by Chinese creator oil-oil (a skill is a packaged way of working you install into an AI coding agent). Once installed, when you ask Claude Code, Codex, or similar agents to design a site, app, dashboard, or component, it does not ship one version and stop: it identifies the product category, studies the two or three most distinctive players, turns vague words like “premium” or “clean” into concrete type, spacing, and color decisions, then produces several genuinely different mockups, with a strict rule that any two directions may share at most one of layout, type, palette, and key visual. The mockups land in a built-in comparison page where you switch desktop and mobile sizes and flip through with arrow keys; click “Select,” paste the copied line back to the agent, and it refines from there, then screenshots both sizes to self-check and does a final pass of subtraction. The gallery at ui.oiloil.org (65 pieces at write time, most labeled GPT 6.1 Sol) shows results like a language-learning app, a hardware site, and a project tool. The open-source edition is MIT and free; a paid Oil UI Pro adds usability, legacy-project, and effects material. Good for designers and indie builders who want AI-made interfaces that don’t all look the same.",
+      "summary": "中文作者 oil-oil 做的开源界面设计 Skill（Skill 可以理解成「装给 AI 编程助手的一套做事方法」）。装好后，你让 Claude Code、Codex 这类 Agent 设计网页、App、后台或组件，它不会直接出一版就交差，而是先认清这是哪类产品、找同类里风格最鲜明的两三家参考，把「高级」「简洁」这种空话翻成具体的字体、留白和配色决定，再做出几份真正不一样的小样——规则写得很死：版式、字体、配色、主视觉四样里，任意两版最多只能有一样相同。几份小样会放进一个自带的风格对比页，能切电脑和手机尺寸、用方向键翻看，你点「选择」后把复制出的一句话发回 Agent，它再接着细化；做完还会在两种尺寸下截图自查，最后做一轮减法。官网 ui.oiloil.org 有一面作品墙，能看到学英语 App、硬件官网、项目管理工具等成品。开源版 MIT 免费；另有付费的 Oil UI Pro，多了可用性、老项目改造、特效等内容。适合想让 AI 做出来的界面别千篇一律的设计师和独立开发者。",
+      "summaryEn": "An open-source UI design skill by Chinese creator oil-oil (a skill is a packaged way of working you install into an AI coding agent). Once installed, when you ask Claude Code, Codex, or similar agents to design a site, app, dashboard, or component, it does not ship one version and stop: it identifies the product category, studies the two or three most distinctive players, turns vague words like “premium” or “clean” into concrete type, spacing, and color decisions, then produces several genuinely different mockups, with a strict rule that any two directions may share at most one of layout, type, palette, and key visual. The mockups land in a built-in comparison page where you switch desktop and mobile sizes and flip through with arrow keys; click “Select,” paste the copied line back to the agent, and it refines from there, then screenshots both sizes to self-check and does a final pass of subtraction. The gallery at ui.oiloil.org shows results like a language-learning app, a hardware site, and a project tool. The open-source edition is MIT and free; a paid Oil UI Pro adds usability, legacy-project, and effects material. Good for designers and indie builders who want AI-made interfaces that don’t all look the same.",
       "sourceUrl": "https://github.com/oil-oil/oil-ui",
       "secondaryUrls": [
         "https://ui.oiloil.org/",
@@ -117,8 +117,8 @@
       "updatedAt": "2026-10-11T12:30:00Z",
       "hook": "让 AI 先做几版真不一样的界面小样，你挑完它再细化。",
       "hookEn": "Your AI agent mocks up genuinely different UI directions, you pick, it refines.",
-      "verifyLog": "线索：作者 @I_am_oil_oil 的更新帖 https://x.com/I_am_oil_oil/status/2109157633898979682 （2026-10-11T05:42Z，约 10-11 13:42 北京时间，撰写时 28 赞），帖里的图都写明由 GPT 6.1 sol + 简单提示词 + Oil UI Pro 做出。仓库 oil-oil/oil-ui 晚间 gh api：MIT、1239★，2026-09-30 创建，最近推送 2026-10-11，最新 release v0.21.0。作品墙数量和模型标注是撰写时页面上看到的。官网与仓库晚间 HTTP 200。预览为 Playwright 实拍官网作品墙首屏，缩成 3:2 WebP 自托管。",
-      "verifyLogEn": "Lead: creator @I_am_oil_oil’s update post https://x.com/I_am_oil_oil/status/2109157633898979682 (2026-10-11T05:42Z, about 13:42 on 10-11 Beijing time, 28 likes at write time); the post says its images were made with GPT 6.1 sol + a simple prompt + Oil UI Pro. Repo oil-oil/oil-ui on this evening’s gh api: MIT, 1239★, created 2026-09-30, last push 2026-10-11, latest release v0.21.0. Gallery count and model labels are what the page showed at write time. Site and repo HTTP 200 this evening. Preview is a Playwright capture of the site’s gallery above the fold, scaled to a self-hosted 3:2 WebP."
+      "verifyLog": "线索：作者 @I_am_oil_oil 的更新帖 https://x.com/I_am_oil_oil/status/2109157633898979682 （2026-10-11T05:42Z，约 10-11 13:42 北京时间，撰写时 28 赞），帖里的图都写明由 GPT 6.1 sol + 简单提示词 + Oil UI Pro 做出。仓库 oil-oil/oil-ui 晚间 gh api：MIT、1239★，2026-09-30 创建，最近推送 2026-10-11，最新 release v0.21.0。作品墙数量和模型标注是撰写时页面上看到的。官网与仓库晚间 HTTP 200。预览为 Playwright 实拍官网作品墙首屏，缩成 3:2 WebP 自托管。 （撰写时 65 件，大多标注用 GPT 6.1 Sol 生成）",
+      "verifyLogEn": "Lead: creator @I_am_oil_oil’s update post https://x.com/I_am_oil_oil/status/2109157633898979682 (2026-10-11T05:42Z, about 13:42 on 10-11 Beijing time, 28 likes at write time); the post says its images were made with GPT 6.1 sol + a simple prompt + Oil UI Pro. Repo oil-oil/oil-ui on this evening’s gh api: MIT, 1239★, created 2026-09-30, last push 2026-10-11, latest release v0.21.0. Gallery count and model labels are what the page showed at write time. Site and repo HTTP 200 this evening. Preview is a Playwright capture of the site’s gallery above the fold, scaled to a self-hosted 3:2 WebP. (65 pieces at write time, most labeled GPT 6.1 Sol)"
     },
     {
       "id": "m3e-canvas",
@@ -162,8 +162,8 @@
       "slug": "prompt-motion",
       "title": "Prompt Motion：200 多条 Claude 做的动效视频，每条都附上做它的提示词",
       "titleEn": "Prompt Motion: 200+ motion videos made with Claude, each with the prompt behind it",
-      "summary": "一个收集「用 AI 做动效视频」的网站：作者 @p4nthera_ 把 X 上大家用 Claude Opus 5.5 做出来的动效片整理到一起，每条视频旁边都放着做出它的那段提示词或 Skill，标明原作者、模型和制作方式，能一键复制。首页按题材分类筛选：产品界面、手机、图表、示意图、动态文字、几何图形、粒子、角色、照片、音乐、代码。点开一条，比如「一个形状在各种界面状态之间变形」，能看到完整提示词怎么写：先问你要哪些状态和配乐、规定只用黑白、弹簧动效不许乱弹、按 120 BPM 每拍都有动作，最后用 HTML + Playwright 渲成视频。10 月 10 日起还多了「Customize」：选一条喜欢的，填上你的产品、颜色和时长，它给你改写一版提示词，说是免费、信息只存在你浏览器里。对设计师来说，最大的用处是对照着看——成片的节奏、缓动、转场，分别是提示词里哪一句控制的。",
-      "summaryEn": "A site collecting AI-made motion videos: curator @p4nthera_ gathers motion pieces people made with Claude Opus 5.5 on X and puts the prompt or skill behind each one right beside the video, credited with author, model, and stack, ready to copy. The home grid filters by theme: product UI, phone, charts, diagrams, kinetic type, shapes, particles, characters, photos, music, and code. Open one, such as “Shape morphing through UI states,” and you see the full prompt: ask the user for the states and a track, stay black and white, use springs with no bouncy easing, make something happen on every beat at 120 BPM, then render with HTML + Playwright. Since October 10 there is also “Customize”: pick a video you like, add your product, colors, and length, and get a rewritten prompt, described as free with your details kept in your browser. For designers the real value is side-by-side study: which line of the prompt drives the rhythm, easing, and transitions you see.",
+      "summary": "一个收集「用 AI 做动效视频」的网站：作者 @p4nthera_ 把 X 上大家用 Claude Opus 5.5 做出来的动效片整理到一起，每条视频旁边都放着做出它的那段提示词或 Skill，标明原作者、模型和制作方式，能一键复制。首页按题材分类筛选：产品界面、手机、图表、示意图、动态文字、几何图形、粒子、角色、照片、音乐、代码。10 月 10 日起还多了「Customize」：选一条喜欢的，填上你的产品、颜色和时长，它给你改写一版提示词，说是免费、信息只存在你浏览器里。对设计师来说，最大的用处是对照着看——成片的节奏、缓动、转场，分别是提示词里哪一句控制的。",
+      "summaryEn": "A site collecting AI-made motion videos: curator @p4nthera_ gathers motion pieces people made with Claude Opus 5.5 on X and puts the prompt or skill behind each one right beside the video, credited with author, model, and stack, ready to copy. The home grid filters by theme: product UI, phone, charts, diagrams, kinetic type, shapes, particles, characters, photos, music, and code. Since October 10 there is also “Customize”: pick a video you like, add your product, colors, and length, and get a rewritten prompt, described as free with your details kept in your browser. For designers the real value is side-by-side study: which line of the prompt drives the rhythm, easing, and transitions you see.",
       "sourceUrl": "https://prompt-motion.com/",
       "secondaryUrls": [
         "https://prompt-motion.com/customize",
@@ -192,8 +192,8 @@
       "updatedAt": "2026-10-11T12:30:00Z",
       "hook": "200 多条 AI 动效片，每条旁边都摆着做它的提示词。",
       "hookEn": "200+ AI motion videos, each shown next to the prompt that made it.",
-      "verifyLog": "线索：@TeddyinMedia 今天的转介帖 https://x.com/TeddyinMedia/status/2109239627458466261 （2026-10-11T11:08Z，约 10-11 19:08 北京时间）；站长 @p4nthera_ 10-10T19:00Z（约 10-11 03:00 北京时间）发帖宣布可自定义任意提示词。本库晚间用 Playwright 打开首页，数到 233 个作品链接，分类计数（如产品界面 100、动态文字 97）是页面当时显示的；打开了「Shape morphing through UI states」（@twoclipping，标注 Opus 5.5、HTML + Playwright、2026-09-24）看完整提示词，也打开了 Customize 页看到两个模板和按题材挑选。站点晚间 HTTP 200。预览为 Playwright 实拍该条目页（视频 + 提示词），3:2 WebP 自托管。",
-      "verifyLogEn": "Lead: @TeddyinMedia’s referral post today https://x.com/TeddyinMedia/status/2109239627458466261 (2026-10-11T11:08Z, about 19:08 on 10-11 Beijing time); curator @p4nthera_ announced customizable prompts at 10-10T19:00Z (about 03:00 on 10-11 Beijing time). This evening this library opened the home page in Playwright and counted 233 entry links; category counts (e.g. It opened “Shape morphing through UI states” (@twoclipping, labeled Opus 5.5, HTML + Playwright, 2026-09-24) to read the full prompt, and the Customize page showing two templates and pick-by-theme. Site HTTP 200 this evening. Preview is a Playwright capture of that entry page (video + prompt), a self-hosted 3:2 WebP."
+      "verifyLog": "线索：@TeddyinMedia 今天的转介帖 https://x.com/TeddyinMedia/status/2109239627458466261 （2026-10-11T11:08Z，约 10-11 19:08 北京时间）；站长 @p4nthera_ 10-10T19:00Z（约 10-11 03:00 北京时间）发帖宣布可自定义任意提示词。本库晚间用 Playwright 打开首页，数到 233 个作品链接，分类计数（如产品界面 100、动态文字 97）是页面当时显示的；打开了「Shape morphing through UI states」（@twoclipping，标注 Opus 5.5、HTML + Playwright、2026-09-24）看完整提示词，也打开了 Customize 页看到两个模板和按题材挑选。站点晚间 HTTP 200。预览为 Playwright 实拍该条目页（视频 + 提示词），3:2 WebP 自托管。 点开一条，比如「一个形状在各种界面状态之间变形」，能看到完整提示词怎么写：先问你要哪些状态和配乐、规定只用黑白、弹簧动效不许乱弹、按 120 BPM 每拍都有动作，最后用 HTML + Playwright 渲成视频。",
+      "verifyLogEn": "Lead: @TeddyinMedia’s referral post today https://x.com/TeddyinMedia/status/2109239627458466261 (2026-10-11T11:08Z, about 19:08 on 10-11 Beijing time); curator @p4nthera_ announced customizable prompts at 10-10T19:00Z (about 03:00 on 10-11 Beijing time). This evening this library opened the home page in Playwright and counted 233 entry links; category counts (e.g. It opened “Shape morphing through UI states” (@twoclipping, labeled Opus 5.5, HTML + Playwright, 2026-09-24) to read the full prompt, and the Customize page showing two templates and pick-by-theme. Site HTTP 200 this evening. Preview is a Playwright capture of that entry page (video + prompt), a self-hosted 3:2 WebP. Open one, such as “Shape morphing through UI states,” and you see the full prompt: ask the user for the states and a track, stay black and white, use springs with no bouncy easing, make something happen on every beat at 120 BPM, then render with HTML + Playwright."
     },
     {
       "id": "cube-type",
@@ -723,8 +723,8 @@
       "slug": "flatten-sf",
       "title": "Flatten SF：在旧金山找最平的步行/骑车路线",
       "titleEn": "Flatten SF: the flattest walking or cycling route across San Francisco",
-      "summary": "HN 首页 item 49971230（2026-10-05T21:40:50Z / 约 10-06 05:40 CST，早间约 96 分）https://flattensf.com/ —— 输入起点终点，选步行或骑车，它会给出从最短到最平的一整串路线（截图里是 30 条），拖动滑杆就能在「少走路」和「少爬坡」之间换，左侧同步显示距离、累计爬升、最陡坡度和高程曲线，还能复制链接分享。地图数据来自 Overture / OpenStreetMap，高程用 USGS 3DEP。页面署名 Drew Edwards。预览为无头浏览器实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN front page item 49971230 (2026-10-05T21:40:50Z / about 05:40 CST on 10-06, about 96 points this morning) at https://flattensf.com/ — enter two places, pick walk or bike, and it lists every route from shortest to flattest (30 in the capture); drag the slider to trade distance for climbing while the panel updates distance, total climb, steepest grade, and an elevation profile, with a copy-link button. Map data from Overture / OpenStreetMap, elevation from USGS 3DEP. Credited to Drew Edwards. Preview is a headless-browser capture of the first screen, cropped to 3:2 WebP.",
+      "summary": "地图数据来自 Overture / OpenStreetMap，高程用 USGS 3DEP。页面署名 Drew Edwards。",
+      "summaryEn": "drag the slider to trade distance for climbing while the panel updates distance, total climb, steepest grade, and an elevation profile, with a copy-link button. Map data from Overture / OpenStreetMap, elevation from USGS 3DEP. Credited to Drew Edwards.",
       "sourceUrl": "https://flattensf.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49971230"
@@ -748,16 +748,16 @@
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "一根滑杆，在少走路和少爬坡之间挑。",
       "hookEn": "One slider between shorter and flatter.",
-      "verifyLog": "主源是 HN 49971230 与公开页（早间 HTTP 200）。",
-      "verifyLogEn": "Primary sources are HN 49971230 and the public page (HTTP 200 this morning). Preview is self-hosted."
+      "verifyLog": "主源是 HN 49971230 与公开页（早间 HTTP 200）。 HN 首页 item 49971230（2026-10-05T21:40:50Z / 约 10-06 05:40 CST，早间约 96 分）https://flattensf.com/ —— 输入起点终点，选步行或骑车，它会给出从最短到最平的一整串路线（截图里是 30 条），拖动滑杆就能在「少走路」和「少爬坡」之间换，左侧同步显示距离、累计爬升、最陡坡度和高程曲线，还能复制链接分享。 预览为无头浏览器实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49971230 and the public page (HTTP 200 this morning). Preview is self-hosted. HN front page item 49971230 (2026-10-05T21:40:50Z / about 05:40 CST on 10-06, about 96 points this morning) at https://flattensf.com/ — enter two places, pick walk or bike, and it lists every route from shortest to flattest (30 in the capture); Preview is a headless-browser capture of the first screen, cropped to 3:2 WebP."
     },
     {
       "id": "stillwet-ai-paintings",
       "slug": "stillwet-ai-paintings",
       "title": "stillwet：AI 模型用代码一笔笔画油画，还能回放作画过程",
       "titleEn": "stillwet: AI models paint stroke by stroke in code, with replayable sessions",
-      "summary": "Show HN item 49928566（2026-10-02T00:27:56Z / 约 08:27 CST，早间约 387 分）https://stillwet.art/ —— 网站说明：每幅画都是模型把每一笔写成代码，再交给油画颜料模拟器画出来，没有用图像生成模型。首页会加速回放一幅画从空白到完成的过程，下面是 75 幅作品的画廊，标了作画模型（如 Claude Opus 5.5、GPT-6.1 Sol、Claude Sonnet 5）、轮次和策展人短评，还有「the studio, live」实时看它作画。预览为无头浏览器实拍回放末段裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49928566 (2026-10-02T00:27:56Z / about 08:27 CST, about 387 points this morning) at https://stillwet.art/ — per the site, each painting is a model writing every brushstroke as code, carried out by an oil-paint simulation, with no image generator. The home page replays one painting from blank canvas to finish, sped up, above a gallery of 75 works labeled with the painting model (such as Claude Opus 5.5, GPT-6.1 Sol, Claude Sonnet 5), the round, and curator notes, plus a live studio view. Preview is a headless-browser capture near the end of the replay, cropped to 3:2 WebP.",
+      "summary": "首页会加速回放一幅画从空白到完成的过程，下面是 75 幅作品的画廊，标了作画模型（如 Claude Opus 5.5、GPT-6.1 Sol、Claude Sonnet 5）、轮次和策展人短评，还有「the studio, live」实时看它作画。",
+      "summaryEn": "The home page replays one painting from blank canvas to finish, sped up, above a gallery of 75 works labeled with the painting model (such as Claude Opus 5.5, GPT-6.1 Sol, Claude Sonnet 5), the round, and curator notes, plus a live studio view.",
       "sourceUrl": "https://stillwet.art/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49928566"
@@ -781,16 +781,16 @@
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "看 AI 用代码一笔笔把油画画出来。",
       "hookEn": "Watch AI paint an oil painting, one coded stroke at a time.",
-      "verifyLog": "主源是 Show HN 49928566 与公开页（早间 HTTP 200）。",
-      "verifyLogEn": "Primary sources are Show HN 49928566 and the public page (HTTP 200 this morning). Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49928566 与公开页（早间 HTTP 200）。 Show HN item 49928566（2026-10-02T00:27:56Z / 约 08:27 CST，早间约 387 分）https://stillwet.art/ —— 网站说明：每幅画都是模型把每一笔写成代码，再交给油画颜料模拟器画出来，没有用图像生成模型。 预览为无头浏览器实拍回放末段裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49928566 and the public page (HTTP 200 this morning). Preview is self-hosted. Show HN item 49928566 (2026-10-02T00:27:56Z / about 08:27 CST, about 387 points this morning) at https://stillwet.art/ — per the site, each painting is a model writing every brushstroke as code, carried out by an oil-paint simulation, with no image generator. Preview is a headless-browser capture near the end of the replay, cropped to 3:2 WebP."
     },
     {
       "id": "island-three",
       "slug": "island-three",
       "title": "Island Three：在浏览器里走进一座 O’Neill 太空圆柱城",
       "titleEn": "Island Three: walk around an O’Neill cylinder in the browser",
-      "summary": "Show HN item 49963508（2026-10-05T11:32:58Z / 约 19:32 CST，早间约 7 分）https://islandthree.world —— 作者 Zach Kauble 把 1970 年代 O’Neill 设想的「三号岛」太空殖民地做成浏览器里能走动的 3D 世界：三条山谷和三扇窗交替、抬头能看到圆柱另一侧的地面，首页还有灵感来源和时间线说明。作者在 HN 说：开发用 Claude Code 指挥，建模主要是 Claude 通过 MCP 操作 Blender。点「Enter the colony」进入，首次加载要建整个世界，可能要等一分钟。预览为首页实拍裁 3:2 WebP（3D 场景在无头环境未渲染出来）。",
-      "summaryEn": "Show HN item 49963508 (2026-10-05T11:32:58Z / about 19:32 CST, about 7 points this morning) at https://islandthree.world — Zach Kauble turned the 1970s O’Neill Island Three space-colony design into a walkable browser 3D world: three valleys alternating with three windows, with the far side of the cylinder overhead, plus a landing page on the inspiration and timeline. On HN he says he directed the build with Claude Code and most modeling was Claude driving Blender through MCP. Click Enter the colony; the first visit builds the whole world and can take a minute. Preview is a capture of the landing page cropped to 3:2 WebP (the 3D scene did not render in the headless capture).",
+      "summary": "作者在 HN 说：开发用 Claude Code 指挥，建模主要是 Claude 通过 MCP 操作 Blender。点「Enter the colony」进入，首次加载要建整个世界，可能要等一分钟。",
+      "summaryEn": "On HN he says he directed the build with Claude Code and most modeling was Claude driving Blender through MCP. Click Enter the colony; the first visit builds the whole world and can take a minute.",
       "sourceUrl": "https://islandthree.world",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49963508",
@@ -816,16 +816,16 @@
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "在浏览器里走进一座太空圆柱城。",
       "hookEn": "Walk into a space-colony cylinder in your browser.",
-      "verifyLog": "主源是 Show HN 49963508 与公开页（早间 HTTP 200）。",
-      "verifyLogEn": "Primary sources are Show HN 49963508 and the public page (HTTP 200 this morning). Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49963508 与公开页（早间 HTTP 200）。 Show HN item 49963508（2026-10-05T11:32:58Z / 约 19:32 CST，早间约 7 分）https://islandthree.world —— 作者 Zach Kauble 把 1970 年代 O’Neill 设想的「三号岛」太空殖民地做成浏览器里能走动的 3D 世界：三条山谷和三扇窗交替、抬头能看到圆柱另一侧的地面，首页还有灵感来源和时间线说明。 预览为首页实拍裁 3:2 WebP（3D 场景在无头环境未渲染出来）。",
+      "verifyLogEn": "Primary sources are Show HN 49963508 and the public page (HTTP 200 this morning). Preview is self-hosted. Show HN item 49963508 (2026-10-05T11:32:58Z / about 19:32 CST, about 7 points this morning) at https://islandthree.world — Zach Kauble turned the 1970s O’Neill Island Three space-colony design into a walkable browser 3D world: three valleys alternating with three windows, with the far side of the cylinder overhead, plus a landing page on the inspiration and timeline. Preview is a capture of the landing page cropped to 3:2 WebP (the 3D scene did not render in the headless capture)."
     },
     {
       "id": "vb6-studio-web",
       "slug": "vb6-studio-web",
       "title": "VB6 Studio Web：浏览器里的经典 Visual Basic 6 IDE",
       "titleEn": "VB6 Studio Web: the classic Visual Basic 6 IDE in your browser",
-      "summary": "HN 首页 item 49956681（2026-10-04T18:49:17Z / 约 10-05 02:49 CST，Algolia 早间核对 69pts）https://wieslawsoltes.github.io/VB6/ —— 用 HTML/CSS/JS 复刻的 VB6 界面：工具箱、窗体设计器、属性面板、工程树都在，打开就是一个示例订单录入窗体，能直接运行。仓库 wieslawsoltes/VB6 早间 gh api：MIT、7★，2026-10-04 刚建；README 写有调试器、WebGPU 绘图和导出单文件 HTML 应用。HN 评论有人导入老 VB6 工程，用到 BitBlt 等 Win32 API 的跑不起来。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN front page item 49956681 (2026-10-04T18:49:17Z / about 02:49 CST on 10-05, 69pts on Algolia this morning) at https://wieslawsoltes.github.io/VB6/ — a VB6 look-alike built in HTML/CSS/JS with toolbox, form designer, properties panel, and project tree; it opens on a sample order-entry form you can run. Repo wieslawsoltes/VB6 morning gh api: MIT, 7★, created 2026-10-04; README lists a debugger, WebGPU drawing, and single-file HTML app export. An HN commenter found old projects using Win32 calls like BitBlt don’t run. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "summary": "README 写有调试器、WebGPU 绘图和导出单文件 HTML 应用。HN 评论有人导入老 VB6 工程，用到 BitBlt 等 Win32 API 的跑不起来。",
+      "summaryEn": "it opens on a sample order-entry form you can run. README lists a debugger, WebGPU drawing, and single-file HTML app export. An HN commenter found old projects using Win32 calls like BitBlt don’t run.",
       "types": [
         "interactive",
         "tool",
@@ -852,16 +852,16 @@
       ],
       "hook": "在浏览器里拖控件做 VB6 窗体。",
       "hookEn": "Build VB6 forms in your browser.",
-      "verifyLog": "主源是 HN 49956681、公开页（早间 HTTP 200）与 MIT 仓库。",
-      "verifyLogEn": "Primary sources are HN 49956681, the public page (HTTP 200 this morning), and the MIT repo. Preview is self-hosted."
+      "verifyLog": "主源是 HN 49956681、公开页（早间 HTTP 200）与 MIT 仓库。 （2026-10-04T18:49:17Z / 约 10-05 02:49 CST，Algolia 早间核对 69pts） HN 首页 item 49956681 https://wieslawsoltes.github.io/VB6/ —— 用 HTML/CSS/JS 复刻的 VB6 界面：工具箱、窗体设计器、属性面板、工程树都在，打开就是一个示例订单录入窗体，能直接运行。 仓库 wieslawsoltes/VB6 早间 gh api：MIT、7★，2026-10-04 刚建； 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49956681, the public page (HTTP 200 this morning), and the MIT repo. Preview is self-hosted. (2026-10-04T18:49:17Z / about 02:49 CST on 10-05, 69pts on Algolia this morning) HN front page item 49956681   at https://wieslawsoltes.github.io/VB6/ — a VB6 look-alike built in HTML/CSS/JS with toolbox, form designer, properties panel, and project tree; Repo wieslawsoltes/VB6 morning gh api: MIT, 7★, created 2026-10-04; Preview is a Playwright capture of the first screen, cropped to 3:2 WebP."
     },
     {
       "id": "lighthouses-of-the-world",
       "slug": "lighthouses-of-the-world",
       "title": "Lighthouses of the World：全球灯塔按真实闪光节奏亮起的地球",
       "titleEn": "Lighthouses of the World: every charted light on a globe, blinking on its real cycle",
-      "summary": "HN 首页 item 49933461（2026-10-02T13:45:49Z / 约 21:45 CST，Algolia 早间核对 161pts）https://mapped.earth/lighthouses/world —— 一颗可拖动缩放的暗色地球，页内写收了 75,919 盏有记录的航标灯，按各自真实的闪光周期闪烁；远看是登陆灯，拉近后港口和海岸灯才出现，悬停能看名字和灯质。数据写明来自 OpenSeaMap / OpenStreetMap、NGA List of Lights、NOAA ENC、USCG Light List。底部有苏格兰、布列塔尼、新英格兰、日本、挪威、开普敦快捷跳转。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN front page item 49933461 (2026-10-02T13:45:49Z / about 21:45 CST, 161pts on Algolia this morning) at https://mapped.earth/lighthouses/world — a dark globe you can drag and zoom; the page says it holds 75,919 charted lights, each blinking on its real cycle. Landfall lights show from orbit, harbour and coastal lights appear as you zoom in, and hover shows each light’s name and character. Credited data: OpenSeaMap / OpenStreetMap, NGA List of Lights, NOAA ENC, USCG Light List. Quick jumps for Scotland, Brittany, New England, Japan, Norway, Cape Town. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "summary": "远看是登陆灯，拉近后港口和海岸灯才出现，悬停能看名字和灯质。数据写明来自 OpenSeaMap / OpenStreetMap、NGA List of Lights、NOAA ENC、USCG Light List。底部有苏格兰、布列塔尼、新英格兰、日本、挪威、开普敦快捷跳转。",
+      "summaryEn": "the page says it holds 75,919 charted lights, each blinking on its real cycle. Landfall lights show from orbit, harbour and coastal lights appear as you zoom in, and hover shows each light’s name and character. Credited data: OpenSeaMap / OpenStreetMap, NGA List of Lights, NOAA ENC, USCG Light List. Quick jumps for Scotland, Brittany, New England, Japan, Norway, Cape Town.",
       "types": [
         "interactive",
         "demo"
@@ -887,16 +887,16 @@
       ],
       "hook": "看全球灯塔按真实节奏一起闪。",
       "hookEn": "Watch the world's lighthouses blink in real rhythm.",
-      "verifyLog": "主源是 HN 49933461 与公开页（早间 HTTP 200）。",
-      "verifyLogEn": "Primary sources are HN 49933461 and the public page (HTTP 200 this morning). Preview is self-hosted."
+      "verifyLog": "主源是 HN 49933461 与公开页（早间 HTTP 200）。 （2026-10-02T13:45:49Z / 约 21:45 CST，Algolia 早间核对 161pts） HN 首页 item 49933461 https://mapped.earth/lighthouses/world —— 一颗可拖动缩放的暗色地球，页内写收了 75,919 盏有记录的航标灯，按各自真实的闪光周期闪烁； 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49933461 and the public page (HTTP 200 this morning). Preview is self-hosted. (2026-10-02T13:45:49Z / about 21:45 CST, 161pts on Algolia this morning) HN front page item 49933461   at https://mapped.earth/lighthouses/world — a dark globe you can drag and zoom; Preview is a Playwright capture of the first screen, cropped to 3:2 WebP."
     },
     {
       "id": "timeline-far-future",
       "slug": "timeline-far-future",
       "title": "Timeline of the Far Future：把维基百科「遥远未来时间线」做成滚动旅程",
       "titleEn": "Timeline of the Far Future: Wikipedia’s far-future timeline as a scrolling journey",
-      "summary": "Show HN item 49940317（2026-10-03T00:40:48Z / 约 08:40 CST，Algolia 早间核对 18pts）https://rivendell.dmitrybrant.com/farfuture/ —— 作者 Dmitry Brant 把维基百科那张很长的「遥远未来时间线」表格改成 three.js + TypeScript 的视觉长页：顶部是对数时间轴，可滚动、用方向键或拖时间轴前进，页内写 180 条科学预测，从一千年后一直到 10^10^10^56 年。作者说做的时候用了 agent 辅助。内容改编自维基百科，页面标注 CC BY-SA 4.0。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49940317 (2026-10-03T00:40:48Z / about 08:40 CST, 18pts on Algolia this morning) at https://rivendell.dmitrybrant.com/farfuture/ — Dmitry Brant turned Wikipedia’s long ‘Timeline of the far future’ table into a three.js + TypeScript visual page: a log-scale timeline on top, advanced by scrolling, arrow keys, or dragging; the page lists 180 scientific projections from a thousand years out to 10^10^10^56 years. The author says he built it with agent help. Content is adapted from Wikipedia and marked CC BY-SA 4.0. Preview is a Playwright capture of the first screen, cropped to 3:2 WebP.",
+      "summary": "作者说做的时候用了 agent 辅助。内容改编自维基百科，页面标注 CC BY-SA 4.0。",
+      "summaryEn": "the page lists 180 scientific projections from a thousand years out to 10^10^10^56 years. The author says he built it with agent help. Content is adapted from Wikipedia and marked CC BY-SA 4.0.",
       "types": [
         "interactive",
         "docs",
@@ -922,16 +922,16 @@
       ],
       "hook": "滚动穿越到宇宙的遥远未来。",
       "hookEn": "Scroll your way into the far future.",
-      "verifyLog": "主源是 Show HN 49940317 与公开页（早间 HTTP 200）。",
-      "verifyLogEn": "Primary sources are Show HN 49940317 and the public page (HTTP 200 this morning). Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49940317 与公开页（早间 HTTP 200）。 （2026-10-03T00:40:48Z / 约 08:40 CST，Algolia 早间核对 18pts） Show HN item 49940317 https://rivendell.dmitrybrant.com/farfuture/ —— 作者 Dmitry Brant 把维基百科那张很长的「遥远未来时间线」表格改成 three.js + TypeScript 的视觉长页：顶部是对数时间轴，可滚动、用方向键或拖时间轴前进，页内写 180 条科学预测，从一千年后一直到 10^10^10^56 年。 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49940317 and the public page (HTTP 200 this morning). Preview is self-hosted. (2026-10-03T00:40:48Z / about 08:40 CST, 18pts on Algolia this morning) Show HN item 49940317   at https://rivendell.dmitrybrant.com/farfuture/ — Dmitry Brant turned Wikipedia’s long ‘Timeline of the far future’ table into a three.js + TypeScript visual page: a log-scale timeline on top, advanced by scrolling, arrow keys, or dragging; Preview is a Playwright capture of the first screen, cropped to 3:2 WebP."
     },
     {
       "id": "css-bed",
       "slug": "css-bed",
       "title": "CSS Bed：一套可切换的 classless CSS 主题床",
       "titleEn": "CSS Bed: a switchable bed of classless CSS themes",
-      "summary": "HN（item 49927212，2026-10-01T21:21:32Z / 约 2026-10-02 05:21 CST，Algolia 早间核对 54pts）https://www.cssbed.com/ —— 同一页 HTML 可切换多套 classless CSS 主题作起步点（仓库目录可见 awsm.css / bamboo / mvp.css / pico.css / sakura / tufte / water.css 等约 27 套）。公开页早间 GET HTTP 200；仓库 ubershmekel/cssbed 早间 gh api：183★、无 SPDX LICENSE 文件。与本站已收 Pico CSS 相邻：那边是单一框架官网，这里是多主题对照床。预览为 Playwright 实拍主题列表页裁 3:2 WebP。",
-      "summaryEn": "HN item 49927212 (2026-10-01T21:21:32Z / about 2026-10-02 05:21 CST, 54pts on Algolia at the morning check) at https://www.cssbed.com/ — one HTML page you can flip through many classless CSS themes as starting points (repo dirs show about 27 themes including awsm.css / bamboo / mvp.css / pico.css / sakura / tufte / water.css). Public page morning GET HTTP 200; repo ubershmekel/cssbed morning gh api: 183★, no SPDX LICENSE file. Neighbor to catalogued Pico CSS: that entry is one framework’s site; this is a multi-theme comparison bed. Preview is a Playwright capture of the theme-list page, cropped to 3:2 WebP.",
+      "summary": "HN https://www.cssbed.com/ —— 同一页 HTML 可切换多套 classless CSS 主题作起步点（仓库目录可见 awsm.css / bamboo / mvp.css / pico.css / sakura / tufte / water.css 等约 27 套）。与本站已收 Pico CSS 相邻：那边是单一框架官网，这里是多主题对照床。",
+      "summaryEn": "Neighbor to catalogued Pico CSS: that entry is one framework’s site; this is a multi-theme comparison bed.",
       "types": [
         "docs",
         "component"
@@ -957,16 +957,16 @@
       ],
       "hook": "给纯 HTML 切换不同的 CSS 主题。",
       "hookEn": "Switch CSS themes for plain HTML.",
-      "verifyLog": "主源是 HN 49927212 与公开页 / GitHub。",
-      "verifyLogEn": "Primary sources are HN 49927212 and the public page / GitHub. Preview is self-hosted."
+      "verifyLog": "主源是 HN 49927212 与公开页 / GitHub。 （item 49927212，2026-10-01T21:21:32Z / 约 2026-10-02 05:21 CST，Algolia 早间核对 54pts） 公开页早间 GET HTTP 200； 仓库 ubershmekel/cssbed 早间 gh api：183★、无 SPDX LICENSE 文件。 预览为 Playwright 实拍主题列表页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49927212 and the public page / GitHub. Preview is self-hosted. (2026-10-01T21:21:32Z / about 2026-10-02 05:21 CST, 54pts on Algolia at the morning check) HN item 49927212   at https://www.cssbed.com/ — one HTML page you can flip through many classless CSS themes as starting points (repo dirs show about 27 themes including awsm.css / bamboo / mvp.css / pico.css / sakura / tufte / water.css). Public page morning GET HTTP 200; repo ubershmekel/cssbed morning gh api: 183★, no SPDX LICENSE file. Preview is a Playwright capture of the theme-list page, cropped to 3:2 WebP."
     },
     {
       "id": "wave-subworkflow",
       "slug": "wave-subworkflow",
       "title": "Wave：Three.js 着色器层叠波浪渐变背景生成器",
       "titleEn": "Wave: Three.js shader layered wave-gradient background generator",
-      "summary": "Show HN（item 49843746，2026-09-25T12:34:56Z / 约 20:34 CST，Algolia 早间核对 7pts）https://wave.subworkflow.ai/ —— 浏览器里用 Three.js / shader 调层叠波浪渐变：拖拽旋转视角、滚轮缩放、拖太阳改光照；可调 grain / 速度 / 循环时长、Normal/Isometric、预设与随机。公开页早间 GET HTTP 200，无需账号即可试。预览为 Playwright 实拍编辑器界面裁 3:2 WebP（含页内控件）。",
-      "summaryEn": "Show HN item 49843746 (2026-09-25T12:34:56Z / about 20:34 CST, 7pts on Algolia at the morning check) at https://wave.subworkflow.ai/ — a browser Three.js / shader editor for layered wave gradients: drag to orbit, scroll to zoom, drag the sun for lighting; grain / speed / loop duration, Normal/Isometric, presets and randomise. Public page morning GET HTTP 200; tryable without an account. Preview is a Playwright capture of the editor UI, cropped to 3:2 WebP (controls included).",
+      "summary": "Show HN https://wave.subworkflow.ai/ —— 浏览器里用 Three.js / shader 调层叠波浪渐变：拖拽旋转视角、滚轮缩放、拖太阳改光照；可调 grain / 速度 / 循环时长、Normal/Isometric、预设与随机。",
+      "summaryEn": "grain / speed / loop duration, Normal/Isometric, presets and randomise. tryable without an account.",
       "types": [
         "demo",
         "tool"
@@ -992,16 +992,16 @@
       ],
       "hook": "在浏览器里生成层叠波浪背景。",
       "hookEn": "Generate layered wave backgrounds in your browser.",
-      "verifyLog": "主源是 Show HN 49843746 与公开页。边界：HN 分仍低（早间 7pts）；页内有赞助栏与分析 cookie 条；导出/商用条款以站点当日说明为准，本库未代导出。",
-      "verifyLogEn": "Primary sources are Show HN 49843746 and the public page. Boundary: HN score is still low (7pts at morning check); the page shows sponsor rails and an analytics cookie bar; export / commercial terms follow the site’s day-of copy — this catalog did not export for you. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49843746 与公开页。边界：HN 分仍低（早间 7pts）；页内有赞助栏与分析 cookie 条；导出/商用条款以站点当日说明为准，本库未代导出。 （item 49843746，2026-09-25T12:34:56Z / 约 20:34 CST，Algolia 早间核对 7pts） 公开页早间 GET HTTP 200，无需账号即可试。 预览为 Playwright 实拍编辑器界面裁 3:2 WebP（含页内控件）。",
+      "verifyLogEn": "Primary sources are Show HN 49843746 and the public page. Boundary: HN score is still low (7pts at morning check); the page shows sponsor rails and an analytics cookie bar; export / commercial terms follow the site’s day-of copy — this catalog did not export for you. Preview is self-hosted. (2026-09-25T12:34:56Z / about 20:34 CST, 7pts on Algolia at the morning check) Show HN item 49843746   at https://wave.subworkflow.ai/ — a browser Three.js / shader editor for layered wave gradients: drag to orbit, scroll to zoom, drag the sun for lighting; Public page morning GET HTTP 200; Preview is a Playwright capture of the editor UI, cropped to 3:2 WebP (controls included)."
     },
     {
       "id": "dental-scope",
       "slug": "dental-scope",
       "title": "Dental Scope：免费可互动的三维牙科解剖",
       "titleEn": "Dental Scope: free interactive 3D dental anatomy",
-      "summary": "Show HN（item 49886535，2026-09-29T00:47:19Z / 约 08:47 CST，Algolia 早间核对 114pts）https://dental-scope.com/ — 浏览器 WebGL 三维牙科解剖：牙齿 / 颌骨 / 神经血管与分层结构，可旋转剖切。作者在 HN 写明免费开源；仓库 Yoosseph/dental-scope 早间 gh api：LICENSE 为 MIT 正文、86★，homepage 指向本站。公开页早间 GET HTTP 200。预览为 Playwright 实拍三维解剖界面裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49886535 (2026-09-29T00:47:19Z / about 08:47 CST, 114pts on Algolia at the morning check) at https://dental-scope.com/ — a free WebGL 3D dental anatomy explorer for teeth, jaws, nerves/vessels, and layered structures with rotate/dissect controls. The author calls it free and open source on HN; repo Yoosseph/dental-scope morning gh api: MIT LICENSE text, 86★, homepage points here. Public page morning GET HTTP 200. Preview is a Playwright capture of the 3D anatomy UI, cropped to 3:2 WebP.",
+      "summary": "Show HN https://dental-scope.com/ — 浏览器 WebGL 三维牙科解剖：牙齿 / 颌骨 / 神经血管与分层结构，可旋转剖切。作者在 HN 写明免费开源。",
+      "summaryEn": "The author calls it free and open source on HN.",
       "types": [
         "demo",
         "tool"
@@ -1029,16 +1029,16 @@
       ],
       "hook": "用可互动的三维模型学习牙科解剖。",
       "hookEn": "Explore dental anatomy with an interactive 3D model.",
-      "verifyLog": "主源是 Show HN 49886535 与公开页 / MIT 仓库。",
-      "verifyLogEn": "Primary sources are Show HN 49886535 and the public page / MIT repo. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49886535 与公开页 / MIT 仓库。 （item 49886535，2026-09-29T00:47:19Z / 约 08:47 CST，Algolia 早间核对 114pts） 仓库 Yoosseph/dental-scope 早间 gh api：LICENSE 为 MIT 正文、86★，homepage 指向本站。 公开页早间 GET HTTP 200。 预览为 Playwright 实拍三维解剖界面裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49886535 and the public page / MIT repo. Preview is self-hosted. (2026-09-29T00:47:19Z / about 08:47 CST, 114pts on Algolia at the morning check) Show HN item 49886535   at https://dental-scope.com/ — a free WebGL 3D dental anatomy explorer for teeth, jaws, nerves/vessels, and layered structures with rotate/dissect controls. repo Yoosseph/dental-scope morning gh api: MIT LICENSE text, 86★, homepage points here. Public page morning GET HTTP 200. Preview is a Playwright capture of the 3D anatomy UI, cropped to 3:2 WebP."
     },
     {
       "id": "56k-rip",
       "slug": "56k-rip",
       "title": "56k.rip：浏览器里重演 1996 拨号上网",
       "titleEn": "56k.rip: the 1996 dial-up internet experience in a browser",
-      "summary": "HN（item 49915126，2026-09-30T22:08:50Z / 约 2026-10-01 06:08 CST，Algolia 早间核对 28pts）https://56k.rip/ — 浏览器模拟 1996 拨号桌面：开 Dial-Up Networking、听握手音、按 14.4 / 28.8 / 56k 字节预算慢慢出页；还有邮件、聊天室、扫雷、画板与屏保。页内称连接按真实速率节流、图片程序化生成并压到 216 色 web-safe，声音多在浏览器合成，无需账号。公开页早间 GET HTTP 200。预览为 Playwright 实拍拨号桌面裁 3:2 WebP。",
-      "summaryEn": "HN item 49915126 (2026-09-30T22:08:50Z / about 2026-10-01 06:08 CST, 28pts on Algolia at the morning check) at https://56k.rip/ — a browser simulation of a 1996 dial-up desktop: open Dial-Up Networking, hear the handshake, and watch pages arrive against a real 14.4 / 28.8 / 56k byte budget, plus mail, chat, minesweeper, paint, and screensavers. The page says delivery is rate-limited for real, pictures are procedural and reduced to the 216-color web-safe palette, most sounds are synthesized in-browser, and no account is needed. Public page morning GET HTTP 200. Preview is a Playwright capture of the dial-up desktop, cropped to 3:2 WebP.",
+      "summary": "HN https://56k.rip/ — 浏览器模拟 1996 拨号桌面：开 Dial-Up Networking、听握手音、按 14.4 / 28.8 / 56k 字节预算慢慢出页；还有邮件、聊天室、扫雷、画板与屏保。页内称连接按真实速率节流、图片程序化生成并压到 216 色 web-safe，声音多在浏览器合成，无需账号。",
+      "summaryEn": "The page says delivery is rate-limited for real, pictures are procedural and reduced to the 216-color web-safe palette, most sounds are synthesized in-browser, and no account is needed.",
       "types": [
         "demo",
         "interactive"
@@ -1064,16 +1064,16 @@
       ],
       "hook": "在浏览器里体验拨号上网年代。",
       "hookEn": "Experience dial-up-era browsing in your browser.",
-      "verifyLog": "主源是 HN 49915126 与公开页。",
-      "verifyLogEn": "Primary sources are HN 49915126 and the public page. Preview is self-hosted."
+      "verifyLog": "主源是 HN 49915126 与公开页。 （item 49915126，2026-09-30T22:08:50Z / 约 2026-10-01 06:08 CST，Algolia 早间核对 28pts） 公开页早间 GET HTTP 200。 预览为 Playwright 实拍拨号桌面裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49915126 and the public page. Preview is self-hosted. (2026-09-30T22:08:50Z / about 2026-10-01 06:08 CST, 28pts on Algolia at the morning check) HN item 49915126   at https://56k.rip/ — a browser simulation of a 1996 dial-up desktop: open Dial-Up Networking, hear the handshake, and watch pages arrive against a real 14.4 / 28.8 / 56k byte budget, plus mail, chat, minesweeper, paint, and screensavers. Public page morning GET HTTP 200. Preview is a Playwright capture of the dial-up desktop, cropped to 3:2 WebP."
     },
     {
       "id": "halfspace",
       "slug": "halfspace",
       "title": "Halfspace：浏览器里用距离场做实体建模的实验 IDE",
       "titleEn": "Halfspace: experimental browser IDE for solid modeling with distance fields",
-      "summary": "HN（item 49913350，2026-09-30T19:44:37Z / 约 2026-10-01 03:44 CST，Algolia 早间核对 65pts）https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter 的实验 IDE：把距离场放在前台做实体建模，可栅格化与导出三角网格；栈为 Rust + egui + wgpu + Rhai，有 Web 与原生。可试 demo：https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half （早间 GET HTTP 200）。仓库 mkeeter/halfspace 早间 gh api：MPL-2.0、51★。作者自称实验向、勿作关键负载。预览为 Playwright 实拍 Web demo 裁 3:2 WebP。",
-      "summaryEn": "HN item 49913350 (2026-09-30T19:44:37Z / about 2026-10-01 03:44 CST, 65pts on Algolia at the morning check) at https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter’s experimental IDE that puts distance fields first for solid modeling, with rasterization and triangle-mesh export; stack is Rust + egui + wgpu + Rhai for web and native. Tryable demo: https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half (morning GET HTTP 200). Repo mkeeter/halfspace morning gh api: MPL-2.0, 51★. Author calls it experimental — not for critical work. Preview is a Playwright capture of the web demo, cropped to 3:2 WebP.",
+      "summary": "HN https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter 的实验 IDE：把距离场放在前台做实体建模，可栅格化与导出三角网格；栈为 Rust + egui + wgpu + Rhai，有 Web 与原生。可试 demo：https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half。作者自称实验向、勿作关键负载。",
+      "summaryEn": "stack is Rust + egui + wgpu + Rhai for web and native. Tryable demo: https://www.mattkeeter.com/projects/halfspace/demo/?example=cabin.half. Author calls it experimental — not for critical work.",
       "types": [
         "tool",
         "demo"
@@ -1102,16 +1102,16 @@
       ],
       "hook": "在浏览器里用距离场做实体建模。",
       "hookEn": "Experiment with distance-field solid modeling in your browser.",
-      "verifyLog": "主源是 HN 49913350、项目文与 Web demo / MPL-2.0 仓库。gh api 核对 MPL-2.0、51★。",
-      "verifyLogEn": "Primary sources are HN 49913350, the project writeup, the web demo, and the MPL-2.0 repo. Boundary: author marks it experimental with possible breaking changes; mobile Safari WebGPU has known issues per the author; this catalog does not guarantee print-ready meshes. gh api check: MPL-2.0, 51★. Preview is self-hosted."
+      "verifyLog": "主源是 HN 49913350、项目文与 Web demo / MPL-2.0 仓库。gh api 核对 MPL-2.0、51★。 （item 49913350，2026-09-30T19:44:37Z / 约 2026-10-01 03:44 CST，Algolia 早间核对 65pts） （早间 GET HTTP 200） 仓库 mkeeter/halfspace 早间 gh api：MPL-2.0、51★。 预览为 Playwright 实拍 Web demo 裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49913350, the project writeup, the web demo, and the MPL-2.0 repo. Boundary: author marks it experimental with possible breaking changes; mobile Safari WebGPU has known issues per the author; this catalog does not guarantee print-ready meshes. gh api check: MPL-2.0, 51★. Preview is self-hosted. (2026-09-30T19:44:37Z / about 2026-10-01 03:44 CST, 65pts on Algolia at the morning check) (morning GET HTTP 200) HN item 49913350   at https://www.mattkeeter.com/projects/halfspace/ — Matt Keeter’s experimental IDE that puts distance fields first for solid modeling, with rasterization and triangle-mesh export; Repo mkeeter/halfspace morning gh api: MPL-2.0, 51★. Preview is a Playwright capture of the web demo, cropped to 3:2 WebP."
     },
     {
       "id": "blackhole-raytracer",
       "slug": "blackhole-raytracer",
       "title": "黑洞实时光线追踪：广义相对论测地线可视化",
       "titleEn": "Real-time black hole raytracer along GR geodesics",
-      "summary": "Show HN（item 49914648，2026-09-30T21:23:01Z / 约 2026-10-01 05:23 CST，Algolia 早间核对 2pts）https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant 2026 浏览器实时 GPU 光线追踪：沿 Schwarzschild 黑洞测地线弯曲光线，可拖拽轨道、调曲率 / FOV / 步数，开关吸积盘、行星、反射球与爱因斯坦环演示。公开页早间 GET HTTP 200。预览为 Playwright 实拍黑洞阴影与吸积盘裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49914648 (2026-09-30T21:23:01Z / about 2026-10-01 05:23 CST, 2pts on Algolia at the morning check) at https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant’s 2026 in-browser real-time GPU raytracer that bends light along Schwarzschild geodesics; drag to orbit, tune curvature / FOV / steps, and toggle accretion disk, planets, reflective spheres, and Einstein-ring demos. Public page morning GET HTTP 200. Preview is a Playwright capture of the black-hole shadow and disk, cropped to 3:2 WebP.",
+      "summary": "Show HN https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant 2026 浏览器实时 GPU 光线追踪：沿 Schwarzschild 黑洞测地线弯曲光线，可拖拽轨道、调曲率 / FOV / 步数，开关吸积盘、行星、反射球与爱因斯坦环演示。",
+      "summaryEn": "drag to orbit, tune curvature / FOV / steps, and toggle accretion disk, planets, reflective spheres, and Einstein-ring demos.",
       "types": [
         "demo",
         "interactive"
@@ -1137,16 +1137,16 @@
       ],
       "hook": "用实时光线追踪探索黑洞视觉。",
       "hookEn": "Explore black-hole visuals with real-time ray tracing.",
-      "verifyLog": "主源是 Show HN 49914648 与公开页。边界：作者写明吸积盘简化、视点是悬停快照而非真实坠入体验；热度早间仅 2pts，但页面完整可试。",
-      "verifyLogEn": "Primary sources are Show HN 49914648 and the public page. Boundary: author notes a simplified disk and a hovering snapshot view, not a free-fall experience; morning score was only 2pts, but the page is complete and tryable. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49914648 与公开页。边界：作者写明吸积盘简化、视点是悬停快照而非真实坠入体验；热度早间仅 2pts，但页面完整可试。 （item 49914648，2026-09-30T21:23:01Z / 约 2026-10-01 05:23 CST，Algolia 早间核对 2pts） 公开页早间 GET HTTP 200。 预览为 Playwright 实拍黑洞阴影与吸积盘裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49914648 and the public page. Boundary: author notes a simplified disk and a hovering snapshot view, not a free-fall experience; morning score was only 2pts, but the page is complete and tryable. Preview is self-hosted. (2026-09-30T21:23:01Z / about 2026-10-01 05:23 CST, 2pts on Algolia at the morning check) Show HN item 49914648   at https://rivendell.dmitrybrant.com/blackhole/ — Dmitry Brant’s 2026 in-browser real-time GPU raytracer that bends light along Schwarzschild geodesics; Public page morning GET HTTP 200. Preview is a Playwright capture of the black-hole shadow and disk, cropped to 3:2 WebP."
     },
     {
       "id": "space-bl2",
       "slug": "space-bl2",
       "title": "Space Now：实时太阳系 + 52 万小行星与在轨卫星",
       "titleEn": "Space Now: real-time Solar System with 526k asteroids and tracked satellites",
-      "summary": "Show HN（item 49898778，2026-09-29T19:08:01Z / 约 2026-09-30 03:08 CST，Algolia 早间核对 97pts）https://space.bl2.net/ — 浏览器里实时三维「Space Now」：页内写 Satellites 约 19,879 条有轨道 + 15,265 近似、Solar System bodies 约 527,080（含小行星/彗星），数据源自称 CelesTrak；可切地球 / 全太阳系、搜索 ISS·Starlink·行星、拖拽旋转与 WASD 飞行。公开页早间 GET HTTP 200，未见独立 SPDX 仓库自链。预览为 Playwright 实拍英文界面地球卫星云裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49898778 (2026-09-29T19:08:01Z / about 2026-09-30 03:08 CST, 97pts on Algolia at the morning check) at https://space.bl2.net/ — a real-time 3D “Space Now” in the browser. The page states about 19,879 satellites with orbits plus 15,265 approximate, and about 527,080 Solar System bodies (asteroids/comets), sourced from CelesTrak; toggle Earth vs full system, search ISS / Starlink / planets, drag to orbit and WASD to fly. Public page morning GET HTTP 200; no separate SPDX repo linked from the page. Preview is a Playwright capture of the English Earth satellite cloud, cropped to 3:2 WebP.",
+      "summary": "Show HN https://space.bl2.net/ — 浏览器里实时三维「Space Now」：页内写 Satellites 约 19,879 条有轨道 + 15,265 近似、Solar System bodies 约 527,080（含小行星/彗星），数据源自称 CelesTrak；可切地球 / 全太阳系、搜索 ISS·Starlink·行星、拖拽旋转与 WASD 飞行。",
+      "summaryEn": "The page states about 19,879 satellites with orbits plus 15,265 approximate, and about 527,080 Solar System bodies (asteroids/comets), sourced from CelesTrak; toggle Earth vs full system, search ISS / Starlink / planets, drag to orbit and WASD to fly. no separate SPDX repo linked from the page.",
       "types": [
         "demo",
         "tool"
@@ -1173,16 +1173,16 @@
       ],
       "hook": "在浏览器里探索太阳系与小行星。",
       "hookEn": "Explore the Solar System and asteroids in your browser.",
-      "verifyLog": "主源是 Show HN 49898778 与公开页。",
-      "verifyLogEn": "Primary sources are Show HN 49898778 and the public page. Boundary: orbit/catalog figures are whatever the page shows at check time; this site does not fetch CelesTrak or verify every object. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49898778 与公开页。 （item 49898778，2026-09-29T19:08:01Z / 约 2026-09-30 03:08 CST，Algolia 早间核对 97pts） 公开页早间 GET HTTP 200，未见独立 SPDX 仓库自链。 预览为 Playwright 实拍英文界面地球卫星云裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49898778 and the public page. Boundary: orbit/catalog figures are whatever the page shows at check time; this site does not fetch CelesTrak or verify every object. Preview is self-hosted. (2026-09-29T19:08:01Z / about 2026-09-30 03:08 CST, 97pts on Algolia at the morning check) Show HN item 49898778   at https://space.bl2.net/ — a real-time 3D “Space Now” in the browser. Public page morning GET HTTP 200; Preview is a Playwright capture of the English Earth satellite cloud, cropped to 3:2 WebP."
     },
     {
       "id": "enigma-design",
       "slug": "enigma-design",
       "title": "Enigma.design：可互动的三维恩尼格玛机教学页",
       "titleEn": "Enigma.design: an interactive 3D Enigma machine lesson",
-      "summary": "Show HN（item 49896757，2026-09-29T17:15:56Z / 约 2026-09-30 01:15 CST，Algolia 早间核对 31pts）https://enigma.design/ — 浏览器里可转转子、接线板与打字的三维恩尼格玛教学：作者称对照史料尺寸做了内部机件，并带战时照片与逐步课程（日密钥纸 / 插线 / 转子序 / 环位）。公开页早间 GET HTTP 200；作者在 HN 写仍在打磨，未见独立 SPDX 仓库自链。预览为 Playwright 实拍首屏三维样机裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49896757 (2026-09-29T17:15:56Z / about 2026-09-30 01:15 CST, 31pts on Algolia at the morning check) at https://enigma.design/ — an interactive 3D Enigma lesson in the browser: turn rotors, set the plugboard, and type, with wartime photos and a step-through (daily key sheet / cables / rotor order / ring settings). The author says internal parts were sized from historical references and that the build is still a work in progress. Public page morning GET HTTP 200; no separate SPDX repo linked from the page. Preview is a Playwright capture of the hero 3D machine, cropped to 3:2 WebP.",
+      "summary": "Show HN https://enigma.design/ — 浏览器里可转转子、接线板与打字的三维恩尼格玛教学：作者称对照史料尺寸做了内部机件，并带战时照片与逐步课程（日密钥纸 / 插线 / 转子序 / 环位）。作者在 HN 写仍在打磨，未见独立 SPDX 仓库自链。",
+      "summaryEn": "The author says internal parts were sized from historical references and that the build is still a work in progress. no separate SPDX repo linked from the page.",
       "types": [
         "demo"
       ],
@@ -1207,16 +1207,16 @@
       ],
       "hook": "用三维互动演示理解恩尼格玛机。",
       "hookEn": "Understand the Enigma machine through an interactive 3D demo.",
-      "verifyLog": "主源是 Show HN 49896757 与公开教学页。",
-      "verifyLogEn": "Primary sources are Show HN 49896757 and the public lesson page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49896757 与公开教学页。 （item 49896757，2026-09-29T17:15:56Z / 约 2026-09-30 01:15 CST，Algolia 早间核对 31pts） 公开页早间 GET HTTP 200； 预览为 Playwright 实拍首屏三维样机裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49896757 and the public lesson page. Preview is self-hosted. (2026-09-29T17:15:56Z / about 2026-09-30 01:15 CST, 31pts on Algolia at the morning check) Show HN item 49896757   at https://enigma.design/ — an interactive 3D Enigma lesson in the browser: turn rotors, set the plugboard, and type, with wartime photos and a step-through (daily key sheet / cables / rotor order / ring settings). Public page morning GET HTTP 200; Preview is a Playwright capture of the hero 3D machine, cropped to 3:2 WebP."
     },
     {
       "id": "scissor-studio",
       "slug": "scissor-studio",
       "title": "Scissor：浏览器里免费的矢量 + 像素设计编辑器",
       "titleEn": "Scissor: free vector and pixel design editor in the browser",
-      "summary": "Show HN（item 49875308，2026-09-28T08:55:31Z / 约 16:55 CST，Algolia 早间核对 134pts）https://scissor.studio/ — 免费浏览器矢量优先编辑器（兼像素层）：钢笔/形状/文字/图层蒙版/实时效果/多网格与描摹；自称 Rust→WASM、无安装无账号、作品留在本机，可装成 PWA；导入导出含 SVG / PDF / PSD / PNG / WebP 等。作者在 HN 写尚未决定是否开源；社区问题可开 samalstudios/scissor-community。公开页早间 Playwright 可达（欢迎层可见）。预览为 Playwright 实拍欢迎层+工作台裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49875308 (2026-09-28T08:55:31Z / about 16:55 CST, 134pts on Algolia at the morning check) at https://scissor.studio/ — a free, vector-first browser editor with pixel layers: pen/shapes/type/layers/masks/live effects/grids/tracing. The page claims Rust→WASM, no install or account, on-device artwork, and PWA install; import/export includes SVG / PDF / PSD / PNG / WebP and more. On HN the author has not decided on open source yet; bugs can go to samalstudios/scissor-community. Public page reachable via Playwright at the morning check (welcome modal visible). Preview is a Playwright capture of the welcome layer over the workspace, cropped to 3:2 WebP.",
+      "summary": "Show HN https://scissor.studio/ — 免费浏览器矢量优先编辑器（兼像素层）：钢笔/形状/文字/图层蒙版/实时效果/多网格与描摹；自称 Rust→WASM、无安装无账号、作品留在本机，可装成 PWA；导入导出含 SVG / PDF / PSD / PNG / WebP 等。作者在 HN 写尚未决定是否开源；社区问题可开 samalstudios/scissor-community。",
+      "summaryEn": "The page claims Rust→WASM, no install or account, on-device artwork, and PWA install; import/export includes SVG / PDF / PSD / PNG / WebP and more. On HN the author has not decided on open source yet; bugs can go to samalstudios/scissor-community.",
       "types": [
         "tool"
       ],
@@ -1244,16 +1244,16 @@
       ],
       "hook": "在浏览器里编辑矢量和像素图。",
       "hookEn": "Edit vector and pixel art in your browser.",
-      "verifyLog": "主源是 Show HN 49875308 与公开工具页。",
-      "verifyLogEn": "Primary sources are Show HN 49875308 and the public tool page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49875308 与公开工具页。 （item 49875308，2026-09-28T08:55:31Z / 约 16:55 CST，Algolia 早间核对 134pts） 公开页早间 Playwright 可达（欢迎层可见）。 预览为 Playwright 实拍欢迎层+工作台裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49875308 and the public tool page. Preview is self-hosted. (2026-09-28T08:55:31Z / about 16:55 CST, 134pts on Algolia at the morning check) Show HN item 49875308   at https://scissor.studio/ — a free, vector-first browser editor with pixel layers: pen/shapes/type/layers/masks/live effects/grids/tracing. Public page reachable via Playwright at the morning check (welcome modal visible). Preview is a Playwright capture of the welcome layer over the workspace, cropped to 3:2 WebP."
     },
     {
       "id": "rename-tools",
       "slug": "rename-tools",
       "title": "Rename.Tools：浏览器里批量重命名本地文件",
       "titleEn": "Rename.Tools: bulk-rename local files in the browser",
-      "summary": "Show HN（item 49887510，2026-09-29T02:54:17Z / 约 10:54 CST，Algolia 晚间核对 2pts）https://rename.tools/en — 浏览器里用规则链批量改本地文件名：查找替换 / 正则 / 序号 / 大小写 / 插入删除 / 自定义 JS，实时预览冲突；页称 File System Access API 直改（Chrome / Edge 等），其他浏览器可导出 Bash / PowerShell 脚本；自称不上传文件、免费、无需注册。仓库 chenz24/rename.tools 于 2026-09-29 gh search：AGPL-3.0、126★。公开页与仓库 HTTP 200。预览为 Playwright 实拍英文工具页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49887510 (2026-09-29T02:54:17Z / about 10:54 CST, 2pts on Algolia at evening check) at https://rename.tools/en — bulk-rename local files in the browser with rule chains: find/replace, regex, sequences, case, insert/remove, custom JS, plus live conflict preview. The page says Chromium browsers rename via the File System Access API; others can export Bash / PowerShell scripts. Claims: no uploads, free, no signup. Repo chenz24/rename.tools on the 2026-09-29 gh search: AGPL-3.0, 126★. Public page and repo HTTP 200. Preview is a Playwright capture of the English tool page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://rename.tools/en — 浏览器里用规则链批量改本地文件名：查找替换 / 正则 / 序号 / 大小写 / 插入删除 / 自定义 JS，实时预览冲突；页称 File System Access API 直改（Chrome / Edge 等），其他浏览器可导出 Bash / PowerShell 脚本；自称不上传文件、免费、无需注册。",
+      "summaryEn": "The page says Chromium browsers rename via the File System Access API; others can export Bash / PowerShell scripts. Claims: no uploads, free, no signup.",
       "types": [
         "tool"
       ],
@@ -1279,16 +1279,16 @@
       ],
       "hook": "在浏览器里批量重命名本地文件。",
       "hookEn": "Batch-rename local files through your browser.",
-      "verifyLog": "主源是 Show HN 49887510 与 AGPL-3.0 仓库 / 公开工具页。",
-      "verifyLogEn": "Primary sources are Show HN 49887510 and the AGPL-3.0 repo / public tool page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49887510 与 AGPL-3.0 仓库 / 公开工具页。 （item 49887510，2026-09-29T02:54:17Z / 约 10:54 CST，Algolia 晚间核对 2pts） 仓库 chenz24/rename.tools 于 2026-09-29 gh search：AGPL-3.0、126★。 公开页与仓库 HTTP 200。 预览为 Playwright 实拍英文工具页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49887510 and the AGPL-3.0 repo / public tool page. Preview is self-hosted. (2026-09-29T02:54:17Z / about 10:54 CST, 2pts on Algolia at evening check) Show HN item 49887510   at https://rename.tools/en — bulk-rename local files in the browser with rule chains: find/replace, regex, sequences, case, insert/remove, custom JS, plus live conflict preview. Repo chenz24/rename.tools on the 2026-09-29 gh search: AGPL-3.0, 126★. Public page and repo HTTP 200. Preview is a Playwright capture of the English tool page, cropped to 3:2 WebP."
     },
     {
       "id": "microllm-lab",
       "slug": "microllm-lab",
       "title": "MicroLLM Lab：浏览器里跑 / 测 7 个小模型",
       "titleEn": "MicroLLM Lab: run and benchmark 7 tiny LLMs in the browser",
-      "summary": "HN 首页（item 49882781，2026-09-28T18:58:53Z / 约 2026-09-29 02:58 CST，Algolia 核对 116pts）https://stateofutopia.com/experiments/microllmlab/ — 浏览器 WebGPU（可回退 WASM/CPU）加载 Q4 小模型，IndexedDB 缓存，免账号；有 Chat / Benchmarks / Compare 与可分享成绩证书。仓库 robss2020/microllm-lab 于 2026-09-29 gh api：8★、license NOASSERTION；README 列出 PetitGPT / SmolLM2 / MiniMind2 / GPT-2 等权重许可证多为 Apache-2.0 或 MIT。公开页与仓库 HTTP 200。预览为 Playwright 实拍实验页裁 3:2 WebP。",
-      "summaryEn": "HN front page item 49882781 (2026-09-28T18:58:53Z / about 2026-09-29 02:58 CST, 116pts on Algolia at check time) at https://stateofutopia.com/experiments/microllmlab/ — load Q4 small models in the browser over WebGPU (WASM/CPU fallback), cache in IndexedDB, no account; Chat / Benchmarks / Compare plus a shareable certificate. Repo robss2020/microllm-lab on the 2026-09-29 gh api: 8★, license NOASSERTION; the README lists weight licenses mostly Apache-2.0 or MIT (PetitGPT / SmolLM2 / MiniMind2 / GPT-2, …). Public page and repo HTTP 200. Preview is a Playwright capture of the lab page, cropped to 3:2 WebP.",
+      "summary": "HN 首页 https://stateofutopia.com/experiments/microllmlab/ — 浏览器 WebGPU（可回退 WASM/CPU）加载 Q4 小模型，IndexedDB 缓存，免账号；有 Chat / Benchmarks / Compare 与可分享成绩证书。README 列出 PetitGPT / SmolLM2 / MiniMind2 / GPT-2 等权重许可证多为 Apache-2.0 或 MIT。",
+      "summaryEn": "Chat / Benchmarks / Compare plus a shareable certificate. the README lists weight licenses mostly Apache-2.0 or MIT (PetitGPT / SmolLM2 / MiniMind2 / GPT-2, …).",
       "types": [
         "tool",
         "demo"
@@ -1315,16 +1315,16 @@
       ],
       "hook": "在浏览器里试跑小模型。",
       "hookEn": "Try small language models in your browser.",
-      "verifyLog": "主源是 HN 49882781 与公开实验页 / 仓库。",
-      "verifyLogEn": "Primary sources are HN 49882781 and the public lab page / repo. Preview is self-hosted."
+      "verifyLog": "主源是 HN 49882781 与公开实验页 / 仓库。 （item 49882781，2026-09-28T18:58:53Z / 约 2026-09-29 02:58 CST，Algolia 核对 116pts） 仓库 robss2020/microllm-lab 于 2026-09-29 gh api：8★、license NOASSERTION； 公开页与仓库 HTTP 200。 预览为 Playwright 实拍实验页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are HN 49882781 and the public lab page / repo. Preview is self-hosted. (2026-09-28T18:58:53Z / about 2026-09-29 02:58 CST, 116pts on Algolia at check time) HN front page item 49882781   at https://stateofutopia.com/experiments/microllmlab/ — load Q4 small models in the browser over WebGPU (WASM/CPU fallback), cache in IndexedDB, no account; Repo robss2020/microllm-lab on the 2026-09-29 gh api: 8★, license NOASSERTION; Public page and repo HTTP 200. Preview is a Playwright capture of the lab page, cropped to 3:2 WebP."
     },
     {
       "id": "destroy-stickman",
       "slug": "destroy-stickman",
       "title": "Destroy Any Website：用火柴人把任意网页打成碎片",
       "titleEn": "Destroy Any Website: smash any page with a stickman",
-      "summary": "Show HN（item 49880601，2026-09-28T16:31:28Z / 约 2026-09-29 00:31 CST，Algolia 核对 100pts）https://destroy.spritefusion.com/ — 输入网址，在真实页面上用像素火柴人射击 / 手雷「摧毁」DOM；可多人开房间，也有 Embed。作者挂 Sprite Fusion 出品；公开页未见自链 SPDX 仓库。页面 HTTP 200；作者提示移动端不可玩。预览为 Playwright 实拍入口弹层裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49880601 (2026-09-28T16:31:28Z / about 2026-09-29 00:31 CST, 100pts on Algolia at check time) at https://destroy.spritefusion.com/ — type a URL and shoot / grenade a pixel stickman across the live page to “destroy” the DOM; multiplayer rooms and an embed are offered. Credited to Sprite Fusion; no SPDX repo self-linked from the public page was found. Page HTTP 200; the author notes it is not playable on mobile. Preview is a Playwright capture of the entry modal, cropped to 3:2 WebP.",
+      "summary": "Show HN https://destroy.spritefusion.com/ — 输入网址，在真实页面上用像素火柴人射击 / 手雷「摧毁」DOM；可多人开房间，也有 Embed。作者挂 Sprite Fusion 出品；公开页未见自链 SPDX 仓库。作者提示移动端不可玩。",
+      "summaryEn": "multiplayer rooms and an embed are offered. Credited to Sprite Fusion; no SPDX repo self-linked from the public page was found. the author notes it is not playable on mobile.",
       "types": [
         "game",
         "interactive",
@@ -1351,16 +1351,16 @@
       ],
       "hook": "把网页变成火柴人的破坏游乐场。",
       "hookEn": "Turn a web page into a stickman destruction playground.",
-      "verifyLog": "主源是 Show HN 49880601 与公开页。",
-      "verifyLogEn": "Primary sources are Show HN 49880601 and the public page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49880601 与公开页。 （item 49880601，2026-09-28T16:31:28Z / 约 2026-09-29 00:31 CST，Algolia 核对 100pts） 页面 HTTP 200； 预览为 Playwright 实拍入口弹层裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49880601 and the public page. Preview is self-hosted. (2026-09-28T16:31:28Z / about 2026-09-29 00:31 CST, 100pts on Algolia at check time) Show HN item 49880601   at https://destroy.spritefusion.com/ — type a URL and shoot / grenade a pixel stickman across the live page to “destroy” the DOM; Page HTTP 200; Preview is a Playwright capture of the entry modal, cropped to 3:2 WebP."
     },
     {
       "id": "skinlab",
       "slug": "skinlab",
       "title": "SkinLab：皮肤科医生做的浏览器 WebGL 皮肤生物物理模型",
       "titleEn": "SkinLab: a dermatologist’s browser WebGL biophysical skin model",
-      "summary": "Show HN（item 49881201，2026-09-28T17:12:55Z / 约 2026-09-29 01:12 CST，Algolia 核对 3pts）https://www.drmagnuslynch.com/skin — 浏览器里可切开 / 打孔 / 激光 / TCA 的皮肤体素块，再按时间轴结疤与重塑；Three.js + WebGL。作者自述为皮肤科医生 vibe coding。公开页 HTTP 200；页内未见自链 SPDX 仓库。预览为 Playwright 实拍工具页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49881201 (2026-09-28T17:12:55Z / about 2026-09-29 01:12 CST, 3pts on Algolia at check time) at https://www.drmagnuslynch.com/skin — a browser voxel skin block you can cut / punch / laser / TCA, then scar and remodel on a timeline; Three.js + WebGL. The author describes themselves as a dermatologist vibe-coding the model. Public page HTTP 200; no SPDX repo self-linked from the page was found. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://www.drmagnuslynch.com/skin — 浏览器里可切开 / 打孔 / 激光 / TCA 的皮肤体素块，再按时间轴结疤与重塑；Three.js + WebGL。作者自述为皮肤科医生 vibe coding。页内未见自链 SPDX 仓库。",
+      "summaryEn": "Three.js + WebGL. The author describes themselves as a dermatologist vibe-coding the model. no SPDX repo self-linked from the page was found.",
       "types": [
         "demo",
         "interactive",
@@ -1386,16 +1386,16 @@
       ],
       "hook": "用互动模型探索皮肤的生物物理。",
       "hookEn": "Explore skin biophysics with an interactive model.",
-      "verifyLog": "主源是 Show HN 49881201 与公开 SkinLab 页。",
-      "verifyLogEn": "Primary sources are Show HN 49881201 and the public SkinLab page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49881201 与公开 SkinLab 页。 （item 49881201，2026-09-28T17:12:55Z / 约 2026-09-29 01:12 CST，Algolia 核对 3pts） 公开页 HTTP 200； 预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49881201 and the public SkinLab page. Preview is self-hosted. (2026-09-28T17:12:55Z / about 2026-09-29 01:12 CST, 3pts on Algolia at check time) Show HN item 49881201   at https://www.drmagnuslynch.com/skin — a browser voxel skin block you can cut / punch / laser / TCA, then scar and remodel on a timeline; Public page HTTP 200; Preview is a Playwright capture of the tool page, cropped to 3:2 WebP."
     },
     {
       "id": "gpu-font",
       "slug": "gpu-font",
       "title": "GPU-font：在浏览器里从一行字认字体",
       "titleEn": "GPU-font: match a font from a line of text in the browser",
-      "summary": "Show HN（item 49875638，2026-09-28T09:49:48Z / 约 17:49 CST，Algolia 核对 2pts）https://dy.github.io/gpu-font/ — 从截图裁一行字，在浏览器里匹配最接近的字体家族、字重和样式。README：跑在 WebGPU 或 CPU 回退上，图片不上传。目录含 Google Fonts，以及 DaFont、Adobe Fonts、GitHub 字体仓、Debian、Font Library 等（作者 README 的目录表）。仓库 dy/gpu-font 于 2026-09-28 gh api：MIT、3★。公开页与仓库 HTTP 200。README 实验口径（作者自称，不是本站基准）：在它没训练过的 Google Fonts 渲染裁图上，正确家族进前五约 92%、排第一约 73%。预览为 Playwright 实拍工具页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49875638 (2026-09-28T09:49:48Z / about 17:49 CST, 2pts on Algolia at check time) at https://dy.github.io/gpu-font/ — crop a line of text from a screenshot and match the closest family, weight, and style in the browser. README: runs on WebGPU or a CPU fallback, and the image is never uploaded. Catalogs include Google Fonts plus DaFont, Adobe Fonts, GitHub font repos, Debian, Font Library, and others (the author’s README catalog table). Repo dy/gpu-font on the 2026-09-28 gh api: MIT, 3★. Public page and repo HTTP 200. Experimental README figures (author claim, not this site’s benchmark): on rendered Google Fonts crops the model had not trained on, the right family is in the top five about 92% of the time and first about 73%. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://dy.github.io/gpu-font/ — 从截图裁一行字，在浏览器里匹配最接近的字体家族、字重和样式。README：跑在 WebGPU 或 CPU 回退上，图片不上传。目录含 Google Fonts，以及 DaFont、Adobe Fonts、GitHub 字体仓、Debian、Font Library 等（作者 README 的目录表）。README 实验口径（作者自称，不是本站基准）：在它没训练过的 Google Fonts 渲染裁图上，正确家族进前五约 92%、排第一约 73%。",
+      "summaryEn": "README: runs on WebGPU or a CPU fallback, and the image is never uploaded. Catalogs include Google Fonts plus DaFont, Adobe Fonts, GitHub font repos, Debian, Font Library, and others (the author’s README catalog table). Experimental README figures (author claim, not this site’s benchmark): on rendered Google Fonts crops the model had not trained on, the right family is in the top five about 92% of the time and first about 73%.",
       "types": [
         "tool"
       ],
@@ -1420,16 +1420,16 @@
       ],
       "hook": "从一行文字寻找可能使用的字体。",
       "hookEn": "Identify possible fonts from a line of text.",
-      "verifyLog": "主源是 Show HN 49875638 与 MIT 仓库 / 浏览器页。gh api 核对 MIT、3★。",
-      "verifyLogEn": "Primary sources are Show HN 49875638 and the MIT repo / browser page. How DaFont / Adobe and the other catalogs are indexed follows the author’s notes. gh api check: MIT, 3★. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49875638 与 MIT 仓库 / 浏览器页。gh api 核对 MIT、3★。 （item 49875638，2026-09-28T09:49:48Z / 约 17:49 CST，Algolia 核对 2pts） 仓库 dy/gpu-font 于 2026-09-28 gh api：MIT、3★。 公开页与仓库 HTTP 200。 预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49875638 and the MIT repo / browser page. How DaFont / Adobe and the other catalogs are indexed follows the author’s notes. gh api check: MIT, 3★. Preview is self-hosted. (2026-09-28T09:49:48Z / about 17:49 CST, 2pts on Algolia at check time) Show HN item 49875638   at https://dy.github.io/gpu-font/ — crop a line of text from a screenshot and match the closest family, weight, and style in the browser. Repo dy/gpu-font on the 2026-09-28 gh api: MIT, 3★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP."
     },
     {
       "id": "lofi-cities",
       "slug": "lofi-cities",
       "title": "Lofi Cities：像素夜城 + 浏览器里现场合成的 lofi",
       "titleEn": "Lofi Cities: pixel night cities with lofi composed live in the browser",
-      "summary": "Show HN（item 49869574，2026-09-27 ~18:44Z，Algolia 核对 154pts）https://loficities.com/ — 免费、免注册：巴黎 / 东京 / 纽约 / 香港 / 悉尼 / 旧金山等像素夜景上，lofi 节拍在浏览器里现场合成（页内 schema 自称 endless）。作者 Safa Elmali（X @SafaElmali）。官网 HTTP 200。公开页未见 SPDX 开源仓库链接（作者其他项目另有 GitHub）。预览为 Playwright 实拍首页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49869574 (2026-09-27 ~18:44Z, 154pts on Algolia at check time) at https://loficities.com/ — free, no sign-up: pixel-art nights in Paris / Tokyo / New York / Hong Kong / Sydney / San Francisco (and more) with lofi beats composed live in the browser (on-page schema calls them endless). Author Safa Elmali (X @SafaElmali). Site HTTP 200. No SPDX open-source repo link found on the public page (the author has other GitHub projects). Preview is a Playwright capture of the home page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://loficities.com/ — 免费、免注册：巴黎 / 东京 / 纽约 / 香港 / 悉尼 / 旧金山等像素夜景上，lofi 节拍在浏览器里现场合成（页内 schema 自称 endless）。作者 Safa Elmali（X @SafaElmali）。公开页未见 SPDX 开源仓库链接（作者其他项目另有 GitHub）。",
+      "summaryEn": "Author Safa Elmali (X @SafaElmali). No SPDX open-source repo link found on the public page (the author has other GitHub projects).",
       "types": [
         "demo",
         "tool"
@@ -1456,16 +1456,16 @@
       ],
       "hook": "在像素夜城里合成轻松的音乐。",
       "hookEn": "Synthesize relaxed music in a pixel-art night city.",
-      "verifyLog": "主源是 Show HN 49869574（核对 154pts）与公开站。",
-      "verifyLogEn": "Primary sources are Show HN 49869574 (154pts at check time) and the public site. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49869574（核对 154pts）与公开站。 （item 49869574，2026-09-27 ~18:44Z，Algolia 核对 154pts） 官网 HTTP 200。 预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49869574 (154pts at check time) and the public site. Preview is self-hosted. (2026-09-27 ~18:44Z, 154pts on Algolia at check time) Show HN item 49869574   at https://loficities.com/ — free, no sign-up: pixel-art nights in Paris / Tokyo / New York / Hong Kong / Sydney / San Francisco (and more) with lofi beats composed live in the browser (on-page schema calls them endless). Site HTTP 200. Preview is a Playwright capture of the home page, cropped to 3:2 WebP."
     },
     {
       "id": "shotcandy",
       "slug": "shotcandy",
       "title": "Shotcandy：浏览器里把截图做成可分享图/视频",
       "titleEn": "Shotcandy: turn a screenshot into a share-ready image or video in the browser",
-      "summary": "Show HN（item 49871097，2026-09-27 ~21:35Z，Algolia 核对 2pts）https://shotcandy.vercel.app — 粘贴或选一张截图，本地套样式后导出分享图/视频；README 称免账号、不上传、无水印。仓库 btahir/shotcandy 于 2026-09-28 gh api：MIT、10★。公开页与仓库 HTTP 200。预览为 Playwright 实拍工具页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49871097 (2026-09-27 ~21:35Z, 2pts on Algolia at check time) at https://shotcandy.vercel.app — paste or pick a screenshot, style it locally, and export a share-ready image or video. The README says no account, no upload, no watermark. Repo btahir/shotcandy on the 2026-09-28 gh api: MIT, 10★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://shotcandy.vercel.app — 粘贴或选一张截图，本地套样式后导出分享图/视频；README 称免账号、不上传、无水印。",
+      "summaryEn": "The README says no account, no upload, no watermark.",
       "types": [
         "tool"
       ],
@@ -1490,16 +1490,16 @@
       ],
       "hook": "把截图做成适合分享的图或视频。",
       "hookEn": "Turn screenshots into shareable images or videos.",
-      "verifyLog": "主源是 Show HN 49871097 与 MIT 仓库 / 浏览器页。",
-      "verifyLogEn": "Primary sources are Show HN 49871097 and the MIT repo / browser page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49871097 与 MIT 仓库 / 浏览器页。 （item 49871097，2026-09-27 ~21:35Z，Algolia 核对 2pts） 仓库 btahir/shotcandy 于 2026-09-28 gh api：MIT、10★。 公开页与仓库 HTTP 200。 预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49871097 and the MIT repo / browser page. Preview is self-hosted. (2026-09-27 ~21:35Z, 2pts on Algolia at check time) Show HN item 49871097   at https://shotcandy.vercel.app — paste or pick a screenshot, style it locally, and export a share-ready image or video. Repo btahir/shotcandy on the 2026-09-28 gh api: MIT, 10★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP."
     },
     {
       "id": "tiny-ai-arena",
       "slug": "tiny-ai-arena",
       "title": "Tiny AI Arena：看四个模型在 8×8 格子里对打",
       "titleEn": "Tiny AI Arena: watch four models fight on an 8×8 grid",
-      "summary": "Show HN（item 49867775，2026-09-27 ~15:51Z，Algolia 核对 96pts）https://tinyaiarena.com/ — 浏览器观战：四模型在风景 8×8 格子上「生死」对打，可逐帧回放与自动播放；作者对照「名叫 AI Arena 却只是无聊基准」的吐槽。代码仓库 hp6/ai-arena（Show HN 自链），2026-09-28 gh api：无 SPDX license、12★。官网 HTTP 200。HN 有移动端滚动难用的反馈。预览为 Playwright 实拍观战页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49867775 (2026-09-27 ~15:51Z, 96pts on Algolia at check time) at https://tinyaiarena.com/ — spectate in the browser: four models fight life-or-death on a scenic 8×8 grid, with frame-by-frame and autoplay. The author contrasts it with “AI Arena” pages that are only boring benchmarks. Code repo hp6/ai-arena (linked from Show HN); on the 2026-09-28 gh api: no SPDX license, 12★. Site HTTP 200. HN comments report hard scrolling on mobile. Preview is a Playwright capture of the spectate page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://tinyaiarena.com/ — 浏览器观战：四模型在风景 8×8 格子上「生死」对打，可逐帧回放与自动播放；作者对照「名叫 AI Arena 却只是无聊基准」的吐槽。HN 有移动端滚动难用的反馈。",
+      "summaryEn": "The author contrasts it with “AI Arena” pages that are only boring benchmarks. Code repo hp6/ai-arena (linked from Show HN). HN comments report hard scrolling on mobile.",
       "types": [
         "demo"
       ],
@@ -1523,16 +1523,16 @@
       ],
       "hook": "看不同模型在小棋盘里对战。",
       "hookEn": "Watch models compete on a small game board.",
-      "verifyLog": "主源是 Show HN 49867775（核对 96pts）与公开站 / 仓库。",
-      "verifyLogEn": "Primary sources are Show HN 49867775 (96pts at check time) and the public site / repo. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49867775（核对 96pts）与公开站 / 仓库。 （item 49867775，2026-09-27 ~15:51Z，Algolia 核对 96pts） 代码仓库 hp6/ai-arena（Show HN 自链），2026-09-28 gh api：无 SPDX license、12★。 官网 HTTP 200。 预览为 Playwright 实拍观战页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49867775 (96pts at check time) and the public site / repo. Preview is self-hosted. (2026-09-27 ~15:51Z, 96pts on Algolia at check time) Show HN item 49867775   at https://tinyaiarena.com/ — spectate in the browser: four models fight life-or-death on a scenic 8×8 grid, with frame-by-frame and autoplay. on the 2026-09-28 gh api: no SPDX license, 12★. Site HTTP 200. Preview is a Playwright capture of the spectate page, cropped to 3:2 WebP."
     },
     {
       "id": "nudl",
       "slug": "nudl",
       "title": "nudl：剪贴板一键去掉链接 tracking 参数",
       "titleEn": "nudl: strip tracking junk off any link you copy",
-      "summary": "Show HN（item 49865832，2026-09-27 ~11:47Z，Algolia 核对 1pt）https://coreho.github.io/nudl/ — 浏览器里粘贴链接或整段消息，本地去掉 UTM / 跳转包装等 tracking；README 称「naked URL」、不是短链、无服务器改写。另有 Windows 托盘与跨平台 CLI（winget Coreho.nudl）。仓库 Coreho/nudl 于 2026-09-27 gh api：MIT、1★。公开页与仓库 HTTP 200。预览为 Playwright 实拍工具页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49865832 (2026-09-27 ~11:47Z, 1pt on Algolia at check time) at https://coreho.github.io/nudl/ — paste a link or a whole message in the browser; tracking such as UTM / redirect wrappers is stripped locally. The README calls it a “naked URL,” not a shortener, with no server rewrite. Also ships a Windows tray app and cross-platform CLI (winget Coreho.nudl). Repo Coreho/nudl on the 2026-09-27 gh api: MIT, 1★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://coreho.github.io/nudl/ — 浏览器里粘贴链接或整段消息，本地去掉 UTM / 跳转包装等 tracking；README 称「naked URL」、不是短链、无服务器改写。另有 Windows 托盘与跨平台 CLI（winget Coreho.nudl）。",
+      "summaryEn": "tracking such as UTM / redirect wrappers is stripped locally. The README calls it a “naked URL,” not a shortener, with no server rewrite. Also ships a Windows tray app and cross-platform CLI (winget Coreho.nudl).",
       "types": [
         "tool"
       ],
@@ -1557,16 +1557,16 @@
       ],
       "hook": "一键清理剪贴板链接的追踪参数。",
       "hookEn": "Remove tracking parameters from clipboard links.",
-      "verifyLog": "主源是 Show HN 49865832 与 MIT 仓库 / 浏览器页。",
-      "verifyLogEn": "Primary sources are Show HN 49865832 and the MIT repo / browser page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49865832 与 MIT 仓库 / 浏览器页。 （item 49865832，2026-09-27 ~11:47Z，Algolia 核对 1pt） 仓库 Coreho/nudl 于 2026-09-27 gh api：MIT、1★。 公开页与仓库 HTTP 200。 预览为 Playwright 实拍工具页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49865832 and the MIT repo / browser page. Preview is self-hosted. (2026-09-27 ~11:47Z, 1pt on Algolia at check time) Show HN item 49865832   at https://coreho.github.io/nudl/ — paste a link or a whole message in the browser; Repo Coreho/nudl on the 2026-09-27 gh api: MIT, 1★. Public page and repo HTTP 200. Preview is a Playwright capture of the tool page, cropped to 3:2 WebP."
     },
     {
       "id": "print-graph-paper",
       "slug": "print-graph-paper",
       "title": "Print Graph Paper：免费可打印方格纸 / 点阵纸 PDF",
       "titleEn": "Print Graph Paper: free printable grid / dot paper PDFs",
-      "summary": "Show HN（item 49854203，2026-09-26 ~07:45Z，Algolia 核对 3pts）https://printgraphpaper.app/ — 浏览器里选 57 种纸型（方格、点阵、等距、乐谱、康奈尔笔记、田字格等），调纸张尺寸 / 间距 / 边距后下载 PDF 或直接打印；页内自称 1:1 真比例、免费、无需注册、无水印。公开页 HTTP 200。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49854203 (2026-09-26 ~07:45Z, 3pts on Algolia at check time) at https://printgraphpaper.app/ — pick among 57 paper types in the browser (grid, dots, isometric, staff paper, Cornell notes, Tian zi ge, and more), set size / spacing / margins, then download a PDF or print; the page claims true 1:1 scale, free, no signup, no watermark. Public page HTTP 200. Preview is a Playwright capture above the fold, cropped to 3:2 WebP.",
+      "summary": "Show HN https://printgraphpaper.app/ — 浏览器里选 57 种纸型（方格、点阵、等距、乐谱、康奈尔笔记、田字格等），调纸张尺寸 / 间距 / 边距后下载 PDF 或直接打印；页内自称 1:1 真比例、免费、无需注册、无水印。",
+      "summaryEn": "the page claims true 1:1 scale, free, no signup, no watermark.",
       "types": [
         "tool"
       ],
@@ -1589,16 +1589,16 @@
       ],
       "hook": "生成可打印的方格纸和点阵纸。",
       "hookEn": "Generate printable graph and dot-grid paper.",
-      "verifyLog": "主源是 Show HN 49854203（当日核对 3pts）与公开工具页。",
-      "verifyLogEn": "Primary sources are Show HN 49854203 (3pts at check time) and the public tool page. Preview is self-hosted."
+      "verifyLog": "主源是 Show HN 49854203（当日核对 3pts）与公开工具页。 （item 49854203，2026-09-26 ~07:45Z，Algolia 核对 3pts） 公开页 HTTP 200。 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49854203 (3pts at check time) and the public tool page. Preview is self-hosted. (2026-09-26 ~07:45Z, 3pts on Algolia at check time) Show HN item 49854203   at https://printgraphpaper.app/ — pick among 57 paper types in the browser (grid, dots, isometric, staff paper, Cornell notes, Tian zi ge, and more), set size / spacing / margins, then download a PDF or print; Public page HTTP 200. Preview is a Playwright capture above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "last-day-dinosaurs",
       "slug": "last-day-dinosaurs",
       "title": "The Last Day：互动恐龙绘画",
       "titleEn": "The Last Day: an interactive dinosaur painting",
-      "summary": "Show HN（item 49841912，2026-09-25 ~08:58Z，Algolia/HN 核对 16pts）https://www.echohive.ai/experiments/dinosaurs — 页面标题 “The Last Day: An interactive dinosaur painting”。meta 写：由 Opus 5.5 制作的互动 2.5D 恐龙绘画，七个乐章，视差、同步配乐、双指缩放与全屏。页内自述 “A 2.5D PAINTING · MADE BY OPUS 5.5”，并写含明亮闪光、镜头晃动、大声效与灾难场景。需要 JavaScript 与 WebGL2。公开页 HTTP 200；预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49841912 (2026-09-25 ~08:58Z, 16pts on HN/Algolia at check time) at https://www.echohive.ai/experiments/dinosaurs — page title “The Last Day: An interactive dinosaur painting”. The meta description says an interactive 2.5D dinosaur painting made by Opus 5.5, with seven movements, parallax, a synchronized soundtrack, pinch zoom, and fullscreen. On-page text says “A 2.5D PAINTING · MADE BY OPUS 5.5” and warns of bright flashes, camera shake, loud effects, and scenes of disaster. Needs JavaScript and WebGL2. Public page HTTP 200. Preview is a Playwright capture above the fold, cropped to 3:2 WebP.",
+      "summary": "Show HN https://www.echohive.ai/experiments/dinosaurs — 页面标题 “The Last Day: An interactive dinosaur painting”。meta 写：由 Opus 5.5 制作的互动 2.5D 恐龙绘画，七个乐章，视差、同步配乐、双指缩放与全屏。页内自述 “A 2.5D PAINTING · MADE BY OPUS 5.5”，并写含明亮闪光、镜头晃动、大声效与灾难场景。需要 JavaScript 与 WebGL2。",
+      "summaryEn": "The meta description says an interactive 2.5D dinosaur painting made by Opus 5.5, with seven movements, parallax, a synchronized soundtrack, pinch zoom, and fullscreen. On-page text says “A 2.5D PAINTING · MADE BY OPUS 5.5” and warns of bright flashes, camera shake, loud effects, and scenes of disaster. Needs JavaScript and WebGL2.",
       "types": [
         "interactive"
       ],
@@ -1623,16 +1623,16 @@
       ],
       "hook": "用互动绘画探索恐龙的最后一天。",
       "hookEn": "Explore the dinosaurs' last day through interactive art.",
-      "verifyLog": "主源是 Show HN 49841912（当日核对 16pts）与 echohive 实验页。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49841912 (16pts at check time) and the echohive experiment page. Self-hosted preview. Unrated."
+      "verifyLog": "主源是 Show HN 49841912（当日核对 16pts）与 echohive 实验页。不打星。 （item 49841912，2026-09-25 ~08:58Z，Algolia/HN 核对 16pts） 公开页 HTTP 200； 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49841912 (16pts at check time) and the echohive experiment page. Self-hosted preview. Unrated. (2026-09-25 ~08:58Z, 16pts on HN/Algolia at check time) Show HN item 49841912   at https://www.echohive.ai/experiments/dinosaurs — page title “The Last Day: An interactive dinosaur painting”. Public page HTTP 200. Preview is a Playwright capture above the fold, cropped to 3:2 WebP."
     },
     {
       "id": "tiddlyinstall",
       "slug": "tiddlyinstall",
       "title": "TiddlyInstall：单 HTML 做跨平台安装包",
       "titleEn": "TiddlyInstall: one HTML file that builds cross-platform installers",
-      "summary": "Show HN（item 49841265，2026-09-25 ~07:25Z，Algolia/HN 核对 3pts）https://robertsdotpm.github.io/_static/tiddlyinstall.html — 单个 HTML 文件，从 GitHub 仓库（分支 / tag / commit）做出 Windows（NSIS .exe）、Linux（POSIX .run）与 macOS（.zip）安装包。页面写可装真实运行时与依赖（示例含 Python、Node.js、Ruby；“13, plus your own runtime”），并把运行时打进安装包给无网络的机器；另写存到磁盘的副本除运行时镜像外不访问网络。仓库 robertsdotpm/tiddlyinstall 于 2026-09-25 gh api：MIT，1★。演示页与仓库均 HTTP 200；预览为 Playwright 实拍页面裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49841265 (2026-09-25 ~07:25Z, 3pts on HN/Algolia at check time) at https://robertsdotpm.github.io/_static/tiddlyinstall.html — one HTML file that builds Windows (NSIS .exe), Linux (POSIX .run), and macOS (.zip) installers from a GitHub repo (branch / tag / commit). The page says it installs a real runtime and dependencies (examples include Python, Node.js, and Ruby; “13, plus your own runtime”) and can pack runtimes into the installer for machines with no internet; a copy saved to disk is also described as needing nothing from the network except the runtime mirror. Repo robertsdotpm/tiddlyinstall on the 2026-09-25 gh api: MIT, 1★. Demo and repo both HTTP 200. Preview is a Playwright capture of the page, cropped to 3:2 WebP.",
+      "summary": "Show HN https://robertsdotpm.github.io/_static/tiddlyinstall.html — 单个 HTML 文件，从 GitHub 仓库（分支 / tag / commit）做出 Windows（NSIS.exe）、Linux（POSIX.run）与 macOS（.zip）安装包。页面写可装真实运行时与依赖（示例含 Python、Node.js、Ruby；“13, plus your own runtime”），并把运行时打进安装包给无网络的机器；另写存到磁盘的副本除运行时镜像外不访问网络。",
+      "summaryEn": "The page says it installs a real runtime and dependencies (examples include Python, Node.js, and Ruby; “13, plus your own runtime”) and can pack runtimes into the installer for machines with no internet; a copy saved to disk is also described as needing nothing from the network except the runtime mirror.",
       "types": [
         "tool",
         "interactive"
@@ -1658,16 +1658,16 @@
       ],
       "hook": "用单个 HTML 制作跨平台安装包。",
       "hookEn": "Make cross-platform installers with a single HTML file.",
-      "verifyLog": "MIT（2026-09-25 gh api，1★）。Show HN item 49841265，Algolia 当日核对 3pts，不另报热度。不打星。",
-      "verifyLogEn": "MIT (gh api, 2026-09-25, 1★). Show HN item 49841265, 3pts on Algolia at check time — not treated as a heat score. Self-hosted preview. Unrated."
+      "verifyLog": "MIT（2026-09-25 gh api，1★）。Show HN item 49841265，Algolia 当日核对 3pts，不另报热度。不打星。 （item 49841265，2026-09-25 ~07:25Z，Algolia/HN 核对 3pts） 仓库 robertsdotpm/tiddlyinstall 于 2026-09-25 gh api：MIT，1★。 演示页与仓库均 HTTP 200； 预览为 Playwright 实拍页面裁 3:2 WebP。",
+      "verifyLogEn": "MIT (gh api, 2026-09-25, 1★). Show HN item 49841265, 3pts on Algolia at check time — not treated as a heat score. Self-hosted preview. Unrated. (2026-09-25 ~07:25Z, 3pts on HN/Algolia at check time) Show HN item 49841265   at https://robertsdotpm.github.io/_static/tiddlyinstall.html — one HTML file that builds Windows (NSIS .exe), Linux (POSIX .run), and macOS (.zip) installers from a GitHub repo (branch / tag / commit). Repo robertsdotpm/tiddlyinstall on the 2026-09-25 gh api: MIT, 1★. Demo and repo both HTTP 200. Preview is a Playwright capture of the page, cropped to 3:2 WebP."
     },
     {
       "id": "bastardica",
       "slug": "bastardica",
       "title": "Bastardica：浏览器里混字重的「bastard」字体工坊",
       "titleEn": "Bastardica: in-browser foundry for bastard web fonts",
-      "summary": "Show HN（item 49823738，2026-09-23 ~22:53Z，Algolia/HN 核对 454pts）https://bastardica.mitpit.com/ — 在浏览器里用 Pyodide + fontTools 本地混合字体：选 base / mix-in，按「每 N 个字形」替换并可选拉伸偏移，导出 TTF / OTF / WOFF2。FAQ 写明字体不上传；衍生字须自行核对源字体许可。灵感来自 Times New Bastard。公开页 HTTP 200；预览为 Playwright 实拍工坊界面裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49823738 (2026-09-23 ~22:53Z, 454pts on HN/Algolia at check time) at https://bastardica.mitpit.com/ — mix fonts locally in the browser with Pyodide + fontTools: pick a base and mix-in, swap every Nth glyph with optional stretch/offset, export TTF / OTF / WOFF2. FAQ says fonts are not uploaded; derivative works still need the source fonts’ licenses. Inspired by Times New Bastard. Public page HTTP 200. Preview is a Playwright capture of the workshop UI, cropped to 3:2 WebP.",
+      "summary": "Show HN https://bastardica.mitpit.com/ — 在浏览器里用 Pyodide + fontTools 本地混合字体：选 base / mix-in，按「每 N 个字形」替换并可选拉伸偏移，导出 TTF / OTF / WOFF2。FAQ 写明字体不上传；衍生字须自行核对源字体许可。灵感来自 Times New Bastard。",
+      "summaryEn": "FAQ says fonts are not uploaded; derivative works still need the source fonts’ licenses. Inspired by Times New Bastard.",
       "types": [
         "interactive",
         "tool"
@@ -1694,16 +1694,16 @@
       ],
       "hook": "在浏览器里实验混合字重。",
       "hookEn": "Experiment with mixed font weights in your browser.",
-      "verifyLog": "主源是 Show HN 49823738（当日核对 454pts）与公开工坊页。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49823738 (454pts at check time) and the public workshop. Self-hosted preview. Unrated."
+      "verifyLog": "主源是 Show HN 49823738（当日核对 454pts）与公开工坊页。不打星。 （item 49823738，2026-09-23 ~22:53Z，Algolia/HN 核对 454pts） 公开页 HTTP 200； 预览为 Playwright 实拍工坊界面裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49823738 (454pts at check time) and the public workshop. Self-hosted preview. Unrated. (2026-09-23 ~22:53Z, 454pts on HN/Algolia at check time) Show HN item 49823738   at https://bastardica.mitpit.com/ — mix fonts locally in the browser with Pyodide + fontTools: pick a base and mix-in, swap every Nth glyph with optional stretch/offset, export TTF / OTF / WOFF2. Public page HTTP 200. Preview is a Playwright capture of the workshop UI, cropped to 3:2 WebP."
     },
     {
       "id": "koi-rest",
       "slug": "koi-rest",
       "title": "koi.rest：和陌生人一起看锦鲤的安静池塘",
       "titleEn": "koi.rest: a quiet shared koi pond",
-      "summary": "Show HN（item 49837006，2026-09-24 ~21:33Z，Algolia/HN 核对 115pts，曾上 Show 前列）https://koi.rest/ — 浏览器多人锦鲤池：你看到的鱼是同池访客；可进池闲逛或设 10–60 分钟计时。作者 Paul Glushak（hxii）在 HN 说明用 AI 帮自己把「阳台枯山水」做成可共享网页。公开页 HTTP 200；预览为 Playwright 点 Enter 后池面裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49837006 (2026-09-24 ~21:33Z, 115pts on HN/Algolia at check time; near the top of Show) at https://koi.rest/ — a shared in-browser koi pond: the fish you see are other visitors; enter freely or set a 10–60 minute timer. Author Paul Glushak (hxii) wrote on HN that he used AI to ship the virtual balcony zen garden he wanted. Public page HTTP 200. Preview is a Playwright capture after Enter, cropped to 3:2 WebP.",
+      "summary": "Show HN https://koi.rest/ — 浏览器多人锦鲤池：你看到的鱼是同池访客；可进池闲逛或设 10–60 分钟计时。作者 Paul Glushak（hxii）在 HN 说明用 AI 帮自己把「阳台枯山水」做成可共享网页。",
+      "summaryEn": "enter freely or set a 10–60 minute timer. Author Paul Glushak (hxii) wrote on HN that he used AI to ship the virtual balcony zen garden he wanted.",
       "types": [
         "interactive",
         "demo"
@@ -1728,16 +1728,16 @@
       ],
       "hook": "和陌生人一起看一个安静的锦鲤池。",
       "hookEn": "Watch a quiet koi pond with strangers.",
-      "verifyLog": "主源是 Show HN 49837006（当日核对 115pts）与公开站。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49837006 (115pts at check time) and the public site. Self-hosted preview. Unrated."
+      "verifyLog": "主源是 Show HN 49837006（当日核对 115pts）与公开站。不打星。 （item 49837006，2026-09-24 ~21:33Z，Algolia/HN 核对 115pts，曾上 Show 前列） 公开页 HTTP 200； 预览为 Playwright 点 Enter 后池面裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49837006 (115pts at check time) and the public site. Self-hosted preview. Unrated. (2026-09-24 ~21:33Z, 115pts on HN/Algolia at check time; near the top of Show) Show HN item 49837006   at https://koi.rest/ — a shared in-browser koi pond: the fish you see are other visitors; Public page HTTP 200. Preview is a Playwright capture after Enter, cropped to 3:2 WebP."
     },
     {
       "id": "pipefitter",
       "slug": "pipefitter",
       "title": "PipeFitter：浏览器里参数化做异径管接头",
       "titleEn": "PipeFitter: parametric pipe connectors in the browser",
-      "summary": "Show HN（item 49836677，2026-09-24 ~21:02Z，Algolia 核对 3pts）https://mankyd.github.io/pipefitter/ — 参数化管件设计器：设直径、长度与弯头，实时 3D 预览，导出 STL / 3MF；参数写在 URL 里可分享。仓库 mankyd/pipefitter 于 2026-09-25 gh api：MIT。公开页与仓库均 HTTP 200；预览为 Playwright 实拍带弯管与截面图裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49836677 (2026-09-24 ~21:02Z, 3pts on Algolia at check time) at https://mankyd.github.io/pipefitter/ — a parametric pipe-connector designer: set diameters, lengths, and bends, live 3D preview, export STL / 3MF; parameters live in the URL for sharing. Repo mankyd/pipefitter on the 2026-09-25 gh api: MIT. Site and repo both HTTP 200. Preview is a Playwright capture of the bent pipe plus cross-section, cropped to 3:2 WebP.",
+      "summary": "Show HN https://mankyd.github.io/pipefitter/ — 参数化管件设计器：设直径、长度与弯头，实时 3D 预览，导出 STL / 3MF；参数写在 URL 里可分享。",
+      "summaryEn": "parameters live in the URL for sharing.",
       "types": [
         "interactive",
         "tool"
@@ -1763,16 +1763,16 @@
       ],
       "hook": "用参数化工具设计异径管接头。",
       "hookEn": "Design pipe reducers with a parametric tool.",
-      "verifyLog": "MIT（2026-09-25 gh api）。Show HN item 49836677，Algolia 当日核对 3pts，不另报热度。不打星。",
-      "verifyLogEn": "MIT (gh api, 2026-09-25). Show HN item 49836677, 3pts on Algolia at check time — not treated as a heat score. Self-hosted preview. Unrated."
+      "verifyLog": "MIT（2026-09-25 gh api）。Show HN item 49836677，Algolia 当日核对 3pts，不另报热度。不打星。 （item 49836677，2026-09-24 ~21:02Z，Algolia 核对 3pts） 仓库 mankyd/pipefitter 于 2026-09-25 gh api：MIT。 公开页与仓库均 HTTP 200； 预览为 Playwright 实拍带弯管与截面图裁 3:2 WebP。",
+      "verifyLogEn": "MIT (gh api, 2026-09-25). Show HN item 49836677, 3pts on Algolia at check time — not treated as a heat score. Self-hosted preview. Unrated. (2026-09-24 ~21:02Z, 3pts on Algolia at check time) Show HN item 49836677   at https://mankyd.github.io/pipefitter/ — a parametric pipe-connector designer: set diameters, lengths, and bends, live 3D preview, export STL / 3MF; Repo mankyd/pipefitter on the 2026-09-25 gh api: MIT. Site and repo both HTTP 200. Preview is a Playwright capture of the bent pipe plus cross-section, cropped to 3:2 WebP."
     },
     {
       "id": "c3-playground",
       "slug": "c3-playground",
       "title": "C3 Playground：浏览器里编图形与声音的 C3 游乐场",
       "titleEn": "C3 Playground: in-browser C3 with graphics and sound",
-      "summary": "Show HN（item 49828605，2026-09-24 ~10:24Z，Algolia/HN 核对 5pts）https://play.c3-lang.org/ — 官方 C3 语言的 WebAssembly 游乐场：零后端依赖，在浏览器里编译并跑交互图形 / 声音程序（示例含 VoxelSpace + Synthwave / Raylib）。C3 编译器仓库 c3lang/c3c 为 MIT（gh api 核对 5834★）。公开页 HTTP 200；预览为 Playwright 实拍 VoxelSpace 示例运行画面裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49828605 (2026-09-24 ~10:24Z, 5pts on HN/Algolia at check time) at https://play.c3-lang.org/ — the official C3 WebAssembly playground: zero backend, compile and run interactive graphics/sound programs in the browser (examples include VoxelSpace + Synthwave / Raylib). The C3 compiler repo c3lang/c3c is MIT (5834★ via gh api at check time). Public page HTTP 200. Preview is a Playwright capture of the VoxelSpace example running, cropped to 3:2 WebP.",
+      "summary": "Show HN https://play.c3-lang.org/ — 官方 C3 语言的 WebAssembly 游乐场：零后端依赖，在浏览器里编译并跑交互图形 / 声音程序（示例含 VoxelSpace + Synthwave / Raylib）。C3 编译器仓库 c3lang/c3c 为 MIT。",
+      "summaryEn": "The C3 compiler repo c3lang/c3c is MIT.",
       "types": [
         "interactive",
         "tool"
@@ -1799,16 +1799,16 @@
       ],
       "hook": "在浏览器里编写图形与声音。",
       "hookEn": "Code graphics and sound in your browser.",
-      "verifyLog": "主源是 Show HN 49828605 与官方游乐场。C3 编译器 MIT（c3lang/c3c，gh api 5834★）；游乐场本身是公开可试的浏览器 demo，本站未审计 WASM 工具链。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49828605 and the official playground. The C3 compiler is MIT (c3lang/c3c, 5834★ via gh api); the playground is a public in-browser demo — this site did not audit the WASM toolchain. Self-hosted preview. Unrated."
+      "verifyLog": "主源是 Show HN 49828605 与官方游乐场。C3 编译器 MIT（c3lang/c3c，gh api 5834★）；游乐场本身是公开可试的浏览器 demo，本站未审计 WASM 工具链。不打星。 （item 49828605，2026-09-24 ~10:24Z，Algolia/HN 核对 5pts） （gh api 核对 5834★） 公开页 HTTP 200； 预览为 Playwright 实拍 VoxelSpace 示例运行画面裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49828605 and the official playground. The C3 compiler is MIT (c3lang/c3c, 5834★ via gh api); the playground is a public in-browser demo — this site did not audit the WASM toolchain. Self-hosted preview. Unrated. (2026-09-24 ~10:24Z, 5pts on HN/Algolia at check time) (5834★ via gh api at check time) Show HN item 49828605   at https://play.c3-lang.org/ — the official C3 WebAssembly playground: zero backend, compile and run interactive graphics/sound programs in the browser (examples include VoxelSpace + Synthwave / Raylib). Public page HTTP 200. Preview is a Playwright capture of the VoxelSpace example running, cropped to 3:2 WebP."
     },
     {
       "id": "cms-ep-sfx-airgap",
       "slug": "cms-ep-sfx-airgap",
       "title": "CMS-EP-SFX：气隙可用的自解密 HTML 加密页",
       "titleEn": "CMS-EP-SFX: air-gapped self-decrypting HTML encryption",
-      "summary": "Show HN（item 49827375，2026-09-24 ~07:22Z，Algolia/HN 核对 6pts）https://cms-sfx-demo.apeleg.com/ — 浏览器本地用 CMS / PWRI + AES-256-GCM 把文件打成「自带解密 UI」的单页 HTML；演示页可 Download for offline use。仓库 ApelegHQ/ts-cms-ep-sfx 为 Apache-2.0（gh api 核对 20★，LICENSE 标注 Apache-2.0 with LLVM exception）。公开页 HTTP 200；预览为 Playwright 实拍加密页裁 3:2 WebP。本条是工具演示笔记，不是安全审计结论。",
-      "summaryEn": "Show HN item 49827375 (2026-09-24 ~07:22Z, 6pts on HN/Algolia at check time) at https://cms-sfx-demo.apeleg.com/ — encrypt a file locally in the browser with CMS / PWRI + AES-256-GCM into a single HTML page that carries its own decrypt UI; the demo offers Download for offline use. Repo ApelegHQ/ts-cms-ep-sfx is Apache-2.0 (20★ via gh api; LICENSE notes Apache-2.0 with LLVM exception). Public page HTTP 200. Preview is a Playwright capture of the encrypt UI, cropped to 3:2 WebP. A tool-demo note — not a security audit.",
+      "summary": "Show HN https://cms-sfx-demo.apeleg.com/ — 浏览器本地用 CMS / PWRI + AES-256-GCM 把文件打成「自带解密 UI」的单页 HTML；演示页可 Download for offline use。仓库 ApelegHQ/ts-cms-ep-sfx 为 Apache-2.0。本条是工具演示笔记，不是安全审计结论。",
+      "summaryEn": "the demo offers Download for offline use. Repo ApelegHQ/ts-cms-ep-sfx is Apache-2.0. A tool-demo note — not a security audit.",
       "types": [
         "tool",
         "interactive"
@@ -1834,16 +1834,16 @@
       ],
       "hook": "用自解密 HTML 在离线环境分享密文。",
       "hookEn": "Share encrypted content offline through self-decrypting HTML.",
-      "verifyLog": "主源 Show HN 49827375 + 官方 demo。许可证 Apache-2.0（gh api / README badge）。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49827375 and the official demo. License Apache-2.0 (gh api / README badge). Self-hosted preview. Unrated."
+      "verifyLog": "主源 Show HN 49827375 + 官方 demo。许可证 Apache-2.0（gh api / README badge）。不打星。 （item 49827375，2026-09-24 ~07:22Z，Algolia/HN 核对 6pts） （gh api 核对 20★，LICENSE 标注 Apache-2.0 with LLVM exception） 公开页 HTTP 200； 预览为 Playwright 实拍加密页裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are Show HN 49827375 and the official demo. License Apache-2.0 (gh api / README badge). Self-hosted preview. Unrated. (2026-09-24 ~07:22Z, 6pts on HN/Algolia at check time) (20★ via gh api; LICENSE notes Apache-2.0 with LLVM exception) Show HN item 49827375   at https://cms-sfx-demo.apeleg.com/ — encrypt a file locally in the browser with CMS / PWRI + AES-256-GCM into a single HTML page that carries its own decrypt UI; Public page HTTP 200. Preview is a Playwright capture of the encrypt UI, cropped to 3:2 WebP."
     },
     {
       "id": "3d-retro",
       "slug": "3d-retro",
       "title": "3d-retro：CC0 可整页粘贴的复古 3D 技巧博物馆",
       "titleEn": "3d-retro: CC0 museum of retro 3D tricks you can paste into a page",
-      "summary": "Show HN（item 49824144，2026-09-23 ~23:33Z，Algolia/HN 核对 3pts）https://3d-retro.com/ — 站点自称 31 个实验，每个可复制为单文件 HTML（WebGL 1 或 Canvas 2D），许可证 CC0 1.0（humans.txt / llms.txt）。含 Plasma、ASCII torus、Amiga Boing、Wolfenstein raycaster、palette fire 等；另有 /llms.txt 与 /api/v1/experiments 方便 Agent 拉取源码。公开页 HTTP 200。预览为 Playwright 实拍首页 Experiments 段裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49824144 (2026-09-23 ~23:33Z, 3pts on HN/Algolia at check time) at https://3d-retro.com/ — the site claims 31 experiments, each copyable as a single HTML file (WebGL 1 or Canvas 2D), licensed CC0 1.0 (humans.txt / llms.txt). Includes Plasma, ASCII torus, Amiga Boing, Wolfenstein raycaster, palette fire, and more; /llms.txt and /api/v1/experiments help agents fetch source. Public page HTTP 200. Preview is a Playwright capture of the homepage Experiments section, cropped to 3:2 WebP.",
+      "summary": "Show HN https://3d-retro.com/ — 站点自称 31 个实验，每个可复制为单文件 HTML（WebGL 1 或 Canvas 2D），许可证 CC0 1.0（humans.txt / llms.txt）。含 Plasma、ASCII torus、Amiga Boing、Wolfenstein raycaster、palette fire 等；另有 /llms.txt 与 /api/v1/experiments 方便 Agent 拉取源码。",
+      "summaryEn": "Includes Plasma, ASCII torus, Amiga Boing, Wolfenstein raycaster, palette fire, and more; /llms.txt and /api/v1/experiments help agents fetch source.",
       "sourceUrl": "https://3d-retro.com/",
       "secondaryUrls": [
         "https://3d-retro.com/llms.txt",
@@ -1874,16 +1874,16 @@
       "updatedAt": "2026-09-24T01:13:59Z",
       "hook": "可整页粘贴的复古立体技巧，每件都是一个文件。",
       "hookEn": "A museum of retro 3D tricks, each one a single file you can paste into a page.",
-      "verifyLog": "公开页 HTTP 200（2026-09-24）。Show HN item 49824144，核对 3pts。预览为 Playwright 实拍首页裁 3:2 WebP。",
-      "verifyLogEn": "Public page HTTP 200 (2026-09-24). Show HN item 49824144, 3pts at check time. Preview is a Playwright homepage capture cropped to 3:2 WebP."
+      "verifyLog": "公开页 HTTP 200（2026-09-24）。Show HN item 49824144，核对 3pts。预览为 Playwright 实拍首页裁 3:2 WebP。 （item 49824144，2026-09-23 ~23:33Z，Algolia/HN 核对 3pts） 公开页 HTTP 200。 预览为 Playwright 实拍首页 Experiments 段裁 3:2 WebP。",
+      "verifyLogEn": "Public page HTTP 200 (2026-09-24). Show HN item 49824144, 3pts at check time. Preview is a Playwright homepage capture cropped to 3:2 WebP. (2026-09-23 ~23:33Z, 3pts on HN/Algolia at check time) Show HN item 49824144   at https://3d-retro.com/ — the site claims 31 experiments, each copyable as a single HTML file (WebGL 1 or Canvas 2D), licensed CC0 1.0 (humans.txt / llms.txt). Public page HTTP 200. Preview is a Playwright capture of the homepage Experiments section, cropped to 3:2 WebP."
     },
     {
       "id": "fractalysis",
       "slug": "fractalysis",
       "title": "Fractalysis：浏览器里无限放大的 Mandelbrot 查看器",
       "titleEn": "Fractalysis: browser Mandelbrot viewer with infinite zoom",
-      "summary": "Show HN（item 49816840，2026-09-23 ~14:35Z，HN 核对 2pts / 6 评论）https://www.erwindegroot.nl/fractalysis/ — 作者称用扰动法与任意精度算术，在浏览器里放大到远超双精度的深度；纯前端、免账号。公开页 HTTP 200。预览为 Playwright 实拍首屏（Mandelbrot + Shadows 面板）裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49816840 (2026-09-23 ~14:35Z, 2pts / 6 comments on HN at check time) at https://www.erwindegroot.nl/fractalysis/ — the author says it uses perturbation and arbitrary-precision arithmetic to zoom far past double precision in the browser; client-side, no account. Public page HTTP 200. Preview is a Playwright above-the-fold capture (Mandelbrot + Shadows panel) cropped to 3:2 WebP.",
+      "summary": "Show HN https://www.erwindegroot.nl/fractalysis/ — 作者称用扰动法与任意精度算术，在浏览器里放大到远超双精度的深度；纯前端、免账号。",
+      "summaryEn": "client-side, no account.",
       "sourceUrl": "https://www.erwindegroot.nl/fractalysis/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49816840"
@@ -1908,16 +1908,16 @@
       "updatedAt": "2026-09-24T01:13:59Z",
       "hook": "在浏览器里把分形放大到普通精度之外。",
       "hookEn": "Zoom a fractal in the browser, far past ordinary precision.",
-      "verifyLog": "公开页 HTTP 200（2026-09-24）。Show HN item 49816840，核对 2pts。预览为 Playwright 实拍首屏裁 3:2 WebP（首屏 canvas 需短暂等待才有图）。",
-      "verifyLogEn": "Public page HTTP 200 (2026-09-24). Show HN item 49816840, 2pts at check time. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP (the canvas needs a short wait before it paints)."
+      "verifyLog": "公开页 HTTP 200（2026-09-24）。Show HN item 49816840，核对 2pts。预览为 Playwright 实拍首屏裁 3:2 WebP（首屏 canvas 需短暂等待才有图）。 （item 49816840，2026-09-23 ~14:35Z，HN 核对 2pts / 6 评论） 公开页 HTTP 200。 预览为 Playwright 实拍首屏（Mandelbrot + Shadows 面板）裁 3:2 WebP。",
+      "verifyLogEn": "Public page HTTP 200 (2026-09-24). Show HN item 49816840, 2pts at check time. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP (the canvas needs a short wait before it paints). (2026-09-23 ~14:35Z, 2pts / 6 comments on HN at check time) Show HN item 49816840   at https://www.erwindegroot.nl/fractalysis/ — the author says it uses perturbation and arbitrary-precision arithmetic to zoom far past double precision in the browser; Public page HTTP 200. Preview is a Playwright above-the-fold capture (Mandelbrot + Shadows panel) cropped to 3:2 WebP."
     },
     {
       "id": "simten-nand",
       "slug": "simten-nand",
       "title": "Simten NAND：在浏览器用 TypeScript 从门电路搭 CPU",
       "titleEn": "Simten NAND: build a CPU from gates in TypeScript in the browser",
-      "summary": "Show HN（item 49817114，2026-09-23 ~14:53Z，HN 核对 3pts）https://play.simten.dev/nand — Simten 的浏览器关卡：用 TypeScript HDL 接线，电路图随代码更新；站点称可导出 Verilog 上 FPGA。仓库 simtenHQ/simten 于 2026-09-24 gh api：Apache-2.0、18★。公开页写明桌面向（手机不适配）。官网与仓库均 HTTP 200。预览为 Playwright 实拍关卡页（含引导弹层）裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49817114 (2026-09-23 ~14:53Z, 3pts on HN at check time) at https://play.simten.dev/nand — a Simten browser level where you wire circuits in a TypeScript HDL and the diagram updates as you type; the site says you can export Verilog for FPGAs. Repo simtenHQ/simten on the 2026-09-24 gh api: Apache-2.0, 18★. The public page says it needs a desktop viewport. Site and repo both HTTP 200. Preview is a Playwright capture of the level page (onboarding modal visible) cropped to 3:2 WebP.",
+      "summary": "Show HN https://play.simten.dev/nand — Simten 的浏览器关卡：用 TypeScript HDL 接线，电路图随代码更新；站点称可导出 Verilog 上 FPGA。公开页写明桌面向（手机不适配）。",
+      "summaryEn": "the site says you can export Verilog for FPGAs. The public page says it needs a desktop viewport.",
       "sourceUrl": "https://play.simten.dev/nand",
       "secondaryUrls": [
         "https://simten.dev/",
@@ -1946,16 +1946,16 @@
       "updatedAt": "2026-09-24T01:13:59Z",
       "hook": "在浏览器用代码接线，从门电路搭起一台处理器。",
       "hookEn": "Wire gates in the browser and build a processor up from them.",
-      "verifyLog": "公开页与 GitHub 均 HTTP 200（2026-09-24）。gh api：Apache-2.0、18★。Show HN item 49817114，核对 3pts。预览为 Playwright 实拍关卡页裁 3:2 WebP。",
-      "verifyLogEn": "Site and GitHub both HTTP 200 (2026-09-24). gh api: Apache-2.0, 18★. Show HN item 49817114, 3pts at check time. Preview is a Playwright level-page capture cropped to 3:2 WebP."
+      "verifyLog": "公开页与 GitHub 均 HTTP 200（2026-09-24）。gh api：Apache-2.0、18★。Show HN item 49817114，核对 3pts。预览为 Playwright 实拍关卡页裁 3:2 WebP。 （item 49817114，2026-09-23 ~14:53Z，HN 核对 3pts） 仓库 simtenHQ/simten 于 2026-09-24 gh api：Apache-2.0、18★。 官网与仓库均 HTTP 200。 预览为 Playwright 实拍关卡页（含引导弹层）裁 3:2 WebP。",
+      "verifyLogEn": "Site and GitHub both HTTP 200 (2026-09-24). gh api: Apache-2.0, 18★. Show HN item 49817114, 3pts at check time. Preview is a Playwright level-page capture cropped to 3:2 WebP. (2026-09-23 ~14:53Z, 3pts on HN at check time) Show HN item 49817114   at https://play.simten.dev/nand — a Simten browser level where you wire circuits in a TypeScript HDL and the diagram updates as you type; Repo simtenHQ/simten on the 2026-09-24 gh api: Apache-2.0, 18★. Site and repo both HTTP 200. Preview is a Playwright capture of the level page (onboarding modal visible) cropped to 3:2 WebP."
     },
     {
       "id": "lineselect",
       "slug": "lineselect",
       "title": "lineselect：管道里交互勾选 stdin 行",
       "titleEn": "lineselect: interactively pick lines from stdin in a pipeline",
-      "summary": "Show HN（item 49813195，2026-09-23 ~08:33Z，Algolia 核对 2pts）https://urbanogilson.github.io/lineselect/ — MIT Rust CLI，插在管道中间：方向键移动，Space 勾选或取消 stdin 行，Enter 把选中行交给下一条命令（页上示例 `ls | lineselect | xargs rm`）。安装走文档页的 install.sh，可钉版本 0.2.3。GitHub urbanogilson/lineselect 于 2026-09-23 gh api：MIT、74★。crates.io API 核到同名 crate 0.2.3、license MIT；本环境打开 crates.io HTML 返回 404。文档页与仓库均 HTTP 200。预览为 Playwright 实拍 GH Pages 文档页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49813195 (2026-09-23 ~08:33Z, 2pts on Algolia at check time) at https://urbanogilson.github.io/lineselect/ — an MIT Rust CLI that sits in a pipeline: arrow keys move, Space selects or clears stdin lines, Enter passes the chosen lines to the next command (the page’s example is `ls | lineselect | xargs rm`). Install is the docs page’s install.sh, and 0.2.3 can be pinned. GitHub urbanogilson/lineselect on the 2026-09-23 gh api: MIT, 74★. The crates.io API shows crate lineselect 0.2.3 with license MIT; the crates.io HTML page returned 404 from this environment. Docs page and repo both HTTP 200. Preview is a Playwright capture of the GH Pages docs, cropped to 3:2 WebP.",
+      "summary": "Show HN https://urbanogilson.github.io/lineselect/ — MIT Rust CLI，插在管道中间：方向键移动，Space 勾选或取消 stdin 行，Enter 把选中行交给下一条命令（页上示例 `ls | lineselect | xargs rm`）。安装走文档页的 install.sh，可钉版本 0.2.3。crates.io API 核到同名 crate 0.2.3、license MIT；本环境打开 crates.io HTML 返回 404。",
+      "summaryEn": "Install is the docs page’s install.sh, and 0.2.3 can be pinned. The crates.io API shows crate lineselect 0.2.3 with license MIT; the crates.io HTML page returned 404 from this environment.",
       "sourceUrl": "https://urbanogilson.github.io/lineselect/",
       "secondaryUrls": [
         "https://github.com/urbanogilson/lineselect",
@@ -1981,16 +1981,16 @@
       "updatedAt": "2026-09-23T12:28:44Z",
       "hook": "在管道里用键盘勾选行，再交给下一条命令。",
       "hookEn": "Pick lines from a pipeline with the keyboard, then pass them on.",
-      "verifyLog": "公开文档页与 GitHub 均 HTTP 200（2026-09-23）。gh api：MIT、74★。Show HN item 49813195，Algolia 核对 2pts。预览为 Playwright 实拍 GH Pages 裁 3:2 WebP。",
-      "verifyLogEn": "Public docs page and GitHub both HTTP 200 (2026-09-23). gh api: MIT, 74★. Show HN item 49813195, 2pts on Algolia at check time. Preview is a Playwright capture of the GH Pages, cropped to 3:2 WebP."
+      "verifyLog": "公开文档页与 GitHub 均 HTTP 200（2026-09-23）。gh api：MIT、74★。Show HN item 49813195，Algolia 核对 2pts。预览为 Playwright 实拍 GH Pages 裁 3:2 WebP。 （item 49813195，2026-09-23 ~08:33Z，Algolia 核对 2pts） GitHub urbanogilson/lineselect 于 2026-09-23 gh api：MIT、74★。 文档页与仓库均 HTTP 200。 预览为 Playwright 实拍 GH Pages 文档页裁 3:2 WebP。",
+      "verifyLogEn": "Public docs page and GitHub both HTTP 200 (2026-09-23). gh api: MIT, 74★. Show HN item 49813195, 2pts on Algolia at check time. Preview is a Playwright capture of the GH Pages, cropped to 3:2 WebP. (2026-09-23 ~08:33Z, 2pts on Algolia at check time) Show HN item 49813195   at https://urbanogilson.github.io/lineselect/ — an MIT Rust CLI that sits in a pipeline: arrow keys move, Space selects or clears stdin lines, Enter passes the chosen lines to the next command (the page’s example is `ls | lineselect | xargs rm`). GitHub urbanogilson/lineselect on the 2026-09-23 gh api: MIT, 74★. Docs page and repo both HTTP 200. Preview is a Playwright capture of the GH Pages docs, cropped to 3:2 WebP."
     },
     {
       "id": "ondevice-tools",
       "slug": "ondevice-tools",
       "title": "OnDevice Tools：64 个纯浏览器工具（不上传）",
       "titleEn": "OnDevice Tools: 64 browser utilities that never upload your data",
-      "summary": "Show HN（item 49813705，2026-09-23 ~09:57Z，Algolia 核对 1pt）https://ondevice-tools.org/ — 站点标题与 README 自称 64 个浏览器工具（JSON / JWT / PDF / 图片等），处理在本地、不上传。首页分类计数 15+11+9+4+6+2+6+7+4 与 64 一致。GitHub priyabrataeee/ondevice-tools 于 2026-09-23 gh api：AGPL-3.0；仓库一句话描述仍写 63。页面含展示广告与 gtag；README 写明广告资助、会记录浏览并设置广告 cookie，同时称放入工具的内容没有接收服务器。本库未逐工具抓包。官网与仓库均 HTTP 200。预览为 Playwright 实拍首页裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49813705 (2026-09-23 ~09:57Z, 1pt on Algolia at check time) at https://ondevice-tools.org/ — the site title and README claim 64 browser tools (JSON / JWT / PDF / images, and more) that process locally and do not upload. Homepage category counts 15+11+9+4+6+2+6+7+4 add up to 64. GitHub priyabrataeee/ondevice-tools on the 2026-09-23 gh api: AGPL-3.0; the repo’s one-line description still says 63. The page includes display ads and gtag; the README says the site is ad-funded, measures page views, and sets ad cookies, while claiming tool contents have no server that could receive them. This library did not packet-capture each tool. Site and repo both HTTP 200. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP.",
+      "summary": "Show HN https://ondevice-tools.org/ — 站点标题与 README 自称 64 个浏览器工具（JSON / JWT / PDF / 图片等），处理在本地、不上传。首页分类计数 15+11+9+4+6+2+6+7+4 与 64 一致。仓库一句话描述仍写 63。页面含展示广告与 gtag；README 写明广告资助、会记录浏览并设置广告 cookie，同时称放入工具的内容没有接收服务器。本库未逐工具抓包。",
+      "summaryEn": "Homepage category counts 15+11+9+4+6+2+6+7+4 add up to 64. the repo’s one-line description still says 63. The page includes display ads and gtag; the README says the site is ad-funded, measures page views, and sets ad cookies, while claiming tool contents have no server that could receive them. This library did not packet-capture each tool.",
       "sourceUrl": "https://ondevice-tools.org/",
       "secondaryUrls": [
         "https://github.com/priyabrataeee/ondevice-tools",
@@ -2016,16 +2016,16 @@
       "updatedAt": "2026-09-23T12:28:44Z",
       "hook": "64 个纯浏览器工具，数据留在本地、不上传。",
       "hookEn": "64 browser tools that keep your data on-device and never upload it.",
-      "verifyLog": "官网与 GitHub 均 HTTP 200（2026-09-23）。gh api license 为 AGPL-3.0。Show HN item 49813705，Algolia 核对 1pt。64 为站点与 README 自称，首页分类数加总一致；gh api 的 description 仍是 63，不混成一个数字。预览为 Playwright 实拍首页裁 3:2 WebP。",
-      "verifyLogEn": "Site and GitHub both HTTP 200 (2026-09-23). gh api license is AGPL-3.0. Show HN item 49813705, 1pt on Algolia at check time. 64 is the site and README claim, and the homepage category counts add up to it; the gh api description still says 63, so the two figures are not collapsed. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP."
+      "verifyLog": "官网与 GitHub 均 HTTP 200（2026-09-23）。gh api license 为 AGPL-3.0。Show HN item 49813705，Algolia 核对 1pt。64 为站点与 README 自称，首页分类数加总一致；gh api 的 description 仍是 63，不混成一个数字。预览为 Playwright 实拍首页裁 3:2 WebP。 （item 49813705，2026-09-23 ~09:57Z，Algolia 核对 1pt） GitHub priyabrataeee/ondevice-tools 于 2026-09-23 gh api：AGPL-3.0； 官网与仓库均 HTTP 200。 预览为 Playwright 实拍首页裁 3:2 WebP。",
+      "verifyLogEn": "Site and GitHub both HTTP 200 (2026-09-23). gh api license is AGPL-3.0. Show HN item 49813705, 1pt on Algolia at check time. 64 is the site and README claim, and the homepage category counts add up to it; the gh api description still says 63, so the two figures are not collapsed. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP. (2026-09-23 ~09:57Z, 1pt on Algolia at check time) Show HN item 49813705   at https://ondevice-tools.org/ — the site title and README claim 64 browser tools (JSON / JWT / PDF / images, and more) that process locally and do not upload. GitHub priyabrataeee/ondevice-tools on the 2026-09-23 gh api: AGPL-3.0; Site and repo both HTTP 200. Preview is a Playwright capture of the homepage, cropped to 3:2 WebP."
     },
     {
       "id": "runboli-halo-guardian",
       "slug": "runboli-halo-guardian",
       "title": "runboli.com：把 Halo 3 Guardian 做成可逛的个人站",
       "titleEn": "runboli.com: Halo 3 Guardian as an explorable personal site",
-      "summary": "HN（item 49732259，2026-09-16，28pts）https://runboli.com/ — 作者把 Halo 3 主菜单/大厅/Guardian 地图做成浏览器可逛个人站：WASD+鼠标，无注册；地图里藏照片、故事、任务与小游戏。非商业粉丝项目。公开页 200；预览为 Playwright 实拍主菜单首屏裁 3:2 WebP（头less 下 3D 场景可能略简）。",
-      "summaryEn": "HN item 49732259 (2026-09-16, 28pts) at https://runboli.com/ — the author rebuilt the Halo 3 main menu / lobby / Guardian map as an explorable personal site in the browser (WASD + mouse, no signup) with photos, stories, quests, and mini-games hidden in the map. Unofficial non-commercial fan project. Public page 200; preview is a Playwright main-menu capture cropped to 3:2 WebP (3D may simplify headless).",
+      "summary": "HN https://runboli.com/ — 作者把 Halo 3 主菜单/大厅/Guardian 地图做成浏览器可逛个人站：WASD+鼠标，无注册；地图里藏照片、故事、任务与小游戏。非商业粉丝项目。公开页 200。",
+      "summaryEn": "Unofficial non-commercial fan project. Public page 200.",
       "sourceUrl": "https://runboli.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49732259"
@@ -2050,16 +2050,16 @@
       "updatedAt": "2026-09-23T01:25:00Z",
       "hook": "把 Halo 3 大厅做成可逛的个人站，藏着照片和小游戏。",
       "hookEn": "Walk Halo 3's lobby as a personal site, with photos and mini-games tucked in.",
-      "verifyLog": "公开页 HTTP 200（2026-09-23）。HN item 49732259。预览为 Playwright 实拍主菜单裁 3:2 WebP。",
-      "verifyLogEn": "Public page HTTP 200 (2026-09-23). HN item 49732259. Preview is a Playwright main-menu capture cropped to 3:2 WebP."
+      "verifyLog": "公开页 HTTP 200（2026-09-23）。HN item 49732259。预览为 Playwright 实拍主菜单裁 3:2 WebP。 （item 49732259，2026-09-16，28pts） 预览为 Playwright 实拍主菜单首屏裁 3:2 WebP（头less 下 3D 场景可能略简）。",
+      "verifyLogEn": "Public page HTTP 200 (2026-09-23). HN item 49732259. Preview is a Playwright main-menu capture cropped to 3:2 WebP. (2026-09-16, 28pts) HN item 49732259   at https://runboli.com/ — the author rebuilt the Halo 3 main menu / lobby / Guardian map as an explorable personal site in the browser (WASD + mouse, no signup) with photos, stories, quests, and mini-games hidden in the map. preview is a Playwright main-menu capture cropped to 3:2 WebP (3D may simplify headless)."
     },
     {
       "id": "gpu-lexer",
       "slug": "gpu-lexer",
       "title": "gpu-lexer：约 27KB 的语言无关 WebGPU 语法高亮",
       "titleEn": "gpu-lexer: ~27KB language-agnostic WebGPU syntax highlighter",
-      "summary": "HN（item 49619464，2026-09-09，121pts）https://gpu-lexer.vercel.app/ — Vercel Labs Shu Ding：先把源码切成词/空白/符号，再用极小 WebGPU 模型结合局部与全文上下文打标签；宣称对未见过的语言也能猜类型，并支持 HTML/Vue/Svelte 内嵌 script/style。站点自述为实验，以与 Shiki 标签一致率衡量（文中约 83%），非语法等价高亮器。公开页 200；预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN item 49619464 (2026-09-09, 121pts) at https://gpu-lexer.vercel.app/ — Vercel Labs (Shu Ding): tokenize into words/whitespace/symbols, then a tiny WebGPU model labels spans from local + whole-file context; claims it can guess types for unseen languages and mixed HTML/Vue/Svelte script/style regions. Site frames it as an experiment scored by Shiki label agreement (~83% in copy), not a grammar-equivalent highlighter. Public page 200; preview is a Playwright above-the-fold capture cropped to 3:2 WebP.",
+      "summary": "HN https://gpu-lexer.vercel.app/ — Vercel Labs Shu Ding：先把源码切成词/空白/符号，再用极小 WebGPU 模型结合局部与全文上下文打标签；宣称对未见过的语言也能猜类型，并支持 HTML/Vue/Svelte 内嵌 script/style。站点自述为实验，以与 Shiki 标签一致率衡量（文中约 83%），非语法等价高亮器。公开页 200。",
+      "summaryEn": "claims it can guess types for unseen languages and mixed HTML/Vue/Svelte script/style regions. Site frames it as an experiment scored by Shiki label agreement (~83% in copy), not a grammar-equivalent highlighter. Public page 200.",
       "sourceUrl": "https://gpu-lexer.vercel.app/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49619464"
@@ -2084,16 +2084,16 @@
       "updatedAt": "2026-09-23T01:25:00Z",
       "hook": "语言无关的 WebGPU 高亮，没见过的语言也能猜类型。",
       "hookEn": "A language-agnostic WebGPU highlighter that guesses unseen languages.",
-      "verifyLog": "公开演示页 HTTP 200（2026-09-23）。HN item 49619464。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Demo page HTTP 200 (2026-09-23). HN item 49619464. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP."
+      "verifyLog": "公开演示页 HTTP 200（2026-09-23）。HN item 49619464。预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49619464，2026-09-09，121pts） 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "Demo page HTTP 200 (2026-09-23). HN item 49619464. Preview is a Playwright above-the-fold capture cropped to 3:2 WebP. (2026-09-09, 121pts) HN item 49619464   at https://gpu-lexer.vercel.app/ — Vercel Labs (Shu Ding): tokenize into words/whitespace/symbols, then a tiny WebGPU model labels spans from local + whole-file context; preview is a Playwright above-the-fold capture cropped to 3:2 WebP."
     },
     {
       "id": "webgcm",
       "slug": "webgcm",
       "title": "WebGCM：浏览器里跑的全球气候模型（WebGPU）",
       "titleEn": "WebGCM: a global climate model in the browser (WebGPU)",
-      "summary": "Show HN（item 49793545，2026-09-22）https://gcm.echorelay.net/ — 作者称多年打造的浏览器全球气候模型：静力大气 27 层、测地线 C 网格，含湿对流/云、风驱两层海洋、海冰/雪/土壤；内核走 WebGPU，无 WebGPU 时回退较慢 CPU；起始状态约 50 MB 下载；建议 Chrome / Edge / Safari 26。互动模型页 https://gcm.echorelay.net/climate。公开落地页与气候页均核到 HTTP 200；仓库 jlhawn/geodesic。预览为 Playwright 实拍落地页首屏裁 3:2 WebP（头less 下 WebGPU 画布可能空白时改拍营销页）。",
-      "summaryEn": "Show HN item 49793545 (2026-09-22) at https://gcm.echorelay.net/ — author notes a multi-year build of a browser global climate model: hydrostatic atmosphere with 27 levels on a geodesic C-grid, moist convection/clouds, a wind-driven two-layer ocean, sea ice/snow/soil; kernels on WebGPU with a slower CPU fallback; starting state ~50 MB download; best in Chrome / Edge / Safari 26. Interactive model: https://gcm.echorelay.net/climate. Landing and climate pages both verified HTTP 200; repo jlhawn/geodesic. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP (falls back to marketing/globe imagery if the WebGPU canvas is blank headless).",
+      "summary": "Show HN https://gcm.echorelay.net/ — 作者称多年打造的浏览器全球气候模型：静力大气 27 层、测地线 C 网格，含湿对流/云、风驱两层海洋、海冰/雪/土壤；内核走 WebGPU，无 WebGPU 时回退较慢 CPU；起始状态约 50 MB 下载；建议 Chrome / Edge / Safari 26。互动模型页 https://gcm.echorelay.net/climate。仓库 jlhawn/geodesic。",
+      "summaryEn": "kernels on WebGPU with a slower CPU fallback; starting state ~50 MB download; best in Chrome / Edge / Safari 26. Interactive model: https://gcm.echorelay.net/climate. repo jlhawn/geodesic.",
       "sourceUrl": "https://gcm.echorelay.net/",
       "secondaryUrls": [
         "https://github.com/jlhawn/geodesic",
@@ -2119,16 +2119,16 @@
       "updatedAt": "2026-09-22T12:30:00Z",
       "hook": "在浏览器里跑的全球气候模型，大气和海洋都在。",
       "hookEn": "A global climate model in the browser, atmosphere and ocean together.",
-      "verifyLog": "Show HN（item 49793545）：作者自述多年打造的教育向浏览器气候玩具/演示，站点文案列出大气层、网格、海洋与 WebGPU/CPU 回退等实现细节——一律为作者自述；本库不声称科学精度超出作者的教育玩具框架。预览为 Playwright 实拍落地页首屏裁 3:2 WebP。",
-      "verifyLogEn": "Show HN item 49793545: the author describes a multi-year educational browser climate toy/demo; site copy lists atmosphere levels, grid, ocean, and WebGPU/CPU fallback details — all author claims. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP."
+      "verifyLog": "Show HN（item 49793545）：作者自述多年打造的教育向浏览器气候玩具/演示，站点文案列出大气层、网格、海洋与 WebGPU/CPU 回退等实现细节——一律为作者自述；本库不声称科学精度超出作者的教育玩具框架。预览为 Playwright 实拍落地页首屏裁 3:2 WebP。 （item 49793545，2026-09-22） 公开落地页与气候页均核到 HTTP 200； 预览为 Playwright 实拍落地页首屏裁 3:2 WebP（头less 下 WebGPU 画布可能空白时改拍营销页）。",
+      "verifyLogEn": "Show HN item 49793545: the author describes a multi-year educational browser climate toy/demo; site copy lists atmosphere levels, grid, ocean, and WebGPU/CPU fallback details — all author claims. Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP. Show HN item 49793545 (2026-09-22) at https://gcm.echorelay.net/ — author notes a multi-year build of a browser global climate model: hydrostatic atmosphere with 27 levels on a geodesic C-grid, moist convection/clouds, a wind-driven two-layer ocean, sea ice/snow/soil; Landing and climate pages both verified HTTP 200; Preview is a Playwright capture of the landing above the fold cropped to 3:2 WebP (falls back to marketing/globe imagery if the WebGPU canvas is blank headless)."
     },
     {
       "id": "system-design-atlas",
       "slug": "system-design-atlas",
       "title": "System Design Atlas：带交互架构图的系统设计阅读站",
       "titleEn": "System Design Atlas: system-design reading with interactive architecture diagrams",
-      "summary": "HN（item 49799241，2026-09-22）https://atlas-sysdes.vercel.app/ — 系统设计阅读站：概念模块、技术页，以及带交互架构图的完整设计文档；GitHub mertkahyaoglu/atlas（MIT）描述与主页一致。公开页与仓库均核到可达；预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN item 49799241 (2026-09-22) at https://atlas-sysdes.vercel.app/ — a system-design reading site with concept modules, technology pages, and worked designs that include interactive architecture diagrams; GitHub mertkahyaoglu/atlas (MIT) matches the homepage description. Public page and repo verified reachable; preview is a Playwright capture cropped to 3:2 WebP.",
+      "summary": "HN https://atlas-sysdes.vercel.app/ — 系统设计阅读站：概念模块、技术页，以及带交互架构图的完整设计文档；GitHub mertkahyaoglu/atlas（MIT）描述与主页一致。公开页与仓库均核到可达。",
+      "summaryEn": "GitHub mertkahyaoglu/atlas (MIT) matches the homepage description. Public page and repo verified reachable.",
       "sourceUrl": "https://atlas-sysdes.vercel.app/",
       "secondaryUrls": [
         "https://github.com/mertkahyaoglu/atlas",
@@ -2153,16 +2153,16 @@
       "updatedAt": "2026-09-22T12:30:00Z",
       "hook": "系统设计阅读站，点开文档就能看架构图。",
       "hookEn": "Read system-design notes and click through the architecture diagrams.",
-      "verifyLog": "HN item 49799241。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "HN item 49799241. Preview is a Playwright capture cropped to 3:2 WebP."
+      "verifyLog": "HN item 49799241。预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49799241，2026-09-22） 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "HN item 49799241. Preview is a Playwright capture cropped to 3:2 WebP. HN item 49799241 (2026-09-22) at https://atlas-sysdes.vercel.app/ — a system-design reading site with concept modules, technology pages, and worked designs that include interactive architecture diagrams; preview is a Playwright capture cropped to 3:2 WebP."
     },
     {
       "id": "transformer-explainer",
       "slug": "transformer-explainer",
       "title": "Transformer Explainer：浏览器里可视化 GPT-2 Transformer",
       "titleEn": "Transformer Explainer: GPT-2 Transformer visualized in the browser",
-      "summary": "HN 首页帖（item 49792342，2026-09-21→22）https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club 开源互动页：浏览器内跑 GPT-2 small（ONNX），可改输入、温度、Top-k/Top-p，并展开 Embedding / Multi-Head Attention / MLP / 输出概率。公开页与 GitHub（MIT）已核验；预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "summaryEn": "HN front-page item 49792342 (2026-09-21→22) at https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club’s open interactive page: GPT-2 small runs in-browser via ONNX; tweak input, temperature, Top-k/Top-p, and expand Embedding / Multi-Head Attention / MLP / output probabilities. Public page and GitHub (MIT) verified; preview is a Playwright capture cropped to 3:2 WebP.",
+      "summary": "HN 首页帖 https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club 开源互动页：浏览器内跑 GPT-2 small（ONNX），可改输入、温度、Top-k/Top-p，并展开 Embedding / Multi-Head Attention / MLP / 输出概率。公开页与 GitHub（MIT）已核验。",
+      "summaryEn": "tweak input, temperature, Top-k/Top-p, and expand Embedding / Multi-Head Attention / MLP / output probabilities. Public page and GitHub (MIT) verified.",
       "sourceUrl": "https://poloclub.github.io/transformer-explainer/",
       "secondaryUrls": [
         "https://github.com/poloclub/transformer-explainer",
@@ -2189,16 +2189,16 @@
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "在浏览器里跑 GPT-2，并能展开注意力和概率。",
       "hookEn": "Run GPT-2 in the browser and open attention and the probabilities.",
-      "verifyLog": "HN 首页条目（item 49792342）：浏览器内 GPT-2 small + 可交互注意力图；仓库 MIT。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "HN front-page item 49792342: in-browser GPT-2 small with interactive attention maps; repo MIT. Preview is a Playwright capture cropped to 3:2 WebP."
+      "verifyLog": "HN 首页条目（item 49792342）：浏览器内 GPT-2 small + 可交互注意力图；仓库 MIT。预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49792342，2026-09-21→22） 预览为 Playwright 实拍首屏裁 3:2 WebP。",
+      "verifyLogEn": "HN front-page item 49792342: in-browser GPT-2 small with interactive attention maps; repo MIT. Preview is a Playwright capture cropped to 3:2 WebP. HN front-page item 49792342 (2026-09-21→22) at https://poloclub.github.io/transformer-explainer/ — Georgia Tech Polo Club’s open interactive page: GPT-2 small runs in-browser via ONNX; preview is a Playwright capture cropped to 3:2 WebP."
     },
     {
       "id": "geojson-viewer",
       "slug": "geojson-viewer",
       "title": "GeoJSON Viewer：粘贴校验并画地图",
       "titleEn": "GeoJSON Viewer: paste, validate, and draw on a map",
-      "summary": "Show HN（item 49784845，2026-09-21）https://9revolution9.com/tools/geo/geojson-viewer — 浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验（闭合环、右手定则、经纬范围、声明 bbox 是否包住数据），错误不画图、警告仍可画；公开页已核实 HTTP 200；解析/校验/渲染均本地，不上传。",
-      "summaryEn": "Show HN item 49784845 (2026-09-21) at https://9revolution9.com/tools/geo/geojson-viewer — paste GeoJSON in-browser and validate against RFC 7946 (closed rings, right-hand rule, lon/lat ranges, declared bbox containment); errors clear the map, warnings still draw; public page verified HTTP 200; parse/validate/render stay local with no upload.",
+      "summary": "Show HN https://9revolution9.com/tools/geo/geojson-viewer — 浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验（闭合环、右手定则、经纬范围、声明 bbox 是否包住数据），错误不画图、警告仍可画；解析/校验/渲染均本地，不上传。",
+      "summaryEn": "errors clear the map, warnings still draw; parse/validate/render stay local with no upload.",
       "sourceUrl": "https://9revolution9.com/tools/geo/geojson-viewer",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49784845"
@@ -2224,16 +2224,16 @@
       "updatedAt": "2026-09-21T12:24:00Z",
       "hook": "粘贴 GeoJSON，校验过再画上地图，全程不上传。",
       "hookEn": "Paste GeoJSON, validate it, and draw the map without uploading.",
-      "verifyLog": "Show HN 当日条目（item 49784845）：浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验；解析/校验/渲染均本地、不上传，是本库 HTML 分区可用的免费 GIS/开发工具。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Same-day Show HN (item 49784845): paste GeoJSON in-browser and validate against RFC 7946; parse/validate/render stay local with no upload — a useful free GIS/dev tool for the HTML board. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "Show HN 当日条目（item 49784845）：浏览器内粘贴 GeoJSON，按 RFC 7946 做语法+语义校验；解析/校验/渲染均本地、不上传，是本库 HTML 分区可用的免费 GIS/开发工具。预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49784845，2026-09-21） 公开页已核实 HTTP 200；",
+      "verifyLogEn": "Same-day Show HN (item 49784845): paste GeoJSON in-browser and validate against RFC 7946; parse/validate/render stay local with no upload — a useful free GIS/dev tool for the HTML board. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49784845 (2026-09-21) at https://9revolution9.com/tools/geo/geojson-viewer — paste GeoJSON in-browser and validate against RFC 7946 (closed rings, right-hand rule, lon/lat ranges, declared bbox containment); public page verified HTTP 200;"
     },
     {
       "id": "gsb-revenue-trivia",
       "slug": "gsb-revenue-trivia",
       "title": "GSB：按营收排金银铜的商业 trivia",
       "titleEn": "GSB: rank four companies by revenue (Gold Silver Bronze)",
-      "summary": "Show HN（item 49785777，2026-09-21）https://playgsb.com/ — 浏览器商业 trivia：读当年标题，把 4 家公司按单年营收从高到低排成金/银/铜，3 次机会；站点自述免费、周一/三/五出新题、可查 archive；公开页已核实 HTTP 200。",
-      "summaryEn": "Show HN item 49785777 (2026-09-21) at https://playgsb.com/ — browser business trivia: read period headlines and rank four companies by single-year revenue Gold→Silver→Bronze with three tries; site says free, new puzzles Mon/Wed/Fri, archive available; public page verified HTTP 200.",
+      "summary": "Show HN https://playgsb.com/ — 浏览器商业 trivia：读当年标题，把 4 家公司按单年营收从高到低排成金/银/铜，3 次机会；站点自述免费、周一/三/五出新题、可查 archive。",
+      "summaryEn": "site says free, new puzzles Mon/Wed/Fri, archive available.",
       "sourceUrl": "https://playgsb.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49785777"
@@ -2258,16 +2258,16 @@
       "updatedAt": "2026-09-21T12:24:00Z",
       "hook": "读当年的标题，按营收给公司排成金、银、铜。",
       "hookEn": "Read the year's headlines and rank companies by revenue.",
-      "verifyLog": "Show HN 当日晚间补收（item 49785777）：纯浏览器商业 trivia 小游戏，站点自述免费。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Evening catch of same-day Show HN (item 49785777): a pure browser business trivia game; the site says it is free to play. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "Show HN 当日晚间补收（item 49785777）：纯浏览器商业 trivia 小游戏，站点自述免费。预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49785777，2026-09-21） 公开页已核实 HTTP 200。",
+      "verifyLogEn": "Evening catch of same-day Show HN (item 49785777): a pure browser business trivia game; the site says it is free to play. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49785777 (2026-09-21) at https://playgsb.com/ — browser business trivia: read period headlines and rank four companies by single-year revenue Gold→Silver→Bronze with three tries; public page verified HTTP 200."
     },
     {
       "id": "ai-event-posters",
       "slug": "ai-event-posters",
       "title": "AI 活动海报：别让生成图难看",
       "titleEn": "AI-generated posters don’t have to be horrible",
-      "summary": "John Hartnup 的实操长文（2026-06-07）：从 Facebook 上那批千篇一律的 AI 村集海报出发，用同一份虚构活动信息让 ChatGPT 反复出图——先要求「避开粉彩 / 喷绘 / 人像」，再让它自选完全不同的设计方向，并把 Bauhaus、Swiss Style、Risograph、Matisse 剪纸等风格名整理成可直接抄的提示词菜单；结论是 AI 海报难看在于默认模板重复，而不是模型做不到。HN item 49764791 于 2026-09-20 冲到约 1600+ 分。",
-      "summaryEn": "John Hartnup’s hands-on essay (2026-06-07): starting from the now-infamous batch of identikit AI village-fayre posters on Facebook, he feeds ChatGPT the same invented event details and iterates — first “avoid pastel / airbrush / people,” then asking it to pick a completely different aesthetic — and ends up with a copyable menu of named styles (Bauhaus, Swiss Style, Risograph, Matisse cut-paper, …). Takeaway: AI posters look bad because the default template repeats, not because the model can’t do better. HN item 49764791 hit ~1,600+ points on 2026-09-20.",
+      "summary": "John Hartnup 的实操长文（2026-06-07）：从 Facebook 上那批千篇一律的 AI 村集海报出发，用同一份虚构活动信息让 ChatGPT 反复出图——先要求「避开粉彩 / 喷绘 / 人像」，再让它自选完全不同的设计方向，并把 Bauhaus、Swiss Style、Risograph、Matisse 剪纸等风格名整理成可直接抄的提示词菜单；结论是 AI 海报难看在于默认模板重复，而不是模型做不到。",
+      "summaryEn": "John Hartnup’s hands-on essay (2026-06-07): starting from the now-infamous batch of identikit AI village-fayre posters on Facebook, he feeds ChatGPT the same invented event details and iterates — first “avoid pastel / airbrush / people,” then asking it to pick a completely different aesthetic — and ends up with a copyable menu of named styles (Bauhaus, Swiss Style, Risograph, Matisse cut-paper, …). Takeaway: AI posters look bad because the default template repeats, not because the model can’t do better.",
       "sourceUrl": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49764791"
@@ -2291,16 +2291,16 @@
       "updatedAt": "2026-09-20T12:20:00Z",
       "hook": "同一张活动海报反复改风格，躲开千篇一律的默认样子。",
       "hookEn": "Restyle one event poster so it stops looking like the default.",
-      "verifyLog": "HN 当日热帖（标题「AI-generated posters don’t have to be horrible」，item 49764791，非 Show HN，故标 show-hn-adjacent）：一篇静态 HTML 长文，逐轮贴出提示词与生成图，风格清单可直接拿去改自己的活动海报，是本库 HTML 分区里少见的「设计方法 + 可抄提示词」文档页。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Same-day HN front-page hit (“AI-generated posters don’t have to be horrible”, item 49764791 — not a Show HN, hence the show-hn-adjacent tag): a static HTML essay that shows each prompt round next to its generated poster, with a style list you can lift straight into your own event poster — a rare “design method + copyable prompts” docs page for the HTML library. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "HN 当日热帖（标题「AI-generated posters don’t have to be horrible」，item 49764791，非 Show HN，故标 show-hn-adjacent）：一篇静态 HTML 长文，逐轮贴出提示词与生成图，风格清单可直接拿去改自己的活动海报，是本库 HTML 分区里少见的「设计方法 + 可抄提示词」文档页。预览为 Playwright 实拍首屏裁 3:2 WebP。 HN item 49764791 于 2026-09-20 冲到约 1600+ 分。",
+      "verifyLogEn": "Same-day HN front-page hit (“AI-generated posters don’t have to be horrible”, item 49764791 — not a Show HN, hence the show-hn-adjacent tag): a static HTML essay that shows each prompt round next to its generated poster, with a style list you can lift straight into your own event poster — a rare “design method + copyable prompts” docs page for the HTML library. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. HN item 49764791 hit ~1,600+ points on 2026-09-20."
     },
     {
       "id": "sparse-snn-demo",
       "slug": "sparse-snn-demo",
       "title": "Sparse-SNN：浏览器里的类脑脉冲网络",
       "titleEn": "Sparse-SNN: connectome-inspired spiking network in the browser",
-      "summary": "AwareLiquid 的 HF Space 静态演示：在画板上手写数字（MNIST）或选 Fashion 模式，由一个 5% 连接密度、LIF 神经元、掩码取自果蝇连接组统计的稀疏脉冲神经网络在浏览器内识别（ONNX Runtime Web，纯客户端）。页面自述每帧只有约 8% 神经元发放、每次脉冲是加法而非乘加，并给出「约 112× 估算节能」；同页「Honest boundaries」标明是研究产物、与稠密 MLP 有 1.5 / 0.5 分差距、能耗为解析估算非实测。Show HN item 49770006。",
-      "summaryEn": "AwareLiquid’s static HF Space demo: draw a digit (MNIST) or switch to Fashion mode and a sparse spiking neural network — 5% connection density, LIF neurons, masks drawn from Drosophila connectome statistics — classifies it in the browser via ONNX Runtime Web, fully client-side. The page says only ~8% of neurons spike per frame, each spike is an add rather than a multiply-accumulate, and claims a “~112× estimated energy saving”; its own “Honest boundaries” block calls it a research artifact with a 1.5 / 0.5-point gap to a dense MLP and analytic (not measured) energy figures. Show HN item 49770006.",
+      "summary": "AwareLiquid 的 HF Space 静态演示：在画板上手写数字（MNIST）或选 Fashion 模式，由一个 5% 连接密度、LIF 神经元、掩码取自果蝇连接组统计的稀疏脉冲神经网络在浏览器内识别（ONNX Runtime Web，纯客户端）。页面自述每帧只有约 8% 神经元发放、每次脉冲是加法而非乘加，并给出「约 112× 估算节能」；同页「Honest boundaries」标明是研究产物、与稠密 MLP 有 1.5 / 0.5 分差距、能耗为解析估算非实测。",
+      "summaryEn": "AwareLiquid’s static HF Space demo: draw a digit (MNIST) or switch to Fashion mode and a sparse spiking neural network — 5% connection density, LIF neurons, masks drawn from Drosophila connectome statistics — classifies it in the browser via ONNX Runtime Web, fully client-side. The page says only ~8% of neurons spike per frame, each spike is an add rather than a multiply-accumulate, and claims a “~112× estimated energy saving”; its own “Honest boundaries” block calls it a research artifact with a 1.5 / 0.5-point gap to a dense MLP and analytic (not measured) energy figures.",
       "sourceUrl": "https://awareliquid-sparse-snn-demo.static.hf.space/index.html",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49770006",
@@ -2326,16 +2326,16 @@
       "updatedAt": "2026-09-20T12:20:00Z",
       "hook": "在画板上写数字，让浏览器里的脉冲网络来认。",
       "hookEn": "Draw a digit and let an in-browser spiking network classify it.",
-      "verifyLog": "Show HN 条目（HN 标题「Connectome-inspired spiking network you can try in the browser」，item 49770006，发帖 2026-09-19 UTC 晚、北京时间 9/20 凌晨，当晚分数不高）：无需安装、打开即画即测的纯前端互动页，模型通过 ONNX Runtime Web 在本地跑。预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Show HN (“Connectome-inspired spiking network you can try in the browser”, item 49770006, posted late 2026-09-19 UTC / early 9/20 Beijing time, low score tonight): a no-install draw-and-classify client-side interactive page with the model running locally via ONNX Runtime Web. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "Show HN 条目（HN 标题「Connectome-inspired spiking network you can try in the browser」，item 49770006，发帖 2026-09-19 UTC 晚、北京时间 9/20 凌晨，当晚分数不高）：无需安装、打开即画即测的纯前端互动页，模型通过 ONNX Runtime Web 在本地跑。预览为 Playwright 实拍首屏裁 3:2 WebP。 Show HN item 49770006。",
+      "verifyLogEn": "Show HN (“Connectome-inspired spiking network you can try in the browser”, item 49770006, posted late 2026-09-19 UTC / early 9/20 Beijing time, low score tonight): a no-install draw-and-classify client-side interactive page with the model running locally via ONNX Runtime Web. Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49770006."
     },
     {
       "id": "mineral-gems",
       "slug": "mineral-gems",
       "title": "Mineral Gems：程序化矿物宝石",
       "titleEn": "Mineral Gems: procedurally generated mineral gems",
-      "summary": "Show HN（item 49759144，2026-09-19）浏览器程序化生成矿物宝石演示：https://gems.0x0000007a.com/ — 公开页已核实 200；纯前端互动页。",
-      "summaryEn": "Show HN item 49759144 (2026-09-19) browser demo of procedurally generated mineral gems at https://gems.0x0000007a.com/ — public page verified HTTP 200; client-side interactive demo.",
+      "summary": "Show HN 浏览器程序化生成矿物宝石演示：https://gems.0x0000007a.com/ — 公开页已核实 200；纯前端互动页。",
+      "summaryEn": "client-side interactive demo.",
       "sourceUrl": "https://gems.0x0000007a.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49759144"
@@ -2359,16 +2359,16 @@
       "updatedAt": "2026-09-19T12:20:00Z",
       "hook": "在浏览器里看程序化生成的矿物宝石。",
       "hookEn": "Procedurally generated mineral gems you can explore in the browser.",
-      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49759144，2026-09-19）",
+      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49759144 (2026-09-19) browser demo of procedurally generated mineral gems at https://gems.0x0000007a.com/ — public page verified HTTP 200;"
     },
     {
       "id": "page-rage",
       "slug": "page-rage",
       "title": "Page Rage：在浏览器里砸烂任意网页",
       "titleEn": "Page Rage: smash any web page in the browser",
-      "summary": "Show HN（item 49746963，2026-09-18）page-rage.com — 免费「砸网页」小游戏：页面自述「Break pre-made pages」模式无需安装、任意浏览器可玩（/rageit）；「Break any page」砸任意网页则需装 Chrome / Firefox / Edge 扩展（Safari 标「soon」）。公开页 200。晨扫后晚间补收（条目在 9/18 白天，晚间波次仍未入库）。",
-      "summaryEn": "Show HN item 49746963 (2026-09-18) page-rage.com — free destroy-the-page game: the page’s “Break pre-made pages” mode needs no install and runs in any browser (/rageit); “Break any page” requires the Chrome / Firefox / Edge extension (Safari marked “soon”). Public page HTTP 200. Landed daytime 9/18; evening wave catch-up.",
+      "summary": "Show HN page-rage.com — 免费「砸网页」小游戏：页面自述「Break pre-made pages」模式无需安装、任意浏览器可玩（/rageit）；「Break any page」砸任意网页则需装 Chrome / Firefox / Edge 扩展（Safari 标「soon」）。公开页 200。晨扫后晚间补收（条目在 9/18 白天，晚间波次仍未入库）。",
+      "summaryEn": "“Break any page” requires the Chrome / Firefox / Edge extension (Safari marked “soon”). Landed daytime 9/18; evening wave catch-up.",
       "sourceUrl": "https://page-rage.com/",
       "secondaryUrls": [
         "https://page-rage.com/rageit",
@@ -2391,16 +2391,16 @@
       "updatedAt": "2026-09-19T12:20:00Z",
       "hook": "在浏览器里砸预制网页；砸任意网页需要扩展。",
       "hookEn": "Smash ready-made pages in the browser; any page needs the extension.",
-      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。 （item 49746963，2026-09-18）",
+      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49746963 (2026-09-18) page-rage.com — free destroy-the-page game: the page’s “Break pre-made pages” mode needs no install and runs in any browser (/rageit); Public page HTTP 200."
     },
     {
       "id": "greenscreen-remover",
       "slug": "greenscreen-remover",
       "title": "Green Screen Remover：浏览器里抠绿幕（视频/图片）",
       "titleEn": "Green Screen Remover: in-browser chroma key for video & image",
-      "summary": "greenscreenremover.net：把绿幕/蓝幕视频或图片拖进标签页即可抠像，运算全在本地浏览器，无上传、无账号、无水印；支持常见浏览器可解码格式。Show HN item 49749795（2026-09-18）。",
-      "summaryEn": "greenscreenremover.net: drop a green/blue-screen video or image into the tab; keying runs fully in-browser with no upload, account, or watermark. Show HN item 49749795 (2026-09-18).",
+      "summary": "greenscreenremover.net：把绿幕/蓝幕视频或图片拖进标签页即可抠像，运算全在本地浏览器，无上传、无账号、无水印；支持常见浏览器可解码格式。",
+      "summaryEn": "greenscreenremover.net: drop a green/blue-screen video or image into the tab; keying runs fully in-browser with no upload, account, or watermark.",
       "sourceUrl": "https://greenscreenremover.net/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49749795"
@@ -2424,16 +2424,16 @@
       "updatedAt": "2026-09-18T12:31:00Z",
       "hook": "把绿幕视频或图片拖进网页，在本地抠掉背景。",
       "hookEn": "Drop a green-screen clip or image in the page and key it locally.",
-      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。 Show HN item 49749795（2026-09-18）。",
+      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49749795 (2026-09-18)."
     },
     {
       "id": "visual-html-editor",
       "slug": "visual-html-editor",
       "title": "Visual HTML：保源码的 AI HTML 可视化编辑器",
       "titleEn": "Visual HTML: source-preserving WYSIWYG for AI-generated HTML",
-      "summary": "kong75.github.io/visual-html-editor：在画布上直接改邮件/幻灯/网页内容，开源可视化 HTML 编辑器，强调源码仍由你掌控。Show HN item 49713864（2026-09-15）。",
-      "summaryEn": "kong75.github.io/visual-html-editor: edit emails/slides/web content on a canvas; open-source visual HTML editor that keeps original source under your control. Show HN item 49713864 (2026-09-15).",
+      "summary": "kong75.github.io/visual-html-editor：在画布上直接改邮件/幻灯/网页内容，开源可视化 HTML 编辑器，强调源码仍由你掌控。",
+      "summaryEn": "kong75.github.io/visual-html-editor: edit emails/slides/web content on a canvas; open-source visual HTML editor that keeps original source under your control.",
       "sourceUrl": "https://kong75.github.io/visual-html-editor/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49713864"
@@ -2457,16 +2457,16 @@
       "updatedAt": "2026-09-18T12:31:00Z",
       "hook": "在画布上改邮件和网页，源码仍然留在你手里。",
       "hookEn": "Edit emails and pages on a canvas while the source stays yours.",
-      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。",
-      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP."
+      "verifyLog": "预览为 Playwright 实拍首屏裁 3:2 WebP。 Show HN item 49713864（2026-09-15）。",
+      "verifyLogEn": "Preview is a Playwright capture of the above-the-fold view cropped to 3:2 WebP. Show HN item 49713864 (2026-09-15)."
     },
     {
       "id": "papereffects-text-match-cut",
       "slug": "papereffects-text-match-cut",
       "title": "Paper Effects：浏览器里的报纸/杂志文字 Match Cut",
       "titleEn": "Paper Effects: in-browser newspaper/magazine text match cuts",
-      "summary": "papereffects.site：纯前端 Canvas 生成报纸/书/杂志风文字 match cut（关键词高亮 + 快门感），可调比例/速度/暗角并导出 GIF/WAV；免账号、关键词不上传。Show HN item 49747752（2026-09-17）。",
-      "summaryEn": "papereffects.site: client-side canvas studio for newspaper/book/magazine text match cuts (keyword highlight + shutter feel), with aspect/speed/dim controls and GIF/WAV export—no account; keywords stay local. Show HN item 49747752 (2026-09-17).",
+      "summary": "papereffects.site：纯前端 Canvas 生成报纸/书/杂志风文字 match cut（关键词高亮 + 快门感），可调比例/速度/暗角并导出 GIF/WAV；免账号、关键词不上传。",
+      "summaryEn": "papereffects.site: client-side canvas studio for newspaper/book/magazine text match cuts (keyword highlight + shutter feel), with aspect/speed/dim controls and GIF/WAV export—no account; keywords stay local.",
       "sourceUrl": "https://papereffects.site",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49747752"
@@ -2490,16 +2490,16 @@
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "在浏览器里做报纸风的文字转场，还能导出动图。",
       "hookEn": "Make newspaper-style text cuts in the browser and export a GIF.",
-      "verifyLog": "",
-      "verifyLogEn": "Show HN same-day listing; preview is site OG cropped to 3:2 WebP."
+      "verifyLog": "Show HN item 49747752（2026-09-17）。",
+      "verifyLogEn": "Show HN same-day listing; preview is site OG cropped to 3:2 WebP. Show HN item 49747752 (2026-09-17)."
     },
     {
       "id": "capsule-single-file-apps",
       "slug": "capsule-single-file-apps",
       "title": "Capsule：单文件 Web 应用（UI + SQLite 打包分享）",
       "titleEn": "Capsule: single-file web apps (UI + SQLite, share like a doc)",
-      "summary": "withcapsule.app：把 UI、本地 SQLite 数据与资源打进一个可分享的 .capsule 文件，免账号、免云端；提供 Web Preview 与桌面端。Show HN item 49712278（2026-09-15，≈366 分）。",
-      "summaryEn": "withcapsule.app: packages UI, local SQLite data, and assets into one shareable .capsule file—no accounts, no cloud—with a Web Preview and desktop builds. Show HN item 49712278 (2026-09-15, ~366 points).",
+      "summary": "withcapsule.app：把 UI、本地 SQLite 数据与资源打进一个可分享的.capsule 文件，免账号、免云端；提供 Web Preview 与桌面端。",
+      "summaryEn": "withcapsule.app: packages UI, local SQLite data, and assets into one shareable.capsule file—no accounts, no cloud—with a Web Preview and desktop builds.",
       "sourceUrl": "https://withcapsule.app/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49712278"
@@ -2524,16 +2524,16 @@
       "updatedAt": "2026-09-17T01:23:00Z",
       "hook": "把界面和本地数据库打成一个文件，像文档一样分享。",
       "hookEn": "Pack a UI and a local database into one file you can share.",
-      "verifyLog": "",
-      "verifyLogEn": "Show HN ~366 points; preview is the site OG image cropped to 3:2 WebP."
+      "verifyLog": "Show HN item 49712278（2026-09-15，≈366 分）。",
+      "verifyLogEn": "Show HN ~366 points; preview is the site OG image cropped to 3:2 WebP. Show HN item 49712278 (2026-09-15, ~366 points)."
     },
     {
       "id": "redis-city",
       "slug": "redis-city",
       "title": "Redis City：浏览器里的 Redis 内部 3D 互动图",
       "titleEn": "Redis City: interactive 3D map of how Redis works",
-      "summary": "poltora.dev/redis：在浏览器里用可交互 3D 场景走一遍 Redis 内部路径（Clients、DB、Allocator、AOF、内核页缓存等），纯前端、免登录。Show HN item 49676425（2026-09-12）。",
-      "summaryEn": "poltora.dev/redis: an interactive browser-only 3D walkthrough of Redis internals (Clients, DB, Allocator, AOF, kernel page cache, …), no login. Show HN item 49676425 (2026-09-12).",
+      "summary": "poltora.dev/redis：在浏览器里用可交互 3D 场景走一遍 Redis 内部路径（Clients、DB、Allocator、AOF、内核页缓存等），纯前端、免登录。",
+      "summaryEn": "poltora.dev/redis: an interactive browser-only 3D walkthrough of Redis internals (Clients, DB, Allocator, AOF, kernel page cache, …), no login.",
       "sourceUrl": "https://poltora.dev/redis",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49676425",
@@ -2558,8 +2558,8 @@
       "updatedAt": "2026-09-16T01:10:52Z",
       "hook": "在立体场景里走一遍 Redis 内部是怎么工作的。",
       "hookEn": "Walk through how Redis works, as an interactive scene in the browser.",
-      "verifyLog": "",
-      "verifyLogEn": "Show HN ~163 points; preview is the project OG image cropped to 3:2 (headless Chrome WebGL shot was blank)."
+      "verifyLog": "Show HN item 49676425（2026-09-12）。",
+      "verifyLogEn": "Show HN ~163 points; preview is the project OG image cropped to 3:2 (headless Chrome WebGL shot was blank). Show HN item 49676425 (2026-09-12)."
     },
     {
       "id": "code-preview-element",
@@ -2600,8 +2600,8 @@
       "slug": "neobrutalism-dev",
       "title": "Neobrutalism.dev：粗野主义 React/Tailwind 组件",
       "titleEn": "Neobrutalism.dev: neobrutalist React/Tailwind components",
-      "summary": "公开组件站：约 64 个粗野主义组件/图表/星形，基于 shadcn/ui 与 Base UI，面向 React + Tailwind v4。Show HN「Just added Base UI support…」（item 49699159，2026-09-14）。演示与文档免登录。",
-      "summaryEn": "Public component site: ~64 neobrutalist components/charts/stars on shadcn/ui + Base UI for React and Tailwind v4. Show HN “Just added Base UI support…” (item 49699159, 2026-09-14). Docs/demo need no login.",
+      "summary": "公开组件站：约 64 个粗野主义组件/图表/星形，基于 shadcn/ui 与 Base UI，面向 React + Tailwind v4。Show HN「Just added Base UI support…」。演示与文档免登录。",
+      "summaryEn": "Public component site: ~64 neobrutalist components/charts/stars on shadcn/ui + Base UI for React and Tailwind v4. Show HN “Just added Base UI support…”. Docs/demo need no login.",
       "sourceUrl": "https://www.neobrutalism.dev/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49699159"
@@ -2625,16 +2625,16 @@
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "粗野主义的 React 组件站，文档和演示不用登录。",
       "hookEn": "A public site of neobrutalist React components you can browse without signing in.",
-      "verifyLog": "Show HN 2026-09-14（item 49699159）。",
-      "verifyLogEn": "Show HN 2026-09-14 (item 49699159). Preview is a 3:2 crop of the home hero screenshot."
+      "verifyLog": "Show HN 2026-09-14（item 49699159）。 （item 49699159，2026-09-14）",
+      "verifyLogEn": "Show HN 2026-09-14 (item 49699159). Preview is a 3:2 crop of the home hero screenshot. (item 49699159, 2026-09-14)"
     },
     {
       "id": "soundmap",
       "slug": "soundmap-sound-camera",
       "title": "Soundmap：摄像头上的「声音相机」",
       "titleEn": "Soundmap: a sound camera on your webcam",
-      "summary": "浏览器里用摄像头画面叠声音可视化的互动页（标题 Soundmap · Sound camera）。Show HN「See Sounds on Your Webcam」（item 49644603，2026-09-10）。需本机摄像头 / 麦克风权限；预览取欢迎屏，未在本站授权摄像头。",
-      "summaryEn": "An in-browser interactive page that overlays sound visualization on the webcam feed (title: Soundmap · Sound camera). Show HN “See Sounds on Your Webcam” (item 49644603, 2026-09-10). Needs local camera / mic permission; the preview is the welcome screen — camera was not granted here.",
+      "summary": "浏览器里用摄像头画面叠声音可视化的互动页（标题 Soundmap · Sound camera）。Show HN「See Sounds on Your Webcam」。需本机摄像头 / 麦克风权限；预览取欢迎屏，未在本站授权摄像头。",
+      "summaryEn": "An in-browser interactive page that overlays sound visualization on the webcam feed (title: Soundmap · Sound camera). Show HN “See Sounds on Your Webcam”. Needs local camera / mic permission.",
       "sourceUrl": "https://soundmap.darebuild.com/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49644603",
@@ -2659,16 +2659,16 @@
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "把声音叠在摄像头画面上，在浏览器里看见它。",
       "hookEn": "See sound drawn over your webcam, right in the browser.",
-      "verifyLog": "Show HN 2026-09-10（item 49644603）。",
-      "verifyLogEn": "Show HN 2026-09-10 (item 49644603). Preview is a faithful welcome-screen recreation from the live DOM/copy (Start your camera / Start camera + mic), not a post-grant live feed."
+      "verifyLog": "Show HN 2026-09-10（item 49644603）。 （item 49644603，2026-09-10）",
+      "verifyLogEn": "Show HN 2026-09-10 (item 49644603). Preview is a faithful welcome-screen recreation from the live DOM/copy (Start your camera / Start camera + mic), not a post-grant live feed. (item 49644603, 2026-09-10) the preview is the welcome screen — camera was not granted here."
     },
     {
       "id": "hopla-games",
       "slug": "hopla-games-webcam-kinect",
       "title": "Hopla Games：浏览器里的儿童体感游戏（无 Kinect）",
       "titleEn": "Hopla Games: Kinect-style kids games in the browser",
-      "summary": "免费儿童摄像头体感小游戏站（气球、定格舞、躲避等）：无下载、无账号，官网自称画面只在本机浏览器处理、不上传。Show HN「The Kinect is dead…」（item 49682477，2026-09-13）。预览取英文落地页，未授权摄像头。",
-      "summaryEn": "Free webcam movement games for kids (balloons, freeze dance, dodge, and more): no download, no account; the site claims the camera image stays in-browser and is never uploaded. Show HN “The Kinect is dead…” (item 49682477, 2026-09-13). Preview is the English landing page; camera was not granted here.",
+      "summary": "免费儿童摄像头体感小游戏站（气球、定格舞、躲避等）：无下载、无账号，官网自称画面只在本机浏览器处理、不上传。Show HN「The Kinect is dead…」。预览取英文落地页，未授权摄像头。",
+      "summaryEn": "Free webcam movement games for kids (balloons, freeze dance, dodge, and more): no download, no account; the site claims the camera image stays in-browser and is never uploaded. Show HN “The Kinect is dead…”. camera was not granted here.",
       "sourceUrl": "https://hoplagames.com/en/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49682477",
@@ -2693,8 +2693,8 @@
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "免费儿童体感小游戏，摄像头画面留在本机。",
       "hookEn": "Free webcam movement games for kids, with the camera staying on the device.",
-      "verifyLog": "Show HN 2026-09-13（item 49682477）。",
-      "verifyLogEn": "Show HN 2026-09-13 (item 49682477). Preview is the site’s public /map.svg letterboxed to 3:2."
+      "verifyLog": "Show HN 2026-09-13（item 49682477）。 （item 49682477，2026-09-13）",
+      "verifyLogEn": "Show HN 2026-09-13 (item 49682477). Preview is the site’s public /map.svg letterboxed to 3:2. (item 49682477, 2026-09-13) Preview is the English landing page;"
     },
     {
       "id": "react-bits",
@@ -2807,8 +2807,8 @@
       "slug": "session-context",
       "title": "Session Context：一页网页能「看懂」你什么",
       "titleEn": "Session Context: what one web page can learn about you",
-      "summary": "公开互动页：把浏览器在未授权前就能测到的指纹 / 头信息 / 存储与设备线索，先写成白话结论，再展开字段表；权限类能力单独列出且默认不索取。Show HN item 49678035（2026-09-12）。",
-      "summaryEn": "A public interactive page that turns what a browser can measure before any permission prompt—fingerprints, headers, storage and device hints—into plain-English findings, then field tables; permission-gated APIs are listed separately and not requested by default. Show HN item 49678035 (2026-09-12).",
+      "summary": "公开互动页：把浏览器在未授权前就能测到的指纹 / 头信息 / 存储与设备线索，先写成白话结论，再展开字段表；权限类能力单独列出且默认不索取。",
+      "summaryEn": "A public interactive page that turns what a browser can measure before any permission prompt—fingerprints, headers, storage and device hints—into plain-English findings, then field tables; permission-gated APIs are listed separately and not requested by default.",
       "sourceUrl": "https://sessioncontext.org",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49678035"
@@ -2832,16 +2832,16 @@
       "updatedAt": "2026-09-13T12:20:00Z",
       "hook": "看清一张网页在要权限之前，能从浏览器知道什么。",
       "hookEn": "See what one page can learn about you before it asks for permission.",
-      "verifyLog": "Show HN 2026-09-12（item 49678035）。预览为现场截图。",
-      "verifyLogEn": "Show HN 2026-09-12 (item 49678035). Preview is a live screenshot."
+      "verifyLog": "Show HN 2026-09-12（item 49678035）。预览为现场截图。 Show HN item 49678035（2026-09-12）。",
+      "verifyLogEn": "Show HN 2026-09-12 (item 49678035). Preview is a live screenshot. Show HN item 49678035 (2026-09-12)."
     },
     {
       "id": "programming-museum",
       "slug": "programming-museum",
       "title": "Programming Museum：能走进去的源代码博物馆",
       "titleEn": "Programming Museum: a walkable museum of source code",
-      "summary": "把可运行的源码当成展品挂进可漫游的房间：旁有策展说明，代码全文可见；收录范围限 MIT / Unlicense 借展，并钉到具体 commit。无登录、无广告。Show HN item 49682008（2026-09-13）。",
-      "summaryEn": "Runnable source hung as framed works in rooms you can walk through, each with a curator note and the full file; loans limited to MIT / Unlicense and pinned to a commit. No login, no ads. Show HN item 49682008 (2026-09-13).",
+      "summary": "把可运行的源码当成展品挂进可漫游的房间：旁有策展说明，代码全文可见；收录范围限 MIT / Unlicense 借展，并钉到具体 commit。无登录、无广告。",
+      "summaryEn": "Runnable source hung as framed works in rooms you can walk through, each with a curator note and the full file; loans limited to MIT / Unlicense and pinned to a commit. No login, no ads.",
       "sourceUrl": "https://www.programmingmuseum.com",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49682008"
@@ -2865,16 +2865,16 @@
       "updatedAt": "2026-09-13T12:20:00Z",
       "hook": "走进可漫游的房间，把能跑的源码当展品看。",
       "hookEn": "Walk through rooms where runnable source code hangs as the exhibits.",
-      "verifyLog": "Show HN 2026-09-13（item 49682008）。预览为现场截图。",
-      "verifyLogEn": "Show HN 2026-09-13 (item 49682008). Preview is a live screenshot."
+      "verifyLog": "Show HN 2026-09-13（item 49682008）。预览为现场截图。 Show HN item 49682008（2026-09-13）。",
+      "verifyLogEn": "Show HN 2026-09-13 (item 49682008). Preview is a live screenshot. Show HN item 49682008 (2026-09-13)."
     },
     {
       "id": "bodily-oddities",
       "slug": "bodily-oddities",
       "title": "Bodily Oddities：身体也能「怪」一点的百科",
       "titleEn": "Bodily Oddities: strange things bodies can (sometimes) do",
-      "summary": "Demjan Vester 的公开互动百科：收录约 143 条人体小怪癖 / 反射 / 感知现象（耳鸣轰鸣、胃咕噜、jamais vu 等），可按身体部位与类型浏览，带「吓人但正常」「现在就能试」入口与搜索。纯前端，Show HN item 49649789（约 271 分）。",
-      "summaryEn": "Demjan Vester’s public interactive encyclopedia of ~143 bodily quirks / reflexes / percepts (ear rumbling, stomach growling, jamais vu, …), browsable by body region and kind, with “scary but normal” / “try right now” entry points and search. Pure front-end; Show HN item 49649789 (~271 points).",
+      "summary": "Demjan Vester 的公开互动百科：收录约 143 条人体小怪癖 / 反射 / 感知现象（耳鸣轰鸣、胃咕噜、jamais vu 等），可按身体部位与类型浏览，带「吓人但正常」「现在就能试」入口与搜索。",
+      "summaryEn": "Demjan Vester’s public interactive encyclopedia of ~143 bodily quirks / reflexes / percepts (ear rumbling, stomach growling, jamais vu, …), browsable by body region and kind, with “scary but normal” / “try right now” entry points and search. Pure front-end.",
       "sourceUrl": "https://vester.si/bodily-oddities/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49649789"
@@ -2898,8 +2898,8 @@
       "updatedAt": "2026-09-12T12:15:00Z",
       "hook": "可检索的人体小怪癖百科，吓人的往往也正常。",
       "hookEn": "A searchable guide to odd bodily quirks, including the scary-but-normal ones.",
-      "verifyLog": "HN Show 2026-09-10（item 49649789）。预览为现场截图。",
-      "verifyLogEn": "Show HN 2026-09-10 (item 49649789). Preview is a live screenshot."
+      "verifyLog": "HN Show 2026-09-10（item 49649789）。预览为现场截图。 纯前端，Show HN item 49649789（约 271 分）。",
+      "verifyLogEn": "Show HN 2026-09-10 (item 49649789). Preview is a live screenshot. Show HN item 49649789 (~271 points)."
     },
     {
       "id": "sparkui",
@@ -3007,8 +3007,8 @@
       "slug": "relativity-park",
       "title": "Relativity Park：光速降到步行时的狭义相对论",
       "titleEn": "Relativity Park: special relativity when light walks",
-      "summary": "Dmitry Brant 的公开互动演示：把光速压到 5 km/h（约步行速度），在公园视角里用 WASD 加速，观察洛伦兹收缩、光行差、多普勒变色与相对论光束效应，各效应可单独开关。Show HN 当日上过热榜（item 49637385）；纯前端可打开，无需登录。",
-      "summaryEn": "Dmitry Brant’s public interactive demo: the speed of light is set to 5 km/h (a brisk walk); accelerate with WASD through a park and watch length contraction, aberration, Doppler colour shift, and relativistic beaming, each toggleable. Hit the Show HN front page the same day (item 49637385); pure front-end, no login.",
+      "summary": "Dmitry Brant 的公开互动演示：把光速压到 5 km/h（约步行速度），在公园视角里用 WASD 加速，观察洛伦兹收缩、光行差、多普勒变色与相对论光束效应，各效应可单独开关。Show HN 当日上过热榜；纯前端可打开，无需登录。",
+      "summaryEn": "Dmitry Brant’s public interactive demo: the speed of light is set to 5 km/h (a brisk walk); accelerate with WASD through a park and watch length contraction, aberration, Doppler colour shift, and relativistic beaming, each toggleable. Hit the Show HN front page the same day; pure front-end, no login.",
       "sourceUrl": "https://rivendell.dmitrybrant.com/relativity/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49637385"
@@ -3032,16 +3032,16 @@
       "updatedAt": "2026-09-10T12:00:00Z",
       "hook": "把光速降到步行，在公园里看见相对论。",
       "hookEn": "Set the speed of light to a walking pace and watch relativity in a park.",
-      "verifyLog": "HN item 49637385（Show HN: What if the speed of light was 5 km/h?）。",
-      "verifyLogEn": "HN item 49637385 (Show HN: What if the speed of light was 5 km/h?). Preview is a live screenshot (site has no og:image)."
+      "verifyLog": "HN item 49637385（Show HN: What if the speed of light was 5 km/h?）。 （item 49637385）",
+      "verifyLogEn": "HN item 49637385 (Show HN: What if the speed of light was 5 km/h?). Preview is a live screenshot (site has no og:image). (item 49637385)"
     },
     {
       "id": "roadwright",
       "slug": "roadwright",
       "title": "Roadwright：画轮子，看它滚出的路面",
       "titleEn": "Roadwright: draw a wheel, see the road it rolls on",
-      "summary": "Basel Ashraf 的浏览器几何小品：手绘（或选一个）轮子轮廓并放好轴心，即时算出该轮无滑滚动时对应的路面曲线，可调滚速、双轮轴距、路面倾斜，并导出 PNG / 切割文件 / 录制循环。纯前端互动；Show HN item 49641755，仓库开源。",
-      "summaryEn": "Basel Ashraf’s browser geometry toy: draw (or pick) a wheel outline, place its axle, and instantly get the road profile it rolls on without slipping; adjust roll speed, two-wheel wheelbase and road tilt, and export PNG / cut files / a recorded loop. Pure front-end interactive; Show HN item 49641755, source on GitHub.",
+      "summary": "Basel Ashraf 的浏览器几何小品：手绘（或选一个）轮子轮廓并放好轴心，即时算出该轮无滑滚动时对应的路面曲线，可调滚速、双轮轴距、路面倾斜，并导出 PNG / 切割文件 / 录制循环。纯前端互动。",
+      "summaryEn": "Basel Ashraf’s browser geometry toy: draw (or pick) a wheel outline, place its axle, and instantly get the road profile it rolls on without slipping; adjust roll speed, two-wheel wheelbase and road tilt, and export PNG / cut files / a recorded loop. Pure front-end interactive.",
       "sourceUrl": "https://baselashraf.com/roadwright/",
       "secondaryUrls": [
         "https://github.com/BaselAshraf81/roadwright",
@@ -3067,8 +3067,8 @@
       "updatedAt": "2026-09-10T12:00:00Z",
       "hook": "画一个轮子，立刻看到它无滑滚动时的路面。",
       "hookEn": "Draw a wheel and instantly see the road it rolls along without slipping.",
-      "verifyLog": "HN item 49641755（Show HN: Draw a wheel. See the road it rolls on）。",
-      "verifyLogEn": "HN item 49641755 (Show HN: Draw a wheel. Preview is the site’s og image (1200×630) letterboxed to 3:2."
+      "verifyLog": "HN item 49641755（Show HN: Draw a wheel. See the road it rolls on）。 Show HN item 49641755，仓库开源。",
+      "verifyLogEn": "HN item 49641755 (Show HN: Draw a wheel. Preview is the site’s og image (1200×630) letterboxed to 3:2. Show HN item 49641755, source on GitHub."
     },
     {
       "id": "shadcss",
@@ -4492,8 +4492,8 @@
       "slug": "scrolling-text-generator",
       "title": "Scrolling Text Generator：浏览器跑马灯/字幕导出",
       "titleEn": "Scrolling Text Generator: browser marquee, ticker, and credits export",
-      "summary": "Show HN（item 49778087）：浏览器内调方向、速度、字体与背景，预览与导出一致；可出 GIF / WebM / 网页嵌入，适合 OBS 与 LED。核心生成与单次导出免费；Premium 模板包与云保存需登录付费，本库只标免费路径。",
-      "summaryEn": "Show HN (item 49778087): tune direction, speed, fonts, and background in-browser with preview matching export; GIF / WebM / web embed for OBS and LED. Core generation and one-off export are free; Premium template packs and cloud save need paid login—this entry covers the free path only.",
+      "summary": "Show HN：浏览器内调方向、速度、字体与背景，预览与导出一致；可出 GIF / WebM / 网页嵌入，适合 OBS 与 LED。核心生成与单次导出免费；Premium 模板包与云保存需登录付费，本库只标免费路径。",
+      "summaryEn": "Show HN: tune direction, speed, fonts, and background in-browser with preview matching export; GIF / WebM / web embed for OBS and LED. Core generation and one-off export are free; Premium template packs and cloud save need paid login—this entry covers the free path only.",
       "sourceUrl": "https://scrollingtextgenerator.space/",
       "secondaryUrls": [
         "https://news.ycombinator.com/item?id=49778087"
@@ -4520,8 +4520,8 @@
       "updatedAt": "2026-09-21T01:20:00Z",
       "hook": "在浏览器里调跑马灯和字幕，再导出或嵌进网页。",
       "hookEn": "Tune a ticker or credits line in the browser, then export or embed it.",
-      "verifyLog": "HN Show（2026-09-20，item 49778087）。已配 Playwright 实拍 3:2 自托管预览。",
-      "verifyLogEn": "Show HN (2026-09-20, item 49778087). Includes a Playwright-captured self-hosted 3:2 preview."
+      "verifyLog": "HN Show（2026-09-20，item 49778087）。已配 Playwright 实拍 3:2 自托管预览。 （item 49778087）",
+      "verifyLogEn": "Show HN (2026-09-20, item 49778087). Includes a Playwright-captured self-hosted 3:2 preview. (item 49778087)"
     }
   ],
   "meta": {

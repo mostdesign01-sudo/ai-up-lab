@@ -8,7 +8,7 @@ import GitHubStar from "./GitHubStar.astro";
 import { sections, entries, sectionEntries, tasks } from "../lib/directory";
 import { homeCreative } from "../lib/home-creative";
 import { homePicks, homeTitles, sourceHost } from "../lib/home-picks";
-import { starterCases } from "../lib/starters";
+import { STARTER_PRIMERS, starterCases } from "../lib/starters";
 import { changelogNotes } from "../lib/cases";
 import { withBase, assetUrl } from "../lib/paths";
 import { shanghaiDateKey } from "../lib/format";
@@ -17,7 +17,7 @@ const { dateKey } = Astro.props;
 const [lead] = homePicks;
 const pickKeys = new Set([...homePicks, ...homeCreative].map(pick => pick.entry.key));
 const recent = dateKey ? entries.filter(entry => shanghaiDateKey(entry.updatedAt) === dateKey) : entries.filter(entry => !pickKeys.has(entry.key)).slice(0, 2);
-const starters = starterCases().map(item => entries.find(entry => entry.key === `grok:${item.id}`)!).filter(Boolean);
+const starters = [...STARTER_PRIMERS, ...starterCases().map(item => `grok:${item.id}`)].map(key => entries.find(entry => entry.key === key)).filter(entry => entry !== undefined).slice(0, 4);
 const archive = [...new Set(changelogNotes.map(note => note.date))].sort((a, b) => b.localeCompare(a)).slice(0, 8);
 const directoryIcons = { learn: "book", tools: "cube", design: "grid", models: "graph", prompts: "note" } as const;
 ---

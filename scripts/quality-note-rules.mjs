@@ -7,3 +7,11 @@ export const LOG_PATTERN = new RegExp([
   "community-sync", "最近推送", "last push", "撰写时", "at write time", "at check time", "不打星", String.raw`^Unrated\.?$`,
   "线索", String.raw`^Lead:`, String.raw`T\d{2}:\d{2}`,
 ].join("|"), "i");
+
+// Summaries may cite real URLs, endpoints and launch times, so only the
+// unambiguous crawl markers count against them.
+export const SUMMARY_LOG_PATTERN = new RegExp([
+  String.raw`HTTP ?\d{3}`, String.raw`\bgh api\b`, "Algolia", String.raw`\d+\s?pts\b`, String.raw`\d[\d,.]*\s?★`,
+  String.raw`\bitem\s?\d{6,}`, String.raw`\bHN\s?\d{6,}`, "Playwright", "预览为", "预览即", String.raw`\bPreview (is|was)\b`,
+  "撰写时", "at write time", "at check time", "fxtwitter",
+].join("|"), "i");

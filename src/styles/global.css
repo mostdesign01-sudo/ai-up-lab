@@ -4105,3 +4105,19 @@ html[data-theme="light"] .home-pill {
   margin: 6px 0 0;
   overflow-wrap: anywhere;
 }
+
+/* Models share the directory page shell; cards stay model-specific but keep summaries short. */
+.model-grid--directory { gap: 20px; }
+@media (min-width: 1050px) {
+  .model-grid--directory { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.model-grid--directory .model-card .summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+.model-grid--directory .model-card-media img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.directory-related { margin-top: 48px; }
+.directory-related h2 { font-size: var(--text-h2); margin: 0 0 16px; }

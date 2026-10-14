@@ -7,8 +7,8 @@
       "titleEn": "Aria Icons: 1M+ open SVG icons with MCP and CLI for coding agents",
       "hook": "搜图标别让助手手画：MCP 直接把 SVG 装进项目。",
       "hookEn": "Stop freehanding icons—MCP searches and installs real SVGs.",
-      "summary": "免费开源（MIT）的图标工具：网站可浏览撰写时显示约 126 万枚 SVG（聚合 Lucide、Tabler、Heroicons、Feather 等多个集合），能改尺寸、描边和颜色再复制或下载。给编程助手的入口是 MCP 与 CLI（npm 包 `aria-icons`）：`npx -y aria-icons@latest setup` 可写入 Cursor / Claude 等配置；助手能搜索、按 `collection:name` 取源码、把图标文件写进仓库，也能迁移混用的图标包。另有远程 MCP 测试入口。适合做界面时需要一致图标、又不想让模型现场「画」一个的人。",
-      "summaryEn": "A free MIT icon toolkit: the site browsed about 1.26M SVGs at write time across sets such as Lucide, Tabler, Heroicons, and Feather, with size, stroke, and color controls before copy or download. Agent surfaces are MCP plus a CLI (`aria-icons` on npm): `npx -y aria-icons@latest setup` writes Cursor / Claude configs; agents can search, fetch by `collection:name`, write icon files into the repo, and migrate mixed icon packages. A remote MCP playground is also linked. Good when UI work needs consistent glyphs instead of model-drawn SVGs.",
+      "summary": "给编程助手的入口是 MCP 与 CLI（npm 包 `aria-icons`）：`npx -y aria-icons@latest setup` 可写入 Cursor / Claude 等配置；助手能搜索、按 `collection:name` 取源码、把图标文件写进仓库，也能迁移混用的图标包。另有远程 MCP 测试入口。适合做界面时需要一致图标、又不想让模型现场「画」一个的人。",
+      "summaryEn": "Agent surfaces are MCP plus a CLI (`aria-icons` on npm): `npx -y aria-icons@latest setup` writes Cursor / Claude configs; agents can search, fetch by `collection:name`, write icon files into the repo, and migrate mixed icon packages. A remote MCP playground is also linked. Good when UI work needs consistent glyphs instead of model-drawn SVGs.",
       "sourceUrl": "https://icons.leularia.com/",
       "secondaryUrls": [
         "https://github.com/LeulAria/Aria-Icons",
@@ -42,16 +42,16 @@
       "featured": false,
       "publishedAt": "2026-09-15",
       "updatedAt": "2026-10-13T12:20:00Z",
-      "verifyLog": "主源 https://icons.leularia.com/ 与 GitHub LeulAria/Aria-Icons；晚间 HTTP 200，gh api：MIT、88★，2025-12-13 创建，最近推送 2026-10-11。Show HN https://news.ycombinator.com/item?id=49717692（约 2026-09-15）。首页撰写时显示 All Icons 约 1,267,498。预览为 Playwright 关掉引导层后实拍图标浏览页，裁 3:2 WebP。",
-      "verifyLogEn": "Primary sources are https://icons.leularia.com/ and LeulAria/Aria-Icons; HTTP 200 this evening; gh api: MIT, 88★, created 2025-12-13, last push 2026-10-11. npm aria-icons@0.1.0. Show HN https://news.ycombinator.com/item?id=49717692 (~2026-09-15). Home UI showed ~1,267,498 All Icons at write time. Preview is a Playwright capture of the browse UI after dismissing the intro, cropped to 3:2 WebP."
+      "verifyLog": "主源 https://icons.leularia.com/ 与 GitHub LeulAria/Aria-Icons；晚间 HTTP 200，gh api：MIT、88★，2025-12-13 创建，最近推送 2026-10-11。Show HN https://news.ycombinator.com/item?id=49717692（约 2026-09-15）。首页撰写时显示 All Icons 约 1,267,498。预览为 Playwright 关掉引导层后实拍图标浏览页，裁 3:2 WebP。 免费开源（MIT）的图标工具：网站可浏览撰写时显示约 126 万枚 SVG（聚合 Lucide、Tabler、Heroicons、Feather 等多个集合），能改尺寸、描边和颜色再复制或下载。",
+      "verifyLogEn": "Primary sources are https://icons.leularia.com/ and LeulAria/Aria-Icons; HTTP 200 this evening; gh api: MIT, 88★, created 2025-12-13, last push 2026-10-11. npm aria-icons@0.1.0. Show HN https://news.ycombinator.com/item?id=49717692 (~2026-09-15). Home UI showed ~1,267,498 All Icons at write time. Preview is a Playwright capture of the browse UI after dismissing the intro, cropped to 3:2 WebP. A free MIT icon toolkit: the site browsed about 1.26M SVGs at write time across sets such as Lucide, Tabler, Heroicons, and Feather, with size, stroke, and color controls before copy or download."
     },
     {
       "id": "ns-ui",
       "slug": "ns-ui",
       "title": "NS UI：542 个可给 Agent 装的 React 组件登记处（带 MCP 与 CLI）",
       "titleEn": "NS UI: a 542-component React registry agents can install via MCP and CLI",
-      "summary": "一个免费开源（MIT）的个人 React 组件库登记处：撰写时首页写有 542 个组件，按交互拆开，能在真实页面上点开预览。安装是把源码拷进你的项目（shadcn 风格的一条 npx 命令），不绑运行时包、不用账号和 API key。颜色走你自己的 CSS 变量，支持亮暗色。给 Agent 用的入口齐：llms.txt、完整说明、MCP（可搜组件、取源码、列分类、给安装命令）、HTTP MCP 端点，以及 npm 上的 CLI。适合已经在用编程助手做前端、又想要「可安装、可主题化」的现成零件，而不是再出一版千篇一律的卡片。",
-      "summaryEn": "A free MIT personal React component registry: the home page listed 542 components at write time, each built around one interaction, previewable live on the site. Install copies source into your project with a single shadcn-style npx command—no runtime package, no account, no API key. Colors come from your own CSS tokens and support light/dark. Agent surfaces include llms.txt, full docs, an MCP server (search, fetch source, list categories, install command), an HTTP MCP endpoint, and an npm CLI. Good when your coding agent builds frontends and you want installable, themeable parts instead of another generic card stack.",
+      "summary": "安装是把源码拷进你的项目（shadcn 风格的一条 npx 命令），不绑运行时包、不用账号和 API key。颜色走你自己的 CSS 变量，支持亮暗色。给 Agent 用的入口齐：llms.txt、完整说明、MCP（可搜组件、取源码、列分类、给安装命令）、HTTP MCP 端点，以及 npm 上的 CLI。适合已经在用编程助手做前端、又想要「可安装、可主题化」的现成零件，而不是再出一版千篇一律的卡片。",
+      "summaryEn": "Install copies source into your project with a single shadcn-style npx command—no runtime package, no account, no API key. Colors come from your own CSS tokens and support light/dark. Agent surfaces include llms.txt, full docs, an MCP server (search, fetch source, list categories, install command), an HTTP MCP endpoint, and an npm CLI. Good when your coding agent builds frontends and you want installable, themeable parts instead of another generic card stack.",
       "sourceUrl": "https://design.helpmarq.com/",
       "secondaryUrls": [
         "https://github.com/nikolas-sapa/ns-ui",
@@ -85,8 +85,8 @@
       "updatedAt": "2026-10-12T12:25:00Z",
       "hook": "五百多个可装进项目的 React 零件，助手也能搜着装。",
       "hookEn": "500+ install-as-source React parts your agent can search and add.",
-      "verifyLog": "线索 Show HN https://news.ycombinator.com/item?id=50011077 （2026-10-08T19:48Z，约 10-09 03:48 北京时间，撰写时 2 分）。仓库 nikolas-sapa/ns-ui 晚间 gh api：MIT、25★，最近推送 2026-10-12。官网晚间 HTTP 200。预览为 Playwright 实拍首页组件墙，裁 3:2 WebP 自托管。",
-      "verifyLogEn": "Lead: Show HN https://news.ycombinator.com/item?id=50011077 (2026-10-08T19:48Z, about 03:48 on 10-09 Beijing time, 2 points at write time). Repo nikolas-sapa/ns-ui on this evening’s gh api: MIT, 25★, last push 2026-10-12. Site HTTP 200 this evening. Preview is a Playwright capture of the home catalog, cropped to a self-hosted 3:2 WebP."
+      "verifyLog": "线索 Show HN https://news.ycombinator.com/item?id=50011077 （2026-10-08T19:48Z，约 10-09 03:48 北京时间，撰写时 2 分）。仓库 nikolas-sapa/ns-ui 晚间 gh api：MIT、25★，最近推送 2026-10-12。官网晚间 HTTP 200。预览为 Playwright 实拍首页组件墙，裁 3:2 WebP 自托管。 一个免费开源（MIT）的个人 React 组件库登记处：撰写时首页写有 542 个组件，按交互拆开，能在真实页面上点开预览。",
+      "verifyLogEn": "Lead: Show HN https://news.ycombinator.com/item?id=50011077 (2026-10-08T19:48Z, about 03:48 on 10-09 Beijing time, 2 points at write time). Repo nikolas-sapa/ns-ui on this evening’s gh api: MIT, 25★, last push 2026-10-12. Site HTTP 200 this evening. Preview is a Playwright capture of the home catalog, cropped to a self-hosted 3:2 WebP. A free MIT personal React component registry: the home page listed 542 components at write time, each built around one interaction, previewable live on the site."
     },
     {
       "id": "moodi",
@@ -258,8 +258,8 @@
       "slug": "rondoflow",
       "title": "RondoFlow：可视化编排本地 Claude Code Agent 团队",
       "titleEn": "RondoFlow: visually orchestrate local Claude Code agent teams",
-      "summary": "Show HN（item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts）https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。官网与仓库均 HTTP 200；无 npm 包。预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49812163 (2026-09-23 ~05:55Z, 3pts on Algolia at check time) at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; no npm package. Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP.",
+      "summary": "Show HN https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。无 npm 包。",
+      "summaryEn": "The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. no npm package.",
       "sourceUrl": "https://rondoflow.app/",
       "secondaryUrls": [
         "https://github.com/rondoflow/rondoflow",
@@ -287,16 +287,16 @@
       "updatedAt": "2026-09-23T12:28:44Z",
       "hook": "在画布上编排本机 Agent，真的会改文件、跑命令。",
       "hookEn": "Arrange local agents on a canvas that edits files and runs commands.",
-      "verifyLog": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。",
-      "verifyLogEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP."
+      "verifyLog": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。 （item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts） 仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。 官网与仓库均 HTTP 200； 预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
+      "verifyLogEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP. (2026-09-23 ~05:55Z, 3pts on Algolia at check time) Show HN item 49812163   at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP."
     },
     {
       "id": "facet-3d",
       "slug": "facet-3d",
       "title": "Facet：可复制粘贴的 React Three Fiber 3D 组件（含 MCP / llms.txt）",
       "titleEn": "Facet: copy-paste React Three Fiber 3D components (MCP / llms.txt)",
-      "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。预览为 Playwright 实拍 playground 首屏裁 3:2。",
-      "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。",
+      "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only.",
       "sourceUrl": "https://assetmaker-nine.vercel.app/",
       "secondaryUrls": [
         "https://github.com/elberacasa/facet",
@@ -327,8 +327,8 @@
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "30 个可复制进项目的三维组件，Agent 也能按目录装。",
       "hookEn": "30 copy-paste 3D components, with a catalog an agent can install from.",
-      "verifyLog": "MIT（2026-09-22 gh api）。预览为 Playwright 实拍 playground 首屏裁 3:2。",
-      "verifyLogEn": "MIT (gh api, 2026-09-22). Preview is a Playwright capture of the playground above the fold cropped to 3:2."
+      "verifyLog": "MIT（2026-09-22 gh api）。预览为 Playwright 实拍 playground 首屏裁 3:2。 预览为 Playwright 实拍 playground 首屏裁 3:2。",
+      "verifyLogEn": "MIT (gh api, 2026-09-22). Preview is a Playwright capture of the playground above the fold cropped to 3:2. Preview is a Playwright capture of the playground above the fold cropped to 3:2."
     },
     {
       "id": "sylva-living-world",

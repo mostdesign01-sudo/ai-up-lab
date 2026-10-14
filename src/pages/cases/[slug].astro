@@ -11,6 +11,7 @@ import { cases, getRelatedCases } from "../../lib/cases";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { fill, ui } from "../../lib/i18n";
 import {
+  caseKindLabels,
   categoryLabel,
   connectorLabel,
   difficultyLabel,
@@ -303,6 +304,10 @@ const previewCreditEn = landing?.previewCreditEn;
         <section class="panel">
           <h2><Loc zh={ui.detail.metadata.zh} en={ui.detail.metadata.en} /></h2>
           <dl class="kv">
+            <div>
+              <dt><Loc zh="类型" en="Type" /></dt>
+              <dd><Loc zh={caseKindLabels[item.kind].zh} en={caseKindLabels[item.kind].en} /></dd>
+            </div>
             <div>
               <dt><Loc zh={ui.meta.role.zh} en={ui.meta.role.en} /></dt>
               <dd>{item.role}</dd>

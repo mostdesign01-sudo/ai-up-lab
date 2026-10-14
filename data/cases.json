@@ -2508,8 +2508,8 @@
       "title": "Main Bot 主动找活、帮你分派给其他 Bot",
       "titleEn": "a Main Bot that offers help first and routes work to your other Bots",
       "kind": "news",
-      "summary": "官方 @bot 2026-10-01T17:35Z（约 10-02 01:35 CST）发帖 https://x.com/bot/status/2105713240701538538 ：Grok Bot 现在会不等你开口就提出能帮你做的事；同串补充说由你的主 Bot（primary Bot）发现可接手的活并主动提出，分批推送，建议本身不计用量（fxtwitter 早间核对约 622 万浏览、7278 赞）。官方 changelog v0.66.0（2026-10-02）https://x.ai/changelog/bot 写明：可以指定一个带星标的 Main Bot，它会主动来问进度，并协调你其他 Bot 的工作，需要 Grok Bot 0.59.0 及以上。怎么用：把最常找的那只 Bot 设为 Main Bot，以后杂事都丢给它，由它转给负责的专门 Bot；它提出的建议先看再点头。二手报道（Grokati）提到员工 @mattyp 的例子：改签航班后 Bot 提醒他 Uber 预约没跟着改，本库未单独核对该帖。",
-      "summaryEn": "Official @bot post at 2026-10-01T17:35Z (about 01:35 CST on 10-02), https://x.com/bot/status/2105713240701538538: Grok Bot can now suggest ways to help without being asked; the thread adds that your primary Bot spots work it can take off your plate and offers to handle it, rolling out gradually, with suggestions not counting against usage (fxtwitter morning check: about 6.22M views, 7,278 likes). The official changelog v0.66.0 (2026-10-02) at https://x.ai/changelog/bot says you can choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates your other Bots; it needs Grok Bot 0.59.0 or later. How to use it: make the Bot you talk to most your Main Bot, hand it loose requests, and let it pass them to the right specialist Bot; review its suggestions before saying yes. A secondary report (Grokati) mentions staff member @mattyp’s example where Bot noticed an Uber booking wasn’t updated after a flight change; that post wasn’t checked separately here.",
+      "summary": "官方 @bot 2026-10-01T17:35Z（约 10-02 01:35 CST）发帖 https://x.com/bot/status/2105713240701538538：Grok Bot 现在会不等你开口就提出能帮你做的事；同串补充说由你的主 Bot（primary Bot）发现可接手的活并主动提出，分批推送，建议本身不计用量。官方 changelog v0.66.0（2026-10-02）https://x.ai/changelog/bot 写明：可以指定一个带星标的 Main Bot，它会主动来问进度，并协调你其他 Bot 的工作，需要 Grok Bot 0.59.0 及以上。怎么用：把最常找的那只 Bot 设为 Main Bot，以后杂事都丢给它，由它转给负责的专门 Bot；它提出的建议先看再点头。二手报道（Grokati）提到员工 @mattyp 的例子：改签航班后 Bot 提醒他 Uber 预约没跟着改，本库未单独核对该帖。",
+      "summaryEn": "Official @bot post at 2026-10-01T17:35Z (about 01:35 CST on 10-02), https://x.com/bot/status/2105713240701538538: Grok Bot can now suggest ways to help without being asked; the thread adds that your primary Bot spots work it can take off your plate and offers to handle it, rolling out gradually, with suggestions not counting against usage. The official changelog v0.66.0 (2026-10-02) at https://x.ai/changelog/bot says you can choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates your other Bots; it needs Grok Bot 0.59.0 or later. How to use it: make the Bot you talk to most your Main Bot, hand it loose requests, and let it pass them to the right specialist Bot; review its suggestions before saying yes. A secondary report (Grokati) mentions staff member @mattyp’s example where Bot noticed an Uber booking wasn’t updated after a flight change; that post wasn’t checked separately here.",
       "categories": [
         "multi-agent",
         "productivity",
@@ -2542,7 +2542,9 @@
       "hookEn": "Pick a Main Bot that finds work and routes it for you.",
       "previewImage": "/previews/main-bot-proactive.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP"
+      "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
+      "verifyLog": "（fxtwitter 早间核对约 622 万浏览、7278 赞）",
+      "verifyLogEn": "(fxtwitter morning check: about 6.22M views, 7,278 likes)"
     },
     {
       "id": "television",
@@ -2857,8 +2859,8 @@
       "title": "Pi 1.0 — 可自改的极简 coding agent 底座（附 Pi Durable）",
       "titleEn": "Pi 1.0 — minimal, make-it-yours coding agent harness (plus Pi Durable)",
       "kind": "tool",
-      "summary": "HN 首页（item 49926069，2026-10-01T19:33:05Z / 约 2026-10-02 03:33 CST，Algolia 早间核对 709pts）https://earendil.com/posts/pi-1-0/ —— Earendil 发布 Pi 1.0：MIT 极简可扩展 agent harness（TUI / print / RPC / SDK）。文内新增 Codemode（原生 MCP 与非 LLM 模型如 Jev / 图像模型）、虚拟模型扩展、延迟加载工具、Anthropic cache warming、对话中途 system message、新 TUI 主题与默认全屏。同日实验包 Pi Durable（HN item 49925969，核对 206pts）面向长会话 / 多表面。安装：`curl -fsSL https://pi.dev/install.sh | sh` 或 npm `@earendil-works/pi-coding-agent`。仓库 earendil-works/pi 早间 gh api：MIT、111225★；站点 https://pi.dev/ HTTP 200。本站 Cases 已收 Magnitude 写可一键接 Pi——本条补官方 1.0 节点。工具笔记，不替你安装或代跑。",
-      "summaryEn": "HN front page item 49926069 (2026-10-01T19:33:05Z / about 2026-10-02 03:33 CST, 709pts on Algolia at the morning check) at https://earendil.com/posts/pi-1-0/ — Earendil ships Pi 1.0: an MIT minimal, extensible agent harness (TUI / print / RPC / SDK). The post adds Codemode (native MCP plus non-LLM models such as Jev / image models), virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, a new TUI theme, and full-screen by default. Same-day experimental Pi Durable (HN item 49925969, 206pts at check) targets long-running / multi-surface use. Install: `curl -fsSL https://pi.dev/install.sh | sh` or npm `@earendil-works/pi-coding-agent`. Repo earendil-works/pi morning gh api: MIT, 111225★; https://pi.dev/ HTTP 200. Cases already lists Magnitude as one-clickable into Pi — this tip adds the official 1.0 node. Tool tip only; does not install or run it for you.",
+      "summary": "HN 首页 https://earendil.com/posts/pi-1-0/ —— Earendil 发布 Pi 1.0：MIT 极简可扩展 agent harness（TUI / print / RPC / SDK）。文内新增 Codemode（原生 MCP 与非 LLM 模型如 Jev / 图像模型）、虚拟模型扩展、延迟加载工具、Anthropic cache warming、对话中途 system message、新 TUI 主题与默认全屏。同日实验包 Pi Durable 面向长会话 / 多表面。安装：`curl -fsSL https://pi.dev/install.sh | sh` 或 npm `@earendil-works/pi-coding-agent`。本站 Cases 已收 Magnitude 写可一键接 Pi——本条补官方 1.0 节点。工具笔记，不替你安装或代跑。",
+      "summaryEn": "The post adds Codemode (native MCP plus non-LLM models such as Jev / image models), virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, a new TUI theme, and full-screen by default. Same-day experimental Pi Durable targets long-running / multi-surface use. Install: `curl -fsSL https://pi.dev/install.sh | sh` or npm `@earendil-works/pi-coding-agent`. Cases already lists Magnitude as one-clickable into Pi — this tip adds the official 1.0 node. Tool tip only; does not install or run it for you.",
       "categories": [
         "research",
         "daily-digest",
@@ -3008,8 +3010,8 @@
       },
       "hook": "用极简 Agent 底座搭自己的编程工作流。",
       "hookEn": "Build your own coding workflow on a minimal Agent harness.",
-      "verifyLog": "主源是 HN 49926069 / 49925969、Earendil 公告与 pi.dev / MIT 仓库。预览 Playwright 实拍 pi.dev 首屏 3:2。不打星。",
-      "verifyLogEn": "Primary sources are HN 49926069 / 49925969, the Earendil announce, pi.dev, and the MIT repo. Preview is a Playwright 3:2 capture of pi.dev above the fold. Unrated."
+      "verifyLog": "主源是 HN 49926069 / 49925969、Earendil 公告与 pi.dev / MIT 仓库。预览 Playwright 实拍 pi.dev 首屏 3:2。不打星。 （item 49926069，2026-10-01T19:33:05Z / 约 2026-10-02 03:33 CST，Algolia 早间核对 709pts） （HN item 49925969，核对 206pts） 仓库 earendil-works/pi 早间 gh api：MIT、111225★； 站点 https://pi.dev/ HTTP 200。",
+      "verifyLogEn": "Primary sources are HN 49926069 / 49925969, the Earendil announce, pi.dev, and the MIT repo. Preview is a Playwright 3:2 capture of pi.dev above the fold. Unrated. (2026-10-01T19:33:05Z / about 2026-10-02 03:33 CST, 709pts on Algolia at the morning check) (HN item 49925969, 206pts at check) HN front page item 49926069   at https://earendil.com/posts/pi-1-0/ — Earendil ships Pi 1.0: an MIT minimal, extensible agent harness (TUI / print / RPC / SDK). Repo earendil-works/pi morning gh api: MIT, 111225★; https://pi.dev/ HTTP 200."
     },
     {
       "id": "magnitude",
@@ -3017,8 +3019,8 @@
       "title": "Magnitude — 为本机 Agent 自调优的开源推理引擎",
       "titleEn": "Magnitude — open-source self-tuning inference engine for local agents",
       "kind": "tool",
-      "summary": "Launch HN（item 49911995，2026-09-30T17:37:40Z / 约 2026-10-01 01:37 CST，Algolia 晚间核对 169pts）https://github.com/magnitudedev/magnitude — Apache-2.0：面向本机 Agent 的推理引擎，在目标硬件上编译并调参 kernel，官网称相对 llama.cpp 最高约 2×（示例：M4 Pro Metal decode 30→57 tok/s；DGX Spark CUDA decode 49→58 tok/s，Qwen 3.6 35B A3B 4-bit / 64k / 无投机解码）。桌面端可一键接 Pi / OpenCode / Hermes / Codex / Claude Code 等，也提供 OpenAI 兼容接口；按需起停模型，会话间共享前缀缓存。仓库 magnitudedev/magnitude 于 2026-10-01 gh api：Apache-2.0、5926★；站点 https://magnitude.dev/ HTTP 200。晨间 changelog 把它与 Ledge 等一并标为「偏应用」跳过；晚间按「具体有用的 AI 工具」进 Cases 工具笔记。本条不替你下载模型或代跑推理。",
-      "summaryEn": "Launch HN item 49911995 (2026-09-30T17:37:40Z / about 2026-10-01 01:37 CST, 169pts on Algolia at the evening check) at https://github.com/magnitudedev/magnitude — Apache-2.0 inference engine for local agents that compiles and tunes kernels on your hardware. The site claims up to about 2× vs llama.cpp (example: M4 Pro Metal decode 30→57 tok/s; DGX Spark CUDA decode 49→58 tok/s, Qwen 3.6 35B A3B 4-bit / 64k / no speculative decoding). Desktop app one-clicks Pi / OpenCode / Hermes / Codex / Claude Code and more, plus an OpenAI-compatible API; models start on demand and stop after idle; sessions share prefix caches. Repo magnitudedev/magnitude on the 2026-10-01 gh api: Apache-2.0, 5926★; https://magnitude.dev/ HTTP 200. Morning changelog skipped it as app-shaped; this evening wave files it as a concrete AI-tool tip in Cases. This tip does not download models or run inference for you.",
+      "summary": "Launch HN https://github.com/magnitudedev/magnitude — Apache-2.0：面向本机 Agent 的推理引擎，在目标硬件上编译并调参 kernel，官网称相对 llama.cpp 最高约 2×（示例：M4 Pro Metal decode 30→57 tok/s；DGX Spark CUDA decode 49→58 tok/s，Qwen 3.6 35B A3B 4-bit / 64k / 无投机解码）。桌面端可一键接 Pi / OpenCode / Hermes / Codex / Claude Code 等，也提供 OpenAI 兼容接口；按需起停模型，会话间共享前缀缓存。晨间 changelog 把它与 Ledge 等一并标为「偏应用」跳过；晚间按「具体有用的 AI 工具」进 Cases 工具笔记。本条不替你下载模型或代跑推理。",
+      "summaryEn": "The site claims up to about 2× vs llama.cpp (example: M4 Pro Metal decode 30→57 tok/s; DGX Spark CUDA decode 49→58 tok/s, Qwen 3.6 35B A3B 4-bit / 64k / no speculative decoding). Desktop app one-clicks Pi / OpenCode / Hermes / Codex / Claude Code and more, plus an OpenAI-compatible API; models start on demand and stop after idle; sessions share prefix caches. Morning changelog skipped it as app-shaped; this evening wave files it as a concrete AI-tool tip in Cases. This tip does not download models or run inference for you.",
       "categories": [
         "research",
         "daily-digest",
@@ -3160,8 +3162,8 @@
       },
       "hook": "让本机 Agent 推理引擎按任务调优。",
       "hookEn": "Tune a local Agent inference engine for your tasks.",
-      "verifyLog": "主源是 Launch HN 49911995、Apache-2.0 仓库与 magnitude.dev。预览 Playwright 实拍 magnitude.dev 首屏 3:2。不打星。",
-      "verifyLogEn": "Primary sources are Launch HN 49911995, the Apache-2.0 repo, and magnitude.dev. Preview is a Playwright 3:2 capture of magnitude.dev above the fold. Unrated."
+      "verifyLog": "主源是 Launch HN 49911995、Apache-2.0 仓库与 magnitude.dev。预览 Playwright 实拍 magnitude.dev 首屏 3:2。不打星。 （item 49911995，2026-09-30T17:37:40Z / 约 2026-10-01 01:37 CST，Algolia 晚间核对 169pts） 仓库 magnitudedev/magnitude 于 2026-10-01 gh api：Apache-2.0、5926★； 站点 https://magnitude.dev/ HTTP 200。",
+      "verifyLogEn": "Primary sources are Launch HN 49911995, the Apache-2.0 repo, and magnitude.dev. Preview is a Playwright 3:2 capture of magnitude.dev above the fold. Unrated. (2026-09-30T17:37:40Z / about 2026-10-01 01:37 CST, 169pts on Algolia at the evening check) Launch HN item 49911995   at https://github.com/magnitudedev/magnitude — Apache-2.0 inference engine for local agents that compiles and tunes kernels on your hardware. Repo magnitudedev/magnitude on the 2026-10-01 gh api: Apache-2.0, 5926★; https://magnitude.dev/ HTTP 200."
     },
     {
       "id": "weave-router",
@@ -3418,8 +3420,8 @@
       "title": "Jeff — 本机可跑的 Jev 兼容 System One 小决策模型",
       "titleEn": "Jeff — local Jev-compatible System One decision models",
       "kind": "tool",
-      "summary": "HN 首页（item 49883844，2026-09-28T20:23:36Z / 约 2026-09-29 04:23 CST，Algolia 核对 235pts）https://github.com/firelex/jeff — MIT：把 Qwen3.5 / Gemma 4 微调成零样本分类决策模型，请求格式与 TypeSafe Jev 同形；作者称约 22 ms（RTX PRO 6000）/ 28 ms（Apple M4 Max MLX）一次前向，输出是各选项校准概率，不是生成文本。README：`jeff-serve` + `/v1/systemone`，支持 choice / noul / score；训练全在本机硬件，合成数据来自开源模型。仓库 firelex/jeff 于 2026-09-29 gh api：MIT、282★；Hugging Face 有 Jeff-Qwen3.5-0.8B / 2B 与 Jeff-Gemma4-E2B。作者写明独立项目、非 TypeSafe 官方。本条是工具笔记，不替你下载权重或代跑服务。",
-      "summaryEn": "HN front page item 49883844 (2026-09-28T20:23:36Z / about 2026-09-29 04:23 CST, 235pts on Algolia at check time) at https://github.com/firelex/jeff — MIT fine-tunes of Qwen3.5 / Gemma 4 for zero-shot classification in the same request shape as TypeSafe Jev. The author reports about 22 ms (RTX PRO 6000) / 28 ms (Apple M4 Max MLX) per forward pass, returning calibrated option probabilities rather than generated text. README: jeff-serve plus /v1/systemone with choice / noul / score; training on local hardware; synthetic data from an open model. Repo firelex/jeff on the 2026-09-29 gh api: MIT, 282★; Hugging Face hosts Jeff-Qwen3.5-0.8B / 2B and Jeff-Gemma4-E2B. The author states it is independent and not affiliated with TypeSafe. This is a tool tip — it does not download weights or run the server for you.",
+      "summary": "HN 首页 https://github.com/firelex/jeff — MIT：把 Qwen3.5 / Gemma 4 微调成零样本分类决策模型，请求格式与 TypeSafe Jev 同形；作者称约 22 ms（RTX PRO 6000）/ 28 ms（Apple M4 Max MLX）一次前向，输出是各选项校准概率，不是生成文本。README：`jeff-serve` + `/v1/systemone`，支持 choice / noul / score；训练全在本机硬件，合成数据来自开源模型。Hugging Face 有 Jeff-Qwen3.5-0.8B / 2B 与 Jeff-Gemma4-E2B。作者写明独立项目、非 TypeSafe 官方。本条是工具笔记，不替你下载权重或代跑服务。",
+      "summaryEn": "The author reports about 22 ms (RTX PRO 6000) / 28 ms (Apple M4 Max MLX) per forward pass, returning calibrated option probabilities rather than generated text. README: jeff-serve plus /v1/systemone with choice / noul / score; training on local hardware; synthetic data from an open model. Hugging Face hosts Jeff-Qwen3.5-0.8B / 2B and Jeff-Gemma4-E2B. The author states it is independent and not affiliated with TypeSafe. This is a tool tip — it does not download weights or run the server for you.",
       "categories": [
         "research",
         "daily-digest",
@@ -3546,8 +3548,8 @@
       },
       "hook": "在本机试用面向小决策的模型。",
       "hookEn": "Try a small-decision model locally.",
-      "verifyLog": "主源是 HN 49883844 与 MIT 仓库 / Hugging Face 权重页。预览 Playwright 实拍 GitHub 仓库首屏裁 3:2。不打星。",
-      "verifyLogEn": "Primary sources are HN 49883844 and the MIT repo / Hugging Face weight pages. Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated."
+      "verifyLog": "主源是 HN 49883844 与 MIT 仓库 / Hugging Face 权重页。预览 Playwright 实拍 GitHub 仓库首屏裁 3:2。不打星。 （item 49883844，2026-09-28T20:23:36Z / 约 2026-09-29 04:23 CST，Algolia 核对 235pts） 仓库 firelex/jeff 于 2026-09-29 gh api：MIT、282★；",
+      "verifyLogEn": "Primary sources are HN 49883844 and the MIT repo / Hugging Face weight pages. Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated. (2026-09-28T20:23:36Z / about 2026-09-29 04:23 CST, 235pts on Algolia at check time) HN front page item 49883844   at https://github.com/firelex/jeff — MIT fine-tunes of Qwen3.5 / Gemma 4 for zero-shot classification in the same request shape as TypeSafe Jev. Repo firelex/jeff on the 2026-09-29 gh api: MIT, 282★;"
     },
     {
       "id": "onesie",
@@ -3555,8 +3557,8 @@
       "title": "Onesie — 给 System One 模型用的 Unix 风格 CLI",
       "titleEn": "Onesie — a Unix-style CLI for System One models",
       "kind": "tool",
-      "summary": "Show HN（item 49876472，2026-09-28T11:37:25Z / 约 19:37 CST，Algolia 核对 2pts）https://github.com/frodi-karlsson/onesie — 作者帖标题写 Unix-style CLI for System One models like Jev。仓库 frodi-karlsson/onesie 于 2026-09-28 gh api：MIT、0★；描述为 “Possibly the most robust System One CLI”。README：把文本和问题送进管道，得到可脚本化的概率、--pick 或 --rate；shell-safety 用退出码做门（0 放行、1 拦住、7 交给人）。安装有 brew、install.sh、go install，然后 onesie auth set；也可先加 Claude Code 插件。onesie calibrate 用你已标注的数据看阈值会抓住什么、误报什么；ONESIE_MOCK 用文件假答，方便测脚本。对话对象是 TypeSafe 的 Jev（直连或 OpenRouter）或 Berget 的 System One 模型。仓库 HTTP 200。本条是工具笔记，不替你安装，也不替你把密钥或工单打到模型上。",
-      "summaryEn": "Show HN item 49876472 (2026-09-28T11:37:25Z / about 19:37 CST, 2pts on Algolia at check time) at https://github.com/frodi-karlsson/onesie — the post title calls it a Unix-style CLI for System One models like Jev. Repo frodi-karlsson/onesie on the 2026-09-28 gh api: MIT, 0★; description “Possibly the most robust System One CLI.” README: pipe text plus a question and get a scriptable probability, --pick, or --rate; shell-safety uses exit codes as a gate (0 run, 1 block, 7 ask a person). Install via brew, install.sh, or go install, then onesie auth set; a Claude Code plugin can come first. onesie calibrate shows what each cut catches and falsely flags on data you have already labelled; ONESIE_MOCK answers from a file so a script can be tested. It talks to TypeSafe’s Jev (direct or via OpenRouter) or Berget’s System One models. Repo HTTP 200. This is a tool tip — it does not install the CLI for you, and it does not send keys or tickets to a model for you.",
+      "summary": "Show HN https://github.com/frodi-karlsson/onesie — 作者帖标题写 Unix-style CLI for System One models like Jev。描述为 “Possibly the most robust System One CLI”。README：把文本和问题送进管道，得到可脚本化的概率、--pick 或 --rate；shell-safety 用退出码做门（0 放行、1 拦住、7 交给人）。安装有 brew、install.sh、go install，然后 onesie auth set；也可先加 Claude Code 插件。onesie calibrate 用你已标注的数据看阈值会抓住什么、误报什么；ONESIE_MOCK 用文件假答，方便测脚本。对话对象是 TypeSafe 的 Jev（直连或 OpenRouter）或 Berget 的 System One 模型。本条是工具笔记，不替你安装，也不替你把密钥或工单打到模型上。",
+      "summaryEn": "description “Possibly the most robust System One CLI.” README: pipe text plus a question and get a scriptable probability, --pick, or --rate; shell-safety uses exit codes as a gate (0 run, 1 block, 7 ask a person). Install via brew, install.sh, or go install, then onesie auth set; a Claude Code plugin can come first. onesie calibrate shows what each cut catches and falsely flags on data you have already labelled; ONESIE_MOCK answers from a file so a script can be tested. It talks to TypeSafe’s Jev (direct or via OpenRouter) or Berget’s System One models. This is a tool tip — it does not install the CLI for you, and it does not send keys or tickets to a model for you.",
       "categories": [
         "research",
         "daily-digest",
@@ -3685,8 +3687,8 @@
       },
       "hook": "用命令行调用 System One 模型。",
       "hookEn": "Use System One models from the command line.",
-      "verifyLog": "主源是 Show HN 49876472 与 MIT 仓库。边界：0★（2026-09-28 gh api，不虚构星数）；需要 TypeSafe / OpenRouter / Berget 的密钥，除非走 --print-request 或 ONESIE_MOCK。预览 Playwright 实拍 GitHub README 首屏 3:2。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49876472 and the MIT repo. Boundary: 0★ on the 2026-09-28 gh api (stars are not invented); a TypeSafe / OpenRouter / Berget key is required unless you use --print-request or ONESIE_MOCK. Preview is a Playwright 3:2 capture of the GitHub README above the fold. Unrated."
+      "verifyLog": "主源是 Show HN 49876472 与 MIT 仓库。边界：0★（2026-09-28 gh api，不虚构星数）；需要 TypeSafe / OpenRouter / Berget 的密钥，除非走 --print-request 或 ONESIE_MOCK。预览 Playwright 实拍 GitHub README 首屏 3:2。不打星。 （item 49876472，2026-09-28T11:37:25Z / 约 19:37 CST，Algolia 核对 2pts） 仓库 frodi-karlsson/onesie 于 2026-09-28 gh api：MIT、0★； 仓库 HTTP 200。",
+      "verifyLogEn": "Primary sources are Show HN 49876472 and the MIT repo. Boundary: 0★ on the 2026-09-28 gh api (stars are not invented); a TypeSafe / OpenRouter / Berget key is required unless you use --print-request or ONESIE_MOCK. Preview is a Playwright 3:2 capture of the GitHub README above the fold. Unrated. (2026-09-28T11:37:25Z / about 19:37 CST, 2pts on Algolia at check time) Show HN item 49876472   at https://github.com/frodi-karlsson/onesie — the post title calls it a Unix-style CLI for System One models like Jev. Repo frodi-karlsson/onesie on the 2026-09-28 gh api: MIT, 0★; Repo HTTP 200."
     },
     {
       "id": "leftovers",
@@ -3694,8 +3696,8 @@
       "title": "Leftovers — 清理 coding agent 留在 Mac 上的进程与缓存",
       "titleEn": "Leftovers — clean up processes and caches coding agents leave on a Mac",
       "kind": "tool",
-      "summary": "Show HN（item 49861159，2026-09-26 ~22:27Z，Algolia 核对 2pts）https://github.com/arpwal/leftovers — MIT 免费 macOS 菜单栏应用：按 footprint（RAM+压缩+swap）找出 agent / 应用留下的 dev server、MCP、git worktree、LaunchAgent 与可重建缓存，安全清理。仓库 arpwal/leftovers 于 2026-09-28 gh api：MIT、2★；文档站 https://arpwal.github.io/leftovers/ HTTP 200。与 Grok Bot / Claude Code / Cursor Agent 等本机旁路相邻；本条是工具笔记，不替你在本机执行清理。",
-      "summaryEn": "Show HN item 49861159 (2026-09-26 ~22:27Z, 2pts on Algolia at check time) at https://github.com/arpwal/leftovers — MIT free macOS menu-bar app: finds leftover dev servers, MCP copies, git worktrees, LaunchAgents, and rebuildable caches by footprint (RAM + compressed + swap) and cleans them safely. Repo arpwal/leftovers on the 2026-09-28 gh api: MIT, 2★; docs site https://arpwal.github.io/leftovers/ HTTP 200. Adjacent to local Grok Bot / Claude Code / Cursor Agent workflows; this is a tool tip — it does not run cleanup on your machine for you.",
+      "summary": "Show HN https://github.com/arpwal/leftovers — MIT 免费 macOS 菜单栏应用：按 footprint（RAM+压缩+swap）找出 agent / 应用留下的 dev server、MCP、git worktree、LaunchAgent 与可重建缓存，安全清理。与 Grok Bot / Claude Code / Cursor Agent 等本机旁路相邻；本条是工具笔记，不替你在本机执行清理。",
+      "summaryEn": "Adjacent to local Grok Bot / Claude Code / Cursor Agent workflows; this is a tool tip — it does not run cleanup on your machine for you.",
       "categories": [
         "research",
         "daily-digest",
@@ -3830,8 +3832,8 @@
       },
       "hook": "清理编程 Agent 遗留的进程与缓存。",
       "hookEn": "Clean up processes and caches left by coding Agents.",
-      "verifyLog": "主源是 Show HN 49861159 与 MIT 仓库 / 文档站。星数仍低（核对 2★）。预览 Playwright 实拍文档首页 3:2。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49861159 and the MIT repo / docs site. Star count is still low (2★ at check time). Preview is a Playwright 3:2 capture of the docs home. Unrated."
+      "verifyLog": "主源是 Show HN 49861159 与 MIT 仓库 / 文档站。星数仍低（核对 2★）。预览 Playwright 实拍文档首页 3:2。不打星。 （item 49861159，2026-09-26 ~22:27Z，Algolia 核对 2pts） 仓库 arpwal/leftovers 于 2026-09-28 gh api：MIT、2★； 文档站 https://arpwal.github.io/leftovers/ HTTP 200。",
+      "verifyLogEn": "Primary sources are Show HN 49861159 and the MIT repo / docs site. Star count is still low (2★ at check time). Preview is a Playwright 3:2 capture of the docs home. Unrated. (2026-09-26 ~22:27Z, 2pts on Algolia at check time) Show HN item 49861159   at https://github.com/arpwal/leftovers — MIT free macOS menu-bar app: finds leftover dev servers, MCP copies, git worktrees, LaunchAgents, and rebuildable caches by footprint (RAM + compressed + swap) and cleans them safely. Repo arpwal/leftovers on the 2026-09-28 gh api: MIT, 2★; docs site https://arpwal.github.io/leftovers/ HTTP 200."
     },
     {
       "id": "shipwithmuse",
@@ -3839,8 +3841,8 @@
       "title": "shipwithmuse.live — Muse 社区作品目录",
       "titleEn": "shipwithmuse.live — a catalog of things people built with Muse",
       "kind": "tool",
-      "summary": "Show HN（item 49863641，2026-09-27 ~05:38Z，Algolia 核对 4pts）https://shipwithmuse.live/ — 独立策展目录，按 Errands / Coding / Local models / Games 等分栏收录公开 Muse 作品（页内自称 1079 builds；含 X / GitHub / Reddit / 视频等入口）。作者 DEV 文称动机是 Muse 公开产出散落各处不好逛。官网 HTTP 200。与本站 Errand（Grok Bot/Muse 相邻）可互参；本条是目录工具笔记，不是 Meta Muse 官方站，也不替你验证每条 build。",
-      "summaryEn": "Show HN item 49863641 (2026-09-27 ~05:38Z, 4pts on Algolia at check time) at https://shipwithmuse.live/ — an independent curated catalog of public Muse builds by use case (Errands / Coding / Local models / Games, etc.; the page claims 1079 builds, with X / GitHub / Reddit / video entries). The author’s DEV post says public Muse shipping was scattered. Site HTTP 200. Useful beside this library’s Errand (Grok Bot/Muse-adjacent) card; this is a directory tool note — not the official Meta Muse site, and individual builds are not verified here.",
+      "summary": "Show HN https://shipwithmuse.live/ — 独立策展目录，按 Errands / Coding / Local models / Games 等分栏收录公开 Muse 作品（页内自称 1079 builds；含 X / GitHub / Reddit / 视频等入口）。作者 DEV 文称动机是 Muse 公开产出散落各处不好逛。与本站 Errand（Grok Bot/Muse 相邻）可互参；本条是目录工具笔记，不是 Meta Muse 官方站，也不替你验证每条 build。",
+      "summaryEn": "the page claims 1079 builds, with X / GitHub / Reddit / video entries). The author’s DEV post says public Muse shipping was scattered. Useful beside this library’s Errand (Grok Bot/Muse-adjacent) card; this is a directory tool note — not the official Meta Muse site, and individual builds are not verified here.",
       "categories": [
         "research",
         "daily-digest",
@@ -3973,8 +3975,8 @@
       },
       "hook": "看看社区用 Muse 做出了什么。",
       "hookEn": "Explore what the community has built with Muse.",
-      "verifyLog": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。预览 Playwright 实拍目录首屏 3:2。不打星。",
-      "verifyLogEn": "Primary sources are Show HN 49863641 and the public catalog; secondary is the DEV post. 1079 builds and category counts are page self-report snapshots (evening 2026-09-27). Preview is a Playwright 3:2 capture of the catalog above the fold. Unrated."
+      "verifyLog": "主源是 Show HN 49863641 与公开目录页；副源 DEV 文。预览 Playwright 实拍目录首屏 3:2。不打星。 （item 49863641，2026-09-27 ~05:38Z，Algolia 核对 4pts） 官网 HTTP 200。",
+      "verifyLogEn": "Primary sources are Show HN 49863641 and the public catalog; secondary is the DEV post. 1079 builds and category counts are page self-report snapshots (evening 2026-09-27). Preview is a Playwright 3:2 capture of the catalog above the fold. Unrated. (2026-09-27 ~05:38Z, 4pts on Algolia at check time) Show HN item 49863641   at https://shipwithmuse.live/ — an independent curated catalog of public Muse builds by use case (Errands / Coding / Local models / Games, etc.; Site HTTP 200."
     },
     {
       "id": "personal-jarvis",
@@ -3982,8 +3984,8 @@
       "title": "Personal Jarvis：开源本机语音编排桌面（Grok Bot 相邻）",
       "titleEn": "Personal Jarvis: open-source local voice-orchestrated desktop (Grok Bot-adjacent)",
       "kind": "tool",
-      "summary": "Show HN（item 49833292，2026-09-24 ~16:43Z，Algolia 核对 1pt）https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 本机桌面：Jarvis 用语音/文字编排 agents、coding session、桌面动作与 MCP；可挂例行与本地 Markdown wiki，产物进 Artifacts。作者在 HN 标题写成 Grok Bot 开源替代；README 强调跑在自己电脑上、模型自选（托管/本地）。仓库于 2026-09-25 gh api：Apache-2.0、65★。官网 personaljarvis.ai HTTP 200。收录为可复现的相邻栈，不当官方替代品。",
-      "summaryEn": "Show HN item 49833292 (2026-09-24 ~16:43Z, 1pt on Algolia at check time) at https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 local desktop: Jarvis orchestrates agents, coding sessions, desktop actions, and MCP by voice or text; supports routines and a local Markdown wiki, with outputs in Artifacts. The HN title frames it as an open-source Grok Bot alternative; the README stresses running on your own computer with your choice of hosted or local models. Repo on the 2026-09-25 gh api: Apache-2.0, 65★. Site personaljarvis.ai HTTP 200. Catalogued as a reproducible adjacent stack, not an official replacement.",
+      "summary": "Show HN https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 本机桌面：Jarvis 用语音/文字编排 agents、coding session、桌面动作与 MCP；可挂例行与本地 Markdown wiki，产物进 Artifacts。作者在 HN 标题写成 Grok Bot 开源替代；README 强调跑在自己电脑上、模型自选（托管/本地）。收录为可复现的相邻栈，不当官方替代品。",
+      "summaryEn": "supports routines and a local Markdown wiki, with outputs in Artifacts. The HN title frames it as an open-source Grok Bot alternative; the README stresses running on your own computer with your choice of hosted or local models. Catalogued as a reproducible adjacent stack, not an official replacement.",
       "categories": [
         "community",
         "engineering",
@@ -4119,8 +4121,8 @@
       "previewImage": "/previews/personal-jarvis.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
       "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
-      "verifyLog": "Apache-2.0（2026-09-25 gh api，65★）。Show HN item 49833292。",
-      "verifyLogEn": "Apache-2.0 (gh api, 2026-09-25, 65★). Show HN item 49833292."
+      "verifyLog": "Apache-2.0（2026-09-25 gh api，65★）。Show HN item 49833292。 （item 49833292，2026-09-24 ~16:43Z，Algolia 核对 1pt） 仓库于 2026-09-25 gh api：Apache-2.0、65★。 官网 personaljarvis.ai HTTP 200。",
+      "verifyLogEn": "Apache-2.0 (gh api, 2026-09-25, 65★). Show HN item 49833292. (2026-09-24 ~16:43Z, 1pt on Algolia at check time) Show HN item 49833292   at https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 local desktop: Jarvis orchestrates agents, coding sessions, desktop actions, and MCP by voice or text; Repo on the 2026-09-25 gh api: Apache-2.0, 65★. Site personaljarvis.ai HTTP 200."
     },
     {
       "id": "us-paypal-cn-visa",
@@ -4477,8 +4479,8 @@
       "title": "用多席 Grok Bot 向越南面料厂询价出样",
       "titleEn": "multi-Bot fabric sourcing to Vietnam suppliers",
       "kind": "guide",
-      "summary": "来自 HN「Grok Bot」帖（item 49261514）下 jjcm 的可复现流程：按领域拆 Bot（各自 Routine/上下文/电脑），异步跑；面料 Bot 先联约 5 家越南供应商，无回再扩 5 家，再人工推到约 40 家（多走 WhatsApp）；与原型 Bot 协作生成带 logo 的随机花纹并导出 .ai 发给供应商。强调域隔离比堆一个全能 Bot 更稳，但也提醒常驻 Agent 会显著烧 token。",
-      "summaryEn": "From the HN “Grok Bot” thread (item 49261514), jjcm’s reproducible flow: split Bots by domain (each with its own routines, context, and computer) for async work; a fabric Bot first reaches ~5 Vietnam suppliers, expands by 5 when silent, then is pushed to ~40 (often via WhatsApp); it collaborates with a prototyper Bot to generate a logo-based random pattern and send a .ai file. Domain isolation beats one mega-Bot, but always-on Agents burn tokens hard.",
+      "summary": "来自 HN「Grok Bot」帖 下 jjcm 的可复现流程：按领域拆 Bot（各自 Routine/上下文/电脑），异步跑；面料 Bot 先联约 5 家越南供应商，无回再扩 5 家，再人工推到约 40 家（多走 WhatsApp）；与原型 Bot 协作生成带 logo 的随机花纹并导出.ai 发给供应商。强调域隔离比堆一个全能 Bot 更稳，但也提醒常驻 Agent 会显著烧 token。",
+      "summaryEn": "From the HN “Grok Bot” thread, jjcm’s reproducible flow: split Bots by domain (each with its own routines, context, and computer) for async work; a fabric Bot first reaches ~5 Vietnam suppliers, expands by 5 when silent, then is pushed to ~40 (often via WhatsApp); it collaborates with a prototyper Bot to generate a logo-based random pattern and send a.ai file. Domain isolation beats one mega-Bot, but always-on Agents burn tokens hard.",
       "categories": [
         "ops",
         "multi-agent",
@@ -4514,8 +4516,8 @@
       "previewImage": "/previews/hn-jjcm-fabric-swag-sourcing.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
       "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
-      "verifyLog": "HN 站点评论（item 49263241，父帖 49261514）。",
-      "verifyLogEn": "HN site comment (item 49263241; parent 49261514)."
+      "verifyLog": "HN 站点评论（item 49263241，父帖 49261514）。 （item 49261514）",
+      "verifyLogEn": "HN site comment (item 49263241; parent 49261514). (item 49261514)"
     },
     {
       "id": "openbot-opensource",
@@ -4523,8 +4525,8 @@
       "title": "Open Bot：开源「每席一电脑」Grok Bot 替代（任意 AG-UI harness）",
       "titleEn": "Open Bot: open-source Grok Bot-style coworkers on any AG-UI harness",
       "kind": "tool",
-      "summary": "Show HN（item 49365575）CopilotKit/OpenBot：MIT 开源「AI coworkers」——每席有独立电脑（浏览器/文件/工具），动作先决策后记录；可接任意 AG-UI agent harness，不绑死单一厂商。仓库 README 与站点可核验；维护者在 HN 注明仍为 alpha。对想对照 Grok Bot「专席电脑 + 可审动作」的人，是可自建的相邻方案。",
-      "summaryEn": "Show HN (item 49365575) CopilotKit/OpenBot: MIT open-source AI coworkers — each seat gets its own computer (browser/files/tools), with actions decided before and recorded after; bring any AG-UI agent harness, no single-vendor lock-in. README and site verified; maintainers note alpha on HN. A self-hostable adjacent option for people comparing Grok Bot’s per-seat computer + reviewable actions.",
+      "summary": "Show HN CopilotKit/OpenBot：MIT 开源「AI coworkers」——每席有独立电脑（浏览器/文件/工具），动作先决策后记录；可接任意 AG-UI agent harness，不绑死单一厂商。仓库 README 与站点可核验；维护者在 HN 注明仍为 alpha。对想对照 Grok Bot「专席电脑 + 可审动作」的人，是可自建的相邻方案。",
+      "summaryEn": "Show HN CopilotKit/OpenBot: MIT open-source AI coworkers — each seat gets its own computer (browser/files/tools), with actions decided before and recorded after; bring any AG-UI agent harness, no single-vendor lock-in. README and site verified; maintainers note alpha on HN. A self-hostable adjacent option for people comparing Grok Bot’s per-seat computer + reviewable actions.",
       "categories": [
         "community",
         "engineering",
@@ -4560,8 +4562,8 @@
       "previewImage": "/previews/openbot-opensource.webp",
       "previewCredit": "预览：Playwright 实拍来源页，裁成 3:2 WebP",
       "previewCreditEn": "Preview: Playwright capture of the source page, cropped to 3:2 WebP",
-      "verifyLog": "MIT（2026-09-22 gh api）。Show HN item 49365575：alpha，路线图仍在推进；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。",
-      "verifyLogEn": "MIT (gh api, 2026-09-22). Show HN item 49365575: alpha with an active roadmap; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement."
+      "verifyLog": "MIT（2026-09-22 gh api）。Show HN item 49365575：alpha，路线图仍在推进；收录为可复现的开源相邻栈，不当官方 Grok Bot 替代品宣传。 （item 49365575）",
+      "verifyLogEn": "MIT (gh api, 2026-09-22). Show HN item 49365575: alpha with an active roadmap; catalogued as a reproducible open-source adjacent stack, not marketed as an official Grok Bot replacement. (item 49365575)"
     },
     {
       "id": "designing-grok-bot-with-grok-bot",
@@ -4941,9 +4943,9 @@
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "可粘贴的小队配方，默认可读可草稿，发送必须人批。",
       "hookEn": "Paste-ready team recipes that read and draft by default, and wait before sending.",
-      "previewImage": "/previews/rosterroom-prompts.webp",
-      "previewCredit": "预览：Playwright 实拍来源页对应区块，裁成 3:2 WebP",
-      "previewCreditEn": "Preview: Playwright clip of the matching source section, cropped to 3:2 WebP"
+      "previewCredit": "预览：本站生成的条目封面（原截图被 Cookie 弹窗遮挡），不是来源页实拍",
+      "previewCreditEn": "Preview: a cover generated by this site (the earlier capture was blocked by a cookie dialog), not a source screenshot",
+      "previewImage": "/previews/rosterroom-prompts.webp"
     },
     {
       "id": "how-i-run-multiple-teams",

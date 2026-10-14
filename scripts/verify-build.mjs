@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
-import { LOG_PATTERN } from "./quality-note-rules.mjs";
+import { LOG_PATTERN, SUMMARY_LOG_PATTERN } from "./quality-note-rules.mjs";
 
 const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.meta.url), "utf8"));
 const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
@@ -517,6 +517,9 @@ if (missing.length) {
       for (const [field, text] of [["qualityNote", item.qualityNote], ["qualityNoteEn", item.qualityNoteEn]]) {
         if (typeof text === "string" && LOG_PATTERN.test(text)) noteBad.push(`${label}/${item.id} ${field}: ${text.match(LOG_PATTERN)[0]}`);
       }
+      for (const [field, text] of [["summary", item.summary], ["summaryEn", item.summaryEn]]) {
+        if (typeof text === "string" && SUMMARY_LOG_PATTERN.test(text)) noteBad.push(`${label}/${item.id} ${field}: ${text.match(SUMMARY_LOG_PATTERN)[0]}`);
+      }
     }
   };
   lintNotes("cases", dataset.cases);
@@ -525,10 +528,10 @@ if (missing.length) {
   lintNotes("models", modelsDataset.models);
   lintNotes("image-prompts", imagePromptsDataset.items);
   if (noteBad.length) {
-    console.error(`quality note lint: ${noteBad.length} note(s) contain verification-log wording; move it to verifyLog (node scripts/split-quality-notes.mjs --write):\n${noteBad.join("\n")}`);
+    console.error(`quality note lint: ${noteBad.length} note(s) contain verification-log wording; move it to verifyLog (node scripts/split-quality-notes.mjs --write; node scripts/split-summaries.mjs --write):\n${noteBad.join("\n")}`);
     process.exit(1);
   }
-  console.log("quality note lint: reader-facing notes contain no crawl or capture logs.");
+  console.log("quality note lint: reader-facing notes and summaries contain no crawl or capture logs.");
 }
 
 console.log(
