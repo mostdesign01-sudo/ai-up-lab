@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-14",
+      "title": "整站梳理：分类、收录理由与页面一致性",
+      "titleEn": "Site cleanup: categories, listing notes, and page consistency",
+      "body": "Cases 新增 kind 字段（工具 / 教程 / 用法配方 / 资讯 / 实践案例），目录按它自动归档，标题去掉「工具：」等前缀；7 个放错到「学习」的新工具回到「工具与应用」，资讯不再混进教程。收录理由与摘要里的 HTTP 状态、star、HN 编号、截图方式移到详情页折叠的「核验记录」，构建会检查。精选按统一规则收紧到约 16%，难度 beginner 并入 starter。旧列表页标 noindex 并移出 sitemap，详情面包屑统一为「首页 / 目录 / 标题」，「品牌收集」移入「更多」。首页首屏与创意轨重排，模型页改用统一目录版式，补齐浅色模式的文字对比度。条目数量不变。",
+      "bodyEn": "Cases gain a kind field (tool / guide / playbook / news / case study); directories derive from it and titles drop type prefixes. Seven recent tools filed under Learning move to Tools, and launch news no longer mixes with guides. HTTP status, star counts, HN ids, and capture notes move out of listing notes and summaries into a folded Verification log on detail pages, with a build check. Featured follows one rule and drops to about 16%; beginner merges into starter. Legacy listings are noindex and leave the sitemap; breadcrumbs read Home / section / title; Brand collection moves into More. The homepage lead and creative rail are rebalanced, the Models page uses the shared directory layout, and light-mode text contrast is fixed. Entry counts unchanged."
+    },
+    {
+      "date": "2026-10-14",
       "title": "收录：Cases +1（小王子 3D 剧情游戏）",
       "titleEn": "Catalog: Cases +1 (The Little Prince 3D story game)",
       "body": "Hao 指定收录 @Saccc_c 帖：16 天用 Opus 5.5 + Tripo + Blender 做的《小王子》3D 剧情网页游戏（littleprince.dev）。标题页可打开；无头浏览器无 WebGPU，未实玩；开源为作者计划，暂无仓库。Playwright 3:2 WebP 预览。cases 171→172。未改首页精选、Models。",

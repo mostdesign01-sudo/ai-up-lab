@@ -70,7 +70,17 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
 .editorial-creative-copy { min-width: 0; }
 .editorial-creative-card h3 { margin: 6px 0 6px; font-size: 16px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere; padding-right: 34px; }
 .editorial-creative-copy > p { font-size: 13px; color: var(--muted); line-height: 1.65; margin: 0 0 10px; }
-.editorial-creative-card .fav-icon { top: 8px; right: 8px; width: 36px; height: 36px; opacity: 1; background: var(--bg-card); }
+.editorial-creative-card .fav-icon { position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; opacity: 1; background: var(--bg-card); }
+/* Desktop: thumbnail beside the copy, so the rail ends near the lead illustration instead of running ~400px past it. */
+@media (min-width: 1051px) {
+  .editorial-creative-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 14px; align-items: start; }
+  .editorial-creative-media { border-radius: 4px; }
+  .editorial-creative-media img { aspect-ratio: 1; }
+  .editorial-creative-kind { margin-top: 0; }
+  .editorial-creative-card h3 { margin-top: 4px; font-size: 15px; padding-right: 40px; }
+  .editorial-creative-copy > p { margin-bottom: 8px; }
+  .editorial-creative-card .fav-icon { top: 0; right: 0; }
+}
 .editorial-creative-more { margin-top: 2px; }
 @keyframes editorial-creative-drift {
   from { transform: scale(1.04) translate3d(0, 0, 0); }
@@ -155,7 +165,9 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
 @media (max-width: 700px) {
   .directory-header-top { padding-block: 10px 8px; }
   .directory-header .brand { --lockup-mark: var(--lab-logo-mobile); font-size: 14px; }
-  .directory-nav { gap: 18px; }
+  /* The fade says "there is more to the right"; the end padding lets the last link scroll clear of it. */
+  .directory-nav { gap: 16px; padding-inline-end: 28px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+  .directory-nav::-webkit-scrollbar { display: none; }
   .editorial-home { padding-top: 28px; }
   .editorial-lead { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .editorial-eyebrow { margin-bottom: 18px; font-size: 12px; }

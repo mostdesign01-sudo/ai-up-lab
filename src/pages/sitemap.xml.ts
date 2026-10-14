@@ -5,7 +5,7 @@ import { entries, sections } from "../lib/directory";
 import { withBase } from "../lib/paths";
 export const GET: APIRoute = ({ site }) => {
   const routes = new Map<string, string | undefined>([
-    ...["", "about/", "brand/", "changelog/", "cases/", "html/", "agent-ui/", "image-prompts/"].map(path => [withBase(path), undefined] as const),
+    ...["", "about/", "brand/", "changelog/"].map(path => [withBase(path), undefined] as const),
     ...designKnowledge.map(spec => [withBase(`brand/guides/${spec.id}/`), undefined] as const),
     ...sections.map(section => [withBase(`${section.id}/`), undefined] as const),
     ...brandCollectionPages.map(page => [withBase(page.href), undefined] as const),

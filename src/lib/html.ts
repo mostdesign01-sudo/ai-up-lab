@@ -30,6 +30,8 @@ export interface HtmlItem {
   updatedAt: string;
   qualityNote: string;
   qualityNoteEn?: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   tags: string[];
 }
 

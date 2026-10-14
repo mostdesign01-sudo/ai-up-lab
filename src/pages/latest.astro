@@ -10,7 +10,7 @@ const latest = getLatestCases();
 const lede = fill(ui.grok.latestLede, { n: latest.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="grok"
   title={ui.grok.latestTitle.zh}
   titleEn={ui.grok.latestTitle.en}

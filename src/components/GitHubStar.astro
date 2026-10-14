@@ -72,7 +72,8 @@ const GITHUB_MARK =
   const targets = document.querySelectorAll<HTMLElement>("[data-gh-stars]");
 
   const paint = (count: number) => {
-    if (!Number.isInteger(count) || count <= 0) return;
+    // A count of 1–9 reads as "nobody uses this"; show the number once it says something.
+    if (!Number.isInteger(count) || count < 10) return;
     const text = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 }).format(count);
     targets.forEach((el) => {
       el.textContent = text;

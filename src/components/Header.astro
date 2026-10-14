@@ -17,7 +17,6 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
     <nav class="directory-nav" aria-label="目录 / Directory">
       <a href={withBase("/")} aria-current={isCurrentPath(path, withBase("/")) ? "page" : undefined}><Loc zh="首页" en="Home" /></a>
       {sections.map(section => <a href={withBase(`${section.id}/`)} aria-current={active === section.id ? "page" : undefined}><Loc zh={section.title.zh} en={section.title.en} /></a>)}
-      <a href={withBase("brand-collection/")} aria-current={isSectionPath(path, withBase("brand-collection/")) ? "page" : undefined}><Loc zh="品牌收集" en="Brand collection" /></a>
     </nav>
     <div class="directory-header-tools">
       <a href={withBase("favorites/")}><Loc zh="收藏" en="Saved" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
@@ -29,6 +28,7 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
           <a href={withBase("changelog/")}><Loc zh="更新记录" en="Update notes" /></a>
           <a href={withBase("about/")}><Loc zh="关于本站" en="About" /></a>
           <a href={withBase("brand/")}><Loc zh="品牌与界面规范" en="Brand guidelines" /></a>
+          <a href={withBase("brand-collection/")} aria-current={isSectionPath(path, withBase("brand-collection/")) ? "page" : undefined}><Loc zh="品牌收集" en="Brand collection" /></a>
         </nav>
       </details>
       <GitHubStar variant="pill" />
@@ -38,6 +38,10 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
   </div>
 </header>
 <script>
+  // On narrow screens the nav scrolls sideways; keep the current section in view.
+  const nav = document.querySelector<HTMLElement>(".directory-nav");
+  const current = nav?.querySelector<HTMLElement>('[aria-current="page"]');
+  if (nav && current && nav.scrollWidth > nav.clientWidth) nav.scrollLeft = current.offsetLeft - nav.clientWidth / 2 + current.offsetWidth / 2;
   const more = document.querySelector<HTMLDetailsElement>(".directory-header-more");
   document.addEventListener("click", event => {
     if (event.target instanceof Node && !more?.contains(event.target)) more?.removeAttribute("open");

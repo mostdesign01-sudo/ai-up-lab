@@ -30,7 +30,13 @@
       "previewImage": "/previews/dsxzai-image-25-gallery.webp",
       "previewCredit": "预览：@dashiAIxz X 帖附图（img.dsxzai.com 首屏截图，裁成 3:2）",
       "previewCreditEn": "Preview: the screenshot attached to @dashiAIxz’s X post (top of img.dsxzai.com, cropped to 3:2)",
-      "tags": ["gallery", "prompt-library", "copy-to-recreate", "chinese", "community"],
+      "tags": [
+        "gallery",
+        "prompt-library",
+        "copy-to-recreate",
+        "chinese",
+        "community"
+      ],
       "publishedAt": "2026-09-14",
       "updatedAt": "2026-09-14T12:00:00Z",
       "highlights": [
@@ -51,9 +57,11 @@
           "textEn": "The site is a Vite/React single-page app; a public /api/cases endpoint pages through the cases. Its total field for the “all” tab read 485 when this library opened it on 2026-09-14 — but that is the site’s own figure across all model tabs; the Image 2.5-only count was not re-tallied here."
         }
       ],
-      "qualityNote": "Image 2.5 提示词看板的第一张卡：一个可逛的第三方提示词画廊，不是模型卡，也不是 Grok Bot 用法。主源是 img.dsxzai.com（2026-09-14 本库打开返回 200，Cloudflare 前置），社区源是作者 @dashiAIxz 的 X 帖（可达，正文与附图已核）。「复制就能生成同款」「能力很强没多少人关注」均为作者自述；站内每条提示词与原帖作品的对应关系以该条的整理说明为准，本库未逐条打开。站点带「提交案例」与「管理」入口，是作者自建站，本库不为其背书，也未测试提交流程。不写点赞、浏览等互动数字；条数只记接口当日自报值并标明口径。预览图取自作者 X 帖附图（站点首屏截图，裁掉浏览器边框后取中 3:2），非本库现场截图 — 无头浏览器打开时首屏图片仍在渐入动画中，故未用现场截图。不打星。",
-      "qualityNoteEn": "First card on the Image 2.5 prompts board: a browsable third-party prompt gallery — not a model card, not a Grok Bot playbook. Primary source is img.dsxzai.com (returned 200 behind Cloudflare when this library opened it on 2026-09-14); the community source is the author @dashiAIxz’s X post (reachable; text and attached image checked). “Copy it and you get the same result” and “strong but under-noticed” are the author’s claims; the mapping between each on-site prompt and its original post is whatever that case’s curation note says — not opened one by one here. The site carries “submit a case” and “admin” entries and is the author’s own build; no endorsement, and the submission flow was not tested. No likes, views, or other engagement figures are recorded; the only count noted is the API’s self-reported total on the day, with its scope stated. Preview is the screenshot attached to the author’s X post (top of the site, browser chrome trimmed, center-cropped to 3:2), not a live capture by this library — a headless load caught the first-screen images mid fade-in, so no live shot was used. Unrated.",
-      "featured": true
+      "qualityNote": "Image 2.5 提示词看板的第一张卡：一个可逛的第三方提示词画廊，不是模型卡，也不是 Grok Bot 用法。主源是 img.dsxzai.com（2026-09-14 本库打开返回 200，Cloudflare 前置），社区源是作者 @dashiAIxz 的 X 帖（可达，正文与附图已核）。「复制就能生成同款」「能力很强没多少人关注」均为作者自述；站内每条提示词与原帖作品的对应关系以该条的整理说明为准，本库未逐条打开。站点带「提交案例」与「管理」入口，是作者自建站，本库不为其背书，也未测试提交流程。不写点赞、浏览等互动数字；条数只记接口当日自报值并标明口径。预览图取自作者 X 帖附图（站点首屏截图，裁掉浏览器边框后取中 3:2），非本库现场截图 — 无头浏览器打开时首屏图片仍在渐入动画中，故未用现场截图。",
+      "qualityNoteEn": "First card on the Image 2.5 prompts board: a browsable third-party prompt gallery — not a model card, not a Grok Bot playbook. Primary source is img.dsxzai.com (returned 200 behind Cloudflare when this library opened it on 2026-09-14); the community source is the author @dashiAIxz’s X post (reachable; text and attached image checked). “Copy it and you get the same result” and “strong but under-noticed” are the author’s claims; the mapping between each on-site prompt and its original post is whatever that case’s curation note says — not opened one by one here. The site carries “submit a case” and “admin” entries and is the author’s own build; no endorsement, and the submission flow was not tested. No likes, views, or other engagement figures are recorded; the only count noted is the API’s self-reported total on the day, with its scope stated.",
+      "featured": true,
+      "verifyLog": "不打星。",
+      "verifyLogEn": "Preview is the screenshot attached to the author’s X post (top of the site, browser chrome trimmed, center-cropped to 3:2), not a live capture by this library — a headless load caught the first-screen images mid fade-in, so no live shot was used. Unrated."
     }
   ]
 }

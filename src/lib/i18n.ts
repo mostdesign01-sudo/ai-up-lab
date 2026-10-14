@@ -83,6 +83,7 @@ export const ui = {
     skill: { zh: "Skill", en: "Skill" },
   },
   quality: { zh: "为什么推荐", en: "Why we recommend it" },
+  verifyLog: { zh: "核验记录：来源、抓取与截图说明", en: "Verification log: sources, checks, and captures" },
   stars: {
     label: { zh: "星级", en: "Stars" },
     of: { zh: "星级 {n} / 5", en: "{n} of 5 stars" },

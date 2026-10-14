@@ -10,7 +10,7 @@ const featured = getFeaturedHtml();
 const lede = fill(ui.html.featuredLede, { n: featured.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="html"
   title={ui.html.featuredTitle.zh}
   titleEn={ui.html.featuredTitle.en}

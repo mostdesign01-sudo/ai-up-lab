@@ -1,0 +1,15 @@
+---
+import Loc from "./Loc.astro";
+import { entries, sections, type LibraryId } from "../lib/directory";
+import { withBase } from "../lib/paths";
+
+interface Props { lib: LibraryId; id: string; }
+const { lib, id } = Astro.props;
+const entry = entries.find(entry => entry.key === `${lib}:${id}`)!;
+const section = sections.find(section => section.id === entry.sections[0])!;
+---
+<nav class="crumb" aria-label="面包屑 / Breadcrumb">
+  <a href={withBase("/")}><Loc zh="首页" en="Home" /></a> /
+  <a href={withBase(`${section.id}/`)}><Loc zh={section.title.zh} en={section.title.en} /></a> /
+  <span aria-current="page"><Loc zh={entry.title.zh} en={entry.title.en} /></span>
+</nav>
