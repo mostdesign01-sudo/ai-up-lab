@@ -1,6 +1,46 @@
 {
   "cases": [
     {
+      "id": "solidcraft",
+      "slug": "solidcraft",
+      "title": "工具：SolidCraft — 开源参数化 CAD（Rust），带 MCP 让助手直接建模",
+      "titleEn": "Tool: SolidCraft — open-source parametric CAD in Rust with MCP for agents",
+      "hook": "浏览器里做参数化零件，还能经 MCP 让助手直接建模。",
+      "hookEn": "Parametric parts in the browser, plus MCP so coding agents can model too.",
+      "summary": "SolidCraft 是纯 Rust 写的开源参数化 3D CAD（Apache-2.0）：草图、约束、特征时间线，改尺寸会重建。可以下载桌面版，也可以在浏览器里试用 https://bherbruck.github.io/solidcraft/app/ ；内置 MCP，编程助手能通过协议直接建模。作者写目前还早，但简单零件已经能用。适合想让编程助手参与 CAD、硬件外壳一类建模，又要开源、可自托管路线的人。",
+      "summaryEn": "SolidCraft is an open-source parametric 3D CAD app written in pure Rust (Apache-2.0): sketches, constraints, and a feature timeline that rebuilds when a dimension changes. You can download the desktop app or try it in the browser at https://bherbruck.github.io/solidcraft/app/. A built-in MCP server lets coding agents model through the protocol. The author describes it as early, but usable for simple parts. Good if you want a coding agent to take part in CAD or hardware-enclosure modeling, and you want an open-source path you can self-host.",
+      "categories": [
+        "content",
+        "engineering",
+        "productivity"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://bherbruck.github.io/solidcraft/",
+      "secondaryUrls": [
+        "https://github.com/bherbruck/solidcraft",
+        "https://bherbruck.github.io/solidcraft/app/",
+        "https://news.ycombinator.com/item?id=50064840"
+      ],
+      "sourceType": "community-show",
+      "qualityNote": "Show HN https://news.ycombinator.com/item?id=50064840（2026-10-13T00:11:04Z，撰写时约 133 分）。文档站 https://bherbruck.github.io/solidcraft/ 与网页试用 https://bherbruck.github.io/solidcraft/app/ 早间 HTTP 200。gh api：Apache-2.0、约 1821★，仓库 2026-10-07 创建，最近推送 2026-10-14；最新 release v0.9.0（2026-10-13）。草图、约束、特征时间线、改尺寸重建、桌面下载、网页试用、内置 MCP，以及作者写的 early but usable for simple parts，均照 README。本库没有下载桌面应用，没有连接 MCP，没有在 CAD 里建模。预览为 Playwright 实拍文档站首页（页内嵌有零件界面），裁 3:2 WebP 自托管。网页应用 https://bherbruck.github.io/solidcraft/app/ 也打开过，停在起始页，未新建零件。",
+      "qualityNoteEn": "Show HN https://news.ycombinator.com/item?id=50064840 (2026-10-13T00:11:04Z, about 133 points at write time). Docs https://bherbruck.github.io/solidcraft/ and the web app https://bherbruck.github.io/solidcraft/app/ returned HTTP 200 this morning. gh api: Apache-2.0, ~1821★, repo created 2026-10-07, last push 2026-10-14; latest release v0.9.0 (2026-10-13). Sketches, constraints, the feature timeline, rebuild-on-dimension-change, desktop downloads, the browser trial, built-in MCP, and the author’s “early but usable for simple parts” follow the README. This library did not download the desktop app, did not connect MCP, and did not model a part. Preview is a Playwright capture of the docs homepage (it embeds a part screenshot), cropped to a self-hosted 3:2 WebP. The web app at https://bherbruck.github.io/solidcraft/app/ was opened and stayed on the start screen; no part was created.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手经 MCP 会改零件模型；导出制造文件或对外发布前，自己核对尺寸和结构。",
+      "approvalBoundaryEn": "Agents can change part models over MCP; check dimensions and structure yourself before exporting manufacturing files or publishing.",
+      "connectors": [
+        "mcp"
+      ],
+      "language": "zh",
+      "featured": true,
+      "publishedAt": "2026-10-13",
+      "updatedAt": "2026-10-14T01:05:00Z",
+      "previewImage": "/previews/solidcraft.webp"
+    },
+    {
       "id": "doop",
       "slug": "doop",
       "title": "工具：Doop — 人和 AI Agent 一起用的开源设计画布（自带 MCP）",
@@ -9331,11 +9371,22 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T12:20:00Z",
+    "updatedAt": "2026-10-14T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.55",
-    "count": 171,
+    "version": "1.4.56",
+    "count": 172,
     "sourcesCrawled": [
+      "https://impeccable.style/",
+      "https://impeccable.style/docs",
+      "https://github.com/pbakaus/impeccable",
+      "https://x.com/m_arhamasif/status/2110038467489259615",
+      "https://plugin87.github.io/ux-ui-agent-skills/",
+      "https://github.com/plugin87/ux-ui-agent-skills",
+      "https://www.npmjs.com/package/ux-ui-agent-skills",
+      "https://bherbruck.github.io/solidcraft/",
+      "https://bherbruck.github.io/solidcraft/app/",
+      "https://github.com/bherbruck/solidcraft",
+      "https://news.ycombinator.com/item?id=50064840",
       "https://x.com/AverageAiBro/status/2109822177621262758",
       "https://github.com/cathrynlavery/diagram-design",
       "https://diagramdesign.dev/",

@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-14",
+      "title": "每日更新：HTML +2（Impeccable / XIAS）、Cases +1（SolidCraft）",
+      "titleEn": "Daily update: HTML +2 (Impeccable / XIAS), Cases +1 (SolidCraft)",
+      "body": "AI×设计优先。HTML：impeccable（设计词表 + audit/polish 等命令 + 确定性检测，Apache-2.0，官网 impeccable.style）；ux-ui-agent-skills / XIAS（设计系统技能包 + 可失败验收闸门，MIT，演示站可先看）。Cases：solidcraft（开源参数化 CAD + MCP，Show HN https://news.ycombinator.com/item?id=50064840）。预览均为 Playwright 3:2 WebP。本库未安装 skill/插件、未连 MCP、未在 CAD 里实测建模。html-items 135→137，cases 171→172。未改首页精选、Agent UI、Models。等 Hao「合」。",
+      "bodyEn": "AI×design first. HTML: impeccable (design vocabulary plus audit/polish and other commands, plus deterministic detectors; Apache-2.0; site impeccable.style); ux-ui-agent-skills / XIAS (design-system skill pack with acceptance gates that can fail the build; MIT; demo you can open before installing). Cases: solidcraft (open-source parametric CAD with MCP; Show HN https://news.ycombinator.com/item?id=50064840). All previews are Playwright 3:2 WebP. This library did not install the skill or plugin, did not connect MCP, and did not model a part in CAD. html-items 135→137, cases 171→172. Homepage picks, Agent UI, and Models unchanged. Waiting for Hao to merge（合）."
+    },
+    {
       "date": "2026-10-13",
       "title": "晚间收录：HTML +1（Diagram Design）、Agent UI +1（Aria Icons）、Cases +1（Doop）",
       "titleEn": "Evening catalog: HTML +1 (Diagram Design), Agent UI +1 (Aria Icons), Cases +1 (Doop)",

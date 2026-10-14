@@ -1,6 +1,83 @@
 {
   "items": [
     {
+      "id": "impeccable",
+      "slug": "impeccable",
+      "title": "Impeccable：给编程助手的设计词表，用命令审计并改掉 AI 界面同质化",
+      "titleEn": "Impeccable: design vocabulary for coding agents — audit and polish away AI UI slop",
+      "hook": "装进助手后，用 audit / polish 等压掉 AI 界面同质化。",
+      "hookEn": "Install into your agent, then audit and polish away AI UI slop.",
+      "summary": "一个免费开源（Apache-2.0）的设计指导，给 AI 编程助手用。官网 impeccable.style，仓库 pbakaus/impeccable。在项目里跑 `npx impeccable install`，可装进 Claude Code、Cursor、Codex、Copilot、Grok Build 等；再用 `/impeccable init` 写下 PRODUCT.md，然后用 polish、audit、critique、distill、animate、bolder、quieter 等约 24 条命令改界面。另外约 59 条确定性检测规则，CLI 和浏览器扩展可以不调模型就抓常见的 AI 界面「同质化」痕迹，比如过度用 Inter、紫蓝渐变、卡片套卡片。适合经常让助手出前端、又嫌结果千篇一律的人。",
+      "summaryEn": "Free, open-source (Apache-2.0) design guidance for AI coding agents. The site is impeccable.style; the repo is pbakaus/impeccable. From a project, `npx impeccable install` sets it up in Claude Code, Cursor, Codex, Copilot, Grok Build, and similar hosts. Then `/impeccable init` writes PRODUCT.md, and commands such as polish, audit, critique, distill, animate, bolder, and quieter—about 24 in all—revise the interface. About 59 deterministic detector rules let the CLI and browser extension catch common AI-interface tells, such as overusing Inter, purple-to-blue gradients, and cards nested in cards, without calling a model. Good if your agent often ships front ends that all look the same.",
+      "sourceUrl": "https://impeccable.style/",
+      "secondaryUrls": [
+        "https://github.com/pbakaus/impeccable",
+        "https://impeccable.style/docs",
+        "https://x.com/m_arhamasif/status/2110038467489259615"
+      ],
+      "previewImage": "/previews/impeccable.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "skill",
+        "open-source",
+        "apache",
+        "ui-design",
+        "agent",
+        "claude-code",
+        "cursor",
+        "codex"
+      ],
+      "qualityNote": "主源官网 https://impeccable.style/ 早间 HTTP 200，文档 https://impeccable.style/docs 同样 HTTP 200。gh api：Apache-2.0、约 80778★，2025-11-16 创建，最近推送 2026-10-13。约 24 条命令、`/impeccable init` 写 PRODUCT.md、约 59 条确定性检测（CLI / 浏览器扩展不调模型）以及 Inter、紫蓝渐变、卡片套卡片等痕迹，均照 README。X 线索 https://x.com/m_arhamasif/status/2110038467489259615（2026-10-13）。本库没有安装 Impeccable，没有对真实项目跑 audit。预览为 Playwright 实拍 impeccable.style 首屏，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Primary site https://impeccable.style/ returned HTTP 200 this morning, as did https://impeccable.style/docs. gh api: Apache-2.0, ~80778★, created 2025-11-16, last push 2026-10-13. About 24 commands, `/impeccable init` writing PRODUCT.md, about 59 deterministic detectors (CLI / browser extension, no model call), and tells such as Inter, purple-blue gradients, and nested cards follow the README. X lead: https://x.com/m_arhamasif/status/2110038467489259615 (2026-10-13). This catalog pass did not install Impeccable and did not run audit against a real project. Preview is a Playwright capture of impeccable.style above the fold, cropped to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2025-11-16",
+      "updatedAt": "2026-10-14T01:05:00Z"
+    },
+    {
+      "id": "ux-ui-agent-skills",
+      "slug": "ux-ui-agent-skills",
+      "title": "UX/UI Agent Skills（XIAS）：把 Claude 变成设计系统架构师",
+      "titleEn": "UX/UI Agent Skills (XIAS): turn Claude into a senior design-system architect",
+      "hook": "Token、组件与可失败验收闸门，让 Claude 按设计系统出界面。",
+      "hookEn": "Tokens, components, and fail-the-build gates so Claude ships on-system UI.",
+      "summary": "plugin87/ux-ui-agent-skills（MIT，又名 XIAS）是一套给 Claude Code、Codex、Cursor 等用的 UX/UI 技能包：DTCG token、约 52 个组件规格、约 138 套品牌级设计系统、约 25 个可运行 skill，以及约 52 条客观验收闸门（其中多条会开真实浏览器测对比度、axe、键盘、reduced-motion 等）——不过关就失败，而不是假装成功。装法包括 Claude Code 插件市场、npx、Homebrew，或 MCP（`claude mcp add ux-ui-gates -- npx -y --package=ux-ui-agent-skills ux-ui-mcp`）。演示站 https://plugin87.github.io/ux-ui-agent-skills/ 可先看再装。撰写时最新 release 为 v2.9.8（2026-10-10）。适合要助手按真设计系统出界面、又要可检查验收的人。",
+      "summaryEn": "plugin87/ux-ui-agent-skills (MIT, also called XIAS) is a UX/UI skill pack for Claude Code, Codex, Cursor, and similar hosts: DTCG tokens, about 52 component specs, about 138 brand-grade design systems, about 25 runnable skills, and about 52 objective acceptance gates (many of which open a real browser to check contrast, axe, keyboard, reduced-motion, and more). A failed gate fails the run instead of pretending success. Install via the Claude Code plugin marketplace, npx, Homebrew, or MCP (`claude mcp add ux-ui-gates -- npx -y --package=ux-ui-agent-skills ux-ui-mcp`). The demo at https://plugin87.github.io/ux-ui-agent-skills/ can be opened before you install. Latest release at write time is v2.9.8 (2026-10-10). Good if you want an agent to ship UI on a real design system, with checks you can fail.",
+      "sourceUrl": "https://plugin87.github.io/ux-ui-agent-skills/",
+      "secondaryUrls": [
+        "https://github.com/plugin87/ux-ui-agent-skills",
+        "https://www.npmjs.com/package/ux-ui-agent-skills"
+      ],
+      "previewImage": "/previews/ux-ui-agent-skills.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "html",
+        "design",
+        "tool",
+        "skill",
+        "open-source",
+        "mit",
+        "design-system",
+        "accessibility",
+        "agent",
+        "claude-code",
+        "mcp"
+      ],
+      "qualityNote": "演示站 https://plugin87.github.io/ux-ui-agent-skills/ 与仓库 plugin87/ux-ui-agent-skills 早间 HTTP 200。gh api：MIT、约 1692★，2026-03-16 创建，最近推送 2026-10-10；最新 release v2.9.8（2026-10-10）。DTCG token、约 52 个组件规格、约 138 套设计系统、约 25 个可运行 skill、约 52 条客观闸门（README 写其中多条会开真实浏览器测对比度、axe、键盘、reduced-motion）以及 Claude Code 插件市场 / npx / Homebrew / MCP 装法，均照 README 与 docs/INSTALL.md。npm registry 确认包 ux-ui-agent-skills、MIT、latest 2.9.8；npmjs.com 页面本次返回 403。演示站首屏撰写时写 51 objective checks，README 徽章写 52 objective gates，摘要取「约 52」。本库没有安装插件或 MCP，没有跑验收闸门。预览为 Playwright 实拍演示站首屏，裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "Demo https://plugin87.github.io/ux-ui-agent-skills/ and repo plugin87/ux-ui-agent-skills returned HTTP 200 this morning. gh api: MIT, ~1692★, created 2026-03-16, last push 2026-10-10; latest release v2.9.8 (2026-10-10). DTCG tokens, about 52 component specs, about 138 design systems, about 25 runnable skills, about 52 objective gates (the README says many open a real browser for contrast, axe, keyboard, and reduced-motion), and the Claude Code marketplace / npx / Homebrew / MCP install paths follow the README and docs/INSTALL.md. The npm registry confirms package ux-ui-agent-skills, MIT, latest 2.9.8; the npmjs.com HTML page returned 403 on this pass. The demo hero showed 51 objective checks at capture time, while the README badge says 52 objective gates, so the summary says about 52. This library did not install the plugin or MCP and did not run the gates. Preview is a Playwright capture of the demo above the fold, cropped to a self-hosted 3:2 WebP.",
+      "featured": true,
+      "publishedAt": "2026-03-16",
+      "updatedAt": "2026-10-14T01:05:00Z"
+    },
+    {
       "id": "diagram-design",
       "slug": "diagram-design",
       "title": "Diagram Design：让编程助手画出「设计师不会嫌弃」的编辑级图示",
@@ -4323,9 +4400,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-13T12:20:00Z",
+    "updatedAt": "2026-10-14T01:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.64",
-    "count": 135
+    "version": "1.3.65",
+    "count": 137
   }
 }
