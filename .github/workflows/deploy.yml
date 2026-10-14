@@ -5,6 +5,10 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # Monday 00:05 Asia/Shanghai: rebuild so the weekly editor's pick turns over
+  # even when nothing else lands on main that day.
+  schedule:
+    - cron: "5 16 * * 0"
 
 permissions:
   contents: read

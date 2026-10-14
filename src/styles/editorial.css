@@ -219,3 +219,19 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
   .editorial-task-section h2 { margin-bottom: 16px; }
   .editorial-home .directory-home-archive { margin-top: 32px; }
 }
+/* An issue without commissioned art shows the entry's real screenshot, framed so it reads as a capture, not an illustration. */
+.editorial-art.is-shot { display: flex; align-items: center; justify-content: center; padding: clamp(20px, 3vw, 40px); background: color-mix(in srgb, var(--brass) 7%, var(--bg-soft)); }
+.editorial-art.is-shot img { height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border-radius: 6px; box-shadow: 0 1px 2px rgba(0, 0, 0, .06), 0 12px 32px rgba(0, 0, 0, .12); }
+.editorial-past-link { margin-top: 18px; }
+/* Past picks archive */
+.picks-archive { display: grid; gap: 0; margin-top: 28px; }
+.picks-archive-item { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 24px; align-items: start; padding: 24px 0; border-top: 1px solid var(--line); }
+.picks-archive-item img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: top; border-radius: 6px; background: var(--bg-soft); }
+.picks-archive-week { margin: 0 0 6px; color: var(--muted); font-size: 13px; }
+.picks-archive-item h2 { margin: 0 0 8px; font-size: 20px; line-height: 1.4; }
+.picks-archive-item h2 a { color: inherit; text-decoration: none; }
+.picks-archive-item h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.picks-archive-item p { margin: 0 0 8px; color: var(--muted); line-height: 1.7; }
+@media (max-width: 700px) {
+  .picks-archive-item { grid-template-columns: 1fr; gap: 14px; }
+}

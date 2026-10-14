@@ -158,3 +158,14 @@ export function groupByShanghaiDay<T>(
       items: grouped,
     }));
 }
+
+/** "10月12日–18日" / "Oct 12–18" for a Monday–Sunday span given as YYYY-MM-DD. */
+export function weekRange(start: string, end: string): { zh: string; en: string } {
+  const [, sm, sd] = start.split("-").map(Number);
+  const [, em, ed] = end.split("-").map(Number);
+  const month = (m: number) => new Date(Date.UTC(2000, m - 1, 1)).toLocaleString("en-US", { month: "short", timeZone: "UTC" });
+  return {
+    zh: sm === em ? `${sm}月${sd}日–${ed}日` : `${sm}月${sd}日–${em}月${ed}日`,
+    en: sm === em ? `${month(sm)} ${sd}–${ed}` : `${month(sm)} ${sd} – ${month(em)} ${ed}`,
+  };
+}

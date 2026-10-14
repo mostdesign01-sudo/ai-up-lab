@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-14",
+      "title": "首页主推改为每周精选",
+      "titleEn": "Homepage lead becomes a weekly pick",
+      "body": "首页主推改成按周排期：data/home-picks.json 的 issues 按 ISO 周排列，每周一自动换期（另有周一凌晨的定时构建兜底），排期用完时保留上一期并在构建日志提醒。已排好 W42–W46 五期，按工具、界面、学习、模型、提示词轮换。没有专属插画的一期显示条目真实截图。新增 /picks/ 往期归档，未到期的排期不会提前出现。",
+      "bodyEn": "The homepage lead is now a weekly queue: issues in data/home-picks.json are keyed by ISO week and turn over every Monday, with a scheduled Monday build as a backstop; when the queue runs out the last issue stays and the build log asks for more. Five issues are queued for W42–W46, rotating through tools, interfaces, learning, models, and prompts. An issue without its own art shows the entry's real screenshot. A new /picks/ page archives past issues; queued issues never appear early."
+    },
+    {
+      "date": "2026-10-14",
       "title": "晚间收录：HTML +1（Rayden UI）、Agent UI +1（affectUI）、Cases +1（Geneva）",
       "titleEn": "Evening catalog: HTML +1 (Rayden UI), Agent UI +1 (affectUI), Cases +1 (Geneva)",
       "body": "AI×设计优先，补今早之后出现的公开源：rayden-ui（MIT React/Tailwind + MCP）；affectui（AI 产品向 React 组件，仓库 MIT，条目只标免费路径）；geneva（当日 Show HN：JSON 时间线 + HTML/CSS 叠层的 MIT 命令行视频工具）。三条均为 Playwright 3:2 WebP。html-items 135→136，agent-ui 63→64，cases 172→173。未改首页精选、Models。未合并仍打开的晨更 PR #100（Impeccable / XIAS / SolidCraft）。",
