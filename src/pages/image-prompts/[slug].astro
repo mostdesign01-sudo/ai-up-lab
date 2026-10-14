@@ -1,4 +1,5 @@
 ---
+import Crumb from "../../components/Crumb.astro";
 import Badge from "../../components/Badge.astro";
 import FavButton from "../../components/FavButton.astro";
 import Loc from "../../components/Loc.astro";
@@ -43,12 +44,7 @@ const others = listImagePrompts().filter((other) => other.id !== item.id);
 >
   <div class="wrap">
     <article class="detail-hero">
-      <p class="crumb">
-        <a href={withBase("/")}><Loc zh={ui.detail.lab.zh} en={ui.detail.lab.en} /></a> /
-        <a href={withBase("image-prompts/")}><Loc zh={ui.nav.imagePrompts.zh} en={ui.nav.imagePrompts.en} /></a> /
-        <span class="loc-zh">{item.title}</span>
-        <span class="loc-en">{item.titleEn}</span>
-      </p>
+      <Crumb lib="image-prompts" id={item.id} />
       <div class="badges">
         <Badge kind="approval" label={modelTag} />
         <Badge kind="community" label={ui.badge.community.zh} labelEn={ui.badge.community.en} />

@@ -1,4 +1,5 @@
 ---
+import Crumb from "../../components/Crumb.astro";
 import AgentUiCard from "../../components/AgentUiCard.astro";
 import Badge from "../../components/Badge.astro";
 import FavButton from "../../components/FavButton.astro";
@@ -44,14 +45,10 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 >
   <div class="wrap">
     <article class="detail-hero">
-      <p class="crumb">
-        <a href={withBase("agent-ui/")}>Agent UI</a> /
-        <span class="loc-zh">{item.title}</span>
-        <span class="loc-en">{titleEn}</span>
-      </p>
+      <Crumb lib="agent-ui" id={item.id} />
       <div class="badges">
         {item.featured && <Badge kind="official" label={ui.badge.featuredPlain.zh} labelEn={ui.badge.featuredPlain.en} />}
-        <Badge kind="community" label="ThreeUI Community" />
+        {new URL(item.sourceUrl).hostname.endsWith("threeui.com") && <Badge kind="community" label="ThreeUI Community" />}
         {item.types.map((type) => <Badge label={agentUiTypeLabel(type)} labelEn={agentUiTypeLabel(type, "en")} />)}
         <Stars value={item.stars} />
       </div>

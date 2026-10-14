@@ -29,7 +29,7 @@
 - Agent UI 进入“界面与范例”。目前条目来自 ThreeUI Community，后续可按来源许可扩展；不要把免费、免登录等当前来源条件推定到未来所有来源。
 - Models 进入“模型与能力”；Image Prompts 进入“提示词与素材”。当前图像条目仍明确标注适用模型，目录名称不绑定版本。
 
-`/cases/`、`/html/`、`/agent-ui/`、`/image-prompts/` 及所有详情链接继续可用。历史收藏仍用 `grok:id` 等键，新目录收藏与旧详情页互通。内部 `paths/`、`combos/` 暂不在公开导航展示，并保留 noindex。
+`/cases/`、`/html/`、`/agent-ui/`、`/image-prompts/`、`/types/`、`/featured/`、`/latest/` 及所有详情链接继续可用；旧列表页标 `noindex, follow` 并移出 sitemap，公开入口只保留五个目录。详情页面包屑统一为“首页 / 所属目录 / 标题”。“品牌收集”入口在“更多”菜单与页脚。历史收藏仍用 `grok:id` 等键，新目录收藏与旧详情页互通。内部 `paths/`、`combos/` 暂不在公开导航展示，并保留 noindex。
 
 ## 本地运行与发布
 

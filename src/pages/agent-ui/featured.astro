@@ -10,7 +10,7 @@ const featured = getFeaturedAgentUi();
 const lede = fill(ui.agent.featuredLede, { n: featured.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="agent-ui"
   title={ui.agent.featuredTitle.zh}
   titleEn={ui.agent.featuredTitle.en}

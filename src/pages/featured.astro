@@ -10,7 +10,7 @@ const featured = getFeaturedCases();
 const lede = fill(ui.grok.featuredLede, { n: featured.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="grok"
   title={ui.grok.featuredTitle.zh}
   titleEn={ui.grok.featuredTitle.en}

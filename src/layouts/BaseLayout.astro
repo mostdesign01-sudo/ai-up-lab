@@ -14,7 +14,8 @@ interface Props {
   descriptionEn?: string;
   collection?: "lab" | "grok" | "html" | "agent-ui";
   shell?: "site" | "plaza";
-  noindex?: boolean;
+  /** true hides the page and its links; "follow" hides a legacy listing but lets crawlers reach the detail pages. */
+  noindex?: boolean | "follow";
 }
 
 const {
@@ -39,7 +40,7 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=12";
     <style is:inline set:html={designTokenCSS}></style>
     <title data-title-zh={title} data-title-en={titleEn}>{title}</title>
     <meta name="description" content={description} data-desc-zh={description} data-desc-en={descriptionEn} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex && <meta name="robots" content={noindex === "follow" ? "noindex, follow" : "noindex, nofollow"} />}
     <meta property="og:title" content={title} data-og-title-zh={title} data-og-title-en={titleEn} />
     <meta property="og:description" content={description} data-og-desc-zh={description} data-og-desc-en={descriptionEn} />
     <meta property="og:type" content="website" />

@@ -10,7 +10,7 @@ const latest = getLatestHtml();
 const lede = fill(ui.html.latestLede, { n: latest.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="html"
   title={ui.html.latestTitle.zh}
   titleEn={ui.html.latestTitle.en}

@@ -155,7 +155,9 @@ html[data-theme="dark"][data-collection="lab"] { --accent-ink: var(--lab-color-o
 @media (max-width: 700px) {
   .directory-header-top { padding-block: 10px 8px; }
   .directory-header .brand { --lockup-mark: var(--lab-logo-mobile); font-size: 14px; }
-  .directory-nav { gap: 18px; }
+  /* The fade says "there is more to the right"; the end padding lets the last link scroll clear of it. */
+  .directory-nav { gap: 16px; padding-inline-end: 28px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent); }
+  .directory-nav::-webkit-scrollbar { display: none; }
   .editorial-home { padding-top: 28px; }
   .editorial-lead { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .editorial-eyebrow { margin-bottom: 18px; font-size: 12px; }
