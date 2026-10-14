@@ -24,8 +24,8 @@
 
 底层五套数据继续独立保存，现有 id、slug、原文链接和收藏键不变。新的展示层在 `src/lib/directory.ts` 汇总它们，`data/directory.json` 保存人工挑出的跨库归属：
 
-- Cases 默认进“学习与工作流”；`caseTools` 中的工具进入“工具与应用”，`casePrompts` 可同时进入“提示词与素材”。新增工具案例请同时更新这张映射表。
-- HTML 中 `tool` 类型进“工具与应用”；演示、交互、组件等进“界面与范例”；`htmlLearning`、`htmlPrompts` 补充学习和素材归属。
+- Cases 按 `kind` 归档：`tool` 与 `news` 进“工具与应用”（被模型页 `relatedCaseIds` 引用的资讯同时进“模型与能力”），`guide`、`playbook`、`showcase` 进“学习与工作流”。`casePrompts` 或分类含 `prompts` / `templates` 的条目同时进“提示词与素材”。新增条目只需填对 `kind`，不再维护工具映射表。
+- HTML 中 `tool` 类型进“工具与应用”；演示、交互、组件等进“界面与范例”；`htmlLearning`、`htmlPrompts` 及 `prompt*` 标签补充学习和素材归属。
 - Agent UI 进入“界面与范例”。目前条目来自 ThreeUI Community，后续可按来源许可扩展；不要把免费、免登录等当前来源条件推定到未来所有来源。
 - Models 进入“模型与能力”；Image Prompts 进入“提示词与素材”。当前图像条目仍明确标注适用模型，目录名称不绑定版本。
 
@@ -52,13 +52,14 @@ npm run preview
 
 1. 选择数据文件：`data/cases.json`、`data/html-items.json`、`data/agent-ui.json`、`data/models.json` 或 `data/image-prompts.json`。
 2. 核对原文、获取方式和重要边界。新增的是工具、教程、模型、组件还是提示词？不要把一般资讯塞进教程库。
-3. 维护 `meta.updatedAt`、`meta.version`、`meta.count` 和条目日期。日期表示整理时间，不是实测证明。
-4. Cases / HTML / Agent UI 要写成对的 `hook` / `hookEn`：一句话说读者能做什么。中文最多 36 字、英文最多 90 字，不放抓取日志、HTTP 状态、互动数字或日期；缺失或格式错误会阻断构建。
-5. 必要时更新 `data/directory.json` 的跨库归属。不同来源讲同一个资源时，优先补充已有条目的来源与步骤，避免重复收录。
-6. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。缺图时可用：
+3. Cases 填 `kind`（tool / guide / playbook / news / showcase），标题不写类型前缀。`qualityNote` 只写读者需要的收录理由与边界；HTTP 状态、star、item 编号、截图方式写进 `verifyLog`。两者都有构建检查。
+4. 维护 `meta.updatedAt`、`meta.version`、`meta.count` 和条目日期。日期表示整理时间，不是实测证明。
+5. Cases / HTML / Agent UI 要写成对的 `hook` / `hookEn`：一句话说读者能做什么。中文最多 36 字、英文最多 90 字，不放抓取日志、HTTP 状态、互动数字或日期；缺失或格式错误会阻断构建。
+6. 必要时更新 `data/directory.json` 的跨库归属。不同来源讲同一个资源时，优先补充已有条目的来源与步骤，避免重复收录。
+7. 有界面的条目用真实截图：`public/previews/{id}.webp`；分类插画仅作缺图回退，不能当产品实拍。缺图时可用：
    - `node scripts/capture-case-previews.mjs --write`（或 `--unique` / `--only=id1,id2` / `--force`）抓来源页实拍；
    - `node scripts/generate-case-covers.mjs --write` 为仍缺图的 Case 生成互不重复的条目封面，并刷新 `public/covers/case-*.webp` 回退图。不要再共用粘土风分类插画充数。
-7. 更新 `data/changelog.json` 的中英说明，运行 `npm run build` 并检查受影响的页面。
+8. 更新 `data/changelog.json` 的中英说明，运行 `npm run build` 并检查受影响的页面。
 
 字段说明见 `data/schema.md`、`data/html-schema.md`、`data/agent-ui-schema.md`、`data/models-schema.md`、`data/image-prompts-schema.md`。
 

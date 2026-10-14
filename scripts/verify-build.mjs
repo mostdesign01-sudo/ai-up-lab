@@ -496,6 +496,19 @@ if (missing.length) {
 }
 
 {
+  // A case's kind decides its directory; titles no longer carry the type prefix.
+  const kinds = new Set(["tool", "guide", "playbook", "news", "showcase"]);
+  const kindBad = dataset.cases.filter(item => !kinds.has(item.kind)).map(item => `${item.id} (${item.kind ?? "missing"})`);
+  const prefixBad = dataset.cases.filter(item => /^(工具|资讯|官方更新|官方发布|官方指南)[：:]/.test(item.title)).map(item => item.id);
+  if (kindBad.length || prefixBad.length) {
+    if (kindBad.length) console.error(`case kind lint: set kind to tool / guide / playbook / news / showcase: ${kindBad.join(", ")}`);
+    if (prefixBad.length) console.error(`case kind lint: drop the type prefix from the title, the card shows the kind: ${prefixBad.join(", ")}`);
+    process.exit(1);
+  }
+  console.log(`case kind lint: ${dataset.cases.length} cases carry a valid kind.`);
+}
+
+{
   // Reader-facing notes explain why an entry is listed and what was not tested.
   // Crawl status, star counts, item ids and capture notes belong in verifyLog.
   const noteBad = [];

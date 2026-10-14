@@ -92,7 +92,7 @@
       "previewImage": "/previews/thx-01.webp",
       "previewCredit": "预览截自 Hugging Face 博文页",
       "previewCreditEn": "Preview cropped from the Hugging Face blog page",
-      "featured": true,
+      "featured": false,
       "verifyLog": "主源是 2026-10-10 HF 博文与模型卡 doofz/THX-01，早间 HTTP 200；能力表、Apache-2.0、pip 与 API 链接照博文。预览为 Playwright 实拍博文页裁 3:2 WebP。",
       "verifyLogEn": "Primary sources are the 2026-10-10 HF blog and model card doofz/THX-01, HTTP 200 this morning; capability table, Apache-2.0, pip, and API links follow the blog. Preview is a Playwright capture of the blog page, cropped to 3:2 WebP."
     },
@@ -490,7 +490,7 @@
       "previewImage": "/previews/nano-banana-2-1.webp",
       "previewCredit": "预览：Google 官方 X 帖宣传短片，2 倍速、裁 3:2 动图（样片由 Google 挑选）",
       "previewCreditEn": "Preview: Google’s official X promo clip at 2× speed, cropped to a 3:2 animation (samples picked by Google)",
-      "featured": true,
+      "featured": false,
       "verifyLog": "收录理由：Hao 转来的 Google 官方 X 帖（@Google，status 2107501209154204148，2026-10-06T16:00:18Z / 北京时间 2026-10-07 00:00），本库偏重 AI×设计，这是 Google 主力出图模型的更新，而且主打版式设计和改图。核对（撰写时，2026-10-07 北京时间中午）：Gemini API 模型页、DeepMind 模型卡（页内 Published 6 October 2026）、出图指南、价格页、更新日志均 HTTP 200；更新日志 10 月 6 日写正式发布（GA），并写旧版 gemini-3.1-flash-image 弃用、还没定关停日期（S5 Labs 等第三方写 10 月 29 日关停，与官方页当前文字不符，未采用）。精选，不打星。",
       "verifyLogEn": "Why: the official Google X post Hao shared (@Google, status 2107501209154204148, 2026-10-06T16:00:18Z / 00:00 on 2026-10-07 Beijing time). Checks at write time (around noon Beijing time on 2026-10-07): the Gemini API model page, the DeepMind model card (Published 6 October 2026), the image generation guide, the pricing page, and the release notes all returned HTTP 200. The preview is the X promo clip (800×800 original) at 2× speed, cropped to a 3:2 animated WebP; the samples are Google’s picks."
     },
@@ -557,7 +557,7 @@
       "previewImage": "/previews/beam.webp",
       "previewCredit": "预览：Chrome 实拍 reflection.ai/blog/introducing-beam 首屏",
       "previewCreditEn": "Preview: Chrome capture of reflection.ai/blog/introducing-beam above the fold",
-      "featured": true,
+      "featured": false,
       "verifyLog": "收录理由：HN item 49969183（标题 Beam: Reflection's 501B open-weight model，提交者 Philpax，2026-10-05T19:16:35.000Z / 约 2026-10-06 03:16 CST）。撰写时 HN 页面与 Algolia 都是 478pts。官博 https://reflection.ai/blog/introducing-beam 撰写时 HTTP 200，页内日期 October 5, 2026，8 min read。提前试用链接指向 https://platform.reflection.ai/ ，撰写时 HTTP 200，但是一个要脚本才能画出的平台页；静态 HTML 里看不到权重下载，本库没有登记账号。Artificial Analysis 的 https://artificialanalysis.ai/models/beam 与 https://artificialanalysis.ai/models/reflection-beam 撰写时均为 HTTP 404，不编第三方榜链接。预览为 Chrome 实拍官博首屏裁 3:2 WebP。精选，不打星。",
       "verifyLogEn": "Why: HN item 49969183 (title Beam: Reflection's 501B open-weight model, submitter Philpax, 2026-10-05T19:16:35.000Z / about 03:16 CST on 2026-10-06). At write time the HN page and Algolia both showed 478pts. The blog https://reflection.ai/blog/introducing-beam returned HTTP 200; the page is dated October 5, 2026, 8 min read. Early access points at https://platform.reflection.ai/, which returned HTTP 200 but is a script-drawn platform page. Artificial Analysis URLs https://artificialanalysis.ai/models/beam and https://artificialanalysis.ai/models/reflection-beam both returned HTTP 404, so no third-party board link is invented. Preview is a Chrome capture of the blog above the fold, cropped to 3:2 WebP."
     },
@@ -630,7 +630,7 @@
       "previewImage": "/previews/gutsy.webp",
       "previewCredit": "预览：Playwright 实拍 github.com/kouhxp/gutsy 首屏",
       "previewCreditEn": "Preview: Playwright capture of github.com/kouhxp/gutsy above the fold",
-      "featured": true,
+      "featured": false,
       "verifyLog": "收录理由：Show HN item 49923223（2026-10-01T15:44:42Z / 约 23:44 CST，Algolia 晚间核对 9pts）之后权重与 README 仍在更新（仓库晚间 gh api 20★ / Apache-2.0；HF kouhxp/gutsy likes 2 / downloads 69）。预览 Playwright 实拍 GitHub 仓库首屏 3:2。不打星。",
       "verifyLogEn": "Why: after Show HN item 49923223 (2026-10-01T15:44:42Z / about 23:44 CST, 9pts on Algolia at the evening check) the weights and README kept moving (evening gh api 20★ / Apache-2.0; HF kouhxp/gutsy likes 2 / downloads 69). Preview is a Playwright 3:2 capture of the GitHub repo above the fold. Unrated."
     },
@@ -731,7 +731,7 @@
       "previewImage": "/previews/clef.webp",
       "previewCredit": "预览：Playwright 实拍 blog.cloudflare.com/clef-decision-models 首屏",
       "previewCreditEn": "Preview: Playwright capture of blog.cloudflare.com/clef-decision-models above the fold",
-      "featured": true,
+      "featured": false,
       "verifyLog": "主源是官博 https://blog.cloudflare.com/clef-decision-models/（晚间 HTTP 200）、Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/（HTTP 200）、HF Cloudflare/clef 与 Cloudflare/clef-flash（Apache-2.0，GET 200；晚间 likes 547 / 183）、Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/（HTTP 200）。HN item 49923692，标题 “Clef: Open-weight decision models, and new RL fine-tuning platform”，2026-10-01T16:18:57Z / 约 2026-10-02 00:18 CST，Algolia 晚间核对 536pts。Artificial Analysis https://artificialanalysis.ai/models/clef 晚间 HTTP 404，不编第三方榜链接。预览为 Playwright 实拍官博首屏裁 3:2 WebP。精选，不打星。",
       "verifyLogEn": "Primary sources are the blog https://blog.cloudflare.com/clef-decision-models/ (evening HTTP 200), the Workers AI changelog https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/ (HTTP 200), HF Cloudflare/clef and Cloudflare/clef-flash (Apache-2.0, GET 200; evening likes 547 / 183), and the Decision Index demo https://clef-evals.workers-ai-mle.workers.dev/ (HTTP 200). HN item 49923692, title “Clef: Open-weight decision models, and new RL fine-tuning platform”, 2026-10-01T16:18:57Z / about 2026-10-02 00:18 CST, 536pts on Algolia at the evening check. Artificial Analysis https://artificialanalysis.ai/models/clef returned HTTP 404 this evening, so no third-party board link is invented. Preview is a Playwright capture of the blog above the fold, cropped to 3:2 WebP."
     },
@@ -1110,7 +1110,7 @@
       "previewImage": "/previews/ember-1.webp",
       "previewCredit": "Playwright 实拍 fireworks.ai/models/fireworks/ember-1 首屏，裁 3:2",
       "previewCreditEn": "Playwright capture of fireworks.ai/models/fireworks/ember-1 above the fold, cropped to 3:2",
-      "featured": true,
+      "featured": false,
       "verifyLog": "收录理由：HN 首页热帖（写入时 Algolia 核对 494pts；研究笔记快照 493pts）的 Fireworks 专用模型，官博与模型页均可核，晨间目录跳过、晚间补上。Artificial Analysis ember-1 页 HTTP 404，故无第三方榜链接。预览为 Playwright 实拍模型页首屏裁 3:2 WebP。不打星（厂商数字未独立复核，且没有可挂的第三方榜）。",
       "verifyLogEn": "Why: a Fireworks specialized model on the HN front page (494pts on Algolia at write time; the research-note snapshot was 493pts), with a checkable blog and model page. The Artificial Analysis ember-1 page returned HTTP 404, so there is no third-party board link. Preview is a Playwright capture of the model page above the fold, cropped to 3:2 WebP."
     },
@@ -1184,7 +1184,7 @@
       "previewImage": "/previews/maniac-mansion-3d.webp",
       "previewCredit": "预览：live 漫步首屏 / 仓库 walkthrough-preview（3:2 自托管）",
       "previewCreditEn": "Preview: live walkthrough above-the-fold / repo walkthrough-preview (3:2 self-hosted)",
-      "featured": true,
+      "featured": false,
       "verifyLog": "1★ 是收录时快照。预览建议 Playwright 实拍 live 首屏或仓库 walkthrough-preview.jpg 裁 3:2。不打星。",
       "verifyLogEn": "No SPDX license (fan project); original art is Lucasfilm / Disney — this card only links the public walkthrough and redistributes no ROM/artwork pack. 1★ is a snapshot at listing time. Prefer a Playwright capture of the live first screen or the repo walkthrough-preview.jpg cropped 3:2. Unrated."
     },
@@ -1685,7 +1685,7 @@
       "previewImage": "/previews/laya-system-one.webp",
       "previewCredit": "预览：Playwright 实拍 laya.convaiinnovations.com 首屏",
       "previewCreditEn": "Preview: Playwright capture of laya.convaiinnovations.com above the fold",
-      "featured": true,
+      "featured": false,
       "verifyLog": "预览为 Playwright 实拍作者长文页首屏裁 3:2 WebP。不打星。",
       "verifyLogEn": "Preview is a Playwright capture of the author page above the fold, cropped to 3:2 WebP. Unrated."
     },
@@ -1767,7 +1767,7 @@
       "previewImage": "/previews/deepseek-v4-1-flash.webp",
       "previewCredit": "预览：DeepSeek 官方文档社交卡",
       "previewCreditEn": "Preview: DeepSeek docs social card",
-      "featured": true,
+      "featured": false,
       "verifyLog": "",
       "verifyLogEn": "Preview is DeepSeek’s docs social card, not a model-specific image."
     },
@@ -1869,7 +1869,7 @@
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
       "previewCreditEn": "Preview: YouWare X video poster (Astra Replay page)",
-      "featured": true,
+      "featured": false,
       "verifyLog": "",
       "verifyLogEn": "Preview is the X video poster (a YouWare page, not an OpenAI image)."
     },
@@ -1943,7 +1943,7 @@
       "previewImage": "/previews/astra-openai-showcase.webp",
       "previewCredit": "预览：OpenAIDevs 文章封面（GPT-6 Astra · Community Builds）",
       "previewCreditEn": "Preview: OpenAIDevs article cover (GPT-6 Astra · Community Builds)",
-      "featured": true,
+      "featured": false,
       "verifyLog": "不打星。",
       "verifyLogEn": "Preview is the OpenAIDevs article cover (the “GPT-6 Astra · Community Builds” galaxy image, letterboxed to 3:2), not a Showcase-page screenshot. Unrated."
     },

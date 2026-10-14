@@ -3,8 +3,9 @@
     {
       "id": "doop",
       "slug": "doop",
-      "title": "工具：Doop — 人和 AI Agent 一起用的开源设计画布（自带 MCP）",
-      "titleEn": "Tool: Doop — open-source multiplayer design canvas with built-in MCP for agents",
+      "title": "Doop — 人和 AI Agent 一起用的开源设计画布（自带 MCP）",
+      "titleEn": "Doop — open-source multiplayer design canvas with built-in MCP for agents",
+      "kind": "tool",
       "hook": "Agent 在画布上直接画帧，你和它共用同一份设计记忆。",
       "hookEn": "Agents sketch frames on a shared canvas with one design memory.",
       "summary": "Doop 自称 Paper.design 的开源替代：无限画布上的帧是真实 HTML（沙箱 iframe），人在浏览器里改，Claude Code / Codex 等任意 MCP 客户端通过内置 MCP（云端 `https://doop.design/mcp`，自托管也有）连上后，可以边画边流式更新、自评截图、接评论当任务。画布带多人光标、批注、活动流和「设计记忆」（钉住范例帧、沉淀风格规则给后来的 Agent）。官网写 Free in beta；仓库 AGPL-3.0，可用 `bun run dev` 或 Docker 自托管，也可用 doop.design 托管版。助手用你已有的模型订阅连 MCP，不必再交一套 AI 密钥。适合想和编程助手在同一张设计画布上改界面、又不愿只靠「截图→粘贴→再说一遍」的人。",
@@ -34,7 +35,7 @@
         "mcp"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-13T12:20:00Z",
       "previewImage": "/previews/doop.webp",
@@ -44,8 +45,9 @@
     {
       "id": "editui",
       "slug": "editui",
-      "title": "工具：EditUI — 在 Chrome 里点界面元素，批量改完再贴给编程助手",
-      "titleEn": "Tool: EditUI — click UI in Chrome, batch the notes, paste to your coding agent",
+      "title": "EditUI — 在 Chrome 里点界面元素，批量改完再贴给编程助手",
+      "titleEn": "EditUI — click UI in Chrome, batch the notes, paste to your coding agent",
+      "kind": "tool",
       "hook": "在真网页上点选要改的地方，一次拷给编程助手。",
       "hookEn": "Click what to change on the live page, then paste one batch to Claude Code or Cursor.",
       "summary": "EditUI 是免费的 Chrome 扩展（MIT 开源）：打开正在跑的页面（含 localhost），开编辑模式后点元素、写下想改成什么样，可以连点多处，最后「Copy all」生成一份带 URL、视口、DOM 上下文和你的备注的提示词，粘贴进 Claude Code、Cursor、Codex 或任意能吃粘贴的助手。它不直接改代码、不接 MCP、不替你调模型，只负责把「你指的是哪一块」说清楚。官网写 Free、不用账号、不用先配仓库。适合做界面走查、又懒得口头描述「左上角那个按钮」的人。",
@@ -65,7 +67,7 @@
       "sourceType": "community-show",
       "qualityNote": "点选→备注→Copy all、agent-agnostic、不直接改代码，都照官网与扩展说明页写；结构化数据标价 0 USD。Chrome Web Store 链接来自官网 CTA。本库没有安装扩展、没有在 localhost 实测走查。",
       "qualityNoteEn": "Click→note→Copy all, agent-agnostic paste, and no direct code edits follow the site and extension page; structured data lists price 0 USD. Chrome Web Store link is from the site CTA. This library did not install the extension or run a localhost review.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -74,7 +76,7 @@
       "approvalBoundaryEn": "The extension only builds a prompt; your pasted agent edits the code—review the diff before merge.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-10-12T12:25:00Z",
       "previewImage": "/previews/editui.webp",
@@ -84,8 +86,9 @@
     {
       "id": "diffui",
       "slug": "diffui",
-      "title": "工具：Diffui — 用扩散模型一次出多版界面，再交给编程助手落地",
-      "titleEn": "Tool: Diffui — diffusion UI mockups in parallel, then hand off to a coding agent",
+      "title": "Diffui — 用扩散模型一次出多版界面，再交给编程助手落地",
+      "titleEn": "Diffui — diffusion UI mockups in parallel, then hand off to a coding agent",
+      "kind": "tool",
       "hook": "一句话出好几版网页界面，挑中了再丢给助手写代码。",
       "hookEn": "Generate several UI directions at once, pick one, hand the build plan to your agent.",
       "summary": "Diffui 是前 Figma 工程师做的扩散式界面设计工具。官网写：用提示词一次生成多张界面方向（自称约 50 秒出 9 张），还能上传现有截图学品牌色、字体和组件，再往同风格扩页。做完可抽成设计 token，并转成不绑框架的 Web Components；也可把构建说明交给 Codex / Cursor 一类助手去实现。定价页写个人按张计费（约 17 美分一张图）、无需绑卡试用；设计转代码在 beta 期免费。Show HN（2026-07-21）约 80 分。适合想先快速比视觉方向、再交给编程助手落地的产品与设计同学。",
@@ -106,7 +109,7 @@
       "sourceType": "community-show",
       "qualityNote": "收录理由：AI×设计，和库里的 Flowstep、Claude Design、Figma 助手同一类「先出视觉再交助手」，但引擎是扩散不是对话 LLM。本库没有注册 Diffui，没有出图，没有实测 MCP / Codex 插件或转代码。",
       "qualityNoteEn": "Why listed: AI×design in the same family as Flowstep, Claude Design, and the Figma agent—visual first, then agent—but driven by diffusion rather than a chat LLM. This library did not sign up, generate images, or test MCP / Codex plugins or code export.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -115,7 +118,7 @@
       "approvalBoundaryEn": "Generations are billed per image; review mockups and exported code before landing them in a production repo or design system.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-07-21",
       "updatedAt": "2026-10-12T01:05:00Z",
       "previewImage": "/previews/diffui.webp",
@@ -125,8 +128,9 @@
     {
       "id": "css-studio",
       "slug": "css-studio",
-      "title": "工具：CSS Studio — 在自己网站上改样式，改完交给现有编程助手写回代码",
-      "titleEn": "Tool: CSS Studio — edit styles on your live site; your coding agent writes them back",
+      "title": "CSS Studio — 在自己网站上改样式，改完交给现有编程助手写回代码",
+      "titleEn": "CSS Studio — edit styles on your live site; your coding agent writes them back",
+      "kind": "tool",
       "hook": "在真网页上改样式文案，一点就交给编程助手写回。",
       "hookEn": "Edit the live page; one click sends changes to your coding agent.",
       "summary": "CSS Studio（Motion 团队出品）是装在你自己网站上的可视化设计层：在浏览器里改文案、样式、布局和动画时间轴，再通过 MCP / skill 把变更交给你本来就在用的编程助手（文档写支持 Cursor、Claude Code、VS Code、Codex、Windsurf 等），由助手改对源文件——HTML/CSS、Tailwind、React 等随你现有技术栈。站点强调「不是从零生成整站」，而是设计已经跑起来的页面；支持一键出多版变体、按断点改、后台并行子任务。定价页写编辑器可免费用，接 AI 助手要一次性买断（页面写 $99）。Show HN（2026-04-09）约 175 分。适合已经有站、想在真页面上精修视觉再让助手落盘的人。",
@@ -157,7 +161,7 @@
       "approvalBoundaryEn": "Apply edits your source; confirm pricing and access before buying. Review the diff before merge.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-04-09",
       "updatedAt": "2026-10-12T01:05:00Z",
       "previewImage": "/previews/css-studio.webp",
@@ -167,8 +171,9 @@
     {
       "id": "wunderui",
       "slug": "wunderui",
-      "title": "工具：WunderUI — 同一套 Figma + React 设计系统，专给编程助手备好 MCP / llms.txt",
-      "titleEn": "Tool: WunderUI — one Figma + React design system with MCP / llms.txt for coding agents",
+      "title": "WunderUI — 同一套 Figma + React 设计系统，专给编程助手备好 MCP / llms.txt",
+      "titleEn": "WunderUI — one Figma + React design system with MCP / llms.txt for coding agents",
+      "kind": "tool",
       "hook": "Figma 和代码同名；助手用 MCP 查真实组件，少瞎编。",
       "hookEn": "Same names in Figma and code; agents read real components over MCP.",
       "summary": "WunderUI 是面向后台、看板、设置页和 AI 聊天界面的设计系统：文档写有 204 个 React 组件、与代码同名的 Figma 库、以及给编程助手用的 MCP、DESIGN.md、design.json 和 llms.txt。免费档约 80 个 Core 组件 MIT 开源（GitHub wunder-ui/wunderui）；Pro 才解锁图表、AI & Agents、UI Blocks 等。Build with AI 页写 MCP 可本地跑、读库存无需密钥；`claude mcp add wunderui -- npx -y wunderui-mcp`。Agent 上下文四件套免费可读。适合已经在用 Cursor / Claude Code、又想助手按真实设计系统出界面的团队。",
@@ -199,7 +204,7 @@
       "approvalBoundaryEn": "Free Core is fine to try; confirm the license before using Pro components, Blocks, or paid Skills.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-12",
       "updatedAt": "2026-10-12T01:05:00Z",
       "previewImage": "/previews/wunderui.webp",
@@ -209,8 +214,9 @@
     {
       "id": "claude-dashboards-motion",
       "slug": "claude-dashboards-motion",
-      "title": "工具：Claude Motion 和 Claude Dashboards — 一句话做动画讲解短片，连上数据出实时看板",
-      "titleEn": "Tool: Claude Motion and Claude Dashboards — animated explainers from a prompt, live dashboards from your data",
+      "title": "Claude Motion 和 Claude Dashboards — 一句话做动画讲解短片，连上数据出实时看板",
+      "titleEn": "Claude Motion and Claude Dashboards — animated explainers from a prompt, live dashboards from your data",
+      "kind": "tool",
       "hook": "一句话把报告做成动画短片，每个字和数字都能改。",
       "hookEn": "Turn a report into a short animated explainer where every word and number stays editable.",
       "summary": "Anthropic 2026-10-08 同时上线两个 beta 功能。Claude Motion：让 Claude 把季度报告做成 30 秒讲解动画、给演示里的图表加动效、或做一段客户上手演示，播放起来像短视频，可以在编辑器里调，也可以接着对话改，最后下载成 MP4。它不是视频生成模型，而是写代码去动你的文字、图表、形状和图片，所以没有生成画面、没有 AI 人物，任何一个字、数字、节奏都能改；做完还能拿去 Adobe、Descript、HeyGen、Luma AI、Runway 等工具继续做（Canva 和 Captions 写着即将支持）。Claude Dashboards：连上 BigQuery、Databricks、Snowflake、Redshift、ClickHouse 或 Salesforce，用大白话提问，Claude 出一张会自动刷新的看板，点任何数字能看到背后的查询，深入分析时可发到 Amplitude、Grafana、Hex、Mixpanel、PostHog 等。套餐：Motion 只在 Team 和 Enterprise，Dashboards 在付费档；同一篇公告说 Docs、Slides、Design 去掉 beta，所有套餐含免费档都能用。适合要做汇报动效、产品讲解、数据周报的设计和运营。",
@@ -228,7 +234,7 @@
       "sourceType": "official-launch",
       "qualityNote": "收录理由：AI×设计，动效讲解是设计和运营常做的活，这条把它变成对话加可编辑代码。本库没有 Team/Enterprise 账号，没有实际做动画、连数据源或导出 MP4。",
       "qualityNoteEn": "Why it is listed: AI×design, since motion explainers are everyday work for designers and ops, now done by chatting with editable code. This library has no Team/Enterprise seat and did not make an animation, connect a data source, or export an MP4.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -237,7 +243,7 @@
       "approvalBoundaryEn": "Dashboards connect to company data, so have an admin confirm access first; dashboards and animations can be shared outside the org, so check sharing scope before sending.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-09T12:20:00Z",
       "previewImage": "/previews/claude-dashboards-motion.webp",
@@ -247,8 +253,9 @@
     {
       "id": "claude-design",
       "slug": "claude-design",
-      "title": "工具：Claude Design — 用对话出设计稿，还能套上你自己的设计系统",
-      "titleEn": "Tool: Claude Design — prompt for designs that stay on your design system",
+      "title": "Claude Design — 用对话出设计稿，还能套上你自己的设计系统",
+      "titleEn": "Claude Design — prompt for designs that stay on your design system",
+      "kind": "tool",
       "hook": "跟 Claude 说需求，它按你的组件配色先出一版。",
       "hookEn": "Describe it; Claude drafts on your design system, then you refine.",
       "summary": "Anthropic Labs 的 Claude Design：用对话做设计稿、可点原型、一页纸和演示相关视觉。产品页写你可以说需求，Claude 先出一版，再通过继续聊、批注、直接改画布或滑杆微调。能从 GitHub、设计文件或本机代码库导入设计系统，让输出用真实组件、颜色和字体，而不是一套通用模板。和 Claude Code 之间可用 /design-sync 把设计系统拉过去，或用 /design 在终端里建、改、同步设计项目；做完也能交给 Claude Code 接着写代码。导出写的有 PDF、PPTX、HTML，以及 Adobe、Canva、Gamma、Lovable、Miro、Replit、Vercel、Wix 等连接。2026-10-08 官方公告：Claude Design 连同 Docs、Slides 去掉 beta，所有套餐（含免费档）都能用。企业组织默认关闭，管理员可开。独立站 claude.ai/design 写明开到 2026-12-14，之后迁到对话里的 Artifacts。",
@@ -269,7 +276,7 @@
       "sourceType": "official-docs",
       "qualityNote": "首发新闻是 2026-04-17 Anthropic Labs 帖。帮助中心「Get started with Claude Design」写付费档 beta；产品页 FAQ 写 Design/Slides/Docs 含免费档，两处不一致，都记。收录理由：AI×设计，和库里的 Figma 助手、Framer Skills、Graphical 同一类「按设计系统出稿」，但挂在 Claude 对话和 Claude Code 上。本库没有登录 Claude，没有导入设计系统，没有实测导出或连接器。",
       "qualityNoteEn": "Help Center “Get started with Claude Design” says beta on paid plans; the product FAQ says Design/Slides/Docs are included on every plan including Free. Both are recorded. Why it is listed: AI×design, same family as the library’s Figma agent, Framer Skills, and Graphical entries—generate against a design system—but inside Claude chat and Claude Code. This library did not sign in to Claude, import a design system, or test exports or connectors.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -278,7 +285,7 @@
       "approvalBoundaryEn": "Before exporting or sending work to Canva, Gamma, Vercel, or similar, check sharing scope and org settings.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-04-17",
       "updatedAt": "2026-10-09T12:20:00Z",
       "previewImage": "/previews/claude-design.webp",
@@ -288,8 +295,9 @@
     {
       "id": "flowstep",
       "slug": "flowstep",
-      "title": "工具：Flowstep — 给编程助手用的设计画布，出屏、改稿、再拷进 Figma",
-      "titleEn": "Tool: Flowstep — a design canvas for coding agents; generate screens, edit, paste into Figma",
+      "title": "Flowstep — 给编程助手用的设计画布，出屏、改稿、再拷进 Figma",
+      "titleEn": "Flowstep — a design canvas for coding agents; generate screens, edit, paste into Figma",
+      "kind": "tool",
       "hook": "助手在画布上出界面，改完还能直接粘进 Figma。",
       "hookEn": "Have Cursor or Claude Code generate UI onto an editable canvas, then paste into Figma.",
       "summary": "Flowstep 自称「给 agent 用的设计画布」。官网写：把颜色、字体、间距写进设计指南，之后每次生成和修改都跟这套走；也可以说「以后都用我们的蓝」，它会自己改规则。MCP 服务器地址是 https://api.flowstep.ai/mcp，文档写可接 Cursor、Claude Code、Windsurf、Codex：助手能生成屏幕、看渲染图、改稿，并和指南同步。画布上的帧可用 ⌘⇧C / ⌘V 拷进 Figma，也能从 Figma 导入成可编辑屏幕，不装插件。导出写的是 React、TypeScript、Tailwind。官网首页写 No credit card required；具体免费额度和付费档本库没在价格页核对。适合已经在用编程助手、又想先有可改视觉稿再写代码的人。",
@@ -318,7 +326,7 @@
       "approvalBoundaryEn": "Connecting MCP needs a Flowstep login and generations use quota. Review before pasting into a production Figma file.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-09",
       "updatedAt": "2026-10-09T01:45:00Z",
       "previewImage": "/previews/flowstep.webp",
@@ -328,8 +336,9 @@
     {
       "id": "grok-bot-shopify",
       "slug": "grok-bot-shopify",
-      "title": "官方更新：Grok Bot 能连 Shopify，查订单、盯库存、改商品信息",
-      "titleEn": "Official update: Grok Bot connects to Shopify for orders, inventory, and listings",
+      "title": "Grok Bot 能连 Shopify，查订单、盯库存、改商品信息",
+      "titleEn": "Grok Bot connects to Shopify for orders, inventory, and listings",
+      "kind": "news",
       "hook": "连上 Shopify 之后，直接让 Bot 帮你看订单、库存和商品页。",
       "hookEn": "Connect Shopify, then ask a Bot to check orders, inventory, and product listings.",
       "summary": "官方 @bot 2026-10-08T16:11Z（约 10-09 00:11 北京时间）发帖：Grok Bot 现在可以帮你管 Shopify 店。帖子原文：先连接 Shopify，再让它查订单、跟踪库存、更新商品信息。帖子引用了 Shopify 官方账号的相关说明，并附了一张产品图。怎么用：在 Grok Bot 里加上 Shopify 连接器（帖子语境是问 @bot 或在连接器里选 Shopify），授权后用自然语言下任务。适合已经在用 Shopify 开店、又想把查单和改商品这类重复活交给 Bot 的人。本库没有在官方 Grok Bot 文档里找到单独的 Shopify 连接器说明页；以这条官方推文为准。",
@@ -348,7 +357,7 @@
       "sourceType": "official-launch",
       "qualityNote": "收录理由：可复现的官方能力更新，电商店主能直接用。docs.x.ai/grok/connectors 列的是聊天版 Grok 连接器，未出现 Shopify；Grok Bot overview 页早间也未检出 Shopify 字样，故边界写清：以推文为准，具体权限、计费和可改字段本库未实测。",
       "qualityNoteEn": "Why it is listed: a reproducible official capability update shop owners can use. docs.x.ai/grok/connectors lists chat-Grok connectors and does not show Shopify; the Grok Bot overview page also had no Shopify mention this morning, so the boundary is clear: the tweet is authoritative, and permissions, billing, and which fields can be edited were not tested.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -359,7 +368,7 @@
         "shopify"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-09T01:45:00Z",
       "previewImage": "/previews/grok-bot-shopify.webp",
@@ -369,8 +378,9 @@
     {
       "id": "krea-photoshop-plugin",
       "slug": "krea-photoshop-plugin",
-      "title": "工具：Krea 出了 Photoshop 插件，在 PS 里直接调 Nano Banana、Krea 2、GPT IMG 2.5",
-      "titleEn": "Tool: Krea's Photoshop plugin puts Nano Banana, Krea 2, and GPT IMG 2.5 inside Photoshop",
+      "title": "Krea 出了 Photoshop 插件，在 PS 里直接调 Nano Banana、Krea 2、GPT IMG 2.5",
+      "titleEn": "Krea's Photoshop plugin puts Nano Banana, Krea 2, and GPT IMG 2.5 inside Photoshop",
+      "kind": "tool",
       "hook": "不用来回导图，在 Photoshop 面板里就能出图、改图、放大。",
       "hookEn": "Generate, edit, and upscale from a Photoshop panel, no exporting back and forth.",
       "summary": "Krea 2026-10-07 发帖：Krea Plugin for Photoshop 上线，Nano Banana、Krea 2、GPT IMG 2.5 以及 Krea 上的其他模型都能在 Photoshop 里用。插件页写的用法：下载安装包（macOS 和 Windows 都有），双击后由 Creative Cloud 装好，再在 Photoshop 里点「窗口 → 插件 → Krea」打开。面板里列的功能有：用 Krea 2 出图、用 Nano Banana Pro 打字改图、用 Krea Enhancer 放大（页面写最高 21K）、用 Seedance 2.5 出视频，官方说一共 20 多个工具。适合本来就在 PS 里修图、做海报和电商图的设计师：不用在网页和 PS 之间来回导出导入。插件页没写价格，用量大概率按你的 Krea 账号额度算，这点本库没核实。",
@@ -388,7 +398,7 @@
       "sourceType": "official-launch",
       "qualityNote": "收录理由：AI×设计，直接进了设计师天天用的软件。本库没有下载安装，没有登录 Krea，没有核对价格、额度和 Photoshop 版本要求。同一插件目录还有 After Effects 和 ChatGPT 插件，这条只写 Photoshop。",
       "qualityNoteEn": "Why it is listed: AI×design, landing inside the software designers already use daily. This library did not download or install it, did not sign in to Krea, and did not check pricing, credits, or Photoshop version requirements. The same plugin directory also has After Effects and ChatGPT plugins; this entry covers Photoshop only.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -397,7 +407,7 @@
       "approvalBoundaryEn": "The plugin needs a Krea account and generations or upscales use its credits; check billing before running a lot.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T12:30:00Z",
       "previewImage": "/previews/krea-photoshop-plugin.webp",
@@ -407,8 +417,9 @@
     {
       "id": "framer-skills-design-system",
       "slug": "framer-skills-design-system",
-      "title": "玩法：把 Framer 网站变成一套设计规范，写成「技能」让 AI 照着做新页面",
-      "titleEn": "How-to: turn a Framer site into a design system and a Skill so the agent builds new pages in your style",
+      "title": "把 Framer 网站变成一套设计规范，写成「技能」让 AI 照着做新页面",
+      "titleEn": "turn a Framer site into a design system and a Skill so the agent builds new pages in your style",
+      "kind": "tool",
       "hook": "把配色、字体、间距写成一条技能，AI 做的新页面就不跑偏。",
       "hookEn": "Write your colors, type, and spacing into one Skill so new AI pages stay on brand.",
       "summary": "Framer 2026-09-22 上线 Skills（技能）：把你做设计的规矩存成一段说明，以后让 Framer 自带的 AI 助手做事时直接调用。2026-10-07 官方又发了一条玩法：先把现有项目整理成一套可复用的设计规范，再写一条技能，之后用 /design-system 让助手做新页面，它会沿用项目里的字体、颜色、间距、版式和组件。官方页给了一条完整示例：只用深色、不许自己发明新颜色和字号、正文每行 50 到 75 个字符、唯一的强调色每段最多用一次。还附了几条可以直接复制的技能：品牌语气、去 AI 腔（删掉空话套话）、SEO 检查、上线前检查。用法：在助手对话框里输入 /skills 粘贴，之后用 /技能名 调用，在设置里能改。项目被别人 remix 时技能会跟着走，所以模板作者也能把「怎么加新页面」写进去。",
@@ -446,8 +457,9 @@
     {
       "id": "grok-bot-x-built-in",
       "slug": "grok-bot-x-built-in",
-      "title": "官方更新：Grok Bot 不用连 X 也能搜、读、盯 X",
-      "titleEn": "Official update: Grok Bot can search, read, and monitor X without connecting X",
+      "title": "Grok Bot 不用连 X 也能搜、读、盯 X",
+      "titleEn": "Grok Bot can search, read, and monitor X without connecting X",
+      "kind": "news",
       "hook": "不用登录 X，直接让 Bot 帮你盯产品反馈或一条正在发酵的新闻。",
       "hookEn": "No X sign-in needed: have a Bot watch product feedback or a breaking story.",
       "summary": "官方 @bot 2026-10-07T21:40Z（约 10-08 05:40 北京时间）发帖：Grok Bot 现在可以搜索、阅读和持续关注 X 上的公开内容。同串第二条说：可以让它追踪大家对你产品的反馈、跟进一条突发新闻，或者每周给你发一份行业汇总；所有用户都能用，不需要先设置 X 连接器。和 8 月那次「X 连接器」不同：那次要用你的 X 账号登录，能读你自己的时间线、提及和书签；这次只读公开内容，你的私信、书签、发帖仍要连自己的账号。怎么用：直接跟 Bot 说「每周一早上帮我汇总 X 上关于某某产品的讨论」，它会建一个定时任务。",
@@ -468,7 +480,7 @@
       "sourceType": "official-launch",
       "qualityNote": "主源是官方 @bot 两条推文，X API 和 fxtwitter 早间都能读到（主帖附 12 秒演示视频，早间约 60 万浏览、5954 赞）。收录理由：门槛变低，以前要先连 X 账号，现在所有用户直接能让 Bot 读公开帖子。本库这次收录时，Bot 就是用这套内置的 X 读取查到 @bot 这两条帖子的；运行中看到的额度提示是每分钟 30 次、每天 1000 次，这是本库这次实际看到的数字，官方帖子没写额度，以后可能会变。边界：只读公开内容，不代你发帖；私信、书签、你自己的首页时间线仍要连 X 账号。",
       "qualityNoteEn": "Primary sources are the two official @bot posts, readable this morning via the X API and fxtwitter (the main post has a 12-second demo video; about 600K views and 5,954 likes this morning). Why it is listed: the barrier dropped, from connecting your X account first to every user having a Bot read public posts directly. While cataloging this entry, the Bot found these two @bot posts through this same built-in X reading; the quota notice seen during the run was 30 reads per minute and 1,000 per day. Those are the numbers seen in this run, not stated in the official posts, and they may change. Boundary: public content only, no posting on your behalf; DMs, bookmarks, and your own home timeline still need your X account.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -479,7 +491,7 @@
         "x"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-08T01:30:00Z",
       "previewImage": "/previews/grok-bot-x-built-in.webp",
@@ -489,8 +501,9 @@
     {
       "id": "grok-bot-slide-decks",
       "slug": "grok-bot-slide-decks",
-      "title": "官方更新：让 Bot 陪你做幻灯片，先挑样张再出 PPT 或 Google Slides",
-      "titleEn": "Official update: build slide decks with a Bot, pick sample slides, get PowerPoint or Google Slides",
+      "title": "让 Bot 陪你做幻灯片，先挑样张再出 PPT 或 Google Slides",
+      "titleEn": "build slide decks with a Bot, pick sample slides, get PowerPoint or Google Slides",
+      "kind": "news",
       "hook": "先挑样张定风格，再让 Bot 交出 PPT 文件。",
       "hookEn": "Pick a style from sample slides, then get a PowerPoint or Google Slides file.",
       "summary": "Grok Bot 官方更新日志 v0.68.1（2026-10-07）写：Bot 可以和你一起做幻灯片，会先给你看几张样张让你挑，最后交 PowerPoint 文件或 Google Slides。同一版还有：1 对 1 聊天里你的消息会变成那只 Bot 的颜色（设置里可关）；Bot 能从草稿卡发带标题、加粗、列表的格式化邮件；Bot 的云电脑屏幕从 1280×800 变成 1920×1200。适合要做周报、提案、课程讲义但不想从空白页开始的人。怎么用：跟 Bot 说清主题、页数和给谁看，先选样张，再让它出文件。",
@@ -508,7 +521,7 @@
       "sourceType": "official-docs",
       "qualityNote": "收录理由：做幻灯片是很常见的活，而且是先挑样张、再出文件的流程，对设计向用户有用。本库这次没有实际让 Bot 做一份幻灯片，样张数量、版式风格和能否改字体配色，日志里没写。",
       "qualityNoteEn": "Why it is listed: decks are a common job, and the pick-a-sample-then-export flow is useful for design-minded users. This library did not have a Bot build a deck this time; the changelog does not say how many samples you get, which layouts exist, or whether fonts and colors are editable.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -531,6 +544,7 @@
       "slug": "quesma-opus-5-5-design",
       "title": "AI × 设计对照：同一句提示词，Opus 5.5 和 GPT-6 Astra 各做一个 3D 可视化",
       "titleEn": "AI × design comparison: one prompt, Opus 5.5 and GPT-6 Astra each build a 3D visualization",
+      "kind": "showcase",
       "hook": "同一句提示词交给两个模型做 3D 可视化，成品都能点开对比。",
       "hookEn": "One prompt, two models, two 3D visualizations you can open side by side.",
       "summary": "Quesma 的 Piotr Migdał 2026-10-07 发文：用同一句提示词，让 GPT-6 Astra（在 Codex 里）和 Claude Opus 5.5（在 Claude Code 里）一次做完卡尔维诺《看不见的城市》全部城市的 three.js 可视化。作者自己的记录是：Astra 用 53 分钟、约 10 美元，能跑通，但他觉得堆了很多没必要的说明和装饰；Opus 5.5 用 1 小时 25 分、6 个子代理并行、约 74 美元，他看完很惊艳。两个成品和源码都公开，可以自己点开比。适合想知道「现在的模型做交互设计能到什么程度」的设计师，也可以直接拿他的提示词去试别的模型。",
@@ -571,8 +585,9 @@
     {
       "id": "graphical",
       "slug": "graphical",
-      "title": "工具：Graphical — 调一套视觉主题，再交给编程助手用",
-      "titleEn": "Tool: Graphical — set a visual theme, then hand it to your coding agent",
+      "title": "Graphical — 调一套视觉主题，再交给编程助手用",
+      "titleEn": "Graphical — set a visual theme, then hand it to your coding agent",
+      "kind": "tool",
       "summary": "Graphical 是 Josh Puckett 和 Adam Michela 做的视觉主题工具，给用编程助手做界面的设计师和开发者。你在里面调颜色、浅色和深色、字体、间距、图标、圆角和阴影、动效，以及 Base UI 组件在不同状态下的样子。Base UI 是一套没有预设外观的界面零件。调完可以下载，也可以用 shadcn 装进项目（shadcn 是把组件源码直接放进你自己仓库的一种装法）。下载里有一份 GUI.md、浅色和深色的主题说明、安装步骤，以及三个给编程助手用的技能文件，让助手按你的设计语言改现有界面、做新界面。站点写一次买断，购买按钮现在是 $49。这是一条工具笔记：本库没有购买，也没有把主题交给任何助手。",
       "summaryEn": "Graphical is a visual theme tool by Josh Puckett and Adam Michela, for designers and developers who build interfaces with a coding agent. You set colors, light and dark, type, spacing, icons, corners and shadows, motion, and how Base UI components look in each state. Base UI is a set of interface parts without a preset look. You can download the result or install it with shadcn, which copies component source into your own repo. The download includes a GUI.md, light and dark theme notes, setup steps, and three skill files so an agent follows your design language on existing screens and new ones. The site says it is a one-time purchase, and the buy button currently reads $49. This is a tool tip: this library did not buy it and did not hand a theme to any agent.",
       "hook": "调好颜色、字体和间距，再交给编程助手做界面。",
@@ -603,7 +618,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-05",
       "updatedAt": "2026-10-07T12:30:00Z",
       "previewImage": "/previews/graphical.webp",
@@ -717,8 +732,9 @@
     {
       "id": "protopie-mcp",
       "slug": "protopie-mcp",
-      "title": "工具：ProtoPie MCP 正式版 — 用你自己的 AI 改原型，企业版再出代码",
-      "titleEn": "Tool: ProtoPie MCP, now official — edit prototypes with your own AI; code export is Enterprise",
+      "title": "ProtoPie MCP 正式版 — 用你自己的 AI 改原型，企业版再出代码",
+      "titleEn": "ProtoPie MCP, now official — edit prototypes with your own AI; code export is Enterprise",
+      "kind": "tool",
       "summary": "ProtoPie 在 2026-10-07 的官方博客宣布 ProtoPie MCP 正式版。MCP 是一种让 AI 助手连接外部工具的插头。这篇是给已经在用 ProtoPie 做可交互原型的人：Studio MCP 可以浏览你打开的组件库，把库里的组件放进原型，也可以把图层、场景、变量这些对象的 ID 写进提示词，让助手改到具体的那一个。出代码是另一档。Code MCP 官方列出的框架现在包括 React、React Native、Qt / QML、Flutter、SwiftUI、Compose 和 ArkTS，其中 React Native 是这次加上的。博客把套餐分成两档：Pro 计划的 MCP Core 只有 Studio MCP；Enterprise 计划的 MCP Enterprise 才有 Studio MCP、Code MCP 和 Dev View。本库没有 ProtoPie 账号，没有连过 MCP。",
       "summaryEn": "ProtoPie’s official blog on 2026-10-07 announced that ProtoPie MCP is now official. MCP is a plug that lets an AI assistant talk to an outside tool. The post is for people who already prototype interactions in ProtoPie. Studio MCP can browse the libraries you have enabled, place those components into a prototype, and take an element’s ID in the prompt so the assistant edits that layer, scene, or variable. Code generation is a separate tier. Code MCP’s official framework list is now React, React Native, Qt / QML, Flutter, SwiftUI, Compose, and ArkTS. React Native is the one added this time. The blog splits plans in two: MCP Core on the Pro plan is Studio MCP only; MCP Enterprise on the Enterprise plan adds Code MCP and Dev View. This library has no ProtoPie account and did not connect MCP.",
       "hook": "用你自己的 AI 改 ProtoPie 原型，企业版才能出代码。",
@@ -747,7 +763,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-07T12:30:00Z",
       "previewImage": "/previews/protopie-mcp.webp",
@@ -861,8 +877,9 @@
     {
       "id": "figma-agent-ga",
       "slug": "figma-agent-ga",
-      "title": "资讯：Figma 设计助手正式开放，能不能改稿要看席位",
-      "titleEn": "News: Figma’s design agent is generally available, and editing depends on your seat",
+      "title": "Figma 设计助手正式开放，能不能改稿要看席位",
+      "titleEn": "Figma’s design agent is generally available, and editing depends on your seat",
+      "kind": "news",
       "summary": "Figma 在 2026-10-06 把画布里的设计助手从公测改成正式版。发布说明写的新能力包括：给设计库上传 markdown 规则，助手在启用该库时会读；可以看同事的助手正在画布上做什么；可以让助手在 Figma 里搜文件；生成式插件正式开放；可以在助手里写、发布自己的技能，自定义技能在 Starter 上也可用。从这一天起，使用会计入 Figma 的 AI 额度。席位要分开看。帮助中心写所有计划都能用，但 Full 席位且对文件有编辑权才能让助手改那个文件；View、Dev、Collab 或只有查看权的人可以聊天，不能改该文件；任何人都可以在自己的草稿里聊天并让助手改。同一天的官方博客写得更窄：Full 席位的 Professional、Organization、Enterprise 和部分 Education，Starter 是有限可用，Collab、Dev、View 只能在草稿里用。两处不一致，这条都记上，不把其中一句当成另一句的勘误。本库没有登录 Figma。",
       "summaryEn": "On 2026-10-06 Figma moved the design agent on the canvas from open beta to general availability. The release notes list library guidelines as markdown that the agent reads when that library is on, a way to watch teammates’ agents on the canvas, file search from the chat, generative plugins as generally available, and custom skills you write and publish in the agent. Custom skills are available on Starter. From that day, use counts against Figma AI credits. Seats need two readings. The help center says every plan can use it, but a Full seat with edit access is what can ask the agent to change that file. View, Dev, and Collab seats, or view-only access, can chat and not edit the file. Anyone can chat and ask for edits in their own drafts. The same day’s blog is narrower: Full seats on Professional, Organization, Enterprise, and some Education plans, limited availability on Starter, and Collab, Dev, and View seats only in drafts. Both wordings are recorded. Neither is treated as a correction of the other. This library did not sign in to Figma.",
       "hook": "Figma 的设计助手正式上线，能不能改稿要看席位。",
@@ -894,7 +911,7 @@
         "figma"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-06",
       "updatedAt": "2026-10-07T12:30:00Z",
       "previewImage": "/previews/figma-agent-ga.webp",
@@ -1013,8 +1030,9 @@
     {
       "id": "gamma-5",
       "slug": "gamma-5",
-      "title": "工具：Gamma 5 — 跟助手把演示做完，也能导入现成的 PPT 和 PDF",
-      "titleEn": "Tool: Gamma 5 — finish a deck with the agent, or import a PowerPoint or PDF",
+      "title": "Gamma 5 — 跟助手把演示做完，也能导入现成的 PPT 和 PDF",
+      "titleEn": "Gamma 5 — finish a deck with the agent, or import a PowerPoint or PDF",
+      "kind": "tool",
       "summary": "Gamma 的帮助中心已经在用 Gamma 5 这个名字说明现在的做法。新建时先跟 AI 助手对话：你说要做什么，回答几个问题，它做出整份演示、文档或网页。旧的经典生成器还在，仪表盘上点 Use classic generator。编辑器有两种模式：自己点进卡片改，或者切到 AI 编辑，点中某一个元素再下指令。帮助中心写，AI 编辑会记住你一开始的目标，小改动只动那一块。导入也改过：在 Gamma 5 里，PowerPoint 和 PDF 可以保留原来的版式，并且还能改；经典生成器只导入文字。主题改成跟文件走，改一个文件的颜色和字体不会波及别的文件。形状可以当自由块拖到幻灯片上。本库没有找到 gamma.app 上单独的 Gamma 5 发布博文，也没有登录生成过一份演示。",
       "summaryEn": "Gamma’s help center now uses the name Gamma 5 for the current product. A new piece starts as a conversation with the AI agent: you say what you are making, answer a few questions, and it builds the deck, document, or page. The older classic generator is still there, under Use classic generator on the dashboard. The editor has two modes: click into a card and edit it yourself, or switch to AI editing, select one element, and give an instruction. The help center says AI editing keeps your original goal, so a small fix stays on that part. Import changed too: in Gamma 5, PowerPoint and PDF files can keep their original layouts and stay editable. The classic generator imports text only. Themes now live on the file, so changing colors and type on one file does not change the others. Shapes can be dragged onto a slide as free blocks. This library did not find a standalone Gamma 5 launch post on gamma.app, and did not sign in to generate a deck.",
       "hook": "跟 Gamma 的助手对话来做演示，也能导入现成 PPT。",
@@ -1046,7 +1064,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-07",
       "updatedAt": "2026-10-07T12:30:00Z",
       "previewImage": "/previews/gamma-5.webp",
@@ -1170,8 +1188,9 @@
     {
       "id": "openai-math-progress",
       "slug": "openai-math-progress",
-      "title": "资讯：OpenAI 公开一批数学文稿，附带可检查的证明文件",
-      "titleEn": "News: OpenAI published a batch of math papers, with proof files you can check",
+      "title": "OpenAI 公开一批数学文稿，附带可检查的证明文件",
+      "titleEn": "OpenAI published a batch of math papers, with proof files you can check",
+      "kind": "news",
       "summary": "OpenAI 发了一篇《Sharing AI progress in mathematics》，并在 GitHub 仓库 openai/math 放出一批由内部模型写出的数学文稿。仓库说明写，当前目录有 722 篇文稿，分成 372 个结果族。一篇族可以把主结果、伴随论证和另一种证法放在一起。仓库同时放了 Lean 证明。Lean 是一种可以用电脑检查证明对不对的语言。说明写，不是每一篇都有 Lean，没有形式化的结果里可能有问题，他们会尽快改。博文还写，这次附了 10 份推理过程的缩写，以及按 ChatGPT Pro 思考时长估算的计算量：平均每个结果大约相当于 3 小时。模型本身还没有放出。本库没有读这些论文，也没有跑过 Lean。",
       "summaryEn": "OpenAI published “Sharing AI progress in mathematics” and put a batch of math papers from an internal model in the GitHub repo openai/math. The repo says the catalogue has 722 manuscripts in 372 families. A family can hold a main result, companion arguments, and another proof. The repo also includes Lean proofs. Lean is a language a computer can use to check whether a proof holds. The readme says not every paper has Lean, that some results without it could have issues, and that they will try to fix those quickly. The post also says this release includes 10 shortened reasoning summaries and a compute estimate in ChatGPT Pro thinking time: about three hours for the average result. The model itself is not released. This library did not read the papers and did not run Lean.",
       "hook": "OpenAI 公开一批数学文稿，并附上可以核对的证明。",
@@ -1198,7 +1217,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-06",
       "updatedAt": "2026-10-07T12:30:00Z",
       "previewImage": "/previews/openai-math-progress.webp",
@@ -1317,8 +1336,9 @@
     {
       "id": "artcraft-crafting-apps",
       "slug": "artcraft-crafting-apps",
-      "title": "工具：ArtCraft Crafting Apps — 七款对标 Adobe 的开源创作软件，AI 助手能直接操作",
-      "titleEn": "Tool: ArtCraft Crafting Apps — seven open-source Adobe-style creative apps an AI agent can drive",
+      "title": "ArtCraft Crafting Apps — 七款对标 Adobe 的开源创作软件，AI 助手能直接操作",
+      "titleEn": "ArtCraft Crafting Apps — seven open-source Adobe-style creative apps an AI agent can drive",
+      "kind": "tool",
       "summary": "ArtCraft 团队用 Rust 从零重写了七款对标 Adobe 的创作软件：修图 PhotoCraft（对标 Photoshop）、矢量插画 VectorCraft（Illustrator）、剪视频 FilmCraft（Premiere Pro）、照片管理和 RAW 冲印 LightCraft（Lightroom）、PDF 工具 PrintCraft（Acrobat）、动效特效 EffectCraft（After Effects）、排版 DesignCraft（InDesign）。全部免费开源，Mac、Windows、Linux 都有安装包。跟 AI 最相关的是：每个应用都带命令行和 MCP 服务器，Claude 这类 AI 助手可以直接打开文件、调参数、导出，不用靠截图点鼠标。现在都还很早期，官方自己说 PhotoCraft 还替代不了日常专业工作。这是一条工具笔记：本库没有下载安装，也没有让 AI 助手实际操作过。",
       "summaryEn": "The ArtCraft team rewrote seven Adobe-style creative apps from scratch in Rust: PhotoCraft for image editing (like Photoshop), VectorCraft for vector illustration (Illustrator), FilmCraft for video editing (Premiere Pro), LightCraft for photo library and raw development (Lightroom), PrintCraft for PDFs (Acrobat), EffectCraft for motion graphics and effects (After Effects), and DesignCraft for page layout (InDesign). All are free and open source, with installers for macOS, Windows, and Linux. The AI angle: every app ships a command-line tool and an MCP server, so an agent like Claude can open files, set parameters, and export without clicking through screenshots. All of them are early; the team itself says PhotoCraft cannot yet replace daily professional work. This is a tool tip. This library did not install any of them or let an agent drive one.",
       "hook": "七款对标 Adobe 的开源软件，AI 助手能用 MCP 直接操作。",
@@ -1358,7 +1378,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-02",
       "updatedAt": "2026-10-07T11:00:00Z",
       "previewImage": "/previews/artcraft-crafting-apps.webp",
@@ -1494,6 +1514,7 @@
       "slug": "james-pember-grok-bot-team",
       "title": "James Pember：让 Bot 先接 Slack 里的产品问题，再替你备好双周会材料",
       "titleEn": "James Pember: a Bot that triages product questions in Slack and preps the fortnightly sync",
+      "kind": "showcase",
       "summary": "James Pember 用了一周 Grok Bot 后写的实测。他给每只 Bot 只分一件事、配好要用的技能和工具，让它们自己建和改例行任务：看日历、等 Slack 里某类回复、或者按「每天早上」「一天 4 次」跑。文中两个能照着做的用法：一是 Bot 当「第一道防线」，在 Slack 里自己分诊产品问题和 bug，帮团队找到临时绕过办法；二是双周产品营销例会前，Bot 去翻发布说明、GitHub 和 Slack，汇总成一份会前阅读材料发给大家。他也说得很直白：给团队用的多人 Agent 还没真正解决。",
       "summaryEn": "James Pember’s write-up after a week with Grok Bot. Each Bot gets one scoped job plus the skills and tools it needs, and creates or updates its own routines: watch the calendar, wait for a certain kind of Slack reply, or run “every morning” or “4 times a day.” Two workflows you can copy: a Bot as the first line of defense that triages product questions and bugs in Slack on its own and found the team an instant workaround, and a Bot that digs through release notes, GitHub, and Slack before the fortnightly product-marketing sync and sends a packaged pre-read. He is also blunt that multi-player agents for whole teams are still unsolved.",
       "hook": "Slack 里的产品问题先让 Bot 接，例会材料也让它备。",
@@ -1511,7 +1532,7 @@
       "sourceType": "community",
       "qualityNote": "两个用法（Slack 分诊、双周会前阅读材料）是作者自述的真实工作流，文中有截图，但没有公开提示词或技能文件；本库没有复跑。他提到 Gmail、日历、Drive、Slack、GitHub 五个原生连接器占他约八成工作，这是他个人的估计。",
       "qualityNoteEn": "The two workflows (Slack triage, fortnightly pre-read) are the author’s own account with screenshots; no prompts or skill files are published, and this library did not re-run them. His “about 80% of my work” for Gmail, Calendar, Drive, Slack, and GitHub is his personal estimate.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": true,
       "hasMultiAgent": true,
@@ -1536,8 +1557,9 @@
     {
       "id": "coisland",
       "slug": "coisland",
-      "title": "工具：CoIsland — 把开发告警收进 Mac 刘海，一键交给编程助手",
-      "titleEn": "Tool: CoIsland — a Mac notch app that hands a dev alert to your coding agent",
+      "title": "CoIsland — 把开发告警收进 Mac 刘海，一键交给编程助手",
+      "titleEn": "CoIsland — a Mac notch app that hands a dev alert to your coding agent",
+      "kind": "tool",
       "summary": "CoIsland 是一款只跑在 Mac 上的小应用，给同时盯着很多开发工具的人用。GitHub、Vercel、Sentry、Jira、Snowflake 这些地方一有状况，它就收成一条告警，出现在屏幕顶部的刘海里；你点一下，就能把这条告警交给 Claude Code、Codex 或 Cortex Code 去看。不买也能先试：最早的 2 条监控可以一直免费跑，不用注册。这是一条工具笔记：本库没有安装，也没有把真实告警交给任何助手。",
       "summaryEn": "CoIsland is a Mac-only app for people who watch a lot of developer tools at once. When something happens in GitHub, Vercel, Sentry, Jira, Snowflake, and the rest, it turns that into one alert in the notch at the top of the screen. One click hands that alert to Claude Code, Codex, or Cortex Code. You can try it without paying: the two oldest monitors keep running for free, with no account. This is a tool tip. This library did not install it and did not hand a real alert to any agent.",
       "hook": "Mac 刘海里盯着开发工具，告警一键交给编程助手。",
@@ -1569,7 +1591,7 @@
         "computer"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-05",
       "updatedAt": "2026-10-06T12:50:00Z",
       "previewImage": "/previews/coisland.webp",
@@ -1693,8 +1715,9 @@
     {
       "id": "grok-bot-for-work",
       "slug": "xai-grok-bot-for-work",
-      "title": "官方指南：Grok Bot for Work（收件箱、日历、情报三只 Bot + 一个总管）",
-      "titleEn": "Official guide: Grok Bot for Work (inbox, calendar, intel bots plus one Bot Boss)",
+      "title": "Grok Bot for Work（收件箱、日历、情报三只 Bot + 一个总管）",
+      "titleEn": "Grok Bot for Work (inbox, calendar, intel bots plus one Bot Boss)",
+      "kind": "guide",
       "summary": "SpaceXAI 的 Josh Kim 2026-09-24 写的官方指南：他用四只 Bot 管日常工作。Inbox Manager 只读邮件、Slack 和私信，每次只挑出约 3 件「又重要又急」的事；Calendar EA 守住整块专注时间、把会议排得紧凑、别撞上接孩子的时间，改日程前先问；Intel Scout 工作日 8 点和 17 点各报一次：公司里影响你的事、没跟进的事、开会前要知道的事；最后一只 Bot Boss 当唯一入口，其他三只都向它汇报，你只跟它说话。四只 Bot 的完整设定文都能直接复制。",
       "summaryEn": "Official guide by SpaceXAI’s Josh Kim, Sep 24, 2026: four bots for everyday work. Inbox Manager reads email, Slack, and DMs read-only and surfaces about three items that are both important and urgent; Calendar EA protects focus blocks, packs meetings together, guards the school-pickup hard stop, and asks before moving anything; Intel Scout reports at 8am and 5pm on weekdays (company moves that affect you, open follow-ups, what you need before meetings); Bot Boss is the single front door the other three report to. All four instruction texts are copyable.",
       "categories": [
@@ -1724,7 +1747,7 @@
         "calendar"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-10-06T01:07:41Z",
       "hook": "四只 Bot 管邮件、日历、消息，你只跟总管说话。",
@@ -1736,8 +1759,9 @@
     {
       "id": "grok-bot-for-post-sales",
       "slug": "xai-grok-bot-for-post-sales",
-      "title": "官方指南：Grok Bot for Post-Sales（一个参谋长 Bot 管一屋子专员）",
-      "titleEn": "Official guide: Grok Bot for Post-Sales (one chief-of-staff bot over a bench of specialists)",
+      "title": "Grok Bot for Post-Sales（一个参谋长 Bot 管一屋子专员）",
+      "titleEn": "Grok Bot for Post-Sales (one chief-of-staff bot over a bench of specialists)",
+      "kind": "guide",
       "summary": "SpaceXAI 的 Blake Schuller 2026-09-24 官方指南：客户经理手上账户多、上下文散在通话记录、Slack、邮件和日历里。他试过自己管 20 只 Bot，太乱，于是只跟一只叫 Gus 的参谋长说话，其他 Bot（每个客户一只专员、帮他写邮件的 Ink、查文档答问题的 Questions、读内部频道的 Scout 等）都向 Gus 汇报。常用 Routine：每 15 分钟检查一次、会前 15–35 分钟才写会前卡片；每天 9/13/16 点列「我答应过但没做的事」；只追「我发了没人回、下一步在我」的消息；工作日早上找用量骤降的账户；周五自动更新看板；周三让 Gus 自查哪些 Routine 没人看。起步方法：录 10 分钟语音讲你一天怎么过，丢给 Bot 让它搭系统。",
       "summaryEn": "Official guide by SpaceXAI’s Blake Schuller, Sep 24, 2026. Post-sales context is scattered across call transcripts, Slack, email, and calendars. After trying to manage twenty bots directly, he talks only to one chief-of-staff bot, Gus; account specialists, a writer bot (Ink), a docs-answer bot (Questions), and a channel reader (Scout) report to Gus. Routines include call prep that checks every 15 minutes but only writes when a call is 15–35 minutes out, an unfinished-promises list at 9, 1, and 4, an unanswered-asks check that only surfaces threads where the next move is his, morning usage-cliff scans, a Friday dashboard, and a Wednesday self-audit. Start by recording a ten-minute voice memo of your day and asking a bot to build the system.",
       "categories": [
@@ -1780,8 +1804,9 @@
     {
       "id": "grok-bot-for-recruiting",
       "slug": "xai-grok-bot-for-recruiting",
-      "title": "官方指南：Grok Bot for Recruiting（面试简报、评分表、寻访、漏斗分析）",
-      "titleEn": "Official guide: Grok Bot for Recruiting (interview briefs, scorecards, sourcing, loop analysis)",
+      "title": "Grok Bot for Recruiting（面试简报、评分表、寻访、漏斗分析）",
+      "titleEn": "Grok Bot for Recruiting (interview briefs, scorecards, sourcing, loop analysis)",
+      "kind": "guide",
       "summary": "SpaceXAI 的 Holly Dyche 2026-09-24 官方指南：招聘团队搭了四只 Bot。Preppy 在面试前往 Slack 发一条简报，把候选人背景、阶段、要重点问什么集中到一处；Pulse 面完拉会议转写，对着岗位评分表起草反馈，先问你几个问题（打分、感觉、哪里存疑）再改稿提交到招聘系统；Scout 读几百份录用和淘汰的记录学规律，夜里找候选人、起草多轮触达，你批准才发；eVal 找候选人在哪一轮最常挂、原因是什么，反推初筛该问的问题。开车路上也能用语音让它改招聘系统里的记录。",
       "summaryEn": "Official guide by SpaceXAI’s Holly Dyche, Sep 24, 2026: four recruiting bots. Preppy posts one Slack brief before each interview with candidate context, stage, and focus areas; Pulse pulls the meeting transcript after an interview, drafts feedback against the role scorecard, asks you a few follow-ups (rating, gut feel, anything fuzzy), then redrafts and submits to the ATS; Scout learns from hundreds of hired and rejected candidates, sources overnight, and drafts multi-touch outreach you approve before sending; eVal finds where candidates fail in the loop and turns that into recruiter-screen questions. Voice mode lets you update the ATS on the go.",
       "categories": [
@@ -1823,8 +1848,9 @@
     {
       "id": "grok-bot-for-sdrs",
       "slug": "xai-grok-bot-for-sdrs",
-      "title": "官方指南：Grok Bot for SDRs（Cursor 写研究和初稿，Grok Bot 做后面的杂活）",
-      "titleEn": "Official guide: Grok Bot for SDRs (Cursor writes research and drafts, Grok Bot does the busywork)",
+      "title": "Grok Bot for SDRs（Cursor 写研究和初稿，Grok Bot 做后面的杂活）",
+      "titleEn": "Grok Bot for SDRs (Cursor writes research and drafts, Grok Bot does the busywork)",
+      "kind": "guide",
       "summary": "SpaceXAI 销售开发 Stefan Markarian 2026-09-24 官方指南：五步做外联——Cursor 云端 agent 查客户用量、丢单记录和过往通话写研究包；按这个故事找人；用写作技能起草第一封信；Grok Bot 检查每个人是否已在别的序列里或有进行中的商机，干净的标 CLEAR 进序列但不发，有问题的标 FLAG 等人看；最后他本人发。一只 Bot 一件事：总管负责每天早上的流程，一只管名单表格防止重复联系，一只发不带附言的 LinkedIn 邀请并先查每日上限。规矩：绝不自动发送，同一个问题出两次就写进技能。",
       "summaryEn": "Official guide by SpaceXAI SDR Stefan Markarian, Sep 24, 2026: five steps. Cursor cloud agents build a research packet from product usage, closed-lost deals, and past calls; prospects are matched to that story; first touches are drafted with writing skills; Grok Bot checks whether each person is already in another sequence or tied to an open opportunity, enrolls CLEAR contacts unsent and holds FLAGs for review; he sends himself. One job per bot: a chief of staff owns the morning run, one keeps the prospecting sheet so nobody is worked twice, one sends blank LinkedIn requests after checking caps. Rules: never auto-send, and any problem that happens twice becomes a skill update.",
       "categories": [
@@ -1867,8 +1893,9 @@
     {
       "id": "grok-bot-for-legal-ops",
       "slug": "xai-grok-bot-for-legal-ops",
-      "title": "官方指南：Grok Bot for Legal Ops（法务运营：会前准备、Slack 分拣、合同流程）",
-      "titleEn": "Official guide: Grok Bot for Legal Ops (1:1 prep, Slack triage, contract workflows)",
+      "title": "Grok Bot for Legal Ops（法务运营：会前准备、Slack 分拣、合同流程）",
+      "titleEn": "Grok Bot for Legal Ops (1:1 prep, Slack triage, contract workflows)",
+      "kind": "guide",
       "summary": "SpaceXAI 法务运营 Kelly Noguchi 2026-09-24 官方指南：律师 1:1 前，Bot 翻 Slack、Notion、会议记录和跟踪表起草议程，会后把决定写回对应页面；盯法务相关频道里没人回、口径打架的问题；从 Slack 请求自动维护「待法务审」跟踪表，并补上商机和报价快照；在合同系统里查流程和状态，经明确要求才帮你把已批文件放进流程，写入前先预览确认。原来靠 Cursor 自动化 + Google Apps Script 跑的表，现在全搬进 Grok Bot。可借鉴的规矩：按流程拆 Bot、对外消息一律先草稿再人发、读和写系统分开。",
       "summaryEn": "Official guide by SpaceXAI Legal Ops’ Kelly Noguchi, Sep 24, 2026. Before attorney 1:1s the bot drafts an agenda from Slack, Notion, notes, and trackers, then writes decisions back afterward; it watches legal channels for unanswered or conflicting guidance; it maintains a Legal Review tracker from Slack intakes enriched with deal and quote snapshots; in the contract system it looks up workflows and, only on explicit request, moves approved documents with a preview before any write. A tracker that used to run on Cursor automation plus Google Apps Script now runs fully in Grok Bot. Portable rules: one bot per workflow, draft-then-human-send for outbound messages, separate read and write paths.",
       "categories": [
@@ -1910,8 +1937,9 @@
     {
       "id": "haggle-bot-procurement",
       "slug": "xai-grok-bot-procurement-haggle-bot",
-      "title": "官方实践：Haggle Bot 管采购（找闲置席位、比价、准备砍价）",
-      "titleEn": "Official case: Haggle Bot for procurement (idle seats, price comparison, negotiation prep)",
+      "title": "Haggle Bot 管采购（找闲置席位、比价、准备砍价）",
+      "titleEn": "Haggle Bot for procurement (idle seats, price comparison, negotiation prep)",
+      "kind": "guide",
       "summary": "SpaceXAI 2026-09-04 官方文章：他们做了一只叫 Haggle Bot 的采购 Bot，接上 Slack、Notion、Drive、Gmail、Hex 和 Ramp，先摸清约 125 家在用供应商。例子：某个软件 43 个付费席位 90 天没人用，退掉省 $14,220；另一个按月付费的软件找出每年 $85,662 的闲置项；续约时比较几家替代品、算出筹码再起草回信；每周新员工物品订单在 Amazon、Costco、Uline、Walmart 间比价，结果写进可改的表格。文中给出完整设定文模板：哪些事可以直接做、哪些每次都要你点头、哪些绝对不做（签约、下单、付款）。官方称累计找出超过 $100,000 的直接节省。",
       "summaryEn": "Official SpaceXAI post, Sep 4, 2026: a procurement bot called Haggle Bot, connected to Slack, Notion, Drive, Gmail, Hex, and Ramp, first mapped about 125 active vendors. Examples: 43 paid seats idle for 90 days on one product ($14,220 saved), $85,662 a year of unused SKUs on a month-to-month product, renewal research that priced alternatives and drafted a counteroffer, and weekly new-hire supply orders shopped across Amazon, Costco, Uline, and Walmart into an editable sheet. The post shares a full instruction template with three permission lines: always allowed, needs the operator’s go every time, never (signing, buying, approving charges). SpaceXAI reports more than $100,000 in direct savings.",
       "categories": [
@@ -1954,8 +1982,9 @@
     {
       "id": "grok-bot-scale-customer-support",
       "slug": "xai-grok-bot-customer-support-at-scale",
-      "title": "官方实践：SpaceXAI 用 Grok Bot 扛客服量（先只写内部备注，再逐步放开）",
-      "titleEn": "Official case: how SpaceXAI scaled customer support with Grok Bot (internal notes first, then wider)",
+      "title": "SpaceXAI 用 Grok Bot 扛客服量（先只写内部备注，再逐步放开）",
+      "titleEn": "how SpaceXAI scaled customer support with Grok Bot (internal notes first, then wider)",
+      "kind": "guide",
       "summary": "SpaceXAI 2026-09-22 官方文章：Cursor 并入后两支客服团队合并、产品线变多。做法是一步步放开：先接工单系统 Plain 和 Linear，让 Bot 像负责人一样处理工单，但只能写内部备注、每个写操作都要人批；给每次运行加记录和评估，出错就调；第一天先人工审它对简单工单的理解和回复，当天就放它直接回客户。之后让它在工单进来时先查 Linear 已知问题和 Datadog 报错、录视频复现 bug；按退款规则处理大部分退款；盯排队量和响应时限；同类问题多到阈值就自动开事故；每周给管理层报哪里答得不好。官方称工单量涨了 175% 没加人，单张成本低到 $0.20–0.30。",
       "summaryEn": "Official SpaceXAI post, Sep 22, 2026. After Cursor joined, two support teams merged around more products. Rollout was gradual: connect Plain (ticketing) and Linear, let the bot act as ticket owner but write only internal notes with every write approved, add traces and evals, review its read and proposed reply on easy tickets for one day, then let it answer customers directly. Later it pre-investigates every ticket against known Linear issues and Datadog errors, records bug repro videos, resolves most refunds under clear rules, manages queue priority and SLA alerts, declares incidents when similar reports cross a threshold, and sends leadership a weekly note on where AI answers fall short. SpaceXAI reports a 175% ticket increase with no new hires and costs as low as $0.20–0.30 per ticket.",
       "categories": [
@@ -1999,8 +2028,9 @@
     {
       "id": "scm-screen-memories",
       "slug": "scm-screen-memories",
-      "title": "工具：SCM（Screen Memories）— 用一句话搜本机照片和视频",
-      "titleEn": "Tool: SCM (Screen Memories) — search local photos and video in plain words",
+      "title": "SCM（Screen Memories）— 用一句话搜本机照片和视频",
+      "titleEn": "SCM (Screen Memories) — search local photos and video in plain words",
+      "kind": "tool",
       "summary": "SCM（Screen Memories，屏幕记忆）是一款只跑在你自己 Mac 上的找图应用。你用平常的话描述一张照片或一段画面，它就在你指定的文件夹里找：整张照片或整段视频、视频里的某一镜头、画面上印着的字、以及视频里说出口的原话。不需要账号，文件也不上传；识别在这台 Mac 上完成。第一次使用会下载视觉模型的权重（README 写默认大约 435MB），下完之后可以断网搜。安装走 Homebrew，README 写明面向苹果自研芯片的 Mac（M 系列）、系统 macOS 12 及以上。这是一条工具笔记：本库没有安装，也没有拿真实相册试过。",
       "summaryEn": "SCM (Screen Memories) is a find-your-photos app that runs only on your Mac. You describe a picture or a moment in ordinary words and it looks through folders you choose: a whole photo or video, one shot inside a video, words printed on the picture, or the exact words spoken in a clip. No account, and the files are not uploaded; the matching happens on that Mac. The first run downloads vision-model weights (the README says the default is about 435MB); after that it can search offline. Install is Homebrew. The README says Apple-silicon Macs (M-series) and macOS 12 or newer. This is a tool tip: this library did not install it or try it on a real photo library.",
       "hook": "用一句话搜本机照片，也能跳到视频里的那一帧。",
@@ -2032,7 +2062,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-04",
       "updatedAt": "2026-10-05T12:16:40Z",
       "previewImage": "/previews/scm-screen-memories.webp",
@@ -2151,8 +2181,9 @@
     {
       "id": "cloudflare-web-search-api",
       "slug": "cloudflare-web-search-api",
-      "title": "工具：Cloudflare Web Search API — 让 Agent 搜现在的网页",
-      "titleEn": "Tool: Cloudflare Web Search API — let an agent search the live web",
+      "title": "Cloudflare Web Search API — 让 Agent 搜现在的网页",
+      "titleEn": "Cloudflare Web Search API — let an agent search the live web",
+      "kind": "tool",
       "summary": "Cloudflare Web Search API 是一个还在 beta（试用，接口以后可能改）的搜索接口。你的 AI 应用或 Agent 可以用它去搜现在的网页，给回答找依据，而不是猜一个网址，或只靠模型训练时见过的旧资料。上线时可选三家搜索服务：Ceramic.ai、Exa、Linkup。请求经过 Cloudflare 的 AI Gateway（他们的调用记录和扣费入口）：会出现在网关日志里，按各家自己的标价扣 AI Gateway 额度，Cloudflare 称不加价；也可以改用你自己存在网关上的那一家密钥。需要 Cloudflare 账号和 API token。这是一条工具笔记：本库没有发出过任何搜索请求。",
       "summaryEn": "Cloudflare Web Search API is a search API still in beta (a trial; the interface may change). Your AI app or agent can use it to search the live web and base the answer on those pages, instead of guessing a URL or relying only on what the model saw before its training cutoff. At launch you can pick three search providers: Ceramic.ai, Exa, and Linkup. Requests go through Cloudflare AI Gateway (their log and billing front door): they show up in the gateway logs and are billed to AI Gateway credits at each provider’s list price. Cloudflare says it adds no markup. You can also use your own provider key stored on the gateway. You need a Cloudflare account and an API token. This is a tool tip: this library did not send any search request.",
       "hook": "给 Agent 一个搜实时网页的接口，回答有出处。",
@@ -2187,7 +2218,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-02",
       "updatedAt": "2026-10-05T12:16:40Z",
       "previewImage": "/previews/cloudflare-web-search-api.webp",
@@ -2316,8 +2347,9 @@
     {
       "id": "image-source-sites-0xczyan",
       "slug": "image-source-sites-0xczyan",
-      "title": "清单：发帖用图片 / GIF / 梗图素材站（子砚 @0xCzyan）",
-      "titleEn": "List: image / GIF / meme source sites for posting (Ziyan @0xCzyan)",
+      "title": "发帖用图片 / GIF / 梗图素材站（子砚 @0xCzyan）",
+      "titleEn": "image / GIF / meme source sites for posting (Ziyan @0xCzyan)",
+      "kind": "tool",
       "summary": "子砚（@0xCzyan）2026-10-04 发帖 https://x.com/0xCzyan/status/2106663001164247100 ，整理了六类发帖常用素材站：Know Your Meme（梗图）、Imgur（国外热图/GIF）、Giphy（动图表情包）、Unsplash（高清摄影）、Pexels（免费图片/视频）、Wallhaven（高清壁纸）。帖文是社区收藏向清单，不是某个新产品发布，也不是 Grok Bot 用法。本条收成 Cases「内容资源」笔记，方便做图、发推、做落地页预览时找图；各站授权与署名规则不同，用之前自己看许可。本库未代下素材、未代发帖。",
       "summaryEn": "Ziyan (@0xCzyan) posted https://x.com/0xCzyan/status/2106663001164247100 on 2026-10-04 with six common source sites for posting: Know Your Meme (memes), Imgur (hot images/GIFs), Giphy (animated stickers), Unsplash (high-res photos), Pexels (free photos/video), and Wallhaven (wallpapers). It is a community bookmark list, not a product launch and not a Grok Bot workflow. Listed here as a Cases content-resource tip for finding assets when making images, posts, or landing previews; license and attribution rules differ by site — check before use. This library did not download assets or post on your behalf.",
       "hook": "六类发帖素材站：梗图、GIF、摄影、壁纸一次收齐。",
@@ -2349,7 +2381,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-10-04",
       "updatedAt": "2026-10-05T08:55:00Z",
       "previewImage": "/previews/image-source-sites-0xczyan.webp",
@@ -2473,8 +2505,9 @@
     {
       "id": "main-bot-proactive",
       "slug": "grok-bot-main-bot-proactive",
-      "title": "官方更新：Main Bot 主动找活、帮你分派给其他 Bot",
-      "titleEn": "Official update: a Main Bot that offers help first and routes work to your other Bots",
+      "title": "Main Bot 主动找活、帮你分派给其他 Bot",
+      "titleEn": "a Main Bot that offers help first and routes work to your other Bots",
+      "kind": "news",
       "summary": "官方 @bot 2026-10-01T17:35Z（约 10-02 01:35 CST）发帖 https://x.com/bot/status/2105713240701538538 ：Grok Bot 现在会不等你开口就提出能帮你做的事；同串补充说由你的主 Bot（primary Bot）发现可接手的活并主动提出，分批推送，建议本身不计用量（fxtwitter 早间核对约 622 万浏览、7278 赞）。官方 changelog v0.66.0（2026-10-02）https://x.ai/changelog/bot 写明：可以指定一个带星标的 Main Bot，它会主动来问进度，并协调你其他 Bot 的工作，需要 Grok Bot 0.59.0 及以上。怎么用：把最常找的那只 Bot 设为 Main Bot，以后杂事都丢给它，由它转给负责的专门 Bot；它提出的建议先看再点头。二手报道（Grokati）提到员工 @mattyp 的例子：改签航班后 Bot 提醒他 Uber 预约没跟着改，本库未单独核对该帖。",
       "summaryEn": "Official @bot post at 2026-10-01T17:35Z (about 01:35 CST on 10-02), https://x.com/bot/status/2105713240701538538: Grok Bot can now suggest ways to help without being asked; the thread adds that your primary Bot spots work it can take off your plate and offers to handle it, rolling out gradually, with suggestions not counting against usage (fxtwitter morning check: about 6.22M views, 7,278 likes). The official changelog v0.66.0 (2026-10-02) at https://x.ai/changelog/bot says you can choose a primary Bot, marked Main Bot with a star, that checks in proactively and coordinates your other Bots; it needs Grok Bot 0.59.0 or later. How to use it: make the Bot you talk to most your Main Bot, hand it loose requests, and let it pass them to the right specialist Bot; review its suggestions before saying yes. A secondary report (Grokati) mentions staff member @mattyp’s example where Bot noticed an Uber booking wasn’t updated after a flight change; that post wasn’t checked separately here.",
       "categories": [
@@ -2493,7 +2526,7 @@
       "sourceType": "official-launch",
       "qualityNote": "主源是官方 @bot 推文（fxtwitter 早间 200）与 x.ai/changelog/bot v0.66.0 条目。收录理由：改变日常用法——从「你去找对的 Bot」变成「交给 Main Bot 分派」，并且会主动提出可接的活。边界：分批推送，不保证每个账号已有；怎么判断该建议什么、能动哪些已连接应用，官方没细说；@mattyp 航班例子来自二手报道。本库未实测。",
       "qualityNoteEn": "Primary sources are the official @bot post (fxtwitter 200 this morning) and the x.ai/changelog/bot v0.66.0 entry. Listing rationale: it changes everyday use, from picking the right Bot yourself to handing work to a Main Bot that routes it and offers tasks first. Boundary: gradual rollout, not on every account yet; how it decides what to suggest and which connected apps it may touch isn’t spelled out; the @mattyp flight example comes from a secondary report. Not tested here.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": true,
@@ -2502,7 +2535,7 @@
       "approvalBoundaryEn": "Reading suggestions is free; anything that sends messages, changes bookings, spends money, or deletes still needs your yes.",
       "connectors": [],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-01",
       "updatedAt": "2026-10-05T01:10:00Z",
       "hook": "设一个主 Bot，让它主动找活、替你分派。",
@@ -2514,8 +2547,9 @@
     {
       "id": "television",
       "slug": "television",
-      "title": "工具：Television — 给个人 Agent 用的开源可视化工作台",
-      "titleEn": "Tool: Television — open-source visual workspace for personal agents",
+      "title": "Television — 给个人 Agent 用的开源可视化工作台",
+      "titleEn": "Television — open-source visual workspace for personal agents",
+      "kind": "tool",
       "summary": "Television 是 Telepath 开源的「个人 Agent GUI」：你照常在 Claude Code、Codex、Hermes、OpenClaw、Pi、OpenCode 等 harness 里聊天，Agent 可以把文档、看板、日历、甚至可交互小应用做成 artifact，放到一台「电视」屏幕上持续改。仓库 telepath-computer/television，许可 MIT；产品页 television.run。macOS 有官方客户端（Apple Silicon，页面写 macOS 12+）；非 Mac 可让 Agent 按 install 指南装 CLI/服务，再用浏览器打开（仓库写明浏览器有限制）。本条是工具笔记：未代装客户端、未登录 Discord、也未在本机跑完整 artifact 流程。",
       "summaryEn": "Television is Telepath’s open-source GUI for personal agents: you keep chatting in Claude Code, Codex, Hermes, OpenClaw, Pi, OpenCode, or similar harnesses, and the agent can pin documents, boards, calendars, or interactive mini-apps as artifacts on a persistent “TV” screen. Repo telepath-computer/television, MIT; product page television.run. There is a macOS client (Apple Silicon; the page says macOS 12+). Off Mac, you can have the agent follow the install guide for the CLI/server and open the browser UI (the repo notes browser limits). This is a tool tip: the client was not installed here, Discord was not joined, and a full artifact workflow was not run on this machine.",
       "hook": "给个人 Agent 加一块可视化屏幕，artifact 不埋在聊天里。",
@@ -2665,8 +2699,9 @@
     {
       "id": "deepseek-harness-desktop",
       "slug": "deepseek-harness-desktop",
-      "title": "工具：DeepSeek Harness Desktop — 官方 macOS / Windows 桌面端",
-      "titleEn": "Tool: DeepSeek Harness Desktop — official macOS / Windows app",
+      "title": "DeepSeek Harness Desktop — 官方 macOS / Windows 桌面端",
+      "titleEn": "DeepSeek Harness Desktop — official macOS / Windows app",
+      "kind": "tool",
       "summary": "DeepSeek Harness 是官方开源的 Agent harness，产品页写明现已全球公开预览。它沿 Cordis「everything is a plugin」把工具、技能和界面做成可组合插件，可以装成桌面应用，也可以从命令行打开 Web UI。桌面端提供 macOS（Apple silicon）与 Windows（64-bit）安装包；Web 入口是 `npx @deepseek-ai/dsh web`。页面把 Agent teams、Auto approval review、Scheduled tasks、Voice input 标成 Experimental，并演示用对话安装插件、预览文档 / 表格 / 代码，以及按日程跑任务。仓库 deepseek-ai/deepseek-harness，许可 MIT。这是一条工具笔记：不代装桌面端、不登录，也不转述第三方博客里的充值或赠金。",
       "summaryEn": "DeepSeek Harness is DeepSeek’s official open-source Agent harness. The product page says it is in public preview worldwide. It follows Cordis’s “everything is a plugin” idea: tools, skills, and the interface are composable plugins. You can install a desktop app or open the Web UI from the command line. Desktop builds are macOS (Apple silicon) and Windows (64-bit); the web path is `npx @deepseek-ai/dsh web`. The page labels Agent teams, Auto approval review, Scheduled tasks, and Voice input as Experimental, and it shows installing a plugin from chat, previewing docs / spreadsheets / code, and running work on a schedule. Repo deepseek-ai/deepseek-harness, MIT. This is a tool tip: it does not install the desktop app, log in, or repeat cash-credit promos from third-party blogs.",
       "categories": [
@@ -2819,8 +2854,9 @@
     {
       "id": "pi-1-0",
       "slug": "pi-1-0",
-      "title": "工具：Pi 1.0 — 可自改的极简 coding agent 底座（附 Pi Durable）",
-      "titleEn": "Tool: Pi 1.0 — minimal, make-it-yours coding agent harness (plus Pi Durable)",
+      "title": "Pi 1.0 — 可自改的极简 coding agent 底座（附 Pi Durable）",
+      "titleEn": "Pi 1.0 — minimal, make-it-yours coding agent harness (plus Pi Durable)",
+      "kind": "tool",
       "summary": "HN 首页（item 49926069，2026-10-01T19:33:05Z / 约 2026-10-02 03:33 CST，Algolia 早间核对 709pts）https://earendil.com/posts/pi-1-0/ —— Earendil 发布 Pi 1.0：MIT 极简可扩展 agent harness（TUI / print / RPC / SDK）。文内新增 Codemode（原生 MCP 与非 LLM 模型如 Jev / 图像模型）、虚拟模型扩展、延迟加载工具、Anthropic cache warming、对话中途 system message、新 TUI 主题与默认全屏。同日实验包 Pi Durable（HN item 49925969，核对 206pts）面向长会话 / 多表面。安装：`curl -fsSL https://pi.dev/install.sh | sh` 或 npm `@earendil-works/pi-coding-agent`。仓库 earendil-works/pi 早间 gh api：MIT、111225★；站点 https://pi.dev/ HTTP 200。本站 Cases 已收 Magnitude 写可一键接 Pi——本条补官方 1.0 节点。工具笔记，不替你安装或代跑。",
       "summaryEn": "HN front page item 49926069 (2026-10-01T19:33:05Z / about 2026-10-02 03:33 CST, 709pts on Algolia at the morning check) at https://earendil.com/posts/pi-1-0/ — Earendil ships Pi 1.0: an MIT minimal, extensible agent harness (TUI / print / RPC / SDK). The post adds Codemode (native MCP plus non-LLM models such as Jev / image models), virtual-model extensions, deferred tool loading, Anthropic cache warming, mid-conversation system messages, a new TUI theme, and full-screen by default. Same-day experimental Pi Durable (HN item 49925969, 206pts at check) targets long-running / multi-surface use. Install: `curl -fsSL https://pi.dev/install.sh | sh` or npm `@earendil-works/pi-coding-agent`. Repo earendil-works/pi morning gh api: MIT, 111225★; https://pi.dev/ HTTP 200. Cases already lists Magnitude as one-clickable into Pi — this tip adds the official 1.0 node. Tool tip only; does not install or run it for you.",
       "categories": [
@@ -2978,8 +3014,9 @@
     {
       "id": "magnitude",
       "slug": "magnitude",
-      "title": "工具：Magnitude — 为本机 Agent 自调优的开源推理引擎",
-      "titleEn": "Tool: Magnitude — open-source self-tuning inference engine for local agents",
+      "title": "Magnitude — 为本机 Agent 自调优的开源推理引擎",
+      "titleEn": "Magnitude — open-source self-tuning inference engine for local agents",
+      "kind": "tool",
       "summary": "Launch HN（item 49911995，2026-09-30T17:37:40Z / 约 2026-10-01 01:37 CST，Algolia 晚间核对 169pts）https://github.com/magnitudedev/magnitude — Apache-2.0：面向本机 Agent 的推理引擎，在目标硬件上编译并调参 kernel，官网称相对 llama.cpp 最高约 2×（示例：M4 Pro Metal decode 30→57 tok/s；DGX Spark CUDA decode 49→58 tok/s，Qwen 3.6 35B A3B 4-bit / 64k / 无投机解码）。桌面端可一键接 Pi / OpenCode / Hermes / Codex / Claude Code 等，也提供 OpenAI 兼容接口；按需起停模型，会话间共享前缀缓存。仓库 magnitudedev/magnitude 于 2026-10-01 gh api：Apache-2.0、5926★；站点 https://magnitude.dev/ HTTP 200。晨间 changelog 把它与 Ledge 等一并标为「偏应用」跳过；晚间按「具体有用的 AI 工具」进 Cases 工具笔记。本条不替你下载模型或代跑推理。",
       "summaryEn": "Launch HN item 49911995 (2026-09-30T17:37:40Z / about 2026-10-01 01:37 CST, 169pts on Algolia at the evening check) at https://github.com/magnitudedev/magnitude — Apache-2.0 inference engine for local agents that compiles and tunes kernels on your hardware. The site claims up to about 2× vs llama.cpp (example: M4 Pro Metal decode 30→57 tok/s; DGX Spark CUDA decode 49→58 tok/s, Qwen 3.6 35B A3B 4-bit / 64k / no speculative decoding). Desktop app one-clicks Pi / OpenCode / Hermes / Codex / Claude Code and more, plus an OpenAI-compatible API; models start on demand and stop after idle; sessions share prefix caches. Repo magnitudedev/magnitude on the 2026-10-01 gh api: Apache-2.0, 5926★; https://magnitude.dev/ HTTP 200. Morning changelog skipped it as app-shaped; this evening wave files it as a concrete AI-tool tip in Cases. This tip does not download models or run inference for you.",
       "categories": [
@@ -3129,8 +3166,9 @@
     {
       "id": "weave-router",
       "slug": "weave-router",
-      "title": "工具：Weave Router — 给 coding agent 的开源模型路由",
-      "titleEn": "Tool: Weave Router — open-source model router for coding agents",
+      "title": "Weave Router — 给 coding agent 的开源模型路由",
+      "titleEn": "Weave Router — open-source model router for coding agents",
+      "kind": "tool",
       "summary": "Weave Router 是给 coding agent 用的开源模型路由。README 的快路径是 `npx @weave-os/router`，可接到 Claude Code、Codex、opencode 或 pi；加上 `--local` 则在本机 8080 端口自托管，提供商密钥留在你的机器上。产品页仍展示兼容包名 `npx @workweave/router`。它按每次上游请求挑模型：难的步骤留给前沿模型，简单的步骤换到更便宜的模型。产品页用 Terminal-Bench 和 SWE-Atlas 对比 GPT-6 Astra 的通过率、耗时和花费，那些数字是厂商自述，本库没有复跑。README 写的是按 action 路由，不是按一整轮对话路由。这是一条工具笔记：不改你的 Agent 配置，也不代付订阅。",
       "summaryEn": "Weave Router is an open-source model router for coding agents. The README quickstart is `npx @weave-os/router` for Claude Code, Codex, opencode, or pi; `--local` self-hosts on port 8080 and keeps provider keys on your machine. The product page still shows the compatibility package `npx @workweave/router`. It picks a model per upstream request: harder steps stay on a frontier model, easier steps move to a cheaper one. The product page compares pass rate, time, and cost with GPT-6 Astra on Terminal-Bench and SWE-Atlas. Those figures are vendor claims and were not re-run here. The README says routing is per action, not per whole conversation turn. This is a tool tip: it does not rewrite your agent config or pay for a subscription.",
       "categories": [
@@ -3281,8 +3319,9 @@
     {
       "id": "team-bots",
       "slug": "xai-team-bots",
-      "title": "官方发布：Team Bots（共享上下文的团队 Bot）",
-      "titleEn": "Official launch: Team Bots (shared-context team bots)",
+      "title": "Team Bots（共享上下文的团队 Bot）",
+      "titleEn": "Team Bots (shared-context team bots)",
+      "kind": "news",
       "summary": "SpaceXAI 官方 2026-09-28 发布 https://x.ai/news/team-bots ：把一只配好上下文 / 插件 / 凭证 / 记忆的 Grok Bot 共享给整队，每人私聊仍隔离，也可拉进 Slack 频道协作。文内可复现四条工作流——客户组（夜间读 Gong/Notion/Slack，工作日早间发 brief 与角色草稿）、工程组（接 Linear/Datadog/Cursor，开 Cloud Agent 修明确 bug）、营销组（对照品牌指南审稿并改站到预览人签）、数据组（只读 Databricks 答一次性分析，记住纠正）。公开页写明 Teams / Enterprise 公测；文内 Harper「24 小时建 Bot、挽回 12 万美元保费」等为客户口述，本库不当独立 KPI。异于已收录的个人营销/GTM/Engineering Guides。",
       "summaryEn": "Official SpaceXAI launch on 2026-09-28 at https://x.ai/news/team-bots: share one Grok Bot configured with context, plugins, credentials, and memory across a team, while keeping each person’s chats private, or invite it into Slack. Four reproducible internal workflows: account teams (nightly Gong/Notion/Slack review → weekday morning brief and role-specific drafts), engineering (Linear/Datadog/Cursor, launch Cloud Agents for well-scoped fixes), marketing (brand-guide review then website/SEO changes to preview for human sign-off), and data (read-only Databricks answers that remember corrections). Page states Teams/Enterprise public beta. Harper’s “built in 24 hours / $120k recovered” line is a customer quote, not an independent KPI here. Distinct from already-catalogued personal Marketing/GTM/Engineering Guides.",
       "categories": [
@@ -3320,7 +3359,7 @@
         "databricks"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-10-01T01:00:00Z",
       "hook": "让团队 Bot 在共享上下文里协作。",
@@ -3332,8 +3371,9 @@
     {
       "id": "grok-bot-for-marketing",
       "slug": "xai-grok-bot-for-marketing",
-      "title": "官方指南：Grok Bot for Marketing（六席营销小队）",
-      "titleEn": "Official guide: Grok Bot for Marketing",
+      "title": "Grok Bot for Marketing（六席营销小队）",
+      "titleEn": "Grok Bot for Marketing",
+      "kind": "guide",
       "summary": "Josh Kim 2026-09-24 官方 Guides：六席专科营销 Bot——Market Researcher（读竞品页写战略缺口）、Product Marketer（Google Docs 定位简报 / 落地页大纲 / 搜索广告文案）、Performance Marketer（搭真实 Google Ads 壳）、Website Ops（Cursor 写页并开营销站 PR）、Marketing Analyst（拉 Ads 记分牌只建议不改预算）、Project Manager（吃掉多席交接税）。用虚构航司 X-Air 跑通研究→文案→广告壳→PR→分析全环；强调先接 Docs/Ads/GitHub 等、席位稳定后再 Share as Template，对外投放与花钱仍人审。异于已收录的 GTM / PMs / Engineering 官方指南。",
       "summaryEn": "Official Sep 24, 2026 Guides piece by Josh Kim: six specialist marketing Bots — Market Researcher (competitor pages → strategic gaps), Product Marketer (positioning briefs / landing outlines / search variants in Google Docs), Performance Marketer (real Google Ads campaign shells), Website Ops (Cursor-written pages that open PRs on the marketing site), Marketing Analyst (Ads scoreboard recommendations without changing live budgets), and Project Manager (handoff tax). Walks a fictional airline X-Air from research through page, ads, and analyst read. Wire Docs/Ads/GitHub first; Share as Template only after a seat is stable; outbound spend stays human-gated. Distinct from the already-catalogued GTM / PMs / Engineering official guides.",
       "categories": [
@@ -3363,7 +3403,7 @@
         "slack"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-24",
       "updatedAt": "2026-09-30T01:20:00Z",
       "hook": "用六席 Agent 分工处理营销任务。",
@@ -3375,8 +3415,9 @@
     {
       "id": "jeff",
       "slug": "jeff",
-      "title": "工具：Jeff — 本机可跑的 Jev 兼容 System One 小决策模型",
-      "titleEn": "Tool: Jeff — local Jev-compatible System One decision models",
+      "title": "Jeff — 本机可跑的 Jev 兼容 System One 小决策模型",
+      "titleEn": "Jeff — local Jev-compatible System One decision models",
+      "kind": "tool",
       "summary": "HN 首页（item 49883844，2026-09-28T20:23:36Z / 约 2026-09-29 04:23 CST，Algolia 核对 235pts）https://github.com/firelex/jeff — MIT：把 Qwen3.5 / Gemma 4 微调成零样本分类决策模型，请求格式与 TypeSafe Jev 同形；作者称约 22 ms（RTX PRO 6000）/ 28 ms（Apple M4 Max MLX）一次前向，输出是各选项校准概率，不是生成文本。README：`jeff-serve` + `/v1/systemone`，支持 choice / noul / score；训练全在本机硬件，合成数据来自开源模型。仓库 firelex/jeff 于 2026-09-29 gh api：MIT、282★；Hugging Face 有 Jeff-Qwen3.5-0.8B / 2B 与 Jeff-Gemma4-E2B。作者写明独立项目、非 TypeSafe 官方。本条是工具笔记，不替你下载权重或代跑服务。",
       "summaryEn": "HN front page item 49883844 (2026-09-28T20:23:36Z / about 2026-09-29 04:23 CST, 235pts on Algolia at check time) at https://github.com/firelex/jeff — MIT fine-tunes of Qwen3.5 / Gemma 4 for zero-shot classification in the same request shape as TypeSafe Jev. The author reports about 22 ms (RTX PRO 6000) / 28 ms (Apple M4 Max MLX) per forward pass, returning calibrated option probabilities rather than generated text. README: jeff-serve plus /v1/systemone with choice / noul / score; training on local hardware; synthetic data from an open model. Repo firelex/jeff on the 2026-09-29 gh api: MIT, 282★; Hugging Face hosts Jeff-Qwen3.5-0.8B / 2B and Jeff-Gemma4-E2B. The author states it is independent and not affiliated with TypeSafe. This is a tool tip — it does not download weights or run the server for you.",
       "categories": [
@@ -3511,8 +3552,9 @@
     {
       "id": "onesie",
       "slug": "onesie",
-      "title": "工具：Onesie — 给 System One 模型用的 Unix 风格 CLI",
-      "titleEn": "Tool: Onesie — a Unix-style CLI for System One models",
+      "title": "Onesie — 给 System One 模型用的 Unix 风格 CLI",
+      "titleEn": "Onesie — a Unix-style CLI for System One models",
+      "kind": "tool",
       "summary": "Show HN（item 49876472，2026-09-28T11:37:25Z / 约 19:37 CST，Algolia 核对 2pts）https://github.com/frodi-karlsson/onesie — 作者帖标题写 Unix-style CLI for System One models like Jev。仓库 frodi-karlsson/onesie 于 2026-09-28 gh api：MIT、0★；描述为 “Possibly the most robust System One CLI”。README：把文本和问题送进管道，得到可脚本化的概率、--pick 或 --rate；shell-safety 用退出码做门（0 放行、1 拦住、7 交给人）。安装有 brew、install.sh、go install，然后 onesie auth set；也可先加 Claude Code 插件。onesie calibrate 用你已标注的数据看阈值会抓住什么、误报什么；ONESIE_MOCK 用文件假答，方便测脚本。对话对象是 TypeSafe 的 Jev（直连或 OpenRouter）或 Berget 的 System One 模型。仓库 HTTP 200。本条是工具笔记，不替你安装，也不替你把密钥或工单打到模型上。",
       "summaryEn": "Show HN item 49876472 (2026-09-28T11:37:25Z / about 19:37 CST, 2pts on Algolia at check time) at https://github.com/frodi-karlsson/onesie — the post title calls it a Unix-style CLI for System One models like Jev. Repo frodi-karlsson/onesie on the 2026-09-28 gh api: MIT, 0★; description “Possibly the most robust System One CLI.” README: pipe text plus a question and get a scriptable probability, --pick, or --rate; shell-safety uses exit codes as a gate (0 run, 1 block, 7 ask a person). Install via brew, install.sh, or go install, then onesie auth set; a Claude Code plugin can come first. onesie calibrate shows what each cut catches and falsely flags on data you have already labelled; ONESIE_MOCK answers from a file so a script can be tested. It talks to TypeSafe’s Jev (direct or via OpenRouter) or Berget’s System One models. Repo HTTP 200. This is a tool tip — it does not install the CLI for you, and it does not send keys or tickets to a model for you.",
       "categories": [
@@ -3649,8 +3691,9 @@
     {
       "id": "leftovers",
       "slug": "leftovers",
-      "title": "工具：Leftovers — 清理 coding agent 留在 Mac 上的进程与缓存",
-      "titleEn": "Tool: Leftovers — clean up processes and caches coding agents leave on a Mac",
+      "title": "Leftovers — 清理 coding agent 留在 Mac 上的进程与缓存",
+      "titleEn": "Leftovers — clean up processes and caches coding agents leave on a Mac",
+      "kind": "tool",
       "summary": "Show HN（item 49861159，2026-09-26 ~22:27Z，Algolia 核对 2pts）https://github.com/arpwal/leftovers — MIT 免费 macOS 菜单栏应用：按 footprint（RAM+压缩+swap）找出 agent / 应用留下的 dev server、MCP、git worktree、LaunchAgent 与可重建缓存，安全清理。仓库 arpwal/leftovers 于 2026-09-28 gh api：MIT、2★；文档站 https://arpwal.github.io/leftovers/ HTTP 200。与 Grok Bot / Claude Code / Cursor Agent 等本机旁路相邻；本条是工具笔记，不替你在本机执行清理。",
       "summaryEn": "Show HN item 49861159 (2026-09-26 ~22:27Z, 2pts on Algolia at check time) at https://github.com/arpwal/leftovers — MIT free macOS menu-bar app: finds leftover dev servers, MCP copies, git worktrees, LaunchAgents, and rebuildable caches by footprint (RAM + compressed + swap) and cleans them safely. Repo arpwal/leftovers on the 2026-09-28 gh api: MIT, 2★; docs site https://arpwal.github.io/leftovers/ HTTP 200. Adjacent to local Grok Bot / Claude Code / Cursor Agent workflows; this is a tool tip — it does not run cleanup on your machine for you.",
       "categories": [
@@ -3667,7 +3710,7 @@
       "sourceType": "community",
       "qualityNote": "收录理由：agent 本机残留是真实痛点，菜单栏 + CLI 可核对。边界：只支持 macOS；清理动作不可逆，受保护进程会拒绝；本站未在你的 Mac 上安装或代清。",
       "qualityNoteEn": "Listing rationale: leftover local agent processes are a real pain; menu bar + CLI are checkable. Boundary: macOS only; cleanup is irreversible and protected processes are refused; this site did not install or clean on your Mac.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -3793,8 +3836,9 @@
     {
       "id": "shipwithmuse",
       "slug": "shipwithmuse",
-      "title": "工具：shipwithmuse.live — Muse 社区作品目录",
-      "titleEn": "Tool: shipwithmuse.live — a catalog of things people built with Muse",
+      "title": "shipwithmuse.live — Muse 社区作品目录",
+      "titleEn": "shipwithmuse.live — a catalog of things people built with Muse",
+      "kind": "tool",
       "summary": "Show HN（item 49863641，2026-09-27 ~05:38Z，Algolia 核对 4pts）https://shipwithmuse.live/ — 独立策展目录，按 Errands / Coding / Local models / Games 等分栏收录公开 Muse 作品（页内自称 1079 builds；含 X / GitHub / Reddit / 视频等入口）。作者 DEV 文称动机是 Muse 公开产出散落各处不好逛。官网 HTTP 200。与本站 Errand（Grok Bot/Muse 相邻）可互参；本条是目录工具笔记，不是 Meta Muse 官方站，也不替你验证每条 build。",
       "summaryEn": "Show HN item 49863641 (2026-09-27 ~05:38Z, 4pts on Algolia at check time) at https://shipwithmuse.live/ — an independent curated catalog of public Muse builds by use case (Errands / Coding / Local models / Games, etc.; the page claims 1079 builds, with X / GitHub / Reddit / video entries). The author’s DEV post says public Muse shipping was scattered. Site HTTP 200. Useful beside this library’s Errand (Grok Bot/Muse-adjacent) card; this is a directory tool note — not the official Meta Muse site, and individual builds are not verified here.",
       "categories": [
@@ -3812,7 +3856,7 @@
       "sourceType": "community",
       "qualityNote": "1079 builds、分类数字是页面自述快照（2026-09-27 晚间）。独立非官方；赞助位页面有标价，收录不构成推荐。未逐条核 build 真实性。",
       "qualityNoteEn": "Independent, not official; sponsor slots show pricing on the page and are not endorsements. Individual builds were not verified one-by-one.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -3937,6 +3981,7 @@
       "slug": "personal-jarvis-opensource",
       "title": "Personal Jarvis：开源本机语音编排桌面（Grok Bot 相邻）",
       "titleEn": "Personal Jarvis: open-source local voice-orchestrated desktop (Grok Bot-adjacent)",
+      "kind": "tool",
       "summary": "Show HN（item 49833292，2026-09-24 ~16:43Z，Algolia 核对 1pt）https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 本机桌面：Jarvis 用语音/文字编排 agents、coding session、桌面动作与 MCP；可挂例行与本地 Markdown wiki，产物进 Artifacts。作者在 HN 标题写成 Grok Bot 开源替代；README 强调跑在自己电脑上、模型自选（托管/本地）。仓库于 2026-09-25 gh api：Apache-2.0、65★。官网 personaljarvis.ai HTTP 200。收录为可复现的相邻栈，不当官方替代品。",
       "summaryEn": "Show HN item 49833292 (2026-09-24 ~16:43Z, 1pt on Algolia at check time) at https://github.com/PersonalJarvis/PersonalJarvis — Apache-2.0 local desktop: Jarvis orchestrates agents, coding sessions, desktop actions, and MCP by voice or text; supports routines and a local Markdown wiki, with outputs in Artifacts. The HN title frames it as an open-source Grok Bot alternative; the README stresses running on your own computer with your choice of hosted or local models. Repo on the 2026-09-25 gh api: Apache-2.0, 65★. Site personaljarvis.ai HTTP 200. Catalogued as a reproducible adjacent stack, not an official replacement.",
       "categories": [
@@ -4080,8 +4125,9 @@
     {
       "id": "us-paypal-cn-visa",
       "slug": "us-paypal-cn-visa",
-      "title": "工具：美区 PayPal 绑国内 Visa — AI / Apple 订阅旁路",
-      "titleEn": "Tool tip: US PayPal with a China-issued Visa — AI / Apple subscription side path",
+      "title": "美区 PayPal 绑国内 Visa — AI / Apple 订阅旁路",
+      "titleEn": "US PayPal with a China-issued Visa — AI / Apple subscription side path",
+      "kind": "tool",
       "summary": "何居上（@hejushang8）2026-09-23 短帖：他的美区 PayPal 绑的是招商银行 Visa（截图尾号 2852），再挂到美区 Apple ID，用来付 App 订阅和线上购物。帖子引用同日长文《美区 PayPal 解决 99% 海外支付问题，注册及养号防封指南》。长文只讲个人账户付款：作者称可用于 AI 订阅、VPS、美区 Apple ID；收款和商业功能要 EIN / ITIN 等美国税务号，作者写明不涉及。准备项按作者清单：稳定美国节点（作者称机房 IP 也可以，在意的是登录地点别跳）、Visa 或万事达（中国发卡行也可以）、真实美国住宅账单地址、美国 +1 号（作者提到 Saily，约 1 美元）。顺序也是作者写的：paypal.com/us 开 Personal，+1 短信，姓名与卡一致，美国地址手动填（举例免税州俄勒冈），先跳过绑卡并验证邮箱，大约等一周再用同一美国节点确认正常，然后在 Wallet 绑国内 Visa / 万事达或 U 卡（作者举例 Bybit、P1、kast），账单地址用注册时那个美国地址。防封按作者经验：登录 IP 保持美国且稳定；没做 SSN / ITIN 就只当付款账户；可选 Wise 美国银行账户和验证器 2FA。本条是旁路工具笔记，完整步骤在作者长文。",
       "summaryEn": "He Jushang (@hejushang8), 23 Sept 2026: his US PayPal is linked to a China Merchants Bank Visa (screenshot ending 2852) and then to a US Apple ID, for app subscriptions and online checkout. The post quotes his same-day article on registering a US PayPal and keeping it from being frozen. The article stays on a personal account used to pay: the author says it covers AI subscriptions, VPS, and a US Apple ID; receiving money and business features need a US tax ID such as an EIN or ITIN, which he leaves out. Prep, in his list: a stable US node (he says a datacenter IP was enough for him; what matters is not hopping countries), a Visa or Mastercard (a Chinese issuer is fine, he writes), a real US residential billing address, and a US +1 number (he mentions Saily at about $1). His order: open Personal at paypal.com/us, verify by +1 SMS, use a legal name that matches the card, add the US address manually (he cites tax-free Oregon), skip the card and verify email, wait about a week while signing in from the same US node, then bind a China-issued Visa / Mastercard or a U-card (he names Bybit, P1, kast) in Wallet, with the signup US address as billing. His anti-freeze notes: keep the login IP in the US and stable; without SSN / ITIN, treat the account as pay-only; optional Wise US bank account and authenticator 2FA. An adjacent tool note — the full steps are in his article.",
       "categories": [
@@ -4113,7 +4159,7 @@
         "Visa"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "previewImage": "/previews/us-paypal-cn-visa.webp",
       "landing": {
         "what": "这是一条办海外账号时用得上的工具笔记，记何居上公开写的用法：美区 PayPal 个人账户，绑一张国内发行的 Visa 或万事达，再作为美区 Apple ID 的付款方式。短帖上的两张图是他自己的钱包和 Apple ID 付款页，招商银行 Visa 尾号 2852。长文把范围收在「能付款」：作者称用来订 AI、买 VPS、给美区 Apple ID 付款。收款、商业账户，以及要 EIN、ITIN 的功能，他写明不讲。本站按 Saily 美国号码那条的口径收录：相邻的实用工具，方便以后注册 AI 或 App 订阅时查阅。页面上的步骤是长文顺序的压缩，点击细节以作者文章为准。",
@@ -4277,6 +4323,7 @@
       "slug": "errand-opensource",
       "title": "Errand：开源「每席一电脑」Grok Bot / Muse 相邻桌面（Runta）",
       "titleEn": "Errand: open-source Grok Bot / Muse-style desktop (Runta)",
+      "kind": "tool",
       "summary": "Apache-2.0 桌面壳 Errand（runerrand.dev）：每个队友一台 Runta 云电脑（shell / 浏览器 / 文件）。用来对照 Grok Bot「每席一电脑」，不是官方替代品。",
       "summaryEn": "Apache-2.0 desktop shell Errand (runerrand.dev): each teammate gets a Runta cloud computer (shell / browser / files). Listed beside Grok Bot’s per-seat computer — not an official replacement.",
       "categories": [
@@ -4427,8 +4474,9 @@
     {
       "id": "hn-jjcm-fabric-swag-sourcing",
       "slug": "hn-jjcm-fabric-swag-sourcing",
-      "title": "HN 实操：用多席 Grok Bot 向越南面料厂询价出样",
-      "titleEn": "HN case: multi-Bot fabric sourcing to Vietnam suppliers",
+      "title": "用多席 Grok Bot 向越南面料厂询价出样",
+      "titleEn": "multi-Bot fabric sourcing to Vietnam suppliers",
+      "kind": "guide",
       "summary": "来自 HN「Grok Bot」帖（item 49261514）下 jjcm 的可复现流程：按领域拆 Bot（各自 Routine/上下文/电脑），异步跑；面料 Bot 先联约 5 家越南供应商，无回再扩 5 家，再人工推到约 40 家（多走 WhatsApp）；与原型 Bot 协作生成带 logo 的随机花纹并导出 .ai 发给供应商。强调域隔离比堆一个全能 Bot 更稳，但也提醒常驻 Agent 会显著烧 token。",
       "summaryEn": "From the HN “Grok Bot” thread (item 49261514), jjcm’s reproducible flow: split Bots by domain (each with its own routines, context, and computer) for async work; a fabric Bot first reaches ~5 Vietnam suppliers, expands by 5 when silent, then is pushed to ~40 (often via WhatsApp); it collaborates with a prototyper Bot to generate a logo-based random pattern and send a .ai file. Domain isolation beats one mega-Bot, but always-on Agents burn tokens hard.",
       "categories": [
@@ -4458,7 +4506,7 @@
         "x"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "按领域拆开 Bot，向越南面料厂询价并出样。",
@@ -4474,6 +4522,7 @@
       "slug": "openbot-opensource",
       "title": "Open Bot：开源「每席一电脑」Grok Bot 替代（任意 AG-UI harness）",
       "titleEn": "Open Bot: open-source Grok Bot-style coworkers on any AG-UI harness",
+      "kind": "tool",
       "summary": "Show HN（item 49365575）CopilotKit/OpenBot：MIT 开源「AI coworkers」——每席有独立电脑（浏览器/文件/工具），动作先决策后记录；可接任意 AG-UI agent harness，不绑死单一厂商。仓库 README 与站点可核验；维护者在 HN 注明仍为 alpha。对想对照 Grok Bot「专席电脑 + 可审动作」的人，是可自建的相邻方案。",
       "summaryEn": "Show HN (item 49365575) CopilotKit/OpenBot: MIT open-source AI coworkers — each seat gets its own computer (browser/files/tools), with actions decided before and recorded after; bring any AG-UI agent harness, no single-vendor lock-in. README and site verified; maintainers note alpha on HN. A self-hostable adjacent option for people comparing Grok Bot’s per-seat computer + reviewable actions.",
       "categories": [
@@ -4503,7 +4552,7 @@
         "github"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "开源同事席：每席一台电脑，可接任意 Agent。",
@@ -4517,8 +4566,9 @@
     {
       "id": "designing-grok-bot-with-grok-bot",
       "slug": "xai-designing-grok-bot-with-grok-bot",
-      "title": "官方指南：用 Grok Bot 设计 Grok Bot（Experiments / Motion God / Figma Bro）",
-      "titleEn": "Official guide: Designing Grok Bot with Grok Bot",
+      "title": "用 Grok Bot 设计 Grok Bot（Experiments / Motion God / Figma Bro）",
+      "titleEn": "Designing Grok Bot with Grok Bot",
+      "kind": "guide",
       "summary": "John Bai 2026-08-24 官方 Guides：设计师用常驻 Bot 小队探索创意——Experiments 做 Notch/桌角/跟光标等 ambient 入口原型；Motion God 在真实产品动画资产上调弹簧与时序；Figma Bro 经 Figma MCP 批量填入门 Bot 肖像与工具 logo。强调更快把想法做成可试用物，判断仍留在人手。",
       "summaryEn": "Official Aug 24, 2026 Guides piece by John Bai: a designer’s always-on Bot squad — Experiments for ambient Bot-access prototypes (notch, desktop peek, cursor companion); Motion God tuning real production animation assets by feel; Figma Bro filling onboarding Bot cards and tool logos via Figma MCP. Faster exploration; judgment stays human.",
       "categories": [
@@ -4550,7 +4600,7 @@
         "computer"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "官方指南：用常驻 Bot 小队把想法做成可试原型。",
@@ -4564,6 +4614,7 @@
       "slug": "bot-store-academy-teach-grok-bot-task-skill",
       "title": "Bot Store Academy：演示教学 → 草稿 Skill → 再 Routine",
       "titleEn": "Bot Store Academy: Teach a task → draft Skill → then Routine",
+      "kind": "guide",
       "summary": "bot.store Academy 免费页（2026-08-31）：对照官方 Skills/Routines，讲清 Teach a task（最多约 10 分钟可见交互、不录音频）如何变成草稿 Skill，再补决策/失败/审批后 Test run，最后才挂 Routine。给出适合/不适合首教的任务清单（收发票字段、改名报告 ✅；发客户信、花钱、删生产 ❌）。",
       "summaryEn": "Free bot.store Academy page (2026-08-31): maps Teach a task (≤~10 min visible interaction, no mic) to a draft Skill, then decision/failure/approval rules, Test run, and only then a Routine. Includes good vs poor first-teach examples (invoice fields/rename report ✅; customer send/spend/delete prod ❌).",
       "categories": [
@@ -4592,7 +4643,7 @@
         "computer"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "免费课：演示教学先变成草稿技能，再挂例行。",
@@ -4606,6 +4657,7 @@
       "slug": "datacamp-grok-bot-tutorial-skills-routines",
       "title": "DataCamp：用 Scout 学周计划练 Skill / Routine / 审批",
       "titleEn": "DataCamp: Scout weekly learning plan → Skill / Routine / approvals",
+      "kind": "guide",
       "summary": "DataCamp 教程：从零建 Scout（DataCamp Learning Bot），读 learner-profile + 四小时预算，打开课程页核对等级/时长/先修（禁止用搜索摘要估时），审完再存成 Skill，周一 Routine 只出计划不代点报名。强调账号级共享云电脑、缺时长写 not listed、被挡时交还控制权。",
       "summaryEn": "DataCamp tutorial: create Scout (a DataCamp Learning Bot), read a learner profile plus a four-hour budget, open course pages to verify level/duration/prereqs (no estimating from search snippets), then save the reviewed method as a Skill and a Monday Routine that only plans—never enrolls. Stresses one account-scoped cloud computer, “not listed” for missing durations, and handing back control when a page blocks the Bot.",
       "categories": [
@@ -4634,7 +4686,7 @@
         "browser"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-01",
       "updatedAt": "2026-09-17T01:23:00Z",
       "hook": "建一个学习 Bot，核对课程页后只出周一计划。",
@@ -4648,6 +4700,7 @@
       "slug": "developersdigest-grok-bot-routines-guide",
       "title": "Developers Digest：Routine 反转自动化（先做再排期）",
       "titleEn": "Developers Digest: Routines invert automation (do the job, then schedule)",
+      "kind": "guide",
       "summary": "2026-08-23 长文：对照 Zapier/n8n「先搭触发器」与 Grok Bot「先做完再存 Skill / Routine」。写清 Teach a task 草稿边界、六要素排期（Bot/时区/输入/输出/审批/缺数策略）、适合低判断多步骤琐事，以及演示型 Routine 不如节点工作流可审计的诚实代价。",
       "summaryEn": "Aug 23, 2026 essay: contrasts Zapier/n8n “build triggers first” with Grok Bot’s “finish the job, then save a Skill/Routine.” Covers Teach-a-task drafts, the six scheduling facts (Bot / timezone / inputs / outputs / approval / missing-data policy), fit for low-judgment multi-step chores, and the honest tradeoff that demonstrated routines are less auditable than node graphs.",
       "categories": [
@@ -4688,8 +4741,9 @@
     {
       "id": "grok-bot-for-gtm",
       "slug": "xai-grok-bot-for-gtm",
-      "title": "官方指南：Grok Bot for GTM（企业销售小队）",
-      "titleEn": "Official guide: Grok Bot for GTM",
+      "title": "Grok Bot for GTM（企业销售小队）",
+      "titleEn": "Grok Bot for GTM",
+      "kind": "guide",
       "summary": "Krista Letz 2026-08-16 官方 Guides：Enterprise GTM 实操——Chief of Staff 编排会前准备/收件箱、Prospecting 过夜拓客、一客户一专家（含可复用的 Weekly media rundown Prompt）、Forecast 写回 Salesforce、Figma 幻灯片在通话中据 Granola 更新、Sales Coach 看 Gong。强调先接 Salesforce/Gmail/Slack/Notion/Figma 等，再把示范流程录成 Skill。",
       "summaryEn": "Official Aug 16, 2026 Guides piece by Krista Letz: Enterprise GTM playbook — Chief of Staff for meeting prep/inbox, overnight Prospecting, one Customer Expert per strategic account (with a reusable Weekly media rundown prompt), Forecast notes back into Salesforce, Figma slides updated live from Granola mid-call, and a Sales Coach on Gong. Wire daily tools first, then record demonstrated flows as Skills.",
       "categories": [
@@ -4719,7 +4773,7 @@
         "figma"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-16",
       "updatedAt": "2026-09-16T01:10:52Z",
       "hook": "官方销售小队：会前准备、过夜拓客，再写回 Salesforce。",
@@ -4731,8 +4785,9 @@
     {
       "id": "grok-bot-for-pms",
       "slug": "xai-grok-bot-for-pms",
-      "title": "官方指南：Grok Bot for PMs（注意力清单 + 产品小队）",
-      "titleEn": "Official guide: Grok Bot for PMs",
+      "title": "Grok Bot for PMs（注意力清单 + 产品小队）",
+      "titleEn": "Grok Bot for PMs",
+      "kind": "guide",
       "summary": "Kevin Niparko 2026-08-15 官方 Guides：PM 用 Grok Bot 组「向你汇报」的小队——用小时级 Attention list（Slack/邮件/Granola/日历涌现优先级）代替僵化周目标；Chief of Staff、不写代码的 Eng mgr、多席 Eng（Cloud Agents）、Data analyst、PM Pete、Recruiter。强调命名分区记忆、少噪声、重要对外动作仍人审。",
       "summaryEn": "Official Aug 15, 2026 Guides piece by Kevin Niparko: a PM’s reporting team of Bots — replace stale weekly goals with an hourly Attention list emergent from Slack/mail/Granola/calendar; Chief of Staff, a non-coding Eng mgr, multiple Eng seats on Cloud Agents, Data analyst, PM Pete, and Recruiter. Named agents with scoped memory, stay quiet unless needed, and keep important outbound human-gated.",
       "categories": [
@@ -4761,7 +4816,7 @@
         "notion"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-15",
       "updatedAt": "2026-09-16T01:10:52Z",
       "hook": "给产品经理的汇报小队，用活的注意力清单代替周目标。",
@@ -4775,6 +4830,7 @@
       "slug": "ronglecat-awesome-grok-bot",
       "title": "RongleCat/awesome-grok-bot：中英日三语 Grok Bot 资源目录",
       "titleEn": "RongleCat/awesome-grok-bot: bilingual+JP Grok Bot directory",
+      "kind": "tool",
       "summary": "社区 Awesome 列表（非官方）：官方文档、教程、现场案例、Skill/Plugin/MCP、开源替代与踩坑；README 中/英/日，徽章自报 entries≈1081（2026-09-15）。异于已收录 ZeroPointRepo/awesome-grok-bot 与 kydlikebtc/awesome-grokbot。",
       "summaryEn": "Community awesome list (unofficial): official docs, tutorials, field cases, skills/plugins/MCP, OSS alternatives, failure modes; EN/ZH/JA READMEs; badge claims ~1081 entries (2026-09-15). Distinct from already-listed ZeroPointRepo/awesome-grok-bot and kydlikebtc/awesome-grokbot.",
       "categories": [
@@ -4789,7 +4845,7 @@
       "sourceType": "community",
       "qualityNote": "非官方目录（2026-09-15 核约 298 star）。条目数为徽章自报；链接需点进核验。",
       "qualityNoteEn": "Unofficial directory (~298 stars checked 2026-09-15). Entry count is a badge claim; verify links by opening them.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": false,
       "hasSkill": false,
       "hasMultiAgent": false,
@@ -4812,6 +4868,7 @@
       "slug": "grok-ship-software-factory",
       "title": "Grok Ship：把 Grok Bot 变成软件工厂（scout / ship）",
       "titleEn": "Grok Ship: turn Grok Bot into a software factory (scout / ship)",
+      "kind": "tool",
       "summary": "kunchenguid/grok-ship：在共享电脑上装软件工厂——sqlite 待办、scout（只出报告）vs ship（授权改动）、按项目 crewmate 拉 Cursor Cloud Agent、合 PR 前对抗审阅、你本人合并。README 写可 `follow …/GROK_SHIP.md` 安装；并注明已被 Firstmate 模板 https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r 替代，本条仍收可复现的开源配方。",
       "summaryEn": "kunchenguid/grok-ship: a software factory on the shared computer — sqlite backlog, scout (report-only) vs ship (authorized change), per-project crewmates driving Cursor Cloud Agents, adversarial review before any PR, and human merges. README install path is `follow …/GROK_SHIP.md`; it notes supersession by the Firstmate template https://x.ai/bot/__4FfrkUdvpdMk6-LKg5r — this card keeps the reproducible open-source recipe.",
       "categories": [
@@ -4840,7 +4897,7 @@
         "github"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-14",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "在共享电脑上装软件工厂：侦察只出报告，改动要授权。",
@@ -4854,6 +4911,7 @@
       "slug": "rosterroom-82-team-prompts",
       "title": "Roster Room：82 套可粘贴 Grok Bot 小队配方",
       "titleEn": "Roster Room: 82 paste-ready Grok Bot team prompts",
+      "kind": "tool",
       "summary": "codejunkie99/rosterroom：纯提示词库（无应用），32 套重建运营小队 + 50 套新场景（创始人/营收/安全/金融等）。每份含 Full setup、First job、Manual fallback；默认可读可草稿，发送/花钱/合入须人批。站点 codejunkie99.github.io/rosterroom。非官方。",
       "summaryEn": "codejunkie99/rosterroom: prompts-only (no app) — 32 rebuilt ops teams plus 50 new scenarios (founders/revenue/security/finance, etc.). Each file has Full setup, First job, and Manual fallback; default is read/draft with human gates for send/spend/merge. Site: codejunkie99.github.io/rosterroom. Unofficial.",
       "categories": [
@@ -4878,7 +4936,7 @@
       "approvalBoundaryEn": "After paste, stay read/draft; send, publish, spend, production edits, and merges need a human.",
       "connectors": [],
       "language": "en",
-      "featured": false,
+      "featured": true,
       "publishedAt": "2026-09-02",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "可粘贴的小队配方，默认可读可草稿，发送必须人批。",
@@ -4890,8 +4948,9 @@
     {
       "id": "how-i-run-multiple-teams",
       "slug": "xai-how-i-run-multiple-teams-of-grok-bots",
-      "title": "官方指南：How I run multiple teams of Grok Bots（一项目一频道）",
-      "titleEn": "Official guide: How I run multiple teams of Grok Bots",
+      "title": "How I run multiple teams of Grok Bots（一项目一频道）",
+      "titleEn": "How I run multiple teams of Grok Bots",
+      "kind": "guide",
       "summary": "Eric Zakariasson 2026-08-27 官方 Guides 实验写法：每个项目 = 一个 Grok Bot 频道 + Notion Projects/Tasks；Projects Manager 用 Project Ops Skill 开频道、组班（先复用、频道至多约 6 席、新建 Bot 须人点头）；卡住标 Blocked 并在频道 ping。异于仅作 secondary 链在 grokbot-guides 索引卡上的链接。",
       "summaryEn": "Official Aug 27, 2026 experimental Guides piece by Eric Zakariasson: one project = one Grok Bot channel + Notion Projects/Tasks; a Projects Manager Bot with a Project Ops skill opens the channel and staffs it (reuse first, ~six seats, new Bots only after human yes); blocked work pings in-channel. Distinct from the bare secondary link on the existing grokbot-guides index card.",
       "categories": [
@@ -4918,7 +4977,7 @@
         "notion"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "一个项目一个频道，由项目经理 Bot 来组班。",
@@ -4930,8 +4989,9 @@
     {
       "id": "templates-for-grok-bot",
       "slug": "xai-templates-for-grok-bot",
-      "title": "官方指南：Templates for Grok Bot（分享配方不是克隆）",
-      "titleEn": "Official guide: Templates for Grok Bot",
+      "title": "Templates for Grok Bot（分享配方不是克隆）",
+      "titleEn": "Templates for Grok Bot",
+      "kind": "guide",
       "summary": "Matt Palmer 2026-09-08 官方 Guides：Template 是 Bot 的「菜谱」——打包指令、相关记忆、Skill、插件与 Routine 触发，不含密钥与私有脚本；可 Team 或公开链接安装，装完需自连插件并核对详情。强调安装前看清上下文与集成，勿盲装。",
       "summaryEn": "Official Sep 8, 2026 Guides piece by Matt Palmer: a Template is a Bot recipe — instructions, relevant memories, skills, plugins, and routine triggers without secrets or private scripts; share Team-only or via public link, then reconnect plugins and review details. Stresses reading context and integrations before installing.",
       "categories": [
@@ -4947,7 +5007,7 @@
       "sourceType": "official-docs",
       "qualityNote": "官方 Guides（2026-09-08）。模板不含密钥；复杂 MCP/脚本需自行补齐。",
       "qualityNoteEn": "Official Guides (2026-09-08). Templates omit secrets; non-standard MCP/scripts must be reattached by the installer.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": true,
       "hasMultiAgent": false,
@@ -4970,8 +5030,9 @@
     {
       "id": "grok-bot-for-support",
       "slug": "xai-grok-bot-for-support",
-      "title": "官方指南：Grok Bot for Support（客服五岗 + Routine）",
-      "titleEn": "Official guide: Grok Bot for Support",
+      "title": "Grok Bot for Support（客服五岗 + Routine）",
+      "titleEn": "Grok Bot for Support",
+      "kind": "guide",
       "summary": "SpaceXAI David Gan 2026-09-09 官方 Guides：用连接器喂上下文，给 Support Bot 五类活——发版跟踪与反馈、缺陷复现录像、流失聚类、按政策审退款（等人批）、定制报表；再把流程落成可过夜的 Routine，手机复查。文内「每天数千工单」等为作者场景描述，本库不当 KPI。",
       "summaryEn": "Official Sep 9, 2026 Guides piece by SpaceXAI’s David Gan: wire connectors, then five Support jobs — release tracking/feedback, bug reproduction with video, churn clustering, policy-gated refunds awaiting approval, and custom reporting — then promote flows to overnight Routines reviewed on mobile. In-article volume claims are scene-setting, not verified KPIs here.",
       "categories": [
@@ -4998,7 +5059,7 @@
         "stripe"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-09",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "客服五类活：跟踪发版、复现缺陷，退款等人批。",
@@ -5010,8 +5071,9 @@
     {
       "id": "grok-bot-101",
       "slug": "xai-grok-bot-101",
-      "title": "官方指南：Grok Bot 101（从解剖到四条工作流）",
-      "titleEn": "Official guide: Grok Bot 101",
+      "title": "Grok Bot 101（从解剖到四条工作流）",
+      "titleEn": "Grok Bot 101",
+      "kind": "guide",
       "summary": "SpaceXAI DevRel Matt Palmer 2026-09-11 官方 Guides：把 Bot 当有持久桌面的同事；用语音/字段写清 Name·Title·Description；Chat / Routine / 多 Bot 链式；四条实操（X→Notion 私人 CRM、健身 Bot Arnold、外环写 Cursor Cloud Agent 提示、跨 Slack·Notion·GitHub 检索）。异于已收录的 mattyp 入门帖与 Guides 索引页。",
       "summaryEn": "Official Sep 11, 2026 Guides piece by SpaceXAI DevRel Matt Palmer: treat a Bot as a colleague with a persistent desktop; define Name/Title/Description; Chat vs Routines vs multi-bot chains; four workflows (X→Notion personal CRM, fitness Bot Arnold, outer-loop Cursor Cloud Agent prompts, Slack/Notion/GitHub search). Distinct from the already-listed mattyp getting-started post and the Guides index.",
       "categories": [
@@ -5028,7 +5090,7 @@
       "sourceType": "official-docs",
       "qualityNote": "官方 Guides（2026-09-11）。关注者人数等为作者自述；价位与计划门槛以现页为准。",
       "qualityNoteEn": "Official Guides (2026-09-11). Follower counts and similar figures are the author’s claims; confirm plan gates on live pricing.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": true,
       "hasMultiAgent": true,
@@ -5043,7 +5105,7 @@
         "github"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-11",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "把 Bot 当有持久桌面的同事，从聊天走到例行。",
@@ -5055,8 +5117,9 @@
     {
       "id": "grok-bot-for-engineering",
       "slug": "xai-grok-bot-for-engineering",
-      "title": "官方指南：Grok Bot for Engineering（工程舰队）",
-      "titleEn": "Official guide: Grok Bot for Engineering",
+      "title": "Grok Bot for Engineering（工程舰队）",
+      "titleEn": "Grok Bot for Engineering",
+      "kind": "guide",
       "summary": "SpaceXAI 工程师 Lingxi Li 2026-09-10 官方 Guides 长文：五席专科工程 Bot（iOS / Desktop / 基建 / Android / harness）拉起 Cursor Cloud Agent，Notion 当状态机巡检，Jenny 做运营岗晨间 1:1 与事后复盘；另写夜间审计与 P0 五分钟催办。作者自述「200+ 并行 Cloud Agent」「Lauren 月合 2000+ PR」等为文内数字，本库不当作核验 KPI。异于已收录的 Lingxi X 长文与 Guides 索引页，本条专指这一篇工程 playbook。",
       "summaryEn": "Official Sep 10, 2026 Grok Bot Guides piece by SpaceXAI engineer Lingxi Li: five specialist engineer Bots (iOS / Desktop / infra / Android / harness) launch Cursor Cloud Agents, use a shared Notion PR board as a state machine, and Jenny (ops Bot) runs morning 1:1s plus postmortems; plus nightly audits and a P0 five-minute nudge loop. Author figures such as “200+ parallel Cloud Agents” and “Lauren shipped 2,000+ PRs in a month” are in-article claims, not verified KPIs here. Distinct from the already-catalogued Lingxi X article and the Guides index — this card is the engineering playbook itself.",
       "categories": [
@@ -5087,7 +5150,7 @@
         "slack"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "专科工程 Bot 拉起云端 Agent，人守高后果的闸门。",
@@ -5101,6 +5164,7 @@
       "slug": "moclaw-cursor-cloud-agent-vs-grok-bot",
       "title": "MoClaw：Cursor Cloud Agent vs Grok Bot（按活选工具）",
       "titleEn": "MoClaw: Cursor Cloud Agent vs Grok Bot (pick by the job)",
+      "kind": "guide",
       "summary": "MoClaw / Zentor 2026-08-20 长文（文内称 2026-09-11 有修订）：把 Cloud Agent（隔离 VM、克隆仓库、开 PR）与 Grok Bot（账号级共享云电脑、签进应用、关盖继续跑）拆开比；强调同账号 Bot 不隔离凭证、Grok Bot 可派发 Cloud Agent、计划门槛不同。文内 Ahrefs 搜索量、硬件传闻与价位是快照，需回官方页核对。",
       "summaryEn": "MoClaw / Zentor’s Aug 20, 2026 decision guide (article notes a Sep 11, 2026 update): separates Cursor Cloud Agents (isolated VMs that clone repos and open PRs) from Grok Bot (one user-scoped shared cloud computer that signs into apps and keeps running after the laptop closes). Stresses shared credentials across Bots, that Grok Bot can launch Cloud Agents, and different plan gates. In-article Ahrefs volumes, hardware rumors, and prices are snapshots — confirm on live docs.",
       "categories": [
@@ -5129,7 +5193,7 @@
         "browser"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-20",
       "updatedAt": "2026-09-14T01:20:00Z",
       "hook": "按活来选：隔离的云端 Agent，还是共享的那台电脑。",
@@ -5141,8 +5205,9 @@
     {
       "id": "saily-us-number-esim",
       "slug": "saily-us-number-esim",
-      "title": "工具：Saily 美国 +1 号（eSIM）— AI 注册旁路",
-      "titleEn": "Tool tip: Saily US +1 eSIM for AI signups",
+      "title": "Saily 美国 +1 号（eSIM）— AI 注册旁路",
+      "titleEn": "Saily US +1 eSIM for AI signups",
+      "kind": "tool",
       "summary": "酱紫表（@pengchujin）2026-09-13 更新：Saily（NordVPN 旗下 eSIM 产品）的美国号码新出包年套餐；作者称用优惠码 JIANGZ7166 立减 5 刀、一年约 6.99 美元（作者数字与作者截图，非本站核实）。引用的是作者 6 月的长文教程「1 美元拥有美国手号教程」：用外区 eSIM 手机或 eSIM 实体卡装上 Saily 的 +1 号码，免费收短信，方便部分海外 AI / 账号注册；付款支持国内信用卡与 Apple Pay。作者称需 KYC 实名（支持中国证件）、App 需外区 App Store；实测 Claude 收不到验证码，ChatGPT、Telegram、PayPal 基本可以，号段可能不够干净。本条是旁路工具笔记，不是 Grok Bot 用法，也不构成购买推荐。",
       "summaryEn": "Update from 酱紫表 (@pengchujin), 2026-09-13: Saily (NordVPN’s eSIM product) now sells its US number on an annual plan; the author says promo code JIANGZ7166 takes $5 off, landing at about $6.99 a year (the author’s figures and screenshots — not verified by this site). It quotes the author’s June long-form tutorial “Own a US phone number for $1”: put Saily’s +1 number on an eSIM-capable overseas phone or a physical eSIM card, receive SMS for free, and use it for some overseas AI / account signups; payment takes Chinese credit cards and Apple Pay. Per the author: KYC is required (Chinese IDs accepted), the app needs a non-China App Store, Claude did not receive codes while ChatGPT, Telegram, and PayPal mostly did, and the number range may not be clean. An adjacent tool note — not a Grok Bot playbook and not a purchase recommendation.",
       "categories": [
@@ -5182,6 +5247,7 @@
       "slug": "native-subtitle-quote-image",
       "title": "「原生字幕拼图」native-subtitle-quote-image：真实视频帧 → 3:4 字幕长图 Skill（程意）",
       "titleEn": "Native Subtitle Quote Image: real video frames → 3:4 subtitle quote cards, an open Agent Skill (ChengYi)",
+      "kind": "tool",
       "summary": "程意（@ChengYi3629）开源的 Agent Skill：从本地视频或用户有权处理的 YouTube 链接出发，用字幕轨 / Whisper 建时间索引、选题选句、精确取帧，再把真实视频帧拼成 3:4 社交长图并逐张质检。两种模式不混用——原生字幕只保留画面像素、不 OCR 重绘；脚本字幕把已审核台词画到真实帧上并标明后期。仓库含 Codex 插件结构与开放 Skill 目录，可复制到其他兼容 Agent；作者推文称 2.0 后拿它做抖音，成图后发不发仍由人来。",
       "summaryEn": "ChengYi’s (@ChengYi3629) open Agent Skill: start from a local video or a YouTube link you have rights to, build a timestamped index from subtitle tracks / Whisper, pick topics and lines, grab exact frames, and stitch real frames into 3:4 social cards with per-image QA. Two modes never mix — native mode keeps pixel subtitles as-is (no OCR redraw); script mode draws reviewed lines onto real frames and labels them as post-added. Ships a Codex plugin layout plus an open skill directory that can be copied into other compatible agents; the author’s post says 2.0 is what they now use for Douyin, but publishing stays a human step.",
       "categories": [
@@ -5210,7 +5276,7 @@
         "youtube"
       ],
       "language": "zh",
-      "featured": false,
+      "featured": true,
       "previewImage": "/previews/native-subtitle-quote-image.webp",
       "publishedAt": "2026-09-11",
       "updatedAt": "2026-09-11T05:20:00Z",
@@ -5222,6 +5288,7 @@
       "slug": "youngurban-how-to-use-grok-bot",
       "title": "Young Urban Project：怎么用 Grok Bot（真用例 vs 炒作）",
       "titleEn": "Young Urban Project: How to Use Grok Bot (real cases vs hype)",
+      "kind": "guide",
       "summary": "Puneet Tandon 2026-09-09 长文：把 Grok Bot 与 Grok 聊天 / Automations 分开，走「幕僚长先窄任务」起步，并按可核验结果列出收件箱分拣、浏览器跑腿、会前会后、持续研究、销售跟进、客服退款、工程杂活等真用例；对照 Hermes / OpenClaw 与 Zapier，点名用量上限与无收据炒作。文内价位与周额度是快照，需回 xAI / Cursor 现页核对。",
       "summaryEn": "Puneet Tandon’s 2026-09-09 guide: separates Grok Bot from the Grok chatbot and Automations, starts with a narrow chief-of-staff task, and lists verifiable uses (inbox triage, browser errands, meeting prep/follow-up, persistent research, sales follow-up, support refunds, coding busywork). Contrasts Hermes / OpenClaw and Zapier, and flags usage ceilings plus unverifiable hype. Pricing and weekly allowances are snapshots — confirm on live xAI / Cursor pages.",
       "sourceUrl": "https://www.youngurbanproject.com/how-to-use-grok-bot/",
@@ -5238,7 +5305,7 @@
       "role": "Practical guide",
       "language": "en",
       "difficulty": "starter",
-      "featured": true,
+      "featured": false,
       "hasMultiAgent": true,
       "hasRoutine": true,
       "hasSkill": true,
@@ -5266,6 +5333,7 @@
       "slug": "everyinc-compound-engineering-plugin",
       "title": "Compound Engineering：给 Grok Bot 用的工程循环插件",
       "titleEn": "Compound Engineering: engineering-loop plugin Grok Bot can load",
+      "kind": "tool",
       "summary": "Every Inc 的官方 Compound Engineering 插件（Cursor 市场）：把 brainstorm → plan → work → simplify → review → compound 做成可调用 Skill。README 写明 Grok Bot 共用 Cursor 账号与插件库——装一次即可被 Bot 加载，不要在 Grok Bot 聊天里 /add-plugin，也不要往 Bot 电脑上 clone。适合把写码循环挂成可复用技能，再视需要挂 Routine。",
       "summaryEn": "Every Inc’s official Compound Engineering plugin (Cursor marketplace): brainstorm → plan → work → simplify → review → compound as callable skills. README states Grok Bot shares your Cursor account and plugin library — install once for Bots to load; do not /add-plugin inside Grok Bot chat, and do not clone onto the Bot computer. Fits saving the coding loop as a reusable skill, then optionally a routine.",
       "sourceUrl": "https://github.com/everyinc/compound-engineering-plugin",
@@ -5281,7 +5349,7 @@
       "role": "Engineering plugin / skill pack",
       "language": "en",
       "difficulty": "intermediate",
-      "featured": true,
+      "featured": false,
       "hasMultiAgent": true,
       "hasRoutine": true,
       "hasSkill": true,
@@ -5307,6 +5375,7 @@
       "slug": "jcpsimmons-gbdl",
       "title": "GBDL：一文件保存多智能体 Grok Bot 编排",
       "titleEn": "GBDL: one Markdown+YAML file to save a multi-agent Grok Bot setup",
+      "kind": "tool",
       "summary": "jcpsimmons 的社区提案（MIT，v0.1）：用一份 `.gbdl.md`（Markdown 引言 + 单一 YAML fence）描述调度者、专精 Bot、connectors、onboarding、memory 与 routines，便于进 git / 换机复原。附 minimal / ops-team / media-studio 示例、JSON Schema 与 reinstate 顺序。非官方格式，但可复现；密钥不得写入文件。",
       "summaryEn": "jcpsimmons’s community proposal (MIT, v0.1): one `.gbdl.md` (Markdown intro + a single YAML fence) captures dispatcher, specialists, connectors, onboarding, memory, and routines so a fleet can be checked into git or rebuilt on a new machine. Ships minimal / ops-team / media-studio examples, a JSON Schema, and a reinstate order. Unofficial — reproducible, but keep secrets out of the file.",
       "sourceUrl": "https://github.com/jcpsimmons/gbdl",
@@ -5324,7 +5393,7 @@
       "role": "Fleet definition / portability",
       "language": "en",
       "difficulty": "intermediate",
-      "featured": true,
+      "featured": false,
       "hasMultiAgent": true,
       "hasRoutine": true,
       "hasSkill": false,
@@ -5349,6 +5418,7 @@
       "slug": "shrdgn-grokbot-skills",
       "title": "grokbot-skills：74 条可挂 Routine 的技能配方库",
       "titleEn": "grokbot-skills: 74 ready-to-run Grok Bot skill recipes",
+      "kind": "tool",
       "summary": "shrdgn 维护的技能目录：74 条 / 12 类，统一 Inputs·Steps·Decision rules·DoD·Safety·Suggested routine 六段；另有 Founder / Sales / Marketer 等 role packs 与 `catalog.json`。审批优先、安静默认、禁止编造数据写进原则。与 ZeroPointRepo/awesome-grok-bot（Skill/Plugin/MCP 索引）互补——本条是可直接粘贴的 SKILL.md 配方。",
       "summaryEn": "shrdgn’s skill library: 74 recipes across 12 categories with a fixed six-section body (Inputs, Steps, Decision rules, DoD, Safety, Suggested routine), plus Founder/Sales/Marketer-style role packs and catalog.json. Approval-first, quiet-when-clean, no invented data. Complements ZeroPointRepo/awesome-grok-bot (skill/plugin/MCP index) — this one ships pasteable SKILL.md recipes.",
       "sourceUrl": "https://github.com/shrdgn/grokbot-skills",
@@ -5365,7 +5435,7 @@
       "role": "Skill library",
       "language": "en",
       "difficulty": "starter",
-      "featured": true,
+      "featured": false,
       "hasMultiAgent": true,
       "hasRoutine": true,
       "hasSkill": true,
@@ -5388,6 +5458,7 @@
       "slug": "kydlikebtc-awesome-grokbot-shares",
       "title": "awesome-grokbot：661 条可点进的 x.ai/bot 分享目录",
       "titleEn": "awesome-grokbot: 661 live x.ai/bot share catalog",
+      "kind": "tool",
       "summary": "kydlikebtc 维护的双语目录：661 条可点进的公开 x.ai/bot 分享（2026-09-08 全量链路核查），带可搜索站点、catalog.json、docs/vetting.md 导入前清单与 docs/routine.md 侦察 routine。与已收录的 ZeroPointRepo/awesome-grok-bot（Skill / Plugin / MCP）不是同一件事——本条是 live bot 分享索引。仓库公开页显示约 295 star（2026-09-09 核对）。",
       "summaryEn": "kydlikebtc’s bilingual catalog of 661 clickable public x.ai/bot shares (all links status-checked 2026-09-08), with a searchable site, catalog.json, docs/vetting.md import checklist, and docs/routine.md scout routine. Distinct from the already-listed ZeroPointRepo/awesome-grok-bot (skills / plugins / MCP) — this indexes live bot shares. Public repo page shows ~295 GitHub stars (checked 2026-09-09).",
       "sourceUrl": "https://github.com/kydlikebtc/awesome-grokbot",
@@ -5408,7 +5479,7 @@
       "language": "en",
       "difficulty": "starter",
       "role": "Directory",
-      "featured": true,
+      "featured": false,
       "hasRoutine": true,
       "hasSkill": true,
       "hasMultiAgent": true,
@@ -5428,6 +5499,7 @@
       "slug": "continuum-grok-bot-routines-guide",
       "title": "Continuum：Grok Bot Routine / Skill 工作指南（含上报上限）",
       "titleEn": "Continuum: Grok Bot Routine / Skill working guide (reported ceilings flagged)",
+      "kind": "guide",
       "summary": "Continuum 长文讲清 routine 与 skill 的行为差异、演示录制怎么拆、日程能做什么、以及与 Grok Automations 的分界；并对照官方 overview / skills-routines 文档。文中提到的 10 分钟演示上限、50 条 routine、20 条运行记录保留等数字均来自第三方 Daily Dose of Data Science，文内反复标明「xAI 未确认」——本库也不当作事实写进卡片。",
       "summaryEn": "Continuum’s long guide on how routines and skills differ in practice, how to split teach-by-demo recordings, what schedules document, and how Bot routines differ from Grok Automations — cross-checked against official overview and skills-routines docs. Figures such as a 10-minute demo cap, 50 routines, and 20-run retention are attributed to third-party Daily Dose of Data Science and repeatedly marked unconfirmed by xAI; this library does not treat them as facts.",
       "sourceUrl": "https://continuumcode.ai/guides/grok-bot-routines/",
@@ -5468,6 +5540,7 @@
       "slug": "aibuilderclub-how-to-use-grok-bot-practical-guide",
       "title": "AI Builder Club：Grok Bot 实操指南（带来源账本）",
       "titleEn": "AI Builder Club: How to Use Grok Bot — Practical Guide",
+      "kind": "guide",
       "summary": "两周教程与长文的合成：首席幕僚模式、按桶统计的可点用来源账本、task→skill→routine、限额节流，并纠正「每 Bot 一台电脑」误读（文档是一人一机、多屏）。未自称实测，标成 documented usage。",
       "summaryEn": "A synthesis of two weeks of tutorials and long posts: chief-of-staff pattern, a clickable source ledger by use-case bucket, task→skill→routine, usage-limit tactics, and a correction of the “one computer per Bot” myth (docs: one computer per user, shared screens). Labeled documented usage, not firsthand.",
       "categories": [
@@ -5498,7 +5571,7 @@
         "slack"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-03T01:10:00Z",
       "hook": "幕僚长模式加来源账本，并纠正「每 Bot 一台电脑」。",
@@ -5512,6 +5585,7 @@
       "slug": "gauraw-grok-bot-complete-guide-without-losing-control",
       "title": "Kumar Gauraw：在不失控的前提下搭 Grok Bot 小队",
       "titleEn": "Kumar Gauraw: Grok Bot complete guide without losing control",
+      "kind": "guide",
       "summary": "安全向完整指南：共享云电脑架构、最小席位、角色合同六问、约 30 分钟安全首跑、task→skill→routine 阶梯，并逐条拆穿「每 Bot 独立 VM / 屏幕即隔离」等神话。引用官方 docs，不抄创作者 ROI 数字。",
       "summaryEn": "A security-first complete guide: shared cloud-computer architecture, smallest useful roster, six-question role contracts, a ~30-minute safe first run, and the task→skill→routine ladder. Debunks myths like “one VM per Bot” and “screens isolate credentials.” Cites official docs; skips unverified ROI claims.",
       "categories": [
@@ -5539,7 +5613,7 @@
         "browser"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-03T01:10:00Z",
       "hook": "先跑一次安全的窄任务，再把小队扩出去。",
@@ -5553,6 +5627,7 @@
       "slug": "gawkbot-open-source-grok-bot",
       "title": "gawkbot：开源、本机跑的 Grok Bot 替代",
       "titleEn": "gawkbot: open-source, on-machine Grok Bot alternative",
+      "kind": "tool",
       "summary": "本机多 Bot（各自目录与工具白名单）、外发/提交/采购/删除逐次审批、可接 Claude Code / Codex / 本地模型，并给结果做 microapp 看板。对比表写明相对 xAI Grok Bot 的免费与本地差异。非 xAI 产品。",
       "summaryEn": "Local multi-bots (per-bot directories and tool allowlists), per-action approval for send/commit/purchase/delete, Claude Code / Codex / local models, plus microapp dashboards for outcomes. Comparison table vs xAI Grok Bot (free, on-machine). Not an xAI product.",
       "categories": [
@@ -5592,6 +5667,7 @@
       "slug": "howdoiuseai-run-business-on-grok-bot-agent-teams",
       "title": "How Do I Use AI：无代码用 Grok Bot 小队跑一门小生意",
       "titleEn": "How Do I Use AI: run a real business on Grok Bot agent teams (no code)",
+      "kind": "guide",
       "summary": "面向非技术运营者的可复现指南：Chief of Staff 路由、skills 先于 routines、审批边界，以及四周 rollout（一任务→skill→routine→日报）。不是空泛夸赞，步骤可跟着做。",
       "summaryEn": "A reproducible non-technical guide: chief-of-staff routing, skills before routines, approval guardrails, and a four-week rollout (one task → skill → routine → daily debrief). Not vague praise — you can follow the steps.",
       "categories": [
@@ -5620,7 +5696,7 @@
         "notion"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-23",
       "updatedAt": "2026-09-02T01:10:00Z",
       "hook": "给非技术运营者：先技能，再例行，再一份日报。",
@@ -5634,6 +5710,7 @@
       "slug": "zeropointrepo-awesome-grok-bot",
       "title": "awesome-grok-bot：已核验的 Skill / Plugin / MCP 目录",
       "titleEn": "awesome-grok-bot: a verified skills / plugins / MCP directory",
+      "kind": "tool",
       "summary": "ZeroPointRepo 维护的非官方精选目录：60+ 条 Grok Bot skills、plugins、MCP 与自托管替代，每条对照一手源。有 CATALOG.md / catalog.csv / plugins.json / llms.txt。和 grokbots.best（Bot 模板发现站）不是同一件事。",
       "summaryEn": "ZeroPointRepo’s unofficial curated directory: 60+ verified Grok Bot skills, plugins, MCP servers, and self-hosted alternatives, each checked against a primary source. Ships CATALOG.md / catalog.csv / plugins.json / llms.txt. Distinct from grokbots.best (bot-template discovery).",
       "categories": [
@@ -5674,6 +5751,7 @@
       "slug": "flavio-copes-grok-bot-deep-dive",
       "title": "Flavio Copes：Grok Bot 完整深潜",
       "titleEn": "Flavio Copes: A deep dive into Grok Bot",
+      "kind": "guide",
       "summary": "Flavio Copes 的长文实操：共享云电脑架构、插件优先连法、Blog Pulse 日审角色、先跑通再存 Skill/Routine、模板分享与审批边界。附完整角色提示词与可复制检查清单。",
       "summaryEn": "Flavio Copes’ long practical guide: shared cloud-computer architecture, plugin-first connectors, a Blog Pulse daily-review role, run-once-then-skill/routine, templates, and approval boundaries. Includes a full role prompt and checklists.",
       "categories": [
@@ -5703,7 +5781,7 @@
         "notion"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-31T01:28:18Z",
       "hook": "先跑通再存技能，并写清审批停在哪里。",
@@ -5717,6 +5795,7 @@
       "slug": "maiyang-21-grok-bot-explorers",
       "title": "X 上最值得关注的 21 个 Grok Bot 探索者",
       "titleEn": "21 Grok Bot explorers worth following on X",
+      "kind": "showcase",
       "summary": "Mai Yang 在深圳 Meetup 当天整理的名单：先看官方三人（Matt Palmer 入门片、Lauren 省额度、Eric 多团队），再看产品组和把 Bot 当同事用的人。部分条目作者自己标了未核到原文。",
       "summaryEn": "Mai Yang’s list from Grok Bot Meetup Shenzhen: start with three official accounts (Matt Palmer’s intro, Lauren on spend, Eric on multi-team), then the product crew and people who run bots as teammates. Some later entries the author marked unverified.",
       "categories": [
@@ -5743,7 +5822,7 @@
         "notion"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/grokbot-explorers-21.webp",
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-08-30T16:44:00Z",
@@ -5755,6 +5834,7 @@
       "slug": "xai-grok-bot-guides",
       "title": "官方 Grok Bot Guides：把 Agent 当同事的实操手册",
       "titleEn": "Official Grok Bot Guides: playbooks for AI teammates",
+      "kind": "playbook",
       "summary": "xAI 官方 playbook 库，不是角色目录。五篇可跟做：多团队频道排班、手游工作室、用 Bot 做设计、企业 GTM、产品经理带一桌 Bot。Elon 转发「How to use Grok Bot」。",
       "summaryEn": "xAI’s official playbook library — not the role catalog. Five follow-along guides: multi-team channels, a mobile game studio, designing with bots, enterprise GTM, and PMs running a bot roster. Elon quote-tweeted “How to use Grok Bot.”",
       "categories": [
@@ -5802,6 +5882,7 @@
       "slug": "jakob-bu-grok-bot-linux-unofficial",
       "title": "非官方 Linux 版 Grok Bot：从 Windows 安装包移植",
       "titleEn": "Unofficial Linux Grok Bot (Windows installer port)",
+      "kind": "tool",
       "summary": "社区把官方 Windows Electron 安装包搬到 Linux：make build 产出 .deb / AppImage / 解压目录，用同一 Cursor / SuperGrok 账号登录。云端电脑不变，本机构建只是遥控器。README 写清依赖、无沙箱参数与 NVIDIA 黑屏 workaround。非 xAI/Cursor 产品。",
       "summaryEn": "Community port of the official Windows Electron installer to Linux: `make build` yields .deb, AppImage, or a tarball; sign in with the same Cursor / SuperGrok account. Bots still live on the cloud computer — this build is the remote control. README covers deps, --no-sandbox, and an NVIDIA black-window workaround. Not an xAI/Cursor product.",
       "categories": [
@@ -5825,7 +5906,7 @@
         "desktop"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T01:10:00Z",
       "hook": "社区把桌面端搬到 Linux，云端电脑仍然是原来那台。",
@@ -5841,6 +5922,7 @@
       "slug": "ryan-perry-mobile-game-studio-rankem",
       "title": "六席 Bot 跑手游工作室：Rank'em",
       "titleEn": "Six-bot mobile game studio: Rank'em",
+      "kind": "showcase",
       "summary": "Ryan Perry 用六个 Grok Bot 分工跑手游 Rank'em 生命周期：Mobile Orchestrator、Rankem Engineer、Creatives、GCS、Analytics、Bug fix。每个 Bot 有独立电脑、例行任务与技能，互相交接而不经过人。编码工具覆盖构建与基建，Grok Bot 接住发行、QA、买量和素材。文章写清角色、交接与真实踩坑。",
       "summaryEn": "Ryan Perry staffed Rank'em with six Grok Bots — Mobile Orchestrator, Rankem Engineer, Creatives, GCS, Analytics, Bug fix — each with its own computer, routines, and skills, handing off without routing through him. Coding tools cover build/infra; Grok Bot covers release, QA, UA, and creative. The post spells out roles, handoffs, and what they caught.",
       "categories": [
@@ -5872,7 +5954,7 @@
         "github"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-08-28T01:10:00Z",
       "hook": "六个 Bot 分工跑一款手游，从发行到修缺陷。",
@@ -5888,6 +5970,7 @@
       "slug": "mattyp-getting-started-with-grok-bot",
       "title": "Grok Bot 入门：从解剖到四条工作流",
       "titleEn": "Getting Started with Grok Bot",
+      "kind": "guide",
       "summary": "SpaceXAI 的 Matt Palmer 做的 30 分钟入门片：Bot 是什么、解剖结构、三种运行方式、多 Bot 串联，以及四条可跟做的工作流——X 粉丝进 Notion、个人软件、用 Cursor 写代码、搜索。时间轴写在推文里。",
       "summaryEn": "A 30-minute getting-started from SpaceXAI’s Matt Palmer: what a Bot is, its anatomy, three ways to run, multi-bot chains, and four follow-along workflows — X followers into Notion, personal software, coding with Cursor, and search. Chapters are in the post.",
       "categories": [
@@ -5918,7 +6001,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/grokbot-getting-started.webp",
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-08-27T17:05:00Z",
@@ -5930,6 +6013,7 @@
       "slug": "daily-briefing-writer-stories",
       "title": "每日简报写手：只收真正重要的故事",
       "titleEn": "Daily Briefing Writer",
+      "kind": "playbook",
       "summary": "官方 Daily Briefing Writer：用高质量输入开场，而不是噪音；只交付对你真正重要的故事，一份收紧的每日简报。不发送、不改日程。",
       "categories": [
         "research",
@@ -5953,7 +6037,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Daily Briefing Writer: start the day with high-quality inputs instead of noise. Delivers a tight daily brief of only the stories that matter to you. Does not send or change the calendar.",
@@ -5970,6 +6054,7 @@
       "slug": "executive-assistant-catchup",
       "title": "行政助理：晨间简报与入室补上下文",
       "titleEn": "Executive Assistant",
+      "kind": "playbook",
       "summary": "官方 Executive Assistant：不必泡在频道里也能保持定向。交付晨间简报，并在你加入新房间时自动补一份上下文摘要，避免刚进线程就迷路。不代发消息、不改会议。",
       "categories": [
         "daily-digest",
@@ -5994,7 +6079,7 @@
         "calendar"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Executive Assistant: stay oriented without living in channels. Delivers a morning briefing, plus an automatic catch-up summary whenever you join a new room, so you are never lost in a thread you just entered. Does not send messages or change meetings.",
@@ -6011,6 +6096,7 @@
       "slug": "newsletter-writer-monthly",
       "title": "Newsletter 写手：按时出月度更新",
       "titleEn": "Newsletter Writer",
+      "kind": "playbook",
       "summary": "官方 Newsletter Writer：按时发出月度营销与产品更新。从发布、赢单和日历拉取新内容，按你的声音写好当期，停在待审，让营销改一次就能发。",
       "categories": [
         "marketing",
@@ -6035,7 +6121,7 @@
         "email"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Newsletter Writer: ship monthly marketing and product updates on time. Pulls what's new from launches, wins, and your calendar, writes the issue in your voice, and parks it for review so marketing can edit once and send.",
@@ -6052,6 +6138,7 @@
       "slug": "prospecting-plan-builder-tracker",
       "title": "拓客计划搭建手：播种+补全+追踪表",
       "titleEn": "Prospecting Plan Builder",
+      "kind": "playbook",
       "summary": "官方 Prospecting Plan Builder：搭好本周工作簿。播种联系人、补全邮箱/手机，并写出可直接上手的追踪表，让外呼从名单开始。不发送、不改 CRM。",
       "categories": [
         "sales",
@@ -6076,7 +6163,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Prospecting Plan Builder: build the week's book of work. Seeds contacts, enriches email/mobile, and writes a ready-to-work tracker so outbound starts from a list. No send, no CRM writes.",
@@ -6093,6 +6180,7 @@
       "slug": "status-report-writer-actions",
       "title": "状态报告写手：活清单+晨间摘要",
       "titleEn": "Status Report Writer",
+      "kind": "playbook",
       "summary": "官方 Status Report Writer：把待办握在手里，避免漏项。从文档、会议和 Slack 拉取未完成事项，合成一份活清单和晨间摘要。不发送、不关项。",
       "categories": [
         "daily-digest",
@@ -6117,7 +6205,7 @@
         "calendar"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official Status Report Writer: own the to-do so nothing slips. Pulls open action items from docs, meetings, and Slack into one living list and a morning digest. Does not send or close items.",
@@ -6134,6 +6222,7 @@
       "slug": "crm-operations-manager-hygiene",
       "title": "CRM 运营经理：会前会后清洁记录",
       "titleEn": "CRM Operations Manager",
+      "kind": "playbook",
       "summary": "官方 CRM Operations Manager：保持管道干净。在会议前后处理 CRM 与组织架构卫生，让记录保持最新，不必再人工过一遍。写入默认停在审批。",
       "categories": [
         "sales",
@@ -6158,7 +6247,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-27T01:15:00Z",
       "summaryEn": "Official CRM Operations Manager: keep the pipeline clean. Handles CRM and org-chart hygiene before and after meetings so records stay current without a manual pass. Writes stop for approval by default.",
@@ -6175,6 +6264,7 @@
       "slug": "apartment-scout-listing-tours",
       "title": "公寓侦察：上架即筛、约看、再申请",
       "titleEn": "Apartment Scout",
+      "kind": "playbook",
       "summary": "官方 Life & Leverage 角色 Apartment Scout：房源一上架就按条件筛出短名单，邮件预约看房时间，只对你点头的房源提交申请。对外发信、预约与申请默认停在审批。",
       "categories": [
         "automation",
@@ -6199,7 +6289,7 @@
         "calendar"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Life & Leverage role Apartment Scout: as soon as listings hit the market it filters a shortlist, emails to book tour times, and applies only for the ones you pick. Outbound mail, bookings, and applications stop for approval by default.",
@@ -6216,6 +6306,7 @@
       "slug": "travel-coordinator-hold-before-book",
       "title": "差旅协调：比价占位，等人批再出票",
       "titleEn": "Travel Coordinator",
+      "kind": "playbook",
       "summary": "官方 Travel Coordinator：按你的规则比较航班与酒店，先占住快过期的优选项，确认后才预订，并把行程写进日历。出票、付款与改签必须人审。",
       "categories": [
         "automation",
@@ -6240,7 +6331,7 @@
         "email"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Travel Coordinator: compares flights and hotels against your rules, holds the best option before it expires, books only after you confirm, and drops the itinerary onto the calendar. Ticketing, payment, and changes need a human.",
@@ -6257,6 +6348,7 @@
       "slug": "calendar-coordinator-chase-holds",
       "title": "日历协调：跨日历约齐人并追 hold",
       "titleEn": "Calendar Coordinator",
+      "kind": "playbook",
       "summary": "官方 Recruiting & People 角色 Calendar Coordinator：跨多本日历把人约到同一房间，并追那些没人有空去追的 hold。对外发邀请与改期默认停在审批。",
       "categories": [
         "ops",
@@ -6298,6 +6390,7 @@
       "slug": "hiring-screener-ats-ready-review",
       "title": "招聘筛选：只把过线的人交给面试",
       "titleEn": "Hiring Screener",
+      "kind": "playbook",
       "summary": "官方 Hiring Screener：按既定标准给申请或作品打分，交出 ATS 可直接审的评审包。和 Talent Scout 的「对外寻源」不同——这里吃的是已投递材料。不联系候选人。",
       "categories": [
         "recruiting",
@@ -6322,7 +6415,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Hiring Screener: scores applications or work samples against a defined bar and hands off an ATS-ready review. Distinct from Talent Scout (outbound sourcing)—this role consumes inbound materials. Do not contact candidates.",
@@ -6339,6 +6432,7 @@
       "slug": "onboarding-manager-day-one-path",
       "title": "入职经理：给新人一条路径而不是一堆链接",
       "titleEn": "Onboarding Manager",
+      "kind": "playbook",
       "summary": "官方 Onboarding Manager：为新员工建清单、抽齐文档、回答 Day-1 问题，并把卡住的事项路由给能解堵的人。不擅自开通账号或对外发欢迎信。",
       "categories": [
         "recruiting",
@@ -6382,6 +6476,7 @@
       "slug": "account-research-pack-before-touch",
       "title": "客户研究专员：先分层再上手",
       "titleEn": "Account Research Specialist",
+      "kind": "playbook",
       "summary": "官方 Sales 角色 Account Research Specialist：在你碰客户之前，从 Salesforce 加实时信号分层，给拟合度与热度打分，并产出可分享的研究包。不写外呼、不改 CRM。",
       "categories": [
         "sales",
@@ -6423,6 +6518,7 @@
       "slug": "meeting-prep-buddy-from-gong-crm",
       "title": "会前准备搭档：带着房间里的人与未结事项进会",
       "titleEn": "Meeting Prep Buddy",
+      "kind": "playbook",
       "summary": "官方 Meeting Prep Buddy：从日历、笔记、CRM、Gong、Slack 拼出会前包——谁在房间、上次接触、未结线程、建议议程。与会议笔记落任务、会议替身不同：这是会前，不是会中/会后。",
       "categories": [
         "sales",
@@ -6465,6 +6561,7 @@
       "slug": "sales-call-coach-gong-homework",
       "title": "销售通话教练：每通 Gong 都留下作业",
       "titleEn": "Sales Call Coach",
+      "kind": "playbook",
       "summary": "官方 Sales Call Coach：复盘 Gong 通话，按时间戳点评发现、异议与高管场控，并给通话打分，让每通都留下作业。不改 CRM、不给客户发跟进。",
       "categories": [
         "sales",
@@ -6505,6 +6602,7 @@
       "slug": "deal-desk-notes-then-salesforce",
       "title": "交易台协调：先拟内部 deal note，批准后再写入 Salesforce",
       "titleEn": "Deal Desk Coordinator",
+      "kind": "playbook",
       "summary": "官方 Deal Desk Coordinator：从历史邮件、Salesforce 和通话起草带上下文的内部交易说明，你批准后再提交进 Salesforce。改价、条款与对外承诺必须人审。",
       "categories": [
         "sales",
@@ -6546,6 +6644,7 @@
       "slug": "renewal-desk-90-day-pack",
       "title": "续约台：带着 90 天包走进每场续约",
       "titleEn": "Renewal Desk Operator",
+      "kind": "playbook",
       "summary": "官方 Renewal Desk Operator：按客户从用量、工单、Gong、CRM 拼 90 天续约包，起草商务说明，只有条款卡住才去催法务。不联系客户、不改合同。",
       "categories": [
         "sales",
@@ -6587,6 +6686,7 @@
       "slug": "deck-updater-mid-call-slides",
       "title": "幻灯片现场更新：发现纪要从会中写进下一页",
       "titleEn": "Deck Updater",
+      "kind": "playbook",
       "summary": "官方 Deck Updater：根据发现纪要在会中或会后立刻改 Deck，并把下一步写进幻灯片，让你离开房间时页面已经在动。不对外发 Deck、不改主模板品牌。",
       "categories": [
         "sales",
@@ -6627,6 +6727,7 @@
       "slug": "beta-adoption-watcher-who-is-in",
       "title": "Beta 采用观察：看谁真的在用新功能",
       "titleEn": "Beta Adoption Watcher",
+      "kind": "playbook",
       "summary": "官方 Product 角色 Beta Adoption Watcher：盯用量，标出哪些客户已经进来试用新功能，方便团队跟进。不联系客户、不改功能开关。",
       "categories": [
         "engineering",
@@ -6669,6 +6770,7 @@
       "slug": "call-faq-miner-timestamped-answers",
       "title": "通话 FAQ 挖掘：用真实通话养活赋能文档",
       "titleEn": "Call FAQ Miner",
+      "kind": "playbook",
       "summary": "官方 Call FAQ Miner：从真实通话里追踪问题、给回答打时间戳，并链回源录音，让赋能材料跟着通话更新。不改对外帮助中心、不把摘录当最终话术发布。",
       "categories": [
         "research",
@@ -6709,6 +6811,7 @@
       "slug": "docs-auditor-stale-vs-shipped",
       "title": "文档审计：对照上周发版抓过期页",
       "titleEn": "Docs Auditor",
+      "kind": "playbook",
       "summary": "官方 Docs Auditor：把帮助中心和内部说明对照上周已发版功能做 diff，标出过期页并起草改写。不直接改线上文档。",
       "categories": [
         "content",
@@ -6750,6 +6853,7 @@
       "slug": "feature-request-who-asked",
       "title": "需求溯源：永远不丢「谁提的这功能」",
       "titleEn": "Feature Request Tracker",
+      "kind": "playbook",
       "summary": "官方 Feature Request Tracker：从 Slack 和通话里挖需求，做成绑到具体客户的活清单，让规格书有真实需求轨迹。不建票、不承诺排期。",
       "categories": [
         "engineering",
@@ -6791,6 +6895,7 @@
       "slug": "product-feedback-cluster-and-route",
       "title": "产品反馈分析：把散落信号收成优先视图",
       "titleEn": "Product Feedback Analyst",
+      "kind": "playbook",
       "summary": "官方 Product Feedback Analyst：从已连接来源收集并聚类反馈，权衡证据与紧急度，起草路由建议等人批准。不改路线图、不回用户。",
       "categories": [
         "engineering",
@@ -6833,6 +6938,7 @@
       "slug": "playtest-operator-ui-findings-pack",
       "title": "玩法测试操作员：API 不够时硬开 UI",
       "titleEn": "Playtest Operator",
+      "kind": "playbook",
       "summary": "官方 Playtest Operator：当 API 不够用时，在电脑上硬走产品路径、捕获失败，并交回一份紧凑发现包。与 Bug 复现不同——这是主动压路径，不是跟一张报修走。",
       "categories": [
         "engineering",
@@ -6875,6 +6981,7 @@
       "slug": "prototype-builder-clickable-url",
       "title": "原型构建：从一句话到可点的 URL",
       "titleEn": "Prototype Builder",
+      "kind": "playbook",
       "summary": "官方 Prototype Builder：在自己的电脑上写，尽快从需求变成可点的东西，回来时带截图和线上 URL。不买域名、不接生产流量。",
       "categories": [
         "coding",
@@ -6916,6 +7023,7 @@
       "slug": "cloud-agent-orchestrator-chase-stuck-runs",
       "title": "云端 Agent 编排：盯一堆 run，卡住再催",
       "titleEn": "Cloud Agent Orchestrator",
+      "kind": "playbook",
       "summary": "官方 Cloud Agent Orchestrator：同时拉起多个 cloud agent run，监控进度、追卡住的任务，并汇总报告，避免你逐个盯。不改生产、不扩大权限。",
       "categories": [
         "engineering",
@@ -6942,7 +7050,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Cloud Agent Orchestrator: kicks off many cloud-agent runs, monitors them, chases what is stuck, and summarizes the report so you are not babysitting each one. No production changes, no permission expansion.",
@@ -6959,6 +7067,7 @@
       "slug": "security-questionnaire-draft-dont-submit",
       "title": "安全问卷填写：门户里先填满，提交留给你",
       "titleEn": "Security Questionnaire Filler",
+      "kind": "playbook",
       "summary": "官方 Security Questionnaire Filler：登录供应商安全问卷站，从你们的 trust center 和历史 RFP 抽答案，填好每个字段，提交按钮留给你。不臆造合规结论。",
       "categories": [
         "ops",
@@ -6984,7 +7093,7 @@
         "computer"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official Security Questionnaire Filler: logs into the vendor questionnaire site, pulls answers from your trust center and past RFPs, drafts every field, and parks submit for you. Does not invent compliance answers.",
@@ -7001,6 +7110,7 @@
       "slug": "vendor-portal-weekly-exceptions",
       "title": "供应商门户代劳：每周走同一条无 API 路径",
       "titleEn": "Vendor Portal Operator",
+      "kind": "playbook",
       "summary": "官方 Vendor Portal Operator：在没有干净 API 的门户上跑续约、席位和采购，每周点同一条路径，只把例外带回来。下单、改席位、付款必须人审。",
       "categories": [
         "ops",
@@ -7043,6 +7153,7 @@
       "slug": "contract-desk-week-of-paper",
       "title": "合同台：一周纸面按阶段和负责人一览",
       "titleEn": "Contract Desk",
+      "kind": "playbook",
       "summary": "官方 Contract Desk：按阶段和负责人汇总本周合同，抽出关键条款，标出卡住的评审。不改条款、不代表签字。",
       "categories": [
         "finance",
@@ -7084,6 +7195,7 @@
       "slug": "refunds-manager-file-and-follow-claims",
       "title": "退款追回经理：找到索赔、提交并跟到底",
       "titleEn": "Refunds Manager",
+      "kind": "playbook",
       "summary": "官方扩容帖「Refunds manager」：找到索赔、提交并跟进，带着追回的退款或折扣回来。这是你作为消费者/采购方去追钱，不是客服给用户办政策内退款。",
       "categories": [
         "finance",
@@ -7109,7 +7221,7 @@
         "expense"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official expansion-post Refunds manager: finds the claim, files it, and follows it through, coming back with the refund or discount it recovered. This is you claiming money back—not in-policy customer refunds.",
@@ -7126,6 +7238,7 @@
       "slug": "seo-aeo-auditor-keyword-and-ai-prompt",
       "title": "SEO / AEO 审计：关键词、技术和 AI 提示一起盯",
       "titleEn": "SEO / AEO Auditor",
+      "kind": "playbook",
       "summary": "官方 SEO / AEO Auditor：把关键词、技术、AI 提示和对手动向收在一处，告诉你在涨还是在丢，标出该修的站点问题，并给出可执行优化计划。不直接改线上页面。",
       "categories": [
         "marketing",
@@ -7149,7 +7262,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T00:25:00Z",
       "summaryEn": "Official SEO / AEO Auditor: tracks keyword, technical, AI-prompt, and competitor movement in one place, surfaces whether you are gaining or losing ground, flags site issues, and returns an optimization plan. Does not edit live pages.",
@@ -7166,6 +7279,7 @@
       "slug": "social-media-manager-park-dont-publish",
       "title": "社媒经理：按你的声音起草，排队等人点发布",
       "titleEn": "Social Media Manager",
+      "kind": "playbook",
       "summary": "官方 Social Media Manager：研究你的真实历史发文，有值得说的上线就起草，把帖子停在待发布队列并保持队列流动。不自行发布、不互动。",
       "categories": [
         "marketing",
@@ -7206,6 +7320,7 @@
       "slug": "paid-media-creative-why-it-works",
       "title": "付费素材策略：在赢家变明显之前写下假设",
       "titleEn": "Paid Media Creative Strategist",
+      "kind": "playbook",
       "summary": "官方 Paid Media Creative Strategist：尽早抓住创意赢家，写清「为什么有效」的假设，并提出下一轮测试。官方强调不编造指标。与付费预算监控不同。",
       "categories": [
         "marketing",
@@ -7246,6 +7361,7 @@
       "slug": "linkedin-campaign-funnel-consistency",
       "title": "LinkedIn 投放经理：广告、表单、跟进和 UTM 对齐",
       "titleEn": "LinkedIn Campaign Manager",
+      "kind": "playbook",
       "summary": "官方 LinkedIn Campaign Manager：把获客漏斗在广告、表单、跟进和 UTM 上对齐，先起草活动等人批准，并保持每个 offer 与交接干净。不自行开投。",
       "categories": [
         "marketing",
@@ -7287,6 +7403,7 @@
       "slug": "marketing-calendar-notion-sync",
       "title": "营销日历负责人：区域/全球内容与活动对齐",
       "titleEn": "Marketing Calendar Owner",
+      "kind": "playbook",
       "summary": "官方 Marketing Calendar Owner：让区域和全球的内容、上线与活动日历保持同步，从 Notion 拉取，并让 webinar 与战役不用每周人工追。不对外发公告。",
       "categories": [
         "marketing",
@@ -7328,6 +7445,7 @@
       "slug": "merch-fulfillment-approve-then-dispatch",
       "title": "周边履约：兑换表审批后才给供应商下日单",
       "titleEn": "Merch Fulfillment Operator",
+      "kind": "playbook",
       "summary": "官方 Merch Fulfillment Operator：对合适的潜客做周边触达，盯兑换表，在聊天里让你批准/拒绝提交，再给供应商发每日订单，告诉他们何时何地发货。发货与对外消息必须人审。",
       "categories": [
         "marketing",
@@ -7370,6 +7488,7 @@
       "slug": "community-ops-ambassador-loop",
       "title": "社区运营经理：大使申请、私信分拣与节奏培育",
       "titleEn": "Community Operations Manager",
+      "kind": "playbook",
       "summary": "官方 Community Operations Manager：筛大使申请、跨渠道分拣私信，并按节奏起草培育内容，让社区不再是全职追人。不自行通过申请、不私发官方承诺。",
       "categories": [
         "marketing",
@@ -7411,6 +7530,7 @@
       "slug": "compelling-events-leadership-digest",
       "title": "关键事件监测：有真实由头才建议互动",
       "titleEn": "Compelling Events Monitor",
+      "kind": "playbook",
       "summary": "官方 Compelling Events Monitor：盯管理层动态里的获奖、发布与招聘信号，交出一份可互动帖子短摘要，并按你的声音起草评论或引用转发。不自行发帖。",
       "categories": [
         "marketing",
@@ -7453,6 +7573,7 @@
       "slug": "event-guest-screener-icp-batch-approve",
       "title": "活动嘉宾筛选：按 ICP 打分，批量待批入邀请工具",
       "titleEn": "Event Guest Screener",
+      "kind": "playbook",
       "summary": "官方 Event Guest Screener：按 ICP 给活动申请打分，并把强匹配批量放进邀请工具等人批。不擅自发邀请。",
       "categories": [
         "marketing",
@@ -7494,6 +7615,7 @@
       "slug": "enablement-fulfillment-zoom-to-drive",
       "title": "赋能交付：把「把录音发我」变成链接回复",
       "titleEn": "Enablement Fulfillment Specialist",
+      "kind": "playbook",
       "summary": "官方 Enablement Fulfillment Specialist：找到 Zoom 资产、做一页纸、上传到 Drive，并起草带链接的回复，避免有人再说「把录音发我」时去翻箱。不自行外发。",
       "categories": [
         "sales",
@@ -7536,6 +7658,7 @@
       "slug": "ticket-triage-draft-replies-only",
       "title": "工单分拣专员：盯队列，只起草回复",
       "titleEn": "Ticket Triage Specialist",
+      "kind": "playbook",
       "summary": "官方 Ticket Triage Specialist：按节奏看支持队列，只起草回复，队列干净时保持安静。与政策内退款 Bot 不同：这里不碰退款，也不关单。",
       "categories": [
         "ops",
@@ -7577,6 +7700,7 @@
       "slug": "presentation-designer-from-master-template",
       "title": "演示文稿设计师：从主模板做出可编辑链接",
       "titleEn": "Presentation Designer",
+      "kind": "playbook",
       "summary": "官方 Presentation Designer：用你的主模板和品牌体系做 Deck，不从空白页开始，并交出可继续改的编辑链接。不对外发送、不改品牌主文件。",
       "categories": [
         "content",
@@ -7616,6 +7740,7 @@
       "slug": "internal-comms-on-voice-review-only",
       "title": "对内传播经理：按对象和渠道起草，只审不发",
       "titleEn": "Internal Communications Manager",
+      "kind": "playbook",
       "summary": "官方 Internal Communications Manager：从真实上下文起草清晰、合你声音的对内文案，并匹配对象与渠道。官方写明 review-only，绝不自行发送。",
       "categories": [
         "content",
@@ -7657,6 +7782,7 @@
       "slug": "overnight-sales-outbound-pipeline",
       "title": "隔夜销售外呼管道",
       "titleEn": "Overnight Sales Outbound Pipeline",
+      "kind": "playbook",
       "summary": "Sales Outbound Bot 隔夜研究 CRM 客户、按 ICP/意向打分、找联系人，并用销售本人语气起草邮件与 LinkedIn 内容，只留下待审收件箱。官方要求：未批准前不发送、不入组。",
       "categories": [
         "sales",
@@ -7700,6 +7826,7 @@
       "slug": "demo-environment-readiness-checklist",
       "title": "演示环境就绪检查清单",
       "titleEn": "Demo Environment Readiness Checklist",
+      "kind": "playbook",
       "summary": "Demo Bot 隔夜拉起环境，检查产品 UI/演示数据，修复坏种子与过期数据，在客户通话前交出「演示就绪」清单。",
       "categories": [
         "sales",
@@ -7720,7 +7847,7 @@
         "product-ui"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Demo Bot stands up the environment overnight, checks product UI/demo data, fixes bad seeds and stale data, and hands over a “demo-ready” checklist before the customer call.",
@@ -7736,6 +7863,7 @@
       "slug": "crm-pipeline-monday-scoreboard",
       "title": "CRM 管道周一记分板",
       "titleEn": "CRM Pipeline Ops / Monday Scoreboard",
+      "kind": "playbook",
       "summary": "Bot 维护 CRM 与组织架构卫生，标记停滞与承诺风险，并在周一发布记分板，让团队一开始就对齐。",
       "categories": [
         "sales",
@@ -7772,6 +7900,7 @@
       "slug": "account-follow-up-warmth-ops",
       "title": "客户跟进与温度运营",
       "titleEn": "Account Follow-up & Warmth Ops",
+      "kind": "playbook",
       "summary": "根据通话纪要更新 CRM 备注、起草产品更新、开支持工单、在团队现有工具里同步下一步——工作落在真实系统里，而不只在聊天中。",
       "categories": [
         "sales",
@@ -7808,6 +7937,7 @@
       "slug": "talent-scout-recruiting-sourcer",
       "title": "人才侦察（招聘寻源）",
       "titleEn": "Talent Scout (Recruiting Sourcer)",
+      "kind": "playbook",
       "summary": "负责寻源、候选人研究、外联草稿与日程准备。示例：找 20 名符合硬性条件的候选人、排除 ATS 重复、引用证据、起草个性化外联——不主动联系。",
       "categories": [
         "recruiting",
@@ -7830,7 +7960,7 @@
         "calendar"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Owns sourcing, candidate research, outreach drafts, and calendar prep. Example: find 20 candidates who meet hard criteria, drop ATS duplicates, cite evidence, and draft personalized outreach — do not contact anyone.",
@@ -7847,6 +7977,7 @@
       "slug": "paid-media-monitor-budget-reallocator",
       "title": "付费投放监控与预算建议（仅推荐）",
       "titleEn": "Paid Media Monitor & Budget Reallocator",
+      "kind": "playbook",
       "summary": "拉取各活动花费与表现，对照月度预算与目标 CAC，给出带数字的再分配建议，并起草给增长团队的 Slack 更新——不改预算、不发送。",
       "categories": [
         "marketing",
@@ -7885,6 +8016,7 @@
       "slug": "weekly-expense-manager",
       "title": "每周费用管家",
       "titleEn": "Weekly Expense Manager",
+      "kind": "playbook",
       "summary": "从费用系统+政策汇总周报，匹配财务收件箱收据，标记缺失分类与政策例外并引用出处，为每位负责人起草一封跟进——只返回摘要与草稿。",
       "categories": [
         "finance",
@@ -7924,6 +8056,7 @@
       "slug": "product-performance-investigation-pack",
       "title": "产品性能调查包",
       "titleEn": "Product Performance Investigation Pack",
+      "kind": "playbook",
       "summary": "例如调查昨日发布后的结账延迟：查仪表盘/链路/火焰图，返回带截图与链接的短报告，区分事实与假设，不改生产、不改告警。",
       "categories": [
         "engineering",
@@ -7961,6 +8094,7 @@
       "slug": "bug-reproduction-pack-staging",
       "title": "预发环境 Bug 复现包",
       "titleEn": "Bug Reproduction Pack (Staging)",
+      "kind": "playbook",
       "summary": "阅读缺陷报告，在预发用全新测试账号复现，返回精确步骤、期望/实际、截图、浏览器/OS、控制台与网络笔记、最小用例。示例触发：Slack #customer-escalations +「needs repro」。",
       "categories": [
         "engineering",
@@ -7984,7 +8118,7 @@
         "ticket"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Reads the bug report, reproduces it on staging with a fresh test account, and returns exact steps, expected/actual, screenshots, browser/OS, console and network notes, and a minimal case. Example trigger: Slack #customer-escalations + “needs repro.”",
@@ -8000,6 +8134,7 @@
       "slug": "account-health-customer-risk-watch-list",
       "title": "客户健康 / 流失风险观察名单",
       "titleEn": "Account Health / Customer-Risk Watch List",
+      "kind": "playbook",
       "summary": "按用量、支持升级、续约时点、干系人活跃度给组合账户打分；给出证据、为何重要、建议下一步——不联系客户、不改 CRM。可升为工作日 8:00 skill+routine。",
       "categories": [
         "research",
@@ -8025,7 +8160,7 @@
         "product-analytics"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Scores a portfolio of accounts by usage, support escalations, renewal timing, and stakeholder activity; returns evidence, why it matters, and a suggested next step — does not contact customers or edit CRM. Can be promoted to a weekday 8:00 skill+routine.",
@@ -8042,6 +8177,7 @@
       "slug": "chief-of-staff-morning-digest",
       "title": "幕僚长晨间摘要",
       "titleEn": "Chief of Staff Morning Digest",
+      "kind": "playbook",
       "summary": "对照优先级文档，回顾昨日至今的 Slack/邮件/日历/会议笔记；只返回匹配项，并附来源、为何重要、建议下一步、以及你是否欠一个决策——不发送、不改会议。",
       "categories": [
         "daily-digest",
@@ -8066,7 +8202,7 @@
         "calendar"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-11",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Against a priority doc, reviews Slack/email/calendar/meeting notes since yesterday; returns only matches, with source, why it matters, a suggested next step, and whether you owe a decision — does not send or change meetings.",
@@ -8082,6 +8218,7 @@
       "slug": "inbox-triage-to-clickup-handoff",
       "title": "收件箱分拣 → ClickUp 交接",
       "titleEn": "Inbox Triage → ClickUp (Agent Handoff)",
+      "kind": "showcase",
       "summary": "定时 Inbox Triage Bot 抓取 Gmail（+日历）、标记紧急项，把结构化简报交给幕僚长，由其在 ClickUp 创建带截止日期与优先级的任务——团队看看板而不是只看聊天。",
       "categories": [
         "daily-digest",
@@ -8103,7 +8240,7 @@
         "clickup"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-13",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "A scheduled Inbox Triage Bot pulls Gmail (+ calendar), flags urgent items, and hands a structured brief to the chief of staff, who creates dated, prioritized ClickUp tasks — the team looks at a board, not only chat.",
@@ -8119,6 +8256,7 @@
       "slug": "invoice-agent-inbox-handoff-pipeline",
       "title": "发票 Agent + 收件箱交接管道",
       "titleEn": "Invoice Agent + Inbox Handoff Pipeline",
+      "kind": "showcase",
       "summary": "上传参考发票 PDF；Invoice Agent 起草同类发票、带附件的 Gmail 回复草稿，并在 ClickUp「Invoices and Payments」看板跟踪状态。可与 Inbox Triage 群聊交接，让发票邮件自动路由。",
       "categories": [
         "automation",
@@ -8155,6 +8293,7 @@
       "slug": "meeting-notes-to-due-dated-tasks",
       "title": "会议笔记 → 带截止日任务（Granola @ 17:00）",
       "titleEn": "Meeting Notes → Due-Dated Tasks",
+      "kind": "showcase",
       "summary": "每天 17:00 例行抓取 Granola 笔记，提取行动项，按规则路由到正确的 ClickUp 看板（如代理 vs YouTube），并填负责人、优先级与截止日期。",
       "categories": [
         "automation",
@@ -8190,6 +8329,7 @@
       "slug": "product-ad-video-from-phone-photo",
       "title": "手机拍照生成产品广告视频",
       "titleEn": "Product Ad Video from Phone Photo",
+      "kind": "showcase",
       "summary": "Video Agent + Higgsfield 插件 + 已保存的产品广告 skill：在 iOS 拍产品照，提示「生成产品广告」，几分钟得到成片；skill 可用 / 引用。",
       "categories": [
         "content",
@@ -8224,6 +8364,7 @@
       "slug": "competitive-intelligence-company-simulation-swarm",
       "title": "竞争情报 / 公司模拟蜂群",
       "titleEn": "Competitive Intelligence / Company Simulation Swarm",
+      "kind": "guide",
       "summary": "多个角色 Bot（研究、核实、策略、工程、营销）通过群聊共享上下文；可用 Composio 接多应用。示例：并行负责人对比编码 Agent 评测，或竞品定价/功能蜂群 → 高管简报。",
       "categories": [
         "research",
@@ -8243,7 +8384,7 @@
         "composio"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-15",
       "updatedAt": "2026-08-23T03:45:00Z",
       "summaryEn": "Several role Bots (research, verify, strategy, engineering, marketing) share context in a group chat; Composio can connect multiple apps. Example: parallel owners comparing coding-agent evals, or a competitor pricing/feature swarm → exec brief.",
@@ -8259,6 +8400,7 @@
       "slug": "one-person-company-newsletter-ops-stack",
       "title": "一人公司 / Newsletter 运营栈",
       "titleEn": "One-Person Company / Newsletter Ops Stack",
+      "kind": "showcase",
       "summary": "幕僚长审计业务并命名首批 Agent（研究、销售、平台专家）；一项目一账户控制上下文/token；例行把 newsletter、目录、Shopify 等工作挪到夜间。",
       "categories": [
         "content",
@@ -8299,6 +8441,7 @@
       "slug": "website-launch-multi-bot-group",
       "title": "网站上线多 Bot 小组",
       "titleEn": "Website Launch Multi-Bot Group",
+      "kind": "playbook",
       "summary": "文档模式：Website Launch 群组含上线协调、内容编辑、分析审阅；协调员分派，交接在同一对话可见。社区也有 EA 用自然语言把建站交给工程 Bot。",
       "categories": [
         "content",
@@ -8332,6 +8475,7 @@
       "slug": "slack-triggered-repro-escalation-routine",
       "title": "Slack 触发的复现 / 升级例行",
       "titleEn": "Slack-Triggered Repro / Escalation Routine",
+      "kind": "playbook",
       "summary": "窄事件规则：当 #customer-escalations 出现工单链接 +「needs repro」时，Bot 打开工单、在预发复现、在对话中贴复现包——未经批准不回帖到 Slack。避免「每条新消息」监听。",
       "categories": [
         "engineering",
@@ -8368,6 +8512,7 @@
       "slug": "cursor-automations-engineering-factory-patterns",
       "title": "Cursor Automations：工程工厂模式（相邻）",
       "titleEn": "Cursor Automations: Engineering Factory Patterns",
+      "kind": "showcase",
       "summary": "同生态的 Cursor 云端 Agent：main 推送安全审查→Slack；PR agentic codeowners；PagerDuty→Datadog 调查→Slack+修复 PR；周仓 digest；晨间覆盖率 PR；Slack 缺陷分拣→Linear→尝试修复。",
       "categories": [
         "coding",
@@ -8410,6 +8555,7 @@
       "slug": "teach-a-task-demo-to-skill",
       "title": "演示教学：把浏览器流程存成 Skill",
       "titleEn": "Teach a Task: Demo a Browser Workflow into a Skill",
+      "kind": "playbook",
       "summary": "官方 Skills / Routines 文档给出的可执行模式：在一对一对话打开电脑视图，选 Teach a task，演示最多约 10 分钟的浏览器流程，Bot 生成草稿 Skill。补上决策规则、失败处理和审批边界后再用 Test run，最后才做成例行。不录音频，演示中不要暴露密钥，凭证走安全交接。",
       "categories": [
         "automation",
@@ -8452,6 +8598,7 @@
       "slug": "kanekoa-seheult-video-research-cutdown",
       "title": "把几十条访谈视频收成一条可看的成片",
       "titleEn": "Research, transcribe, and cut a science video brief",
+      "kind": "showcase",
       "summary": "KanekoaTheGreat 用自然语言让 Grok Bot 找出 Dr. Roger Seheult 谈阳光、红光、红外与线粒体的全部相关视频（含 MedCram，以及与 Huberman、Eric Berg、Steven Bartlett 等的访谈）。几分钟后交出：38 条视频转写合成一份 Word、精选 13 段科学讲解并剪成 19:35 成片、以及带原片时间戳的 Markdown 摘要。无脚本、无代码。",
       "categories": [
         "research",
@@ -8477,7 +8624,7 @@
         "files"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/kanekoa-video-research.webp",
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-25T00:58:00Z",
@@ -8492,6 +8639,7 @@
       "slug": "digital-declutterer-subscriptions-audit",
       "title": "数字断舍离：邮箱、网盘与订阅审计",
       "titleEn": "Digital Declutterer",
+      "kind": "playbook",
       "summary": "官方扩容帖里的 Digital declutterer：全天候审计邮箱、Drive 和付费订阅，整理出可取消清单（金额、最近使用）。只有你点头才丢弃或退订。",
       "categories": [
         "automation",
@@ -8514,7 +8662,7 @@
         "expense"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-25T01:10:00Z",
       "summaryEn": "Digital declutterer from the official expansion post: around-the-clock audit of email, Drive, and paid subscriptions, producing a cancel list (amount, last used). It discards or unsubscribes only after you nod.",
@@ -8531,6 +8679,7 @@
       "slug": "meeting-stand-in-notes-and-summary",
       "title": "会议替身：缺席时入会并带回摘要",
       "titleEn": "Meeting Stand-in",
+      "kind": "playbook",
       "summary": "官方扩容角色 Meeting stand-in：你去不了时由 Bot 入会、向房间说明你在场、做详细笔记并发送摘要，让你事后仍跟得上。",
       "categories": [
         "automation",
@@ -8569,6 +8718,7 @@
       "slug": "website-builder-domain-and-deploy",
       "title": "建站 Bot：做站、买域名、部署上线",
       "titleEn": "Website Builder",
+      "kind": "playbook",
       "summary": "官方扩容角色 Website builder：搭建站点、购买域名并部署最终版本，协助配置插件、交出可访问 URL，并加上跳转规则。与「多 Bot 上线小组」互补，这是单 Bot 端到端交付。",
       "categories": [
         "coding",
@@ -8607,6 +8757,7 @@
       "slug": "game-artist-custom-assets-pipeline",
       "title": "游戏美术 Bot：按方向产出管线资产",
       "titleEn": "Game Artist",
+      "kind": "playbook",
       "summary": "官方扩容帖里的 Game artist：进入现有美术管线，按你的创作方向制作定制资产，再把游戏真正需要的东西交回来。适合先在草稿目录出图，入库与覆盖正式资源必须人审。",
       "summaryEn": "Game artist from the official expansion post: visits the art pipeline, makes custom assets according to your creative direction, and comes back with what the game needs. Draft in a scratch folder first; promoting or overwriting production assets needs a human.",
       "categories": [
@@ -8645,6 +8796,7 @@
       "slug": "office-manager-work-orders-across-portals",
       "title": "办公室经理：工单、排班与门户代劳",
       "titleEn": "Office Manager",
+      "kind": "playbook",
       "summary": "官方扩容角色 Office manager：接收工单、规划产能，并在 Gmail、Slack、ServiceTitan、Quo 和客户门户之间代为点选。让店主不必同时活在六个工具里。预约、改价、对外消息默认停在审批。",
       "summaryEn": "Official expansion role Office manager: intakes work orders, plans capacity, and does the browser work across Gmail, Slack, ServiceTitan, Quo, and the client portal so a shop owner does not have to live in six tools. Booking, price changes, and outbound messages stop for approval by default.",
       "categories": [
@@ -8683,6 +8835,7 @@
       "slug": "customer-support-in-policy-refunds",
       "title": "客服退款 Bot：政策内退款先拟后批",
       "titleEn": "Customer Support · in-policy refunds",
+      "kind": "playbook",
       "summary": "官方扩容角色 Customer support：阅读支持邮件并接入支付服务商，处理政策内的常规退款。Gergely Orosz 在 2026-08-19 公开过同一形态：Grok Bot 连接支持邮箱与 Stripe API，每笔先在 Bot 界面确认再打款。",
       "summaryEn": "Official expansion role Customer support: reads support mail, connects to the payments provider, and handles routine in-policy refunds. Gergely Orosz published the same shape on 2026-08-19: Grok Bot on support email plus the Stripe API, confirming each refund in the Bot UI before money moves.",
       "categories": [
@@ -8710,7 +8863,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-21",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "政策内的退款先拟好，打款前在界面里等你确认。",
@@ -8724,6 +8877,7 @@
       "slug": "mobile-voice-grocery-shopping-bot",
       "title": "边推婴儿车边用语音买菜",
       "titleEn": "Voice grocery shopping on a walk",
+      "kind": "guide",
       "summary": "Debbie O'Brien 在手机上用语音让 Grok Bot 往 Alcampo 购物车加东西：截图核对品牌、按照片认零食、查肉饼含肉比例，验证码自己过，付款她最终点头。之后还让 Bot 比了别家超市的同品牌价格。她把这件事从幕僚长里拆成独立的 Shopping Bot，以免上下文被购物填满。",
       "summaryEn": "Debbie O'Brien used voice on her phone so Grok Bot could add to an Alcampo cart: screenshot the brands, identify snacks from a photo, check meat percentage on burgers, she cleared captchas herself, and she gave the final okay on payment. Afterwards the Bot compared named-brand prices at other delivery supermarkets. She split this off the chief of staff into a dedicated Shopping Bot so shopping would not fill the context window.",
       "categories": [
@@ -8747,7 +8901,7 @@
         "mobile"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-26T01:20:00Z",
       "hook": "边走边用语音往购物车加东西，付款仍由你点头。",
@@ -8761,6 +8915,7 @@
       "slug": "grokbot-boring-directory",
       "title": "无聊目录：每晚长一页",
       "titleEn": "A boring directory that grows a page a night",
+      "kind": "tool",
       "summary": "robert.（@robrtcode）把 Grok Bot 写成「买无聊互联网地」：找没人写的日常搜索缺口，在自己电脑上做小目录，每晚发一页，例行跑，日报进 Telegram。联盟邮件和佣金是作者说法，未核实。",
       "summaryEn": "robert. (@robrtcode) frames Grok Bot as buying boring internet land: find a daily-search niche nobody covers, build a small directory on its own computer, publish a page each night, run it on a routine, reports to Telegram. Affiliate emails and commissions are the author’s claim, unverified.",
       "categories": [
@@ -8803,6 +8958,7 @@
       "slug": "grokbot-ssh-tailscale",
       "title": "用 Tailscale SSH 连上 Grok Bot 电脑",
       "titleEn": "SSH into Grok Bot’s computer over Tailscale",
+      "kind": "guide",
       "summary": "Lonely 转发蓝哥AI 的非官方教程：Grok Bot 背后是一台 Linux。用 Tailscale 把这台机器和自己电脑拉进同一张私有网，再 ssh box@100.x.x.x。官方没把 SSH 做成一等功能。",
       "summaryEn": "Lonely sharing 蓝哥AI’s unofficial tutorial: Grok Bot’s backend is a Linux machine. Join it and your laptop on the same Tailscale network, then ssh box@100.x.x.x. SSH is not a first-class official feature.",
       "categories": [
@@ -8844,6 +9000,7 @@
       "slug": "grok-bot-and-x",
       "title": "Grok Bot 正式接通 X",
       "titleEn": "Grok Bot now works with X",
+      "kind": "news",
       "summary": "官方 2026-08-29：在 Grok Bot 里用 X 连接器登录，没有开发者账号也会代开。付费用户获赠 X API 额度。可让 Bot 搜帖、读时间线/提及、拉趋势、管理书签。官方标明这是第一版。",
       "summaryEn": "Official, 2026-08-29: sign in with the X connector inside Grok Bot; a developer account is created if you lack one. Paid users get starter X API credits. Bots can search posts, read the timeline and mentions, pull trends, and manage bookmarks. Marked as a first version.",
       "categories": [
@@ -8870,7 +9027,7 @@
         "x"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/grok-bot-and-x.webp",
       "publishedAt": "2026-08-29",
       "updatedAt": "2026-09-01T01:41:20Z",
@@ -8882,6 +9039,7 @@
       "slug": "jtemporal-ai-squad",
       "title": "Jessica Temporal：一个周六用六席 Bot 把 Yarn Stash 推上线",
       "titleEn": "Jessica Temporal: a Saturday six-bot squad that shipped Yarn Stash",
+      "kind": "showcase",
       "summary": "Auth0 DevRel Jessica Temporal 周五装上 Grok Bot，周六用 CoS Dorothea（30 分钟例行）、CMO Francis、QA Queenie、开发 Dottie、基建 Iggy、工程经理 Em，给 My Yarn Stash 做了 Ravelry 批量导入、Heroku→FastAPI Cloud、自定义 Auth 域名等。她做最终检查和预发。六席人设公开在 gist。",
       "summaryEn": "Auth0 DevRel Jessica Temporal installed Grok Bot Friday night and spent Saturday with CoS Dorothea (30-min routine), CMO Francis, QA Queenie, developer Dottie, infra Iggy, and EM Em. They shipped Ravelry bulk import, Heroku→FastAPI Cloud, and a custom Auth domain for My Yarn Stash. She kept final checks and staging. Bot descriptions are a public gist.",
       "categories": [
@@ -8911,7 +9069,7 @@
         "browser"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/jtemporal-ai-squad.webp",
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-01T01:41:20Z",
@@ -8925,6 +9083,7 @@
       "slug": "figma-bro",
       "title": "figma bro：Figma 设计系统搭档",
       "titleEn": "figma bro: a Figma design-system partner",
+      "kind": "tool",
       "summary": "John Bai（Designing SpaceXAI）公开的可添加 Grok Bot 模板。Auto Layout 优先、少图层、走真实组件库，改文件走 Figma 连接器而不是截图。第三方 Bot，会代你动手。",
       "summaryEn": "A shareable Grok Bot template from John Bai (Designing SpaceXAI). Autolayout-first, fewest layers, real component library; it edits through the Figma connector, not screenshots. Third-party bot; it can act on your files.",
       "categories": [
@@ -8950,7 +9109,7 @@
         "figma"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/figma-bro.webp",
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-01T02:00:00Z",
@@ -8962,6 +9121,7 @@
       "slug": "grokbots-best",
       "title": "grokbots.best：社区 Grok Bot 发现站",
       "titleEn": "grokbots.best: a community Grok Bot directory",
+      "kind": "showcase",
       "summary": "Hieu Dinh（@hieudinh_）做的公开模板目录，按安装量和集成筛。第三方站，不是 x.ai 官方名录。作者说还会继续加 Bot。",
       "summaryEn": "Hieu Dinh’s (@hieudinh_) public-template directory, filterable by installs and integrations. Third-party, not the official x.ai catalog. Author says more bots are coming.",
       "categories": [
@@ -8983,7 +9143,7 @@
       "requiresApproval": false,
       "connectors": [],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/grokbots-best.webp",
       "publishedAt": "2026-08-30",
       "updatedAt": "2026-09-01T11:40:00Z",
@@ -8995,6 +9155,7 @@
       "slug": "lingxi-engineering-org",
       "title": "Lingxi：把 coding agent 编成工程组织",
       "titleEn": "Lingxi: run coding agents as an engineering org",
+      "kind": "tool",
       "summary": "SpaceXAI / Cursor 工程师 Lingxi Li 的工程长文：专科工头 Bot 拉起 Cloud Agent，Notion 当状态机巡检，人只守高后果闸门。AYi 做了中文提纯。",
       "summaryEn": "SpaceXAI / Cursor engineer Lingxi Li’s write-up: specialist boss bots spawn Cloud Agents, Notion as a shared state machine, humans only at high-consequence gates. AYi published a Chinese digest.",
       "categories": [
@@ -9024,7 +9185,7 @@
         "github"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/lingxi-engineering-org.webp",
       "publishedAt": "2026-08-31",
       "updatedAt": "2026-09-02T05:35:00Z",
@@ -9034,8 +9195,9 @@
     {
       "id": "claude-fable-5-1",
       "slug": "claude-fable-5-1",
-      "title": "资讯：Claude Fable 5.1 / Mythos 5.1",
-      "titleEn": "News: Claude Fable 5.1 / Mythos 5.1",
+      "title": "Claude Fable 5.1 / Mythos 5.1",
+      "titleEn": "Claude Fable 5.1 / Mythos 5.1",
+      "kind": "news",
       "summary": "官方 2026-09：Anthropic 发布 Claude Fable 5.1（通用）与 Mythos 5.1（受信访问）。同一底层模型、不同防护等级。定位编码、知识工作与长任务/Agent，并展示科研侧早期例子（蛋白结合、金星高程图、基因组模型加速）。官方称下调 cache read 价。本条是相邻 AI 资讯，不是 Grok Bot 用法。",
       "summaryEn": "Official, Sept 2026: Anthropic launched Claude Fable 5.1 (generally available) and Mythos 5.1 (trusted access)—same underlying model, different safeguard levels. Pitch is coding, knowledge work, and long-running / agentic tasks, plus early research demos (protein binders, Venus DEM, genomics speedups). Anthropic says cache-read prices are cut. Adjacent AI news — not a Grok Bot playbook.",
       "categories": [
@@ -9069,8 +9231,9 @@
     {
       "id": "designing-grok-bot",
       "slug": "designing-grok-bot",
-      "title": "官方设计文：为持久 Agent 设计 Grok Bot",
+      "title": "为持久 Agent 设计 Grok Bot",
       "titleEn": "Designing Grok Bot for a world of persistent agents",
+      "kind": "guide",
       "summary": "xAI 官方设计长文（2026-09-03）：从聊天会话改成 Bot 名册、在场状态、Bot 自己的电脑，以及无需提示就能开工的 Routine。五件基本对象：Bot / Chat / Prompt·Skill·Routine / Tools / Artifacts。多 Agent 用幕僚长路由，记忆按角色边界。",
       "summaryEn": "Official xAI design essay (2026-09-03): from chat sessions to a Bot roster, presence, each Bot’s own computer, and Routines that start work without a prompt. Five primitives: Bots, Chats, Prompts/Skills/Routines, Tools, Artifacts. Multi-agent coordination via a Chief of Staff; memory stays role-scoped.",
       "categories": [
@@ -9108,6 +9271,7 @@
       "slug": "mindstudio-grok-bot-tips-and-hacks",
       "title": "MindStudio：Chief of Staff + grill-me 技能上手",
       "titleEn": "MindStudio: Grok Bot tips — Chief of Staff + grill-me skill",
+      "kind": "guide",
       "summary": "MindStudio 教程：用幕僚长路由专精子 Agent、grill-me 技能深挖业务上下文、共享知识 vs 单 Bot 记忆、Composio 扩集成、Routine 云端定时，以及用电脑视图演示学技能。",
       "summaryEn": "MindStudio tutorial: chief-of-staff routing to specialist sub-agents, a grill-me skill that interviews you for context, shared vs per-bot memory, Composio for extra integrations, cloud Routines, and teach-by-demo on the agent computer.",
       "categories": [
@@ -9145,6 +9309,7 @@
       "slug": "granda-botops",
       "title": "Granda：用 BotOps 跑 Grok Bot 舰队",
       "titleEn": "Granda: running a Grok Bot fleet with BotOps",
+      "kind": "guide",
       "summary": "可复现的 L1 幕僚长 → L2 领域主 → L3 临时工/节奏跑者分层：Notion 记工单、表情前缀生命周期、静默默认、swarm 上限 6，并附公开 BotOps skill 仓库。",
       "summaryEn": "A reproducible L1 Chief of Staff → L2 domain owners → L3 temps/cadence runners model: Notion tickets, emoji lifecycle, quiet-by-default, swarms capped at 6, plus a public BotOps skill repo.",
       "categories": [
@@ -9173,7 +9338,7 @@
         "browser"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/granda-botops.webp",
       "publishedAt": "2026-09-06",
       "updatedAt": "2026-09-07T01:23:22Z",
@@ -9187,6 +9352,7 @@
       "slug": "greenlit-chief-of-staff-method",
       "title": "Greenlit：幕僚长组织图而非待办清单",
       "titleEn": "Greenlit: chief-of-staff org chart instead of a to-do list",
+      "kind": "guide",
       "summary": "把 X 上流行的 CoS + 窄专精编排写成五份合同：角色一句、描述承载规则、交接五字段、审批强制、全员共享一台电脑——对照官方 roster 文档的可落地版。",
       "summaryEn": "Turns the viral CoS + narrow-specialist pattern into five contracts: one role sentence, rules in the description, five-field handoffs, approvals that enforce, and one shared computer — a buildable reading of the official roster docs.",
       "categories": [
@@ -9220,6 +9386,7 @@
       "slug": "laozhang-grok-bot-getting-started",
       "title": "LaoZhang：安全的 Grok Bot 第一天文档审阅",
       "titleEn": "LaoZhang: a safe first-day Grok Bot document review",
+      "kind": "guide",
       "summary": "可复现入门：核验计划与账号链接、装对架构桌面端，建 Document Checker，附公开 PDF 跑固定 Markdown 报告提示词，再校正后存为 Skill/考虑 Routine。2026-09-08 对照官方文档核过。",
       "summaryEn": "Reproducible first day: verify plan/account linking, install the right desktop build, create a Document Checker, run a fixed Markdown-report prompt on a public PDF, correct it, then save a Skill / consider a Routine. Checked against first-party docs on 2026-09-08.",
       "categories": [
@@ -9253,6 +9420,7 @@
       "slug": "aimaker-seven-bot-phone-team",
       "title": "AI Maker：七人 Grok Bot 小队从手机跑",
       "titleEn": "AI Maker: a seven-Bot Grok Bot team run from the phone",
+      "kind": "showcase",
       "summary": "实操小队：Social Writer（Typefully）、CoS 晨间清单（Gmail/Calendar/Todoist）、Invoice Hunter、Content Researcher（Tavily/YouTube/X→Notion）、SEO 周报、Creative Director、Business Coach；强调先手工跑稳再 Skill+Routine。",
       "summaryEn": "Hands-on roster: Social Writer (Typefully), CoS morning list (Gmail/Calendar/Todoist), Invoice Hunter, Content Researcher (Tavily/YouTube/X → Notion), SEO weekly report, Creative Director, Business Coach — with “run manually first, then Skill + Routine.”",
       "categories": [
@@ -9280,7 +9448,7 @@
         "x"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/aimaker-seven-bot-team.webp",
       "publishedAt": "2026-09-06",
       "updatedAt": "2026-09-08T01:27:40Z",
@@ -9292,6 +9460,7 @@
       "slug": "mobile-next-mobile-mcp",
       "title": "Mobile MCP：让 AI 直接点 iOS / Android App",
       "titleEn": "Mobile MCP: let the agent tap iOS / Android apps over MCP",
+      "kind": "tool",
       "summary": "Mobile Next 开源的 MCP 服务器（Apache-2.0），把 iOS / Android 模拟器、仿真器与 USB 真机接给任何支持 MCP 的客户端：Claude Code、Codex、Gemini CLI、GitHub Copilot、Cursor 等。优先读无障碍树拿结构化元素，读不到再退回截图点坐标。工具覆盖列设备、装卸 / 启停 App、点滑输入、按键、深链、录屏、抓 logcat 与崩溃报告。标准配置 `npx -y @mobilenext/mobile-mcp@latest`，默认 stdio，`--listen` 可起 SSE 并用 MOBILEMCP_AUTH 加 Bearer。",
       "summaryEn": "Mobile Next’s open-source MCP server (Apache-2.0) that exposes iOS / Android simulators, emulators, and USB-connected real devices to any MCP client — Claude Code, Codex, Gemini CLI, GitHub Copilot, Cursor, and more. Reads the accessibility tree first for structured elements, falls back to screenshot + coordinates. Tools cover device listing, app install/launch/terminate, tap/swipe/type, hardware buttons, deep links, screen recording, logcat and crash reports. Standard config is `npx -y @mobilenext/mobile-mcp@latest`; stdio by default, `--listen` for SSE with a MOBILEMCP_AUTH Bearer token.",
       "categories": [
@@ -9326,7 +9495,7 @@
         "adb"
       ],
       "language": "zh",
-      "featured": true,
+      "featured": false,
       "previewImage": "/previews/mobile-mcp.webp",
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T16:20:00Z",
@@ -9340,6 +9509,7 @@
       "slug": "6yuwei-grok-bot-cloud-vm-six-workflows",
       "title": "6yuwei：共享云电脑、审批门与六种可测工作流",
       "titleEn": "6yuwei: shared cloud computer, approval gates, and six testable workflows",
+      "kind": "guide",
       "summary": "2026-08-28 长文：把 Grok Bot 与 Grok 聊天 / Grok Build / API 拆开讲，再落到四根架构柱（共享云电脑、Computer Use、演示学任务/Routine、人审门），并给出可谨慎试跑的六种模式——幕僚长多 Agent、意向线索、缺陷复现开 Issue、无 API 遗留系统 RPA、品牌竞品值守、夜间批处理。强调窄角色、先读后写、Bot 不是安全边界。",
       "summaryEn": "Aug 28, 2026 guide: separates Grok Bot from Grok chat / Grok Build / API, then covers four pillars (shared cloud computer, computer use, teach/routines, approval gates) and six carefully testable patterns—chief-of-staff multi-agent, intent lead prep, bug reproduction tickets, legacy RPA without APIs, brand/competitor watch, and nightly batch jobs. Stresses narrow roles, read-and-prepare first, and that Bots are not security boundaries.",
       "categories": [
@@ -9386,6 +9556,7 @@
       "slug": "cursor-docs-grok-bot-get-started",
       "title": "Cursor 文档：安装桌面端到第一次审阅",
       "titleEn": "Cursor docs: install desktop through first review",
+      "kind": "playbook",
       "summary": "Cursor 官方 Get started：从仪表盘下载桌面端、用 Cursor 账号登录、创建专注 Bot（示例 Piper：产品性能调查、证据与假设分开、不改生产设置）、给边界清晰的首任务、在 Agent Computer 上手动登录工具、审阅后沉淀为 skill/routine；并说明 iOS 同云电脑可消息/接管/审批，但 Teach a task 与改 Routine 仍在桌面。",
       "summaryEn": "Official Cursor Get started: download the desktop app from the dashboard, sign in with Cursor, create a focused Bot (example Piper: product-performance investigation, evidence vs hypotheses, never change production), hand a bounded first task, take over Agent Computer for tool logins, then review and save a skill/routine. Notes iOS shares the same cloud computer for messaging/takeover/approvals, while Teach a task and routine editing stay on desktop.",
       "categories": [
@@ -9402,7 +9573,7 @@
       "sourceType": "official-docs",
       "qualityNote": "Cursor 官方文档页。套餐/隐私模式切换以文档当日说明为准；与 xAI docs 互补，本库不当访问承诺。",
       "qualityNoteEn": "Official Cursor docs page. Plan and Privacy Mode notes follow the live docs; complementary to xAI docs—not an access guarantee.",
-      "difficulty": "beginner",
+      "difficulty": "starter",
       "hasRoutine": true,
       "hasSkill": true,
       "hasMultiAgent": false,
@@ -9414,7 +9585,7 @@
         "browser"
       ],
       "language": "en",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-21",
       "updatedAt": "2026-09-21T01:20:00Z",
       "hook": "官方入门：装上桌面端，审完第一次任务再存技能。",

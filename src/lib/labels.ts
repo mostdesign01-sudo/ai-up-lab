@@ -1,4 +1,4 @@
-import type { Difficulty, SourceType } from "./cases";
+import type { CaseKind, Difficulty, SourceType } from "./cases";
 import type { Locale } from "./i18n";
 
 export const categoryLabels: Record<string, string> = {
@@ -99,6 +99,14 @@ export const sourceTypeLabelsEn: Record<SourceType, string> = {
   tutorial: "Tutorial",
   "case-study": "Case study",
   "adjacent-cursor": "Cursor-adjacent",
+};
+
+export const caseKindLabels: Record<CaseKind, { zh: string; en: string }> = {
+  tool: { zh: "工具", en: "Tool" },
+  guide: { zh: "教程", en: "Guide" },
+  playbook: { zh: "用法配方", en: "Playbook" },
+  news: { zh: "资讯", en: "News" },
+  showcase: { zh: "实践案例", en: "Case study" },
 };
 
 export const difficultyLabels: Record<Difficulty, string> = {

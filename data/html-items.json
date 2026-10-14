@@ -36,7 +36,7 @@
       ],
       "qualityNote": "44 种图示、自含 HTML+SVG、品牌对齐、draw.io/Mermaid/Excalidraw 重画与各宿主装法均照官网与 README。本库没有安装 skill、没有让助手实测出图。",
       "qualityNoteEn": "The 44 types, self-contained HTML+SVG, brand match, draw.io/Mermaid/Excalidraw redraw, and install paths follow the site and README. This library did not install the skill or run a live diagram generation.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-13",
       "updatedAt": "2026-10-13T12:20:00Z",
       "verifyLog": "主源官网 https://diagramdesign.dev/ 与仓库 cathrynlavery/diagram-design；晚间 HTTP 200，gh api：MIT、约 53415★，2026-04-16 创建，最近推送 2026-10-13。预览为 Playwright 实拍官网首屏，裁 3:2 WebP 自托管。",
@@ -74,7 +74,7 @@
       ],
       "qualityNote": "57 patterns、Claude Code / Codex / npx skills 三种装法、演示站与「浏览器仍需自查」都照 README 写。本库没有安装插件、没有让 Agent 实际跑生成对比。",
       "qualityNoteEn": "The 57 patterns, Claude Code / Codex / npx skills install paths, demo site, and “still check in the browser” note follow the README. This library did not install the plugin or run an agent generation comparison.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-12T12:25:00Z",
       "hook": "装给编程助手的界面指南，少一点 AI 同质化。",
@@ -112,7 +112,7 @@
       ],
       "qualityNote": "八步设计方法、「四样里最多一样相同」的规则、风格对比页、截图自查、版本检查只读公开版本列表（可用 OIL_NO_UPDATE_CHECK=1 关闭），都照中文 README 写。价格两处写法不一：官网英文页写 Pro $9.99 一次买断，中文 README 写 69 元一次买断，以购买页为准。本库没有安装这个 Skill、没有让 Agent 实际跑一遍，没买 Pro。",
       "qualityNoteEn": "The eight-step method, the “share at most one of four” rule, the comparison page, screenshot self-checks, and the update check that only reads a public version list (disable with OIL_NO_UPDATE_CHECK=1) follow the Chinese README. Pricing differs by page: the English site says Pro is a $9.99 one-time purchase, the Chinese README says ¥69 one-time; the checkout page is authoritative. This library did not install the skill, did not run it through an agent, and did not buy Pro.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-11T12:30:00Z",
       "hook": "让 AI 先做几版真不一样的界面小样，你挑完它再细化。",
@@ -149,7 +149,7 @@
       ],
       "qualityNote": "零件清单、磁吸成组、多页面跳转与转场、主题四项、四种语言的 Prompt 输出、安卓/网页两种目标、本地存储无后台、可选自带 key 的 AI 助手，都照 README 写。",
       "qualityNoteEn": "The parts list, magnetic grouping, multi-screen navigation and transitions, the four theme axes, prompt output in four languages, Android/web targets, localStorage with no backend, and the optional bring-your-own-key AI helper follow the README.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-11T12:30:00Z",
       "hook": "拖零件拼 Material 3 界面，一键写成给 AI 的提示词。",
@@ -837,7 +837,7 @@
         "https://news.ycombinator.com/item?id=49956681"
       ],
       "previewImage": "/previews/vb6-studio-web.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-04",
       "updatedAt": "2026-10-05T01:10:00Z",
       "qualityNote": "收录理由：一整套老式桌面 IDE 用纯网页技术做出来、能拖控件能运行，适合拆 UI 写法。边界：项目刚建一天；Win32 API 基本没实现，老工程不一定能跑；本库只点开看过，没导入工程。预览自托管。",
@@ -872,7 +872,7 @@
         "https://news.ycombinator.com/item?id=49933461"
       ],
       "previewImage": "/previews/lighthouses-of-the-world.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-02",
       "updatedAt": "2026-10-05T01:10:00Z",
       "qualityNote": "收录理由：大数据量 + 真实节奏动画 + 分级显示的地球可视化，值得拆交互和性能做法。边界：没找到公开仓库和许可证；HN 有人反馈手机上拖动慢、缩放跳得猛；灯塔数据以各上游为准。预览自托管。",
@@ -942,7 +942,7 @@
         "https://news.ycombinator.com/item?id=49927212"
       ],
       "previewImage": "/previews/css-bed.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-01",
       "updatedAt": "2026-10-02T01:00:00Z",
       "qualityNote": "收录理由：立刻可切换对照的 classless 主题床，不是空目录。边界：仓库早间未见 LICENSE（无 SPDX）；各主题版权以各自上游为准；站点本身偏老项目今日再上首页。预览自托管。",
@@ -976,7 +976,7 @@
         "https://news.ycombinator.com/item?id=49843746"
       ],
       "previewImage": "/previews/wave-subworkflow.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-25",
       "updatedAt": "2026-10-02T01:00:00Z",
       "qualityNote": "收录理由：立刻可玩的着色器背景工具，不是空落地页。预览自托管。",
@@ -1012,7 +1012,7 @@
         "https://github.com/Yoosseph/dental-scope"
       ],
       "previewImage": "/previews/dental-scope.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-10-01T01:00:00Z",
       "qualityNote": "收录理由：立刻可试的三维解剖交互，不是空落地页。边界：HN 有评论质疑恒牙数量等解剖细节，本库不背书医学准确性，仅作可视化学习工具；请勿当临床依据。预览自托管。",
@@ -1048,7 +1048,7 @@
         "https://news.ycombinator.com/item?id=49915126"
       ],
       "previewImage": "/previews/56k-rip.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-30",
       "updatedAt": "2026-10-01T01:00:00Z",
       "qualityNote": "收录理由：完整可玩的拨号时代浏览器体验，速率节流可感知。边界：怀旧模拟，不是真实 ISP；「别人摘机掉线」等为设计效果。预览自托管。",
@@ -1085,7 +1085,7 @@
         "https://news.ycombinator.com/item?id=49913350"
       ],
       "previewImage": "/previews/halfspace.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-30",
       "updatedAt": "2026-10-01T01:00:00Z",
       "qualityNote": "收录理由：立刻可开的距离场建模 IDE（WebGPU）。边界：作者标明实验、API 可能破坏；移动 Safari WebGPU 作者称有问题；本库不保证网格可打印质量。预览自托管。",
@@ -1121,7 +1121,7 @@
         "https://news.ycombinator.com/item?id=49914648"
       ],
       "previewImage": "/previews/blackhole-raytracer.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-30",
       "updatedAt": "2026-10-01T01:00:00Z",
       "qualityNote": "收录理由：可动手的 GR 光线弯曲可视化，参数可调。预览自托管。",
@@ -1156,7 +1156,7 @@
         "https://news.ycombinator.com/item?id=49898778"
       ],
       "previewImage": "/previews/space-bl2.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-09-30T01:20:00Z",
       "qualityNote": "收录理由：立刻可试的实时天文可视化，不是营销空页。边界：轨道/目录数字以页内当时显示为准，本站不代拉 CelesTrak、不核验每颗目标。预览自托管。",
@@ -1191,7 +1191,7 @@
         "https://news.ycombinator.com/item?id=49896757"
       ],
       "previewImage": "/previews/enigma-design.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-09-30T01:20:00Z",
       "qualityNote": "收录理由：可动手理解恩尼格玛机件的高质量交互页。边界：密码学教学演示，不是作战级复刻保证；作者自称 WIP。预览自托管。",
@@ -1226,7 +1226,7 @@
         "https://github.com/samalstudios/scissor-community"
       ],
       "previewImage": "/previews/scissor-studio.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-30T01:20:00Z",
       "qualityNote": "收录理由：立刻可试的免费本机向设计工具（向量+像素），不是空落地页。边界：作者尚未承诺开源；移动端 UI 仍 WIP；「不上传」以页内自述为准，本站不代存你的稿件。预览自托管。",
@@ -1263,7 +1263,7 @@
         "https://news.ycombinator.com/item?id=49887510"
       ],
       "previewImage": "/previews/rename-tools.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-29",
       "updatedAt": "2026-09-29T12:10:00Z",
       "qualityNote": "收录理由：立刻可试的浏览器实用工具（批量改名），不是营销落地页。边界：「不上传 / 直改」依赖浏览器 File System Access API；本站未代改你的磁盘文件。可选 TMDb 查询会出站，页内已说明。预览自托管。",
@@ -1299,7 +1299,7 @@
         "https://news.ycombinator.com/item?id=49882781"
       ],
       "previewImage": "/previews/microllm-lab.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-29T01:05:00Z",
       "qualityNote": "收录理由：立刻可试的本机小模型实验室，客观 suite 比聊天皮更有用。边界：仓库 SPDX 为 NOASSERTION，权重许可证以 README 表为准；无 WebGPU 时会慢很多（作者页也提示）；tok/s 与准确率是本机跑出来的，本站未代跑全套。预览自托管。",
@@ -1336,7 +1336,7 @@
         "https://www.spritefusion.com"
       ],
       "previewImage": "/previews/destroy-stickman.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-29T01:05:00Z",
       "qualityNote": "收录理由：高质量可立刻玩的网页互动 demo，和 Sprite Fusion 工具链相邻。边界：公开页未见 SPDX 自链仓库；会加载你输入的第三方站点，注意别对着敏感内网地址乱填；移动端作者标明不可用。预览自托管。",
@@ -1371,7 +1371,7 @@
         "https://news.ycombinator.com/item?id=49881201"
       ],
       "previewImage": "/previews/skinlab.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-29T01:05:00Z",
       "qualityNote": "收录理由：可交互的医学向 WebGL demo，参数和文献口径写在页上。边界：不是诊疗建议；Validate / Scar report 是作者实现，本站未医学复核；未见 SPDX 自链仓库。预览自托管。",
@@ -1405,7 +1405,7 @@
         "https://news.ycombinator.com/item?id=49875638"
       ],
       "previewImage": "/previews/gpu-font.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-28",
       "updatedAt": "2026-09-28T12:10:00Z",
       "qualityNote": "收录理由：立刻可试的本机字体匹配，图片按作者称不上传。边界：前五 92% / 第一 73% 以及各目录家族数是 README 作者实验口径，本站未复跑；DaFont / Adobe 等索引方式以作者说明为准。预览自托管。",
@@ -1441,7 +1441,7 @@
         "https://github.com/SafaElmali"
       ],
       "previewImage": "/previews/lofi-cities.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-09-28T01:05:00Z",
       "qualityNote": "收录理由：立刻可逛的高质量氛围向单页。边界：未找到页面自链的 SPDX 仓库；音频/美术归属以作者页为准；本站未代开付费打赏。预览自托管。",
@@ -1475,7 +1475,7 @@
         "https://news.ycombinator.com/item?id=49871097"
       ],
       "previewImage": "/previews/shotcandy.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-09-28T01:05:00Z",
       "qualityNote": "收录理由：立刻可试的截图美化工具。边界：样式与导出尺寸以作者实现为准；本站未代传真实截图做批量审计。预览自托管。",
@@ -1509,7 +1509,7 @@
         "https://news.ycombinator.com/item?id=49867775"
       ],
       "previewImage": "/previews/tiny-ai-arena.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-09-28T01:05:00Z",
       "qualityNote": "收录理由：可点开的互动演示，不是排行榜文案。边界：仓库无 SPDX；对战结果与模型名以页面为准，不构成智力排名；移动端体验有 HN 差评。预览自托管。",
@@ -1542,7 +1542,7 @@
         "https://news.ycombinator.com/item?id=49865832"
       ],
       "previewImage": "/previews/nudl.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-27",
       "updatedAt": "2026-09-27T12:05:00Z",
       "qualityNote": "收录理由：立刻可试的隐私向链接清理工具。边界：能识别哪些参数算 tracking 以作者规则为准；本站未审计规则表完整性。CLI/托盘未代装。预览自托管。",
@@ -1575,7 +1575,7 @@
         "https://news.ycombinator.com/item?id=49854203"
       ],
       "previewImage": "/previews/print-graph-paper.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-26",
       "updatedAt": "2026-09-26T12:05:00Z",
       "qualityNote": "收录理由：具体可立刻用的浏览器 PDF 工具，不是营销落地页。边界：纸型数量与「1:1 / 免费」是页面自述；本站未审计 PDF 生成与打印驱动。无开源仓库可核。预览自托管。",
@@ -1608,7 +1608,7 @@
         "https://www.echohive.ai/"
       ],
       "previewImage": "/previews/last-day-dinosaurs.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-25",
       "updatedAt": "2026-09-25T12:20:00Z",
       "qualityNote": "收录理由：可直接打开的高质量 HTML 互动绘画，不是营销落地页。边界：“made by Opus 5.5” 是页面自述，本站未重跑生成；闪光 / 灾难内容警告照录页面原文。本站未审计 WebGL 与配乐。预览自托管。",
@@ -1679,7 +1679,7 @@
         "https://news.ycombinator.com/item?id=49823738"
       ],
       "previewImage": "/previews/bastardica.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-25",
       "updatedAt": "2026-09-25T01:05:00Z",
       "qualityNote": "字体处理在浏览器本地（Pyodide / fontTools）；本站未审计 WASM 工具链。收录理由：可直接试的高质量 HTML 字体内核，不是营销落地页。商用衍生字须核源字体许可。预览自托管。",
@@ -1713,7 +1713,7 @@
         "https://news.ycombinator.com/item?id=49837006"
       ],
       "previewImage": "/previews/koi-rest.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-25",
       "updatedAt": "2026-09-25T01:05:00Z",
       "qualityNote": "互动页可复现；本站未审计多人同步实现。与 Agent UI 里 ThreeUI「Koi Studies」组件不是同一物。预览自托管。",
@@ -1867,7 +1867,7 @@
         "llms-txt",
         "hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "许可证以站点 humans.txt / llms.txt 的 CC0 1.0 为准；实验计数以 /api/v1/experiments 与首页列表为 31。无独立 GitHub 仓库可核。",
       "qualityNoteEn": "License follows the site’s humans.txt / llms.txt CC0 1.0 claim; experiment count is 31 per /api/v1/experiments and the homepage list. No separate GitHub repo to verify.",
       "publishedAt": "2026-09-23",
@@ -2077,7 +2077,7 @@
         "hn",
         "experiment"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "站点自述实验向、与 Shiki 一致率非客观正确性；本库不声称可替换生产高亮器。",
       "qualityNoteEn": "Site frames an experiment scored by Shiki agreement, not objective correctness; not catalogued as a production highlighter replacement.",
       "publishedAt": "2026-09-23",
@@ -2112,7 +2112,7 @@
         "hn",
         "visualization"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开落地页与 /climate 互动页均 200（2026-09-22）。仓库 jlhawn/geodesic 可达。",
       "qualityNoteEn": "Landing and /climate interactive pages both 200 (2026-09-22). This library does not claim scientific accuracy beyond the author’s educational-toy framing. Repo jlhawn/geodesic reachable.",
       "publishedAt": "2026-09-22",
@@ -2217,7 +2217,7 @@
         "browser",
         "no-upload"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-21）。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。",
       "qualityNoteEn": "Public page 200 (2026-09-21). The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source.",
       "publishedAt": "2026-09-21",
@@ -2251,7 +2251,7 @@
         "browser",
         "free"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-21）。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。",
       "qualityNoteEn": "Public page 200 (2026-09-21). The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source.",
       "publishedAt": "2026-09-21",
@@ -2352,7 +2352,7 @@
         "show-hn",
         "browser"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-19）。Show HN 当日条目（HN 标题「Procedurally Generated Mineral Gems」）：浏览器内程序化生成矿物宝石，无需安装、直接打开即玩，是本库 HTML 分区偏好的纯前端生成式互动页。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。",
       "qualityNoteEn": "Public page 200 (2026-09-19). Same-day Show HN (HN title “Procedurally Generated Mineral Gems”): procedurally generated mineral gems rendered in the browser, no install, open and play — the kind of client-side generative interactive page the HTML library favors. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source.",
       "publishedAt": "2026-09-19",
@@ -2384,7 +2384,7 @@
         "show-hn",
         "destructive-fun"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-19，/rageit 亦 200）。Show HN 补收（HN 标题「Free game to destroy any web page」，2026-09-18）：本库只收其浏览器内可直接玩的部分——页面自述「Break pre-made pages：No installation. Any browser.」；「砸任意网页」依赖浏览器扩展，扩展本身不在本库收录范围，本库亦未安装测试。属于 HTML 分区的「游戏/互动」类型。HN 条目页在部分网络下可能 403，仍列公开 item URL 作次要来源。",
       "qualityNoteEn": "Public page 200 (2026-09-19; /rageit also 200). Show HN catch-up (HN title “Free game to destroy any web page”, 2026-09-18): catalogued for the part that runs directly in the browser — the page’s own “Break pre-made pages: No installation. Any browser.” mode. Smashing arbitrary pages depends on a browser extension, which is outside this library’s scope and was not installed or tested here. An “interactive” type for the HTML library. The HN item page may return 403 on some networks; the public item URL is still listed as a secondary source.",
       "publishedAt": "2026-09-18",
@@ -2417,7 +2417,7 @@
         "no-upload",
         "show-hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-18）。Show HN 当日条目；免费本地工具，隐私声明清楚（不上传、免账号、无水印），与 Paper Effects 同属浏览器端媒体工具，适合本库 HTML 分区。",
       "qualityNoteEn": "Public page 200 (2026-09-18). Same-day Show HN; a free local tool with a clear privacy claim (no upload, no account, no watermark)—a browser-side media tool in the same vein as Paper Effects, a good fit for the HTML library.",
       "publishedAt": "2026-09-18",
@@ -2450,7 +2450,7 @@
         "show-hn",
         "open-source"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-18）。晨扫后补收的 Show HN（2026-09-15）：开源、免注册、直接在浏览器打开编辑器，对 AI 生成 HTML 的可视化修改是本库 HTML 分区的典型用法。",
       "qualityNoteEn": "Public page 200 (2026-09-18). Catch-up for a solid Show HN (2026-09-15) still missing after the morning scan: open source, no sign-up, editor opens in the browser; visually editing AI-generated HTML is a core HTML-library use.",
       "publishedAt": "2026-09-15",
@@ -2483,7 +2483,7 @@
         "show-hn",
         "no-signup"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-18）。Show HN 当日条目；预览取官网 OG 裁成 3:2 WebP。",
       "qualityNoteEn": "Public page 200 (2026-09-18).",
       "publishedAt": "2026-09-17",
@@ -2517,7 +2517,7 @@
         "show-hn",
         "web-preview"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-17）。Show HN ≈366 分；预览取官网 OG 图裁成 3:2 WebP。",
       "qualityNoteEn": "Public page returned 200 (2026-09-17).",
       "publishedAt": "2026-09-15",
@@ -2618,7 +2618,7 @@
         "shadcn",
         "show-hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "组件数为站点自述；需 React/Tailwind 栈，不是单文件 HTML。预览取首页 hero 截屏裁 3:2。",
       "qualityNoteEn": "Component count is a site claim; stack is React/Tailwind, not single-file HTML.",
       "publishedAt": "2026-09-14",
@@ -2652,7 +2652,7 @@
         "show-hn",
         "interactive"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "托管在 DareBuild 子域；欢迎页可无权限打开。相机与麦克风权限由浏览器本地处理，本站未授权、未录制。预览按线上欢迎屏 DOM/文案复刻渲染（Start your camera / Start camera + mic），非授权后实时画面。",
       "qualityNoteEn": "Hosted on a DareBuild subdomain; the welcome screen opens without granting permissions. Camera and mic stay browser-local; neither was granted or recorded here.",
       "publishedAt": "2026-09-10",
@@ -2686,7 +2686,7 @@
         "show-hn",
         "interactive"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "「免费」「画面不上传」「适龄 4+」为站点自述，本站未测摄像头管线。需本机摄像头与兼容浏览器。预览取自站点公开 /map.svg 资源 letterbox 为 3:2。",
       "qualityNoteEn": "“Free,” “never uploaded,” and “ages 4+” are site claims; the camera pipeline was not re-tested here. Needs a local webcam and a compatible browser.",
       "publishedAt": "2026-09-13",
@@ -2721,7 +2721,7 @@
         "animation",
         "landing"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "组件数为作者 / 站点自述：来源帖写「160+」，官网首页 2026-09-14 当日显示「170+ COMPONENTS · FREE FOREVER」，本站均未复计；官网另有付费 Pro 入口，本条只收免费浏览站。来源帖未给外链，官网与仓库均核到 200。仓库许可证为 MIT + Commons Clause（非纯 MIT），商用二次分发前请自查。非 Grok Bot 案例，归 HTML 收集的组件参考。",
       "qualityNoteEn": "Component counts are author / site claims: the source post says “160+”, and the homepage showed “170+ COMPONENTS · FREE FOREVER” on 2026-09-14 — neither re-counted here. The site also has a paid Pro tier; only the free browse site is catalogued. The post carries no external link; site and repo both returned 200. The repo is licensed MIT + Commons Clause (not plain MIT) — check before redistributing commercially. Not a Grok Bot case; filed under HTML Collection as a component reference.",
       "publishedAt": "2026-09-13",
@@ -2757,7 +2757,7 @@
         "mit",
         "copy-paste"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "条数与协议以仓库与官网为准：仓库 LICENSE 为 MIT（2026-09-14 核对）；来源帖写「150+」，官网首页当日显示「155+ animated React components」，均为作者 / 站点自述、未逐条复计。来源帖未给外链，官网与仓库均核到 200。官网带 Carbon 广告位。",
       "qualityNoteEn": "Count and license follow the repo and site: the repo LICENSE is MIT (checked 2026-09-14); the source post says “150+” and the homepage showed “155+ animated React components” that day — both author / site claims, not re-counted. The post has no external link; site and repo both returned 200. The site carries a Carbon ad slot.",
       "publishedAt": "2026-09-13",
@@ -2792,7 +2792,7 @@
         "component",
         "saas"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "帖内无链接，以官网为准（2026-09-14 核到 200，仓库同）。作者描述与营销腔（「高级感」「Awesome / Tasteful」）不照搬成事实数字，本条不写组件条数。域名 vengence 与仓库名 Vengeance 拼写不一，已在标题与摘要注明。",
       "qualityNoteEn": "No link in the post; the official site is the reference (200 on 2026-09-14, repo likewise). Author descriptions and marketing tone (“premium feel”, “Awesome / Tasteful”) are not turned into factual numbers — no component count is recorded here. The domain (vengence) and repo name (Vengeance) are spelled differently, noted in the title and summary.",
       "publishedAt": "2026-09-13",
@@ -2825,7 +2825,7 @@
         "show-hn",
         "interactive"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "站点自述几乎所有值在浏览器内测、不落盘；两个需服务端暂记的演示会在页面标明。指纹熵数字引自公开研究，本站未复测。",
       "qualityNoteEn": "The site claims nearly all values are measured in-browser and not written to disk; the two demos that need short server memory say so on-page. Entropy figures cite published studies and were not re-measured here.",
       "publishedAt": "2026-09-12",
@@ -2891,7 +2891,7 @@
         "show-hn",
         "health-curious"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "条目数「143」为站首页自述，未逐条复计；医学现象说明仅供好奇，非诊疗建议。",
       "qualityNoteEn": "The “143” count is the site’s own homepage claim, not re-counted here; descriptions are curiosity notes, not medical advice.",
       "publishedAt": "2026-09-10",
@@ -2926,7 +2926,7 @@
         "open-source",
         "npm"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "2026-09-12 核对：演示站与 npm 可达；GitHub Limeade-Labs/sparkui star 很少（个位数），以站点 + npm 为主源。模板数 / 组件数为站点自述。",
       "qualityNoteEn": "Checked 2026-09-12: demo and npm reachable; GitHub Limeade-Labs/sparkui has only a few stars — treat site + npm as primary. Template/component counts are site claims.",
       "publishedAt": "2026-04-17",
@@ -2962,7 +2962,7 @@
         "zero-build",
         "llms-txt"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开演示与 GitHub（2026-09-11 核对约 41 star）。面向 Agent 的 llms.txt / MCP 是亮点；组件数与主题数为站点自述。",
       "qualityNoteEn": "Public demo + GitHub (~41 stars checked 2026-09-11). Agent-facing llms.txt / MCP are the draw; component and theme counts are site claims.",
       "publishedAt": "2026-09-11",
@@ -2994,7 +2994,7 @@
         "themes",
         "zero-build"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "演示站与 npm 公开可开（2026-09-11）。组件数 / 体积为站点自述；未找到独立开源仓库页时以 npm + 演示站为准。",
       "qualityNoteEn": "Demo and npm are public (2026-09-11). Component counts and bundle size are site claims; when no separate public repo page is found, treat npm + demo as the source.",
       "publishedAt": "2026-09-11",
@@ -3025,7 +3025,7 @@
         "demo",
         "show-hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "演示公开可打开；物理教学用途，非论文复现。预览来自现场截图（无 og:image）。",
       "qualityNoteEn": "Demo is publicly open; physics-teaching demo, not a paper reproduction.",
       "publishedAt": "2026-09-10",
@@ -3060,7 +3060,7 @@
         "demo",
         "show-hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开可打开，GitHub 可点进。预览由站点 og 图（1200×630）加边裁成 3:2。",
       "qualityNoteEn": "See the road it rolls on). Publicly open; GitHub repo linked.",
       "publishedAt": "2026-09-10",
@@ -3094,7 +3094,7 @@
         "zero-js",
         "ai-apps"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "演示与 GitHub 公开可打开（MIT）。组件数/体积以站点当日自述为准。",
       "qualityNoteEn": "Demo and GitHub are publicly open (MIT). Component counts/size are the site’s own claims on the day checked.",
       "publishedAt": "2026-09-10",
@@ -3126,7 +3126,7 @@
         "gameboy",
         "hacker-news"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "演示站与 GitHub 公开可打开。来自 Hacker News。",
       "qualityNoteEn": "Demo and GitHub are publicly open. From Hacker News.",
       "publishedAt": "2026-09-10",
@@ -3160,7 +3160,7 @@
         "zero-build",
         "hacker-news"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "演示与 GitHub 公开可打开。来自 Hacker News。",
       "qualityNoteEn": "Demo and GitHub are publicly open. From Hacker News.",
       "publishedAt": "2026-09-09",
@@ -3194,7 +3194,7 @@
         "interactive",
         "hacker-news"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开可打开。来自 Hacker News。",
       "qualityNoteEn": "Publicly open. From Hacker News.",
       "publishedAt": "2026-09-09",
@@ -3221,7 +3221,7 @@
         "https://consti.de"
       ],
       "previewImage": "/previews/laser-graffiti.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-29",
       "updatedAt": "2026-09-03T01:10:00Z",
       "qualityNote": "公开可玩；作者自述页面文案多为 AI 生成。来自 Hacker News。",
@@ -3256,7 +3256,7 @@
         "https://news.ycombinator.com/item?id=49523387"
       ],
       "previewImage": "/previews/ambient-css.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-01",
       "updatedAt": "2026-09-02T01:10:00Z",
       "qualityNote": "演示页与 GitHub 均可公开打开。来自 Hacker News。",
@@ -3474,7 +3474,7 @@
         "https://x.com/sunmer575399/status/2092924093427536109"
       ],
       "previewImage": "/previews/open-design.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-04-28",
       "updatedAt": "2026-08-28T01:25:00Z",
       "qualityNote": "sunmer 推荐。Apache-2.0，GitHub 约 9.2 万 star。本机优先，数据不出机器。",
@@ -3504,7 +3504,7 @@
         "https://news.ycombinator.com/item?id=49468816"
       ],
       "previewImage": "/previews/voronoi-go.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T01:10:00Z",
       "qualityNote": "可公开访问的交互棋盘；今日 HN Show 前列。由 Hacker News 发现。",
@@ -3537,7 +3537,7 @@
         "https://news.ycombinator.com/item?id=49421948"
       ],
       "previewImage": "/previews/glassbox.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-28T01:10:00Z",
       "qualityNote": "单文件、无构建、MIT；适合当「浏览器能暴露什么」的可玩演示。由 Hacker News 发现。",
@@ -3691,7 +3691,7 @@
       "secondaryUrls": [
         "https://github.com/thomaspark/gridgarden/"
       ],
-      "featured": false,
+      "featured": true,
       "publishedAt": "2017-04-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "Grid 布局的对照练习页，URL 长期稳定。",
@@ -3720,7 +3720,7 @@
       "secondaryUrls": [
         "https://github.com/animate-css/animate.css"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2011-10-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "动效类参考站，示范如何用纯 CSS class 展示动画。",
@@ -3749,7 +3749,7 @@
       "secondaryUrls": [
         "https://github.com/lynnandtonic/a-single-div"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2014-10-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "展示 HTML+CSS 极限表达的作品集，源码公开。",
@@ -3856,7 +3856,7 @@
         "portfolio"
       ],
       "sourceUrl": "https://html5up.net/",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2013-01-01",
       "updatedAt": "2026-08-23T04:16:00Z",
       "qualityNote": "长期维护的开源模板目录，适合收集落地页与作品集 HTML。",
@@ -4174,7 +4174,7 @@
         "https://news.ycombinator.com/item?id=49432319"
       ],
       "previewImage": "/previews/dont-wordle.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2022-05-31",
       "updatedAt": "2026-08-26T03:14:01Z",
       "qualityNote": "公开可玩的每日 HTML 字谜。由 Hacker News（news.ycombinator.com / @hackernews）发现。适合「游戏/互动」类收集。",
@@ -4208,7 +4208,7 @@
         "https://news.ycombinator.com/item?id=49419351"
       ],
       "previewImage": "/previews/rack-02.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-24",
       "updatedAt": "2026-08-26T03:14:01Z",
       "qualityNote": "根域名 404，真实可玩页在 /rack-02/。由 Hacker News（news.ycombinator.com / @hackernews）发现。",
@@ -4276,7 +4276,7 @@
         "https://news.ycombinator.com/item?id=48294241"
       ],
       "previewImage": "/previews/polycss.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-05-27",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "另有 Pipes 展示页 css.graphics/pipes。",
@@ -4310,7 +4310,7 @@
         "https://news.ycombinator.com/item?id=49556678"
       ],
       "previewImage": "/previews/sirenfall.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-09-04T02:00:14Z",
       "qualityNote": "公开可玩；雨雷是录音，警报音实时合成。来自 Hacker News。",
@@ -4405,7 +4405,7 @@
         "https://github.com/itchernetski/html-presentation-editor"
       ],
       "previewImage": "/previews/html-presentation-editor.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-05-11",
       "updatedAt": "2026-09-08T01:27:40Z",
       "qualityNote": "免费 MIT，演示页即成品。适合 Agent 整文件改写场景。",
@@ -4437,7 +4437,7 @@
         "https://news.ycombinator.com/item?id=49559069"
       ],
       "previewImage": "/previews/ptree.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T01:27:40Z",
       "qualityNote": "科学可视化演示，非落地模板。",

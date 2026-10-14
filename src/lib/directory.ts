@@ -7,6 +7,7 @@ import { imagePrompts } from "./image-prompts";
 import { cardLine } from "./cardline";
 import { caseCover } from "./covers";
 import { withBase, assetUrl } from "./paths";
+import { caseKindLabels } from "./labels";
 import type { Copy } from "./i18n";
 
 export const sections = [
@@ -33,6 +34,8 @@ export interface DirectoryEntry {
   id: string;
   href: string;
   title: Copy;
+  /** Short content-type label for card kickers, e.g. 工具 / 组件 / 模型. */
+  kind: Copy;
   line: Copy;
   sections: SectionId[];
   tasks: string[];
@@ -46,6 +49,23 @@ export interface DirectoryEntry {
   featured?: boolean;
 }
 
+// First matching type wins, so list the more specific ones first.
+const htmlKinds: [string, Copy][] = [
+  ["game", { zh: "网页游戏", en: "Web game" }], ["component", { zh: "组件", en: "Component" }], ["library", { zh: "组件库", en: "Library" }],
+  ["template", { zh: "模板", en: "Template" }], ["motion", { zh: "动效", en: "Motion" }], ["interactive", { zh: "互动网页", en: "Interactive" }],
+  ["tool", { zh: "网页工具", en: "Web tool" }], ["landing", { zh: "落地页", en: "Landing page" }], ["demo", { zh: "演示", en: "Demo" }],
+  ["portfolio", { zh: "作品集", en: "Portfolio" }], ["docs", { zh: "文档", en: "Docs" }],
+];
+const agentUiKinds: [string, Copy][] = [
+  ["agent-api", { zh: "Agent 接口", en: "Agent API" }], ["library", { zh: "组件库", en: "Library" }], ["button", { zh: "按钮", en: "Button" }],
+  ["text-animation", { zh: "文字动效", en: "Text motion" }], ["hero", { zh: "首屏", en: "Hero" }], ["section", { zh: "区块", en: "Section" }],
+  ["landing", { zh: "落地页", en: "Landing page" }], ["background", { zh: "背景", en: "Background" }], ["shader", { zh: "着色器", en: "Shader" }],
+  ["threejs", { zh: "3D 场景", en: "3D scene" }], ["motion", { zh: "动效", en: "Motion" }], ["component", { zh: "组件", en: "Component" }],
+];
+const typeKind = (types: readonly string[], table: [string, Copy][], fallback: Copy) => table.find(([type]) => types.includes(type))?.[1] ?? fallback;
+// A news case that a model page links to also belongs under Models.
+const modelCaseIds = new Set(models.flatMap(model => model.relatedCaseIds ?? []));
+
 const inList = (list: string[], id: string) => list.includes(id);
 const caseTaskIds = (categories: string[]) => tasks.filter(task => task.categories.some(category => categories.includes(category))).map(task => task.id);
 const base = (lib: LibraryId, item: { id: string; slug: string; title: string; titleEn?: string; summary: string; summaryEn?: string; hook?: string; hookEn?: string; updatedAt: string; stars?: number; featured?: boolean; previewImage?: string }, path: string) => ({
@@ -58,22 +78,22 @@ const base = (lib: LibraryId, item: { id: string; slug: string; title: string; t
 
 export const entries: DirectoryEntry[] = [
   ...cases.map(item => {
-    const isTool = inList(membership.caseTools, item.id);
-    const sectionIds: SectionId[] = [isTool ? "tools" : "learn"];
-    if (inList(membership.casePrompts, item.id)) sectionIds.push("prompts");
-    return { ...base("grok", item, "cases"), sections: sectionIds, tasks: caseTaskIds(item.categories), difficulty: item.difficulty, searchText: caseSearchText(item), sourceUrl: item.sourceUrl, thumb: assetUrl(item.previewImage ?? caseCover(item)), cover: !item.previewImage };
+    const sectionIds: SectionId[] = [item.kind === "tool" || item.kind === "news" ? "tools" : "learn"];
+    if (item.kind === "news" && modelCaseIds.has(item.id)) sectionIds.push("models");
+    if (inList(membership.casePrompts, item.id) || item.categories.some(category => category === "prompts" || category === "templates")) sectionIds.push("prompts");
+    return { ...base("grok", item, "cases"), kind: caseKindLabels[item.kind], sections: sectionIds, tasks: caseTaskIds(item.categories), difficulty: item.difficulty, searchText: caseSearchText(item), sourceUrl: item.sourceUrl, thumb: assetUrl(item.previewImage ?? caseCover(item)), cover: !item.previewImage };
   }),
   ...htmlItems.map(item => {
     const sectionIds: SectionId[] = [];
     if (item.types.includes("tool")) sectionIds.push("tools");
     if (item.types.some(type => type !== "tool" && type !== "docs") || !sectionIds.length) sectionIds.push("design");
     if (inList(membership.htmlLearning, item.id)) sectionIds.push("learn");
-    if (inList(membership.htmlPrompts, item.id)) sectionIds.push("prompts");
-    return { ...base("html", item, "html"), sections: sectionIds, tasks: [], searchText: htmlSearchText(item), sourceUrl: item.sourceUrl };
+    if (inList(membership.htmlPrompts, item.id) || item.tags.some(tag => tag.startsWith("prompt"))) sectionIds.push("prompts");
+    return { ...base("html", item, "html"), kind: typeKind(item.types, htmlKinds, { zh: "网页", en: "Web page" }), sections: sectionIds, tasks: [], searchText: htmlSearchText(item), sourceUrl: item.sourceUrl };
   }),
-  ...agentUiItems.map(item => ({ ...base("agent-ui", item, "agent-ui"), sections: ["design"] as SectionId[], tasks: [], searchText: agentUiSearchText(item), sourceUrl: item.sourceUrl })),
-  ...models.map(item => ({ ...base("models", item, "models"), sections: ["models"] as SectionId[], tasks: [], searchText: [item.title, item.titleEn, item.name, item.vendor, item.summary, item.summaryEn, item.qualityNote, item.qualityNoteEn, ...(item.highlights?.flatMap(x => [x.text, x.textEn]) ?? [])].join(" "), sourceUrl: item.sources.find(source => source.kind === "official")!.url })),
-  ...imagePrompts.map(item => ({ ...base("image-prompts", item, "image-prompts"), sections: ["prompts"] as SectionId[], tasks: [], searchText: [item.title, item.titleEn, item.summary, item.summaryEn, item.tags.join(" "), item.modelTag ?? "gpt-image-2.5", item.qualityNote, item.qualityNoteEn].join(" "), sourceUrl: item.sourceUrl })),
+  ...agentUiItems.map(item => ({ ...base("agent-ui", item, "agent-ui"), kind: typeKind(item.types, agentUiKinds, { zh: "界面件", en: "UI piece" }), sections: ["design"] as SectionId[], tasks: [], searchText: agentUiSearchText(item), sourceUrl: item.sourceUrl })),
+  ...models.map(item => ({ ...base("models", item, "models"), kind: { zh: `${item.vendor} · 模型`, en: `${item.vendor} · Model` }, sections: ["models"] as SectionId[], tasks: [], searchText: [item.title, item.titleEn, item.name, item.vendor, item.summary, item.summaryEn, item.qualityNote, item.qualityNoteEn, ...(item.highlights?.flatMap(x => [x.text, x.textEn]) ?? [])].join(" "), sourceUrl: item.sources.find(source => source.kind === "official")!.url })),
+  ...imagePrompts.map(item => ({ ...base("image-prompts", item, "image-prompts"), kind: { zh: "提示词画廊", en: "Prompt gallery" }, sections: ["prompts"] as SectionId[], tasks: [], searchText: [item.title, item.titleEn, item.summary, item.summaryEn, item.tags.join(" "), item.modelTag ?? "gpt-image-2.5", item.qualityNote, item.qualityNoteEn].join(" "), sourceUrl: item.sourceUrl })),
 ].sort((a, b) => b.updatedAt.localeCompare(a.updatedAt) || a.key.localeCompare(b.key));
 
 export function sectionEntries(id: SectionId) {

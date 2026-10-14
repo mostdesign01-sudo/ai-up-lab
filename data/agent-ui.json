@@ -39,7 +39,7 @@
       "npmPackage": "aria-icons",
       "qualityNote": "npm aria-icons@0.1.0。免费开源；本库没有把 MCP 接到本机助手、没有在真实项目里 add 图标。",
       "qualityNoteEn": "Free/open; this library did not wire MCP into a local agent or add icons in a real app.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-15",
       "updatedAt": "2026-10-13T12:20:00Z",
       "verifyLog": "主源 https://icons.leularia.com/ 与 GitHub LeulAria/Aria-Icons；晚间 HTTP 200，gh api：MIT、88★，2025-12-13 创建，最近推送 2026-10-11。Show HN https://news.ycombinator.com/item?id=49717692（约 2026-09-15）。首页撰写时显示 All Icons 约 1,267,498。预览为 Playwright 关掉引导层后实拍图标浏览页，裁 3:2 WebP。",
@@ -80,7 +80,7 @@
       "npmPackage": "@nikolas.sapa/ns-ui-mcp",
       "qualityNote": "542 组件、源码安装、MCP/CLI/llms.txt、CSS token 要求都照官网与 llms.txt（标注 Generated 2026-10-11、License MIT）写。本库没有实际 npx 安装组件，也没接 MCP 跑通搜索。",
       "qualityNoteEn": "The 542 components, source install, MCP/CLI/llms.txt, and CSS token requirements follow the site and llms.txt (Generated 2026-10-11, License MIT). This library did not run npx installs or exercise the MCP search tools.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-12T12:25:00Z",
       "hook": "五百多个可装进项目的 React 零件，助手也能搜着装。",
@@ -120,7 +120,7 @@
       "npmPackage": "moodi",
       "qualityNote": "免费开源，非 Pro。本库没有在生产项目安装，只打开了 playground。",
       "qualityNoteEn": "Free/open, not Pro. This library did not install it in a production app; only opened the playground.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-12T01:05:00Z",
       "hook": "加载圈换成会眨眼的小 3D 角色，状态一变表情跟着变。",
@@ -201,7 +201,7 @@
       ],
       "qualityNote": "四个演示场景、默认模型 chat-latest、Jev 负责选界面、A2UI 与 Open Generative UI 的分工、iframe 沙箱、可选 MCP 服务都照 README 写；README 自己注明 54 秒发布片是渲染出来的演示画面，实际运行时每次由 Agent 生成、结果会变。本库没有 key，没有本地跑起来，也没核对两家 API 的费用。预览取自仓库 README 场景图（3D 飞机讲解），裁 3:2 WebP 自托管。",
       "qualityNoteEn": "The four demo scenes, default chat-latest model, Jev choosing the presentation, the A2UI / Open Generative UI split, the iframe sandbox, and the optional MCP server follow the README; the README itself says the 54-second launch film shows rendered scenes and real runs are generated per request and vary. This library has neither key, did not run it locally, and did not check either API's pricing.",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-10-09",
       "updatedAt": "2026-10-10T12:30:00Z",
       "hook": "开源的会出界面的聊天，能换成你自己的设计系统。",
@@ -280,7 +280,7 @@
         "local-first",
         "hn"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "README 写明编排的是 Claude Code CLI 子进程，并列出 Director / Planner / Advisor 与 Claude Code / OpenAI / Perplexity；官网营销计数不转成核验指标。registry.npmjs.org/rondoflow 返回 404，不填 npmPackage。",
       "qualityNoteEn": "The README says the canvas runs Claude Code CLI subprocesses and lists Director / Planner / Advisor plus Claude Code / OpenAI / Perplexity; homepage marketing counts are not recorded as verified metrics. registry.npmjs.org/rondoflow returned 404, so npmPackage is omitted.",
       "publishedAt": "2026-09-23",
@@ -320,7 +320,7 @@
         "llms-txt",
         "open-source"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。",
       "qualityNoteEn": "Public playground and GitHub README both state 30 components, copy-paste, and Agent MCP; not ThreeUI Pro.",
       "publishedAt": "2026-09-22",
@@ -358,7 +358,7 @@
         "nature",
         "sylva"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开页 200（2026-09-18），默认变体 Living Green 免登录可看，页头 GET PRO 为站级 CTA（Bookshelf 等 Community 页同样存在）。",
       "qualityNoteEn": "Public page 200 (2026-09-18); the default Living Green variant renders without login, and the header GET PRO is a site-wide CTA (also present on Community pages such as Bookshelf).",
       "publishedAt": "2026-09-18",
@@ -471,7 +471,7 @@
         "css-has",
         "zero-js"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开演示 200（2026-09-15）。组件数为站点自述；预览取文档页 Agent API 段 3:2。非 ThreeUI。",
       "qualityNoteEn": "Public demo returned 200 (2026-09-15). Not ThreeUI.",
       "publishedAt": "2026-09-15",
@@ -508,7 +508,7 @@
         "background",
         "webgl"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（2026-09-14 核到页面可达、Copy Prompt 可见、无 Pro template 遮罩；规范 URL 为 /backgrounds/portal-field/cloud-field）。复制 prompt，勿手写体积云。",
       "qualityNoteEn": "Free Community background (page reachable with Copy Prompt and no Pro template overlay, checked 2026-09-14; canonical URL /backgrounds/portal-field/cloud-field). Copy the prompt; don’t hand-author volume clouds.",
       "publishedAt": "2026-09-14",
@@ -543,7 +543,7 @@
         "cta",
         "css"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费按钮（2026-09-14 核到 Copy Prompt、无 Pro template 遮罩；规范 URL 为 /buttons/rectangle-buttons/dot-border-button）。复制 prompt，勿手写描边动画。",
       "qualityNoteEn": "Free Community button (Copy Prompt present, no Pro template overlay, checked 2026-09-14; canonical URL /buttons/rectangle-buttons/dot-border-button). Copy the prompt; don’t hand-author the border motion.",
       "publishedAt": "2026-09-14",
@@ -578,7 +578,7 @@
         "canvas",
         "vortex"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写粒子环。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the particle rings.",
       "publishedAt": "2026-09-13",
@@ -613,7 +613,7 @@
         "particles",
         "wordmark"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写黏稠粒子场。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the viscous particle field.",
       "publishedAt": "2026-09-13",
@@ -648,7 +648,7 @@
         "css",
         "agent-console"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 CSS 加载件（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community CSS loader (Copy Prompt present, no Pro template overlay, checked 2026-09-12). Copy the prompt; don’t hand-write shaders.",
       "publishedAt": "2026-09-12",
@@ -683,7 +683,7 @@
         "background",
         "canvas"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。四变体均按免费收录。",
       "qualityNoteEn": "Free Community background (Copy Prompt present, no Pro template overlay, checked 2026-09-12). All four variants treated as free.",
       "publishedAt": "2026-09-12",
@@ -717,7 +717,7 @@
         "paper",
         "hero"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Three.js 纸张组件（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js paper component (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
@@ -752,7 +752,7 @@
         "fabric",
         "background"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Three.js 背景（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js background (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
@@ -788,7 +788,7 @@
         "laser",
         "matrix"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（无 PRO 角标，在 THREEUI 免费栏目下的 Laser 家族）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community background (no PRO badge; Laser family under the free THREEUI section). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
@@ -826,7 +826,7 @@
         "cta",
         "liquid-metal"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge; under Buttons in the free THREEUI section). Copy the prompt and only change label / hue — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
@@ -863,7 +863,7 @@
         "background",
         "globe"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（无 PRO 角标）。复制 prompt 只改色相/透明度，不要手写着色器。",
       "qualityNoteEn": "Free Community background (no PRO badge). Copy the prompt and only retint hue/opacity — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
@@ -899,7 +899,7 @@
         "tree",
         "background"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Elements 变体（无 PRO 角标）。复制 prompt 只改色相与粒子，不要手写动效。",
       "qualityNoteEn": "Free Community Elements variant (no PRO badge). Copy the prompt and only retint hue / particles — do not hand-write motion.",
       "publishedAt": "2026-09-10",
@@ -970,7 +970,7 @@
         "circle",
         "cta"
       ],
-      "featured": false,
+      "featured": true,
       "stars": 4,
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt，改主色即可。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and retint the accent.",
@@ -1095,7 +1095,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "免费区够 Agent 抄过渡。不收 Pro 单独条目。",
@@ -1126,7 +1126,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "周览资源五站之一。站点偏作品集，抄之前先看授权和依赖。",
@@ -1157,7 +1157,7 @@
         "https://beui.dev/r",
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "开源，组件 JSON 可给 Agent 直接读。适合当乐高块。",
@@ -1187,7 +1187,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "周览资源那条里的第一站。专门给 Agent 界面，不是通用按钮库。",
@@ -1218,7 +1218,7 @@
       "secondaryUrls": [
         "https://x.com/sts81998850/status/2092631071120920605"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T15:30:00Z",
       "qualityNote": "风间推荐的交互参考站，标语是 The gold standard in buttery smooth digital production。免登录可逛。",
@@ -1251,7 +1251,7 @@
       "secondaryUrls": [
         "https://x.com/sucodeee/status/2092222674478993525"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-08-27T15:30:00Z",
       "qualityNote": "来自 @sucodeee 的进度条动画。现有库以 ThreeUI 为主，这条是同类 GPU UI 动效，编辑器免费可玩，导出文件要 Pro。",
@@ -1285,7 +1285,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "适合当 Agent 的第一块三维 Hero：复制页面里的 prompt / Skill.md，只改色相、点大小和运动速度，不必手改 procedural JS。",
@@ -1321,7 +1321,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "仪表盘或「推理中」状态很好用。把 prompt 交给 Agent，调 hue / speed，做成自己的数据弧，不要去碰 Pro 变体。",
@@ -1427,7 +1427,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "想让 Agent 做出「会呼吸」的按钮时用这组。Skill.md 里改色相就够，别手写 GLSL。",
@@ -1462,7 +1462,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "多 Agent / 网络叙事的背景。把 prompt 交给 Agent，调密度和描边，主题一换就走。",
@@ -1568,7 +1568,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "安静品牌站的好起点。Skill 控制字体与主色，Agent 换主题比重写布局更快。",
@@ -1639,7 +1639,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "自然向产品的免费整页。只链 Living Green； sakura / maple 等 Pro 变体不要打开、不要写进 prompt。",
@@ -1784,7 +1784,7 @@
         "https://threeui.com/browse"
       ],
       "previewImage": "/previews/koi-studies.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-26T01:20:00Z",
       "qualityNote": "Community 免费组件，出现在 ThreeUI 公开「最新」列表。复制 Skill.md 只改纸色、印章红和翻页速度即可，不必手写 CSS 3D。",
@@ -1820,7 +1820,7 @@
         "https://threeui.com/browse"
       ],
       "previewImage": "/previews/bestsellers-book-showcase.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-26T01:20:00Z",
       "qualityNote": "Community 免费完整 HTML 落地页，不是 Pro。适合让 Agent 当「书/系列产品首屏」模板，只改字体和主色。",
@@ -1927,7 +1927,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费三维 Hero。复制 prompt 只改色相和拖影密度，不要手写粒子系统。",
@@ -1961,7 +1961,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费界面件。复制 Skill.md 换成我们的层色和节点标签即可。",
@@ -1995,7 +1995,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费背景场。复制 prompt 只改金属色和流动速度。",
@@ -2029,7 +2029,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-09-04T02:00:14Z",
       "qualityNote": "Community 免费背景场。复制 prompt 只改色相与速度，保持免费变体。",
@@ -2063,7 +2063,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-09-04T02:00:14Z",
       "qualityNote": "Community 免费界面件。复制 prompt 只改尺寸和色相，保持免费变体。",
@@ -2097,7 +2097,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-07",
       "updatedAt": "2026-09-07T01:23:22Z",
       "qualityNote": "Community 同步报告含 portal-field 父组件。只收免费变体，避开标 PRO 的衍生页。",
@@ -2131,7 +2131,7 @@
       "secondaryUrls": [
         "https://github.com/DavidHDev/canvas-ui"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-07",
       "updatedAt": "2026-09-07T01:23:22Z",
       "qualityNote": "面向 Agent 的可复制组件目录（非 ThreeUI）。免费开源；安装用官方 npx/registry，不收付费墙条目。",
@@ -2165,7 +2165,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T01:27:40Z",
       "qualityNote": "只收免费默认变体 Temple Night；Yosemite/Presidio/Lake Louise 为 PRO。",
