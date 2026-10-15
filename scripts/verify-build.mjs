@@ -376,6 +376,49 @@ if (
   console.error("image-prompts/ is missing the dsxzai gallery card.");
   process.exit(1);
 }
+if (
+  !imagePromptsIndex.includes("prompt-board-masonry") ||
+  !imagePromptsIndex.includes("GPT Image 2.5") ||
+  !imagePromptsIndex.includes("精选") ||
+  !imagePromptsIndex.includes("最新") ||
+  !imagePromptsIndex.includes("画廊") ||
+  imagePromptsIndex.includes("最热")
+) {
+  console.error("image-prompts/ gallery is missing model tabs, featured/newest sort, or a real tag, or it shows 最热.");
+  process.exit(1);
+}
+if (
+  !imagePromptsIndex.includes("prompt-sheet") ||
+  !imagePromptsIndex.includes("提示词待补充") ||
+  !imagePromptsIndex.includes("相似作品") ||
+  !imagePromptsIndex.includes("做同款") ||
+  !imagePromptsIndex.includes("/tools/")
+) {
+  console.error("image-prompts/ lightbox is missing the sheet, the missing-prompt note, related works, or the 做同款 hook.");
+  process.exit(1);
+}
+
+const promptsIndex = await readFile(new URL("../dist/prompts/index.html", import.meta.url), "utf8");
+if (
+  !promptsIndex.includes("prompt-board-masonry") ||
+  !promptsIndex.includes("html/meigen/") ||
+  !promptsIndex.includes("image-prompts/dsxzai-image-25-gallery/") ||
+  !promptsIndex.includes("loading=\"lazy\"") ||
+  promptsIndex.includes("最热")
+) {
+  console.error("prompts/ gallery is missing prompt-library cards or shows a popularity sort.");
+  process.exit(1);
+}
+if (
+  !promptsIndex.includes("prompt-sheet") ||
+  !promptsIndex.includes("提示词待补充") ||
+  !promptsIndex.includes("相似作品") ||
+  !promptsIndex.includes("做同款") ||
+  !promptsIndex.includes("/tools/")
+) {
+  console.error("prompts/ lightbox is missing the sheet, the missing-prompt note, related works, or the 做同款 hook.");
+  process.exit(1);
+}
 
 {
   const page = await readFile(new URL("../dist/image-prompts/dsxzai-image-25-gallery/index.html", import.meta.url), "utf8");
