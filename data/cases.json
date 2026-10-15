@@ -1,6 +1,89 @@
 {
   "cases": [
     {
+      "id": "openpencil",
+      "slug": "openpencil",
+      "title": "OpenPencil：开源、可读写 .fig 的设计编辑器（自带 MCP）",
+      "titleEn": "OpenPencil — open-source Figma-compatible design editor with MCP",
+      "kind": "tool",
+      "hook": "本机打开 .fig，还能让编程助手通过 MCP 改每一层。",
+      "hookEn": "Open .fig locally and let agents edit every layer over MCP.",
+      "summary": "OpenPencil 是 MIT 开源的设计编辑器：本机打开并写回 .fig，也能开 .pen。桌面版用 Tauri（README 写可用 Homebrew 安装，也有网页版和在线演示），内置 AI 聊天，密钥用你自己的。编程助手可以走 CLI（npm 包 @open-pencil/cli）或 MCP（@open-pencil/mcp）改图层；文档站还有无头 Vue SDK 和 llms.txt。文档站可编程页列出 24 条 CLI 命令。README 写项目仍在积极开发，现在能用，边角还糙。官网另有托管版 Cloud 的候补名单，和开源编辑器分开，本条不写 Cloud。适合想在自己机器上改 Figma 文件，并让 Cursor、Claude Code 这类助手经 MCP 改每一层的人。本库没有安装桌面版，也没有接上 MCP。",
+      "summaryEn": "OpenPencil is an MIT design editor that opens and writes .fig files, and also opens .pen. The desktop app is Tauri (the README lists a Homebrew install; there is also a web app and an online demo) with built-in AI chat on your own keys. Coding agents can drive layers through the CLI (npm @open-pencil/cli) or MCP (@open-pencil/mcp); the docs also ship a headless Vue SDK and llms.txt. The programmable docs page lists 24 CLI commands. The README says the project is in active development: usable, with rough edges. The site has a separate waitlist for hosted OpenPencil Cloud; this entry does not cover Cloud. Good when you want to edit Figma files on your own machine and let Cursor or Claude Code change every layer over MCP. This library did not install the desktop app or connect MCP.",
+      "categories": [
+        "design",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://openpencil.dev/",
+      "secondaryUrls": [
+        "https://github.com/open-pencil/open-pencil",
+        "https://openpencil.dev/programmable/mcp-server",
+        "https://app.openpencil.dev/demo"
+      ],
+      "sourceType": "community-show",
+      "previewImage": "/previews/openpencil.webp",
+      "qualityNote": "未本机安装桌面版、未接 MCP 实测；功能照官网/README。托管版 Cloud 只看到候补入口，本条不写。",
+      "qualityNoteEn": "Desktop app not installed here and MCP not exercised; features follow the site and README. Hosted Cloud only showed a waitlist, so this entry skips it.",
+      "verifyLog": "2026-10-15 晚间：openpencil.dev、llms.txt、MCP 文档、app.openpencil.dev/demo 均为 HTTP 200。gh api：MIT、8992★，创建于 2026-02-27，最近推送 2026-10-15；最新 release v0.16.0（2026-10-14）。npm @open-pencil/cli 与 @open-pencil/mcp 均为 0.16.0、MIT。README 写可读写 .fig 与 .pen、桌面与网页、内置聊天、CLI、MCP、Vue SDK、llms.txt，并写 Active development / rough edges。官网可编程页标题写 122 MCP tools，并列出 24 条命令名（本库逐条数过是 24）；README 写 100+ tools，未逐个对照工具表。Cloud 页只有候补，未见标价。预览取官网与 README 同款 screenshot.png，去掉黑边后裁 3:2 WebP（1200×800）。",
+      "verifyLogEn": "2026-10-15 evening: openpencil.dev, llms.txt, the MCP docs, and app.openpencil.dev/demo all HTTP 200. gh api: MIT, 8992★, created 2026-02-27, last push 2026-10-15; latest release v0.16.0 (2026-10-14). npm @open-pencil/cli and @open-pencil/mcp are both 0.16.0, MIT. The README says read/write .fig and .pen, desktop and web, built-in chat, CLI, MCP, Vue SDK, llms.txt, and active development with rough edges. The programmable page heading says 122 MCP tools and lists 24 command names (counted here as 24); the README says 100+ tools, and this library did not reconcile the tool table one by one. Cloud is a waitlist with no price shown. Preview is the site/README screenshot.png, black bars removed, cropped to a 3:2 WebP (1200×800).",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "助手会改打开的设计文件；写回 .fig 或交给团队前，自己看一层。",
+      "approvalBoundaryEn": "The agent can edit the open design file; review the layers before writing the .fig back or handing it to a team.",
+      "language": "zh",
+      "connectors": [
+        "mcp"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15T12:45:00Z"
+    },
+    {
+      "id": "figma-specs",
+      "slug": "figma-specs",
+      "title": "Figma Specs：画布上的 Markdown 设计说明，给编程助手读",
+      "titleEn": "Figma Specs — Markdown design briefs on the canvas for coding agents",
+      "kind": "tool",
+      "hook": "把设计说明写在画布旁，编程助手按同一份 Spec 干活。",
+      "hookEn": "Write the design brief beside the canvas so the coding agent follows one Spec.",
+      "summary": "Figma 在 2026-10-15 推出 Specs：放在 Figma 或 FigJam 画布上的多人 Markdown。可以把现成的 .md 拖进画布，也可以按 D 或点工具栏的 Specs 图标新建；帮助中心还写了独立 Spec 文件，文件浏览器里选 Spec，或打开 figma.com/spec/new。说明里能嵌画布上的画框、FigJam 或节点，文字和设计放在一起。接上 Figma MCP 的编程助手用 figma-spec 技能读写这些 Spec。博客写从当天起向付费方案开放测试；帮助中心写 Professional、Education、Organization、Enterprise，且需要对文件有编辑权，并写功能会在接下来几周陆续出现。用助手改 Spec 会计入 Figma 的 AI 额度，自己直接写字不计。这和库里的 figma-agent-ga 不是同一条：那条是 10 月 6 日设计助手正式版，这条是画布上的说明容器。适合想把设计说明写在稿子旁边、让编程助手按同一份 Spec 干活的人。本库没有付费工作区，没有打开 Spec，也没有接 MCP。",
+      "summaryEn": "On 2026-10-15 Figma launched Specs: multiplayer Markdown on the Figma or FigJam canvas. Drop a .md file onto the canvas, or press D / click the Specs icon; the help center also describes a standalone Spec file from the file browser or figma.com/spec/new. A spec can embed a frame, a FigJam file, or a canvas node, so the writing sits next to the design. Coding agents on the Figma MCP server read and write Specs with the figma-spec skill. The blog says open beta on paid plans starting that day; the help center lists Professional, Education, Organization, and Enterprise, requires edit access, and says the feature rolls out over the following weeks. Using the agent on a Spec spends Figma AI credits; typing in the spec yourself does not. This is not the in-library figma-agent-ga entry, which is the 6 October design-agent launch; this one is the on-canvas spec container. Good when the brief should live beside the frames and the coding agent should follow that same Spec. This library has no paid workspace, did not open a Spec, and did not connect MCP.",
+      "categories": [
+        "design",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.figma.com/blog/introducing-figma-specs/",
+      "secondaryUrls": [
+        "https://help.figma.com/hc/en-us/articles/44049066011671-Guide-to-Specs-in-Figma"
+      ],
+      "sourceType": "official-launch",
+      "previewImage": "/previews/figma-specs.webp",
+      "qualityNote": "付费方案开放测试；本库未在付费工作区实测 Specs/MCP。博客写付费方案，帮助中心另列 Education，两套范围都保留。",
+      "qualityNoteEn": "Open beta on paid plans; this library did not try Specs or MCP in a paid workspace. The blog says paid plans and the help center also lists Education; both scopes stay.",
+      "verifyLog": "2026-10-15 晚间：博客与帮助中心均 HTTP 200。博客日期 October 15, 2026，作者 Luke Zhang、Johnny Dallas、Aosheng Ran。拖放 .md、按 D、Figma MCP 与 figma-spec 技能、AI 额度与「直接编辑不计额度」均照博客和帮助中心。帮助中心写 Professional、Education、Organization、Enterprise，需编辑权，并写接下来几周陆续开放。预览为博客配图（画布上的 Spec 与旁边的架构图）裁 3:2 WebP（1200×800），不是本库登录后的实拍。与 figma-agent-ga（发布说明，2026-10-06）源地址不同。",
+      "verifyLogEn": "2026-10-15 evening: blog and help center both HTTP 200. Blog date October 15, 2026; authors Luke Zhang, Johnny Dallas, Aosheng Ran. Drag-and-drop .md, the D shortcut, Figma MCP plus the figma-spec skill, and AI-credit vs direct-edit wording follow the blog and help center. The help center lists Professional, Education, Organization, and Enterprise, requires edit access, and says access rolls out over the following weeks. Preview is a blog figure (a Spec beside an architecture diagram) cropped to a 3:2 WebP (1200×800), not a capture from a signed-in file. Different source URL from figma-agent-ga (release notes, 2026-10-06).",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "让助手改 Spec 或按 Spec 写代码前，先确认席位和 AI 额度。本库没有代为登录。",
+      "approvalBoundaryEn": "Check the seat and AI credits before an agent edits a Spec or implements it. This library did not sign in.",
+      "connectors": [
+        "figma",
+        "mcp"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15T12:45:00Z"
+    },
+    {
       "id": "geneva",
       "slug": "geneva",
       "title": "Geneva — 用 HTML/CSS 做字幕与动效的开源命令行视频编辑器（MIT）",
@@ -9676,11 +9759,18 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-15T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.57",
-    "count": 173,
+    "version": "1.4.58",
+    "count": 175,
     "sourcesCrawled": [
+      "https://openpencil.dev/",
+      "https://github.com/open-pencil/open-pencil",
+      "https://openpencil.dev/programmable/mcp-server",
+      "https://app.openpencil.dev/demo",
+      "https://openpencil.dev/llms.txt",
+      "https://www.figma.com/blog/introducing-figma-specs/",
+      "https://help.figma.com/hc/en-us/articles/44049066011671-Guide-to-Specs-in-Figma",
       "https://genevarender.com/",
       "https://github.com/geneva-render/geneva",
       "https://news.ycombinator.com/item?id=50086224",
