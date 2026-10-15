@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-15",
+      "title": "每日更新：Cases +3（Awesome DESIGN.md / photocn / Open Components）、HTML +1（Blobz）",
+      "titleEn": "Daily update: Cases +3 (Awesome DESIGN.md / photocn / Open Components), HTML +1 (Blobz)",
+      "body": "AI×设计优先。Cases：awesome-design-md（VoltAgent DESIGN.md 合集 + getdesign.md，MIT，约 121k★，约 84 份 DESIGN.md）；photocn（shadcn/ui WebGL 照片编辑组件 + llms.txt，MIT，Show HN #49976134）；open-components（UX/DX/AX 组件标准 + llms.txt，MIT，Show HN #50030849）。HTML：blobz（确定性玩味 SVG 头像工作室/API，MIT，Show HN #50086216）。预览均为 Playwright 3:2 WebP。本库未把 DESIGN.md 丢进真实项目生成、未 shadcn 安装 photocn、未按 Open Components 逐条验收、Blobz 仅在工作室页确认变脸。cases 173→176，html-items 136→137。未改首页精选、Agent UI、Models。等 Hao「合」。",
+      "bodyEn": "AI×design first. Cases: awesome-design-md (VoltAgent DESIGN.md collection + getdesign.md, MIT, ~121k★, ~84 DESIGN.md files); photocn (shadcn/ui WebGL photo-editor components + llms.txt, MIT, Show HN #49976134); open-components (UX/DX/AX component standard + llms.txt, MIT, Show HN #50030849). HTML: blobz (deterministic playful SVG avatar studio/API, MIT, Show HN #50086216). All previews are Playwright 3:2 WebP. This library did not drop DESIGN.md into a real project, did not shadcn-install photocn, did not audit against Open Components rules, and only confirmed Blobz face updates in the studio. cases 173→176, html-items 136→137. Homepage picks, Agent UI, and Models unchanged. Waiting for Hao to merge（合）."
+    },
+    {
       "date": "2026-10-14",
       "title": "晚间收录：HTML +1（Rayden UI）、Agent UI +1（affectUI）、Cases +1（Geneva）",
       "titleEn": "Evening catalog: HTML +1 (Rayden UI), Agent UI +1 (affectUI), Cases +1 (Geneva)",
