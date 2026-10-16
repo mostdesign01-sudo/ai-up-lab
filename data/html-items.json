@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "cc-lineart",
+      "slug": "cc-lineart",
+      "title": "CC-lineart：给编程助手的手绘墨线与水彩网页设计系统",
+      "titleEn": "CC-lineart — hand-drawn ink and watercolor web design system for coding agents",
+      "hook": "手绘墨线加水彩的网页和 SVG，编程助手可以直接抄。",
+      "hookEn": "Hand-drawn ink and watercolor pages and SVG that coding agents can copy.",
+      "summary": "CC-lineart 是 MIT 的双语设计系统，给 Claude Code、Codex 这类编程助手用。风格是手绘墨线加水彩，README 写了 8 个场景：图标、产品首屏、店铺页、界面组件、架构图、数据图、仓库头图，以及一笔画动效。例子是可以打开的 HTML 和 SVG，助手可以照着抄。检查命令是 python3 -I scripts/lineart.py lint。装法是把仓库拷进助手的 skills 目录。适合想让生成的网页和示意图带纸感的人。本库没有在本机跑 lint。",
+      "summaryEn": "CC-lineart is an MIT bilingual design system for coding agents such as Claude Code and Codex. The look is hand-drawn ink plus watercolor. The README lists eight scenarios: icons, product heroes, storefronts, UI kits, architecture diagrams, data graphics, repo banners, and stroke-draw motion. The examples are HTML and SVG an agent can copy. The check command is python3 -I scripts/lineart.py lint. Install by copying the repo into the agent’s skills directory. Good when generated pages and diagrams should feel like paper. This library did not run the lint locally.",
+      "sourceUrl": "https://github.com/aa2246740/CC-lineart",
+      "secondaryUrls": [
+        "https://github.com/aa2246740/CC-lineart/blob/main/README.zh-CN.md",
+        "https://github.com/aa2246740/CC-lineart/blob/main/SKILL.md"
+      ],
+      "previewImage": "/previews/cc-lineart.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "svg",
+        "html",
+        "design-system",
+        "ai",
+        "mit",
+        "skill",
+        "watercolor",
+        "icons",
+        "agent"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-16T01:40:00Z",
+      "qualityNote": "未在本机跑 lineart.py lint；描述照 README。例子页上的 0 warnings 是页面自己的标注。",
+      "qualityNoteEn": "lineart.py lint was not run on this machine; the description follows the README. The 0 warnings label on the example page is that page’s own text.",
+      "verifyLog": "2026-10-16 早间：github.com/aa2246740/CC-lineart、README.zh-CN.md 与 SKILL.md 均为 HTTP 200。gh api：MIT、13★，创建于 2026-10-08，最近推送 2026-10-14。README 列出 8 个场景，并写 12 幅代表性 SVG 通过 python3 -I scripts/lineart.py lint 且 0 警告；本库未跑该命令。预览为 Playwright 打开仓库自带的 examples/pages-hero/hero-landing-page.html（页头自标 CC-lineart v2.4），裁 3:2 WebP（1200×800）。页上的 0 Lint Warnings 是例子文案。",
+      "verifyLogEn": "2026-10-16 morning: github.com/aa2246740/CC-lineart, README.zh-CN.md, and SKILL.md all HTTP 200. gh api: MIT, 13★, created 2026-10-08, last push 2026-10-14. The README lists 8 scenarios and says 12 flagship SVGs pass python3 -I scripts/lineart.py lint with 0 warnings; this library did not run that command. Preview is a Playwright open of the repo’s examples/pages-hero/hero-landing-page.html (the header labels itself CC-lineart v2.4), cropped to a 3:2 WebP (1200×800). The 0 Lint Warnings line is copy on that example."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +4599,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-16T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.66",
+    "count": 137
   }
 }
