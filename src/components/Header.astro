@@ -24,6 +24,7 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
         <summary><Loc zh="更多" en="More" /><Icon name="caret" size={12} /></summary>
         <nav class="directory-more-menu" aria-label="更多 / More">
           <a href={withBase("search/")}><Loc zh="搜索资源" en="Search resources" /></a>
+          <a href={withBase("image-tools/")}><Loc zh="免费图片工具" en="Free image tools" /></a>
           <a class="directory-more-saved" href={withBase("favorites/")}><Loc zh="我的收藏" en="Saved resources" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>
           <a href={withBase("changelog/")}><Loc zh="更新记录" en="Update notes" /></a>
           <a href={withBase("about/")}><Loc zh="关于本站" en="About" /></a>

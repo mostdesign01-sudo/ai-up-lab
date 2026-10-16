@@ -1,0 +1,340 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Loc from "../../components/Loc.astro";
+import { withBase } from "../../lib/paths";
+
+const sampleSrc = withBase("image-tools/sample.jpg");
+const scriptSrc = withBase("image-tools/bench.js");
+const licenseHref = withBase("licenses/image-tools.txt");
+---
+
+<BaseLayout
+  title="免费图片工具 · AI UP LAB"
+  titleEn="Free image tools · AI UP LAB"
+  description="在浏览器里用 MODNet 或 BiRefNet_lite 抠图，在画布上换背景，再用 ESRGAN Slim 放大。照片不离开这台设备。"
+  descriptionEn="Cut out with MODNet or BiRefNet_lite, replace the background on a canvas, and upscale with ESRGAN Slim. Photos stay on this device."
+>
+  <div class="wrap-wide image-bench-page">
+    <section class="collection-hero">
+      <p class="bench-kicker"><Loc zh="工具与应用" en="Tools & apps" /></p>
+      <h1><Loc zh="免费图片工具" en="Free image tools" /></h1>
+      <p class="lede">
+        <Loc
+          zh="在这台浏览器里抠出主体、换成新背景，再放大两倍。照片只在本地处理，模型权重在第一次使用时下载。"
+          en="Cut out a subject, swap the background, and double the resolution in this browser. Photos stay local. Model weights download the first time you use them."
+        />
+      </p>
+    </section>
+
+    <div class="image-bench" data-image-bench data-sample={sampleSrc}>
+      <div class="bench-stage-col">
+        <div class="bench-frame" data-stage>
+          <p class="bench-empty"><Loc zh="正在载入示例图。" en="Loading the sample." /></p>
+        </div>
+        <p class="bench-meta" data-meta>MODNet</p>
+        <p class="bench-status" data-status role="status" aria-live="polite">
+          <Loc zh="准备示例图。" en="Preparing the sample." />
+        </p>
+      </div>
+
+      <form class="bench-controls" onsubmit="return false">
+        <fieldset>
+          <legend><span>01</span><Loc zh="图片" en="Photo" /></legend>
+          <div class="bench-actions">
+            <label class="btn btn-ghost bench-file">
+              <Loc zh="上传照片" en="Upload a photo" />
+              <input data-file type="file" accept="image/*" />
+            </label>
+            <button class="btn btn-ghost" type="button" data-sample-btn>
+              <Loc zh="用示例图" en="Use the sample" />
+            </button>
+          </div>
+          <p class="bench-note">
+            <Loc
+              zh="长边会先收到 1024 像素以内，方便在普通笔记本上跑完。示例人像来自 Pexels（照片 5965592）。"
+              en="The long edge is capped at 1024 pixels so a normal laptop can finish. The sample portrait is Pexels photo 5965592."
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>02</span><Loc zh="抠图" en="Cutout" /></legend>
+          <label class="bench-choice">
+            <input type="radio" name="cutout-model" value="modnet" checked />
+            <span>
+              <strong>MODNet</strong>
+              <Loc zh="人像 · 约 7 MB · Apache-2.0" en="Portraits · about 7 MB · Apache-2.0" />
+            </span>
+          </label>
+          <label class="bench-choice">
+            <input type="radio" name="cutout-model" value="birefnet" />
+            <span>
+              <strong>BiRefNet_lite</strong>
+              <Loc zh="通用主体 · 512 边长 · 约 190 MB · MIT" en="General subjects · 512 px · about 190 MB · MIT" />
+            </span>
+          </label>
+          <button class="btn btn-primary bench-go" type="button" data-cutout>
+            <Loc zh="开始抠图" en="Cut out" />
+          </button>
+          <p class="bench-note">
+            <Loc
+              zh="MODNet 面向人像。BiRefNet_lite 面向更一般的主体，用同一套权重的 512 边长导出，避免 1024 固定图在浏览器里把内存撑满。两者都通过 Transformers.js 在本地推理。"
+              en="MODNet is for portraits. BiRefNet_lite is for more general subjects and uses a 512-pixel export of the same weights, so the fixed 1024 graph does not exhaust browser memory. Both run locally through Transformers.js."
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>03</span><Loc zh="背景" en="Background" /></legend>
+          <div class="bench-modes" role="radiogroup">
+            <label><input type="radio" name="bg-mode" value="clear" checked /><Loc zh="透明" en="Clear" /></label>
+            <label><input type="radio" name="bg-mode" value="color" /><Loc zh="纯色" en="Color" /></label>
+            <label><input type="radio" name="bg-mode" value="image" /><Loc zh="图片" en="Image" /></label>
+          </div>
+          <label class="bench-color">
+            <Loc zh="颜色" en="Color" />
+            <input data-color type="color" value="#1f6f5b" />
+          </label>
+          <label class="btn btn-ghost bench-file">
+            <Loc zh="上传背景图" en="Upload a background" />
+            <input data-bg-file type="file" accept="image/*" />
+          </label>
+          <p class="bench-note">
+            <Loc
+              zh="抠图结果画在画布上。透明背景下面的格子只是预览，下载的 PNG 仍带透明通道。"
+              en="The cutout is drawn on a canvas. The checkerboard is only a preview; the downloaded PNG keeps its alpha."
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend><span>04</span><Loc zh="放大" en="Upscale" /></legend>
+          <button class="btn btn-primary bench-go" type="button" data-upscale>
+            <Loc zh="放大 2×" en="Upscale 2×" />
+          </button>
+          <button class="btn btn-ghost bench-go" type="button" data-download disabled>
+            <Loc zh="下载 PNG" en="Download PNG" />
+          </button>
+          <p class="bench-note">
+            <Loc
+              zh="UpscalerJS 的 ESRGAN Slim 2×（MIT）。它输出不透明的 RGB：透明背景会先铺在上面选的颜色上再放大。"
+              en="UpscalerJS ESRGAN Slim 2× (MIT). It outputs opaque RGB, so a clear background is flattened onto the selected color first."
+            />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+
+    <section class="bench-license">
+      <h2><Loc zh="用了哪些模型" en="Which models" /></h2>
+      <ul>
+        <li>
+          <a href="https://huggingface.co/Xenova/modnet" rel="noreferrer">Xenova/modnet</a>
+          <Loc zh=" · MODNet 人像抠图 · Apache-2.0" en=" · MODNet portrait matting · Apache-2.0" />
+        </li>
+        <li>
+          <a href="https://huggingface.co/studioludens/birefnet-lite-512" rel="noreferrer">studioludens/birefnet-lite-512</a>
+          <Loc zh=" · BiRefNet_lite 的 512 浏览器导出 · MIT，权重来自 ZhengPeng7/BiRefNet_lite" en=" · 512-pixel browser export of BiRefNet_lite · MIT, weights from ZhengPeng7/BiRefNet_lite" />
+        </li>
+        <li>
+          <a href="https://github.com/huggingface/transformers.js" rel="noreferrer">Transformers.js</a>
+          <Loc zh=" · 浏览器推理 · Apache-2.0" en=" · in-browser inference · Apache-2.0" />
+        </li>
+        <li>
+          <a href="https://github.com/thekevinscott/upscaler" rel="noreferrer">UpscalerJS</a>
+          <Loc zh=" + " en=" + " />
+          <a href="https://github.com/thekevinscott/upscaler/tree/main/models/esrgan-slim" rel="noreferrer">ESRGAN Slim 2×</a>
+          <Loc zh=" · MIT。原始 ESRGAN 为 Apache-2.0" en=" · MIT. Original ESRGAN is Apache-2.0" />
+        </li>
+      </ul>
+      <p>
+        <Loc
+          zh="本页只加载上面这些许可。没有接入 BRIA RMBG，也没有接入非商用或 AGPL 权重。"
+          en="This page loads only the licenses above. It does not load BRIA RMBG, or other non-commercial or AGPL weights."
+        />
+        <a href={licenseHref}><Loc zh="许可说明" en="License notes" /></a>
+        ·
+        <a href="https://www.pexels.com/photo/5965592/" rel="noreferrer"><Loc zh="示例图来源" en="Sample photo" /></a>
+      </p>
+      <noscript>
+        <p><Loc zh="抠图和放大需要 JavaScript。关掉脚本时仍可以阅读上面的说明和许可。" en="Cutout and upscale need JavaScript. With scripts off, the description and licenses above stay readable." /></p>
+      </noscript>
+    </section>
+  </div>
+  <script is:inline src={scriptSrc} defer></script>
+</BaseLayout>
+
+<style>
+  .image-bench-page {
+    padding-bottom: 24px;
+  }
+  .bench-kicker {
+    margin: 0 0 8px;
+    color: var(--brass);
+    font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .image-bench-page h1 {
+    margin: 0 0 8px;
+    font-size: clamp(32px, 5vw, 52px);
+    letter-spacing: -0.045em;
+    line-height: 1.05;
+  }
+  .image-bench-page .lede {
+    max-width: 40rem;
+    color: var(--muted);
+    font-size: 17px;
+  }
+  .image-bench {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(280px, 380px);
+    gap: 28px;
+    align-items: start;
+    margin-top: 28px;
+  }
+  .bench-frame {
+    min-height: 320px;
+    border: 1px solid var(--line-strong);
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: #ebe6e1;
+    background-image:
+      linear-gradient(45deg, #d7d0c8 25%, transparent 25%),
+      linear-gradient(-45deg, #d7d0c8 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #d7d0c8 75%),
+      linear-gradient(-45deg, transparent 75%, #d7d0c8 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+  }
+  :global(html[data-theme="dark"]) .bench-frame {
+    background-color: #2a2631;
+    background-image:
+      linear-gradient(45deg, #3a3444 25%, transparent 25%),
+      linear-gradient(-45deg, #3a3444 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #3a3444 75%),
+      linear-gradient(-45deg, transparent 75%, #3a3444 75%);
+  }
+  .bench-frame :global(.bench-canvas) {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 72vh;
+    object-fit: contain;
+  }
+  .bench-empty,
+  .bench-meta,
+  .bench-status,
+  .bench-note,
+  .bench-license p,
+  .bench-license li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .bench-meta,
+  .bench-status {
+    margin: 10px 0 0;
+  }
+  .bench-status {
+    color: var(--ink);
+    min-height: 1.5em;
+  }
+  .bench-controls {
+    display: grid;
+    gap: 14px;
+  }
+  .bench-controls fieldset {
+    margin: 0;
+    padding: 14px 14px 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bg-card);
+  }
+  .bench-controls legend {
+    padding: 0 6px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .bench-controls legend span {
+    margin-right: 8px;
+    color: var(--brass);
+    font-family: var(--font-mono, "IBM Plex Mono", ui-monospace, monospace);
+    font-size: 12px;
+  }
+  .bench-actions,
+  .bench-modes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .bench-go,
+  .bench-file,
+  .bench-actions .btn,
+  .bench-modes label,
+  .bench-color {
+    min-height: 44px;
+  }
+  .bench-go {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .bench-file input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+  .bench-choice,
+  .bench-modes label,
+  .bench-color {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  .bench-choice span {
+    display: grid;
+  }
+  .bench-choice strong {
+    font-weight: 600;
+  }
+  .bench-note {
+    margin: 10px 0 0;
+  }
+  .bench-license {
+    margin-top: 36px;
+    max-width: 46rem;
+  }
+  .bench-license h2 {
+    margin: 0 0 8px;
+    font-size: 20px;
+    letter-spacing: -0.03em;
+  }
+  .bench-license ul {
+    margin: 0 0 12px;
+    padding-left: 18px;
+  }
+  .bench-license a {
+    color: var(--brass);
+  }
+  .image-bench[data-busy] .bench-status {
+    color: var(--brass);
+  }
+  @media (max-width: 800px) {
+    .image-bench {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+    .bench-stage-col {
+      order: -1;
+    }
+    .bench-frame {
+      min-height: 220px;
+    }
+  }
+</style>

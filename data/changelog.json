@@ -36,6 +36,13 @@
       "bodyEn": "Morning daily update failed; evening AI×design catch-up: diagram-design (editorial diagram skill → self-contained HTML+SVG, MIT, push today); aria-icons (1M+ SVGs + MCP/CLI, MIT); doop (open multiplayer design canvas with MCP, AGPL, X lead today). All three have Playwright 3:2 WebP previews; this library did not install skills/MCP or self-host. html-items 134→135, agent-ui 62→63, cases 170→171. Homepage picks and Models unchanged."
     },
     {
+      "date": "2026-10-13",
+      "title": "站内工具：浏览器抠图、换背景、放大",
+      "titleEn": "On-site tool: in-browser cutout, background, and upscale",
+      "body": "新增 /image-tools/。抠图走 Transformers.js：MODNet（Xenova/modnet，q8，Apache-2.0，偏人像）与 BiRefNet_lite（studioludens/birefnet-lite-512，同一套 MIT 权重的 512 边长导出；1024 固定图在浏览器里会内存不足）。换背景在画布上合成透明、纯色或另一张图。放大用 UpscalerJS 的 ESRGAN Slim 2×（MIT；原始 ESRGAN 为 Apache-2.0）。没有接入 BRIA RMBG 或其他非商用、AGPL 权重。照片留在浏览器，权重首次使用时下载。用站内 Pexels 示例人像跑过 MODNet、BiRefNet_lite 512 换色背景，以及 ESRGAN Slim 2×（960×640 放到 1920×1280）。入口在「更多」、页脚和工具目录。",
+      "bodyEn": "Added /image-tools/. Cutout uses Transformers.js: MODNet (Xenova/modnet, q8, Apache-2.0, portraits) and BiRefNet_lite (studioludens/birefnet-lite-512, a 512-pixel export of the same MIT weights; the fixed 1024 graph runs out of browser memory). Background replacement composites clear, solid color, or another image on a canvas. Upscale uses UpscalerJS ESRGAN Slim 2× (MIT; original ESRGAN is Apache-2.0). BRIA RMBG and other non-commercial or AGPL weights are not loaded. Photos stay in the browser; weights download on first use. The bundled Pexels sample was run through MODNet, BiRefNet_lite 512 with a solid background, and ESRGAN Slim 2× (960×640 to 1920×1280). Linked from More, the footer, and the tools section."
+    },
+    {
       "date": "2026-10-12",
       "title": "晚间收录：HTML +1（Suta）、Agent UI +1（NS UI）、Cases +1（EditUI）",
       "titleEn": "Evening catalog: HTML +1 (Suta), Agent UI +1 (NS UI), Cases +1 (EditUI)",
