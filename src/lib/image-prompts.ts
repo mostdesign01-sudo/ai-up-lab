@@ -40,6 +40,8 @@ export interface ImagePromptItem {
   highlights?: ImagePromptHighlight[];
   qualityNote: string;
   qualityNoteEn: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   /** Optional pointers into data/models.json (e.g. a future GPT-Image-2.5 model card). */
   relatedModelIds?: string[];
   featured?: boolean;

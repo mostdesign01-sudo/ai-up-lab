@@ -1,0 +1,23 @@
+---
+import Loc from "./Loc.astro";
+import { ui } from "../lib/i18n";
+
+interface Props {
+  log?: string;
+  logEn?: string;
+}
+
+const { log, logEn = log } = Astro.props;
+---
+
+{
+  log ? (
+    <details class="verify-log">
+      <summary><Loc zh={ui.verifyLog.zh} en={ui.verifyLog.en} /></summary>
+      <p>
+        <span class="loc-zh">{log}</span>
+        <span class="loc-en">{logEn}</span>
+      </p>
+    </details>
+  ) : null
+}

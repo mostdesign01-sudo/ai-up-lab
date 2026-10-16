@@ -34,19 +34,21 @@
 | `sourceUrl` | string | 公开原文 / 演示 URL |
 | `secondaryUrls` | string[] | 可选，仓库或其他来源 |
 | `previewImage` | string | 自托管预览缩略图，站点根相对路径（如 `/previews/{id}.webp`）。构建时由 Astro `base`（与仓库名相同，现为 `/ai-up-lab`）加上前缀。缺省或加载失败时卡片回退 CSS 海报。 |
-| `featured` | boolean | 是否出现在精选 |
+| `featured` | boolean | 精选。规则：编辑星级 ≥4、上了首页或在人工精选表中；全站保持在约 15% 以内 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。编辑质量判断，不是 GitHub star 数；不填则不显示 |
 | `publishedAt` | string | 来源大致公开日期 `YYYY-MM-DD` |
 | `updatedAt` | string | 本条目校对时间 |
-| `qualityNote` | string | 为何收录；页面展示为「收录理由」 |
+| `qualityNote` | string | 读者可读的收录理由与边界；不写 HTTP 状态、star、item 编号、截图方式，构建会检查 |
 | `qualityNoteEn` | string | 英文收录理由 |
+| `verifyLog` | string | 可选。来源核对、抓取状态、star / 点数、截图方式等核验记录；详情页折叠显示，不进卡片 |
+| `verifyLogEn` | string | 可选。英文核验记录 |
 | `tags` | string[] | 检索用标签 |
 
 ## 文案规范 / copy rules
 
 - `hook` 与 `summary`（及 `hookEn` / `summaryEn`）是读者向价值：说明这条是什么、为什么值得打开。
-- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `qualityNote`。
-- 核验痕迹只写在 `qualityNote` / `qualityNoteEn`：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
+- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `verifyLog`。
+- 核验痕迹只写在 `verifyLog` / `verifyLogEn`（详情页折叠为「核验记录」）：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
 - 卡片短句优先用 `hook`。没有 `hook` 时，从 `summary` 取第一句并去掉上述核验碎片。不要把 `qualityNote` 当作卡片文案。详情页仍展示完整 `summary`。
 
 ## 类型枚举

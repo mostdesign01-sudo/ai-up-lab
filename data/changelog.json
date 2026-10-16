@@ -1,6 +1,41 @@
 {
   "notes": [
     {
+      "date": "2026-10-15",
+      "title": "晚间收录：Cases +2（OpenPencil、Figma Specs）、Agent UI +1（figma-pilot）",
+      "titleEn": "Evening catalog: Cases +2 (OpenPencil, Figma Specs), Agent UI +1 (figma-pilot)",
+      "body": "AI×设计：openpencil（MIT，本机读写 .fig/.pen，CLI @open-pencil/cli、MCP @open-pencil/mcp、Vue SDK 与 llms.txt；官网 Cloud 是单独候补，本条只写开源路径）；figma-specs（Figma 2026-10-15 博客，画布上的多人 Markdown，编程助手经 Figma MCP 读；开放测试。博客写付费方案，帮助中心写 Professional / Education / Organization / Enterprise 且需编辑权）。Agent UI：figma-pilot（MIT，README 工具表只有 figma_status、figma_execute、figma_get_api_docs，npm @youware-labs/figma-pilot-mcp）。三条均为 3:2 WebP。本库未装桌面版或插件、未接 MCP、未在付费工作区打开 Specs。cases 173→175（1.4.57→1.4.58），agent-ui 64→65（1.4.28→1.4.29）。未改首页精选、HTML、Models。未合并仍打开的 #104（Awesome DESIGN.md / photocn / Open Components / Blobz）与 #100（Impeccable / XIAS / SolidCraft）。",
+      "bodyEn": "AI×design: openpencil (MIT; local read/write of .fig/.pen; CLI @open-pencil/cli, MCP @open-pencil/mcp, Vue SDK and llms.txt; hosted Cloud is a separate waitlist, so this entry covers the open-source path only); figma-specs (Figma blog 2026-10-15; multiplayer Markdown on the canvas that coding agents read through Figma MCP; open beta. The blog says paid plans; the help center lists Professional / Education / Organization / Enterprise and requires edit access). Agent UI: figma-pilot (MIT; README tool table is only figma_status, figma_execute, and figma_get_api_docs; npm @youware-labs/figma-pilot-mcp). All three are 3:2 WebP. This library did not install the desktop app or plugin, did not connect MCP, and did not open Specs in a paid workspace. cases 173→175 (1.4.57→1.4.58), agent-ui 64→65 (1.4.28→1.4.29). Home picks, HTML, and Models unchanged. Did not merge still-open #104 (Awesome DESIGN.md / photocn / Open Components / Blobz) or #100 (Impeccable / XIAS / SolidCraft)."
+    },
+    {
+      "date": "2026-10-14",
+      "title": "晚间收录：HTML +1（Rayden UI）、Agent UI +1（affectUI）、Cases +1（Geneva）",
+      "titleEn": "Evening catalog: HTML +1 (Rayden UI), Agent UI +1 (affectUI), Cases +1 (Geneva)",
+      "body": "AI×设计优先，补今早之后出现的公开源：rayden-ui（MIT React/Tailwind + MCP）；affectui（AI 产品向 React 组件，仓库 MIT，条目只标免费路径）；geneva（当日 Show HN：JSON 时间线 + HTML/CSS 叠层的 MIT 命令行视频工具）。三条均为 Playwright 3:2 WebP。html-items 135→136，agent-ui 63→64，cases 172→173。未改首页精选、Models。未合并仍打开的晨更 PR #100（Impeccable / XIAS / SolidCraft）。",
+      "bodyEn": "AI×design-first catch-up after morning: rayden-ui (MIT React/Tailwind + MCP); affectui (AI-product React components, MIT repo, free path only); geneva (same-day Show HN: MIT CLI with JSON timelines and HTML/CSS overlays). All three use Playwright 3:2 WebP. html-items 135→136, agent-ui 63→64, cases 172→173. Home picks and Models unchanged. Did not merge still-open morning PR #100 (Impeccable / XIAS / SolidCraft)."
+    },
+    {
+      "date": "2026-10-14",
+      "title": "整站梳理：分类、收录理由与页面一致性",
+      "titleEn": "Site cleanup: categories, listing notes, and page consistency",
+      "body": "Cases 新增 kind 字段（工具 / 教程 / 用法配方 / 资讯 / 实践案例），目录按它自动归档，标题去掉「工具：」等前缀；7 个放错到「学习」的新工具回到「工具与应用」，资讯不再混进教程。收录理由与摘要里的 HTTP 状态、star、HN 编号、截图方式移到详情页折叠的「核验记录」，构建会检查。精选按统一规则收紧到约 16%，难度 beginner 并入 starter。旧列表页标 noindex 并移出 sitemap，详情面包屑统一为「首页 / 目录 / 标题」，「品牌收集」移入「更多」。首页首屏与创意轨重排，模型页改用统一目录版式，补齐浅色模式的文字对比度。条目数量不变。",
+      "bodyEn": "Cases gain a kind field (tool / guide / playbook / news / case study); directories derive from it and titles drop type prefixes. Seven recent tools filed under Learning move to Tools, and launch news no longer mixes with guides. HTTP status, star counts, HN ids, and capture notes move out of listing notes and summaries into a folded Verification log on detail pages, with a build check. Featured follows one rule and drops to about 16%; beginner merges into starter. Legacy listings are noindex and leave the sitemap; breadcrumbs read Home / section / title; Brand collection moves into More. The homepage lead and creative rail are rebalanced, the Models page uses the shared directory layout, and light-mode text contrast is fixed. Entry counts unchanged."
+    },
+    {
+      "date": "2026-10-14",
+      "title": "收录：Cases +1（小王子 3D 剧情游戏）",
+      "titleEn": "Catalog: Cases +1 (The Little Prince 3D story game)",
+      "body": "Hao 指定收录 @Saccc_c 帖：16 天用 Opus 5.5 + Tripo + Blender 做的《小王子》3D 剧情网页游戏（littleprince.dev）。标题页可打开；无头浏览器无 WebGPU，未实玩；开源为作者计划，暂无仓库。Playwright 3:2 WebP 预览。cases 171→172。未改首页精选、Models。",
+      "bodyEn": "Hao-requested: @Saccc_c's Little Prince 3D story web game built in 16 days with Opus 5.5 + Tripo + Blender (littleprince.dev). Title page loads; not played (no WebGPU headless); open-source is planned, no repo yet. Playwright 3:2 WebP preview. cases 171→172. Homepage picks and Models unchanged."
+    },
+    {
+      "date": "2026-10-13",
+      "title": "晚间收录：HTML +1（Diagram Design）、Agent UI +1（Aria Icons）、Cases +1（Doop）",
+      "titleEn": "Evening catalog: HTML +1 (Diagram Design), Agent UI +1 (Aria Icons), Cases +1 (Doop)",
+      "body": "今早「每日更新」失败，晚间补 AI×设计：diagram-design（编辑级图示 Skill，自含 HTML+SVG，MIT，仓库当日有推送）；aria-icons（百万级 SVG + MCP/CLI，MIT）；doop（开源多人设计画布，内置 MCP，AGPL，X 当日线索）。三条均为 Playwright 3:2 WebP；本库未装 skill/MCP、未自托管实测。html-items 134→135，agent-ui 62→63，cases 170→171。未改首页精选、Models。",
+      "bodyEn": "Morning daily update failed; evening AI×design catch-up: diagram-design (editorial diagram skill → self-contained HTML+SVG, MIT, push today); aria-icons (1M+ SVGs + MCP/CLI, MIT); doop (open multiplayer design canvas with MCP, AGPL, X lead today). All three have Playwright 3:2 WebP previews; this library did not install skills/MCP or self-host. html-items 134→135, agent-ui 62→63, cases 170→171. Homepage picks and Models unchanged."
+    },
+    {
       "date": "2026-10-13",
       "title": "站内工具：浏览器抠图、换背景、放大",
       "titleEn": "On-site tool: in-browser cutout, background, and upscale",

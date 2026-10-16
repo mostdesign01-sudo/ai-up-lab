@@ -11,11 +11,15 @@ export type SourceType =
 
 export type Difficulty = "starter" | "intermediate" | "advanced";
 
+/** What a case is to the reader; decides its directory and card label. */
+export type CaseKind = "tool" | "guide" | "playbook" | "news" | "showcase";
+
 export interface CaseItem {
   id: string;
   slug: string;
   title: string;
   titleEn: string;
+  kind: CaseKind;
   summary: string;
   summaryEn?: string;
   hook?: string;
@@ -27,6 +31,8 @@ export interface CaseItem {
   sourceType: SourceType;
   qualityNote: string;
   qualityNoteEn?: string;
+  verifyLog?: string;
+  verifyLogEn?: string;
   difficulty: Difficulty;
   hasRoutine: boolean;
   hasSkill: boolean;

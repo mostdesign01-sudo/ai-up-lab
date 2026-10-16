@@ -4082,3 +4082,55 @@ html[data-theme="light"] .home-pill {
 
 .directory-nav a, .directory-section-card, .directory-card-link, .directory-task-links a, .directory-header-tools a { text-decoration: none; }
 .directory-card:not(:has(.directory-thumb)) .directory-card-copy { padding-right: 42px; }
+
+.verify-log {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.verify-log > summary {
+  cursor: pointer;
+  width: fit-content;
+  padding: 4px 0;
+  color: var(--muted);
+}
+
+.verify-log > summary:hover {
+  color: var(--ink);
+}
+
+.verify-log > p {
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+
+/* Models share the directory page shell; cards stay model-specific but keep summaries short. */
+.model-grid--directory { gap: 20px; }
+@media (min-width: 1050px) {
+  .model-grid--directory { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.model-grid--directory .model-card .summary {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+}
+.model-grid--directory .model-card-media img { aspect-ratio: 16 / 10; object-fit: cover; width: 100%; }
+.directory-related { margin-top: 48px; }
+.directory-related h2 { font-size: var(--text-h2); margin: 0 0 16px; }
+
+/* Small colored text on tinted fills needs more weight than the base hue to reach 4.5:1 in light mode. */
+html[data-theme="light"] .badge.official { color: color-mix(in srgb, var(--teal) 72%, #000); }
+html[data-theme="light"] .badge.community { color: color-mix(in srgb, var(--sky) 82%, #000); }
+html[data-theme="light"] .badge.cursor { color: color-mix(in srgb, var(--violet) 82%, #000); }
+html[data-theme="light"] .badge.approval,
+html[data-theme="light"] .badge.featured { color: color-mix(in srgb, var(--amber) 70%, #000); }
+html[data-theme="light"] .badge.routine { color: color-mix(in srgb, var(--green) 78%, #000); }
+html[data-theme="light"] .badge.multi { color: color-mix(in srgb, var(--rose) 82%, #000); }
+.panel > .quality-note strong,
+.gh-star-repo { color: var(--muted); }
+/* The teal accent sits at 4.1:1 against light surfaces; a slightly deeper teal clears 4.5:1 for links and white button text. */
+html[data-theme="light"][data-collection="html"] { --accent: color-mix(in srgb, var(--teal) 82%, #000); }

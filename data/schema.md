@@ -29,6 +29,7 @@
 | `slug` | string | 详情页路径 `/cases/[slug]/` |
 | `title` | string | 中文标题（主 UI，默认语言） |
 | `titleEn` | string | 英文标题（EN 模式主标题；ZH 模式作为次要行） |
+| `kind` | string | `tool` 工具 · `guide` 教程 · `playbook` 用法配方 · `news` 资讯 · `showcase` 实践案例。决定目录归属与卡片角标；标题不再写「工具：」「资讯：」等前缀 |
 | `summary` | string | 中文摘要。读者向价值，不要写成核验日志 |
 | `summaryEn` | string | 英文摘要（EN 模式展示；勿编造新主张） |
 | `hook` | string | 可选。读者向一句话：这是什么、为什么值得打开。中文 ≤ 36 个汉字。不写核验痕迹、HTTP 状态、星数或点数、日期 |
@@ -38,8 +39,10 @@
 | `sourceUrl` | string | 主来源 URL |
 | `secondaryUrls` | string[] | 可选补充来源 |
 | `sourceType` | string | `official-docs` `official-launch` `community` `tutorial` `case-study` `adjacent-cursor` |
-| `qualityNote` | string | 为何收录、适用边界；页面展示为「收录理由」 |
+| `qualityNote` | string | 读者可读的收录理由与边界（含“本站没有实测什么”）；不写 HTTP 状态、star、item 编号、截图方式，构建会检查 |
 | `qualityNoteEn` | string | 英文收录理由 |
+| `verifyLog` | string | 可选。来源核对、抓取状态、star / 点数、截图方式等核验记录；详情页折叠显示，不进卡片 |
+| `verifyLogEn` | string | 可选。英文核验记录 |
 | `difficulty` | string | `starter` `intermediate` `advanced` |
 | `hasRoutine` | boolean | 是否包含例行 / 定时或事件触发 |
 | `hasSkill` | boolean | 是否包含可复用 skill |
@@ -49,8 +52,8 @@
 | `approvalBoundaryEn` | string | 可选，英文审批边界 |
 | `connectors` | string[] | 涉及的系统或工具 |
 | `language` | string | 条目文案语言，当前为 `zh` |
-| `featured` | boolean | 是否出现在首页精选 |
-| `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `qualityNote` 里。不填则不显示星行 |
+| `featured` | boolean | 精选。规则：编辑星级 ≥4、带完整 `landing`、上了首页或在人工精选表中；全站保持在约 15% 以内 |
+| `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。是编辑对质量的判断，**不是** GitHub star 数；GitHub 数字若要提，写在 `verifyLog` 里。不填则不显示星行 |
 | `previewImage` | string | 可选，站点根路径如 `/previews/id.webp`，界面类优先 3:2 |
 | `landing` | object | 可选。可能从 X 或其它对外帖链到详情页时使用，见下。有 `steps` 时详情页改走「怎么试」，不再渲染通用 Skill / Routine 上手路径 |
 | `publishedAt` | string | 来源公开日期 `YYYY-MM-DD` |
@@ -71,8 +74,8 @@
 ## 文案规范 / copy rules
 
 - `hook` 与 `summary`（及 `hookEn` / `summaryEn`）是读者向价值：说明这条是什么、为什么值得打开。
-- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `qualityNote`。
-- 核验痕迹只写在 `qualityNote` / `qualityNoteEn`：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
+- `summary` / `summaryEn` 不要写 HTTP 状态、`gh api`、Algolia 或截图方式；这些放进 `verifyLog`。
+- 核验痕迹只写在 `verifyLog` / `verifyLogEn`（详情页折叠为「核验记录」）：HTTP 状态、`gh api`、Algolia、截图方式（例如 Playwright / WebP）、撰写时的 star 或点数、日期与 item 编号。
 - 卡片短句优先用 `hook`。没有 `hook` 时，从 `summary` 取第一句并去掉上述核验碎片。不要把 `qualityNote` 当作卡片文案。详情页仍展示完整 `summary`。
 
 ## 徽章映射

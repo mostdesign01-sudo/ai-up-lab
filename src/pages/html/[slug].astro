@@ -1,8 +1,10 @@
 ---
+import Crumb from "../../components/Crumb.astro";
 import Badge from "../../components/Badge.astro";
 import FavButton from "../../components/FavButton.astro";
 import HtmlCard from "../../components/HtmlCard.astro";
 import Loc from "../../components/Loc.astro";
+import VerifyLog from "../../components/VerifyLog.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
@@ -42,11 +44,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 >
   <div class="wrap">
     <article class="detail-hero">
-      <p class="crumb">
-        <a href={withBase("html/")}><Loc zh={ui.lib.html.zh} en={ui.lib.html.en} /></a> /
-        <span class="loc-zh">{item.title}</span>
-        <span class="loc-en">{titleEn}</span>
-      </p>
+      <Crumb lib="html" id={item.id} />
       <div class="badges">
         {item.featured && <Badge kind="official" label={ui.badge.featuredPlain.zh} labelEn={ui.badge.featuredPlain.en} />}
         {item.types.map((type) => <Badge label={htmlTypeLabel(type)} labelEn={htmlTypeLabel(type, "en")} />)}
@@ -113,6 +111,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
             <span class="loc-zh">{item.qualityNote}</span>
             <span class="loc-en">{qualityEn}</span>
           </p>
+          <VerifyLog log={item.verifyLog} logEn={item.verifyLogEn} />
         </section>
         {
           related.length > 0 && (

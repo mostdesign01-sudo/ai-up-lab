@@ -45,6 +45,8 @@ Image 2.5 提示词看板（Image prompts）与三套内容库、可跑路径、
 | `highlights` | object[] | 可选，短要点：`text` `textEn`。作者数字必须标「作者称」，站点自报数字要写清口径 |
 | `qualityNote` | string | 收录理由 / 核实边界：哪些是作者自述、哪个 URL 没能确认、预览图怎么来的 |
 | `qualityNoteEn` | string | 英文收录理由 |
+| `verifyLog` | string | 可选。来源核对、抓取状态、star / 点数、截图方式等核验记录；详情页折叠显示，不进卡片 |
+| `verifyLogEn` | string | 可选。英文核验记录 |
 | `relatedModelIds` | string[] | 可选，指向 `data/models.json` 里已有的 `id`（例如日后开了 GPT-Image-2.5 模型卡）；构建时必须能解析 |
 | `featured` | boolean | 是否在看板靠前 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。只表示这张卡的整理质量，不为原站内容背书；不填则不显示 |

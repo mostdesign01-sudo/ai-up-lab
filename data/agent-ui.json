@@ -1,12 +1,133 @@
 {
   "items": [
     {
+      "id": "figma-pilot",
+      "slug": "figma-pilot",
+      "title": "figma-pilot：用代码执行驱动 Figma 的 MCP（少量工具）",
+      "titleEn": "figma-pilot — MCP that drives Figma via JS code execution",
+      "hook": "三个工具：查连接、跑一段 JS、读 API 说明。",
+      "hookEn": "Three tools: check the connection, run some JS, read the API notes.",
+      "summary": "figma-pilot 是 MIT 开源的 MCP，让编程助手用代码改 Figma，而不是把一长串改图层工具塞进上下文。README 的工具表只有三个：figma_status 看插件是否连上，figma_execute 跑一段 JavaScript，figma_get_api_docs 取接口说明。npm 包是 @youware-labs/figma-pilot-mcp。还要在 Figma 桌面版里导入配套插件（仓库 Releases 有插件压缩包），README 写本地桥接端口 38451。适合已经开着 Figma 桌面版、想让助手一次改一批图层的人。本库没有装插件，也没有把 MCP 接到本机助手上跑过。",
+      "summaryEn": "figma-pilot is an MIT MCP that lets a coding agent change Figma by running code, instead of loading a long list of layer tools into context. The README tool table has three entries: figma_status checks that the plugin is connected, figma_execute runs JavaScript, and figma_get_api_docs returns API notes. The npm package is @youware-labs/figma-pilot-mcp. You also import the companion plugin into Figma desktop (the repo Releases include a plugin zip); the README names local bridge port 38451. Good when Figma desktop is already open and you want an agent to change many layers in one go. This library did not install the plugin or run the MCP against a local agent.",
+      "sourceUrl": "https://github.com/youware-labs/figma-pilot",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/@youware-labs/figma-pilot-mcp",
+        "https://github.com/youware-labs/figma-pilot/releases"
+      ],
+      "previewImage": "/previews/figma-pilot.webp",
+      "npmPackage": "@youware-labs/figma-pilot-mcp",
+      "promptHint": "先在 Figma 桌面版运行 figma-pilot 插件，再让助手用 figma_status 确认连接，用 figma_execute 改画布。改完自己看图层；README 只列这三个工具。",
+      "promptHintEn": "Run the figma-pilot plugin in Figma desktop, then have the agent call figma_status and figma_execute. Review the layers yourself; the README lists only these three tools.",
+      "types": [
+        "agent-api",
+        "library"
+      ],
+      "tags": [
+        "figma",
+        "mcp",
+        "mit",
+        "open-source",
+        "agent-ui",
+        "code-execution"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15T12:45:00Z",
+      "qualityNote": "未在本机安装 Figma 插件、未接 MCP 跑代码；三个工具名照 README：figma_status、figma_execute、figma_get_api_docs。",
+      "qualityNoteEn": "Figma plugin not installed here and no MCP code was run; the three tool names follow the README: figma_status, figma_execute, and figma_get_api_docs.",
+      "verifyLog": "2026-10-15 晚间：gh api license SPDX MIT、106★，创建于 2026-01-19，最近推送 2026-01-29。Release v0.1.9（2026-01-28）含 figma-pilot-plugin-v0.1.9.zip。npm view @youware-labs/figma-pilot-mcp 为 0.1.9、MIT；npmjs.com 页面本环境 curl 403，版本以 npm registry 为准。README 工具表仅 figma_status、figma_execute、figma_get_api_docs。预览取 README 的 assets/openai.gif 一帧，裁 3:2 WebP（1200×800）。未装插件、未接 MCP。",
+      "verifyLogEn": "2026-10-15 evening: gh api license SPDX MIT, 106★, created 2026-01-19, last push 2026-01-29. Release v0.1.9 (2026-01-28) includes figma-pilot-plugin-v0.1.9.zip. npm view @youware-labs/figma-pilot-mcp is 0.1.9, MIT; the npmjs.com page returned curl 403 here, so the version is from the npm registry. The README tool table lists only figma_status, figma_execute, and figma_get_api_docs. Preview is one frame of README assets/openai.gif, cropped to a 3:2 WebP (1200×800). Plugin not installed, MCP not connected."
+    },
+    {
+      "id": "affectui",
+      "slug": "affectui",
+      "title": "affectUI：面向 AI 产品的 React 组件/屏幕块（可 shadcn 安装，带 MCP）",
+      "titleEn": "affectUI: React components and screens for AI products (shadcn install + MCP)",
+      "hook": "聊天、引用、审批卡这类 AI 界面零件，可拷贝或让助手装。",
+      "hookEn": "AI chat, citation, and approval UI you can copy—or let an agent install.",
+      "summary": "affectUI 提供面向 AI 产品的 React 组件、屏幕与动效：流式回答、引用芯片、思考态、Prompt 输入条等。安装可走 shadcn CLI，也可连接官网 MCP，让 Claude / Cursor 等搜索并写入单文件源码。仓库 MIT。官网同时售 Pro（有一次买断促销文案）；免费可拷贝的条目以官网 Library 标明为准，本库只标免费/开源路径，不替 Pro 站台。适合做 AI 聊天或 Agent 产品界面、又想少一点「默认灰卡片」的人。本库未登录、未购买 Pro、未实测 MCP。",
+      "summaryEn": "affectUI ships React components, screens, and motion for AI products—streamed answers, citation chips, thinking states, prompt bars, and more. Install via the shadcn CLI or connect the site MCP so Claude / Cursor can search and write one-file sources. The repo is MIT. The site also sells Pro (a founding one-time offer was on the home page); free copyable items are whatever the Library marks free—this entry covers the free/open path only. Good for AI chat or agent UIs that need less default gray-card look. This library did not log in, buy Pro, or exercise the MCP.",
+      "sourceUrl": "https://www.affectui.com/",
+      "secondaryUrls": [
+        "https://github.com/flohoeller/affectui"
+      ],
+      "previewImage": "/previews/affectui.webp",
+      "npmPackage": "",
+      "promptHint": "先打开 https://www.affectui.com/ 的 Library，只挑标明可免费拷贝的条目；或按官网 Docs 接 MCP / shadcn 安装。不要默认安装 Pro 专属件。",
+      "promptHintEn": "Open the Library on https://www.affectui.com/ and only take items marked free to copy; or follow Docs for MCP / shadcn install. Do not assume Pro pieces are free.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "ai-ui",
+        "mcp",
+        "shadcn",
+        "mit",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-03",
+      "updatedAt": "2026-10-14T12:15:00Z",
+      "qualityNote": "主源官网与仓库 flohoeller/affectui。首页可见 Pro 促销条与「97+」组件自述；免费条数以 Library 为准，未逐条核对。本库未登录、未购 Pro、未接 MCP。",
+      "qualityNoteEn": "Primary sources are the site and flohoeller/affectui. Home page showed a Pro founding offer and a “97+” component claim; free item counts follow the Library and were not audited item-by-item. This library did not log in, buy Pro, or wire MCP.",
+      "verifyLog": "2026-10-14 晚间：affectui.com / flohoeller/affectui HTTP 200；gh api MIT stars=30；首页有 Pro 促销；Playwright 3:2 WebP。晚间 gh api：MIT、30★，最近推送 2026-10-13。预览为 Playwright 实拍首页，裁 3:2 WebP。",
+      "verifyLogEn": "2026-10-14 evening: site/repo HTTP 200; gh api MIT stars=30; Pro offer on home; Playwright 3:2 WebP. Evening gh api: MIT, 30★, last push 2026-10-13. Preview is a Playwright home capture, cropped to a self-hosted 3:2 WebP."
+    },
+    {
+      "id": "aria-icons",
+      "slug": "aria-icons",
+      "title": "Aria Icons：百万级开源 SVG 图标，给 Agent 配好 MCP / CLI",
+      "titleEn": "Aria Icons: 1M+ open SVG icons with MCP and CLI for coding agents",
+      "hook": "搜图标别让助手手画：MCP 直接把 SVG 装进项目。",
+      "hookEn": "Stop freehanding icons—MCP searches and installs real SVGs.",
+      "summary": "给编程助手的入口是 MCP 与 CLI（npm 包 `aria-icons`）：`npx -y aria-icons@latest setup` 可写入 Cursor / Claude 等配置；助手能搜索、按 `collection:name` 取源码、把图标文件写进仓库，也能迁移混用的图标包。另有远程 MCP 测试入口。适合做界面时需要一致图标、又不想让模型现场「画」一个的人。",
+      "summaryEn": "Agent surfaces are MCP plus a CLI (`aria-icons` on npm): `npx -y aria-icons@latest setup` writes Cursor / Claude configs; agents can search, fetch by `collection:name`, write icon files into the repo, and migrate mixed icon packages. A remote MCP playground is also linked. Good when UI work needs consistent glyphs instead of model-drawn SVGs.",
+      "sourceUrl": "https://icons.leularia.com/",
+      "secondaryUrls": [
+        "https://github.com/LeulAria/Aria-Icons",
+        "https://www.npmjs.com/package/aria-icons",
+        "https://news.ycombinator.com/item?id=49717692",
+        "https://mcpplaygroundonline.com/mcp-test-server?url=https%3A%2F%2Ficons.leularia.com%2Fapi%2Fmcp"
+      ],
+      "previewImage": "/previews/aria-icons.webp",
+      "promptHint": "先 `npx -y aria-icons@latest setup` 接 MCP，或让助手按 `collection:name`（如 lucide:house）搜索后把 SVG 源码写进项目；不要让模型手画图标。",
+      "promptHintEn": "Run `npx -y aria-icons@latest setup` for MCP, or have the agent search by `collection:name` (e.g. lucide:house) and write SVG source into the repo—do not freehand icons.",
+      "types": [
+        "ui",
+        "library",
+        "component",
+        "agent-api"
+      ],
+      "tags": [
+        "icons",
+        "svg",
+        "mcp",
+        "cli",
+        "open-source",
+        "mit",
+        "agent-ui",
+        "lucide",
+        "design"
+      ],
+      "npmPackage": "aria-icons",
+      "qualityNote": "npm aria-icons@0.1.0。免费开源；本库没有把 MCP 接到本机助手、没有在真实项目里 add 图标。",
+      "qualityNoteEn": "Free/open; this library did not wire MCP into a local agent or add icons in a real app.",
+      "featured": false,
+      "publishedAt": "2026-09-15",
+      "updatedAt": "2026-10-13T12:20:00Z",
+      "verifyLog": "主源 https://icons.leularia.com/ 与 GitHub LeulAria/Aria-Icons；晚间 HTTP 200，gh api：MIT、88★，2025-12-13 创建，最近推送 2026-10-11。Show HN https://news.ycombinator.com/item?id=49717692（约 2026-09-15）。首页撰写时显示 All Icons 约 1,267,498。预览为 Playwright 关掉引导层后实拍图标浏览页，裁 3:2 WebP。 免费开源（MIT）的图标工具：网站可浏览撰写时显示约 126 万枚 SVG（聚合 Lucide、Tabler、Heroicons、Feather 等多个集合），能改尺寸、描边和颜色再复制或下载。",
+      "verifyLogEn": "Primary sources are https://icons.leularia.com/ and LeulAria/Aria-Icons; HTTP 200 this evening; gh api: MIT, 88★, created 2025-12-13, last push 2026-10-11. npm aria-icons@0.1.0. Show HN https://news.ycombinator.com/item?id=49717692 (~2026-09-15). Home UI showed ~1,267,498 All Icons at write time. Preview is a Playwright capture of the browse UI after dismissing the intro, cropped to 3:2 WebP. A free MIT icon toolkit: the site browsed about 1.26M SVGs at write time across sets such as Lucide, Tabler, Heroicons, and Feather, with size, stroke, and color controls before copy or download."
+    },
+    {
       "id": "ns-ui",
       "slug": "ns-ui",
       "title": "NS UI：542 个可给 Agent 装的 React 组件登记处（带 MCP 与 CLI）",
       "titleEn": "NS UI: a 542-component React registry agents can install via MCP and CLI",
-      "summary": "一个免费开源（MIT）的个人 React 组件库登记处：撰写时首页写有 542 个组件，按交互拆开，能在真实页面上点开预览。安装是把源码拷进你的项目（shadcn 风格的一条 npx 命令），不绑运行时包、不用账号和 API key。颜色走你自己的 CSS 变量，支持亮暗色。给 Agent 用的入口齐：llms.txt、完整说明、MCP（可搜组件、取源码、列分类、给安装命令）、HTTP MCP 端点，以及 npm 上的 CLI。适合已经在用编程助手做前端、又想要「可安装、可主题化」的现成零件，而不是再出一版千篇一律的卡片。",
-      "summaryEn": "A free MIT personal React component registry: the home page listed 542 components at write time, each built around one interaction, previewable live on the site. Install copies source into your project with a single shadcn-style npx command—no runtime package, no account, no API key. Colors come from your own CSS tokens and support light/dark. Agent surfaces include llms.txt, full docs, an MCP server (search, fetch source, list categories, install command), an HTTP MCP endpoint, and an npm CLI. Good when your coding agent builds frontends and you want installable, themeable parts instead of another generic card stack.",
+      "summary": "安装是把源码拷进你的项目（shadcn 风格的一条 npx 命令），不绑运行时包、不用账号和 API key。颜色走你自己的 CSS 变量，支持亮暗色。给 Agent 用的入口齐：llms.txt、完整说明、MCP（可搜组件、取源码、列分类、给安装命令）、HTTP MCP 端点，以及 npm 上的 CLI。适合已经在用编程助手做前端、又想要「可安装、可主题化」的现成零件，而不是再出一版千篇一律的卡片。",
+      "summaryEn": "Install copies source into your project with a single shadcn-style npx command—no runtime package, no account, no API key. Colors come from your own CSS tokens and support light/dark. Agent surfaces include llms.txt, full docs, an MCP server (search, fetch source, list categories, install command), an HTTP MCP endpoint, and an npm CLI. Good when your coding agent builds frontends and you want installable, themeable parts instead of another generic card stack.",
       "sourceUrl": "https://design.helpmarq.com/",
       "secondaryUrls": [
         "https://github.com/nikolas-sapa/ns-ui",
@@ -33,13 +154,15 @@
         "hacker-news"
       ],
       "npmPackage": "@nikolas.sapa/ns-ui-mcp",
-      "qualityNote": "线索 Show HN https://news.ycombinator.com/item?id=50011077 （2026-10-08T19:48Z，约 10-09 03:48 北京时间，撰写时 2 分）。仓库 nikolas-sapa/ns-ui 晚间 gh api：MIT、25★，最近推送 2026-10-12。542 组件、源码安装、MCP/CLI/llms.txt、CSS token 要求都照官网与 llms.txt（标注 Generated 2026-10-11、License MIT）写。官网晚间 HTTP 200。本库没有实际 npx 安装组件，也没接 MCP 跑通搜索。预览为 Playwright 实拍首页组件墙，裁 3:2 WebP 自托管。",
-      "qualityNoteEn": "Lead: Show HN https://news.ycombinator.com/item?id=50011077 (2026-10-08T19:48Z, about 03:48 on 10-09 Beijing time, 2 points at write time). Repo nikolas-sapa/ns-ui on this evening’s gh api: MIT, 25★, last push 2026-10-12. The 542 components, source install, MCP/CLI/llms.txt, and CSS token requirements follow the site and llms.txt (Generated 2026-10-11, License MIT). Site HTTP 200 this evening. This library did not run npx installs or exercise the MCP search tools. Preview is a Playwright capture of the home catalog, cropped to a self-hosted 3:2 WebP.",
-      "featured": true,
+      "qualityNote": "542 组件、源码安装、MCP/CLI/llms.txt、CSS token 要求都照官网与 llms.txt（标注 Generated 2026-10-11、License MIT）写。本库没有实际 npx 安装组件，也没接 MCP 跑通搜索。",
+      "qualityNoteEn": "The 542 components, source install, MCP/CLI/llms.txt, and CSS token requirements follow the site and llms.txt (Generated 2026-10-11, License MIT). This library did not run npx installs or exercise the MCP search tools.",
+      "featured": false,
       "publishedAt": "2026-10-08",
       "updatedAt": "2026-10-12T12:25:00Z",
       "hook": "五百多个可装进项目的 React 零件，助手也能搜着装。",
-      "hookEn": "500+ install-as-source React parts your agent can search and add."
+      "hookEn": "500+ install-as-source React parts your agent can search and add.",
+      "verifyLog": "线索 Show HN https://news.ycombinator.com/item?id=50011077 （2026-10-08T19:48Z，约 10-09 03:48 北京时间，撰写时 2 分）。仓库 nikolas-sapa/ns-ui 晚间 gh api：MIT、25★，最近推送 2026-10-12。官网晚间 HTTP 200。预览为 Playwright 实拍首页组件墙，裁 3:2 WebP 自托管。 一个免费开源（MIT）的个人 React 组件库登记处：撰写时首页写有 542 个组件，按交互拆开，能在真实页面上点开预览。",
+      "verifyLogEn": "Lead: Show HN https://news.ycombinator.com/item?id=50011077 (2026-10-08T19:48Z, about 03:48 on 10-09 Beijing time, 2 points at write time). Repo nikolas-sapa/ns-ui on this evening’s gh api: MIT, 25★, last push 2026-10-12. Site HTTP 200 this evening. Preview is a Playwright capture of the home catalog, cropped to a self-hosted 3:2 WebP. A free MIT personal React component registry: the home page listed 542 components at write time, each built around one interaction, previewable live on the site."
     },
     {
       "id": "moodi",
@@ -71,13 +194,15 @@
         "open-source"
       ],
       "npmPackage": "moodi",
-      "qualityNote": "主源是 https://www.getmoodi.dev/ 与 GitHub korneXD/moodi（MIT），早间 HTTP 200；npm moodi@0.5.0。Show HN https://news.ycombinator.com/item?id=50047937 （2026-10-11）。免费开源，非 Pro。本库没有在生产项目安装，只打开了 playground。预览为 Playwright 实拍 playground 裁 3:2 WebP。",
-      "qualityNoteEn": "Primary sources are https://www.getmoodi.dev/ and GitHub korneXD/moodi (MIT), HTTP 200 this morning; npm moodi@0.5.0. Show HN https://news.ycombinator.com/item?id=50047937 (2026-10-11). Free/open, not Pro. This library did not install it in a production app; only opened the playground. Preview is a Playwright capture of the playground, cropped to 3:2 WebP.",
-      "featured": true,
+      "qualityNote": "免费开源，非 Pro。本库没有在生产项目安装，只打开了 playground。",
+      "qualityNoteEn": "Free/open, not Pro. This library did not install it in a production app; only opened the playground.",
+      "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-12T01:05:00Z",
       "hook": "加载圈换成会眨眼的小 3D 角色，状态一变表情跟着变。",
-      "hookEn": "Swap the spinner for a blinking 3D buddy that changes with UI state."
+      "hookEn": "Swap the spinner for a blinking 3D buddy that changes with UI state.",
+      "verifyLog": "主源是 https://www.getmoodi.dev/ 与 GitHub korneXD/moodi（MIT），早间 HTTP 200；npm moodi@0.5.0。Show HN https://news.ycombinator.com/item?id=50047937 （2026-10-11）。预览为 Playwright 实拍 playground 裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources are https://www.getmoodi.dev/ and GitHub korneXD/moodi (MIT), HTTP 200 this morning; npm moodi@0.5.0. Show HN https://news.ycombinator.com/item?id=50047937 (2026-10-11). Preview is a Playwright capture of the playground, cropped to 3:2 WebP."
     },
     {
       "id": "agent-standup",
@@ -108,13 +233,15 @@
         "hacker-news"
       ],
       "npmPackage": "@double_geste/agent-standup",
-      "qualityNote": "线索 HN item 50039630（2026-10-11T03:42Z，约 10-11 11:42 北京时间，撰写时 44pts、45 条评论）。仓库 Atoll92/agent-standup 晚间 gh api：MIT、104★，2026-10-10 创建，最近推送 2026-10-11；最新 release v1.24.3（2026-10-11T11:16Z），npm 包 @double_geste/agent-standup 同为 1.24.3、MIT。入会/离会、配音与口型、共享屏幕显示真实输出、卡住/安静/失败提示、token 与上下文计数、回放与视频导出、只读本地会话文件、九种界面语言（除英法外为 AI 初译）都照 README 和官网写；README 注明这是非官方社区项目，与 Anthropic 无关，Windows/Linux 版为实验性，macOS 应用未签名。本库没有本地跑 npx 或扩展，没接自己的会话。预览为官网 1 分钟演示视频（虚构团队，非用户数据）第 35 秒画面，裁 3:2 WebP 自托管。",
-      "qualityNoteEn": "Lead: HN item 50039630 (2026-10-11T03:42Z, about 11:42 on 10-11 Beijing time, 44pts and 45 comments at write time). Repo Atoll92/agent-standup on this evening’s gh api: MIT, 104★, created 2026-10-10, last push 2026-10-11; latest release v1.24.3 (2026-10-11T11:16Z), and npm package @double_geste/agent-standup is also 1.24.3, MIT. Joining/leaving, voices and lip-sync, screen sharing with real output, stuck/quiet/failed indicators, token and context gauges, replay and video export, reading only local session files, and nine interface languages (all but English and French AI-drafted) follow the README and site; the README says it is an unofficial community project not affiliated with Anthropic, Windows/Linux builds are experimental, and the macOS app is unsigned. This library did not run the npx command or the extension and did not connect its own sessions. Preview is the 35-second frame of the site’s 1-minute demo video (a fictional team, not user data), cropped to a self-hosted 3:2 WebP.",
+      "qualityNote": "入会/离会、配音与口型、共享屏幕显示真实输出、卡住/安静/失败提示、token 与上下文计数、回放与视频导出、只读本地会话文件、九种界面语言（除英法外为 AI 初译）都照 README 和官网写；README 注明这是非官方社区项目，与 Anthropic 无关，Windows/Linux 版为实验性，macOS 应用未签名。本库没有本地跑 npx 或扩展，没接自己的会话。",
+      "qualityNoteEn": "Joining/leaving, voices and lip-sync, screen sharing with real output, stuck/quiet/failed indicators, token and context gauges, replay and video export, reading only local session files, and nine interface languages (all but English and French AI-drafted) follow the README and site; the README says it is an unofficial community project not affiliated with Anthropic, Windows/Linux builds are experimental, and the macOS app is unsigned. This library did not run the npx command or the extension and did not connect its own sessions.",
       "featured": false,
       "publishedAt": "2026-10-11",
       "updatedAt": "2026-10-11T12:30:00Z",
       "hook": "Claude Code 的子 Agent 开起视频站会，谁卡住一眼看到。",
-      "hookEn": "Claude Code sub-agents become talking coworkers, so you see who is stuck."
+      "hookEn": "Claude Code sub-agents become talking coworkers, so you see who is stuck.",
+      "verifyLog": "线索 HN item 50039630（2026-10-11T03:42Z，约 10-11 11:42 北京时间，撰写时 44pts、45 条评论）。仓库 Atoll92/agent-standup 晚间 gh api：MIT、104★，2026-10-10 创建，最近推送 2026-10-11；最新 release v1.24.3（2026-10-11T11:16Z），npm 包 @double_geste/agent-standup 同为 1.24.3、MIT。预览为官网 1 分钟演示视频（虚构团队，非用户数据）第 35 秒画面，裁 3:2 WebP 自托管。",
+      "verifyLogEn": "Lead: HN item 50039630 (2026-10-11T03:42Z, about 11:42 on 10-11 Beijing time, 44pts and 45 comments at write time). Repo Atoll92/agent-standup on this evening’s gh api: MIT, 104★, created 2026-10-10, last push 2026-10-11; latest release v1.24.3 (2026-10-11T11:16Z), and npm package @double_geste/agent-standup is also 1.24.3, MIT. Preview is the 35-second frame of the site’s 1-minute demo video (a fictional team, not user data), cropped to a self-hosted 3:2 WebP."
     },
     {
       "id": "open-intelligent-ui",
@@ -148,13 +275,15 @@
         "design-system",
         "mcp"
       ],
-      "qualityNote": "线索：CopilotKit CEO Atai Barkai 的发布帖 https://x.com/ataiiam/status/2108553441199223093 （2026-10-09T13:41Z，约 10-09 21:41 北京时间；晚间约 6.2 万次浏览、597 赞、822 收藏），引用的是 OpenAI 的 GPT-6 / Intelligent UI 发布帖。仓库 CopilotKit/OpenIntelligentUI 晚间 gh api：MIT、2243★，2026-03-12 创建，最近一次推送 2026-10-09（加入「自带 API key」引导）。四个演示场景、默认模型 chat-latest、Jev 负责选界面、A2UI 与 Open Generative UI 的分工、iframe 沙箱、可选 MCP 服务都照 README 写；README 自己注明 54 秒发布片是渲染出来的演示画面，实际运行时每次由 Agent 生成、结果会变。托管演示 opengenerativeui.copilotkit.ai 晚间 HTTP 200，但要先填 OpenAI 和 Jev 两把 key 才能聊天；Jev 在 TypeSafe 那边仍是早期访问。本库没有 key，没有本地跑起来，也没核对两家 API 的费用。预览取自仓库 README 场景图（3D 飞机讲解），裁 3:2 WebP 自托管。",
-      "qualityNoteEn": "Lead: launch post by CopilotKit CEO Atai Barkai https://x.com/ataiiam/status/2108553441199223093 (2026-10-09T13:41Z, about 21:41 on 10-09 Beijing time; about 62K views, 597 likes, 822 bookmarks this evening), quoting OpenAI's GPT-6 / Intelligent UI launch post. Repo CopilotKit/OpenIntelligentUI on this evening's gh api: MIT, 2243★, created 2026-03-12, last push 2026-10-09 (bring-your-own-key onboarding). The four demo scenes, default chat-latest model, Jev choosing the presentation, the A2UI / Open Generative UI split, the iframe sandbox, and the optional MCP server follow the README; the README itself says the 54-second launch film shows rendered scenes and real runs are generated per request and vary. The hosted demo opengenerativeui.copilotkit.ai returned HTTP 200 this evening but needs both an OpenAI and a Jev key before chatting; Jev is still early access at TypeSafe. This library has neither key, did not run it locally, and did not check either API's pricing. Preview is the README scene image (3D airplane explainer), cropped to a self-hosted 3:2 WebP.",
-      "featured": true,
+      "qualityNote": "四个演示场景、默认模型 chat-latest、Jev 负责选界面、A2UI 与 Open Generative UI 的分工、iframe 沙箱、可选 MCP 服务都照 README 写；README 自己注明 54 秒发布片是渲染出来的演示画面，实际运行时每次由 Agent 生成、结果会变。本库没有 key，没有本地跑起来，也没核对两家 API 的费用。预览取自仓库 README 场景图（3D 飞机讲解），裁 3:2 WebP 自托管。",
+      "qualityNoteEn": "The four demo scenes, default chat-latest model, Jev choosing the presentation, the A2UI / Open Generative UI split, the iframe sandbox, and the optional MCP server follow the README; the README itself says the 54-second launch film shows rendered scenes and real runs are generated per request and vary. This library has neither key, did not run it locally, and did not check either API's pricing.",
+      "featured": false,
       "publishedAt": "2026-10-09",
       "updatedAt": "2026-10-10T12:30:00Z",
       "hook": "开源的会出界面的聊天，能换成你自己的设计系统。",
-      "hookEn": "Open-source chat that answers with interactive UI, styled by your design system."
+      "hookEn": "Open-source chat that answers with interactive UI, styled by your design system.",
+      "verifyLog": "线索：CopilotKit CEO Atai Barkai 的发布帖 https://x.com/ataiiam/status/2108553441199223093 （2026-10-09T13:41Z，约 10-09 21:41 北京时间；晚间约 6.2 万次浏览、597 赞、822 收藏），引用的是 OpenAI 的 GPT-6 / Intelligent UI 发布帖。仓库 CopilotKit/OpenIntelligentUI 晚间 gh api：MIT、2243★，2026-03-12 创建，最近一次推送 2026-10-09（加入「自带 API key」引导）。托管演示 opengenerativeui.copilotkit.ai 晚间 HTTP 200，但要先填 OpenAI 和 Jev 两把 key 才能聊天；Jev 在 TypeSafe 那边仍是早期访问。",
+      "verifyLogEn": "Lead: launch post by CopilotKit CEO Atai Barkai https://x.com/ataiiam/status/2108553441199223093 (2026-10-09T13:41Z, about 21:41 on 10-09 Beijing time; about 62K views, 597 likes, 822 bookmarks this evening), quoting OpenAI's GPT-6 / Intelligent UI launch post. Repo CopilotKit/OpenIntelligentUI on this evening's gh api: MIT, 2243★, created 2026-03-12, last push 2026-10-09 (bring-your-own-key onboarding). The hosted demo opengenerativeui.copilotkit.ai returned HTTP 200 this evening but needs both an OpenAI and a Jev key before chatting; Jev is still early access at TypeSafe. Preview is the README scene image (3D airplane explainer), cropped to a self-hosted 3:2 WebP."
     },
     {
       "id": "shaders-com",
@@ -190,21 +319,23 @@
         "svelte",
         "hacker-news"
       ],
-      "qualityNote": "HN item 49980593（2026-10-06T16:12:21.000Z / 约 2026-10-07 00:12 CST），撰写时 Algolia 2pts。官网、MCP 文档撰写时 HTTP 200；仓库 shader-effects-inc/shaders 为 MIT、1263★，npm shaders 4.0.0。价格页写：免费档包含全部开源组件、设计编辑器、代码导出和 CLI/MCP；Pro（$199/年）加的是 1000+ 预设、55+ 网页区块、给 AI 的复制提示词和高清导出——这些不在本条收录范围。「16,000+ 设计工程师」是官网自述。本库没有安装 MCP。预览为 Chrome（软件渲染 WebGPU）实拍首页编辑器演示区，裁 3:2 WebP。",
-      "qualityNoteEn": "HN item 49980593 (2026-10-06T16:12:21.000Z / about 00:12 CST on 2026-10-07), 2pts on Algolia at write time. Site and MCP docs HTTP 200 at write time; repo shader-effects-inc/shaders is MIT with 1263★, npm shaders 4.0.0. The pricing page says the free tier includes every open-source component, the design editor, code export, and CLI/MCP; Pro ($199/yr) adds 1000+ presets, 55+ website sections, copy-paste prompts for AI, and HD export, all out of scope here. “16,000+ design engineers” is a site claim. This library did not install the MCP. Preview is a Chrome capture (software-rendered WebGPU) of the homepage editor demo, cropped to 3:2 WebP.",
+      "qualityNote": "价格页写：免费档包含全部开源组件、设计编辑器、代码导出和 CLI/MCP；Pro（$199/年）加的是 1000+ 预设、55+ 网页区块、给 AI 的复制提示词和高清导出——这些不在本条收录范围。「16,000+ 设计工程师」是官网自述。本库没有安装 MCP。",
+      "qualityNoteEn": "The pricing page says the free tier includes every open-source component, the design editor, code export, and CLI/MCP; Pro ($199/yr) adds 1000+ presets, 55+ website sections, copy-paste prompts for AI, and HD export, all out of scope here. “16,000+ design engineers” is a site claim. This library did not install the MCP.",
       "featured": false,
       "publishedAt": "2026-10-06",
       "updatedAt": "2026-10-07T01:00:00Z",
       "hook": "200 多个 WebGPU 特效组件，装个 MCP 就能让助手来调。",
-      "hookEn": "200+ WebGPU effect components, and one MCP install lets your agent tune them."
+      "hookEn": "200+ WebGPU effect components, and one MCP install lets your agent tune them.",
+      "verifyLog": "HN item 49980593（2026-10-06T16:12:21.000Z / 约 2026-10-07 00:12 CST），撰写时 Algolia 2pts。官网、MCP 文档撰写时 HTTP 200；仓库 shader-effects-inc/shaders 为 MIT、1263★，npm shaders 4.0.0。预览为 Chrome（软件渲染 WebGPU）实拍首页编辑器演示区，裁 3:2 WebP。",
+      "verifyLogEn": "HN item 49980593 (2026-10-06T16:12:21.000Z / about 00:12 CST on 2026-10-07), 2pts on Algolia at write time. Site and MCP docs HTTP 200 at write time; repo shader-effects-inc/shaders is MIT with 1263★, npm shaders 4.0.0. Preview is a Chrome capture (software-rendered WebGPU) of the homepage editor demo, cropped to 3:2 WebP."
     },
     {
       "id": "rondoflow",
       "slug": "rondoflow",
       "title": "RondoFlow：可视化编排本地 Claude Code Agent 团队",
       "titleEn": "RondoFlow: visually orchestrate local Claude Code agent teams",
-      "summary": "Show HN（item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts）https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。官网与仓库均 HTTP 200；无 npm 包。预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
-      "summaryEn": "Show HN item 49812163 (2026-09-23 ~05:55Z, 3pts on Algolia at check time) at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; no npm package. Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP.",
+      "summary": "Show HN https://rondoflow.app/ — MIT、本地优先：React Flow 画布上拖 agent 与 skill，跑的是本机 Claude Code CLI 子进程（可读写真文件、跑命令、用 MCP 与 skill），不是只把聊天提示串起来。README 写明 Director 在每步中途决定继续、重试或结束，Planner 开跑前调整团队，Advisor 事后复盘；同一条流程可混 Claude Code、OpenAI、Perplexity，危险操作走策略闸。无 npm 包。",
+      "summaryEn": "The README states a Director decides mid-step whether to continue, retry, or stop, a Planner tunes the team before the run, and an Advisor reviews afterward; one workflow can mix Claude Code, OpenAI, and Perplexity, with risky actions behind a policy gate. no npm package.",
       "sourceUrl": "https://rondoflow.app/",
       "secondaryUrls": [
         "https://github.com/rondoflow/rondoflow",
@@ -225,21 +356,23 @@
         "local-first",
         "hn"
       ],
-      "featured": true,
-      "qualityNote": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。README 写明编排的是 Claude Code CLI 子进程，并列出 Director / Planner / Advisor 与 Claude Code / OpenAI / Perplexity；官网营销计数不转成核验指标。registry.npmjs.org/rondoflow 返回 404，不填 npmPackage。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。",
-      "qualityNoteEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The README says the canvas runs Claude Code CLI subprocesses and lists Director / Planner / Advisor plus Claude Code / OpenAI / Perplexity; homepage marketing counts are not recorded as verified metrics. registry.npmjs.org/rondoflow returned 404, so npmPackage is omitted. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP.",
+      "featured": false,
+      "qualityNote": "README 写明编排的是 Claude Code CLI 子进程，并列出 Director / Planner / Advisor 与 Claude Code / OpenAI / Perplexity；官网营销计数不转成核验指标。registry.npmjs.org/rondoflow 返回 404，不填 npmPackage。",
+      "qualityNoteEn": "The README says the canvas runs Claude Code CLI subprocesses and lists Director / Planner / Advisor plus Claude Code / OpenAI / Perplexity; homepage marketing counts are not recorded as verified metrics. registry.npmjs.org/rondoflow returned 404, so npmPackage is omitted.",
       "publishedAt": "2026-09-23",
       "updatedAt": "2026-09-23T12:28:44Z",
       "hook": "在画布上编排本机 Agent，真的会改文件、跑命令。",
-      "hookEn": "Arrange local agents on a canvas that edits files and runs commands."
+      "hookEn": "Arrange local agents on a canvas that edits files and runs commands.",
+      "verifyLog": "MIT（2026-09-23 gh api，18★）。官网与 GitHub 均 HTTP 200。Show HN item 49812163，Algolia 当日核对 3pts，不另报热度。首屏是营销文案，预览改拍 Screenshots 段产品画布，Playwright 裁 3:2 WebP。 （item 49812163，2026-09-23 ~05:55Z，Algolia 核对 3pts） 仓库 rondoflow/rondoflow 于 2026-09-23 gh api：MIT、18★。 官网与仓库均 HTTP 200； 预览为 Playwright 实拍官网 Screenshots 段「The real canvas」裁 3:2 WebP。",
+      "verifyLogEn": "MIT (gh api 2026-09-23, 18★). Site and GitHub both HTTP 200. Show HN item 49812163, 3pts on Algolia at check time — no extra popularity claimed. The above-the-fold view is marketing copy; the preview is the Screenshots-section product canvas, Playwright-cropped to 3:2 WebP. (2026-09-23 ~05:55Z, 3pts on Algolia at check time) Show HN item 49812163   at https://rondoflow.app/ — MIT and local-first: drag agents and skills on a React Flow canvas that launches real local Claude Code CLI subprocesses (read and write files, run commands, use MCP and skills), not just chained chat prompts. Repo rondoflow/rondoflow on the 2026-09-23 gh api: MIT, 18★. Site and repo both HTTP 200; Preview is a Playwright capture of the site’s Screenshots “The real canvas” image, cropped to 3:2 WebP."
     },
     {
       "id": "facet-3d",
       "slug": "facet-3d",
       "title": "Facet：可复制粘贴的 React Three Fiber 3D 组件（含 MCP / llms.txt）",
       "titleEn": "Facet: copy-paste React Three Fiber 3D components (MCP / llms.txt)",
-      "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。预览为 Playwright 实拍 playground 首屏裁 3:2。",
-      "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "summary": "MIT 开源 registry：30 个生产向 R3F 组件（Avatar Maker / Image Particles / Grass Field / Ocean 等），CLI `npx facet3d add …` 把源码拷进仓库；另有 `@facet3d/mcp`、`/llms.txt` 方便 Agent 浏览安装。公开 playground https://assetmaker-nine.vercel.app/ 与 GitHub 已核验；免费开源，非 Pro-only。",
+      "summaryEn": "MIT open-source registry: 30 production-oriented R3F components (Avatar Maker / Image Particles / Grass Field / Ocean, …). CLI `npx facet3d add …` copies source into your repo; `@facet3d/mcp` and `/llms.txt` help agents browse and install. Public playground https://assetmaker-nine.vercel.app/ and GitHub verified; free/open, not Pro-only.",
       "sourceUrl": "https://assetmaker-nine.vercel.app/",
       "secondaryUrls": [
         "https://github.com/elberacasa/facet",
@@ -263,13 +396,15 @@
         "llms-txt",
         "open-source"
       ],
-      "featured": true,
-      "qualityNote": "MIT（2026-09-22 gh api）。公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。预览为 Playwright 实拍 playground 首屏裁 3:2。",
-      "qualityNoteEn": "MIT (gh api, 2026-09-22). Public playground and GitHub README both state 30 components, copy-paste, and Agent MCP; not ThreeUI Pro. Preview is a Playwright capture of the playground above the fold cropped to 3:2.",
+      "featured": false,
+      "qualityNote": "公开 playground 与 GitHub README 均写明 30 组件、copy-paste、Agent MCP；非 ThreeUI Pro。",
+      "qualityNoteEn": "Public playground and GitHub README both state 30 components, copy-paste, and Agent MCP; not ThreeUI Pro.",
       "publishedAt": "2026-09-22",
       "updatedAt": "2026-09-22T01:20:00Z",
       "hook": "30 个可复制进项目的三维组件，Agent 也能按目录装。",
-      "hookEn": "30 copy-paste 3D components, with a catalog an agent can install from."
+      "hookEn": "30 copy-paste 3D components, with a catalog an agent can install from.",
+      "verifyLog": "MIT（2026-09-22 gh api）。预览为 Playwright 实拍 playground 首屏裁 3:2。 预览为 Playwright 实拍 playground 首屏裁 3:2。",
+      "verifyLogEn": "MIT (gh api, 2026-09-22). Preview is a Playwright capture of the playground above the fold cropped to 3:2. Preview is a Playwright capture of the playground above the fold cropped to 3:2."
     },
     {
       "id": "sylva-living-world",
@@ -299,13 +434,15 @@
         "nature",
         "sylva"
       ],
-      "featured": true,
-      "qualityNote": "community-sync-report（2026-08-31）components 含 sylva-living-world（variant living-green），不在 excludedProParents；仓库 MIT。公开页 200（2026-09-18），默认变体 Living Green 免登录可看，页头 GET PRO 为站级 CTA（Bookshelf 等 Community 页同样存在）。预览为 Playwright 实拍 Living Green 演示画布（约 40s 生长态）裁 3:2。",
-      "qualityNoteEn": "Listed in community-sync-report (2026-08-31) components as sylva-living-world (variant living-green), not in excludedProParents; repo is MIT. Public page 200 (2026-09-18); the default Living Green variant renders without login, and the header GET PRO is a site-wide CTA (also present on Community pages such as Bookshelf). Preview is a Playwright capture of the live Living Green canvas (~40s into growth) cropped to 3:2.",
+      "featured": false,
+      "qualityNote": "公开页 200（2026-09-18），默认变体 Living Green 免登录可看，页头 GET PRO 为站级 CTA（Bookshelf 等 Community 页同样存在）。",
+      "qualityNoteEn": "Public page 200 (2026-09-18); the default Living Green variant renders without login, and the header GET PRO is a site-wide CTA (also present on Community pages such as Bookshelf).",
       "publishedAt": "2026-09-18",
       "updatedAt": "2026-09-18T12:31:00Z",
       "hook": "免费的苔藓森林场景；同页的季节变体不收录。",
-      "hookEn": "A free moss-forest scene; seasonal variants on the page are not listed."
+      "hookEn": "A free moss-forest scene; seasonal variants on the page are not listed.",
+      "verifyLog": "community-sync-report（2026-08-31）components 含 sylva-living-world（variant living-green），不在 excludedProParents；仓库 MIT。预览为 Playwright 实拍 Living Green 演示画布（约 40s 生长态）裁 3:2。",
+      "verifyLogEn": "Listed in community-sync-report (2026-08-31) components as sylva-living-world (variant living-green), not in excludedProParents; repo is MIT. Preview is a Playwright capture of the live Living Green canvas (~40s into growth) cropped to 3:2."
     },
     {
       "id": "bookshelf",
@@ -336,12 +473,14 @@
         "carousel"
       ],
       "featured": false,
-      "qualityNote": "community-sync-report 含 bookshelf（Community 免费）。公开页 200（2026-09-18）；预览取官方缩略图裁 3:2。",
-      "qualityNoteEn": "Listed in community-sync-report as bookshelf (Community/free). Public page 200 (2026-09-18); preview is the official thumbnail cropped to 3:2.",
+      "qualityNote": "公开页 200（2026-09-18）；预览取官方缩略图裁 3:2。",
+      "qualityNoteEn": "Sources checked; not tested here. Results follow the original source.",
       "publishedAt": "2026-09-18",
       "updatedAt": "2026-09-18T01:12:00Z",
       "hook": "可以翻开检视的书架场景，封面带着箔印。",
-      "hookEn": "A bookshelf scene you can open and page through, with foil covers."
+      "hookEn": "A bookshelf scene you can open and page through, with foil covers.",
+      "verifyLog": "community-sync-report 含 bookshelf（Community 免费）。",
+      "verifyLogEn": "Listed in community-sync-report as bookshelf (Community/free). Public page 200 (2026-09-18); preview is the official thumbnail cropped to 3:2."
     },
     {
       "id": "engraved-certificate",
@@ -371,12 +510,14 @@
         "guilloche"
       ],
       "featured": false,
-      "qualityNote": "community-sync-report 含 engraved-certificate（Community 免费）。公开页 200（2026-09-17）；预览取官方缩略图裁 3:2。",
-      "qualityNoteEn": "Listed in community-sync-report as engraved-certificate (Community/free). Public page 200 (2026-09-17); preview is the official thumbnail cropped to 3:2.",
+      "qualityNote": "公开页 200（2026-09-17）；预览取官方缩略图裁 3:2。",
+      "qualityNoteEn": "Sources checked; not tested here. Results follow the original source.",
       "publishedAt": "2026-09-17",
       "updatedAt": "2026-09-17T01:23:00Z",
       "hook": "雕版证书板面，圆形扭索纹会自己轮换状态。",
-      "hookEn": "An engraved certificate whose guilloche rosettes cycle on their own."
+      "hookEn": "An engraved certificate whose guilloche rosettes cycle on their own.",
+      "verifyLog": "community-sync-report 含 engraved-certificate（Community 免费）。",
+      "verifyLogEn": "Listed in community-sync-report as engraved-certificate (Community/free). Public page 200 (2026-09-17); preview is the official thumbnail cropped to 3:2."
     },
     {
       "id": "zephyr-framework",
@@ -406,13 +547,15 @@
         "css-has",
         "zero-js"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "公开演示 200（2026-09-15）。组件数为站点自述；预览取文档页 Agent API 段 3:2。非 ThreeUI。",
-      "qualityNoteEn": "Public demo returned 200 (2026-09-15). Component count is a site claim; preview is a 3:2 crop around the Agent API section. Not ThreeUI.",
+      "qualityNoteEn": "Public demo returned 200 (2026-09-15). Not ThreeUI.",
       "publishedAt": "2026-09-15",
       "updatedAt": "2026-09-15T01:30:00Z",
       "hook": "零运行时的网页组件，Agent 可以开窗、切页、推数据。",
-      "hookEn": "Zero-runtime web components an agent can open, switch, and fill with data."
+      "hookEn": "Zero-runtime web components an agent can open, switch, and fill with data.",
+      "verifyLog": "",
+      "verifyLogEn": "Component count is a site claim; preview is a 3:2 crop around the Agent API section."
     },
     {
       "id": "cloud-field",
@@ -441,7 +584,7 @@
         "background",
         "webgl"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（2026-09-14 核到页面可达、Copy Prompt 可见、无 Pro template 遮罩；规范 URL 为 /backgrounds/portal-field/cloud-field）。复制 prompt，勿手写体积云。",
       "qualityNoteEn": "Free Community background (page reachable with Copy Prompt and no Pro template overlay, checked 2026-09-14; canonical URL /backgrounds/portal-field/cloud-field). Copy the prompt; don’t hand-author volume clouds.",
       "publishedAt": "2026-09-14",
@@ -476,7 +619,7 @@
         "cta",
         "css"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费按钮（2026-09-14 核到 Copy Prompt、无 Pro template 遮罩；规范 URL 为 /buttons/rectangle-buttons/dot-border-button）。复制 prompt，勿手写描边动画。",
       "qualityNoteEn": "Free Community button (Copy Prompt present, no Pro template overlay, checked 2026-09-14; canonical URL /buttons/rectangle-buttons/dot-border-button). Copy the prompt; don’t hand-author the border motion.",
       "publishedAt": "2026-09-14",
@@ -511,7 +654,7 @@
         "canvas",
         "vortex"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写粒子环。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the particle rings.",
       "publishedAt": "2026-09-13",
@@ -546,7 +689,7 @@
         "particles",
         "wordmark"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费文字动效（2026-09-13 核到页面可达、无 Pro template 遮罩；Copy Prompt 以浏览器核验为准）。复制 prompt，勿手写黏稠粒子场。",
       "qualityNoteEn": "Free Community text animation (page reachable with no Pro template overlay, checked 2026-09-13; Copy Prompt confirmed in-browser). Copy the prompt; don’t hand-author the viscous particle field.",
       "publishedAt": "2026-09-13",
@@ -581,7 +724,7 @@
         "css",
         "agent-console"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 CSS 加载件（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community CSS loader (Copy Prompt present, no Pro template overlay, checked 2026-09-12). Copy the prompt; don’t hand-write shaders.",
       "publishedAt": "2026-09-12",
@@ -616,7 +759,7 @@
         "background",
         "canvas"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（2026-09-12 核到 Copy Prompt，无 Pro template 遮罩）。四变体均按免费收录。",
       "qualityNoteEn": "Free Community background (Copy Prompt present, no Pro template overlay, checked 2026-09-12). All four variants treated as free.",
       "publishedAt": "2026-09-12",
@@ -650,7 +793,7 @@
         "paper",
         "hero"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Three.js 纸张组件（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js paper component (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
@@ -685,7 +828,7 @@
         "fabric",
         "background"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Three.js 背景（浏览墙无 PRO 角标）。复制 prompt，勿手写着色器。",
       "qualityNoteEn": "Free Community Three.js background (no PRO badge on the browse wall). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-11",
@@ -721,13 +864,15 @@
         "laser",
         "matrix"
       ],
-      "featured": true,
-      "qualityNote": "Community 免费背景（无 PRO 角标，在 THREEUI 免费栏目下的 Laser 家族）。复制 prompt，勿手写着色器。预览为 ThreeUI 官方缩略图裁 3:2。",
-      "qualityNoteEn": "Free Community background (no PRO badge; Laser family under the free THREEUI section). Copy the prompt — do not hand-write the shader. Preview is ThreeUI’s official thumbnail cropped to 3:2.",
+      "featured": false,
+      "qualityNote": "Community 免费背景（无 PRO 角标，在 THREEUI 免费栏目下的 Laser 家族）。复制 prompt，勿手写着色器。",
+      "qualityNoteEn": "Free Community background (no PRO badge; Laser family under the free THREEUI section). Copy the prompt — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-10T12:00:00Z",
       "hook": "跟着指针走的激光矩阵，适合面板的氛围底。",
-      "hookEn": "A pointer-reactive laser matrix for the atmosphere behind a panel."
+      "hookEn": "A pointer-reactive laser matrix for the atmosphere behind a panel.",
+      "verifyLog": "预览为 ThreeUI 官方缩略图裁 3:2。",
+      "verifyLogEn": "Preview is ThreeUI’s official thumbnail cropped to 3:2."
     },
     {
       "id": "liquid-metal-button",
@@ -757,13 +902,15 @@
         "cta",
         "liquid-metal"
       ],
-      "featured": true,
-      "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。预览为现场演示帧（指针悬停态）裁 3:2。",
-      "qualityNoteEn": "Free Community UI piece (no PRO badge; under Buttons in the free THREEUI section). Copy the prompt and only change label / hue — do not hand-write the shader. Preview is a live demo frame (pointer-hover state) cropped to 3:2.",
+      "featured": false,
+      "qualityNote": "Community 免费界面件（无 PRO 角标，在 THREEUI 免费栏目 Buttons 下）。复制 prompt，只改文案与色相，勿手写着色器。",
+      "qualityNoteEn": "Free Community UI piece (no PRO badge; under Buttons in the free THREEUI section). Copy the prompt and only change label / hue — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
       "updatedAt": "2026-09-10T12:00:00Z",
       "hook": "液态金属按钮，指针带动光谱，按下泛起涟漪。",
-      "hookEn": "A liquid-metal button whose color follows the pointer and ripples on press."
+      "hookEn": "A liquid-metal button whose color follows the pointer and ripples on press.",
+      "verifyLog": "预览为现场演示帧（指针悬停态）裁 3:2。",
+      "verifyLogEn": "Preview is a live demo frame (pointer-hover state) cropped to 3:2."
     },
     {
       "id": "energy-orb",
@@ -792,7 +939,7 @@
         "background",
         "globe"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费背景（无 PRO 角标）。复制 prompt 只改色相/透明度，不要手写着色器。",
       "qualityNoteEn": "Free Community background (no PRO badge). Copy the prompt and only retint hue/opacity — do not hand-write the shader.",
       "publishedAt": "2026-09-10",
@@ -828,7 +975,7 @@
         "tree",
         "background"
       ],
-      "featured": true,
+      "featured": false,
       "qualityNote": "Community 免费 Elements 变体（无 PRO 角标）。复制 prompt 只改色相与粒子，不要手写动效。",
       "qualityNoteEn": "Free Community Elements variant (no PRO badge). Copy the prompt and only retint hue / particles — do not hand-write motion.",
       "publishedAt": "2026-09-10",
@@ -899,7 +1046,7 @@
         "circle",
         "cta"
       ],
-      "featured": false,
+      "featured": true,
       "stars": 4,
       "qualityNote": "Community 免费界面件（无 PRO 角标）。复制 prompt，改主色即可。",
       "qualityNoteEn": "Free Community UI piece (no PRO badge). Copy the prompt and retint the accent.",
@@ -1024,7 +1171,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "免费区够 Agent 抄过渡。不收 Pro 单独条目。",
@@ -1055,7 +1202,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "周览资源五站之一。站点偏作品集，抄之前先看授权和依赖。",
@@ -1086,7 +1233,7 @@
         "https://beui.dev/r",
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "开源，组件 JSON 可给 Agent 直接读。适合当乐高块。",
@@ -1116,7 +1263,7 @@
       "secondaryUrls": [
         "https://x.com/grgerwcwetwet/status/2092937412490260513"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-27",
       "updatedAt": "2026-08-28T00:56:00Z",
       "qualityNote": "周览资源那条里的第一站。专门给 Agent 界面，不是通用按钮库。",
@@ -1147,7 +1294,7 @@
       "secondaryUrls": [
         "https://x.com/sts81998850/status/2092631071120920605"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-26",
       "updatedAt": "2026-08-27T15:30:00Z",
       "qualityNote": "风间推荐的交互参考站，标语是 The gold standard in buttery smooth digital production。免登录可逛。",
@@ -1180,7 +1327,7 @@
       "secondaryUrls": [
         "https://x.com/sucodeee/status/2092222674478993525"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-08-27T15:30:00Z",
       "qualityNote": "来自 @sucodeee 的进度条动画。现有库以 ThreeUI 为主，这条是同类 GPU UI 动效，编辑器免费可玩，导出文件要 Pro。",
@@ -1214,7 +1361,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "适合当 Agent 的第一块三维 Hero：复制页面里的 prompt / Skill.md，只改色相、点大小和运动速度，不必手改 procedural JS。",
@@ -1250,7 +1397,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "仪表盘或「推理中」状态很好用。把 prompt 交给 Agent，调 hue / speed，做成自己的数据弧，不要去碰 Pro 变体。",
@@ -1356,7 +1503,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "想让 Agent 做出「会呼吸」的按钮时用这组。Skill.md 里改色相就够，别手写 GLSL。",
@@ -1391,7 +1538,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "多 Agent / 网络叙事的背景。把 prompt 交给 Agent，调密度和描边，主题一换就走。",
@@ -1497,7 +1644,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "安静品牌站的好起点。Skill 控制字体与主色，Agent 换主题比重写布局更快。",
@@ -1568,7 +1715,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-24T09:10:00Z",
       "qualityNote": "自然向产品的免费整页。只链 Living Green； sakura / maple 等 Pro 变体不要打开、不要写进 prompt。",
@@ -1713,7 +1860,7 @@
         "https://threeui.com/browse"
       ],
       "previewImage": "/previews/koi-studies.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-26T01:20:00Z",
       "qualityNote": "Community 免费组件，出现在 ThreeUI 公开「最新」列表。复制 Skill.md 只改纸色、印章红和翻页速度即可，不必手写 CSS 3D。",
@@ -1749,7 +1896,7 @@
         "https://threeui.com/browse"
       ],
       "previewImage": "/previews/bestsellers-book-showcase.webp",
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-22",
       "updatedAt": "2026-08-26T01:20:00Z",
       "qualityNote": "Community 免费完整 HTML 落地页，不是 Pro。适合让 Agent 当「书/系列产品首屏」模板，只改字体和主色。",
@@ -1856,7 +2003,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费三维 Hero。复制 prompt 只改色相和拖影密度，不要手写粒子系统。",
@@ -1890,7 +2037,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费界面件。复制 Skill.md 换成我们的层色和节点标签即可。",
@@ -1924,7 +2071,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-08-25",
       "updatedAt": "2026-09-01T01:41:20Z",
       "qualityNote": "Community 免费背景场。复制 prompt 只改金属色和流动速度。",
@@ -1958,7 +2105,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-09-04T02:00:14Z",
       "qualityNote": "Community 免费背景场。复制 prompt 只改色相与速度，保持免费变体。",
@@ -1992,7 +2139,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-04",
       "updatedAt": "2026-09-04T02:00:14Z",
       "qualityNote": "Community 免费界面件。复制 prompt 只改尺寸和色相，保持免费变体。",
@@ -2026,7 +2173,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-07",
       "updatedAt": "2026-09-07T01:23:22Z",
       "qualityNote": "Community 同步报告含 portal-field 父组件。只收免费变体，避开标 PRO 的衍生页。",
@@ -2060,7 +2207,7 @@
       "secondaryUrls": [
         "https://github.com/DavidHDev/canvas-ui"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-07",
       "updatedAt": "2026-09-07T01:23:22Z",
       "qualityNote": "面向 Agent 的可复制组件目录（非 ThreeUI）。免费开源；安装用官方 npx/registry，不收付费墙条目。",
@@ -2094,7 +2241,7 @@
         "https://github.com/MengTo/threeui",
         "https://threeui.com/browse"
       ],
-      "featured": true,
+      "featured": false,
       "publishedAt": "2026-09-08",
       "updatedAt": "2026-09-08T01:27:40Z",
       "qualityNote": "只收免费默认变体 Temple Night；Yosemite/Presidio/Lake Louise 为 PRO。",
@@ -2175,19 +2322,21 @@
         "webgl",
         "hero"
       ],
-      "qualityNote": "community-sync 确认父组件 `gallery` 在 Community（无 Pro-only 变体）。同站 GET PRO 入口不代表本条收费。已配 Playwright 实拍 3:2 自托管预览。",
-      "qualityNoteEn": "community-sync lists parent `gallery` in Community (no Pro-only variants). Site-wide GET PRO links do not make this entry paid. Includes a Playwright-captured self-hosted 3:2 preview.",
+      "qualityNote": "同站 GET PRO 入口不代表本条收费。",
+      "qualityNoteEn": "Site-wide GET PRO links do not make this entry paid.",
       "featured": false,
       "publishedAt": "2026-09-21",
       "updatedAt": "2026-09-21T01:20:00Z",
       "hook": "弯曲图板绕柱旋转的英雄图带，可调速度和透明度。",
-      "hookEn": "A hero ribbon of curved panels on a column, with speed and opacity."
+      "hookEn": "A hero ribbon of curved panels on a column, with speed and opacity.",
+      "verifyLog": "community-sync 确认父组件 `gallery` 在 Community（无 Pro-only 变体）。已配 Playwright 实拍 3:2 自托管预览。",
+      "verifyLogEn": "community-sync lists parent `gallery` in Community (no Pro-only variants). Includes a Playwright-captured self-hosted 3:2 preview."
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-12T12:25:00Z",
+    "updatedAt": "2026-10-15T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.26",
-    "count": 62
+    "version": "1.4.29",
+    "count": 65
   }
 }

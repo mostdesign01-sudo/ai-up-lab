@@ -10,7 +10,7 @@ const latest = getLatestAgentUi();
 const lede = fill(ui.agent.latestLede, { n: latest.length });
 ---
 
-<BaseLayout
+<BaseLayout noindex="follow"
   collection="agent-ui"
   title={ui.agent.latestTitle.zh}
   titleEn={ui.agent.latestTitle.en}

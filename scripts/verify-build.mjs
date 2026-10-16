@@ -1,5 +1,6 @@
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
+import { LOG_PATTERN, SUMMARY_LOG_PATTERN } from "./quality-note-rules.mjs";
 
 const dataset = JSON.parse(await readFile(new URL("../data/cases.json", import.meta.url), "utf8"));
 const htmlDataset = JSON.parse(await readFile(new URL("../data/html-items.json", import.meta.url), "utf8"));
@@ -492,6 +493,45 @@ if (missing.length) {
   lintHooks("html", htmlDataset.items);
   lintHooks("agent-ui", agentUiDataset.items);
   if (hookBad.length) process.exit(1);
+}
+
+{
+  // A case's kind decides its directory; titles no longer carry the type prefix.
+  const kinds = new Set(["tool", "guide", "playbook", "news", "showcase"]);
+  const kindBad = dataset.cases.filter(item => !kinds.has(item.kind)).map(item => `${item.id} (${item.kind ?? "missing"})`);
+  const prefixBad = dataset.cases.filter(item => /^(工具|资讯|官方更新|官方发布|官方指南)[：:]/.test(item.title)).map(item => item.id);
+  if (kindBad.length || prefixBad.length) {
+    if (kindBad.length) console.error(`case kind lint: set kind to tool / guide / playbook / news / showcase: ${kindBad.join(", ")}`);
+    if (prefixBad.length) console.error(`case kind lint: drop the type prefix from the title, the card shows the kind: ${prefixBad.join(", ")}`);
+    process.exit(1);
+  }
+  console.log(`case kind lint: ${dataset.cases.length} cases carry a valid kind.`);
+}
+
+{
+  // Reader-facing notes explain why an entry is listed and what was not tested.
+  // Crawl status, star counts, item ids and capture notes belong in verifyLog.
+  const noteBad = [];
+  const lintNotes = (label, items) => {
+    for (const item of items) {
+      for (const [field, text] of [["qualityNote", item.qualityNote], ["qualityNoteEn", item.qualityNoteEn]]) {
+        if (typeof text === "string" && LOG_PATTERN.test(text)) noteBad.push(`${label}/${item.id} ${field}: ${text.match(LOG_PATTERN)[0]}`);
+      }
+      for (const [field, text] of [["summary", item.summary], ["summaryEn", item.summaryEn]]) {
+        if (typeof text === "string" && SUMMARY_LOG_PATTERN.test(text)) noteBad.push(`${label}/${item.id} ${field}: ${text.match(SUMMARY_LOG_PATTERN)[0]}`);
+      }
+    }
+  };
+  lintNotes("cases", dataset.cases);
+  lintNotes("html", htmlDataset.items);
+  lintNotes("agent-ui", agentUiDataset.items);
+  lintNotes("models", modelsDataset.models);
+  lintNotes("image-prompts", imagePromptsDataset.items);
+  if (noteBad.length) {
+    console.error(`quality note lint: ${noteBad.length} note(s) contain verification-log wording; move it to verifyLog (node scripts/split-quality-notes.mjs --write; node scripts/split-summaries.mjs --write):\n${noteBad.join("\n")}`);
+    process.exit(1);
+  }
+  console.log("quality note lint: reader-facing notes and summaries contain no crawl or capture logs.");
 }
 
 console.log(

@@ -1,4 +1,4 @@
-import type { Difficulty, SourceType } from "./cases";
+import type { CaseKind, Difficulty, SourceType } from "./cases";
 import type { Locale } from "./i18n";
 
 export const categoryLabels: Record<string, string> = {
@@ -25,6 +25,7 @@ export const categoryLabels: Record<string, string> = {
   support: "客服支持",
   community: "社区",
   skills: "技能",
+  design: "设计",
 };
 
 export const categoryLabelsEn: Record<string, string> = {
@@ -51,6 +52,7 @@ export const categoryLabelsEn: Record<string, string> = {
   support: "Customer support",
   community: "Community",
   skills: "Skills",
+  design: "Design",
 };
 
 export const categoryIntros: Record<string, string> = {
@@ -66,6 +68,7 @@ export const categoryIntros: Record<string, string> = {
   "multi-agent": "多 Bot 群聊、交接与蜂群协作。",
   coding: "建站、代码审查与工程工厂相邻用法。",
   ops: "日常运营与流程卫生相关用法。",
+  design: "界面、视觉与设计工具相关用法。",
 };
 
 export const categoryIntrosEn: Record<string, string> = {
@@ -81,6 +84,7 @@ export const categoryIntrosEn: Record<string, string> = {
   "multi-agent": "Multi-bot group chats, handoffs, and swarm collaboration.",
   coding: "Site launches, code review, and engineering-factory adjacent uses.",
   ops: "Day-to-day operations and process hygiene.",
+  design: "Interface, visual, and design-tool uses.",
 };
 
 export const sourceTypeLabels: Record<SourceType, string> = {
@@ -99,6 +103,14 @@ export const sourceTypeLabelsEn: Record<SourceType, string> = {
   tutorial: "Tutorial",
   "case-study": "Case study",
   "adjacent-cursor": "Cursor-adjacent",
+};
+
+export const caseKindLabels: Record<CaseKind, { zh: string; en: string }> = {
+  tool: { zh: "工具", en: "Tool" },
+  guide: { zh: "教程", en: "Guide" },
+  playbook: { zh: "用法配方", en: "Playbook" },
+  news: { zh: "资讯", en: "News" },
+  showcase: { zh: "实践案例", en: "Case study" },
 };
 
 export const difficultyLabels: Record<Difficulty, string> = {
