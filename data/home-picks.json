@@ -1,9 +1,32 @@
 {
   "picks": [
-    {"key": "grok:pi-1-0", "section": "tools", "title": {"zh": "Pi 1.0：搭建自己的\n编程工作流", "en": "Pi 1.0: build your own coding workflow"}, "reason": {"zh": "适合想按自己的方式扩展编程助手的人。", "en": "For people who want to shape a coding assistant around their own workflow."}}
+    {
+      "key": "grok:openpencil",
+      "section": "tools",
+      "title": {
+        "zh": "OpenPencil：本机改 .fig，\n还能让助手动图层",
+        "en": "OpenPencil: edit .fig locally,\nagents touch every layer"
+      },
+      "reason": {
+        "zh": "适合想把设计文件接进编程助手、又要开源本机可控的人。",
+        "en": "For people who want agents on design files—local and open-source."
+      }
+    }
   ],
   "titles": [
-    {"key": "html:css-bed", "title": {"zh": "CSS Bed", "en": "CSS Bed"}},
-    {"key": "html:wave-subworkflow", "title": {"zh": "Wave：层叠波浪背景生成器", "en": "Wave: layered wave backgrounds"}}
+    {
+      "key": "grok:figma-specs",
+      "title": {
+        "zh": "Figma Specs：画布旁的设计说明",
+        "en": "Figma Specs: briefs beside the canvas"
+      }
+    },
+    {
+      "key": "agent-ui:figma-pilot",
+      "title": {
+        "zh": "figma-pilot：用代码驱动 Figma",
+        "en": "figma-pilot: drive Figma with code"
+      }
+    }
   ]
 }
