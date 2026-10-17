@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "figma-pilot",
+      "slug": "figma-pilot",
+      "title": "figma-pilot：用代码执行驱动 Figma 的 MCP（少量工具）",
+      "titleEn": "figma-pilot — MCP that drives Figma via JS code execution",
+      "hook": "三个工具：查连接、跑一段 JS、读 API 说明。",
+      "hookEn": "Three tools: check the connection, run some JS, read the API notes.",
+      "summary": "figma-pilot 是 MIT 开源的 MCP，让编程助手用代码改 Figma，而不是把一长串改图层工具塞进上下文。README 的工具表只有三个：figma_status 看插件是否连上，figma_execute 跑一段 JavaScript，figma_get_api_docs 取接口说明。npm 包是 @youware-labs/figma-pilot-mcp。还要在 Figma 桌面版里导入配套插件（仓库 Releases 有插件压缩包），README 写本地桥接端口 38451。适合已经开着 Figma 桌面版、想让助手一次改一批图层的人。本库没有装插件，也没有把 MCP 接到本机助手上跑过。",
+      "summaryEn": "figma-pilot is an MIT MCP that lets a coding agent change Figma by running code, instead of loading a long list of layer tools into context. The README tool table has three entries: figma_status checks that the plugin is connected, figma_execute runs JavaScript, and figma_get_api_docs returns API notes. The npm package is @youware-labs/figma-pilot-mcp. You also import the companion plugin into Figma desktop (the repo Releases include a plugin zip); the README names local bridge port 38451. Good when Figma desktop is already open and you want an agent to change many layers in one go. This library did not install the plugin or run the MCP against a local agent.",
+      "sourceUrl": "https://github.com/youware-labs/figma-pilot",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/@youware-labs/figma-pilot-mcp",
+        "https://github.com/youware-labs/figma-pilot/releases"
+      ],
+      "previewImage": "/previews/figma-pilot.webp",
+      "npmPackage": "@youware-labs/figma-pilot-mcp",
+      "promptHint": "先在 Figma 桌面版运行 figma-pilot 插件，再让助手用 figma_status 确认连接，用 figma_execute 改画布。改完自己看图层；README 只列这三个工具。",
+      "promptHintEn": "Run the figma-pilot plugin in Figma desktop, then have the agent call figma_status and figma_execute. Review the layers yourself; the README lists only these three tools.",
+      "types": [
+        "agent-api",
+        "library"
+      ],
+      "tags": [
+        "figma",
+        "mcp",
+        "mit",
+        "open-source",
+        "agent-ui",
+        "code-execution"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-15T12:45:00Z",
+      "qualityNote": "未在本机安装 Figma 插件、未接 MCP 跑代码；三个工具名照 README：figma_status、figma_execute、figma_get_api_docs。",
+      "qualityNoteEn": "Figma plugin not installed here and no MCP code was run; the three tool names follow the README: figma_status, figma_execute, and figma_get_api_docs.",
+      "verifyLog": "2026-10-15 晚间：gh api license SPDX MIT、106★，创建于 2026-01-19，最近推送 2026-01-29。Release v0.1.9（2026-01-28）含 figma-pilot-plugin-v0.1.9.zip。npm view @youware-labs/figma-pilot-mcp 为 0.1.9、MIT；npmjs.com 页面本环境 curl 403，版本以 npm registry 为准。README 工具表仅 figma_status、figma_execute、figma_get_api_docs。预览取 README 的 assets/openai.gif 一帧，裁 3:2 WebP（1200×800）。未装插件、未接 MCP。",
+      "verifyLogEn": "2026-10-15 evening: gh api license SPDX MIT, 106★, created 2026-01-19, last push 2026-01-29. Release v0.1.9 (2026-01-28) includes figma-pilot-plugin-v0.1.9.zip. npm view @youware-labs/figma-pilot-mcp is 0.1.9, MIT; the npmjs.com page returned curl 403 here, so the version is from the npm registry. The README tool table lists only figma_status, figma_execute, and figma_get_api_docs. Preview is one frame of README assets/openai.gif, cropped to a 3:2 WebP (1200×800). Plugin not installed, MCP not connected."
+    },
+    {
       "id": "affectui",
       "slug": "affectui",
       "title": "affectUI：面向 AI 产品的 React 组件/屏幕块（可 shadcn 安装，带 MCP）",
@@ -2296,9 +2334,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-15T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.28",
-    "count": 64
+    "version": "1.4.29",
+    "count": 65
   }
 }
