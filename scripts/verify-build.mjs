@@ -401,7 +401,7 @@ if (
   }
 }
 
-if (!home.includes("编辑精选") || !home.includes("editorial-feature")) {
+if (!home.includes("本周精选") || !home.includes("editorial-feature")) {
   console.error("Homepage is missing the editorial feature.");
   process.exit(1);
 }
@@ -493,6 +493,24 @@ if (missing.length) {
   lintHooks("html", htmlDataset.items);
   lintHooks("agent-ui", agentUiDataset.items);
   if (hookBad.length) process.exit(1);
+}
+
+{
+  // Weekly editor's pick: art files exist, and the archive never shows a queued future issue.
+  const picks = JSON.parse(await readFile(new URL("../data/home-picks.json", import.meta.url), "utf8"));
+  const shanghai = new Date(Date.now() + 8 * 3600e3);
+  const day = new Date(Date.UTC(shanghai.getUTCFullYear(), shanghai.getUTCMonth(), shanghai.getUTCDate()));
+  day.setUTCDate(day.getUTCDate() + 4 - (day.getUTCDay() || 7));
+  const isoWeek = `${day.getUTCFullYear()}-W${String(Math.ceil(((day - Date.UTC(day.getUTCFullYear(), 0, 1)) / 864e5 + 1) / 7)).padStart(2, "0")}`;
+  const thisWeek = process.env.HOME_WEEK ?? isoWeek;
+  const archive = await readFile(new URL("../dist/picks/index.html", import.meta.url), "utf8");
+  for (const issue of picks.issues) {
+    if (issue.art && !existsSync(new URL(`../public${issue.art.src}`, import.meta.url))) throw new Error(`Weekly pick art is missing: ${issue.week} ${issue.art.src}`);
+    const shownTitle = issue.title.en.replaceAll("&", "&amp;");
+    if (issue.week > thisWeek && archive.includes(shownTitle)) throw new Error(`Weekly picks archive shows a queued issue early: ${issue.week}`);
+  }
+  const queued = picks.issues.filter(issue => issue.week > thisWeek).length;
+  console.log(`Weekly picks verified: ${picks.issues.length} issues, ${queued} queued after ${thisWeek}, art present, no early reveals.`);
 }
 
 {
