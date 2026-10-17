@@ -1,11 +1,113 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-17T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 29
   },
   "models": [
+    {
+      "id": "flux-3-image-klein",
+      "slug": "flux-3-image-klein",
+      "name": "FLUX 3 Image Klein",
+      "vendor": "Black Forest Labs",
+      "title": "FLUX 3 Image Klein：5.6B 开放权重，文生图、改图，最多 10 张参考图",
+      "titleEn": "FLUX 3 Image Klein: a 5.6B open-weight model for generation, editing, and up to 10 references",
+      "summary": "Black Forest Labs 在 2026-10-15 发布 FLUX 3 Image Klein：5.6B 参数的开放权重图像模型，能文生图、按指令改图，也最多吃 10 张参考图。博文写它和完整的 FLUX 3 Image 共用几项能力：原生最高 4K、按像素对齐的改图，以及用边界框指定元素位置或把修改限定在一块区域里。有两个权重：蒸馏版给低延迟出图，Base 给微调和 LoRA。文档表写蒸馏版 16 步、CFG 1，Base 50 步、CFG 3.5。文档写它能在消费级显卡上跑，低到 RTX 3090。文本编码器是 Qwen3-VL-4B-Instruct，模型卡写这 5.6B 只算图像变压器，编码器另外算，而且编码器是 Apache-2.0。官方反复写不要把短提示词直接送进去：要先用提示词扩写器。模型卡说扩写器是另一个 9B 模型，仓库名 flux-3-image-klein-pup。API 名是 flux-3-image-klein。博文写 1K 图起价 $0.009；文档价目表按分辨率另列，768 图是 $0.008，1K 是 $0.009，往上到 4K 的 $0.036，文生图和改图同价。许可是 FLUX Kommunity License。博文写个人和年收入低于 500 万美元的公司可免费商用，更大的机构要走商业授权或 API。模型卡把门槛写成：年化总收入低于 500 万美元的 Qualifying Users。适合想在自己机器上出图、改图，又接受先扩写提示词的人。本库没有下载权重，没有本地跑，也没有调 API。",
+      "summaryEn": "Black Forest Labs released FLUX 3 Image Klein on 2026-10-15: a 5.6B open-weight image model for text-to-image, instruction edits, and up to 10 reference images. The blog says it shares several capabilities with the full FLUX 3 Image model: native output up to 4K, pixel-perfect editing, and bounding boxes that place an element or confine an edit to one region. There are two weight sets: a distilled one for low-latency generation, and Base for fine-tuning and LoRA. The docs table lists the distilled model at 16 steps and CFG 1, and Base at 50 steps and CFG 3.5. The docs say it fits on consumer GPUs, down to an RTX 3090. The text encoder is Qwen3-VL-4B-Instruct. The model card says the 5.6B count is the image transformer only, the encoder is separate, and that encoder is Apache-2.0. The vendor repeatedly says not to send a short prompt as typed: run a prompt upsampler first. The model card calls that upsampler another 9B model, repo flux-3-image-klein-pup. The API name is flux-3-image-klein. The blog says pricing starts at $0.009 per 1K image. The docs price table lists resolutions separately: $0.008 at 768, $0.009 at 1K, up to $0.036 at 4K, with text-to-image and editing at the same price. The license is the FLUX Kommunity License. The blog says individuals and companies with annual revenue under $5M may use it commercially for free; larger organizations need a commercial license or the API. The model card phrases the bar as Qualifying Users with less than US$5M in gross annualized revenue. Good when you want to generate and edit on your own machine and will expand the prompt first. This library did not download the weights, did not run them locally, and did not call the API.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-17T12:45:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Black Forest Labs 博文：FLUX 3 Image Klein",
+          "labelEn": "Black Forest Labs blog: FLUX 3 Image Klein",
+          "url": "https://bfl.ai/blog/flux-3-image-klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "官方模型页",
+          "labelEn": "Official model page",
+          "url": "https://bfl.ai/models/flux-3-image-klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "文档：规格、步数和 API 价格",
+          "labelEn": "Docs: specs, steps, and API pricing",
+          "url": "https://docs.bfl.ml/flux_3/flux3_image_klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：蒸馏权重",
+          "labelEn": "Hugging Face: distilled weights",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Base 权重（微调 / LoRA）",
+          "labelEn": "Hugging Face: Base weights (fine-tune / LoRA)",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-base",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：提示词扩写器 flux-3-image-klein-pup",
+          "labelEn": "Hugging Face: prompt upsampler flux-3-image-klein-pup",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50123580",
+          "by": "Hacker News",
+          "date": "2026-10-17"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：5.6B 开放权重。文生图、按指令改图、最多 10 张参考图。边界框可以指定元素放在哪，或把修改限定在一块区域。原生最高 4K。",
+          "textEn": "Vendor claim: 5.6B open weights. Text-to-image, instruction edits, and up to 10 reference images. Bounding boxes place an element or confine an edit to one region. Native output up to 4K."
+        },
+        {
+          "text": "文档表：蒸馏版 16 步、CFG 1，适合快出图和本地部署；Base 50 步、CFG 3.5，适合微调和 LoRA。模型卡把蒸馏版的 guidance 写成 none，和文档的 CFG 1 不是同一句，两套都留着。",
+          "textEn": "Docs table: distilled is 16 steps at CFG 1, for fast generation and local deployment; Base is 50 steps at CFG 3.5, for fine-tuning and LoRA. The model card lists distilled guidance as none, which is not the same sentence as CFG 1. Both wordings stay."
+        },
+        {
+          "text": "官方强调必须先过提示词扩写器。模型卡说那是另一个 9B 模型，仓库名 flux-3-image-klein-pup。短提示词直接送进去，官方写效果会明显变差。",
+          "textEn": "The vendor says to run a prompt upsampler first. The model card calls it another 9B model, repo flux-3-image-klein-pup. A short prompt sent as typed, the vendor says, gives noticeably weaker results."
+        },
+        {
+          "text": "API 名 flux-3-image-klein。博文写 1K 图起价 $0.009。文档价目表：768 图 $0.008、1K $0.009、1.5K $0.011、2K $0.014、4K $0.036，文生图和改图同价。",
+          "textEn": "API name flux-3-image-klein. The blog says pricing starts at $0.009 per 1K image. The docs table lists $0.008 at 768, $0.009 at 1K, $0.011 at 1.5K, $0.014 at 2K, and $0.036 at 4K, with text-to-image and editing at the same price."
+        },
+        {
+          "text": "许可是 FLUX Kommunity License。博文写个人和年收入低于 500 万美元的公司可免费商用；模型卡写成年度总收入低于 500 万美元的 Qualifying Users。更大的机构要商业授权。文档写消费级显卡、低到 RTX 3090。本库没有本地跑过。",
+          "textEn": "The license is the FLUX Kommunity License. The blog says individuals and companies under $5M annual revenue may use it commercially for free; the model card says Qualifying Users under US$5M gross annualized revenue. Larger organizations need a commercial license. The docs say consumer GPUs, down to an RTX 3090. This library did not run it locally."
+        }
+      ],
+      "qualityNote": "参数、参考图、边界框、4K、步数、显卡、扩写器、API 名和价格都是厂商页面上的说法，本库没有出图、没有复跑。文档写蒸馏版 CFG 1，模型卡把蒸馏版 guidance 写成 none。博文的收入门槛和模型卡的年化总收入用词也不完全一样，两套都留着。API 根地址本环境没有用 GET 打开，不放进链接。",
+      "qualityNoteEn": "Parameter count, references, bounding boxes, 4K, steps, GPUs, the upsampler, the API name, and prices are what the vendor pages say. This library did not generate an image or re-run anything. The docs list distilled CFG 1; the model card lists distilled guidance as none. The blog’s revenue bar and the model card’s gross-annualized-revenue wording are not the same sentence. Both stay. The API root did not open on a GET from this environment, so it is not linked.",
+      "verifyLog": "2026-10-17 晚间：博文、模型页、docs.bfl.ml/flux_3/flux3_image_klein、三个 Hugging Face 仓库（蒸馏、Base、pup）均为 HTTP 200。博文日期 October 15, 2026。文档表为蒸馏 16 步 / CFG 1、Base 50 步 / CFG 3.5、最高 4K，并写 down to an RTX 3090、Do not use it without its prompt upsampler。博文另写 INT8 可在 8GB 显存的 RTX 上跑，以及 Pricing starts at $0.009 per 1K image。文档价目表为 768×768 $0.008、1K $0.009、1.5K $0.011、2K $0.014、4K $0.036。模型卡写文本编码器 Qwen3-VL-4B-Instruct（Apache-2.0）、5.6B 只计图像变压器、扩写器为单独的 9B 模型 flux-3-image-klein-pup，并把蒸馏版 guidance 写成 none。博文许可句：free commercial use for individuals and companies with annual revenue under $5M。模型卡：Qualifying Users with less than US$5M in gross annualized revenue。API 示例路径是 https://api.bfl.ai/v1/flux-3-image-klein ，本环境 GET 为 HTTP 405，未当作可打开的链接。HN item 50123580，Algolia 176pts，创建于 2026-10-16T19:47:13Z，抓取时仍在 news.ycombinator.com 首页。预览为 Playwright 调本机 Chrome 实拍官方模型页首屏，1500×1000 WebP。未下载权重，未本地推理。",
+      "verifyLogEn": "2026-10-17 evening: the blog, the model page, docs.bfl.ml/flux_3/flux3_image_klein, and the three Hugging Face repos (distilled, Base, pup) all HTTP 200. Blog date October 15, 2026. The docs table is distilled 16 steps / CFG 1, Base 50 steps / CFG 3.5, up to 4K, and says down to an RTX 3090 and do not use it without its prompt upsampler. The blog also says the INT8 build runs on RTX GPUs with 8GB of VRAM, and that pricing starts at $0.009 per 1K image. The docs price table is 768×768 $0.008, 1K $0.009, 1.5K $0.011, 2K $0.014, 4K $0.036. The model card names the text encoder Qwen3-VL-4B-Instruct (Apache-2.0), says 5.6B counts the image transformer only, calls the upsampler a separate 9B model flux-3-image-klein-pup, and lists distilled guidance as none. Blog license sentence: free commercial use for individuals and companies with annual revenue under $5M. Model card: Qualifying Users with less than US$5M in gross annualized revenue. The API sample path is https://api.bfl.ai/v1/flux-3-image-klein; a GET from this environment returned HTTP 405, so it is not linked as a page that opens. HN item 50123580, 176pts on Algolia, created 2026-10-16T19:47:13Z, still on the news.ycombinator.com front page at fetch time. Preview is a Playwright capture through local Chrome of the official model-page hero, a 1500×1000 WebP. Weights not downloaded, no local inference.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/flux-3-image-klein.webp",
+      "previewCredit": "预览：实拍 bfl.ai 官方模型页首屏",
+      "previewCreditEn": "Preview: capture of the official model page on bfl.ai, above the fold",
+      "featured": false
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",
