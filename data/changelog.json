@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-18",
+      "title": "收录：Cases +1（Claude 官方转的 6 个作品）",
+      "titleEn": "Catalog: Cases +1 (six projects reposted by Claude)",
+      "body": "showcase：claude-six-projects-2026-10，@claudeai 10-17 帖子里的 6 个作品（山火分析原型、涂鸦象棋、手写字体、电磁场可视化、AngioView 冠脉造影 3D、Haiku 俳句动画），每项附作者原帖；只有 AngioView 有公开网站，其余只有视频。预览为 6 段视频截帧拼成 3:2 WebP。本库没有复现任何一个。cases 175→176（1.4.58→1.4.59）。未改首页精选、HTML、Agent UI、Models。",
+      "bodyEn": "showcase: claude-six-projects-2026-10, the six projects in @claudeai's 10-17 post (wildfire analysis prototype, doodle chess, handwriting font, EM field visualization, AngioView 3D angiogram trainer, Haiku animations), each linked to the creator's post; only AngioView has a public site, the rest are videos. Preview is stills from the six videos tiled into a 3:2 WebP. This library reproduced none of them. cases 175→176 (1.4.58→1.4.59). Home picks, HTML, Agent UI and Models unchanged."
+    },
+    {
       "date": "2026-10-15",
       "title": "晚间收录：Cases +2（OpenPencil、Figma Specs）、Agent UI +1（figma-pilot）",
       "titleEn": "Evening catalog: Cases +2 (OpenPencil, Figma Specs), Agent UI +1 (figma-pilot)",
