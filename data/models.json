@@ -1,11 +1,173 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-18T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 30
   },
   "models": [
+    {
+      "id": "moss-image",
+      "slug": "moss-image",
+      "name": "MOSS-Image",
+      "vendor": "OpenMOSS",
+      "title": "MOSS-Image：5B 文生图，主打文字渲染和版式控制",
+      "titleEn": "MOSS-Image: a 5B text-to-image model aimed at text rendering and layout control",
+      "summary": "OpenMOSS 的 MOSS-Image 是 5B 参数的 DiT 文生图模型。项目页和 README 在 2026-10-16 公布 Base 与 SFT：SFT 由 Base 在整理过的数据上微调而来。官方写提示词最长约 4K token，可以用 JSON 指定文字、物体和位置。用户指南有推理参数和 LoRA 训练建议，并有英文和简体中文两份。权重为 Apache-2.0。README 链了 Hugging Face Space 演示和一份技术报告 PDF，也写了 ComfyUI 插件的装法。适合要在图里排文字和版式的人。本库没有下载权重，没有出图，技术报告只确认能下载，没有读正文。",
+      "summaryEn": "MOSS-Image from OpenMOSS is a 5B-parameter DiT text-to-image model. The project page and README introduced Base and SFT on 2026-10-16: SFT is Base fine-tuned on curated data. The project says prompts can run to about 4K tokens, and a JSON layout can place text and objects. The user guide has inference settings and LoRA training notes, in English and Simplified Chinese. The weights are Apache-2.0. The README links a Hugging Face Space demo and a technical-report PDF, and it documents a ComfyUI plugin. Useful when you need text and layout inside an image. This library did not download the weights or generate an image. The technical report downloaded, and this library did not read it.",
+      "announcedAt": "2026-10-16",
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "项目主页",
+          "labelEn": "Project homepage",
+          "url": "https://openmoss.ai/MOSS-Image/",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub 仓库",
+          "labelEn": "GitHub repository",
+          "url": "https://github.com/OpenMOSS/MOSS-Image",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：MOSS-Image-SFT",
+          "labelEn": "Hugging Face: MOSS-Image-SFT",
+          "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-11"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：MOSS-Image-Base",
+          "labelEn": "Hugging Face: MOSS-Image-Base",
+          "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-11"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face Space 演示",
+          "labelEn": "Hugging Face Space demo",
+          "url": "https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "技术报告 PDF",
+          "labelEn": "Technical report PDF",
+          "url": "https://github.com/OpenMOSS/MOSS-Image/blob/main/paper/MOSS_Image_Technical_Report.pdf",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "product",
+          "label": "Comfy-Org 权重",
+          "labelEn": "Comfy-Org weights",
+          "url": "https://huggingface.co/Comfy-Org/MOSS-Image",
+          "by": "Comfy-Org",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "community",
+          "label": "X 上的出图帖",
+          "labelEn": "X post with generated images",
+          "url": "https://x.com/ivanfioravanti/status/2111777166702870615",
+          "by": "ivanfioravanti",
+          "date": "2026-10-18"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "项目页和 README 称：5B 的 DiT 骨干，提示词最长约 4K token，可以用 JSON 指定场景、文字、物体和位置。",
+          "textEn": "The project page and README say: a 5B DiT backbone, prompts up to about 4K tokens, and JSON that places the scene, text, and objects."
+        },
+        {
+          "text": "两套权重：MOSS-Image-Base，以及在其上用整理数据微调的 MOSS-Image-SFT。权重为 Apache-2.0。Hugging Face 模型仓库创建于 2026-10-11，公开介绍写的是 2026-10-16。",
+          "textEn": "Two weight sets: MOSS-Image-Base, and MOSS-Image-SFT fine-tuned from it on curated data. Weights are Apache-2.0. The Hugging Face repos were created on 2026-10-11; the public introduction is dated 2026-10-16."
+        },
+        {
+          "text": "用户指南有推理设置和 LoRA 训练建议，并有中英两份。README 链了本地 Gradio、Hugging Face Space 演示和技术报告 PDF。本库没有出图，也没有读报告正文。",
+          "textEn": "The user guide has inference settings and LoRA training notes, in Chinese and English. The README links a local Gradio app, a Hugging Face Space demo, and a technical-report PDF. This library did not generate an image or read the report."
+        },
+        {
+          "text": "仓库写了 ComfyUI 插件的安装说明，Comfy-Org 也发布了一份权重。另有一个给 GPT-6 系列助手用的提示词增强 skill。本库都没有装。",
+          "textEn": "The repo documents a ComfyUI plugin, and Comfy-Org published a weight repo. There is also a prompt-enhancer skill aimed at GPT-6-family agents. This library installed none of them."
+        }
+      ],
+      "qualityNote": "5B、约 4K token、JSON 布局、Apache-2.0、LoRA 训练建议、Space 演示和技术报告链接，来自项目主页与 README。本库打开了主页、README、两张模型卡和 Space 页面，技术报告 PDF 可以下载，但没有读正文，没有跑推理，没有在 ComfyUI 里加载。有人在 X 上贴了自己机器上的出图耗时，那是个人环境的结果，没有写进能力说明。",
+      "qualityNoteEn": "The 5B size, roughly 4K-token prompts, JSON layout, Apache-2.0, LoRA training notes, Space demo, and technical-report link come from the project page and README. This library opened the homepage, README, both model cards, and the Space page. The technical-report PDF downloaded, and this library did not read it, did not run inference, and did not load it in ComfyUI. Someone posted their own generation times on X; that is one machine, and it is not listed here as a capability.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/moss-image.webp",
+      "previewCredit": "预览截自项目主页 openmoss.ai/MOSS-Image 首屏",
+      "previewCreditEn": "Preview cropped from the openmoss.ai/MOSS-Image homepage",
+      "featured": false,
+      "verifyLog": "2026-10-18：项目页 https://openmoss.ai/MOSS-Image/ HTTP 200（github.io 地址会跳到这里）。README 要点与 2026-10-16 新闻、4K token、5B、Apache-2.0、LoRA 建议、Space 与技术报告徽章均在页面上。gh api：OpenMOSS/MOSS-Image stars=548，license=Apache-2.0，创建 2026-10-16。HF API：Base 与 SFT createdAt 均为 2026-10-11，license apache-2.0。Space OpenMOSS-Team/MOSS-Image HTTP 200，API createdAt 2026-10-14。技术报告 raw PDF HTTP 200，约 32MB，未读正文。Comfy-Org/MOSS-Image HF API createdAt 2026-10-16，license apache-2.0。X 帖 2111777166702870615 为 ivanfioravanti 2026-10-18 的个人出图。预览为 Playwright 实拍项目主页首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: project page https://openmoss.ai/MOSS-Image/ HTTP 200 (the github.io URL redirects there). The README highlights, the 2026-10-16 news line, 4K tokens, 5B, Apache-2.0, LoRA notes, and the Space and technical-report badges are on the page. gh api: OpenMOSS/MOSS-Image stars=548, license=Apache-2.0, created 2026-10-16. HF API: Base and SFT createdAt 2026-10-11, license apache-2.0. Space OpenMOSS-Team/MOSS-Image HTTP 200, API createdAt 2026-10-14. Technical report raw PDF HTTP 200, about 32MB, not read. Comfy-Org/MOSS-Image HF API createdAt 2026-10-16, license apache-2.0. X post 2111777166702870615 is ivanfioravanti’s own generations on 2026-10-18. Preview is a Playwright capture of the project homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "kling-4-0",
+      "slug": "kling-4-0",
+      "name": "Kling 4.0",
+      "vendor": "Kling AI",
+      "title": "Kling 4.0：视频模型已全面开放",
+      "titleEn": "Kling 4.0: the video model is now fully available",
+      "summary": "Kling AI 在 2026-10-15 的官方帖里宣布 Kling 4.0 已全面可用。帖里写当天起有两件事：kling.ai 上的创作界面已更新；也可以通过 MCP 和 CLI 接入。帖里标为即将推出的是 4K 和 1080p 的 10-bit HDR 视频，以及给企业客户和开发者的 API。官网首页能看到 Kling 4.0 和 MCP / CLI 的介绍。这篇帖和首页可见文字没有写清片段时长、关键帧数量或参考图上限，这里不记。价格和积分本库没有核对。本库没有登录创作，也没有接 MCP 或 CLI。",
+      "summaryEn": "On 2026-10-15 Kling AI posted that Kling 4.0 is fully available. The post says two things start that day: the creation interface on kling.ai is refreshed, and Kling 4.0 can also be used through MCP and CLI. Marked as coming soon: 10-bit HDR video at 4K and 1080p, and API access for enterprise customers and developers. The homepage shows a Kling 4.0 section and an MCP / CLI section. That post and the visible homepage copy do not state clip length, keyframe count, or a reference limit, so those are left out. This library did not check prices or credits, did not sign in, and did not connect MCP or CLI.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Kling AI 官方帖：4.0 全面可用",
+          "labelEn": "Kling AI post: 4.0 fully available",
+          "url": "https://x.com/Kling_ai/status/2110747537187709424",
+          "by": "Kling AI",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Kling 官网",
+          "labelEn": "Kling website",
+          "url": "https://kling.ai/",
+          "by": "Kling AI",
+          "date": "2026-10-15"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方帖（2026-10-15）：Kling 4.0 已全面可用。网页创作界面已更新，也可以通过 MCP 和 CLI 做视频。",
+          "textEn": "Official post (2026-10-15): Kling 4.0 is fully available. The web creation interface is refreshed, and video work can also go through MCP and CLI."
+        },
+        {
+          "text": "同一帖写即将推出，还不是已经上线：4K 与 1080p 的 10-bit HDR，以及面向企业客户和开发者的 API。",
+          "textEn": "The same post marks these as coming soon, not already shipped: 10-bit HDR at 4K and 1080p, and an API for enterprise customers and developers."
+        },
+        {
+          "text": "官网首页有 Kling 4.0 和 MCP / CLI 区块。页面结构化数据里的 15 秒多镜头等字样仍放在 Kling 3.0 的功能列表下，本条不把它算成 4.0 的规格。",
+          "textEn": "The homepage has Kling 4.0 and MCP / CLI sections. Structured data on that page still lists items such as 15-second multi-shot control under the Kling 3.0 feature list, so this card does not treat them as 4.0 specs."
+        }
+      ],
+      "qualityNote": "已经可用的范围和即将推出的两项，只按 Kling AI 官方帖的原文。第三方摘要里的片段时长、关键帧个数和参考图上限，没有在这篇帖或首页可见正文里对上 4.0，因此不写。首页结构化数据仍把 15 秒多镜头等放在 Kling 3.0 的功能列表里。本库没有登录，没有查价格或积分，没有调用 MCP 或 CLI，也没有生成视频。打开的页面没有写明公司主体。",
+      "qualityNoteEn": "What is available now, and the two coming-soon items, follow the Kling AI post only. Clip length, keyframe count, and reference limits from third-party summaries were not matched to 4.0 in that post or in the visible homepage copy, so they are omitted. Homepage structured data still places 15-second multi-shot and similar items under the Kling 3.0 feature list. This library did not sign in, did not check prices or credits, did not call MCP or CLI, and did not generate a video. The pages opened do not name a parent company.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/kling-4-0.webp",
+      "previewCredit": "预览截自 kling.ai 首页首屏",
+      "previewCreditEn": "Preview cropped from the kling.ai homepage",
+      "featured": false,
+      "verifyLog": "2026-10-18：官方帖 https://x.com/Kling_ai/status/2110747537187709424 ，created_at 2026-10-15T15:00:03Z。帖文写全面可用、更新后的网页界面、MCP 与 CLI；配图文字含 Coming Soon：10-bit HDR at 4K and 1080p，以及 API access for enterprise customers and developers。kling.ai HTTP 200，首屏为 All-New Kling 4.0，页内有 MCP / CLI 区块。JSON-LD featureList 写的是 Kling 3.0 model series，含 15-second multi-shot control，未当作 4.0 规格。未见价格。预览为 Playwright 实拍首页，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: official post https://x.com/Kling_ai/status/2110747537187709424 , created_at 2026-10-15T15:00:03Z. The text says fully available, a refreshed web interface, and MCP and CLI; the image text includes Coming Soon: 10-bit HDR at 4K and 1080p, and API access for enterprise customers and developers. kling.ai HTTP 200, hero reads All-New Kling 4.0, and the page has an MCP / CLI section. JSON-LD featureList names the Kling 3.0 model series, including 15-second multi-shot control, which is not treated as a 4.0 spec. No prices seen. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",
