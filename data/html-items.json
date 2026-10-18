@@ -1,6 +1,111 @@
 {
   "items": [
     {
+      "id": "pele",
+      "slug": "pele",
+      "title": "Pele：把 Mermaid 画成可换主题的 SVG",
+      "titleEn": "Pele: Mermaid diagrams as themeable SVG",
+      "hook": "写 Mermaid，得到能用 CSS 变量换色的 SVG。",
+      "hookEn": "Write Mermaid and get SVG you can recolor with CSS variables.",
+      "summary": "Pele 是为 Obsidian 做的开源库，npm 包名 `pele`。你写 Mermaid 语法，它输出 SVG。官网写它零依赖，并支持 Mermaid 12.1.0 里的每一种图。颜色和字体走 CSS 变量（例如 `--pele-bg`），改样式不用重新渲染。官网对照表还写：gzip 后 230 kB，Mermaid.js 为 1.6 MB；渲染时间 0.05–0.3 毫秒，Mermaid.js 为 6–82 毫秒；并概括为大约小 6 倍、最快大约快 500 倍，对方有 23 个直接依赖。仓库 LICENSE 文件是 MIT，文末另注一枚 Lucide 图标为 ISC。适合要在页面或笔记里嵌图、又不想带上整包 Mermaid.js 的人。本库没有安装这个包，也没有把每种图都画一遍。",
+      "summaryEn": "Pele is an open-source library made for Obsidian. The npm package is `pele`. You write Mermaid syntax and it returns SVG. The site says it has zero dependencies and supports every diagram type in Mermaid 12.1.0. Colors and fonts use CSS variables such as `--pele-bg`, so restyling does not re-render. Its comparison table lists 230 kB gzip against 1.6 MB for Mermaid.js, render time 0.05–0.3 ms against 6–82 ms, summarized there as about 6× smaller and up to 500× faster, with 23 direct dependencies on the Mermaid.js side. The repo LICENSE file is MIT, and it notes one Lucide icon under ISC. Useful when you want diagrams in a page or note without the full Mermaid.js bundle. This library did not install the package or render every diagram type.",
+      "sourceUrl": "https://pele.run/",
+      "secondaryUrls": [
+        "https://github.com/obsidianmd/pele",
+        "https://www.npmjs.com/package/pele",
+        "https://news.ycombinator.com/item?id=50132193"
+      ],
+      "previewImage": "/previews/pele.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "mermaid",
+        "svg",
+        "diagram",
+        "mit",
+        "open-source",
+        "obsidian",
+        "css"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "零依赖、Mermaid 12.1.0 的全部图类型、CSS 变量换色不必重渲染，以及体积和速度对照，都是官网的说法，本库没有复测，也没有把每种图都画出来。仓库 LICENSE 文件为 MIT，文末另注一枚 Lucide 图标为 ISC；npm 上的 license 字段也是 MIT。本库没有执行安装，也没有在 Obsidian 里打开。",
+      "qualityNoteEn": "Zero dependencies, every Mermaid 12.1.0 diagram type, CSS-variable theming without a re-render, and the size and speed comparison are the site’s claims. This library did not re-benchmark them or render every diagram type. The repo LICENSE file is MIT and notes one Lucide icon under ISC; the npm license field is also MIT. This library did not install it or open it in Obsidian.",
+      "verifyLog": "2026-10-18：HN item 50132193，Algolia 461 pts，作者 dchest，创建 2026-10-17T15:55:09Z。官网 https://pele.run/ HTTP 200。npm pele@1.6.0，license 字段 MIT，dependencies 为空，repository 为 github.com/obsidianmd/pele。gh api：stars=1259，license 检测为 NOASSERTION；raw LICENSE 开头为 MIT License，Copyright (c) 2026 kepano，文末 Lucide 图标为 ISC。仓库创建 2026-10-05，最近推送 2026-10-17。预览为 Playwright 实拍官网首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: HN item 50132193, Algolia 461 pts, author dchest, created 2026-10-17T15:55:09Z. https://pele.run/ HTTP 200. npm pele@1.6.0, license field MIT, empty dependencies, repository github.com/obsidianmd/pele. gh api: stars=1259, detected license NOASSERTION; raw LICENSE starts as MIT License, Copyright (c) 2026 kepano, and notes a Lucide icon under ISC. Repo created 2026-10-05, last push 2026-10-17. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "furifont",
+      "slug": "furifont",
+      "title": "Furifont：振假名做在字体里的日文字体",
+      "titleEn": "Furifont: a Japanese font with furigana built into the glyphs",
+      "hook": "振假名画进字体里，连字换上，正文不用 ruby。",
+      "hookEn": "Furigana is drawn into the font, so the text stays plain.",
+      "summary": "Furifont 是 antfu 做的日文字体，振假名做在字体里面。它从 Source Han Sans 或 Source Han Serif 编译：构建时读入词典，把读音画进新字形，再用连字替换，例如「今日」变成带「きょう」的一个字。正文仍是普通汉字，不用 ruby。有 Sans 和 Serif，读音分平假名和罗马字；常规体提供 otf 与 woff2，可变字体提供 ttf 与 woff2。官网有书签小工具和用户脚本，用来给网页换上这套字体。浏览器按文字系统分开做连字，汉字后面的送假名字体自己看不到，这部分要另开 JavaScript。字体为 SIL OFL（README 写 1.1），读音数据为 CC BY-SA 4.0，仓库代码为 MIT。官网提醒读音可能不对。本库没有安装字体，也没有用书签改过别的网页。",
+      "summaryEn": "Furifont, by antfu, is a Japanese font with furigana built into the glyphs. It is compiled from Source Han Sans or Source Han Serif: a build step reads a dictionary, draws readings into new glyphs, and swaps them in with ligatures, so 今日 becomes one glyph with きょう above it. The text stays plain kanji, with no ruby markup. There are Sans and Serif families, in hiragana and romaji. Regular weights ship as otf and woff2; variable fonts ship as ttf and woff2. The site has a bookmarklet and a userscript that apply the font to a web page. Browsers shape each script separately, so the font cannot see okurigana after a kanji; that part needs optional JavaScript. The fonts are SIL OFL (the README says 1.1), the readings data is CC BY-SA 4.0, and the repo code is MIT. The site warns that readings can be wrong. This library did not install the font or run the bookmarklet on another page.",
+      "sourceUrl": "https://furifont.antfu.me/",
+      "secondaryUrls": [
+        "https://github.com/antfu/furifont",
+        "https://news.ycombinator.com/item?id=50100994"
+      ],
+      "previewImage": "/previews/furifont.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "font",
+        "japanese",
+        "furigana",
+        "ofl",
+        "typography",
+        "open-source"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "字体由 Source Han Sans / Serif 编译、SIL OFL、读音数据 CC BY-SA 4.0、Sans 与 Serif、平假名与罗马字、woff2 / ttf / otf、书签和用户脚本，都照官网与仓库 README。README 写代码为 MIT，并比官网多列了若干词典来源。本库没有安装字体，没有用书签或用户脚本改网页，也没有核对读音是否正确。",
+      "qualityNoteEn": "The Source Han Sans / Serif build, SIL OFL, CC BY-SA 4.0 readings, Sans and Serif, hiragana and romaji, woff2 / ttf / otf, and the bookmarklet and userscript follow the site and the repo README. The README says the code is MIT and lists a few more dictionary sources than the site. This library did not install the font, did not run the bookmarklet or userscript, and did not check whether readings are correct.",
+      "verifyLog": "2026-10-18：HN item 50100994，Algolia 361 pts，作者 plaguna，创建 2026-10-15T08:48:30Z。官网 https://furifont.antfu.me/ HTTP 200。仓库 antfu/furifont，gh api license=MIT stars=299，创建 2026-10-12，最近推送 2026-10-16，homepage 指向官网。预览为 Playwright 实拍官网首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: HN item 50100994, Algolia 361 pts, author plaguna, created 2026-10-15T08:48:30Z. https://furifont.antfu.me/ HTTP 200. Repo antfu/furifont, gh api license=MIT stars=299, created 2026-10-12, last push 2026-10-16, homepage is the site. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "five-hundred-clocks",
+      "slug": "five-hundred-clocks",
+      "title": "Five Hundred Clocks：一个 HTML 文件里的 500 只钟",
+      "titleEn": "Five Hundred Clocks: 500 clocks in one HTML file",
+      "hook": "一个文件里有 500 种钟，代码出自 Opus 5.5。",
+      "hookEn": "Five hundred clocks in one HTML file, written by Opus 5.5.",
+      "summary": "Tom Gally 的单页画廊：500 只用不同方式显示当前时间的钟，收在一个 HTML 文件里。Show HN 标题和仓库 README 都写这个文件约 6.3 MB。README 开头写明，页面和配套工具里的代码与文字都由 Claude Opus 5.5 撰写，Tom 出提示、看结果并决定留哪些，他自己不改代码。页面不引用外部库、字体、图片或网络请求，钟面用 canvas 二维绘图画出来。仓库许可证是 CC0。可以当作模型写出超大单文件网页的例子，不是一套可复用组件。本库打开了画廊，没有把 500 只钟逐一点开核对。",
+      "summaryEn": "Tom Gally’s single-page gallery: 500 clocks that each show the current time differently, in one HTML file. The Show HN title and the repo README both call the file about 6.3 MB. The README opens by saying Claude Opus 5.5 wrote the code and the text in the page and the build kit; Tom wrote the prompts, reviewed the results, and decided what to keep, and he did not edit the code. The page loads no external libraries, fonts, images, or network requests. Each clock is drawn with the canvas 2D API. The repo license is CC0. A useful example of a model writing a very large single-file page, not a reusable component kit. This library opened the gallery and did not open all 500 clocks to check them.",
+      "sourceUrl": "https://tkgally.github.io/500-clocks/",
+      "secondaryUrls": [
+        "https://github.com/tkgally/500-clocks",
+        "https://news.ycombinator.com/item?id=50137820"
+      ],
+      "previewImage": "/previews/five-hundred-clocks.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "html",
+        "single-file",
+        "clock",
+        "canvas",
+        "opus",
+        "cc0",
+        "ai-generated"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "单文件、无外部库和图片、canvas 绘制、四轮会话与子代理分工，来自仓库 README。该 README 写明由 Claude Opus 5.5 写成，其中的耗时和 token 是文内估算，本库没有核对用量。6.3 MB 是 Show HN 标题和 README 的说法。本库打开了画廊首页，没有逐只点开，也没有核对每只钟的时间。",
+      "qualityNoteEn": "The single file, the lack of external libraries and images, canvas drawing, and the four sessions with subagents come from the repo README. That README says Claude Opus 5.5 wrote it, and the time and token figures in it are estimates this library did not check against a bill. 6.3 MB is what the Show HN title and the README say. This library opened the gallery and did not open every clock or check that each one shows the right time.",
+      "verifyLog": "2026-10-18：Show HN item 50137820，Algolia 53 pts，作者 tkgally，创建 2026-10-18T04:04:58Z。页面 https://tkgally.github.io/500-clocks/ HTTP 200，content-range 总长 6347060 字节。仓库 tkgally/500-clocks，gh api license=CC0-1.0 stars=5，创建 2026-10-18。README 注明由 Claude Opus 5.5 于 2026-10-18 撰写，并给出分轮 token 估算（合计约 14–15 million 子代理 token）。预览为 Playwright 实拍画廊首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: Show HN item 50137820, Algolia 53 pts, author tkgally, created 2026-10-18T04:04:58Z. https://tkgally.github.io/500-clocks/ HTTP 200, content-range total 6347060 bytes. Repo tkgally/500-clocks, gh api license=CC0-1.0 stars=5, created 2026-10-18. The README says Claude Opus 5.5 wrote it on 2026-10-18 and gives per-session token estimates (about 14–15 million subagent tokens in total). Preview is a Playwright capture of the gallery, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +4666,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-18T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.66",
+    "count": 139
   }
 }
