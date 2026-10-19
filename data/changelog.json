@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-19",
+      "title": "晚间收录：Cases +1（UI Design Editor）、HTML +3（Rocket Engines、Kernwise、CADR Mono）、Models +1（Timestral）",
+      "titleEn": "Evening catalog: Cases +1 (UI Design Editor), HTML +3 (Rocket Engines, Kernwise, CADR Mono), Models +1 (Timestral)",
+      "body": "Cases：ui-design-editor（MIT 网页设计画布。仓库简介仍写 100% local，打开的编辑器会保存 Space，持链即可读写；Connect AI 把提示词交给助手。HN 50150221）。HTML：farside-rocket-engines（13 种发动机的 3D 目录，Babylon.js 包内版本号 9.16.1，WebGL2；作者自述 Claude Opus 5.5 与 Blender MCP。HN 50140443）；kernwise（浏览器字距练习，对照字体文件里的字距，页面没有写 AI 制作。HN 50151283）；cadr-mono（OFL 1.1 等宽字体，README 写 935 字形，样张检查表写 729，本库没有安装核对。HN 50145962）。Models：timestral（新闻页 2026-10-15；代码 Apache-2.0，四套权重为 Modified MIT 且含月收入 2000 万美元条款；榜单与 CPU 耗时只记厂商说法。HN 50150434）。五条预览均为 Playwright 实拍 3:2 WebP。无头 WebGL 用了 SwiftShader。收录前核对 main 与当时打开的 PR，这些域名没有重复。没有跳过。cases 175→176（1.4.58→1.4.59），html-items 136→139（1.3.65→1.3.66），models 28→29（1.1.21→1.1.22）。未改 Agent UI、首页精选。未合并。",
+      "bodyEn": "Cases: ui-design-editor (MIT browser design canvas. The repo blurb still says 100% local; the live editor saves a Space that anyone with the link can edit; Connect AI hands a prompt to an assistant. HN 50150221). HTML: farside-rocket-engines (3D catalog of 13 engine cycles; Babylon.js bundle version 9.16.1; WebGL2; the author says Claude Opus 5.5 and Blender MCP. HN 50140443); kernwise (in-browser kerning drill checked against the font file; the pages do not say it was made with AI. HN 50151283); cadr-mono (OFL 1.1 monospace; the README says 935 glyphs and the specimen table says 729; the font was not installed to reconcile them. HN 50145962). Models: timestral (news post 2026-10-15; code Apache-2.0; four weight repos are Modified MIT with a $20 million monthly-revenue clause; ranks and CPU timings are vendor claims only. HN 50150434). All five previews are Playwright 3:2 WebP captures. Headless WebGL used SwiftShader. Checked main and the open PRs first; these domains were not already listed. Nothing skipped. cases 175→176 (1.4.58→1.4.59), html-items 136→139 (1.3.65→1.3.66), models 28→29 (1.1.21→1.1.22). Agent UI and homepage picks unchanged. Not merged."
+    },
+    {
       "date": "2026-10-15",
       "title": "晚间收录：Cases +2（OpenPencil、Figma Specs）、Agent UI +1（figma-pilot）",
       "titleEn": "Evening catalog: Cases +2 (OpenPencil, Figma Specs), Agent UI +1 (figma-pilot)",
