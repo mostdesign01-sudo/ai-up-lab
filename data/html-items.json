@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "id": "farside-rocket-engines",
+      "slug": "farside-rocket-engines",
+      "title": "FarsideLab：可拆开的火箭发动机 3D 目录",
+      "titleEn": "FarsideLab: a 3D catalog of rocket engines you can take apart",
+      "hook": "在浏览器里拆开发动机，看推进剂怎么走。",
+      "hookEn": "Take a rocket engine apart in the browser and follow the propellant.",
+      "summary": "FarsideLab 的 Concept 002 是浏览器里的火箭发动机目录，列出 13 种循环，分成已飞和未来概念两组。3D 视图可以转动，也有 Explore、Explode、Cutaway、Flow 四个模式。页脚写这是独立可视化项目，不代表 NASA 或发动机制造商；外形尺寸按公开资料，内部布置是示意。作者 Kari Nöjd 在讨论帖里说，自己是暖通和给排水工程师，也做 3D，不是火箭工程师；站点用 Claude Opus 5.5 做，三维模型由 Claude 经 Blender MCP 生成，他做美术指导和事实核对，前后大约一周。画面署名 Visuals by Vidro。适合想看循环差别、又不把示意模型当成工程图的人。本库没有用文献复核飞行记录，也没有把流动动画看完。",
+      "summaryEn": "Concept 002 on FarsideLab is an in-browser catalog of rocket engines: 13 cycles, split into flown and future concepts. The 3D view orbits, and it has Explore, Explode, Cutaway, and Flow. The footer says this is an independent visualization, not affiliated with NASA or any engine maker; outer dimensions follow published figures, and the internals are representative. Kari Nöjd wrote that he is an HVAC and plumbing engineer and a 3D artist, not a rocket engineer; the site was made with Claude Opus 5.5, the models were made by Claude through Blender MCP, and he did art direction and fact checking over about a week. The credit line says Visuals by Vidro. Useful when you want to see how the cycles differ without treating the model as an engineering drawing. This library did not check the flight history against the literature and did not watch a full flow loop.",
+      "sourceUrl": "https://farsidelab.com/concept/rocket-engines/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50140443"
+      ],
+      "previewImage": "/previews/farside-rocket-engines.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "3d",
+        "webgl",
+        "rocket",
+        "babylon",
+        "show-hn",
+        "claude"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "13 种和「已飞 / 未来概念」两组来自页面目录。Claude Opus 5.5、Blender MCP 和大约一周是作者在讨论帖里的自述。页脚写内部结构是示意。未来概念里，aerospike 与 nuclear thermal 的标题写试车但没飞，rotating detonation 写尚未服役、并提到 2021 年有小型发动机在探空火箭上点火，air-breathing 写从未造完。作者把后四类概括成「3 个试车没飞、1 个没做完」，和旋转爆震那条的页面文字不完全一样，本条按页面标题写。本库点过四个模式和 Gas generator，没有拖开合滑杆，没有点零件，没有提交邮箱，也没有查原始文献。",
+      "qualityNoteEn": "The 13 cycles and the flown / future groups come from the page catalog. Claude Opus 5.5, Blender MCP, and about a week are the author’s own account. The footer says the internals are representative. Among the future concepts, aerospike and nuclear thermal are headed as tested and never flown, rotating detonation as not yet in service with a note that a small engine fired on a sounding rocket in 2021, and air-breathing as never built. The author’s summary of “three test-fired and unflown, one never finished” does not match that rotating-detonation note exactly; this entry follows the page headings. This library clicked the four modes and Gas generator, did not drag the spread slider, did not click a part, did not submit the email form, and did not check primary sources.",
+      "verifyLog": "2026-10-19 晚间：页面 HTTP 200，标题 Concept 002: Rocket Engines · FarsideLab。目录 JSON https://farsidelab.com/content/explorers/rocket-engines.json HTTP 200，explorer.engines 13 条：Pressure-fed、Gas generator、Staged combustion、Full-flow staged、Expander、Electric pump-fed、Solid motor、Hybrid motor、Ion thruster（group today），以及 Aerospike、Rotating detonation、Nuclear thermal、Air-breathing combined cycle（group future）。加载的 babylon-ray.core 包里有 _CdnVersion=\"9.16.1\"。Playwright + headless Chrome，启动参数 --use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader。点 Explore in 3D 后出现 canvas，getContext('webgl2') 成功，VERSION 为 WebGL 2.0 (OpenGL ES 3.0 Chromium)，RENDERER 为 WebKit WebGL。先看到 Pressure-fed 装配体和右侧 Shuttle / Orion 说明，再点 Gas generator，右侧写 Falcon 9 / Falcon Heavy。点 2 EXPLODE 能看到零件分开和 SPREAD 滑杆，点击把页面滚到了视口下沿，模型有一部分在画面上方；没有拖滑杆。点 3 CUTAWAY 能看到喷管剖开。点 4 FLOW 时选中行变成 Full-flow staged，管路是蓝和铜色；静帧看不出粒子是否在动，没有看完一圈。没有点零件，没有点 Copy view link，没有填 Notify 邮箱。HN item 50140443，Algolia 1 pt，作者 kari_nojd，创建 2026-10-18T12:20:12Z。预览为 Explore 后的 Pressure-fed 视图，Playwright 实拍 1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 evening: page HTTP 200, title Concept 002: Rocket Engines · FarsideLab. Catalog JSON https://farsidelab.com/content/explorers/rocket-engines.json HTTP 200, 13 explorer.engines: Pressure-fed, Gas generator, Staged combustion, Full-flow staged, Expander, Electric pump-fed, Solid motor, Hybrid motor, Ion thruster (group today), plus Aerospike, Rotating detonation, Nuclear thermal, and Air-breathing combined cycle (group future). The loaded babylon-ray.core bundle contains _CdnVersion=\"9.16.1\". Playwright + headless Chrome with --use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader. After Explore in 3D, a canvas appeared, getContext('webgl2') succeeded, VERSION was WebGL 2.0 (OpenGL ES 3.0 Chromium), RENDERER was WebKit WebGL. First view was the assembled Pressure-fed engine with the Shuttle / Orion note; Gas generator then showed the Falcon 9 / Falcon Heavy note. 2 EXPLODE showed separated parts and a SPREAD slider; the click scrolled the page so part of the model sat above the viewport. The slider was not dragged. 3 CUTAWAY showed a cut nozzle. 4 FLOW left Full-flow staged selected, with blue and copper lines; a still frame does not show whether particles were moving, and the loop was not watched. Did not click a part, Copy view link, or the Notify email field. HN item 50140443, Algolia 1 pt, author kari_nojd, created 2026-10-18T12:20:12Z. Preview is the Pressure-fed view after Explore, a Playwright capture at 1200×800 WebP."
+    },
+    {
+      "id": "kernwise",
+      "slug": "kernwise",
+      "title": "Kernwise：免费的字距练习",
+      "titleEn": "Kernwise: a free kerning drill",
+      "hook": "把字母拖到看起来均匀，再对字体里的字距。",
+      "hookEn": "Drag letters until the spacing looks even, then check the font's kerning.",
+      "summary": "Kernwise 是 Design Inspiration 做的免费字距练习，在浏览器里打开就能玩，不用注册，也不用安装。一轮 10 个词，每个词换一款字体。第一个和最后一个字母固定，中间的用鼠标拖，或用方向键一次挪 1 像素（按住 Shift 挪 10 像素）。点 Done 之后，页面把你的间距和字体文件里的字距叠在一起，并标出每个间隙差了多少；页面写 1000 单位等于一个字号。也可以自己输入 3 到 12 个字母练习，练习词不计入这轮分数。说明文写字体来自 Google Fonts，并写受到 Kern Type 的启发。游戏页和说明文都没有说它是 AI 做的。适合想练标题字距的人。本库没有打完一轮，也没有用自定义词。",
+      "summaryEn": "Kernwise, by Design Inspiration, is a free kerning drill in the browser. No sign-up and nothing to install. A round is 10 words, each in a different typeface. The first and last letters stay fixed; you drag the ones between them, or nudge 1 pixel with the arrow keys (10 with Shift). Done lays the font’s own spacing over yours and labels how far each gap is off. The page says 1,000 units equal the type size. You can also type a word of 3 to 12 letters; practice words are not scored. The article says the typefaces come from Google Fonts and that the game is inspired by Kern Type. Neither the game nor the article says it was made with AI. Useful for practicing headline spacing. This library did not finish a round or try a custom word.",
+      "sourceUrl": "https://www.designinspiration.info/kernwise.html",
+      "secondaryUrls": [
+        "https://www.designinspiration.info/kernwise-a-free-kerning-game-for-designers/",
+        "https://news.ycombinator.com/item?id=50151283"
+      ],
+      "previewImage": "/previews/kernwise.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "typography",
+        "kerning",
+        "design",
+        "google-fonts",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "不用注册、一轮 10 个词、对照字体文件里的字距、1000 单位等于一个字号，都按说明文和游戏页。说明文写有 17 款字体、词库超过 60 个，本库没有逐个数。页面没有写这是 AI 做的。本库在一次新开的局里直接点了 Done，看到叠字、间隙数字和分数；没有先把字距拖匀，没有点 Yours 或 Solution，没有打完 10 个词，也没有提交自定义词。",
+      "qualityNoteEn": "No sign-up, 10 words a round, a comparison with the font file’s kerning, and 1,000 units to the em follow the article and the game page. The article says 17 typefaces and a pool of more than 60 words; this library did not count them. The pages do not say the game was made with AI. In a fresh round this library clicked Done immediately and saw the overlay, the gap numbers, and a score. The letters were not dragged into place first. Yours and Solution were not opened, the 10 words were not finished, and no custom word was submitted.",
+      "verifyLog": "2026-10-19 晚间：游戏页与说明文 HTTP 200。说明文标题 Kernwise: A Free Kerning Game for Designers。游戏页标题 Kernwise。第一次打开是 Word 01 / 10，Typeface Syne by Bonjour Monde，词为 Feather；按了 Tab 再按一次右方向键，没有按 Enter。另开一局直接点 Done：词为 Whisky，Typeface Instrument Serif by Instrument，分数 15/100，间隙标了 −35、−55、+10、+203、−123，并出现 Overlay / Yours / Solution。没有点后两个视图，没有点 Next word，没有用 Space your own word。说明文检索没有 Claude、GPT 或其他「AI 制作」表述（样式注释里的 auto-generated 不算）。HN item 50151283，Algolia 1 pt，作者 bepero，创建 2026-10-19T11:56:11Z，帖子正文为空。预览为 Playwright 实拍第一局未核对时的画面，1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 evening: game page and article HTTP 200. Article title Kernwise: A Free Kerning Game for Designers. Game title Kernwise. First load was Word 01 / 10, Typeface Syne by Bonjour Monde, the word Feather. Pressed Tab, then ArrowRight once, and did not press Enter. A later round: clicked Done without dragging. The word was Whisky, Typeface Instrument Serif by Instrument, score 15/100, gaps marked −35, −55, +10, +203, −123, with Overlay / Yours / Solution. Did not open Yours or Solution, did not click Next word, and did not use Space your own word. A search of the article found no Claude, GPT, or other “made with AI” claim (an auto-generated note in the stylesheet does not count). HN item 50151283, Algolia 1 pt, author bepero, created 2026-10-19T11:56:11Z, empty post text. Preview is a Playwright capture of the first round before checking, 1200×800 WebP."
+    },
+    {
+      "id": "cadr-mono",
+      "slug": "cadr-mono",
+      "title": "CADR Mono：用 Lisp 生成的等宽字体",
+      "titleEn": "CADR Mono: a monospace generated from Lisp",
+      "hook": "等宽字体从 Lisp 参数生成，另有一档深色。",
+      "hookEn": "A monospace generated from Lisp parameters, with a separate dark grade.",
+      "summary": "CADR Mono 是 Anthony Green 用 Common Lisp 生成的等宽字体，给终端和代码用。README 写 935 个字形、8 个静态字体，许可是 SIL OFL 1.1，且没有 Reserved Font Name。有 CADR Mono 和 CADR Mono Dark 两档，各有 Regular、Italic、Bold、Bold Italic。深色档把笔画减细，字宽不变，所以换档不会把列挤乱。方框、方块和盲文按字格算出来；斜体里的方框和盲文不跟着斜。README 里的样张是终端里的 git、diff、方框和盲文。Nerd Font 要用仓库里的命令另外编，fonts 目录里没有，图标许可也和正文字体不一样。适合想要一款可免费嵌入的等宽字体、并接受字形是算出来而不是手绘的人。本库没有安装字体，也没有数过字形。",
+      "summaryEn": "CADR Mono, by Anthony Green, is a monospace for terminals and code, generated from Common Lisp. The README says 935 glyphs and 8 static fonts, under SIL OFL 1.1, with no Reserved Font Name. There are two families, CADR Mono and CADR Mono Dark, each in Regular, Italic, Bold, and Bold Italic. The dark grade removes ink from the strokes and keeps the same advance, so swapping grades does not reflow a column. Box drawing, blocks, and braille are computed from the cell; in the italic, boxes and braille stay upright. The README specimen shows git, a diff, box drawing, and braille in a terminal. A Nerd Font build is a separate make target, is not in fonts/, and its icons use other licenses. Useful when you want an embeddable monospace and accept that the glyphs are computed rather than drawn by hand. This library did not install the font or count the glyphs.",
+      "sourceUrl": "https://github.com/atgreen/cadr-mono",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50145962"
+      ],
+      "previewImage": "/previews/cadr-mono.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "font",
+        "monospace",
+        "ofl",
+        "lisp",
+        "typography",
+        "terminal"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "935 个字形、两档、8 个字体，以及 OFL 1.1、没有保留字体名，按 README 和 LICENSE。同一页样张里的检查表写着 glyph set 729 PASS、advance 1229、fonts 8、ink in cell 41 WARN，和 935 不是同一个数字，本库没有安装字体去对。Nerd Font 不在 fonts 目录里，本库没有编译，也没有打开那些图标许可文件。斜体、盲文和 hinting 都没有在终端里看过。",
+      "qualityNoteEn": "935 glyphs, two grades, eight fonts, OFL 1.1, and no Reserved Font Name follow the README and the LICENSE file. The specimen on that same README shows a check table reading glyph set 729 PASS, advance 1229, fonts 8, and ink in cell 41 WARN. That is not the same number as 935, and this library did not install the font to reconcile them. The Nerd Font build is not in fonts/; this library did not compile it and did not open those icon license files. Italic, braille, and hinting were not tried in a terminal.",
+      "verifyLog": "2026-10-19 晚间：仓库页 HTTP 200。gh api：atgreen/cadr-mono，license SPDX OFL-1.1，4★，创建 2026-10-15T10:53:07Z，最近推送 2026-10-15T15:03:07Z，homepage 为空。LICENSE 文件开头为 SIL Open Font License Version 1.1，Copyright 2026 Anthony Green。README 写 935 glyphs、8 static fonts、无 Reserved Font Name，深色档 stem 164 对 180、advance 都是 1229 / 2048 em，方框与盲文在斜体中不倾斜，Nerd Font 用 make -f build/Makefile nf，图标来自多套上游许可且 Font Logos / Pomicons 未收录。样张 alt 为 “CADR Mono in a terminal: git, a diff, box drawing, braille meters and source”，图中检查表为 glyph set 729 PASS。HN item 50145962，Algolia 2 pts，作者 atgreen，创建 2026-10-18T22:04:50Z；作者写这是又一个等宽字体，反引号比较醒目，方便读 Common Lisp。本库没有在终端里对照反引号。预览为 Playwright 截取 README 样张后居中裁成 1200×800 WebP。字体条目放在 HTML，与未合并的 Furifont 相同。",
+      "verifyLogEn": "2026-10-19 evening: repo page HTTP 200. gh api: atgreen/cadr-mono, SPDX OFL-1.1, 4★, created 2026-10-15T10:53:07Z, last push 2026-10-15T15:03:07Z, homepage empty. The LICENSE file starts as SIL Open Font License Version 1.1, Copyright 2026 Anthony Green. The README says 935 glyphs, 8 static fonts, no Reserved Font Name, dark-grade stem 164 against 180, advance 1229 on a 2048 em, box drawing and braille upright in the italic, and a Nerd Font build via make -f build/Makefile nf. Icon sets use several upstream licenses; Font Logos and Pomicons are omitted. Specimen alt text: “CADR Mono in a terminal: git, a diff, box drawing, braille meters and source.” The table in that image reads glyph set 729 PASS. HN item 50145962, Algolia 2 pts, author atgreen, created 2026-10-18T22:04:50Z. The author calls it another monospace vanity font with a strong backquote for Common Lisp. This library did not compare the backquote in a terminal. Preview is the README specimen, captured with Playwright and center-cropped to 1200×800 WebP. Filed under HTML, same library as the still-open Furifont entry."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +4661,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-19T12:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.66",
+    "count": 139
   }
 }
