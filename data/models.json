@@ -1,11 +1,200 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-21T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 30
   },
   "models": [
+    {
+      "id": "krea-3",
+      "slug": "krea-3",
+      "name": "Krea 3",
+      "vendor": "Krea",
+      "title": "Krea 3：Krea 的新图像模型，Fast 与 Ultra 两档",
+      "titleEn": "Krea 3: Krea’s new image model, in Fast and Ultra",
+      "summary": "Krea 在 2026-10-15 的发布文里推出 Krea 3，写作新的图像编辑模型：按话说改哪里、留哪里，也能直接文生图。发布文称多数编辑在 8 秒内返回、原生 2K，2K 每张 0.06 美元、1K 每张 0.03 美元，一次最多 6 张参考图；产品页现在的标题是比 Nano Banana Pro 快 4 倍，并写它已是应用里的默认图像模型。API 把思考分成 fast、high、ultra。fast 是默认；fast 和 high 不需要 beta。ultra 要 Max 及以上，输出固定 2K，必须带参考图，不带图的请求会按 fast 跑、按 fast 计费，文档写一次可能要几分钟、最长大约 10 分钟。10 月 20 日官方 X 帖称 Ultra 排进图像榜前 4、只被 OpenAI 的模型超过，Fast 把速度和质量的曲线往前推。同一天的官方博客把 Arena、Artificial Analysis、Design Arena 分开写，并写明三块榜不是同一个名次。这些时间和名次都是厂商说法。适合要批量改产品图、又在意单张时间和价钱的人。本库没有登录，没有出过一张图。",
+      "summaryEn": "Krea introduced Krea 3 on 15 October 2026 as its new image-editing model: you say what should change and what should stay, and it can also generate from text. The launch post says most edits return in under 8 seconds at native 2K, at $0.06 per image at 2K and $0.03 at 1K, with up to 6 reference images. The product page’s current headline says it is 4× faster than Nano Banana Pro, and the guide says it is now the default image model in the app. The API splits thinking into fast, high, and ultra. Fast is the default. Fast and high do not need beta. Ultra requires Max or above, always outputs 2K, needs a reference image, and a text-only ultra request runs and bills as fast. The docs say a run can take minutes, up to about 10. On 20 October the official X post said Ultra ranks in the top 4 of image arenas, passed only by OpenAI models, and that Fast pushes the speed-quality curve. The same day’s blog keeps Arena, Artificial Analysis, and Design Arena separate and says they are not one rank. The times and the ranks are vendor claims. Useful when you edit product shots in volume and care about time and price per image. This library did not sign in and did not generate an image.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Krea 博客：Introducing Krea 3",
+          "labelEn": "Krea blog: Introducing Krea 3",
+          "url": "https://www.krea.ai/blog/introducing-krea-3",
+          "by": "Krea",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Krea 3 产品页",
+          "labelEn": "Krea 3 product page",
+          "url": "https://www.krea.ai/krea-3",
+          "by": "Krea"
+        },
+        {
+          "kind": "official",
+          "label": "Krea 博客：榜单说明（10 月 20 日）",
+          "labelEn": "Krea blog: the leaderboard post (20 October)",
+          "url": "https://www.krea.ai/blog/krea-3-benchmarks",
+          "by": "Krea",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "官方 X 帖",
+          "labelEn": "Official X post",
+          "url": "https://x.com/krea_ai/status/2112567020353102324",
+          "by": "krea_ai",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "用户指南",
+          "labelEn": "User guide",
+          "url": "https://www.krea.ai/docs/user-guide/features/krea-3",
+          "by": "Krea"
+        },
+        {
+          "kind": "official",
+          "label": "API 说明：思考档与 Ultra",
+          "labelEn": "API overview: thinking modes and Ultra",
+          "url": "https://www.krea.ai/docs/developers/krea-3/overview",
+          "by": "Krea"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：10 月 15 日发布帖",
+          "labelEn": "Hacker News: the 15 October launch thread",
+          "url": "https://news.ycombinator.com/item?id=50105648",
+          "by": "dvrp",
+          "date": "2026-10-15"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：多数编辑 8 秒内、原生 2K；2K 每张 0.06 美元，1K 每张 0.03 美元。对照表把 Nano Banana Pro 写成 33 秒、0.135 美元，GPT Image 2 写成 90 秒、0.22 美元，并注明时间是 Krea 自己在 9 月 24 日到 10 月 1 日测的中位数。产品页标题写比 Nano Banana Pro 快 4 倍。",
+          "textEn": "Vendor claim: most edits return in under 8 seconds at native 2K, at $0.06 per image at 2K and $0.03 at 1K. The comparison table lists Nano Banana Pro at 33 seconds and $0.135, and GPT Image 2 at 90 seconds and $0.22, and says the times are Krea’s own medians from 24 September to 1 October. The product-page headline says 4× faster than Nano Banana Pro."
+        },
+        {
+          "text": "API 文档：fast 是默认；fast 和 high 不需要 beta。ultra 要 Max 及以上，始终 2K，不带参考图就按 fast 跑并按 fast 计费；一次可能要几分钟，文档写最长大约 10 分钟。8 秒指的是发布文里的常规编辑，不是 ultra。",
+          "textEn": "API docs: fast is the default; fast and high do not need beta. Ultra requires Max or above, is always 2K, and a request with no reference image runs and bills as fast. A job can take minutes; the docs say up to about 10. The 8 seconds are the launch post’s ordinary edits, not Ultra."
+        },
+        {
+          "text": "榜单只记厂商说法，本库没有打开 Arena、Artificial Analysis 或 Design Arena 复核。X 帖称 Ultra 排前 4、只被 OpenAI 超过。同日博客写三块榜不能合成一个名次：Arena 多图编辑 Ultra 第 4（1435±11，初步，2991 票），单图编辑第 8；博客转述的 Artificial Analysis 上 Ultra 第 5、Fast 第 11；Design Arena 上 Ultra Thinking 第 4/51。",
+          "textEn": "Ranks are vendor claims only. This library did not open Arena, Artificial Analysis, or Design Arena to check them. The X post says Ultra is top 4, passed only by OpenAI. The same day’s blog says the three boards must not be collapsed: Arena multi-image edit has Ultra at #4 (1435±11, preliminary, 2,991 votes) and single-image edit at #8; the blog’s retelling of Artificial Analysis has Ultra at #5 and Fast at #11; Design Arena has Ultra Thinking at #4 of 51."
+        },
+        {
+          "text": "发布文写 Krea 3 已在 krea.ai 上线，并列出 fal、Hedra、Together AI、Nous Research、OpenRouter 和 Replicate。本库没有登录，没有出图，也没有逐个打开这些渠道。",
+          "textEn": "The launch post says Krea 3 is live on krea.ai and lists fal, Hedra, Together AI, Nous Research, OpenRouter, and Replicate. This library did not sign in, did not generate an image, and did not open each of those partners."
+        }
+      ],
+      "qualityNote": "速度、价格和名次都是 Krea 的说法，本库没有出图，也没有打开第三方榜复核。博客首屏嵌的图写着 Arena 多图编辑、Krea 3 Ultra Ranked #4、1435，前三名是 GPT Image，和 X 帖的“前 4、只被 OpenAI 超过”对得上这一块榜；同一篇博客又写单图编辑是第 8、另外两块榜名次也不同。不要把帖子收成一个总排名。库里已有 Krea 的 Photoshop 插件那条，写的是 Krea 2 等模型，本条不把 Krea 3 算进那个插件。未合并的晚间 PR 曾以仍是测试版为由跳过；本库打开的 10 月 15 日发布文和用户指南写已经对所有人开放，Ultra 另要 Max 及以上。",
+      "qualityNoteEn": "Speeds, prices, and ranks are Krea’s claims. This library did not generate an image and did not open the third-party boards. The chart embedded at the top of the blog says Arena multi-image edit, Krea 3 Ultra ranked #4, 1435, with three GPT Image models above it, which matches the X post’s “top 4, only OpenAI ahead” for that one board. The same post also says single-image edit is #8 and that the other two boards differ. Do not collapse the post into one overall rank. The library already has Krea’s Photoshop plugin entry, which names Krea 2 and other models; this card does not treat Krea 3 as part of that plugin. An unmerged evening PR skipped it as still in beta. The 15 October launch post and the user guide opened here say it is available to everyone, with Ultra separately requiring Max or above.",
+      "relatedCaseIds": [
+        "krea-photoshop-plugin"
+      ],
+      "relatedModelIds": [],
+      "previewImage": "/previews/krea-3.webp",
+      "previewCredit": "预览截自 Krea 3 产品页首屏",
+      "previewCreditEn": "Preview cropped from the Krea 3 product-page hero",
+      "featured": false,
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://www.krea.ai/blog/introducing-krea-3 HTTP 200，标题 Introducing Krea 3 - Krea，作者 The Krea Team，October 15, 2026。正文：under 8 seconds、native 2K、$0.06 at 2K、$0.03 at 1K、up to 6 reference images；对照表 Under 8 s / 33 s / 90 s，$0.06 / $0.135 / $0.22，脚注写 median time on Krea, Sep 24 to Oct 1, 2026, queue included，list prices without image references；并写 live on krea.ai for our 30 million users，渠道 fal、Hedra、Together AI、Nous Research、OpenRouter、Replicate。产品页 https://www.krea.ai/krea-3 HTTP 200，标题 Krea 3: an image editing model 4× faster than Nano Banana Pro，首屏字是 Frontier Image Editing Model、4× faster than Nano Banana Pro。榜单文 https://www.krea.ai/blog/krea-3-benchmarks HTTP 200，October 20, 2026，开篇写三块榜不能合成一个名次，并给出 Arena 多图 #4（1435±11，Preliminary，2,991 votes，rank spread 4–5）、单图 #8（1411±11，2,619 votes，spread 5–10）、Artificial Analysis Ultra #5 / Fast #11、Design Arena Ultra Thinking #4 of 51。Chrome 打开该文，首屏图文字为 Multi-Image Edit Arena、Krea 3 Ultra: Ranked #4。用户指南与 API 说明均 HTTP 200：default image model；fast / high 不需要 beta；ultra 要 Max，402 与 K3_ULTRA_ACCESS_REQUIRED；纯文字 ultra 按 fast 计费；最长 about 10 minutes。X 帖 2112567020353102324，@krea_ai，2026-10-20T15:30:01Z，正文即 top of image arenas、Fast 的帕累托、Ultra top-4 only surpassed by OpenAI models。HN item 50105648，Algolia 352 pts，作者 dvrp，创建 2026-10-15T16:04:05Z，链的是产品页。没有登录，没有点 Try Krea 3。预览为产品页首屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://www.krea.ai/blog/introducing-krea-3 HTTP 200, title Introducing Krea 3 - Krea, The Krea Team, October 15, 2026. Body: under 8 seconds, native 2K, $0.06 at 2K, $0.03 at 1K, up to 6 reference images. The comparison table says Under 8 s / 33 s / 90 s and $0.06 / $0.135 / $0.22, with a footnote that the times are medians on Krea from Sep 24 to Oct 1, 2026, queue included, and list prices without image references. It also says live on krea.ai for 30 million users, via fal, Hedra, Together AI, Nous Research, OpenRouter, and Replicate. Product page https://www.krea.ai/krea-3 HTTP 200, title Krea 3: an image editing model 4× faster than Nano Banana Pro; the hero reads Frontier Image Editing Model, 4× faster than Nano Banana Pro. Benchmark post https://www.krea.ai/blog/krea-3-benchmarks HTTP 200, October 20, 2026. The opening says the three boards must not be collapsed, and gives Arena multi-image #4 (1435±11, Preliminary, 2,991 votes, spread 4–5), single-image #8 (1411±11, 2,619 votes, spread 5–10), Artificial Analysis Ultra #5 / Fast #11, and Design Arena Ultra Thinking #4 of 51. Chrome showed the embedded chart labeled Multi-Image Edit Arena, Krea 3 Ultra: Ranked #4. The user guide and API overview both returned HTTP 200: default image model; fast and high need no beta; ultra needs Max, with 402 and K3_ULTRA_ACCESS_REQUIRED; text-only ultra bills as fast; up to about 10 minutes. X post 2112567020353102324, @krea_ai, 2026-10-20T15:30:01Z. HN item 50105648, Algolia 352 pts, author dvrp, created 2026-10-15T16:04:05Z, linking the product page. Not signed in, Try Krea 3 not clicked. Preview is the product-page hero, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "voxtral-3",
+      "slug": "voxtral-3",
+      "name": "Voxtral 3",
+      "vendor": "Mistral",
+      "title": "Voxtral 3：Mistral 的语音模型家族和语音代理 SDK",
+      "titleEn": "Voxtral 3: Mistral’s speech-model family and voice-agent SDK",
+      "summary": "Mistral 在 2026-10-20 发布 Voxtral 3：一组语音模型和一个语音代理 SDK，把听、想、调用工具和说串进一条实时流程。新闻点名的模型有 Voxtral Small Transcribe 3（转录、说话人分离、关键词偏置，官方称覆盖 50 多种语言）、Voxtral Mini Transcribe 3（新闻写 4B 参数，批量每分钟 0.0035 美元）、Voxtral Mini Transcribe Realtime 3，以及 Voxtral Mini TTS 3。文档四页都标着 2026-10-20、Public Preview。新闻写实时模型在 35 种以上语言里低于 500 毫秒；实时模型文档写延迟可以在 80 毫秒到 2400 毫秒之间调，每分钟 0.008 美元。TTS 也有两套说法：新闻写 35 种以上语言、50 种以上方言，模型文档写支持 9 种语言、首包大约 90 毫秒、每百万字符 13 美元。语音代理 API 的价格表写，推理用 Mistral Small 4 时每分钟 0.04 美元，换别的推理模型每分钟 0.08 美元。新闻写可以走 Mistral 的 API，也可以自部署；文档没有写开源许可，也没有写权重下载。适合要做电话或网页里的语音代理、又要欧区或自建的人。本库没有登录 Studio，没有点 Take the call，没有调 API。",
+      "summaryEn": "On 20 October 2026 Mistral released Voxtral 3: a family of speech models and a voice-agent SDK that puts listening, reasoning, tool calls, and speaking on one realtime stream. The news post names Voxtral Small Transcribe 3 (transcription, diarization, and context biasing, which it says covers 50+ languages), Voxtral Mini Transcribe 3 (the news says 4B parameters, $0.0035 per minute in batch), Voxtral Mini Transcribe Realtime 3, and Voxtral Mini TTS 3. All four doc pages are dated 20 October 2026 and marked Public Preview. The news says the realtime model is under 500 ms in 35+ languages; the realtime model page says latency is configurable from 80 ms to 2,400 ms, at $0.008 per minute. TTS has two wordings: the news says 35+ languages and 50+ dialects, the model page says 9 languages, about 90 ms to first audio, and $13 per million characters. The voice-agent price table says $0.04 per minute when reasoning uses Mistral Small 4, and $0.08 per minute with another reasoning model. The news says you can use Mistral’s API or self-deploy. The docs do not state an open-source license or a weights download. Useful for phone or web voice agents that need an EU endpoint or your own infrastructure. This library did not sign in to Studio, did not press Take the call, and did not call the API.",
+      "announcedAt": "2026-10-20",
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Mistral 新闻：Voxtral 3",
+          "labelEn": "Mistral news: Voxtral 3",
+          "url": "https://mistral.ai/news/voxtral-3/",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Small Transcribe 3",
+          "labelEn": "Docs: Voxtral Small Transcribe 3",
+          "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Mini Transcribe 3",
+          "labelEn": "Docs: Voxtral Mini Transcribe 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Mini Transcribe Realtime 3",
+          "labelEn": "Docs: Voxtral Mini Transcribe Realtime 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral TTS 3",
+          "labelEn": "Docs: Voxtral TTS 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50168396",
+          "by": "ilreb",
+          "date": "2026-10-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Small Transcribe 3 做 50 多种语言的转录和说话人分离，新闻写它超过 Whisper、Scribe v2 和 Gemini 3.5 Transcribe。Mini 批量版新闻写是 4B，每分钟 0.0035 美元。两张文档都标 Public Preview，上下文 32k，Small 每分钟 0.004 美元。分数没有复跑。",
+          "textEn": "Vendor claim: Small Transcribe 3 covers transcription and diarization in 50+ languages, and the news says it beats Whisper, Scribe v2, and Gemini 3.5 Transcribe. The news says the Mini batch model is 4B at $0.0035 per minute. Both doc pages say Public Preview and a 32k context; Small is $0.004 per minute. Scores were not re-run."
+        },
+        {
+          "text": "实时转录有两套官方说法。新闻写 35 种以上语言、低于 500 毫秒。模型文档写延迟可在 80 毫秒到 2400 毫秒之间调，每分钟 0.008 美元，并带轮次检测、偏置和说话人分离。本库没有对着干。",
+          "textEn": "Realtime transcription has two official wordings. The news says 35+ languages and under 500 ms. The model page says latency is configurable from 80 ms to 2,400 ms, at $0.008 per minute, with end-of-turn detection, biasing, and diarization. This library did not reconcile them."
+        },
+        {
+          "text": "TTS 也对不上。新闻写 Mini TTS 3 支持 35 种以上语言、50 种以上方言，Pro Voice 用大约 30 分钟音频。模型文档的标题是 Voxtral TTS 3，写支持 9 种语言、首包大约 90 毫秒、34 个情绪标签，每百万字符 13 美元。",
+          "textEn": "TTS does not match across pages. The news says Mini TTS 3 supports 35+ languages and 50+ dialects, and that Pro Voice uses about 30 minutes of audio. The model page is titled Voxtral TTS 3 and says 9 languages, about 90 ms to first audio, 34 emotion tags, and $13 per million characters."
+        },
+        {
+          "text": "新闻价格表：语音代理配 Mistral Small 4 为每分钟 0.04 美元，换别的推理模型每分钟 0.08 美元。开头写欧盟托管或自部署，文末又写 API 有欧洲、美国和全球端点。许可和权重都没写，未核实。",
+          "textEn": "The news price table lists the voice agent at $0.04 per minute with Mistral Small 4 and $0.08 per minute with another reasoning model. The opening says an EU-hosted API or self-deployment; the pricing section later says European, US, and global endpoints. No license and no weights are stated. Unverified."
+        }
+      ],
+      "qualityNote": "语言数、延迟和“超过某某模型”都是 Mistral 新闻或文档里的说法，本库没有复跑，也没有调 API。新闻和 TTS 文档的语言数不一致，实时模型的延迟说法也不一致，两条都留着。四张模型文档的页眉写 Public Preview 和 Premier；Premier 指什么，页面没有解释，未核实。没有看到开源许可或权重下载，自部署写成联系团队，不要当成已经公开权重。本库没有登录，没有点新闻页上的 Take the call。",
+      "qualityNoteEn": "Language counts, latency, and “beats model X” are claims from Mistral’s news post or docs. This library did not re-run them and did not call the API. The news post and the TTS doc disagree on language count, and the realtime latency wordings disagree too; both are kept. The four model pages are labeled Public Preview and Premier. The page does not say what Premier means, so that is unverified. No open-source license or weights download appears. Self-deployment is written as talking to the team, so this is not a public-weights release. This library did not sign in and did not press Take the call on the news page.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/voxtral-3.webp",
+      "previewCredit": "预览截自 Mistral 新闻页首屏，点过 Cookie 面板的 Close",
+      "previewCreditEn": "Preview of the Mistral news hero after Close on the cookie panel",
+      "featured": false,
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://mistral.ai/news/voxtral-3/ HTTP 200，标题 Voxtral 3: Voice Agent SDK & Speech Models in 50+ Languages。页内 datePublished 2026-10-20T12:00:22.000Z，dateModified 2026-10-20T20:43:05.862Z。新闻价格表：Mini Transcribe 3 batch $0.0035/min，Mini Transcribe Realtime 3 $0.008/min，Small Transcribe 3 $0.0040/min，Speech 3 $13/1M chars，语音代理配 Mistral Small 4 为 0.04$/min，其他推理模型 0.08$/min。Mini 4B 与 $0.0035/min、50+ 语言、35+ 语言 / sub-500ms、TTS 35+ 语言与 50+ 方言、Pro Voice 30 分钟，都在这篇新闻正文里。四张文档均 HTTP 200，页眉 October 20, 2026、Public Preview、Premier：Small 与 Mini 转录上下文 32k，价格 $0.004/min 与 $0.0035/min；实时文档写 80 ms to 2,400 ms、$0.008/min；TTS 文档标题 Voxtral TTS 3，写 9 languages、~90 ms、34 emotion tags、2 pace tags、$13/M chars。四页都没有 Apache、license 或 weight 字样。HN item 50168396，Algolia 515 pts，作者 ilreb，创建 2026-10-20T16:02:07Z。Chrome 打开新闻页，点 Cookies 再点 Close，首屏是 Voxtral 3 和 Take the call。没有点 Take the call，没有登录。预览为该首屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://mistral.ai/news/voxtral-3/ HTTP 200, title Voxtral 3: Voice Agent SDK & Speech Models in 50+ Languages. In-page datePublished 2026-10-20T12:00:22.000Z, dateModified 2026-10-20T20:43:05.862Z. The news price table: Mini Transcribe 3 batch $0.0035/min, Mini Transcribe Realtime 3 $0.008/min, Small Transcribe 3 $0.0040/min, Speech 3 $13/1M chars, voice agent with Mistral Small 4 at $0.04/min, any other reasoning model at $0.08/min. The 4B Mini, $0.0035/min, 50+ languages, 35+ languages under 500 ms, TTS at 35+ languages and 50+ dialects, and Pro Voice at 30 minutes are all in that news body. All four doc pages returned HTTP 200, headed October 20, 2026, Public Preview, Premier. Small and Mini transcribe list a 32k context at $0.004/min and $0.0035/min. The realtime page says 80 ms to 2,400 ms and $0.008/min. The TTS page is titled Voxtral TTS 3 and says 9 languages, ~90 ms, 34 emotion tags, 2 pace tags, and $13 per million characters. None of the four pages contain Apache, license, or weight. HN item 50168396, Algolia 515 pts, author ilreb, created 2026-10-20T16:02:07Z. Chrome opened the news page, clicked Cookies, then Close. The hero is Voxtral 3 and Take the call. Take the call was not pressed and there was no sign-in. Preview is that hero, 1440×960 viewport scaled to 1200×800 WebP."
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",
