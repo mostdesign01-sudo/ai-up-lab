@@ -1,6 +1,106 @@
 {
   "items": [
     {
+      "id": "connexio",
+      "slug": "connexio",
+      "title": "Connexio：免费的物联网官网界面套件，演示站能直接打开",
+      "titleEn": "Connexio: a free IoT marketing-site UI kit with a demo you can open",
+      "hook": "免费物联网界面套件，浏览器里就能看分块仪表盘。",
+      "hookEn": "A free IoT UI kit whose dashboard blocks open in the browser.",
+      "summary": "Connexio 是 Dpopstudio（@dpopstudio）做的物联网监控官网界面套件。演示站是一条可以滚动的落地页：导航有 Product、AI、Integrations、Performance、About Us，往下是分块的仪表盘样稿，设备在线数、用量柱状图、温度和用电并排。页面里还有一段叫 Connexio AI 的对话样稿。这些数字和对话是套件里的假数据，不是一家真实公司的用户量。Figma 社区文件的标题写 Free，公开描述写这是覆盖落地页到法律页的免费网站 UI kit，并写 17 页，点名了 Landing、Product、Resources、Integrations、Performance、About Us、Contact Us，后面在网页 meta 里被截断。适合要做物联网或设备监控类官网、想先有一套排好的版面的人。本库没有登录，没有打开 Figma 文件。",
+      "summaryEn": "Connexio is an IoT-monitoring marketing-site UI kit by Dpopstudio (@dpopstudio). The demo is one scrolling landing page. The nav lists Product, AI, Integrations, Performance, and About Us, and further down are dashboard blocks: devices online, a usage chart, temperature, and energy side by side. A section called Connexio AI shows a sample chat. The figures and the chat are dummy copy inside the kit, not a real company’s user counts. The Figma community file’s title says Free. Its public description calls it a free website UI kit from the landing page through legal pages, says 17 pages, and names Landing, Product, Resources, Integrations, Performance, About Us, and Contact Us before the sentence is cut off in the page meta. Useful when you want a laid-out marketing site for an IoT or device-monitoring product. This library did not sign in and did not open the Figma file.",
+      "sourceUrl": "https://dpopstudio.co/connexio",
+      "secondaryUrls": [
+        "https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free",
+        "https://x.com/dpopstudio/status/2112531781207695822"
+      ],
+      "previewImage": "/previews/connexio.webp",
+      "types": [
+        "landing",
+        "component"
+      ],
+      "tags": [
+        "ui-kit",
+        "iot",
+        "figma",
+        "dashboard",
+        "saas"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "归在 HTML：它是可以打开的官网套件和 Figma 文件，不是带 MCP 的设计工具。帖子写 crisp bento grid 和 light/dark mode，也写 100% free。演示站正文没有出现 bento 这个词，看到的是浅色分块卡片；导航里没有明暗切换，明暗模式未核实。样稿写着 10 万以上活跃用户、100 多个品牌，卡片上的在线设备数和电量也是动画里的例子。Figma 描述被截断之后还有哪些页，以及社区文件的许可条款，都没打开，未核实。演示站上的 Connexio AI 是界面文案，不是能对话的产品。",
+      "qualityNoteEn": "Filed under HTML: it is a marketing-site kit and a Figma file you can open, not a design tool with MCP. The post says a crisp bento grid, light/dark mode, and 100% free. The demo copy never uses the word bento; what is on the page is a light set of blocks, and the nav has no theme switch, so dark mode is unverified. The page’s “100,000+ active users,” “100+ brands,” and the device and energy figures on the cards are sample animation, not measured customers. Whatever pages follow the cut-off Figma description, and the community file’s license terms, were not opened and are unverified. Connexio AI on the demo is interface copy, not a product you can talk to.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：演示站 https://dpopstudio.co/connexio HTTP 200，标题 Connexio · IoT Monitoring Landing Page | dpopstudio。导航是页内锚点（#features、#ai、#integrations、#performance、#about），不是 17 个独立网址。https://dpopstudio.co/product HTTP 200，标题是 Products | dpopstudio，那是工作室的产品索引，不是 Connexio 的子页。Figma https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free HTTP 200，标题 Connexio - IoT SaaS Website UI Kit Free | Figma；meta description 写 free website UI kit、17 pages，名单到 Contact Us 后以 “H...” 截断。X 帖 2112531781207695822，@dpopstudio，2026-10-20T13:10:00Z，两条 t.co 分别解开为上面的演示站和 Figma。Chrome 打开演示站，页根是浅色，按钮只有导航、Login、Sign up，没有暗色开关；滚到 Data Usage 一节后截图。预览为该屏，视口 1440×960 缩到 1200×800 WebP。没有登录，没有在 Figma 里打开文件。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): demo https://dpopstudio.co/connexio HTTP 200, title Connexio · IoT Monitoring Landing Page | dpopstudio. The nav is in-page anchors (#features, #ai, #integrations, #performance, #about), not 17 separate URLs. https://dpopstudio.co/product returned HTTP 200 with title Products | dpopstudio, the studio’s product index, not a Connexio subpage. Figma https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free HTTP 200, title Connexio - IoT SaaS Website UI Kit Free | Figma; the meta description says free website UI kit and 17 pages, and the list is cut at “H...” after Contact Us. X post 2112531781207695822, @dpopstudio, 2026-10-20T13:10:00Z; the two t.co links unwind to the demo and the Figma file above. Chrome opened the demo in light mode. The controls were the nav, Login, and Sign up, with no dark switch. Scrolled to the Data Usage section, then captured. Preview is that view, 1440×960 viewport scaled to 1200×800 WebP. Not signed in, file not opened in Figma."
+    },
+    {
+      "id": "ikea-flatpack",
+      "slug": "ikea-flatpack",
+      "title": "Flat Pack：在浏览器里按宜家说明书看 BILLY 怎么装",
+      "titleEn": "Flat Pack: follow IKEA’s BILLY manual as a 3D assembly in the browser",
+      "hook": "在浏览器里按宜家说明书的顺序看三维组装。",
+      "hookEn": "Step through a real IKEA manual as a 3D build in the browser.",
+      "summary": "Flat Pack, Step by Step 是 Ryan Sael（@RyanSael）做的浏览器页面：把宜家 BILLY 书柜的组装说明书做成可以步进的三维场景，旁边能翻开原说明书。页面写这是 80×28×202 厘米的 BILLY，说明书编号 AA-1823127-9，零件、数量和顺序照说明书，板材厚度和孔位是从图上读的，所以是接近而不是实测尺寸。界面上还可以切到 LACK 边桌。页脚写说明书版权归 Inter IKEA Systems B.V.，原件未改，并链到 ikea.com 上的 PDF；作品不是宜家做的，也没有宜家背书。源文件头写原作版权归 Ryan Sael，保留所有权利。适合想在买来或动手之前看清某一步的人。本库打开后停在 BILLY 第 1 步，没有走完，也没有切到 LACK。",
+      "summaryEn": "Flat Pack, Step by Step is a browser page by Ryan Sael (@RyanSael): IKEA’s BILLY bookcase manual as a 3D scene you can step through, with the original manual open beside it. The page says this is the 80×28×202 cm BILLY, manual AA-1823127-9, and that the parts, counts, and order follow the manual, while thickness and hole positions are read off the drawings, so they are close rather than measured. The UI can also switch to the LACK side table. The footer says the manual is copyright Inter IKEA Systems B.V., shown unaltered, and links the PDF on ikea.com. The piece is not made or endorsed by IKEA. The source header says the original work is Ryan Sael’s, all rights reserved. Useful if you want to see a step before you buy or build. This library opened it on BILLY step 1, did not finish the sequence, and did not switch to LACK.",
+      "sourceUrl": "https://sael.net/flatpack/",
+      "secondaryUrls": [
+        "https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf",
+        "https://news.ycombinator.com/item?id=50168096",
+        "https://x.com/RyanSael"
+      ],
+      "previewImage": "/previews/ikea-flatpack.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "3d",
+        "ikea",
+        "explainer",
+        "assembly"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "版权归 Ryan Sael，不是开源作品；页面欢迎索引和链接，其余使用要先征得本人同意。说明书是宜家的，作品本身不是宜家官方。本库只看到 BILLY 的第 1 步（木销，说明书第 6 页），界面写第 1 步共 14 步、五金 9/82、板件 0/11、木销 101351 已放入 9/16。没有播完，没有点 LACK，没有核对 PDF 的每一页是否和三维一一对应。页面上的零件尺寸说明是作者自己写的“从图上读、不是测量”。",
+      "qualityNoteEn": "Copyright is Ryan Sael’s; this is not an open-source work. The page welcomes indexing and links, and asks for permission before other uses. The manual is IKEA’s; the piece is not an IKEA product. This library only saw BILLY step 1 (dowels, manual page 6). The UI read step 1 of 14, hardware 9/82, panels 0/11, and dowel 101351 with 9 of 16 in. The sequence was not played through, LACK was not selected, and the PDF was not checked page by page against the 3D. The page’s own note says thicknesses and hole positions are read off the drawings, not measured.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://sael.net/flatpack/ HTTP 200，标题 Flat Pack, Step by Step: IKEA manuals, built in 3D。源文件头写 Original work by Ryan Sael. All rights reserved，并链到 https://x.com/RyanSael 。页脚链的 BILLY PDF https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf HTTP 200，约 1.6 MB。Chrome 打开后三维场景已出来，界面文字：STEP 1/14，HARDWARE IN 9/82，PANELS IN 0/11，STEP 1 · DOWELS，木销 101351，9 of 16 in，MANUAL · PAGE 6；右上有 BILLY bookcase / LACK table 切换，当时停在 BILLY。没有点播放走完 14 步，没有切 LACK。HN item 50168096，标题 IKEA – 3D Guide，作者 punnerud，创建 2026-10-20T15:42:45Z，Algolia 134 pts。预览为这一屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://sael.net/flatpack/ HTTP 200, title Flat Pack, Step by Step: IKEA manuals, built in 3D. The source header says Original work by Ryan Sael, all rights reserved, and links https://x.com/RyanSael. The footer’s BILLY PDF, https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf, returned HTTP 200, about 1.6 MB. Chrome showed the 3D scene. The UI text read STEP 1/14, HARDWARE IN 9/82, PANELS IN 0/11, STEP 1 · DOWELS, dowel 101351, 9 of 16 in, MANUAL · PAGE 6. The BILLY bookcase / LACK table switch was visible and set to BILLY. The 14 steps were not played through and LACK was not selected. HN item 50168096, title IKEA – 3D Guide, author punnerud, created 2026-10-20T15:42:45Z, Algolia 134 pts. Preview is that view, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "permit-pending",
+      "slug": "permit-pending",
+      "title": "Permit Pending：浏览器里当市长，盖楼要过审批和选举",
+      "titleEn": "Permit Pending: be the mayor in the browser, and get every building through approval",
+      "hook": "浏览器里当市长，每栋楼都要过听证和选举。",
+      "hookEn": "Be the mayor in the browser; every building needs a hearing and an election.",
+      "summary": "Permit Pending 是 Peter Cai 做的免费浏览器城市模拟。Hacker News 上的标题是 SimCity, but with Permits。你是民选市长，不是上帝：公寓、公交和工厂要经过听证、反对、诉讼和上诉，四年选一次。介绍页写了四种开局：Blank Slate（200 人）、Small Town（2000 人）、Booming Suburb（25000 人）、The Unaffordable Metropolis（30 万人），地图可以选 128、192 或 256，规则开关有选举、故事和开发商。本库在默认的 Blank Slate 上点了 Take office，进入一张暂停的地图，界面写城市叫 Oakmont、日期 2025 年 1 月 1 日、支持率 53%、账上 260 万美元、200 人、失业率 5.4%、距选举 48 个月、政治资本 10。工具栏有分区、道路、电力、公共服务、收件箱和预算。适合想玩“审批比建造更难”的人。本库没有点 Resume，没有办过一次听证，也没有打完选举。",
+      "summaryEn": "Permit Pending is Peter Cai’s free browser city sim. On Hacker News the title is SimCity, but with Permits. You are an elected mayor, not a god: apartments, bus lanes, and factories go through hearings, objections, lawsuits, and appeals, and there is an election every four years. The intro page lists four starts: Blank Slate (200 people), Small Town (2,000), Booming Suburb (25,000), and The Unaffordable Metropolis (300,000). Map size can be 128, 192, or 256, with toggles for elections, stories, and developers. This library clicked Take office on the default Blank Slate and landed on a paused map. The UI read Oakmont, 1 January 2025, 53% approval, $2.6 million, 200 people, 5.4% jobless, 48 months to the election, and 10 clout. The toolbar has zoning, roads, power, services, an inbox, and a budget. Useful if you want the permits to be harder than the building. This library did not press Resume, did not hold a hearing, and did not finish an election.",
+      "sourceUrl": "https://permit.petercai.com/",
+      "secondaryUrls": [
+        "https://permit.petercai.com/play/",
+        "https://news.ycombinator.com/item?id=50170593",
+        "https://www.petercai.com/"
+      ],
+      "previewImage": "/previews/permit-pending.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "game",
+        "city-builder",
+        "browser",
+        "simulation"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "介绍页写免费。页面结构化数据里的作者是 Peter Cai。许可条款页面上没有写，未核实，不要当成开源。本库只进了默认 Blank Slate 的暂停局，看到的城市名、支持率、金额和失业率是这一局界面上的数字，不是每局都一样。没有点继续，没有划过分区，没有处理收件箱，没有打完四年。介绍里那段从第 1 个月到第 48 个月的审批故事是页面上的举例，不是本库玩出来的。",
+      "qualityNoteEn": "The intro page says the game is free. The structured data names Peter Cai as the author. No license is stated on the page, so it is unverified and this is not an open-source release. This library only entered the default Blank Slate and left it paused. The city name, approval, cash, and jobless rate are what that one screen showed, not a promise that every city matches. Resume was not pressed, no zone was drawn, the inbox was not opened, and the four years were not played. The month-1-to-month-48 story on the intro page is the page’s own example, not a game this library played.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://permit.petercai.com/ HTTP 200，标题 Permit Pending: build the city of your dreams, subject to approval。页面 ld+json 写 VideoGame、isAccessibleForFree、price 0 USD、author Peter Cai、url https://www.petercai.com/ （该作者页 HTTP 200）。https://permit.petercai.com/play/ 在 Chrome 中打开，标题 Permit Pending。新游戏屏列出 Blank Slate 200 residents RELAXED、Small Town 2,000、Booming Suburb 25,000 MODERATE、The Unaffordable Metropolis 300,000 BRUTAL，地图 128×128 / 192×192 / 256×256，规则 Elections / Stories / Developers，暂停选项 Always / Only urgent / Never，按钮 Take office。点 Take office 后仍在 /play/，界面文字：Oakmont、JAN 1, 2025、MAYOR APPROVAL 53%、$2.6M、200、Jobless 5.4%、Election 48 mo、Clout 10、PAUSED、The Gazette has nothing to report yet，工具有 Inspect、Zoning、Roads、Power、Services、Inbox、Budget。没有点 Resume。HN item 50170593，标题 SimCity, but with Permits，作者 pcai，创建 2026-10-20T18:29:09Z，Algolia 531 pts。预览为暂停中的这一局，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://permit.petercai.com/ HTTP 200, title Permit Pending: build the city of your dreams, subject to approval. The page’s ld+json says VideoGame, isAccessibleForFree, price 0 USD, author Peter Cai, and links https://www.petercai.com/, which returned HTTP 200. https://permit.petercai.com/play/ opened in Chrome with title Permit Pending. The new-game screen listed Blank Slate (200 residents, Relaxed), Small Town (2,000), Booming Suburb (25,000, Moderate), The Unaffordable Metropolis (300,000, Brutal), map sizes 128×128 / 192×192 / 256×256, rules Elections / Stories / Developers, pause Always / Only urgent / Never, and a Take office button. After Take office the URL was still /play/. The UI text read Oakmont, JAN 1, 2025, MAYOR APPROVAL 53%, $2.6M, 200, Jobless 5.4%, Election 48 mo, Clout 10, PAUSED, and The Gazette has nothing to report yet, with Inspect, Zoning, Roads, Power, Services, Inbox, and Budget. Resume was not pressed. HN item 50170593, title SimCity, but with Permits, author pcai, created 2026-10-20T18:29:09Z, Algolia 531 pts. Preview is that paused city, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +4661,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-21T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.66",
+    "count": 139
   }
 }
