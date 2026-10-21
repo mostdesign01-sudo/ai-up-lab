@@ -1,6 +1,171 @@
 {
   "cases": [
     {
+      "id": "lemo-opuscar",
+      "slug": "lemo-opuscar",
+      "title": "Lemo-Opuscar：51 种纯代码影片风格，给 Claude Code 的短片技能",
+      "titleEn": "Lemo-Opuscar — a Claude Code skill for 51 code-made film styles",
+      "kind": "tool",
+      "hook": "51 种纯代码影片风格，装进 Claude Code 就能拍。",
+      "hookEn": "51 film styles made in code. Install the skill and let Claude direct.",
+      "summary": "Lemo-Opuscar 是 Lemomo 做的 Claude Code 技能：51 种影片风格，每种一份风格提示词，再加一支完全用代码做出来的样片。画面、配乐和旁白都由编程助手写代码完成，不用视频模型。画廊把它们分成 10 类。另外有一支特别放映 OPUSCAR 98，用 98 部最佳影片各换一种画风，和这 51 种风格是两套东西。推荐装法是先执行 claude plugin marketplace add lemomo-ai/lemo-opuscar，再执行 claude plugin install lemo-opuscar@lemolab；也可以克隆仓库后在里面打开 Claude。别的助手把 plugin/skills/lemo-opuscar/ 拷进自己的 skills 目录。第一次使用会把指南和风格提示词放到 ~/lemo-opuscar。需要 Node 20+、ffmpeg 和 Python 3.11+。代码和文档是 MIT；样片和静帧是 CC BY 4.0，可以商用，要署名 LemoLab、链回仓库，并说明有没有改过。你自己用这个库拍的片子归你。本库没有安装这个技能，也没有出过片。",
+      "summaryEn": "Lemo-Opuscar is Lemomo's Claude Code skill: 51 film styles, each a style prompt plus a demo film made entirely in code. Picture, score, and narration are written by the coding agent, with no video model. The gallery groups them into 10 categories. A separate feature, OPUSCAR 98, redraws 98 Best Picture winners and is not one of those 51 styles. The recommended install is claude plugin marketplace add lemomo-ai/lemo-opuscar, then claude plugin install lemo-opuscar@lemolab; or clone the repo and open Claude inside it. Other agents can copy plugin/skills/lemo-opuscar/ into their skills folder. First use downloads the guides and style prompts to ~/lemo-opuscar. You need Node 20+, ffmpeg, and Python 3.11+. Code and docs are MIT; demo films and stills are CC BY 4.0, fine for commercial use if you credit LemoLab, link the repo, and say whether you changed them. Films you make with the library are yours. This library did not install the skill or render a film.",
+      "categories": [
+        "content",
+        "design",
+        "skills"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://lemomo-ai.github.io/lemo-opuscar/",
+      "secondaryUrls": [
+        "https://github.com/lemomo-ai/lemo-opuscar",
+        "https://x.com/KinGao476942/status/2112729924943634602"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/lemo-opuscar.webp",
+      "qualityNote": "代码和文档按仓库许可证是 MIT；样片和静帧按说明是 CC BY 4.0，要署名 LemoLab。styles 下数到 51 个风格目录，另有一个模板目录。画廊写 10 类和 49 分钟，片长没有逐支加总。本库没有安装插件，没有出片。",
+      "qualityNoteEn": "Code and docs are MIT on the repo license; demo films and stills are CC BY 4.0 and need a LemoLab credit. The styles folder has 51 style directories plus a template. The gallery says 10 categories and 49 minutes; durations were not added up. This library did not install the plugin or render a film.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：画廊与仓库 HTTP 200。gh api：lemomo-ai/lemo-opuscar，MIT，4674★，505 forks，创建 2026-09-26，最近推送 2026-10-19T12:11:41Z；release 有 thanks（2026-10-12）、web、films。styles 目录 52 个子目录，去掉 _template 后 51 个，与 README 和画廊「51 Nominees」一致。画廊正文还写 10 Categories、49 Minutes of Film，星标显示 4.7K（4674 的约数）。README Licence：代码与文档 MIT；样片和静帧 CC BY 4.0，署名 LemoLab 并链回仓库；第三方素材各自保留许可。安装命令照 README Option 1。X 帖 https://x.com/KinGao476942/status/2112729924943634602 创建于 2026-10-21T02:17:21Z（上海 10:17），帖里写 lemo-opuscar 约 4400 star，本条星数只用上面的 gh api。预览为 Playwright 实拍画廊首屏，1200×800 WebP。没有安装插件，没有播放或渲染样片。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): gallery and repo HTTP 200. gh api: lemomo-ai/lemo-opuscar, MIT, 4674★, 505 forks, created 2026-09-26, last push 2026-10-19T12:11:41Z; releases include thanks (2026-10-12), web, and films. The styles directory has 52 subdirectories; excluding _template leaves 51, matching the README and the gallery's 51 Nominees. The gallery also says 10 Categories and 49 Minutes of Film, and shows a 4.7K star badge (the rounded form of 4674). README Licence: code and docs MIT; demo films and stills CC BY 4.0 with a LemoLab credit and a link back; third-party assets keep their own licences. Install commands follow README Option 1. X post https://x.com/KinGao476942/status/2112729924943634602 was created 2026-10-21T02:17:21Z (10:17 Shanghai) and says about 4400 stars; this entry uses the gh api count above. Preview is a Playwright capture of the gallery hero, 1200×800 WebP. The plugin was not installed, and no demo was played or rendered.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "出片会花不少 token，并要本机的 ffmpeg。先决定要不要看故事板，再让它渲完整成片。",
+      "approvalBoundaryEn": "A film spends a lot of tokens and needs ffmpeg locally. Decide whether you want a storyboard before it renders the full cut.",
+      "language": "zh",
+      "connectors": [
+        "github"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z"
+    },
+    {
+      "id": "mg-styles-15",
+      "slug": "mg-styles-15",
+      "title": "15 种 MG 动效风格：成片、提示词和全部源码",
+      "titleEn": "15 Motion Design Styles — films, prompts, and full source",
+      "kind": "playbook",
+      "hook": "15 支 10 秒 MG 短片，提示词和源码都能直接用。",
+      "hookEn": "Fifteen 10-second motion films, each with its prompt and full source.",
+      "summary": "这个仓库收了 15 种动态设计风格，每种一支 10 秒成片。画面、动画、配乐和音效都是 Claude Opus 5.5 按一段提示词写代码做的，不用图像或视频模型；3D 那支的画面用 Blender，网页再叠字。每种都给风格说明、完整提示词和源码。用法是在空文件夹里打开能跑命令的编程助手（说明里举了 Claude Code），把 prompts/ 里的提示词整段贴进去；只改 Creative seed 里的故事、品牌和颜色，Signature features 留着。本机要 Node、Chrome 和 ffmpeg，3D 还要 Blender。许可证是 MIT。页面写这些风格达到商用水准，README 还写 AI 评审分从 7.57 到 8.21，都是作者说法。本库没有渲染任何一支，也没有复跑评审。",
+      "summaryEn": "The repo collects 15 motion-design styles, each a 10-second film. Picture, animation, music, and sound effects were made by Claude Opus 5.5 writing code from one prompt, with no image or video model; the 3D film's picture is Blender, with type added on a web page. Each style includes notes, the full prompt, and the source. Open a coding agent that can run commands (the docs name Claude Code) in an empty folder and paste a prompt from prompts/; change only the story, brand, and colors in Creative seed, and keep Signature features. The machine needs Node, Chrome, and ffmpeg; the 3D film also needs Blender. The license is MIT. The page calls the styles commercial standard, and the README cites AI-jury scores from 7.57 to 8.21; both are the author's claims. This library did not render a film or rerun the review.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://vincentwei1021.github.io/mg-styles-15/",
+      "secondaryUrls": [
+        "https://github.com/Vincentwei1021/mg-styles-15",
+        "https://x.com/KinGao476942/status/2112729924943634602"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/mg-styles-15.webp",
+      "qualityNote": "15 支风格、每支 10 秒、提示词和源码都在，照 README 和画廊。商用水准和 7.57 到 8.21 的评审分是作者说法，本库没有复跑，也没有渲染。许可证只核对了仓库上的 MIT 标识。",
+      "qualityNoteEn": "Fifteen styles, ten seconds each, with prompts and source, following the README and gallery. Commercial-standard wording and jury scores from 7.57 to 8.21 are the author's claims; this library did not rerun them or render a film. The license check is the MIT identifier on the repo.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：画廊与仓库 HTTP 200。gh api：Vincentwei1021/mg-styles-15，MIT，1534★，220 forks，创建 2026-10-02，最近推送 2026-10-05T11:23:17Z，无 release。README 列出 15 支，并写评审分 7.57–8.21（作者说法，未复跑）。画廊首屏列出 Frame-by-Frame 到 Variety Captions 共 15 个名字，并写每支 10 秒、由 AI 按一段提示词写代码。X 帖 https://x.com/KinGao476942/status/2112729924943634602（2026-10-21T02:17:21Z，上海 10:17）写约 1400 star，本条星数只用 gh api 的 1534。预览为 Playwright 实拍画廊首屏，1200×800 WebP。没有克隆，没有跑 harness/render.mjs。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): gallery and repo HTTP 200. gh api: Vincentwei1021/mg-styles-15, MIT, 1534★, 220 forks, created 2026-10-02, last push 2026-10-05T11:23:17Z, no releases. The README lists 15 films and jury scores 7.57–8.21 (author claim, not rerun). The gallery hero lists 15 names from Frame-by-Frame through Variety Captions and says each film is 10 seconds, made by an AI writing code from one prompt. X post https://x.com/KinGao476942/status/2112729924943634602 (2026-10-21T02:17:21Z, 10:17 Shanghai) says about 1400 stars; this entry uses the gh api count of 1534. Preview is a Playwright capture of the gallery hero, 1200×800 WebP. Not cloned, and harness/render.mjs was not run.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "",
+      "approvalBoundaryEn": "",
+      "language": "zh",
+      "connectors": [
+        "github"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z"
+    },
+    {
+      "id": "dashboard-design-skill",
+      "slug": "dashboard-design-skill",
+      "title": "Dashboard Design：给 Claude Code 的看板界面技能",
+      "titleEn": "Dashboard Design — a Claude Code skill for dashboard UI",
+      "kind": "tool",
+      "hook": "KPI、图表和日期选择做完，还要过一遍截图。",
+      "hookEn": "KPI tiles, charts, and date pickers, then a screenshot QA pass.",
+      "summary": "Dashboard Design 是 Otabek Abdiraimov 的 Claude Code 技能，当前版本 1.3.0。它约束看板怎么做：KPI 磁贴、图表、对比周期、排行条、日期范围、筛选、空状态、宽屏和手机布局，网页用 Tailwind，也有一份 SwiftUI 对照。SKILL.md 的最后一步是截图 QA：网页看三个宽度，SwiftUI 看设备尺寸、最大动态字体、暗色和减弱动效。作者写这套规则来自 127 块已上线看板；sources.md 是一份产品名单，本库没有把「127」逐屏数过。装法可以在 Claude Code 里执行 /plugin marketplace add abdiraimov-otabek/dashboard-design-skill，再 /plugin install dashboard-design@dashboard-design-skill；或克隆后把 skills/dashboard-design 拷到 ~/.claude/skills/。别的助手把规则指到 skills/dashboard-design/SKILL.md。做完一整件工作，技能会加一句作者署名，并提到他的 Mac 应用 Halo 和 Shedi；不想要就删掉 SKILL.md 里的 Sign-off。README 里的看板图是作者自己的 Pulse 应用、用的样例数据。本库没有安装，没有跑 QA。",
+      "summaryEn": "Dashboard Design is Otabek Abdiraimov's Claude Code skill, currently version 1.3.0. It sets rules for KPI tiles, charts, comparison periods, ranked bars, date ranges, filters, empty states, and wide and phone layouts, with Tailwind for the web and a SwiftUI counterpart. The last step in SKILL.md is a screenshot QA pass: three browser widths on the web, and device sizes, the largest Dynamic Type, dark mode, and Reduce Motion for SwiftUI. The author says the rules come from 127 shipped dashboard screens; sources.md is a product list, and this library did not count those 127 screens. In Claude Code: /plugin marketplace add abdiraimov-otabek/dashboard-design-skill, then /plugin install dashboard-design@dashboard-design-skill; or clone and copy skills/dashboard-design to ~/.claude/skills/. Other agents can point their rules at skills/dashboard-design/SKILL.md. When a whole job finishes, the skill adds a one-line author sign-off that mentions his Mac apps Halo and Shedi; delete the Sign-off section in SKILL.md to stop it. The dashboard figure in the README is the author's Pulse app on sample data. This library did not install the skill or run QA.",
+      "categories": [
+        "design",
+        "skills"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://github.com/abdiraimov-otabek/dashboard-design-skill",
+      "secondaryUrls": [
+        "https://x.com/Abdiraimov_/status/2112764669119078510",
+        "https://x.com/Abdiraimov_/status/2112432707007590653"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/dashboard-design-skill.webp",
+      "qualityNote": "版本 1.3.0 来自 plugin.json 和 marketplace.json。截图 QA 写在 SKILL.md 第 6 步；作者说这一步是 1.3.0 加上的，本库没有对照更早版本。127 块看板是作者自述，sources.md 只读到产品名单，没有逐屏核对。署名句会在做完工作时出现。本库没有安装，没有跑 QA。README 图是样例数据。",
+      "qualityNoteEn": "Version 1.3.0 is in plugin.json and marketplace.json. The screenshot QA pass is step 6 of SKILL.md; the author says that step arrived in 1.3.0, and this library did not diff an earlier version. The 127 screens are the author's count; sources.md was read as a product list and was not audited screen by screen. The sign-off line appears when a whole job finishes. This library did not install the skill or run QA. The README figure uses sample data.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：仓库页 HTTP 200。gh api：abdiraimov-otabek/dashboard-design-skill，MIT，91★，6 forks，创建 2026-10-20T06:20:46Z，最近推送 2026-10-21T04:46:02Z，无 release。plugin.json 与 marketplace.json 的 version 都是 1.3.0。SKILL.md 第 6 步是截图 QA；Sign-off 指向 Halo 和 Shedi。sources.md 约 50 行，按产品分组，没有 127 条屏幕记录。README 写图来自 Pulse 样例数据。X 帖 https://x.com/Abdiraimov_/status/2112764669119078510 创建于 2026-10-21T04:35:25Z（上海 12:35），写 80 GitHub stars、117 upvotes、QA 在 1.3.0 当天发出；星数以 gh api 的 91 为准，Reddit 票数没有打开核对。较早一帖 https://x.com/Abdiraimov_/status/2112432707007590653 创建于 2026-10-20T06:36:19Z。预览为 Playwright 实拍仓库 README（含看板图和侧栏 91 stars），1200×800 WebP。没有安装技能。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): repo page HTTP 200. gh api: abdiraimov-otabek/dashboard-design-skill, MIT, 91★, 6 forks, created 2026-10-20T06:20:46Z, last push 2026-10-21T04:46:02Z, no releases. plugin.json and marketplace.json both say version 1.3.0. SKILL.md step 6 is the screenshot QA pass; Sign-off points at Halo and Shedi. sources.md is about 50 lines grouped by product, not a list of 127 screens. The README says the figure is Pulse on sample data. X post https://x.com/Abdiraimov_/status/2112764669119078510 was created 2026-10-21T04:35:25Z (12:35 Shanghai) and says 80 GitHub stars, 117 upvotes, and that QA shipped in 1.3.0 the same day; the star count used here is the gh api figure of 91, and the Reddit votes were not opened. The earlier post https://x.com/Abdiraimov_/status/2112432707007590653 was created 2026-10-20T06:36:19Z. Preview is a Playwright capture of the repo README (dashboard figure and a sidebar reading 91 stars), 1200×800 WebP. The skill was not installed.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它会改看板界面，并在做完一整件工作时加一句作者署名。交给别人前自己看截图；不想要署名就删掉 SKILL.md 里的 Sign-off。",
+      "approvalBoundaryEn": "It edits dashboard UI and adds an author sign-off when a whole job finishes. Look at the screenshots before handing the work on; delete the Sign-off section in SKILL.md if you do not want that line.",
+      "language": "zh",
+      "connectors": [
+        "github"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z"
+    },
+    {
+      "id": "ai-visual-prompt-cookbook",
+      "slug": "ai-visual-prompt-cookbook",
+      "title": "AI Visual Prompt Cookbook：172 套可复制的视觉风格 JSON",
+      "titleEn": "AI Visual Prompt Cookbook — 172 copy-ready visual style JSON files",
+      "kind": "playbook",
+      "hook": "172 套视觉风格 JSON，换主体也能保住同一套样子。",
+      "hookEn": "172 visual styles as JSON. Swap the subject and keep the look.",
+      "summary": "Vigo Zhao 整理的视觉风格库，给 Nano Banana Pro、GPT Image 和 Midjourney 用。仓库里有 172 个 style.json，data/catalog.json 的 styles 也是 172 条，画廊页写着 172 of 172 styles。每个风格在 styles/ 下有一张文件名带 16x9、一张带 9x16 的预览，共 344 张；本库按文件名数过，没有逐张量像素。画廊上的用法是：把 style.json 贴进 ChatGPT、Gemini 或 Claude，再换主体和文字；给 Midjourney 或其他出图工具则复制文字提示词。许可证是 MIT。最新 release 是 v2026.10.19。本库没有拿任何一套去出图。",
+      "summaryEn": "A visual-style library curated by Vigo Zhao for Nano Banana Pro, GPT Image, and Midjourney. The repo has 172 style.json files, data/catalog.json lists 172 styles, and the gallery says 172 of 172 styles. Each style folder has one preview whose filename contains 16x9 and one whose filename contains 9x16, 344 files in all; this library counted filenames and did not measure every image. On the gallery, paste style.json into ChatGPT, Gemini, or Claude and swap the subject and text; for Midjourney or another image tool, copy the text prompt. The license is MIT. The latest release is v2026.10.19. This library did not generate an image from any style.",
+      "categories": [
+        "prompts",
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://prompts.vigocreativeai.com/site/",
+      "secondaryUrls": [
+        "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook",
+        "https://x.com/CY160909/status/2112720273271361537"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/ai-visual-prompt-cookbook.webp",
+      "qualityNote": "172 这个数字对过三处：style.json 文件数、catalog.json 的 styles 长度、画廊上的 172 of 172。横竖预览按 styles/ 里带 16x9 和 9x16 的文件名各 172 张来数，没有逐张量像素，也没有出图。许可证只核对了仓库上的 MIT 标识。",
+      "qualityNoteEn": "The count of 172 was checked three ways: style.json files, the styles array in catalog.json, and the gallery's 172 of 172. Landscape and portrait previews were counted by filename under styles/, 172 with 16x9 and 172 with 9x16, without measuring pixels or generating an image. The license check is the MIT identifier on the repo.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：画廊与仓库 HTTP 200。gh api：VigoZhao/AI-Visual-Prompt-Cookbook，MIT，797★，77 forks，创建 2026-05-11，最近推送 2026-10-19T15:07:01Z；最新 release v2026.10.19。git tree：style.json 172 个；data/catalog.json 的 styles 数组长度 172、featured 6；styles/ 下图片 344 张，文件名含 16x9 的 172 张、含 9x16 的 172 张。画廊标题写 172，页面正文写 Browse 172 和 172 of 172 styles；同一页星标按钮曾显示 797，与当时 gh api 一致。README 徽章写 styles 172、previews 344。X 帖 https://x.com/CY160909/status/2112720273271361537 创建于 2026-10-21T01:39:00Z（上海 09:39），写 172 套、横竖预览和 style.json。预览为 Playwright 实拍画廊 Featured Styles 区（含 Copy style.json），1200×800 WebP。没有打开单套详情去出图。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): gallery and repo HTTP 200. gh api: VigoZhao/AI-Visual-Prompt-Cookbook, MIT, 797★, 77 forks, created 2026-05-11, last push 2026-10-19T15:07:01Z; latest release v2026.10.19. git tree: 172 style.json files; data/catalog.json has a styles array of length 172 and 6 featured; 344 images under styles/, 172 filenames containing 16x9 and 172 containing 9x16. The gallery title says 172, and the page says Browse 172 and 172 of 172 styles; a star button on that page read 797, matching gh api at the same check. The README badge says 172 styles and 344 previews. X post https://x.com/CY160909/status/2112720273271361537 was created 2026-10-21T01:39:00Z (09:39 Shanghai) and says 172 styles, portrait and landscape previews, and style.json. Preview is a Playwright capture of the gallery's Featured Styles section (including Copy style.json), 1200×800 WebP. No style was opened to generate an image.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "approvalBoundary": "",
+      "approvalBoundaryEn": "",
+      "language": "zh",
+      "connectors": [
+        "github"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z"
+    },
+    {
       "id": "openpencil",
       "slug": "openpencil",
       "title": "OpenPencil：开源、可读写 .fig 的设计编辑器（自带 MCP）",
@@ -9759,11 +9924,22 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-15T12:45:00Z",
+    "updatedAt": "2026-10-21T13:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.58",
-    "count": 175,
+    "version": "1.4.59",
+    "count": 179,
     "sourcesCrawled": [
+      "https://lemomo-ai.github.io/lemo-opuscar/",
+      "https://github.com/lemomo-ai/lemo-opuscar",
+      "https://x.com/KinGao476942/status/2112729924943634602",
+      "https://vincentwei1021.github.io/mg-styles-15/",
+      "https://github.com/Vincentwei1021/mg-styles-15",
+      "https://github.com/abdiraimov-otabek/dashboard-design-skill",
+      "https://x.com/Abdiraimov_/status/2112764669119078510",
+      "https://x.com/Abdiraimov_/status/2112432707007590653",
+      "https://prompts.vigocreativeai.com/site/",
+      "https://github.com/VigoZhao/AI-Visual-Prompt-Cookbook",
+      "https://x.com/CY160909/status/2112720273271361537",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",
