@@ -1,11 +1,179 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-22T01:27:06Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 30
   },
   "models": [
+    {
+      "id": "recursive-flint",
+      "slug": "recursive-flint",
+      "name": "Recursive Flint",
+      "vendor": "Recursive",
+      "title": "Recursive Flint：约 40B 的开放权重编码模型，主打本机跑 Agent",
+      "titleEn": "Recursive Flint: an open-weight coding model around 40B, aimed at local agents",
+      "summary": "Recursive Flint 是 Recursive 的开放权重编码模型，Apache 2.0。模型卡写总参数 39.8B、每 token 激活约 2.5B（含输出头；激活主体约 2.2B），并写四舍五入的叫法是 40B-A2.5B。博文把规模写成 40B 总参、每 token 2.5B。博文称在 M4 Pro MacBook Pro 上短上下文超过 125 tok/s，在 64GB NVIDIA RTX Spark 上超过 150 tok/s。上下文有两套说法：模型卡的文档化配置是 262,144 token；博文写最多 512k，并建议编码任务留在 256k 以内。模型卡自报 Terminal-Bench 2.1 为 54.9%，SWE-bench Pro v2 为 89.7%，SWE-bench Verified 为 74.2%，本库没有复跑。权重有 BF16（模型卡写下载大约 80 GB）、MLX INT4（卡上写大约 22.6 GB）和 INT4 卡指向的 GGUF。博文写兼容 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang，并发布推理引擎 rec。本库没有下载，也没有跑。",
+      "summaryEn": "Recursive Flint is Recursive’s open-weight coding model under Apache 2.0. The model card says 39.8B total parameters and about 2.5B active per token, including the output head, with the active body around 2.2B, and gives 40B-A2.5B as the rounded name. The blog rounds this to 40B total and 2.5B per token. The blog says more than 125 tok/s on an M4 Pro MacBook Pro and more than 150 tok/s on a 64GB NVIDIA RTX Spark, at short contexts. Context has two wordings: the card’s documented configuration is 262,144 tokens; the blog says up to 512k and recommends staying within 256k for coding. The card reports 54.9% on Terminal-Bench 2.1, 89.7% on SWE-bench Pro v2, and 74.2% on SWE-bench Verified. This library did not re-run them. Weights include BF16 (the card says the download is about 80 GB), MLX INT4 (the card says about 22.6 GB), and the GGUF the INT4 card points to. The blog lists llama.cpp, Ollama, Unsloth, LM Studio, vLLM, and SGLang, and ships the rec inference engine. Nothing was downloaded or run here.",
+      "announcedAt": "2026-10-21",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Recursive 博文：Introducing Flint",
+          "labelEn": "Recursive blog: Introducing Flint",
+          "url": "https://recursive.com/updates/introducing-recursive-flint",
+          "by": "Recursive"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：RecursiveSI/flint（BF16）",
+          "labelEn": "Hugging Face: RecursiveSI/flint (BF16)",
+          "url": "https://huggingface.co/RecursiveSI/flint",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：flint-int4（MLX INT4）",
+          "labelEn": "Hugging Face: flint-int4 (MLX INT4)",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：flint-int4-gguf",
+          "labelEn": "Hugging Face: flint-int4-gguf",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4-gguf",
+          "by": "Recursive"
+        },
+        {
+          "kind": "official",
+          "label": "推理引擎 rec",
+          "labelEn": "rec inference engine",
+          "url": "https://github.com/recursive-oss/rec",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "模型卡：总参 39.8B，每 token 激活约 2.5B（含输出头），激活主体约 2.2B，四舍五入叫 40B-A2.5B。博文写作 40B 总参、每 token 2.5B。Apache 2.0。",
+          "textEn": "Model card: 39.8B total, about 2.5B active per token including the output head, active body about 2.2B, rounded name 40B-A2.5B. The blog says 40B total and 2.5B per token. Apache 2.0."
+        },
+        {
+          "text": "上下文两套说法都保留：模型卡的文档化配置是 262,144 token；博文写最多 512k，建议编码任务留在 256k 以内。",
+          "textEn": "Both context wordings stay: the card’s documented configuration is 262,144 tokens; the blog says up to 512k and recommends staying within 256k for coding."
+        },
+        {
+          "text": "厂商自报，本库未复跑：Terminal-Bench 2.1 为 54.9%，SWE-bench Pro v2 为 89.7%，SWE-bench Verified 为 74.2%。博文另称 M4 Pro 上短上下文超过 125 tok/s，64GB RTX Spark 上超过 150 tok/s。",
+          "textEn": "Vendor-reported, not re-run here: Terminal-Bench 2.1 54.9%, SWE-bench Pro v2 89.7%, SWE-bench Verified 74.2%. The blog also says more than 125 tok/s on an M4 Pro at short context, and more than 150 tok/s on a 64GB RTX Spark."
+        },
+        {
+          "text": "BF16 卡写下载大约 80 GB。MLX INT4 卡写大约 22.6 GB。INT4 卡指向 GGUF，给 llama.cpp 的 Metal。博文写兼容 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang，并配 rec。",
+          "textEn": "The BF16 card says the download is about 80 GB. The MLX INT4 card says about 22.6 GB. That card points at a GGUF for llama.cpp on Metal. The blog lists llama.cpp, Ollama, Unsloth, LM Studio, vLLM, SGLang, and rec."
+        }
+      ],
+      "qualityNote": "基准分和本机速度都是厂商自报，没有下载权重，也没有复跑。39.8B 和博文里的 40B、262,144 和博文里的 512k 两套说法都留着。博文页没有看到日历日期，上架日按模型卡的创建日。",
+      "qualityNoteEn": "Benchmark scores and on-device speeds are the vendor’s own report. Weights were not downloaded and scores were not re-run. Both 39.8B and the blog’s 40B stay, and both 262,144 and the blog’s 512k stay. The blog page had no calendar date, so the listed date is the model card’s creation date.",
+      "verifyLog": "2026-10-22 早间：博文、BF16 模型卡、INT4 卡、GGUF 页均为 HTTP 200。HF API：flint 创建 2026-10-21T14:20:58Z，license apache-2.0，likes 251，downloads 0；flint-int4 创建 2026-10-21T13:51:27Z，license apache-2.0。模型卡写 39.8B、约 2.5B 激活、文档化上下文 262,144、BF16 下载 about 80 GB，以及 54.9%、89.7%、74.2%。INT4 README 写 MLX、group-64 affine INT4、embeddings INT8、approximately 22.6 GB，并指向 GGUF 与 rec。博文写 40 billion、2.5 billion、最多 512k、建议 256k 内、M4 Pro 超过 125 tok/s、64GB RTX Spark 超过 150 tok/s，以及 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang。博文没有看到日历日期。分片体积接口没有返回 size，22.6 GB 和 80 GB 都没有加总复核。rec 仓库 2026-10-22 09:27（上海）gh api：Apache-2.0，55★，2 forks，创建 2026-10-21T15:35:55Z，描述 Our lightning-fast inference engine，没有安装。没有下载权重，没有跑推理。预览是博文首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 morning: the blog, the BF16 card, the INT4 card, and the GGUF page are HTTP 200. HF API: flint created 2026-10-21T14:20:58Z, license apache-2.0, 251 likes, 0 downloads; flint-int4 created 2026-10-21T13:51:27Z, license apache-2.0. The card says 39.8B, about 2.5B active, a documented context of 262,144, a BF16 download of about 80 GB, and 54.9%, 89.7%, 74.2%. The INT4 README says MLX, group-64 affine INT4, INT8 embeddings, approximately 22.6 GB, and points at the GGUF and rec. The blog says 40 billion, 2.5 billion, up to 512k, a 256k recommendation, more than 125 tok/s on M4 Pro, more than 150 tok/s on a 64GB RTX Spark, and llama.cpp, Ollama, Unsloth, LM Studio, vLLM, SGLang. No calendar date was on the blog. The file API did not return shard sizes, so 22.6 GB and 80 GB were not summed. rec at 2026-10-22 09:27 Asia/Shanghai gh api: Apache-2.0, 55★, 2 forks, created 2026-10-21T15:35:55Z, description “Our lightning-fast inference engine”; not installed. Weights were not downloaded and inference was not run. Preview is a screenshot of the blog hero, scaled to a 1200×800 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/recursive-flint.webp",
+      "previewCredit": "预览截自 Recursive 博文 Introducing Flint 的首屏",
+      "previewCreditEn": "Preview from the hero of Recursive’s Introducing Flint post",
+      "featured": false
+    },
+    {
+      "id": "fibo-2",
+      "slug": "fibo-2",
+      "name": "Fibo 2.0",
+      "vendor": "Bria",
+      "title": "Fibo 2.0：Bria 的 8B 图像模型，编辑和文生图在同一套权重里",
+      "titleEn": "Fibo 2.0: Bria’s 8B image model, editing and text-to-image in one set of weights",
+      "summary": "Bria 的 Fibo 2.0 是 8B 参数的开放权重图像模型，编辑和文生图在同一套权重里。模型卡写只用授权数据训练，用 VGL 结构化 JSON 控制画面。Dev 是完整底模，卡上写文生图用 50 步、guidance 5.0；Edit Turbo 从它蒸馏而来，只做编辑，4 步、guidance 1.0，支持遮罩编辑和最多 4 张参考图。权重页写非商用走 CC BY-NC 4.0，商用要和 Bria 另签协议。模型卡把 Artificial Analysis 的名次写成开放权重图像编辑第 1、文生图第 2，日期是 2026-10-20，这是厂商说法，本库没有打开榜单复核。文档页没有单独的日历发布日；Dev 仓库创建于 2026-10-18，Edit Turbo 创建于 2026-10-19。fal 的 edit 与 generate 页都写每张 0.04 美元。Bria 自己的定价页打开后停在转圈，没有看到另一套价格。模型卡还写有 ComfyUI 节点和 HF Space，本库没有出图。",
+      "summaryEn": "Fibo 2.0 from Bria is an 8B open-weight image model with editing and text-to-image in one set of weights. The model card says it is trained only on licensed data and controlled with VGL structured JSON. Dev is the full base; the card says text-to-image uses 50 steps and guidance 5.0. Edit Turbo is distilled from it for editing only, in 4 steps at guidance 1.0, with masked edits and up to four reference images. The weight pages say non-commercial use is CC BY-NC 4.0 and commercial use needs a separate agreement with Bria. The card dates an Artificial Analysis rank of number 1 in open-weights image editing and number 2 in open-weights text-to-image to 2026-10-20. That is the vendor’s claim; this library did not open the leaderboard. The docs page has no separate calendar launch date. The Dev repo was created 2026-10-18 and Edit Turbo 2026-10-19. fal’s edit and generate pages both say 0.04 dollars per image. Bria’s own pricing page stayed on a spinner, so no second price was visible. The card also names ComfyUI nodes and a Hugging Face Space. No image was generated here.",
+      "announcedAt": "2026-10-20",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Bria 文档：Fibo 2 is live",
+          "labelEn": "Bria docs: Fibo 2 is live",
+          "url": "https://docs.bria.ai/whats-new/fibo-2",
+          "by": "Bria"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Fibo-2.0-dev",
+          "labelEn": "Hugging Face: Fibo-2.0-dev",
+          "url": "https://huggingface.co/briaai/Fibo-2.0-dev",
+          "by": "Bria",
+          "date": "2026-10-18"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Fibo-2.0-edit-turbo",
+          "labelEn": "Hugging Face: Fibo-2.0-edit-turbo",
+          "url": "https://huggingface.co/briaai/Fibo-2.0-edit-turbo",
+          "by": "Bria",
+          "date": "2026-10-19"
+        },
+        {
+          "kind": "product",
+          "label": "fal：bria/fibo-2/edit",
+          "labelEn": "fal: bria/fibo-2/edit",
+          "url": "https://fal.ai/models/bria/fibo-2/edit",
+          "by": "fal"
+        },
+        {
+          "kind": "product",
+          "label": "fal：bria/fibo-2/generate",
+          "labelEn": "fal: bria/fibo-2/generate",
+          "url": "https://fal.ai/models/bria/fibo-2/generate",
+          "by": "fal"
+        },
+        {
+          "kind": "community",
+          "label": "Hugging Face Space：Fibo-2.0-editing",
+          "labelEn": "Hugging Face Space: Fibo-2.0-editing",
+          "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
+          "by": "Bria"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：一套 8B 权重同时做编辑和文生图。Edit Turbo 4 步、无 classifier-free guidance；Dev 文生图示例是 50 步、guidance 5.0。遮罩编辑，最多 4 张参考图。提示词走 VGL 结构化 JSON。",
+          "textEn": "Vendor: one 8B checkpoint does editing and text-to-image. Edit Turbo is 4 steps with no classifier-free guidance; the Dev text-to-image example is 50 steps at guidance 5.0. Masked edits, up to four reference images, prompts as VGL structured JSON."
+        },
+        {
+          "text": "权重页写非商用 CC BY-NC 4.0，商用要和 Bria 签协议。训练数据写的是授权数据。Hugging Face 的 license 字段是 other，链到 CC BY-NC 4.0。",
+          "textEn": "The weight pages say non-commercial CC BY-NC 4.0, with commercial use under an agreement with Bria. Training data is described as licensed. The Hugging Face license field is other, linked to CC BY-NC 4.0."
+        },
+        {
+          "text": "厂商说法，本库未复核：Artificial Analysis 开放权重图像编辑第 1、文生图第 2，模型卡日期 2026-10-20。文档页还写编辑超过 Ideogram、ByteDance、Black Forest Labs 的闭源模型，同样未复核。",
+          "textEn": "Vendor claim, not rechecked here: Artificial Analysis number 1 in open-weights image editing and number 2 in open-weights text-to-image, dated 2026-10-20 on the card. The docs page also says editing beats closed models from Ideogram, ByteDance, and Black Forest Labs; that was not rechecked either."
+        },
+        {
+          "text": "fal 的 edit 与 generate 页写每张 0.04 美元，十张 0.40 美元，1 美元 25 张。Bria 平台定价页停在转圈，没有看到另一套价。",
+          "textEn": "fal’s edit and generate pages say 0.04 dollars per image, 0.40 dollars for ten, and 25 images per 1 dollar. Bria’s platform pricing page stayed on a spinner, so no second price was visible."
+        }
+      ],
+      "qualityNote": "名次只按模型卡和文档页的厂商说法写，没有打开 Artificial Analysis。价格只写了 fal 页面上的每张 0.04 美元；Bria 定价页没有加载出来。模型卡提到 ComfyUI 节点，原始 README 返回 401，没有另找节点仓库。没有出图。",
+      "qualityNoteEn": "Ranks are the vendor’s wording on the model card and docs page. Artificial Analysis was not opened. The only price written down is 0.04 dollars per image on the fal pages; Bria’s pricing page did not finish loading. The card mentions ComfyUI nodes; the raw README returned 401, and no node repo was hunted down. No image was generated.",
+      "verifyLog": "2026-10-22 早间：文档页、两张模型卡、HF Space、fal 的 edit 与 generate 均为 HTTP 200。HF API：Fibo-2.0-dev 创建 2026-10-18T13:44:10Z，lastModified 2026-10-21T11:47:41Z，downloads 396，likes 101，license other，license_link 指向 CC BY-NC 4.0。Edit Turbo 创建 2026-10-19T13:11:51Z，downloads 310，likes 84，base_model 为 Fibo-2.0-dev。模型卡写 8B、VGL、遮罩、最多 4 张参考图、Edit Turbo 的步数 4 与 guidance 1.0、Dev 的 50 步与 guidance 5.0，名次日期 October 20, 2026。文档页写开放权重编辑第 1、文生图 top-2，并点名 Ideogram、ByteDance、Black Forest Labs。fal 页标题为 Fibo 2.0 Edit 与 Generate API，正文写每张 0.04 美元，十张 0.40 美元，1 美元 25 张。Bria 平台定价页 HTTP 200，无头截图停在转圈，没有读到价目。模型卡原始 README 为 401，ComfyUI 链接没有从卡片里打开。没有登录，没有出图。预览是文档页首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 morning: the docs page, both model cards, the HF Space, and fal edit and generate are HTTP 200. HF API: Fibo-2.0-dev created 2026-10-18T13:44:10Z, lastModified 2026-10-21T11:47:41Z, 396 downloads, 101 likes, license other, license_link to CC BY-NC 4.0. Edit Turbo created 2026-10-19T13:11:51Z, 310 downloads, 84 likes, base model Fibo-2.0-dev. The cards say 8B, VGL, masks, up to four references, Edit Turbo at 4 steps and guidance 1.0, Dev at 50 steps and guidance 5.0, and a rank date of October 20, 2026. The docs page says number 1 in open-weights editing and top-2 in open-weights text-to-image, and names Ideogram, ByteDance, and Black Forest Labs. fal page titles are the Fibo 2.0 Edit and Generate APIs; the body says 0.04 dollars per image, 0.40 dollars for ten, and 25 images per 1 dollar. Bria’s platform pricing page is HTTP 200; a headless shot stayed on a spinner and no price table was read. The raw model-card README returned 401, so the ComfyUI link was not opened from the card. Not signed in and no image generated. Preview is a screenshot of the docs hero, scaled to a 1200×800 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/fibo-2.webp",
+      "previewCredit": "预览截自 Bria 文档页 Fibo 2 is live 的首屏",
+      "previewCreditEn": "Preview from the hero of Bria’s Fibo 2 is live docs page",
+      "featured": false
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",
