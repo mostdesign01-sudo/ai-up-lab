@@ -1,11 +1,81 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-23T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 29
   },
   "models": [
+    {
+      "id": "ideogram-vector",
+      "slug": "ideogram-vector",
+      "name": "Ideogram Vector",
+      "vendor": "Ideogram",
+      "title": "Ideogram Vector 1.0：文生/图生可编辑 SVG",
+      "titleEn": "Ideogram Vector 1.0: text/image to editable SVG",
+      "summary": "Ideogram 在 2026-10-22 推出 Ideogram Vector。产品页写：用文本提示生成可编辑 SVG，或把现有图转成可以缩放、再改颜色和单个形状的矢量。官方帖称文本提示能出带平滑渐变和清晰字形的可编辑 SVG，也可以把图转成可缩放矢量。产品页的接口是 POST /v2/svg/generate/ideogram-vector-1（提示，参考图可选）和 POST /v2/svg/vectorize/ideogram-vector-1（不写提示，直接转图）。价目按产品页，单位美元每张：文生矢量 Low 0.13、Medium 0.16、High 0.20；带参考图时 Low 和 Medium 不变，High 为 0.32。图生矢量 0.10。这些数字是产品页所写，本库没有下单。本库没有调用 API，也没有在 Ideogram 里生成过 SVG。",
+      "summaryEn": "Ideogram introduced Ideogram Vector on 2026-10-22. The product page says a text prompt produces an editable SVG, or an existing image becomes a vector you can scale and then recolor or edit shape by shape. The official post says a text prompt can produce an editable SVG with smooth gradients and sharp typography, and that an image can become a scalable vector. The page lists POST /v2/svg/generate/ideogram-vector-1 (prompt, references optional) and POST /v2/svg/vectorize/ideogram-vector-1 (no prompt, convert the image). Prices on the product page, USD per SVG: text to vector is 0.13 low, 0.16 medium, and 0.20 high; with references, low and medium stay the same and high is 0.32. Image to vector is 0.10. Those numbers are what the product page writes; this library did not place an order. This library did not call the API and did not generate an SVG in Ideogram.",
+      "announcedAt": "2026-10-22",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-23T01:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Ideogram Vector 产品页",
+          "labelEn": "Ideogram Vector product page",
+          "url": "https://ideogram.ai/models/vector/",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "official",
+          "label": "官方帖：推出第一个矢量模型",
+          "labelEn": "Official post: first vector model",
+          "url": "https://x.com/ideogram_ai/status/2113300317584720259",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "official",
+          "label": "API：Generate SVG",
+          "labelEn": "API: Generate SVG",
+          "url": "https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "product",
+          "label": "fal：text-to-vector",
+          "labelEn": "fal: text-to-vector",
+          "url": "https://fal.ai/models/ideogram/vector/text-to-vector",
+          "by": "fal",
+          "date": "2026-10-22"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "产品页：文本提示出可编辑 SVG，或把现有图转成可缩放矢量。接口名是 ideogram-vector-1。",
+          "textEn": "Product page: a text prompt makes an editable SVG, or an existing image becomes a scalable vector. The endpoint name is ideogram-vector-1."
+        },
+        {
+          "text": "官方帖称：平滑渐变、清晰字形。这是厂商说法，本库没有出图核对。",
+          "textEn": "The official post says smooth gradients and sharp typography. That is the vendor’s wording; this library did not generate a sample to check it."
+        },
+        {
+          "text": "产品页价目，本库未下单：文生 Low / Medium / High 为 0.13 / 0.16 / 0.20 美元；带参考图时只有 High 为 0.32 美元。图生矢量 0.10 美元一张。",
+          "textEn": "Product-page prices, no order placed here: text-to-vector low / medium / high are 0.13 / 0.16 / 0.20 USD; with references only high is 0.32 USD. Image-to-vector is 0.10 USD per image."
+        }
+      ],
+      "qualityNote": "平滑渐变和清晰字形来自官方帖，不是本库出图后的判断。价格只记产品页价目表：文生矢量按 Low、Medium、High，带参考图时只有 High 更贵；图生矢量按张。fal 的 text-to-vector 页单价与产品页一致。本库没有下单，没有调用 API，也没有登录 Ideogram 生成 SVG。",
+      "qualityNoteEn": "Smooth gradients and sharp typography come from the official post, not from a sample generated here. Prices are only the product-page table: text-to-vector by low, medium, and high, with references raising only high; image-to-vector is per image. The fal text-to-vector page lists the same unit prices. This library did not place an order, did not call the API, and did not sign in to Ideogram to generate an SVG.",
+      "verifyLog": "2026-10-23 早间（上海）：产品页 https://ideogram.ai/models/vector/ HTTP 200，last-modified Thu, 22 Oct 2026 15:52:07 GMT。title「AI Vector Generator: Ready-to-use SVG Artwork | Ideogram」。正文写 scalable, editable SVGs，crisp SVG edges，Text to vector / Image to vector。价目表列：Text to vector，Quality / Prompt only / With references：Low 0.13/0.13，Medium 0.16/0.16，High 0.20/0.32；Image to vector 0.10 / image。接口 POST /v2/svg/generate/ideogram-vector-1 与 POST /v2/svg/vectorize/ideogram-vector-1。API 文档 https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg HTTP 200。官方 X https://x.com/ideogram_ai/status/2113300317584720259 ，fxtwitter created Thu Oct 22 16:03:53 +0000 2026，likes 1226。帖文：Generate clean, editable SVGs with smooth gradients and sharp typography from a text prompt, or turn any image into a detailed, scalable vector。fal https://fal.ai/models/ideogram/vector/text-to-vector HTTP 200，页内 publishedAt 2026-10-22T16:02:38.929Z；billing 写 low 0.13、medium 0.16、high 0.20，带参考图时 high 0.32，low 与 medium 不变。预览为无头 Chrome 实拍产品页首屏，视口 1200×800 WebP。没有登录，没有调用 API，没有下单。页面与接口写 Ideogram Vector / ideogram-vector-1；标题里的 1.0 对应该接口名，页面标题本身没有写 “1.0” 这三个字符。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): product page https://ideogram.ai/models/vector/ HTTP 200, last-modified Thu, 22 Oct 2026 15:52:07 GMT. Title “AI Vector Generator: Ready-to-use SVG Artwork | Ideogram.” Body says scalable, editable SVGs, crisp SVG edges, Text to vector / Image to vector. Price table: Text to vector, Quality / Prompt only / With references: Low 0.13/0.13, Medium 0.16/0.16, High 0.20/0.32; Image to vector 0.10 / image. Endpoints POST /v2/svg/generate/ideogram-vector-1 and POST /v2/svg/vectorize/ideogram-vector-1. API docs https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg HTTP 200. Official X https://x.com/ideogram_ai/status/2113300317584720259 , fxtwitter created Thu Oct 22 16:03:53 +0000 2026, 1226 likes. Post text: generate clean, editable SVGs with smooth gradients and sharp typography from a text prompt, or turn any image into a detailed, scalable vector. fal https://fal.ai/models/ideogram/vector/text-to-vector HTTP 200, in-page publishedAt 2026-10-22T16:02:38.929Z; billing says low 0.13, medium 0.16, high 0.20, and with references high is 0.32 while low and medium stay the same. Preview is a headless Chrome capture of the product hero, 1200×800 WebP. Not signed in, API not called, no order placed. The page and endpoint say Ideogram Vector / ideogram-vector-1; the 1.0 in the title matches that endpoint name, and the page title itself does not contain the characters “1.0”.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/ideogram-vector.webp",
+      "previewCredit": "Ideogram Vector 产品页",
+      "previewCreditEn": "Ideogram Vector product page",
+      "featured": false
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",
