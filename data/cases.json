@@ -1,6 +1,83 @@
 {
   "cases": [
     {
+      "id": "typeui-micro-interactions",
+      "slug": "typeui-micro-interactions",
+      "title": "TypeUI Micro Interactions：113 个可预览微交互 + 可复制实现提示词",
+      "titleEn": "TypeUI Micro Interactions: 113 previewable micro-interactions with copyable build prompts",
+      "kind": "tool",
+      "hook": "113 个微交互可预览，提示词能直接复制去实现。",
+      "hookEn": "Preview 113 micro-interactions and copy a prompt to build each one.",
+      "summary": "TypeUI 的微交互画廊按控件分组：Buttons、Inputs、Selection、Modals、Drawers、Tooltips、Toasts、Step navigation、Lists、Sliders、Cards。页面写一共 113 条。每条可以预览行为，并用 TypeUI Creative 复制实现提示词。适合要用 AI 写微交互、又不想从零描述动效的人。本库没有把复制出的提示词贴进任何模型出代码。",
+      "summaryEn": "TypeUI’s micro-interaction gallery is grouped by control: Buttons, Inputs, Selection, Modals, Drawers, Tooltips, Toasts, Step navigation, Lists, Sliders, and Cards. The page says there are 113. Each one can be previewed, and TypeUI Creative copies an implementation prompt. Useful when you want AI to build a micro-interaction without describing the motion from scratch. This library did not paste a copied prompt into any model.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.typeui.sh/micro-interactions",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50199290"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/typeui-micro-interactions.webp",
+      "qualityNote": "收录是因为每条都能预览行为，并用 TypeUI Creative 复制实现提示词。页面写 113 条，分组见正文。本库没有把提示词交给模型生成代码。本条是 /micro-interactions 画廊，和 TypeUI 主站上的 UI/UX 规则页分开。",
+      "qualityNoteEn": "Listed because each example can be previewed and TypeUI Creative copies an implementation prompt. The page says 113, and the groups are in the summary. This library did not hand a prompt to a model. This entry is the /micro-interactions gallery, separate from the UI/UX rules page on the TypeUI home site.",
+      "verifyLog": "2026-10-23 早间（上海）：Algolia search query「UI micro interactions prompts for AI」tags=story，命中 objectID 50199290，title「Show HN: UI micro interactions prompts for AI」，url https://www.typeui.sh/micro-interactions，author elwingo1，created_at 2026-10-22T18:32:57Z，points 68，children 22。curl 与无头 Chrome 打开该 URL 均为 Vercel Security Checkpoint（curl HTTP 429，响应头 x-vercel-mitigated: challenge；Chrome 页文案 Failed to verify your browser / Code 99）。正文来自同一 URL 的 Jina reader HTML（HTTP 200，title「UI Micro Interactions and AI Prompts | TypeUI」）。meta description 写 Explore 113 interactive UI micro interactions，并写 copy its implementation prompt with TypeUI Creative。页内分组链接：buttons、inputs、selection-controls、modals、drawers、tooltips、toasts、navigation（Step navigation）、lists、sliders、cards。预览为 Jina 对同一 URL 的截图（1280×1280 PNG），裁掉底部隐私弹层后缩成 1200×800 WebP。本库没有点 Copy prompt，也没有把提示词贴进模型。与仍打开的 #116 跳过记录不同：那条写的是 typeui.sh 主站规则页打不开，本条路径是 /micro-interactions。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): Algolia search for “UI micro interactions prompts for AI” (story) hit objectID 50199290, title “Show HN: UI micro interactions prompts for AI”, url https://www.typeui.sh/micro-interactions, author elwingo1, created_at 2026-10-22T18:32:57Z, 68 points, 22 children. curl and headless Chrome both stopped on a Vercel Security Checkpoint (curl HTTP 429, x-vercel-mitigated: challenge; Chrome text “Failed to verify your browser / Code 99”). Body copy is from a Jina reader HTML fetch of the same URL (HTTP 200, title “UI Micro Interactions and AI Prompts | TypeUI”). The meta description says “Explore 113 interactive UI micro interactions” and “copy its implementation prompt with TypeUI Creative”. In-page group links: buttons, inputs, selection-controls, modals, drawers, tooltips, toasts, navigation (Step navigation), lists, sliders, cards. Preview is a Jina screenshot of the same URL (1280×1280 PNG), privacy dialog cropped off, scaled to a 1200×800 WebP. Copy prompt was not clicked, and no prompt was pasted into a model. Different from the still-open #116 skip note, which was the typeui.sh home rules page; this path is /micro-interactions.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": false,
+      "language": "zh",
+      "connectors": [],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-23T01:40:00Z"
+    },
+    {
+      "id": "figma-code-layers",
+      "slug": "figma-code-layers",
+      "title": "Figma Code Layers：画布上并排放可运行的代码原型（开放测试）",
+      "titleEn": "Figma Code Layers: runnable code prototypes side by side on the canvas (open beta)",
+      "kind": "tool",
+      "hook": "在画布上并排试能跑的代码原型。",
+      "hookEn": "Try runnable code prototypes side by side on the canvas.",
+      "summary": "Figma 在 2026-10-15 把 Code Layers 放进开放测试。画布上的 code layer 是一段能跑的交互原型，可以和设计帧放在一起，也可以复制一份再试另一个方向。入手有几条路：从空白层让 Figma agent 做、选中设计帧再 Build selection、用 Chrome 扩展把线上页面抓进来、连 GitHub、从本地文件夹导入，或经 Figma MCP 把编程工具里的原型放上画布。Extract designs 能把当前画面、选中的元素，或一段操作流程拉回可编辑图层。帮助中心写可用计划包括 Education（K-12）、Starter、Professional、Organization、Enterprise，需要编辑权，创建需要 Full seat，并写接下来几周陆续出现。博客和帮助中心都写：付费计划上，到 2026-11-04 为止，在 code layer 里生成和编辑不计 AI 额度；同一次请求里，助手做的其他工作仍会计额度。11 月 4 日之后，code layer 任务按其他 agent 功能走额度。导入本身不计额度。本库没有 Figma 账号，没有登录试用。",
+      "summaryEn": "On 2026-10-15 Figma moved Code Layers into open beta. A code layer is a running interactive prototype on the canvas, next to design frames, and it can be duplicated to try another direction. You can start from an empty layer and prompt the Figma agent, turn selected frames into a layer with Build selection, capture a live page with the Chrome extension, connect GitHub, import a local folder, or bring a prototype in through Figma MCP. Extract designs pulls the current view, a selected element, or a flow back into editable layers. The help center lists Education (K-12), Starter, Professional, Organization, and Enterprise, requires edit access, says creating a layer needs a Full seat, and says access rolls out over the following weeks. Both the blog and the help center say that on paid plans, generating and editing inside a code layer does not spend AI credits through 2026-11-04; other agent work in the same request still does. After 4 November, code-layer tasks spend credits like other agent features. The import itself does not spend credits. This library has no Figma account and did not sign in.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.figma.com/blog/design-together-with-code-layers/",
+      "secondaryUrls": [
+        "https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design",
+        "https://x.com/figma/status/2113330876407054503"
+      ],
+      "sourceType": "official-launch",
+      "previewImage": "/previews/figma-code-layers.webp",
+      "qualityNote": "开放测试，席位和额度以帮助中心为准。帮助中心把 Starter 和 Education（K-12）也列进可用计划；免费到 2026-11-04 的额度豁免，博客和帮助中心都写成付费计划。豁免只覆盖在 code layer 里生成和编辑的任务，同一次提示里的其他助手工作仍计额度。导入本身不计额度。本库没有登录试用。",
+      "qualityNoteEn": "Open beta; seat and credit rules follow the help center. The help center also lists Starter and Education (K-12). The credit waiver through 2026-11-04 is written as paid plans on both the blog and the help center. The waiver covers generating and editing inside a code layer; other agent work in the same prompt still spends credits. The import itself does not spend credits. This library did not sign in.",
+      "verifyLog": "2026-10-23 早间（上海）：博客 https://www.figma.com/blog/design-together-with-code-layers/ HTTP 200，日期 October 15, 2026，作者 Sean Blanton（Product Designer, Figma），首段写 Today, code layers moves into open beta。帮助中心 https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design HTTP 200。可用计划写 Education (K-12)、Starter、Professional、Organization、Enterprise，需编辑权。创建需要 Full seat；import 本身不计 Figma AI credits，之后让 Figma Make agent 改才计。帮助中心写 open beta、接下来几周陆续开放；付费计划上 creating and editing within code layers is free through November 4, 2026；同一次 prompt 里只有生成和编辑 code layer 的任务免费，助手的其他工作仍计额度；November 4 之后全部 code layer 任务走额度。Extract designs 写 whole page、selected element、flow。工具栏 Code 或按 B、Build selection、Chrome 扩展、GitHub、本地文件夹、Figma MCP 均照帮助中心。官方 X https://x.com/figma/status/2113330876407054503 ，fxtwitter 记录 created Thu Oct 22 18:05:19 +0000 2026，likes 187，reposts 13，正文列设计转 code layer、Chrome 扩展、并排复制、Figma MCP。预览为无头 Chrome 实拍博客配图（设计帧与旁边可运行界面），视口 1200×800 WebP。本库没有 Figma 账号，没有登录。与库内 figma-specs（2026-10-15 Markdown Specs）源地址不同。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): blog https://www.figma.com/blog/design-together-with-code-layers/ HTTP 200, date October 15, 2026, author Sean Blanton (Product Designer, Figma), lead line “Today, code layers moves into open beta.” Help center https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design HTTP 200. Plans listed: Education (K-12), Starter, Professional, Organization, Enterprise, with edit access. Creating a layer requires a Full seat; the import itself does not use Figma AI credits, and later edits with the Figma Make agent do. The help center says open beta rolling out over the following weeks; on paid plans, creating and editing within code layers is free through November 4, 2026; only the generate-and-edit tasks in a prompt are free, and the agent’s other work still spends credits; after November 4 every code-layer task spends credits. Extract designs lists whole page, selected element, and flow. Toolbar Code or B, Build selection, the Chrome extension, GitHub, a local folder, and Figma MCP follow the help center. Official X https://x.com/figma/status/2113330876407054503 , fxtwitter created Thu Oct 22 18:05:19 +0000 2026, 187 likes, 13 reposts; the post lists design-to-code-layer, the Chrome extension, side-by-side duplicates, and Figma MCP. Preview is a headless Chrome capture of the blog figure (a design frame beside a running UI), 1200×800 WebP. No Figma account and no sign-in. Different source URL from in-library figma-specs (Markdown Specs, 2026-10-15).",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "让助手改 code layer，或把线上页面抓进文件前，先确认席位和 AI 额度。本库没有代为登录。",
+      "approvalBoundaryEn": "Check the seat and AI credits before an agent edits a code layer or captures a live page into the file. This library did not sign in.",
+      "language": "zh",
+      "connectors": [
+        "figma"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-23T01:40:00Z"
+    },
+    {
       "id": "openpencil",
       "slug": "openpencil",
       "title": "OpenPencil：开源、可读写 .fig 的设计编辑器（自带 MCP）",
@@ -9759,11 +9836,16 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-15T12:45:00Z",
+    "updatedAt": "2026-10-23T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.58",
-    "count": 175,
+    "version": "1.4.59",
+    "count": 177,
     "sourcesCrawled": [
+      "https://www.typeui.sh/micro-interactions",
+      "https://news.ycombinator.com/item?id=50199290",
+      "https://www.figma.com/blog/design-together-with-code-layers/",
+      "https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design",
+      "https://x.com/figma/status/2113330876407054503",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",
