@@ -1,6 +1,45 @@
 {
   "items": [
     {
+      "id": "creative-ui",
+      "slug": "creative-ui",
+      "title": "creative-ui：偏设计向的 shadcn 注册表 + Claude skills",
+      "titleEn": "creative-ui: a design-forward shadcn registry with Claude skills",
+      "hook": "半调、拼贴框、颗粒叠层这类视觉件，一条 shadcn 命令装进项目。",
+      "hookEn": "Halftone, collage frames, grain overlays—install with one shadcn command.",
+      "summary": "creative-ui 是 MIT 开源的 shadcn 注册表（官网 https://ui.krutikraut.com ，仓库 krutikkkkkkkkk/creative-ui）：偏印刷/拼贴审美的 React 组件，以及可装进 `.claude/skills/` 的 Claude skills。registry.json 当日可见 10 项，含 halftone-image、grain-overlay、collage-frame、duotone-image、dna-carousel、dithering-hover、rotunda-carousel、image-trail，以及 classical-collage-web-design / lasting-logo-design 两条 skill。安装示例：`npx shadcn@latest add @creative-ui/halftone-image`（`@creative-ui` 已在 shadcn 官方 registries 目录）。适合想给界面加点非默认灰卡片质感、又习惯让 Claude / Cursor 用 shadcn CLI 拉件的人。本库没有执行 shadcn add，也没有把 skill 装进本机助手。",
+      "summaryEn": "creative-ui is an MIT shadcn registry (https://ui.krutikraut.com , repo krutikkkkkkkkk/creative-ui): print/collage-leaning React components plus Claude skills that install into `.claude/skills/`. registry.json listed 10 items on check day, including halftone-image, grain-overlay, collage-frame, duotone-image, dna-carousel, dithering-hover, rotunda-carousel, image-trail, and the classical-collage-web-design / lasting-logo-design skills. Install example: `npx shadcn@latest add @creative-ui/halftone-image` (`@creative-ui` is in the official shadcn registries directory). Good when you want less default gray-card UI and already use Claude / Cursor with the shadcn CLI. This library did not run shadcn add or install a skill into a local agent.",
+      "sourceUrl": "https://ui.krutikraut.com/",
+      "secondaryUrls": [
+        "https://github.com/krutikkkkkkkkk/creative-ui",
+        "https://x.com/krutikkkkkkkkk/status/2113938836439072786"
+      ],
+      "previewImage": "/previews/creative-ui.webp",
+      "npmPackage": "",
+      "promptHint": "在已有 shadcn 项目里执行 `npx shadcn@latest add @creative-ui/<name>`；skill 类条目会写入 `.claude/skills/`。先逛 https://ui.krutikraut.com/ 再挑件。本库未实测安装。",
+      "promptHintEn": "In a shadcn project run `npx shadcn@latest add @creative-ui/<name>`; skill items write into `.claude/skills/`. Browse https://ui.krutikraut.com/ first. This library did not run an install.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "shadcn",
+        "react",
+        "claude-skills",
+        "registry",
+        "mit",
+        "design",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24T12:20:00Z",
+      "qualityNote": "主源官网与仓库 krutikkkkkkkkk/creative-ui（MIT）。组件/skill 名单以当日 registry.json 为准；未逐项安装核对。本库未执行 shadcn add。",
+      "qualityNoteEn": "Primary sources are the site and krutikkkkkkkkk/creative-ui (MIT). Component/skill names follow that day’s registry.json; items were not installed one-by-one. This library did not run shadcn add.",
+      "verifyLog": "2026-10-24 晚间：ui.krutikraut.com / github.com/krutikkkkkkkkk/creative-ui HTTP 200；gh api MIT stars=22，最近推送 2026-10-24；registry.json 10 items；Playwright 3:2 WebP。",
+      "verifyLogEn": "2026-10-24 evening: site/repo HTTP 200; gh api MIT stars=22, last push 2026-10-24; registry.json 10 items; Playwright 3:2 WebP."
+    },
+    {
       "id": "figma-pilot",
       "slug": "figma-pilot",
       "title": "figma-pilot：用代码执行驱动 Figma 的 MCP（少量工具）",
@@ -2334,9 +2373,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-15T12:45:00Z",
+    "updatedAt": "2026-10-24T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.29",
-    "count": 65
+    "version": "1.4.30",
+    "count": 66
   }
 }

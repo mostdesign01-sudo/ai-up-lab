@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-24",
+      "title": "晚间收录 2026-10-24：Agent UI +1（creative-ui）、HTML +1（MakeGradient）、Cases +1（Latch）",
+      "titleEn": "Evening catalog 2026-10-24: Agent UI +1 (creative-ui), HTML +1 (MakeGradient), Cases +1 (Latch)",
+      "body": "AI×设计优先。Agent UI：creative-ui（MIT shadcn 注册表 + Claude skills，官网 ui.krutikraut.com，registry 当日 10 项，`npx shadcn add @creative-ui/<name>`；本库未安装）。HTML：makegradient（免费免登录 WebGL 八模式渐变，可导出代码/Figma/图视频；非开源；本库未逐项导出）。Cases：latch（MIT ~6KB WebMCP 脚本，Show HN #50218601；脚本免费，Pro 分析另计；本库未嵌入）。三条均为 1200×800 WebP。相对 **main**：agent-ui 65→66（1.4.29→1.4.30），html-items 136→137（1.3.65→1.3.66），cases 175→176（1.4.58→1.4.59）。不叠未合并 PR（含昨晚 #122）。跳过 Multipeer（候补名单/非开源）、Calsee/Encarta/RetroBrag/Gasfree（弱 AI×设计或非设计主轴）、gallery-walls（实体相框规划）、Agent Display（仓库无许可且客户端未就绪）。未改 Models、首页精选。未合并，等「合」。",
+      "bodyEn": "AI×design first. Agent UI: creative-ui (MIT shadcn registry + Claude skills, ui.krutikraut.com, 10 registry items that day, `npx shadcn add @creative-ui/<name>`; not installed here). HTML: makegradient (free no-login WebGL eight-mode gradients with code/Figma/image/video export; not OSS; exports not fully exercised). Cases: latch (MIT ~6KB WebMCP script, Show HN #50218601; script free, Pro analytics separate; not embedded). All three are 1200×800 WebP. Relative to **main**: agent-ui 65→66 (1.4.29→1.4.30), html-items 136→137 (1.3.65→1.3.66), cases 175→176 (1.4.58→1.4.59). Not stacked on unmerged PRs (including last night #122). Skipped Multipeer (waitlist/not OSS), Calsee/Encarta/RetroBrag/Gasfree (weak AI×design), gallery-walls (physical frames), Agent Display (no license; clients not ready). Models and home picks unchanged. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-15",
       "title": "晚间收录：Cases +2（OpenPencil、Figma Specs）、Agent UI +1（figma-pilot）",
       "titleEn": "Evening catalog: Cases +2 (OpenPencil, Figma Specs), Agent UI +1 (figma-pilot)",
