@@ -1,11 +1,75 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-25T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.22",
+    "count": 29
   },
   "models": [
+    {
+      "id": "fovea-4b",
+      "slug": "fovea-4b",
+      "name": "Fovea-4B",
+      "vendor": "Sivasuthan（个人开发者）",
+      "title": "Fovea-4B：看图做决定的 4B 开源模型，一次前向给出每个选项的概率",
+      "titleEn": "Fovea-4B: an open 4B model that makes decisions about images, with a probability for every option in one forward pass",
+      "summary": "Fovea-4B 是基于 Qwen3.5-4B 微调的开源图像决策模型（Apache-2.0），2026-10-24 发布在 Hugging Face。它不写长文：你给一张或多张图（照片、文档、收据、图表、截图）、一段 JSON 状态和类型化问题——是否（noul）、多选（choice）、分级打分（score）——它一次前向就返回每个选项的概率和置信度，答案总和为 1，证据不足时概率会摊平而不是报错。接口沿用 TypeSafe 的 System One API（POST /v1/systemone），所以 Jev 的客户端可以直接换着调。对设计和产品团队，它适合做截图分流这类「只要一个决定」的环节：这张截图是不是报错页、属于哪个页面、视觉问题严重程度打几分。作者在模型卡里用自建的 2,360 道多选题和 Imajev-4B、H2O-Lightning-4B、Jev-Vision 对比，称总分 80.6 居首、校准误差最低——这是作者自测，本库未复跑。官方写明的短板：只懂英文、不做多步推理、小字识别受分辨率限制；自部署需要 16 GB 以上显存的 GPU，权重约 9 GB。",
+      "summaryEn": "Fovea-4B is an open image decision model fine-tuned from Qwen3.5-4B (Apache-2.0), published on Hugging Face on 2026-10-24. It does not write prose: give it one or more images (photos, documents, receipts, charts, screenshots), a JSON state, and typed questions—yes/no (noul), choice, or ordinal score—and it returns a probability for every option plus a confidence in one forward pass; answers sum to 1, and when evidence is missing the probabilities flatten instead of erroring. It speaks TypeSafe's System One API (POST /v1/systemone), so Jev clients can call it unchanged. For design and product teams it fits steps that need one decision, such as screenshot triage: is this an error page, which screen is it, how severe is the visual bug. The model card compares it with Imajev-4B, H2O-Lightning-4B, and Jev-Vision on the authors' own 2,360 multiple-choice questions and claims the top overall score (80.6) and the lowest calibration error—these are the authors' numbers, not re-run here. Stated limits: English only, no multi-step reasoning, small text limited by resolution; self-hosting needs a GPU with 16 GB+ and the weights are about 9 GB.",
+      "announcedAt": "2026-10-24",
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型：Sivasuthan/fovea-4b（Apache-2.0）",
+          "labelEn": "Hugging Face model: Sivasuthan/fovea-4b (Apache-2.0)",
+          "url": "https://huggingface.co/Sivasuthan/fovea-4b",
+          "by": "Sivasuthan",
+          "date": "2026-10-24"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：Sivasuthan9/fovea（推理服务与请求示例）",
+          "labelEn": "GitHub: Sivasuthan9/fovea (serving script and request examples)",
+          "url": "https://github.com/Sivasuthan9/fovea",
+          "by": "Sivasuthan9",
+          "date": "2026-10-24"
+        }
+      ],
+      "highlights": [
+        {
+          "label": "4B 参数，基于 Qwen3.5-4B，一次前向出决定",
+          "labelEn": "4B params on Qwen3.5-4B, one forward pass per decision"
+        },
+        {
+          "label": "类型化问题：noul / choice / score，每个选项带概率",
+          "labelEn": "Typed questions: noul / choice / score, a probability per option"
+        },
+        {
+          "label": "兼容 TypeSafe System One API（/v1/systemone）",
+          "labelEn": "Compatible with TypeSafe's System One API (/v1/systemone)"
+        },
+        {
+          "label": "Apache-2.0 权重；自部署需 16 GB+ 显存",
+          "labelEn": "Apache-2.0 weights; self-hosting needs 16 GB+ VRAM"
+        }
+      ],
+      "qualityNote": "收录理由：库里已有 Jev、THX-01 等文本决策小模型，Fovea-4B 把同一套接口搬到图像上，可用于截图、界面状态的快速分流。边界：评测分数是作者自建题集上的自测，作者也说明不等于排行榜成绩，本库未复跑；只支持英文。本库没有下载权重、没有运行 serve.py，也没有调用 System One API。",
+      "qualityNoteEn": "Why: the library already lists small text decision models like Jev and THX-01; Fovea-4B brings the same interface to images, useful for quick triage of screenshots and UI states. Boundary: the scores are the authors' own held-out evaluation, which they say does not equal a leaderboard result, and were not re-run here; English only. This library did not download the weights, run serve.py, or call the System One API.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "thx-01",
+        "strands-decider-2b",
+        "laya-system-one"
+      ],
+      "previewImage": "/previews/fovea-4b.webp",
+      "previewCredit": "预览截自 Hugging Face 模型卡页面",
+      "previewCreditEn": "Preview cropped from the Hugging Face model card page",
+      "featured": false,
+      "verifyLog": "2026-10-25 晚间：HF 模型页与 GitHub Sivasuthan9/fovea 均 HTTP 200。HF API：createdAt 2026-10-24，license apache-2.0，base_model Qwen/Qwen3.5-4B，文件含 model.safetensors、decision_readout.safetensors、calibration.json。gh api Sivasuthan9/fovea：Apache-2.0，1★，创建于 2026-10-24，README 给出 serve.py 启动命令、16 GB 显卡与约 9 GB 权重说明，作为第二来源。评测表（80.6 / 79.9 / 79.4 / 75.7，ECE 0.035）照模型卡转述，未复跑。预览为 Playwright 实拍 HF 模型卡页，1440×960 缩到 1200×800 WebP。未下载权重、未跑 serve.py、未调 System One API。",
+      "verifyLogEn": "2026-10-25 evening: HF model page and GitHub Sivasuthan9/fovea both HTTP 200. HF API: createdAt 2026-10-24, license apache-2.0, base_model Qwen/Qwen3.5-4B, files include model.safetensors, decision_readout.safetensors, calibration.json. gh api Sivasuthan9/fovea: Apache-2.0, 1★, created 2026-10-24; its README gives the serve.py command, 16 GB GPU and ~9 GB weights, used as the second source. Eval table (80.6 / 79.9 / 79.4 / 75.7, ECE 0.035) is restated from the model card, not re-run. Preview is a Playwright capture of the HF model card, 1440×960 scaled to a 1200×800 WebP. Did not download weights, run serve.py, or call the System One API."
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",

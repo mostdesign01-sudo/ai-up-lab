@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-25",
+      "title": "晚间收录：Agent UI +2（Lightswind、Intelli UI）、Models +1（Fovea-4B）",
+      "titleEn": "Evening catalog: Agent UI +2 (Lightswind, Intelli UI), Models +1 (Fovea-4B)",
+      "body": "Agent UI：lightswind（MIT React + Tailwind 动画组件库，`npx lightswind init / add` 拷源码进项目，自带 MCP 给 Cursor / Claude；官网另售 Pro，本条只写免费 MIT 路径，组件数 README 写 160+、官网说法不一）；intelli-ui（IntelliHelper 的 MIT Liquid Glass 组件库，CLI @intellihelper/cli、MCP intellihelper-ui、助手插件；项目很早期、星标很少）。Models：fovea-4b（Qwen3.5-4B 微调的图像决策模型，Apache-2.0，兼容 TypeSafe System One API，可做截图分流；模型卡评测为作者自测，本库未复跑）。三条均为 3:2 WebP。本库未跑 init、未接 MCP、未购 Pro、未下载权重或运行 serve.py。agent-ui 65→67（1.4.29→1.4.30），models 28→29（1.1.21→1.1.22）。未改首页精选、Cases、HTML。",
+      "bodyEn": "Agent UI: lightswind (MIT React + Tailwind animated component library; `npx lightswind init / add` copies source into your project, with a built-in MCP for Cursor / Claude; the site also sells Pro, this entry covers only the free MIT path, and component counts differ between the README's 160+ and the site); intelli-ui (IntelliHelper's MIT Liquid Glass component library with the @intellihelper/cli CLI, the intellihelper-ui MCP, and an agent plugin; very early with few stars). Models: fovea-4b (an image decision model fine-tuned from Qwen3.5-4B, Apache-2.0, compatible with TypeSafe's System One API, useful for screenshot triage; model card evals are the authors' own and were not re-run). All three are 3:2 WebP. This library did not run init, wire MCP, buy Pro, download weights, or run serve.py. agent-ui 65→67 (1.4.29→1.4.30), models 28→29 (1.1.21→1.1.22). Home picks, Cases, and HTML unchanged."
+    },
+    {
       "date": "2026-10-15",
       "title": "晚间收录：Cases +2（OpenPencil、Figma Specs）、Agent UI +1（figma-pilot）",
       "titleEn": "Evening catalog: Cases +2 (OpenPencil, Figma Specs), Agent UI +1 (figma-pilot)",
