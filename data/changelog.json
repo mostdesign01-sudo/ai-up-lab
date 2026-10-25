@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-18",
+      "title": "收录：Cases +1（Claude 官方转的 6 个作品）",
+      "titleEn": "Catalog: Cases +1 (six projects reposted by Claude)",
+      "body": "showcase：claude-six-projects-2026-10，@claudeai 10-17 帖子里的 6 个作品（山火分析原型、涂鸦象棋、手写字体、电磁场可视化、AngioView 冠脉造影 3D、Haiku 俳句动画），每项附作者原帖；只有 AngioView 有公开网站，其余只有视频。预览为 6 段视频截帧拼成 3:2 WebP。本库没有复现任何一个。cases 175→176（1.4.58→1.4.59）。未改首页精选、HTML、Agent UI、Models。",
+      "bodyEn": "showcase: claude-six-projects-2026-10, the six projects in @claudeai's 10-17 post (wildfire analysis prototype, doodle chess, handwriting font, EM field visualization, AngioView 3D angiogram trainer, Haiku animations), each linked to the creator's post; only AngioView has a public site, the rest are videos. Preview is stills from the six videos tiled into a 3:2 WebP. This library reproduced none of them. cases 175→176 (1.4.58→1.4.59). Home picks, HTML, Agent UI and Models unchanged."
+    },
+    {
+      "date": "2026-10-18",
       "title": "晚间收录：HTML +3（Pele、Furifont、Five Hundred Clocks）、Models +2（MOSS-Image、Kling 4.0）",
       "titleEn": "Evening catalog: HTML +3 (Pele, Furifont, Five Hundred Clocks), Models +2 (MOSS-Image, Kling 4.0)",
       "body": "HTML：pele（Obsidian 的 Mermaid 转 SVG，CSS 变量换色，npm 包 pele，LICENSE 为 MIT；HN 50132193）；furifont（antfu 的日文字体，振假名做进连字，字体 SIL OFL，读音数据 CC BY-SA 4.0，代码 MIT；HN 50100994）；five-hundred-clocks（一个 HTML 里 500 只钟，Show HN 标题与 README 写约 6.3 MB，Claude Opus 5.5 撰写，CC0；HN 50137820）。Models：moss-image（OpenMOSS 5B DiT，Base 与 SFT，Apache-2.0，README 写约 4K token 与 JSON 布局，有 Space 演示和技术报告 PDF，本库未出图未读报告）；kling-4-0（官方帖 2026-10-15 宣布全面可用，网页界面、MCP 与 CLI 已可用，10-bit HDR 与企业/开发者 API 为即将推出；时长和关键帧未在官方帖或首页对上 4.0，故不写，也未查价格）。五条预览均为 Playwright 实拍 3:2 WebP。收录前核对本地四库与打开的 PR，没有重复。html-items 136→139（1.3.65→1.3.66），models 28→30（1.1.21→1.1.22）。未改 Cases、Agent UI、首页精选。未合并。",
