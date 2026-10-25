@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "design-style",
+      "slug": "design-style",
+      "title": "Design Style：每天一个设计风格",
+      "titleEn": "Design Style: one design style a day",
+      "hook": "每天拆一种风格：短片、风格图、规则和给 AI 的提示词。",
+      "hookEn": "One style at a time: a short film, plates, rules, and AI prompts.",
+      "summary": "观默（@guanmo_ai）做的设计风格库，网页画廊和仓库都能打开。画廊「全部作品」显示 3：设计风格 2 期（包豪斯、瑞士国际主义），布局方式 1 期（便当盒）。README 写每一期有 15 秒 Remotion 短片、4 张 1080×1350 的手写 SVG、设计规则、色板字体、AI 提示词、设计令牌和制作过程。GitHub API 的 license 字段为空，整库未标许可证。gallery 目录里另有一份 MIT 文本，但正文写视频、音频、封面和风格素材不在这份画廊代码许可里；README 另写转发视频和图片请注明观默。本库没有在本地渲染短片。",
+      "summaryEn": "A design-style library by 观默 (@guanmo_ai). The web gallery and the repo both open. The gallery’s work count shows 3: two styles (Bauhaus, Swiss Style) and one layout (Bento Grid). The README says each issue has a 15-second Remotion film, four hand-written SVGs at 1080×1350, design rules, a palette and type, AI prompts, design tokens, and a making-of. The GitHub API license field is empty, so the repo is not marked with a license. A separate MIT text sits in the gallery folder, and it says videos, audio, covers, and original style assets are outside that gallery-code license. The README also asks for credit to 观默 when sharing video or images. This library did not render a film locally.",
+      "sourceUrl": "https://guanmo-ai.github.io/design-style/",
+      "secondaryUrls": [
+        "https://github.com/guanmo-ai/design-style"
+      ],
+      "previewImage": "/previews/design-style.webp",
+      "types": [
+        "docs",
+        "motion"
+      ],
+      "tags": [
+        "design",
+        "motion",
+        "svg",
+        "prompts",
+        "reference",
+        "remotion"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "qualityNote": "归在 HTML：这是能打开的风格参考画廊，和库里的海报构图手册一类，不是要装进助手的 skill。整库未标许可证。画廊目录里的 MIT 只覆盖画廊代码，视频和图片除外。没有本地渲染。",
+      "qualityNoteEn": "Filed under HTML: it is a style gallery you can open, in the same lane as the poster-composition handbooks, not a skill you install into an agent. The repo is not marked with a license. The MIT file in the gallery folder covers gallery code only, and excludes video and images. Not rendered locally.",
+      "verifyLog": "2026-10-22 09:27（上海）gh api：guanmo-ai/design-style，license 字段 null，51★，2 forks，创建 2026-10-20T04:27:20Z，最近推送 2026-10-21T14:33:28Z。releases：day-01（2026-10-20）、layout-01 与 day-02（2026-10-21）。gallery/data/works.json 三条：001-bauhaus、01-bento-grid、002-swiss-style。画廊 HTTP 200；无头浏览器等脚本跑完后，「全部作品」显示 3，筛选项为设计风格 2、布局方式 1。gallery/LICENSE 是 MIT 文本，并写视频、音频、封面和原始风格素材不在许可内。README 写转发请注明观默 @guanmo_ai，字体另有 SIL OFL 或 GUST，没有逐个打开字体许可证。没有做本地渲染。预览是画廊首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 09:27 Asia/Shanghai gh api: guanmo-ai/design-style, license field null, 51★, 2 forks, created 2026-10-20T04:27:20Z, last push 2026-10-21T14:33:28Z. Releases: day-01 (2026-10-20), layout-01 and day-02 (2026-10-21). gallery/data/works.json has three entries: 001-bauhaus, 01-bento-grid, 002-swiss-style. The gallery is HTTP 200; after headless Chrome ran the scripts, the work count showed 3, with filters for 2 styles and 1 layout. gallery/LICENSE is an MIT text and says videos, audio, covers, and original style assets are not covered. The README asks for credit to 观默 @guanmo_ai when sharing, and names SIL OFL or GUST for fonts; those font licenses were not opened one by one. No local render. Preview is a screenshot of the gallery’s first screen, scaled to a 1200×800 WebP."
+    },
+    {
       "id": "qingicon",
       "slug": "qingicon",
       "title": "QingIcon：中性线性图标库，带 React、Vue 和 MCP",
@@ -5125,7 +5159,7 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-21T13:00:00Z",
+    "updatedAt": "2026-10-22T01:27:06Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
     "count": 137
