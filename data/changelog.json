@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-10-25",
+      "title": "收录 PR 自动合并；每条内容有自己的分享卡；新增 RSS",
+      "titleEn": "Catalog PRs merge automatically; every entry gets its own share card; RSS feed",
+      "body": "10/15 之后的早晚收录积压在 PR 里，网站停更了 10 天。现在只改收录数据和截图的 PR 会在构建通过后自动合进 main 并部署，冲突的条目按 id 合并，合不进的会标记 catalog-hold 等人处理。每个详情页分享到 X、微信等平台时，显示该条目自己的截图卡片，不再是同一张站点图。新增 /rss.xml（最新 60 条），页脚可订阅。访问统计已预留，配置 Cloudflare Web Analytics token 后开启。",
+      "bodyEn": "Morning and evening catalog runs had piled up in PRs since 10/15, and the site went ten days without an update. PRs that only change catalog data and screenshots now merge into main and deploy as soon as they build; entries are merged by id, and a PR that cannot be merged is labelled catalog-hold for a human. Sharing a detail page on X, WeChat and elsewhere now shows that entry's own screenshot card instead of the same site image. Added /rss.xml (latest 60) with a footer link. Analytics are wired up and turn on once a Cloudflare Web Analytics token is set."
+    },
+    {
+      "date": "2026-10-25",
       "title": "晚间收录：Agent UI +2（Lightswind、Intelli UI）、Models +1（Fovea-4B）",
       "titleEn": "Evening catalog: Agent UI +2 (Lightswind, Intelli UI), Models +1 (Fovea-4B)",
       "body": "Agent UI：lightswind（MIT React + Tailwind 动画组件库，`npx lightswind init / add` 拷源码进项目，自带 MCP 给 Cursor / Claude；官网另售 Pro，本条只写免费 MIT 路径，组件数 README 写 160+、官网说法不一）；intelli-ui（IntelliHelper 的 MIT Liquid Glass 组件库，CLI @intellihelper/cli、MCP intellihelper-ui、助手插件；项目很早期、星标很少）。Models：fovea-4b（Qwen3.5-4B 微调的图像决策模型，Apache-2.0，兼容 TypeSafe System One API，可做截图分流；模型卡评测为作者自测，本库未复跑）。三条均为 3:2 WebP。本库未跑 init、未接 MCP、未购 Pro、未下载权重或运行 serve.py。agent-ui 65→67（1.4.29→1.4.30），models 28→29（1.1.21→1.1.22）。未改首页精选、Cases、HTML。",

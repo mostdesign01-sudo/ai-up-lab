@@ -16,6 +16,8 @@ interface Props {
   shell?: "site" | "plaza";
   /** true hides the page and its links; "follow" hides a legacy listing but lets crawlers reach the detail pages. */
   noindex?: boolean | "follow";
+  /** Site-root path of this page's share card (see src/lib/og.ts); defaults to the site card. */
+  image?: string;
 }
 
 const {
@@ -26,10 +28,13 @@ const {
   collection = "lab",
   shell = "site",
   noindex = false,
+  image,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=12";
+// Cloudflare Web Analytics: set the repo variable CF_BEACON_TOKEN (see deploy.yml) to turn it on.
+const cfBeacon = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+const ogImage = image ? new URL(withBase(image), Astro.site).href : new URL(withBase("og.png"), Astro.site).href + "?v=12";
 ---
 
 <!doctype html>
@@ -55,6 +60,7 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=12";
     <meta name="twitter:description" content={description} data-tw-desc-zh={description} data-tw-desc-en={descriptionEn} />
     <meta name="twitter:image" content={ogImage} />
     <link rel="canonical" href={canonical} />
+    <link rel="alternate" type="application/rss+xml" title={siteName} href={withBase("rss.xml")} />
     <link rel="icon" href={withBase("favicon.svg")} type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -145,6 +151,7 @@ const ogImage = new URL(withBase("og.png"), Astro.site).href + "?v=12";
         }
       })();
     </script>
+    {cfBeacon && <script is:inline defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon={JSON.stringify({ token: cfBeacon })}></script>}
   </head>
   <body>
     {

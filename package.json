@@ -6,7 +6,7 @@
   "description": "AI UP LAB — 核验精选的可复用用法 · Cases / HTML / Agent UI",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/verify-build.mjs",
+    "build": "astro build && node scripts/build-og.mjs && node scripts/verify-build.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "brand-pdfs": "node scripts/generate-brand-pdfs.mjs"
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@phosphor-icons/core": "^2.1.1",
-    "astro": "^5.18.2"
+    "astro": "^5.18.2",
+    "sharp": "^0.34.5"
   }
 }

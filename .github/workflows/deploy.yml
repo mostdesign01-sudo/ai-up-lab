@@ -37,6 +37,10 @@ jobs:
         run: npm ci
       - name: Build
         run: npm run build
+        env:
+          # Optional: Cloudflare Web Analytics site token, set under
+          # Settings → Secrets and variables → Actions → Variables.
+          PUBLIC_CF_BEACON_TOKEN: ${{ vars.CF_BEACON_TOKEN }}
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3

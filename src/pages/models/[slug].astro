@@ -8,6 +8,7 @@ import VerifyLog from "../../components/VerifyLog.astro";
 import ModelCard from "../../components/ModelCard.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ogCard } from "../../lib/og";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { ui } from "../../lib/i18n";
 import {
@@ -43,6 +44,7 @@ const kindBadge = (kind: string) => (kind === "official" ? "official" : kind ===
 
 <BaseLayout
   collection="lab"
+  image={ogCard("models", item)}
   title={`${item.title} · AI UP LAB`}
   titleEn={`${item.titleEn} · AI UP LAB`}
   description={item.summary}

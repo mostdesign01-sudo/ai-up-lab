@@ -21,6 +21,7 @@ const requiredPages = [
   "catalog.json",
   "llms.txt",
   "sitemap.xml",
+  "rss.xml",
   "cases/index.html",
   "featured/index.html",
   "latest/index.html",
@@ -511,6 +512,27 @@ if (missing.length) {
   }
   const queued = picks.issues.filter(issue => issue.week > thisWeek).length;
   console.log(`Weekly picks verified: ${picks.issues.length} issues, ${queued} queued after ${thisWeek}, art present, no early reveals.`);
+}
+
+{
+  // Each detail page shares its own card; every og:image must exist, and the feed must list real pages.
+  const sectionsWithCards = [["cases", dataset.cases], ["html", htmlDataset.items], ["agent-ui", agentUiDataset.items], ["models", modelsDataset.models], ["image-prompts", imagePromptsDataset.items]];
+  let cards = 0;
+  for (const [section, items] of sectionsWithCards) {
+    for (const item of items) {
+      const html = await readFile(new URL(`../dist/${section}/${item.slug}/index.html`, import.meta.url), "utf8");
+      const image = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+      if (!image) throw new Error(`Detail page has no og:image: ${section}/${item.slug}`);
+      const local = new URL(image).pathname.replace(/^\/ai-up-lab\//, "");
+      if (!existsSync(new URL(`../dist/${local}`, import.meta.url))) throw new Error(`Share card is missing: ${section}/${item.slug} -> ${local}`);
+      if (local.startsWith("og/")) cards++;
+    }
+  }
+  const rss = await readFile(new URL("../dist/rss.xml", import.meta.url), "utf8");
+  const links = [...rss.matchAll(/<link>([^<]+)<\/link>/g)].slice(1).map(m => new URL(m[1]).pathname.replace(/^\/ai-up-lab\//, ""));
+  if (links.length < 20) throw new Error(`RSS feed lists only ${links.length} items`);
+  for (const link of links) if (!existsSync(new URL(`../dist/${link}index.html`, import.meta.url))) throw new Error(`RSS item points to a missing page: ${link}`);
+  console.log(`Share cards verified: ${cards} detail pages use their own card; RSS lists ${links.length} live pages.`);
 }
 
 {
