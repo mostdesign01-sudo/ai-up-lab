@@ -1,6 +1,91 @@
 {
   "cases": [
     {
+      "id": "lovart-arti",
+      "slug": "lovart-arti",
+      "title": "Lovart 2.0 的 Arti：记得你口味、能隔夜交稿的设计助手",
+      "titleEn": "Arti in Lovart 2.0 — a design agent that remembers your taste and works overnight",
+      "kind": "tool",
+      "hook": "下班前交一份需求，第二天看调研和初稿；反馈会记进它的记忆。",
+      "hookEn": "Leave a brief before you log off and review research and drafts in the morning.",
+      "summary": "Lovart 在 2.0 版推出个人设计助手 Arti。官方说法：它记得你的偏好和作品集，下班前排一份需求，第二天就有调研和初稿等你看。Arti 页面列了五件它会自己做的事：定期检查画布、提前标出问题（Canvas check-up）；新项目先上网找竞品、配色和案例，整理成报告（Design research）；自动更新记忆；把你跑顺的流程存成技能，合适时提出来用（Self-evolving skills）；把同事或客户在画布上的评论一键交给它改（Feedback revisions）。定价页把 Arti 标为 Beta，只写在付费档：Starter 按年付每月 16 美元起，每天 2 次委派任务、2 次画布检查、1 次调研，高档位次数更多；免费档没有列 Arti。Lovart 本身是做电商主图、品牌物料、社媒图和短视频的 AI 设计平台。适合已经在用 Lovart、想把重复的出图和改稿交出去的人。本库没有付费账号，没有登录，也没有试过 Arti。",
+      "summaryEn": "Lovart 2.0 introduces Arti, a personal design agent. Lovart says it remembers your preferences and portfolio, so you can schedule a brief before logging off and wake up to research and drafts. The Arti page lists five things it does on its own: Canvas check-up (looks over your canvases and flags issues early), Design research (searches the web for competitors, palettes and case studies and writes a report for a new project), auto-updated memory, Self-evolving skills (workflows you have nailed become skills it suggests later), and Feedback revisions (send teammate or client canvas comments to Arti in one click and it revises). The pricing page marks Arti as Beta on paid plans only: Starter from $16 a month billed annually, with 2 delegated tasks, 2 canvas check-ups and 1 research run a day, and more on higher tiers; the free plan does not list Arti. Lovart itself is an AI design platform for e-commerce images, brand assets, social graphics and short video. Good if you already use Lovart and want to hand off repeat image work and revisions. This library has no paid account, did not sign in, and did not try Arti.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design agent",
+      "sourceUrl": "https://x.com/lovart_ai/status/2112231902686167168",
+      "secondaryUrls": [
+        "https://www.lovart.ai/arti",
+        "https://www.lovart.ai/pricing",
+        "https://www.lovart.ai/"
+      ],
+      "sourceType": "official-launch",
+      "previewImage": "/previews/lovart-arti.webp",
+      "qualityNote": "官方发布帖加官网功能页和定价页，功能描述都是 Lovart 自己的说法。Arti 是 Beta、只在付费档；本库没有付费账号，没试委派任务、画布检查或调研报告的实际效果，也没核对按次数之外的额度怎么扣。",
+      "qualityNoteEn": "The official launch post plus Lovart’s feature and pricing pages; every capability is Lovart’s own description. Arti is Beta and paid-only; this library has no paid account, did not try delegated tasks, canvas check-ups or research reports, and did not check how usage beyond the daily counts is billed.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：官方 X 帖 2112231902686167168（@lovart_ai，2026-10-19T17:18:23Z，即上海 10-20 01:18；140 赞、133 收藏、21 回复）原文「Meet Arti, your personal design agent. New in Lovart 2.0.」「Schedule a brief before you log off, and wake up to research and drafts ready to review.」；回帖 2112232096576229431 的链接跳到 lovart.ai 首页。www.lovart.ai HTTP 200，首屏 Welcome to Lovart 2.0，顶栏 2.0 年付折扣倒计时。www.lovart.ai/arti 未登录可见「What I can do on my own」五项（Canvas check-up、Design research、Auto-update memory、Self-evolving skills、Feedback revisions），下方记忆区显示 Request failed（未登录）。www.lovart.ai/pricing：Starter 年付 $16/月（月付 $19），列 Arti, personal design agent Beta、Delegated Task 2 tasks/day、Canvas check-up 2 times/day、Design research 1 time/day；Basic 4/4/2，Pro 8/8/4，Ultimate 10/10/5；Free $0 一栏未列 Arti。收录前 main 与打开的 PR 里没有 lovart。预览为 Playwright 打开 Lovart 首页首屏（未登录），1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): official X post 2112231902686167168 (@lovart_ai, 2026-10-19T17:18:23Z, i.e. 01:18 on 10-20 in Shanghai; 140 likes, 133 bookmarks, 21 replies) reads “Meet Arti, your personal design agent. New in Lovart 2.0.” and “Schedule a brief before you log off, and wake up to research and drafts ready to review.”; the link in reply 2112232096576229431 lands on the lovart.ai homepage. www.lovart.ai HTTP 200, hero Welcome to Lovart 2.0, with a 2.0 annual-discount countdown bar. www.lovart.ai/arti shows the five “What I can do on my own” items signed out (Canvas check-up, Design research, Auto-update memory, Self-evolving skills, Feedback revisions); the memory panel below shows Request failed (signed out). www.lovart.ai/pricing: Starter $16/month billed annually ($19 monthly) lists Arti, personal design agent Beta, Delegated Task 2 tasks/day, Canvas check-up 2 times/day, Design research 1 time/day; Basic 4/4/2, Pro 8/8/4, Ultimate 10/10/5; the Free $0 column does not list Arti. Neither main nor the open PRs had lovart. Preview is a Playwright view of the signed-out Lovart homepage hero, 1200×800 WebP.",
+      "difficulty": "starter",
+      "hasRoutine": true,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "委派任务按天限次、出图扣积分；交给客户或发布前，自己看一遍 Arti 的初稿和改稿。",
+      "approvalBoundaryEn": "Delegated tasks are capped per day and images spend credits; review Arti’s drafts and revisions before they go to a client or get published.",
+      "connectors": [
+        "lovart"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z"
+    },
+    {
+      "id": "reverse-brand-prompt",
+      "slug": "reverse-brand-prompt",
+      "title": "反推品牌规范提示词：让 Claude Code 量出一个网站的字体、配色和组件",
+      "titleEn": "Reverse-brand prompt — have Claude Code measure a site’s type, colour and components",
+      "kind": "playbook",
+      "hook": "给一个网址，让 Claude 实测字体配色，产出非官方品牌手册。",
+      "hookEn": "Give Claude Code a URL; it measures type, colour and grid into an unofficial guide.",
+      "summary": "设计师 Amir Mušić 在 X 上分享的一段长提示词：贴进 Claude Code（或任何能跑命令、开浏览器、写文件的 Claude 环境），填上网址和配图方式，它会先写一个可复用的命令行工具 reverse-brand，再拿它去分析那个网站。流程分九步：用本机 Chrome 无头打开首页和 3–5 个关键页（含 390px 手机宽度），逐个元素记下字体、字号、行高、颜色、间距、圆角、阴影和断点；聚类出字号层级、颜色角色、间距基数和按钮卡片变体，从文案里统计出三条语气规则；导出 CSS 变量和 W3C design-tokens JSON；再用这些 token 拼出一份长得像对方官网的非官方品牌手册（无图版 ≤150 KB、带图版），外加 Instagram 轮播图、X 配图和一段 60 帧演示视频，最后写 verify.js 自检并截图复查。提示词写死了几条底线：每一页标「非官方分析」，不复制 logo、字体文件和对方图片，遇到人机验证就停下让人处理，AI 配图只能从文字生成并标注。作者原帖拿 Revolut 做了示范。适合想快速摸清某个品牌视觉体系、或给自己产品倒推一份 token 的设计师。本库没有跑这段提示词。",
+      "summaryEn": "A long prompt shared on X by designer Amir Mušić. Paste it into Claude Code (or any Claude setup with a shell, a browser and file access), set the URL and image mode, and it first writes a reusable CLI called reverse-brand, then runs it on that site. The nine steps: open the home page and 3–5 key pages in headless local Chrome (plus a 390px mobile pass) and record every element’s font, size, line height, colour, spacing, radius, shadow and breakpoint; cluster a type scale, colour roles, a spacing base and button and card variants, and derive three voice rules from copy statistics; export CSS variables and W3C design-tokens JSON; rebuild an unofficial brand guide that looks like the brand’s own site using only those tokens (an image-free edition under 150 KB and an image edition), plus an Instagram carousel, X images and a 60 fps presentation video; finally write verify.js and review screenshots. The prompt fixes some hard limits: every page says “Unofficial analysis”, no logos, font files or brand images are copied, it stops at bot checks for a human, and AI images come from text prompts only and are labelled. The author demonstrated it on Revolut. Useful for designers who want a fast read of a brand’s visual system or to back-derive tokens for their own product. This library did not run the prompt.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Claude Code prompt",
+      "sourceUrl": "https://gist.github.com/amirmushichge/ede82d51439e4bd70817c329e36c4cc7",
+      "secondaryUrls": [
+        "https://x.com/AmirMushich/status/2112251544133337176",
+        "https://x.com/AmirMushich/status/2112251551247135039"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/reverse-brand-prompt.webp",
+      "qualityNote": "提示词全文公开，步骤和底线都照原文写。本库没有在 Claude Code 里跑过，量出来的值准不准、要花多少 token 和配图费用都没验证；原帖下也有人指出间距 token 还要手调、语气只看首页文案会偏。产物明确是非官方分析，别拿去当对方的官方规范。",
+      "qualityNoteEn": "The full prompt is public and the steps and limits follow it. This library did not run it in Claude Code, so measurement accuracy and token and image costs are unverified; replies under the post also note that spacing tokens still need hand-tuning and homepage-only voice analysis can skew. The output is explicitly unofficial; do not treat it as the brand’s own guidelines.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：X 原帖 2112251544133337176（@AmirMushich，2026-10-19T18:36:26Z，即上海 10-20 02:36；252 赞、430 收藏）写「I gave Opus a URL & it reverse-engineered the Revolut's design system」；自回帖 2112251551247135039「Save the prompt」，t.co 跳到 gist amirmushichge/ede82d51439e4bd70817c329e36c4cc7。gist 页 HTTP 200，标题 Reverse-brand prompt for Claude (Opus, agentic coding mode)，文件 brand-reverse-prompt.md，页面标 Secret（未列出，凭链接公开），6 star、3 fork；api.github.com 显示创建 2026-10-19T18:31:21Z、更新 2026-10-20T08:10:36Z。raw 共 115 行、约 11 KB，含 Non-negotiables、1 Capture 到 9 Log 九节与 Deliverables；正文写 Playwright with an installed Chrome、1440×900 与 390×844、150 KB / 4 MB 预算、60 fps 视频经 ffmpeg 编码。回帖里有人指出 token 间距仍需手调、语气只读首页。收录前 main 与打开的 PR 里没有这条 gist 或 reverse-brand。预览为 Playwright 打开 gist 页首屏，1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): X post 2112251544133337176 (@AmirMushich, 2026-10-19T18:36:26Z, i.e. 02:36 on 10-20 in Shanghai; 252 likes, 430 bookmarks) says “I gave Opus a URL & it reverse-engineered the Revolut's design system”; self-reply 2112251551247135039 “Save the prompt” links via t.co to gist amirmushichge/ede82d51439e4bd70817c329e36c4cc7. Gist page HTTP 200, title Reverse-brand prompt for Claude (Opus, agentic coding mode), file brand-reverse-prompt.md, marked Secret (unlisted, public by link), 6 stars, 3 forks; api.github.com shows created 2026-10-19T18:31:21Z, updated 2026-10-20T08:10:36Z. Raw is 115 lines, about 11 KB, with Non-negotiables, nine sections from 1 Capture to 9 Log, and Deliverables; it specifies Playwright with an installed Chrome, 1440×900 and 390×844, 150 KB / 4 MB budgets, and a 60 fps video encoded through ffmpeg. Replies note spacing tokens still need hand-tuning and voice reads only the homepage. Neither main nor the open PRs had this gist or reverse-brand. Preview is a Playwright view of the gist page hero, 1200×800 WebP.",
+      "difficulty": "advanced",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "选 IMAGES = api 会花配图费用，密钥只放 .env；产物只能标非官方分析，别对外当成对方的品牌规范发布。",
+      "approvalBoundaryEn": "IMAGES = api spends image-generation money and keys stay in .env; label the output as unofficial and do not publish it as the brand’s own guidelines.",
+      "connectors": [
+        "claude-code",
+        "chrome",
+        "ffmpeg"
+      ],
+      "language": "zh",
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z"
+    },
+    {
       "id": "huashu-motion",
       "slug": "huashu-motion",
       "title": "huashu-motion：让编程助手做产品发布片、配乐，指着画面改",
@@ -10583,19 +10668,18 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-20T01:30:00Z",
+    "updatedAt": "2026-10-20T13:00:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.59",
-    "count": 178,
+    "count": 177,
     "sourcesCrawled": [
-      "https://github.com/alchaincyf/huashu-motion",
-      "https://x.com/AlchainHust/status/2111821583862161631",
-      "https://github.com/harukikuri/spotnote",
-      "https://spotnote-weld.vercel.app/",
-      "https://news.ycombinator.com/item?id=50153011",
-      "https://designsystemloop.dev/",
-      "https://github.com/owaizin/ds-loop",
-      "https://x.com/owaizin/status/2112112829654520040",
+      "https://x.com/lovart_ai/status/2112231902686167168",
+      "https://www.lovart.ai/",
+      "https://www.lovart.ai/arti",
+      "https://www.lovart.ai/pricing",
+      "https://gist.github.com/amirmushichge/ede82d51439e4bd70817c329e36c4cc7",
+      "https://x.com/AmirMushich/status/2112251544133337176",
+      "https://x.com/AmirMushich/status/2112251551247135039",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",

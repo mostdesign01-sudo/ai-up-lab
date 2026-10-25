@@ -1,11 +1,110 @@
 {
   "meta": {
-    "updatedAt": "2026-10-20T01:30:00Z",
+    "updatedAt": "2026-10-20T13:00:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.1.22",
     "count": 29
   },
   "models": [
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "slug": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "vendor": "DeepSeek",
+      "title": "DeepSeek-V4.1-Flash-1017：V4.1-Flash 小版本更新，MIT 权重，三天后开源推理框架 DeepInfer",
+      "titleEn": "DeepSeek-V4.1-Flash-1017: a minor V4.1-Flash update with MIT weights, plus the open DeepInfer engine",
+      "summary": "DeepSeek 在 2026-10-17 发布 V4.1-Flash 的小版本更新 V4.1-Flash-1017，网页、App 和 API 同步上线：API 模型名仍是 `deepseek-flash`，旧名 `deepseek-v4-flash` 等也转到它。官方称基准更高、完成任务更快、输出更短，在性能和成本上是「帕累托改进」；Hugging Face 模型卡对比表里 DeepSWE v1.1 从 74.2 到 77.0，Terminal-Bench 4.0 从 31.2 到 42.3，HLE（不用工具）从 36.8 到 42.6。权重在 Hugging Face 和 ModelScope 以 MIT 许可放出，模型卡写这次没有附 Jinja 对话模板，改用仓库里的 Python 编码参考实现，另发 Rust 写的 deepseek-recipe 处理提示格式。价格页写 1M 上下文、最长输出 384K、支持视觉，高峰时段每百万 token 输入 0.30 美元（缓存命中 0.006）、输出 1.20 美元，非高峰减半。10 月 20 日 DeepSeek 又开源了自家推理框架 DeepInfer（Apache-2.0），默认就跑这个权重，但只支持 NVIDIA SM100 和华为昇腾 950，且不含 KV 缓存系统和预填充/解码拆分这些完整服务所需的部分。Artificial Analysis 给它智能指数 45，在 121 个模型里排第 2。分数都是厂商或第三方的说法，本库没有调 API，也没有跑权重。",
+      "summaryEn": "On 17 October 2026 DeepSeek shipped V4.1-Flash-1017, a minor update to V4.1-Flash, on the web, app and API at once: the API model name is still `deepseek-flash`, and legacy names such as `deepseek-v4-flash` route to it. DeepSeek claims higher benchmarks, faster task completion and shorter outputs, a Pareto improvement in performance and cost; the Hugging Face model card table shows DeepSWE v1.1 going from 74.2 to 77.0, Terminal-Bench 4.0 from 31.2 to 42.3, and HLE without tools from 36.8 to 42.6. Weights are on Hugging Face and ModelScope under MIT. The model card says there is no Jinja chat template this time; instead the repo has a Python reference encoder, and the separate Rust deepseek-recipe handles prompt formatting. The pricing page lists a 1M context, up to 384K output and vision support, with peak prices per million tokens of $0.30 input ($0.006 cache hit) and $1.20 output, halved off-peak. On 20 October DeepSeek also open-sourced its in-house inference engine DeepInfer (Apache-2.0), which defaults to these weights but only supports NVIDIA SM100 and Huawei Ascend 950 and leaves out the KV cache system and prefill/decode disaggregation a full service needs. Artificial Analysis gives it an Intelligence Index of 45, 2nd of 121 models. Scores are vendor or third-party claims; this library did not call the API or run the weights.",
+      "announcedAt": "2026-10-17",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "DeepSeek 新闻：V4.1-Flash-1017 发布",
+          "labelEn": "DeepSeek news: V4.1-Flash-1017 release",
+          "url": "https://api-docs.deepseek.com/news/news261017",
+          "by": "DeepSeek",
+          "date": "2026-10-17"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型页：deepseek-ai/DeepSeek-V4.1-Flash-1017（MIT）",
+          "labelEn": "Hugging Face model page: deepseek-ai/DeepSeek-V4.1-Flash-1017 (MIT)",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "by": "DeepSeek-AI",
+          "date": "2026-10-17"
+        },
+        {
+          "kind": "official",
+          "label": "DeepSeek API 文档：模型与价格",
+          "labelEn": "DeepSeek API docs: models and pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing",
+          "by": "DeepSeek"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：deepseek-ai/DeepInfer 推理框架（Apache-2.0）",
+          "labelEn": "GitHub: deepseek-ai/DeepInfer inference engine (Apache-2.0)",
+          "url": "https://github.com/deepseek-ai/DeepInfer",
+          "by": "DeepSeek-AI",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "DeepSeek 官方 X 帖：DeepInfer 开源",
+          "labelEn": "DeepSeek official X post: DeepInfer open source",
+          "url": "https://x.com/deepseek_ai/status/2112476496283775135",
+          "by": "deepseek_ai",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 第三方测评页",
+          "labelEn": "Artificial Analysis third-party page",
+          "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+          "by": "Artificial Analysis"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：DeepInfer 开源",
+          "labelEn": "Hacker News thread: DeepInfer open-sourced",
+          "url": "https://news.ycombinator.com/item?id=50163277",
+          "by": "Hacker News",
+          "date": "2026-10-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：相比 V4.1-Flash 基准更高、任务更快、输出更短。模型卡表：DeepSWE v1.1 74.2→77.0，Terminal-Bench 4.0 31.2→42.3，HLE（不用工具）36.8→42.6。本库没有复跑。",
+          "textEn": "Vendor claim: higher benchmarks, faster tasks and shorter outputs than V4.1-Flash. Model card table: DeepSWE v1.1 74.2→77.0, Terminal-Bench 4.0 31.2→42.3, HLE without tools 36.8→42.6. Not re-run here."
+        },
+        {
+          "text": "权重 MIT，Hugging Face 与 ModelScope 均可下；没有 Jinja 对话模板，改用 Python 参考编码器和 Rust 的 deepseek-recipe。",
+          "textEn": "MIT weights on Hugging Face and ModelScope; no Jinja chat template, with a Python reference encoder and the Rust deepseek-recipe instead."
+        },
+        {
+          "text": "价格页：`deepseek-flash` 1M 上下文、最长输出 384K、支持视觉；高峰每百万 token 输入 0.30 美元、输出 1.20 美元，非高峰减半。",
+          "textEn": "Pricing page: `deepseek-flash` has a 1M context, up to 384K output and vision; peak per million tokens is $0.30 input and $1.20 output, halved off-peak."
+        },
+        {
+          "text": "DeepInfer（10 月 20 日开源，Apache-2.0）默认跑这个权重，只支持 NVIDIA SM100 与昇腾 950，不含 KV 缓存与预填充/解码拆分。",
+          "textEn": "DeepInfer (open-sourced 20 October, Apache-2.0) defaults to these weights, supports only NVIDIA SM100 and Ascend 950, and omits the KV cache and prefill/decode disaggregation."
+        }
+      ],
+      "qualityNote": "基准分和「更快更短」都按 DeepSeek 新闻页与模型卡，是厂商说法；Artificial Analysis 的智能指数 45、第 2 名和每秒约 210 个输出 token 是第三方测量。本库没有调 API、没有下载权重，也没有在 SM100 或昇腾上编译 DeepInfer。同系列的 9 月版 V4.1-Flash 另有一张卡，这张只记 1017 更新和三天后开源的推理框架。",
+      "qualityNoteEn": "Benchmark scores and the faster/shorter claims follow DeepSeek’s news page and model card and are vendor claims; Artificial Analysis’s Intelligence Index of 45, rank 2 and about 210 output tokens per second are third-party measurements. This library did not call the API, download weights, or build DeepInfer on SM100 or Ascend. The September V4.1-Flash has its own card; this one covers the 1017 update and the inference engine released three days later.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "deepseek-v4-1-flash"
+      ],
+      "previewImage": "/previews/deepseek-v4-1-flash-1017.webp",
+      "previewCredit": "预览截自 DeepSeek API 文档新闻页",
+      "previewCreditEn": "Preview cropped from the DeepSeek API docs news page",
+      "featured": false,
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：新闻页 https://api-docs.deepseek.com/news/news261017 HTTP 200，标题 DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real，侧栏日期 2026/10/17；正文 Pareto improvement、Now live on our website, app, and API、Optimized for DeepSeek Harness / Tencent CodeBuddy / WorkBuddy、Search & Fetch API $0.75 / 1,000 calls、Hugging Face 与 ModelScope 链接。HF API：deepseek-ai/DeepSeek-V4.1-Flash-1017 创建 2026-10-17T02:40:38Z，license mit，pipeline image-text-to-text，1830 赞；模型卡称 minor update，对比表 DS-V4.1-Flash-1017 vs DS-V4.1-Flash：HLE 42.6 vs 36.8、Terminal-Bench 4.0 42.3 vs 31.2、DeepSWE v1.1 77.0 vs 74.2、ProgramBench 29.1 vs 20.3；写 This release does not include a Jinja-format chat template。ModelScope 页 HTTP 200。价格页 quick_start/pricing：MODEL VERSION DeepSeek-V4.1-Flash-1017，CONTEXT 1M，MAX OUTPUT 384K，Vision ✓，峰时 cache hit $0.006 / miss $0.3 / output $1.2，非峰减半。gh api repos/deepseek-ai/DeepInfer：Apache-2.0，创建 2026-10-16，6292★；README 写 Supported models DeepSeek-V4.1-Flash、默认 checkpoint deepseek-ai/DeepSeek-V4.1-Flash-1017、硬件 NVIDIA SM100 与 Huawei Ascend 950、不含 KV cache system 与 VE/Prefill/Decode disaggregation。官方 X 帖 2112476496283775135（@deepseek_ai，2026-10-20T09:30:19Z，12650 赞）。HN item 50163277「DeepSeek just open-sourced its inference engine」Algolia 626 pts。Artificial Analysis 页 HTTP 200：Open weights model，Intelligence Index 45（#2 / 121），210.6 output tokens/s，In $0.30 Out $1.20，552B 总参数 / 16B 激活，License MIT；其 X 帖 2112218661432000694（2026-10-19）写比 V4.1 Flash 高 6 分。收录前 main 只有 9 月版 deepseek-v4-1-flash，打开的 PR 里没有 1017 / DeepInfer。预览为 Playwright 打开新闻页首屏，1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): news page https://api-docs.deepseek.com/news/news261017 HTTP 200, title DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real, sidebar date 2026/10/17; body says Pareto improvement, Now live on our website, app, and API, Optimized for DeepSeek Harness / Tencent CodeBuddy / WorkBuddy, Search & Fetch API $0.75 / 1,000 calls, with Hugging Face and ModelScope links. HF API: deepseek-ai/DeepSeek-V4.1-Flash-1017 created 2026-10-17T02:40:38Z, license mit, pipeline image-text-to-text, 1,830 likes; the model card calls it a minor update, and its table DS-V4.1-Flash-1017 vs DS-V4.1-Flash shows HLE 42.6 vs 36.8, Terminal-Bench 4.0 42.3 vs 31.2, DeepSWE v1.1 77.0 vs 74.2, ProgramBench 29.1 vs 20.3; it says This release does not include a Jinja-format chat template. ModelScope page HTTP 200. Pricing page quick_start/pricing: MODEL VERSION DeepSeek-V4.1-Flash-1017, CONTEXT 1M, MAX OUTPUT 384K, Vision ✓, peak cache hit $0.006 / miss $0.3 / output $1.2, halved off-peak. gh api repos/deepseek-ai/DeepInfer: Apache-2.0, created 2026-10-16, 6,292★; README lists supported model DeepSeek-V4.1-Flash, default checkpoint deepseek-ai/DeepSeek-V4.1-Flash-1017, hardware NVIDIA SM100 and Huawei Ascend 950, and excludes a KV cache system and VE/Prefill/Decode disaggregation. Official X post 2112476496283775135 (@deepseek_ai, 2026-10-20T09:30:19Z, 12,650 likes). HN item 50163277 “DeepSeek just open-sourced its inference engine”, Algolia 626 pts. Artificial Analysis HTTP 200: Open weights model, Intelligence Index 45 (#2 / 121), 210.6 output tokens/s, In $0.30 Out $1.20, 552B total / 16B active parameters, License MIT; its X post 2112218661432000694 (2026-10-19) says 6 points above V4.1 Flash. Before this entry main only had the September deepseek-v4-1-flash, and no open PR had 1017 / DeepInfer. Preview is a Playwright view of the news page hero, 1200×800 WebP."
+    },
     {
       "id": "minimax-m3-1-flash",
       "slug": "minimax-m3-1-flash",

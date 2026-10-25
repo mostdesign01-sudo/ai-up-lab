@@ -1,6 +1,94 @@
 {
   "items": [
     {
+      "id": "glaze",
+      "slug": "glaze",
+      "title": "Glaze：给 AI 产品用的黑白玻璃设计系统（shadcn 一条命令装）",
+      "titleEn": "Glaze — a glassy black-and-white design system for AI products, installed with shadcn",
+      "hook": "提示框、推理、工具调用、自主权限都有现成组件，还带给助手读的规则。",
+      "hookEn": "Prompt input, reasoning, tool calls and autonomy rules, plus a skill for the agent.",
+      "summary": "Glaze 是 Arlan Marat 在 design.how 上放出的第三套设计系统，定位「给 AI 产品用」：整体黑白、紧凑，只有下一步要按的那个按钮用玻璃质感。它走 shadcn 注册表，`npx shadcn@latest add https://design.how/r/glaze/theme.json` 装主题，同时把 Glaze 的 SKILL.md 写进 .claude/skills 和 .agents/skills，让编程助手按它的规则改界面。注册表列出 87 项：常规输入、表格、弹层之外，AI 一栏有 Prompt input、Send button、Mention、Message、Conversation、Response、Reasoning、Tool call、Activity、Follow-ups、Action receipt、Autonomy rule；还有 11 个整屏区块（预订审批、引用回答、Agent 计划、模拟测试等）和一份 ESLint 规则包，用来挡掉不在 token 里的数值。代码和技能在 GitHub 仓库 arla6ka/design.how，MIT 许可。官网复制安装提示词前会弹邮箱框，可以点「Just copy the prompt」跳过。适合要做 Agent 产品、又不想每屏重新设计审批卡和工具调用卡的人。本库读了注册表和组件源码，没有在项目里实际装上跑。",
+      "summaryEn": "Glaze is the third design system Arlan Marat has published on design.how, aimed at AI products: compact black and white, with glass only on the one button you press next. It ships as a shadcn registry: `npx shadcn@latest add https://design.how/r/glaze/theme.json` installs the theme and writes the Glaze SKILL.md into .claude/skills and .agents/skills so a coding agent follows its rules. The registry lists 87 items. Beyond inputs, tables and overlays, the AI group has Prompt input, Send button, Mention, Message, Conversation, Response, Reasoning, Tool call, Activity, Follow-ups, Action receipt and Autonomy rule; there are 11 full-screen blocks (booking approval, cited answer, agent plan, simulations and more) and an ESLint pack that flags values outside the tokens. Code and skills live in the GitHub repo arla6ka/design.how under MIT. The site shows an email box before copying the install prompt; “Just copy the prompt” skips it. Good if you are building an agent product and do not want to redesign approval and tool-call cards on every screen. This library read the registry and component source but did not install it into a project.",
+      "sourceUrl": "https://design.how/systems/glaze",
+      "secondaryUrls": [
+        "https://github.com/arla6ka/design.how",
+        "https://design.how/r/glaze/registry.json",
+        "https://design.how/systems",
+        "https://x.com/arlanmarat/status/2112236146050965965"
+      ],
+      "previewImage": "/previews/glaze.webp",
+      "promptHint": "先 npx shadcn@latest add https://design.how/r/glaze/theme.json，在根布局引入样式并给 body 加 glaze 类；再按需 add prompt-input、tool-call、autonomy-rule。改界面前先读 .agents/skills/glaze/SKILL.md，改完跑 glaze.eslint.config.mjs。",
+      "promptHintEn": "Run npx shadcn@latest add https://design.how/r/glaze/theme.json, import the stylesheet in the root layout and add the glaze class to body, then add prompt-input, tool-call and autonomy-rule as needed. Read .agents/skills/glaze/SKILL.md before UI changes and run glaze.eslint.config.mjs after.",
+      "types": [
+        "ui",
+        "component",
+        "library"
+      ],
+      "tags": [
+        "design-system",
+        "shadcn",
+        "agent-ui",
+        "ai-components",
+        "skills",
+        "mit",
+        "open-source",
+        "react",
+        "tailwind"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "qualityNote": "免费、MIT，组件源码可读。本库没有在真实项目里装主题或组件，也没有跑它的 lint；官网的 design.how 技能页需要留邮箱才显示完整说明，本条只写 GitHub 仓库里能看到的六个技能名。",
+      "qualityNoteEn": "Free and MIT, with readable component source. This library did not install the theme or components into a real project or run its lint. The design.how skills page asks for an email before showing full instructions, so this entry only names the six skills visible in the GitHub repo.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：design.how/systems/glaze HTTP 200，标题 Glaze, a design system for AI products；页面侧栏 AI 组含 Prompt input 到 Autonomy rule 共 12 项。点 Install 后弹邮箱框，选 Just copy the prompt 拿到安装提示词：shadcn init、add theme.json（同时写 .claude/skills/glaze/SKILL.md 与 .agents/skills/glaze/SKILL.md）、npx skills add arla6ka/design.how、按需 add 组件、11 个区块、lint.json 与 npx eslint -c glaze.eslint.config.mjs。curl https://design.how/r/glaze/registry.json：shadcn registry schema，87 项；prompt-input.json 为 registry:component，含 registry/glaze/ai/prompt-input.tsx 等 7 个文件；tool-call.json 依赖 @base-ui/react@^1.8.0；lint.json 含 eslint.config.mjs、plugin.mjs 等 5 个文件；components/prompt-input.md HTTP 200。gh api repos/arla6ka/design.how：MIT、141★，创建 2026-09-28；提交 2026-10-19T03:55:38Z「Add Glaze and bring Quartz up to date」；systems/ 下有 glaze、lime、quartz，skills/ 下有 build-design-system、component-docs、design-system-boss、migrate-design-system、token-mapping、ui-review。作者 X 帖 2112236146050965965（@arlanmarat，2026-10-19T17:35:15Z，151 赞、111 收藏）。design.how/skills 页是邮箱解锁，正文为占位文字。收录前 main 与打开的 PR 里没有 design.how / glaze。预览为 Playwright 打开 Glaze 页、下滚 1300px 的一屏（预订审批卡与「On its own」权限选择），1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): design.how/systems/glaze HTTP 200, title Glaze, a design system for AI products; the sidebar AI group lists 12 items from Prompt input to Autonomy rule. Clicking Install opens an email box; Just copy the prompt yields the install prompt: shadcn init, add theme.json (which also writes .claude/skills/glaze/SKILL.md and .agents/skills/glaze/SKILL.md), npx skills add arla6ka/design.how, add components as needed, 11 blocks, lint.json and npx eslint -c glaze.eslint.config.mjs. curl https://design.how/r/glaze/registry.json: shadcn registry schema, 87 items; prompt-input.json is a registry:component with 7 files including registry/glaze/ai/prompt-input.tsx; tool-call.json depends on @base-ui/react@^1.8.0; lint.json has 5 files including eslint.config.mjs and plugin.mjs; components/prompt-input.md HTTP 200. gh api repos/arla6ka/design.how: MIT, 141★, created 2026-09-28; commit 2026-10-19T03:55:38Z “Add Glaze and bring Quartz up to date”; systems/ holds glaze, lime and quartz, skills/ holds build-design-system, component-docs, design-system-boss, migrate-design-system, token-mapping and ui-review. Author X post 2112236146050965965 (@arlanmarat, 2026-10-19T17:35:15Z, 151 likes, 111 bookmarks). The design.how/skills page is email-gated with placeholder text. Neither main nor the open PRs had design.how / glaze. Preview is a Playwright view of the Glaze page scrolled 1300px (booking approval card and the “On its own” autonomy picker), 1200×800 WebP."
+    },
+    {
+      "id": "chai-ui",
+      "slug": "chai-ui",
+      "title": "Chai UI：生成式 AI 应用的提示栏与结果卡组件（React / Vue）",
+      "titleEn": "Chai UI — prompt bar and result-card components for generative AI apps (React / Vue)",
+      "hook": "一条提示栏管模型选择、提示词优化和附件，结果卡自带重试与下载。",
+      "hookEn": "One prompt bar for model picking, prompt rewriting and attachments; result cards retry.",
+      "summary": "Chai UI 是 MIT 开源的「AI 交互设计系统」，把图像、视频类 AI 应用里反复出现的界面做成四个组件：Composer（提示栏：附件、用途、模型菜单、提示词优化、自动选模型、停止按钮，可选语音输入和世界模型的 Environment / Character 双提示）、MediaAnalyzer（丢进图片、视频或音频，反推一段可用的提示词）、ResultCard（一次生成的结果，带点赞、重试、下载、分享和翻面看参数）、EditCard（在图上框选区域、每块写一句修改指令，再按版本翻页）。React 与 Vue 各一套，组件和行为相同；设计 token 另有 CSS 变量、JS 和 Figma token 集。后端可接 Fal.ai、OpenRouter、Vercel AI Gateway 或你自己的引擎，密钥只放在你服务器上的一个路由里。不接后端时整套跑内置 mock，不发网络请求，适合先把界面搭起来。项目自述仍在积极开发，版本 0.10.x。本库用 React 装了 0.10.1，不接引擎跑通了提示栏到结果卡；没有接 Fal、OpenRouter，也没有试编辑卡和 Vue 版。",
+      "summaryEn": "Chai UI is an MIT “design system for AI model interactions” that turns the parts every image and video AI app rebuilds into four components: Composer (prompt bar with attachments, use cases, a model menu, prompt optimization, auto model routing and stop; optional voice input and world-model Environment / Character prompts), MediaAnalyzer (drop in an image, video or audio clip and get a usable prompt back), ResultCard (one generation’s results with like, retry, download, share and a details flip) and EditCard (mark regions on an image, give each its own instruction, then page through versions). React and Vue packages have the same components and behaviour; design tokens also ship as CSS variables, JS and a Figma token set. Engines cover Fal.ai, OpenRouter, Vercel AI Gateway or your own, with keys kept in one route on your server. With no engine it runs on built-in mocks and makes no network calls, so you can lay out the UI first. The project says it is in active development at 0.10.x. This library installed 0.10.1 in React and ran the prompt bar through to a result card without an engine; it did not connect Fal or OpenRouter, or try EditCard or the Vue package.",
+      "sourceUrl": "https://chai-ui.com/",
+      "secondaryUrls": [
+        "https://github.com/kazarazat/chai-ui",
+        "https://chai-ui.com/docs/components",
+        "https://www.npmjs.com/package/@chai-ui/react",
+        "https://news.ycombinator.com/item?id=50159662"
+      ],
+      "previewImage": "/previews/chai-ui.webp",
+      "npmPackage": "@chai-ui/react",
+      "promptHint": "pnpm add @chai-ui/react @chai-ui/core @chai-ui/tokens，引入 @chai-ui/tokens/css 和 @chai-ui/react/style.css，先不传 engine 用 mock 搭好 Composer + ResultCard；要接真模型再加 createChaiHandler 服务端路由，把 FAL_KEY 或 OPENROUTER_API_KEY 放服务器环境变量。",
+      "promptHintEn": "pnpm add @chai-ui/react @chai-ui/core @chai-ui/tokens, import @chai-ui/tokens/css and @chai-ui/react/style.css, and build Composer + ResultCard on mocks with no engine first; for real models add the createChaiHandler server route and keep FAL_KEY or OPENROUTER_API_KEY in server env.",
+      "types": [
+        "ui",
+        "component",
+        "library"
+      ],
+      "tags": [
+        "generative-ui",
+        "prompt-bar",
+        "react",
+        "vue",
+        "design-tokens",
+        "mit",
+        "open-source",
+        "agent-ui",
+        "fal",
+        "openrouter"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "qualityNote": "MIT 开源。本库只在 React 里用内置 mock 跑过提示栏和结果卡；在那次试用里单按 Enter 没有提交，点发送按钮才出结果。没有接任何真实模型或服务端路由，没有试 EditCard、MediaAnalyzer 和 Vue 包，无障碍声明照 README。",
+      "qualityNoteEn": "MIT open source. This library only ran the prompt bar and result card on built-in mocks in React; in that run Enter alone did not submit and the send button did. No real model or server route was connected, EditCard, MediaAnalyzer and the Vue package were not tried, and the accessibility claims follow the README.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：chai-ui.com HTTP 200，标题 Chai UI: Brew AI Apps Fast，页脚 Open source · MIT · 2026，页面写 Version 0.10.1 / 4 Components / 140 Tokens / 4 Packages。docs/components 列 Composer bar、Media analyzer、Result card、Edit card，侧栏 v0.1.72 — 2026-10-17。gh api repos/kazarazat/chai-ui：MIT、10★，创建 2026-10-01，最近推送 2026-10-17；packages/ 下 core、react、tokens、vue。npm view @chai-ui/react、@chai-ui/vue、@chai-ui/tokens 均为 0.10.1、MIT（modified 2026-10-17）。Show HN item 50159662「Chai-UI – A design system to generative AI apps」，2026-10-20T00:06Z，Algolia 2 pts。实测：Vite + React 19.3.1 装 @chai-ui/react / core / tokens 0.10.1，按 README 去掉 engine 与 ChaiProvider，vite build 通过；页面里输入提示后单按 Enter 未提交，点发送按钮后出现 ResultCard，文本结果标「(mock — mock-model)」，带 Download、Share、Like、Dislike、Retry、Show details、Copy prompt；控制台无报错，没有任何外部网络请求。收录前 main 与打开的 PR 里没有 chai-ui。预览为 Playwright 打开官网首屏，1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): chai-ui.com HTTP 200, title Chai UI: Brew AI Apps Fast, footer Open source · MIT · 2026; the page shows Version 0.10.1 / 4 Components / 140 Tokens / 4 Packages. docs/components lists Composer bar, Media analyzer, Result card and Edit card; sidebar v0.1.72 — 2026-10-17. gh api repos/kazarazat/chai-ui: MIT, 10★, created 2026-10-01, last push 2026-10-17; packages/ holds core, react, tokens and vue. npm view @chai-ui/react, @chai-ui/vue and @chai-ui/tokens are all 0.10.1, MIT (modified 2026-10-17). Show HN item 50159662 “Chai-UI – A design system to generative AI apps”, 2026-10-20T00:06Z, Algolia 2 pts. Hands-on: Vite + React 19.3.1 with @chai-ui/react / core / tokens 0.10.1, engine and ChaiProvider left out per the README; vite build passed. Typing a prompt and pressing Enter alone did not submit; clicking send rendered a ResultCard whose text result read “(mock — mock-model)”, with Download, Share, Like, Dislike, Retry, Show details and Copy prompt; no console errors and no external network requests. Neither main nor the open PRs had chai-ui. Preview is a Playwright view of the homepage hero, 1200×800 WebP."
+    },
+    {
       "id": "dsk",
       "slug": "dsk",
       "title": "DSK：给画布编辑器的 Web Components 控件套件",
@@ -2375,9 +2463,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-16T12:00:00Z",
+    "updatedAt": "2026-10-20T13:00:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.30",
-    "count": 66
+    "count": 67
   }
 }
