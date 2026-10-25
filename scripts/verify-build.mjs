@@ -536,6 +536,18 @@ if (missing.length) {
 }
 
 {
+  // Hot topics: each has a page and a share card; the hot one is linked from the homepage band.
+  const { topics } = JSON.parse(await readFile(new URL("../data/topics.json", import.meta.url), "utf8"));
+  const home = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
+  for (const topic of topics) {
+    if (!existsSync(new URL(`../dist/topics/${topic.id}/index.html`, import.meta.url))) throw new Error(`Topic page is missing: ${topic.id}`);
+    if (!existsSync(new URL(`../dist/og/topics/${topic.id}.jpg`, import.meta.url))) throw new Error(`Topic share card is missing: ${topic.id} (needs four start entries with screenshots)`);
+    if (topic.hot && !home.includes(`topics/${topic.id}/`)) throw new Error(`Homepage does not link the hot topic: ${topic.id}`);
+  }
+  console.log(`Topics verified: ${topics.length} topic page(s) with share cards; hot topic linked from the homepage.`);
+}
+
+{
   // A case's kind decides its directory; titles no longer carry the type prefix.
   const kinds = new Set(["tool", "guide", "playbook", "news", "showcase"]);
   const kindBad = dataset.cases.filter(item => !kinds.has(item.kind)).map(item => `${item.id} (${item.kind ?? "missing"})`);

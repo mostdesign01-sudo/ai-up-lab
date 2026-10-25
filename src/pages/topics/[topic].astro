@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DirectoryCard from "../../components/DirectoryCard.astro";
+import Icon from "../../components/Icon.astro";
+import Loc from "../../components/Loc.astro";
+import { topics, type Topic } from "../../lib/topics";
+export function getStaticPaths() {
+  return topics.map(topic => ({ params: { topic: topic.id }, props: { topic } }));
+}
+interface Props { topic: Topic; }
+const { topic } = Astro.props;
+const ROLE_PREVIEW = 6;
+const roleCount = topic.roles.reduce((sum, group) => sum + group.entries.length, 0);
+const jumps = [
+  { id: "start", show: topic.start.length > 0, zh: "先读这几篇", en: "Start here" },
+  { id: "roles", show: roleCount > 0, zh: "按岗位挑 Bot", en: "Pick a role" },
+  { id: "tools", show: topic.tools.length > 0, zh: "工具与技能", en: "Tools & skills" },
+  { id: "stories", show: topic.stories.length > 0, zh: "真实小队与动态", en: "Teams & news" },
+  { id: "also", show: topic.also.length > 0, zh: "同类助手", en: "Similar assistants" },
+  { id: "guides", show: topic.guides.length > 0, zh: "更多教程", en: "More guides" },
+].filter(jump => jump.show);
+---
+<BaseLayout image={`/og/topics/${topic.id}.jpg`} title={`${topic.title.zh} · AI UP LAB`} titleEn={`${topic.title.en} · AI UP LAB`} description={topic.lede.zh} descriptionEn={topic.lede.en}>
+  <div class="wrap-wide topic-page">
+    <section class="topic-hero">
+      <p class="editorial-eyebrow"><Loc zh={`热门专题 · ${topic.members.length + topic.also.length} 条`} en={`Hot topic · ${topic.members.length + topic.also.length} resources`} /></p>
+      <h1><Loc zh={topic.title.zh} en={topic.title.en} /></h1>
+      <p class="lede"><Loc zh={topic.lede.zh} en={topic.lede.en} /></p>
+      <nav class="topic-jump" aria-label="本页目录 / On this page">{jumps.map(jump => <a href={`#${jump.id}`}><Loc zh={jump.zh} en={jump.en} /></a>)}</nav>
+    </section>
+
+    {topic.start.length > 0 && <section class="topic-section" id="start" aria-labelledby="start-title">
+      <div class="editorial-section-heading"><div><h2 id="start-title"><Loc zh={`先读这 ${topic.start.length} 篇`} en={`Read these ${topic.start.length} first`} /></h2><p><Loc zh="从第一天怎么配、怎么守住审批开始。" en="Day-one setup and keeping approvals in your hands." /></p></div></div>
+      <div class="editorial-starter-grid">{topic.start.map((entry, index) => <a href={entry.href}><span class="editorial-starter-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span><div><h3><Loc zh={entry.title.zh} en={entry.title.en} /></h3><p><Loc zh={entry.line.zh} en={entry.line.en} /></p></div><Icon name="arrow" size={18} /></a>)}</div>
+    </section>}
+
+    {roleCount > 0 && <section class="topic-section" id="roles" aria-labelledby="roles-title">
+      <div class="editorial-section-heading"><div><h2 id="roles-title"><Loc zh="按岗位挑一只 Bot" en="Pick a bot for the job" /></h2><p><Loc zh={`${roleCount} 套岗位配方：它做什么、什么时候跑、哪一步要你批。`} en={`${roleCount} role recipes: what it does, when it runs, and which step waits for you.`} /></p></div></div>
+      {topic.roles.map(group => <div class="topic-role-group">
+        <h3><Loc zh={group.title.zh} en={group.title.en} /><span>{group.entries.length}</span></h3>
+        <ul class="topic-role-list">{group.entries.slice(0, ROLE_PREVIEW).map(entry => <li><a href={entry.href}><strong class="topic-row-title"><Loc zh={entry.title.zh} en={entry.title.en} /></strong><p class="topic-row-line"><Loc zh={entry.line.zh} en={entry.line.en} /></p></a></li>)}</ul>
+        {group.entries.length > ROLE_PREVIEW && <details class="topic-more"><summary><Loc zh={`再看 ${group.entries.length - ROLE_PREVIEW} 条`} en={`Show ${group.entries.length - ROLE_PREVIEW} more`} /></summary><ul class="topic-role-list">{group.entries.slice(ROLE_PREVIEW).map(entry => <li><a href={entry.href}><strong class="topic-row-title"><Loc zh={entry.title.zh} en={entry.title.en} /></strong><p class="topic-row-line"><Loc zh={entry.line.zh} en={entry.line.en} /></p></a></li>)}</ul></details>}
+      </div>)}
+    </section>}
+
+    {topic.tools.length > 0 && <section class="topic-section" id="tools" aria-labelledby="tools-title">
+      <div class="editorial-section-heading"><div><h2 id="tools-title"><Loc zh="工具、技能与开源替代" en="Tools, skills and open-source alternatives" /></h2><p><Loc zh="技能库、配方目录、编排插件，以及能自己部署的同类实现。" en="Skill libraries, recipe directories, orchestration plugins and self-hosted alternatives." /></p></div></div>
+      <div class="directory-grid">{topic.tools.map(entry => <DirectoryCard entry={entry} />)}</div>
+    </section>}
+
+    {topic.stories.length > 0 && <section class="topic-section" id="stories" aria-labelledby="stories-title">
+      <div class="editorial-section-heading"><div><h2 id="stories-title"><Loc zh="真实小队与官方动态" en="Real teams and official news" /></h2><p><Loc zh="别人怎么用一整支 Bot 小队干活，以及最近新增的能力。" en="How people run whole teams of bots, and what the product added lately." /></p></div></div>
+      <div class="directory-grid">{topic.stories.map(entry => <DirectoryCard entry={entry} />)}</div>
+    </section>}
+
+    {topic.also.length > 0 && <section class="topic-section" id="also" aria-labelledby="also-title">
+      <div class="editorial-section-heading"><div><h2 id="also-title"><Loc zh="同类 Agent 助手" en="Similar agent assistants" /></h2><p><Loc zh="不叫 Grok Bot，但同样是能记住你、按时干活、交给你审批的助手。" en="Not Grok Bot, but the same idea: assistants that remember you, work on a schedule and hand you the approval." /></p></div></div>
+      <div class="directory-grid">{topic.also.map(entry => <DirectoryCard entry={entry} />)}</div>
+    </section>}
+
+    {topic.guides.length > 0 && <section class="topic-section" id="guides" aria-labelledby="guides-title">
+      <div class="editorial-section-heading"><div><h2 id="guides-title"><Loc zh="更多教程" en="More guides" /></h2><p><Loc zh={`${topic.guides.length} 篇，最新在前。`} en={`${topic.guides.length} guides, newest first.`} /></p></div></div>
+      <ul class="topic-role-list topic-guide-list">{topic.guides.map(entry => <li><a href={entry.href}><strong class="topic-row-title"><Loc zh={entry.title.zh} en={entry.title.en} /></strong><p class="topic-row-line"><Loc zh={entry.line.zh} en={entry.line.en} /></p></a></li>)}</ul>
+    </section>}
+  </div>
+</BaseLayout>

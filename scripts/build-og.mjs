@@ -81,7 +81,42 @@ for (const [section, file, key] of sources) {
   }
 }
 
-let done = 0;
+// Topic pages share a 2 × 2 grid of their starter entries' screenshots.
+const topicJobs = [];
+const caseItems = JSON.parse(await readFile(path.join(root, "data/cases.json"), "utf8")).cases;
+const { topics } = JSON.parse(await readFile(path.join(root, "data/topics.json"), "utf8"));
+await mkdir(path.join(dist, "og", "topics"), { recursive: true });
+for (const topic of topics) {
+  const shots = topic.start
+    .map(key => caseItems.find(item => `grok:${item.id}` === key)?.previewImage)
+    .filter(src => src && !/^(https?:)?\/\//.test(src))
+    .slice(0, 4)
+    .map(src => path.join(root, "public", src));
+  if (shots.length === 4) topicJobs.push([shots, path.join(dist, "og", "topics", `${topic.id}.jpg`)]);
+}
+
+async function grid(files, outFile, brand) {
+  const GAP = 16;
+  const cw = (SHOT.width - GAP) / 2;
+  const ch = (SHOT.height - GAP) / 2;
+  const cellMask = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${cw}" height="${ch}"><rect width="${cw}" height="${ch}" rx="12" fill="#fff"/></svg>`);
+  const cellFrame = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${cw}" height="${ch}"><rect x="0.5" y="0.5" width="${cw - 1}" height="${ch - 1}" rx="12" fill="none" stroke="#17151b" stroke-opacity="0.12"/></svg>`);
+  const layers = [];
+  for (const [i, file] of files.entries()) {
+    const left = SHOT.left + (i % 2) * (cw + GAP);
+    const top = SHOT.top + Math.floor(i / 2) * (ch + GAP);
+    const cell = await sharp(file).resize({ width: cw, height: ch, fit: "cover", position: "top" }).composite([{ input: cellMask, blend: "dest-in" }]).png().toBuffer();
+    layers.push({ input: cell, left, top }, { input: cellFrame, left, top });
+  }
+  const brandTop = SHOT.top + SHOT.height + Math.round((H - SHOT.top - SHOT.height - brand.height) / 2);
+  await sharp({ create: { width: W, height: H, channels: 3, background: "#ffffff" } })
+    .composite([...layers, { input: brand.mark, left: PAD, top: brandTop }])
+    .jpeg({ quality: 82, mozjpeg: true })
+    .toFile(outFile);
+}
+for (const [files, out] of topicJobs) await grid(files, out, brand);
+
+let done = topicJobs.length;
 const failed = [];
 async function worker() {
   while (jobs.length) {

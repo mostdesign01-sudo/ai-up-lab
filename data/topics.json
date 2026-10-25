@@ -1,0 +1,47 @@
+{
+  "topics": [
+    {
+      "id": "grok-bot",
+      "hot": true,
+      "nav": {
+        "zh": "Grok Bot",
+        "en": "Grok Bot"
+      },
+      "title": {
+        "zh": "Grok Bot 与 Agent 助手",
+        "en": "Grok Bot & agent assistants"
+      },
+      "lede": {
+        "zh": "让 Agent 像同事一样接活：从第一天怎么配，到按岗位挑一只 Bot、接上工具和技能，再看别人怎么用一整支小队跑业务。",
+        "en": "Put an agent to work like a teammate: how to set it up on day one, pick a bot for a role, wire in tools and skills, and see how others run whole teams of bots."
+      },
+      "band": {
+        "zh": "入门、岗位配方、工具技能和真实案例，一页看全。",
+        "en": "Starter guides, role recipes, tools, skills and real teams in one place."
+      },
+      "match": {
+        "pattern": "grok\\s*bot|grokbot",
+        "kinds": [
+          "playbook"
+        ],
+        "exclude": [
+          "grok:reverse-brand-prompt"
+        ]
+      },
+      "start": [
+        "grok:grok-bot-101",
+        "grok:laozhang-getting-started",
+        "grok:templates-for-grok-bot",
+        "grok:continuum-routines-guide"
+      ],
+      "also": [
+        "grok:lovart-arti",
+        "grok:television",
+        "grok:pi-1-0",
+        "grok:haggle-bot-procurement",
+        "grok:bot-store-academy-teach-a-task",
+        "grok:cloud-agent-orchestrator"
+      ]
+    }
+  ]
+}
