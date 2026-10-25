@@ -7,8 +7,10 @@ name: Auto-merge catalog PRs
 # (scripts/merge-catalog-json.mjs), rebuilds after each one, and then deploys.
 #
 # A PR qualifies only when it is opened by the repo owner from this repo, is
-# not a draft, carries no `catalog-hold` label, and touches nothing but the
-# catalog data and preview images. Anything else still waits for a review.
+# not a draft, carries no `catalog-hold` label, was opened in the last
+# MAX_AGE_DAYS days, and touches nothing but the catalog data and preview
+# images. Anything else still waits for a review; older PRs were left open on
+# purpose or forgotten, and either way a person should decide.
 # A PR that cannot be merged or breaks the build gets the `catalog-hold`
 # label and a comment, and is skipped until the label is removed.
 
@@ -34,6 +36,7 @@ env:
   ASTRO_TELEMETRY_DISABLED: "1"
   GH_TOKEN: ${{ github.token }}
   HOLD_LABEL: catalog-hold
+  MAX_AGE_DAYS: "3"
 
 jobs:
   merge:
@@ -80,9 +83,11 @@ jobs:
           _Auto-merge catalog PRs workflow_" || true
           }
 
+          since=$(date -u -d "$MAX_AGE_DAYS days ago" +%Y-%m-%dT%H:%M:%SZ)
           prs=$(gh pr list --base main --state open --limit 50 \
-            --json number,isDraft,author,headRepositoryOwner,labels,headRefName \
+            --json number,isDraft,author,headRepositoryOwner,labels,headRefName,createdAt \
             --jq "[.[] | select(.isDraft | not)
+                        | select(.createdAt >= \"$since\")
                         | select(.author.login == \"$owner\")
                         | select(.headRepositoryOwner.login == \"$owner\")
                         | select([.labels[].name] | index(\"$HOLD_LABEL\") | not)
