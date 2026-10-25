@@ -1,6 +1,99 @@
 {
   "cases": [
     {
+      "id": "reason-network",
+      "slug": "reason-network",
+      "title": "Reason Network：让编程助手互相派活，避免同时改同一处",
+      "titleEn": "Reason Network — coding agents assign work and see each other's repo",
+      "kind": "tool",
+      "hook": "让本机编程助手互相派活，并看到彼此在改哪个仓库。",
+      "hookEn": "Local coding agents assign each other work and see who is in which repo.",
+      "summary": "Reason Network 由 Reason（@reasonmachines，YC 支持）做。它让本机的 Codex、Cursor、Claude Code、Gemini CLI、Copilot CLI、opencode、Pi、Grok Bot、Muse 互相派活，并看到彼此在改哪个仓库、哪条分支，多个助手同时写代码不撞车。队友的助手可以加入同一个工作区。同一局域网里的流量直连，端到端加密。安装是 `curl -fsSL https://reasonmachines.com/install.sh | bash`，然后 `reason network setup`。免费；云端 Reason 会话另外计费。网络引擎开源（Apache 2.0），Reason 命令行工具不开源。本库没有安装，也没有让助手互相对话。",
+      "summaryEn": "Reason Network is from Reason (@reasonmachines, YC-backed). It lets coding agents on your machine assign work to each other and see who is in which repo and branch, so several assistants can code without colliding: Codex, Cursor, Claude Code, Gemini CLI, Copilot CLI, opencode, Pi, Grok Bot, and Muse. Teammates' agents can join the same workspace. Traffic on the same LAN is direct and end-to-end encrypted. Install with `curl -fsSL https://reasonmachines.com/install.sh | bash`, then `reason network setup`. Free; cloud Reason sessions are billed separately. The network engine is open source (Apache 2.0); the Reason CLI is not. This library did not install it or have agents talk.",
+      "categories": [
+        "multi-agent",
+        "coding"
+      ],
+      "role": "coding agents",
+      "sourceUrl": "https://reasonmachines.com/network",
+      "secondaryUrls": [
+        "https://x.com/reasonmachines/status/2111135100142518430"
+      ],
+      "sourceType": "official-launch",
+      "previewImage": "/previews/reason-network.webp",
+      "qualityNote": "适合同时开着好几个编程助手、想互相派活又不撞车的人。网络免费，云端 Reason 会话另外计费。网络引擎是 Apache 2.0，Reason 命令行工具不开源。本库没有安装，也没有让助手互相对话。",
+      "qualityNoteEn": "For people already running several coding agents who want them to assign work without colliding. The network is free; cloud Reason sessions are billed separately. The network engine is Apache 2.0; the Reason CLI is not open source. This library did not install it or have agents talk.",
+      "verifyLog": "2026-10-17：落地页 https://reasonmachines.com/network HTTP 200，link rel=canonical 为 https://reasonmachines.com/network 。原帖 https://x.com/reasonmachines/status/2111135100142518430 经 fxtwitter 核对为 200，帖内 t.co 展开为该落地页；帖文时间 2026-10-16T16:40:05Z（北京时间 2026-10-17 00:40）。落地页 FAQ 写网络引擎 Apache 2.0、Reason CLI 不开源、网络免费、云端 Reason 会话照常计费、同一局域网直连、电脑之间流量端到端加密；安装命令与页面一致。预览为 Chrome 实拍落地页首屏，缩成 1200×800 WebP。本库未执行安装脚本。",
+      "verifyLogEn": "2026-10-17: landing page https://reasonmachines.com/network returned HTTP 200; link rel=canonical is https://reasonmachines.com/network. The post https://x.com/reasonmachines/status/2111135100142518430 checked out via fxtwitter (200); its t.co link expands to that landing page. Post time 2026-10-16T16:40:05Z (2026-10-17 00:40 Shanghai). The landing FAQ says the network engine is Apache 2.0, the Reason CLI is not open source, the network is free, cloud Reason sessions bill as usual, same-LAN traffic is direct, and traffic between computers is end-to-end encrypted. The install commands match the page. Preview is a Chrome capture of the landing hero, scaled to a 1200×800 WebP. This library did not run the install script.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": false,
+      "hasMultiAgent": true,
+      "requiresApproval": true,
+      "approvalBoundary": "执行安装脚本，或让助手加入共享工作区互相派活之前，自己确认脚本和成员名单。",
+      "approvalBoundaryEn": "Read the install script and the member list before running it, or before agents join a shared workspace and assign work.",
+      "language": "zh",
+      "connectors": [
+        "computer"
+      ],
+      "featured": false,
+      "landing": {
+        "what": "给已经在用 Codex、Cursor、Claude Code、Gemini CLI、Copilot CLI、opencode、Pi、Grok Bot、Muse 的人。这些助手可以互相要活，队友的助手也能进同一个工作区。每个助手看得到谁在哪个仓库、哪条分支上，避免同时改同一处。同一局域网直连，端到端加密。出品是 Reason（@reasonmachines，YC 支持）。",
+        "whatEn": "For people already using Codex, Cursor, Claude Code, Gemini CLI, Copilot CLI, opencode, Pi, Grok Bot, or Muse. Those agents can ask each other for work, and teammates' agents can join one workspace. Every agent sees who is in which repo and branch, so they do not edit the same place at once. Same-LAN traffic is direct and end-to-end encrypted. Made by Reason (@reasonmachines, YC-backed).",
+        "steps": [
+          {
+            "title": "安装并进入网络",
+            "titleEn": "Install and join the network",
+            "body": "官方安装是 `curl -fsSL https://reasonmachines.com/install.sh | bash`，然后运行 `reason network setup`。本库没有执行安装脚本。",
+            "bodyEn": "The published install is `curl -fsSL https://reasonmachines.com/install.sh | bash`, then `reason network setup`. This library did not run that install script.",
+            "links": [
+              {
+                "href": "https://reasonmachines.com/network",
+                "label": "Reason Network 落地页",
+                "labelEn": "Reason Network landing page"
+              },
+              {
+                "href": "https://x.com/reasonmachines/status/2111135100142518430",
+                "label": "发布帖",
+                "labelEn": "Launch post"
+              }
+            ]
+          },
+          {
+            "title": "看谁在改哪个仓库",
+            "titleEn": "See who is in which repo",
+            "body": "接上之后，助手可以互相派活。队友的助手加入同一工作区后，每个助手都能看到谁正在哪个仓库、哪条分支上干活。同一局域网的流量直连，端到端加密。",
+            "bodyEn": "Once connected, agents can assign work to each other. After teammates' agents join the same workspace, every agent sees who is working in which repo and branch. Same-LAN traffic is direct and end-to-end encrypted.",
+            "links": [
+              {
+                "href": "https://reasonmachines.com/network",
+                "label": "落地页说明",
+                "labelEn": "Landing page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "网络本身免费。云端 Reason 会话另外计费。",
+            "textEn": "The network itself is free. Cloud Reason sessions are billed separately and are not included in that free network."
+          },
+          {
+            "text": "网络引擎开源，许可是 Apache 2.0。Reason 命令行工具不开源。",
+            "textEn": "The network engine is open source under Apache 2.0. The Reason CLI is not open source."
+          },
+          {
+            "text": "本库没有安装，也没有让两个助手对过话。执行安装脚本前自己看一遍。",
+            "textEn": "This library did not install it and did not have two agents talk. Read the install script before you run it."
+          }
+        ],
+        "previewCredit": "预览：Reason Network 落地页首屏",
+        "previewCreditEn": "Preview: Reason Network landing page above the fold"
+      },
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-17T06:40:00Z"
+    },
+    {
       "id": "stylebot",
       "slug": "stylebot",
       "title": "Stylebot：开源扩展，用手或编程助手改任意网站样式",
@@ -10082,23 +10175,14 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-16T12:00:00Z",
+    "updatedAt": "2026-10-17T06:40:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.59",
-    "count": 177,
+    "count": 176,
     "sourcesCrawled": [
-      "https://stylebot.dev/",
-      "https://github.com/ankit/stylebot",
-      "https://www.npmjs.com/package/@stylebot/cli",
-      "https://news.ycombinator.com/item?id=50105251",
-      "https://figcraft.run/",
-      "https://figcraft.run/pricing",
-      "https://figcraft.run/mcp",
-      "https://github.com/storytold/figcraft",
-      "https://getartcraft.com/apps/figcraft",
-      "https://flowscape-ui.github.io/dsk/",
-      "https://github.com/Flowscape-UI/dsk",
-      "https://www.npmjs.com/package/@flowscape-ui/dsk",
+      "https://reasonmachines.com/network",
+      "https://x.com/reasonmachines/status/2111135100142518430",
+      "https://api.fxtwitter.com/reasonmachines/status/2111135100142518430",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",

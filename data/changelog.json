@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-17",
+      "title": "收录：Cases +1（Reason Network）",
+      "titleEn": "Catalog: Cases +1 (Reason Network)",
+      "body": "Cases：reason-network（Reason / @reasonmachines，YC 支持）。落地页 canonical https://reasonmachines.com/network （帖内 t.co 展开后核对）。发布帖 https://x.com/reasonmachines/status/2111135100142518430 （2026-10-16T16:40:05Z，北京时间 2026-10-17）。让 Claude Code、Codex、Cursor、Gemini CLI、Copilot CLI、opencode、Pi、Grok Bot、Muse 互相派活，并看到谁在哪个仓库和分支；同一局域网直连、端到端加密。安装为 curl -fsSL https://reasonmachines.com/install.sh | bash，然后 reason network setup。网络免费，云端 Reason 会话另计费。引擎 Apache 2.0，Reason CLI 不开源。本库未安装、未让助手对话。Chrome 实拍 3:2 WebP。cases 175→176（1.4.58→1.4.59）。未改首页精选、HTML、Agent UI、Models。",
+      "bodyEn": "Cases: reason-network (Reason / @reasonmachines, YC-backed). Canonical landing page https://reasonmachines.com/network (checked after the post's t.co link expanded). Launch post https://x.com/reasonmachines/status/2111135100142518430 (2026-10-16T16:40:05Z, 2026-10-17 Shanghai). Claude Code, Codex, Cursor, Gemini CLI, Copilot CLI, opencode, Pi, Grok Bot, and Muse can assign work to each other and see who is in which repo and branch; same-LAN traffic is direct and end-to-end encrypted. Install with curl -fsSL https://reasonmachines.com/install.sh | bash, then reason network setup. The network is free; cloud Reason sessions are billed separately. Engine is Apache 2.0; the Reason CLI is not open source. This library did not install it or have agents talk. Chrome capture, 3:2 WebP. cases 175→176 (1.4.58→1.4.59). Home picks, HTML, Agent UI, and Models unchanged."
+    },
+    {
       "date": "2026-10-16",
       "title": "晚间收录：Cases +2（Stylebot、FigCraft）、Agent UI +1（DSK）",
       "titleEn": "Evening catalog: Cases +2 (Stylebot, FigCraft), Agent UI +1 (DSK)",
