@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "id": "shapcn",
+      "slug": "shapcn",
+      "title": "shapcn：按形状装配的图标变形（任意图标 morph 到任意图标）",
+      "titleEn": "shapcn: shape-aware icon morphing (any icon to any other)",
+      "hook": "任意图标按形状装好再变形，零件按顺序走。",
+      "hookEn": "Any icon morphs into any other by shape, parts in order.",
+      "summary": "shapcn 先按描边重量给图标装 rig：最重的形状当身体，碰到的零件挂到父级，再按这个父子顺序变形。页面把每个点同时滑过去叫 sloptween，并放在对照里。支持 Lucide、Tabler、Phosphor、Remix、Hugeicons，也可以用自己的图标。script 标签页面写今天就能用，并带全部 1,858 个 Lucide；npm 包 shape-aware-morph 仍标为进行中。页面有 Playground，可以选一对图标试。作者 Ron Kurti，仓库 MIT，并写明与 shadcn/ui 无关。适合想要图标状态切换有先后、又不想为每一对做关键帧的人。本库没有把 script 嵌进项目，也没有安装 npm。",
+      "summaryEn": "shapcn rigs an icon by stroke weight first: the heaviest shapes are the body, a part parents to the shape it touches, and the morph follows that order. The page calls a simultaneous point-to-point slide a sloptween and shows it as the comparison. It supports Lucide, Tabler, Phosphor, Remix, Hugeicons, and your own icons. The page says the script tag works today and includes all 1,858 Lucide icons; the npm package shape-aware-morph is still marked in progress. A Playground lets you try a pair. Made by Ron Kurti, MIT repo, and the page says it is not affiliated with shadcn/ui. Useful when an icon state change should move in order and you do not want to keyframe every pair. This library did not embed the script or install the npm package.",
+      "sourceUrl": "https://shapcn.com/",
+      "secondaryUrls": [
+        "https://github.com/seahorsecastle/shapcn",
+        "https://news.ycombinator.com/item?id=50197999"
+      ],
+      "previewImage": "/previews/shapcn.webp",
+      "types": [
+        "tool",
+        "interactive",
+        "component"
+      ],
+      "tags": [
+        "icon",
+        "morph",
+        "lucide",
+        "motion",
+        "tabler",
+        "phosphor",
+        "remix",
+        "hugeicons",
+        "mit",
+        "web-component"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-23T01:40:00Z",
+      "qualityNote": "收录是因为变形按形状的父子顺序走，页面把 script 标成今天可用，npm 包 shape-aware-morph 仍标为进行中。图标许可各家不同：Lucide 为 ISC，Tabler、Hugeicons、Phosphor 为 MIT，Remix 用 Remix Icon License。本库没有嵌入 script，也没有安装 npm。",
+      "qualityNoteEn": "Listed because the morph follows a parent-child rig, the page marks the script tag as usable today, and the npm package shape-aware-morph is still marked in progress. Icon licenses differ: Lucide is ISC, Tabler, Hugeicons, and Phosphor are MIT, and Remix uses the Remix Icon License. This library did not embed the script or install npm.",
+      "verifyLog": "2026-10-23 早间（上海）：https://shapcn.com/ HTTP 200，last-modified Thu, 22 Oct 2026 17:11:53 GMT。title「shapcn: Shape-aware icon morphing」。og:description「Change the icon name. shapcn animates the rest. Any icon into any other, planned live.」。页面写 75 KB engine gzipped、220 KB with all 1,858 Lucide icons；script 示例 https://shapcn.com/morph-icon.js ；npm i shape-aware-morph 与 npm 三档均标 In progress；「Script tag works today. npm package is in progress. Source is on GitHub.」仓库链接 github.com/seahorsecastle/shapcn。页脚：Made by Ron Kurti，MIT，Not affiliated with shadcn/ui；Icons: Lucide (ISC), Tabler (MIT), Hugeicons (MIT), Phosphor (MIT), Remix Icon (Remix Icon License 1.0)。gh api seahorsecastle/shapcn：license MIT，stargazers_count 0，forks 0，created 2026-10-20T22:13:49Z，pushed 2026-10-22T16:31:47Z，language JavaScript，homepage https://shapcn.com 。Algolia objectID 50197999，title「Show HN: shapcn brings shape-aware icon morphing」，author seahorsecastle，created_at 2026-10-22T16:54:48Z，points 1。预览为无头 Chrome 实拍首页首屏（含 Examples），视口 1200×800 WebP。没有把 script 嵌进项目，没有 npm install。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): https://shapcn.com/ HTTP 200, last-modified Thu, 22 Oct 2026 17:11:53 GMT. Title “shapcn: Shape-aware icon morphing.” og:description “Change the icon name. shapcn animates the rest. Any icon into any other, planned live.” The page says 75 KB engine gzipped and 220 KB with all 1,858 Lucide icons; the script example is https://shapcn.com/morph-icon.js ; npm i shape-aware-morph and the three npm rows are marked In progress; “Script tag works today. npm package is in progress. Source is on GitHub.” Repo link github.com/seahorsecastle/shapcn. Footer: Made by Ron Kurti, MIT, not affiliated with shadcn/ui; icons Lucide (ISC), Tabler (MIT), Hugeicons (MIT), Phosphor (MIT), Remix Icon (Remix Icon License 1.0). gh api seahorsecastle/shapcn: MIT, stargazers_count 0, forks 0, created 2026-10-20T22:13:49Z, pushed 2026-10-22T16:31:47Z, language JavaScript, homepage https://shapcn.com . Algolia objectID 50197999, title “Show HN: shapcn brings shape-aware icon morphing”, author seahorsecastle, created_at 2026-10-22T16:54:48Z, 1 point. Preview is a headless Chrome capture of the home hero including Examples, 1200×800 WebP. The script was not embedded and npm was not installed."
+    },
+    {
       "id": "archscribe",
       "slug": "archscribe",
       "title": "Archscribe：JSON 出手绘架构图，附可编辑 Excalidraw",
@@ -5268,9 +5308,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-22T12:40:00Z",
+    "updatedAt": "2026-10-23T01:40:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
-    "count": 139
+    "count": 137
   }
 }
