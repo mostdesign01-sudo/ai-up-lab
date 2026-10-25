@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-16",
+      "title": "早间收录：Cases +3（OpenUI、Mowgli、MagicOS）、HTML +1（CC-lineart）",
+      "titleEn": "Morning catalog: Cases +3 (OpenUI, Mowgli, MagicOS), HTML +1 (CC-lineart)",
+      "body": "Cases：openui（Thesys 的 MIT 生成式 UI 标准；OpenUI Lang、Gateway、npx @openuidev/cli@latest create 与 setup-agent。不是 wandb/openui，也不是 open-ui.org。首页可见文案没有写 OpenUI 1.0；2026-10-15 的仓库发布里有 @openuidev/react-lang@1.0.1）；mowgli（商业 AI 设计画布，手机/网页/桌面，情绪板、原型、Figma 导入、对话修改，经 MCP 或 React+Tailwind / Figma 交出。首页写可以免费开始，价目未抄）；magic-os（Magic Patterns 2026-10-13 博客的 MagicOS 无限画布：PRD、变体、并行任务、语音，导入导出代码库 / Claude Design / Figma，MCP 交给 Claude Code / Cursor / Codex）。HTML：cc-lineart（MIT 手绘墨线+水彩，README 8 个场景，HTML/SVG 例子给助手抄）。四条均为 3:2 WebP。本库未跑 create/setup-agent、未接 Gateway、未注册 Mowgli 或 MagicOS、未跑 lineart.py lint。cases 175→178（1.4.58→1.4.59），html-items 136→137（1.3.65→1.3.66）。未改首页精选、Agent UI、Models。未合并仍打开的 #104、#100；#87 里未合并的 magic-patterns 指向产品首页，本条以 MagicOS 博客为主源。",
+      "bodyEn": "Cases: openui (Thesys’s MIT generative-UI standard; OpenUI Lang, Gateway, npx @openuidev/cli@latest create and setup-agent. Not wandb/openui and not open-ui.org. Visible homepage copy does not say OpenUI 1.0; the 2026-10-15 repo releases include @openuidev/react-lang@1.0.1); mowgli (commercial AI design canvas for mobile/web/desktop, with moodboards, prototypes, Figma import, chat edits, and handoff over MCP or as React+Tailwind / Figma. The homepage says you can start for free; tiers not copied); magic-os (MagicOS infinite canvas from the Magic Patterns blog on 2026-10-13: PRD, variants, parallel tasks, voice, import/export with a codebase / Claude Design / Figma, MCP handoff to Claude Code / Cursor / Codex). HTML: cc-lineart (MIT ink-and-watercolor system, eight README scenarios, HTML/SVG examples agents can copy). All four are 3:2 WebP. This library did not run create/setup-agent, did not connect Gateway, did not sign up for Mowgli or MagicOS, and did not run lineart.py lint. cases 175→178 (1.4.58→1.4.59), html-items 136→137 (1.3.65→1.3.66). Home picks, Agent UI, and Models unchanged. Did not merge still-open #104 or #100; unmerged magic-patterns on #87 points at the product homepage, while this entry’s primary source is the MagicOS blog."
+    },
+    {
       "date": "2026-10-15",
       "title": "每日更新：Cases +3（Awesome DESIGN.md / photocn / Open Components）、HTML +1（Blobz）",
       "titleEn": "Daily update: Cases +3 (Awesome DESIGN.md / photocn / Open Components), HTML +1 (Blobz)",
