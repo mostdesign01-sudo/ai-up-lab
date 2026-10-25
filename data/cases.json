@@ -1,6 +1,45 @@
 {
   "cases": [
     {
+      "id": "latch",
+      "slug": "latch",
+      "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
+      "titleEn": "Latch: one script so AI browsers can operate your site (WebMCP)",
+      "kind": "tool",
+      "hook": "把搜索、加购、表单挂成 WebMCP 工具，agent 不用瞎点。",
+      "hookEn": "Expose search, cart, and form actions as WebMCP tools so agents stop guessing clicks.",
+      "summary": "Latch（https://latch.tools/ ，仓库 r0bertini/latch，MIT）是一段约 6KB、零依赖的前端脚本：只读检查 DOM，把搜索框、加购/立即购买、联系/预约表单、导航等登记成 WebMCP 工具（如 search_site、add_to_cart、submit_form、navigate），供 ChatGPT Atlas、Perplexity Comet、Chrome WebMCP origin trial、Edge 等 agentic 浏览器直接调用。无 WebMCP 时静默降级、不改坏页面。安装：`<script src=\"https://latch.tools/latch.js\" defer></script>`。脚本本身免费开源；站点另售 Pro 托管分析（当日标价约 €19/项目/月），本条只写开源脚本路径。Show HN https://news.ycombinator.com/item?id=50218601（2026-10-24）。本库没有在真实站点嵌入，也没有用 AI 浏览器实测工具调用。",
+      "summaryEn": "Latch (https://latch.tools/ , repo r0bertini/latch, MIT) is a ~6KB zero-dependency front-end script: it read-only inspects the DOM and registers search, add-to-cart/buy-now, contact/booking forms, and nav as WebMCP tools (search_site, add_to_cart, submit_form, navigate) for agentic browsers such as ChatGPT Atlas, Perplexity Comet, Chrome’s WebMCP origin trial, and Edge. Without WebMCP it no-ops and does not break the host page. Install: `<script src=\"https://latch.tools/latch.js\" defer></script>`. The script is free/open source; the site also sells Pro hosted analytics (~€19/project/month on check day)—this entry covers the open script path only. Show HN https://news.ycombinator.com/item?id=50218601 (2026-10-24). This library did not embed it on a real site or exercise tool calls from an AI browser.",
+      "categories": [
+        "coding",
+        "design"
+      ],
+      "role": "WebMCP site adapter",
+      "sourceUrl": "https://latch.tools/",
+      "secondaryUrls": [
+        "https://github.com/r0bertini/latch",
+        "https://news.ycombinator.com/item?id=50218601"
+      ],
+      "previewImage": "/previews/latch.webp",
+      "sourceType": "show-hn",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [],
+      "approvalBoundary": "把第三方脚本挂进生产站前先审内容安全与隐私；Pro 分析按项目付费。本库没有代为嵌入。",
+      "approvalBoundaryEn": "Review security/privacy before dropping a third-party script on production; Pro analytics bills per project. This library did not embed it.",
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24T12:20:00Z",
+      "qualityNote": "收录是因为 MIT 单行脚本 + WebMCP 工具表清晰，且与 AI 浏览器可操作站点直接相关。仓库很新、尚无社区积累，但落地页与 README 可核对。本库未嵌入、未用 AI 浏览器实测。",
+      "qualityNoteEn": "Listed because the MIT one-line script and WebMCP tool table are concrete and relevant to AI-operable sites. The repo is brand new with no community traction yet; landing page and README were readable. Not embedded; AI-browser tool calls not exercised.",
+      "verifyLog": "2026-10-24 晚间：latch.tools / github.com/r0bertini/latch HTTP 200；gh api MIT stars=0；Show HN 50218601；Playwright 3:2 WebP。未嵌入站点、未开 AI 浏览器点工具。",
+      "verifyLogEn": "2026-10-24 evening: site/repo HTTP 200; gh api MIT stars=0; Show HN 50218601; Playwright 3:2 WebP. Not embedded; AI-browser tools not clicked."
+    },
+    {
       "id": "fx0",
       "slug": "fx0",
       "title": "fx0：Vercel Labs 开源 AI 设计代理，一页写成单个 HTML",
@@ -11228,23 +11267,11 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-23T12:10:00Z",
+    "updatedAt": "2026-10-24T12:20:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.59",
-    "count": 179,
+    "count": 176,
     "sourcesCrawled": [
-      "https://fx0.vercel.dev/",
-      "https://github.com/vercel-labs/fx0",
-      "https://www.scriptbyai.com/fx0-ai-design-agent/",
-      "https://github.com/heldernoid/openstitch",
-      "https://github.com/iohelder/openstitch",
-      "https://tombelieber.github.io/app-canvas/",
-      "https://github.com/tombelieber/app-canvas",
-      "https://tomtang3.ai/blog/introducing-app-canvas/",
-      "https://github.com/tombelieber/app-canvas/blob/v0.10.3/AGENT_GUIDE.md",
-      "https://pristine-ui.pages.dev/",
-      "https://github.com/maddhruv/pristine",
-      "https://news.ycombinator.com/item?id=50204389",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",
@@ -11522,7 +11549,10 @@
       "https://news.ycombinator.com/item?id=49559069",
       "https://threeui.com/three-js/temple-night/temple-night",
       "https://github.com/MengTo/threeui",
-      "https://threeui.com/css/animated-top-dock/sable"
+      "https://threeui.com/css/animated-top-dock/sable",
+      "https://ui.krutikraut.com/",
+      "https://www.makegradient.com/",
+      "https://latch.tools/"
     ]
   }
 }

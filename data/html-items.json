@@ -1,6 +1,39 @@
 {
   "items": [
     {
+      "id": "makegradient",
+      "slug": "makegradient",
+      "title": "MakeGradient：免费 WebGL 渐变引擎，可导出代码/Figma/视频",
+      "titleEn": "MakeGradient: free WebGL gradient engine with code/Figma/video export",
+      "hook": "八种着色器渐变，浏览器里调完直接拷到 React / Figma。",
+      "hookEn": "Eight shader gradients—tune in-browser, then copy to React or Figma.",
+      "summary": "MakeGradient（https://www.makegradient.com/）是免费、免登录的浏览器渐变工具：WebGL/GLSL 渲染，模式含 Fluid Mesh、Aurora、Deep Sea、Holographic、Impasto、Spectral、Fractal、Grainy；可调颜色、噪点与运动。导出写明有 React 组件、Tailwind、CSS 回退、embed.js、Figma、PNG 与短视频。作者称 forever free、无水印。未发现公开源码仓库，本条只标免费可用路径。适合做英雄区或品牌背景、又想要比纯 CSS 渐变更“油膜/极光”一点的人。本库没有完整导出每一类格式，也没有核对视频导出是否仍可用。",
+      "summaryEn": "MakeGradient (https://www.makegradient.com/) is a free, no-login browser gradient tool: WebGL/GLSL modes include Fluid Mesh, Aurora, Deep Sea, Holographic, Impasto, Spectral, Fractal, and Grainy; tune colors, noise, and motion. Exports claim React, Tailwind, CSS fallback, embed.js, Figma, PNG, and short video. The author calls it forever free with no watermark. No public source repo found—this entry covers the free usable path only. Good for hero/brand backgrounds that need more oil-slick/aurora feel than plain CSS. This library did not fully exercise every export type and did not re-verify video export.",
+      "sourceUrl": "https://www.makegradient.com/",
+      "secondaryUrls": [],
+      "previewImage": "/previews/makegradient.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "gradient",
+        "webgl",
+        "figma",
+        "export",
+        "free",
+        "design",
+        "shader"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24T12:20:00Z",
+      "qualityNote": "免费免登录浏览器工具；非开源。导出能力照官网控件文案；视频导出社区曾有失效反馈，本库未复测。",
+      "qualityNoteEn": "Free no-login browser tool; not open source. Export claims follow on-page controls; video export has had community failure reports—not retested here.",
+      "verifyLog": "2026-10-24 晚间：makegradient.com HTTP 200；无公开 GitHub；Playwright 实拍 Holographic 模式裁 3:2 WebP。未逐项点 CODE/FIGMA/VIDEO/IMAGE 导出。",
+      "verifyLogEn": "2026-10-24 evening: makegradient.com HTTP 200; no public GitHub; Playwright Holographic-mode capture cropped to 3:2 WebP. CODE/FIGMA/VIDEO/IMAGE exports not exercised item-by-item."
+    },
+    {
       "id": "shapcn",
       "slug": "shapcn",
       "title": "shapcn：按形状装配的图标变形（任意图标 morph 到任意图标）",
@@ -5308,7 +5341,7 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-23T01:40:00Z",
+    "updatedAt": "2026-10-24T12:20:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
     "count": 137
