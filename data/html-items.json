@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id": "baipix",
+      "slug": "baipix",
+      "title": "Baipix：像设计工具一样的免费像素画编辑器，可直接贴进 Figma",
+      "titleEn": "Baipix: a free pixel art editor that works like a design tool and pastes into Figma",
+      "hook": "浏览器里画像素画，复制成 SVG 直接贴进 Figma。",
+      "hookEn": "Draw pixel art in the browser and paste it into Figma as clean SVG.",
+      "summary": "Baipix 是免费开源的网页像素画编辑器，MIT，不用注册，画稿存在浏览器的 IndexedDB 里。界面照现代设计工具做：菜单栏、Ctrl+K 命令面板、图层和分组、多画板、组件实例，以及描边、投影、发光等图层效果，还有等距网格和一拖就出的体块。调色板有 PICO-8、Game Boy、Endesga 32 等预设，也能贴 Lospec 色板，提亮和压暗沿色板走。导出 PNG（1× 到 32×）、每个颜色合成一条路径的 SVG、.aseprite 和 tileset；Copy as SVG 后可以直接贴进 Figma 或 Illustrator，像素间隙做成的 LED 点阵效果也会一起带过去。作者 @Todobai 在 X 上说是自己用 Claude 花几个晚上做的。适合要在设计稿里放像素图标、点阵字或游戏素材的人。本库打开过仓库里的示例并复制了 SVG，没有贴进 Figma。",
+      "summaryEn": "Baipix is a free, open-source pixel art editor in the browser, MIT, with no sign-up; drawings are kept in the browser’s IndexedDB. The interface follows modern design tools: a menu bar, a Ctrl+K command palette, layers and groups, several boards, component instances, outline, shadow, and glow effects, plus an isometric grid and one-drag volumes. Palettes include presets such as PICO-8, Game Boy, and Endesga 32, and you can paste a Lospec palette; shade and lighten move along the palette. Exports are PNG from 1× to 32×, SVG with one merged path per color, .aseprite, and tilesets. Copy as SVG pastes straight into Figma or Illustrator, including the pixel gap for an LED or dot-matrix look. The author, @Todobai, wrote on X that he built it with Claude over a few evenings. Useful when you need pixel icons, dot-matrix type, or game assets in a design file. This library opened the repo’s sample and copied its SVG; it did not paste it into Figma.",
+      "sourceUrl": "https://baipix.app/",
+      "secondaryUrls": [
+        "https://baipix.app/app/",
+        "https://github.com/baipix/baipix",
+        "https://x.com/Todobai/status/2112272010428444989"
+      ],
+      "previewImage": "/previews/baipix.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "pixel-art",
+        "svg",
+        "figma",
+        "editor",
+        "claude",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-20T01:30:00Z",
+      "qualityNote": "本库在编辑器里导入了仓库自带的 sunset.baipix（160×90，5 个图层，17 色），按默认 8× 点 Copy as SVG，读到的 SVG 是 1280×720、5 个图层分组、41 条路径，和「一层一组、一色一条路径」的说法对得上。没有把 SVG 真的贴进 Figma，没有自己从头画，也没有试等距工具和 .aseprite 导出。用 Claude 做是作者在 X 上的自述，仓库 README 没写。README 写画稿不上传，站点用 Cloudflare Web Analytics 统计页面浏览，可以用 ?notrack 关掉。",
+      "qualityNoteEn": "This library imported the repo’s sunset.baipix (160×90, 5 layers, 17 colors) and used Copy as SVG at the default 8×. The SVG read back was 1280×720 with 5 layer groups and 41 paths, consistent with one group per layer and one path per color. The SVG was not pasted into Figma, nothing was drawn from scratch, and the isometric tools and .aseprite export were not tried. Building it with Claude is the author’s statement on X; the README does not say so. The README says drawings are never uploaded; the site counts page views with Cloudflare Web Analytics, which ?notrack turns off.",
+      "verifyLog": "2026-10-20 早间（Asia/Shanghai）：https://baipix.app/ HTTP 200，标题 Baipix · Free online pixel art editor, export to SVG and Figma。编辑器 https://baipix.app/app/ HTTP 200，标题 Baipix editor · Free online pixel art editor，欢迎页有 Create / Import 和 8 个模板（Icon 16×16 到 Isometric scene 128×128）。gh api baipix/baipix，MIT，3★，创建 2026-09-25T22:33:47Z，最近推送 2026-10-19T21:20:24Z，homepage https://baipix.app。headless Chrome：点 Import 选 raw.githubusercontent.com 上的 docs/sunset.baipix（17611 字节），画布显示 160×90 px · 5 layers · 17 colors，图层 Near clouds、Middle clouds、Far clouds、Stars、Sky；点 Skip the tour；Export 对话框默认 8×、PNG，写 1280 × 720 px, transparent background；点 Copy as SVG，提示 SVG copied. Paste it into Figma or Illustrator.，读剪贴板 56366 字符，<svg width=\"1280\" height=\"720\" shape-rendering=\"crispEdges\">，<g 5 个，<path 41 条，第一组 id=\"Sky\"。X：@Todobai 帖 2112272010428444989，2026-10-19T19:57Z，写 So I built the Figma of pixel art with Claude, in a few evenings。预览为导入示例后的编辑器，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 morning (Asia/Shanghai): https://baipix.app/ HTTP 200, title Baipix · Free online pixel art editor, export to SVG and Figma. Editor https://baipix.app/app/ HTTP 200, title Baipix editor · Free online pixel art editor; the welcome screen shows Create / Import and 8 templates (Icon 16×16 to Isometric scene 128×128). gh api baipix/baipix, MIT, 3★, created 2026-09-25T22:33:47Z, last push 2026-10-19T21:20:24Z, homepage https://baipix.app. Headless Chrome: Import with docs/sunset.baipix from raw.githubusercontent.com (17,611 bytes); the canvas showed 160×90 px · 5 layers · 17 colors, layers Near clouds, Middle clouds, Far clouds, Stars, Sky. Clicked Skip the tour. The Export dialog defaulted to 8× PNG, 1280 × 720 px, transparent background. Copy as SVG showed SVG copied. Paste it into Figma or Illustrator.; the clipboard held 56,366 characters, <svg width=\"1280\" height=\"720\" shape-rendering=\"crispEdges\">, 5 <g elements, 41 <path elements, first group id=\"Sky\". X: @Todobai post 2112272010428444989, 2026-10-19T19:57Z, saying he built the Figma of pixel art with Claude in a few evenings. Preview is the editor after importing the sample, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
       "id": "farside-rocket-engines",
       "slug": "farside-rocket-engines",
       "title": "FarsideLab：可拆开的火箭发动机 3D 目录",
@@ -4949,9 +4985,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-19T12:40:00Z",
+    "updatedAt": "2026-10-20T01:30:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
-    "count": 139
+    "count": 137
   }
 }
