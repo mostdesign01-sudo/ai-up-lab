@@ -1,11 +1,124 @@
 {
   "meta": {
-    "updatedAt": "2026-10-18T12:20:00Z",
+    "updatedAt": "2026-10-19T12:40:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.1.22",
-    "count": 30
+    "count": 29
   },
   "models": [
+    {
+      "id": "timestral",
+      "slug": "timestral",
+      "name": "Timestral",
+      "vendor": "Mistral AI",
+      "title": "Timestral：Mistral 的时间序列基础模型",
+      "titleEn": "Timestral: Mistral's time-series foundation models",
+      "summary": "Mistral 在 2026-10-15 发布 Timestral，官方称这是他们的第一组时间序列基础模型。新闻页写四个尺寸：5M、28M、123M、209M，上下文 32768 个时间步，输出 21 个分位数，可以带多变量目标、只在过去已知的协变量，以及未来已知的协变量。规格表写许可是 Modified MIT，可以在本地、VPC 或隔离环境里跑。官方称 209M 在 GIFT-Eval、TIME、fev-bench 的预训练零样本模型里排第一，并用更少的参数超过先前最好结果；28M 在 GIFT-Eval 和 TIME 上超过大约四倍大的 Chronos-2；在 8 线程 CPU 上，用三周的 15 分钟数据预测未来一天，5M 约 10 毫秒、209M 约 140 毫秒。这些名次和耗时都是厂商说法。仓库里的代码是 Apache-2.0。四套权重在 Hugging Face，每份 LICENSE 都是 Modified MIT，并写全球合并月收入超过 2000 万美元的公司需要另谈商业许可。新闻页写技术报告稍后发布。适合要做概率预测、又能接受许可门槛和未复核榜单的人。本库没有下载权重，也没有跑预测。",
+      "summaryEn": "On 15 October 2026 Mistral released Timestral, which it calls its first family of time-series foundation models. The news post lists four sizes, 5M, 28M, 123M, and 209M, a context of 32,768 time steps, and 21 quantile outputs, with multivariate targets plus past-only and known-future covariates. The spec table says the licence is Modified MIT and that it can run on-prem, in a VPC, or air-gapped. Mistral says the 209M model ranks first among pretrained zero-shot models on GIFT-Eval, TIME, and fev-bench, and beats the previous best with fewer parameters; that the 28M model beats Chronos-2, about four times larger, on GIFT-Eval and TIME; and that on an 8-thread CPU, forecasting one day ahead from three weeks of 15-minute history takes about 10 ms at 5M and about 140 ms at 209M. Those ranks and timings are vendor claims. The code in the repository is Apache-2.0. The four weight repos on Hugging Face each carry a Modified MIT LICENSE, which says a company whose global consolidated monthly revenue exceeded $20 million in the preceding month needs a separate commercial licence. The news post says a technical report will follow. Useful for probabilistic forecasts if you can accept the licence limit and unchecked leaderboards. This library did not download the weights or run a forecast.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Mistral 新闻：Introducing Timestral",
+          "labelEn": "Mistral news: Introducing Timestral",
+          "url": "https://mistral.ai/news/timestral/",
+          "by": "Mistral",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub 仓库（代码 Apache-2.0）",
+          "labelEn": "GitHub repository (code Apache-2.0)",
+          "url": "https://github.com/mistralai/timestral",
+          "by": "Mistral AI",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Timestral 1.0 209M",
+          "labelEn": "Docs: Timestral 1.0 209M",
+          "url": "https://docs.mistral.ai/models/timestral-1-0",
+          "by": "Mistral AI"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 合集",
+          "labelEn": "Hugging Face collection",
+          "url": "https://huggingface.co/collections/mistralai/timestral",
+          "by": "mistralai"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-209M",
+          "labelEn": "Hugging Face: Timestral-209M",
+          "url": "https://huggingface.co/mistralai/Timestral-209M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-123M",
+          "labelEn": "Hugging Face: Timestral-123M",
+          "url": "https://huggingface.co/mistralai/Timestral-123M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-28M",
+          "labelEn": "Hugging Face: Timestral-28M",
+          "url": "https://huggingface.co/mistralai/Timestral-28M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-5M",
+          "labelEn": "Hugging Face: Timestral-5M",
+          "url": "https://huggingface.co/mistralai/Timestral-5M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50150434",
+          "by": "groar",
+          "date": "2026-10-19"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：四个尺寸 5M、28M、123M、209M，上下文 32768 步，输出 21 个分位数，支持多变量目标和两类协变量。",
+          "textEn": "Vendor claim: four sizes (5M, 28M, 123M, 209M), context of 32,768 steps, 21 quantiles, multivariate targets, and two kinds of covariates."
+        },
+        {
+          "text": "官方称：209M 在 GIFT-Eval、TIME、fev-bench 的预训练零样本条目里排第一，并已把结果提交到 GIFT-Eval 和 TIME 榜。本库没有打开这些榜。",
+          "textEn": "Vendor claim: 209M ranks first among pretrained zero-shot entries on GIFT-Eval, TIME, and fev-bench, and the results were submitted to the GIFT-Eval and TIME boards. This library did not open those boards."
+        },
+        {
+          "text": "官方称：8 线程 CPU 上，用三周 15 分钟数据预测一天，5M 约 10 毫秒，209M 约 140 毫秒。本库没有复测。",
+          "textEn": "Vendor claim: on an 8-thread CPU, one day ahead from three weeks of 15-minute history takes about 10 ms at 5M and about 140 ms at 209M. Not re-timed here."
+        },
+        {
+          "text": "代码为 Apache-2.0。四份权重的 LICENSE 都是 Modified MIT，并限制前一个月全球合并月收入超过 2000 万美元的公司。模型卡上的 license 字段是 other。",
+          "textEn": "The code is Apache-2.0. All four weight LICENSE files are Modified MIT and limit companies whose global consolidated revenue exceeded $20 million in the preceding month. The model-card license field is other."
+        }
+      ],
+      "qualityNote": "榜单名次、和 Chronos-2 / TimesFM-3 / Falcon-2.0 的参数对比，以及 CPU 耗时，都只按新闻页原文，是厂商说法。本库没有打开那三个榜，也没有跑推理。新闻页规格表写 Modified MIT，没有写收入门槛；收入门槛写在四个 Hugging Face 仓库的 LICENSE 里，四份文本一致。代码仓库的 LICENSE 是 Apache-2.0，README 写明它不覆盖权重。文档页把 209M 标成 Public Preview。新闻页写技术报告将随后发布，仓库文件里没有 PDF。本库没有安装 Python 包，没有登录 Mistral Forge，也没有查托管价格。",
+      "qualityNoteEn": "Leaderboard ranks, the parameter comparisons with Chronos-2, TimesFM-3, and Falcon-2.0, and the CPU timings follow the news post only. They are vendor claims. This library did not open the three boards and did not run inference. The news spec table says Modified MIT and does not mention the revenue limit. That limit is in the LICENSE file of each of the four Hugging Face repos, and the four texts match. The code repository’s LICENSE is Apache-2.0, and the README says it does not cover the weights. The docs page marks 209M as Public Preview. The news post says a technical report will follow; the repo has no PDF. This library did not install the Python package, did not sign in to Mistral Forge, and did not check hosted prices.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/timestral.webp",
+      "previewCredit": "预览截自 Mistral 新闻页首屏",
+      "previewCreditEn": "Preview cropped from the Mistral news-page hero",
+      "featured": false,
+      "verifyLog": "2026-10-19 晚间：新闻页 https://mistral.ai/news/timestral/ HTTP 200，标题 Introducing Timestral，日期 October 15, 2026，By Mistral，7 min read。页面规格表：Parameters 5M / 28M / 123M / 209M，Context length 32,768，Output 21 quantiles，Licence Modified MIT，Deployment On-prem, VPC or air-gapped。文中写技术报告 will follow，并链到 GitHub、https://docs.mistral.ai/models/timestral-1-0 和 Hugging Face 合集。文档页 HTTP 200，标题 Timestral 1.0 209M，标 Public Preview、Modified MIT，并链到 Timestral-209M 的 LICENSE。gh api：mistralai/timestral，Apache-2.0，442★，32 forks，创建 2026-10-15T10:20:18Z，最近推送 2026-10-15T14:59:57Z。仓库树没有 PDF。HF API：Timestral-209M createdAt 2026-10-14T08:52:36Z，license 字段 other，pipeline time-series-forecasting，gated false，当时 likes 150、downloads 2601；5M / 28M / 123M 的 license 字段同样是 other，createdAt 分别为 2026-10-14T13:41:13Z、17:50:53Z、17:51:04Z。四份 raw LICENSE 均为 Modified MIT License，Attribution notice 2026 - Mistral AI，并含 2000 万美元月收入条款，长度都是 1687。合集 URL HTTP 200。HN item 50150434，Algolia 69 pts，作者 groar，创建 2026-10-19T09:59:32Z。预览为 Playwright 实拍新闻页首屏，点过一个 OK 后仍能看到 Cookies 按钮，1200×800 WebP。没有下载 safetensors，没有跑 TimestralForecaster。",
+      "verifyLogEn": "2026-10-19 evening: news page https://mistral.ai/news/timestral/ HTTP 200, title Introducing Timestral, date October 15, 2026, By Mistral, 7 min read. Spec table: parameters 5M / 28M / 123M / 209M, context length 32,768, output 21 quantiles, licence Modified MIT, deployment on-prem, VPC, or air-gapped. The post says a technical report will follow and links GitHub, https://docs.mistral.ai/models/timestral-1-0, and the Hugging Face collection. Docs page HTTP 200, title Timestral 1.0 209M, marked Public Preview and Modified MIT, with a link to the Timestral-209M LICENSE. gh api: mistralai/timestral, Apache-2.0, 442★, 32 forks, created 2026-10-15T10:20:18Z, last push 2026-10-15T14:59:57Z. No PDF in the repo tree. HF API: Timestral-209M createdAt 2026-10-14T08:52:36Z, license field other, pipeline time-series-forecasting, gated false, likes 150 and downloads 2601 at check time. 5M / 28M / 123M also have license field other, createdAt 2026-10-14T13:41:13Z, 17:50:53Z, and 17:51:04Z. All four raw LICENSE files are Modified MIT License, attribution 2026 - Mistral AI, including the $20 million monthly-revenue clause, each 1687 characters. Collection URL HTTP 200. HN item 50150434, Algolia 69 pts, author groar, created 2026-10-19T09:59:32Z. Preview is a Playwright capture of the news hero after clicking OK; a Cookies button was still visible. 1200×800 WebP. Did not download safetensors and did not run TimestralForecaster."
+    },
     {
       "id": "moss-image",
       "slug": "moss-image",
