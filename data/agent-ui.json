@@ -1,6 +1,93 @@
 {
   "items": [
     {
+      "id": "lightswind",
+      "slug": "lightswind",
+      "title": "Lightswind UI：命令行装进项目、源码归你的 React 动画组件库（带 MCP）",
+      "titleEn": "Lightswind UI: a CLI-first React animated component library whose source you own (with MCP)",
+      "hook": "一条命令把动画组件源码拷进项目，也能让助手经 MCP 挑选安装。",
+      "hookEn": "One command copies animated component source into your repo, or let an agent pick via MCP.",
+      "summary": "Lightswind UI 是 MIT 开源的 React + Tailwind 动画组件库，走 shadcn 那条「源码进你项目」的路：`npx lightswind@latest init` 识别 Next.js / Vite / CRA 并装好公共工具，再用 `npx lightswind add 组件名` 把单个组件拷到 components/lightswind/ 下，之后随便改。另一个卖点是自带 MCP：`npx lightswind mcp init` 可给 Cursor / Claude Desktop 配好，让编程助手自己浏览、取用、安装组件；README 也写了 GitHub Copilot。组件以动效为主（3D 轮播、滚动触发、着色器背景、Hero 等），README 写 160+ 个，官网各处自称数量不一，这里不替它定数。官网同时卖 Pro 授权（额外的付费组件、页面模板和需登录的 CLI 下发），首页还挂着促销横幅；本条只讲免费、MIT 的那部分，不用 Pro 也能用。适合想给落地页、作品集快速加动效，又不想引入运行时依赖的人。",
+      "summaryEn": "Lightswind UI is an MIT React + Tailwind animated component library that follows the shadcn idea of putting source in your project: `npx lightswind@latest init` detects Next.js / Vite / CRA and installs shared utilities, then `npx lightswind add <name>` copies one component into components/lightswind/ for you to edit. Its other selling point is a built-in MCP: `npx lightswind mcp init` configures Cursor / Claude Desktop so a coding agent can browse, fetch, and install components itself; the README also mentions GitHub Copilot. The components lean on motion (3D carousels, scroll triggers, shader backgrounds, heroes); the README says 160+, while the site quotes different counts in different places, so no exact number is given here. The site also sells a Pro license (extra paid components, page templates, and authenticated CLI delivery) and runs a promo banner; this entry covers only the free MIT part, which works without Pro. Good for adding motion to landing pages or portfolios without a runtime dependency.",
+      "sourceUrl": "https://lightswind.com/",
+      "secondaryUrls": [
+        "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
+        "https://www.npmjs.com/package/lightswind",
+        "https://lightswind.com/components/mcp-server"
+      ],
+      "previewImage": "/previews/lightswind.webp",
+      "npmPackage": "lightswind",
+      "promptHint": "在 React + Tailwind 项目根目录跑 `npx lightswind@latest init`，再 `npx lightswind add 组件名` 装一个免费组件，从 components/lightswind/ 引入后按自己的品牌改颜色和动效时长。想让助手挑组件就跑 `npx lightswind mcp init`。别默认去装 Pro 组件，也别从 \"lightswind\" 包直接 import。",
+      "promptHintEn": "In a React + Tailwind project root run `npx lightswind@latest init`, then `npx lightswind add <name>` for one free component; import it from components/lightswind/ and retune colors and motion timing for your brand. Run `npx lightswind mcp init` if you want an agent to pick components. Do not assume Pro components are free, and do not import from the \"lightswind\" package directly.",
+      "types": [
+        "ui",
+        "motion",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "tailwind",
+        "animation",
+        "mcp",
+        "cli",
+        "mit",
+        "open-source",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "qualityNote": "收录理由：成熟度较高的 MIT 动画组件库，CLI 拷源码加 MCP 让助手安装，正好接上 AI 编程流程。边界：官网另售 Pro，本条只写免费 MIT 路径；组件数量 README 与官网说法不一，未逐个核对。本库没有跑 init，没有接 MCP，也没有购买或使用 Pro。",
+      "qualityNoteEn": "Why: a fairly mature MIT animated component library where the CLI copies source and an MCP lets agents install it, which fits AI coding workflows. Boundary: the site also sells Pro; this entry covers only the free MIT path. Component counts differ between the README and the site and were not audited one by one. This library did not run init, did not wire the MCP, and did not buy or use Pro.",
+      "verifyLog": "2026-10-25 晚间：lightswind.com HTTP 200。gh api codewithMUHILAN/Lightswind-UI-Library：license SPDX MIT，1172★，创建于 2023-07-11，最近推送 2026-07-24。npm view lightswind：3.2.5，MIT。README 写 160+ 组件；官网首页写 312+ 组件与 559+ 区块，弹窗写 215+，三处不一致，条目不写具体数。首页有 Pricing / Pro 入口与促销横幅（SCALEUP30）。README 命令：init、add、mcp、mcp init。预览为 Playwright 实拍首页（先关掉「Support Open Source」弹窗），1440×960 缩到 1200×800 WebP。未跑 init、未接 MCP、未购 Pro。",
+      "verifyLogEn": "2026-10-25 evening: lightswind.com HTTP 200. gh api codewithMUHILAN/Lightswind-UI-Library: license SPDX MIT, 1172★, created 2023-07-11, last push 2026-07-24. npm view lightswind: 3.2.5, MIT. README says 160+ components; the site home says 312+ components and 559+ blocks, and a popup says 215+; the three disagree, so the entry gives no exact count. Home has Pricing / Pro links and a promo banner (SCALEUP30). README commands: init, add, mcp, mcp init. Preview is a Playwright capture of the home page (after dismissing the \"Support Open Source\" popup), 1440×960 scaled to a 1200×800 WebP. Did not run init, wire MCP, or buy Pro."
+    },
+    {
+      "id": "intelli-ui",
+      "slug": "intelli-ui",
+      "title": "Intelli UI：MIT 开源的 Liquid Glass 风格 React 组件库（CLI、MCP、助手插件）",
+      "titleEn": "Intelli UI: an MIT Liquid Glass React component library (CLI, MCP, agent plugin)",
+      "hook": "磨砂玻璃风的 React 组件，命令行拷进项目，也能让助手装。",
+      "hookEn": "Frosted-glass React components you copy in with a CLI, or have an agent install.",
+      "summary": "Intelli UI（IntelliHelper 出品）是一套 MIT 开源的 Liquid Glass（磨砂玻璃）风格组件库，面向 React / Next.js + Tailwind，交互底层用 Radix UI。用法和 shadcn 一样：`npx @intellihelper/cli@latest init`，再 `add button card dialog`，源码落进你自己的仓库。它把界面分成「安静的外壳层」和「饱和的内容层」两种玻璃，附 mono、aurora、sunset、frost、ocean 五套主题。给编程助手的入口有两个：MCP 服务 intellihelper-ui（README 列了 Cursor、Claude Code、VS Code、Codex 等），以及 agent-skills 插件（Claude / Grok 等可装）。组件数官网写 131+，README 写 80+，以官网组件页为准。项目很新、关注者很少，适合想试 Liquid Glass 视觉、愿意自己审代码的人，暂不建议直接上生产。",
+      "summaryEn": "Intelli UI (by IntelliHelper) is an MIT Liquid Glass (frosted glass) component library for React / Next.js + Tailwind, with Radix UI underneath for interactive behavior. It works like shadcn: `npx @intellihelper/cli@latest init`, then `add button card dialog`, and the source lands in your repo. It splits UI into a quiet chrome layer and saturated content panels, and ships five themes: mono, aurora, sunset, frost, ocean. For coding agents there is an MCP server, intellihelper-ui (the README lists Cursor, Claude Code, VS Code, Codex and others), plus an agent-skills plugin for Claude, Grok, and more. The site says 131+ components while the README says 80+; trust the site's component pages. The project is very new with a small following—good for trying the Liquid Glass look if you will review the code yourself, not yet something to drop straight into production.",
+      "sourceUrl": "https://ui.intellihelper.in/",
+      "secondaryUrls": [
+        "https://github.com/IntelliHelper/IntelliHelper-UI",
+        "https://www.npmjs.com/package/@intellihelper/cli",
+        "https://github.com/IntelliHelper/agent-skills"
+      ],
+      "previewImage": "/previews/intelli-ui.webp",
+      "npmPackage": "@intellihelper/cli",
+      "promptHint": "在 Next.js + Tailwind 项目里跑 `npx @intellihelper/cli@latest init`，再 `npx @intellihelper/cli@latest add button card dialog`，先挑一个主题（如 frost）做一张设置页，外壳用安静的玻璃层、主内容用饱和面板。装进来的源码要自己过一遍再用。",
+      "promptHintEn": "In a Next.js + Tailwind project run `npx @intellihelper/cli@latest init`, then `npx @intellihelper/cli@latest add button card dialog`; pick one theme (e.g. frost) and build a settings page with quiet glass chrome and a saturated main panel. Review the copied source before shipping it.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "nextjs",
+        "tailwind",
+        "liquid-glass",
+        "radix",
+        "mcp",
+        "cli",
+        "mit",
+        "open-source",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "qualityNote": "收录理由：Liquid Glass 是当下热门视觉方向，这套 MIT 组件库把它做成可拷贝源码，并给了 CLI、MCP 和助手插件。边界：项目很早期，GitHub 星标很少，维护前景未知；组件数官网与 README 不一致。本库没有安装 CLI、没有接 MCP 或插件，也没有做生产级审查。",
+      "qualityNoteEn": "Why: Liquid Glass is a popular visual direction right now, and this MIT library turns it into copyable source with a CLI, MCP, and agent plugin. Boundary: the project is very early with very few GitHub stars, so its maintenance outlook is unknown; component counts differ between the site and the README. This library did not install the CLI, did not wire the MCP or plugin, and did not do a production-grade review.",
+      "verifyLog": "2026-10-25 晚间：ui.intellihelper.in HTTP 200。gh api IntelliHelper/IntelliHelper-UI：license SPDX MIT，2★，创建于 2026-06-30，最近推送 2026-10-20。npm view @intellihelper/cli：0.3.0，MIT。官网首页写 131+ components、Free · Open source；README 写 80+ React components；首页未见付费档。README 列 MCP 服务 intellihelper-ui 与 IntelliHelper/agent-skills 插件。预览为 Playwright 实拍首页，1440×960 缩到 1200×800 WebP。未装 CLI、未接 MCP / 插件、未做生产审查。",
+      "verifyLogEn": "2026-10-25 evening: ui.intellihelper.in HTTP 200. gh api IntelliHelper/IntelliHelper-UI: license SPDX MIT, 2★, created 2026-06-30, last push 2026-10-20. npm view @intellihelper/cli: 0.3.0, MIT. Site home says 131+ components and Free · Open source; README says 80+ React components; no paid tier seen on the home page. README lists the intellihelper-ui MCP server and the IntelliHelper/agent-skills plugin. Preview is a Playwright capture of the home page, 1440×960 scaled to a 1200×800 WebP. Did not install the CLI, wire MCP / plugin, or do a production review."
+    },
+    {
       "id": "creative-ui",
       "slug": "creative-ui",
       "title": "creative-ui：偏设计向的 shadcn 注册表 + Claude skills",
@@ -2502,9 +2589,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-25T12:20:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.4.30",
-    "count": 66
+    "count": 67
   }
 }
