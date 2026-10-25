@@ -1,6 +1,115 @@
 {
   "items": [
     {
+      "id": "archscribe",
+      "slug": "archscribe",
+      "title": "Archscribe：JSON 出手绘架构图，附可编辑 Excalidraw",
+      "titleEn": "Archscribe: hand-drawn diagrams from JSON, with editable Excalidraw",
+      "hook": "一份 JSON，出可编辑草图、PNG 和动画 GIF。",
+      "hookEn": "One JSON spec becomes an editable sketch, a PNG, and an animated GIF.",
+      "summary": "Archscribe 是 MIT 许可的 Codex / Claude 技能，外面挂一个本地 Python 渲染器。默认在无头 Chromium 里用 rough.js 画手绘线；没有 Chromium 时，用 `--renderer pillow` 退回 Pillow。一份 JSON 配置可以交出可编辑的 .excalidraw、PNG 和动画 GIF。浏览器渲染器还会写 MP4，也可以选 SVG 和单文件可点击 HTML。配色两套：默认深色霓虹，`--style paper` 是浅色纸面。布局三套：panorama（系统全景）、swimlane（泳道）、graph（自由连线）。浏览器渲染用 Excalifont 手绘字，并带思源黑体。仓库有简体中文 README 和 README.en.md。适合写文章、系统架构或流程图，又想留下能改的源文件的人。本库没有安装这个技能，也没有跑渲染脚本。",
+      "summaryEn": "Archscribe is an MIT Codex / Claude skill with a local Python renderer. By default it draws the hand-drawn lines with rough.js in headless Chromium; without Chromium, `--renderer pillow` falls back to Pillow. One JSON spec can produce an editable .excalidraw file, a PNG, and an animated GIF. The browser renderer also writes an MP4, and can add SVG plus a single-file clickable HTML page. Two looks: dark neon by default, and a light paper look with `--style paper`. Three layouts: panorama (a system overview), swimlane, and graph (freeform links). The browser renderer uses the hand-drawn Excalifont face and also includes Source Han Sans. The repo has a Simplified Chinese README and README.en.md. Useful for articles, system architecture, or process diagrams when you want a source file you can still edit. This library did not install the skill and did not run the renderer.",
+      "sourceUrl": "https://github.com/lazypay/Archscribe",
+      "secondaryUrls": [
+        "https://github.com/lazypay/Archscribe/blob/main/README.en.md",
+        "https://x.com/haoge6699/status/2113203960752336965"
+      ],
+      "previewImage": "/previews/archscribe.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "skill",
+        "diagram",
+        "excalidraw",
+        "gif",
+        "mit",
+        "codex",
+        "claude",
+        "python"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "收录是因为这是能装进 Codex 或 Claude 的开源绘图技能，产物包含可编辑的 Excalidraw，而不只是一张图。默认渲染器是无头 Chromium，Pillow 只是没装浏览器时的退路。本库没有安装技能，没有装依赖，也没有用示例配置出图。",
+      "qualityNoteEn": "Listed because it is an open-source diagram skill for Codex or Claude, and the output includes an editable Excalidraw file rather than only a picture. The default renderer is headless Chromium; Pillow is the fallback when Chromium is not installed. This library did not install the skill, did not install its dependencies, and did not render a sample spec.",
+      "verifyLog": "2026-10-22 晚间（上海）：gh api lazypay/Archscribe，license SPDX MIT，about 368 stars as of 2026-10-22（stargazers_count=368），forks 24，创建 2026-06-27T08:05:11Z，最近推送 2026-07-15T04:49:44Z，语言 Python。根目录有 README.md、README.en.md、SKILL.md、LICENSE。SKILL.md 写默认浏览器渲染器可出 PNG、GIF、MP4、SVG、可编辑 Excalidraw 和交互 HTML；未装 Chromium 时用 --renderer pillow，Pillow 支持 PNG、GIF 和 Excalidraw。README 画廊三例：homepage-panorama.gif（panorama + default）、homepage-swimlane.gif（swimlane + paper）、homepage-graph.gif（graph + paper）。GitHub 仓库页 HTTP 200。X 帖 https://x.com/haoge6699/status/2113203960752336965 作者 @haoge6699，创建 2026-10-22T09:41:00Z。预览为 Playwright 实拍 README 画廊中的全景 GIF（homepage-panorama），1200×800 WebP。没有把技能装进 Codex 或 Claude，没有 pip install，没有运行 scripts/render_animated_diagram.py，没有核对 GIF 帧差。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): gh api lazypay/Archscribe, SPDX MIT, about 368 stars as of 2026-10-22 (stargazers_count=368), 24 forks, created 2026-06-27T08:05:11Z, last push 2026-07-15T04:49:44Z, language Python. Repo root has README.md, README.en.md, SKILL.md, and LICENSE. SKILL.md says the default browser renderer can emit PNG, GIF, MP4, SVG, editable Excalidraw, and interactive HTML; without Chromium, --renderer pillow is the fallback, and Pillow supports PNG, GIF, and Excalidraw. README gallery examples: homepage-panorama.gif (panorama + default), homepage-swimlane.gif (swimlane + paper), homepage-graph.gif (graph + paper). The GitHub repo page was HTTP 200. X post https://x.com/haoge6699/status/2113203960752336965 by @haoge6699, created 2026-10-22T09:41:00Z. Preview is a Playwright capture of the panorama GIF (homepage-panorama) in the README gallery, 1200×800 WebP. The skill was not installed into Codex or Claude, pip install was not run, scripts/render_animated_diagram.py was not run, and GIF frame differences were not checked."
+    },
+    {
+      "id": "img2threejs",
+      "slug": "img2threejs",
+      "title": "img2threejs：参考图重建成纯代码的 Three.js 模型",
+      "titleEn": "img2threejs: rebuild a reference image as a code-only Three.js model",
+      "hook": "参考图变成可动画的纯代码 Three.js 模型。",
+      "hookEn": "A reference image becomes an animation-ready Three.js model, in code.",
+      "summary": "img2threejs 是 Apache-2.0 的 Agent 技能，SKILL.md 标的版本是 2.0.0。给它一张物体或角色的参考图，它按分阶段的雕刻和视觉自检，写出一个 THREE.Group 工厂：用基本体、程序着色器和生成几何把对象搭出来，并带枢轴和插槽，方便接着做动画。README 写这是代码重建，不是摄影测量、抽网格或下载素材包；画廊说明写这些演示在浏览器里跑，没有网格文件。文档写它可以在 Hermes、Claude Code、Codex 或 OpenCode 里用，安装命令是 `npx --yes img2threejs@latest install`。在线演示列在仓库 README 的 Live demos 表里，画廊源码在另一个 showcase 仓库。适合要可改、可动画的 Three.js 代码，而不是一个现成网格的人。本库没有安装技能，没有拿参考图跑重建，也没有打开那些在线演示。",
+      "summaryEn": "img2threejs is an Apache-2.0 agent skill. SKILL.md marks version 2.0.0. Given a reference image of an object or character, it follows a staged sculpt and visual self-check and writes a THREE.Group factory: primitives, procedural shaders, and generated geometry, with pivots and sockets so the result can be animated. The README calls this reconstruction in code, not photogrammetry, mesh extraction, or a downloaded asset pack; the gallery note says the demos run in the browser and ship no mesh files. The docs say it runs under Hermes, Claude Code, Codex, or OpenCode, and the install command is `npx --yes img2threejs@latest install`. The live demos are listed in the repo README’s Live demos table, and the gallery source is a separate showcase repo. Useful when you want editable, animation-ready Three.js code rather than a finished mesh. This library did not install the skill, did not reconstruct a reference image, and did not open those live demos.",
+      "sourceUrl": "https://github.com/img2threejs/img2threejs",
+      "secondaryUrls": [
+        "https://img2threejs.io/",
+        "https://github.com/img2threejs/img2threejs-showcase",
+        "https://x.com/zmdsb259414/status/2113140946699460933"
+      ],
+      "previewImage": "/previews/img2threejs.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "threejs",
+        "skill",
+        "apache-2.0",
+        "procedural",
+        "animation",
+        "python",
+        "codex"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "收录是因为这是公开的图像转三维技能，模型按文档用代码搭建，画廊说明写没有网格文件。README 上的赞助徽章不改变 Apache-2.0 许可。本库没有安装，没有跑重建，也没有在浏览器里打开那些演示。",
+      "qualityNoteEn": "Listed because it is a public image-to-3D skill whose models are built in code, and the gallery note says there are no mesh files. Sponsor badges on the README do not change the Apache-2.0 license. This library did not install it, did not run a reconstruction, and did not open those demos in a browser.",
+      "verifyLog": "2026-10-22 晚间（上海）：gh api img2threejs/img2threejs，license Apache-2.0，about 18682 stars as of 2026-10-22（stargazers_count=18682），forks 1570，创建 2026-07-15T02:58:39Z，最近推送 2026-10-21T08:27:20Z，homepage https://img2threejs.io ，语言 Python。SKILL.md frontmatter 为 version 2.0.0、license Apache-2.0。README Live demos 表有 Tropical Island、Man Robot、Snowbound Crossing、Ocean Blue PRS Guitar、Groot、Raz、Starship + Super Heavy、Mars Cat、Lee Sin、Dual-Sword Warrior、AWP Medusa、Talon Knife 等行，链到 img2threejs.io 的 hash 路由；画廊源码仓库为 img2threejs/img2threejs-showcase。GitHub 仓库页 HTTP 200。X 帖 https://x.com/zmdsb259414/status/2113140946699460933 作者 @zmdsb259414，创建 2026-10-22T05:30:36Z，把 img2threejs 放在 8 个仓库清单的第 1 条，帖内写约 18600 star。预览为 Playwright 实拍 README「Live demos」表格，1200×800 WebP。没有执行 npx install，没有跑 forge，没有打开在线 WebGL 演示，没有用参考图重建模型。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): gh api img2threejs/img2threejs, license Apache-2.0, about 18682 stars as of 2026-10-22 (stargazers_count=18682), 1570 forks, created 2026-07-15T02:58:39Z, last push 2026-10-21T08:27:20Z, homepage https://img2threejs.io , language Python. SKILL.md frontmatter says version 2.0.0 and license Apache-2.0. The README Live demos table includes rows such as Tropical Island, Man Robot, Snowbound Crossing, Ocean Blue PRS Guitar, Groot, Raz, Starship + Super Heavy, Mars Cat, Lee Sin, Dual-Sword Warrior, AWP Medusa, and Talon Knife, linking to hash routes on img2threejs.io; the gallery source repo is img2threejs/img2threejs-showcase. The GitHub repo page was HTTP 200. X post https://x.com/zmdsb259414/status/2113140946699460933 by @zmdsb259414, created 2026-10-22T05:30:36Z, lists img2threejs first among eight repos and says about 18600 stars. Preview is a Playwright capture of the README Live demos table, 1200×800 WebP. npx install was not run, forge was not run, the live WebGL demos were not opened, and no reference image was reconstructed."
+    },
+    {
+      "id": "oneshotprompts",
+      "slug": "oneshotprompts",
+      "title": "oneshotprompts：把白话想法写成动效提示词",
+      "titleEn": "oneshotprompts: turn a plain-words idea into a motion-design prompt",
+      "hook": "白话想法写成带技法槽位的动效提示词。",
+      "hookEn": "A plain-words idea becomes a motion prompt with technique slots.",
+      "summary": "oneshotprompts 是浏览器里的动效提示词编辑器。使用条款写网站免费使用，没有账号；你写的提示词留在浏览器里，站点说自己收不到。工具条有 Scene、Step、Blank 和 Technique。虚线词可以点开换说法。页面上有 Roll 和 Surprise me，也有 Copy prompt。关于页写技法库 923 条，其中 900 条有一段会循环的短示例；编辑器搜索框也写着 923。编辑器下方有给 AI 助手的说明，/agents/ 列出 WebMCP 工具，例如 read_prompt、search_techniques、get_final_prompt，给已经开着这个页面的 Chrome 助手用。另外有一份可选的邮件周报（Motion Cheat Sheet：先是 50 条白话技法，之后每周一条），不订阅也能写、能复制。关于页写制作者是 Takayuki Hoffman。本库没有订阅邮件，没有把提示词贴进模型出片，也没有用助手驱动页面。",
+      "summaryEn": "oneshotprompts is a motion-design prompt editor in the browser. The terms say the site is free to use and there is no account; prompts stay in the browser, and the site says it does not receive them. The toolbar has Scene, Step, Blank, and Technique. Dotted words can be tapped to swap the wording. The page has Roll and Surprise me, and Copy prompt. The about page says the technique library has 923 entries, 900 of them with a short looping example; the editor search field also says 923. Under the editor there are instructions for an AI agent, and /agents/ lists WebMCP tools such as read_prompt, search_techniques, and get_final_prompt for an agent that already has this page open in Chrome. A newsletter is optional (Motion Cheat Sheet: 50 techniques in plain words, then one a week); you can write and copy without joining. The about page names Takayuki Hoffman as the maker. This library did not join the newsletter, did not paste a prompt into a model to make a clip, and did not let an agent drive the page.",
+      "sourceUrl": "https://oneshotprompts.com/",
+      "secondaryUrls": [
+        "https://oneshotprompts.com/agents/",
+        "https://oneshotprompts.com/about/",
+        "https://x.com/rayanabdulcader/status/2113033625457324451"
+      ],
+      "previewImage": "/previews/oneshotprompts.webp",
+      "types": [
+        "tool",
+        "motion"
+      ],
+      "tags": [
+        "motion",
+        "prompts",
+        "free",
+        "webmcp",
+        "editor"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "免费网页工具。条款写不注册就能用，提示词不上传到站点。邮件周报是可选的，不订也能复制提示词。923 和 900 是关于页和页面自己的数字，本库没有逐条点开示例。没有把提示词交给模型，也没有调用页面上的助手工具。",
+      "qualityNoteEn": "A free web tool. The terms say it works without an account, and prompts are not uploaded to the site. The newsletter is optional; you can copy a prompt without joining. 923 and 900 are the site’s own figures, and this library did not open each example. A prompt was not handed to a model, and the page’s agent tools were not called.",
+      "verifyLog": "2026-10-22 晚间（上海）：https://oneshotprompts.com/ HTTP 200，文档标题为 Write motion design prompts · oneshotprompts。首屏可见 Scene、Step、Blank、Technique、Copy prompt、搜索框文案 Search 923 techniques，以及 Using an AI agent? It can work this page directly. / Copy instructions。页内 HTML 另有 Roll、Surprise me，以及 Motion Cheat Sheet 邮件表单（50 techniques in plain words，then one new technique and a prompt to try each week）。/about/ HTTP 200：技法库 923 条，900 条有短的现场示例；制作者 Takayuki Hoffman。/agents/ HTTP 200，响应头 last-modified 为 Fri, 16 Oct 2026；页上工具名为 get_writing_guide、read_prompt、write_prompt、edit_prompt、search_techniques、get_technique、get_settings、change_setting、list_ideas、start_from、add_scene、get_final_prompt，并写 search_techniques 在全部 923 条里查找。/terms/ HTTP 200，Last updated October 15, 2026，原文 The site is free to use，并写提示词归用户、站点收不到。/privacy/ 写没有账号、newsletter is opt-in。站点没有公开源代码仓库，本条不标开源许可证。X 帖 https://x.com/rayanabdulcader/status/2113033625457324451 作者 @rayanabdulcader，创建 2026-10-21T22:24:09Z。预览为 Playwright 实拍工具页首屏，1200×800 WebP。没有点 Roll 或 Surprise me，没有点虚线词，没有复制提示词去模型出片，没有订阅邮件，没有在 Chrome 里接 WebMCP，也没有逐条打开示例。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): https://oneshotprompts.com/ HTTP 200, document title Write motion design prompts · oneshotprompts. The first screen shows Scene, Step, Blank, Technique, Copy prompt, a search field reading Search 923 techniques, and Using an AI agent? It can work this page directly. / Copy instructions. The page HTML also has Roll, Surprise me, and a Motion Cheat Sheet email form (50 techniques in plain words, then one new technique and a prompt to try each week). /about/ HTTP 200: a library of 923 techniques, 900 with a short live example; maker Takayuki Hoffman. /agents/ HTTP 200, response header last-modified Fri, 16 Oct 2026; tool names on the page are get_writing_guide, read_prompt, write_prompt, edit_prompt, search_techniques, get_technique, get_settings, change_setting, list_ideas, start_from, add_scene, and get_final_prompt, and it says search_techniques looks through all 923. /terms/ HTTP 200, Last updated October 15, 2026, with the sentence The site is free to use, and a statement that prompts belong to the user and the site does not receive them. /privacy/ says there are no accounts and the newsletter is opt-in. No public source repo was found, so this entry does not name an open-source license. X post https://x.com/rayanabdulcader/status/2113033625457324451 by @rayanabdulcader, created 2026-10-21T22:24:09Z. Preview is a Playwright capture of the tool’s first screen, 1200×800 WebP. Roll and Surprise me were not clicked, dotted words were not tapped, a prompt was not copied into a model, the newsletter was not joined, WebMCP was not connected in Chrome, and the examples were not opened one by one."
+    },
+    {
       "id": "design-style",
       "slug": "design-style",
       "title": "Design Style：每天一个设计风格",
@@ -5159,9 +5268,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-22T01:27:06Z",
+    "updatedAt": "2026-10-22T12:40:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
-    "count": 137
+    "count": 139
   }
 }
