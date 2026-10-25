@@ -1,6 +1,74 @@
 {
   "items": [
     {
+      "id": "regex-marble-run",
+      "slug": "regex-marble-run",
+      "title": "Regex Marble Run：把正则画成 3D 弹珠轨道",
+      "titleEn": "Regex Marble Run: a regular expression as a 3D marble track",
+      "hook": "把一条正则走成能看见回溯的 3D 弹珠轨道。",
+      "hookEn": "Watch a regular expression run as a 3D marble track.",
+      "summary": "Regex Marble Run 把一条 JavaScript 正则画成 3D 弹珠轨道：字符是一扇门，贪婪量词是回环，弹珠沿着匹配往下走。旁边记步数、回溯、尝试次数、保存的选择和原生耗时。打开就是示例 <.+>，测试串是 <b>bold</b>，轨道在播，步数会往前走。代码 MIT。适合想看见正则为什么回溯、而不只看匹配结果的人。本库看了这条默认示例在播，没有改成自己的表达式。",
+      "summaryEn": "Regex Marble Run draws a JavaScript regular expression as a 3D marble track: a character is a gate, a greedy quantifier is a loop, and marbles follow the match. A side panel counts steps, backtracks, attempts, saved choices, and native time. It opens on the example <.+> with the test string <b>bold</b>, the track plays, and the step count advances. The code is MIT. Good when you want to see why a pattern backtracks, not only whether it matches. This library watched that default example play and did not write a pattern of its own.",
+      "sourceUrl": "https://www.regexmarblerun.com/",
+      "secondaryUrls": [
+        "https://github.com/bottomless/regex-marble-run",
+        "https://news.ycombinator.com/item?id=50122671"
+      ],
+      "previewImage": "/previews/regex-marble-run.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "regex",
+        "3d",
+        "visualization",
+        "javascript",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-19T01:40:00Z",
+      "qualityNote": "看过默认示例的轨道在播放，步数会往前走。没有改成自己的复杂表达式，也没有核对页面上的原生耗时。",
+      "qualityNoteEn": "The default example track was playing and the step count advanced. No custom pattern was written, and the on-page native time was not checked against the browser.",
+      "verifyLog": "2026-10-19 早间：regexmarblerun.com HTTP 200，标题 Regex Marble Run。默认示例 /<.+>/ ，测试串 <b>bold</b>，状态 Playing；先看到 Steps 1，稍后 Steps 2、进度 4/39，Native time 0.00–0.10 ms。页面 GitHub 链到 bottomless/regex-marble-run。gh api：MIT，5★，创建于 2026-10-13T09:35:31Z，最近推送 2026-10-15T18:46:02Z。HN https://news.ycombinator.com/item?id=50122671 ，2026-10-16T18:48:48Z，撰写时 87pts，标题 Regex visualized as 3D marble run。预览为轨道播放中的实拍，1200×800 WebP。未改写正则，未对拍浏览器 RegExp 耗时。",
+      "verifyLogEn": "2026-10-19 morning: regexmarblerun.com HTTP 200, title Regex Marble Run. Default example /<.+>/ , test string <b>bold</b>, status Playing; Steps showed 1, then later Steps 2 and progress 4/39, native time 0.00–0.10 ms. The page's GitHub link goes to bottomless/regex-marble-run. gh api: MIT, 5★, created 2026-10-13T09:35:31Z, last push 2026-10-15T18:46:02Z. HN https://news.ycombinator.com/item?id=50122671 , 2026-10-16T18:48:48Z, 87pts at write time, title Regex visualized as 3D marble run. Preview is a 1200×800 WebP while the track was playing. The pattern was not rewritten, and the native time was not checked against the browser RegExp."
+    },
+    {
+      "id": "duck-pond",
+      "slug": "duck-pond",
+      "title": "Duck Pond：浏览器里现场合成的鸭叫",
+      "titleEn": "Duck Pond: duck calls synthesized in the browser",
+      "hook": "浏览器里的鸭塘，叫声是现场合成的，不是录音。",
+      "hookEn": "A browser duck pond whose calls are synthesized, not recorded.",
+      "summary": "Duck Pond 是浏览器里的一小群绿头鸭。介绍写：三只母鸭、两只公鸭、两窝小鸭；不用录音，每声叫都在当下合成，并按你站在岸边的位置来听。侧栏按远近列出名字、距离、朝向和正在做的事，叫的时候会标出那一声。可以扔豌豆，也可以改成耳机听感。代码 MIT。适合想听程序合成的鸭叫、而不是一段循环录音的人。本库没有在这个环境里听到声音。",
+      "summaryEn": "Duck Pond is a small flock of mallards in the browser. The intro says three hens, two drakes, and two broods of ducklings; there are no recordings, every call is synthesized as it happens, and you hear it from where you stand on the bank. A side list orders each bird by distance and shows its name, bearing, and what it is doing, and marks a call when one happens. You can throw peas, or switch the render for headphones. The code is MIT. Good when you want a synthesized duck call rather than a looped recording. This library did not hear the audio in this environment.",
+      "sourceUrl": "https://celphase.github.io/duck-pond/",
+      "secondaryUrls": [
+        "https://github.com/celphase/duck-pond",
+        "https://news.ycombinator.com/item?id=50131006"
+      ],
+      "previewImage": "/previews/duck-pond.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "audio",
+        "synthesizer",
+        "web-audio",
+        "wasm",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-19T01:40:00Z",
+      "qualityNote": "页面介绍写没有录音、叫声当下合成。这个环境里音频工作线程没有启动，所以没有听到声音。地图上能看到页面场景里的鸭、距离和活动，其中一只标着 pip-pip。没有确认扔豌豆成功。",
+      "qualityNoteEn": "The page says there are no recordings and calls are synthesized as they happen. Audio playback did not start in this environment, so nothing was heard. The map showed the page's own flock with distances and activities, including one pip-pip call. Throwing peas was not confirmed.",
+      "verifyLog": "2026-10-19 早间：celphase.github.io/duck-pond HTTP 200。介绍层原文：three hens, two drakes and two broods of ducklings. No recordings. 点 Listen 后 AudioContext 状态为 running，但 AudioWorklet.addModule 未完成，AudioWorkletNode 报 pond-player is not defined，所以没有出声。随后跑的是页面自带的 duck_pond.wasm 场景（pond-worker.js），侧栏出现 Pip、Mabel、Fig、Bean、Dot、Clover、Bramble、Rufus、Nib、Hazel、Sprout、Tuft，活动含 picking insects、grazing、resting、dabbling、preening、huddled，Nib 标 pip-pip。Throw peas 点过，豌豆计数仍是 0，未确认撒出。gh api：celphase/duck-pond，MIT，17★，创建于 2026-10-17T12:21:03Z，最近推送 2026-10-17T16:30:10Z，描述 High-quality duck audio synthesizer。Show HN https://news.ycombinator.com/item?id=50131006 ，2026-10-17T13:28:46Z，撰写时 168pts。预览为 wasm 场景画出的俯视鸭塘，1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 morning: celphase.github.io/duck-pond HTTP 200. Intro text: three hens, two drakes and two broods of ducklings. No recordings. After Listen, AudioContext state was running, but AudioWorklet.addModule did not finish and AudioWorkletNode reported pond-player is not defined, so nothing was heard. The map then came from the page's own duck_pond.wasm scene (pond-worker.js). The list showed Pip, Mabel, Fig, Bean, Dot, Clover, Bramble, Rufus, Nib, Hazel, Sprout, and Tuft, with activities including picking insects, grazing, resting, dabbling, preening, and huddled; Nib was marked pip-pip. Throw peas was clicked and the pea count stayed 0, so a scatter was not confirmed. gh api: celphase/duck-pond, MIT, 17★, created 2026-10-17T12:21:03Z, last push 2026-10-17T16:30:10Z, description High-quality duck audio synthesizer. Show HN https://news.ycombinator.com/item?id=50131006 , 2026-10-17T13:28:46Z, 168pts at write time. Preview is the top-down pond drawn by that wasm scene, 1200×800 WebP."
+    },
+    {
       "id": "pele",
       "slug": "pele",
       "title": "Pele：把 Mermaid 画成可换主题的 SVG",
@@ -4781,9 +4849,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-18T12:20:00Z",
+    "updatedAt": "2026-10-19T01:40:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
-    "count": 139
+    "count": 138
   }
 }
