@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "blobz",
+      "slug": "blobz",
+      "title": "Blobz：任意名字生成同款玩味 SVG 头像，可编辑也可当图片 API",
+      "titleEn": "Blobz: playful deterministic SVG avatars from any name, studio or image API",
+      "hook": "任意名字生成同款玩味 SVG 头像，可编辑也可当图片 API。",
+      "hookEn": "Turn any name into a playful deterministic SVG avatar, studio or image API.",
+      "summary": "Blobz（MIT，仓库 lirena00/blobz）把用户名、邮箱或任意 ID 变成玩味的确定性 SVG 头像：同一输入与配色永远同一张脸，不必存图。可在 https://blobz.lirena.in/create 在线设计，用 `@blobz/react` / `@blobz/avatar-core` 嵌进应用，或走托管图片 API。适合缺省头像、演示账号脸、设计系统里的占位肖像。",
+      "summaryEn": "Blobz (MIT, repo lirena00/blobz) turns a username, email, or any ID into a playful deterministic SVG avatar: the same input and palette always yield the same face, with no image store. Design live at https://blobz.lirena.in/create, embed with `@blobz/react` / `@blobz/avatar-core`, or use the hosted image API. Good for default avatars, demo faces, and placeholder portraits in a design system.",
+      "sourceUrl": "https://blobz.lirena.in/",
+      "secondaryUrls": [
+        "https://blobz.lirena.in/create",
+        "https://github.com/lirena00/blobz",
+        "https://news.ycombinator.com/item?id=50086216"
+      ],
+      "previewImage": "/previews/blobz.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "svg",
+        "avatar",
+        "design",
+        "generator",
+        "react",
+        "open-source",
+        "mit",
+        "hacker-news"
+      ],
+      "qualityNote": "收录理由：拿来就能用的头像生成小工具，确定性输出、可商用路径清晰。边界：本库在工作室页输入名字确认会变脸，没有 npm 安装，没有调用托管 API 做压测。",
+      "qualityNoteEn": "Listed as a ready-to-use deterministic avatar generator with a clear path into apps. Boundary: this library typed a name in the studio and confirmed the face updates; it did not npm-install or load-test the hosted API.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-15T01:10:00Z",
+      "verifyLog": "主源 https://blobz.lirena.in/ 与 /create、仓库 lirena00/blobz；早间 HTTP 200。gh api：MIT、约 18★，仓库 2026-10-09 创建，最近推送 2026-10-14。Show HN https://news.ycombinator.com/item?id=50086216（2026-10-14，撰写时约 7 分）。确定性 SVG、React / core 包、托管 API 均照 README。预览为 Playwright 实拍 /create 工作室（输入 Saksham），裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources https://blobz.lirena.in/ and /create, repo lirena00/blobz; HTTP 200 this morning. gh api: MIT, ~18★, created 2026-10-09, last push 2026-10-14. Show HN https://news.ycombinator.com/item?id=50086216 (2026-10-14, about 7 points at write time). Deterministic SVG, React/core packages, and hosted API follow the README. Preview is a Playwright capture of /create (name Saksham), cropped to a self-hosted 3:2 WebP."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +4599,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-15T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.66",
+    "count": 137
   }
 }
