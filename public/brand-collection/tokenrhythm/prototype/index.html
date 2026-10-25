@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="color-scheme" content="dark" />
+  <title>基元律动 · 蝴蝶效应概念稿</title>
+  <meta name="description" content="基元律动品牌网站视觉概念稿，方向 1「蝴蝶效应」：中心一点冷高光与几何涟漪场。探索稿，非定稿。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..650&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* Tokens — direction 1 "Butterfly Effect". Canvas, highlight and text values follow §2 / §3-1 of the concept pack. */
+    :root {
+      --bg: #05070c;
+      --bg-deep: #0a1220;
+      --card: #0e1624;
+      --card-hi: #152033;
+      --line: rgba(168, 224, 255, 0.09);
+      --line-hi: rgba(168, 224, 255, 0.2);
+      --text: #e8eef7;
+      --muted: #9aa8bc;
+      --faint: #5f6c80;
+      --hi: #a8e0ff;
+      --cyan: #7ec8ff;
+      --blue: #5b8cff;
+      --teal: #6ee7d8;
+      --sans: "Inter", -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+      --wrap: 1200px;
+      --gutter: clamp(16px, 4vw, 40px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 400 16px/1.7 var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--hi); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
+    .mono { font-family: var(--mono); letter-spacing: 0.02em; }
+
+    /* Review strip — keeps the "exploration, not final" status visible. */
+    .review {
+      position: relative; z-index: 30;
+      display: flex; justify-content: center; gap: 6px 16px; flex-wrap: wrap;
+      padding: 7px var(--gutter);
+      background: #070b13; border-bottom: 1px solid var(--line);
+      color: var(--faint); font: 400 11px/1.6 var(--mono); letter-spacing: 0.04em;
+    }
+    .review strong { color: var(--muted); font-weight: 500; }
+    .review a { color: var(--cyan); text-decoration: none; }
+    .review a:hover { text-decoration: underline; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(5, 7, 12, 0.72);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav .wrap { display: flex; align-items: center; gap: 32px; height: 60px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; white-space: nowrap; }
+    .brand svg { width: 22px; height: 22px; color: var(--hi); flex: none; }
+    .brand b { font-weight: 600; font-size: 15px; letter-spacing: 0.04em; }
+    .brand span { color: var(--faint); font: 400 12px/1 var(--mono); }
+    .nav ul { display: flex; gap: 26px; margin: 0; padding: 0; list-style: none; }
+    .nav ul a { color: var(--muted); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+    .nav ul a:hover { color: var(--text); }
+    .nav .spacer { flex: 1; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 40px; padding: 0 18px;
+      border-radius: 999px; border: 1px solid transparent;
+      font: 500 14px/1 var(--sans); text-decoration: none; white-space: nowrap;
+      cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary { background: var(--text); color: #05070c; }
+    .btn-primary:hover { background: #fff; box-shadow: 0 0 0 6px rgba(168, 224, 255, 0.08), 0 0 32px rgba(126, 200, 255, 0.25); }
+    .btn-ghost { border-color: var(--line-hi); color: var(--text); background: rgba(14, 22, 36, 0.4); }
+    .btn-ghost:hover { border-color: rgba(168, 224, 255, 0.4); background: rgba(21, 32, 51, 0.6); }
+    .btn-sm { min-height: 34px; padding: 0 14px; font-size: 13px; }
+    .btn .arrow { transition: transform 0.2s; }
+    .btn:hover .arrow { transform: translateX(2px); }
+
+    /* Hero */
+    .hero {
+      position: relative; isolation: isolate;
+      min-height: min(calc(100svh - 88px), 900px);
+      display: flex; align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(60% 70% at 66% 56%, rgba(10, 18, 32, 0.95) 0%, rgba(5, 7, 12, 0) 70%),
+        var(--bg);
+    }
+    .field { position: absolute; inset: 0; width: 100%; height: 100%; display: block; z-index: -1; }
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: linear-gradient(90deg, var(--bg) 0%, rgba(5, 7, 12, 0.9) 30%, rgba(5, 7, 12, 0.5) 42%, rgba(5, 7, 12, 0) 56%);
+    }
+    .hero::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 120px; z-index: -1; pointer-events: none;
+      background: linear-gradient(180deg, rgba(5, 7, 12, 0), var(--bg));
+    }
+    .hero-copy { position: relative; max-width: 540px; padding: 72px 0 96px; pointer-events: none; }
+    .hero-copy a, .hero-copy button { pointer-events: auto; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      margin: 0 0 28px; color: var(--muted); font: 400 12px/1 var(--mono); letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .eyebrow i { width: 5px; height: 5px; border-radius: 50%; background: var(--hi); box-shadow: 0 0 10px 2px rgba(168, 224, 255, 0.55); }
+    .hero h1 {
+      margin: 0; font-weight: 600; font-size: clamp(42px, 6vw, 80px); line-height: 1.06; letter-spacing: -0.02em;
+      background: linear-gradient(180deg, #f4f8fd 30%, #b7c6d8 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero .tagline { margin: 22px 0 0; color: var(--hi); font: 400 15px/1.4 var(--mono); letter-spacing: 0.06em; }
+    .hero .lede { margin: 22px 0 0; max-width: 27em; color: var(--muted); font-size: 17px; line-height: 1.8; }
+    .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+    .hero .audience { margin: 28px 0 0; color: var(--faint); font: 400 12px/1.6 var(--mono); letter-spacing: 0.04em; }
+
+    .hero-tools {
+      position: absolute; right: var(--gutter); bottom: 28px; z-index: 2;
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; min-height: 32px; padding: 0 12px;
+      border: 1px solid var(--line); border-radius: 999px; background: rgba(5, 7, 12, 0.6);
+      color: var(--muted); font: 400 11px/1 var(--mono); letter-spacing: 0.04em; cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .chip:hover, .chip[aria-pressed="true"] { color: var(--hi); border-color: var(--line-hi); }
+    .chip i { width: 6px; height: 6px; border-radius: 50%; border: 1px solid currentColor; }
+    .chip[aria-pressed="true"] i { background: currentColor; }
+
+    /* Annotation overlay: labels follow points projected from the field. */
+    .annos { position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0; transition: opacity 0.3s; }
+    .annos.on { opacity: 1; }
+    .anno { position: absolute; left: 0; top: 0; will-change: transform; }
+    .anno::before {
+      content: ""; position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%;
+      border: 1px solid var(--teal); background: var(--bg);
+    }
+    .anno::after { content: ""; position: absolute; left: 3px; top: 0; width: 22px; height: 1px; background: rgba(110, 231, 216, 0.5); }
+    .anno span {
+      position: absolute; left: 30px; top: -10px; white-space: nowrap;
+      padding: 3px 8px; border: 1px solid rgba(110, 231, 216, 0.3); border-radius: 4px; background: rgba(5, 7, 12, 0.82);
+      color: var(--teal); font: 400 11px/1.4 var(--mono); letter-spacing: 0.04em;
+    }
+    .anno.flip::after { left: auto; right: 3px; }
+    .anno.flip span { left: auto; right: 30px; }
+    .anno span em { color: var(--muted); font-style: normal; margin-left: 6px; }
+
+    /* Sections */
+    section.block { position: relative; padding: clamp(80px, 11vw, 140px) 0; }
+    section.block + section.block { border-top: 1px solid var(--line); }
+    .kicker { margin: 0 0 18px; color: var(--cyan); font: 400 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; }
+    .h2 { margin: 0; max-width: 18em; font-weight: 600; font-size: clamp(30px, 3.8vw, 48px); line-height: 1.18; letter-spacing: -0.015em; }
+    .sub { margin: 18px 0 0; max-width: 40em; color: var(--muted); font-size: 16px; }
+
+    /* 01 Method — four glyphs of the site grammar */
+    .grammar { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: 64px; border-top: 1px solid var(--line); }
+    .grammar article { position: relative; padding: 32px 28px 8px 0; }
+    .grammar article + article { padding-left: 28px; border-left: 1px solid var(--line); }
+    .grammar svg { display: block; width: 88px; height: 88px; color: var(--hi); overflow: visible; }
+    .grammar .num { margin: 28px 0 10px; color: var(--faint); font: 400 12px/1 var(--mono); }
+    .grammar h3 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: 0.02em; }
+    .grammar h3 small { margin-left: 8px; color: var(--faint); font: 400 12px/1 var(--mono); letter-spacing: 0.04em; }
+    .grammar p { margin: 12px 0 0; color: var(--muted); font-size: 15px; line-height: 1.75; }
+    .grammar .maps { margin-top: 18px; color: var(--cyan); font: 400 12px/1.6 var(--mono); }
+    .glyph-pulse { transform-origin: 44px 44px; animation: glyph 4s cubic-bezier(.2,.6,.3,1) infinite; }
+    .glyph-pulse.d2 { animation-delay: 1.33s; }
+    .glyph-pulse.d3 { animation-delay: 2.66s; }
+    @keyframes glyph { 0% { transform: scale(0.15); opacity: 0; } 15% { opacity: 0.9; } 100% { transform: scale(1); opacity: 0; } }
+    .glyph-dash { animation: dash 3.2s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -40; } }
+
+    /* 02 Flow — one request along a ripple track */
+    .flow { position: relative; margin-top: 72px; }
+    .track { position: relative; height: 56px; margin: 0 0 8px; }
+    .track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: linear-gradient(90deg, rgba(168,224,255,0.35), rgba(168,224,255,0.08)); }
+    .track .runner {
+      position: absolute; top: 50%; left: 0; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px; border-radius: 50%;
+      background: #fff; box-shadow: 0 0 0 4px rgba(168, 224, 255, 0.12), 0 0 18px 4px rgba(126, 200, 255, 0.6);
+      animation: run 8s cubic-bezier(.45,0,.55,1) infinite;
+    }
+    @keyframes run { 0% { left: 0; opacity: 0; } 4% { opacity: 1; } 92% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+    .track .node { position: absolute; top: 50%; width: 0; height: 0; }
+    .track .node b { position: absolute; left: -3px; top: -3px; width: 6px; height: 6px; border-radius: 50%; background: var(--hi); }
+    .track .node i {
+      position: absolute; left: -22px; top: -22px; width: 44px; height: 44px; border-radius: 50%;
+      border: 1px solid rgba(168, 224, 255, 0.5); opacity: 0; transform: scale(0.2);
+      animation: node 8s ease-out infinite;
+    }
+    .track .node i + i { animation-name: node2; }
+    .track .node:nth-of-type(2) i { animation-delay: 0.3s; }
+    .track .node:nth-of-type(3) i { animation-delay: 2.6s; }
+    .track .node:nth-of-type(4) i { animation-delay: 4.9s; }
+    .track .node:nth-of-type(5) i { animation-delay: 7.2s; }
+    @keyframes node { 0% { opacity: 0; transform: scale(0.2); } 2% { opacity: 0.9; } 16% { opacity: 0; transform: scale(1.4); } 100% { opacity: 0; transform: scale(1.4); } }
+    @keyframes node2 { 0%, 3% { opacity: 0; transform: scale(0.2); } 5% { opacity: 0.6; } 22% { opacity: 0; transform: scale(2.1); } 100% { opacity: 0; transform: scale(2.1); } }
+    .steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin: 0; padding: 0; list-style: none; }
+    .steps li { padding-top: 18px; }
+    .steps .mono { color: var(--faint); font-size: 12px; }
+    .steps h3 { margin: 10px 0 0; font-size: 20px; font-weight: 600; }
+    .steps p { margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+    .steps .return { color: var(--teal); }
+
+    /* Workbench — abstract panels, before / after a pass */
+    .bench { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 56px; }
+    .pane {
+      position: relative; overflow: hidden; min-height: 220px; padding: 22px;
+      background: linear-gradient(180deg, var(--card), rgba(14, 22, 36, 0.6));
+      border: 1px solid var(--line); border-radius: 14px;
+    }
+    .pane header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; color: var(--faint); font: 400 11px/1 var(--mono); letter-spacing: 0.06em; }
+    .pane header b { font-weight: 400; color: var(--muted); }
+    .pane .bar { height: 8px; margin: 0 0 14px; border-radius: 4px; background: rgba(154, 168, 188, 0.16); transition: width 0.9s cubic-bezier(.2,.7,.2,1), background 0.9s; }
+    .pane .bar.hd { height: 10px; width: 34%; margin-bottom: 26px; background: rgba(154, 168, 188, 0.28); }
+    .pane .tag { position: absolute; right: 22px; top: 52px; width: 54px; height: 18px; border-radius: 4px; border: 1px solid var(--line-hi); transition: background 0.9s, border-color 0.9s; }
+    .bench.play .pane.after .tag { background: rgba(126, 200, 255, 0.22); border-color: rgba(168, 224, 255, 0.5); }
+    .bench.play .pane.after .bar.lit { background: linear-gradient(90deg, rgba(126, 200, 255, 0.5), rgba(126, 200, 255, 0.12)); }
+    .pane .sweep {
+      position: absolute; left: -40%; top: 50%; width: 180%; aspect-ratio: 1; border-radius: 50%;
+      border: 1px solid rgba(168, 224, 255, 0.45); transform: translate(-50%, -50%) scale(0.05); opacity: 0; pointer-events: none;
+    }
+    .bench.play .pane.after .sweep { animation: sweep 1.6s cubic-bezier(.2,.6,.3,1) forwards; }
+    @keyframes sweep { 0% { opacity: 0.9; transform: translate(-50%, -50%) scale(0.05); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1); } }
+    .bench-note { margin: 14px 0 0; color: var(--faint); font: 400 12px/1.6 var(--mono); }
+
+    /* 03 Audience */
+    .who { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 56px; }
+    .card {
+      position: relative; padding: 28px; min-height: 220px;
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .card:hover { border-color: var(--line-hi); background: var(--card-hi); }
+    .card .state { display: inline-block; padding: 4px 9px; border: 1px solid var(--line-hi); border-radius: 999px; color: var(--hi); font: 400 11px/1 var(--mono); letter-spacing: 0.06em; }
+    .card .state.next { color: var(--faint); border-color: var(--line); }
+    .card h3 { margin: 26px 0 0; font-size: 22px; font-weight: 600; }
+    .card p { margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+    .card.dim h3 { color: var(--muted); }
+
+    .values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 72px; border-top: 1px solid var(--line); }
+    .values div { padding: 28px 28px 0 0; }
+    .values div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+    .values b { display: block; font-size: 28px; font-weight: 600; letter-spacing: 0.08em; }
+    .values span { display: block; margin-top: 8px; color: var(--muted); font-size: 15px; }
+
+    /* Closing — top-down ripple */
+    .closing { position: relative; isolation: isolate; overflow: hidden; min-height: 560px; display: grid; place-items: center; text-align: center; border-top: 1px solid var(--line); }
+    .closing .field { z-index: -1; }
+    .closing::before {
+      content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: radial-gradient(closest-side, rgba(5, 7, 12, 0.9) 0%, rgba(5, 7, 12, 0.35) 55%, rgba(5, 7, 12, 0) 100%);
+    }
+    .closing .inner { padding: 120px var(--gutter); }
+    .closing .h2 { margin: 0 auto; }
+    .closing .tagline { margin: 18px 0 0; color: var(--hi); font: 400 14px/1.4 var(--mono); letter-spacing: 0.08em; }
+    .closing .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 40px 0 48px; color: var(--faint); font-size: 13px; }
+    footer .wrap { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 24px; }
+    footer .cols { display: flex; gap: 40px; flex-wrap: wrap; }
+    footer .cols p { margin: 0 0 6px; }
+    footer .cols a { color: var(--muted); text-decoration: none; }
+    footer .cols a:hover { color: var(--text); }
+    footer .meta { flex-basis: 100%; margin-top: 16px; padding-top: 20px; border-top: 1px solid var(--line); font: 400 11px/1.7 var(--mono); letter-spacing: 0.03em; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .nav ul { display: none; }
+      .grammar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grammar article:nth-child(3) { padding-left: 0; border-left: 0; }
+      .grammar article:nth-child(n + 3) { border-top: 1px solid var(--line); margin-top: 24px; }
+      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 32px; }
+      .track { display: none; }
+      .steps li { border-top: 1px solid var(--line-hi); }
+      .who { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+    }
+    @media (max-width: 820px) {
+      .hero { flex-direction: column; align-items: stretch; min-height: 0; }
+      .hero > .wrap { order: 0; }
+      .hero > .field { order: 1; }
+      .hero > .hero-tools { order: 2; }
+      .hero::before { background: none; }
+      .hero-copy { max-width: none; padding: 48px 0 0; }
+      .hero .field { position: relative; inset: auto; height: min(96vw, 480px); margin-top: 8px; z-index: 0; }
+      .hero::after { display: none; }
+      .hero-tools { position: relative; right: auto; bottom: auto; justify-content: flex-start; padding: 0 var(--gutter) 40px; }
+      .bench { grid-template-columns: 1fr; }
+      .anno span em { display: none; }
+    }
+    @media (max-width: 560px) {
+      .brand span { display: none; }
+      .nav .btn { padding: 0 12px; }
+      .grammar { grid-template-columns: 1fr; }
+      .grammar article, .grammar article + article { padding-left: 0; border-left: 0; }
+      .grammar article + article { border-top: 1px solid var(--line); margin-top: 24px; }
+      .steps { grid-template-columns: 1fr; }
+      .values { grid-template-columns: 1fr; }
+      .values div, .values div + div { padding-left: 0; border-left: 0; }
+      .values div + div { margin-top: 24px; border-top: 1px solid var(--line); }
+      .hero .lede { font-size: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .glyph-pulse, .glyph-dash, .track .runner, .track .node i, .bench.play .pane.after .sweep { animation: none; }
+      .glyph-pulse { opacity: 0.5; transform: none; }
+      .glyph-pulse.d2 { opacity: 0.32; }
+      .glyph-pulse.d3 { opacity: 0.18; }
+      .track .runner { left: 0; }
+      .pane .bar, .pane .tag { transition: none; }
+      [data-motion-only] { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="review" role="note">
+    <span><strong>概念稿</strong> · 方向 1「蝴蝶效应 / Butterfly Effect」</span>
+    <span>探索候选，非定稿，不作上线依据</span>
+    <a href="../">查看方向说明 →</a>
+  </div>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="基元律动 TokenRhythm">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="2.1" fill="currentColor" />
+          <circle cx="12" cy="12" r="6.2" stroke="currentColor" stroke-opacity="0.62" />
+          <circle cx="12" cy="12" r="10.6" stroke="currentColor" stroke-opacity="0.28" />
+        </svg>
+        <b>基元律动</b><span>TokenRhythm</span>
+      </a>
+      <ul>
+        <li><a href="#method">方法</a></li>
+        <li><a href="#flow">工作流</a></li>
+        <li><a href="#who">适合谁</a></li>
+        <li><a href="#about">关于</a></li>
+      </ul>
+      <span class="spacer"></span>
+      <a class="btn btn-ghost btn-sm" href="#start">开始接入</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <canvas class="field" id="hero-field" aria-hidden="true"></canvas>
+      <div class="annos" id="annos" aria-hidden="true">
+        <div class="anno" data-anchor="core"><span>基元<em>一次请求</em></span></div>
+        <div class="anno" data-anchor="ring"><span>律动<em>等距外扩</em></span></div>
+        <div class="anno" data-anchor="panel"><span>组织<em>工作被改写</em></span></div>
+        <div class="anno" data-anchor="return"><span>进化<em>经验回写</em></span></div>
+      </div>
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><i></i>多模型时代的智能组织者</p>
+          <h1 id="hero-title">一点接入，<br />工作换轨。</h1>
+          <p class="tagline">All Models, One Mind</p>
+          <p class="lede">基元律动把多个模型组织成一束可用的智能。从第一次调用开始，每一次交付的经验都会回写，让协同持续进化。</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#start">开始接入 <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#method">了解方法</a>
+          </div>
+          <p class="audience">优先面向个人开发者与小型产品团队</p>
+        </div>
+      </div>
+      <div class="hero-tools">
+        <button class="chip" type="button" id="perturb" data-motion-only><i></i>发出一次扰动</button>
+        <button class="chip" type="button" id="anno-toggle" aria-pressed="false"><i></i>显示图形注释</button>
+      </div>
+    </section>
+
+    <section class="block" id="method" aria-labelledby="method-title">
+      <div class="wrap">
+        <p class="kicker">01 · 方法</p>
+        <h2 class="h2" id="method-title">小基元，大律动。</h2>
+        <p class="sub">一点扰动，改写整条工作流。全站只用一套图形：中心一点、等距外扩、轻擦工作面、一线回流。</p>
+
+        <div class="grammar">
+          <article>
+            <svg viewBox="0 0 88 88" fill="none" aria-hidden="true">
+              <circle cx="44" cy="44" r="14" fill="url(#g-core)" />
+              <circle cx="44" cy="44" r="2.6" fill="#fff" />
+              <defs>
+                <radialGradient id="g-core"><stop offset="0" stop-color="#a8e0ff" stop-opacity="0.6" /><stop offset="1" stop-color="#a8e0ff" stop-opacity="0" /></radialGradient>
+              </defs>
+            </svg>
+            <p class="num">01</p>
+            <h3>基元<small>Primitive</small></h3>
+            <p>一次请求，就是一次扰动的起点。</p>
+            <p class="maps">→ 模型接入</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 88 88" fill="none" aria-hidden="true">
+              <circle cx="44" cy="44" r="14" stroke="currentColor" stroke-opacity="0.18" />
+              <circle cx="44" cy="44" r="28" stroke="currentColor" stroke-opacity="0.12" />
+              <circle cx="44" cy="44" r="42" stroke="currentColor" stroke-opacity="0.08" />
+              <circle class="glyph-pulse" cx="44" cy="44" r="42" stroke="currentColor" />
+              <circle class="glyph-pulse d2" cx="44" cy="44" r="42" stroke="currentColor" />
+              <circle class="glyph-pulse d3" cx="44" cy="44" r="42" stroke="currentColor" />
+              <circle cx="44" cy="44" r="2.4" fill="#fff" />
+            </svg>
+            <p class="num">02</p>
+            <h3>律动<small>Rhythm</small></h3>
+            <p>波纹等距外扩：多个模型按同一节拍展开，不抢拍。</p>
+            <p class="maps">→ 智能组织</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 88 88" fill="none" aria-hidden="true">
+              <circle cx="30" cy="54" r="16" stroke="currentColor" stroke-opacity="0.22" />
+              <circle cx="30" cy="54" r="32" stroke="currentColor" stroke-opacity="0.5" />
+              <rect x="50" y="10" width="34" height="24" rx="3" fill="#0e1624" stroke="currentColor" stroke-opacity="0.55" />
+              <rect x="55" y="16" width="12" height="2.5" rx="1.25" fill="currentColor" fill-opacity="0.5" />
+              <rect x="55" y="22" width="22" height="2" rx="1" fill="#7ec8ff" fill-opacity="0.7" />
+              <rect x="55" y="27" width="15" height="2" rx="1" fill="currentColor" fill-opacity="0.25" />
+              <circle cx="30" cy="54" r="2.4" fill="#fff" />
+            </svg>
+            <p class="num">03</p>
+            <h3>组织<small>Organize</small></h3>
+            <p>波纹擦过工作面，任务被重新编排，交付随之改变。</p>
+            <p class="maps">→ 路由与工作流</p>
+          </article>
+          <article>
+            <svg viewBox="0 0 88 88" fill="none" aria-hidden="true">
+              <circle cx="44" cy="44" r="20" stroke="currentColor" stroke-opacity="0.16" />
+              <circle cx="44" cy="44" r="38" stroke="currentColor" stroke-opacity="0.3" />
+              <path class="glyph-dash" d="M78 26 C 70 6, 34 2, 26 22 S 36 44, 44 44" stroke="#6ee7d8" stroke-opacity="0.8" stroke-dasharray="2 6" stroke-linecap="round" />
+              <circle cx="78" cy="26" r="2" fill="#6ee7d8" />
+              <circle cx="44" cy="44" r="2.4" fill="#fff" />
+            </svg>
+            <p class="num">04</p>
+            <h3>进化<small>Evolve</small></h3>
+            <p>最外圈一线回流：每次交付的经验回到起点。</p>
+            <p class="maps">→ 经验回写 / 后训练</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="flow" aria-labelledby="flow-title">
+      <div class="wrap">
+        <p class="kicker">02 · 工作流</p>
+        <h2 class="h2" id="flow-title">从一次调用，到一条更好的工作流。</h2>
+        <p class="sub">波纹只往外走一次，就把沿途的工作重新排了一遍。</p>
+
+        <div class="flow">
+          <div class="track" aria-hidden="true">
+            <span class="node" style="left:0"><b></b><i></i><i></i></span>
+            <span class="node" style="left:calc(25% + 6px)"><b></b><i></i><i></i></span>
+            <span class="node" style="left:calc(50% + 12px)"><b></b><i></i><i></i></span>
+            <span class="node" style="left:calc(75% + 18px)"><b></b><i></i><i></i></span>
+            <span class="runner"></span>
+          </div>
+          <ol class="steps">
+            <li><span class="mono">A · 接入</span><h3>一个入口</h3><p>把手头的模型接进来，用同一个入口调用。</p></li>
+            <li><span class="mono">B · 组织</span><h3>排进同一条线</h3><p>按任务把合适的模型编进同一条工作流。</p></li>
+            <li><span class="mono">C · 交付</span><h3>回到工作台</h3><p>结果回到你的产品和工作台里，接着用。</p></li>
+            <li><span class="mono return">D · 回写</span><h3>下一次更顺</h3><p>交付中的经验回写，下一次协同更顺手。</p></li>
+          </ol>
+        </div>
+
+        <div class="bench" id="bench">
+          <div class="pane before" aria-hidden="true">
+            <header><b>工作台 · 扰动前</b><span>—</span></header>
+            <span class="tag"></span>
+            <div class="bar hd"></div>
+            <div class="bar" style="width:82%"></div>
+            <div class="bar" style="width:64%"></div>
+            <div class="bar" style="width:48%"></div>
+            <div class="bar" style="width:70%"></div>
+          </div>
+          <div class="pane after" aria-hidden="true">
+            <span class="sweep"></span>
+            <header><b>工作台 · 一次扰动之后</b><span>已换轨</span></header>
+            <span class="tag"></span>
+            <div class="bar hd" style="width:46%"></div>
+            <div class="bar lit" data-to="58%" style="width:82%"></div>
+            <div class="bar" data-to="90%" style="width:64%"></div>
+            <div class="bar lit" data-to="72%" style="width:48%"></div>
+            <div class="bar" data-to="38%" style="width:70%"></div>
+          </div>
+        </div>
+        <p class="bench-note">示意：抽象界面块，不展示真实产品界面。滚动到这里时，右侧工作台被一圈波纹改写。</p>
+      </div>
+    </section>
+
+    <section class="block" id="who" aria-labelledby="who-title">
+      <div class="wrap">
+        <p class="kicker">03 · 适合谁</p>
+        <h2 class="h2" id="who-title">先给最需要它的人。</h2>
+        <div class="who">
+          <article class="card">
+            <span class="state">现在 · 优先</span>
+            <h3>个人开发者</h3>
+            <p>一个人也能同时用好多个模型，把精力留给产品本身。</p>
+          </article>
+          <article class="card">
+            <span class="state">现在 · 优先</span>
+            <h3>小型产品团队</h3>
+            <p>团队用同一种方式组织模型，协同经验可以留下来、接着用。</p>
+          </article>
+          <article class="card dim">
+            <span class="state next">下一阶段</span>
+            <h3>企业</h3>
+            <p>面向企业的能力在规划中。</p>
+          </article>
+        </div>
+
+        <div class="values" id="about">
+          <div><b>专业</b><span>精确、克制，把复杂留在系统里。</span></div>
+          <div><b>开放</b><span>不绑定单一模型，接入保持开放。</span></div>
+          <div><b>进取</b><span>每一次交付，都让下一次更好。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="start" aria-labelledby="closing-title">
+      <canvas class="field" id="closing-field" aria-hidden="true"></canvas>
+      <div class="inner">
+        <p class="kicker">All Models, One Mind</p>
+        <h2 class="h2" id="closing-title">让智能协同进化。</h2>
+        <p class="tagline">从第一次调用开始</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#start">开始接入 <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="#method">了解方法</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="#top" aria-label="基元律动 TokenRhythm">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="2.1" fill="currentColor" />
+          <circle cx="12" cy="12" r="6.2" stroke="currentColor" stroke-opacity="0.62" />
+          <circle cx="12" cy="12" r="10.6" stroke="currentColor" stroke-opacity="0.28" />
+        </svg>
+        <b>基元律动</b><span>TokenRhythm</span>
+      </a>
+      <div class="cols">
+        <div><p>北京基元律动</p><p>多模型时代的智能组织者</p></div>
+        <div><p><a href="#top">tokenrhythm.studio</a></p><p><a href="#top">opensquilla.ai</a></p></div>
+      </div>
+      <p class="meta">概念稿 · 方向 1「蝴蝶效应」视觉推进 · 2026-10 · 文案取自概念包可用句，无未核实数字 · 标志为占位，不是标志提案 · 工作室：蕉不绿 / JIAO BU LV</p>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      const TAU = Math.PI * 2;
+      const smooth = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+      const mod = (a, n) => ((a % n) + n) % n;
+      const ease = (x) => 1 - Math.pow(1 - x, 3);
+
+      // Two panel layouts: bars are [u0, v, u1]; the second one is the "rewritten" state.
+      const LAYOUTS = [
+        { head: 0.36, lines: [0.84, 0.62, 0.46], lit: 0 },
+        { head: 0.5, lines: [0.56, 0.9, 0.7], lit: 1 },
+      ];
+
+      /**
+       * Ripple field: one pinpoint, equidistant rings on a tilted plane, a dot lattice the rings lift,
+       * optional abstract panels the rings graze, and a dashed return line back to the center.
+       */
+      function createField(canvas, cfg) {
+        const ctx = canvas.getContext("2d");
+        const SPACING = 1;
+        const SPEED = 0.5; // one ring every 2s
+        const MAX_R = cfg.maxR;
+        const CAM = 10;
+        let w = 0, h = 0, dpr = 1, S = 1, cx = 0, cy = 0;
+        let yaw = cfg.yaw, yawTarget = cfg.yaw, elev = cfg.elev, elevTarget = cfg.elev;
+        let visible = true, raf = 0, lastT = 0;
+        const t0 = performance.now() / 1000 - 6;
+        const pulses = [];
+        const anchors = {};
+
+        const dots = [];
+        if (cfg.grid) {
+          const step = cfg.grid;
+          const lim = MAX_R + 0.9;
+          for (let x = -lim; x <= lim; x += step) {
+            for (let z = -lim; z <= lim; z += step) {
+              const d = Math.hypot(x, z);
+              if (d <= lim) dots.push([x, z, d]);
+            }
+          }
+        }
+
+        const panels = (cfg.panels || []).map((p, i) => ({
+          ...p, dc: Math.hypot(p.x, p.z), state: 0, from: 0, mix: 1, phase: null, passes: i, glow: 0, hitBy: new Set(),
+        }));
+
+        function project(x, y, z) {
+          const c = Math.cos(yaw), s = Math.sin(yaw);
+          const xr = x * c - z * s, zr = x * s + z * c;
+          const se = Math.sin(elev), ce = Math.cos(elev);
+          const up = zr * se + y * ce;
+          const depth = zr * ce - y * se;
+          const f = CAM / (CAM + depth);
+          return [cx + xr * f * S, cy - up * f * S, f];
+        }
+
+        const env = (r) => smooth(0, 0.5, r) * (1 - smooth(MAX_R - 1.6, MAX_R, r));
+        const frontDist = (d, t) => { const u = mod(SPEED * t - d, SPACING); return Math.min(u, SPACING - u); };
+
+        function lift(d, t) {
+          const fd = frontDist(d, t);
+          let y = 0.13 * Math.exp(-(fd * fd) / 0.03) * env(d);
+          for (const p of pulses) {
+            const r = p.speed * (t - p.t);
+            const k = d - r;
+            y += 0.34 * Math.exp(-(k * k) / 0.07) * env(r);
+          }
+          return y;
+        }
+
+        function resize() {
+          const rect = canvas.getBoundingClientRect();
+          w = rect.width; h = rect.height;
+          dpr = Math.min(window.devicePixelRatio || 1, 2);
+          canvas.width = Math.max(1, Math.round(w * dpr));
+          canvas.height = Math.max(1, Math.round(h * dpr));
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          const l = cfg.layout(w, h);
+          cx = l.cx; cy = l.cy; S = l.S;
+        }
+
+        function ring(r, y = 0) {
+          ctx.beginPath();
+          const n = 180;
+          for (let i = 0; i <= n; i++) {
+            const a = (i / n) * TAU;
+            const [x, yy] = project(Math.cos(a) * r, y, Math.sin(a) * r);
+            i ? ctx.lineTo(x, yy) : ctx.moveTo(x, yy);
+          }
+        }
+
+        function panelPoint(p, u, v) {
+          const c = Math.cos(p.rot), s = Math.sin(p.rot);
+          const lu = (u - 0.5) * p.w, lv = (0.5 - v) * p.d;
+          return project(p.x + lu * c - lv * s, p.y, p.z + lu * s + lv * c);
+        }
+
+        function quad(p, u0, v0, u1, v1) {
+          const a = panelPoint(p, u0, v0), b = panelPoint(p, u1, v0), c = panelPoint(p, u1, v1), d = panelPoint(p, u0, v1);
+          ctx.beginPath();
+          ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.lineTo(c[0], c[1]); ctx.lineTo(d[0], d[1]); ctx.closePath();
+        }
+
+        function flip(p, t) {
+          p.from = p.state; p.state = 1 - p.state; p.mix = 0; p.flipAt = t;
+        }
+
+        function draw(t, dt) {
+          yaw += (yawTarget - yaw) * Math.min(1, dt * 2.5);
+          elev += (elevTarget - elev) * Math.min(1, dt * 2.5);
+          ctx.clearRect(0, 0, w, h);
+
+          // Dot lattice: faint, lifted where a ring passes.
+          if (dots.length) {
+            ctx.fillStyle = "#a8e0ff";
+            for (const [x, z, d] of dots) {
+              const y = lift(d, t);
+              const [sx, sy, f] = project(x, y, z);
+              const edge = 1 - smooth(MAX_R - 0.8, MAX_R + 0.9, d);
+              const a = Math.min(0.85, (0.07 + y * 2.6) * edge * cfg.dotAlpha);
+              if (a < 0.01) continue;
+              const size = (0.8 + y * 5) * f * cfg.dotScale;
+              ctx.globalAlpha = a;
+              ctx.fillRect(sx - size / 2, sy - size / 2, size, size);
+            }
+            ctx.globalAlpha = 1;
+          }
+
+          // Static guide rings: the still frame must read "center → out" on its own.
+          ctx.lineWidth = 1;
+          for (let r = 1; r <= 4; r++) {
+            ring(r);
+            ctx.strokeStyle = `rgba(168,224,255,${0.1 - r * 0.012})`;
+            ctx.stroke();
+          }
+
+          // Travelling rings.
+          const base = mod(SPEED * t, SPACING);
+          for (let r = base; r < MAX_R; r += SPACING) {
+            const a = env(r);
+            if (a < 0.01) continue;
+            ring(r);
+            ctx.strokeStyle = `rgba(126,200,255,${0.09 * a})`;
+            ctx.lineWidth = 7;
+            ctx.stroke();
+            ctx.strokeStyle = `rgba(190,232,255,${0.62 * a})`;
+            ctx.lineWidth = 1.1;
+            ctx.stroke();
+          }
+
+          // Clicked perturbations: a faster, brighter single ring.
+          for (let i = pulses.length - 1; i >= 0; i--) {
+            const p = pulses[i];
+            const r = p.speed * (t - p.t);
+            if (r > MAX_R + 0.2) { pulses.splice(i, 1); continue; }
+            const a = env(r);
+            ring(r);
+            ctx.strokeStyle = `rgba(126,200,255,${0.16 * a})`;
+            ctx.lineWidth = 10;
+            ctx.stroke();
+            ctx.strokeStyle = `rgba(232,246,255,${0.95 * a})`;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+            for (const panel of panels) {
+              if (!panel.hitBy.has(p) && r >= panel.dc) { panel.hitBy.add(p); flip(panel, t); }
+            }
+          }
+
+          // Return line: from the outermost ring back to the core (experience written back).
+          if (cfg.returnLine) {
+            const R = 4.25, a0 = cfg.returnAngle, n = 90;
+            ctx.beginPath();
+            for (let i = 0; i <= n; i++) {
+              const k = i / n;
+              const r = R * (1 - k);
+              const a = a0 + k * 1.1;
+              const y = Math.sin(Math.PI * k) * 1.1 * (1 - k * 0.35);
+              const [sx, sy] = project(Math.cos(a) * r, y, Math.sin(a) * r);
+              i ? ctx.lineTo(sx, sy) : ctx.moveTo(sx, sy);
+              if (i === 38) anchors.return = [sx, sy];
+            }
+            ctx.setLineDash([2, 7]);
+            ctx.lineDashOffset = -t * 9;
+            ctx.strokeStyle = "rgba(110,231,216,0.5)";
+            ctx.lineWidth = 1.1;
+            ctx.lineCap = "round";
+            ctx.stroke();
+            ctx.setLineDash([]);
+            const [ox, oy] = project(Math.cos(a0) * R, 0, Math.sin(a0) * R);
+            ctx.fillStyle = "rgba(110,231,216,0.85)";
+            ctx.beginPath(); ctx.arc(ox, oy, 2, 0, TAU); ctx.fill();
+          }
+
+          // Panels: abstract workbench blocks floating above the plane.
+          for (const p of panels) {
+            const phase = Math.floor((SPEED * t - p.dc) / SPACING);
+            if (p.phase !== null && phase !== p.phase) {
+              p.passes++;
+              if (p.passes % 3 === 0) flip(p, t);
+            }
+            p.phase = phase;
+            const fd = frontDist(p.dc, t);
+            let g = Math.exp(-(fd * fd) / 0.12) * env(p.dc);
+            for (const q of pulses) { const k = p.dc - q.speed * (t - q.t); g = Math.max(g, Math.exp(-(k * k) / 0.2) * 1.4); }
+            p.glow += (g - p.glow) * Math.min(1, dt * 8);
+            if (p.mix < 1) p.mix = Math.min(1, (t - p.flipAt) / 0.9);
+            const m = ease(p.mix);
+            const A = LAYOUTS[p.from], B = LAYOUTS[p.state];
+            const lerp = (x, y) => x + (y - x) * m;
+
+            quad(p, 0, 0, 1, 1);
+            ctx.fillStyle = "rgba(11,18,31,0.9)";
+            ctx.fill();
+            ctx.strokeStyle = `rgba(168,224,255,${0.16 + p.glow * 0.55})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            ctx.fillStyle = "rgba(154,168,188,0.32)";
+            quad(p, 0.08, 0.14, 0.08 + lerp(A.head, B.head) * 0.84, 0.22); ctx.fill();
+            const lit = lerp(A.lit, B.lit);
+            [0.42, 0.58, 0.74].forEach((v, i) => {
+              const len = lerp(A.lines[i], B.lines[i]);
+              quad(p, 0.08, v, 0.08 + len * 0.84, v + 0.06);
+              ctx.fillStyle = i === 1 ? `rgba(126,200,255,${0.16 + lit * 0.5})` : "rgba(154,168,188,0.16)";
+              ctx.fill();
+            });
+            quad(p, 0.76, 0.12, 0.92, 0.24);
+            ctx.fillStyle = `rgba(110,231,216,${0.06 + lit * 0.32 + p.glow * 0.1})`;
+            ctx.fill();
+
+            if (p.anchor) anchors.panel = panelPoint(p, 0.04, 0.04);
+          }
+
+          // Core pinpoint: flashes as each ring is born.
+          const born = Math.exp(-Math.pow(mod(SPEED * t, SPACING) / 0.09, 2));
+          const [px, py] = project(0, 0, 0);
+          const glowR = (18 + born * 16) * (S / 110);
+          const grad = ctx.createRadialGradient(px, py, 0, px, py, glowR * 3);
+          grad.addColorStop(0, `rgba(210,240,255,${0.55 + born * 0.3})`);
+          grad.addColorStop(0.25, "rgba(126,200,255,0.22)");
+          grad.addColorStop(1, "rgba(126,200,255,0)");
+          ctx.fillStyle = grad;
+          ctx.beginPath(); ctx.arc(px, py, glowR * 3, 0, TAU); ctx.fill();
+          ctx.fillStyle = "#fff";
+          ctx.beginPath(); ctx.arc(px, py, 2.4 + born * 0.8, 0, TAU); ctx.fill();
+
+          anchors.core = [px, py];
+          const ra = cfg.ringAnchorAngle ?? 2.5;
+          anchors.ring = project(Math.cos(ra) * 2, 0, Math.sin(ra) * 2);
+          if (cfg.onFrame) cfg.onFrame(anchors);
+        }
+
+        function frame(now) {
+          raf = 0;
+          const t = now / 1000 - t0;
+          const dt = Math.min(0.05, lastT ? t - lastT : 0.016);
+          lastT = t;
+          draw(t, dt);
+          if (visible && !reduceMotion.matches) raf = requestAnimationFrame(frame);
+        }
+
+        function start() { if (!raf) raf = requestAnimationFrame(frame); }
+
+        function still() {
+          yaw = yawTarget = cfg.yaw; elev = elevTarget = cfg.elev;
+          draw(cfg.stillAt, 0.016);
+        }
+
+        resize();
+        reduceMotion.matches ? still() : start();
+
+        new ResizeObserver(() => { resize(); reduceMotion.matches ? still() : start(); }).observe(canvas);
+        new IntersectionObserver(([e]) => {
+          visible = e.isIntersecting;
+          if (visible && !reduceMotion.matches) { lastT = 0; start(); }
+        }).observe(canvas);
+        reduceMotion.addEventListener("change", () => (reduceMotion.matches ? still() : start()));
+
+        return {
+          perturb() {
+            if (reduceMotion.matches) return;
+            pulses.push({ t: performance.now() / 1000 - t0, speed: 1.5 });
+            start();
+          },
+          redraw() { if (reduceMotion.matches) still(); },
+          steer(nx, ny) {
+            yawTarget = cfg.yaw + nx * 0.22;
+            elevTarget = cfg.elev + ny * 0.05;
+          },
+        };
+      }
+
+      // Hero: perspective plane, rings on the right, left third left dark for the headline.
+      const annos = document.getElementById("annos");
+      const annoEls = [...annos.querySelectorAll(".anno")];
+      let annosOn = false;
+      const heroCanvas = document.getElementById("hero-field");
+      const heroSection = heroCanvas.parentElement;
+      const hero = createField(heroCanvas, {
+        maxR: 4.7,
+        elev: 0.5,
+        yaw: -0.32,
+        grid: 0.2,
+        dotAlpha: 1,
+        dotScale: 1.1,
+        returnLine: true,
+        returnAngle: -0.55,
+        ringAnchorAngle: -2.55,
+        stillAt: 6.62,
+        panels: [
+          { x: 2.7, y: 0.62, z: 1.35, w: 1.9, d: 1.18, rot: -0.2 },
+          { x: -1.75, y: 0.5, z: 3.05, w: 1.6, d: 1.0, rot: 0.24 },
+          { x: 1.15, y: 0.5, z: -2.95, w: 1.75, d: 1.05, rot: 0.1, anchor: true },
+        ],
+        layout(w, h) {
+          if (w < 820) return { cx: w * 0.5, cy: h * 0.5, S: Math.min(w / 8, h / 4.6) };
+          return { cx: w * 0.69, cy: h * 0.56, S: Math.min(w / 14.5, h / 7.2) };
+        },
+        onFrame(a) {
+          if (!annosOn) return;
+          const ox = heroCanvas.offsetLeft, oy = heroCanvas.offsetTop;
+          for (const el of annoEls) {
+            const p = a[el.dataset.anchor];
+            if (!p) continue;
+            el.style.transform = `translate(${(ox + p[0]).toFixed(1)}px, ${(oy + p[1]).toFixed(1)}px)`;
+            el.classList.toggle("flip", ox + p[0] > heroSection.clientWidth - 180);
+          }
+        },
+      });
+
+      heroSection.addEventListener("pointermove", (e) => {
+        const r = heroCanvas.getBoundingClientRect();
+        hero.steer((e.clientX - r.left) / r.width - 0.5, (e.clientY - r.top) / r.height - 0.5);
+      });
+      heroSection.addEventListener("pointerleave", () => hero.steer(0, 0));
+      heroSection.addEventListener("click", (e) => {
+        if (e.target.closest("a, button")) return;
+        hero.perturb();
+      });
+      document.getElementById("perturb").addEventListener("click", () => hero.perturb());
+      const annoToggle = document.getElementById("anno-toggle");
+      annoToggle.addEventListener("click", () => {
+        annosOn = !annosOn;
+        annos.classList.toggle("on", annosOn);
+        annoToggle.setAttribute("aria-pressed", String(annosOn));
+        annoToggle.lastChild.textContent = annosOn ? "隐藏图形注释" : "显示图形注释";
+        hero.steer(0, 0);
+        hero.redraw();
+      });
+
+      // Closing band: the same field seen from above — plain concentric circles and the return spiral.
+      createField(document.getElementById("closing-field"), {
+        maxR: 4.6,
+        elev: Math.PI / 2,
+        yaw: 0,
+        grid: 0.24,
+        dotAlpha: 0.7,
+        dotScale: 1,
+        returnLine: true,
+        returnAngle: -0.9,
+        stillAt: 6.62,
+        layout(w, h) { return { cx: w / 2, cy: h / 2, S: Math.max(h / 8.2, Math.min(w / 9.2, h / 5.6)) }; },
+      });
+
+      // Workbench demo: rewrite the right pane once it scrolls into view.
+      const bench = document.getElementById("bench");
+      new IntersectionObserver(([e], io) => {
+        if (!e.isIntersecting) return;
+        io.disconnect();
+        bench.classList.add("play");
+        bench.querySelectorAll(".after .bar[data-to]").forEach((bar) => { bar.style.width = bar.dataset.to; });
+      }, { threshold: 0.5 }).observe(bench);
+    })();
+  </script>
+</body>
+</html>

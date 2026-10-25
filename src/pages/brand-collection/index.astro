@@ -2,7 +2,7 @@
 import BrandCollectionFrame from "../../components/BrandCollectionFrame.astro";
 import Loc from "../../components/Loc.astro";
 import { assetUrl, withBase } from "../../lib/paths";
-import { benchmarkStudies, brandCollectionPdf, brandMonogram, referenceGaps, referenceGroups } from "../../lib/brand-collection";
+import { benchmarkStudies, brandCollectionPdf, brandMonogram, projectStudies, referenceGaps, referenceGroups } from "../../lib/brand-collection";
 ---
 
 <BrandCollectionFrame
@@ -121,6 +121,33 @@ import { benchmarkStudies, brandCollectionPdf, brandMonogram, referenceGaps, ref
               <a href={assetUrl(brandCollectionPdf(study.id))} download={`${study.id}-brand-note.pdf`}>
                 <Loc zh="下载 PDF" en="Download PDF" />
               </a>
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bc-section" id="projects">
+    <h2><Loc zh="视觉推进" en="Visual direction work" /></h2>
+    <p class="bc-section-note">
+      <Loc
+        zh="按项目 brief 做的方向深化稿，不是公开资料笔记。页面上的文案和图形都是概念稿，非定稿。"
+        en="Direction work built from a project brief, not public-source notes. Copy and graphics on these pages are concepts, not final."
+      />
+    </p>
+    <div class="bc-grid">
+      {
+        projectStudies.map((study) => (
+          <article class="bc-card">
+            <p class="bc-logo is-ink bc-cover">
+              <img src={assetUrl(study.cover)} alt="" width="320" height="180" loading="lazy" decoding="async" />
+            </p>
+            <h3><Loc zh={study.title.zh} en={study.title.en} /></h3>
+            <p>{study.line}</p>
+            <p class="bc-card-links">
+              <a href={withBase(study.href)}><Loc zh="打开说明" en="Open the note" /></a>
+              <a href={withBase(study.demo)}><Loc zh="打开概念稿" en="Open the concept" /></a>
             </p>
           </article>
         ))

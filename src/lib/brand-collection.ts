@@ -12,6 +12,7 @@ export const brandCollectionPages = [
   { href: "brand-collection/joma/", zh: "JOMA 调研", en: "JOMA" },
   { href: "brand-collection/joma/visual-audit/", zh: "JOMA 视觉", en: "JOMA visuals" },
   { href: "brand-collection/joma/china-ecommerce/", zh: "JOMA 中国电商", en: "JOMA China" },
+  { href: "brand-collection/tokenrhythm/", zh: "基元律动", en: "TokenRhythm" },
 ] as const;
 
 export interface ReferenceCard {
@@ -100,4 +101,9 @@ export const benchmarkStudies: { id: string; href: string; title: { zh: string; 
   { id: "joma", href: "brand-collection/joma/", title: { zh: "JOMA 品牌调研", en: "JOMA overview" }, line: "公开资料：品牌基本信息、定位口号、中国业务、渠道与赞助、竞品。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
   { id: "joma-visual-audit", href: "brand-collection/joma/visual-audit/", title: { zh: "JOMA 视觉审计", en: "JOMA visual audit" }, line: "标志、色彩、字体、官网视觉；以及升级时可保留与可改之处。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
   { id: "joma-china-ecommerce", href: "brand-collection/joma/china-ecommerce/", title: { zh: "JOMA 中国电商视觉", en: "JOMA China commerce" }, line: "京东、天猫等中国电商渠道的视觉与文案。调研日期 2026-09-09。", logo: "brand-collection/assets/joma/logo-joma-official-header-blue.svg" },
+];
+
+/** Visual direction work in progress. These are concept pages, not public-source notes, so they carry no PDF. */
+export const projectStudies: { id: string; href: string; demo: string; cover: string; title: { zh: string; en: string }; line: string }[] = [
+  { id: "tokenrhythm", href: "brand-collection/tokenrhythm/", demo: "brand-collection/tokenrhythm/prototype/", cover: "brand-collection/assets/tokenrhythm/hero-desktop.webp", title: { zh: "基元律动 · 蝴蝶效应方向", en: "TokenRhythm · Butterfly Effect" }, line: "品牌网站视觉推进：方向 1「蝴蝶效应」落成可交互首页概念稿，含图形语法、色彩、动效与禁区自查。探索稿，非定稿。" },
 ];

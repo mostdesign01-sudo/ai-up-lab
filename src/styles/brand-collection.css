@@ -14,6 +14,7 @@
 .bc-logo { position: relative; display: block; aspect-ratio: 16 / 9; width: 100%; height: auto; margin: 0; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: #fff; box-sizing: border-box; overflow: hidden; }
 .bc-logo.is-ink { background: #111; }
 .bc-logo img { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; max-width: 72%; max-height: 58%; width: auto; height: auto; object-fit: contain; object-position: center; }
+.bc-logo.bc-cover img { left: 0; top: 0; transform: none; width: 100%; height: 100%; max-width: none; max-height: none; object-fit: cover; }
 .bc-mono { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 28px; font-weight: 650; line-height: 1; color: #17151b; }
 .bc-logo.is-ink .bc-mono { color: #f5f2fa; }
 .bc-card-links { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: auto; font-size: 13px; }

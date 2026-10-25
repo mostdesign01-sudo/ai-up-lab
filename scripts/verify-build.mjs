@@ -55,6 +55,8 @@ const requiredPages = [
   "brand-collection/joma/index.html",
   "brand-collection/joma/visual-audit/index.html",
   "brand-collection/joma/china-ecommerce/index.html",
+  "brand-collection/tokenrhythm/index.html",
+  "brand-collection/tokenrhythm/prototype/index.html",
 ];
 
 const missing = [];
@@ -685,6 +687,7 @@ const brandCollectionPages = [
   "brand-collection/joma/index.html",
   "brand-collection/joma/visual-audit/index.html",
   "brand-collection/joma/china-ecommerce/index.html",
+  "brand-collection/tokenrhythm/index.html",
 ];
 const brandCollectionForbidden = ["品牌书", "brand-book", "design-spec", "内部", "evidence", "brand-rules"];
 for (const page of brandCollectionPages) {
