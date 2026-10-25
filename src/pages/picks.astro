@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import Loc from "../components/Loc.astro";
+import { currentIssue, pastIssues } from "../lib/home-picks";
+import { weekRange } from "../lib/format";
+import { assetUrl, withBase } from "../lib/paths";
+
+// Queued future issues are never listed here; they appear when their week starts.
+const shown = [currentIssue, ...pastIssues];
+// Homepage titles break lines by hand; keep a space where the break sat between Latin words.
+const oneLine = (text: string) => text.replace(/([A-Za-z0-9])\n/g, "$1 ").replace(/\n/g, "");
+---
+<BaseLayout title="每周精选 · AI UP LAB" titleEn="Weekly picks · AI UP LAB" description="AI UP LAB 每周一期的编辑精选，按周归档。" descriptionEn="AI UP LAB's weekly editor's pick, archived by week.">
+  <div class="wrap directory-page">
+    <section class="collection-hero">
+      <h1><Loc zh="每周精选" en="Weekly picks" /></h1>
+      <p class="lede"><Loc zh="每周一期，由编辑从收录里挑一条最值得动手试的，周一更新。" en="One pick a week: the entry most worth trying, chosen by an editor and updated every Monday." /></p>
+    </section>
+    <div class="picks-archive">
+      {shown.map((issue, index) => {
+        const dates = weekRange(issue.start, issue.end);
+        const image = issue.art ? assetUrl(issue.art.src) : issue.entry.thumb;
+        return (
+          <article class="picks-archive-item">
+            <a href={issue.entry.href} tabindex="-1" aria-hidden="true">{image && <img src={image} alt="" width="600" height="400" loading={index < 2 ? "eager" : "lazy"} decoding="async" />}</a>
+            <div>
+              <p class="picks-archive-week"><Loc zh={`${index === 0 ? "本周 · " : ""}${issue.week} · ${dates.zh}`} en={`${index === 0 ? "This week · " : ""}${issue.week} · ${dates.en}`} /> · <a href={withBase(`${issue.section.id}/`)}><Loc zh={issue.section.title.zh} en={issue.section.title.en} /></a></p>
+              <h2><a href={issue.entry.href}><Loc zh={oneLine(issue.title.zh)} en={issue.title.en} /></a></h2>
+              <p><Loc zh={issue.reason.zh} en={issue.reason.en} /></p>
+              {issue.art?.credit && <p class="picks-archive-credit"><Loc zh={`图片：${issue.art.credit.zh}`} en={`Image: ${issue.art.credit.en}`} /></p>}
+              <a class="editorial-text-link" href={issue.entry.href}><Loc zh="阅读用法" en="Read the guide" /><Icon name="arrow" size={16} /></a>
+            </div>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

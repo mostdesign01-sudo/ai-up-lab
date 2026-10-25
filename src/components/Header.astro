@@ -6,6 +6,7 @@ import Icon from "./Icon.astro";
 import { sections, entries } from "../lib/directory";
 import { withBase, isSectionPath, isCurrentPath } from "../lib/paths";
 import { ui } from "../lib/i18n";
+import { hotTopic } from "../lib/topics";
 import { siteName, siteTagline, siteTaglineEn } from "../lib/site";
 const path = Astro.url.pathname;
 const currentEntry = entries.find(entry => isCurrentPath(path, entry.href));
@@ -17,6 +18,7 @@ const active = currentEntry?.sections[0] ?? sections.find(section => isSectionPa
     <nav class="directory-nav" aria-label="目录 / Directory">
       <a href={withBase("/")} aria-current={isCurrentPath(path, withBase("/")) ? "page" : undefined}><Loc zh="首页" en="Home" /></a>
       {sections.map(section => <a href={withBase(`${section.id}/`)} aria-current={active === section.id ? "page" : undefined}><Loc zh={section.title.zh} en={section.title.en} /></a>)}
+      {hotTopic && <a class="directory-nav-hot" href={withBase(`topics/${hotTopic.id}/`)} aria-current={isSectionPath(path, withBase(`topics/${hotTopic.id}/`)) ? "page" : undefined}><Loc zh={hotTopic.nav.zh} en={hotTopic.nav.en} /></a>}
     </nav>
     <div class="directory-header-tools">
       <a href={withBase("favorites/")}><Loc zh="收藏" en="Saved" /><span class="fav-count" data-fav-count hidden aria-hidden="true"></span></a>

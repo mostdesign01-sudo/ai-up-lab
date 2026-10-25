@@ -1,0 +1,127 @@
+name: Auto-merge catalog PRs
+
+# The morning and evening catalog runs open a PR each, and every one of them
+# appends to the same JSON files. Left for a human to click, they pile up and
+# start conflicting with each other, and the site stops updating. This
+# workflow merges them into main as soon as they are ready, entry by entry
+# (scripts/merge-catalog-json.mjs), rebuilds after each one, and then deploys.
+#
+# A PR qualifies only when it is opened by the repo owner from this repo, is
+# not a draft, carries no `catalog-hold` label, and touches nothing but the
+# catalog data and preview images. Anything else still waits for a review.
+# A PR that cannot be merged or breaks the build gets the `catalog-hold`
+# label and a comment, and is skipped until the label is removed.
+
+on:
+  workflow_run:
+    workflows: ["Deploy to GitHub Pages"]
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: "40 */6 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+
+concurrency:
+  group: auto-merge-catalog
+  cancel-in-progress: false
+
+env:
+  ASTRO_TELEMETRY_DISABLED: "1"
+  GH_TOKEN: ${{ github.token }}
+  HOLD_LABEL: catalog-hold
+
+jobs:
+  merge:
+    if: >-
+      github.event_name != 'workflow_run' ||
+      (github.event.workflow_run.event == 'pull_request' &&
+       github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install
+        run: npm ci
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config merge.catalog-json.driver "node scripts/merge-catalog-json.mjs %O %A %B"
+          echo "data/*.json merge=catalog-json" >> .git/info/attributes
+          gh label create "$HOLD_LABEL" --color d93f0b \
+            --description "Catalog PR needs a human: auto-merge skipped it" 2>/dev/null || true
+      - name: Merge ready catalog PRs
+        id: merge
+        run: |
+          owner="${GITHUB_REPOSITORY%%/*}"
+          allowed='^(data/(cases|html-items|agent-ui|models|image-prompts|changelog)\.json|public/previews/[^/]+\.(webp|png|jpe?g))$'
+          merged=()
+
+          hold() {
+            gh pr edit "$1" --add-label "$HOLD_LABEL" >/dev/null || true
+            gh pr comment "$1" --body "$2
+
+          自动合并跳过了这个 PR，已加上 \`$HOLD_LABEL\` 标签。处理好后去掉标签，下一轮会重试。
+
+          ---
+          _Auto-merge catalog PRs workflow_" || true
+          }
+
+          prs=$(gh pr list --base main --state open --limit 50 \
+            --json number,isDraft,author,headRepositoryOwner,labels,headRefName \
+            --jq "[.[] | select(.isDraft | not)
+                        | select(.author.login == \"$owner\")
+                        | select(.headRepositoryOwner.login == \"$owner\")
+                        | select([.labels[].name] | index(\"$HOLD_LABEL\") | not)
+                        | .number] | sort | .[]")
+
+          for n in $prs; do
+            files=$(gh pr view "$n" --json files --jq '.files[].path')
+            if [ -z "$files" ] || echo "$files" | grep -v -E "$allowed" | grep -q .; then
+              echo "#$n touches more than catalog data; leaving it for review"
+              continue
+            fi
+            git fetch -q origin "pull/$n/head:pr-$n"
+            before=$(git rev-parse HEAD)
+            title=$(gh pr view "$n" --json title --jq .title)
+            if ! git merge --no-ff -q -m "Merge #$n: $title" "pr-$n"; then
+              git merge --abort || git reset -q --hard "$before"
+              hold "$n" "合并到 main 时有条目冲突（两边改了同一条的同一字段），需要人工处理。"
+              continue
+            fi
+            if ! npm run build > "$RUNNER_TEMP/build-$n.log" 2>&1; then
+              tail -n 30 "$RUNNER_TEMP/build-$n.log"
+              git reset -q --hard "$before"
+              hold "$n" "合并后 \`npm run build\` 失败：
+
+          \`\`\`
+          $(tail -n 15 "$RUNNER_TEMP/build-$n.log")
+          \`\`\`"
+              continue
+            fi
+            merged+=("$n")
+            echo "merged #$n"
+          done
+
+          echo "merged=${merged[*]}" >> "$GITHUB_OUTPUT"
+      - name: Push and deploy
+        if: steps.merge.outputs.merged != ''
+        run: |
+          git push origin HEAD:main
+          # Pushes made with GITHUB_TOKEN do not trigger other workflows, so
+          # start the Pages deploy explicitly.
+          gh workflow run deploy.yml --ref main
+          echo "Merged: ${{ steps.merge.outputs.merged }}"

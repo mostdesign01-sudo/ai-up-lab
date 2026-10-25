@@ -7,6 +7,7 @@ import Loc from "../../components/Loc.astro";
 import VerifyLog from "../../components/VerifyLog.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ogCard } from "../../lib/og";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
 import { htmlItems, RESERVED_HTML_SLUGS } from "../../lib/html";
 import { htmlTypeIntro, htmlTypeLabel } from "../../lib/html-labels";
@@ -37,6 +38,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 
 <BaseLayout
   collection="html"
+  image={ogCard("html", item)}
   title={`${item.title} · AI UP LAB`}
   titleEn={`${titleEn} · AI UP LAB`}
   description={item.summary}

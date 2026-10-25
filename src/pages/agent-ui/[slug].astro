@@ -7,6 +7,7 @@ import Loc from "../../components/Loc.astro";
 import VerifyLog from "../../components/VerifyLog.astro";
 import Stars from "../../components/Stars.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { ogCard } from "../../lib/og";
 import { agentUiItems, RESERVED_AGENT_UI_SLUGS } from "../../lib/agent-ui";
 import { agentUiTypeIntro, agentUiTypeLabel } from "../../lib/agent-ui-labels";
 import { formatPublishedDate, formatShanghaiDateTime } from "../../lib/format";
@@ -38,6 +39,7 @@ const previewAltEn = fill(ui.detail.previewAlt, { title: titleEn });
 
 <BaseLayout
   collection="agent-ui"
+  image={ogCard("agent-ui", item)}
   title={`${item.title} · AI UP LAB`}
   titleEn={`${titleEn} · AI UP LAB`}
   description={item.summary}

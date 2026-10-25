@@ -1,11 +1,1059 @@
 {
   "meta": {
-    "updatedAt": "2026-10-12T01:05:00Z",
+    "updatedAt": "2026-10-25T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.21",
-    "count": 28
+    "version": "1.1.30",
+    "count": 40
   },
   "models": [
+    {
+      "id": "fovea-4b",
+      "slug": "fovea-4b",
+      "name": "Fovea-4B",
+      "vendor": "Sivasuthan（个人开发者）",
+      "title": "Fovea-4B：看图做决定的 4B 开源模型，一次前向给出每个选项的概率",
+      "titleEn": "Fovea-4B: an open 4B model that makes decisions about images, with a probability for every option in one forward pass",
+      "summary": "Fovea-4B 是基于 Qwen3.5-4B 微调的开源图像决策模型（Apache-2.0），2026-10-24 发布在 Hugging Face。它不写长文：你给一张或多张图（照片、文档、收据、图表、截图）、一段 JSON 状态和类型化问题——是否（noul）、多选（choice）、分级打分（score）——它一次前向就返回每个选项的概率和置信度，答案总和为 1，证据不足时概率会摊平而不是报错。接口沿用 TypeSafe 的 System One API（POST /v1/systemone），所以 Jev 的客户端可以直接换着调。对设计和产品团队，它适合做截图分流这类「只要一个决定」的环节：这张截图是不是报错页、属于哪个页面、视觉问题严重程度打几分。作者在模型卡里用自建的 2,360 道多选题和 Imajev-4B、H2O-Lightning-4B、Jev-Vision 对比，称总分 80.6 居首、校准误差最低——这是作者自测，本库未复跑。官方写明的短板：只懂英文、不做多步推理、小字识别受分辨率限制；自部署需要 16 GB 以上显存的 GPU，权重约 9 GB。",
+      "summaryEn": "Fovea-4B is an open image decision model fine-tuned from Qwen3.5-4B (Apache-2.0), published on Hugging Face on 2026-10-24. It does not write prose: give it one or more images (photos, documents, receipts, charts, screenshots), a JSON state, and typed questions—yes/no (noul), choice, or ordinal score—and it returns a probability for every option plus a confidence in one forward pass; answers sum to 1, and when evidence is missing the probabilities flatten instead of erroring. It speaks TypeSafe's System One API (POST /v1/systemone), so Jev clients can call it unchanged. For design and product teams it fits steps that need one decision, such as screenshot triage: is this an error page, which screen is it, how severe is the visual bug. The model card compares it with Imajev-4B, H2O-Lightning-4B, and Jev-Vision on the authors' own 2,360 multiple-choice questions and claims the top overall score (80.6) and the lowest calibration error—these are the authors' numbers, not re-run here. Stated limits: English only, no multi-step reasoning, small text limited by resolution; self-hosting needs a GPU with 16 GB+ and the weights are about 9 GB.",
+      "announcedAt": "2026-10-24",
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型：Sivasuthan/fovea-4b（Apache-2.0）",
+          "labelEn": "Hugging Face model: Sivasuthan/fovea-4b (Apache-2.0)",
+          "url": "https://huggingface.co/Sivasuthan/fovea-4b",
+          "by": "Sivasuthan",
+          "date": "2026-10-24"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：Sivasuthan9/fovea（推理服务与请求示例）",
+          "labelEn": "GitHub: Sivasuthan9/fovea (serving script and request examples)",
+          "url": "https://github.com/Sivasuthan9/fovea",
+          "by": "Sivasuthan9",
+          "date": "2026-10-24"
+        }
+      ],
+      "highlights": [
+        {
+          "label": "4B 参数，基于 Qwen3.5-4B，一次前向出决定",
+          "labelEn": "4B params on Qwen3.5-4B, one forward pass per decision"
+        },
+        {
+          "label": "类型化问题：noul / choice / score，每个选项带概率",
+          "labelEn": "Typed questions: noul / choice / score, a probability per option"
+        },
+        {
+          "label": "兼容 TypeSafe System One API（/v1/systemone）",
+          "labelEn": "Compatible with TypeSafe's System One API (/v1/systemone)"
+        },
+        {
+          "label": "Apache-2.0 权重；自部署需 16 GB+ 显存",
+          "labelEn": "Apache-2.0 weights; self-hosting needs 16 GB+ VRAM"
+        }
+      ],
+      "qualityNote": "收录理由：库里已有 Jev、THX-01 等文本决策小模型，Fovea-4B 把同一套接口搬到图像上，可用于截图、界面状态的快速分流。边界：评测分数是作者自建题集上的自测，作者也说明不等于排行榜成绩，本库未复跑；只支持英文。本库没有下载权重、没有运行 serve.py，也没有调用 System One API。",
+      "qualityNoteEn": "Why: the library already lists small text decision models like Jev and THX-01; Fovea-4B brings the same interface to images, useful for quick triage of screenshots and UI states. Boundary: the scores are the authors' own held-out evaluation, which they say does not equal a leaderboard result, and were not re-run here; English only. This library did not download the weights, run serve.py, or call the System One API.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "typesafe-jev",
+        "thx-01",
+        "strands-decider-2b",
+        "laya-system-one"
+      ],
+      "previewImage": "/previews/fovea-4b.webp",
+      "previewCredit": "预览截自 Hugging Face 模型卡页面",
+      "previewCreditEn": "Preview cropped from the Hugging Face model card page",
+      "featured": false,
+      "verifyLog": "2026-10-25 晚间：HF 模型页与 GitHub Sivasuthan9/fovea 均 HTTP 200。HF API：createdAt 2026-10-24，license apache-2.0，base_model Qwen/Qwen3.5-4B，文件含 model.safetensors、decision_readout.safetensors、calibration.json。gh api Sivasuthan9/fovea：Apache-2.0，1★，创建于 2026-10-24，README 给出 serve.py 启动命令、16 GB 显卡与约 9 GB 权重说明，作为第二来源。评测表（80.6 / 79.9 / 79.4 / 75.7，ECE 0.035）照模型卡转述，未复跑。预览为 Playwright 实拍 HF 模型卡页，1440×960 缩到 1200×800 WebP。未下载权重、未跑 serve.py、未调 System One API。",
+      "verifyLogEn": "2026-10-25 evening: HF model page and GitHub Sivasuthan9/fovea both HTTP 200. HF API: createdAt 2026-10-24, license apache-2.0, base_model Qwen/Qwen3.5-4B, files include model.safetensors, decision_readout.safetensors, calibration.json. gh api Sivasuthan9/fovea: Apache-2.0, 1★, created 2026-10-24; its README gives the serve.py command, 16 GB GPU and ~9 GB weights, used as the second source. Eval table (80.6 / 79.9 / 79.4 / 75.7, ECE 0.035) is restated from the model card, not re-run. Preview is a Playwright capture of the HF model card, 1440×960 scaled to a 1200×800 WebP. Did not download weights, run serve.py, or call the System One API."
+    },
+    {
+      "id": "ideogram-vector",
+      "slug": "ideogram-vector",
+      "name": "Ideogram Vector",
+      "vendor": "Ideogram",
+      "title": "Ideogram Vector 1.0：文生/图生可编辑 SVG",
+      "titleEn": "Ideogram Vector 1.0: text/image to editable SVG",
+      "summary": "Ideogram 在 2026-10-22 推出 Ideogram Vector。产品页写：用文本提示生成可编辑 SVG，或把现有图转成可以缩放、再改颜色和单个形状的矢量。官方帖称文本提示能出带平滑渐变和清晰字形的可编辑 SVG，也可以把图转成可缩放矢量。产品页的接口是 POST /v2/svg/generate/ideogram-vector-1（提示，参考图可选）和 POST /v2/svg/vectorize/ideogram-vector-1（不写提示，直接转图）。价目按产品页，单位美元每张：文生矢量 Low 0.13、Medium 0.16、High 0.20；带参考图时 Low 和 Medium 不变，High 为 0.32。图生矢量 0.10。这些数字是产品页所写，本库没有下单。本库没有调用 API，也没有在 Ideogram 里生成过 SVG。",
+      "summaryEn": "Ideogram introduced Ideogram Vector on 2026-10-22. The product page says a text prompt produces an editable SVG, or an existing image becomes a vector you can scale and then recolor or edit shape by shape. The official post says a text prompt can produce an editable SVG with smooth gradients and sharp typography, and that an image can become a scalable vector. The page lists POST /v2/svg/generate/ideogram-vector-1 (prompt, references optional) and POST /v2/svg/vectorize/ideogram-vector-1 (no prompt, convert the image). Prices on the product page, USD per SVG: text to vector is 0.13 low, 0.16 medium, and 0.20 high; with references, low and medium stay the same and high is 0.32. Image to vector is 0.10. Those numbers are what the product page writes; this library did not place an order. This library did not call the API and did not generate an SVG in Ideogram.",
+      "announcedAt": "2026-10-22",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-23T01:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Ideogram Vector 产品页",
+          "labelEn": "Ideogram Vector product page",
+          "url": "https://ideogram.ai/models/vector/",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "official",
+          "label": "官方帖：推出第一个矢量模型",
+          "labelEn": "Official post: first vector model",
+          "url": "https://x.com/ideogram_ai/status/2113300317584720259",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "official",
+          "label": "API：Generate SVG",
+          "labelEn": "API: Generate SVG",
+          "url": "https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg",
+          "by": "Ideogram",
+          "date": "2026-10-22"
+        },
+        {
+          "kind": "product",
+          "label": "fal：text-to-vector",
+          "labelEn": "fal: text-to-vector",
+          "url": "https://fal.ai/models/ideogram/vector/text-to-vector",
+          "by": "fal",
+          "date": "2026-10-22"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "产品页：文本提示出可编辑 SVG，或把现有图转成可缩放矢量。接口名是 ideogram-vector-1。",
+          "textEn": "Product page: a text prompt makes an editable SVG, or an existing image becomes a scalable vector. The endpoint name is ideogram-vector-1."
+        },
+        {
+          "text": "官方帖称：平滑渐变、清晰字形。这是厂商说法，本库没有出图核对。",
+          "textEn": "The official post says smooth gradients and sharp typography. That is the vendor’s wording; this library did not generate a sample to check it."
+        },
+        {
+          "text": "产品页价目，本库未下单：文生 Low / Medium / High 为 0.13 / 0.16 / 0.20 美元；带参考图时只有 High 为 0.32 美元。图生矢量 0.10 美元一张。",
+          "textEn": "Product-page prices, no order placed here: text-to-vector low / medium / high are 0.13 / 0.16 / 0.20 USD; with references only high is 0.32 USD. Image-to-vector is 0.10 USD per image."
+        }
+      ],
+      "qualityNote": "平滑渐变和清晰字形来自官方帖，不是本库出图后的判断。价格只记产品页价目表：文生矢量按 Low、Medium、High，带参考图时只有 High 更贵；图生矢量按张。fal 的 text-to-vector 页单价与产品页一致。本库没有下单，没有调用 API，也没有登录 Ideogram 生成 SVG。",
+      "qualityNoteEn": "Smooth gradients and sharp typography come from the official post, not from a sample generated here. Prices are only the product-page table: text-to-vector by low, medium, and high, with references raising only high; image-to-vector is per image. The fal text-to-vector page lists the same unit prices. This library did not place an order, did not call the API, and did not sign in to Ideogram to generate an SVG.",
+      "verifyLog": "2026-10-23 早间（上海）：产品页 https://ideogram.ai/models/vector/ HTTP 200，last-modified Thu, 22 Oct 2026 15:52:07 GMT。title「AI Vector Generator: Ready-to-use SVG Artwork | Ideogram」。正文写 scalable, editable SVGs，crisp SVG edges，Text to vector / Image to vector。价目表列：Text to vector，Quality / Prompt only / With references：Low 0.13/0.13，Medium 0.16/0.16，High 0.20/0.32；Image to vector 0.10 / image。接口 POST /v2/svg/generate/ideogram-vector-1 与 POST /v2/svg/vectorize/ideogram-vector-1。API 文档 https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg HTTP 200。官方 X https://x.com/ideogram_ai/status/2113300317584720259 ，fxtwitter created Thu Oct 22 16:03:53 +0000 2026，likes 1226。帖文：Generate clean, editable SVGs with smooth gradients and sharp typography from a text prompt, or turn any image into a detailed, scalable vector。fal https://fal.ai/models/ideogram/vector/text-to-vector HTTP 200，页内 publishedAt 2026-10-22T16:02:38.929Z；billing 写 low 0.13、medium 0.16、high 0.20，带参考图时 high 0.32，low 与 medium 不变。预览为无头 Chrome 实拍产品页首屏，视口 1200×800 WebP。没有登录，没有调用 API，没有下单。页面与接口写 Ideogram Vector / ideogram-vector-1；标题里的 1.0 对应该接口名，页面标题本身没有写 “1.0” 这三个字符。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): product page https://ideogram.ai/models/vector/ HTTP 200, last-modified Thu, 22 Oct 2026 15:52:07 GMT. Title “AI Vector Generator: Ready-to-use SVG Artwork | Ideogram.” Body says scalable, editable SVGs, crisp SVG edges, Text to vector / Image to vector. Price table: Text to vector, Quality / Prompt only / With references: Low 0.13/0.13, Medium 0.16/0.16, High 0.20/0.32; Image to vector 0.10 / image. Endpoints POST /v2/svg/generate/ideogram-vector-1 and POST /v2/svg/vectorize/ideogram-vector-1. API docs https://developer.ideogram.ai/v2/api-reference/vectors/generate-svg HTTP 200. Official X https://x.com/ideogram_ai/status/2113300317584720259 , fxtwitter created Thu Oct 22 16:03:53 +0000 2026, 1226 likes. Post text: generate clean, editable SVGs with smooth gradients and sharp typography from a text prompt, or turn any image into a detailed, scalable vector. fal https://fal.ai/models/ideogram/vector/text-to-vector HTTP 200, in-page publishedAt 2026-10-22T16:02:38.929Z; billing says low 0.13, medium 0.16, high 0.20, and with references high is 0.32 while low and medium stay the same. Preview is a headless Chrome capture of the product hero, 1200×800 WebP. Not signed in, API not called, no order placed. The page and endpoint say Ideogram Vector / ideogram-vector-1; the 1.0 in the title matches that endpoint name, and the page title itself does not contain the characters “1.0”.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/ideogram-vector.webp",
+      "previewCredit": "Ideogram Vector 产品页",
+      "previewCreditEn": "Ideogram Vector product page",
+      "featured": false
+    },
+    {
+      "id": "recursive-flint",
+      "slug": "recursive-flint",
+      "name": "Recursive Flint",
+      "vendor": "Recursive",
+      "title": "Recursive Flint：约 40B 的开放权重编码模型，主打本机跑 Agent",
+      "titleEn": "Recursive Flint: an open-weight coding model around 40B, aimed at local agents",
+      "summary": "Recursive Flint 是 Recursive 的开放权重编码模型，Apache 2.0。模型卡写总参数 39.8B、每 token 激活约 2.5B（含输出头；激活主体约 2.2B），并写四舍五入的叫法是 40B-A2.5B。博文把规模写成 40B 总参、每 token 2.5B。博文称在 M4 Pro MacBook Pro 上短上下文超过 125 tok/s，在 64GB NVIDIA RTX Spark 上超过 150 tok/s。上下文有两套说法：模型卡的文档化配置是 262,144 token；博文写最多 512k，并建议编码任务留在 256k 以内。模型卡自报 Terminal-Bench 2.1 为 54.9%，SWE-bench Pro v2 为 89.7%，SWE-bench Verified 为 74.2%，本库没有复跑。权重有 BF16（模型卡写下载大约 80 GB）、MLX INT4（卡上写大约 22.6 GB）和 INT4 卡指向的 GGUF。博文写兼容 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang，并发布推理引擎 rec。本库没有下载，也没有跑。",
+      "summaryEn": "Recursive Flint is Recursive’s open-weight coding model under Apache 2.0. The model card says 39.8B total parameters and about 2.5B active per token, including the output head, with the active body around 2.2B, and gives 40B-A2.5B as the rounded name. The blog rounds this to 40B total and 2.5B per token. The blog says more than 125 tok/s on an M4 Pro MacBook Pro and more than 150 tok/s on a 64GB NVIDIA RTX Spark, at short contexts. Context has two wordings: the card’s documented configuration is 262,144 tokens; the blog says up to 512k and recommends staying within 256k for coding. The card reports 54.9% on Terminal-Bench 2.1, 89.7% on SWE-bench Pro v2, and 74.2% on SWE-bench Verified. This library did not re-run them. Weights include BF16 (the card says the download is about 80 GB), MLX INT4 (the card says about 22.6 GB), and the GGUF the INT4 card points to. The blog lists llama.cpp, Ollama, Unsloth, LM Studio, vLLM, and SGLang, and ships the rec inference engine. Nothing was downloaded or run here.",
+      "announcedAt": "2026-10-21",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Recursive 博文：Introducing Flint",
+          "labelEn": "Recursive blog: Introducing Flint",
+          "url": "https://recursive.com/updates/introducing-recursive-flint",
+          "by": "Recursive"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：RecursiveSI/flint（BF16）",
+          "labelEn": "Hugging Face: RecursiveSI/flint (BF16)",
+          "url": "https://huggingface.co/RecursiveSI/flint",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：flint-int4（MLX INT4）",
+          "labelEn": "Hugging Face: flint-int4 (MLX INT4)",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：flint-int4-gguf",
+          "labelEn": "Hugging Face: flint-int4-gguf",
+          "url": "https://huggingface.co/RecursiveSI/flint-int4-gguf",
+          "by": "Recursive"
+        },
+        {
+          "kind": "official",
+          "label": "推理引擎 rec",
+          "labelEn": "rec inference engine",
+          "url": "https://github.com/recursive-oss/rec",
+          "by": "Recursive",
+          "date": "2026-10-21"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "模型卡：总参 39.8B，每 token 激活约 2.5B（含输出头），激活主体约 2.2B，四舍五入叫 40B-A2.5B。博文写作 40B 总参、每 token 2.5B。Apache 2.0。",
+          "textEn": "Model card: 39.8B total, about 2.5B active per token including the output head, active body about 2.2B, rounded name 40B-A2.5B. The blog says 40B total and 2.5B per token. Apache 2.0."
+        },
+        {
+          "text": "上下文两套说法都保留：模型卡的文档化配置是 262,144 token；博文写最多 512k，建议编码任务留在 256k 以内。",
+          "textEn": "Both context wordings stay: the card’s documented configuration is 262,144 tokens; the blog says up to 512k and recommends staying within 256k for coding."
+        },
+        {
+          "text": "厂商自报，本库未复跑：Terminal-Bench 2.1 为 54.9%，SWE-bench Pro v2 为 89.7%，SWE-bench Verified 为 74.2%。博文另称 M4 Pro 上短上下文超过 125 tok/s，64GB RTX Spark 上超过 150 tok/s。",
+          "textEn": "Vendor-reported, not re-run here: Terminal-Bench 2.1 54.9%, SWE-bench Pro v2 89.7%, SWE-bench Verified 74.2%. The blog also says more than 125 tok/s on an M4 Pro at short context, and more than 150 tok/s on a 64GB RTX Spark."
+        },
+        {
+          "text": "BF16 卡写下载大约 80 GB。MLX INT4 卡写大约 22.6 GB。INT4 卡指向 GGUF，给 llama.cpp 的 Metal。博文写兼容 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang，并配 rec。",
+          "textEn": "The BF16 card says the download is about 80 GB. The MLX INT4 card says about 22.6 GB. That card points at a GGUF for llama.cpp on Metal. The blog lists llama.cpp, Ollama, Unsloth, LM Studio, vLLM, SGLang, and rec."
+        }
+      ],
+      "qualityNote": "基准分和本机速度都是厂商自报，没有下载权重，也没有复跑。39.8B 和博文里的 40B、262,144 和博文里的 512k 两套说法都留着。博文页没有看到日历日期，上架日按模型卡的创建日。",
+      "qualityNoteEn": "Benchmark scores and on-device speeds are the vendor’s own report. Weights were not downloaded and scores were not re-run. Both 39.8B and the blog’s 40B stay, and both 262,144 and the blog’s 512k stay. The blog page had no calendar date, so the listed date is the model card’s creation date.",
+      "verifyLog": "2026-10-22 早间：博文、BF16 模型卡、INT4 卡、GGUF 页均为 HTTP 200。HF API：flint 创建 2026-10-21T14:20:58Z，license apache-2.0，likes 251，downloads 0；flint-int4 创建 2026-10-21T13:51:27Z，license apache-2.0。模型卡写 39.8B、约 2.5B 激活、文档化上下文 262,144、BF16 下载 about 80 GB，以及 54.9%、89.7%、74.2%。INT4 README 写 MLX、group-64 affine INT4、embeddings INT8、approximately 22.6 GB，并指向 GGUF 与 rec。博文写 40 billion、2.5 billion、最多 512k、建议 256k 内、M4 Pro 超过 125 tok/s、64GB RTX Spark 超过 150 tok/s，以及 llama.cpp、Ollama、Unsloth、LM Studio、vLLM、SGLang。博文没有看到日历日期。分片体积接口没有返回 size，22.6 GB 和 80 GB 都没有加总复核。rec 仓库 2026-10-22 09:27（上海）gh api：Apache-2.0，55★，2 forks，创建 2026-10-21T15:35:55Z，描述 Our lightning-fast inference engine，没有安装。没有下载权重，没有跑推理。预览是博文首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 morning: the blog, the BF16 card, the INT4 card, and the GGUF page are HTTP 200. HF API: flint created 2026-10-21T14:20:58Z, license apache-2.0, 251 likes, 0 downloads; flint-int4 created 2026-10-21T13:51:27Z, license apache-2.0. The card says 39.8B, about 2.5B active, a documented context of 262,144, a BF16 download of about 80 GB, and 54.9%, 89.7%, 74.2%. The INT4 README says MLX, group-64 affine INT4, INT8 embeddings, approximately 22.6 GB, and points at the GGUF and rec. The blog says 40 billion, 2.5 billion, up to 512k, a 256k recommendation, more than 125 tok/s on M4 Pro, more than 150 tok/s on a 64GB RTX Spark, and llama.cpp, Ollama, Unsloth, LM Studio, vLLM, SGLang. No calendar date was on the blog. The file API did not return shard sizes, so 22.6 GB and 80 GB were not summed. rec at 2026-10-22 09:27 Asia/Shanghai gh api: Apache-2.0, 55★, 2 forks, created 2026-10-21T15:35:55Z, description “Our lightning-fast inference engine”; not installed. Weights were not downloaded and inference was not run. Preview is a screenshot of the blog hero, scaled to a 1200×800 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/recursive-flint.webp",
+      "previewCredit": "预览截自 Recursive 博文 Introducing Flint 的首屏",
+      "previewCreditEn": "Preview from the hero of Recursive’s Introducing Flint post",
+      "featured": false
+    },
+    {
+      "id": "fibo-2",
+      "slug": "fibo-2",
+      "name": "Fibo 2.0",
+      "vendor": "Bria",
+      "title": "Fibo 2.0：Bria 的 8B 图像模型，编辑和文生图在同一套权重里",
+      "titleEn": "Fibo 2.0: Bria’s 8B image model, editing and text-to-image in one set of weights",
+      "summary": "Bria 的 Fibo 2.0 是 8B 参数的开放权重图像模型，编辑和文生图在同一套权重里。模型卡写只用授权数据训练，用 VGL 结构化 JSON 控制画面。Dev 是完整底模，卡上写文生图用 50 步、guidance 5.0；Edit Turbo 从它蒸馏而来，只做编辑，4 步、guidance 1.0，支持遮罩编辑和最多 4 张参考图。权重页写非商用走 CC BY-NC 4.0，商用要和 Bria 另签协议。模型卡把 Artificial Analysis 的名次写成开放权重图像编辑第 1、文生图第 2，日期是 2026-10-20，这是厂商说法，本库没有打开榜单复核。文档页没有单独的日历发布日；Dev 仓库创建于 2026-10-18，Edit Turbo 创建于 2026-10-19。fal 的 edit 与 generate 页都写每张 0.04 美元。Bria 自己的定价页打开后停在转圈，没有看到另一套价格。模型卡还写有 ComfyUI 节点和 HF Space，本库没有出图。",
+      "summaryEn": "Fibo 2.0 from Bria is an 8B open-weight image model with editing and text-to-image in one set of weights. The model card says it is trained only on licensed data and controlled with VGL structured JSON. Dev is the full base; the card says text-to-image uses 50 steps and guidance 5.0. Edit Turbo is distilled from it for editing only, in 4 steps at guidance 1.0, with masked edits and up to four reference images. The weight pages say non-commercial use is CC BY-NC 4.0 and commercial use needs a separate agreement with Bria. The card dates an Artificial Analysis rank of number 1 in open-weights image editing and number 2 in open-weights text-to-image to 2026-10-20. That is the vendor’s claim; this library did not open the leaderboard. The docs page has no separate calendar launch date. The Dev repo was created 2026-10-18 and Edit Turbo 2026-10-19. fal’s edit and generate pages both say 0.04 dollars per image. Bria’s own pricing page stayed on a spinner, so no second price was visible. The card also names ComfyUI nodes and a Hugging Face Space. No image was generated here.",
+      "announcedAt": "2026-10-20",
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Bria 文档：Fibo 2 is live",
+          "labelEn": "Bria docs: Fibo 2 is live",
+          "url": "https://docs.bria.ai/whats-new/fibo-2",
+          "by": "Bria"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Fibo-2.0-dev",
+          "labelEn": "Hugging Face: Fibo-2.0-dev",
+          "url": "https://huggingface.co/briaai/Fibo-2.0-dev",
+          "by": "Bria",
+          "date": "2026-10-18"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Fibo-2.0-edit-turbo",
+          "labelEn": "Hugging Face: Fibo-2.0-edit-turbo",
+          "url": "https://huggingface.co/briaai/Fibo-2.0-edit-turbo",
+          "by": "Bria",
+          "date": "2026-10-19"
+        },
+        {
+          "kind": "product",
+          "label": "fal：bria/fibo-2/edit",
+          "labelEn": "fal: bria/fibo-2/edit",
+          "url": "https://fal.ai/models/bria/fibo-2/edit",
+          "by": "fal"
+        },
+        {
+          "kind": "product",
+          "label": "fal：bria/fibo-2/generate",
+          "labelEn": "fal: bria/fibo-2/generate",
+          "url": "https://fal.ai/models/bria/fibo-2/generate",
+          "by": "fal"
+        },
+        {
+          "kind": "community",
+          "label": "Hugging Face Space：Fibo-2.0-editing",
+          "labelEn": "Hugging Face Space: Fibo-2.0-editing",
+          "url": "https://huggingface.co/spaces/briaai/Fibo-2.0-editing",
+          "by": "Bria"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：一套 8B 权重同时做编辑和文生图。Edit Turbo 4 步、无 classifier-free guidance；Dev 文生图示例是 50 步、guidance 5.0。遮罩编辑，最多 4 张参考图。提示词走 VGL 结构化 JSON。",
+          "textEn": "Vendor: one 8B checkpoint does editing and text-to-image. Edit Turbo is 4 steps with no classifier-free guidance; the Dev text-to-image example is 50 steps at guidance 5.0. Masked edits, up to four reference images, prompts as VGL structured JSON."
+        },
+        {
+          "text": "权重页写非商用 CC BY-NC 4.0，商用要和 Bria 签协议。训练数据写的是授权数据。Hugging Face 的 license 字段是 other，链到 CC BY-NC 4.0。",
+          "textEn": "The weight pages say non-commercial CC BY-NC 4.0, with commercial use under an agreement with Bria. Training data is described as licensed. The Hugging Face license field is other, linked to CC BY-NC 4.0."
+        },
+        {
+          "text": "厂商说法，本库未复核：Artificial Analysis 开放权重图像编辑第 1、文生图第 2，模型卡日期 2026-10-20。文档页还写编辑超过 Ideogram、ByteDance、Black Forest Labs 的闭源模型，同样未复核。",
+          "textEn": "Vendor claim, not rechecked here: Artificial Analysis number 1 in open-weights image editing and number 2 in open-weights text-to-image, dated 2026-10-20 on the card. The docs page also says editing beats closed models from Ideogram, ByteDance, and Black Forest Labs; that was not rechecked either."
+        },
+        {
+          "text": "fal 的 edit 与 generate 页写每张 0.04 美元，十张 0.40 美元，1 美元 25 张。Bria 平台定价页停在转圈，没有看到另一套价。",
+          "textEn": "fal’s edit and generate pages say 0.04 dollars per image, 0.40 dollars for ten, and 25 images per 1 dollar. Bria’s platform pricing page stayed on a spinner, so no second price was visible."
+        }
+      ],
+      "qualityNote": "名次只按模型卡和文档页的厂商说法写，没有打开 Artificial Analysis。价格只写了 fal 页面上的每张 0.04 美元；Bria 定价页没有加载出来。模型卡提到 ComfyUI 节点，原始 README 返回 401，没有另找节点仓库。没有出图。",
+      "qualityNoteEn": "Ranks are the vendor’s wording on the model card and docs page. Artificial Analysis was not opened. The only price written down is 0.04 dollars per image on the fal pages; Bria’s pricing page did not finish loading. The card mentions ComfyUI nodes; the raw README returned 401, and no node repo was hunted down. No image was generated.",
+      "verifyLog": "2026-10-22 早间：文档页、两张模型卡、HF Space、fal 的 edit 与 generate 均为 HTTP 200。HF API：Fibo-2.0-dev 创建 2026-10-18T13:44:10Z，lastModified 2026-10-21T11:47:41Z，downloads 396，likes 101，license other，license_link 指向 CC BY-NC 4.0。Edit Turbo 创建 2026-10-19T13:11:51Z，downloads 310，likes 84，base_model 为 Fibo-2.0-dev。模型卡写 8B、VGL、遮罩、最多 4 张参考图、Edit Turbo 的步数 4 与 guidance 1.0、Dev 的 50 步与 guidance 5.0，名次日期 October 20, 2026。文档页写开放权重编辑第 1、文生图 top-2，并点名 Ideogram、ByteDance、Black Forest Labs。fal 页标题为 Fibo 2.0 Edit 与 Generate API，正文写每张 0.04 美元，十张 0.40 美元，1 美元 25 张。Bria 平台定价页 HTTP 200，无头截图停在转圈，没有读到价目。模型卡原始 README 为 401，ComfyUI 链接没有从卡片里打开。没有登录，没有出图。预览是文档页首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 morning: the docs page, both model cards, the HF Space, and fal edit and generate are HTTP 200. HF API: Fibo-2.0-dev created 2026-10-18T13:44:10Z, lastModified 2026-10-21T11:47:41Z, 396 downloads, 101 likes, license other, license_link to CC BY-NC 4.0. Edit Turbo created 2026-10-19T13:11:51Z, 310 downloads, 84 likes, base model Fibo-2.0-dev. The cards say 8B, VGL, masks, up to four references, Edit Turbo at 4 steps and guidance 1.0, Dev at 50 steps and guidance 5.0, and a rank date of October 20, 2026. The docs page says number 1 in open-weights editing and top-2 in open-weights text-to-image, and names Ideogram, ByteDance, and Black Forest Labs. fal page titles are the Fibo 2.0 Edit and Generate APIs; the body says 0.04 dollars per image, 0.40 dollars for ten, and 25 images per 1 dollar. Bria’s platform pricing page is HTTP 200; a headless shot stayed on a spinner and no price table was read. The raw model-card README returned 401, so the ComfyUI link was not opened from the card. Not signed in and no image generated. Preview is a screenshot of the docs hero, scaled to a 1200×800 WebP.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/fibo-2.webp",
+      "previewCredit": "预览截自 Bria 文档页 Fibo 2 is live 的首屏",
+      "previewCreditEn": "Preview from the hero of Bria’s Fibo 2 is live docs page",
+      "featured": false
+    },
+    {
+      "id": "krea-3",
+      "slug": "krea-3",
+      "name": "Krea 3",
+      "vendor": "Krea",
+      "title": "Krea 3：Krea 的新图像模型，Fast 与 Ultra 两档",
+      "titleEn": "Krea 3: Krea’s new image model, in Fast and Ultra",
+      "summary": "Krea 在 2026-10-15 的发布文里推出 Krea 3，写作新的图像编辑模型：按话说改哪里、留哪里，也能直接文生图。发布文称多数编辑在 8 秒内返回、原生 2K，2K 每张 0.06 美元、1K 每张 0.03 美元，一次最多 6 张参考图；产品页现在的标题是比 Nano Banana Pro 快 4 倍，并写它已是应用里的默认图像模型。API 把思考分成 fast、high、ultra。fast 是默认；fast 和 high 不需要 beta。ultra 要 Max 及以上，输出固定 2K，必须带参考图，不带图的请求会按 fast 跑、按 fast 计费，文档写一次可能要几分钟、最长大约 10 分钟。10 月 20 日官方 X 帖称 Ultra 排进图像榜前 4、只被 OpenAI 的模型超过，Fast 把速度和质量的曲线往前推。同一天的官方博客把 Arena、Artificial Analysis、Design Arena 分开写，并写明三块榜不是同一个名次。这些时间和名次都是厂商说法。适合要批量改产品图、又在意单张时间和价钱的人。本库没有登录，没有出过一张图。",
+      "summaryEn": "Krea introduced Krea 3 on 15 October 2026 as its new image-editing model: you say what should change and what should stay, and it can also generate from text. The launch post says most edits return in under 8 seconds at native 2K, at $0.06 per image at 2K and $0.03 at 1K, with up to 6 reference images. The product page’s current headline says it is 4× faster than Nano Banana Pro, and the guide says it is now the default image model in the app. The API splits thinking into fast, high, and ultra. Fast is the default. Fast and high do not need beta. Ultra requires Max or above, always outputs 2K, needs a reference image, and a text-only ultra request runs and bills as fast. The docs say a run can take minutes, up to about 10. On 20 October the official X post said Ultra ranks in the top 4 of image arenas, passed only by OpenAI models, and that Fast pushes the speed-quality curve. The same day’s blog keeps Arena, Artificial Analysis, and Design Arena separate and says they are not one rank. The times and the ranks are vendor claims. Useful when you edit product shots in volume and care about time and price per image. This library did not sign in and did not generate an image.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Krea 博客：Introducing Krea 3",
+          "labelEn": "Krea blog: Introducing Krea 3",
+          "url": "https://www.krea.ai/blog/introducing-krea-3",
+          "by": "Krea",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Krea 3 产品页",
+          "labelEn": "Krea 3 product page",
+          "url": "https://www.krea.ai/krea-3",
+          "by": "Krea"
+        },
+        {
+          "kind": "official",
+          "label": "Krea 博客：榜单说明（10 月 20 日）",
+          "labelEn": "Krea blog: the leaderboard post (20 October)",
+          "url": "https://www.krea.ai/blog/krea-3-benchmarks",
+          "by": "Krea",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "官方 X 帖",
+          "labelEn": "Official X post",
+          "url": "https://x.com/krea_ai/status/2112567020353102324",
+          "by": "krea_ai",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "用户指南",
+          "labelEn": "User guide",
+          "url": "https://www.krea.ai/docs/user-guide/features/krea-3",
+          "by": "Krea"
+        },
+        {
+          "kind": "official",
+          "label": "API 说明：思考档与 Ultra",
+          "labelEn": "API overview: thinking modes and Ultra",
+          "url": "https://www.krea.ai/docs/developers/krea-3/overview",
+          "by": "Krea"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：10 月 15 日发布帖",
+          "labelEn": "Hacker News: the 15 October launch thread",
+          "url": "https://news.ycombinator.com/item?id=50105648",
+          "by": "dvrp",
+          "date": "2026-10-15"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：多数编辑 8 秒内、原生 2K；2K 每张 0.06 美元，1K 每张 0.03 美元。对照表把 Nano Banana Pro 写成 33 秒、0.135 美元，GPT Image 2 写成 90 秒、0.22 美元，并注明时间是 Krea 自己在 9 月 24 日到 10 月 1 日测的中位数。产品页标题写比 Nano Banana Pro 快 4 倍。",
+          "textEn": "Vendor claim: most edits return in under 8 seconds at native 2K, at $0.06 per image at 2K and $0.03 at 1K. The comparison table lists Nano Banana Pro at 33 seconds and $0.135, and GPT Image 2 at 90 seconds and $0.22, and says the times are Krea’s own medians from 24 September to 1 October. The product-page headline says 4× faster than Nano Banana Pro."
+        },
+        {
+          "text": "API 文档：fast 是默认；fast 和 high 不需要 beta。ultra 要 Max 及以上，始终 2K，不带参考图就按 fast 跑并按 fast 计费；一次可能要几分钟，文档写最长大约 10 分钟。8 秒指的是发布文里的常规编辑，不是 ultra。",
+          "textEn": "API docs: fast is the default; fast and high do not need beta. Ultra requires Max or above, is always 2K, and a request with no reference image runs and bills as fast. A job can take minutes; the docs say up to about 10. The 8 seconds are the launch post’s ordinary edits, not Ultra."
+        },
+        {
+          "text": "榜单只记厂商说法，本库没有打开 Arena、Artificial Analysis 或 Design Arena 复核。X 帖称 Ultra 排前 4、只被 OpenAI 超过。同日博客写三块榜不能合成一个名次：Arena 多图编辑 Ultra 第 4（1435±11，初步，2991 票），单图编辑第 8；博客转述的 Artificial Analysis 上 Ultra 第 5、Fast 第 11；Design Arena 上 Ultra Thinking 第 4/51。",
+          "textEn": "Ranks are vendor claims only. This library did not open Arena, Artificial Analysis, or Design Arena to check them. The X post says Ultra is top 4, passed only by OpenAI. The same day’s blog says the three boards must not be collapsed: Arena multi-image edit has Ultra at #4 (1435±11, preliminary, 2,991 votes) and single-image edit at #8; the blog’s retelling of Artificial Analysis has Ultra at #5 and Fast at #11; Design Arena has Ultra Thinking at #4 of 51."
+        },
+        {
+          "text": "发布文写 Krea 3 已在 krea.ai 上线，并列出 fal、Hedra、Together AI、Nous Research、OpenRouter 和 Replicate。本库没有登录，没有出图，也没有逐个打开这些渠道。",
+          "textEn": "The launch post says Krea 3 is live on krea.ai and lists fal, Hedra, Together AI, Nous Research, OpenRouter, and Replicate. This library did not sign in, did not generate an image, and did not open each of those partners."
+        }
+      ],
+      "qualityNote": "速度、价格和名次都是 Krea 的说法，本库没有出图，也没有打开第三方榜复核。博客首屏嵌的图写着 Arena 多图编辑、Krea 3 Ultra Ranked #4、1435，前三名是 GPT Image，和 X 帖的“前 4、只被 OpenAI 超过”对得上这一块榜；同一篇博客又写单图编辑是第 8、另外两块榜名次也不同。不要把帖子收成一个总排名。库里已有 Krea 的 Photoshop 插件那条，写的是 Krea 2 等模型，本条不把 Krea 3 算进那个插件。未合并的晚间 PR 曾以仍是测试版为由跳过；本库打开的 10 月 15 日发布文和用户指南写已经对所有人开放，Ultra 另要 Max 及以上。",
+      "qualityNoteEn": "Speeds, prices, and ranks are Krea’s claims. This library did not generate an image and did not open the third-party boards. The chart embedded at the top of the blog says Arena multi-image edit, Krea 3 Ultra ranked #4, 1435, with three GPT Image models above it, which matches the X post’s “top 4, only OpenAI ahead” for that one board. The same post also says single-image edit is #8 and that the other two boards differ. Do not collapse the post into one overall rank. The library already has Krea’s Photoshop plugin entry, which names Krea 2 and other models; this card does not treat Krea 3 as part of that plugin. An unmerged evening PR skipped it as still in beta. The 15 October launch post and the user guide opened here say it is available to everyone, with Ultra separately requiring Max or above.",
+      "relatedCaseIds": [
+        "krea-photoshop-plugin"
+      ],
+      "relatedModelIds": [],
+      "previewImage": "/previews/krea-3.webp",
+      "previewCredit": "预览截自 Krea 3 产品页首屏",
+      "previewCreditEn": "Preview cropped from the Krea 3 product-page hero",
+      "featured": false,
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://www.krea.ai/blog/introducing-krea-3 HTTP 200，标题 Introducing Krea 3 - Krea，作者 The Krea Team，October 15, 2026。正文：under 8 seconds、native 2K、$0.06 at 2K、$0.03 at 1K、up to 6 reference images；对照表 Under 8 s / 33 s / 90 s，$0.06 / $0.135 / $0.22，脚注写 median time on Krea, Sep 24 to Oct 1, 2026, queue included，list prices without image references；并写 live on krea.ai for our 30 million users，渠道 fal、Hedra、Together AI、Nous Research、OpenRouter、Replicate。产品页 https://www.krea.ai/krea-3 HTTP 200，标题 Krea 3: an image editing model 4× faster than Nano Banana Pro，首屏字是 Frontier Image Editing Model、4× faster than Nano Banana Pro。榜单文 https://www.krea.ai/blog/krea-3-benchmarks HTTP 200，October 20, 2026，开篇写三块榜不能合成一个名次，并给出 Arena 多图 #4（1435±11，Preliminary，2,991 votes，rank spread 4–5）、单图 #8（1411±11，2,619 votes，spread 5–10）、Artificial Analysis Ultra #5 / Fast #11、Design Arena Ultra Thinking #4 of 51。Chrome 打开该文，首屏图文字为 Multi-Image Edit Arena、Krea 3 Ultra: Ranked #4。用户指南与 API 说明均 HTTP 200：default image model；fast / high 不需要 beta；ultra 要 Max，402 与 K3_ULTRA_ACCESS_REQUIRED；纯文字 ultra 按 fast 计费；最长 about 10 minutes。X 帖 2112567020353102324，@krea_ai，2026-10-20T15:30:01Z，正文即 top of image arenas、Fast 的帕累托、Ultra top-4 only surpassed by OpenAI models。HN item 50105648，Algolia 352 pts，作者 dvrp，创建 2026-10-15T16:04:05Z，链的是产品页。没有登录，没有点 Try Krea 3。预览为产品页首屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://www.krea.ai/blog/introducing-krea-3 HTTP 200, title Introducing Krea 3 - Krea, The Krea Team, October 15, 2026. Body: under 8 seconds, native 2K, $0.06 at 2K, $0.03 at 1K, up to 6 reference images. The comparison table says Under 8 s / 33 s / 90 s and $0.06 / $0.135 / $0.22, with a footnote that the times are medians on Krea from Sep 24 to Oct 1, 2026, queue included, and list prices without image references. It also says live on krea.ai for 30 million users, via fal, Hedra, Together AI, Nous Research, OpenRouter, and Replicate. Product page https://www.krea.ai/krea-3 HTTP 200, title Krea 3: an image editing model 4× faster than Nano Banana Pro; the hero reads Frontier Image Editing Model, 4× faster than Nano Banana Pro. Benchmark post https://www.krea.ai/blog/krea-3-benchmarks HTTP 200, October 20, 2026. The opening says the three boards must not be collapsed, and gives Arena multi-image #4 (1435±11, Preliminary, 2,991 votes, spread 4–5), single-image #8 (1411±11, 2,619 votes, spread 5–10), Artificial Analysis Ultra #5 / Fast #11, and Design Arena Ultra Thinking #4 of 51. Chrome showed the embedded chart labeled Multi-Image Edit Arena, Krea 3 Ultra: Ranked #4. The user guide and API overview both returned HTTP 200: default image model; fast and high need no beta; ultra needs Max, with 402 and K3_ULTRA_ACCESS_REQUIRED; text-only ultra bills as fast; up to about 10 minutes. X post 2112567020353102324, @krea_ai, 2026-10-20T15:30:01Z. HN item 50105648, Algolia 352 pts, author dvrp, created 2026-10-15T16:04:05Z, linking the product page. Not signed in, Try Krea 3 not clicked. Preview is the product-page hero, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "voxtral-3",
+      "slug": "voxtral-3",
+      "name": "Voxtral 3",
+      "vendor": "Mistral",
+      "title": "Voxtral 3：Mistral 的语音模型家族和语音代理 SDK",
+      "titleEn": "Voxtral 3: Mistral’s speech-model family and voice-agent SDK",
+      "summary": "Mistral 在 2026-10-20 发布 Voxtral 3：一组语音模型和一个语音代理 SDK，把听、想、调用工具和说串进一条实时流程。新闻点名的模型有 Voxtral Small Transcribe 3（转录、说话人分离、关键词偏置，官方称覆盖 50 多种语言）、Voxtral Mini Transcribe 3（新闻写 4B 参数，批量每分钟 0.0035 美元）、Voxtral Mini Transcribe Realtime 3，以及 Voxtral Mini TTS 3。文档四页都标着 2026-10-20、Public Preview。新闻写实时模型在 35 种以上语言里低于 500 毫秒；实时模型文档写延迟可以在 80 毫秒到 2400 毫秒之间调，每分钟 0.008 美元。TTS 也有两套说法：新闻写 35 种以上语言、50 种以上方言，模型文档写支持 9 种语言、首包大约 90 毫秒、每百万字符 13 美元。语音代理 API 的价格表写，推理用 Mistral Small 4 时每分钟 0.04 美元，换别的推理模型每分钟 0.08 美元。新闻写可以走 Mistral 的 API，也可以自部署；文档没有写开源许可，也没有写权重下载。适合要做电话或网页里的语音代理、又要欧区或自建的人。本库没有登录 Studio，没有点 Take the call，没有调 API。",
+      "summaryEn": "On 20 October 2026 Mistral released Voxtral 3: a family of speech models and a voice-agent SDK that puts listening, reasoning, tool calls, and speaking on one realtime stream. The news post names Voxtral Small Transcribe 3 (transcription, diarization, and context biasing, which it says covers 50+ languages), Voxtral Mini Transcribe 3 (the news says 4B parameters, $0.0035 per minute in batch), Voxtral Mini Transcribe Realtime 3, and Voxtral Mini TTS 3. All four doc pages are dated 20 October 2026 and marked Public Preview. The news says the realtime model is under 500 ms in 35+ languages; the realtime model page says latency is configurable from 80 ms to 2,400 ms, at $0.008 per minute. TTS has two wordings: the news says 35+ languages and 50+ dialects, the model page says 9 languages, about 90 ms to first audio, and $13 per million characters. The voice-agent price table says $0.04 per minute when reasoning uses Mistral Small 4, and $0.08 per minute with another reasoning model. The news says you can use Mistral’s API or self-deploy. The docs do not state an open-source license or a weights download. Useful for phone or web voice agents that need an EU endpoint or your own infrastructure. This library did not sign in to Studio, did not press Take the call, and did not call the API.",
+      "announcedAt": "2026-10-20",
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Mistral 新闻：Voxtral 3",
+          "labelEn": "Mistral news: Voxtral 3",
+          "url": "https://mistral.ai/news/voxtral-3/",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Small Transcribe 3",
+          "labelEn": "Docs: Voxtral Small Transcribe 3",
+          "url": "https://docs.mistral.ai/models/voxtral-small-transcribe-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Mini Transcribe 3",
+          "labelEn": "Docs: Voxtral Mini Transcribe 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral Mini Transcribe Realtime 3",
+          "labelEn": "Docs: Voxtral Mini Transcribe Realtime 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-transcribe-realtime-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Voxtral TTS 3",
+          "labelEn": "Docs: Voxtral TTS 3",
+          "url": "https://docs.mistral.ai/models/voxtral-mini-tts-3-0",
+          "by": "Mistral",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50168396",
+          "by": "ilreb",
+          "date": "2026-10-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Small Transcribe 3 做 50 多种语言的转录和说话人分离，新闻写它超过 Whisper、Scribe v2 和 Gemini 3.5 Transcribe。Mini 批量版新闻写是 4B，每分钟 0.0035 美元。两张文档都标 Public Preview，上下文 32k，Small 每分钟 0.004 美元。分数没有复跑。",
+          "textEn": "Vendor claim: Small Transcribe 3 covers transcription and diarization in 50+ languages, and the news says it beats Whisper, Scribe v2, and Gemini 3.5 Transcribe. The news says the Mini batch model is 4B at $0.0035 per minute. Both doc pages say Public Preview and a 32k context; Small is $0.004 per minute. Scores were not re-run."
+        },
+        {
+          "text": "实时转录有两套官方说法。新闻写 35 种以上语言、低于 500 毫秒。模型文档写延迟可在 80 毫秒到 2400 毫秒之间调，每分钟 0.008 美元，并带轮次检测、偏置和说话人分离。本库没有对着干。",
+          "textEn": "Realtime transcription has two official wordings. The news says 35+ languages and under 500 ms. The model page says latency is configurable from 80 ms to 2,400 ms, at $0.008 per minute, with end-of-turn detection, biasing, and diarization. This library did not reconcile them."
+        },
+        {
+          "text": "TTS 也对不上。新闻写 Mini TTS 3 支持 35 种以上语言、50 种以上方言，Pro Voice 用大约 30 分钟音频。模型文档的标题是 Voxtral TTS 3，写支持 9 种语言、首包大约 90 毫秒、34 个情绪标签，每百万字符 13 美元。",
+          "textEn": "TTS does not match across pages. The news says Mini TTS 3 supports 35+ languages and 50+ dialects, and that Pro Voice uses about 30 minutes of audio. The model page is titled Voxtral TTS 3 and says 9 languages, about 90 ms to first audio, 34 emotion tags, and $13 per million characters."
+        },
+        {
+          "text": "新闻价格表：语音代理配 Mistral Small 4 为每分钟 0.04 美元，换别的推理模型每分钟 0.08 美元。开头写欧盟托管或自部署，文末又写 API 有欧洲、美国和全球端点。许可和权重都没写，未核实。",
+          "textEn": "The news price table lists the voice agent at $0.04 per minute with Mistral Small 4 and $0.08 per minute with another reasoning model. The opening says an EU-hosted API or self-deployment; the pricing section later says European, US, and global endpoints. No license and no weights are stated. Unverified."
+        }
+      ],
+      "qualityNote": "语言数、延迟和“超过某某模型”都是 Mistral 新闻或文档里的说法，本库没有复跑，也没有调 API。新闻和 TTS 文档的语言数不一致，实时模型的延迟说法也不一致，两条都留着。四张模型文档的页眉写 Public Preview 和 Premier；Premier 指什么，页面没有解释，未核实。没有看到开源许可或权重下载，自部署写成联系团队，不要当成已经公开权重。本库没有登录，没有点新闻页上的 Take the call。",
+      "qualityNoteEn": "Language counts, latency, and “beats model X” are claims from Mistral’s news post or docs. This library did not re-run them and did not call the API. The news post and the TTS doc disagree on language count, and the realtime latency wordings disagree too; both are kept. The four model pages are labeled Public Preview and Premier. The page does not say what Premier means, so that is unverified. No open-source license or weights download appears. Self-deployment is written as talking to the team, so this is not a public-weights release. This library did not sign in and did not press Take the call on the news page.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/voxtral-3.webp",
+      "previewCredit": "预览截自 Mistral 新闻页首屏，点过 Cookie 面板的 Close",
+      "previewCreditEn": "Preview of the Mistral news hero after Close on the cookie panel",
+      "featured": false,
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://mistral.ai/news/voxtral-3/ HTTP 200，标题 Voxtral 3: Voice Agent SDK & Speech Models in 50+ Languages。页内 datePublished 2026-10-20T12:00:22.000Z，dateModified 2026-10-20T20:43:05.862Z。新闻价格表：Mini Transcribe 3 batch $0.0035/min，Mini Transcribe Realtime 3 $0.008/min，Small Transcribe 3 $0.0040/min，Speech 3 $13/1M chars，语音代理配 Mistral Small 4 为 0.04$/min，其他推理模型 0.08$/min。Mini 4B 与 $0.0035/min、50+ 语言、35+ 语言 / sub-500ms、TTS 35+ 语言与 50+ 方言、Pro Voice 30 分钟，都在这篇新闻正文里。四张文档均 HTTP 200，页眉 October 20, 2026、Public Preview、Premier：Small 与 Mini 转录上下文 32k，价格 $0.004/min 与 $0.0035/min；实时文档写 80 ms to 2,400 ms、$0.008/min；TTS 文档标题 Voxtral TTS 3，写 9 languages、~90 ms、34 emotion tags、2 pace tags、$13/M chars。四页都没有 Apache、license 或 weight 字样。HN item 50168396，Algolia 515 pts，作者 ilreb，创建 2026-10-20T16:02:07Z。Chrome 打开新闻页，点 Cookies 再点 Close，首屏是 Voxtral 3 和 Take the call。没有点 Take the call，没有登录。预览为该首屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://mistral.ai/news/voxtral-3/ HTTP 200, title Voxtral 3: Voice Agent SDK & Speech Models in 50+ Languages. In-page datePublished 2026-10-20T12:00:22.000Z, dateModified 2026-10-20T20:43:05.862Z. The news price table: Mini Transcribe 3 batch $0.0035/min, Mini Transcribe Realtime 3 $0.008/min, Small Transcribe 3 $0.0040/min, Speech 3 $13/1M chars, voice agent with Mistral Small 4 at $0.04/min, any other reasoning model at $0.08/min. The 4B Mini, $0.0035/min, 50+ languages, 35+ languages under 500 ms, TTS at 35+ languages and 50+ dialects, and Pro Voice at 30 minutes are all in that news body. All four doc pages returned HTTP 200, headed October 20, 2026, Public Preview, Premier. Small and Mini transcribe list a 32k context at $0.004/min and $0.0035/min. The realtime page says 80 ms to 2,400 ms and $0.008/min. The TTS page is titled Voxtral TTS 3 and says 9 languages, ~90 ms, 34 emotion tags, 2 pace tags, and $13 per million characters. None of the four pages contain Apache, license, or weight. HN item 50168396, Algolia 515 pts, author ilreb, created 2026-10-20T16:02:07Z. Chrome opened the news page, clicked Cookies, then Close. The hero is Voxtral 3 and Take the call. Take the call was not pressed and there was no sign-in. Preview is that hero, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "deepseek-v4-1-flash-1017",
+      "slug": "deepseek-v4-1-flash-1017",
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "vendor": "DeepSeek",
+      "title": "DeepSeek-V4.1-Flash-1017：V4.1-Flash 小版本更新，MIT 权重，三天后开源推理框架 DeepInfer",
+      "titleEn": "DeepSeek-V4.1-Flash-1017: a minor V4.1-Flash update with MIT weights, plus the open DeepInfer engine",
+      "summary": "DeepSeek 在 2026-10-17 发布 V4.1-Flash 的小版本更新 V4.1-Flash-1017，网页、App 和 API 同步上线：API 模型名仍是 `deepseek-flash`，旧名 `deepseek-v4-flash` 等也转到它。官方称基准更高、完成任务更快、输出更短，在性能和成本上是「帕累托改进」；Hugging Face 模型卡对比表里 DeepSWE v1.1 从 74.2 到 77.0，Terminal-Bench 4.0 从 31.2 到 42.3，HLE（不用工具）从 36.8 到 42.6。权重在 Hugging Face 和 ModelScope 以 MIT 许可放出，模型卡写这次没有附 Jinja 对话模板，改用仓库里的 Python 编码参考实现，另发 Rust 写的 deepseek-recipe 处理提示格式。价格页写 1M 上下文、最长输出 384K、支持视觉，高峰时段每百万 token 输入 0.30 美元（缓存命中 0.006）、输出 1.20 美元，非高峰减半。10 月 20 日 DeepSeek 又开源了自家推理框架 DeepInfer（Apache-2.0），默认就跑这个权重，但只支持 NVIDIA SM100 和华为昇腾 950，且不含 KV 缓存系统和预填充/解码拆分这些完整服务所需的部分。Artificial Analysis 给它智能指数 45，在 121 个模型里排第 2。分数都是厂商或第三方的说法，本库没有调 API，也没有跑权重。",
+      "summaryEn": "On 17 October 2026 DeepSeek shipped V4.1-Flash-1017, a minor update to V4.1-Flash, on the web, app and API at once: the API model name is still `deepseek-flash`, and legacy names such as `deepseek-v4-flash` route to it. DeepSeek claims higher benchmarks, faster task completion and shorter outputs, a Pareto improvement in performance and cost; the Hugging Face model card table shows DeepSWE v1.1 going from 74.2 to 77.0, Terminal-Bench 4.0 from 31.2 to 42.3, and HLE without tools from 36.8 to 42.6. Weights are on Hugging Face and ModelScope under MIT. The model card says there is no Jinja chat template this time; instead the repo has a Python reference encoder, and the separate Rust deepseek-recipe handles prompt formatting. The pricing page lists a 1M context, up to 384K output and vision support, with peak prices per million tokens of $0.30 input ($0.006 cache hit) and $1.20 output, halved off-peak. On 20 October DeepSeek also open-sourced its in-house inference engine DeepInfer (Apache-2.0), which defaults to these weights but only supports NVIDIA SM100 and Huawei Ascend 950 and leaves out the KV cache system and prefill/decode disaggregation a full service needs. Artificial Analysis gives it an Intelligence Index of 45, 2nd of 121 models. Scores are vendor or third-party claims; this library did not call the API or run the weights.",
+      "announcedAt": "2026-10-17",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "DeepSeek 新闻：V4.1-Flash-1017 发布",
+          "labelEn": "DeepSeek news: V4.1-Flash-1017 release",
+          "url": "https://api-docs.deepseek.com/news/news261017",
+          "by": "DeepSeek",
+          "date": "2026-10-17"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型页：deepseek-ai/DeepSeek-V4.1-Flash-1017（MIT）",
+          "labelEn": "Hugging Face model page: deepseek-ai/DeepSeek-V4.1-Flash-1017 (MIT)",
+          "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+          "by": "DeepSeek-AI",
+          "date": "2026-10-17"
+        },
+        {
+          "kind": "official",
+          "label": "DeepSeek API 文档：模型与价格",
+          "labelEn": "DeepSeek API docs: models and pricing",
+          "url": "https://api-docs.deepseek.com/quick_start/pricing",
+          "by": "DeepSeek"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub：deepseek-ai/DeepInfer 推理框架（Apache-2.0）",
+          "labelEn": "GitHub: deepseek-ai/DeepInfer inference engine (Apache-2.0)",
+          "url": "https://github.com/deepseek-ai/DeepInfer",
+          "by": "DeepSeek-AI",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "official",
+          "label": "DeepSeek 官方 X 帖：DeepInfer 开源",
+          "labelEn": "DeepSeek official X post: DeepInfer open source",
+          "url": "https://x.com/deepseek_ai/status/2112476496283775135",
+          "by": "deepseek_ai",
+          "date": "2026-10-20"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 第三方测评页",
+          "labelEn": "Artificial Analysis third-party page",
+          "url": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+          "by": "Artificial Analysis"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：DeepInfer 开源",
+          "labelEn": "Hacker News thread: DeepInfer open-sourced",
+          "url": "https://news.ycombinator.com/item?id=50163277",
+          "by": "Hacker News",
+          "date": "2026-10-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：相比 V4.1-Flash 基准更高、任务更快、输出更短。模型卡表：DeepSWE v1.1 74.2→77.0，Terminal-Bench 4.0 31.2→42.3，HLE（不用工具）36.8→42.6。本库没有复跑。",
+          "textEn": "Vendor claim: higher benchmarks, faster tasks and shorter outputs than V4.1-Flash. Model card table: DeepSWE v1.1 74.2→77.0, Terminal-Bench 4.0 31.2→42.3, HLE without tools 36.8→42.6. Not re-run here."
+        },
+        {
+          "text": "权重 MIT，Hugging Face 与 ModelScope 均可下；没有 Jinja 对话模板，改用 Python 参考编码器和 Rust 的 deepseek-recipe。",
+          "textEn": "MIT weights on Hugging Face and ModelScope; no Jinja chat template, with a Python reference encoder and the Rust deepseek-recipe instead."
+        },
+        {
+          "text": "价格页：`deepseek-flash` 1M 上下文、最长输出 384K、支持视觉；高峰每百万 token 输入 0.30 美元、输出 1.20 美元，非高峰减半。",
+          "textEn": "Pricing page: `deepseek-flash` has a 1M context, up to 384K output and vision; peak per million tokens is $0.30 input and $1.20 output, halved off-peak."
+        },
+        {
+          "text": "DeepInfer（10 月 20 日开源，Apache-2.0）默认跑这个权重，只支持 NVIDIA SM100 与昇腾 950，不含 KV 缓存与预填充/解码拆分。",
+          "textEn": "DeepInfer (open-sourced 20 October, Apache-2.0) defaults to these weights, supports only NVIDIA SM100 and Ascend 950, and omits the KV cache and prefill/decode disaggregation."
+        }
+      ],
+      "qualityNote": "基准分和「更快更短」都按 DeepSeek 新闻页与模型卡，是厂商说法；Artificial Analysis 的智能指数 45、第 2 名和每秒约 210 个输出 token 是第三方测量。本库没有调 API、没有下载权重，也没有在 SM100 或昇腾上编译 DeepInfer。同系列的 9 月版 V4.1-Flash 另有一张卡，这张只记 1017 更新和三天后开源的推理框架。",
+      "qualityNoteEn": "Benchmark scores and the faster/shorter claims follow DeepSeek’s news page and model card and are vendor claims; Artificial Analysis’s Intelligence Index of 45, rank 2 and about 210 output tokens per second are third-party measurements. This library did not call the API, download weights, or build DeepInfer on SM100 or Ascend. The September V4.1-Flash has its own card; this one covers the 1017 update and the inference engine released three days later.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "deepseek-v4-1-flash"
+      ],
+      "previewImage": "/previews/deepseek-v4-1-flash-1017.webp",
+      "previewCredit": "预览截自 DeepSeek API 文档新闻页",
+      "previewCreditEn": "Preview cropped from the DeepSeek API docs news page",
+      "featured": false,
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：新闻页 https://api-docs.deepseek.com/news/news261017 HTTP 200，标题 DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real，侧栏日期 2026/10/17；正文 Pareto improvement、Now live on our website, app, and API、Optimized for DeepSeek Harness / Tencent CodeBuddy / WorkBuddy、Search & Fetch API $0.75 / 1,000 calls、Hugging Face 与 ModelScope 链接。HF API：deepseek-ai/DeepSeek-V4.1-Flash-1017 创建 2026-10-17T02:40:38Z，license mit，pipeline image-text-to-text，1830 赞；模型卡称 minor update，对比表 DS-V4.1-Flash-1017 vs DS-V4.1-Flash：HLE 42.6 vs 36.8、Terminal-Bench 4.0 42.3 vs 31.2、DeepSWE v1.1 77.0 vs 74.2、ProgramBench 29.1 vs 20.3；写 This release does not include a Jinja-format chat template。ModelScope 页 HTTP 200。价格页 quick_start/pricing：MODEL VERSION DeepSeek-V4.1-Flash-1017，CONTEXT 1M，MAX OUTPUT 384K，Vision ✓，峰时 cache hit $0.006 / miss $0.3 / output $1.2，非峰减半。gh api repos/deepseek-ai/DeepInfer：Apache-2.0，创建 2026-10-16，6292★；README 写 Supported models DeepSeek-V4.1-Flash、默认 checkpoint deepseek-ai/DeepSeek-V4.1-Flash-1017、硬件 NVIDIA SM100 与 Huawei Ascend 950、不含 KV cache system 与 VE/Prefill/Decode disaggregation。官方 X 帖 2112476496283775135（@deepseek_ai，2026-10-20T09:30:19Z，12650 赞）。HN item 50163277「DeepSeek just open-sourced its inference engine」Algolia 626 pts。Artificial Analysis 页 HTTP 200：Open weights model，Intelligence Index 45（#2 / 121），210.6 output tokens/s，In $0.30 Out $1.20，552B 总参数 / 16B 激活，License MIT；其 X 帖 2112218661432000694（2026-10-19）写比 V4.1 Flash 高 6 分。收录前 main 只有 9 月版 deepseek-v4-1-flash，打开的 PR 里没有 1017 / DeepInfer。预览为 Playwright 打开新闻页首屏，1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): news page https://api-docs.deepseek.com/news/news261017 HTTP 200, title DeepSeek-V4.1-Flash-1017: Wish-Driven Programming Made Real, sidebar date 2026/10/17; body says Pareto improvement, Now live on our website, app, and API, Optimized for DeepSeek Harness / Tencent CodeBuddy / WorkBuddy, Search & Fetch API $0.75 / 1,000 calls, with Hugging Face and ModelScope links. HF API: deepseek-ai/DeepSeek-V4.1-Flash-1017 created 2026-10-17T02:40:38Z, license mit, pipeline image-text-to-text, 1,830 likes; the model card calls it a minor update, and its table DS-V4.1-Flash-1017 vs DS-V4.1-Flash shows HLE 42.6 vs 36.8, Terminal-Bench 4.0 42.3 vs 31.2, DeepSWE v1.1 77.0 vs 74.2, ProgramBench 29.1 vs 20.3; it says This release does not include a Jinja-format chat template. ModelScope page HTTP 200. Pricing page quick_start/pricing: MODEL VERSION DeepSeek-V4.1-Flash-1017, CONTEXT 1M, MAX OUTPUT 384K, Vision ✓, peak cache hit $0.006 / miss $0.3 / output $1.2, halved off-peak. gh api repos/deepseek-ai/DeepInfer: Apache-2.0, created 2026-10-16, 6,292★; README lists supported model DeepSeek-V4.1-Flash, default checkpoint deepseek-ai/DeepSeek-V4.1-Flash-1017, hardware NVIDIA SM100 and Huawei Ascend 950, and excludes a KV cache system and VE/Prefill/Decode disaggregation. Official X post 2112476496283775135 (@deepseek_ai, 2026-10-20T09:30:19Z, 12,650 likes). HN item 50163277 “DeepSeek just open-sourced its inference engine”, Algolia 626 pts. Artificial Analysis HTTP 200: Open weights model, Intelligence Index 45 (#2 / 121), 210.6 output tokens/s, In $0.30 Out $1.20, 552B total / 16B active parameters, License MIT; its X post 2112218661432000694 (2026-10-19) says 6 points above V4.1 Flash. Before this entry main only had the September deepseek-v4-1-flash, and no open PR had 1017 / DeepInfer. Preview is a Playwright view of the news page hero, 1200×800 WebP."
+    },
+    {
+      "id": "minimax-m3-1-flash",
+      "slug": "minimax-m3-1-flash",
+      "name": "MiniMax M3.1 Flash",
+      "vendor": "MiniMax",
+      "title": "MiniMax M3.1 Flash：主打 Agent 与编程的低价快模型",
+      "titleEn": "MiniMax M3.1 Flash: a cheap, fast model for agents and coding",
+      "summary": "MiniMax 在 2026-10-19 发布 M3.1 Flash，官方称此前匿名上线、处理过 200 万亿以上 token 的 Space Bunny 就是它的早期版本。博客写它在复杂 Agent 任务、电脑操作、编程和网络安全上都有进步，在线推理快将近三倍，Agent 任务的总使用成本比上一代低 70%。API 统一价：每百万 token 输入 0.15 美元、输出 0.60 美元、缓存输入 0.015 美元。文档的模型列表写 MiniMax-M3.1-Flash 是多模态编程模型，1M 上下文，思考深度可调。官方给出的分数有 DeepSWE v1.1 73.7%、OSWorld V2 61.7、Agents’ Last Exam 29.6、BankerToolBench 76.2、CyberGym 82%，日常输出可到每秒 200 个 token 以上、中位数 170 以上。现在可以通过 MiniMax API、M Plan 订阅和 MiniMax Code 使用；博客写权重稍后发布，官方 X 帖写 10 月 23 日放出。这些分数和速度都是厂商说法。适合要大量跑 Agent、又在意单价的人。本库没有调用 API。",
+      "summaryEn": "MiniMax released M3.1 Flash on 19 October 2026 and says Space Bunny, which ran anonymously and processed more than 200 trillion tokens, was an early version of it. The blog claims gains in complex agent tasks, computer use, coding, and cybersecurity, online inference nearly three times faster, and agent-task usage costs 70% lower than its predecessor. Flat API pricing per million tokens is $0.15 input, $0.60 output, and $0.015 cached input. The docs model list describes MiniMax-M3.1-Flash as a multimodal coding model with a 1M context window and tunable thinking depth. Vendor scores include DeepSWE v1.1 73.7%, OSWorld V2 61.7, Agents’ Last Exam 29.6, BankerToolBench 76.2, and CyberGym 82%, with everyday output above 200 tokens per second and a median above 170. It is available through the MiniMax API, the M Plan subscription, and MiniMax Code; the blog says weights will come later, and the official X post says 23 October. Scores and speeds are vendor claims. Useful if you run many agent tasks and care about unit price. This library did not call the API.",
+      "announcedAt": "2026-10-19",
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T01:30:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "MiniMax 博客：M3.1 Flash 发布",
+          "labelEn": "MiniMax blog: M3.1 Flash release",
+          "url": "https://www.minimax.io/blog/minimax-m31f",
+          "by": "MiniMax",
+          "date": "2026-10-19"
+        },
+        {
+          "kind": "official",
+          "label": "MiniMax 官方 X 帖（权重日期、价格）",
+          "labelEn": "MiniMax official X post (weights date, pricing)",
+          "url": "https://x.com/MiniMax_AI/status/2112150867868541221",
+          "by": "MiniMax_AI",
+          "date": "2026-10-19"
+        },
+        {
+          "kind": "official",
+          "label": "MiniMax API 文档：模型列表",
+          "labelEn": "MiniMax API docs: model list",
+          "url": "https://platform.minimax.io/docs/guides/models-intro",
+          "by": "MiniMax"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 第三方测评页",
+          "labelEn": "Artificial Analysis third-party page",
+          "url": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+          "by": "Artificial Analysis"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50154540",
+          "by": "jtg",
+          "date": "2026-10-19"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：API 统一价每百万 token 输入 0.15 美元、输出 0.60 美元、缓存输入 0.015 美元；Agent 任务总成本比上一代低 70%。",
+          "textEn": "Vendor claim: flat API pricing per million tokens of $0.15 input, $0.60 output, and $0.015 cached input; agent-task usage costs 70% lower than the predecessor."
+        },
+        {
+          "text": "官方称：DeepSWE v1.1 73.7%、OSWorld V2 61.7、Agents’ Last Exam 29.6、BankerToolBench 76.2、CyberGym 82%。本库没有复跑。",
+          "textEn": "Vendor claim: DeepSWE v1.1 73.7%, OSWorld V2 61.7, Agents’ Last Exam 29.6, BankerToolBench 76.2, CyberGym 82%. Not re-run here."
+        },
+        {
+          "text": "官方称：日常输出每秒 200 个 token 以上，中位数 170 以上。Artificial Analysis 页面测得约 122.8，口径不同。",
+          "textEn": "Vendor claim: everyday output above 200 tokens per second, median above 170. The Artificial Analysis page shows about 122.8, measured differently."
+        },
+        {
+          "text": "文档写 1M 上下文、多模态、思考深度可调。博客写权重稍后发布，官方 X 帖写 10 月 23 日；许可尚未公布。",
+          "textEn": "The docs list a 1M context window, multimodal input, and tunable thinking depth. The blog says weights will come later and the X post says 23 October; no licence has been published."
+        }
+      ],
+      "qualityNote": "分数、速度和成本降幅都按 MiniMax 博客和官方 X 帖，是厂商说法，本库没有调 API，也没有复测。两处口径不一：博客写 DeepSWE 73.7%、ALE 29.6，X 帖写 74% 和 30%；博客写权重稍后发布，X 帖写 10 月 23 日。Artificial Analysis 页面把它标为 Proprietary，智能指数 43，在 173 个模型里排第 4，输出速度约 122.8 token/秒，低于官方说的中位数 170；那是第三方测量，条件不同。权重还没放出，开源许可未知。本库没有登录 MiniMax 平台，也没有核对 M Plan 价格。",
+      "qualityNoteEn": "Scores, speeds, and the cost reduction follow MiniMax’s blog and official X post. They are vendor claims; this library did not call the API or re-test. Two figures differ between them: the blog says DeepSWE 73.7% and ALE 29.6, the X post says 74% and 30%; the blog says weights will come later, the X post says 23 October. Artificial Analysis lists it as Proprietary with an Intelligence Index of 43, 4th of 173 models, and output of about 122.8 tokens per second, below the vendor’s median of 170; that is a third-party measurement under different conditions. Weights are not out yet and the licence is unknown. This library did not sign in to the MiniMax platform or check M Plan prices.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/minimax-m3-1-flash.webp",
+      "previewCredit": "预览截自 MiniMax 博客首屏",
+      "previewCreditEn": "Preview cropped from the MiniMax blog hero",
+      "featured": false,
+      "verifyLog": "2026-10-20 早间（Asia/Shanghai）：博客 https://www.minimax.io/blog/minimax-m31f HTTP 200，标题 MiniMax M3.1 Flash: Redefining Agent Performance and Cost - MiniMax Research | MiniMax，日期 2026-10-19。正文：Space Bunny 处理 200 trillion tokens 以上；nearly three times faster；usage costs 70% lower；BankerToolBench 76.2；DeepSWE v1.1 73.7%；OSWorld V2 61.7；ALE 29.6；CyberGym 82%；200+ TPS、P50 170+ TPS；价格 $0.15 / $0.60 / $0.015；available through the MiniMax API, M Plan, and MiniMax Code；Model weights will be released later；Pro will also arrive later。官方 X 帖 2112150867868541221（@MiniMax_AI，2026-10-19T11:56:23Z，当时 6541 赞）：Automation-Bench 62%、ALE 30%、DeepSWE 74%、BabyVision 91%，1/3 the cost of M3 and 3x the speed，Model weights will arrive on Oct 23。文档 https://platform.minimax.io/docs/guides/models-intro HTTP 200，Language Models 第一行 MiniMax-M3.1-Flash：Frontier multimodal coding model with 1M context window and tunable thinking depth。Hugging Face API 列 MiniMaxAI 最新 5 个模型，没有 M3.1。Artificial Analysis 页 HTTP 200：Proprietary model，Released October 2026，Intelligence Index 43（#4 / 173），122.8 output tokens per second（#70 / 151），In $0.15 Out $0.60，Cache Discount 90%。HN item 50154540，Algolia 375 pts，作者 jtg，创建 2026-10-19T16:39:09Z。收录前 main 与打开的 PR 里没有 M3.1 / minimax-m31f。预览为博客首屏，点过 Reject All 关掉 Cookie 框，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 morning (Asia/Shanghai): blog https://www.minimax.io/blog/minimax-m31f HTTP 200, title MiniMax M3.1 Flash: Redefining Agent Performance and Cost - MiniMax Research | MiniMax, dated 2026-10-19. Body: Space Bunny processed more than 200 trillion tokens; nearly three times faster; usage costs 70% lower; BankerToolBench 76.2; DeepSWE v1.1 73.7%; OSWorld V2 61.7; ALE 29.6; CyberGym 82%; 200+ TPS, P50 170+ TPS; pricing $0.15 / $0.60 / $0.015; available through the MiniMax API, M Plan, and MiniMax Code; model weights will be released later; Pro will arrive later. Official X post 2112150867868541221 (@MiniMax_AI, 2026-10-19T11:56:23Z, 6,541 likes at check time): Automation-Bench 62%, ALE 30%, DeepSWE 74%, BabyVision 91%, 1/3 the cost of M3 and 3x the speed, model weights will arrive on Oct 23. Docs https://platform.minimax.io/docs/guides/models-intro HTTP 200; the first Language Models row is MiniMax-M3.1-Flash: Frontier multimodal coding model with 1M context window and tunable thinking depth. The Hugging Face API’s five newest MiniMaxAI models do not include M3.1. Artificial Analysis HTTP 200: Proprietary model, Released October 2026, Intelligence Index 43 (#4 / 173), 122.8 output tokens per second (#70 / 151), In $0.15 Out $0.60, Cache Discount 90%. HN item 50154540, Algolia 375 pts, author jtg, created 2026-10-19T16:39:09Z. Neither main nor the open PRs had M3.1 / minimax-m31f. Preview is the blog hero after clicking Reject All on the cookie banner, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "timestral",
+      "slug": "timestral",
+      "name": "Timestral",
+      "vendor": "Mistral AI",
+      "title": "Timestral：Mistral 的时间序列基础模型",
+      "titleEn": "Timestral: Mistral's time-series foundation models",
+      "summary": "Mistral 在 2026-10-15 发布 Timestral，官方称这是他们的第一组时间序列基础模型。新闻页写四个尺寸：5M、28M、123M、209M，上下文 32768 个时间步，输出 21 个分位数，可以带多变量目标、只在过去已知的协变量，以及未来已知的协变量。规格表写许可是 Modified MIT，可以在本地、VPC 或隔离环境里跑。官方称 209M 在 GIFT-Eval、TIME、fev-bench 的预训练零样本模型里排第一，并用更少的参数超过先前最好结果；28M 在 GIFT-Eval 和 TIME 上超过大约四倍大的 Chronos-2；在 8 线程 CPU 上，用三周的 15 分钟数据预测未来一天，5M 约 10 毫秒、209M 约 140 毫秒。这些名次和耗时都是厂商说法。仓库里的代码是 Apache-2.0。四套权重在 Hugging Face，每份 LICENSE 都是 Modified MIT，并写全球合并月收入超过 2000 万美元的公司需要另谈商业许可。新闻页写技术报告稍后发布。适合要做概率预测、又能接受许可门槛和未复核榜单的人。本库没有下载权重，也没有跑预测。",
+      "summaryEn": "On 15 October 2026 Mistral released Timestral, which it calls its first family of time-series foundation models. The news post lists four sizes, 5M, 28M, 123M, and 209M, a context of 32,768 time steps, and 21 quantile outputs, with multivariate targets plus past-only and known-future covariates. The spec table says the licence is Modified MIT and that it can run on-prem, in a VPC, or air-gapped. Mistral says the 209M model ranks first among pretrained zero-shot models on GIFT-Eval, TIME, and fev-bench, and beats the previous best with fewer parameters; that the 28M model beats Chronos-2, about four times larger, on GIFT-Eval and TIME; and that on an 8-thread CPU, forecasting one day ahead from three weeks of 15-minute history takes about 10 ms at 5M and about 140 ms at 209M. Those ranks and timings are vendor claims. The code in the repository is Apache-2.0. The four weight repos on Hugging Face each carry a Modified MIT LICENSE, which says a company whose global consolidated monthly revenue exceeded $20 million in the preceding month needs a separate commercial licence. The news post says a technical report will follow. Useful for probabilistic forecasts if you can accept the licence limit and unchecked leaderboards. This library did not download the weights or run a forecast.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Mistral 新闻：Introducing Timestral",
+          "labelEn": "Mistral news: Introducing Timestral",
+          "url": "https://mistral.ai/news/timestral/",
+          "by": "Mistral",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub 仓库（代码 Apache-2.0）",
+          "labelEn": "GitHub repository (code Apache-2.0)",
+          "url": "https://github.com/mistralai/timestral",
+          "by": "Mistral AI",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "文档：Timestral 1.0 209M",
+          "labelEn": "Docs: Timestral 1.0 209M",
+          "url": "https://docs.mistral.ai/models/timestral-1-0",
+          "by": "Mistral AI"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 合集",
+          "labelEn": "Hugging Face collection",
+          "url": "https://huggingface.co/collections/mistralai/timestral",
+          "by": "mistralai"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-209M",
+          "labelEn": "Hugging Face: Timestral-209M",
+          "url": "https://huggingface.co/mistralai/Timestral-209M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-123M",
+          "labelEn": "Hugging Face: Timestral-123M",
+          "url": "https://huggingface.co/mistralai/Timestral-123M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-28M",
+          "labelEn": "Hugging Face: Timestral-28M",
+          "url": "https://huggingface.co/mistralai/Timestral-28M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Timestral-5M",
+          "labelEn": "Hugging Face: Timestral-5M",
+          "url": "https://huggingface.co/mistralai/Timestral-5M",
+          "by": "mistralai",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50150434",
+          "by": "groar",
+          "date": "2026-10-19"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：四个尺寸 5M、28M、123M、209M，上下文 32768 步，输出 21 个分位数，支持多变量目标和两类协变量。",
+          "textEn": "Vendor claim: four sizes (5M, 28M, 123M, 209M), context of 32,768 steps, 21 quantiles, multivariate targets, and two kinds of covariates."
+        },
+        {
+          "text": "官方称：209M 在 GIFT-Eval、TIME、fev-bench 的预训练零样本条目里排第一，并已把结果提交到 GIFT-Eval 和 TIME 榜。本库没有打开这些榜。",
+          "textEn": "Vendor claim: 209M ranks first among pretrained zero-shot entries on GIFT-Eval, TIME, and fev-bench, and the results were submitted to the GIFT-Eval and TIME boards. This library did not open those boards."
+        },
+        {
+          "text": "官方称：8 线程 CPU 上，用三周 15 分钟数据预测一天，5M 约 10 毫秒，209M 约 140 毫秒。本库没有复测。",
+          "textEn": "Vendor claim: on an 8-thread CPU, one day ahead from three weeks of 15-minute history takes about 10 ms at 5M and about 140 ms at 209M. Not re-timed here."
+        },
+        {
+          "text": "代码为 Apache-2.0。四份权重的 LICENSE 都是 Modified MIT，并限制前一个月全球合并月收入超过 2000 万美元的公司。模型卡上的 license 字段是 other。",
+          "textEn": "The code is Apache-2.0. All four weight LICENSE files are Modified MIT and limit companies whose global consolidated revenue exceeded $20 million in the preceding month. The model-card license field is other."
+        }
+      ],
+      "qualityNote": "榜单名次、和 Chronos-2 / TimesFM-3 / Falcon-2.0 的参数对比，以及 CPU 耗时，都只按新闻页原文，是厂商说法。本库没有打开那三个榜，也没有跑推理。新闻页规格表写 Modified MIT，没有写收入门槛；收入门槛写在四个 Hugging Face 仓库的 LICENSE 里，四份文本一致。代码仓库的 LICENSE 是 Apache-2.0，README 写明它不覆盖权重。文档页把 209M 标成 Public Preview。新闻页写技术报告将随后发布，仓库文件里没有 PDF。本库没有安装 Python 包，没有登录 Mistral Forge，也没有查托管价格。",
+      "qualityNoteEn": "Leaderboard ranks, the parameter comparisons with Chronos-2, TimesFM-3, and Falcon-2.0, and the CPU timings follow the news post only. They are vendor claims. This library did not open the three boards and did not run inference. The news spec table says Modified MIT and does not mention the revenue limit. That limit is in the LICENSE file of each of the four Hugging Face repos, and the four texts match. The code repository’s LICENSE is Apache-2.0, and the README says it does not cover the weights. The docs page marks 209M as Public Preview. The news post says a technical report will follow; the repo has no PDF. This library did not install the Python package, did not sign in to Mistral Forge, and did not check hosted prices.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/timestral.webp",
+      "previewCredit": "预览截自 Mistral 新闻页首屏",
+      "previewCreditEn": "Preview cropped from the Mistral news-page hero",
+      "featured": false,
+      "verifyLog": "2026-10-19 晚间：新闻页 https://mistral.ai/news/timestral/ HTTP 200，标题 Introducing Timestral，日期 October 15, 2026，By Mistral，7 min read。页面规格表：Parameters 5M / 28M / 123M / 209M，Context length 32,768，Output 21 quantiles，Licence Modified MIT，Deployment On-prem, VPC or air-gapped。文中写技术报告 will follow，并链到 GitHub、https://docs.mistral.ai/models/timestral-1-0 和 Hugging Face 合集。文档页 HTTP 200，标题 Timestral 1.0 209M，标 Public Preview、Modified MIT，并链到 Timestral-209M 的 LICENSE。gh api：mistralai/timestral，Apache-2.0，442★，32 forks，创建 2026-10-15T10:20:18Z，最近推送 2026-10-15T14:59:57Z。仓库树没有 PDF。HF API：Timestral-209M createdAt 2026-10-14T08:52:36Z，license 字段 other，pipeline time-series-forecasting，gated false，当时 likes 150、downloads 2601；5M / 28M / 123M 的 license 字段同样是 other，createdAt 分别为 2026-10-14T13:41:13Z、17:50:53Z、17:51:04Z。四份 raw LICENSE 均为 Modified MIT License，Attribution notice 2026 - Mistral AI，并含 2000 万美元月收入条款，长度都是 1687。合集 URL HTTP 200。HN item 50150434，Algolia 69 pts，作者 groar，创建 2026-10-19T09:59:32Z。预览为 Playwright 实拍新闻页首屏，点过一个 OK 后仍能看到 Cookies 按钮，1200×800 WebP。没有下载 safetensors，没有跑 TimestralForecaster。",
+      "verifyLogEn": "2026-10-19 evening: news page https://mistral.ai/news/timestral/ HTTP 200, title Introducing Timestral, date October 15, 2026, By Mistral, 7 min read. Spec table: parameters 5M / 28M / 123M / 209M, context length 32,768, output 21 quantiles, licence Modified MIT, deployment on-prem, VPC, or air-gapped. The post says a technical report will follow and links GitHub, https://docs.mistral.ai/models/timestral-1-0, and the Hugging Face collection. Docs page HTTP 200, title Timestral 1.0 209M, marked Public Preview and Modified MIT, with a link to the Timestral-209M LICENSE. gh api: mistralai/timestral, Apache-2.0, 442★, 32 forks, created 2026-10-15T10:20:18Z, last push 2026-10-15T14:59:57Z. No PDF in the repo tree. HF API: Timestral-209M createdAt 2026-10-14T08:52:36Z, license field other, pipeline time-series-forecasting, gated false, likes 150 and downloads 2601 at check time. 5M / 28M / 123M also have license field other, createdAt 2026-10-14T13:41:13Z, 17:50:53Z, and 17:51:04Z. All four raw LICENSE files are Modified MIT License, attribution 2026 - Mistral AI, including the $20 million monthly-revenue clause, each 1687 characters. Collection URL HTTP 200. HN item 50150434, Algolia 69 pts, author groar, created 2026-10-19T09:59:32Z. Preview is a Playwright capture of the news hero after clicking OK; a Cookies button was still visible. 1200×800 WebP. Did not download safetensors and did not run TimestralForecaster."
+    },
+    {
+      "id": "moss-image",
+      "slug": "moss-image",
+      "name": "MOSS-Image",
+      "vendor": "OpenMOSS",
+      "title": "MOSS-Image：5B 文生图，主打文字渲染和版式控制",
+      "titleEn": "MOSS-Image: a 5B text-to-image model aimed at text rendering and layout control",
+      "summary": "OpenMOSS 的 MOSS-Image 是 5B 参数的 DiT 文生图模型。项目页和 README 在 2026-10-16 公布 Base 与 SFT：SFT 由 Base 在整理过的数据上微调而来。官方写提示词最长约 4K token，可以用 JSON 指定文字、物体和位置。用户指南有推理参数和 LoRA 训练建议，并有英文和简体中文两份。权重为 Apache-2.0。README 链了 Hugging Face Space 演示和一份技术报告 PDF，也写了 ComfyUI 插件的装法。适合要在图里排文字和版式的人。本库没有下载权重，没有出图，技术报告只确认能下载，没有读正文。",
+      "summaryEn": "MOSS-Image from OpenMOSS is a 5B-parameter DiT text-to-image model. The project page and README introduced Base and SFT on 2026-10-16: SFT is Base fine-tuned on curated data. The project says prompts can run to about 4K tokens, and a JSON layout can place text and objects. The user guide has inference settings and LoRA training notes, in English and Simplified Chinese. The weights are Apache-2.0. The README links a Hugging Face Space demo and a technical-report PDF, and it documents a ComfyUI plugin. Useful when you need text and layout inside an image. This library did not download the weights or generate an image. The technical report downloaded, and this library did not read it.",
+      "announcedAt": "2026-10-16",
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "项目主页",
+          "labelEn": "Project homepage",
+          "url": "https://openmoss.ai/MOSS-Image/",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub 仓库",
+          "labelEn": "GitHub repository",
+          "url": "https://github.com/OpenMOSS/MOSS-Image",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：MOSS-Image-SFT",
+          "labelEn": "Hugging Face: MOSS-Image-SFT",
+          "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-SFT",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-11"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：MOSS-Image-Base",
+          "labelEn": "Hugging Face: MOSS-Image-Base",
+          "url": "https://huggingface.co/OpenMOSS-Team/MOSS-Image-Base",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-11"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face Space 演示",
+          "labelEn": "Hugging Face Space demo",
+          "url": "https://huggingface.co/spaces/OpenMOSS-Team/MOSS-Image",
+          "by": "OpenMOSS-Team",
+          "date": "2026-10-14"
+        },
+        {
+          "kind": "official",
+          "label": "技术报告 PDF",
+          "labelEn": "Technical report PDF",
+          "url": "https://github.com/OpenMOSS/MOSS-Image/blob/main/paper/MOSS_Image_Technical_Report.pdf",
+          "by": "OpenMOSS",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "product",
+          "label": "Comfy-Org 权重",
+          "labelEn": "Comfy-Org weights",
+          "url": "https://huggingface.co/Comfy-Org/MOSS-Image",
+          "by": "Comfy-Org",
+          "date": "2026-10-16"
+        },
+        {
+          "kind": "community",
+          "label": "X 上的出图帖",
+          "labelEn": "X post with generated images",
+          "url": "https://x.com/ivanfioravanti/status/2111777166702870615",
+          "by": "ivanfioravanti",
+          "date": "2026-10-18"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "项目页和 README 称：5B 的 DiT 骨干，提示词最长约 4K token，可以用 JSON 指定场景、文字、物体和位置。",
+          "textEn": "The project page and README say: a 5B DiT backbone, prompts up to about 4K tokens, and JSON that places the scene, text, and objects."
+        },
+        {
+          "text": "两套权重：MOSS-Image-Base，以及在其上用整理数据微调的 MOSS-Image-SFT。权重为 Apache-2.0。Hugging Face 模型仓库创建于 2026-10-11，公开介绍写的是 2026-10-16。",
+          "textEn": "Two weight sets: MOSS-Image-Base, and MOSS-Image-SFT fine-tuned from it on curated data. Weights are Apache-2.0. The Hugging Face repos were created on 2026-10-11; the public introduction is dated 2026-10-16."
+        },
+        {
+          "text": "用户指南有推理设置和 LoRA 训练建议，并有中英两份。README 链了本地 Gradio、Hugging Face Space 演示和技术报告 PDF。本库没有出图，也没有读报告正文。",
+          "textEn": "The user guide has inference settings and LoRA training notes, in Chinese and English. The README links a local Gradio app, a Hugging Face Space demo, and a technical-report PDF. This library did not generate an image or read the report."
+        },
+        {
+          "text": "仓库写了 ComfyUI 插件的安装说明，Comfy-Org 也发布了一份权重。另有一个给 GPT-6 系列助手用的提示词增强 skill。本库都没有装。",
+          "textEn": "The repo documents a ComfyUI plugin, and Comfy-Org published a weight repo. There is also a prompt-enhancer skill aimed at GPT-6-family agents. This library installed none of them."
+        }
+      ],
+      "qualityNote": "5B、约 4K token、JSON 布局、Apache-2.0、LoRA 训练建议、Space 演示和技术报告链接，来自项目主页与 README。本库打开了主页、README、两张模型卡和 Space 页面，技术报告 PDF 可以下载，但没有读正文，没有跑推理，没有在 ComfyUI 里加载。有人在 X 上贴了自己机器上的出图耗时，那是个人环境的结果，没有写进能力说明。",
+      "qualityNoteEn": "The 5B size, roughly 4K-token prompts, JSON layout, Apache-2.0, LoRA training notes, Space demo, and technical-report link come from the project page and README. This library opened the homepage, README, both model cards, and the Space page. The technical-report PDF downloaded, and this library did not read it, did not run inference, and did not load it in ComfyUI. Someone posted their own generation times on X; that is one machine, and it is not listed here as a capability.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/moss-image.webp",
+      "previewCredit": "预览截自项目主页 openmoss.ai/MOSS-Image 首屏",
+      "previewCreditEn": "Preview cropped from the openmoss.ai/MOSS-Image homepage",
+      "featured": false,
+      "verifyLog": "2026-10-18：项目页 https://openmoss.ai/MOSS-Image/ HTTP 200（github.io 地址会跳到这里）。README 要点与 2026-10-16 新闻、4K token、5B、Apache-2.0、LoRA 建议、Space 与技术报告徽章均在页面上。gh api：OpenMOSS/MOSS-Image stars=548，license=Apache-2.0，创建 2026-10-16。HF API：Base 与 SFT createdAt 均为 2026-10-11，license apache-2.0。Space OpenMOSS-Team/MOSS-Image HTTP 200，API createdAt 2026-10-14。技术报告 raw PDF HTTP 200，约 32MB，未读正文。Comfy-Org/MOSS-Image HF API createdAt 2026-10-16，license apache-2.0。X 帖 2111777166702870615 为 ivanfioravanti 2026-10-18 的个人出图。预览为 Playwright 实拍项目主页首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: project page https://openmoss.ai/MOSS-Image/ HTTP 200 (the github.io URL redirects there). The README highlights, the 2026-10-16 news line, 4K tokens, 5B, Apache-2.0, LoRA notes, and the Space and technical-report badges are on the page. gh api: OpenMOSS/MOSS-Image stars=548, license=Apache-2.0, created 2026-10-16. HF API: Base and SFT createdAt 2026-10-11, license apache-2.0. Space OpenMOSS-Team/MOSS-Image HTTP 200, API createdAt 2026-10-14. Technical report raw PDF HTTP 200, about 32MB, not read. Comfy-Org/MOSS-Image HF API createdAt 2026-10-16, license apache-2.0. X post 2111777166702870615 is ivanfioravanti’s own generations on 2026-10-18. Preview is a Playwright capture of the project homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "kling-4-0",
+      "slug": "kling-4-0",
+      "name": "Kling 4.0",
+      "vendor": "Kling AI",
+      "title": "Kling 4.0：视频模型已全面开放",
+      "titleEn": "Kling 4.0: the video model is now fully available",
+      "summary": "Kling AI 在 2026-10-15 的官方帖里宣布 Kling 4.0 已全面可用。帖里写当天起有两件事：kling.ai 上的创作界面已更新；也可以通过 MCP 和 CLI 接入。帖里标为即将推出的是 4K 和 1080p 的 10-bit HDR 视频，以及给企业客户和开发者的 API。官网首页能看到 Kling 4.0 和 MCP / CLI 的介绍。这篇帖和首页可见文字没有写清片段时长、关键帧数量或参考图上限，这里不记。价格和积分本库没有核对。本库没有登录创作，也没有接 MCP 或 CLI。",
+      "summaryEn": "On 2026-10-15 Kling AI posted that Kling 4.0 is fully available. The post says two things start that day: the creation interface on kling.ai is refreshed, and Kling 4.0 can also be used through MCP and CLI. Marked as coming soon: 10-bit HDR video at 4K and 1080p, and API access for enterprise customers and developers. The homepage shows a Kling 4.0 section and an MCP / CLI section. That post and the visible homepage copy do not state clip length, keyframe count, or a reference limit, so those are left out. This library did not check prices or credits, did not sign in, and did not connect MCP or CLI.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Kling AI 官方帖：4.0 全面可用",
+          "labelEn": "Kling AI post: 4.0 fully available",
+          "url": "https://x.com/Kling_ai/status/2110747537187709424",
+          "by": "Kling AI",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Kling 官网",
+          "labelEn": "Kling website",
+          "url": "https://kling.ai/",
+          "by": "Kling AI",
+          "date": "2026-10-15"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方帖（2026-10-15）：Kling 4.0 已全面可用。网页创作界面已更新，也可以通过 MCP 和 CLI 做视频。",
+          "textEn": "Official post (2026-10-15): Kling 4.0 is fully available. The web creation interface is refreshed, and video work can also go through MCP and CLI."
+        },
+        {
+          "text": "同一帖写即将推出，还不是已经上线：4K 与 1080p 的 10-bit HDR，以及面向企业客户和开发者的 API。",
+          "textEn": "The same post marks these as coming soon, not already shipped: 10-bit HDR at 4K and 1080p, and an API for enterprise customers and developers."
+        },
+        {
+          "text": "官网首页有 Kling 4.0 和 MCP / CLI 区块。页面结构化数据里的 15 秒多镜头等字样仍放在 Kling 3.0 的功能列表下，本条不把它算成 4.0 的规格。",
+          "textEn": "The homepage has Kling 4.0 and MCP / CLI sections. Structured data on that page still lists items such as 15-second multi-shot control under the Kling 3.0 feature list, so this card does not treat them as 4.0 specs."
+        }
+      ],
+      "qualityNote": "已经可用的范围和即将推出的两项，只按 Kling AI 官方帖的原文。第三方摘要里的片段时长、关键帧个数和参考图上限，没有在这篇帖或首页可见正文里对上 4.0，因此不写。首页结构化数据仍把 15 秒多镜头等放在 Kling 3.0 的功能列表里。本库没有登录，没有查价格或积分，没有调用 MCP 或 CLI，也没有生成视频。打开的页面没有写明公司主体。",
+      "qualityNoteEn": "What is available now, and the two coming-soon items, follow the Kling AI post only. Clip length, keyframe count, and reference limits from third-party summaries were not matched to 4.0 in that post or in the visible homepage copy, so they are omitted. Homepage structured data still places 15-second multi-shot and similar items under the Kling 3.0 feature list. This library did not sign in, did not check prices or credits, did not call MCP or CLI, and did not generate a video. The pages opened do not name a parent company.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/kling-4-0.webp",
+      "previewCredit": "预览截自 kling.ai 首页首屏",
+      "previewCreditEn": "Preview cropped from the kling.ai homepage",
+      "featured": false,
+      "verifyLog": "2026-10-18：官方帖 https://x.com/Kling_ai/status/2110747537187709424 ，created_at 2026-10-15T15:00:03Z。帖文写全面可用、更新后的网页界面、MCP 与 CLI；配图文字含 Coming Soon：10-bit HDR at 4K and 1080p，以及 API access for enterprise customers and developers。kling.ai HTTP 200，首屏为 All-New Kling 4.0，页内有 MCP / CLI 区块。JSON-LD featureList 写的是 Kling 3.0 model series，含 15-second multi-shot control，未当作 4.0 规格。未见价格。预览为 Playwright 实拍首页，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: official post https://x.com/Kling_ai/status/2110747537187709424 , created_at 2026-10-15T15:00:03Z. The text says fully available, a refreshed web interface, and MCP and CLI; the image text includes Coming Soon: 10-bit HDR at 4K and 1080p, and API access for enterprise customers and developers. kling.ai HTTP 200, hero reads All-New Kling 4.0, and the page has an MCP / CLI section. JSON-LD featureList names the Kling 3.0 model series, including 15-second multi-shot control, which is not treated as a 4.0 spec. No prices seen. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "flux-3-image-klein",
+      "slug": "flux-3-image-klein",
+      "name": "FLUX 3 Image Klein",
+      "vendor": "Black Forest Labs",
+      "title": "FLUX 3 Image Klein：5.6B 开放权重，文生图、改图，最多 10 张参考图",
+      "titleEn": "FLUX 3 Image Klein: a 5.6B open-weight model for generation, editing, and up to 10 references",
+      "summary": "Black Forest Labs 在 2026-10-15 发布 FLUX 3 Image Klein：5.6B 参数的开放权重图像模型，能文生图、按指令改图，也最多吃 10 张参考图。博文写它和完整的 FLUX 3 Image 共用几项能力：原生最高 4K、按像素对齐的改图，以及用边界框指定元素位置或把修改限定在一块区域里。有两个权重：蒸馏版给低延迟出图，Base 给微调和 LoRA。文档表写蒸馏版 16 步、CFG 1，Base 50 步、CFG 3.5。文档写它能在消费级显卡上跑，低到 RTX 3090。文本编码器是 Qwen3-VL-4B-Instruct，模型卡写这 5.6B 只算图像变压器，编码器另外算，而且编码器是 Apache-2.0。官方反复写不要把短提示词直接送进去：要先用提示词扩写器。模型卡说扩写器是另一个 9B 模型，仓库名 flux-3-image-klein-pup。API 名是 flux-3-image-klein。博文写 1K 图起价 $0.009；文档价目表按分辨率另列，768 图是 $0.008，1K 是 $0.009，往上到 4K 的 $0.036，文生图和改图同价。许可是 FLUX Kommunity License。博文写个人和年收入低于 500 万美元的公司可免费商用，更大的机构要走商业授权或 API。模型卡把门槛写成：年化总收入低于 500 万美元的 Qualifying Users。适合想在自己机器上出图、改图，又接受先扩写提示词的人。本库没有下载权重，没有本地跑，也没有调 API。",
+      "summaryEn": "Black Forest Labs released FLUX 3 Image Klein on 2026-10-15: a 5.6B open-weight image model for text-to-image, instruction edits, and up to 10 reference images. The blog says it shares several capabilities with the full FLUX 3 Image model: native output up to 4K, pixel-perfect editing, and bounding boxes that place an element or confine an edit to one region. There are two weight sets: a distilled one for low-latency generation, and Base for fine-tuning and LoRA. The docs table lists the distilled model at 16 steps and CFG 1, and Base at 50 steps and CFG 3.5. The docs say it fits on consumer GPUs, down to an RTX 3090. The text encoder is Qwen3-VL-4B-Instruct. The model card says the 5.6B count is the image transformer only, the encoder is separate, and that encoder is Apache-2.0. The vendor repeatedly says not to send a short prompt as typed: run a prompt upsampler first. The model card calls that upsampler another 9B model, repo flux-3-image-klein-pup. The API name is flux-3-image-klein. The blog says pricing starts at $0.009 per 1K image. The docs price table lists resolutions separately: $0.008 at 768, $0.009 at 1K, up to $0.036 at 4K, with text-to-image and editing at the same price. The license is the FLUX Kommunity License. The blog says individuals and companies with annual revenue under $5M may use it commercially for free; larger organizations need a commercial license or the API. The model card phrases the bar as Qualifying Users with less than US$5M in gross annualized revenue. Good when you want to generate and edit on your own machine and will expand the prompt first. This library did not download the weights, did not run them locally, and did not call the API.",
+      "announcedAt": "2026-10-15",
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-17T12:45:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Black Forest Labs 博文：FLUX 3 Image Klein",
+          "labelEn": "Black Forest Labs blog: FLUX 3 Image Klein",
+          "url": "https://bfl.ai/blog/flux-3-image-klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "官方模型页",
+          "labelEn": "Official model page",
+          "url": "https://bfl.ai/models/flux-3-image-klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "文档：规格、步数和 API 价格",
+          "labelEn": "Docs: specs, steps, and API pricing",
+          "url": "https://docs.bfl.ml/flux_3/flux3_image_klein",
+          "by": "Black Forest Labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：蒸馏权重",
+          "labelEn": "Hugging Face: distilled weights",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Base 权重（微调 / LoRA）",
+          "labelEn": "Hugging Face: Base weights (fine-tune / LoRA)",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-base",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：提示词扩写器 flux-3-image-klein-pup",
+          "labelEn": "Hugging Face: prompt upsampler flux-3-image-klein-pup",
+          "url": "https://huggingface.co/black-forest-labs/flux-3-image-klein-pup",
+          "by": "black-forest-labs",
+          "date": "2026-10-15"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50123580",
+          "by": "Hacker News",
+          "date": "2026-10-17"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：5.6B 开放权重。文生图、按指令改图、最多 10 张参考图。边界框可以指定元素放在哪，或把修改限定在一块区域。原生最高 4K。",
+          "textEn": "Vendor claim: 5.6B open weights. Text-to-image, instruction edits, and up to 10 reference images. Bounding boxes place an element or confine an edit to one region. Native output up to 4K."
+        },
+        {
+          "text": "文档表：蒸馏版 16 步、CFG 1，适合快出图和本地部署；Base 50 步、CFG 3.5，适合微调和 LoRA。模型卡把蒸馏版的 guidance 写成 none，和文档的 CFG 1 不是同一句，两套都留着。",
+          "textEn": "Docs table: distilled is 16 steps at CFG 1, for fast generation and local deployment; Base is 50 steps at CFG 3.5, for fine-tuning and LoRA. The model card lists distilled guidance as none, which is not the same sentence as CFG 1. Both wordings stay."
+        },
+        {
+          "text": "官方强调必须先过提示词扩写器。模型卡说那是另一个 9B 模型，仓库名 flux-3-image-klein-pup。短提示词直接送进去，官方写效果会明显变差。",
+          "textEn": "The vendor says to run a prompt upsampler first. The model card calls it another 9B model, repo flux-3-image-klein-pup. A short prompt sent as typed, the vendor says, gives noticeably weaker results."
+        },
+        {
+          "text": "API 名 flux-3-image-klein。博文写 1K 图起价 $0.009。文档价目表：768 图 $0.008、1K $0.009、1.5K $0.011、2K $0.014、4K $0.036，文生图和改图同价。",
+          "textEn": "API name flux-3-image-klein. The blog says pricing starts at $0.009 per 1K image. The docs table lists $0.008 at 768, $0.009 at 1K, $0.011 at 1.5K, $0.014 at 2K, and $0.036 at 4K, with text-to-image and editing at the same price."
+        },
+        {
+          "text": "许可是 FLUX Kommunity License。博文写个人和年收入低于 500 万美元的公司可免费商用；模型卡写成年度总收入低于 500 万美元的 Qualifying Users。更大的机构要商业授权。文档写消费级显卡、低到 RTX 3090。本库没有本地跑过。",
+          "textEn": "The license is the FLUX Kommunity License. The blog says individuals and companies under $5M annual revenue may use it commercially for free; the model card says Qualifying Users under US$5M gross annualized revenue. Larger organizations need a commercial license. The docs say consumer GPUs, down to an RTX 3090. This library did not run it locally."
+        }
+      ],
+      "qualityNote": "参数、参考图、边界框、4K、步数、显卡、扩写器、API 名和价格都是厂商页面上的说法，本库没有出图、没有复跑。文档写蒸馏版 CFG 1，模型卡把蒸馏版 guidance 写成 none。博文的收入门槛和模型卡的年化总收入用词也不完全一样，两套都留着。API 根地址本环境没有用 GET 打开，不放进链接。",
+      "qualityNoteEn": "Parameter count, references, bounding boxes, 4K, steps, GPUs, the upsampler, the API name, and prices are what the vendor pages say. This library did not generate an image or re-run anything. The docs list distilled CFG 1; the model card lists distilled guidance as none. The blog’s revenue bar and the model card’s gross-annualized-revenue wording are not the same sentence. Both stay. The API root did not open on a GET from this environment, so it is not linked.",
+      "verifyLog": "2026-10-17 晚间：博文、模型页、docs.bfl.ml/flux_3/flux3_image_klein、三个 Hugging Face 仓库（蒸馏、Base、pup）均为 HTTP 200。博文日期 October 15, 2026。文档表为蒸馏 16 步 / CFG 1、Base 50 步 / CFG 3.5、最高 4K，并写 down to an RTX 3090、Do not use it without its prompt upsampler。博文另写 INT8 可在 8GB 显存的 RTX 上跑，以及 Pricing starts at $0.009 per 1K image。文档价目表为 768×768 $0.008、1K $0.009、1.5K $0.011、2K $0.014、4K $0.036。模型卡写文本编码器 Qwen3-VL-4B-Instruct（Apache-2.0）、5.6B 只计图像变压器、扩写器为单独的 9B 模型 flux-3-image-klein-pup，并把蒸馏版 guidance 写成 none。博文许可句：free commercial use for individuals and companies with annual revenue under $5M。模型卡：Qualifying Users with less than US$5M in gross annualized revenue。API 示例路径是 https://api.bfl.ai/v1/flux-3-image-klein ，本环境 GET 为 HTTP 405，未当作可打开的链接。HN item 50123580，Algolia 176pts，创建于 2026-10-16T19:47:13Z，抓取时仍在 news.ycombinator.com 首页。预览为 Playwright 调本机 Chrome 实拍官方模型页首屏，1500×1000 WebP。未下载权重，未本地推理。",
+      "verifyLogEn": "2026-10-17 evening: the blog, the model page, docs.bfl.ml/flux_3/flux3_image_klein, and the three Hugging Face repos (distilled, Base, pup) all HTTP 200. Blog date October 15, 2026. The docs table is distilled 16 steps / CFG 1, Base 50 steps / CFG 3.5, up to 4K, and says down to an RTX 3090 and do not use it without its prompt upsampler. The blog also says the INT8 build runs on RTX GPUs with 8GB of VRAM, and that pricing starts at $0.009 per 1K image. The docs price table is 768×768 $0.008, 1K $0.009, 1.5K $0.011, 2K $0.014, 4K $0.036. The model card names the text encoder Qwen3-VL-4B-Instruct (Apache-2.0), says 5.6B counts the image transformer only, calls the upsampler a separate 9B model flux-3-image-klein-pup, and lists distilled guidance as none. Blog license sentence: free commercial use for individuals and companies with annual revenue under $5M. Model card: Qualifying Users with less than US$5M in gross annualized revenue. The API sample path is https://api.bfl.ai/v1/flux-3-image-klein; a GET from this environment returned HTTP 405, so it is not linked as a page that opens. HN item 50123580, 176pts on Algolia, created 2026-10-16T19:47:13Z, still on the news.ycombinator.com front page at fetch time. Preview is a Playwright capture through local Chrome of the official model-page hero, a 1500×1000 WebP. Weights not downloaded, no local inference.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/flux-3-image-klein.webp",
+      "previewCredit": "预览：实拍 bfl.ai 官方模型页首屏",
+      "previewCreditEn": "Preview: capture of the official model page on bfl.ai, above the fold",
+      "featured": false
+    },
     {
       "id": "thx-01",
       "slug": "thx-01",

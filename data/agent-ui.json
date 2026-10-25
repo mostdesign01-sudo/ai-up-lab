@@ -1,6 +1,261 @@
 {
   "items": [
     {
+      "id": "lightswind",
+      "slug": "lightswind",
+      "title": "Lightswind UI：命令行装进项目、源码归你的 React 动画组件库（带 MCP）",
+      "titleEn": "Lightswind UI: a CLI-first React animated component library whose source you own (with MCP)",
+      "hook": "一条命令把动画组件源码拷进项目，也能让助手经 MCP 挑选安装。",
+      "hookEn": "One command copies animated component source into your repo, or let an agent pick via MCP.",
+      "summary": "Lightswind UI 是 MIT 开源的 React + Tailwind 动画组件库，走 shadcn 那条「源码进你项目」的路：`npx lightswind@latest init` 识别 Next.js / Vite / CRA 并装好公共工具，再用 `npx lightswind add 组件名` 把单个组件拷到 components/lightswind/ 下，之后随便改。另一个卖点是自带 MCP：`npx lightswind mcp init` 可给 Cursor / Claude Desktop 配好，让编程助手自己浏览、取用、安装组件；README 也写了 GitHub Copilot。组件以动效为主（3D 轮播、滚动触发、着色器背景、Hero 等），README 写 160+ 个，官网各处自称数量不一，这里不替它定数。官网同时卖 Pro 授权（额外的付费组件、页面模板和需登录的 CLI 下发），首页还挂着促销横幅；本条只讲免费、MIT 的那部分，不用 Pro 也能用。适合想给落地页、作品集快速加动效，又不想引入运行时依赖的人。",
+      "summaryEn": "Lightswind UI is an MIT React + Tailwind animated component library that follows the shadcn idea of putting source in your project: `npx lightswind@latest init` detects Next.js / Vite / CRA and installs shared utilities, then `npx lightswind add <name>` copies one component into components/lightswind/ for you to edit. Its other selling point is a built-in MCP: `npx lightswind mcp init` configures Cursor / Claude Desktop so a coding agent can browse, fetch, and install components itself; the README also mentions GitHub Copilot. The components lean on motion (3D carousels, scroll triggers, shader backgrounds, heroes); the README says 160+, while the site quotes different counts in different places, so no exact number is given here. The site also sells a Pro license (extra paid components, page templates, and authenticated CLI delivery) and runs a promo banner; this entry covers only the free MIT part, which works without Pro. Good for adding motion to landing pages or portfolios without a runtime dependency.",
+      "sourceUrl": "https://lightswind.com/",
+      "secondaryUrls": [
+        "https://github.com/codewithMUHILAN/Lightswind-UI-Library",
+        "https://www.npmjs.com/package/lightswind",
+        "https://lightswind.com/components/mcp-server"
+      ],
+      "previewImage": "/previews/lightswind.webp",
+      "npmPackage": "lightswind",
+      "promptHint": "在 React + Tailwind 项目根目录跑 `npx lightswind@latest init`，再 `npx lightswind add 组件名` 装一个免费组件，从 components/lightswind/ 引入后按自己的品牌改颜色和动效时长。想让助手挑组件就跑 `npx lightswind mcp init`。别默认去装 Pro 组件，也别从 \"lightswind\" 包直接 import。",
+      "promptHintEn": "In a React + Tailwind project root run `npx lightswind@latest init`, then `npx lightswind add <name>` for one free component; import it from components/lightswind/ and retune colors and motion timing for your brand. Run `npx lightswind mcp init` if you want an agent to pick components. Do not assume Pro components are free, and do not import from the \"lightswind\" package directly.",
+      "types": [
+        "ui",
+        "motion",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "tailwind",
+        "animation",
+        "mcp",
+        "cli",
+        "mit",
+        "open-source",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "qualityNote": "收录理由：成熟度较高的 MIT 动画组件库，CLI 拷源码加 MCP 让助手安装，正好接上 AI 编程流程。边界：官网另售 Pro，本条只写免费 MIT 路径；组件数量 README 与官网说法不一，未逐个核对。本库没有跑 init，没有接 MCP，也没有购买或使用 Pro。",
+      "qualityNoteEn": "Why: a fairly mature MIT animated component library where the CLI copies source and an MCP lets agents install it, which fits AI coding workflows. Boundary: the site also sells Pro; this entry covers only the free MIT path. Component counts differ between the README and the site and were not audited one by one. This library did not run init, did not wire the MCP, and did not buy or use Pro.",
+      "verifyLog": "2026-10-25 晚间：lightswind.com HTTP 200。gh api codewithMUHILAN/Lightswind-UI-Library：license SPDX MIT，1172★，创建于 2023-07-11，最近推送 2026-07-24。npm view lightswind：3.2.5，MIT。README 写 160+ 组件；官网首页写 312+ 组件与 559+ 区块，弹窗写 215+，三处不一致，条目不写具体数。首页有 Pricing / Pro 入口与促销横幅（SCALEUP30）。README 命令：init、add、mcp、mcp init。预览为 Playwright 实拍首页（先关掉「Support Open Source」弹窗），1440×960 缩到 1200×800 WebP。未跑 init、未接 MCP、未购 Pro。",
+      "verifyLogEn": "2026-10-25 evening: lightswind.com HTTP 200. gh api codewithMUHILAN/Lightswind-UI-Library: license SPDX MIT, 1172★, created 2023-07-11, last push 2026-07-24. npm view lightswind: 3.2.5, MIT. README says 160+ components; the site home says 312+ components and 559+ blocks, and a popup says 215+; the three disagree, so the entry gives no exact count. Home has Pricing / Pro links and a promo banner (SCALEUP30). README commands: init, add, mcp, mcp init. Preview is a Playwright capture of the home page (after dismissing the \"Support Open Source\" popup), 1440×960 scaled to a 1200×800 WebP. Did not run init, wire MCP, or buy Pro."
+    },
+    {
+      "id": "intelli-ui",
+      "slug": "intelli-ui",
+      "title": "Intelli UI：MIT 开源的 Liquid Glass 风格 React 组件库（CLI、MCP、助手插件）",
+      "titleEn": "Intelli UI: an MIT Liquid Glass React component library (CLI, MCP, agent plugin)",
+      "hook": "磨砂玻璃风的 React 组件，命令行拷进项目，也能让助手装。",
+      "hookEn": "Frosted-glass React components you copy in with a CLI, or have an agent install.",
+      "summary": "Intelli UI（IntelliHelper 出品）是一套 MIT 开源的 Liquid Glass（磨砂玻璃）风格组件库，面向 React / Next.js + Tailwind，交互底层用 Radix UI。用法和 shadcn 一样：`npx @intellihelper/cli@latest init`，再 `add button card dialog`，源码落进你自己的仓库。它把界面分成「安静的外壳层」和「饱和的内容层」两种玻璃，附 mono、aurora、sunset、frost、ocean 五套主题。给编程助手的入口有两个：MCP 服务 intellihelper-ui（README 列了 Cursor、Claude Code、VS Code、Codex 等），以及 agent-skills 插件（Claude / Grok 等可装）。组件数官网写 131+，README 写 80+，以官网组件页为准。项目很新、关注者很少，适合想试 Liquid Glass 视觉、愿意自己审代码的人，暂不建议直接上生产。",
+      "summaryEn": "Intelli UI (by IntelliHelper) is an MIT Liquid Glass (frosted glass) component library for React / Next.js + Tailwind, with Radix UI underneath for interactive behavior. It works like shadcn: `npx @intellihelper/cli@latest init`, then `add button card dialog`, and the source lands in your repo. It splits UI into a quiet chrome layer and saturated content panels, and ships five themes: mono, aurora, sunset, frost, ocean. For coding agents there is an MCP server, intellihelper-ui (the README lists Cursor, Claude Code, VS Code, Codex and others), plus an agent-skills plugin for Claude, Grok, and more. The site says 131+ components while the README says 80+; trust the site's component pages. The project is very new with a small following—good for trying the Liquid Glass look if you will review the code yourself, not yet something to drop straight into production.",
+      "sourceUrl": "https://ui.intellihelper.in/",
+      "secondaryUrls": [
+        "https://github.com/IntelliHelper/IntelliHelper-UI",
+        "https://www.npmjs.com/package/@intellihelper/cli",
+        "https://github.com/IntelliHelper/agent-skills"
+      ],
+      "previewImage": "/previews/intelli-ui.webp",
+      "npmPackage": "@intellihelper/cli",
+      "promptHint": "在 Next.js + Tailwind 项目里跑 `npx @intellihelper/cli@latest init`，再 `npx @intellihelper/cli@latest add button card dialog`，先挑一个主题（如 frost）做一张设置页，外壳用安静的玻璃层、主内容用饱和面板。装进来的源码要自己过一遍再用。",
+      "promptHintEn": "In a Next.js + Tailwind project run `npx @intellihelper/cli@latest init`, then `npx @intellihelper/cli@latest add button card dialog`; pick one theme (e.g. frost) and build a settings page with quiet glass chrome and a saturated main panel. Review the copied source before shipping it.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "react",
+        "nextjs",
+        "tailwind",
+        "liquid-glass",
+        "radix",
+        "mcp",
+        "cli",
+        "mit",
+        "open-source",
+        "component-library",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-25T12:20:00Z",
+      "qualityNote": "收录理由：Liquid Glass 是当下热门视觉方向，这套 MIT 组件库把它做成可拷贝源码，并给了 CLI、MCP 和助手插件。边界：项目很早期，GitHub 星标很少，维护前景未知；组件数官网与 README 不一致。本库没有安装 CLI、没有接 MCP 或插件，也没有做生产级审查。",
+      "qualityNoteEn": "Why: Liquid Glass is a popular visual direction right now, and this MIT library turns it into copyable source with a CLI, MCP, and agent plugin. Boundary: the project is very early with very few GitHub stars, so its maintenance outlook is unknown; component counts differ between the site and the README. This library did not install the CLI, did not wire the MCP or plugin, and did not do a production-grade review.",
+      "verifyLog": "2026-10-25 晚间：ui.intellihelper.in HTTP 200。gh api IntelliHelper/IntelliHelper-UI：license SPDX MIT，2★，创建于 2026-06-30，最近推送 2026-10-20。npm view @intellihelper/cli：0.3.0，MIT。官网首页写 131+ components、Free · Open source；README 写 80+ React components；首页未见付费档。README 列 MCP 服务 intellihelper-ui 与 IntelliHelper/agent-skills 插件。预览为 Playwright 实拍首页，1440×960 缩到 1200×800 WebP。未装 CLI、未接 MCP / 插件、未做生产审查。",
+      "verifyLogEn": "2026-10-25 evening: ui.intellihelper.in HTTP 200. gh api IntelliHelper/IntelliHelper-UI: license SPDX MIT, 2★, created 2026-06-30, last push 2026-10-20. npm view @intellihelper/cli: 0.3.0, MIT. Site home says 131+ components and Free · Open source; README says 80+ React components; no paid tier seen on the home page. README lists the intellihelper-ui MCP server and the IntelliHelper/agent-skills plugin. Preview is a Playwright capture of the home page, 1440×960 scaled to a 1200×800 WebP. Did not install the CLI, wire MCP / plugin, or do a production review."
+    },
+    {
+      "id": "creative-ui",
+      "slug": "creative-ui",
+      "title": "creative-ui：偏设计向的 shadcn 注册表 + Claude skills",
+      "titleEn": "creative-ui: a design-forward shadcn registry with Claude skills",
+      "hook": "半调、拼贴框、颗粒叠层这类视觉件，一条 shadcn 命令装进项目。",
+      "hookEn": "Halftone, collage frames, grain overlays—install with one shadcn command.",
+      "summary": "creative-ui 是 MIT 开源的 shadcn 注册表（官网 https://ui.krutikraut.com ，仓库 krutikkkkkkkkk/creative-ui）：偏印刷/拼贴审美的 React 组件，以及可装进 `.claude/skills/` 的 Claude skills。registry.json 当日可见 10 项，含 halftone-image、grain-overlay、collage-frame、duotone-image、dna-carousel、dithering-hover、rotunda-carousel、image-trail，以及 classical-collage-web-design / lasting-logo-design 两条 skill。安装示例：`npx shadcn@latest add @creative-ui/halftone-image`（`@creative-ui` 已在 shadcn 官方 registries 目录）。适合想给界面加点非默认灰卡片质感、又习惯让 Claude / Cursor 用 shadcn CLI 拉件的人。本库没有执行 shadcn add，也没有把 skill 装进本机助手。",
+      "summaryEn": "creative-ui is an MIT shadcn registry (https://ui.krutikraut.com , repo krutikkkkkkkkk/creative-ui): print/collage-leaning React components plus Claude skills that install into `.claude/skills/`. registry.json listed 10 items on check day, including halftone-image, grain-overlay, collage-frame, duotone-image, dna-carousel, dithering-hover, rotunda-carousel, image-trail, and the classical-collage-web-design / lasting-logo-design skills. Install example: `npx shadcn@latest add @creative-ui/halftone-image` (`@creative-ui` is in the official shadcn registries directory). Good when you want less default gray-card UI and already use Claude / Cursor with the shadcn CLI. This library did not run shadcn add or install a skill into a local agent.",
+      "sourceUrl": "https://ui.krutikraut.com/",
+      "secondaryUrls": [
+        "https://github.com/krutikkkkkkkkk/creative-ui",
+        "https://x.com/krutikkkkkkkkk/status/2113938836439072786"
+      ],
+      "previewImage": "/previews/creative-ui.webp",
+      "npmPackage": "",
+      "promptHint": "在已有 shadcn 项目里执行 `npx shadcn@latest add @creative-ui/<name>`；skill 类条目会写入 `.claude/skills/`。先逛 https://ui.krutikraut.com/ 再挑件。本库未实测安装。",
+      "promptHintEn": "In a shadcn project run `npx shadcn@latest add @creative-ui/<name>`; skill items write into `.claude/skills/`. Browse https://ui.krutikraut.com/ first. This library did not run an install.",
+      "types": [
+        "ui",
+        "component"
+      ],
+      "tags": [
+        "shadcn",
+        "react",
+        "claude-skills",
+        "registry",
+        "mit",
+        "design",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24T12:20:00Z",
+      "qualityNote": "主源官网与仓库 krutikkkkkkkkk/creative-ui（MIT）。组件/skill 名单以当日 registry.json 为准；未逐项安装核对。本库未执行 shadcn add。",
+      "qualityNoteEn": "Primary sources are the site and krutikkkkkkkkk/creative-ui (MIT). Component/skill names follow that day’s registry.json; items were not installed one-by-one. This library did not run shadcn add.",
+      "verifyLog": "2026-10-24 晚间：ui.krutikraut.com / github.com/krutikkkkkkkkk/creative-ui HTTP 200；gh api MIT stars=22，最近推送 2026-10-24；registry.json 10 items；Playwright 3:2 WebP。",
+      "verifyLogEn": "2026-10-24 evening: site/repo HTTP 200; gh api MIT stars=22, last push 2026-10-24; registry.json 10 items; Playwright 3:2 WebP."
+    },
+    {
+      "id": "glaze",
+      "slug": "glaze",
+      "title": "Glaze：给 AI 产品用的黑白玻璃设计系统（shadcn 一条命令装）",
+      "titleEn": "Glaze — a glassy black-and-white design system for AI products, installed with shadcn",
+      "hook": "提示框、推理、工具调用、自主权限都有现成组件，还带给助手读的规则。",
+      "hookEn": "Prompt input, reasoning, tool calls and autonomy rules, plus a skill for the agent.",
+      "summary": "Glaze 是 Arlan Marat 在 design.how 上放出的第三套设计系统，定位「给 AI 产品用」：整体黑白、紧凑，只有下一步要按的那个按钮用玻璃质感。它走 shadcn 注册表，`npx shadcn@latest add https://design.how/r/glaze/theme.json` 装主题，同时把 Glaze 的 SKILL.md 写进 .claude/skills 和 .agents/skills，让编程助手按它的规则改界面。注册表列出 87 项：常规输入、表格、弹层之外，AI 一栏有 Prompt input、Send button、Mention、Message、Conversation、Response、Reasoning、Tool call、Activity、Follow-ups、Action receipt、Autonomy rule；还有 11 个整屏区块（预订审批、引用回答、Agent 计划、模拟测试等）和一份 ESLint 规则包，用来挡掉不在 token 里的数值。代码和技能在 GitHub 仓库 arla6ka/design.how，MIT 许可。官网复制安装提示词前会弹邮箱框，可以点「Just copy the prompt」跳过。适合要做 Agent 产品、又不想每屏重新设计审批卡和工具调用卡的人。本库读了注册表和组件源码，没有在项目里实际装上跑。",
+      "summaryEn": "Glaze is the third design system Arlan Marat has published on design.how, aimed at AI products: compact black and white, with glass only on the one button you press next. It ships as a shadcn registry: `npx shadcn@latest add https://design.how/r/glaze/theme.json` installs the theme and writes the Glaze SKILL.md into .claude/skills and .agents/skills so a coding agent follows its rules. The registry lists 87 items. Beyond inputs, tables and overlays, the AI group has Prompt input, Send button, Mention, Message, Conversation, Response, Reasoning, Tool call, Activity, Follow-ups, Action receipt and Autonomy rule; there are 11 full-screen blocks (booking approval, cited answer, agent plan, simulations and more) and an ESLint pack that flags values outside the tokens. Code and skills live in the GitHub repo arla6ka/design.how under MIT. The site shows an email box before copying the install prompt; “Just copy the prompt” skips it. Good if you are building an agent product and do not want to redesign approval and tool-call cards on every screen. This library read the registry and component source but did not install it into a project.",
+      "sourceUrl": "https://design.how/systems/glaze",
+      "secondaryUrls": [
+        "https://github.com/arla6ka/design.how",
+        "https://design.how/r/glaze/registry.json",
+        "https://design.how/systems",
+        "https://x.com/arlanmarat/status/2112236146050965965"
+      ],
+      "previewImage": "/previews/glaze.webp",
+      "promptHint": "先 npx shadcn@latest add https://design.how/r/glaze/theme.json，在根布局引入样式并给 body 加 glaze 类；再按需 add prompt-input、tool-call、autonomy-rule。改界面前先读 .agents/skills/glaze/SKILL.md，改完跑 glaze.eslint.config.mjs。",
+      "promptHintEn": "Run npx shadcn@latest add https://design.how/r/glaze/theme.json, import the stylesheet in the root layout and add the glaze class to body, then add prompt-input, tool-call and autonomy-rule as needed. Read .agents/skills/glaze/SKILL.md before UI changes and run glaze.eslint.config.mjs after.",
+      "types": [
+        "ui",
+        "component",
+        "library"
+      ],
+      "tags": [
+        "design-system",
+        "shadcn",
+        "agent-ui",
+        "ai-components",
+        "skills",
+        "mit",
+        "open-source",
+        "react",
+        "tailwind"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "qualityNote": "免费、MIT，组件源码可读。本库没有在真实项目里装主题或组件，也没有跑它的 lint；官网的 design.how 技能页需要留邮箱才显示完整说明，本条只写 GitHub 仓库里能看到的六个技能名。",
+      "qualityNoteEn": "Free and MIT, with readable component source. This library did not install the theme or components into a real project or run its lint. The design.how skills page asks for an email before showing full instructions, so this entry only names the six skills visible in the GitHub repo.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：design.how/systems/glaze HTTP 200，标题 Glaze, a design system for AI products；页面侧栏 AI 组含 Prompt input 到 Autonomy rule 共 12 项。点 Install 后弹邮箱框，选 Just copy the prompt 拿到安装提示词：shadcn init、add theme.json（同时写 .claude/skills/glaze/SKILL.md 与 .agents/skills/glaze/SKILL.md）、npx skills add arla6ka/design.how、按需 add 组件、11 个区块、lint.json 与 npx eslint -c glaze.eslint.config.mjs。curl https://design.how/r/glaze/registry.json：shadcn registry schema，87 项；prompt-input.json 为 registry:component，含 registry/glaze/ai/prompt-input.tsx 等 7 个文件；tool-call.json 依赖 @base-ui/react@^1.8.0；lint.json 含 eslint.config.mjs、plugin.mjs 等 5 个文件；components/prompt-input.md HTTP 200。gh api repos/arla6ka/design.how：MIT、141★，创建 2026-09-28；提交 2026-10-19T03:55:38Z「Add Glaze and bring Quartz up to date」；systems/ 下有 glaze、lime、quartz，skills/ 下有 build-design-system、component-docs、design-system-boss、migrate-design-system、token-mapping、ui-review。作者 X 帖 2112236146050965965（@arlanmarat，2026-10-19T17:35:15Z，151 赞、111 收藏）。design.how/skills 页是邮箱解锁，正文为占位文字。收录前 main 与打开的 PR 里没有 design.how / glaze。预览为 Playwright 打开 Glaze 页、下滚 1300px 的一屏（预订审批卡与「On its own」权限选择），1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): design.how/systems/glaze HTTP 200, title Glaze, a design system for AI products; the sidebar AI group lists 12 items from Prompt input to Autonomy rule. Clicking Install opens an email box; Just copy the prompt yields the install prompt: shadcn init, add theme.json (which also writes .claude/skills/glaze/SKILL.md and .agents/skills/glaze/SKILL.md), npx skills add arla6ka/design.how, add components as needed, 11 blocks, lint.json and npx eslint -c glaze.eslint.config.mjs. curl https://design.how/r/glaze/registry.json: shadcn registry schema, 87 items; prompt-input.json is a registry:component with 7 files including registry/glaze/ai/prompt-input.tsx; tool-call.json depends on @base-ui/react@^1.8.0; lint.json has 5 files including eslint.config.mjs and plugin.mjs; components/prompt-input.md HTTP 200. gh api repos/arla6ka/design.how: MIT, 141★, created 2026-09-28; commit 2026-10-19T03:55:38Z “Add Glaze and bring Quartz up to date”; systems/ holds glaze, lime and quartz, skills/ holds build-design-system, component-docs, design-system-boss, migrate-design-system, token-mapping and ui-review. Author X post 2112236146050965965 (@arlanmarat, 2026-10-19T17:35:15Z, 151 likes, 111 bookmarks). The design.how/skills page is email-gated with placeholder text. Neither main nor the open PRs had design.how / glaze. Preview is a Playwright view of the Glaze page scrolled 1300px (booking approval card and the “On its own” autonomy picker), 1200×800 WebP."
+    },
+    {
+      "id": "chai-ui",
+      "slug": "chai-ui",
+      "title": "Chai UI：生成式 AI 应用的提示栏与结果卡组件（React / Vue）",
+      "titleEn": "Chai UI — prompt bar and result-card components for generative AI apps (React / Vue)",
+      "hook": "一条提示栏管模型选择、提示词优化和附件，结果卡自带重试与下载。",
+      "hookEn": "One prompt bar for model picking, prompt rewriting and attachments; result cards retry.",
+      "summary": "Chai UI 是 MIT 开源的「AI 交互设计系统」，把图像、视频类 AI 应用里反复出现的界面做成四个组件：Composer（提示栏：附件、用途、模型菜单、提示词优化、自动选模型、停止按钮，可选语音输入和世界模型的 Environment / Character 双提示）、MediaAnalyzer（丢进图片、视频或音频，反推一段可用的提示词）、ResultCard（一次生成的结果，带点赞、重试、下载、分享和翻面看参数）、EditCard（在图上框选区域、每块写一句修改指令，再按版本翻页）。React 与 Vue 各一套，组件和行为相同；设计 token 另有 CSS 变量、JS 和 Figma token 集。后端可接 Fal.ai、OpenRouter、Vercel AI Gateway 或你自己的引擎，密钥只放在你服务器上的一个路由里。不接后端时整套跑内置 mock，不发网络请求，适合先把界面搭起来。项目自述仍在积极开发，版本 0.10.x。本库用 React 装了 0.10.1，不接引擎跑通了提示栏到结果卡；没有接 Fal、OpenRouter，也没有试编辑卡和 Vue 版。",
+      "summaryEn": "Chai UI is an MIT “design system for AI model interactions” that turns the parts every image and video AI app rebuilds into four components: Composer (prompt bar with attachments, use cases, a model menu, prompt optimization, auto model routing and stop; optional voice input and world-model Environment / Character prompts), MediaAnalyzer (drop in an image, video or audio clip and get a usable prompt back), ResultCard (one generation’s results with like, retry, download, share and a details flip) and EditCard (mark regions on an image, give each its own instruction, then page through versions). React and Vue packages have the same components and behaviour; design tokens also ship as CSS variables, JS and a Figma token set. Engines cover Fal.ai, OpenRouter, Vercel AI Gateway or your own, with keys kept in one route on your server. With no engine it runs on built-in mocks and makes no network calls, so you can lay out the UI first. The project says it is in active development at 0.10.x. This library installed 0.10.1 in React and ran the prompt bar through to a result card without an engine; it did not connect Fal or OpenRouter, or try EditCard or the Vue package.",
+      "sourceUrl": "https://chai-ui.com/",
+      "secondaryUrls": [
+        "https://github.com/kazarazat/chai-ui",
+        "https://chai-ui.com/docs/components",
+        "https://www.npmjs.com/package/@chai-ui/react",
+        "https://news.ycombinator.com/item?id=50159662"
+      ],
+      "previewImage": "/previews/chai-ui.webp",
+      "npmPackage": "@chai-ui/react",
+      "promptHint": "pnpm add @chai-ui/react @chai-ui/core @chai-ui/tokens，引入 @chai-ui/tokens/css 和 @chai-ui/react/style.css，先不传 engine 用 mock 搭好 Composer + ResultCard；要接真模型再加 createChaiHandler 服务端路由，把 FAL_KEY 或 OPENROUTER_API_KEY 放服务器环境变量。",
+      "promptHintEn": "pnpm add @chai-ui/react @chai-ui/core @chai-ui/tokens, import @chai-ui/tokens/css and @chai-ui/react/style.css, and build Composer + ResultCard on mocks with no engine first; for real models add the createChaiHandler server route and keep FAL_KEY or OPENROUTER_API_KEY in server env.",
+      "types": [
+        "ui",
+        "component",
+        "library"
+      ],
+      "tags": [
+        "generative-ui",
+        "prompt-bar",
+        "react",
+        "vue",
+        "design-tokens",
+        "mit",
+        "open-source",
+        "agent-ui",
+        "fal",
+        "openrouter"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-20T13:00:00Z",
+      "qualityNote": "MIT 开源。本库只在 React 里用内置 mock 跑过提示栏和结果卡；在那次试用里单按 Enter 没有提交，点发送按钮才出结果。没有接任何真实模型或服务端路由，没有试 EditCard、MediaAnalyzer 和 Vue 包，无障碍声明照 README。",
+      "qualityNoteEn": "MIT open source. This library only ran the prompt bar and result card on built-in mocks in React; in that run Enter alone did not submit and the send button did. No real model or server route was connected, EditCard, MediaAnalyzer and the Vue package were not tried, and the accessibility claims follow the README.",
+      "verifyLog": "2026-10-20 晚间（Asia/Shanghai）：chai-ui.com HTTP 200，标题 Chai UI: Brew AI Apps Fast，页脚 Open source · MIT · 2026，页面写 Version 0.10.1 / 4 Components / 140 Tokens / 4 Packages。docs/components 列 Composer bar、Media analyzer、Result card、Edit card，侧栏 v0.1.72 — 2026-10-17。gh api repos/kazarazat/chai-ui：MIT、10★，创建 2026-10-01，最近推送 2026-10-17；packages/ 下 core、react、tokens、vue。npm view @chai-ui/react、@chai-ui/vue、@chai-ui/tokens 均为 0.10.1、MIT（modified 2026-10-17）。Show HN item 50159662「Chai-UI – A design system to generative AI apps」，2026-10-20T00:06Z，Algolia 2 pts。实测：Vite + React 19.3.1 装 @chai-ui/react / core / tokens 0.10.1，按 README 去掉 engine 与 ChaiProvider，vite build 通过；页面里输入提示后单按 Enter 未提交，点发送按钮后出现 ResultCard，文本结果标「(mock — mock-model)」，带 Download、Share、Like、Dislike、Retry、Show details、Copy prompt；控制台无报错，没有任何外部网络请求。收录前 main 与打开的 PR 里没有 chai-ui。预览为 Playwright 打开官网首屏，1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 evening (Asia/Shanghai): chai-ui.com HTTP 200, title Chai UI: Brew AI Apps Fast, footer Open source · MIT · 2026; the page shows Version 0.10.1 / 4 Components / 140 Tokens / 4 Packages. docs/components lists Composer bar, Media analyzer, Result card and Edit card; sidebar v0.1.72 — 2026-10-17. gh api repos/kazarazat/chai-ui: MIT, 10★, created 2026-10-01, last push 2026-10-17; packages/ holds core, react, tokens and vue. npm view @chai-ui/react, @chai-ui/vue and @chai-ui/tokens are all 0.10.1, MIT (modified 2026-10-17). Show HN item 50159662 “Chai-UI – A design system to generative AI apps”, 2026-10-20T00:06Z, Algolia 2 pts. Hands-on: Vite + React 19.3.1 with @chai-ui/react / core / tokens 0.10.1, engine and ChaiProvider left out per the README; vite build passed. Typing a prompt and pressing Enter alone did not submit; clicking send rendered a ResultCard whose text result read “(mock — mock-model)”, with Download, Share, Like, Dislike, Retry, Show details and Copy prompt; no console errors and no external network requests. Neither main nor the open PRs had chai-ui. Preview is a Playwright view of the homepage hero, 1200×800 WebP."
+    },
+    {
+      "id": "dsk",
+      "slug": "dsk",
+      "title": "DSK：给画布编辑器的 Web Components 控件套件",
+      "titleEn": "DSK — web components for canvas editors",
+      "hook": "给画布编辑器的数值、颜色、标尺和图层树。",
+      "hookEn": "Numbers, color, rulers, and a layer tree for canvas editors.",
+      "summary": "DSK（Design System Kit）是 MIT 开源、不绑框架的 Web Components 套件，给画布和创意工具做检查器：可拖拽的精确数值、颜色与吸管、角度、标尺、图层树，以及平移缩放。注册一次后用普通 HTML 标签和原生事件；文档写了 Vanilla、React、Vue、Svelte、Angular 的接法，并有 tldraw、Excalidraw、React Flow 等编辑器示例，其中 tldraw 示例包含标尺和评论。npm 包是 @flowscape-ui/dsk。不要和更早的 React 包 @flowscape-ui/design-system-kit 当成同一个。适合已经有自己的画布引擎、只想补一套编辑器控件的人。本库没有把包装进真实编辑器，只看了文档站和演示。",
+      "summaryEn": "DSK (Design System Kit) is an MIT, framework-agnostic Web Components kit for inspectors in canvas and creative tools: draggable precision numbers, color and an eyedropper, angles, rulers, a layer tree, and pan/zoom. Register it once, then use ordinary HTML tags and native events. The docs include Vanilla, React, Vue, Svelte, and Angular setup, plus editor examples for tldraw, Excalidraw, React Flow, and others; the tldraw example includes rulers and comments. The npm package is @flowscape-ui/dsk. Do not treat it as the older React package @flowscape-ui/design-system-kit. Good when you already have a canvas engine and only need editor controls. This library did not install the package into a real editor; docs and demo only.",
+      "sourceUrl": "https://flowscape-ui.github.io/dsk/",
+      "secondaryUrls": [
+        "https://github.com/Flowscape-UI/dsk"
+      ],
+      "previewImage": "/previews/dsk.webp",
+      "npmPackage": "@flowscape-ui/dsk",
+      "promptHint": "用 npm 包 @flowscape-ui/dsk 做画布编辑器的检查器：dsk-input、dsk-input-color、dsk-ruler、dsk-layer-tree。保留你自己的渲染和撤销；不要安装旧的 React 包 @flowscape-ui/design-system-kit。",
+      "promptHintEn": "Use the npm package @flowscape-ui/dsk for a canvas-editor inspector: dsk-input, dsk-input-color, dsk-ruler, dsk-layer-tree. Keep your own renderer and undo stack; do not install the older React package @flowscape-ui/design-system-kit.",
+      "types": [
+        "library",
+        "ui"
+      ],
+      "tags": [
+        "web-components",
+        "canvas",
+        "design-tools",
+        "mit",
+        "open-source",
+        "color",
+        "rulers",
+        "layers",
+        "agent-ui",
+        "tldraw"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-16T12:00:00Z",
+      "qualityNote": "文档 README 写 19 个自定义元素。npm 包是 @flowscape-ui/dsk，和更早的 React 包 @flowscape-ui/design-system-kit 不是同一个。tldraw 示例在文档里，含标尺与评论。本库没有把包装进真实编辑器，只看了文档和演示。",
+      "qualityNoteEn": "The README lists 19 custom elements. The npm package is @flowscape-ui/dsk, which is not the older React package @flowscape-ui/design-system-kit. The tldraw example in the docs includes rulers and comments. This library did not install the package into a real editor; docs and demo only.",
+      "verifyLog": "2026-10-16 晚间：flowscape-ui.github.io/dsk/ HTTP 200（Playwright）。gh api：MIT、1★，创建于 2026-10-11，最近推送 2026-10-15；release v1.1.0（2026-10-12T21:00:54Z）。npm view @flowscape-ui/dsk 为 1.1.0、MIT。另有 npm 包 @flowscape-ui/design-system-kit@1.3.1，说明是 React 组件，与本条不是同一个包。README 表格数得 19 个自定义元素，并列出 tldraw 示例（形状变换、相机同步、标尺、评论）。收录依据里的 2026-10-15 X 提及（开源、不绑框架、tldraw 演示含标尺与评论钉）与 README 的 tldraw 示例相符；本库没有另取到该帖的状态链接。预览为 Playwright 实拍文档站首页，裁 3:2 WebP（1200×800）。未 npm 安装进真实编辑器。",
+      "verifyLogEn": "2026-10-16 evening: flowscape-ui.github.io/dsk/ HTTP 200 (Playwright). gh api: MIT, 1★, created 2026-10-11, last push 2026-10-15; release v1.1.0 (2026-10-12T21:00:54Z). npm view @flowscape-ui/dsk is 1.1.0, MIT. A separate npm package @flowscape-ui/design-system-kit@1.3.1 describes React components and is not this entry. The README table counts 19 custom elements and lists a tldraw example (shape transforms, camera sync, rulers, comments). The 2026-10-15 X mention used for this listing (open source, framework-agnostic, a tldraw demo with rulers and comment pins) matches that README example; this library did not retrieve a status URL for the post. Preview is a Playwright capture of the docs homepage, cropped to a 3:2 WebP (1200×800). Not installed into a real editor."
+    },
+    {
       "id": "figma-pilot",
       "slug": "figma-pilot",
       "title": "figma-pilot：用代码执行驱动 Figma 的 MCP（少量工具）",
@@ -2334,9 +2589,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-15T12:45:00Z",
+    "updatedAt": "2026-10-25T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.29",
-    "count": 65
+    "version": "1.4.33",
+    "count": 71
   }
 }

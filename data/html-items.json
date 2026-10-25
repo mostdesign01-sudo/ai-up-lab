@@ -1,6 +1,786 @@
 {
   "items": [
     {
+      "id": "makegradient",
+      "slug": "makegradient",
+      "title": "MakeGradient：免费 WebGL 渐变引擎，可导出代码/Figma/视频",
+      "titleEn": "MakeGradient: free WebGL gradient engine with code/Figma/video export",
+      "hook": "八种着色器渐变，浏览器里调完直接拷到 React / Figma。",
+      "hookEn": "Eight shader gradients—tune in-browser, then copy to React or Figma.",
+      "summary": "MakeGradient（https://www.makegradient.com/）是免费、免登录的浏览器渐变工具：WebGL/GLSL 渲染，模式含 Fluid Mesh、Aurora、Deep Sea、Holographic、Impasto、Spectral、Fractal、Grainy；可调颜色、噪点与运动。导出写明有 React 组件、Tailwind、CSS 回退、embed.js、Figma、PNG 与短视频。作者称 forever free、无水印。未发现公开源码仓库，本条只标免费可用路径。适合做英雄区或品牌背景、又想要比纯 CSS 渐变更“油膜/极光”一点的人。本库没有完整导出每一类格式，也没有核对视频导出是否仍可用。",
+      "summaryEn": "MakeGradient (https://www.makegradient.com/) is a free, no-login browser gradient tool: WebGL/GLSL modes include Fluid Mesh, Aurora, Deep Sea, Holographic, Impasto, Spectral, Fractal, and Grainy; tune colors, noise, and motion. Exports claim React, Tailwind, CSS fallback, embed.js, Figma, PNG, and short video. The author calls it forever free with no watermark. No public source repo found—this entry covers the free usable path only. Good for hero/brand backgrounds that need more oil-slick/aurora feel than plain CSS. This library did not fully exercise every export type and did not re-verify video export.",
+      "sourceUrl": "https://www.makegradient.com/",
+      "secondaryUrls": [],
+      "previewImage": "/previews/makegradient.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "gradient",
+        "webgl",
+        "figma",
+        "export",
+        "free",
+        "design",
+        "shader"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-24",
+      "updatedAt": "2026-10-24T12:20:00Z",
+      "qualityNote": "免费免登录浏览器工具；非开源。导出能力照官网控件文案；视频导出社区曾有失效反馈，本库未复测。",
+      "qualityNoteEn": "Free no-login browser tool; not open source. Export claims follow on-page controls; video export has had community failure reports—not retested here.",
+      "verifyLog": "2026-10-24 晚间：makegradient.com HTTP 200；无公开 GitHub；Playwright 实拍 Holographic 模式裁 3:2 WebP。未逐项点 CODE/FIGMA/VIDEO/IMAGE 导出。",
+      "verifyLogEn": "2026-10-24 evening: makegradient.com HTTP 200; no public GitHub; Playwright Holographic-mode capture cropped to 3:2 WebP. CODE/FIGMA/VIDEO/IMAGE exports not exercised item-by-item."
+    },
+    {
+      "id": "shapcn",
+      "slug": "shapcn",
+      "title": "shapcn：按形状装配的图标变形（任意图标 morph 到任意图标）",
+      "titleEn": "shapcn: shape-aware icon morphing (any icon to any other)",
+      "hook": "任意图标按形状装好再变形，零件按顺序走。",
+      "hookEn": "Any icon morphs into any other by shape, parts in order.",
+      "summary": "shapcn 先按描边重量给图标装 rig：最重的形状当身体，碰到的零件挂到父级，再按这个父子顺序变形。页面把每个点同时滑过去叫 sloptween，并放在对照里。支持 Lucide、Tabler、Phosphor、Remix、Hugeicons，也可以用自己的图标。script 标签页面写今天就能用，并带全部 1,858 个 Lucide；npm 包 shape-aware-morph 仍标为进行中。页面有 Playground，可以选一对图标试。作者 Ron Kurti，仓库 MIT，并写明与 shadcn/ui 无关。适合想要图标状态切换有先后、又不想为每一对做关键帧的人。本库没有把 script 嵌进项目，也没有安装 npm。",
+      "summaryEn": "shapcn rigs an icon by stroke weight first: the heaviest shapes are the body, a part parents to the shape it touches, and the morph follows that order. The page calls a simultaneous point-to-point slide a sloptween and shows it as the comparison. It supports Lucide, Tabler, Phosphor, Remix, Hugeicons, and your own icons. The page says the script tag works today and includes all 1,858 Lucide icons; the npm package shape-aware-morph is still marked in progress. A Playground lets you try a pair. Made by Ron Kurti, MIT repo, and the page says it is not affiliated with shadcn/ui. Useful when an icon state change should move in order and you do not want to keyframe every pair. This library did not embed the script or install the npm package.",
+      "sourceUrl": "https://shapcn.com/",
+      "secondaryUrls": [
+        "https://github.com/seahorsecastle/shapcn",
+        "https://news.ycombinator.com/item?id=50197999"
+      ],
+      "previewImage": "/previews/shapcn.webp",
+      "types": [
+        "tool",
+        "interactive",
+        "component"
+      ],
+      "tags": [
+        "icon",
+        "morph",
+        "lucide",
+        "motion",
+        "tabler",
+        "phosphor",
+        "remix",
+        "hugeicons",
+        "mit",
+        "web-component"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-23T01:40:00Z",
+      "qualityNote": "收录是因为变形按形状的父子顺序走，页面把 script 标成今天可用，npm 包 shape-aware-morph 仍标为进行中。图标许可各家不同：Lucide 为 ISC，Tabler、Hugeicons、Phosphor 为 MIT，Remix 用 Remix Icon License。本库没有嵌入 script，也没有安装 npm。",
+      "qualityNoteEn": "Listed because the morph follows a parent-child rig, the page marks the script tag as usable today, and the npm package shape-aware-morph is still marked in progress. Icon licenses differ: Lucide is ISC, Tabler, Hugeicons, and Phosphor are MIT, and Remix uses the Remix Icon License. This library did not embed the script or install npm.",
+      "verifyLog": "2026-10-23 早间（上海）：https://shapcn.com/ HTTP 200，last-modified Thu, 22 Oct 2026 17:11:53 GMT。title「shapcn: Shape-aware icon morphing」。og:description「Change the icon name. shapcn animates the rest. Any icon into any other, planned live.」。页面写 75 KB engine gzipped、220 KB with all 1,858 Lucide icons；script 示例 https://shapcn.com/morph-icon.js ；npm i shape-aware-morph 与 npm 三档均标 In progress；「Script tag works today. npm package is in progress. Source is on GitHub.」仓库链接 github.com/seahorsecastle/shapcn。页脚：Made by Ron Kurti，MIT，Not affiliated with shadcn/ui；Icons: Lucide (ISC), Tabler (MIT), Hugeicons (MIT), Phosphor (MIT), Remix Icon (Remix Icon License 1.0)。gh api seahorsecastle/shapcn：license MIT，stargazers_count 0，forks 0，created 2026-10-20T22:13:49Z，pushed 2026-10-22T16:31:47Z，language JavaScript，homepage https://shapcn.com 。Algolia objectID 50197999，title「Show HN: shapcn brings shape-aware icon morphing」，author seahorsecastle，created_at 2026-10-22T16:54:48Z，points 1。预览为无头 Chrome 实拍首页首屏（含 Examples），视口 1200×800 WebP。没有把 script 嵌进项目，没有 npm install。",
+      "verifyLogEn": "2026-10-23 morning (Shanghai): https://shapcn.com/ HTTP 200, last-modified Thu, 22 Oct 2026 17:11:53 GMT. Title “shapcn: Shape-aware icon morphing.” og:description “Change the icon name. shapcn animates the rest. Any icon into any other, planned live.” The page says 75 KB engine gzipped and 220 KB with all 1,858 Lucide icons; the script example is https://shapcn.com/morph-icon.js ; npm i shape-aware-morph and the three npm rows are marked In progress; “Script tag works today. npm package is in progress. Source is on GitHub.” Repo link github.com/seahorsecastle/shapcn. Footer: Made by Ron Kurti, MIT, not affiliated with shadcn/ui; icons Lucide (ISC), Tabler (MIT), Hugeicons (MIT), Phosphor (MIT), Remix Icon (Remix Icon License 1.0). gh api seahorsecastle/shapcn: MIT, stargazers_count 0, forks 0, created 2026-10-20T22:13:49Z, pushed 2026-10-22T16:31:47Z, language JavaScript, homepage https://shapcn.com . Algolia objectID 50197999, title “Show HN: shapcn brings shape-aware icon morphing”, author seahorsecastle, created_at 2026-10-22T16:54:48Z, 1 point. Preview is a headless Chrome capture of the home hero including Examples, 1200×800 WebP. The script was not embedded and npm was not installed."
+    },
+    {
+      "id": "archscribe",
+      "slug": "archscribe",
+      "title": "Archscribe：JSON 出手绘架构图，附可编辑 Excalidraw",
+      "titleEn": "Archscribe: hand-drawn diagrams from JSON, with editable Excalidraw",
+      "hook": "一份 JSON，出可编辑草图、PNG 和动画 GIF。",
+      "hookEn": "One JSON spec becomes an editable sketch, a PNG, and an animated GIF.",
+      "summary": "Archscribe 是 MIT 许可的 Codex / Claude 技能，外面挂一个本地 Python 渲染器。默认在无头 Chromium 里用 rough.js 画手绘线；没有 Chromium 时，用 `--renderer pillow` 退回 Pillow。一份 JSON 配置可以交出可编辑的 .excalidraw、PNG 和动画 GIF。浏览器渲染器还会写 MP4，也可以选 SVG 和单文件可点击 HTML。配色两套：默认深色霓虹，`--style paper` 是浅色纸面。布局三套：panorama（系统全景）、swimlane（泳道）、graph（自由连线）。浏览器渲染用 Excalifont 手绘字，并带思源黑体。仓库有简体中文 README 和 README.en.md。适合写文章、系统架构或流程图，又想留下能改的源文件的人。本库没有安装这个技能，也没有跑渲染脚本。",
+      "summaryEn": "Archscribe is an MIT Codex / Claude skill with a local Python renderer. By default it draws the hand-drawn lines with rough.js in headless Chromium; without Chromium, `--renderer pillow` falls back to Pillow. One JSON spec can produce an editable .excalidraw file, a PNG, and an animated GIF. The browser renderer also writes an MP4, and can add SVG plus a single-file clickable HTML page. Two looks: dark neon by default, and a light paper look with `--style paper`. Three layouts: panorama (a system overview), swimlane, and graph (freeform links). The browser renderer uses the hand-drawn Excalifont face and also includes Source Han Sans. The repo has a Simplified Chinese README and README.en.md. Useful for articles, system architecture, or process diagrams when you want a source file you can still edit. This library did not install the skill and did not run the renderer.",
+      "sourceUrl": "https://github.com/lazypay/Archscribe",
+      "secondaryUrls": [
+        "https://github.com/lazypay/Archscribe/blob/main/README.en.md",
+        "https://x.com/haoge6699/status/2113203960752336965"
+      ],
+      "previewImage": "/previews/archscribe.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "skill",
+        "diagram",
+        "excalidraw",
+        "gif",
+        "mit",
+        "codex",
+        "claude",
+        "python"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "收录是因为这是能装进 Codex 或 Claude 的开源绘图技能，产物包含可编辑的 Excalidraw，而不只是一张图。默认渲染器是无头 Chromium，Pillow 只是没装浏览器时的退路。本库没有安装技能，没有装依赖，也没有用示例配置出图。",
+      "qualityNoteEn": "Listed because it is an open-source diagram skill for Codex or Claude, and the output includes an editable Excalidraw file rather than only a picture. The default renderer is headless Chromium; Pillow is the fallback when Chromium is not installed. This library did not install the skill, did not install its dependencies, and did not render a sample spec.",
+      "verifyLog": "2026-10-22 晚间（上海）：gh api lazypay/Archscribe，license SPDX MIT，about 368 stars as of 2026-10-22（stargazers_count=368），forks 24，创建 2026-06-27T08:05:11Z，最近推送 2026-07-15T04:49:44Z，语言 Python。根目录有 README.md、README.en.md、SKILL.md、LICENSE。SKILL.md 写默认浏览器渲染器可出 PNG、GIF、MP4、SVG、可编辑 Excalidraw 和交互 HTML；未装 Chromium 时用 --renderer pillow，Pillow 支持 PNG、GIF 和 Excalidraw。README 画廊三例：homepage-panorama.gif（panorama + default）、homepage-swimlane.gif（swimlane + paper）、homepage-graph.gif（graph + paper）。GitHub 仓库页 HTTP 200。X 帖 https://x.com/haoge6699/status/2113203960752336965 作者 @haoge6699，创建 2026-10-22T09:41:00Z。预览为 Playwright 实拍 README 画廊中的全景 GIF（homepage-panorama），1200×800 WebP。没有把技能装进 Codex 或 Claude，没有 pip install，没有运行 scripts/render_animated_diagram.py，没有核对 GIF 帧差。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): gh api lazypay/Archscribe, SPDX MIT, about 368 stars as of 2026-10-22 (stargazers_count=368), 24 forks, created 2026-06-27T08:05:11Z, last push 2026-07-15T04:49:44Z, language Python. Repo root has README.md, README.en.md, SKILL.md, and LICENSE. SKILL.md says the default browser renderer can emit PNG, GIF, MP4, SVG, editable Excalidraw, and interactive HTML; without Chromium, --renderer pillow is the fallback, and Pillow supports PNG, GIF, and Excalidraw. README gallery examples: homepage-panorama.gif (panorama + default), homepage-swimlane.gif (swimlane + paper), homepage-graph.gif (graph + paper). The GitHub repo page was HTTP 200. X post https://x.com/haoge6699/status/2113203960752336965 by @haoge6699, created 2026-10-22T09:41:00Z. Preview is a Playwright capture of the panorama GIF (homepage-panorama) in the README gallery, 1200×800 WebP. The skill was not installed into Codex or Claude, pip install was not run, scripts/render_animated_diagram.py was not run, and GIF frame differences were not checked."
+    },
+    {
+      "id": "img2threejs",
+      "slug": "img2threejs",
+      "title": "img2threejs：参考图重建成纯代码的 Three.js 模型",
+      "titleEn": "img2threejs: rebuild a reference image as a code-only Three.js model",
+      "hook": "参考图变成可动画的纯代码 Three.js 模型。",
+      "hookEn": "A reference image becomes an animation-ready Three.js model, in code.",
+      "summary": "img2threejs 是 Apache-2.0 的 Agent 技能，SKILL.md 标的版本是 2.0.0。给它一张物体或角色的参考图，它按分阶段的雕刻和视觉自检，写出一个 THREE.Group 工厂：用基本体、程序着色器和生成几何把对象搭出来，并带枢轴和插槽，方便接着做动画。README 写这是代码重建，不是摄影测量、抽网格或下载素材包；画廊说明写这些演示在浏览器里跑，没有网格文件。文档写它可以在 Hermes、Claude Code、Codex 或 OpenCode 里用，安装命令是 `npx --yes img2threejs@latest install`。在线演示列在仓库 README 的 Live demos 表里，画廊源码在另一个 showcase 仓库。适合要可改、可动画的 Three.js 代码，而不是一个现成网格的人。本库没有安装技能，没有拿参考图跑重建，也没有打开那些在线演示。",
+      "summaryEn": "img2threejs is an Apache-2.0 agent skill. SKILL.md marks version 2.0.0. Given a reference image of an object or character, it follows a staged sculpt and visual self-check and writes a THREE.Group factory: primitives, procedural shaders, and generated geometry, with pivots and sockets so the result can be animated. The README calls this reconstruction in code, not photogrammetry, mesh extraction, or a downloaded asset pack; the gallery note says the demos run in the browser and ship no mesh files. The docs say it runs under Hermes, Claude Code, Codex, or OpenCode, and the install command is `npx --yes img2threejs@latest install`. The live demos are listed in the repo README’s Live demos table, and the gallery source is a separate showcase repo. Useful when you want editable, animation-ready Three.js code rather than a finished mesh. This library did not install the skill, did not reconstruct a reference image, and did not open those live demos.",
+      "sourceUrl": "https://github.com/img2threejs/img2threejs",
+      "secondaryUrls": [
+        "https://img2threejs.io/",
+        "https://github.com/img2threejs/img2threejs-showcase",
+        "https://x.com/zmdsb259414/status/2113140946699460933"
+      ],
+      "previewImage": "/previews/img2threejs.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "threejs",
+        "skill",
+        "apache-2.0",
+        "procedural",
+        "animation",
+        "python",
+        "codex"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "收录是因为这是公开的图像转三维技能，模型按文档用代码搭建，画廊说明写没有网格文件。README 上的赞助徽章不改变 Apache-2.0 许可。本库没有安装，没有跑重建，也没有在浏览器里打开那些演示。",
+      "qualityNoteEn": "Listed because it is a public image-to-3D skill whose models are built in code, and the gallery note says there are no mesh files. Sponsor badges on the README do not change the Apache-2.0 license. This library did not install it, did not run a reconstruction, and did not open those demos in a browser.",
+      "verifyLog": "2026-10-22 晚间（上海）：gh api img2threejs/img2threejs，license Apache-2.0，about 18682 stars as of 2026-10-22（stargazers_count=18682），forks 1570，创建 2026-07-15T02:58:39Z，最近推送 2026-10-21T08:27:20Z，homepage https://img2threejs.io ，语言 Python。SKILL.md frontmatter 为 version 2.0.0、license Apache-2.0。README Live demos 表有 Tropical Island、Man Robot、Snowbound Crossing、Ocean Blue PRS Guitar、Groot、Raz、Starship + Super Heavy、Mars Cat、Lee Sin、Dual-Sword Warrior、AWP Medusa、Talon Knife 等行，链到 img2threejs.io 的 hash 路由；画廊源码仓库为 img2threejs/img2threejs-showcase。GitHub 仓库页 HTTP 200。X 帖 https://x.com/zmdsb259414/status/2113140946699460933 作者 @zmdsb259414，创建 2026-10-22T05:30:36Z，把 img2threejs 放在 8 个仓库清单的第 1 条，帖内写约 18600 star。预览为 Playwright 实拍 README「Live demos」表格，1200×800 WebP。没有执行 npx install，没有跑 forge，没有打开在线 WebGL 演示，没有用参考图重建模型。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): gh api img2threejs/img2threejs, license Apache-2.0, about 18682 stars as of 2026-10-22 (stargazers_count=18682), 1570 forks, created 2026-07-15T02:58:39Z, last push 2026-10-21T08:27:20Z, homepage https://img2threejs.io , language Python. SKILL.md frontmatter says version 2.0.0 and license Apache-2.0. The README Live demos table includes rows such as Tropical Island, Man Robot, Snowbound Crossing, Ocean Blue PRS Guitar, Groot, Raz, Starship + Super Heavy, Mars Cat, Lee Sin, Dual-Sword Warrior, AWP Medusa, and Talon Knife, linking to hash routes on img2threejs.io; the gallery source repo is img2threejs/img2threejs-showcase. The GitHub repo page was HTTP 200. X post https://x.com/zmdsb259414/status/2113140946699460933 by @zmdsb259414, created 2026-10-22T05:30:36Z, lists img2threejs first among eight repos and says about 18600 stars. Preview is a Playwright capture of the README Live demos table, 1200×800 WebP. npx install was not run, forge was not run, the live WebGL demos were not opened, and no reference image was reconstructed."
+    },
+    {
+      "id": "oneshotprompts",
+      "slug": "oneshotprompts",
+      "title": "oneshotprompts：把白话想法写成动效提示词",
+      "titleEn": "oneshotprompts: turn a plain-words idea into a motion-design prompt",
+      "hook": "白话想法写成带技法槽位的动效提示词。",
+      "hookEn": "A plain-words idea becomes a motion prompt with technique slots.",
+      "summary": "oneshotprompts 是浏览器里的动效提示词编辑器。使用条款写网站免费使用，没有账号；你写的提示词留在浏览器里，站点说自己收不到。工具条有 Scene、Step、Blank 和 Technique。虚线词可以点开换说法。页面上有 Roll 和 Surprise me，也有 Copy prompt。关于页写技法库 923 条，其中 900 条有一段会循环的短示例；编辑器搜索框也写着 923。编辑器下方有给 AI 助手的说明，/agents/ 列出 WebMCP 工具，例如 read_prompt、search_techniques、get_final_prompt，给已经开着这个页面的 Chrome 助手用。另外有一份可选的邮件周报（Motion Cheat Sheet：先是 50 条白话技法，之后每周一条），不订阅也能写、能复制。关于页写制作者是 Takayuki Hoffman。本库没有订阅邮件，没有把提示词贴进模型出片，也没有用助手驱动页面。",
+      "summaryEn": "oneshotprompts is a motion-design prompt editor in the browser. The terms say the site is free to use and there is no account; prompts stay in the browser, and the site says it does not receive them. The toolbar has Scene, Step, Blank, and Technique. Dotted words can be tapped to swap the wording. The page has Roll and Surprise me, and Copy prompt. The about page says the technique library has 923 entries, 900 of them with a short looping example; the editor search field also says 923. Under the editor there are instructions for an AI agent, and /agents/ lists WebMCP tools such as read_prompt, search_techniques, and get_final_prompt for an agent that already has this page open in Chrome. A newsletter is optional (Motion Cheat Sheet: 50 techniques in plain words, then one a week); you can write and copy without joining. The about page names Takayuki Hoffman as the maker. This library did not join the newsletter, did not paste a prompt into a model to make a clip, and did not let an agent drive the page.",
+      "sourceUrl": "https://oneshotprompts.com/",
+      "secondaryUrls": [
+        "https://oneshotprompts.com/agents/",
+        "https://oneshotprompts.com/about/",
+        "https://x.com/rayanabdulcader/status/2113033625457324451"
+      ],
+      "previewImage": "/previews/oneshotprompts.webp",
+      "types": [
+        "tool",
+        "motion"
+      ],
+      "tags": [
+        "motion",
+        "prompts",
+        "free",
+        "webmcp",
+        "editor"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-22T12:40:00Z",
+      "qualityNote": "免费网页工具。条款写不注册就能用，提示词不上传到站点。邮件周报是可选的，不订也能复制提示词。923 和 900 是关于页和页面自己的数字，本库没有逐条点开示例。没有把提示词交给模型，也没有调用页面上的助手工具。",
+      "qualityNoteEn": "A free web tool. The terms say it works without an account, and prompts are not uploaded to the site. The newsletter is optional; you can copy a prompt without joining. 923 and 900 are the site’s own figures, and this library did not open each example. A prompt was not handed to a model, and the page’s agent tools were not called.",
+      "verifyLog": "2026-10-22 晚间（上海）：https://oneshotprompts.com/ HTTP 200，文档标题为 Write motion design prompts · oneshotprompts。首屏可见 Scene、Step、Blank、Technique、Copy prompt、搜索框文案 Search 923 techniques，以及 Using an AI agent? It can work this page directly. / Copy instructions。页内 HTML 另有 Roll、Surprise me，以及 Motion Cheat Sheet 邮件表单（50 techniques in plain words，then one new technique and a prompt to try each week）。/about/ HTTP 200：技法库 923 条，900 条有短的现场示例；制作者 Takayuki Hoffman。/agents/ HTTP 200，响应头 last-modified 为 Fri, 16 Oct 2026；页上工具名为 get_writing_guide、read_prompt、write_prompt、edit_prompt、search_techniques、get_technique、get_settings、change_setting、list_ideas、start_from、add_scene、get_final_prompt，并写 search_techniques 在全部 923 条里查找。/terms/ HTTP 200，Last updated October 15, 2026，原文 The site is free to use，并写提示词归用户、站点收不到。/privacy/ 写没有账号、newsletter is opt-in。站点没有公开源代码仓库，本条不标开源许可证。X 帖 https://x.com/rayanabdulcader/status/2113033625457324451 作者 @rayanabdulcader，创建 2026-10-21T22:24:09Z。预览为 Playwright 实拍工具页首屏，1200×800 WebP。没有点 Roll 或 Surprise me，没有点虚线词，没有复制提示词去模型出片，没有订阅邮件，没有在 Chrome 里接 WebMCP，也没有逐条打开示例。",
+      "verifyLogEn": "2026-10-22 evening (Shanghai): https://oneshotprompts.com/ HTTP 200, document title Write motion design prompts · oneshotprompts. The first screen shows Scene, Step, Blank, Technique, Copy prompt, a search field reading Search 923 techniques, and Using an AI agent? It can work this page directly. / Copy instructions. The page HTML also has Roll, Surprise me, and a Motion Cheat Sheet email form (50 techniques in plain words, then one new technique and a prompt to try each week). /about/ HTTP 200: a library of 923 techniques, 900 with a short live example; maker Takayuki Hoffman. /agents/ HTTP 200, response header last-modified Fri, 16 Oct 2026; tool names on the page are get_writing_guide, read_prompt, write_prompt, edit_prompt, search_techniques, get_technique, get_settings, change_setting, list_ideas, start_from, add_scene, and get_final_prompt, and it says search_techniques looks through all 923. /terms/ HTTP 200, Last updated October 15, 2026, with the sentence The site is free to use, and a statement that prompts belong to the user and the site does not receive them. /privacy/ says there are no accounts and the newsletter is opt-in. No public source repo was found, so this entry does not name an open-source license. X post https://x.com/rayanabdulcader/status/2113033625457324451 by @rayanabdulcader, created 2026-10-21T22:24:09Z. Preview is a Playwright capture of the tool’s first screen, 1200×800 WebP. Roll and Surprise me were not clicked, dotted words were not tapped, a prompt was not copied into a model, the newsletter was not joined, WebMCP was not connected in Chrome, and the examples were not opened one by one."
+    },
+    {
+      "id": "design-style",
+      "slug": "design-style",
+      "title": "Design Style：每天一个设计风格",
+      "titleEn": "Design Style: one design style a day",
+      "hook": "每天拆一种风格：短片、风格图、规则和给 AI 的提示词。",
+      "hookEn": "One style at a time: a short film, plates, rules, and AI prompts.",
+      "summary": "观默（@guanmo_ai）做的设计风格库，网页画廊和仓库都能打开。画廊「全部作品」显示 3：设计风格 2 期（包豪斯、瑞士国际主义），布局方式 1 期（便当盒）。README 写每一期有 15 秒 Remotion 短片、4 张 1080×1350 的手写 SVG、设计规则、色板字体、AI 提示词、设计令牌和制作过程。GitHub API 的 license 字段为空，整库未标许可证。gallery 目录里另有一份 MIT 文本，但正文写视频、音频、封面和风格素材不在这份画廊代码许可里；README 另写转发视频和图片请注明观默。本库没有在本地渲染短片。",
+      "summaryEn": "A design-style library by 观默 (@guanmo_ai). The web gallery and the repo both open. The gallery’s work count shows 3: two styles (Bauhaus, Swiss Style) and one layout (Bento Grid). The README says each issue has a 15-second Remotion film, four hand-written SVGs at 1080×1350, design rules, a palette and type, AI prompts, design tokens, and a making-of. The GitHub API license field is empty, so the repo is not marked with a license. A separate MIT text sits in the gallery folder, and it says videos, audio, covers, and original style assets are outside that gallery-code license. The README also asks for credit to 观默 when sharing video or images. This library did not render a film locally.",
+      "sourceUrl": "https://guanmo-ai.github.io/design-style/",
+      "secondaryUrls": [
+        "https://github.com/guanmo-ai/design-style"
+      ],
+      "previewImage": "/previews/design-style.webp",
+      "types": [
+        "docs",
+        "motion"
+      ],
+      "tags": [
+        "design",
+        "motion",
+        "svg",
+        "prompts",
+        "reference",
+        "remotion"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-22T01:27:06Z",
+      "qualityNote": "归在 HTML：这是能打开的风格参考画廊，和库里的海报构图手册一类，不是要装进助手的 skill。整库未标许可证。画廊目录里的 MIT 只覆盖画廊代码，视频和图片除外。没有本地渲染。",
+      "qualityNoteEn": "Filed under HTML: it is a style gallery you can open, in the same lane as the poster-composition handbooks, not a skill you install into an agent. The repo is not marked with a license. The MIT file in the gallery folder covers gallery code only, and excludes video and images. Not rendered locally.",
+      "verifyLog": "2026-10-22 09:27（上海）gh api：guanmo-ai/design-style，license 字段 null，51★，2 forks，创建 2026-10-20T04:27:20Z，最近推送 2026-10-21T14:33:28Z。releases：day-01（2026-10-20）、layout-01 与 day-02（2026-10-21）。gallery/data/works.json 三条：001-bauhaus、01-bento-grid、002-swiss-style。画廊 HTTP 200；无头浏览器等脚本跑完后，「全部作品」显示 3，筛选项为设计风格 2、布局方式 1。gallery/LICENSE 是 MIT 文本，并写视频、音频、封面和原始风格素材不在许可内。README 写转发请注明观默 @guanmo_ai，字体另有 SIL OFL 或 GUST，没有逐个打开字体许可证。没有做本地渲染。预览是画廊首屏截图，缩成 1200×800 WebP。",
+      "verifyLogEn": "2026-10-22 09:27 Asia/Shanghai gh api: guanmo-ai/design-style, license field null, 51★, 2 forks, created 2026-10-20T04:27:20Z, last push 2026-10-21T14:33:28Z. Releases: day-01 (2026-10-20), layout-01 and day-02 (2026-10-21). gallery/data/works.json has three entries: 001-bauhaus, 01-bento-grid, 002-swiss-style. The gallery is HTTP 200; after headless Chrome ran the scripts, the work count showed 3, with filters for 2 styles and 1 layout. gallery/LICENSE is an MIT text and says videos, audio, covers, and original style assets are not covered. The README asks for credit to 观默 @guanmo_ai when sharing, and names SIL OFL or GUST for fonts; those font licenses were not opened one by one. No local render. Preview is a screenshot of the gallery’s first screen, scaled to a 1200×800 WebP."
+    },
+    {
+      "id": "qingicon",
+      "slug": "qingicon",
+      "title": "QingIcon：中性线性图标库，带 React、Vue 和 MCP",
+      "titleEn": "QingIcon — neutral line icons, with React, Vue, and an MCP server",
+      "hook": "3901 个线性图标，网页能搜能复制，还带 MCP。",
+      "hookEn": "3901 line icons to search and copy, plus React, Vue, and MCP.",
+      "summary": "QingIcon 是面向 AI、云和网页产品的中性图标库。图标浏览器的搜索框写着 3901 个图标，仓库 icons-source/line 里也是 3901 个 SVG、34 个分类，没有 Fill 或素描的 SVG。页面上的 Fill 标签是禁用的，提示还没开放。素描开关在工具条上，本库没有拨动；README 写素描只在网站和 Figma 插件里，不进 npm 包和 MCP。页头版本在页面脚本跑起来之后是 2.0.4，和 npm 上 qingicon-react、qingicon-vue 的 2.0.4 一致；qingicon-mcp 是 1.0.2。首页标语仍写 3900+、3 种字重、2 种样式加素描，和目前能打开的线性集、禁用的 Fill 不是同一套说法，条数以 3901 为准。许可证是 Apache-2.0。网站写个人和商用都不收费，再分发要保留许可声明。本库没有安装这三个包，没有接 MCP，也没有打开 Figma 插件。",
+      "summaryEn": "QingIcon is a neutral icon library for AI, cloud, and web products. The icon browser's search field says 3901 icons, and icons-source/line in the repo is also 3901 SVGs across 34 categories, with no fill or sketch SVGs. The Fill tab on the page is disabled and marked as not open yet. A Sketch switch sits on the toolbar; this library did not toggle it. The README says sketch exists on the website and in the Figma plugin, and is not in the npm packages or the MCP server. After the page script runs, the header version is 2.0.4, matching qingicon-react and qingicon-vue on npm; qingicon-mcp is 1.0.2. The hero still says 3900+, 3 weights, 2 styles, and a sketch variant, which is a different claim from the line set that actually opens and the disabled Fill tab; the count used here is 3901. The license is Apache-2.0. The site says personal and commercial use are free, and redistribution keeps the license notice. This library did not install the three packages, did not connect MCP, and did not open the Figma plugin.",
+      "sourceUrl": "https://qingicon.com/",
+      "secondaryUrls": [
+        "https://github.com/asorn/qingicon-open",
+        "https://www.npmjs.com/package/qingicon-react",
+        "https://www.npmjs.com/package/qingicon-vue",
+        "https://www.npmjs.com/package/qingicon-mcp",
+        "https://www.figma.com/community/plugin/1686396239772536401",
+        "https://x.com/AsornQ/status/2112844915264901203"
+      ],
+      "previewImage": "/previews/qingicon.webp",
+      "types": [
+        "component"
+      ],
+      "tags": [
+        "icons",
+        "react",
+        "vue",
+        "mcp",
+        "apache-2.0",
+        "figma",
+        "ai",
+        "svg"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z",
+      "qualityNote": "条数以图标浏览器搜索框上的 3901 和仓库线性 SVG 的 3901 为准。Fill 标签禁用。素描开关看到了，没有拨动。首页标语里的 3 种字重和 2 种样式没有在文件里对上。npm 上 React 与 Vue 是 2.0.4，MCP 是 1.0.2，许可证都是 Apache-2.0。本库没有安装包、没有接 MCP。Figma 插件页没有打开。",
+      "qualityNoteEn": "The count used here is 3901, from the icon browser's search field and from the line SVGs in the repo. The Fill tab is disabled. The Sketch switch was visible and was not toggled. The hero's 3 weights and 2 styles were not matched to files. On npm, React and Vue are 2.0.4 and the MCP package is 1.0.2, all Apache-2.0. This library did not install the packages or connect MCP. The Figma plugin page was not opened.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：qingicon.com HTTP 200。页内脚本 window.QINGICON_VERSION 为 2.0.4；静态占位是 v0.1.0，脚本把 #versionTag 改成 v2.0.4 后本库才截图。图标浏览器搜索框文案为 Search 3901 icons；Fill 按钮 role=tab、aria-disabled=true、class 含 disabled，提示 Coming soon，点击被禁用拦住。gh api：asorn/qingicon-open，Apache-2.0，4★，1 fork，创建 2026-09-28，最近推送 2026-10-08T07:00:29Z。git tree：svg 3901，全部在 icons-source/line，分类目录 34 个，fill 与 sketch 路径为 0。registry.npmjs.org：qingicon-react 2.0.4 Apache-2.0，qingicon-vue 2.0.4 Apache-2.0，qingicon-mcp 1.0.2 Apache-2.0。网站许可区写 Apache 2.0、个人和商用免费，日期 Oct 8, 2026。Figma 社区插件页 curl 返回 403（CloudFront），没有打开。X 帖 https://x.com/AsornQ/status/2112844915264901203 创建于 2026-10-21T09:54:17Z（上海 17:54），写 3900+ icons。预览为 Playwright 实拍图标浏览器（线性、搜索框 3901），1200×800 WebP。没有 npm install，没有接 MCP，没有拨动 Sketch。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): qingicon.com HTTP 200. The inline script sets window.QINGICON_VERSION to 2.0.4; the static placeholder is v0.1.0, and the screenshot was taken after the script set #versionTag to v2.0.4. The icon browser search field reads Search 3901 icons. The Fill control is role=tab, aria-disabled=true, class includes disabled, tooltip Coming soon, and the click was blocked because it is disabled. gh api: asorn/qingicon-open, Apache-2.0, 4★, 1 fork, created 2026-09-28, last push 2026-10-08T07:00:29Z. git tree: 3901 svgs, all under icons-source/line, 34 category directories, 0 fill and 0 sketch paths. registry.npmjs.org: qingicon-react 2.0.4 Apache-2.0, qingicon-vue 2.0.4 Apache-2.0, qingicon-mcp 1.0.2 Apache-2.0. The site license block says Apache 2.0, free for personal and commercial use, dated Oct 8, 2026. The Figma community plugin page returned 403 from CloudFront and was not opened. X post https://x.com/AsornQ/status/2112844915264901203 was created 2026-10-21T09:54:17Z (17:54 Shanghai) and says 3900+ icons. Preview is a Playwright capture of the icon browser (Line, search field 3901), 1200×800 WebP. No npm install, no MCP session, and Sketch was not toggled."
+    },
+    {
+      "id": "connexio",
+      "slug": "connexio",
+      "title": "Connexio：免费的物联网官网界面套件，演示站能直接打开",
+      "titleEn": "Connexio: a free IoT marketing-site UI kit with a demo you can open",
+      "hook": "免费物联网界面套件，浏览器里就能看分块仪表盘。",
+      "hookEn": "A free IoT UI kit whose dashboard blocks open in the browser.",
+      "summary": "Connexio 是 Dpopstudio（@dpopstudio）做的物联网监控官网界面套件。演示站是一条可以滚动的落地页：导航有 Product、AI、Integrations、Performance、About Us，往下是分块的仪表盘样稿，设备在线数、用量柱状图、温度和用电并排。页面里还有一段叫 Connexio AI 的对话样稿。这些数字和对话是套件里的假数据，不是一家真实公司的用户量。Figma 社区文件的标题写 Free，公开描述写这是覆盖落地页到法律页的免费网站 UI kit，并写 17 页，点名了 Landing、Product、Resources、Integrations、Performance、About Us、Contact Us，后面在网页 meta 里被截断。适合要做物联网或设备监控类官网、想先有一套排好的版面的人。本库没有登录，没有打开 Figma 文件。",
+      "summaryEn": "Connexio is an IoT-monitoring marketing-site UI kit by Dpopstudio (@dpopstudio). The demo is one scrolling landing page. The nav lists Product, AI, Integrations, Performance, and About Us, and further down are dashboard blocks: devices online, a usage chart, temperature, and energy side by side. A section called Connexio AI shows a sample chat. The figures and the chat are dummy copy inside the kit, not a real company’s user counts. The Figma community file’s title says Free. Its public description calls it a free website UI kit from the landing page through legal pages, says 17 pages, and names Landing, Product, Resources, Integrations, Performance, About Us, and Contact Us before the sentence is cut off in the page meta. Useful when you want a laid-out marketing site for an IoT or device-monitoring product. This library did not sign in and did not open the Figma file.",
+      "sourceUrl": "https://dpopstudio.co/connexio",
+      "secondaryUrls": [
+        "https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free",
+        "https://x.com/dpopstudio/status/2112531781207695822"
+      ],
+      "previewImage": "/previews/connexio.webp",
+      "types": [
+        "landing",
+        "component"
+      ],
+      "tags": [
+        "ui-kit",
+        "iot",
+        "figma",
+        "dashboard",
+        "saas"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "归在 HTML：它是可以打开的官网套件和 Figma 文件，不是带 MCP 的设计工具。帖子写 crisp bento grid 和 light/dark mode，也写 100% free。演示站正文没有出现 bento 这个词，看到的是浅色分块卡片；导航里没有明暗切换，明暗模式未核实。样稿写着 10 万以上活跃用户、100 多个品牌，卡片上的在线设备数和电量也是动画里的例子。Figma 描述被截断之后还有哪些页，以及社区文件的许可条款，都没打开，未核实。演示站上的 Connexio AI 是界面文案，不是能对话的产品。",
+      "qualityNoteEn": "Filed under HTML: it is a marketing-site kit and a Figma file you can open, not a design tool with MCP. The post says a crisp bento grid, light/dark mode, and 100% free. The demo copy never uses the word bento; what is on the page is a light set of blocks, and the nav has no theme switch, so dark mode is unverified. The page’s “100,000+ active users,” “100+ brands,” and the device and energy figures on the cards are sample animation, not measured customers. Whatever pages follow the cut-off Figma description, and the community file’s license terms, were not opened and are unverified. Connexio AI on the demo is interface copy, not a product you can talk to.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：演示站 https://dpopstudio.co/connexio HTTP 200，标题 Connexio · IoT Monitoring Landing Page | dpopstudio。导航是页内锚点（#features、#ai、#integrations、#performance、#about），不是 17 个独立网址。https://dpopstudio.co/product HTTP 200，标题是 Products | dpopstudio，那是工作室的产品索引，不是 Connexio 的子页。Figma https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free HTTP 200，标题 Connexio - IoT SaaS Website UI Kit Free | Figma；meta description 写 free website UI kit、17 pages，名单到 Contact Us 后以 “H...” 截断。X 帖 2112531781207695822，@dpopstudio，2026-10-20T13:10:00Z，两条 t.co 分别解开为上面的演示站和 Figma。Chrome 打开演示站，页根是浅色，按钮只有导航、Login、Sign up，没有暗色开关；滚到 Data Usage 一节后截图。预览为该屏，视口 1440×960 缩到 1200×800 WebP。没有登录，没有在 Figma 里打开文件。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): demo https://dpopstudio.co/connexio HTTP 200, title Connexio · IoT Monitoring Landing Page | dpopstudio. The nav is in-page anchors (#features, #ai, #integrations, #performance, #about), not 17 separate URLs. https://dpopstudio.co/product returned HTTP 200 with title Products | dpopstudio, the studio’s product index, not a Connexio subpage. Figma https://www.figma.com/community/file/1694234274729790155/connexio-iot-saas-website-ui-kit-free HTTP 200, title Connexio - IoT SaaS Website UI Kit Free | Figma; the meta description says free website UI kit and 17 pages, and the list is cut at “H...” after Contact Us. X post 2112531781207695822, @dpopstudio, 2026-10-20T13:10:00Z; the two t.co links unwind to the demo and the Figma file above. Chrome opened the demo in light mode. The controls were the nav, Login, and Sign up, with no dark switch. Scrolled to the Data Usage section, then captured. Preview is that view, 1440×960 viewport scaled to 1200×800 WebP. Not signed in, file not opened in Figma."
+    },
+    {
+      "id": "ikea-flatpack",
+      "slug": "ikea-flatpack",
+      "title": "Flat Pack：在浏览器里按宜家说明书看 BILLY 怎么装",
+      "titleEn": "Flat Pack: follow IKEA’s BILLY manual as a 3D assembly in the browser",
+      "hook": "在浏览器里按宜家说明书的顺序看三维组装。",
+      "hookEn": "Step through a real IKEA manual as a 3D build in the browser.",
+      "summary": "Flat Pack, Step by Step 是 Ryan Sael（@RyanSael）做的浏览器页面：把宜家 BILLY 书柜的组装说明书做成可以步进的三维场景，旁边能翻开原说明书。页面写这是 80×28×202 厘米的 BILLY，说明书编号 AA-1823127-9，零件、数量和顺序照说明书，板材厚度和孔位是从图上读的，所以是接近而不是实测尺寸。界面上还可以切到 LACK 边桌。页脚写说明书版权归 Inter IKEA Systems B.V.，原件未改，并链到 ikea.com 上的 PDF；作品不是宜家做的，也没有宜家背书。源文件头写原作版权归 Ryan Sael，保留所有权利。适合想在买来或动手之前看清某一步的人。本库打开后停在 BILLY 第 1 步，没有走完，也没有切到 LACK。",
+      "summaryEn": "Flat Pack, Step by Step is a browser page by Ryan Sael (@RyanSael): IKEA’s BILLY bookcase manual as a 3D scene you can step through, with the original manual open beside it. The page says this is the 80×28×202 cm BILLY, manual AA-1823127-9, and that the parts, counts, and order follow the manual, while thickness and hole positions are read off the drawings, so they are close rather than measured. The UI can also switch to the LACK side table. The footer says the manual is copyright Inter IKEA Systems B.V., shown unaltered, and links the PDF on ikea.com. The piece is not made or endorsed by IKEA. The source header says the original work is Ryan Sael’s, all rights reserved. Useful if you want to see a step before you buy or build. This library opened it on BILLY step 1, did not finish the sequence, and did not switch to LACK.",
+      "sourceUrl": "https://sael.net/flatpack/",
+      "secondaryUrls": [
+        "https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf",
+        "https://news.ycombinator.com/item?id=50168096",
+        "https://x.com/RyanSael"
+      ],
+      "previewImage": "/previews/ikea-flatpack.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "3d",
+        "ikea",
+        "explainer",
+        "assembly"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "版权归 Ryan Sael，不是开源作品；页面欢迎索引和链接，其余使用要先征得本人同意。说明书是宜家的，作品本身不是宜家官方。本库只看到 BILLY 的第 1 步（木销，说明书第 6 页），界面写第 1 步共 14 步、五金 9/82、板件 0/11、木销 101351 已放入 9/16。没有播完，没有点 LACK，没有核对 PDF 的每一页是否和三维一一对应。页面上的零件尺寸说明是作者自己写的“从图上读、不是测量”。",
+      "qualityNoteEn": "Copyright is Ryan Sael’s; this is not an open-source work. The page welcomes indexing and links, and asks for permission before other uses. The manual is IKEA’s; the piece is not an IKEA product. This library only saw BILLY step 1 (dowels, manual page 6). The UI read step 1 of 14, hardware 9/82, panels 0/11, and dowel 101351 with 9 of 16 in. The sequence was not played through, LACK was not selected, and the PDF was not checked page by page against the 3D. The page’s own note says thicknesses and hole positions are read off the drawings, not measured.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://sael.net/flatpack/ HTTP 200，标题 Flat Pack, Step by Step: IKEA manuals, built in 3D。源文件头写 Original work by Ryan Sael. All rights reserved，并链到 https://x.com/RyanSael 。页脚链的 BILLY PDF https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf HTTP 200，约 1.6 MB。Chrome 打开后三维场景已出来，界面文字：STEP 1/14，HARDWARE IN 9/82，PANELS IN 0/11，STEP 1 · DOWELS，木销 101351，9 of 16 in，MANUAL · PAGE 6；右上有 BILLY bookcase / LACK table 切换，当时停在 BILLY。没有点播放走完 14 步，没有切 LACK。HN item 50168096，标题 IKEA – 3D Guide，作者 punnerud，创建 2026-10-20T15:42:45Z，Algolia 134 pts。预览为这一屏，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://sael.net/flatpack/ HTTP 200, title Flat Pack, Step by Step: IKEA manuals, built in 3D. The source header says Original work by Ryan Sael, all rights reserved, and links https://x.com/RyanSael. The footer’s BILLY PDF, https://www.ikea.com/gb/en/assembly_instructions/billy-bookcase-white__AA-1823127-9-100.pdf, returned HTTP 200, about 1.6 MB. Chrome showed the 3D scene. The UI text read STEP 1/14, HARDWARE IN 9/82, PANELS IN 0/11, STEP 1 · DOWELS, dowel 101351, 9 of 16 in, MANUAL · PAGE 6. The BILLY bookcase / LACK table switch was visible and set to BILLY. The 14 steps were not played through and LACK was not selected. HN item 50168096, title IKEA – 3D Guide, author punnerud, created 2026-10-20T15:42:45Z, Algolia 134 pts. Preview is that view, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "permit-pending",
+      "slug": "permit-pending",
+      "title": "Permit Pending：浏览器里当市长，盖楼要过审批和选举",
+      "titleEn": "Permit Pending: be the mayor in the browser, and get every building through approval",
+      "hook": "浏览器里当市长，每栋楼都要过听证和选举。",
+      "hookEn": "Be the mayor in the browser; every building needs a hearing and an election.",
+      "summary": "Permit Pending 是 Peter Cai 做的免费浏览器城市模拟。Hacker News 上的标题是 SimCity, but with Permits。你是民选市长，不是上帝：公寓、公交和工厂要经过听证、反对、诉讼和上诉，四年选一次。介绍页写了四种开局：Blank Slate（200 人）、Small Town（2000 人）、Booming Suburb（25000 人）、The Unaffordable Metropolis（30 万人），地图可以选 128、192 或 256，规则开关有选举、故事和开发商。本库在默认的 Blank Slate 上点了 Take office，进入一张暂停的地图，界面写城市叫 Oakmont、日期 2025 年 1 月 1 日、支持率 53%、账上 260 万美元、200 人、失业率 5.4%、距选举 48 个月、政治资本 10。工具栏有分区、道路、电力、公共服务、收件箱和预算。适合想玩“审批比建造更难”的人。本库没有点 Resume，没有办过一次听证，也没有打完选举。",
+      "summaryEn": "Permit Pending is Peter Cai’s free browser city sim. On Hacker News the title is SimCity, but with Permits. You are an elected mayor, not a god: apartments, bus lanes, and factories go through hearings, objections, lawsuits, and appeals, and there is an election every four years. The intro page lists four starts: Blank Slate (200 people), Small Town (2,000), Booming Suburb (25,000), and The Unaffordable Metropolis (300,000). Map size can be 128, 192, or 256, with toggles for elections, stories, and developers. This library clicked Take office on the default Blank Slate and landed on a paused map. The UI read Oakmont, 1 January 2025, 53% approval, $2.6 million, 200 people, 5.4% jobless, 48 months to the election, and 10 clout. The toolbar has zoning, roads, power, services, an inbox, and a budget. Useful if you want the permits to be harder than the building. This library did not press Resume, did not hold a hearing, and did not finish an election.",
+      "sourceUrl": "https://permit.petercai.com/",
+      "secondaryUrls": [
+        "https://permit.petercai.com/play/",
+        "https://news.ycombinator.com/item?id=50170593",
+        "https://www.petercai.com/"
+      ],
+      "previewImage": "/previews/permit-pending.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "game",
+        "city-builder",
+        "browser",
+        "simulation"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-21T01:30:00Z",
+      "qualityNote": "介绍页写免费。页面结构化数据里的作者是 Peter Cai。许可条款页面上没有写，未核实，不要当成开源。本库只进了默认 Blank Slate 的暂停局，看到的城市名、支持率、金额和失业率是这一局界面上的数字，不是每局都一样。没有点继续，没有划过分区，没有处理收件箱，没有打完四年。介绍里那段从第 1 个月到第 48 个月的审批故事是页面上的举例，不是本库玩出来的。",
+      "qualityNoteEn": "The intro page says the game is free. The structured data names Peter Cai as the author. No license is stated on the page, so it is unverified and this is not an open-source release. This library only entered the default Blank Slate and left it paused. The city name, approval, cash, and jobless rate are what that one screen showed, not a promise that every city matches. Resume was not pressed, no zone was drawn, the inbox was not opened, and the four years were not played. The month-1-to-month-48 story on the intro page is the page’s own example, not a game this library played.",
+      "verifyLog": "2026-10-21 早间（Asia/Shanghai）：https://permit.petercai.com/ HTTP 200，标题 Permit Pending: build the city of your dreams, subject to approval。页面 ld+json 写 VideoGame、isAccessibleForFree、price 0 USD、author Peter Cai、url https://www.petercai.com/ （该作者页 HTTP 200）。https://permit.petercai.com/play/ 在 Chrome 中打开，标题 Permit Pending。新游戏屏列出 Blank Slate 200 residents RELAXED、Small Town 2,000、Booming Suburb 25,000 MODERATE、The Unaffordable Metropolis 300,000 BRUTAL，地图 128×128 / 192×192 / 256×256，规则 Elections / Stories / Developers，暂停选项 Always / Only urgent / Never，按钮 Take office。点 Take office 后仍在 /play/，界面文字：Oakmont、JAN 1, 2025、MAYOR APPROVAL 53%、$2.6M、200、Jobless 5.4%、Election 48 mo、Clout 10、PAUSED、The Gazette has nothing to report yet，工具有 Inspect、Zoning、Roads、Power、Services、Inbox、Budget。没有点 Resume。HN item 50170593，标题 SimCity, but with Permits，作者 pcai，创建 2026-10-20T18:29:09Z，Algolia 531 pts。预览为暂停中的这一局，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-21 morning (Asia/Shanghai): https://permit.petercai.com/ HTTP 200, title Permit Pending: build the city of your dreams, subject to approval. The page’s ld+json says VideoGame, isAccessibleForFree, price 0 USD, author Peter Cai, and links https://www.petercai.com/, which returned HTTP 200. https://permit.petercai.com/play/ opened in Chrome with title Permit Pending. The new-game screen listed Blank Slate (200 residents, Relaxed), Small Town (2,000), Booming Suburb (25,000, Moderate), The Unaffordable Metropolis (300,000, Brutal), map sizes 128×128 / 192×192 / 256×256, rules Elections / Stories / Developers, pause Always / Only urgent / Never, and a Take office button. After Take office the URL was still /play/. The UI text read Oakmont, JAN 1, 2025, MAYOR APPROVAL 53%, $2.6M, 200, Jobless 5.4%, Election 48 mo, Clout 10, PAUSED, and The Gazette has nothing to report yet, with Inspect, Zoning, Roads, Power, Services, Inbox, and Budget. Resume was not pressed. HN item 50170593, title SimCity, but with Permits, author pcai, created 2026-10-20T18:29:09Z, Algolia 531 pts. Preview is that paused city, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "baipix",
+      "slug": "baipix",
+      "title": "Baipix：像设计工具一样的免费像素画编辑器，可直接贴进 Figma",
+      "titleEn": "Baipix: a free pixel art editor that works like a design tool and pastes into Figma",
+      "hook": "浏览器里画像素画，复制成 SVG 直接贴进 Figma。",
+      "hookEn": "Draw pixel art in the browser and paste it into Figma as clean SVG.",
+      "summary": "Baipix 是免费开源的网页像素画编辑器，MIT，不用注册，画稿存在浏览器的 IndexedDB 里。界面照现代设计工具做：菜单栏、Ctrl+K 命令面板、图层和分组、多画板、组件实例，以及描边、投影、发光等图层效果，还有等距网格和一拖就出的体块。调色板有 PICO-8、Game Boy、Endesga 32 等预设，也能贴 Lospec 色板，提亮和压暗沿色板走。导出 PNG（1× 到 32×）、每个颜色合成一条路径的 SVG、.aseprite 和 tileset；Copy as SVG 后可以直接贴进 Figma 或 Illustrator，像素间隙做成的 LED 点阵效果也会一起带过去。作者 @Todobai 在 X 上说是自己用 Claude 花几个晚上做的。适合要在设计稿里放像素图标、点阵字或游戏素材的人。本库打开过仓库里的示例并复制了 SVG，没有贴进 Figma。",
+      "summaryEn": "Baipix is a free, open-source pixel art editor in the browser, MIT, with no sign-up; drawings are kept in the browser’s IndexedDB. The interface follows modern design tools: a menu bar, a Ctrl+K command palette, layers and groups, several boards, component instances, outline, shadow, and glow effects, plus an isometric grid and one-drag volumes. Palettes include presets such as PICO-8, Game Boy, and Endesga 32, and you can paste a Lospec palette; shade and lighten move along the palette. Exports are PNG from 1× to 32×, SVG with one merged path per color, .aseprite, and tilesets. Copy as SVG pastes straight into Figma or Illustrator, including the pixel gap for an LED or dot-matrix look. The author, @Todobai, wrote on X that he built it with Claude over a few evenings. Useful when you need pixel icons, dot-matrix type, or game assets in a design file. This library opened the repo’s sample and copied its SVG; it did not paste it into Figma.",
+      "sourceUrl": "https://baipix.app/",
+      "secondaryUrls": [
+        "https://baipix.app/app/",
+        "https://github.com/baipix/baipix",
+        "https://x.com/Todobai/status/2112272010428444989"
+      ],
+      "previewImage": "/previews/baipix.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "pixel-art",
+        "svg",
+        "figma",
+        "editor",
+        "claude",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-20T01:30:00Z",
+      "qualityNote": "本库在编辑器里导入了仓库自带的 sunset.baipix（160×90，5 个图层，17 色），按默认 8× 点 Copy as SVG，读到的 SVG 是 1280×720、5 个图层分组、41 条路径，和「一层一组、一色一条路径」的说法对得上。没有把 SVG 真的贴进 Figma，没有自己从头画，也没有试等距工具和 .aseprite 导出。用 Claude 做是作者在 X 上的自述，仓库 README 没写。README 写画稿不上传，站点用 Cloudflare Web Analytics 统计页面浏览，可以用 ?notrack 关掉。",
+      "qualityNoteEn": "This library imported the repo’s sunset.baipix (160×90, 5 layers, 17 colors) and used Copy as SVG at the default 8×. The SVG read back was 1280×720 with 5 layer groups and 41 paths, consistent with one group per layer and one path per color. The SVG was not pasted into Figma, nothing was drawn from scratch, and the isometric tools and .aseprite export were not tried. Building it with Claude is the author’s statement on X; the README does not say so. The README says drawings are never uploaded; the site counts page views with Cloudflare Web Analytics, which ?notrack turns off.",
+      "verifyLog": "2026-10-20 早间（Asia/Shanghai）：https://baipix.app/ HTTP 200，标题 Baipix · Free online pixel art editor, export to SVG and Figma。编辑器 https://baipix.app/app/ HTTP 200，标题 Baipix editor · Free online pixel art editor，欢迎页有 Create / Import 和 8 个模板（Icon 16×16 到 Isometric scene 128×128）。gh api baipix/baipix，MIT，3★，创建 2026-09-25T22:33:47Z，最近推送 2026-10-19T21:20:24Z，homepage https://baipix.app。headless Chrome：点 Import 选 raw.githubusercontent.com 上的 docs/sunset.baipix（17611 字节），画布显示 160×90 px · 5 layers · 17 colors，图层 Near clouds、Middle clouds、Far clouds、Stars、Sky；点 Skip the tour；Export 对话框默认 8×、PNG，写 1280 × 720 px, transparent background；点 Copy as SVG，提示 SVG copied. Paste it into Figma or Illustrator.，读剪贴板 56366 字符，<svg width=\"1280\" height=\"720\" shape-rendering=\"crispEdges\">，<g 5 个，<path 41 条，第一组 id=\"Sky\"。X：@Todobai 帖 2112272010428444989，2026-10-19T19:57Z，写 So I built the Figma of pixel art with Claude, in a few evenings。预览为导入示例后的编辑器，视口 1440×960 缩到 1200×800 WebP。",
+      "verifyLogEn": "2026-10-20 morning (Asia/Shanghai): https://baipix.app/ HTTP 200, title Baipix · Free online pixel art editor, export to SVG and Figma. Editor https://baipix.app/app/ HTTP 200, title Baipix editor · Free online pixel art editor; the welcome screen shows Create / Import and 8 templates (Icon 16×16 to Isometric scene 128×128). gh api baipix/baipix, MIT, 3★, created 2026-09-25T22:33:47Z, last push 2026-10-19T21:20:24Z, homepage https://baipix.app. Headless Chrome: Import with docs/sunset.baipix from raw.githubusercontent.com (17,611 bytes); the canvas showed 160×90 px · 5 layers · 17 colors, layers Near clouds, Middle clouds, Far clouds, Stars, Sky. Clicked Skip the tour. The Export dialog defaulted to 8× PNG, 1280 × 720 px, transparent background. Copy as SVG showed SVG copied. Paste it into Figma or Illustrator.; the clipboard held 56,366 characters, <svg width=\"1280\" height=\"720\" shape-rendering=\"crispEdges\">, 5 <g elements, 41 <path elements, first group id=\"Sky\". X: @Todobai post 2112272010428444989, 2026-10-19T19:57Z, saying he built the Figma of pixel art with Claude in a few evenings. Preview is the editor after importing the sample, 1440×960 viewport scaled to 1200×800 WebP."
+    },
+    {
+      "id": "farside-rocket-engines",
+      "slug": "farside-rocket-engines",
+      "title": "FarsideLab：可拆开的火箭发动机 3D 目录",
+      "titleEn": "FarsideLab: a 3D catalog of rocket engines you can take apart",
+      "hook": "在浏览器里拆开发动机，看推进剂怎么走。",
+      "hookEn": "Take a rocket engine apart in the browser and follow the propellant.",
+      "summary": "FarsideLab 的 Concept 002 是浏览器里的火箭发动机目录，列出 13 种循环，分成已飞和未来概念两组。3D 视图可以转动，也有 Explore、Explode、Cutaway、Flow 四个模式。页脚写这是独立可视化项目，不代表 NASA 或发动机制造商；外形尺寸按公开资料，内部布置是示意。作者 Kari Nöjd 在讨论帖里说，自己是暖通和给排水工程师，也做 3D，不是火箭工程师；站点用 Claude Opus 5.5 做，三维模型由 Claude 经 Blender MCP 生成，他做美术指导和事实核对，前后大约一周。画面署名 Visuals by Vidro。适合想看循环差别、又不把示意模型当成工程图的人。本库没有用文献复核飞行记录，也没有把流动动画看完。",
+      "summaryEn": "Concept 002 on FarsideLab is an in-browser catalog of rocket engines: 13 cycles, split into flown and future concepts. The 3D view orbits, and it has Explore, Explode, Cutaway, and Flow. The footer says this is an independent visualization, not affiliated with NASA or any engine maker; outer dimensions follow published figures, and the internals are representative. Kari Nöjd wrote that he is an HVAC and plumbing engineer and a 3D artist, not a rocket engineer; the site was made with Claude Opus 5.5, the models were made by Claude through Blender MCP, and he did art direction and fact checking over about a week. The credit line says Visuals by Vidro. Useful when you want to see how the cycles differ without treating the model as an engineering drawing. This library did not check the flight history against the literature and did not watch a full flow loop.",
+      "sourceUrl": "https://farsidelab.com/concept/rocket-engines/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50140443"
+      ],
+      "previewImage": "/previews/farside-rocket-engines.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "3d",
+        "webgl",
+        "rocket",
+        "babylon",
+        "show-hn",
+        "claude"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "13 种和「已飞 / 未来概念」两组来自页面目录。Claude Opus 5.5、Blender MCP 和大约一周是作者在讨论帖里的自述。页脚写内部结构是示意。未来概念里，aerospike 与 nuclear thermal 的标题写试车但没飞，rotating detonation 写尚未服役、并提到 2021 年有小型发动机在探空火箭上点火，air-breathing 写从未造完。作者把后四类概括成「3 个试车没飞、1 个没做完」，和旋转爆震那条的页面文字不完全一样，本条按页面标题写。本库点过四个模式和 Gas generator，没有拖开合滑杆，没有点零件，没有提交邮箱，也没有查原始文献。",
+      "qualityNoteEn": "The 13 cycles and the flown / future groups come from the page catalog. Claude Opus 5.5, Blender MCP, and about a week are the author’s own account. The footer says the internals are representative. Among the future concepts, aerospike and nuclear thermal are headed as tested and never flown, rotating detonation as not yet in service with a note that a small engine fired on a sounding rocket in 2021, and air-breathing as never built. The author’s summary of “three test-fired and unflown, one never finished” does not match that rotating-detonation note exactly; this entry follows the page headings. This library clicked the four modes and Gas generator, did not drag the spread slider, did not click a part, did not submit the email form, and did not check primary sources.",
+      "verifyLog": "2026-10-19 晚间：页面 HTTP 200，标题 Concept 002: Rocket Engines · FarsideLab。目录 JSON https://farsidelab.com/content/explorers/rocket-engines.json HTTP 200，explorer.engines 13 条：Pressure-fed、Gas generator、Staged combustion、Full-flow staged、Expander、Electric pump-fed、Solid motor、Hybrid motor、Ion thruster（group today），以及 Aerospike、Rotating detonation、Nuclear thermal、Air-breathing combined cycle（group future）。加载的 babylon-ray.core 包里有 _CdnVersion=\"9.16.1\"。Playwright + headless Chrome，启动参数 --use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader。点 Explore in 3D 后出现 canvas，getContext('webgl2') 成功，VERSION 为 WebGL 2.0 (OpenGL ES 3.0 Chromium)，RENDERER 为 WebKit WebGL。先看到 Pressure-fed 装配体和右侧 Shuttle / Orion 说明，再点 Gas generator，右侧写 Falcon 9 / Falcon Heavy。点 2 EXPLODE 能看到零件分开和 SPREAD 滑杆，点击把页面滚到了视口下沿，模型有一部分在画面上方；没有拖滑杆。点 3 CUTAWAY 能看到喷管剖开。点 4 FLOW 时选中行变成 Full-flow staged，管路是蓝和铜色；静帧看不出粒子是否在动，没有看完一圈。没有点零件，没有点 Copy view link，没有填 Notify 邮箱。HN item 50140443，Algolia 1 pt，作者 kari_nojd，创建 2026-10-18T12:20:12Z。预览为 Explore 后的 Pressure-fed 视图，Playwright 实拍 1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 evening: page HTTP 200, title Concept 002: Rocket Engines · FarsideLab. Catalog JSON https://farsidelab.com/content/explorers/rocket-engines.json HTTP 200, 13 explorer.engines: Pressure-fed, Gas generator, Staged combustion, Full-flow staged, Expander, Electric pump-fed, Solid motor, Hybrid motor, Ion thruster (group today), plus Aerospike, Rotating detonation, Nuclear thermal, and Air-breathing combined cycle (group future). The loaded babylon-ray.core bundle contains _CdnVersion=\"9.16.1\". Playwright + headless Chrome with --use-gl=angle --use-angle=swiftshader --enable-unsafe-swiftshader. After Explore in 3D, a canvas appeared, getContext('webgl2') succeeded, VERSION was WebGL 2.0 (OpenGL ES 3.0 Chromium), RENDERER was WebKit WebGL. First view was the assembled Pressure-fed engine with the Shuttle / Orion note; Gas generator then showed the Falcon 9 / Falcon Heavy note. 2 EXPLODE showed separated parts and a SPREAD slider; the click scrolled the page so part of the model sat above the viewport. The slider was not dragged. 3 CUTAWAY showed a cut nozzle. 4 FLOW left Full-flow staged selected, with blue and copper lines; a still frame does not show whether particles were moving, and the loop was not watched. Did not click a part, Copy view link, or the Notify email field. HN item 50140443, Algolia 1 pt, author kari_nojd, created 2026-10-18T12:20:12Z. Preview is the Pressure-fed view after Explore, a Playwright capture at 1200×800 WebP."
+    },
+    {
+      "id": "kernwise",
+      "slug": "kernwise",
+      "title": "Kernwise：免费的字距练习",
+      "titleEn": "Kernwise: a free kerning drill",
+      "hook": "把字母拖到看起来均匀，再对字体里的字距。",
+      "hookEn": "Drag letters until the spacing looks even, then check the font's kerning.",
+      "summary": "Kernwise 是 Design Inspiration 做的免费字距练习，在浏览器里打开就能玩，不用注册，也不用安装。一轮 10 个词，每个词换一款字体。第一个和最后一个字母固定，中间的用鼠标拖，或用方向键一次挪 1 像素（按住 Shift 挪 10 像素）。点 Done 之后，页面把你的间距和字体文件里的字距叠在一起，并标出每个间隙差了多少；页面写 1000 单位等于一个字号。也可以自己输入 3 到 12 个字母练习，练习词不计入这轮分数。说明文写字体来自 Google Fonts，并写受到 Kern Type 的启发。游戏页和说明文都没有说它是 AI 做的。适合想练标题字距的人。本库没有打完一轮，也没有用自定义词。",
+      "summaryEn": "Kernwise, by Design Inspiration, is a free kerning drill in the browser. No sign-up and nothing to install. A round is 10 words, each in a different typeface. The first and last letters stay fixed; you drag the ones between them, or nudge 1 pixel with the arrow keys (10 with Shift). Done lays the font’s own spacing over yours and labels how far each gap is off. The page says 1,000 units equal the type size. You can also type a word of 3 to 12 letters; practice words are not scored. The article says the typefaces come from Google Fonts and that the game is inspired by Kern Type. Neither the game nor the article says it was made with AI. Useful for practicing headline spacing. This library did not finish a round or try a custom word.",
+      "sourceUrl": "https://www.designinspiration.info/kernwise.html",
+      "secondaryUrls": [
+        "https://www.designinspiration.info/kernwise-a-free-kerning-game-for-designers/",
+        "https://news.ycombinator.com/item?id=50151283"
+      ],
+      "previewImage": "/previews/kernwise.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "typography",
+        "kerning",
+        "design",
+        "google-fonts",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-19",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "不用注册、一轮 10 个词、对照字体文件里的字距、1000 单位等于一个字号，都按说明文和游戏页。说明文写有 17 款字体、词库超过 60 个，本库没有逐个数。页面没有写这是 AI 做的。本库在一次新开的局里直接点了 Done，看到叠字、间隙数字和分数；没有先把字距拖匀，没有点 Yours 或 Solution，没有打完 10 个词，也没有提交自定义词。",
+      "qualityNoteEn": "No sign-up, 10 words a round, a comparison with the font file’s kerning, and 1,000 units to the em follow the article and the game page. The article says 17 typefaces and a pool of more than 60 words; this library did not count them. The pages do not say the game was made with AI. In a fresh round this library clicked Done immediately and saw the overlay, the gap numbers, and a score. The letters were not dragged into place first. Yours and Solution were not opened, the 10 words were not finished, and no custom word was submitted.",
+      "verifyLog": "2026-10-19 晚间：游戏页与说明文 HTTP 200。说明文标题 Kernwise: A Free Kerning Game for Designers。游戏页标题 Kernwise。第一次打开是 Word 01 / 10，Typeface Syne by Bonjour Monde，词为 Feather；按了 Tab 再按一次右方向键，没有按 Enter。另开一局直接点 Done：词为 Whisky，Typeface Instrument Serif by Instrument，分数 15/100，间隙标了 −35、−55、+10、+203、−123，并出现 Overlay / Yours / Solution。没有点后两个视图，没有点 Next word，没有用 Space your own word。说明文检索没有 Claude、GPT 或其他「AI 制作」表述（样式注释里的 auto-generated 不算）。HN item 50151283，Algolia 1 pt，作者 bepero，创建 2026-10-19T11:56:11Z，帖子正文为空。预览为 Playwright 实拍第一局未核对时的画面，1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 evening: game page and article HTTP 200. Article title Kernwise: A Free Kerning Game for Designers. Game title Kernwise. First load was Word 01 / 10, Typeface Syne by Bonjour Monde, the word Feather. Pressed Tab, then ArrowRight once, and did not press Enter. A later round: clicked Done without dragging. The word was Whisky, Typeface Instrument Serif by Instrument, score 15/100, gaps marked −35, −55, +10, +203, −123, with Overlay / Yours / Solution. Did not open Yours or Solution, did not click Next word, and did not use Space your own word. A search of the article found no Claude, GPT, or other “made with AI” claim (an auto-generated note in the stylesheet does not count). HN item 50151283, Algolia 1 pt, author bepero, created 2026-10-19T11:56:11Z, empty post text. Preview is a Playwright capture of the first round before checking, 1200×800 WebP."
+    },
+    {
+      "id": "cadr-mono",
+      "slug": "cadr-mono",
+      "title": "CADR Mono：用 Lisp 生成的等宽字体",
+      "titleEn": "CADR Mono: a monospace generated from Lisp",
+      "hook": "等宽字体从 Lisp 参数生成，另有一档深色。",
+      "hookEn": "A monospace generated from Lisp parameters, with a separate dark grade.",
+      "summary": "CADR Mono 是 Anthony Green 用 Common Lisp 生成的等宽字体，给终端和代码用。README 写 935 个字形、8 个静态字体，许可是 SIL OFL 1.1，且没有 Reserved Font Name。有 CADR Mono 和 CADR Mono Dark 两档，各有 Regular、Italic、Bold、Bold Italic。深色档把笔画减细，字宽不变，所以换档不会把列挤乱。方框、方块和盲文按字格算出来；斜体里的方框和盲文不跟着斜。README 里的样张是终端里的 git、diff、方框和盲文。Nerd Font 要用仓库里的命令另外编，fonts 目录里没有，图标许可也和正文字体不一样。适合想要一款可免费嵌入的等宽字体、并接受字形是算出来而不是手绘的人。本库没有安装字体，也没有数过字形。",
+      "summaryEn": "CADR Mono, by Anthony Green, is a monospace for terminals and code, generated from Common Lisp. The README says 935 glyphs and 8 static fonts, under SIL OFL 1.1, with no Reserved Font Name. There are two families, CADR Mono and CADR Mono Dark, each in Regular, Italic, Bold, and Bold Italic. The dark grade removes ink from the strokes and keeps the same advance, so swapping grades does not reflow a column. Box drawing, blocks, and braille are computed from the cell; in the italic, boxes and braille stay upright. The README specimen shows git, a diff, box drawing, and braille in a terminal. A Nerd Font build is a separate make target, is not in fonts/, and its icons use other licenses. Useful when you want an embeddable monospace and accept that the glyphs are computed rather than drawn by hand. This library did not install the font or count the glyphs.",
+      "sourceUrl": "https://github.com/atgreen/cadr-mono",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50145962"
+      ],
+      "previewImage": "/previews/cadr-mono.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "font",
+        "monospace",
+        "ofl",
+        "lisp",
+        "typography",
+        "terminal"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-19T12:40:00Z",
+      "qualityNote": "935 个字形、两档、8 个字体，以及 OFL 1.1、没有保留字体名，按 README 和 LICENSE。同一页样张里的检查表写着 glyph set 729 PASS、advance 1229、fonts 8、ink in cell 41 WARN，和 935 不是同一个数字，本库没有安装字体去对。Nerd Font 不在 fonts 目录里，本库没有编译，也没有打开那些图标许可文件。斜体、盲文和 hinting 都没有在终端里看过。",
+      "qualityNoteEn": "935 glyphs, two grades, eight fonts, OFL 1.1, and no Reserved Font Name follow the README and the LICENSE file. The specimen on that same README shows a check table reading glyph set 729 PASS, advance 1229, fonts 8, and ink in cell 41 WARN. That is not the same number as 935, and this library did not install the font to reconcile them. The Nerd Font build is not in fonts/; this library did not compile it and did not open those icon license files. Italic, braille, and hinting were not tried in a terminal.",
+      "verifyLog": "2026-10-19 晚间：仓库页 HTTP 200。gh api：atgreen/cadr-mono，license SPDX OFL-1.1，4★，创建 2026-10-15T10:53:07Z，最近推送 2026-10-15T15:03:07Z，homepage 为空。LICENSE 文件开头为 SIL Open Font License Version 1.1，Copyright 2026 Anthony Green。README 写 935 glyphs、8 static fonts、无 Reserved Font Name，深色档 stem 164 对 180、advance 都是 1229 / 2048 em，方框与盲文在斜体中不倾斜，Nerd Font 用 make -f build/Makefile nf，图标来自多套上游许可且 Font Logos / Pomicons 未收录。样张 alt 为 “CADR Mono in a terminal: git, a diff, box drawing, braille meters and source”，图中检查表为 glyph set 729 PASS。HN item 50145962，Algolia 2 pts，作者 atgreen，创建 2026-10-18T22:04:50Z；作者写这是又一个等宽字体，反引号比较醒目，方便读 Common Lisp。本库没有在终端里对照反引号。预览为 Playwright 截取 README 样张后居中裁成 1200×800 WebP。字体条目放在 HTML，与未合并的 Furifont 相同。",
+      "verifyLogEn": "2026-10-19 evening: repo page HTTP 200. gh api: atgreen/cadr-mono, SPDX OFL-1.1, 4★, created 2026-10-15T10:53:07Z, last push 2026-10-15T15:03:07Z, homepage empty. The LICENSE file starts as SIL Open Font License Version 1.1, Copyright 2026 Anthony Green. The README says 935 glyphs, 8 static fonts, no Reserved Font Name, dark-grade stem 164 against 180, advance 1229 on a 2048 em, box drawing and braille upright in the italic, and a Nerd Font build via make -f build/Makefile nf. Icon sets use several upstream licenses; Font Logos and Pomicons are omitted. Specimen alt text: “CADR Mono in a terminal: git, a diff, box drawing, braille meters and source.” The table in that image reads glyph set 729 PASS. HN item 50145962, Algolia 2 pts, author atgreen, created 2026-10-18T22:04:50Z. The author calls it another monospace vanity font with a strong backquote for Common Lisp. This library did not compare the backquote in a terminal. Preview is the README specimen, captured with Playwright and center-cropped to 1200×800 WebP. Filed under HTML, same library as the still-open Furifont entry."
+    },
+    {
+      "id": "regex-marble-run",
+      "slug": "regex-marble-run",
+      "title": "Regex Marble Run：把正则画成 3D 弹珠轨道",
+      "titleEn": "Regex Marble Run: a regular expression as a 3D marble track",
+      "hook": "把一条正则走成能看见回溯的 3D 弹珠轨道。",
+      "hookEn": "Watch a regular expression run as a 3D marble track.",
+      "summary": "Regex Marble Run 把一条 JavaScript 正则画成 3D 弹珠轨道：字符是一扇门，贪婪量词是回环，弹珠沿着匹配往下走。旁边记步数、回溯、尝试次数、保存的选择和原生耗时。打开就是示例 <.+>，测试串是 <b>bold</b>，轨道在播，步数会往前走。代码 MIT。适合想看见正则为什么回溯、而不只看匹配结果的人。本库看了这条默认示例在播，没有改成自己的表达式。",
+      "summaryEn": "Regex Marble Run draws a JavaScript regular expression as a 3D marble track: a character is a gate, a greedy quantifier is a loop, and marbles follow the match. A side panel counts steps, backtracks, attempts, saved choices, and native time. It opens on the example <.+> with the test string <b>bold</b>, the track plays, and the step count advances. The code is MIT. Good when you want to see why a pattern backtracks, not only whether it matches. This library watched that default example play and did not write a pattern of its own.",
+      "sourceUrl": "https://www.regexmarblerun.com/",
+      "secondaryUrls": [
+        "https://github.com/bottomless/regex-marble-run",
+        "https://news.ycombinator.com/item?id=50122671"
+      ],
+      "previewImage": "/previews/regex-marble-run.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "regex",
+        "3d",
+        "visualization",
+        "javascript",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-16",
+      "updatedAt": "2026-10-19T01:40:00Z",
+      "qualityNote": "看过默认示例的轨道在播放，步数会往前走。没有改成自己的复杂表达式，也没有核对页面上的原生耗时。",
+      "qualityNoteEn": "The default example track was playing and the step count advanced. No custom pattern was written, and the on-page native time was not checked against the browser.",
+      "verifyLog": "2026-10-19 早间：regexmarblerun.com HTTP 200，标题 Regex Marble Run。默认示例 /<.+>/ ，测试串 <b>bold</b>，状态 Playing；先看到 Steps 1，稍后 Steps 2、进度 4/39，Native time 0.00–0.10 ms。页面 GitHub 链到 bottomless/regex-marble-run。gh api：MIT，5★，创建于 2026-10-13T09:35:31Z，最近推送 2026-10-15T18:46:02Z。HN https://news.ycombinator.com/item?id=50122671 ，2026-10-16T18:48:48Z，撰写时 87pts，标题 Regex visualized as 3D marble run。预览为轨道播放中的实拍，1200×800 WebP。未改写正则，未对拍浏览器 RegExp 耗时。",
+      "verifyLogEn": "2026-10-19 morning: regexmarblerun.com HTTP 200, title Regex Marble Run. Default example /<.+>/ , test string <b>bold</b>, status Playing; Steps showed 1, then later Steps 2 and progress 4/39, native time 0.00–0.10 ms. The page's GitHub link goes to bottomless/regex-marble-run. gh api: MIT, 5★, created 2026-10-13T09:35:31Z, last push 2026-10-15T18:46:02Z. HN https://news.ycombinator.com/item?id=50122671 , 2026-10-16T18:48:48Z, 87pts at write time, title Regex visualized as 3D marble run. Preview is a 1200×800 WebP while the track was playing. The pattern was not rewritten, and the native time was not checked against the browser RegExp."
+    },
+    {
+      "id": "duck-pond",
+      "slug": "duck-pond",
+      "title": "Duck Pond：浏览器里现场合成的鸭叫",
+      "titleEn": "Duck Pond: duck calls synthesized in the browser",
+      "hook": "浏览器里的鸭塘，叫声是现场合成的，不是录音。",
+      "hookEn": "A browser duck pond whose calls are synthesized, not recorded.",
+      "summary": "Duck Pond 是浏览器里的一小群绿头鸭。介绍写：三只母鸭、两只公鸭、两窝小鸭；不用录音，每声叫都在当下合成，并按你站在岸边的位置来听。侧栏按远近列出名字、距离、朝向和正在做的事，叫的时候会标出那一声。可以扔豌豆，也可以改成耳机听感。代码 MIT。适合想听程序合成的鸭叫、而不是一段循环录音的人。本库没有在这个环境里听到声音。",
+      "summaryEn": "Duck Pond is a small flock of mallards in the browser. The intro says three hens, two drakes, and two broods of ducklings; there are no recordings, every call is synthesized as it happens, and you hear it from where you stand on the bank. A side list orders each bird by distance and shows its name, bearing, and what it is doing, and marks a call when one happens. You can throw peas, or switch the render for headphones. The code is MIT. Good when you want a synthesized duck call rather than a looped recording. This library did not hear the audio in this environment.",
+      "sourceUrl": "https://celphase.github.io/duck-pond/",
+      "secondaryUrls": [
+        "https://github.com/celphase/duck-pond",
+        "https://news.ycombinator.com/item?id=50131006"
+      ],
+      "previewImage": "/previews/duck-pond.webp",
+      "types": [
+        "interactive",
+        "tool"
+      ],
+      "tags": [
+        "audio",
+        "synthesizer",
+        "web-audio",
+        "wasm",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-19T01:40:00Z",
+      "qualityNote": "页面介绍写没有录音、叫声当下合成。这个环境里音频工作线程没有启动，所以没有听到声音。地图上能看到页面场景里的鸭、距离和活动，其中一只标着 pip-pip。没有确认扔豌豆成功。",
+      "qualityNoteEn": "The page says there are no recordings and calls are synthesized as they happen. Audio playback did not start in this environment, so nothing was heard. The map showed the page's own flock with distances and activities, including one pip-pip call. Throwing peas was not confirmed.",
+      "verifyLog": "2026-10-19 早间：celphase.github.io/duck-pond HTTP 200。介绍层原文：three hens, two drakes and two broods of ducklings. No recordings. 点 Listen 后 AudioContext 状态为 running，但 AudioWorklet.addModule 未完成，AudioWorkletNode 报 pond-player is not defined，所以没有出声。随后跑的是页面自带的 duck_pond.wasm 场景（pond-worker.js），侧栏出现 Pip、Mabel、Fig、Bean、Dot、Clover、Bramble、Rufus、Nib、Hazel、Sprout、Tuft，活动含 picking insects、grazing、resting、dabbling、preening、huddled，Nib 标 pip-pip。Throw peas 点过，豌豆计数仍是 0，未确认撒出。gh api：celphase/duck-pond，MIT，17★，创建于 2026-10-17T12:21:03Z，最近推送 2026-10-17T16:30:10Z，描述 High-quality duck audio synthesizer。Show HN https://news.ycombinator.com/item?id=50131006 ，2026-10-17T13:28:46Z，撰写时 168pts。预览为 wasm 场景画出的俯视鸭塘，1200×800 WebP。",
+      "verifyLogEn": "2026-10-19 morning: celphase.github.io/duck-pond HTTP 200. Intro text: three hens, two drakes and two broods of ducklings. No recordings. After Listen, AudioContext state was running, but AudioWorklet.addModule did not finish and AudioWorkletNode reported pond-player is not defined, so nothing was heard. The map then came from the page's own duck_pond.wasm scene (pond-worker.js). The list showed Pip, Mabel, Fig, Bean, Dot, Clover, Bramble, Rufus, Nib, Hazel, Sprout, and Tuft, with activities including picking insects, grazing, resting, dabbling, preening, and huddled; Nib was marked pip-pip. Throw peas was clicked and the pea count stayed 0, so a scatter was not confirmed. gh api: celphase/duck-pond, MIT, 17★, created 2026-10-17T12:21:03Z, last push 2026-10-17T16:30:10Z, description High-quality duck audio synthesizer. Show HN https://news.ycombinator.com/item?id=50131006 , 2026-10-17T13:28:46Z, 168pts at write time. Preview is the top-down pond drawn by that wasm scene, 1200×800 WebP."
+    },
+    {
+      "id": "pele",
+      "slug": "pele",
+      "title": "Pele：把 Mermaid 画成可换主题的 SVG",
+      "titleEn": "Pele: Mermaid diagrams as themeable SVG",
+      "hook": "写 Mermaid，得到能用 CSS 变量换色的 SVG。",
+      "hookEn": "Write Mermaid and get SVG you can recolor with CSS variables.",
+      "summary": "Pele 是为 Obsidian 做的开源库，npm 包名 `pele`。你写 Mermaid 语法，它输出 SVG。官网写它零依赖，并支持 Mermaid 12.1.0 里的每一种图。颜色和字体走 CSS 变量（例如 `--pele-bg`），改样式不用重新渲染。官网对照表还写：gzip 后 230 kB，Mermaid.js 为 1.6 MB；渲染时间 0.05–0.3 毫秒，Mermaid.js 为 6–82 毫秒；并概括为大约小 6 倍、最快大约快 500 倍，对方有 23 个直接依赖。仓库 LICENSE 文件是 MIT，文末另注一枚 Lucide 图标为 ISC。适合要在页面或笔记里嵌图、又不想带上整包 Mermaid.js 的人。本库没有安装这个包，也没有把每种图都画一遍。",
+      "summaryEn": "Pele is an open-source library made for Obsidian. The npm package is `pele`. You write Mermaid syntax and it returns SVG. The site says it has zero dependencies and supports every diagram type in Mermaid 12.1.0. Colors and fonts use CSS variables such as `--pele-bg`, so restyling does not re-render. Its comparison table lists 230 kB gzip against 1.6 MB for Mermaid.js, render time 0.05–0.3 ms against 6–82 ms, summarized there as about 6× smaller and up to 500× faster, with 23 direct dependencies on the Mermaid.js side. The repo LICENSE file is MIT, and it notes one Lucide icon under ISC. Useful when you want diagrams in a page or note without the full Mermaid.js bundle. This library did not install the package or render every diagram type.",
+      "sourceUrl": "https://pele.run/",
+      "secondaryUrls": [
+        "https://github.com/obsidianmd/pele",
+        "https://www.npmjs.com/package/pele",
+        "https://news.ycombinator.com/item?id=50132193"
+      ],
+      "previewImage": "/previews/pele.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "mermaid",
+        "svg",
+        "diagram",
+        "mit",
+        "open-source",
+        "obsidian",
+        "css"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "零依赖、Mermaid 12.1.0 的全部图类型、CSS 变量换色不必重渲染，以及体积和速度对照，都是官网的说法，本库没有复测，也没有把每种图都画出来。仓库 LICENSE 文件为 MIT，文末另注一枚 Lucide 图标为 ISC；npm 上的 license 字段也是 MIT。本库没有执行安装，也没有在 Obsidian 里打开。",
+      "qualityNoteEn": "Zero dependencies, every Mermaid 12.1.0 diagram type, CSS-variable theming without a re-render, and the size and speed comparison are the site’s claims. This library did not re-benchmark them or render every diagram type. The repo LICENSE file is MIT and notes one Lucide icon under ISC; the npm license field is also MIT. This library did not install it or open it in Obsidian.",
+      "verifyLog": "2026-10-18：HN item 50132193，Algolia 461 pts，作者 dchest，创建 2026-10-17T15:55:09Z。官网 https://pele.run/ HTTP 200。npm pele@1.6.0，license 字段 MIT，dependencies 为空，repository 为 github.com/obsidianmd/pele。gh api：stars=1259，license 检测为 NOASSERTION；raw LICENSE 开头为 MIT License，Copyright (c) 2026 kepano，文末 Lucide 图标为 ISC。仓库创建 2026-10-05，最近推送 2026-10-17。预览为 Playwright 实拍官网首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: HN item 50132193, Algolia 461 pts, author dchest, created 2026-10-17T15:55:09Z. https://pele.run/ HTTP 200. npm pele@1.6.0, license field MIT, empty dependencies, repository github.com/obsidianmd/pele. gh api: stars=1259, detected license NOASSERTION; raw LICENSE starts as MIT License, Copyright (c) 2026 kepano, and notes a Lucide icon under ISC. Repo created 2026-10-05, last push 2026-10-17. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "furifont",
+      "slug": "furifont",
+      "title": "Furifont：振假名做在字体里的日文字体",
+      "titleEn": "Furifont: a Japanese font with furigana built into the glyphs",
+      "hook": "振假名画进字体里，连字换上，正文不用 ruby。",
+      "hookEn": "Furigana is drawn into the font, so the text stays plain.",
+      "summary": "Furifont 是 antfu 做的日文字体，振假名做在字体里面。它从 Source Han Sans 或 Source Han Serif 编译：构建时读入词典，把读音画进新字形，再用连字替换，例如「今日」变成带「きょう」的一个字。正文仍是普通汉字，不用 ruby。有 Sans 和 Serif，读音分平假名和罗马字；常规体提供 otf 与 woff2，可变字体提供 ttf 与 woff2。官网有书签小工具和用户脚本，用来给网页换上这套字体。浏览器按文字系统分开做连字，汉字后面的送假名字体自己看不到，这部分要另开 JavaScript。字体为 SIL OFL（README 写 1.1），读音数据为 CC BY-SA 4.0，仓库代码为 MIT。官网提醒读音可能不对。本库没有安装字体，也没有用书签改过别的网页。",
+      "summaryEn": "Furifont, by antfu, is a Japanese font with furigana built into the glyphs. It is compiled from Source Han Sans or Source Han Serif: a build step reads a dictionary, draws readings into new glyphs, and swaps them in with ligatures, so 今日 becomes one glyph with きょう above it. The text stays plain kanji, with no ruby markup. There are Sans and Serif families, in hiragana and romaji. Regular weights ship as otf and woff2; variable fonts ship as ttf and woff2. The site has a bookmarklet and a userscript that apply the font to a web page. Browsers shape each script separately, so the font cannot see okurigana after a kanji; that part needs optional JavaScript. The fonts are SIL OFL (the README says 1.1), the readings data is CC BY-SA 4.0, and the repo code is MIT. The site warns that readings can be wrong. This library did not install the font or run the bookmarklet on another page.",
+      "sourceUrl": "https://furifont.antfu.me/",
+      "secondaryUrls": [
+        "https://github.com/antfu/furifont",
+        "https://news.ycombinator.com/item?id=50100994"
+      ],
+      "previewImage": "/previews/furifont.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "font",
+        "japanese",
+        "furigana",
+        "ofl",
+        "typography",
+        "open-source"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "字体由 Source Han Sans / Serif 编译、SIL OFL、读音数据 CC BY-SA 4.0、Sans 与 Serif、平假名与罗马字、woff2 / ttf / otf、书签和用户脚本，都照官网与仓库 README。README 写代码为 MIT，并比官网多列了若干词典来源。本库没有安装字体，没有用书签或用户脚本改网页，也没有核对读音是否正确。",
+      "qualityNoteEn": "The Source Han Sans / Serif build, SIL OFL, CC BY-SA 4.0 readings, Sans and Serif, hiragana and romaji, woff2 / ttf / otf, and the bookmarklet and userscript follow the site and the repo README. The README says the code is MIT and lists a few more dictionary sources than the site. This library did not install the font, did not run the bookmarklet or userscript, and did not check whether readings are correct.",
+      "verifyLog": "2026-10-18：HN item 50100994，Algolia 361 pts，作者 plaguna，创建 2026-10-15T08:48:30Z。官网 https://furifont.antfu.me/ HTTP 200。仓库 antfu/furifont，gh api license=MIT stars=299，创建 2026-10-12，最近推送 2026-10-16，homepage 指向官网。预览为 Playwright 实拍官网首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: HN item 50100994, Algolia 361 pts, author plaguna, created 2026-10-15T08:48:30Z. https://furifont.antfu.me/ HTTP 200. Repo antfu/furifont, gh api license=MIT stars=299, created 2026-10-12, last push 2026-10-16, homepage is the site. Preview is a Playwright capture of the homepage, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "five-hundred-clocks",
+      "slug": "five-hundred-clocks",
+      "title": "Five Hundred Clocks：一个 HTML 文件里的 500 只钟",
+      "titleEn": "Five Hundred Clocks: 500 clocks in one HTML file",
+      "hook": "一个文件里有 500 种钟，代码出自 Opus 5.5。",
+      "hookEn": "Five hundred clocks in one HTML file, written by Opus 5.5.",
+      "summary": "Tom Gally 的单页画廊：500 只用不同方式显示当前时间的钟，收在一个 HTML 文件里。Show HN 标题和仓库 README 都写这个文件约 6.3 MB。README 开头写明，页面和配套工具里的代码与文字都由 Claude Opus 5.5 撰写，Tom 出提示、看结果并决定留哪些，他自己不改代码。页面不引用外部库、字体、图片或网络请求，钟面用 canvas 二维绘图画出来。仓库许可证是 CC0。可以当作模型写出超大单文件网页的例子，不是一套可复用组件。本库打开了画廊，没有把 500 只钟逐一点开核对。",
+      "summaryEn": "Tom Gally’s single-page gallery: 500 clocks that each show the current time differently, in one HTML file. The Show HN title and the repo README both call the file about 6.3 MB. The README opens by saying Claude Opus 5.5 wrote the code and the text in the page and the build kit; Tom wrote the prompts, reviewed the results, and decided what to keep, and he did not edit the code. The page loads no external libraries, fonts, images, or network requests. Each clock is drawn with the canvas 2D API. The repo license is CC0. A useful example of a model writing a very large single-file page, not a reusable component kit. This library opened the gallery and did not open all 500 clocks to check them.",
+      "sourceUrl": "https://tkgally.github.io/500-clocks/",
+      "secondaryUrls": [
+        "https://github.com/tkgally/500-clocks",
+        "https://news.ycombinator.com/item?id=50137820"
+      ],
+      "previewImage": "/previews/five-hundred-clocks.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "html",
+        "single-file",
+        "clock",
+        "canvas",
+        "opus",
+        "cc0",
+        "ai-generated"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-18",
+      "updatedAt": "2026-10-18T12:20:00Z",
+      "qualityNote": "单文件、无外部库和图片、canvas 绘制、四轮会话与子代理分工，来自仓库 README。该 README 写明由 Claude Opus 5.5 写成，其中的耗时和 token 是文内估算，本库没有核对用量。6.3 MB 是 Show HN 标题和 README 的说法。本库打开了画廊首页，没有逐只点开，也没有核对每只钟的时间。",
+      "qualityNoteEn": "The single file, the lack of external libraries and images, canvas drawing, and the four sessions with subagents come from the repo README. That README says Claude Opus 5.5 wrote it, and the time and token figures in it are estimates this library did not check against a bill. 6.3 MB is what the Show HN title and the README say. This library opened the gallery and did not open every clock or check that each one shows the right time.",
+      "verifyLog": "2026-10-18：Show HN item 50137820，Algolia 53 pts，作者 tkgally，创建 2026-10-18T04:04:58Z。页面 https://tkgally.github.io/500-clocks/ HTTP 200，content-range 总长 6347060 字节。仓库 tkgally/500-clocks，gh api license=CC0-1.0 stars=5，创建 2026-10-18。README 注明由 Claude Opus 5.5 于 2026-10-18 撰写，并给出分轮 token 估算（合计约 14–15 million 子代理 token）。预览为 Playwright 实拍画廊首屏，视口 1200×800，导出 1000×667 WebP。",
+      "verifyLogEn": "2026-10-18: Show HN item 50137820, Algolia 53 pts, author tkgally, created 2026-10-18T04:04:58Z. https://tkgally.github.io/500-clocks/ HTTP 200, content-range total 6347060 bytes. Repo tkgally/500-clocks, gh api license=CC0-1.0 stars=5, created 2026-10-18. The README says Claude Opus 5.5 wrote it on 2026-10-18 and gives per-session token estimates (about 14–15 million subagent tokens in total). Preview is a Playwright capture of the gallery, viewport 1200×800, exported as 1000×667 WebP."
+    },
+    {
+      "id": "animateicons",
+      "slug": "animateicons",
+      "title": "AnimateIcons：1,170 个免费开源动画图标，React / Vue / Angular / 原生 JS",
+      "titleEn": "AnimateIcons: 1,170 free open-source animated icons for React, Vue, Angular, and plain JS",
+      "hook": "一千一百七十个开源动画图标，几个前端框架都能用。",
+      "hookEn": "1,170 open-source animated icons for React, Vue, Angular, and JS.",
+      "summary": "AnimateIcons 是一套免费开源的动画 SVG 图标。官网首页写 1170 个，可以悬停播放，也能自己触发；能改大小、颜色和时长。React 用 @animateicons/react，Vue 3 / Nuxt 用 @animateicons/vue，Angular 20、21、22 用 @animateicons/angular，原生 JS、Web Components，以及 Svelte、Solid、Astro 走 @animateicons/vanilla。README 写同一套图标、同一套动效。也可以用 npx animateicons add 把单个图标拷进项目。图标外形基于 Lucide 和 Hugeicons，第三方声明另计。文档站还有 MCP 页。适合要一套会动的图标、又不想只绑在 React 上的人。本库没有安装这些包，也没有接 MCP。",
+      "summaryEn": "AnimateIcons is a free, open-source set of animated SVG icons. The homepage says 1170 icons, playing on hover or on demand, with size, color, and duration you can change. React uses @animateicons/react, Vue 3 / Nuxt uses @animateicons/vue, Angular 20, 21, and 22 use @animateicons/angular, and plain JS, web components, Svelte, Solid, and Astro use @animateicons/vanilla. The README says the icons and the motion are the same across those packages. npx animateicons add copies one icon into a project. Icon shapes are based on Lucide and Hugeicons; those third-party notices are separate. The docs site also has an MCP page. Good when you want animated icons and do not want to be locked to React. This library did not install the packages or connect MCP.",
+      "sourceUrl": "https://animateicons.in",
+      "secondaryUrls": [
+        "https://github.com/Avijit07x/animateicons",
+        "https://animateicons.in/icons/docs",
+        "https://x.com/Avijit07x/status/2111355681228140655"
+      ],
+      "previewImage": "/previews/animateicons.webp",
+      "types": [
+        "component",
+        "motion"
+      ],
+      "tags": [
+        "icons",
+        "animation",
+        "svg",
+        "react",
+        "vue",
+        "angular",
+        "svelte",
+        "open-source",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-17T12:45:00Z",
+      "qualityNote": "个数、框架和 MIT 许可照官网首页、README 与仓库许可。图标外形基于 Lucide 和 Hugeicons，第三方声明另计。文档站有 MCP 页。本库没有安装包，也没有接 MCP。",
+      "qualityNoteEn": "The count, frameworks, and MIT license follow the homepage, the README, and the repo license. Icon shapes are based on Lucide and Hugeicons, with separate third-party notices. The docs site has an MCP page. This library did not install the packages or connect MCP.",
+      "verifyLog": "2026-10-17 晚间：animateicons.in、/icons/docs、/icons/docs/mcp、/icons/lucide 与 github.com/Avijit07x/animateicons 均为 HTTP 200。gh api：MIT、1264★，创建于 2025-07-29T17:51:25Z，最近推送 2026-10-17T12:00:26Z，主页 https://animateicons.in。README 横幅与正文都写 1,170，并列出 @animateicons/react、vue、angular、vanilla（含 Svelte、Solid、Astro）。首页实拍文案是 “1170 free, open source”，顶栏写现已支持 Vue、Angular 和 plain JavaScript。X 原帖 https://x.com/Avijit07x/status/2111355681228140655 经 fxtwitter HTTP 200，时间为 Sat Oct 17 07:16:36 +0000 2026（北京时间 15:16），帖里写 1,170+。npmjs.com 包页本环境 HTTP 403；registry.npmjs.org 四个包均为 HTTP 200、license MIT，版本分别为 react 0.12.1、vue 0.1.0、angular 0.1.0、vanilla 0.1.0。预览为 Chrome 无头实拍首页，1500×1000 WebP。",
+      "verifyLogEn": "2026-10-17 evening: animateicons.in, /icons/docs, /icons/docs/mcp, /icons/lucide, and github.com/Avijit07x/animateicons all HTTP 200. gh api: MIT, 1264★, created 2025-07-29T17:51:25Z, last push 2026-10-17T12:00:26Z, homepage https://animateicons.in. The README banner and body both say 1,170 and list @animateicons/react, vue, angular, and vanilla (including Svelte, Solid, and Astro). The captured homepage says “1170 free, open source” and the top bar says it now works with Vue, Angular, and plain JavaScript. The X post https://x.com/Avijit07x/status/2111355681228140655 was HTTP 200 via fxtwitter, Sat Oct 17 07:16:36 +0000 2026 (15:16 Beijing), and says 1,170+. npmjs.com package pages returned HTTP 403 from this environment; registry.npmjs.org returned HTTP 200 for all four packages, license MIT, versions react 0.12.1, vue 0.1.0, angular 0.1.0, vanilla 0.1.0. Preview is a headless Chrome capture of the homepage, a 1500×1000 WebP."
+    },
+    {
+      "id": "cc-lineart",
+      "slug": "cc-lineart",
+      "title": "CC-lineart：给编程助手的手绘墨线与水彩网页设计系统",
+      "titleEn": "CC-lineart — hand-drawn ink and watercolor web design system for coding agents",
+      "hook": "手绘墨线加水彩的网页和 SVG，编程助手可以直接抄。",
+      "hookEn": "Hand-drawn ink and watercolor pages and SVG that coding agents can copy.",
+      "summary": "CC-lineart 是 MIT 的双语设计系统，给 Claude Code、Codex 这类编程助手用。风格是手绘墨线加水彩，README 写了 8 个场景：图标、产品首屏、店铺页、界面组件、架构图、数据图、仓库头图，以及一笔画动效。例子是可以打开的 HTML 和 SVG，助手可以照着抄。检查命令是 python3 -I scripts/lineart.py lint。装法是把仓库拷进助手的 skills 目录。适合想让生成的网页和示意图带纸感的人。本库没有在本机跑 lint。",
+      "summaryEn": "CC-lineart is an MIT bilingual design system for coding agents such as Claude Code and Codex. The look is hand-drawn ink plus watercolor. The README lists eight scenarios: icons, product heroes, storefronts, UI kits, architecture diagrams, data graphics, repo banners, and stroke-draw motion. The examples are HTML and SVG an agent can copy. The check command is python3 -I scripts/lineart.py lint. Install by copying the repo into the agent’s skills directory. Good when generated pages and diagrams should feel like paper. This library did not run the lint locally.",
+      "sourceUrl": "https://github.com/aa2246740/CC-lineart",
+      "secondaryUrls": [
+        "https://github.com/aa2246740/CC-lineart/blob/main/README.zh-CN.md",
+        "https://github.com/aa2246740/CC-lineart/blob/main/SKILL.md"
+      ],
+      "previewImage": "/previews/cc-lineart.webp",
+      "types": [
+        "component",
+        "docs"
+      ],
+      "tags": [
+        "svg",
+        "html",
+        "design-system",
+        "ai",
+        "mit",
+        "skill",
+        "watercolor",
+        "icons",
+        "agent"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-08",
+      "updatedAt": "2026-10-16T01:40:00Z",
+      "qualityNote": "未在本机跑 lineart.py lint；描述照 README。例子页上的 0 warnings 是页面自己的标注。",
+      "qualityNoteEn": "lineart.py lint was not run on this machine; the description follows the README. The 0 warnings label on the example page is that page’s own text.",
+      "verifyLog": "2026-10-16 早间：github.com/aa2246740/CC-lineart、README.zh-CN.md 与 SKILL.md 均为 HTTP 200。gh api：MIT、13★，创建于 2026-10-08，最近推送 2026-10-14。README 列出 8 个场景，并写 12 幅代表性 SVG 通过 python3 -I scripts/lineart.py lint 且 0 警告；本库未跑该命令。预览为 Playwright 打开仓库自带的 examples/pages-hero/hero-landing-page.html（页头自标 CC-lineart v2.4），裁 3:2 WebP（1200×800）。页上的 0 Lint Warnings 是例子文案。",
+      "verifyLogEn": "2026-10-16 morning: github.com/aa2246740/CC-lineart, README.zh-CN.md, and SKILL.md all HTTP 200. gh api: MIT, 13★, created 2026-10-08, last push 2026-10-14. The README lists 8 scenarios and says 12 flagship SVGs pass python3 -I scripts/lineart.py lint with 0 warnings; this library did not run that command. Preview is a Playwright open of the repo’s examples/pages-hero/hero-landing-page.html (the header labels itself CC-lineart v2.4), cropped to a 3:2 WebP (1200×800). The 0 Lint Warnings line is copy on that example."
+    },
+    {
+      "id": "blobz",
+      "slug": "blobz",
+      "title": "Blobz：任意名字生成同款玩味 SVG 头像，可编辑也可当图片 API",
+      "titleEn": "Blobz: playful deterministic SVG avatars from any name, studio or image API",
+      "hook": "任意名字生成同款玩味 SVG 头像，可编辑也可当图片 API。",
+      "hookEn": "Turn any name into a playful deterministic SVG avatar, studio or image API.",
+      "summary": "Blobz（MIT，仓库 lirena00/blobz）把用户名、邮箱或任意 ID 变成玩味的确定性 SVG 头像：同一输入与配色永远同一张脸，不必存图。可在 https://blobz.lirena.in/create 在线设计，用 `@blobz/react` / `@blobz/avatar-core` 嵌进应用，或走托管图片 API。适合缺省头像、演示账号脸、设计系统里的占位肖像。",
+      "summaryEn": "Blobz (MIT, repo lirena00/blobz) turns a username, email, or any ID into a playful deterministic SVG avatar: the same input and palette always yield the same face, with no image store. Design live at https://blobz.lirena.in/create, embed with `@blobz/react` / `@blobz/avatar-core`, or use the hosted image API. Good for default avatars, demo faces, and placeholder portraits in a design system.",
+      "sourceUrl": "https://blobz.lirena.in/",
+      "secondaryUrls": [
+        "https://blobz.lirena.in/create",
+        "https://github.com/lirena00/blobz",
+        "https://news.ycombinator.com/item?id=50086216"
+      ],
+      "previewImage": "/previews/blobz.webp",
+      "types": [
+        "tool",
+        "interactive"
+      ],
+      "tags": [
+        "svg",
+        "avatar",
+        "design",
+        "generator",
+        "react",
+        "open-source",
+        "mit",
+        "hacker-news"
+      ],
+      "qualityNote": "收录理由：拿来就能用的头像生成小工具，确定性输出、可商用路径清晰。边界：本库在工作室页输入名字确认会变脸，没有 npm 安装，没有调用托管 API 做压测。",
+      "qualityNoteEn": "Listed as a ready-to-use deterministic avatar generator with a clear path into apps. Boundary: this library typed a name in the studio and confirmed the face updates; it did not npm-install or load-test the hosted API.",
+      "featured": false,
+      "publishedAt": "2026-10-09",
+      "updatedAt": "2026-10-15T01:10:00Z",
+      "verifyLog": "主源 https://blobz.lirena.in/ 与 /create、仓库 lirena00/blobz；早间 HTTP 200。gh api：MIT、约 18★，仓库 2026-10-09 创建，最近推送 2026-10-14。Show HN https://news.ycombinator.com/item?id=50086216（2026-10-14，撰写时约 7 分）。确定性 SVG、React / core 包、托管 API 均照 README。预览为 Playwright 实拍 /create 工作室（输入 Saksham），裁 3:2 WebP。",
+      "verifyLogEn": "Primary sources https://blobz.lirena.in/ and /create, repo lirena00/blobz; HTTP 200 this morning. gh api: MIT, ~18★, created 2026-10-09, last push 2026-10-14. Show HN https://news.ycombinator.com/item?id=50086216 (2026-10-14, about 7 points at write time). Deterministic SVG, React/core packages, and hosted API follow the README. Preview is a Playwright capture of /create (name Saksham), cropped to a self-hosted 3:2 WebP."
+    },
+    {
       "id": "rayden-ui",
       "slug": "rayden-ui",
       "title": "Rayden UI：MIT 的 React/Tailwind 组件库，还给编程助手配了 MCP",
@@ -4561,9 +5341,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-14T12:15:00Z",
+    "updatedAt": "2026-10-24T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.65",
-    "count": 136
+    "version": "1.3.78",
+    "count": 158
   }
 }

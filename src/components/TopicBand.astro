@@ -1,0 +1,20 @@
+---
+import Icon from "./Icon.astro";
+import Loc from "./Loc.astro";
+import { hotTopic } from "../lib/topics";
+import { withBase } from "../lib/paths";
+const topic = hotTopic;
+const href = topic ? withBase(`topics/${topic.id}/`) : "";
+const total = topic ? topic.members.length + topic.also.length : 0;
+---
+{topic && <section class="topic-band" aria-labelledby="topic-band-title">
+  <div class="topic-band-copy">
+    <p class="topic-band-eyebrow"><Loc zh="热门专题" en="Hot topic" /></p>
+    <h2 id="topic-band-title"><a href={href}><Loc zh={topic.title.zh} en={topic.title.en} /></a></h2>
+    <p><Loc zh={topic.band.zh} en={topic.band.en} /></p>
+    <a class="topic-band-cta" href={href}><Loc zh={`进入专题 · ${total} 条`} en={`Open the topic · ${total}`} /><Icon name="arrow" size={18} /></a>
+  </div>
+  <ul class="topic-band-list">
+    {topic.latest.map(entry => <li><a href={entry.href}><img src={entry.thumb} alt="" width="120" height="80" loading="lazy" decoding="async" /><div><small><Loc zh={entry.kind.zh} en={entry.kind.en} /></small><strong class="topic-band-title"><Loc zh={entry.title.zh} en={entry.title.en} /></strong></div></a></li>)}
+  </ul>
+</section>}

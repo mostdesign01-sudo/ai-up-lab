@@ -3,11 +3,13 @@ import { brandCollectionPages } from "../lib/brand-collection";
 import { designKnowledge } from "../lib/design-knowledge";
 import { entries, sections } from "../lib/directory";
 import { withBase } from "../lib/paths";
+import { topics } from "../lib/topics";
 export const GET: APIRoute = ({ site }) => {
   const routes = new Map<string, string | undefined>([
-    ...["", "about/", "brand/", "changelog/"].map(path => [withBase(path), undefined] as const),
+    ...["", "picks/", "about/", "brand/", "changelog/"].map(path => [withBase(path), undefined] as const),
     ...designKnowledge.map(spec => [withBase(`brand/guides/${spec.id}/`), undefined] as const),
     ...sections.map(section => [withBase(`${section.id}/`), undefined] as const),
+    ...topics.map(topic => [withBase(`topics/${topic.id}/`), topic.members[0]?.updatedAt] as const),
     ...brandCollectionPages.map(page => [withBase(page.href), undefined] as const),
     ...entries.map(entry => [entry.href, entry.updatedAt] as const),
   ]);

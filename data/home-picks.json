@@ -1,9 +1,14 @@
 {
-  "picks": [
-    {"key": "grok:pi-1-0", "section": "tools", "title": {"zh": "Pi 1.0：搭建自己的\n编程工作流", "en": "Pi 1.0: build your own coding workflow"}, "reason": {"zh": "适合想按自己的方式扩展编程助手的人。", "en": "For people who want to shape a coding assistant around their own workflow."}}
+  "issues": [
+    {"week": "2026-W42", "key": "grok:openpencil", "section": "tools", "title": {"zh": "OpenPencil：本机改 .fig，\n还能让助手动图层", "en": "OpenPencil: edit .fig locally,\nagents touch every layer"}, "reason": {"zh": "适合想把设计文件接进编程助手、又要开源本机可控的人。", "en": "For people who want agents on design files—local and open-source."}},
+    {"week": "2026-W43", "key": "agent-ui:ns-ui", "section": "design", "title": {"zh": "NS UI：给 Agent\n准备好的组件库", "en": "NS UI: a component registry ready for agents"}, "reason": {"zh": "适合想让编程助手直接装组件、而不是从零写界面的人。", "en": "For people who want their coding agent to install real components instead of drawing UI from scratch."}, "art": {"src": "/editorial/2026-w43.webp", "width": 1190, "height": 1322}},
+    {"week": "2026-W44", "key": "grok:grok-bot-for-work", "section": "learn", "title": {"zh": "四只 Bot 管日常：\n你只跟总管说话", "en": "Four bots run your day;\nyou only talk to the boss"}, "reason": {"zh": "适合想让 Agent 先接手邮件、日历和消息，又要改日程前先问你的人。", "en": "For people who want an agent on mail, calendar and messages, but still asked before anything moves."}},
+    {"week": "2026-W45", "key": "models:gpt-6-intelligent-ui", "section": "models", "title": {"zh": "GPT-6 的回答\n开始长出界面", "en": "GPT-6 answers start to come with interfaces"}, "reason": {"zh": "适合关注 AI 产品形态、想知道“回答即界面”意味着什么的设计师和产品经理。", "en": "For designers and PMs watching how AI products change when an answer can be an interface."}},
+    {"week": "2026-W46", "key": "html:refero-styles", "section": "prompts", "title": {"zh": "Refero Styles：\n先给助手看规范", "en": "Refero Styles: hand your agent a design brief"}, "reason": {"zh": "适合想让 AI 做的界面少点“AI 味”的人。", "en": "For people who want less generic AI-made UI by showing the agent real product specs first."}},
+    {"week": "2026-W47", "key": "html:transformer-explainer", "section": "learn", "title": {"zh": "看懂大模型：\n拆开 Transformer", "en": "See how an LLM works: open up a Transformer in your browser"}, "reason": {"zh": "适合想弄明白模型为什么这样回答、又不想先读论文的人。", "en": "For people who want to see why a model answers the way it does, without reading the paper first."}}
   ],
   "titles": [
-    {"key": "html:css-bed", "title": {"zh": "CSS Bed", "en": "CSS Bed"}},
-    {"key": "html:wave-subworkflow", "title": {"zh": "Wave：层叠波浪背景生成器", "en": "Wave: layered wave backgrounds"}}
+    {"key": "grok:figma-specs", "title": {"zh": "Figma Specs：画布旁的设计说明", "en": "Figma Specs: briefs beside the canvas"}},
+    {"key": "agent-ui:figma-pilot", "title": {"zh": "figma-pilot：用代码驱动 Figma", "en": "figma-pilot: drive Figma with code"}}
   ]
 }
