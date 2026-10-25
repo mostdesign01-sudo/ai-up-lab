@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "id": "qingicon",
+      "slug": "qingicon",
+      "title": "QingIcon：中性线性图标库，带 React、Vue 和 MCP",
+      "titleEn": "QingIcon — neutral line icons, with React, Vue, and an MCP server",
+      "hook": "3901 个线性图标，网页能搜能复制，还带 MCP。",
+      "hookEn": "3901 line icons to search and copy, plus React, Vue, and MCP.",
+      "summary": "QingIcon 是面向 AI、云和网页产品的中性图标库。图标浏览器的搜索框写着 3901 个图标，仓库 icons-source/line 里也是 3901 个 SVG、34 个分类，没有 Fill 或素描的 SVG。页面上的 Fill 标签是禁用的，提示还没开放。素描开关在工具条上，本库没有拨动；README 写素描只在网站和 Figma 插件里，不进 npm 包和 MCP。页头版本在页面脚本跑起来之后是 2.0.4，和 npm 上 qingicon-react、qingicon-vue 的 2.0.4 一致；qingicon-mcp 是 1.0.2。首页标语仍写 3900+、3 种字重、2 种样式加素描，和目前能打开的线性集、禁用的 Fill 不是同一套说法，条数以 3901 为准。许可证是 Apache-2.0。网站写个人和商用都不收费，再分发要保留许可声明。本库没有安装这三个包，没有接 MCP，也没有打开 Figma 插件。",
+      "summaryEn": "QingIcon is a neutral icon library for AI, cloud, and web products. The icon browser's search field says 3901 icons, and icons-source/line in the repo is also 3901 SVGs across 34 categories, with no fill or sketch SVGs. The Fill tab on the page is disabled and marked as not open yet. A Sketch switch sits on the toolbar; this library did not toggle it. The README says sketch exists on the website and in the Figma plugin, and is not in the npm packages or the MCP server. After the page script runs, the header version is 2.0.4, matching qingicon-react and qingicon-vue on npm; qingicon-mcp is 1.0.2. The hero still says 3900+, 3 weights, 2 styles, and a sketch variant, which is a different claim from the line set that actually opens and the disabled Fill tab; the count used here is 3901. The license is Apache-2.0. The site says personal and commercial use are free, and redistribution keeps the license notice. This library did not install the three packages, did not connect MCP, and did not open the Figma plugin.",
+      "sourceUrl": "https://qingicon.com/",
+      "secondaryUrls": [
+        "https://github.com/asorn/qingicon-open",
+        "https://www.npmjs.com/package/qingicon-react",
+        "https://www.npmjs.com/package/qingicon-vue",
+        "https://www.npmjs.com/package/qingicon-mcp",
+        "https://www.figma.com/community/plugin/1686396239772536401",
+        "https://x.com/AsornQ/status/2112844915264901203"
+      ],
+      "previewImage": "/previews/qingicon.webp",
+      "types": [
+        "component"
+      ],
+      "tags": [
+        "icons",
+        "react",
+        "vue",
+        "mcp",
+        "apache-2.0",
+        "figma",
+        "ai",
+        "svg"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-21",
+      "updatedAt": "2026-10-21T13:00:00Z",
+      "qualityNote": "条数以图标浏览器搜索框上的 3901 和仓库线性 SVG 的 3901 为准。Fill 标签禁用。素描开关看到了，没有拨动。首页标语里的 3 种字重和 2 种样式没有在文件里对上。npm 上 React 与 Vue 是 2.0.4，MCP 是 1.0.2，许可证都是 Apache-2.0。本库没有安装包、没有接 MCP。Figma 插件页没有打开。",
+      "qualityNoteEn": "The count used here is 3901, from the icon browser's search field and from the line SVGs in the repo. The Fill tab is disabled. The Sketch switch was visible and was not toggled. The hero's 3 weights and 2 styles were not matched to files. On npm, React and Vue are 2.0.4 and the MCP package is 1.0.2, all Apache-2.0. This library did not install the packages or connect MCP. The Figma plugin page was not opened.",
+      "verifyLog": "2026-10-21 晚间（约 20:15 上海）：qingicon.com HTTP 200。页内脚本 window.QINGICON_VERSION 为 2.0.4；静态占位是 v0.1.0，脚本把 #versionTag 改成 v2.0.4 后本库才截图。图标浏览器搜索框文案为 Search 3901 icons；Fill 按钮 role=tab、aria-disabled=true、class 含 disabled，提示 Coming soon，点击被禁用拦住。gh api：asorn/qingicon-open，Apache-2.0，4★，1 fork，创建 2026-09-28，最近推送 2026-10-08T07:00:29Z。git tree：svg 3901，全部在 icons-source/line，分类目录 34 个，fill 与 sketch 路径为 0。registry.npmjs.org：qingicon-react 2.0.4 Apache-2.0，qingicon-vue 2.0.4 Apache-2.0，qingicon-mcp 1.0.2 Apache-2.0。网站许可区写 Apache 2.0、个人和商用免费，日期 Oct 8, 2026。Figma 社区插件页 curl 返回 403（CloudFront），没有打开。X 帖 https://x.com/AsornQ/status/2112844915264901203 创建于 2026-10-21T09:54:17Z（上海 17:54），写 3900+ icons。预览为 Playwright 实拍图标浏览器（线性、搜索框 3901），1200×800 WebP。没有 npm install，没有接 MCP，没有拨动 Sketch。",
+      "verifyLogEn": "2026-10-21 evening (~20:15 Shanghai): qingicon.com HTTP 200. The inline script sets window.QINGICON_VERSION to 2.0.4; the static placeholder is v0.1.0, and the screenshot was taken after the script set #versionTag to v2.0.4. The icon browser search field reads Search 3901 icons. The Fill control is role=tab, aria-disabled=true, class includes disabled, tooltip Coming soon, and the click was blocked because it is disabled. gh api: asorn/qingicon-open, Apache-2.0, 4★, 1 fork, created 2026-09-28, last push 2026-10-08T07:00:29Z. git tree: 3901 svgs, all under icons-source/line, 34 category directories, 0 fill and 0 sketch paths. registry.npmjs.org: qingicon-react 2.0.4 Apache-2.0, qingicon-vue 2.0.4 Apache-2.0, qingicon-mcp 1.0.2 Apache-2.0. The site license block says Apache 2.0, free for personal and commercial use, dated Oct 8, 2026. The Figma community plugin page returned 403 from CloudFront and was not opened. X post https://x.com/AsornQ/status/2112844915264901203 was created 2026-10-21T09:54:17Z (17:54 Shanghai) and says 3900+ icons. Preview is a Playwright capture of the icon browser (Line, search field 3901), 1200×800 WebP. No npm install, no MCP session, and Sketch was not toggled."
+    },
+    {
       "id": "connexio",
       "slug": "connexio",
       "title": "Connexio：免费的物联网官网界面套件，演示站能直接打开",
@@ -5085,9 +5125,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-21T01:30:00Z",
+    "updatedAt": "2026-10-21T13:00:00Z",
     "timezone": "Asia/Shanghai",
     "version": "1.3.66",
-    "count": 139
+    "count": 137
   }
 }
