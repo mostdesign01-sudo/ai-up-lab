@@ -1,6 +1,136 @@
 {
   "items": [
     {
+      "id": "calm-web",
+      "slug": "calm-web",
+      "title": "Calm Web：把网页读成印刷杂志",
+      "titleEn": "Calm Web: read the web like a print magazine",
+      "hook": "把订阅和文章排成可以翻页的印刷杂志。",
+      "hookEn": "Set feeds and articles into a print magazine you can page through.",
+      "summary": "Calm Web 把阅读收成印刷杂志。首页写着 Curated collections set in print：按主题挑出版物，也可以自己加网站、RSS、Substack 或 OPML，再编一份报纸式的一期。打开 Design 这一辑，页面排出双栏刊物，左边是正文，右边是本期目录，并可以打印或导出 PDF、再加来源。作者在 Show HN 里说主要做桌面体验，排版用了 pretext 和 justif。这不是 AI 产品，但是给书桌用的阅读版式。本库打开了 Design 这一辑并看到排好的一期，没有导出 PDF，没有加自定义源，也没有逐篇读完。",
+      "summaryEn": "Calm Web sets reading into a print magazine. The home page says Curated collections set in print: pick publications by topic, or add a site, RSS, Substack, or OPML feed and compile a broadsheet issue. Opening the Design collection typesets a two-column issue, with the article on the left and the contents on the right, plus print or PDF export and a way to add a source. On Show HN the author says it is mainly a desktop experience and that layout uses pretext and justif. It is not an AI product; it is a reading layout for the desk. This library opened the Design issue and saw it typeset. It did not export a PDF, did not add a custom source, and did not read every article.",
+      "sourceUrl": "https://calmweb.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50237273"
+      ],
+      "previewImage": "/previews/calm-web.webp",
+      "types": [
+        "landing",
+        "tool"
+      ],
+      "tags": [
+        "reader",
+        "design",
+        "typography",
+        "calm"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：把网页阅读收成安静的杂志版式，适合想少分心看长文的人。边界：这是阅读器，不是 AI 产品，而且作者说主要照顾桌面。本库只打开了 Design 这一辑，没有导出 PDF，也没有加自己的订阅源。",
+      "qualityNoteEn": "Why: it sets web reading into a calm magazine layout, for people who want fewer distractions in a long piece. Boundary: it is a reader, not an AI product, and the author says it is mainly for desktop. This library only opened the Design issue, did not export a PDF, and did not add its own feed.",
+      "verifyLog": "2026-10-26：https://calmweb.app/ HTTP 200。首页是分类索引。点击 Design 后地址为 https://calmweb.app/?mag=curated-design ，排出双栏刊物，页脚可见 34 PAGES 与 Sunday, October 25, 2026。Show HN https://news.ycombinator.com/item?id=50237273 （2026-10-26T00:00:12Z，作者 niraj-agarwal，撰写时 1pt），提到 https://github.com/chenglou/pretext 与 https://github.com/lyallcooper/justif ，并写 mainly focused on desktop。预览为 Playwright 实拍该 Design 一期首屏，1440×960 收到 1200×800 WebP。未点 Export PDF，未 Add Publication，未逐篇打开。",
+      "verifyLogEn": "2026-10-26: https://calmweb.app/ HTTP 200. The home page is a topic index. After choosing Design the URL is https://calmweb.app/?mag=curated-design and a two-column issue appears; the footer shows 34 PAGES and Sunday, October 25, 2026. Show HN https://news.ycombinator.com/item?id=50237273 (2026-10-26T00:00:12Z, author niraj-agarwal, 1pt at write time) mentions https://github.com/chenglou/pretext and https://github.com/lyallcooper/justif , and says mainly focused on desktop. Preview is a Playwright capture of that Design issue's first screen, 1440×960 fitted to a 1200×800 WebP. Did not press Export PDF, did not Add Publication, and did not open every article."
+    },
+    {
+      "id": "ra-mermaid",
+      "slug": "ra-mermaid",
+      "title": "ra-mermaid：可叠放的 Mermaid 子图编辑器",
+      "titleEn": "ra-mermaid: stacked Mermaid subgraph editor",
+      "hook": "浏览器里把 Mermaid 子图叠成一整块来画。",
+      "hookEn": "Draw Mermaid subgraphs as one stacked block, in the browser.",
+      "summary": "ra-mermaid（页面标题 mermaidStacks）是 Mermaid 的一个分叉，给流程图加了叠放子图：在子图后面写 id@{ layout: stack }，里面的节点会画成贴在一起、等宽的一叠盒子，连到某个节点的线仍然落在那个盒子上。操场可以换示例、布局（ELK 或 dagre）和主题，也能把快照存在本地、复制链接、下载 SVG。作者写明：同一叠里的节点互连、子图标题、叠里再套子图，目前还不支持；GitHub 自带的 Mermaid 会忽略这套语法，要到这个操场里看。作者说这是让 Claude 加上去的语法。许可证是 MIT。本库打开了默认的叠放示例并看到盒子叠在一起，没有把每种导出、布局和主题都点一遍。",
+      "summaryEn": "ra-mermaid (the page title is mermaidStacks) is a fork of Mermaid that adds stacked subgraphs to flowcharts: write id@{ layout: stack } after a subgraph and its nodes draw as touching, equal-width boxes in one block, while a link to any node still lands on that box. The playground can switch examples, layout (ELK or dagre), and theme, and it can keep snapshots locally, copy a link, or download SVG. The author says links between two nodes in the same stack, the subgraph title, and a stack that contains another subgraph are not supported yet, and that GitHub's own Mermaid ignores this syntax, so you have to view it in this playground. The author says the syntax was added with Claude. The license is MIT. This library opened the default stacked example and saw the boxes stack. It did not exercise every export, layout, and theme.",
+      "sourceUrl": "https://ramraj07.github.io/ra-mermaid/",
+      "secondaryUrls": [
+        "https://github.com/ramraj07/ra-mermaid",
+        "https://news.ycombinator.com/item?id=50236250"
+      ],
+      "previewImage": "/previews/ra-mermaid.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "mermaid",
+        "diagram",
+        "editor",
+        "html"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-25",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：补上 Mermaid 子图不好叠放的缺口，在浏览器里就能改图。边界：上游 Mermaid 不认这套语法；同一叠内部的连线、标题和嵌套子图，作者写明还没做。许可证是 MIT。本库没有把每种导出和布局都点一遍。",
+      "qualityNoteEn": "Why: it fills the gap where Mermaid subgraphs will not stack, and you can edit the diagram in the browser. Boundary: upstream Mermaid does not understand this syntax, and the author says links inside one stack, the title, and nested subgraphs are not done yet. The license is MIT. This library did not exercise every export and layout.",
+      "verifyLog": "2026-10-26：https://ramraj07.github.io/ra-mermaid/ HTTP 200。操场 HTML 里没有仓库链接。Show HN https://news.ycombinator.com/item?id=50236250 （2026-10-25T21:32:01Z，作者 ramraj07，撰写时 1pt）给出 https://github.com/ramraj07/ra-mermaid ，并写是让 Claude 加上的语法。gh api：fork of mermaid-js/mermaid，license SPDX MIT，0★，创建 2026-10-25T16:26:49Z，最近推送 2026-10-25T20:27:17Z。默认示例页面显示约 773 ms，渲染出 Frontend / API layer / Database 叠放。类型按 html 枚举只记 tool（这是编辑器，不是文档站）。预览为 Playwright 实拍该默认示例，1440×960 收到 1200×800 WebP。未点 Download SVG 与 Copy link，未切换全部示例、布局与主题。",
+      "verifyLogEn": "2026-10-26: https://ramraj07.github.io/ra-mermaid/ HTTP 200. The playground HTML has no repository link. Show HN https://news.ycombinator.com/item?id=50236250 (2026-10-25T21:32:01Z, author ramraj07, 1pt at write time) links https://github.com/ramraj07/ra-mermaid and says the syntax was added with Claude. gh api: fork of mermaid-js/mermaid, license SPDX MIT, 0★, created 2026-10-25T16:26:49Z, last push 2026-10-25T20:27:17Z. The default example shows about 773 ms and renders a Frontend / API layer / Database stack. Typed as tool only per the html enum (it is an editor, not a docs site). Preview is a Playwright capture of that default example, 1440×960 fitted to a 1200×800 WebP. Did not press Download SVG or Copy link, and did not switch every example, layout, and theme."
+    },
+    {
+      "id": "geometry-script",
+      "slug": "geometry-script",
+      "title": "Geometry Script：用 Python 写 Blender Geometry Nodes",
+      "titleEn": "Geometry Script: Python API for Blender Geometry Nodes",
+      "hook": "用 Python 写 Blender 几何节点，脚本会生成节点树。",
+      "hookEn": "Write Blender Geometry Nodes in Python; the script builds the node tree.",
+      "summary": "Geometry Script 是 Carson Katri 的 Blender 插件：用 Python 写几何节点、着色器和合成器，脚本会直接生成节点树，方便改很大的节点图，也方便不写代码的人再去节点里微调。当前说明要求 Blender 5.2 或更新版本，可以把对应版本的安装盒拖进 Blender。仓库里还有一份 Claude Code 技能：连着 Blender 的 MCP 时用它跑脚本，否则在后台的 Blender 里跑。文档站单独成册。许可证是 GPL-3.0。适合想把生成式三维流程交给编程助手、最后仍落回 Blender 节点的人。本库没有安装插件，没有在 Blender 里跑示例，也没有装那个技能。",
+      "summaryEn": "Geometry Script is Carson Katri's Blender add-on: a Python API for Geometry Nodes, shaders, and the compositor. A script becomes a node tree, which makes large graphs easier to edit and still lets someone who does not write code tweak the nodes. The current instructions require Blender 5.2 or newer, and you can drag the install box for your version into Blender. The repo also includes a Claude Code skill that runs scripts through Blender's MCP server when it is connected, or in a background Blender otherwise. The documentation is a separate book. The license is GPL-3.0. Useful when a coding agent should build a generative 3D graph that still lands in Blender nodes. This library did not install the add-on, did not run an example in Blender, and did not install the skill.",
+      "sourceUrl": "https://github.com/carson-katri/geometry-script",
+      "secondaryUrls": [
+        "https://carson-katri.github.io/geometry-script/"
+      ],
+      "previewImage": "/previews/geometry-script.webp",
+      "types": [
+        "tool",
+        "docs"
+      ],
+      "tags": [
+        "blender",
+        "geometry-nodes",
+        "python",
+        "3d",
+        "generative"
+      ],
+      "featured": false,
+      "publishedAt": "2022-11-13",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：把 Blender 几何节点写成 Python，方便编程助手生成和改三维流程。边界：许可证是 GPL-3.0，当前说明要求 Blender 5.2 或更新版本。本库没有安装插件，没有打开 Blender，也没有安装仓库里的技能。",
+      "qualityNoteEn": "Why: Geometry Nodes as Python, so a coding agent can generate and revise a 3D graph. Boundary: the license is GPL-3.0, and the current instructions require Blender 5.2 or newer. This library did not install the add-on, did not open Blender, and did not install the skill in the repo.",
+      "verifyLog": "2026-10-26：https://github.com/carson-katri/geometry-script HTTP 200。gh api：license SPDX GPL-3.0，346★，33 forks，创建 2022-11-13T19:51:58Z，最近推送 2026-10-19T12:14:21Z。README 写 requires Blender 5.2 or newer，并有 Claude Code skill（/plugin install geometry-script --marketplace carson-katri/geometry-script）。文档 https://carson-katri.github.io/geometry-script/ HTTP 200。publishedAt 用仓库创建日，不是本次校对日。预览为 Playwright 实拍 README 词标、示例代码与 Blender 5.2 安装说明，视口 1280×853 收到 1200×800 WebP。未拖进 Blender，未跑脚本，未装 skill。不放入 cases.json。",
+      "verifyLogEn": "2026-10-26: https://github.com/carson-katri/geometry-script HTTP 200. gh api: license SPDX GPL-3.0, 346★, 33 forks, created 2022-11-13T19:51:58Z, last push 2026-10-19T12:14:21Z. The README says it requires Blender 5.2 or newer and includes a Claude Code skill (/plugin install geometry-script --marketplace carson-katri/geometry-script). Docs https://carson-katri.github.io/geometry-script/ HTTP 200. publishedAt is the repo creation date, not this check. Preview is a Playwright capture of the README wordmark, sample code, and the Blender 5.2 install note, viewport 1280×853 fitted to a 1200×800 WebP. Did not drag it into Blender, did not run a script, and did not install the skill. Not placed in cases.json."
+    },
+    {
+      "id": "overgrown",
+      "slug": "overgrown",
+      "title": "Overgrown：让浏览器长满植物的扩展",
+      "titleEn": "Overgrown: a browser extension that grows plants on the web",
+      "hook": "标签放久了，植物会爬上来，划开才能点。",
+      "hookEn": "Leave a tab alone and plants grow over it until you slash them clear.",
+      "summary": "Overgrown 是 Charlie Gerard 做的一个 Chrome 扩展：标签离开视线越久，植物就越从边缘往中间长。长过大约百分之五之后，后面的页面还能滚动，但不能点、不能选、不能拖；用鼠标把藤蔓划开，降回去就松开。可以选砍刀、电锯或喷火器，也可以改长满要多久。博客写了做法，配了一张植物盖住页面的演示图。安装要自己下载仓库里的 dist，在开发者模式下加载未打包的扩展。页面和仓库都没有指向网上应用店。仓库根目录没有许可证文件。本库没有安装扩展，没有在真实标签上看到植物生长。",
+      "summaryEn": "Overgrown is a Chrome extension by Charlie Gerard. The longer a tab stays out of view, the more plants grow from the edges toward the middle. Past about five percent, you can still scroll the page behind the vines, but you cannot click, select, or drag; slash the vines with the pointer and it frees up once the cover drops back. You can pick a machete, a chainsaw, or a flamethrower, and you can change how long a full overgrowth takes. The blog explains the build and shows a demo of plants covering a page. Install by downloading the repo's dist folder and loading the unpacked extension in developer mode. Neither the post nor the repo links a web store. The repo root has no license file. This library did not install the extension and did not watch plants grow on a real tab.",
+      "sourceUrl": "https://charliegerard.dev/blog/overgrown-extension/",
+      "secondaryUrls": [
+        "https://github.com/charliegerard/Overgrown",
+        "https://news.ycombinator.com/item?id=50197108"
+      ],
+      "previewImage": "/previews/overgrown.webp",
+      "types": [
+        "landing",
+        "motion"
+      ],
+      "tags": [
+        "extension",
+        "playful",
+        "css",
+        "plants"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：用植物盖住久未读的标签，是个轻松的网页小实验。边界：要自己加载未打包的扩展，不是商店里一键安装；仓库没有许可证文件。本库没有安装，也没有在浏览器里让植物长出来。",
+      "qualityNoteEn": "Why: a playful web experiment where neglected tabs grow over with plants. Boundary: you load the unpacked extension yourself; it is not a one-click store install, and the repo has no license file. This library did not install it or watch plants grow in a browser.",
+      "verifyLog": "2026-10-26：博客 https://charliegerard.dev/blog/overgrown-extension/ HTTP 200，文首日期 20/10/2026。页内链接到 https://github.com/charliegerard/Overgrown ，没有 Chrome Web Store 链接。gh api：license 为空，28★，创建 2026-10-15T19:21:46Z，最近推送 2026-10-20T18:11:17Z。仓库根目录文件列表没有 LICENSE。README 安装步骤是下载 dist，在 chrome://extensions 打开开发者模式后 Load unpacked。HN https://news.ycombinator.com/item?id=50197108 （2026-10-22T15:52:21Z，撰写时 122pts）。预览为 Playwright 实拍博客首屏（含 Demo 图），1440×960 收到 1200×800 WebP。本环境未安装扩展。",
+      "verifyLogEn": "2026-10-26: blog https://charliegerard.dev/blog/overgrown-extension/ HTTP 200, dated 20/10/2026 at the top. The post links https://github.com/charliegerard/Overgrown and does not link the Chrome Web Store. gh api: license null, 28★, created 2026-10-15T19:21:46Z, last push 2026-10-20T18:11:17Z. The repo root listing has no LICENSE file. The README install steps are: download dist, then Load unpacked from chrome://extensions with developer mode on. HN https://news.ycombinator.com/item?id=50197108 (2026-10-22T15:52:21Z, 122pts at write time). Preview is a Playwright capture of the blog's first screen, including the Demo image, 1440×960 fitted to a 1200×800 WebP. The extension was not installed in this environment."
+    },
+    {
       "id": "makegradient",
       "slug": "makegradient",
       "title": "MakeGradient：免费 WebGL 渐变引擎，可导出代码/Figma/视频",
@@ -5341,9 +5471,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-26T01:14:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.78",
-    "count": 158
+    "version": "1.3.79",
+    "count": 162
   }
 }
