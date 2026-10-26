@@ -1,6 +1,77 @@
 {
   "items": [
     {
+      "id": "shadcn-ai-elements",
+      "slug": "shadcn-ai-elements",
+      "title": "shadcn AI Elements：给 AI 聊天界面的组件套件",
+      "titleEn": "shadcn AI Elements: components for AI chat UIs",
+      "hook": "给 AI 聊天准备的消息、输入和推理组件，复制进来再改。",
+      "hookEn": "Message, input, and reasoning components for AI chat. Copy them in and edit.",
+      "summary": "shadcn/ui 文档新开了 AI Elements：一组给 AI 聊天和 Agent 界面用的模式，包括 Message、Prompt Input、Reasoning、Chain of Thought、Sources、Tool、Subagent、Plan，以及它们所依托的 Trace。每一块都是现有 shadcn/ui 组件拼出来的，复制进自己的项目再改，文档写明没有单独的安装包，代码归你。Chat 是 Message Scroller 里的一轮轮 Message；一轮里面的 Reasoning、Tool、Plan 都落在 Trace 上。想从零搭聊天，文档指向一个用 AI SDK 的 Next.js 聊天模板。已经从 elements.ai-sdk.dev 拷过组件的项目可以继续用，文档另给了迁到这套组件的提示词。这和本库已有的 shadcn-ui（设计系统底座）不是同一条。文档可公开阅读。本库没有把组件装进项目，也没有跑那个聊天模板。",
+      "summaryEn": "The shadcn/ui docs now have AI Elements: patterns for AI chat and agent interfaces, including Message, Prompt Input, Reasoning, Chain of Thought, Sources, Tool, Subagent, Plan, and the Trace they sit on. Each one is a composition of existing shadcn/ui components that you copy into your project. The docs say there is no package to install, and the code is yours. A Chat is Message turns inside a Message Scroller; Reasoning, Tool, and Plan inside a turn are built on Trace. For a chatbot from scratch, the docs point at a Next.js template that uses the AI SDK. Projects that already copied components from elements.ai-sdk.dev can keep using them; the docs also include a prompt for moving a wrapper onto these components. This is a separate entry from shadcn-ui, the design-system base already in this library. The docs are public. This library did not install the components or run that chatbot template.",
+      "sourceUrl": "https://ui.shadcn.com/docs/ai-elements",
+      "secondaryUrls": [
+        "https://ui.shadcn.com/docs/changelog/2026-10-ai-elements",
+        "https://ui.shadcn.com"
+      ],
+      "previewImage": "/previews/shadcn-ai-elements.webp",
+      "promptHint": "做 AI 聊天界面时，从 shadcn/ui 文档的 AI Elements 复制 Message、Prompt Input 和 Reasoning，不要新装一个包。这和本库的 shadcn-ui 底座不是同一条。不要假设还有一套要付费的 Pro 组件。",
+      "promptHintEn": "For an AI chat UI, copy Message, Prompt Input, and Reasoning from the shadcn/ui AI Elements docs. Do not install a new package. This is separate from the shadcn-ui base entry. Do not assume a paid Pro tier.",
+      "types": [
+        "ui"
+      ],
+      "tags": [
+        "shadcn",
+        "ai",
+        "chat",
+        "components",
+        "agent-ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-14",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：给 Agent 聊天界面一套可复制的消息、输入、推理和工具步骤，和 shadcn/ui 底座分开记。边界：公开文档，复制进项目后代码归你，没有单独的包。本库没有安装组件，也没有跑文档里的聊天模板。",
+      "qualityNoteEn": "Why: a copy-in kit for agent chat — messages, input, reasoning, and tool steps — listed apart from the shadcn/ui base. Boundary: public docs; once copied, the code is yours, and there is no separate package. This library did not install the components or run the chatbot template.",
+      "verifyLog": "2026-10-26 上午（Asia/Shanghai）：https://ui.shadcn.com/docs/ai-elements HTTP 200，标题 AI Elements。https://ui.shadcn.com/docs/ai HTTP 404。更新日志 https://ui.shadcn.com/docs/changelog/2026-10-ai-elements HTTP 200，文首 date 为 2026-10-14（October 2026 - Trace, Code Block and AI Elements）。正文写 there is no package to install。页面未见 Pro 售卖说明，本条不写 Pro。类型按 agent-ui 枚举只记 ui（schema 没有 component / docs）。预览为 Playwright + 系统 Chrome 实拍文档页首屏，1440×960 收到 1200×800 WebP。未执行 shadcn add，未跑 chatbot template。",
+      "verifyLogEn": "2026-10-26 morning (Asia/Shanghai): https://ui.shadcn.com/docs/ai-elements HTTP 200, title AI Elements. https://ui.shadcn.com/docs/ai HTTP 404. Changelog https://ui.shadcn.com/docs/changelog/2026-10-ai-elements HTTP 200; frontmatter date is 2026-10-14 (October 2026 - Trace, Code Block and AI Elements). The page says there is no package to install. No Pro sales copy was on the page, so this entry claims none. Typed as ui only, because the agent-ui enum has no component or docs. Preview is a Playwright capture with system Chrome of the docs first screen, 1440×960 fitted to a 1200×800 WebP. Did not run shadcn add or the chatbot template."
+    },
+    {
+      "id": "sketchagent",
+      "slug": "sketchagent",
+      "title": "SketchAgent：给编程 Agent 用的 3D 网格操场",
+      "titleEn": "SketchAgent: a 3D mesh playground for coding agents",
+      "hook": "浏览器里描述物体，助手写脚本改三维网格。",
+      "hookEn": "Describe an object in the browser and an agent scripts the 3D mesh.",
+      "summary": "SketchAgent 是浏览器里的三维网格操场。页面写：贴一张物体照片或用文字描述，助手会写建模脚本、渲染预览，再改模型。视口可以在 Shaded、Clay、Wireframe 之间换，也可以导出 GLB 或 STL。不想把密钥交给网页的话，页面提供一段提示，让 Claude Code、Codex CLI 或 Cursor 经 MCP 来驱动。密钥提示写明留在这个浏览器里，只发给所选的服务商。打开时是空场景，单位是毫米，Z 轴向上。作者的 Show HN 说明底层是 three.js 和 manifold-3d，并给助手一个多视角的渲染预览。本库只打开了空操场，没有填写 API 密钥，没有跑通一次建模，也没有接上 MCP。",
+      "summaryEn": "SketchAgent is a browser playground for 3D meshes. The page says you attach a photo of an object or describe it, and an agent writes a modeling script, renders previews, and revises the model. The viewport switches among Shaded, Clay, and Wireframe, and can export GLB or STL. If you would rather not give the page a key, it offers a prompt so Claude Code, Codex CLI, or Cursor can drive it over MCP. The key note says keys stay in this browser and are sent only to the provider you pick. It opens on an empty scene, in millimeters, Z up. The author's Show HN says it runs on three.js and manifold-3d and gives the agent a multi-view render preview. This library only opened the empty playground. It did not enter an API key, did not complete a modeling run, and did not connect MCP.",
+      "sourceUrl": "https://sketchagent.dev/",
+      "secondaryUrls": [
+        "https://sketchagent.dev/playground",
+        "https://news.ycombinator.com/item?id=50237291"
+      ],
+      "previewImage": "/previews/sketchagent.webp",
+      "promptHint": "打开 SketchAgent 操场，用文字或照片描述要做的物体；或者用页面上的 MCP 提示，让 Claude Code、Codex 或 Cursor 来驱动。密钥留在浏览器里。从空场景开始，不要假设已经生成过模型。",
+      "promptHintEn": "Open the SketchAgent playground and describe an object in words or with a photo, or use the on-page MCP prompt with Claude Code, Codex, or Cursor. Leave keys in the browser. Start from the empty scene and do not assume a model was already generated.",
+      "types": [
+        "threejs",
+        "ui"
+      ],
+      "tags": [
+        "3d",
+        "mesh",
+        "agent",
+        "playground",
+        "threejs"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26T01:14:00Z",
+      "qualityNote": "收录理由：编程助手可以在浏览器里改三维网格，也可以改走自己的 MCP，适合把 AI 和三维设计放在一起试。边界：要自备模型密钥，或自备编程助手。本库没有填写密钥，没有生成模型，也没有接上 MCP。",
+      "qualityNoteEn": "Why: a coding agent can edit 3D meshes in the browser, or drive the same playground over your own MCP, which fits trying AI and 3D design together. Boundary: you bring a model key or your own coding agent. This library did not enter a key, did not generate a model, and did not connect MCP.",
+      "verifyLog": "2026-10-26：https://sketchagent.dev/ 与 https://sketchagent.dev/playground 均 HTTP 200，首页跳到 /playground。页面文案含 Build 3D models by chatting、Bring your own agent、Empty scene · units mm · Z up。Show HN https://news.ycombinator.com/item?id=50237291 （2026-10-26T00:02:39Z，作者 wsxiaoys，撰写时 1pt），标题写 three.js + manifold-3d。该帖提交链接是 https://sketchagent.dev/s/yfYU6LhT ，本库没有打开那条轨迹。任务草稿里的 item 45728715 打开后是另一条旧评论，不是这个产品，故未收录。类型按 agent-ui 枚举记 threejs、ui（操场不是落地页，未记 landing）。预览为 Playwright + Chrome（SwiftShader）实拍空操场，1440×960 收到 1200×800 WebP。未填 API key，未点 Send，未接 MCP。",
+      "verifyLogEn": "2026-10-26: https://sketchagent.dev/ and https://sketchagent.dev/playground both HTTP 200; the home URL redirects to /playground. On-page copy includes Build 3D models by chatting, Bring your own agent, and Empty scene · units mm · Z up. Show HN https://news.ycombinator.com/item?id=50237291 (2026-10-26T00:02:39Z, author wsxiaoys, 1pt at write time); the title says three.js + manifold-3d. That post's submitted link is https://sketchagent.dev/s/yfYU6LhT , which this library did not open. The draft item 45728715 is an older unrelated comment, so it is not linked. Types are threejs and ui per the agent-ui enum (the playground is not a landing page, so landing is omitted). Preview is a Playwright + Chrome (SwiftShader) capture of the empty playground, 1440×960 fitted to a 1200×800 WebP. Did not enter an API key, did not press Send, and did not connect MCP."
+    },
+    {
       "id": "lightswind",
       "slug": "lightswind",
       "title": "Lightswind UI：命令行装进项目、源码归你的 React 动画组件库（带 MCP）",
@@ -2589,9 +2660,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-10-26T01:14:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.33",
-    "count": 71
+    "version": "1.4.34",
+    "count": 73
   }
 }
