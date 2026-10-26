@@ -46,7 +46,7 @@ npm run preview
 
 `.github/workflows/deploy.yml` 在 PR 上构建检查，在 main 推送后部署。新目录通过静态 HTML 发布，不需要服务器、数据库或访问时调用模型。
 
-收录 PR 自动合并：`.github/workflows/auto-merge-catalog.yml` 在每次 PR 构建完成后（以及每 6 小时）扫一遍开着的 PR。仓库所有者从本仓库开的、非草稿、只改 `data/{cases,html-items,agent-ui,models,image-prompts,changelog}.json` 和 `public/previews/*` 的 PR，会按条目合并进 main（`scripts/merge-catalog-json.mjs` 按 `id` 合并并重算 `meta`），逐个构建通过后推送并触发部署。合不进或构建失败的 PR 会被加上 `catalog-hold` 标签并留言，去掉标签后下一轮重试。改到代码、样式或其他数据的 PR 仍需人工审核。
+收录 PR 自动合并：`.github/workflows/auto-merge-catalog.yml` 在每次 PR 构建完成后（以及每 6 小时）扫一遍开着的 PR。仓库所有者从本仓库开的、3 天内新开的、非草稿、只改 `data/{cases,html-items,agent-ui,models,image-prompts,changelog}.json` 和 `public/previews/*` 的 PR，会按条目合并进 main（`scripts/merge-catalog-json.mjs` 按 `id` 合并并重算 `meta`），逐个构建通过后推送并触发部署。合不进或构建失败的 PR 会被加上 `catalog-hold` 标签并留言，去掉标签后下一轮重试。改到代码、样式或其他数据的 PR，以及开了超过 3 天的旧 PR，仍需人工审核。
 
 分享与订阅：
 - 构建后 `scripts/build-og.mjs` 为每个有本地截图的详情页生成 1200×630 分享卡（`dist/og/<目录>/<slug>.jpg`），`og:image` 指向它；没有截图的页面沿用 `public/og.png`。
