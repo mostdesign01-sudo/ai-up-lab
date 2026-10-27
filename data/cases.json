@@ -1,6 +1,47 @@
 {
   "cases": [
     {
+      "id": "frameground",
+      "slug": "frameground",
+      "title": "Frameground：给编程助手的开源设计画布，每帧一份独立 HTML",
+      "titleEn": "Frameground: an open-source design canvas where each frame is one HTML file",
+      "kind": "tool",
+      "hook": "每帧是一份独立 HTML，编程助手改文件，画布跟着同步。",
+      "hookEn": "Each frame is one HTML file. Coding agents edit it on disk and the canvas follows.",
+      "summary": "Frameground 是给编程助手用的开源设计画布（MIT）。落地页写：描述一屏，助手把 HTML 写到磁盘，工具监视文件系统，再用 iframe 钉到无限画布上。每一帧是项目目录里的一份自包含 HTML；旁边还有 PROJECT.md、DESIGN.md（颜色、字体、间距等令牌，对齐 Google 的 design.md）、FEEL.md（动势、构图、气氛）、frames.json 和 .opendesign/layout.json。Claude Code 技能在 .claude/skills：/frame 写或改一帧，/frontend-design 定视觉方向，/port 把现有界面按屏搬进来（README 写可拉起并行子助手，并支持 --redesign 与 --append），/alternatives 对同一帧出多稿，/suggest 把配色或字体变体放进 Tokens 面板。README 还写 opencode、Codex、Gemini CLI 可以读项目说明。技术栈是 React、@xyflow/react 和 Vite，本机执行 npm run dev。落地页对照表把 Claude Design 和 Google Stitch 写成闭源云端，把自己写成 MIT、本机、HTML 文件、任意助手、可用 git，费用栏写 Free。那是页面上的对照。与仍打开的 #87 里的 google-stitch 不是同一条。本库没有安装依赖，没有启动本地画布，也没有调用技能或生成帧。",
+      "summaryEn": "Frameground is an open-source design canvas for coding agents (MIT). The landing page says you describe a screen, the agent writes HTML to disk, and the tool watches the filesystem and pins each file on an infinite canvas as an iframe. Each frame is one self-contained HTML file in the project directory, alongside PROJECT.md, DESIGN.md (color, type, and spacing tokens, aligned with Google's design.md), FEEL.md (motion, composition, and atmosphere), frames.json, and .opendesign/layout.json. Claude Code skills live in .claude/skills: /frame writes or updates one frame, /frontend-design sets a visual direction, /port brings existing screens in (the README says it can spawn parallel subagents, with --redesign and --append), /alternatives makes several takes of one frame, and /suggest drops palette or type variants into the Tokens panel. The README also says opencode, Codex, and Gemini CLI can read the project instructions. The stack is React, @xyflow/react, and Vite; locally you run npm run dev. The landing page's comparison table lists Claude Design and Google Stitch as closed and cloud-hosted, and Frameground as MIT, local, HTML files, any agent, git-friendly, with Free in the cost row. That table is the page's own comparison. This is not the google-stitch entry in still-open #87. This library did not install dependencies, did not start the local canvas, and did not run a skill or generate a frame.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Local design canvas",
+      "sourceUrl": "https://basta.github.io/frameground/",
+      "secondaryUrls": [
+        "https://github.com/basta/frameground"
+      ],
+      "previewImage": "/previews/frameground.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "opencode",
+        "Gemini CLI"
+      ],
+      "publishedAt": "2026-04-20",
+      "updatedAt": "2026-10-27T12:30:00Z",
+      "qualityNote": "收录理由：MIT 的本机设计画布，每帧是一份可以 diff 的 HTML，并给编程助手准备了写帧、定方向、搬迁、多稿和令牌建议。边界：五个技能目录都在 .claude/skills；skills/ 里没有 suggest 的镜像，opencode 与 Gemini CLI 的命令目录里只看到 frame、frontend-design、port。落地页写无账号、无遥测、无用量上限，自带的助手仍可能另行计费。本库没有安装依赖，没有启动本地画布，也没有让助手执行技能。",
+      "qualityNoteEn": "Why: an MIT local design canvas where each frame is diffable HTML, with agent skills to write a frame, set a direction, port screens, explore alternatives, and suggest tokens. Boundary: all five skill folders are under .claude/skills; skills/ has no suggest mirror, and the opencode and Gemini CLI command folders only contain frame, frontend-design, and port. The landing page says there is no account, telemetry, or usage cap; the agent you bring may still cost money. Dependencies were not installed, the local canvas was not started, and no skill was run.",
+      "verifyLog": "2026-10-27 晚间（Asia/Shanghai）：https://basta.github.io/frameground/ HTTP 200，title “Frameground — The open source AI design tool.”。页内眉题 Open Source · Local-First · Agent-Agnostic，示例提示 “/frame a dashboard with revenue charts”，主标题 “The open source AI design tool. One sentence in, a rendered frame out.”，导航 About / Compare / GitHub。Hero 是页面自带的 media/hero.mp4（poster 为 media/hero-poster.jpg），画面为 my-app · canvas，两帧文件名 homepage.html 与 messages.html。预览为系统 google-chrome 无头模式实拍该首屏，窗口 1200×800，sharp 存成 WebP。仓库 https://github.com/basta/frameground ：gh api license SPDX MIT，stargazers_count 28，forks 7，created 2026-04-20T13:49:57Z，pushed 2026-07-20T14:31:42Z，homepage 指向落地页，默认分支 master。LICENSE 为 MIT，Copyright (c) 2026 basta。package.json license MIT，依赖含 react、@xyflow/react、vite，engines node >=20.19.0。.claude/skills 有 alternatives、frame、frontend-design、port、suggest。skills/ 下有 alternatives.md、frame.md、frontend-design.md、port.md，没有 suggest.md。.opencode/commands 与 .gemini/commands 只有 frame、frontend-design、port。内容 API 里 AGENTS.md 与 GEMINI.md 是同一 blob，和 CLAUDE.md 不同。本库没有 npm install，没有 npm run dev，没有创建项目，没有调用技能。",
+      "verifyLogEn": "2026-10-27 evening (Asia/Shanghai): https://basta.github.io/frameground/ HTTP 200, title “Frameground — The open source AI design tool.” Page eyebrow Open Source · Local-First · Agent-Agnostic, example prompt “/frame a dashboard with revenue charts”, headline “The open source AI design tool. One sentence in, a rendered frame out.”, nav About / Compare / GitHub. The hero is the page's own media/hero.mp4 (poster media/hero-poster.jpg), showing my-app · canvas with frame filenames homepage.html and messages.html. Preview is a headless system google-chrome capture of that first screen, window 1200×800, saved with sharp as WebP. Repo https://github.com/basta/frameground : gh api license SPDX MIT, stargazers_count 28, forks 7, created 2026-04-20T13:49:57Z, pushed 2026-07-20T14:31:42Z, homepage points at the landing page, default branch master. LICENSE is MIT, Copyright (c) 2026 basta. package.json license MIT, dependencies include react, @xyflow/react, and vite, engines node >=20.19.0. .claude/skills contains alternatives, frame, frontend-design, port, and suggest. skills/ contains alternatives.md, frame.md, frontend-design.md, and port.md, and does not contain suggest.md. .opencode/commands and .gemini/commands contain only frame, frontend-design, and port. The contents API returns the same blob for AGENTS.md and GEMINI.md, different from CLAUDE.md. This library did not npm install, did not npm run dev, did not create a project, and did not run a skill."
+    },
+    {
       "id": "latch",
       "slug": "latch",
       "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
@@ -11267,10 +11308,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-27T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.74",
-    "count": 211,
+    "version": "1.4.75",
+    "count": 212,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11552,7 +11593,9 @@
       "https://threeui.com/css/animated-top-dock/sable",
       "https://ui.krutikraut.com/",
       "https://www.makegradient.com/",
-      "https://latch.tools/"
+      "https://latch.tools/",
+      "https://basta.github.io/frameground/",
+      "https://github.com/basta/frameground"
     ]
   }
 }
