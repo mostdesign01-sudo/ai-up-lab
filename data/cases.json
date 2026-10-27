@@ -1,6 +1,87 @@
 {
   "cases": [
     {
+      "id": "pigma",
+      "slug": "pigma",
+      "title": "Pigma：浏览器里的开源设计编辑器",
+      "titleEn": "Pigma: an open-source design editor in the browser",
+      "kind": "tool",
+      "hook": "在浏览器里改设计稿，文件留在这台电脑上。",
+      "hookEn": "Edit a design in the browser and keep the file on this computer.",
+      "summary": "Pigma 是浏览器里的开源设计编辑器。落地页写它受 Figma 启发，有矢量与形状、会跟着内容重排的布局、组件、原型，以及 SVG、PNG、PDF 导出；作品保存在这个浏览器里，可以导出留档。页面标明 MIT，可以自己托管或分叉。仓库说明写明它不是 Figma 出品，也没有得到 Figma 背书。本库打开了编辑器，看到一份本地的 Pigma Starter：1 个页面、63 个图层，顶部有 Design、Prototype、Inspect。落地页的助手一节写：Claude 经 MCP 调用画布工具改稿，但助手需要一台 Pigma 服务，由桌面应用在本机运行；仓库说明写托管页面是静态构建，共享房间和助手桥接不在这页上跑。发布列表当时是空的。本库没有新画形状，没有导出，没有编译桌面应用，也没有接上助手。",
+      "summaryEn": "Pigma is an open-source design editor in the browser. The landing page says it is Figma-inspired, with vectors and shapes, layout that reflows, components, prototypes, and SVG, PNG, and PDF export. Work stays in this browser, and you can export a copy. The page marks it MIT, and you can self-host or fork it. The repo states it is not a Figma product and is not endorsed by Figma. This library opened the editor and saw a local Pigma Starter: 1 page, 63 layers, with Design, Prototype, and Inspect. The landing page's assistant section says Claude edits the canvas through MCP, but the assistant needs a Pigma server that the desktop app runs on your machine. The repo says the hosted page is a static build, so shared rooms and the agent bridge do not run there. The releases list was empty. This library did not draw a new shape, did not export, did not build the desktop app, and did not connect an assistant.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Browser design editor",
+      "sourceUrl": "https://josei.github.io/pigma/",
+      "secondaryUrls": [
+        "https://josei.github.io/pigma/app/",
+        "https://github.com/josei/pigma"
+      ],
+      "previewImage": "/previews/pigma.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "MCP"
+      ],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：不用注册就能在浏览器里打开的开源设计编辑器，落地页也写了让编程助手改画布的路径。边界：托管页是静态编辑器，助手要另有本机服务；发布列表当时没有可下载的版本。本库没有新画形状，没有导出，也没有接上助手。",
+      "qualityNoteEn": "Why: an open-source design editor you can open in the browser without an account, and the landing page also describes a path for a coding agent to edit the canvas. Boundary: the hosted page is a static editor, and the assistant needs a local server; the releases list had nothing to download. This library did not draw a new shape, did not export, and did not connect an assistant.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://josei.github.io/pigma/ 与 https://josei.github.io/pigma/app/ 均 HTTP 200。编辑器标题 Pigma，状态行 Local document · 63 layers · 1 page，画布上是 Pigma Starter。落地页原文含 MIT licensed · free to use, self-host or fork，以及 The assistant needs a Pigma server. The desktop app runs one on your machine. README 写 The hosted link above is a static build, so sharing rooms and the agent bridge show a note there instead，并写 not affiliated with, endorsed by, or sponsored by Figma。打开编辑器时 https://josei.github.io/config.json HTTP 404，画布仍显示初稿。gh api：josei/pigma，license SPDX MIT，0★，创建 2026-10-26T11:20:25Z，最近推送 2026-10-27T00:33:51Z；releases 列表长度为 0。预览为 Playwright + 系统 Chrome 实拍编辑器，视口 1440×960，sharp 收到 1200×800 WebP。未新画形状，未导出，未 npm run relay，未接 MCP。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://josei.github.io/pigma/ and https://josei.github.io/pigma/app/ both HTTP 200. Editor title Pigma, status line Local document · 63 layers · 1 page, canvas is Pigma Starter. Landing copy includes MIT licensed · free to use, self-host or fork, and The assistant needs a Pigma server. The desktop app runs one on your machine. The README says the hosted link is a static build, so sharing rooms and the agent bridge do not run there, and that it is not affiliated with, endorsed by, or sponsored by Figma. While the editor loaded, https://josei.github.io/config.json was HTTP 404; the starter canvas still appeared. gh api: josei/pigma, license SPDX MIT, 0★, created 2026-10-26T11:20:25Z, last push 2026-10-27T00:33:51Z; the releases list length was 0. Preview is a Playwright capture with system Chrome of the editor, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not draw a new shape, did not export, did not run npm run relay, and did not connect MCP."
+    },
+    {
+      "id": "bureau",
+      "slug": "bureau",
+      "title": "BUREAU：给编程助手的设计工作室技能",
+      "titleEn": "BUREAU: a design-studio skill for coding agents",
+      "kind": "tool",
+      "hook": "给编程助手的开源设计技能，附带可打开的网页模板。",
+      "hookEn": "An open-source design skill for coding agents, with web templates you can open.",
+      "summary": "BUREAU 是一套开源设计技能。站点写 v3.0.0、MIT，装进 Claude Code、Codex、Antigravity 或 Hermes。安装段写：克隆仓库后运行 bash installers/install.sh --agent claude --scope user，需要 Node 20 或更新；浏览器取证和 Figma MCP 都是可选的。装好后重启助手，用 /bureau 调用。页面后部写 Thirteen worlds. Thirteen lineages.，列出 Kinetic Editorial、Product Surface、Immersive Experience 等十三套模板，每套写由三位设计师的方法混合，并各有自己的手机版构图。首页侧栏的统计却写着 3 个 live templates、10 道审查、23 个深度模块、3 种语言。本库打开了 Kinetic Editorial（demos/kinetic-editorial），看到 Marginal / Night，大标题 After dark, the city re-computes.，旁注 Autumn 2026、Lisbon。本库没有运行安装脚本，也没有在助手里调用 /bureau。",
+      "summaryEn": "BUREAU is an open-source design skill. The site says v3.0.0 and MIT, and that it installs into Claude Code, Codex, Antigravity, or Hermes. The install section says to clone the repo and run bash installers/install.sh --agent claude --scope user. It requires Node 20 or newer. Browser evidence and Figma MCP are both optional. After installing, restart the agent and call /bureau. Further down, the page says Thirteen worlds. Thirteen lineages. and lists thirteen templates, including Kinetic Editorial, Product Surface, and Immersive Experience. Each one names a blend of three designers and its own mobile composition. The hero stat instead says 3 live templates, plus 10 review gates, 23 depth modules, and 3 languages. This library opened Kinetic Editorial (demos/kinetic-editorial) and saw Marginal / Night, the headline After dark, the city re-computes., and the note Autumn 2026, Lisbon. This library did not run the installer and did not call /bureau in an agent.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design studio skill",
+      "sourceUrl": "https://acf1210.github.io/bureau/",
+      "secondaryUrls": [
+        "https://github.com/acf1210/bureau",
+        "https://acf1210.github.io/bureau/demos/kinetic-editorial/index.html"
+      ],
+      "previewImage": "/previews/bureau.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Antigravity",
+        "Hermes"
+      ],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：编程助手可以装上一套带模板和审查步骤的设计技能，模板页本身就能打开看。边界：首页统计写 3 套活模板，页面后部又列出十三套，两处数字没有对上。本库没有安装，也没有让助手跑一遍。",
+      "qualityNoteEn": "Why: a coding agent can install a design skill that ships templates and a review path, and the template pages themselves open in the browser. Boundary: the hero stat says 3 live templates, while a later section lists thirteen, and those two counts were not reconciled. This library did not install it and did not run it in an agent.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://acf1210.github.io/bureau/ HTTP 200。页首 Open-source agent skill, v3.0.0, MIT licence；侧栏 REVIEW GATES 10、DEPTH MODULES 23、LIVE TEMPLATES 3、LANGUAGES 3。正文 Thirteen worlds. Thirteen lineages. 下列出 13 个名字：Kinetic Editorial、Product Surface、Immersive Experience、Legal Practice、Architecture Studio、Restaurant Table、Private Bank、Clinic Care、Developer API、Fashion Atelier、Record Label、Museum Archive、Hardware Store。安装段原文 Requires Node 20+. Playwright is optional and degrades to manual screenshots. Figma MCP is optional，以及 bash installers/install.sh --agent claude --scope user，另有 --agent all --scope user --dry-run。https://acf1210.github.io/bureau/demos/kinetic-editorial/index.html HTTP 200，标题 Marginal / Night — An independent journal after dark，h1 After dark, the city re-computes. gh api：acf1210/bureau，license SPDX MIT，1★，创建 2026-10-26T16:49:40Z，最近推送 2026-10-26T20:36:27Z。预览为 Playwright + 系统 Chrome 实拍该 Kinetic Editorial 首页，视口 1440×960，sharp 收到 1200×800 WebP。未运行 install.sh，未调用 /bureau，未点 Read the night index。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://acf1210.github.io/bureau/ HTTP 200. Header: Open-source agent skill, v3.0.0, MIT licence. Side stats: REVIEW GATES 10, DEPTH MODULES 23, LIVE TEMPLATES 3, LANGUAGES 3. Body says Thirteen worlds. Thirteen lineages. and lists 13 names: Kinetic Editorial, Product Surface, Immersive Experience, Legal Practice, Architecture Studio, Restaurant Table, Private Bank, Clinic Care, Developer API, Fashion Atelier, Record Label, Museum Archive, Hardware Store. Install copy: Requires Node 20+. Playwright is optional and degrades to manual screenshots. Figma MCP is optional, plus bash installers/install.sh --agent claude --scope user, and a --agent all --scope user --dry-run. https://acf1210.github.io/bureau/demos/kinetic-editorial/index.html HTTP 200, title Marginal / Night — An independent journal after dark, h1 After dark, the city re-computes. gh api: acf1210/bureau, license SPDX MIT, 1★, created 2026-10-26T16:49:40Z, last push 2026-10-26T20:36:27Z. Preview is a Playwright capture with system Chrome of that Kinetic Editorial first screen, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not run install.sh, did not call /bureau, and did not press Read the night index."
+    },
+    {
       "id": "latch",
       "slug": "latch",
       "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
@@ -11267,10 +11348,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-27T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.74",
-    "count": 211,
+    "version": "1.4.75",
+    "count": 213,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11552,7 +11633,13 @@
       "https://threeui.com/css/animated-top-dock/sable",
       "https://ui.krutikraut.com/",
       "https://www.makegradient.com/",
-      "https://latch.tools/"
+      "https://latch.tools/",
+      "https://josei.github.io/pigma/",
+      "https://josei.github.io/pigma/app/",
+      "https://github.com/josei/pigma",
+      "https://acf1210.github.io/bureau/",
+      "https://github.com/acf1210/bureau",
+      "https://acf1210.github.io/bureau/demos/kinetic-editorial/index.html"
     ]
   }
 }
