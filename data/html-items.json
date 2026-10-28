@@ -1,6 +1,141 @@
 {
   "items": [
     {
+      "id": "mozaik",
+      "slug": "mozaik",
+      "title": "Mozaik：拷进项目的动画 React 组件",
+      "titleEn": "Mozaik: animated React components you copy into a project",
+      "hook": "七十个动画组件，源码可以拷进 React 项目。",
+      "hookEn": "Seventy animated components, with source you can copy into a React project.",
+      "summary": "Mozaik 是一套动画 React 组件的公开画廊。首页写它们共用一套 token，遵循系统的减少动效设置，可以用键盘操作，拷进项目后是你自己的源码。组件页写着 70 components · 3 variants · 1 block，分组包括 Text、Backgrounds、Cursor、Buttons、Cards，以及 AI、Data、On-chain。本库打开了 Shimmer Button：页面写光线沿按钮边缘转一圈，禁用或处于减少动效时停下；预览区能看到这颗按钮，旁边还有 Neutral light 和 Disabled。该页的安装是三步：npm install motion，npm install clsx tailwind-merge，再把组件拷到 components/shimmer-button.tsx。仓库 README 另给了一条注册表命令，示例是 rolling-text 的 json。许可证是 MIT。本库没有安装依赖，没有把文件拷进项目，也没有拨动减少动效开关。",
+      "summaryEn": "Mozaik is a public gallery of animated React components. The home page says they share one token set, follow the system reduced-motion setting, work with a keyboard, and land in your project as source you own. The components page says 70 components · 3 variants · 1 block, grouped into Text, Backgrounds, Cursor, Buttons, Cards, plus AI, Data, and On-chain. This library opened Shimmer Button. The page says a light circles the button's edge and stops when the button is disabled or reduced motion is on. The preview shows that button, plus Neutral light and Disabled. That page's install is three steps: npm install motion, npm install clsx tailwind-merge, then copy the component to components/shimmer-button.tsx. The repo README also gives a registry command, with rolling-text's json as the example. The license is MIT. This library did not install the dependencies, did not copy the file into a project, and did not toggle reduced motion.",
+      "sourceUrl": "https://goktas-batuhan.github.io/mozaik-site/",
+      "secondaryUrls": [
+        "https://goktas-batuhan.github.io/mozaik-site/components/",
+        "https://goktas-batuhan.github.io/mozaik-site/components/shimmer-button/",
+        "https://github.com/goktas-batuhan/mozaik"
+      ],
+      "previewImage": "/previews/mozaik.webp",
+      "types": [
+        "component"
+      ],
+      "tags": [
+        "react",
+        "motion",
+        "shadcn",
+        "components",
+        "design"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：动画组件有公开画廊，单颗按钮的页面写了拷贝源码的步骤。边界：许可证是 MIT。本库只打开了画廊和 Shimmer Button，没有安装依赖，也没有拷进项目。",
+      "qualityNoteEn": "Why: the animated components have a public gallery, and the single-button page writes out the steps for copying the source. Boundary: the license is MIT. This library only opened the gallery and Shimmer Button. It did not install the dependencies or copy anything into a project.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://goktas-batuhan.github.io/mozaik-site/ HTTP 200，首页有 70 components, copy the code，以及 Components 70、Variants and blocks 4、MIT sources credited 7、Pass the quality gate 100%。https://goktas-batuhan.github.io/mozaik-site/components/ HTTP 200，正文 70 components · 3 variants · 1 block。侧栏计数 Text 13、Backgrounds 10、Cursor 6、Buttons 5、Cards 4、Navigation 2、Overlays 2、Layout 9、Scroll 1、Feedback 8、AI 2、Data 1、Media 1、On-chain 6，合计 70；Blocks 下 Marketing 1。https://goktas-batuhan.github.io/mozaik-site/components/shimmer-button/ HTTP 200，标题 Shimmer Button · Mozaik，正文 A button with a light that circles its edge. Stops when disabled or under reduced motion. 安装三步为 npm install motion、npm install clsx tailwind-merge、拷到 components/shimmer-button.tsx。README 示例命令为 npx shadcn@latest add https://raw.githubusercontent.com/goktas-batuhan/mozaik/main/public/r/rolling-text.json 。gh api：goktas-batuhan/mozaik，license SPDX MIT，0★，创建 2026-10-26T08:10:01Z，最近推送 2026-10-26T23:19:40Z。预览为 Playwright + 系统 Chrome（SwiftShader）实拍组件目录，视口 1440×960，sharp 收到 1200×800 WebP。未 npm install，未拷文件，未拨 Reduced motion。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://goktas-batuhan.github.io/mozaik-site/ HTTP 200. The home page shows 70 components, copy the code, plus Components 70, Variants and blocks 4, MIT sources credited 7, and Pass the quality gate 100%. https://goktas-batuhan.github.io/mozaik-site/components/ HTTP 200, body 70 components · 3 variants · 1 block. Sidebar counts: Text 13, Backgrounds 10, Cursor 6, Buttons 5, Cards 4, Navigation 2, Overlays 2, Layout 9, Scroll 1, Feedback 8, AI 2, Data 1, Media 1, On-chain 6, totaling 70; under Blocks, Marketing 1. https://goktas-batuhan.github.io/mozaik-site/components/shimmer-button/ HTTP 200, title Shimmer Button · Mozaik, body A button with a light that circles its edge. Stops when disabled or under reduced motion. The three install steps are npm install motion, npm install clsx tailwind-merge, and copy to components/shimmer-button.tsx. The README example command is npx shadcn@latest add https://raw.githubusercontent.com/goktas-batuhan/mozaik/main/public/r/rolling-text.json . gh api: goktas-batuhan/mozaik, license SPDX MIT, 0★, created 2026-10-26T08:10:01Z, last push 2026-10-26T23:19:40Z. Preview is a Playwright capture with system Chrome (SwiftShader) of the component index, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not npm install, did not copy the file, and did not toggle Reduced motion."
+    },
+    {
+      "id": "font-fam",
+      "slug": "font-fam",
+      "title": "Font Fam：可检索的开源字体目录",
+      "titleEn": "Font Fam: a searchable directory of open-source fonts",
+      "hook": "检索两千多个开源字体，并在页面里改字预览。",
+      "hookEn": "Search more than two thousand open-source fonts and preview the type on the page.",
+      "summary": "Font Fam 把开源字体收成一个可以检索的目录。首页写着 2,181 typefaces from 851 designers，可以按 Sans、Serif、Display、Handwriting、Mono、Variable 筛，也能改字号和字重。关于页把来源拆成 Google Fonts 1,943 个家族、Fontsource 66 个，以及独立字体厂牌 172 个，三者相加正是 2,181；并写完全免费，没有广告、账号和跟踪，字体文件只在许可允许时放在站上。本库在搜索框输入 Geist Pixel，列表只留下这一家；打开它的字体页，设计者写 Andrés Briganti、Evil Rabbit、Guillermo Rauch，分类 Display，1 个样式，可变轴 ELSH 0–100，来源 Google Fonts，许可一行写 Open source (SIL OFL, Apache or Ubuntu)，正文可以改自己的句子。页脚写 Made in MVD, Uruguay，© 2026 Ben Sterne。本库没有下载字体文件，也没有把每一种筛选都点一遍。",
+      "summaryEn": "Font Fam collects open-source fonts into a directory you can search. The home page says 2,181 typefaces from 851 designers. You can filter by Sans, Serif, Display, Handwriting, Mono, and Variable, and you can change size and weight. The about page splits the sources into 1,943 Google Fonts families, 66 from Fontsource, and 172 from independent foundries, which add up to 2,181. It also says the directory is free, with no ads, no account, and no tracking, and that font files are hosted on the site only where the license allows. This library typed Geist Pixel into the search box and the list kept that one family. Its font page names Andrés Briganti, Evil Rabbit, and Guillermo Rauch, category Display, 1 style, variable axis ELSH 0–100, source Google Fonts, and a license line reading Open source (SIL OFL, Apache or Ubuntu). The specimen text can be replaced with your own sentence. The footer says Made in MVD, Uruguay, © 2026 Ben Sterne. This library did not download a font file and did not click every filter.",
+      "sourceUrl": "https://fontfam.net/",
+      "secondaryUrls": [
+        "https://fontfam.net/about/",
+        "https://fontfam.net/fonts/geist-pixel/",
+        "https://news.ycombinator.com/item?id=50248841"
+      ],
+      "previewImage": "/previews/font-fam.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "font",
+        "typography",
+        "directory",
+        "design"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：把散落的开源字体收成可以搜索和预览的目录，字体页写着设计者和来源。边界：这是目录，不是生成字体的模型。本库搜过一个家族并打开了它的页面，没有下载字体文件。",
+      "qualityNoteEn": "Why: it gathers scattered open-source fonts into a directory you can search and preview, and a font page names the designers and the source. Boundary: it is a directory, not a model that generates fonts. This library searched for one family and opened its page. It did not download a font file.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://fontfam.net/ HTTP 200，首页原文 2,181 typefaces from 851 designers。搜索框填入 Geist Pixel 后列表只剩 Geist Pixel（Display · 1 style · VF · Andrés Briganti +2）。https://fontfam.net/fonts/geist-pixel/ HTTP 200，标题 Geist Pixel Font: Free Preview & Download | Font Fam；许可一行原文 Open source (SIL OFL, Apache or Ubuntu)；有 Download from Google Fonts 链接。https://fontfam.net/about/ HTTP 200，原文 Sources: Google Fonts (1,943 families), Fontsource (66), and 172 families from independent foundries，以及 completely free: no ads, no account, no tracking；1,943+66+172=2,181。页脚 Made in MVD, Uruguay · © 2026 by Ben Sterne。Show HN https://news.ycombinator.com/item?id=50248841 （2026-10-26T18:41:57Z，作者 bensterne，撰写时 5pts）。预览为 Playwright + 系统 Chrome 实拍未搜索的目录网格，视口 1440×960，sharp 收到 1200×800 WebP。未点下载，未逐个点 Sans / Serif 等筛选，未打开 Pairs。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://fontfam.net/ HTTP 200. Home copy: 2,181 typefaces from 851 designers. After typing Geist Pixel in the search box, the list kept only Geist Pixel (Display · 1 style · VF · Andrés Briganti +2). https://fontfam.net/fonts/geist-pixel/ HTTP 200, title Geist Pixel Font: Free Preview & Download | Font Fam. The license line reads Open source (SIL OFL, Apache or Ubuntu). There is a Download from Google Fonts link. https://fontfam.net/about/ HTTP 200. Copy: Sources: Google Fonts (1,943 families), Fontsource (66), and 172 families from independent foundries, and completely free: no ads, no account, no tracking. 1,943+66+172=2,181. Footer: Made in MVD, Uruguay · © 2026 by Ben Sterne. Show HN https://news.ycombinator.com/item?id=50248841 (2026-10-26T18:41:57Z, author bensterne, 5pts at write time). Preview is a Playwright capture with system Chrome of the unfiltered directory grid, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not press download, did not click every Sans / Serif filter, and did not open Pairs."
+    },
+    {
+      "id": "uipalooza",
+      "slug": "uipalooza",
+      "title": "UI Palooza：同一道题，对照模型和设计技能",
+      "titleEn": "UI Palooza: one brief, compared across models and design skills",
+      "hook": "同一道界面题，并排看模型和设计技能的成稿。",
+      "hookEn": "One interface brief, side by side across models and design skills.",
+      "summary": "UI Palooza 把同一份前端题目交给不同的模型和设计技能，再把成稿排成矩阵。本库打开时，页头写 18 个模型、8 个技能、472/483 次已捕获的运行。题目至少有 City journal、Weekend discovery、Team inbox、Forma frontend 四份。技能列包括 Vanilla（不加设计技能）、Frontend Design（Anthropic）、Web Guidelines（Vercel）、UI UX Pro Max、Impeccable、Taste、Distinctive Websites、Best Web Design。样本有 Baseline A、Baseline B、Alternative、Whacky；页面写 A 与 B 各自独立，Alternative 使用基线的描述，Whacky 用一条新的实验提示。供应商筛选项里有 Anthropic、DeepSeek、Meta、OpenAI、Reflection、Z.ai。第一行是 GLM 5.2（Z.ai · Pi · Lunaroute），格子上写着检查通过数和耗时。点 Open artifact 会打开一份可交互的成稿。本库打开了 City journal、Vanilla、GLM 5.2 的那一格，页面标题是 CITYSIDE — Everyday city life。llms.txt 的快照时间是 2026-10-23，写 18 行模型、4 份内置题目、8 个技能条件。本库没有提交自己的题目，也没有重跑任何一次生成。",
+      "summaryEn": "UI Palooza gives the same frontend brief to different models and design skills, then lays the results out as a matrix. When this library opened it, the header said 18 models, 8 skills, and 472/483 captured runs. The briefs include at least City journal, Weekend discovery, Team inbox, and Forma frontend. Skill columns include Vanilla (no design skill), Frontend Design (Anthropic), Web Guidelines (Vercel), UI UX Pro Max, Impeccable, Taste, Distinctive Websites, and Best Web Design. Samples are Baseline A, Baseline B, Alternative, and Whacky. The page says A and B are independent, Alternative uses descriptions of the baselines, and Whacky uses a fresh experimental prompt. Provider filters include Anthropic, DeepSeek, Meta, OpenAI, Reflection, and Z.ai. The first row is GLM 5.2 (Z.ai · Pi · Lunaroute), and the cells show check counts and elapsed time. Open artifact opens a working page. This library opened the City journal, Vanilla, GLM 5.2 cell; its title is CITYSIDE — Everyday city life. The llms.txt snapshot is dated 2026-10-23 and says 18 model rows, 4 built-in briefs, and 8 skill conditions. This library did not submit its own brief and did not re-run a generation.",
+      "sourceUrl": "https://uipalooza.ai/",
+      "secondaryUrls": [
+        "https://uipalooza.ai/methodology.html",
+        "https://uipalooza.ai/llms.txt",
+        "https://news.ycombinator.com/item?id=50238943"
+      ],
+      "previewImage": "/previews/uipalooza.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "design",
+        "benchmark",
+        "models",
+        "skills",
+        "ui"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：同一道界面题可以并排打开不同模型和设计技能做出的网页，而不只是看截图。边界：页上的运行是事先捕获的，成稿地址里能看到更早的日期。本库打开了一个成稿页，没有提交自己的题目，也没有重跑。",
+      "qualityNoteEn": "Why: one interface brief can be opened side by side across models and design skills, as working pages rather than only as screenshots. Boundary: the runs on the page were captured ahead of time, and an artifact address carries an earlier date. This library opened one result page. It did not submit its own brief and did not re-run anything.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://uipalooza.ai/ HTTP 200，页头 18 Models、8 Skills、472/483 Captured runs。矩阵浮层写 18 model rows · 32 design columns。第一格 Open artifact 的 href 为 https://designs.uipalooza.ai/artifacts/city-journal--v1--s1--glm-5.2--vanilla--2026-09-17T02-26-34-125Z/ ，该地址 HTTP 200，标题 CITYSIDE — Everyday city life。地址中的时间是 2026-09-17。https://uipalooza.ai/llms.txt HTTP 200，文首 Snapshot: 2026-10-23T18:43:11.167Z，并写 18 model rows; 4 built-in briefs; 8 skill conditions。https://uipalooza.ai/methodology.html HTTP 200。Show HN https://news.ycombinator.com/item?id=50238943 （2026-10-26T04:00:04Z，作者 joeysim，撰写时 6pts），帖文写 public collection has 1,784 designs；与页头 472/483 不是同一个数字，正文采用打开页面时的页头。预览为 Playwright + 系统 Chrome 实拍矩阵（含 Matrix map 浮层），视口 1440×960，sharp 收到 1200×800 WebP。未提交 Bring your own brief，未重跑，未逐篇点开 CITYSIDE。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://uipalooza.ai/ HTTP 200. Header: 18 Models, 8 Skills, 472/483 Captured runs. A matrix overlay says 18 model rows · 32 design columns. The first Open artifact href is https://designs.uipalooza.ai/artifacts/city-journal--v1--s1--glm-5.2--vanilla--2026-09-17T02-26-34-125Z/ , HTTP 200, title CITYSIDE — Everyday city life. The timestamp in that address is 2026-09-17. https://uipalooza.ai/llms.txt HTTP 200, opening Snapshot: 2026-10-23T18:43:11.167Z, and 18 model rows; 4 built-in briefs; 8 skill conditions. https://uipalooza.ai/methodology.html HTTP 200. Show HN https://news.ycombinator.com/item?id=50238943 (2026-10-26T04:00:04Z, author joeysim, 6pts at write time). The post says the public collection has 1,784 designs, which is not the same number as the header's 472/483; the entry uses the header seen on the page. Preview is a Playwright capture with system Chrome of the matrix, including the Matrix map overlay, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not submit Bring your own brief, did not re-run, and did not read through CITYSIDE."
+    },
+    {
+      "id": "taste-index",
+      "slug": "taste-index",
+      "title": "AI Taste Index：十个模型做的网站和人的偏好",
+      "titleEn": "AI Taste Index: sites from ten models, and how people preferred them",
+      "hook": "十个模型按同一批题目做网站，再看人怎么选。",
+      "hookEn": "Ten models build sites from the same briefs, then you see how people chose.",
+      "summary": "AI Taste Index 是 HumanSignal 的设计研究页：10 个模型、10 道相同的创意题目、100 个生成的网站，用人的两两选择来排。总榜写明这是比较，不是绝对质量分：胜率表示一个模型的设计相对其他模型被选中的频率。页面写这次使用 450 道两两题上各前 10 张有效票，共 4,500 票、29 位标注者，平票每边算半票；另有一次九月的试点用了每题前 5 票。总榜（每模型 900 票）从高到低是 GPT 6 Astra 64.3%、Grok 4.6 62.7%、Muse Spark 1.3 60.3%、DeepSeek V4 Pro 56.2%、Kimi K3 53.3%、GLM 5.3 53.2%、Claude Sonnet 5 49.1%、Qwen 3.8 2.4T 48.9%、Gemini 3.8 Flash 32.8%、Seed 2.0 Code 19.1%。页面写前三名相差 4.0 个百分点，而且至少有七个模型在某一道题上拿过第一。单份成稿页面写着仍然没有单独的分数。本库从索引打开了 science-publication 题目下、结果文件标为 GPT 6 Astra 的那一站，看到 Field Equation 的一篇望远镜稿，标题 The Telescope Designed to See the Universe's First Light。本库没有投票，没有下载 CSV，也没有重跑。",
+      "summaryEn": "The AI Taste Index is HumanSignal's design study page: 10 models, 10 shared creative briefs, and 100 generated sites, ranked from human pairwise choices. The overall table says this is a comparison, not an absolute quality score: a win rate is how often a model's design was preferred against the others. The page says this run uses the first 10 valid votes on each of 450 pairwise tasks, 4,500 votes from 29 annotators, and that a tie counts as half a vote for each side. A September pilot used the first five votes per task. The overall table (900 votes per model), high to low: GPT 6 Astra 64.3%, Grok 4.6 62.7%, Muse Spark 1.3 60.3%, DeepSeek V4 Pro 56.2%, Kimi K3 53.3%, GLM 5.3 53.2%, Claude Sonnet 5 49.1%, Qwen 3.8 2.4T 48.9%, Gemini 3.8 Flash 32.8%, Seed 2.0 Code 19.1%. The page says the top three are separated by 4.0 percentage points, and that seven different models take first place on at least one brief. Individual design pages still show no separate score. From the index, this library opened the science-publication site that the results file labels as GPT 6 Astra, and saw a Field Equation telescope story titled The Telescope Designed to See the Universe's First Light. This library did not vote, did not download the CSV, and did not re-run the study.",
+      "sourceUrl": "https://humansignal.com/taste-index",
+      "secondaryUrls": [
+        "https://humansignal.com/taste-index/results.json",
+        "https://humansignal.com/taste-index/sites/eb166670-dca1-46ff-aa24-cbde492676e3/index.html",
+        "https://news.ycombinator.com/item?id=50249662"
+      ],
+      "previewImage": "/previews/taste-index.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "design",
+        "benchmark",
+        "models",
+        "taste",
+        "research"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-27T01:10:00Z",
+      "qualityNote": "收录理由：同一批题目下，十个模型做出的网站可以直接打开，旁边有人的偏好排序。边界：排序是这项研究的投票，不是本库复测；单份成稿没有单独的分数。生成和投票都早于这次公开帖。本库打开了总榜和一个生成站点，没有投票。",
+      "qualityNoteEn": "Why: sites that ten models made from the same briefs can be opened directly, next to a human preference ranking. Boundary: the ranking is this study's votes, not a retest by this library, and a single design has no separate score. Generation and the votes both predate this public post. This library opened the overall table and one generated site. It did not vote.",
+      "verifyLog": "2026-10-27 上午（Asia/Shanghai）：https://humansignal.com/taste-index HTTP 200。点开 Overall rankings 后，表头 GLOBAL · 900 VOTES PER MODEL，说明 This run uses the first ten valid votes on each of 450 pairwise tasks: 4,500 votes from 29 annotators. Ties count as half a vote for each side. 以及 A September pilot used the first five votes per task. 总榜十行与正文一致：GPT 6 Astra 64.3% / 1.78 / 1–8，Grok 4.6 62.7% / 1.67 / 1–8，Muse Spark 1.3 60.3% / 1.52 / 1–7，DeepSeek V4 Pro 56.2% / 1.29 / 1–9，Kimi K3 53.3% / 1.16 / 1–8，GLM 5.3 53.2% / 1.15 / 1–10，Claude Sonnet 5 49.1% / 0.98 / 4–9，Qwen 3.8 2.4T 48.9% / 0.98 / 1–10，Gemini 3.8 Flash 32.8% / 0.51 / 4–10，Seed 2.0 Code 19.1% / 0.26 / 7–10。说明另写 top three models are separated by 4.0 percentage points，seven different models take first place on at least one brief，以及 Why individual designs still show no score。https://humansignal.com/taste-index/results.json HTTP 200，provenance.preferenceDate 为 2026-10-05，directionCount 100，siteCount 100。打开的站点 https://humansignal.com/taste-index/sites/eb166670-dca1-46ff-aa24-cbde492676e3/index.html HTTP 200，标题 The Telescope Designed to See the Universe’s First Light — Field Equation；results.json 将该 id 标为 model gpt-6-astra、brief science-publication、startedAt 2026-09-09T03:24:57.076Z、preference null。Show HN https://news.ycombinator.com/item?id=50249662 （2026-10-26T19:32:33Z，作者 ReDeiPirati，撰写时 4pts）。预览为 Playwright + 系统 Chrome 实拍总榜，视口 1440×960，sharp 收到 1200×800 WebP。未下载 CSV，未投票，未重跑。",
+      "verifyLogEn": "2026-10-27 morning (Asia/Shanghai): https://humansignal.com/taste-index HTTP 200. After opening Overall rankings, the table header is GLOBAL · 900 VOTES PER MODEL. Copy: This run uses the first ten valid votes on each of 450 pairwise tasks: 4,500 votes from 29 annotators. Ties count as half a vote for each side. Also: A September pilot used the first five votes per task. The ten overall rows match the entry: GPT 6 Astra 64.3% / 1.78 / 1–8, Grok 4.6 62.7% / 1.67 / 1–8, Muse Spark 1.3 60.3% / 1.52 / 1–7, DeepSeek V4 Pro 56.2% / 1.29 / 1–9, Kimi K3 53.3% / 1.16 / 1–8, GLM 5.3 53.2% / 1.15 / 1–10, Claude Sonnet 5 49.1% / 0.98 / 4–9, Qwen 3.8 2.4T 48.9% / 0.98 / 1–10, Gemini 3.8 Flash 32.8% / 0.51 / 4–10, Seed 2.0 Code 19.1% / 0.26 / 7–10. The page also says the top three models are separated by 4.0 percentage points, seven different models take first place on at least one brief, and Why individual designs still show no score. https://humansignal.com/taste-index/results.json HTTP 200, provenance.preferenceDate 2026-10-05, directionCount 100, siteCount 100. The opened site https://humansignal.com/taste-index/sites/eb166670-dca1-46ff-aa24-cbde492676e3/index.html HTTP 200, title The Telescope Designed to See the Universe’s First Light — Field Equation. results.json labels that id model gpt-6-astra, brief science-publication, startedAt 2026-09-09T03:24:57.076Z, preference null. Show HN https://news.ycombinator.com/item?id=50249662 (2026-10-26T19:32:33Z, author ReDeiPirati, 4pts at write time). Preview is a Playwright capture with system Chrome of the overall table, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not download the CSV, did not vote, and did not re-run."
+    },
+    {
       "id": "calm-web",
       "slug": "calm-web",
       "title": "Calm Web：把网页读成印刷杂志",
@@ -5471,9 +5606,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-27T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.79",
-    "count": 162
+    "version": "1.3.80",
+    "count": 166
   }
 }
