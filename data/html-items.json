@@ -1,6 +1,46 @@
 {
   "items": [
     {
+      "id": "plushies",
+      "slug": "plushies",
+      "title": "plushies：给 AI 助手的毛绒 3D 光标",
+      "titleEn": "plushies: squishy 3D cursors for AI helpers",
+      "hook": "毛绒小角色在设计稿里指着改、报进度，AI 干活看得见。",
+      "hookEn": "Plush 3D helpers point, highlight, and report progress as AI edits your app.",
+      "summary": "plushies 是一套给 three.js 用的毛绒 3D 角色，加上让 AI 助手在应用里“看得见地干活”的光标。选一个轮廓（心、星、云等，共 17 种），它会充成带缝边和毛发的抱枕，可以加眼睛、眼镜、帽子，还有挤压回弹。配套的 @plushies/cursors 给每个助手一个自己的指针、名牌和状态框：滑到要改的元素旁边、给它描边、写正在做什么和进度，做完跳一下。演示页让 Pip、Moss、Biscuit 三个助手同时在假的视频剪辑、设计稿、网站、表格和文档里干活；在设计稿场景里，它们分别改图层名、填色和自动布局，旁边的属性面板跟着变。页面下方还有一个编辑器，可以自己捏一个。两个包都是 MIT，作者写明这是 alpha 概念验证，接口会变，代码大量由 AI 编程助手写成。适合在做 AI 设计工具或多人协作界面、想让 Agent 的动作对用户可见的人参考。本库只在浏览器里打开了演示并切到设计稿场景，没有装包进项目，也没有用编辑器捏角色。",
+      "summaryEn": "plushies is a set of soft 3D plush characters for three.js, plus cursors that let AI helpers work visibly inside an app. Pick a silhouette (heart, star, cloud, 17 in all) and it inflates into a pillow with a rolled seam and fur, with eyes, glasses, hats, and squash and stretch. The companion @plushies/cursors package gives each helper its own pointer, name tag, and status box: it glides to the element it is changing, highlights it, narrates the step and progress, and hops when done. The demo runs three helpers, Pip, Moss, and Biscuit, at once in a mock video editor, design file, website, spreadsheet, and document; in the design file they rename layers, change fills, and adjust auto layout while the properties panel follows. Further down there is an editor for making your own. Both packages are MIT, and the author marks this as an alpha proof of concept whose APIs will change, built with heavy help from AI coding agents. Useful if you are building an AI design tool or a collaborative interface and want an agent's actions to be visible to the user. This library only opened the demo in a browser and switched to the design file scene; it did not install the packages into a project or build a character in the editor.",
+      "sourceUrl": "https://prathje.github.io/plushies/",
+      "secondaryUrls": [
+        "https://github.com/prathje/plushies",
+        "https://news.ycombinator.com/item?id=50271968",
+        "https://www.npmjs.com/package/plushies",
+        "https://www.npmjs.com/package/@plushies/cursors"
+      ],
+      "previewImage": "/previews/plushies.webp",
+      "types": [
+        "landing",
+        "interactive",
+        "component"
+      ],
+      "tags": [
+        "threejs",
+        "ai",
+        "design",
+        "cursor",
+        "agent",
+        "webgl",
+        "mit",
+        "alpha"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-28",
+      "updatedAt": "2026-10-28T12:15:00Z",
+      "qualityNote": "收录理由：把 AI 助手的动作做成指着元素、带状态和进度的毛绒光标，给 AI 设计工具和协作界面一个可抄的“Agent 在场感”方案。边界：作者标明是 alpha 概念验证，接口会变；本库没有把包装进项目，没有试编辑器捏角色，也没有在手机上看。",
+      "qualityNoteEn": "Why: it turns an AI helper's actions into plush cursors that point at elements and show status and progress, a copyable way to make an agent feel present in AI design tools and collaborative interfaces. Boundary: the author marks it as an alpha proof of concept whose APIs will change; this library did not install the packages into a project, did not build a character in the editor, and did not check it on a phone.",
+      "verifyLog": "2026-10-28 晚间（上海）：https://prathje.github.io/plushies/ HTTP 200，标题 plushies — soft plush characters for AI helpers and more。Show HN https://news.ycombinator.com/item?id=50271968 （Squishy 3D helpers powered by Three.js，作者 prathje，2026-10-28T11:38:56Z，撰写时 1pt、0 评论，链接到同一演示）。gh api prathje/plushies：license MIT，3 stars、0 forks，创建 2026-10-03T11:43:48Z，最近推送 2026-10-08T07:09:16Z，homepage 为同一演示，语言 TypeScript，描述 PoC of cute plush character for AI collaboration。README 写 17 silhouettes、三种光标设计 live / buddy / island，并标 Alpha / proof of concept 与 Built with AI agents (Claude Code)。npm registry：plushies latest 0.1.0-alpha.0（alpha 标签 0.1.0-alpha.1），MIT；@plushies/cursors latest 0.1.0-alpha.2，MIT。预览为 Playwright 实拍演示首屏，切到 USE CASE「Design file」后等待助手动作，1440×960 收到 1200×800 WebP。未 npm install，未用编辑器，未测移动端，未看完整演示视频。",
+      "verifyLogEn": "2026-10-28 evening (Shanghai): https://prathje.github.io/plushies/ HTTP 200, title plushies — soft plush characters for AI helpers and more. Show HN https://news.ycombinator.com/item?id=50271968 (Squishy 3D helpers powered by Three.js, author prathje, 2026-10-28T11:38:56Z, 1pt and 0 comments at write time, linking the same demo). gh api prathje/plushies: license MIT, 3 stars, 0 forks, created 2026-10-03T11:43:48Z, last push 2026-10-08T07:09:16Z, homepage is the same demo, language TypeScript, description PoC of cute plush character for AI collaboration. The README lists 17 silhouettes and three cursor designs (live / buddy / island), and marks it Alpha / proof of concept and Built with AI agents (Claude Code). npm registry: plushies latest 0.1.0-alpha.0 (alpha tag 0.1.0-alpha.1), MIT; @plushies/cursors latest 0.1.0-alpha.2, MIT. Preview is a Playwright capture of the demo's first screen after switching USE CASE to Design file and waiting for the helpers, 1440×960 fitted to a 1200×800 WebP. No npm install, editor not used, mobile not tested, full demo video not watched."
+    },
+    {
       "id": "calm-web",
       "slug": "calm-web",
       "title": "Calm Web：把网页读成印刷杂志",
@@ -5471,9 +5511,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-28T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.79",
-    "count": 162
+    "version": "1.3.80",
+    "count": 163
   }
 }

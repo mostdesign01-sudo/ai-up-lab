@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-28",
+      "title": "晚间收录 2026-10-28：HTML +1（plushies）",
+      "titleEn": "Evening catalog 2026-10-28: HTML +1 (plushies)",
+      "body": "HTML：plushies（three.js 毛绒 3D 角色，17 种轮廓、毛发着色器、眼睛眼镜帽子、挤压回弹；配套 @plushies/cursors 让 AI 助手带指针、名牌、状态和进度在应用里干活。演示有视频剪辑、设计稿、网站、文档等假应用，预览取设计稿场景。MIT，npm plushies 0.1.0-alpha.0、@plushies/cursors 0.1.0-alpha.2，作者标明 alpha 概念验证、接口会变。Show HN https://news.ycombinator.com/item?id=50271968 ，仓库 https://github.com/prathje/plushies 。本库未 npm install、未用编辑器、未测移动端）。预览为实拍 1200×800 WebP。相对 main：html-items 162→163（1.3.79→1.3.80）。写入前核对 main 与当时打开的 PR，plushies 与演示 URL 都不在其中。未改首页精选、Cases、Agent UI、Models。未合并，等「合」。",
+      "bodyEn": "HTML: plushies (soft 3D plush characters for three.js: 17 silhouettes, a fur shader, eyes, glasses, hats, squash and stretch; the companion @plushies/cursors lets AI helpers work inside an app with a pointer, name tag, status, and progress. The demo has mock apps including a video editor, design file, website, and document; the preview shows the design file scene. MIT, npm plushies 0.1.0-alpha.0 and @plushies/cursors 0.1.0-alpha.2, and the author marks it as an alpha proof of concept whose APIs will change. Show HN https://news.ycombinator.com/item?id=50271968 , repo https://github.com/prathje/plushies . No npm install, editor not used, mobile not tested). Preview is a captured 1200×800 WebP. Relative to main: html-items 162→163 (1.3.79→1.3.80). Checked main and the open PRs before writing; neither the plushies id nor the demo URL was among them. Home picks, Cases, Agent UI, and Models unchanged. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-26",
       "title": "早间收录 2026-10-26：Agent UI +2（shadcn AI Elements、SketchAgent）、HTML +4（Calm Web、ra-mermaid、Geometry Script、Overgrown）",
       "titleEn": "Morning catalog 2026-10-26: Agent UI +2 (shadcn AI Elements, SketchAgent), HTML +4 (Calm Web, ra-mermaid, Geometry Script, Overgrown)",
