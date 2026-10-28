@@ -1,6 +1,38 @@
 {
   "items": [
     {
+      "id": "titleart",
+      "slug": "titleart",
+      "title": "TitleArt：1997 味标题排版器（浏览器里叠字）",
+      "titleEn": "TitleArt: a 1997-style title setter (stacked type in the browser)",
+      "hook": "在浏览器里把标题排成 1997 年的叠字。",
+      "hookEn": "Stack title lettering in the browser, in a 1997 style.",
+      "summary": "TitleArt（https://titleart.dvy.io/ ）是浏览器里的 1997 味标题排版器。打开就是编辑器：可以把字叠起来，改字体、形状、阴影和三维，再导出 PNG、SVG、GIF 或视频。默认画布上是 “WordArt is back!”，页脚署 Davey Baker。应用内条款写：用它做出来的作品可以分享和出售，不必署名 TitleArt；同一条款不许可复制、再分发或出售应用自己的代码，也不许可把自带剪贴画和模板当成素材包分发，这些权利保留。字体、界面字和表情另有许可（内置字体多为 SIL Open Font License 1.1，Ultra 为 Apache License 2.0，界面字基于 ReactOS 位图字并标 MIT，Twemoji 为 CC BY 4.0）。依赖库的许可证在 /software-licences.txt。没有找到把 TitleArt 应用本身标成开源的许可证。Show HN https://news.ycombinator.com/item?id=50238708 （2026-10-26）。本库打开了编辑器并看到默认叠字，没有导出，也没有改成自己的标题。",
+      "summaryEn": "TitleArt (https://titleart.dvy.io/ ) is a 1997-style title setter in the browser. It opens as an editor: stack letters, change the font, shape, shadow, and 3-D, then export PNG, SVG, GIF, or video. The default canvas says “WordArt is back!”, and the footer credits Davey Baker. The in-app terms say artwork made with the tool may be shared and sold without crediting TitleArt; the same terms do not allow copying, redistributing, or selling the app's own code, or distributing its original clip art and templates as an asset collection, and those rights stay reserved. Fonts, the interface face, and emoji have their own terms (most built-in fonts SIL Open Font License 1.1, Ultra under the Apache License 2.0, the interface face based on a ReactOS bitmap font and marked MIT, Twemoji under CC BY 4.0). Dependency licences are in /software-licences.txt. No licence was found that marks the TitleArt app itself as open source. Show HN https://news.ycombinator.com/item?id=50238708 (2026-10-26). This library opened the editor and saw the default stacked type. It did not export and did not change the words.",
+      "sourceUrl": "https://titleart.dvy.io/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50238708",
+        "https://titleart.dvy.io/software-licences.txt"
+      ],
+      "previewImage": "/previews/titleart.webp",
+      "types": [
+        "tool"
+      ],
+      "tags": [
+        "typography",
+        "editor",
+        "wordart",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-28T01:12:02Z",
+      "qualityNote": "收录是因为可以在浏览器里直接做 1997 味的叠字标题，打开就能用。这是公开网页工具。条款允许分享和出售做出来的作品，同时保留应用代码，以及把自带剪贴画和模板当素材包分发的权利，所以不把它当成开源项目。本库只打开了默认编辑器，没有导出，也没有改字。",
+      "qualityNoteEn": "Listed because you can set 1997-style stacked titles in the browser, and it opens ready to use. It is a public web tool. The terms allow sharing and selling artwork made with it, while reserving the app code and the right to distribute the bundled clip art and templates as an asset collection, so it is not treated as an open-source project. This library only opened the default editor, did not export, and did not change the words.",
+      "verifyLog": "2026-10-28 早间（上海）：https://titleart.dvy.io/ HTTP 200，last-modified Tue, 27 Oct 2026 01:16:53 GMT。页面标题 TitleArt — Make text like it’s 1997。编辑器加载后默认文字为 WordArt is back!，菜单含 Export as PNG, SVG, GIF or video，页脚 Davey Baker。https://titleart.dvy.io/software-licences.txt HTTP 200，开头写 The app bundles dependencies which contain the following licenses。应用内 Terms of Use（打包脚本中的文案）写可以分享和出售作品且不必署名，同时 Permission to use exported artwork does not give you permission to copy, redistribute or sell the app’s original code, or to distribute its original clip art and templates as an asset collection。字体段落写 SIL Open Font License 1.1，Ultra 为 Apache License 2.0，界面字基于 ReactOS、© 2019–2025 Katayama Hirofumi MZ、MIT，Twemoji 为 CC BY 4.0。https://github.com/davidbarker/titleart HTTP 404。Show HN https://news.ycombinator.com/item?id=50238708 ，作者 davidbarker，2026-10-26T03:23:57Z，score 396。本库没有点导出，没有改默认文字，没有打开模板库。预览为本机 Chrome 实拍已加载的编辑器，视口 1200×800，导出 WebP。",
+      "verifyLogEn": "2026-10-28 morning (Shanghai): https://titleart.dvy.io/ HTTP 200, last-modified Tue, 27 Oct 2026 01:16:53 GMT. The page title is TitleArt — Make text like it’s 1997. After the editor loaded, the default text was WordArt is back!, the menu included Export as PNG, SVG, GIF or video, and the footer said Davey Baker. https://titleart.dvy.io/software-licences.txt HTTP 200, opening with The app bundles dependencies which contain the following licenses. The in-app Terms of Use (copy in the bundled script) says artwork may be shared and sold without credit, and that permission to use exported artwork does not give permission to copy, redistribute, or sell the app’s original code, or to distribute its original clip art and templates as an asset collection. The font section names the SIL Open Font License 1.1, the Apache License 2.0 for Ultra, a ReactOS-based interface face © 2019–2025 Katayama Hirofumi MZ under MIT, and Twemoji under CC BY 4.0. https://github.com/davidbarker/titleart HTTP 404. Show HN https://news.ycombinator.com/item?id=50238708 , author davidbarker, 2026-10-26T03:23:57Z, score 396. Export was not clicked, the default words were not changed, and the template gallery was not opened. Preview is a local Chrome capture of the loaded editor, viewport 1200×800, exported WebP."
+    },
+    {
       "id": "calm-web",
       "slug": "calm-web",
       "title": "Calm Web：把网页读成印刷杂志",
@@ -5471,9 +5503,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-28T01:12:02Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.79",
-    "count": 162
+    "version": "1.3.80",
+    "count": 163
   }
 }

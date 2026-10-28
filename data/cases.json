@@ -1,6 +1,184 @@
 {
   "cases": [
     {
+      "id": "hallmark",
+      "slug": "hallmark",
+      "title": "Hallmark：反 AI 味的设计 Skill（50 套主题 + 浏览器 lint）",
+      "titleEn": "Hallmark: an anti-slop design skill (50 themes + a browser lint)",
+      "kind": "tool",
+      "hook": "给编程助手五十套主题，并用浏览器检查挡住 AI 味。",
+      "hookEn": "Fifty themes for a coding agent, plus a browser check for machine-made pages.",
+      "summary": "Hallmark（https://www.usehallmark.com/ ，仓库 Nutlope/hallmark，MIT）是给编程助手的设计技能，当前为 v2。落地页写一行安装 `npx skills add nutlope/hallmark -g`，并写可用于 Claude Code、Codex 和 OpenCode；README 与 package.json 的技能清单里还有 Cursor。它从 50 套主题里发三套，先问照片和真实数字，再在浏览器里用 sloplint 检查。Floor 不放行的包括紫到蓝、紫到粉、深色底上的青色渐变，编造的指标，以及字距拉开的全大写小标签；Reflex 是模型常掉进去的默认，有理由可以记一笔例外。落地页署 Hassan and Youssef，README 写 Made by Together AI。本库没有安装这个技能，也没有跑 sloplint。",
+      "summaryEn": "Hallmark (https://www.usehallmark.com/ , repo Nutlope/hallmark, MIT) is a design skill for coding agents, currently v2. The landing page installs it with `npx skills add nutlope/hallmark -g` and names Claude Code, Codex, and OpenCode; the README and the package.json skill list also include Cursor. It deals three of 50 themes, asks for photos and real numbers, then checks the page in a browser with sloplint. Floor gates include purple-to-blue, purple-to-pink, and cyan-on-dark gradients, invented metrics, and tracked-capital labels; Reflex gates are defaults a model falls into and can be waived on the record. The landing page credits Hassan and Youssef; the README says Made by Together AI. This library did not install the skill or run sloplint.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design skill",
+      "sourceUrl": "https://www.usehallmark.com/",
+      "secondaryUrls": [
+        "https://github.com/Nutlope/hallmark"
+      ],
+      "previewImage": "/previews/hallmark.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenCode"
+      ],
+      "approvalBoundary": "安装会写入助手的技能目录；点名 redesign 会改已有页面。本库没有安装。",
+      "approvalBoundaryEn": "Installing writes into the agent's skill folder; a named redesign changes an existing page. This library did not install it.",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-28T01:12:02Z",
+      "qualityNote": "收录是因为这是给编程助手的 MIT 设计技能，用五十套主题和浏览器检查去压常见的 AI 味：紫到蓝或紫到粉的渐变、编造的数字、字距拉开的全大写小标签。落地页安装行列出 Claude Code、Codex 和 OpenCode，说明里还有 Cursor。本库没有安装技能，也没有跑 sloplint。",
+      "qualityNoteEn": "Listed because it is an MIT design skill for coding agents: fifty themes and a browser check against common machine-made tells, including purple-to-blue or purple-to-pink gradients, invented numbers, and tracked-capital labels. The install line names Claude Code, Codex, and OpenCode; the docs also name Cursor. This library did not install the skill or run sloplint.",
+      "verifyLog": "2026-10-28 早间（上海）：https://www.usehallmark.com/ HTTP 200。首屏文案为 The design skill that ends AI slop，安装命令 npx skills add nutlope/hallmark -g，同句列出 Claude Code、Codex and OpenCode，徽章约 39k。gh api repos/Nutlope/hallmark：license SPDX MIT，stargazers_count 39018，forks 2036，created 2026-04-27T20:47:10Z，pushed 2026-10-27T15:05:53Z，homepage https://www.usehallmark.com/ 。package.json version 2.0.0，skill.harnesses 为 claude-code、codex、cursor、opencode。skills/hallmark/references/themes 下主题 .md 为 50（不含 README.md）。gates.md：2a Floor 为 purple-to-blue、purple-to-pink 或 cyan-on-dark gradient；46a Floor 为 invented metric；67 Floor 为 tracked-caps label；2b Reflex 为其他色相的渐变字。README 写 Made by Together AI，照片来自 Wikimedia Commons 并在页面署名。本库没有执行 npx skills add，没有跑 sloplint.mjs。预览为本机 Chrome 实拍落地页首屏，视口 1200×800，导出 WebP。",
+      "verifyLogEn": "2026-10-28 morning (Shanghai): https://www.usehallmark.com/ HTTP 200. The first screen says The design skill that ends AI slop, shows npx skills add nutlope/hallmark -g, names Claude Code, Codex and OpenCode, and badges about 39k. gh api repos/Nutlope/hallmark: license SPDX MIT, stargazers_count 39018, forks 2036, created 2026-04-27T20:47:10Z, pushed 2026-10-27T15:05:53Z, homepage https://www.usehallmark.com/ . package.json version 2.0.0; skill.harnesses are claude-code, codex, cursor, opencode. Theme markdown files under skills/hallmark/references/themes: 50, excluding README.md. gates.md: 2a Floor is a purple-to-blue, purple-to-pink, or cyan-on-dark gradient; 46a Floor is an invented metric; 67 Floor is the tracked-caps label; 2b Reflex is gradient text in any other hue. The README says Made by Together AI; photos are from Wikimedia Commons and credited on the page. npx skills add was not run, and sloplint.mjs was not run. Preview is a local Chrome capture of the landing first screen, viewport 1200×800, exported WebP."
+    },
+    {
+      "id": "better-design",
+      "slug": "better-design",
+      "title": "Better Design：给编程助手的设计系统 / 指南 / 评审 MCP（有免费额度）",
+      "titleEn": "Better Design: design systems, guides, and review MCP for coding agents (free tier)",
+      "kind": "tool",
+      "hook": "给编程助手接上设计系统、指南和评审，并有免费额度。",
+      "hookEn": "Design systems, guides, and review rules for a coding agent, on a free tier.",
+      "summary": "Better Design（https://better-design.com/ ）给编程助手接设计系统、设计指南和评审规则。对比页写：86 套完整设计系统、424 篇设计指南、135 条评审规则。首页安装是 `npx better-design`，安装页和对比页写 `npx -y better-design`。对比页写：这条命令给出的密钥，在认领免费账号之前停在 25 次工具调用；认领之后，免费账号每月 300 次工具调用，并且每 30 天 10 次生成额度。定价页 Developer 档是永久 $0、不要卡、每月 300 次工具调用；Pro 是每月 $20、不限调用次数，并有 14 天试用。npm 说明另有 `npx skills add marvkr/better-design --skill better-design`。这是有免费额度的在线服务，不把整套产品当成开源软件收录。Show HN https://news.ycombinator.com/item?id=50253082 （2026-10-27）。本库没有连接 MCP，也没有消耗调用次数。",
+      "summaryEn": "Better Design (https://better-design.com/ ) gives a coding agent design systems, design guides, and review rules. The compare page says 86 complete design systems, 424 design guides, and 135 review rules. The homepage install is `npx better-design`; the install page and the compare page say `npx -y better-design`. The compare page says the key that command creates stops after 25 tool calls until you claim a free account; after that, the free account is 300 tool calls a month and 10 generation credits every 30 days. On the pricing page the Developer plan is $0 forever, no card, 300 tool calls a month; Pro is $20 a month with unlimited tool calls and a 14-day trial. The npm readme also lists `npx skills add marvkr/better-design --skill better-design`. This is a hosted service with a free allowance, not cataloged as a fully open-source product. Show HN https://news.ycombinator.com/item?id=50253082 (2026-10-27). This library did not connect MCP and did not spend tool calls.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design MCP",
+      "sourceUrl": "https://better-design.com/",
+      "secondaryUrls": [
+        "https://better-design.com/mcp/install",
+        "https://better-design.com/compare",
+        "https://better-design.com/pricing",
+        "https://news.ycombinator.com/item?id=50253082",
+        "https://github.com/marvkr/better-design"
+      ],
+      "previewImage": "/previews/better-design.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex"
+      ],
+      "approvalBoundary": "连接会使用对方签发的密钥，调用算进免费额度。本库没有连接，也没有注册。",
+      "approvalBoundaryEn": "Connecting uses a key the service issues, and calls count against the free allowance. This library did not connect or sign up.",
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-10-28T01:12:02Z",
+      "qualityNote": "收录是因为编程助手可以接设计系统、指南和评审，而且免费档当次打开就能用。这是有免费额度的在线服务，不是把整套产品当开源软件收录。免费账号每月 300 次工具调用，每 30 天另有 10 次生成额度；安装时若还没有账号，给出的密钥用满 25 次就要认领免费账号。本库没有连接 MCP，也没有消耗这些次数。",
+      "qualityNoteEn": "Listed because a coding agent can take design systems, guides, and review rules, and the free tier was usable when opened. It is a hosted service with a free allowance, not cataloged as a fully open-source product. A free account is 300 tool calls a month plus 10 generation credits every 30 days; a key created before you claim an account stops after 25 tool calls. This library did not connect MCP and did not spend those calls.",
+      "verifyLog": "2026-10-28 早间（上海）：https://better-design.com/ 、/mcp/install 、/compare 、/pricing 均为 HTTP 200。首页可见 Free for 300 tool calls a month，安装钮为 npx better-design，Connect 控件默认 ChatGPT，星标徽章 538。对比页原句：86 complete design systems, 424 design guides and 135 review rules；并写 The key npx -y better-design creates stops after 25 tool calls until you claim it with a free account. Then 300 tool calls a month, with 10 generation credits every 30 days。对比页还写 Where every figure came from, read on 15 October 2026。定价页 Developer：$0 forever、No card required、300 tool calls a month；Pro：$20 / month、Unlimited tool calls、14-day free trial。本次打开的定价页没有看到 prices last changed 2026-08-17 这类句子。安装页 JSON-LD 含 date 2026-08-20。npm registry better-design：latest 0.49.1，license MIT，该版本 time 2026-10-26T10:40:56.161Z，readme 另有 npx skills add marvkr/better-design --skill better-design。gh api repos/marvkr/better-design：MIT，538★，created 2026-05-05T20:01:56Z，pushed 2026-10-25T22:43:02Z，树里有 skills/better-design/SKILL.md。Show HN https://news.ycombinator.com/item?id=50253082 ，作者 marvinkr，2026-10-27T00:16:35Z，score 2。本库没有跑 npx，没有连接 MCP，没有注册，没有消耗工具调用。预览为本机 Chrome 实拍首页首屏，视口 1200×800，导出 WebP。",
+      "verifyLogEn": "2026-10-28 morning (Shanghai): https://better-design.com/ , /mcp/install , /compare , and /pricing all HTTP 200. The homepage shows Free for 300 tool calls a month, an install control reading npx better-design, a Connect control defaulting to ChatGPT, and a 538 star badge. The compare page's sentence is 86 complete design systems, 424 design guides and 135 review rules, and it says the key npx -y better-design creates stops after 25 tool calls until you claim it with a free account, then 300 tool calls a month, with 10 generation credits every 30 days. The same page says Where every figure came from, read on 15 October 2026. Pricing: Developer is $0 forever, No card required, 300 tool calls a month; Pro is $20 / month, Unlimited tool calls, 14-day free trial. The pricing page opened this time did not show a prices-last-changed 2026-08-17 line. The install page JSON-LD includes the date 2026-08-20. npm registry better-design: latest 0.49.1, license MIT, that version's time 2026-10-26T10:40:56.161Z; the readme also lists npx skills add marvkr/better-design --skill better-design. gh api repos/marvkr/better-design: MIT, 538★, created 2026-05-05T20:01:56Z, pushed 2026-10-25T22:43:02Z, with skills/better-design/SKILL.md in the tree. Show HN https://news.ycombinator.com/item?id=50253082 , author marvinkr, 2026-10-27T00:16:35Z, score 2. npx was not run, MCP was not connected, no account was created, and no tool call was spent. Preview is a local Chrome capture of the homepage first screen, viewport 1200×800, exported WebP."
+    },
+    {
+      "id": "gradientdeck",
+      "slug": "gradientdeck",
+      "title": "GradientDeck：编程助手设计 Skill + 免费 CSS 渐变工具站",
+      "titleEn": "GradientDeck: a design skill for coding agents, plus free CSS gradient tools",
+      "kind": "tool",
+      "hook": "给编程助手的设计技能，另有免费的 CSS 渐变工具。",
+      "hookEn": "A design skill for coding agents, plus free CSS gradient tools in the browser.",
+      "summary": "GradientDeck 技能站（https://skill.gradientdeck.com/ ）是给编程助手的设计技能，MIT。页面上的安装命令是 `npx gradientdeck install`，并写 Claude Code、Codex、Cursor、Copilot，免费。仓库是 https://github.com/VenoM9078/gradientdeck-skill 。它要求先从产品自己的世界里找一个点子，再写页面，并且不编造评价和数字。README 还把 OpenCode 写进安装落点。旁边的 https://gradientdeck.com/ 是免费的浏览器 CSS 工具，可做渐变、网格、玻璃、阴影和调色板，并复制 CSS、Tailwind、SVG 或 React。Show HN https://news.ycombinator.com/item?id=50251342 （2026-10-26）。本库没有安装技能，也没有在工具站生成页面。",
+      "summaryEn": "The GradientDeck skill site (https://skill.gradientdeck.com/ ) is an MIT design skill for coding agents. The page's install command is `npx gradientdeck install`, and it names Claude Code, Codex, Cursor, and Copilot, free. The repo is https://github.com/VenoM9078/gradientdeck-skill . Before any code it finds one idea from the product's own world, then builds the page, and it does not invent quotes or numbers. The README also lists OpenCode among install locations. The companion site https://gradientdeck.com/ is a free in-browser CSS workshop for gradients, meshes, glass, shadows, and palettes, copying CSS, Tailwind, SVG, or React. Show HN https://news.ycombinator.com/item?id=50251342 (2026-10-26). This library did not install the skill and did not generate a page on the tools site.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design skill",
+      "sourceUrl": "https://skill.gradientdeck.com/",
+      "secondaryUrls": [
+        "https://github.com/VenoM9078/gradientdeck-skill",
+        "https://gradientdeck.com/",
+        "https://news.ycombinator.com/item?id=50251342"
+      ],
+      "previewImage": "/previews/gradientdeck.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "GitHub Copilot"
+      ],
+      "approvalBoundary": "安装会把技能写进项目或本机的助手目录。本库没有安装。",
+      "approvalBoundaryEn": "Installing writes the skill into the project or the machine's agent folder. This library did not install it.",
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-28T01:12:02Z",
+      "qualityNote": "收录是因为这是给编程助手的 MIT 设计技能，技能站写明先从产品里找一个点子再写页面，工具站还可以免费做 CSS 渐变。技能页列出 Claude Code、Codex、Cursor、Copilot。本库没有安装技能，也没有在工具站生成页面。",
+      "qualityNoteEn": "Listed because it is an MIT design skill for coding agents: the skill site says to find one idea in the product before writing the page, and the tools site also offers free CSS gradients. The skill page names Claude Code, Codex, Cursor, and Copilot. This library did not install the skill and did not generate a page on the tools site.",
+      "verifyLog": "2026-10-28 早间（上海）：https://skill.gradientdeck.com/ 与 https://gradientdeck.com/ 均为 HTTP 200。技能页首屏安装命令为 npx gradientdeck install，并写 Claude Code · Codex · Cursor · Copilot — free, MIT。工具站写 Free CSS generators，可复制 CSS、Tailwind、SVG 或 React，并链到技能页。gh api repos/VenoM9078/gradientdeck-skill：license SPDX MIT，stargazers_count 29，forks 1，created 2026-10-16T01:48:02Z，pushed 2026-10-24T22:21:00Z，homepage https://skill.gradientdeck.com 。package.json version 0.2.0。npm registry gradientdeck latest 0.2.0，time 2026-10-23T15:51:24.889Z。README 安装表还列出 OpenCode。仓库有 skills/gradientdeck/SKILL.md。Show HN https://news.ycombinator.com/item?id=50251342 ，2026-10-26T21:35:27Z，score 4，链接指向该 GitHub 仓库。本库没有执行 npx gradientdeck install，没有在工具站点 Copy 或改参数生成。预览为本机 Chrome 实拍技能站首屏，视口 1200×800，导出 WebP。主源用技能站，工具站放在补充链接。",
+      "verifyLogEn": "2026-10-28 morning (Shanghai): https://skill.gradientdeck.com/ and https://gradientdeck.com/ both HTTP 200. The skill page's first screen shows npx gradientdeck install and Claude Code · Codex · Cursor · Copilot — free, MIT. The tools site says Free CSS generators, with CSS, Tailwind, SVG, or React to copy, and links the skill. gh api repos/VenoM9078/gradientdeck-skill: license SPDX MIT, stargazers_count 29, forks 1, created 2026-10-16T01:48:02Z, pushed 2026-10-24T22:21:00Z, homepage https://skill.gradientdeck.com . package.json version 0.2.0. npm registry gradientdeck latest 0.2.0, time 2026-10-23T15:51:24.889Z. The README install table also lists OpenCode. The repo has skills/gradientdeck/SKILL.md. Show HN https://news.ycombinator.com/item?id=50251342 , 2026-10-26T21:35:27Z, score 4, linking that GitHub repo. npx gradientdeck install was not run, and Copy / parameter changes were not used on the tools site. Preview is a local Chrome capture of the skill site's first screen, viewport 1200×800, exported WebP. The skill site is the primary URL; the tools site is a secondary link."
+    },
+    {
+      "id": "toolcraft",
+      "slug": "toolcraft",
+      "title": "Toolcraft：用 AI 做自定义设计小应用的开源起步套件",
+      "titleEn": "Toolcraft: an open-source starter for custom design apps built with AI",
+      "kind": "tool",
+      "hook": "用开源起步套件，让编程助手做你自己的设计小应用。",
+      "hookEn": "An open-source starter for building your own small design apps with AI.",
+      "summary": "Toolcraft（https://toolcraft.sh/ ，仓库 pixel-point/toolcraft，MIT）是用 AI 做自定义设计小应用的开源起步套件。首页安装命令是 `npx @pixel-point/toolcraft create`。站点写它带工作画布、工具栏、图层、时间轴和关键帧，以及嵌进去的 AI 技能。README 写可配合 Codex、Claude Code、Cursor，并写生成出来的应用留在本机，不是云端服务。仓库 examples 里有 `.agents/skills` 下的 SKILL.md，starter 顶层有 AGENTS.md。Show HN https://news.ycombinator.com/item?id=49658747 （2026-09-11）。本库没有用这条命令生成应用。",
+      "summaryEn": "Toolcraft (https://toolcraft.sh/ , repo pixel-point/toolcraft, MIT) is an open-source starter for building custom design apps with AI. The homepage install command is `npx @pixel-point/toolcraft create`. The site says it includes a working canvas, toolbar, layers, timeline, and keyframes, plus embedded AI skills. The README says it works with Codex, Claude Code, and Cursor, and that the generated app stays on your machine rather than a cloud service. Example apps in the repo include SKILL.md files under `.agents/skills`, and the starter root has AGENTS.md. Show HN https://news.ycombinator.com/item?id=49658747 (2026-09-11). This library did not run that command to scaffold an app.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design app starter",
+      "sourceUrl": "https://toolcraft.sh/",
+      "secondaryUrls": [
+        "https://github.com/pixel-point/toolcraft",
+        "https://toolcraft.sh/gallery",
+        "https://news.ycombinator.com/item?id=49658747"
+      ],
+      "previewImage": "/previews/toolcraft.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor"
+      ],
+      "approvalBoundary": "create 会在选定目录生成一套应用。本库没有运行。",
+      "approvalBoundaryEn": "create scaffolds an app into a chosen folder. This library did not run it.",
+      "publishedAt": "2026-09-11",
+      "updatedAt": "2026-10-28T01:12:02Z",
+      "qualityNote": "收录是因为可以用开源起步套件让编程助手做自己的设计小应用。站点写了画布、工具栏、图层、时间轴和 AI 技能，许可证是 MIT。本库没有用命令生成项目。",
+      "qualityNoteEn": "Listed because an open-source starter lets a coding agent build a small design app of your own. The site describes a canvas, toolbar, layers, timeline, and AI skills, and the license is MIT. This library did not scaffold a project.",
+      "verifyLog": "2026-10-28 早间（上海）：https://toolcraft.sh/ 与 https://toolcraft.sh/gallery HTTP 200。首页原句 open-source starter kit，安装命令 npx @pixel-point/toolcraft create；正文写 working canvas, toolbar, layer system, timeline, and keyframe workflows, plus embedded AI skills。gh api repos/pixel-point/toolcraft：license SPDX MIT，stargazers_count 962，forks 46，created 2026-07-14T13:55:33Z，pushed 2026-09-19T18:48:19Z，homepage https://toolcraft.sh 。npm @pixel-point/toolcraft latest 0.0.26，license MIT，time 2026-09-19T18:46:11.290Z。README 安装命令与首页一致，并有 npx --yes @pixel-point/toolcraft create --yes 的助手提示词。examples 下多个应用含 .agents/skills/*/SKILL.md；starter 顶层有 AGENTS.md，starter 根目录这次没有看到 SKILL.md。Show HN https://news.ycombinator.com/item?id=49658747 ，2026-09-11T14:11:09Z，score 1。更早的 https://news.ycombinator.com/item?id=49089600 ，2026-07-28T20:37:29Z，score 56，链到官网。本库没有执行 create，没有 npm install，没有启动本地预览。预览为本机 Chrome 实拍官网首屏，视口 1200×800，导出 WebP。",
+      "verifyLogEn": "2026-10-28 morning (Shanghai): https://toolcraft.sh/ and https://toolcraft.sh/gallery HTTP 200. The homepage says open-source starter kit and shows npx @pixel-point/toolcraft create; the body says a working canvas, toolbar, layer system, timeline, and keyframe workflows, plus embedded AI skills. gh api repos/pixel-point/toolcraft: license SPDX MIT, stargazers_count 962, forks 46, created 2026-07-14T13:55:33Z, pushed 2026-09-19T18:48:19Z, homepage https://toolcraft.sh . npm @pixel-point/toolcraft latest 0.0.26, license MIT, time 2026-09-19T18:46:11.290Z. The README install command matches the homepage and also includes an agent prompt with npx --yes @pixel-point/toolcraft create --yes. Several apps under examples contain .agents/skills/*/SKILL.md; the starter root has AGENTS.md, and no SKILL.md was seen at the starter root this time. Show HN https://news.ycombinator.com/item?id=49658747 , 2026-09-11T14:11:09Z, score 1. Earlier https://news.ycombinator.com/item?id=49089600 , 2026-07-28T20:37:29Z, score 56, links the site. create was not run, npm install was not run, and the local preview was not started. Preview is a local Chrome capture of the site's first screen, viewport 1200×800, exported WebP."
+    },
+    {
       "id": "latch",
       "slug": "latch",
       "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
@@ -11267,10 +11445,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-28T01:12:02Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.74",
-    "count": 211,
+    "version": "1.4.75",
+    "count": 215,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11552,7 +11730,29 @@
       "https://threeui.com/css/animated-top-dock/sable",
       "https://ui.krutikraut.com/",
       "https://www.makegradient.com/",
-      "https://latch.tools/"
+      "https://latch.tools/",
+      "https://www.usehallmark.com/",
+      "https://github.com/Nutlope/hallmark",
+      "https://better-design.com/",
+      "https://better-design.com/mcp/install",
+      "https://better-design.com/compare",
+      "https://better-design.com/pricing",
+      "https://news.ycombinator.com/item?id=50253082",
+      "https://github.com/marvkr/better-design",
+      "https://skill.gradientdeck.com/",
+      "https://gradientdeck.com/",
+      "https://github.com/VenoM9078/gradientdeck-skill",
+      "https://news.ycombinator.com/item?id=50251342",
+      "https://titleart.dvy.io/",
+      "https://titleart.dvy.io/software-licences.txt",
+      "https://news.ycombinator.com/item?id=50238708",
+      "https://toolcraft.sh/",
+      "https://toolcraft.sh/gallery",
+      "https://github.com/pixel-point/toolcraft",
+      "https://news.ycombinator.com/item?id=49658747",
+      "https://news.ycombinator.com/item?id=49089600",
+      "https://icons.andrsrxn.com/",
+      "https://github.com/andrsrxn/icons"
     ]
   }
 }
