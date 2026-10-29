@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-29",
+      "title": "晚间收录 2026-10-29：Cases +1（Kalka）、HTML +2（Pure Particles、vibegif）",
+      "titleEn": "Evening catalog 2026-10-29: Cases +1 (Kalka), HTML +2 (Pure Particles, vibegif)",
+      "body": "AI×设计。Cases：kalka（MIT 开源设计画布，图层就是真 HTML/CSS，桌面版自带本地 MCP，Claude Code、Cursor、Codex 等助手可以直接在画布上起稿。落地页 https://kalka.design/ ，仓库 https://github.com/leyscore/kalka 。是 OpenPencil 的分叉，正文写明与已收的 openpencil 的关系。最新版是 0.1.0-beta.5（2026-10-19），不是任务说明里的 beta.1。本库没有下载或安装桌面版，没有连接 MCP）。HTML：pure-particles（法国设计师的 three.js 粒子烟雾，MIT，图片配色、?embed 嵌入、4K 与无缝 MP4 导出；Show HN 2026-10-29。不是 AI 工具。没有上传图片、没有导出、没有试嵌入）；vibegif（750 个 CC0 动图，由 AI 写的 gen/ 脚本渲染，含 50 个动漫风界面状态贴纸；Show HN 2026-10-29。没有逐个打开、没有本地渲染）。三条预览均为实拍 1200×800 WebP。相对 main：cases 211→212（1.4.74→1.4.75），html-items 162→164（1.3.79→1.3.80）。版本从 main 加 1，不叠仍打开的 #134、#133、#131、#130、#129、#128、#100。跳过 DesignJS（#130 已因没有公开演示跳过，状况未变）、pulp（https://github.com/nipunbatra/pulp 没有许可证）。未改首页精选、Agent UI、Models。未合并，等「合」。",
+      "bodyEn": "AI×design. Cases: kalka (an MIT open-source design canvas whose layers are real HTML/CSS; the desktop app ships a local MCP server so Claude Code, Cursor, Codex, and other agents draft on the canvas. Landing page https://kalka.design/ , repo https://github.com/leyscore/kalka . It is a fork of OpenPencil; the text names its relation to the existing openpencil entry. The latest build is 0.1.0-beta.5 (2026-10-19), not the beta.1 in the brief. The desktop app was not downloaded or installed, and MCP was not connected). HTML: pure-particles (a designer's three.js particle smoke, MIT, image colouring, ?embed, 4K and seamless MP4 export; Show HN 2026-10-29. Not an AI tool. No image upload, export, or embed test); vibegif (750 CC0 animations rendered from AI-written gen/ scripts, including 50 anime-style UI state stickers; Show HN 2026-10-29. Files not opened one by one; not rendered locally). All three previews are captured 1200×800 WebP. Relative to main: cases 211→212 (1.4.74→1.4.75), html-items 162→164 (1.3.79→1.3.80). Versions are main plus one, not stacked on still-open #134, #133, #131, #130, #129, #128, or #100. Skipped DesignJS (already skipped in #130 for no public demo; unchanged) and pulp (https://github.com/nipunbatra/pulp has no license). Home picks, Agent UI, and Models unchanged. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-26",
       "title": "早间收录 2026-10-26：Agent UI +2（shadcn AI Elements、SketchAgent）、HTML +4（Calm Web、ra-mermaid、Geometry Script、Overgrown）",
       "titleEn": "Morning catalog 2026-10-26: Agent UI +2 (shadcn AI Elements, SketchAgent), HTML +4 (Calm Web, ra-mermaid, Geometry Script, Overgrown)",
