@@ -1,6 +1,49 @@
 {
   "cases": [
     {
+      "id": "kalka",
+      "slug": "kalka",
+      "title": "Kalka：开源设计画布，图层就是真 HTML/CSS，编程助手经 MCP 起稿",
+      "titleEn": "Kalka: an open-source design canvas whose layers are real HTML/CSS, drafted by agents over MCP",
+      "kind": "tool",
+      "hook": "助手经 MCP 用 HTML 起稿，你在画布上手调，始终是网页。",
+      "hookEn": "Your agent drafts in HTML over MCP, you refine on the canvas, and it stays a web page.",
+      "summary": "Kalka 是 MIT 开源的设计编辑器，定位是 Figma 替代：画布就是浏览器，每个图层都是浏览器排版和绘制的元素，图层面板就是 DOM，图层可以是 h1、nav、a、button 并带 class。桌面版自带本地 MCP 服务，Settings → MCP 可以一键连 Claude Code、Claude Desktop、Cursor、VS Code、Codex、Windsurf、Gemini CLI、LM Studio、opencode 等；README 写助手先 get_selection 或 get_page_tree，再用 write_html 起稿、update_styles 调整、get_screenshot 自查。文档是一个文件夹：每页一份 HTML、styles.css、设计令牌和素材，可以用 Git 存版本。还能打开 Figma .fig 和 Pencil .pen，给画板加平板和手机断点并导出为 @media，导出独立 HTML、Tailwind JSX、Storybook、PNG、SVG、PDF，也有 kalka 命令行。README 写明它是 OpenPencil 的分叉（本库已收的 openpencil），在其编辑器、.fig 支持和 MCP 服务上继续做。目前是 0.1.0 beta，macOS、Windows、Linux 都有测试版，安装包未签名，首次启动需要手动放行；落地页写桌面版和本地 MCP 免费，以后会有可选的团队托管订阅。本库没有下载或安装桌面版，没有连接 MCP，也没有导入或导出文件。",
+      "summaryEn": "Kalka is an MIT open-source design editor pitched as a Figma alternative: the canvas is the browser, every layer is an element the browser lays out and paints, the layers panel is the DOM, and a layer can be an h1, nav, a, or button with class names. The desktop app ships a local MCP server; Settings → MCP connects Claude Code, Claude Desktop, Cursor, VS Code, Codex, Windsurf, Gemini CLI, LM Studio, opencode, and others in one click. The README says agents start with get_selection or get_page_tree, draft with write_html, adjust with update_styles, and check with get_screenshot. A document is a folder: one HTML file per page, styles.css, design tokens, and assets, versioned with Git. It also opens Figma .fig and Pencil .pen files, adds tablet and phone breakpoints exported as @media rules, and exports standalone HTML, Tailwind JSX, Storybook stories, PNG, SVG, and PDF, with a kalka command line. The README says it is a fork of OpenPencil (the openpencil entry already in this library) and builds on its editor, .fig support, and MCP server. It is at 0.1.0 beta, with tester builds for macOS, Windows, and Linux; builds are unsigned, so the first launch needs a manual override. The landing page says the desktop app and local MCP server are free, with an optional hosted team subscription later. This library did not download or install the desktop app, did not connect MCP, and did not import or export a file.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Agent design canvas",
+      "sourceUrl": "https://kalka.design/",
+      "secondaryUrls": [
+        "https://github.com/leyscore/kalka",
+        "https://github.com/leyscore/kalka/releases",
+        "https://x.com/bedleybuilds"
+      ],
+      "previewImage": "/previews/kalka.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "MCP"
+      ],
+      "publishedAt": "2026-10-17",
+      "updatedAt": "2026-10-29T12:30:00Z",
+      "qualityNote": "收录理由：设计稿本身就是 HTML/CSS，编程助手经 MCP 直接在画布上起稿，人再手调，省掉从图片反推代码。边界：0.1.0 测试版，安装包未签名，落地页路线图写内存占用还在优化；它是 OpenPencil 的分叉，和已收的 openpencil 有大量共同底子。内置 AI 对话要自带 API key。本库没有下载或安装桌面版，没有连接 MCP，也没有导入 .fig 或导出代码。",
+      "qualityNoteEn": "Why: the design itself is HTML/CSS, coding agents draft on the canvas over MCP, and a person refines by hand, so nothing is reverse-engineered from a picture. Boundary: 0.1.0 beta with unsigned builds, and the landing-page roadmap says memory use is still being reduced; it is a fork of OpenPencil and shares much of its base with the openpencil entry already listed. The built-in AI chat needs your own API key. This library did not download or install the desktop app, did not connect MCP, and did not import a .fig or export code.",
+      "verifyLog": "2026-10-29 晚间（Asia/Shanghai）：https://kalka.design/ HTTP 200，title “Kalka, the open source Figma alternative that designs in real HTML”，首屏徽标 Kalka v0.1.0-beta.5，主标题 “Your agent drafts it. You make it yours.”，按钮 Download the beta / Source on GitHub。FAQ 写桌面版与本地 MCP 为 MIT、免费，团队托管版以后作为可选订阅；路线图 01–05 Done，06 Beta 6 In progress。页脚 Made by Pixelers、X @bedleybuilds；页面源码含作者名 Baurice Ley。仓库 https://github.com/leyscore/kalka ：gh api license SPDX MIT，stargazers_count 1，forks 0，created 2026-10-11T20:45:51Z，pushed 2026-10-19T12:00:04Z，homepage 为空。LICENSE 为 MIT，Copyright (c) 2026 Danila Poyarkov and OpenPencil contributors；README Credits 写是 OpenPencil 的分叉。package.json name kalka、version 0.1.0-beta.5、license MIT。根目录有 skills/kalka。Releases：v0.1.0-beta.1 发布于 2026-10-17T03:23:56Z（prerelease），最新 v0.1.0-beta.5 发布于 2026-10-19T08:16:36Z，含 dmg、mac zip、AppImage、Windows exe。任务说明里写的 beta.1 已不是最新版。预览为无头 google-chrome（DevTools 协议）实拍落地页首屏 1200×800，点掉 Refuse 关闭 cookie 横幅后截图，sharp 存成 WebP。本库没有下载或安装任何安装包，没有 bun install，没有连接 MCP，没有导入或导出文件。",
+      "verifyLogEn": "2026-10-29 evening (Asia/Shanghai): https://kalka.design/ HTTP 200, title “Kalka, the open source Figma alternative that designs in real HTML”, first-screen badge Kalka v0.1.0-beta.5, headline “Your agent drafts it. You make it yours.”, buttons Download the beta / Source on GitHub. The FAQ says the desktop app and local MCP server are MIT and free, with an optional hosted team version later; roadmap items 01–05 are Done and 06 Beta 6 is In progress. Footer: Made by Pixelers, X @bedleybuilds; the page source names Baurice Ley as author. Repo https://github.com/leyscore/kalka : gh api license SPDX MIT, stargazers_count 1, forks 0, created 2026-10-11T20:45:51Z, pushed 2026-10-19T12:00:04Z, empty homepage. LICENSE is MIT, Copyright (c) 2026 Danila Poyarkov and OpenPencil contributors; README Credits says it is a fork of OpenPencil. package.json name kalka, version 0.1.0-beta.5, license MIT. Root has skills/kalka. Releases: v0.1.0-beta.1 published 2026-10-17T03:23:56Z (prerelease); latest v0.1.0-beta.5 published 2026-10-19T08:16:36Z with dmg, mac zip, AppImage, and Windows exe. The beta.1 named in the task brief is no longer the latest. Preview is a headless google-chrome (DevTools protocol) capture of the landing first screen at 1200×800, after clicking Refuse on the cookie banner, saved with sharp as WebP. This library did not download or install any build, did not bun install, did not connect MCP, and did not import or export a file."
+    },
+    {
       "id": "latch",
       "slug": "latch",
       "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
@@ -11267,10 +11310,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-29T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.74",
-    "count": 211,
+    "version": "1.4.75",
+    "count": 212,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11552,7 +11595,9 @@
       "https://threeui.com/css/animated-top-dock/sable",
       "https://ui.krutikraut.com/",
       "https://www.makegradient.com/",
-      "https://latch.tools/"
+      "https://latch.tools/",
+      "https://kalka.design/",
+      "https://github.com/leyscore/kalka"
     ]
   }
 }
