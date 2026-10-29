@@ -1,6 +1,126 @@
 {
   "cases": [
     {
+      "id": "replica",
+      "slug": "replica",
+      "title": "Replica（GitHub 开源的 AI 原型工具）",
+      "titleEn": "Replica: GitHub’s open-source AI prototyping tool",
+      "kind": "tool",
+      "hook": "用你的设计系统，在 Copilot 里做出可交互原型。",
+      "hookEn": "Build interactive prototypes in Copilot from your own design system.",
+      "summary": "Replica（https://github.com/github/replica ，MIT）是 GitHub Design 做的开源 AI 原型工具，页脚也写了 Microsoft CoreAI Design。设计师用团队自己的组件、模式和文档写下引导；其他人在 GitHub Copilot app 里用自然语言做、改可交互原型。Replica 插件在对话旁边打开画布。本地可以不搭服务器、域名或 Replica Hub：需要已登录的 Copilot app、Git，以及 Node.js（两份 starter 的 package.json 都写 engines.node 为 ^24.15.0 || ^26.0.0），系统是 macOS 或 Linux。Starter 有 Minimal（小示例，改成自己的设计系统）和 CoreAI Sandbox（现成导航，以及 Microsoft CoreAI 的按钮、菜单等）。可选的自托管 Hub 用来发布原型和收评论，需要 Linux 服务器、独立域名、通配 DNS 和 HTTPS。Hub 把发布和评审活动记在自己的库里并保留 90 天，这些记录不会自动发给 GitHub；看成品或在 Hub 里评审不需要 Copilot 订阅。介绍视频在 README 里：https://www.youtube.com/watch?v=J2Z28CwIfsA 。本库没有安装 Copilot 插件，没有跑本地原型，也没有搭建 Hub。",
+      "summaryEn": "Replica (https://github.com/github/replica , MIT) is an open-source AI prototyping tool from GitHub Design; the README footer also names Microsoft CoreAI Design. Designers write guidance from the team’s components, patterns, and docs; anyone else prompts in the GitHub Copilot app to make and revise interactive prototypes. The Replica plugin opens a canvas beside the conversation. Local work does not need a server, a domain, or Replica Hub: it needs a signed-in Copilot app, Git, and Node.js (both starters set engines.node to ^24.15.0 || ^26.0.0) on macOS or Linux. Starters are Minimal (a small app to adapt to your design system) and CoreAI Sandbox (a navigation shell plus buttons, menus, and other pieces from Microsoft’s CoreAI design system). Optional self-hosted Hub is for publishing prototypes and comments, and needs a Linux server, a dedicated domain, wildcard DNS, and HTTPS. Hub stores publish and review activity in its own database for 90 days and does not automatically send those records to GitHub; viewing a finished prototype or reviewing it in Hub does not need a Copilot subscription. The README links an intro video: https://www.youtube.com/watch?v=J2Z28CwIfsA . This library did not install the Copilot plugin, did not run a local prototype, and did not set up Hub.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://github.com/github/replica",
+      "secondaryUrls": [
+        "https://github.com/github/replica/blob/main/docs/local-prototyping.md",
+        "https://www.youtube.com/watch?v=J2Z28CwIfsA"
+      ],
+      "sourceType": "official-launch",
+      "previewImage": "/previews/replica.webp",
+      "qualityNote": "收录是因为原型走团队自己的组件和文档，本地可以不搭 Hub。接受 Copilot 的仓库配置之前，文档写会话启动可能会全局安装 Copilot CLI、启用 Replica 插件，并用 npm ci 装依赖。自带模型供应商仍是公开预览，费用和条款另计。Hub 由团队自己托管，活动记录留 90 天，不会自动交给 GitHub；自托管也不等于数据不离开组织。捆绑字体是 SIL Open Font License。本库没有安装 Copilot 插件，没有跑本地原型，也没有搭建 Hub。",
+      "qualityNoteEn": "Listed because prototypes follow the team’s own components and docs, and local work does not need Hub. Before you accept Copilot’s repository setup, the docs say session startup can install the Copilot CLI globally, enable the Replica plugin, and install dependencies with npm ci. Bringing your own model provider is still a public preview, with that provider’s costs and terms. The team hosts Hub; activity records stay 90 days and are not sent to GitHub automatically. Self-hosting does not mean no data leaves the organization. Bundled fonts use the SIL Open Font License. This library did not install the Copilot plugin, did not run a local prototype, and did not set up Hub.",
+      "verifyLog": "2026-10-29 早间（上海）：https://github.com/github/replica HTTP 200，标题 GitHub - github/replica: Interactive prototyping tools for your team。无头 Chrome 滚到 README 横幅后实拍，可见 Replica 字标与「An open-source AI prototyping tool」。gh api：MIT，TypeScript，stargazers_count 42，forks 12，created 2026-10-15T20:03:06Z，pushed 2026-10-29T00:23:18Z，homepage 空，description “Interactive prototyping tools for your team.” README 写 GitHub Design、Copilot app 画布、Minimal / CoreAI Sandbox、Hub 可选、活动记录保留 90 天且不自动发给 GitHub、看成品或 Hub 评审不需要 Copilot 订阅、BYOK 为 public preview、字体 SIL OFL。docs/local-prototyping.md 经 gh api 读到：macOS 或 Linux、已登录的 Copilot app、Git、Node 跟 starter 的 engines.node、bash/curl/tar、lsof；接受配置前会话可能安装 Copilot CLI、启用插件并 npm ci。starters/minimal 与 starters/coreai 的 package.json engines.node 都是 ^24.15.0 || ^26.0.0。catalog.tsv 把 CoreAI Sandbox 写成 React Router app with CoreAI components and a Foundry-style shell。YouTube https://www.youtube.com/watch?v=J2Z28CwIfsA 只在 README 里看到链接，没有打开播放。预览为 Playwright 实拍该 README，1200×800 WebP。没有安装插件，没有跑 install-starter.sh，没有搭 Hub。",
+      "verifyLogEn": "2026-10-29 morning (Shanghai): https://github.com/github/replica HTTP 200, title GitHub - github/replica: Interactive prototyping tools for your team. Headless Chrome scrolled to the README banner; the Replica wordmark and “An open-source AI prototyping tool” are in frame. gh api: MIT, TypeScript, stargazers_count 42, 12 forks, created 2026-10-15T20:03:06Z, pushed 2026-10-29T00:23:18Z, empty homepage, description “Interactive prototyping tools for your team.” The README covers GitHub Design, the Copilot app canvas, Minimal / CoreAI Sandbox, optional Hub, 90-day activity retention that is not sent to GitHub automatically, no Copilot subscription to view a finished prototype or review in Hub, BYOK in public preview, and SIL OFL fonts. docs/local-prototyping.md via gh api: macOS or Linux, a signed-in Copilot app, Git, Node matching the starter engines.node, bash/curl/tar, and lsof; before setup is accepted, session startup can install the Copilot CLI, enable the plugin, and run npm ci. starters/minimal and starters/coreai both set engines.node to ^24.15.0 || ^26.0.0. catalog.tsv describes CoreAI Sandbox as a React Router app with CoreAI components and a Foundry-style shell. YouTube https://www.youtube.com/watch?v=J2Z28CwIfsA is linked from the README and was not played. Preview is a Playwright capture of that README, 1200×800 WebP. The plugin was not installed, install-starter.sh was not run, and Hub was not set up.",
+      "difficulty": "intermediate",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "接受 Copilot 仓库配置前先看它会装什么。把设计系统交给模型，或把原型发到 Hub 之前，自己看一遍。本库没有代为安装或发布。",
+      "approvalBoundaryEn": "Read what Copilot will install before you accept the repository setup. Review the design-system context and the prototype before they go to a model or to Hub. This library did not install or publish anything.",
+      "language": "zh",
+      "connectors": [
+        "github"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-15",
+      "updatedAt": "2026-10-29T01:20:00Z"
+    },
+    {
+      "id": "ai-design-skills",
+      "slug": "ai-design-skills",
+      "title": "AI Design Skills（落地页设计 skill 合集）",
+      "titleEn": "AI Design Skills: a landing-page design skill collection",
+      "kind": "tool",
+      "hook": "一份落地页 skill，从结构和文案做到视觉系统。",
+      "hookEn": "One landing-page skill for structure, copy, and a visual system.",
+      "summary": "AI Design Skills（https://github.com/elayadesign/ai-design-skills ，MIT）是给 Claude Code、Cursor、Codex、Windsurf，以及任何读 Markdown 规则的编程工具用的设计 skill 合集。README 的表里目前只有一个 skill：landing-page-design，文件在 skills/landing-page-design/SKILL.md。它先问用途、受众和证据，再定页面结构和转化文案，并写了一套字体、间距、圆角和动效规则。SKILL.md 写落地页只服务一个意图：一个 offer、一个受众、一个主要动作；也写它会用到营销站、组件和设计评审上，和用户明确的提示冲突时以用户为准。改已有站点则指向更早的仓库 https://github.com/elayadesign/redesign-skill （MIT）。Claude 的装法是克隆后把 skill 文件夹拷进 .claude/skills/；Cursor 是把 SKILL.md curl 到 .cursor/rules/。视觉数值集中在文件后部，fork 后改那一节即可。README 写内容真实感和动效思路改编自 Leon Lin 的 taste-skill，并写那个仓库是 MIT。本库没有把 skill 装进 Claude 或 Cursor，也没有用它生成落地页。",
+      "summaryEn": "AI Design Skills (https://github.com/elayadesign/ai-design-skills , MIT) is a design-skill collection for Claude Code, Cursor, Codex, Windsurf, and any coding tool that reads a Markdown rules file. The README table currently lists one skill, landing-page-design, at skills/landing-page-design/SKILL.md. It asks about purpose, audience, and proof, then sets page structure and conversion copy, plus type, spacing, radius, and motion rules. SKILL.md says a landing page serves one intent: one offer, one audience, one primary action. It also says the file applies to marketing sites, components, and design reviews, and that an explicit user prompt wins when it conflicts with a rule. Upgrading an existing site points at the older repo https://github.com/elayadesign/redesign-skill (MIT). For Claude, clone the repo and copy the skill folder into .claude/skills/. For Cursor, curl SKILL.md into .cursor/rules/. Visual values sit in one section near the end of the file; fork and edit that section. The README says content-realism and motion ideas are adapted from Leon Lin’s taste-skill and says that repo is MIT. This library did not install the skill into Claude or Cursor and did not generate a landing page with it.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://github.com/elayadesign/ai-design-skills",
+      "secondaryUrls": [
+        "https://github.com/elayadesign/ai-design-skills/blob/main/skills/landing-page-design/SKILL.md",
+        "https://github.com/elayadesign/redesign-skill"
+      ],
+      "sourceType": "community",
+      "previewImage": "/previews/ai-design-skills.webp",
+      "qualityNote": "收录是因为落地页的结构和视觉规则写在同一份 skill 里，而且目前合集里就这一份。SKILL.md 写它也会套到营销站、组件和设计评审上，范围比标题宽；和用户自己的提示冲突时以用户为准。taste-skill 的 MIT 只按本仓库 README 的说法，没有另外打开那个仓库核对许可证文件。redesign-skill 的 MIT 是单独核对过的。本库没有把 skill 装进 Claude 或 Cursor，也没有用它生成落地页。",
+      "qualityNoteEn": "Listed because structure and visual rules for a landing page live in one skill, and the collection currently has only that skill. SKILL.md says it also applies to marketing sites, components, and design reviews, which is wider than the title; an explicit user prompt wins on conflict. The MIT claim for taste-skill is only what this repo’s README says; that other repository’s license file was not opened. The MIT license on redesign-skill was checked separately. This library did not install the skill into Claude or Cursor and did not generate a landing page with it.",
+      "verifyLog": "2026-10-29 早间（上海）：https://github.com/elayadesign/ai-design-skills HTTP 200。无头 Chrome 滚到 README 标题 “AI Design Skills”，可见 Skills 表只有 landing-page-design，以及 Claude Code 的 clone + cp 安装块。gh api：MIT，stargazers_count 11124，forks 798，language 空，homepage 空，created 2026-07-29T06:43:16Z，pushed 2026-10-27T16:02:10Z。git tree 只有 .gitignore、LICENSE、README.md、skills/landing-page-design/SKILL.md。SKILL.md frontmatter name 为 landing-page-design；正文写 one offer、one audience、one primary action，并写用户明确提示优先于规则。Cursor 安装是 README 里的 curl 到 .cursor/rules/<skill-name>.md。redesign-skill gh api：MIT，stargazers_count 423，created 2026-07-18T22:37:00Z，pushed 2026-10-26T00:15:34Z。taste-skill 只在 README Credits 里被写成 MIT，没有打开 https://github.com/Leonxlnx/taste-skill 的许可证文件。预览为 Playwright 实拍该 README，1200×800 WebP。没有拷贝 skill，没有 curl SKILL.md，没有生成页面。",
+      "verifyLogEn": "2026-10-29 morning (Shanghai): https://github.com/elayadesign/ai-design-skills HTTP 200. Headless Chrome scrolled to the README heading “AI Design Skills”; the Skills table lists only landing-page-design, and the Claude Code clone + cp install block is visible. gh api: MIT, stargazers_count 11124, 798 forks, empty language, empty homepage, created 2026-07-29T06:43:16Z, pushed 2026-10-27T16:02:10Z. The git tree is .gitignore, LICENSE, README.md, and skills/landing-page-design/SKILL.md. SKILL.md frontmatter name is landing-page-design; the body says one offer, one audience, one primary action, and that an explicit user prompt wins over a rule. The Cursor install in the README is a curl into .cursor/rules/<skill-name>.md. redesign-skill gh api: MIT, stargazers_count 423, created 2026-07-18T22:37:00Z, pushed 2026-10-26T00:15:34Z. taste-skill is called MIT only in this README’s Credits; the license file at https://github.com/Leonxlnx/taste-skill was not opened. Preview is a Playwright capture of that README, 1200×800 WebP. The skill folder was not copied, SKILL.md was not curled, and no page was generated.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它会按规则改页面文案和样式。放进项目之前先看视觉那一节是不是你要的；本库没有代为安装。",
+      "approvalBoundaryEn": "It will change page copy and styling to match its rules. Read the visual section before you add it to a project. This library did not install it.",
+      "language": "zh",
+      "connectors": [],
+      "featured": false,
+      "publishedAt": "2026-07-29",
+      "updatedAt": "2026-10-29T01:20:00Z"
+    },
+    {
+      "id": "tellers-skills",
+      "slug": "tellers-skills",
+      "title": "Tellers Skills（AI 剪辑时间轴预览）",
+      "titleEn": "Tellers Skills: AI editing with a live timeline preview",
+      "kind": "tool",
+      "hook": "助手在本机剪视频，浏览器里看时间轴再导出。",
+      "hookEn": "An agent edits video locally, with a live timeline and MP4 export.",
+      "summary": "Tellers Skills（https://tellers.ai/skills ，仓库 https://github.com/tellers-ai/skills ，MIT）让 Claude、Codex 或 Cursor 在本机剪视频。页面写：把提示交给助手，在本地浏览器标签里看时间轴成形，不用另装视频编辑器，也不必每次改动都先编码。本地技能 tellers-otio-player 用本地文件或 URL 做 OTIO 时间轴（剪切、分层、标题、效果、音乐），在 localhost 预览并导出 MP4，README 写不需要 Tellers 账号，需要 Python 3 和浏览器（建议 Chrome 或 Edge）。另一个技能 tellers-mcp 安装 https://mcp.tellers.ai/ ，用来改云端项目、搜素材和字幕、生成声音、音乐、图像和视频，README 写这个需要 Tellers 账号。页面写播放器免费，并写有 33 种效果和转场。安装可以 npx skills add tellers-ai/skills，或在 Claude Code、Codex 里加对应插件。播放和导出在浏览器里跑，页面写速度取决于效果、分辨率和机器。仓库创建于 2026-04-07。Show HN https://news.ycombinator.com/item?id=50277631 （2026-10-28）。本库没有安装技能，没有接 Tellers MCP，也没有导出视频。",
+      "summaryEn": "Tellers Skills (https://tellers.ai/skills , repo https://github.com/tellers-ai/skills , MIT) lets Claude, Codex, or Cursor edit video on your machine. The page says you hand the agent a prompt and watch the timeline take shape in a local browser tab, without installing a video editor or encoding after every change. The local skill tellers-otio-player builds an OTIO timeline from local files or URLs (cuts, layers, titles, effects, music), previews it on localhost, and exports MP4. The README says that path needs no Tellers account, and that it needs Python 3 plus a browser (Chrome or Edge recommended). The other skill, tellers-mcp, installs https://mcp.tellers.ai/ to edit cloud projects, search footage and transcripts, and generate voice, music, images, and video; the README says that path needs a Tellers account. The page says the player is free and that there are 33 effects and transitions. Install with npx skills add tellers-ai/skills, or add the plugins in Claude Code or Codex. Playback and export run in the browser; the page says speed depends on effects, resolution, and hardware. The repo was created on 2026-04-07. Show HN https://news.ycombinator.com/item?id=50277631 (2026-10-28). This library did not install the skills, did not connect Tellers MCP, and did not export a video.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://tellers.ai/skills",
+      "secondaryUrls": [
+        "https://github.com/tellers-ai/skills",
+        "https://news.ycombinator.com/item?id=50277631",
+        "https://www.youtube.com/watch?v=C1KhD6tU-po"
+      ],
+      "sourceType": "community-show",
+      "previewImage": "/previews/tellers-skills.webp",
+      "qualityNote": "收录是因为助手可以在本机改时间轴，并用浏览器预览，不必每次都先导出。页面写 33 种效果和转场，本库没有逐条数过。本地播放器按页面和 README 不需要 Tellers 账号；MCP 那条要账号，还会碰到云端素材和生成。页面写播放速度取决于效果、分辨率和机器。本库没有安装技能，没有接 Tellers MCP，也没有导出视频。",
+      "qualityNoteEn": "Listed because an agent can change a timeline on your machine and preview it in the browser, without exporting after every change. The page says 33 effects and transitions; this library did not count each one. The local player needs no Tellers account, according to the page and the README. The MCP skill needs an account and reaches cloud footage and generation. The page says playback speed depends on effects, resolution, and hardware. This library did not install the skills, did not connect Tellers MCP, and did not export a video.",
+      "verifyLog": "2026-10-29 早间（上海）：https://tellers.ai/skills HTTP 200，标题 Tellers Skills | Free video editing for Claude & Codex。无头 Chrome 实拍首屏：TELLERS SKILLS / FREE FOR YOUR AGENT，标题 YOUR AGENT EDITS FAST. YOU SEE IT LIVE.，正文 Turn Claude, Codex or Cursor into your video editor，提示 Edit videos with https://github.com/tellers-ai/skills ，按钮 Copy prompt，100% FREE PLAYER。页内链接 Codex 为 codex://threads/new，Claude Code 为 claude://code/new，Cursor 为 https://cursor.com/link/prompt?text=Edit%20videos%20with%20https%3A%2F%2Fgithub.com%2Ftellers-ai%2Fskills ；没有点这些链接，也没有点 Copy prompt。正文另有 Explore all 33 effects & transitions。gh api tellers-ai/skills：MIT，Python，stargazers_count 2，forks 0，created 2026-04-07T00:12:24Z，pushed 2026-10-28T17:35:22Z，homepage https://tellers.ai/skills ，description 写 Claude Code、Codex、Claude Desktop、Cursor，以及本地 Tellers player 或 Tellers MCP。README 分 tellers-otio-player（Python 3 + 浏览器，无账号，可导出 MP4）和 tellers-mcp（https://mcp.tellers.ai/ ，需要账号）。播放器 bundle 写在 https://tellers.ai/videoplayer/bundle.js 。YouTube https://www.youtube.com/watch?v=C1KhD6tU-po 只在 README 里看到，没有播放。Algolia item 50277631：title “Show HN: Preview video timelines live in the browser as AI agents edit them”，url 指向该 GitHub 仓库而不是 tellers.ai/skills，author rguignar，created_at 2026-10-28T17:39:29Z，points 2，children 0。预览为 Playwright 实拍技能页首屏，1200×800 WebP。没有 npx skills add，没有登录，没有导出。",
+      "verifyLogEn": "2026-10-29 morning (Shanghai): https://tellers.ai/skills HTTP 200, title Tellers Skills | Free video editing for Claude & Codex. Headless Chrome capture of the first screen: TELLERS SKILLS / FREE FOR YOUR AGENT, heading YOUR AGENT EDITS FAST. YOU SEE IT LIVE., body “Turn Claude, Codex or Cursor into your video editor”, prompt “Edit videos with https://github.com/tellers-ai/skills”, Copy prompt button, 100% FREE PLAYER. In-page links: Codex is codex://threads/new, Claude Code is claude://code/new, Cursor is https://cursor.com/link/prompt?text=Edit%20videos%20with%20https%3A%2F%2Fgithub.com%2Ftellers-ai%2Fskills . Those links and Copy prompt were not clicked. The page also says Explore all 33 effects & transitions. gh api tellers-ai/skills: MIT, Python, stargazers_count 2, 0 forks, created 2026-04-07T00:12:24Z, pushed 2026-10-28T17:35:22Z, homepage https://tellers.ai/skills ; the description names Claude Code, Codex, Claude Desktop, Cursor, and the local Tellers player or Tellers MCP. The README splits tellers-otio-player (Python 3 + a browser, no account, MP4 export) and tellers-mcp (https://mcp.tellers.ai/ , account required). The player bundle is named at https://tellers.ai/videoplayer/bundle.js . YouTube https://www.youtube.com/watch?v=C1KhD6tU-po is linked from the README and was not played. Algolia item 50277631: title “Show HN: Preview video timelines live in the browser as AI agents edit them”, url points at the GitHub repo rather than tellers.ai/skills, author rguignar, created_at 2026-10-28T17:39:29Z, 2 points, 0 children. Preview is a Playwright capture of the skills-page hero, 1200×800 WebP. npx skills add was not run, there was no sign-in, and nothing was exported.",
+      "difficulty": "starter",
+      "hasRoutine": false,
+      "hasSkill": true,
+      "hasMultiAgent": false,
+      "requiresApproval": true,
+      "approvalBoundary": "本地导出会在项目目录写 MP4。接 MCP 或把成片交出去之前，先确认账号和素材能不能离开这台机器。本库没有代为登录或导出。",
+      "approvalBoundaryEn": "A local export writes an MP4 into the project folder. Before you connect MCP or hand a cut to someone else, check whether the account and the footage can leave this machine. This library did not sign in or export.",
+      "language": "zh",
+      "connectors": [],
+      "featured": false,
+      "publishedAt": "2026-10-28",
+      "updatedAt": "2026-10-29T01:20:00Z"
+    },
+    {
       "id": "latch",
       "slug": "latch",
       "title": "Latch：一行脚本让站点在 AI 浏览器里可被操作（WebMCP）",
@@ -11267,10 +11387,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-24T12:20:00Z",
+    "updatedAt": "2026-10-29T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.74",
-    "count": 211,
+    "version": "1.4.75",
+    "count": 214,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11552,7 +11672,18 @@
       "https://threeui.com/css/animated-top-dock/sable",
       "https://ui.krutikraut.com/",
       "https://www.makegradient.com/",
-      "https://latch.tools/"
+      "https://latch.tools/",
+      "https://github.com/github/replica",
+      "https://github.com/github/replica/blob/main/docs/local-prototyping.md",
+      "https://www.youtube.com/watch?v=J2Z28CwIfsA",
+      "https://github.com/elayadesign/ai-design-skills",
+      "https://github.com/elayadesign/ai-design-skills/blob/main/skills/landing-page-design/SKILL.md",
+      "https://github.com/elayadesign/redesign-skill",
+      "https://tellers.ai/skills",
+      "https://github.com/tellers-ai/skills",
+      "https://news.ycombinator.com/item?id=50277631",
+      "https://www.youtube.com/watch?v=C1KhD6tU-po",
+      "https://mcp.tellers.ai/"
     ]
   }
 }

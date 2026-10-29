@@ -1,6 +1,41 @@
 {
   "items": [
     {
+      "id": "lightbox",
+      "slug": "lightbox",
+      "title": "Lightbox（headless React 灯箱）",
+      "titleEn": "Lightbox: a headless React lightbox",
+      "hook": "不带 CSS 的 React 灯箱，捏合和滑动都能用。",
+      "hookEn": "A headless React lightbox with pinch, swipe, and pull to dismiss.",
+      "summary": "Lightbox（https://lightbox.frontend.supply ，仓库 https://github.com/frontendsupply/lightbox ，MIT）是 Frontend Supply 的 headless React 灯箱。它不带 CSS，缩略图会变形展开成大图再缩回去，手势有捏合、滑动、双击和滚轮缩放，以及下拉关闭。底层是 Base UI 和 Motion；README 写鼠标拖动另加载 Blossom Carousel，而且只在有鼠标时加载。安装写法是 pnpm add @frontendsupply/lightbox @base-ui/react motion。npm 上的版本是 0.3.0，peer 要求 React 19、react-dom 19、Motion 12 和 @base-ui/react 1.9。README 写需要 React 19 或更新。演示页打开后能看到缩略图画廊，并写点击任一张图即可滑动、捏合或下拉关闭。Show HN https://news.ycombinator.com/item?id=50280331 （2026-10-28）。本库打开了演示页做预览，没有把包装进项目。",
+      "summaryEn": "Lightbox (https://lightbox.frontend.supply , repo https://github.com/frontendsupply/lightbox , MIT) is Frontend Supply’s headless React lightbox. It ships no CSS. A thumbnail morphs open into the photo and back, with pinch, swipe, double-tap, and wheel zoom, plus pull to dismiss. It is built on Base UI and Motion; the README says mouse dragging comes from Blossom Carousel and loads only where there is a mouse. The install line is pnpm add @frontendsupply/lightbox @base-ui/react motion. The npm version is 0.3.0, with peers React 19, react-dom 19, Motion 12, and @base-ui/react 1.9. The README says it requires React 19 or later. The demo page opens on a thumbnail gallery and says to click any image, then swipe, pinch, or pull to dismiss. Show HN https://news.ycombinator.com/item?id=50280331 (2026-10-28). This library opened the demo page for the preview and did not install the package into a project.",
+      "sourceUrl": "https://lightbox.frontend.supply",
+      "secondaryUrls": [
+        "https://github.com/frontendsupply/lightbox",
+        "https://lightbox.frontend.supply/docs",
+        "https://news.ycombinator.com/item?id=50280331"
+      ],
+      "previewImage": "/previews/lightbox.webp",
+      "types": [
+        "component"
+      ],
+      "tags": [
+        "react",
+        "lightbox",
+        "headless",
+        "motion",
+        "base-ui",
+        "mit"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-28",
+      "updatedAt": "2026-10-29T01:20:00Z",
+      "qualityNote": "收录是因为灯箱不带 CSS，捏合、滑动和下拉关闭都在组件里，样式留给项目自己写。npm 版本 0.3.0，peer 要 React 19。README 里的无障碍说法（焦点圈定、滚动锁定、Esc、减弱动效）本库没有逐项操作。本库打开了演示页做预览，看到缩略图画廊，没有点开大图，也没有把包装进项目。",
+      "qualityNoteEn": "Listed because the lightbox ships no CSS: pinch, swipe, and pull to dismiss are in the component, and the styling stays with the project. The npm version is 0.3.0 and the peer range asks for React 19. Accessibility claims in the README (focus trap, scroll lock, Esc, reduced motion) were not stepped through. This library opened the demo page for the preview, saw the thumbnail gallery, did not open a photo, and did not install the package into a project.",
+      "verifyLog": "2026-10-29 早间（上海）：https://lightbox.frontend.supply/ HTTP 200，标题 Lightbox: headless React lightbox with zoom and swipe。无头 Chrome 实拍首屏可见 Lightbox、Docs / Examples / Agent、标题 Everything a React lightbox should do，以及九张缩略图，最后一张带 +3。没有点图片，没有打开 /docs 里的每一个示例。/docs HTTP 200。gh api frontendsupply/lightbox：MIT，TypeScript，stargazers_count 16，forks 0，created 2026-10-19T18:48:46Z，pushed 2026-10-26T14:25:33Z，homepage https://lightbox.frontend.supply ，description “Native-feeling lightbox for React. Zero opinions about your design. Built on Base UI and Motion.” packages/lightbox/package.json version 0.3.0，peerDependencies react >=19、react-dom >=19、motion >=12、@base-ui/react ^1.9.0，dependencies @blossom-carousel/core ^1.1.9。npm registry dist-tag latest 0.3.0，发布时间 2026-10-26T14:25:03.192Z。Algolia item 50280331：title “Show HN: The Best Lightbox Component Out There”，url 指向 GitHub 仓库而不是演示站，author dgknca，created_at 2026-10-28T20:20:55Z，points 1，children 0。预览为 Playwright 实拍演示页首屏，1200×800 WebP。没有 pnpm add，没有把组件嵌进项目。",
+      "verifyLogEn": "2026-10-29 morning (Shanghai): https://lightbox.frontend.supply/ HTTP 200, title Lightbox: headless React lightbox with zoom and swipe. Headless Chrome capture of the first screen shows Lightbox, Docs / Examples / Agent, the heading Everything a React lightbox should do, and a nine-thumbnail grid with +3 on the last cell. No photo was clicked, and not every example under /docs was opened. /docs HTTP 200. gh api frontendsupply/lightbox: MIT, TypeScript, stargazers_count 16, 0 forks, created 2026-10-19T18:48:46Z, pushed 2026-10-26T14:25:33Z, homepage https://lightbox.frontend.supply , description “Native-feeling lightbox for React. Zero opinions about your design. Built on Base UI and Motion.” packages/lightbox/package.json version 0.3.0; peerDependencies react >=19, react-dom >=19, motion >=12, @base-ui/react ^1.9.0; dependencies @blossom-carousel/core ^1.1.9. npm registry dist-tag latest 0.3.0, published 2026-10-26T14:25:03.192Z. Algolia item 50280331: title “Show HN: The Best Lightbox Component Out There”, url points at the GitHub repo rather than the demo, author dgknca, created_at 2026-10-28T20:20:55Z, 1 point, 0 children. Preview is a Playwright capture of the demo’s first screen, 1200×800 WebP. pnpm add was not run, and the component was not added to a project."
+    },
+    {
       "id": "calm-web",
       "slug": "calm-web",
       "title": "Calm Web：把网页读成印刷杂志",
@@ -5471,9 +5506,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-29T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.79",
-    "count": 162
+    "version": "1.3.80",
+    "count": 163
   }
 }
