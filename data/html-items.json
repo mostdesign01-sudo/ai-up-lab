@@ -1,6 +1,76 @@
 {
   "items": [
     {
+      "id": "pure-particles",
+      "slug": "pure-particles",
+      "title": "Pure Particles：玻璃方盒里的粒子烟雾，可嵌入首屏、导出 4K 与无缝循环",
+      "titleEn": "Pure Particles: particle smoke in a glass cube, embeddable as a hero, with 4K and seamless-loop export",
+      "hook": "拖一张图给烟雾上色，嵌进首屏或导出无缝循环。",
+      "hookEn": "Drop an image to colour the smoke, then embed it as a hero or export a seamless loop.",
+      "summary": "Pure Particles（页面名 Pure Art）是法国设计师 Romain 的 three.js 作品：约一百万颗粒子在玻璃方盒里流动，拖动转方盒，悬停搅动，滚轮缩放。右侧面板有七种外观（pure、aura、original、ribbon、veil、rebound、smoke），颜色可以选预设、画渐变，或拖进任意图片让每个像素给一份烟雾上色；下面再细调速度、湍流、节拍、玻璃回弹等。地址栏就是当前外观的分享链接，加 ?embed 可以用 iframe 放进自己页面当首屏背景；也能导出 4K 静帧或无缝循环 MP4。MIT 开源，README 还写了它的设计取舍：黑底一盏灯，颜色只留给烟雾。不是 AI 生成工具，是给落地页和社媒配图用的可调视觉素材。需要 WebGL 2。本库只在无头浏览器里看到默认外观，没有上传图片、没有录制或导出，也没有试嵌入。",
+      "summaryEn": "Pure Particles (the page calls it Pure Art) is a three.js piece by Romain, a designer in France: about a million grains flow inside a glass cube; drag to turn it, hover to stir, scroll to zoom. The side panel has seven looks (pure, aura, original, ribbon, veil, rebound, smoke), and colour can be a preset, a gradient you draw, or any dropped image whose pixels each colour a share of the smoke; below that you fine-tune speed, turbulence, beat, glass rebound, and more. The address bar is a share link to the current look, and adding ?embed lets you iframe it into your own page as a hero background; it also exports a 4K still or a seamless MP4 loop. It is MIT open source, and the README explains its design choices: a black studio with one lamp, colour reserved for the smoke. It is not an AI generator; it is tunable visual material for landing pages and social posts. It needs WebGL 2. This library only saw the default look in a headless browser; it did not upload an image, record or export, or try the embed.",
+      "sourceUrl": "https://pureart-xyz.vercel.app/",
+      "secondaryUrls": [
+        "https://github.com/Exos45xyz/pure-art",
+        "https://news.ycombinator.com/item?id=50285372"
+      ],
+      "previewImage": "/previews/pure-particles.webp",
+      "types": [
+        "interactive",
+        "motion"
+      ],
+      "tags": [
+        "three.js",
+        "webgl",
+        "particles",
+        "hero",
+        "generative",
+        "embed"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-10-29T12:30:00Z",
+      "qualityNote": "收录理由：设计师做的可调粒子视觉，能用自己的图片配色，并直接嵌入首屏或导出循环视频，比找现成烟雾视频更可控。边界：需要 WebGL 2，一百万粒子对旧设备和手机有负担；仓库刚公开，作者说这是系列的第一件。不是 AI 工具。本库没有上传图片、没有导出，也没有试嵌入。",
+      "qualityNoteEn": "Why: a designer-made, tunable particle visual you can colour from your own image and embed as a hero or export as a loop, more controllable than stock smoke footage. Boundary: it needs WebGL 2, and a million grains is heavy on old devices and phones; the repo is brand new and the author calls it the first piece in a series. It is not an AI tool. This library did not upload an image, export, or try the embed.",
+      "verifyLog": "2026-10-29 晚间（Asia/Shanghai）：https://pureart-xyz.vercel.app/ HTTP 200，title “Pure Art”，meta description “Particle smoke in a glass cube. A free, open-source three.js toy by Pure Studio.”，页脚 FREE & OPEN SOURCE · GITHUB 与 DESIGNED BY PURE STUDIO。等待约 30 秒后加载完成，右侧 PARAMETERS 面板可见 randomize / reset、七种 LOOK、COLOUR 与 + image、SHARE 的 record / copy code、FINE-TUNE 的 speed、flow、turbulence 等。仓库 https://github.com/Exos45xyz/pure-art ：gh api license SPDX MIT，stargazers_count 0，forks 0，created 2026-10-28T19:01:57Z，pushed 2026-10-29T11:47:25Z，homepage 指向演示。LICENSE 为 MIT，Copyright (c) 2026 Pure Studio。README 写 ?embed 的 iframe 用法、4K 图与无缝 MP4 循环导出。Show HN https://news.ycombinator.com/item?id=50285372 （2026-10-29T06:57:17Z，作者 exos-xyz，撰写时 2pt、2 评论），正文自称法国设计师 Romain。预览为无头 google-chrome（swiftshader WebGL）实拍默认外观 1200×800，sharp 存成 WebP。没有上传图片、没有 record、没有导出 4K、没有试 ?embed，也没有 npm install。",
+      "verifyLogEn": "2026-10-29 evening (Asia/Shanghai): https://pureart-xyz.vercel.app/ HTTP 200, title “Pure Art”, meta description “Particle smoke in a glass cube. A free, open-source three.js toy by Pure Studio.”, footer FREE & OPEN SOURCE · GITHUB and DESIGNED BY PURE STUDIO. After about 30 seconds it finished loading; the PARAMETERS panel showed randomize / reset, seven LOOK chips, COLOUR with + image, SHARE with record / copy code, and FINE-TUNE sliders such as speed, flow, and turbulence. Repo https://github.com/Exos45xyz/pure-art : gh api license SPDX MIT, stargazers_count 0, forks 0, created 2026-10-28T19:01:57Z, pushed 2026-10-29T11:47:25Z, homepage points at the demo. LICENSE is MIT, Copyright (c) 2026 Pure Studio. README documents the ?embed iframe, 4K image, and seamless MP4 loop export. Show HN https://news.ycombinator.com/item?id=50285372 (2026-10-29T06:57:17Z, author exos-xyz, 2pt and 2 comments at write time); the post says the author is Romain, a designer from France. Preview is a headless google-chrome (swiftshader WebGL) capture of the default look at 1200×800, saved with sharp as WebP. No image upload, no record, no 4K export, no ?embed test, and no npm install."
+    },
+    {
+      "id": "vibegif",
+      "slug": "vibegif",
+      "title": "vibegif：750 个 AI 生成的公有领域 GIF 与动态 WebP",
+      "titleEn": "vibegif: 750 AI-made public-domain GIFs and animated WebPs",
+      "hook": "750 个 CC0 小动图，含界面状态贴纸，可直接热链。",
+      "hookEn": "750 CC0 animated stickers, UI state ones included, ready to hotlink.",
+      "summary": "vibegif 是一面公有领域动图墙：750 个黑白线描风的小动画，每个都有动态 WebP，多数也有 GIF，按 /主题/动作 的地址直接热链，比如 /cat/wag.webp。每一个都是 gen/ 目录里的一段脚本，npm run gen 渲染进 public/；贡献说明开头就是 Got AI? 让 AI 写新条目或新分区再提 PR，最近的提交带有 Claude Opus 5.5 合著署名。分区有动物、物件、表情包，以及 50 个动漫风的界面与页面状态贴纸，适合拿来做空状态、加载、成功提示的小插画。全部 CC0，可以商用、不署名。本库只看了首页和仓库，没有逐个打开 750 个文件，也没有本地跑 npm run gen。",
+      "summaryEn": "vibegif is a public-domain wall of animations: 750 small black-and-white line-art loops, each as an animated WebP and most also as a GIF, hotlinkable by /subject/action paths such as /cat/wag.webp. Each one is a script in gen/, rendered into public/ by npm run gen; the contributing guide opens with Got AI? and asks you to have AI write new items or sections and open a PR, and recent commits carry a Claude Opus 5.5 co-author line. Sections include animals, objects, memes, and 50 anime-style UI and page-state stickers, handy for empty states, loading, and success illustrations. Everything is CC0, so commercial use without credit is fine. This library only looked at the home page and the repo; it did not open all 750 files and did not run npm run gen locally.",
+      "sourceUrl": "https://vibegif.direct-img.link/",
+      "secondaryUrls": [
+        "https://github.com/direct-img/vibegif.direct-img.link",
+        "https://news.ycombinator.com/item?id=50283765"
+      ],
+      "previewImage": "/previews/vibegif.webp",
+      "types": [
+        "motion",
+        "other"
+      ],
+      "tags": [
+        "gif",
+        "webp",
+        "cc0",
+        "stickers",
+        "illustration",
+        "ai-generated"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-22",
+      "updatedAt": "2026-10-29T12:30:00Z",
+      "qualityNote": "收录理由：AI 写脚本生成、CC0 授权的小动图，界面状态贴纸可以直接放进空状态和提示里。边界：风格统一是黑白线描，不适合要彩色品牌插画的场合；热链依赖作者的站点长期在线，正式项目最好下载自托管。本库没有逐个检查 750 个文件，也没有本地渲染。",
+      "qualityNoteEn": "Why: small AI-scripted animations under CC0, with UI-state stickers you can drop into empty states and toasts. Boundary: the style is uniformly black-and-white line art, so it does not fit color brand illustration; hotlinking depends on the author's site staying up, so production work should download and self-host. This library did not check all 750 files and did not render locally.",
+      "verifyLog": "2026-10-29 晚间（Asia/Shanghai）：https://vibegif.direct-img.link/ HTTP 200，title “vibegif · 750 free public domain gifs and animated webp”，首屏 “public domain gallery of 750 gifs and animated webp / feel free to hot link them”，每格下有 webp / gif 链接，部分只有 webp。仓库 https://github.com/direct-img/vibegif.direct-img.link ：gh api license SPDX CC0-1.0，stargazers_count 65，forks 5，created 2026-10-22T17:00:44Z，pushed 2026-10-28T15:07:50Z。LICENSE 为 CC0 1.0 Universal。gen/ 下 11 个分区（含 anime、bw、color、manga、meme 等）。CONTRIBUTING.md 首句 “Got AI? Use them to make new items or whole new sections”。最近提交 “Move the 50 new anime UI stickers into the uianime section on the main page, 750 total”，带 Co-Authored-By: Claude Opus 5.5。Show HN https://news.ycombinator.com/item?id=50283765 （2026-10-29T02:15:58Z，作者 planetrenox，撰写时 1pt、0 评论），标题写 made by Opus 5.5。预览为无头 google-chrome 实拍首页首屏 1200×800，sharp 存成 WebP。没有逐个打开文件，没有 npm install / npm run gen。",
+      "verifyLogEn": "2026-10-29 evening (Asia/Shanghai): https://vibegif.direct-img.link/ HTTP 200, title “vibegif · 750 free public domain gifs and animated webp”, first screen “public domain gallery of 750 gifs and animated webp / feel free to hot link them”, each tile with webp / gif links, some webp only. Repo https://github.com/direct-img/vibegif.direct-img.link : gh api license SPDX CC0-1.0, stargazers_count 65, forks 5, created 2026-10-22T17:00:44Z, pushed 2026-10-28T15:07:50Z. LICENSE is CC0 1.0 Universal. gen/ has 11 sections (including anime, bw, color, manga, meme). CONTRIBUTING.md opens “Got AI? Use them to make new items or whole new sections”. Latest commit “Move the 50 new anime UI stickers into the uianime section on the main page, 750 total” with Co-Authored-By: Claude Opus 5.5. Show HN https://news.ycombinator.com/item?id=50283765 (2026-10-29T02:15:58Z, author planetrenox, 1pt and 0 comments at write time), title says made by Opus 5.5. Preview is a headless google-chrome capture of the home first screen at 1200×800, saved with sharp as WebP. Files were not opened one by one; no npm install / npm run gen."
+    },
+    {
       "id": "calm-web",
       "slug": "calm-web",
       "title": "Calm Web：把网页读成印刷杂志",
@@ -5471,9 +5541,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-29T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.79",
-    "count": 162
+    "version": "1.3.80",
+    "count": 164
   }
 }
