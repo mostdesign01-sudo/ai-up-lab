@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-30",
+      "title": "晚间收录 2026-10-30：Cases +1（Bref-ui）",
+      "titleEn": "Evening catalog 2026-10-30: Cases +1 (Bref-ui)",
+      "body": "AI×设计：bref-ui（MIT，feuersteiner/bref-ui，npm bref-ui@3.0.2）— Svelte 5 组件库，定位 Svelte-first / human-first / agent-first；可 npm 安装或 `npx bref-ui` 复制源码；文档含 playground、主题与 /llms.txt。预览 3:2 WebP。本库未 npm/CLI 实测。cases 212→213（1.4.75→1.4.76）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold PR（#134/#133/#131/#130/#129/#128/#100…）。",
+      "bodyEn": "AI×design: bref-ui (MIT, feuersteiner/bref-ui, npm bref-ui@3.0.2) — Svelte 5 component library pitched as Svelte-first / human-first / agent-first; install via npm or copy source with `npx bref-ui`; docs include playgrounds, themes, and /llms.txt. Preview is a 3:2 WebP. This library did not npm/CLI-test. cases 212→213 (1.4.75→1.4.76). HTML / Agent UI / Models / home picks unchanged. Did not merge still-open catalog-hold PRs (#134/#133/#131/#130/#129/#128/#100…)."
+    },
+    {
       "date": "2026-10-29",
       "title": "晚间收录 2026-10-29：Cases +1（Kalka）、HTML +2（Pure Particles、vibegif）",
       "titleEn": "Evening catalog 2026-10-29: Cases +1 (Kalka), HTML +2 (Pure Particles, vibegif)",

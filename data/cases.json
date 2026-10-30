@@ -1,6 +1,52 @@
 {
   "cases": [
     {
+      "id": "bref-ui",
+      "slug": "bref-ui",
+      "title": "Bref-ui：面向助手编程的 Svelte 5 组件库（可复制源码）",
+      "titleEn": "Bref-ui: a Svelte 5 component library built for agent-assisted coding",
+      "kind": "tool",
+      "hook": "Svelte 5 组件可 npm 装，也可复制源码进项目。",
+      "hookEn": "Install Svelte 5 components via npm, or copy their source into your app like shadcn.",
+      "summary": "Bref-ui（MIT，仓库 feuersteiner/bref-ui，npm bref-ui）是一套 Svelte-first / human-first / agent-first 的 Svelte 5 组件库：scoped CSS、原生 HTML 事件与绑定，运行时依赖尽量只留 Svelte。可 `npm install bref-ui` 后用 Theme + Button 等组件；也可用 `npx bref-ui init` / `npx bref-ui add button` 把源码复制进项目（默认 #bref 导入）。文档站有组件 playground、主题（New Paris / VS Code / Glassy / Crystal Code）与 /llms.txt，方便编程助手发现与核对 API。路线图写明生成式 UI 仍是计划项。适合已用 Svelte 5、又想让助手按同一套组件写界面的人。本库没有 npm/CLI 安装实测，没有在真实 SvelteKit 项目里接入。",
+      "summaryEn": "Bref-ui (MIT, repo feuersteiner/bref-ui, npm bref-ui) is a Svelte-first / human-first / agent-first Svelte 5 component library: scoped CSS, native HTML events and bindings, with runtime deps kept close to Svelte alone. Install with `npm install bref-ui` and render Theme plus components, or run `npx bref-ui init` / `npx bref-ui add button` to copy source into your project (default #bref imports). Docs include component playgrounds, themes (New Paris / VS Code / Glassy / Crystal Code), and /llms.txt so coding agents can discover and check APIs. The roadmap still lists generative UI as planned. Good if you already use Svelte 5 and want agents to write UI against the same components. This library did not npm/CLI-install or wire it into a real SvelteKit app.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design component library",
+      "sourceUrl": "https://feuersteiner.github.io/bref-ui/",
+      "secondaryUrls": [
+        "https://github.com/feuersteiner/bref-ui",
+        "https://feuersteiner.github.io/bref-ui/llms.txt",
+        "https://feuersteiner.github.io/bref-ui/demo",
+        "https://www.npmjs.com/package/bref-ui",
+        "https://x.com/MarieloGerdart/status/2116045179014820153"
+      ],
+      "previewImage": "/previews/bref-ui.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手可能改你的组件目录与依赖；合并前自己核对主题、可访问性与复制进项目的源码。",
+      "approvalBoundaryEn": "Agents may change your components folder and dependencies; check themes, accessibility, and copied source yourself before merging.",
+      "connectors": [
+        "Svelte",
+        "SvelteKit",
+        "npm"
+      ],
+      "publishedAt": "2025-02-07",
+      "updatedAt": "2026-10-30T12:17:31Z",
+      "qualityNote": "收录理由：明确 agent-first，带 llms.txt 与可复制 CLI，是 AI×设计向的 Svelte 5 组件库。边界：生成式 UI 仍是路线图；本库没有执行 npm install 或 bref-ui CLI，没有在真实项目里接入。",
+      "qualityNoteEn": "Listed as an agent-first Svelte 5 component library with llms.txt and a copy CLI for AI×design workflows. Boundary: generative UI is still on the roadmap; this library did not run npm install or the bref-ui CLI, and did not wire it into a real app.",
+      "verifyLog": "主源 https://feuersteiner.github.io/bref-ui/ 与仓库 feuersteiner/bref-ui、llms.txt、demo；晚间 HTTP 200。gh api：MIT、约 96★，仓库 2025-02-07 创建，最近推送 2026-10-30T07:53:06Z。npm bref-ui 最新 3.0.2。X https://x.com/MarieloGerdart/status/2116045179014820153（2026-10-30）。agent-first、复制 CLI、主题与 llms.txt 均照官网与 README。预览为 Playwright 实拍文档首屏，裁 3:2 WebP。本库未 npm/CLI 安装实测。",
+      "verifyLogEn": "Primary sources https://feuersteiner.github.io/bref-ui/, feuersteiner/bref-ui, llms.txt, and demo; HTTP 200 this evening. gh api: MIT, ~96★, created 2025-02-07, last push 2026-10-30T07:53:06Z. npm bref-ui latest 3.0.2. X https://x.com/MarieloGerdart/status/2116045179014820153 (2026-10-30). Agent-first pitch, copy CLI, themes, and llms.txt follow the site and README. Preview is a Playwright capture of the docs hero, cropped to a self-hosted 3:2 WebP. This library did not npm/CLI-install."
+    },
+    {
       "id": "kalka",
       "slug": "kalka",
       "title": "Kalka：开源设计画布，图层就是真 HTML/CSS，编程助手经 MCP 起稿",
@@ -11310,10 +11356,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-29T12:30:00Z",
+    "updatedAt": "2026-10-30T12:19:23Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.75",
-    "count": 212,
+    "version": "1.4.76",
+    "count": 213,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11597,7 +11643,13 @@
       "https://www.makegradient.com/",
       "https://latch.tools/",
       "https://kalka.design/",
-      "https://github.com/leyscore/kalka"
+      "https://github.com/leyscore/kalka",
+      "https://feuersteiner.github.io/bref-ui/",
+      "https://github.com/feuersteiner/bref-ui",
+      "https://feuersteiner.github.io/bref-ui/llms.txt",
+      "https://feuersteiner.github.io/bref-ui/demo",
+      "https://www.npmjs.com/package/bref-ui",
+      "https://x.com/MarieloGerdart/status/2116045179014820153"
     ]
   }
 }
