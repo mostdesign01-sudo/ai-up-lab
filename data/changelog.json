@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-10-31",
+      "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
+      "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
+      "body": "AI×设计：motif（motif-ae.vercel.app，作者 Khayam）— 本机 UI 画布一键送进 After Effects，支持 .fig / Figma 链接导入；官网写 v0.6.0 免费 Mac/Win，未见公开开源仓。opendesigner（MIT，ckryptickunal/OpenDesigner，约 47★）— 给 Claude Code / Cursor / Codex 等的设计系统 skill，产出 tokens / CSS / Tailwind / DESIGN.md。预览各一枚 3:2 WebP。本库未安装 Motif、未装 OpenDesigner plugin、未跑引擎。cases 213→215（1.4.76→1.4.77）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold PR（#134/#133/#131/#130/#129/#128/#100…）。",
+      "bodyEn": "AI×design: motif (motif-ae.vercel.app, by Khayam) — local UI canvas → After Effects in one click, with .fig / Figma-link import; site lists free Mac/Win v0.6.0, no public OSS repo found. opendesigner (MIT, ckryptickunal/OpenDesigner, ~47★) — design-system skills for Claude Code / Cursor / Codex that emit tokens / CSS / Tailwind / DESIGN.md. One 3:2 WebP preview each. This library did not install Motif, the OpenDesigner plugin, or the engine. cases 213→215 (1.4.76→1.4.77). HTML / Agent UI / Models / home picks unchanged. Did not merge still-open catalog-hold PRs (#134/#133/#131/#130/#129/#128/#100…)."
+    },
+    {
       "date": "2026-10-30",
       "title": "晚间收录 2026-10-30：Cases +1（Bref-ui）",
       "titleEn": "Evening catalog 2026-10-30: Cases +1 (Bref-ui)",

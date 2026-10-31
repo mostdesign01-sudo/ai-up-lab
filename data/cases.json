@@ -1,6 +1,97 @@
 {
   "cases": [
     {
+      "id": "motif",
+      "slug": "motif",
+      "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
+      "titleEn": "Motif: design UI on a canvas, send a clean composition to After Effects in one click",
+      "kind": "tool",
+      "hook": "画布上做好 UI，⌘E 一层层进 AE，文字形状都活着。",
+      "hookEn": "Design UI on the canvas, hit ⌘E, and every named layer lands live in After Effects.",
+      "summary": "Motif（https://motif-ae.vercel.app ，作者 Khayam / @thekh4yam）是给动态设计师用的本机设计画布：在画布上做 UI（钢笔、布尔、蒙版、137 个 UI Kit 块、约 7000 图标、明暗主题），再按 ⌘E（Windows 为 Ctrl+E）把设计送进 Adobe After Effects——文字仍是可编辑文字层，形状仍是形状层，组可变成 null 或预合成，图层名保留。支持打开本地 .fig 或粘贴 Figma 链接导入画板；也可导出图片。官网写 v0.6.0（2026-10-20），Mac（Universal，macOS 12+）与 Windows（x64，Win 10/11）免费下载，无需账号、无追踪、可离线（可选 Figma 链接导入除外）；标明永远免费、个人与商用均可。送进 AE 需要本机已装 After Effects（蒙版 track matte 需 AE 2023+）；只设计、导入 Figma、导出图可不装 AE。安装包未走 Apple/微软商店公证，首次打开需系统放行。公开页未找到开源仓库，本条不写开源。适合先在画布定 UI 再进 AE 做动画、想少手搓图层的动态与短视频同学。本库没有下载安装包，没有导入 .fig，也没有实测 ⌘E 导出到 After Effects。",
+      "summaryEn": "Motif (https://motif-ae.vercel.app , by Khayam / @thekh4yam) is a local design canvas for motion designers: build UI on the canvas (pen, booleans, masks, 137 UI-kit blocks, ~7,000 icons, light/dark), then press ⌘E (Ctrl+E on Windows) to send it into Adobe After Effects—live editable text, real shape layers, groups as nulls or precomps, names kept. Open a local .fig or paste a Figma link to import frames; image export works too. The site lists v0.6.0 (2026-10-20), free Mac (Universal, macOS 12+) and Windows (x64, Win 10/11) builds, no account, no tracking, offline except optional Figma-link import; free forever for personal and commercial use. Sending to AE needs After Effects installed (mask track mattes need AE 2023+); designing, Figma import, and image export work without it. Builds are not Apple/Microsoft Store–notarised, so the first open needs a system override. No public open-source repo was found on the marketing site, so this entry does not claim OSS. Good when you want UI settled on a canvas before keyframing in AE. This library did not download the installer, import a .fig, or run ⌘E into After Effects.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://motif-ae.vercel.app",
+      "secondaryUrls": [
+        "https://x.com/thekh4yam/status/2116487547387789770",
+        "https://x.com/thekh4yam"
+      ],
+      "previewImage": "/previews/motif.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "首次安装需系统放行未公证安装包；往正式 AE 工程送层前自己核对图层与字体。本库没有代为安装或导出。",
+      "approvalBoundaryEn": "First launch needs a system override for the unsigned build; review layers and fonts before sending into a production AE project. This library did not install or export for you.",
+      "connectors": [
+        "After Effects",
+        "Figma"
+      ],
+      "publishedAt": "2026-10-20",
+      "updatedAt": "2026-10-31T12:20:00Z",
+      "qualityNote": "收录理由：设计→动态交接工具，和库里偏「设计→代码 / 助手」的条目互补——这边是 UI 画布一键进 AE，适合短视频与动效同学。边界：官网写免费本机应用，公开页未见开源仓库，勿写成 OSS（作者 X 帖自称开源，但实验室未找到公开源码仓，故仍不写）；送 AE 依赖本机 After Effects。本库没有下载安装包，没有导入 .fig，也没有实测导出。",
+      "qualityNoteEn": "Why listed: a design→motion handoff tool that complements design→code / agent entries—UI canvas into AE in one shot for short-form and motion work. Limits: the site markets a free local app; no public OSS repo was found, so do not call it open source (the author’s X post says open source, but no public source repo was found); AE export needs After Effects installed. This library did not download the installer, import a .fig, or test export.",
+      "verifyLog": "2026-10-31 晚间（Asia/Shanghai）：https://motif-ae.vercel.app HTTP 200，title/首屏写 Motif — Design UI. Send it to After Effects in one click；徽标 Free for Mac & Windows · v 0.6.0；主文 Design it here. Animate it in After Effects；下载区写 Version 0.6.0 · released 20 October 2026，macOS .dmg ~240MB、Windows setup ~118MB，Needs Adobe After Effects…；FAQ 写免费、可商用、可离线、Figma .fig/链接导入、不做动画（只做交接）。作者署名 Khayam，联系 thekh4yam@gmail.com，X @thekh4yam。页内未见 GitHub / MIT / open source 字样；gh search repos “motif after effects” 无对应公开仓。X 线索 https://x.com/thekh4yam/status/2116487547387789770（抓取 403，URL 仍作 secondary）。预览为官网首屏实拍裁 3:2 WebP 自托管。本库未下载安装包、未导入 .fig、未接 AE。",
+      "verifyLogEn": "2026-10-31 evening (Asia/Shanghai): https://motif-ae.vercel.app HTTP 200; hero Free for Mac & Windows · v 0.6.0; Download section Version 0.6.0 · released 20 October 2026; macOS/Windows builds listed; FAQ free/commercial/offline/Figma import; author Khayam (@thekh4yam). No GitHub/MIT/OSS claim on the page; gh repo search found no matching public Motif AE repo. X status URL kept as secondary (fetch 403). Preview is a 3:2 WebP of the landing hero. Did not download, import .fig, or connect AE."
+    },
+    {
+      "id": "opendesigner",
+      "slug": "opendesigner",
+      "title": "OpenDesigner：几句问答生成设计系统，交给你已有的 AI 编程工具",
+      "titleEn": "OpenDesigner: a few plain answers become a design system for the AI tools you already use",
+      "kind": "tool",
+      "hook": "装进 AI 编程工具，问答后写出 token 与 DESIGN.md。",
+      "hookEn": "Drop into Claude, Cursor, or Codex; a Q&A writes tokens, CSS, Tailwind, and DESIGN.md.",
+      "summary": "OpenDesigner（https://opendesigner.dev ，仓库 ckryptickunal/OpenDesigner，MIT）是一套给已有 AI 编程工具用的免费开源 skill / 小引擎：用几句产品问答生成设计系统规则，写出设计 token、CSS、Tailwind 主题与 DESIGN.md，并做可读性/无障碍检查，让后续助手与团队按同一套视觉规则建界面。安装路径：Claude Code 两条 `/plugin marketplace add ckryptickunal/OpenDesigner` 再 `/plugin install opendesigner@opendesigner`（装入 8 个 skill）；Claude 应用可打 zip 上传 Skills；Cursor / Codex / Copilot / Gemini CLI 等把 `.agents/skills/opendesigner*` 拷进项目；ChatGPT 用仓库里的 Project 说明与 knowledge 文件；也可单独跑 Python 引擎（3.10+，无网络）生成文件。文档写可选接 Figma remote MCP / Paper Desktop 导出。适合想让助手「先有设计系统再写 UI」、又不愿从零手写 token 的人。本库没有安装 plugin、没有跑引擎、也没有在真实项目里生成 DESIGN.md。",
+      "summaryEn": "OpenDesigner (https://opendesigner.dev , repo ckryptickunal/OpenDesigner, MIT) is a free open-source skill set and small engine for the AI coding tools you already use: a short product Q&A becomes design-system rules—tokens, CSS, a Tailwind theme, and DESIGN.md—with readability/accessibility checks so later agents and teammates share one look. Install paths: Claude Code `/plugin marketplace add ckryptickunal/OpenDesigner` then `/plugin install opendesigner@opendesigner` (eight skills); Claude app via a built skill zip; Cursor / Codex / Copilot / Gemini CLI by copying `.agents/skills/opendesigner*` into the project; ChatGPT via the repo’s Project instructions and knowledge files; or run the Python engine alone (3.10+, no network). Docs also mention optional Figma remote MCP / Paper Desktop export. Good when you want agents to follow a design system before shipping UI. This library did not install the plugin, run the engine, or generate DESIGN.md in a real project.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI design workflow",
+      "sourceUrl": "https://opendesigner.dev",
+      "secondaryUrls": [
+        "https://github.com/ckryptickunal/OpenDesigner",
+        "https://opendesigner.dev/docs/",
+        "https://opendesigner.dev/docs/install/",
+        "https://opendesigner.dev/showcase/",
+        "https://x.com/OpenDesigner_/status/2116500082099097682"
+      ],
+      "previewImage": "/previews/opendesigner.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "skill / plugin 会写入项目里的设计系统文件；合并进正式仓库前自己审 token、对比度与 DESIGN.md。本库没有代为安装或生成。",
+      "approvalBoundaryEn": "Skills/plugins write design-system files into your project; review tokens, contrast, and DESIGN.md before merging to production. This library did not install or generate for you.",
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "ChatGPT",
+        "Figma"
+      ],
+      "publishedAt": "2026-09-23",
+      "updatedAt": "2026-10-31T12:20:00Z",
+      "qualityNote": "收录理由：把设计系统做成可装进 Claude Code / Cursor / Codex 的 skill，直接产出 token / CSS / Tailwind / DESIGN.md，贴合 AI×设计。边界：开源 MIT，但跑 skill 仍消耗你自己的 AI 额度；文档写 Claude app / ChatGPT / 多代理实测记录仍有限。本库没有安装 plugin，没有跑引擎，也没有生成真实项目的 DESIGN.md。",
+      "qualityNoteEn": "Why listed: a design system packaged as skills for Claude Code / Cursor / Codex that emit tokens / CSS / Tailwind / DESIGN.md—clear AI×design fit. Limits: MIT and free, but skills still use your own AI plan; docs say recorded runs outside the engine path are still thin. This library did not install the plugin, run the engine, or generate a real-project DESIGN.md.",
+      "verifyLog": "2026-10-31 晚间（Asia/Shanghai）：https://opendesigner.dev 与 /docs/install/ HTTP 200；首屏 Free and open source · MIT，安装示意 `/plugin marketplace add ckryptickunal/OpenDesigner`。gh api ckryptickunal/OpenDesigner：MIT、约 47★，创建 2026-09-23T12:54:12Z，最近推送 2026-10-31T10:21:46Z，homepage opendesigner.dev。README 写 Claude Code / Claude app / Cursor·Codex / ChatGPT / 独立 engine 五条路径，八个 skill 名。X https://x.com/OpenDesigner_/status/2116500082099097682。预览为官网首屏实拍裁 3:2 WebP 自托管。本库未安装 plugin、未跑 engine、未生成 DESIGN.md。",
+      "verifyLogEn": "2026-10-31 evening (Asia/Shanghai): opendesigner.dev + /docs/install/ HTTP 200; MIT badge and Claude Code plugin commands on site. gh api: MIT, ~47★, created 2026-09-23, pushed 2026-10-31T10:21:46Z. README lists five install paths and eight skills. X status kept as secondary. Preview is a 3:2 WebP of the landing hero. Did not install plugin, run engine, or write DESIGN.md."
+    },
+    {
       "id": "bref-ui",
       "slug": "bref-ui",
       "title": "Bref-ui：面向助手编程的 Svelte 5 组件库（可复制源码）",
@@ -11356,10 +11447,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-30T12:19:23Z",
+    "updatedAt": "2026-10-31T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.76",
-    "count": 213,
+    "version": "1.4.77",
+    "count": 215,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11649,7 +11740,15 @@
       "https://feuersteiner.github.io/bref-ui/llms.txt",
       "https://feuersteiner.github.io/bref-ui/demo",
       "https://www.npmjs.com/package/bref-ui",
-      "https://x.com/MarieloGerdart/status/2116045179014820153"
+      "https://x.com/MarieloGerdart/status/2116045179014820153",
+      "https://motif-ae.vercel.app",
+      "https://x.com/thekh4yam/status/2116487547387789770",
+      "https://opendesigner.dev",
+      "https://github.com/ckryptickunal/OpenDesigner",
+      "https://opendesigner.dev/docs/",
+      "https://opendesigner.dev/docs/install/",
+      "https://opendesigner.dev/showcase/",
+      "https://x.com/OpenDesigner_/status/2116500082099097682"
     ]
   }
 }
