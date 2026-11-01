@@ -1,11 +1,70 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-01T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "sensenova-loop-9b",
+      "slug": "sensenova-loop-9b",
+      "name": "SenseNova-Loop-9B-Preview",
+      "vendor": "商汤科技 SenseTime / OpenSenseNova",
+      "title": "SenseNova-Loop-9B-Preview：循环 Transformer 多模态预览，强调长上下文与设计向展示",
+      "titleEn": "SenseNova-Loop-9B-Preview: a looped-transformer multimodal preview for long context and design-ish showcases",
+      "summary": "SenseNova-Loop-9B-Preview 是商汤 SenseNova 团队开源的多模态预览模型（Apache-2.0），Hugging Face 仓库 2026-10-28 建立，GitHub README 的新闻栏写 2026-10-30 正式发布，定位长上下文和 agent 工作流：输入文字和图片，输出文字。架构上它把一段解码层循环跑两遍：32 个不同的解码层里，第 4–27 层共享权重执行两次，一次前向共 56 次层计算、只存 32 层权重；循环段内用两路残差流的 mHC（manifold-constrained hyper-connections）路由信息，注意力按「三层线性 + 一层全注意力」交错；README 写约 9B 总参数、约 14.6B 推理参数，训练序列最长 262,144 token，支持 MTP 加速。用 Transformers 加载需要 trust_remote_code（自定义 sensenova_loop 代码），官方给了 LightLLM 四卡示例，SGLang 和 vLLM 要用对应 PR 分支。和设计相关的是 README 的展示区：动效设计、PPT 设计、数据分析样例（标注由 Raccoon Work 制作），以及 RaccoonPPTBench 等自家基准图——这些都是官方或合作方演示，不是本库运行结果。本库没有下载权重、没有本地推理，也没有复现任何样例。",
+      "summaryEn": "SenseTime’s SenseNova team has open-sourced SenseNova-Loop-9B-Preview, a multimodal preview model (Apache-2.0). The Hugging Face repo was created on 2026-10-28 and the GitHub README news line announces the release on 2026-10-30, aimed at long-context and agentic workflows: text and images in, text out. Architecturally it loops a block of decoder layers twice: of 32 distinct decoder layers, layers 4–27 run twice with shared weights, giving 56 layer executions per forward pass while storing 32 layers’ weights; inside the loop, two-stream mHC (manifold-constrained hyper-connections) routes information between residual streams, and attention interleaves three linear-attention layers with one full-attention layer. The README lists ~9B total and ~14.6B inference parameters, training sequences up to 262,144 tokens, and MTP for faster inference. Loading with Transformers needs trust_remote_code (custom sensenova_loop code); there is an official four-GPU LightLLM example, while SGLang and vLLM need specific PR branches. The design angle is the README showcase—motion design, PPT design, and data-analysis samples (credited to Raccoon Work) plus in-house benchmarks such as RaccoonPPTBench—all vendor or partner demos, not lab runs. This library did not download the weights, run local inference, or reproduce any sample.",
+      "announcedAt": "2026-10-30",
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "GitHub：OpenSenseNova/SenseNova-Loop（README、架构说明与展示样例）",
+          "labelEn": "GitHub: OpenSenseNova/SenseNova-Loop (README, architecture notes, and showcase samples)",
+          "url": "https://github.com/OpenSenseNova/SenseNova-Loop",
+          "by": "OpenSenseNova",
+          "date": "2026-10-30"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 模型：sensenova/SenseNova-Loop-9B-Preview（Apache-2.0）",
+          "labelEn": "Hugging Face model: sensenova/SenseNova-Loop-9B-Preview (Apache-2.0)",
+          "url": "https://huggingface.co/sensenova/SenseNova-Loop-9B-Preview",
+          "by": "sensenova",
+          "date": "2026-10-28"
+        }
+      ],
+      "highlights": [
+        {
+          "label": "循环解码：第 4–27 层共享权重跑两遍，32 层权重、56 次层计算",
+          "labelEn": "Looped decoder: layers 4–27 run twice with shared weights—32 layers stored, 56 executed"
+        },
+        {
+          "label": "两路残差流 mHC + 三线性一全注意力交错",
+          "labelEn": "Two-stream mHC plus 3:1 linear/full attention interleave"
+        },
+        {
+          "label": "图文输入、文字输出；训练序列最长 262,144 token",
+          "labelEn": "Image + text in, text out; training sequences up to 262,144 tokens"
+        },
+        {
+          "label": "Apache-2.0；需 trust_remote_code，LightLLM 示例为四卡",
+          "labelEn": "Apache-2.0; needs trust_remote_code, LightLLM example uses four GPUs"
+        }
+      ],
+      "qualityNote": "收录理由：开源多模态循环架构预览，README 带动效、PPT、数据分析等设计/演示向样例。边界：本库没有下载权重、没有本地推理、没有复现样例视频；展示素材来自官方 README（标注 Raccoon Work 制作），基准图为官方自测。Preview 版，SGLang / vLLM 支持还在 PR 分支。",
+      "qualityNoteEn": "Why listed: an open multimodal looped-architecture preview whose README carries design/showcase samples (motion, PPT, data analysis). Limits: this library did not download weights, run local inference, or reproduce the sample videos; showcase material comes from the official README (credited to Raccoon Work) and the benchmark chart is vendor-reported. It is a Preview, and SGLang / vLLM support still lives on PR branches.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/sensenova-loop.webp",
+      "previewCredit": "预览裁自 GitHub 仓库 assets/loop-mhc-overview.jpg 架构图",
+      "previewCreditEn": "Preview cropped from the repo’s assets/loop-mhc-overview.jpg architecture diagram",
+      "featured": false,
+      "verifyLog": "2026-11-01 晚间（Asia/Shanghai）：GitHub OpenSenseNova/SenseNova-Loop 与 HF sensenova/SenseNova-Loop-9B-Preview 均 HTTP 200。gh api：Apache-2.0，59★，创建于 2026-10-29，最近推送 2026-11-01；README 新闻栏 [2026.10.30] 发布，展示区 Motion Design / PPT Design / Data Analysis 标注 Created by Raccoon Work，规格表 ~9B total / ~14.6B inference、32 层 / 56 次执行、[4,28) 循环两遍、mHC 2 streams / Sinkhorn 20 次、262,144 训练长度。HF API：createdAt 2026-10-28T15:34Z，license apache-2.0，pipeline image-text-to-text，library transformers，tags 含 sensenova_loop、looped-transformer、mhc、custom_code、en、zh；likes 125，downloads 927。预览为仓库 assets/loop-mhc-overview.jpg（4465×2280）居中裁成 3:2，1200×800 WebP。未下载权重、未运行模型。",
+      "verifyLogEn": "2026-11-01 evening (Asia/Shanghai): GitHub OpenSenseNova/SenseNova-Loop and HF sensenova/SenseNova-Loop-9B-Preview both HTTP 200. gh api: Apache-2.0, 59★, created 2026-10-29, last push 2026-11-01; README news [2026.10.30] release; showcase Motion Design / PPT Design / Data Analysis credited “Created by Raccoon Work”; spec table ~9B total / ~14.6B inference, 32 layers / 56 executions, [4,28) looped twice, mHC 2 streams / 20 Sinkhorn iterations, 262,144 training length. HF API: createdAt 2026-10-28T15:34Z, license apache-2.0, pipeline image-text-to-text, library transformers, tags include sensenova_loop, looped-transformer, mhc, custom_code, en, zh; 125 likes, 927 downloads. Preview is the repo’s assets/loop-mhc-overview.jpg (4465×2280) centre-cropped to 3:2, 1200×800 WebP. Did not download weights or run the model."
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
