@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-01",
+      "title": "晚间收录 2026-11-01：Cases +3、Models +1（ai-design-check / Looseleaf / code-video-showcase / SenseNova-Loop）",
+      "titleEn": "Evening catalog 2026-11-01: Cases +3, Models +1 (ai-design-check / Looseleaf / code-video-showcase / SenseNova-Loop)",
+      "body": "AI×设计：ai-design-check（MIT，enmerasoftware/ai-design-check，npm @enmera/ai-design-check，约 64★）— 76 条设计规则 + 零依赖检查器 + 修界面的 agent skill，专抓 AI 写出的界面里的「生成味」。looseleaf（MIT，kevintngo/looseleaf，6★，当天新建）— 手绘纸笔风的 shadcn/ui，README 写 123 个组件、61 个 blocks，走 shadcn registry 安装。code-video-showcase（MIT，Moessif/code-video-showcase，约 253★）— 用 HTML/Canvas/Three.js + Python 配乐 + FFmpeg 做卡点展示片的 Agent Skill，不用生成模型，仓库无成品片。Models：sensenova-loop-9b（Apache-2.0，商汤 SenseNova-Loop-9B-Preview）— 循环 Transformer + mHC 多模态预览，README 带动效/PPT/数据分析样例。预览各一枚 3:2 WebP。本库未跑检查器、未装 skill、未 registry 安装、未渲染、未下载权重。cases 215→218（1.4.77→1.4.80），models 40→41（1.1.30→1.1.31）。未改 HTML / Agent UI / 首页精选。未合并仍打开的 catalog-hold PR（#138/#134/#133/#131/#130/#129/#128/#100…）。",
+      "bodyEn": "AI×design: ai-design-check (MIT, enmerasoftware/ai-design-check, npm @enmera/ai-design-check, ~64★) — 76 design rules, a zero-dependency checker, and an agent skill that fixes the “generated” look of AI-written UI. looseleaf (MIT, kevintngo/looseleaf, 6★, created the same day) — hand-drawn paper-and-pen shadcn/ui; README lists 123 components and 61 blocks, installed via a shadcn registry. code-video-showcase (MIT, Moessif/code-video-showcase, ~253★) — an Agent Skill for beat-synced showcase films from HTML/Canvas/Three.js + a Python score + FFmpeg, no generative models; no finished film in the repo. Models: sensenova-loop-9b (Apache-2.0, SenseTime SenseNova-Loop-9B-Preview) — looped-transformer + mHC multimodal preview whose README carries motion/PPT/data-analysis samples. One 3:2 WebP preview each. This library did not run the checker, install skills, run a registry install, render, or download weights. cases 215→218 (1.4.77→1.4.80), models 40→41 (1.1.30→1.1.31). HTML / Agent UI / home picks unchanged. Did not merge still-open catalog-hold PRs (#138/#134/#133/#131/#130/#129/#128/#100…)."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
