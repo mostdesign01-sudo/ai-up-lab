@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-01",
+      "title": "收录 Stageshow（agent 假 UI skill）",
+      "titleEn": "Catalog Stageshow (agent faux-UI skill)",
+      "body": "cases +1；1.4.77→1.4.78；215→216；未改 HTML/Agent UI/Models/首页；PR 已贴 catalog-hold，等 Hao「合」.",
+      "bodyEn": "cases +1; 1.4.77→1.4.78; 215→216; HTML / Agent UI / Models / home unchanged; PR labelled catalog-hold, waiting for Hao to say 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",

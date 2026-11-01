@@ -1,6 +1,129 @@
 {
   "cases": [
     {
+      "id": "stageshow",
+      "slug": "stageshow",
+      "title": "Stageshow：教 agent 做出像样的假产品 UI 静帧与动效",
+      "titleEn": "Stageshow: a skill so agents make better faux product UI stills and motion",
+      "kind": "tool",
+      "hook": "装进编程助手，照金样例做假 UI 静帧、光标演示和 bento。",
+      "hookEn": "Drop into your coding agent; gold examples drive faux UI stills, cursor demos, and bentos.",
+      "summary": "Stageshow（https://benji.org/stageshow ，仓库 https://github.com/benjitaylor/skills 里的 stageshow/，该目录 LICENSE 为 MIT，Copyright (c) 2026 Benji Taylor）是一套 skill 加小型 React kit，让编程助手做出更好的假产品 UI：静帧、功能卡片、光标走查、手机手势和 bento。作者是 Benji Taylor（@benjitaylor）。文里的七步是 Medium、Look、Story、Examples、Screen、Choreograph、Rehearse：先定媒介和外观，再写三到五拍，从最近的金样例改产品，屏幕上只留少量真文案，然后编排循环，最后用接触表排练。仓内带金样例（examples/）、kit/、playground，以及 scripts/film.mjs（把一镜铺成接触表并标出能测到的问题）。交出来的是普通 React 组件，可以跟项目里别的代码一样改。安装：`npx skills add benjitaylor/skills --skill stageshow`。作者站写可配合 Grok Build、Claude Code、Codex、Gemini 等编程助手。适合要做「看起来像真产品」的界面静帧和短演示、又不想从零写一套界面套件的人。本库没有安装这个 skill，没有跑 playground，也没有用 film.mjs 出片。",
+      "summaryEn": "Stageshow (https://benji.org/stageshow , the stageshow/ folder in https://github.com/benjitaylor/skills , MIT in that folder’s LICENSE, Copyright (c) 2026 Benji Taylor) is a skill plus a small React kit so a coding agent makes better faux product UI: stills, feature cards, cursor walkthroughs, phone gestures, and bentos. The author is Benji Taylor (@benjitaylor). The essay’s seven steps are Medium, Look, Story, Examples, Screen, Choreograph, and Rehearse: settle the medium and look, write three to five beats, adapt the closest gold example, keep only a few real strings on screen, choreograph the loop, then rehearse against a contact sheet. The repo ships gold examples (examples/), kit/, a playground, and scripts/film.mjs, which lays a take on a contact sheet and flags what it can measure. What you get is an ordinary React component you can change like the rest of the project. Install with `npx skills add benjitaylor/skills --skill stageshow`. The author’s site says it works with Grok Build, Claude Code, Codex, Gemini, and other coding agents. For anyone who wants product-like UI stills and short demos without writing a kit from scratch. This library did not install the skill, run the playground, or film with film.mjs.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "Agent faux-UI skill",
+      "sourceUrl": "https://benji.org/stageshow",
+      "secondaryUrls": [
+        "https://github.com/benjitaylor/skills",
+        "https://github.com/benjitaylor/skills/tree/main/stageshow",
+        "https://x.com/benjitaylor/status/2116593247854453244",
+        "https://x.com/benjitaylor"
+      ],
+      "previewImage": "/previews/stageshow.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "skill 会写入本机或项目的 agent skills；假 UI 在对外发布前自己核对画面，并避开把演示当成他人品牌。本库没有代为安装。",
+      "approvalBoundaryEn": "The skill writes into local or project agent skills; review the faux UI before you ship it, and do not present a demo as someone else’s brand. This library did not install it for you.",
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "Gemini",
+        "Grok Build"
+      ],
+      "landing": {
+        "what": "多数模型已经能画假界面，但常常显得笨重。Stageshow 把那些细小决定写成 skill：七步先定媒介、外观、故事和金样例，再出画面、编排和排练。你拿到的是能改的 React，不是一张定死的图。",
+        "whatEn": "Most models can already fake a UI, and it often looks heavy-handed. Stageshow writes those small decisions into a skill: seven steps settle the medium, look, story, and a gold example before the screen, the choreography, and a rehearsal. You get React you can edit, not a frozen picture.",
+        "steps": [
+          {
+            "title": "读作者原文",
+            "titleEn": "Read the essay",
+            "body": "文里写清这个 skill 补的是哪道缝、七步各自决定什么，以及检查抓的是错误而不是点子好不好。",
+            "bodyEn": "The essay says which gap the skill fills, what each of the seven steps decides, and that the checks catch mistakes rather than dull ideas.",
+            "links": [
+              {
+                "href": "https://benji.org/stageshow",
+                "label": "Stageshow 原文",
+                "labelEn": "Stageshow essay"
+              }
+            ]
+          },
+          {
+            "title": "装进编程助手",
+            "titleEn": "Add it to your coding agent",
+            "body": "在已有的编程助手里执行 `npx skills add benjitaylor/skills --skill stageshow`。源码在 benjitaylor/skills 的 stageshow/（SKILL.md、kit/、examples/、playground、scripts/film.mjs）。本库没有执行这条命令。",
+            "bodyEn": "In the coding agent you already use, run `npx skills add benjitaylor/skills --skill stageshow`. Source is stageshow/ in benjitaylor/skills (SKILL.md, kit/, examples/, playground, scripts/film.mjs). This library did not run that command.",
+            "links": [
+              {
+                "href": "https://github.com/benjitaylor/skills",
+                "label": "技能仓库",
+                "labelEn": "Skills repo"
+              },
+              {
+                "href": "https://github.com/benjitaylor/skills/tree/main/stageshow",
+                "label": "stageshow 目录",
+                "labelEn": "stageshow folder"
+              }
+            ]
+          },
+          {
+            "title": "看作者怎么介绍",
+            "titleEn": "See how the author introduced it",
+            "body": "发布帖在 X。作者主页是 @benjitaylor。",
+            "bodyEn": "The launch post is on X. The author is @benjitaylor.",
+            "links": [
+              {
+                "href": "https://x.com/benjitaylor/status/2116593247854453244",
+                "label": "发布帖",
+                "labelEn": "Launch post"
+              },
+              {
+                "href": "https://x.com/benjitaylor",
+                "label": "作者主页",
+                "labelEn": "Author profile"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "安装会写入本机或项目里的 agent skills。先在副本上看生成的假 UI，再决定要不要留。",
+            "textEn": "Install writes into local or project agent skills. Look at the faux UI on a copy before you keep it."
+          },
+          {
+            "text": "生成用的是你自己的模型额度。作者写大多数演示仍要来回改几轮才像样。",
+            "textEn": "Generation spends your own model quota. The author says most demos still take a few rounds of feedback."
+          },
+          {
+            "text": "产出是演示用的假界面。文内产品名、标志和界面归原主，不要当成可上线产品或官方授权。",
+            "textEn": "The output is faux UI for a demo. Product names, marks, and interfaces in the essay belong to their owners; it is not a shippable product or an endorsement."
+          },
+          {
+            "text": "本库没有安装 skill，没有打开 playground，也没有跑 film.mjs。",
+            "textEn": "This library did not install the skill, open the playground, or run film.mjs."
+          }
+        ],
+        "previewCredit": "预览：Benji Taylor 的 Stageshow 金样例",
+        "previewCreditEn": "Preview: gold examples from Benji Taylor’s Stageshow"
+      },
+      "publishedAt": "2026-10-31",
+      "updatedAt": "2026-11-01T07:10:00Z",
+      "qualityNote": "收录理由：给编程助手的假产品 UI skill，用金样例把静帧、光标演示、手机手势和 bento 收成可改的 React，属于 AI×设计。边界：安装会写入本机或项目的 agent skills，生成时用的是你自己的模型额度；作者写大多数演示仍要来回改几轮。检查抓的是错误，不是点子好不好，对外使用前要自己看画面，并避开把演示当成他人品牌。本库没有安装，没有跑 playground，也没有出片。",
+      "qualityNoteEn": "Why listed: a skill that pushes coding agents toward better faux product UI—stills, cursor demos, phone gestures, and bentos—as ordinary React, which fits AI×design. Limits: install writes into local or project agent skills and spends your own model quota; the author says most demos still take a few rounds of feedback. The checks catch mistakes, not dull ideas, so look at the picture yourself before you ship it, and do not present a demo as someone else’s brand. This library did not install the skill, run the playground, or film a demo.",
+      "verifyLog": "2026-11-01（Asia/Shanghai）：https://benji.org/stageshow HTTP 200，页面日期 31 October 2026；正文安装命令为 npx skills add benjitaylor/skills --skill stageshow；七步表为 Medium / Look / Story / Examples / Screen / Choreograph / Rehearse；作者写 most demos still take a few rounds of feedback，并写可配合 Grok Build、Claude Code、Codex、Gemini 等。gh api repos/benjitaylor/skills：stargazers_count 144（任务说明约 143★），created 2026-10-26T06:08:56Z，pushed 2026-10-31T18:07:19Z，仓库级 license 字段为空；stageshow/LICENSE 正文为 MIT，Copyright (c) 2026 Benji Taylor。目录含 SKILL.md、kit/、examples/、playground、scripts/film.mjs。X https://x.com/benjitaylor/status/2116593247854453244 （2026-10-31），作者页 https://x.com/benjitaylor 。预览为任务附图 1200×800 WebP（金样例拼图），出处 Benji Taylor / Stageshow；本库未实拍。本库没有安装 skill，没有跑 playground，没有跑 film.mjs。",
+      "verifyLogEn": "2026-11-01 (Asia/Shanghai): https://benji.org/stageshow HTTP 200, page dated 31 October 2026; install command on the page is npx skills add benjitaylor/skills --skill stageshow; the seven steps are Medium / Look / Story / Examples / Screen / Choreograph / Rehearse; the author says most demos still take a few rounds of feedback, and names Grok Build, Claude Code, Codex, Gemini, and others. gh api repos/benjitaylor/skills: stargazers_count 144 (the brief said ~143★), created 2026-10-26T06:08:56Z, pushed 2026-10-31T18:07:19Z; the repo-level license field is empty; stageshow/LICENSE text is MIT, Copyright (c) 2026 Benji Taylor. The folder includes SKILL.md, kit/, examples/, playground, and scripts/film.mjs. X https://x.com/benjitaylor/status/2116593247854453244 (2026-10-31), author https://x.com/benjitaylor . Preview is the supplied 1200×800 WebP (gold-example collage), credited to Benji Taylor / Stageshow; this library did not film it. The skill was not installed, the playground was not run, and film.mjs was not run."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11570,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-01T07:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11871,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://benji.org/stageshow",
+      "https://github.com/benjitaylor/skills",
+      "https://github.com/benjitaylor/skills/tree/main/stageshow",
+      "https://github.com/benjitaylor/skills/blob/main/stageshow/LICENSE",
+      "https://x.com/benjitaylor/status/2116593247854453244",
+      "https://x.com/benjitaylor"
     ]
   }
 }
