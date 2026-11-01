@@ -1,6 +1,135 @@
 {
   "cases": [
     {
+      "id": "ai-design-check",
+      "slug": "ai-design-check",
+      "title": "ai-design-check：给 AI 写出的界面做设计检查与修复（零依赖）",
+      "titleEn": "ai-design-check: design rules and a zero-dependency checker for AI-built UIs",
+      "kind": "tool",
+      "hook": "AI 界面有生成味？规则扫一遍，让 agent 修到零告警。",
+      "hookEn": "AI-built UI looks generated? Scan with rules, then let an agent fix it to zero findings.",
+      "summary": "ai-design-check（MIT，GitHub enmerasoftware/ai-design-check，npm @enmera/ai-design-check，作者为土耳其团队 Enmera）专抓 Claude Code、Cursor、Codex 写出来的界面里那股「生成味」。它分三件东西：一套设计规则（README 现写 76 条，每条都有 what / why / how to fix，英文和土耳其文两份）；一个零依赖的检查器，`npx @enmera/ai-design-check` 直接扫项目，不调 LLM、不要 API key，只抓能量化的毛病——间距不在 4px 网格、字号不在字阶、渐变按钮和紫色渐变、拿 emoji 当图标、「Welcome back, Alex! 👋」式开场、去掉 focus ring 不补、图标按钮没名字等，按文件和行号报错，可 `--json` 或 `--format github` 进 CI；还有两个 agent skill（`npx skills add enmerasoftware/ai-design-check`），装好后对 agent 说「fix the design of this screen」，它先量、再从产品定方向、分轮修间距/配色/图标/文案/字体/布局/动效，最后重跑检查器报 before→after 的数字。能读 React / Next / Vue / Svelte / Blade / 纯 HTML / CSS / i18n JSON，也读 SwiftUI 和 Jetpack Compose。另有 inventory（统计按钮、标题等有多少种长相）、rules、init、system（按品牌色出字体和过对比度的配色）和 story（生成方形 before/after 短视频）等子命令。作者在 X 上演示一个仪表盘 266 条 findings 修到 0——那是作者自己的演示，不是本库实测。适合已经用 agent 写前端、想给设计加一道可执行门禁的同学。本库没有对本仓库跑检查器，没有装 skill，也没有生成 before/after 视频。",
+      "summaryEn": "ai-design-check (MIT, GitHub enmerasoftware/ai-design-check, npm @enmera/ai-design-check; by the Turkish studio Enmera) targets the “generated” look of interfaces written by Claude Code, Cursor, and Codex. It ships three things: a rule set (the README now says 76 rules, each with what / why / how to fix, in English and Turkish); a zero-dependency checker—`npx @enmera/ai-design-check` scans the project with no LLM and no API key, catching only measurable defects such as spacing off the 4 px grid, font sizes off the scale, gradient buttons and purple gradients, emoji used as icons, “Welcome back, Alex! 👋” openers, focus rings removed without a replacement, and unnamed icon buttons, reported by file and line, with `--json` or `--format github` for CI; and two agent skills (`npx skills add enmerasoftware/ai-design-check`)—ask your agent to “fix the design of this screen” and it measures, picks a direction from the product, fixes spacing, colour, icons, copy, type, layout, and motion in passes, then re-runs the checker and reports the before→after count. It reads React / Next / Vue / Svelte / Blade / plain HTML / CSS / i18n JSON, plus SwiftUI and Jetpack Compose. Extra commands include inventory (how many looks your buttons, headings, etc. have), rules, init, system (fonts and contrast-checked colours from a brand colour), and story (a square before/after video). The author’s X demo takes a dashboard from 266 findings to 0—that is the author’s claim, not a lab measurement. Good if you already ship front-end with agents and want an enforceable design gate. This library did not run the checker on this repo, install the skill, or render a before/after video.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "design linter / agent skill",
+      "sourceUrl": "https://github.com/enmerasoftware/ai-design-check",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/@enmera/ai-design-check",
+        "https://x.com/sinanyorulmazz/status/2116531845839851723",
+        "https://enmera.com.tr"
+      ],
+      "previewImage": "/previews/ai-design-check.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "npm"
+      ],
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01T12:20:00Z",
+      "qualityNote": "收录理由：AI 写 UI 后的可执行设计门禁，零依赖可扫、有 skill 可修。边界：本库没有对本仓库跑 npx check，没有装 skill，没有生成 before/after 视频；规则条数以收录当晚 README 为准（76 条），关注度数字见核验记录。X 帖里 266→0 是作者演示，不是本库实测。检查器本身不需要密钥；用 skill 修界面时走的是你自己的 agent 和额度。",
+      "qualityNoteEn": "Why listed: an enforceable design gate for AI-written UI—scan with zero dependencies, fix with a skill. Limits: this library did not run npx check on this repo, install the skill, or render a before/after video; the rule count is as read from the README on catalog night (76 rules); popularity numbers are in the verify log. The 266→0 figure on X is the author’s demo, not a lab result. The checker needs no secrets; fixing via the skill runs on your own agent and quota.",
+      "verifyLog": "2026-11-01 晚间（Asia/Shanghai）：https://github.com/enmerasoftware/ai-design-check HTTP 200；gh api：MIT，64★，创建于 2026-10-28，最近推送 2026-11-01，homepage 指向 npm。README 写 76 design rules、zero-dependency checker、No LLM, no API key, no dependencies，列出 inventory / rules / init / system / story / narrow / hook 子命令，支持 .tsx/.jsx/.vue/.svelte/.html/Blade/CSS/i18n JSON 与 SwiftUI/Compose，skill 安装为 `npx skills add enmerasoftware/ai-design-check`（含 ai-design-check 与 ai-design-fix 两个 skill）。npm 网页对脚本请求返回 403，改查 registry.npmjs.org/@enmera/ai-design-check：latest 0.9.0，MIT，首发 2026-10-28。https://enmera.com.tr HTTP 200。X 帖 https://x.com/sinanyorulmazz/status/2116531845839851723（2026-10-31，作者演示 266 findings→0）仅作 secondary，未抓取正文核对。预览为仓库 examples/story-dashboard.webp（720×720）居中裁成 3:2，1200×800 WebP 自托管。本库未运行检查器、未装 skill。",
+      "verifyLogEn": "2026-11-01 evening (Asia/Shanghai): https://github.com/enmerasoftware/ai-design-check HTTP 200; gh api: MIT, 64★, created 2026-10-28, last push 2026-11-01, homepage points to npm. README says 76 design rules, a zero-dependency checker, “No LLM, no API key, no dependencies”; lists inventory / rules / init / system / story / narrow / hook commands; reads .tsx/.jsx/.vue/.svelte/.html/Blade/CSS/i18n JSON plus SwiftUI/Compose; skills install via `npx skills add enmerasoftware/ai-design-check` (ai-design-check and ai-design-fix). The npm web page returned 403 to scripted requests, so registry.npmjs.org/@enmera/ai-design-check was checked instead: latest 0.9.0, MIT, first published 2026-10-28. https://enmera.com.tr HTTP 200. X post https://x.com/sinanyorulmazz/status/2116531845839851723 (2026-10-31, author demo 266 findings→0) kept as secondary; its text was not fetched. Preview is the repo’s examples/story-dashboard.webp (720×720) centre-cropped to 3:2, self-hosted 1200×800 WebP. Did not run the checker or install the skill."
+    },
+    {
+      "id": "looseleaf",
+      "slug": "looseleaf",
+      "title": "Looseleaf：手绘风的 shadcn/ui，123 个组件可 registry 安装",
+      "titleEn": "Looseleaf: hand-drawn shadcn/ui — 123 components via a shadcn registry",
+      "kind": "tool",
+      "hook": "同款 shadcn 零件，表面全是纸笔手绘风。",
+      "hookEn": "Same shadcn parts — every surface looks drawn on paper.",
+      "summary": "Looseleaf（https://kevintngo.github.io/looseleaf/ ，MIT，GitHub kevintngo/looseleaf，作者 Kevin Ngo）是一套「纸上手绘」皮肤的 shadcn/ui：React + Tailwind v4 + Radix，每个表面都是纸，每条线都像笔画出来，配贴纸、印章和一支叫 Stubby 的铅笔头吉祥物。它保留 shadcn/ui 的零件、props 和 data-slot 名称，README 说可以不改 JSX 直接换上；装饰归装饰，语义仍是普通 Radix。README 列的规模：123 个组件（覆盖 shadcn 全部零件，另加纸张物件、贴纸、画板和聊天套件）、61 个 blocks（侧栏、登录注册、仪表盘、设置、定价、聊天、落地页段落）、160 个图标 / 48 个涂鸦 / 88 张贴纸，全用代码画；一套手写字体 Kevin Sans；无障碍方面写了键盘操作、可见焦点、AA 文本、24px 点击区、减弱动效、强制色、RTL 和三档密度。安装走 shadcn registry：在 components.json 里加 `@looseleaf`，再 `npx shadcn@latest add @looseleaf/button`，组件以源码落进你的仓库。代码、美术和字体都是 MIT。仓库当天新建，关注度还很低。X 上 @rudraxx13 评论说作者的演示视频是由一个 agent skill 驱动 macOS 光标录的——这是第三方说法，本库没核实。适合想给 AI 产品或原型换一个不像模板的界面风格、又不想离开 shadcn 生态的同学。本库只打开了公开页和 README，没有跑 registry 安装，也没做键盘或无障碍测试。",
+      "summaryEn": "Looseleaf (https://kevintngo.github.io/looseleaf/ , MIT, GitHub kevintngo/looseleaf, by Kevin Ngo) is shadcn/ui reskinned as paper and pen: React + Tailwind v4 + Radix, where every surface is paper and every line looks hand-drawn, with stickers, stamps, and a pencil-stub mascot called Stubby. It keeps shadcn/ui’s parts, props, and data-slot names, so the README says you can swap it in without touching your JSX; the charm is decoration and the semantics stay plain Radix. README counts: 123 components (every shadcn part plus paper objects, stickers, a sketchpad, and a chat kit), 61 blocks (sidebars, login/sign-up, dashboards, settings, pricing, chat, landing sections), 160 icons / 48 doodles / 88 stickers all drawn in code, one hand-drawn typeface (Kevin Sans), and accessibility claims covering keyboard, visible focus, AA text, 24 px targets, reduced motion, forced colours, RTL, and three densities. Install via a shadcn registry: add `@looseleaf` to components.json, then `npx shadcn@latest add @looseleaf/button`; components land as source in your repo. Code, art, and font are all MIT. The repo was created the same day and has little traction yet. On X, @rudraxx13 said the author’s demo video was filmed by an agent skill driving the macOS cursor—a third-party claim the lab did not verify. Good if you want an AI product or prototype that does not look like a template without leaving the shadcn ecosystem. This library only opened the public site and README; it did not run a registry install or test keyboard/accessibility.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "UI kit / design system",
+      "sourceUrl": "https://kevintngo.github.io/looseleaf/",
+      "secondaryUrls": [
+        "https://github.com/kevintngo/looseleaf",
+        "https://x.com/rudraxx13/status/2116855539728572544",
+        "https://x.com/kevin_t_ngo"
+      ],
+      "previewImage": "/previews/looseleaf.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "shadcn",
+        "React",
+        "Tailwind"
+      ],
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01T12:20:00Z",
+      "qualityNote": "收录理由：AI×设计里少见的「完整 shadcn 手绘皮肤」，可商用 MIT。边界：关注度很低、项目当天新建；组件数、无障碍项都是 README 自述。本库只打开了公开页/README，没有跑 registry 安装，没有做键盘/无障碍测试；X 上「agent skill 录演示」是第三方说法，仓库里未确认 skill 路径，故 hasSkill 记 false。",
+      "qualityNoteEn": "Why listed: a rare complete hand-drawn skin for shadcn in the AI×design space, MIT for commercial use. Limits: very little traction and the repo was created the same day; component counts and accessibility claims are the README’s own. This library only opened the public site/README, did not run a registry install, and did not test keyboard/accessibility; the “agent skill filmed the demo” remark on X is third-party and no skill path was confirmed in the repo, so hasSkill is false.",
+      "verifyLog": "2026-11-01 晚间（Asia/Shanghai）：https://kevintngo.github.io/looseleaf/ 与 https://github.com/kevintngo/looseleaf 均 HTTP 200；gh api：MIT，6★，创建于 2026-11-01T05:16Z，homepage 为演示站。README 写 React + Tailwind v4 + Radix、shadcn registry、123 components / 61 blocks / 160 icons / 48 doodles / 88 stickers / Kevin Sans、无障碍清单，安装为 components.json 加 `\"@looseleaf\": \"https://kevintngo.github.io/looseleaf/r/{name}.json\"` 后 `npx shadcn@latest add @looseleaf/button`；Licence 段写代码、美术与 Kevin Sans 均 MIT，IBM Plex Mono 为 SIL OFL 1.1。X 评论 https://x.com/rudraxx13/status/2116855539728572544 与作者账号 https://x.com/kevin_t_ngo 仅作 secondary，未抓取核对。预览为仓库 public/og.png（1200×630）居中裁成 3:2，1200×800 WebP 自托管。本库未安装组件。",
+      "verifyLogEn": "2026-11-01 evening (Asia/Shanghai): https://kevintngo.github.io/looseleaf/ and https://github.com/kevintngo/looseleaf both HTTP 200; gh api: MIT, 6★, created 2026-11-01T05:16Z, homepage is the demo site. README states React + Tailwind v4 + Radix, a shadcn registry, 123 components / 61 blocks / 160 icons / 48 doodles / 88 stickers / Kevin Sans, an accessibility list, and install via adding `\"@looseleaf\": \"https://kevintngo.github.io/looseleaf/r/{name}.json\"` to components.json then `npx shadcn@latest add @looseleaf/button`; the Licence section says code, art, and Kevin Sans are MIT, IBM Plex Mono is SIL OFL 1.1. X commentary https://x.com/rudraxx13/status/2116855539728572544 and the author account https://x.com/kevin_t_ngo kept as secondary, not fetched. Preview is the repo’s public/og.png (1200×630) centre-cropped to 3:2, self-hosted 1200×800 WebP. Did not install components."
+    },
+    {
+      "id": "code-video-showcase",
+      "slug": "code-video-showcase",
+      "title": "code-video-showcase：用代码逐帧做卡点展示片的 Agent Skill（不用生成模型）",
+      "titleEn": "code-video-showcase: an Agent Skill for beat-synced showcase films drawn in code — no generative models",
+      "kind": "tool",
+      "hook": "不花生成额度：代码逐帧出画面，Python 配乐，FFmpeg 卡点。",
+      "hookEn": "Skip video-gen credits: HTML/Canvas/Three.js frames, Python score, FFmpeg on the beat.",
+      "summary": "code-video-showcase（MIT，GitHub Moessif/code-video-showcase）是一个「用代码做视频」的 Agent Skill：画面用 HTML / Canvas / SVG / Three.js 逐帧渲染，配乐用 Python（numpy + scipy）按 120 BPM 合成，最后由 FFmpeg 合成 30–90 秒的卡点风格展示片，全程不调用任何视频、图像或音乐生成模型。它不是模型而是一份制作配方：从一支 61 秒参考展示片量出来的剪辑结构公式（8 秒开场、11 段风格各 3 秒、段间 1 秒大字卡、八连闪、收尾）、大字卡系统、8 套配色主题、11 种风格配方（扁平科普、傅里叶数学、发布会、白板手绘、赛博故障、水墨、数据竞速、8-bit、代码录屏、Three.js 黏土、竖屏短片）、无头浏览器 → FFmpeg 的确定性渲染管线、每段的质检清单和可运行模板；每帧都是时间 t 的纯函数，同一秒在任何机器上都渲出同一帧。安装方式是把仓库 clone 进 agent 的 skills 目录（DeepSeek Harness 用 ~/.dsh/skills/，Claude Code 用 ~/.claude/skills/），之后说「卡点视频」「用代码做视频」之类会自动触发。本机需要 Node 20+、无头 Chromium、FFmpeg、Python。README 明说仓库里没有成品演示片，预览图是参考片的分析产物和模板占位图；致谢写明想法起源于创作者 Mixx.ftr 的提示词，本仓库是工程化重建。适合做产品发布、品牌、知识类展示片又不想烧生成额度、愿意在本机折腾工具链的同学。本库没有 clone、没有装依赖，也没有渲染任何片段。",
+      "summaryEn": "code-video-showcase (MIT, GitHub Moessif/code-video-showcase) is an Agent Skill for making video in code: frames rendered one by one with HTML / Canvas / SVG / Three.js, a 120 BPM score synthesized in Python (numpy + scipy), and FFmpeg assembling a 30–90 s beat-synced showcase film—no video, image, or music generation models at any step. It is a production recipe, not a model: a timeline formula measured off a 61 s reference showcase (8 s opening, eleven 3 s style segments with 1 s big cards between them, an eight-flash montage, an ending), a big-card system, 8 colour themes, 11 style recipes (flat science, Fourier maths, product launch, whiteboard, cyber glitch, ink wash, data race, 8-bit, code screencast, Three.js clay, vertical short), a deterministic headless-browser → FFmpeg pipeline, a per-segment QA checklist, and runnable templates; every frame is a pure function of t, so the same second renders the same frame on any machine. Install by cloning the repo into your agent’s skills folder (~/.dsh/skills/ for DeepSeek Harness, ~/.claude/skills/ for Claude Code); prompts like “beat-synced showcase video” or “render video in code” then trigger it. You need Node 20+, headless Chromium, FFmpeg, and Python locally. The README says plainly that there is no finished demo video in the repo—the previews are analysis artifacts of the reference film plus template placeholder stills—and credits the idea to a prompt by creator Mixx.ftr, with this repo as an engineering reconstruction. Good for launch, brand, or explainer showcase films when you would rather spend effort on a local toolchain than on generation credits. This library did not clone the repo, install dependencies, or render any segment.",
+      "categories": [
+        "design",
+        "content",
+        "coding"
+      ],
+      "role": "agent skill / motion",
+      "sourceUrl": "https://github.com/Moessif/code-video-showcase",
+      "secondaryUrls": [
+        "https://x.com/Manojkumar2257/status/2116525374251348166"
+      ],
+      "previewImage": "/previews/code-video-showcase.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "本机要装 Node 20+、FFmpeg、Playwright、Python 才会渲染；仓库不带成品演示片，先自己渲一段再对外用。本库没有代为安装或渲染。",
+      "approvalBoundaryEn": "Rendering needs Node 20+, FFmpeg, Playwright, and Python installed locally; the repo ships no finished demo film, so render a segment yourself before using it publicly. This library did not install or render anything for you.",
+      "connectors": [
+        "Claude Code",
+        "DeepSeek Harness",
+        "FFmpeg",
+        "Playwright"
+      ],
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-01T12:20:00Z",
+      "qualityNote": "收录理由：设计向「代码出片」技能，避开生成模型额度，风格配方和渲染管线都写得很细。边界：仓库无成品片，预览是参考片分析图和模板占位；参考片本身不随仓库分发。本库没有 clone、没有装依赖、没有渲染任何片段，未验证 QA 清单与配乐脚本能否一次跑通。",
+      "qualityNoteEn": "Why listed: a design-leaning “film from code” skill that sidesteps generation credits, with detailed style recipes and a render pipeline. Limits: no finished film in the repo—previews are reference-analysis sheets and template placeholders, and the reference film itself is not distributed. This library did not clone, install dependencies, or render any segment, and did not verify that the QA checklist or score script run end to end.",
+      "verifyLog": "2026-11-01 晚间（Asia/Shanghai）：https://github.com/Moessif/code-video-showcase HTTP 200；gh api：MIT，253★，创建于 2026-10-24，最近推送 2026-10-28。README 写 pure-code beat-synced showcase-video skill、No video, image or music generation models、8 themes / 11 style recipes / 120 BPM / Playwright → FFmpeg / QA checklist，环境要求 Node ≥20、playwright、FFmpeg+ffprobe、numpy+scipy；Preview 段明写 There is no finished demo video in this repository；Credits 段写起源于 Mixx.ftr 的提示词。X 帖 https://x.com/Manojkumar2257/status/2116525374251348166 仅作 secondary，未抓取核对。预览为仓库 assets/contact-1fps.jpg（参考片 1fps 联系表，1956×1116）居中裁成 3:2，1200×800 WebP 自托管；画面里的文字来自参考片本身。本库未渲染。",
+      "verifyLogEn": "2026-11-01 evening (Asia/Shanghai): https://github.com/Moessif/code-video-showcase HTTP 200; gh api: MIT, 253★, created 2026-10-24, last push 2026-10-28. README states a pure-code beat-synced showcase-video skill, “No video, image or music generation models”, 8 themes / 11 style recipes / 120 BPM / Playwright → FFmpeg / QA checklist, and requires Node ≥20, playwright, FFmpeg+ffprobe, numpy+scipy; the Preview section says “There is no finished demo video in this repository”; Credits name a prompt by Mixx.ftr as the origin. X post https://x.com/Manojkumar2257/status/2116525374251348166 kept as secondary, not fetched. Preview is the repo’s assets/contact-1fps.jpg (1 fps contact sheet of the reference film, 1956×1116) centre-cropped to 3:2, self-hosted 1200×800 WebP; on-screen text comes from the reference film. Did not render."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11576,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-01T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.80",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11877,17 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://github.com/enmerasoftware/ai-design-check",
+      "https://www.npmjs.com/package/@enmera/ai-design-check",
+      "https://x.com/sinanyorulmazz/status/2116531845839851723",
+      "https://enmera.com.tr",
+      "https://kevintngo.github.io/looseleaf/",
+      "https://github.com/kevintngo/looseleaf",
+      "https://x.com/rudraxx13/status/2116855539728572544",
+      "https://x.com/kevin_t_ngo",
+      "https://github.com/Moessif/code-video-showcase",
+      "https://x.com/Manojkumar2257/status/2116525374251348166"
     ]
   }
 }
