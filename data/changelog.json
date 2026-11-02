@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-02",
+      "title": "晚间收录 2026-11-02：Cases +2（Chartory / UI Craft）",
+      "titleEn": "Evening catalog 2026-11-02: Cases +2 (Chartory / UI Craft)",
+      "body": "AI×设计：chartory（MIT，chartory/charts，作者 Berkay Erdinc）— 100 种免费 React 图表进 shadcn 官方目录，纯 SVG 无图表库，四档尺寸按数据排版，附 agent 用 MCP；Figma 套件与 Signal 风格等为付费。ui-craft（MIT，educlopez/ui-craft）— 给 Claude Code / Cursor / Codex 的设计工程 skill + CLI，/craft 十项验收、/critique 评分卡，可接 CI 打 0–100 分。预览各一枚 3:2 WebP。本库未运行 npx shadcn add、未接 Chartory MCP、未在真实应用生成图表；未装 UI Craft CLI/skill、未跑命令。跳过 virtualdiwali.com（未找到源码仓与许可）。cases 215→217（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold PR（#140/#139/#138/#134/#131…）。",
+      "bodyEn": "AI×design: chartory (MIT, chartory/charts, by Berkay Erdinc) — 100 free React chart types in the official shadcn directory, pure SVG with no chart library, laid out from data at four sizes, with an MCP server for agents; Figma kit and Signal style are paid. ui-craft (MIT, educlopez/ui-craft) — design-engineering skill + CLI for Claude Code / Cursor / Codex with a /craft ten-item bar, /critique scorecard and a 0–100 CI score. One 3:2 WebP preview each. This library did not run npx shadcn add, wire the Chartory MCP, or render charts in a real app; did not install the UI Craft CLI/skill or run its commands. Skipped virtualdiwali.com (no source repo or licence found). cases 215→217 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Did not merge still-open catalog-hold PRs (#140/#139/#138/#134/#131…)."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
