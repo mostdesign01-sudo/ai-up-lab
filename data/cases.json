@@ -1,6 +1,99 @@
 {
   "cases": [
     {
+      "id": "chartory",
+      "slug": "chartory",
+      "title": "Chartory：100 种免费 MIT React 图表，进了 shadcn 官方目录",
+      "titleEn": "Chartory: 100 free MIT React chart types, now in the official shadcn directory",
+      "kind": "tool",
+      "hook": "桑基、甘特、热力图一条 shadcn 命令装好，纯 SVG 无图表库。",
+      "hookEn": "Sankey, gantt, heatmap: one shadcn command each, pure SVG, no chart library.",
+      "summary": "Chartory（https://usechartory.com/free ，作者 Berkay Erdinc / @berkayerdinc_，版权方 BEY AGENCY LTD）把 100 种图表做成 React 组件，放进 shadcn 官方 registry 目录（@chartory），MIT 许可、无需 token 或账号。装法和普通 shadcn 组件一样：`npx shadcn add @chartory/sankey`，图表、绘制引擎与 Hearth 主题 token 以 TypeScript 源码落进你的项目，代码归你改。引擎自己画 SVG，不依赖 D3 / Recharts / canvas，运行时只依赖 React；每张图按你传入的数据和 xs/s/m/l 四档尺寸重新排版，标签不重叠，支持明暗主题、四种分类色、入场与数据变形动画、尊重减弱动效，并默认带读屏用的文字摘要和数据表。按「随时间变化 / 比较 / 占比 / 分布 / 流向 / 关系 / 排期 / 空间」八类问题组织图表；每张免费图也可在 v0 里直接打开。仓库自带 MCP 配置（https://usechartory.com/mcp），让 Claude、Cursor 等 agent 按 slug 查找、安装、配置图表。免费的是 Hearth 风格下这 100 种；Figma 套件、Signal 风格、组件块、仪表盘模板与行业包属于付费 Pro（买断）。适合做数据仪表盘、报告页、想要「设计过的图表」又不想再背一个图表库的前端与设计同学。本库没有运行 npx shadcn add，没有接入 MCP，也没有在真实项目里生成图表。",
+      "summaryEn": "Chartory (https://usechartory.com/free , by Berkay Erdinc / @berkayerdinc_, copyright BEY AGENCY LTD) ships 100 chart types as React components in the official shadcn registry directory (@chartory), MIT licensed, no token or account. Install like any shadcn component — `npx shadcn add @chartory/sankey` — and the chart, its engine and Hearth theme tokens land in your project as plain TypeScript you own. The engine draws SVG itself (no D3, Recharts or canvas; React is the only runtime dependency); every chart re-lays itself out for your data at four sizes (xs/s/m/l) so labels never collide, with light/dark, four category colours, draw-in and morph motion that respects reduced motion, and a screen-reader summary plus data table by default. Charts are organised by eight questions (change over time, compare, part of whole, distribution, flow, relationship, schedule, space), and each free chart opens in v0. The repo ships an MCP config (https://usechartory.com/mcp) so Claude, Cursor and other agents can find, install and configure charts by slug. Free covers these 100 types in the Hearth style; the Figma kit, Signal style, blocks, dashboard templates and sector packs are paid Pro (one-time). Good for dashboards and report pages when you want designed charts without adopting a chart library. This library did not run npx shadcn add, did not wire the MCP server, and did not render charts in a real app.",
+      "categories": [
+        "design",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://usechartory.com/free",
+      "secondaryUrls": [
+        "https://github.com/chartory/charts",
+        "https://ui.shadcn.com/docs/directory?q=chartory",
+        "https://usechartory.com/docs/agents",
+        "https://x.com/berkayerdinc_/status/2117196273820295445",
+        "https://x.com/berkayerdinc_/status/2117220828492267778"
+      ],
+      "previewImage": "/previews/chartory.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "装进项目的是源码，合并前自己审一遍生成的组件与 token；让 agent 通过 MCP 安装前确认它改动的文件。本库没有代为安装或接 MCP。",
+      "approvalBoundaryEn": "It installs source into your repo, so review generated components and tokens before merging, and confirm which files an agent changes when it installs via MCP. This library did not install or wire MCP for you.",
+      "connectors": [
+        "shadcn",
+        "React",
+        "MCP",
+        "v0",
+        "Claude",
+        "Cursor"
+      ],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-02T12:20:00Z",
+      "qualityNote": "收录理由：设计感强的图表直接以源码进 shadcn 项目，还给 agent 留了 MCP 入口，补上库里 AI×设计条目偏 UI、少数据可视化的空缺。边界：免费的是 Hearth 风格 100 种，Figma 套件、Signal 风格、模板与行业包要付费；仓库刚建、社区反馈很少。本库没有运行安装命令，没有接 MCP，也没有在真实项目里渲染图表。",
+      "qualityNoteEn": "Why listed: designed charts that land as source in a shadcn project, with an MCP entry point for agents—fills the data-viz gap among AI×design entries that lean UI. Limits: free covers 100 Hearth-style types; the Figma kit, Signal style, templates and sector packs are paid; the repo is brand new with little community feedback. This library did not run the install command, wire MCP, or render charts in a real app.",
+      "verifyLog": "2026-11-02 晚间（Asia/Shanghai）：https://usechartory.com/free HTTP 200，title Free charts for Figma and React · Chartory，首屏 100 charts, free to ship. / 100 React charts in the Hearth collection, MIT licensed, open in the public registry. / No token, no account，示例 `npx shadcn add @chartory/bars`；顶栏 New: Chartory 1.0. Now in the shadcn directory。/docs/agents、/licence、/pricing 均 HTTP 200。gh api chartory/charts：MIT（LICENSE.md 版权 BEY AGENCY LTD），约 1★，创建 2026-11-01T22:22:55Z，最近推送 2026-11-02T08:05:05Z，homepage usechartory.com/free；README 写 SVG 无图表库、四档尺寸、MCP server，仓库含 mcp.json（url https://usechartory.com/mcp）与 .cursor-plugin。shadcn-ui/ui 仓 apps/v4/registry/directory.json 含 @chartory 条目（url https://usechartory.com/r/{name}.json）。X @berkayerdinc_ 2026-11-02T10:05Z 帖 Chartory is now in the official @shadcn directory（附演示视频），11:42Z 帖附长文 I drew every chart your dashboard is missing。预览为 /free 首屏实拍（拒绝 cookie 后）裁 3:2 WebP 自托管。本库未运行 npx shadcn add、未接 MCP、未在真实应用中生成图表、未看演示视频全片。",
+      "verifyLogEn": "2026-11-02 evening (Asia/Shanghai): https://usechartory.com/free HTTP 200; hero 100 charts, free to ship / MIT / No token, no account, sample `npx shadcn add @chartory/bars`; banner Chartory 1.0 now in the shadcn directory. /docs/agents, /licence, /pricing HTTP 200. gh api chartory/charts: MIT (LICENSE.md © BEY AGENCY LTD), ~1★, created 2026-11-01T22:22:55Z, pushed 2026-11-02T08:05:05Z; README covers SVG/no chart lib, four sizes, MCP server; repo has mcp.json (https://usechartory.com/mcp) and .cursor-plugin. shadcn-ui/ui directory.json lists @chartory. X @berkayerdinc_ posts 2026-11-02T10:05Z (shadcn directory, demo video) and 11:42Z (article). Preview is a 3:2 WebP of the /free hero after rejecting cookies. Did not run npx shadcn add, wire MCP, render charts in a real app, or watch the full demo video."
+    },
+    {
+      "id": "ui-craft",
+      "slug": "ui-craft",
+      "title": "UI Craft：给 AI 编程代理装上设计品味，还能用分数卡住 CI",
+      "titleEn": "UI Craft: a design-engineering skill that gives coding agents taste and a score your CI can fail on",
+      "kind": "tool",
+      "hook": "装成 skill，agent 出的 UI 过十项验收，设计师不改才算完。",
+      "hookEn": "A skill that makes agent-built UI pass a ten-item bar before it counts as done.",
+      "summary": "UI Craft（https://skills.smoothui.dev ，作者 Eduardo Calvo / educlopez，SmoothUI 作者）是给 AI 编程代理用的设计工程系统，MIT 开源（GitHub educlopez/ui-craft）。可以当 agent skill 装，也可以用官方 CLI（一个 Go 静态二进制，macOS/Linux 用 `curl -fsSL https://skills.smoothui.dev/install | bash`）自动识别你的编程工具并写入 skill、命令、MCP 关卡、评审代理与设计记忆。用法按「四级阶梯」：0 级装上后照常提需求，UI 自带层级与你的 token、少 AI 味；1 级用 `/craft`、`/critique`、`/polish`、`/animate` 等单次命令；2 级用 `/brief`、`/tokens`、`/remember` 把设计上下文存给后续会话；3 级用 `/finalize`、评审代理、MCP 关卡和 `ui-craft-detect` 在 review 与 CI 里给出 0–100 的确定性分数。`/craft dashboard` 之类会先问三个问题（可跳过），选构图与主题预设，再按十项验收标准自检。`/critique` 按尼尔森十条可用性启发式、六条经典设计定律和五个角色走查出评分卡，每条问题标注商业影响。官网首屏写 52 项确定性检查，并附同一提示词装与不装的对比图。适合常让 Claude Code / Cursor / Codex 写前端、想把「好不好看」变成可检查标准的同学。本库没有安装 CLI 或 skill，没有跑 /craft 或 /critique，也没有接 CI 关卡。",
+      "summaryEn": "UI Craft (https://skills.smoothui.dev , by Eduardo Calvo / educlopez, author of SmoothUI) is an MIT-licensed design-engineering system for AI coding agents (GitHub educlopez/ui-craft). Install it as an agent skill or via the official CLI—a static Go binary (`curl -fsSL https://skills.smoothui.dev/install | bash` on macOS/Linux) that detects your harness and wires the skill, commands, MCP gates, review agents and design memory. It is organised as a four-rung ladder: rung 0, just install and prompt as usual for UI with real hierarchy and your tokens; rung 1, focused commands like `/craft`, `/critique`, `/polish`, `/animate`; rung 2, `/brief`, `/tokens`, `/remember` to persist design context; rung 3, `/finalize`, review agents, MCP gates and `ui-craft-detect` for a deterministic 0–100 score in review and CI. `/craft dashboard` asks three optional questions, picks a composition and theme preset, and must pass a ten-item acceptance bar. `/critique` scores against Nielsen’s ten heuristics, six design laws and five persona walkthroughs, tagging each finding by business impact. The site advertises 52 deterministic checks and shows same-prompt before/after comparisons. Good if you let Claude Code / Cursor / Codex write front-end and want “does it look good” as a checkable gate. This library did not install the CLI or skill, run /craft or /critique, or wire CI gates.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://skills.smoothui.dev/",
+      "secondaryUrls": [
+        "https://github.com/educlopez/ui-craft"
+      ],
+      "previewImage": "/previews/ui-craft.webp",
+      "sourceType": "official-docs",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装脚本用 curl | bash 并会改写你编程工具的配置；运行前先读脚本，接 CI 关卡前先在分支上试。本库没有代为安装或运行。",
+      "approvalBoundaryEn": "The installer is curl | bash and rewrites your harness config; read the script first and trial CI gates on a branch. This library did not install or run it for you.",
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "MCP"
+      ],
+      "publishedAt": "2026-03-19",
+      "updatedAt": "2026-11-02T12:20:00Z",
+      "qualityNote": "收录理由：把「设计品味」写成 agent 可执行的规则加可打分的检查，能接进 review 与 CI，和库里只给提示词或组件的 AI×设计条目互补。边界：MIT 免费，但跑命令仍消耗你自己的 AI 额度；评分规则是作者的设计主张，未必适合每个品牌。本库没有安装 CLI 或 skill，没有跑命令，也没有接 CI。",
+      "qualityNoteEn": "Why listed: turns design taste into agent-executable rules plus scoreable checks that plug into review and CI—complements AI×design entries that only ship prompts or components. Limits: MIT and free, but commands use your own AI plan; the scoring encodes the author’s design opinions and may not fit every brand. This library did not install the CLI or skill, run commands, or wire CI.",
+      "verifyLog": "2026-11-02 晚间（Asia/Shanghai）：https://skills.smoothui.dev/ HTTP 200，title UI Craft: taste you can fail a build on，首屏 Taste you can fail a build on / 52 deterministic checks and a score your CI can fail on，安装 `curl -fsSL https://skills.smoothui.dev/install | bash`。gh api educlopez/ui-craft：MIT，约 418★，创建 2026-03-19T11:21:25Z，最近推送 2026-10-30T02:25:19Z，最新 release v1.0.20（2026-08-19），homepage skills.smoothui.dev；README 写四级阶梯、/craft 十项验收、/critique 尼尔森启发式评分卡、Go CLI 安装。已对 main 与所有打开 PR 的 cases/html/agent-ui/models 检索 ui-craft / educlopez / smoothui / UI Craft，未见重复。预览为官网首屏实拍裁 3:2 WebP 自托管。本库未运行安装脚本、未装 skill、未跑 /craft、/critique 或 ui-craft-detect。",
+      "verifyLogEn": "2026-11-02 evening (Asia/Shanghai): https://skills.smoothui.dev/ HTTP 200; hero Taste you can fail a build on / 52 deterministic checks; install via curl | bash. gh api educlopez/ui-craft: MIT, ~418★, created 2026-03-19, pushed 2026-10-30T02:25:19Z, latest release v1.0.20 (2026-08-19). README covers the four-rung ladder, /craft ten-item bar, /critique heuristic scorecard and Go CLI. Searched main and every open PR’s cases/html/agent-ui/models for ui-craft / educlopez / smoothui / UI Craft: no duplicate. Preview is a 3:2 WebP of the landing hero. Did not run the installer, install the skill, or run /craft, /critique or ui-craft-detect."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11540,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-02T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11841,16 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://usechartory.com/free",
+      "https://github.com/chartory/charts",
+      "https://ui.shadcn.com/docs/directory?q=chartory",
+      "https://usechartory.com/docs/agents",
+      "https://x.com/berkayerdinc_/status/2117196273820295445",
+      "https://x.com/berkayerdinc_/status/2117220828492267778",
+      "https://skills.smoothui.dev/",
+      "https://github.com/educlopez/ui-craft",
+      "https://virtualdiwali.com/"
     ]
   }
 }
