@@ -1,6 +1,76 @@
 {
   "items": [
     {
+      "id": "pixelfx",
+      "slug": "pixelfx",
+      "title": "pixelfx：244 个代码驱动的像素特效，附带可写新效果的 skill",
+      "titleEn": "pixelfx: 244 code-driven pixel-art effects, plus a skill to author new ones",
+      "hook": "244 个代码像素特效，助手还能再写新的。",
+      "hookEn": "244 code-made pixel effects, plus a skill to write new ones.",
+      "summary": "pixelfx（https://patch-gg.github.io/pixelfx/ ，仓库 patch-gg/pixelfx，MIT）是 244 个用代码画出来的像素特效和动画：火、爆炸、水、冰、闪电、近战、投射物、界面、拾取物等，README 分类表加总就是 244。每个效果都是一小段代码，画廊里可以播放、改色、镜像，也可以放进浏览器游戏，或导出精灵表给 Godot、Unity 等引擎。另有 Claude Code skill，用插件市场两条命令，或把 skills/pixelfx 拷进技能目录，让助手查找、导出，或按起草、渲染、看、再改的方式写新效果。README 把方法署给 Hugo Duprez / Sprite Fusion：代码当黏土，要看画面，并喂参考；部分效果改编自他的开源代码。本库没有安装 skill，没有导出精灵表，只打开了公开画廊和仓库说明。",
+      "summaryEn": "pixelfx (https://patch-gg.github.io/pixelfx/ , repo patch-gg/pixelfx, MIT) is 244 pixel-art effects and animations drawn in code: fire, explosions, water, ice, lightning, melee, projectiles, UI, pickups, and more. The category counts in the README add up to 244. Each effect is a small piece of code. The gallery can play, recolor, and mirror them; they can drop into a browser game or export as sprite sheets for Godot, Unity, and other engines. A Claude Code skill installs with two plugin-marketplace commands, or by copying skills/pixelfx into the skills folder, so an assistant can find, export, or author new effects by drafting, rendering, looking, and refining. The README credits the method to Hugo Duprez / Sprite Fusion: treat code as clay, trust your eyes, and feed references; some effects adapt his open-source code. This library did not install the skill and did not export sprite sheets; it only opened the public gallery and the repo docs.",
+      "sourceUrl": "https://patch-gg.github.io/pixelfx/",
+      "secondaryUrls": [
+        "https://github.com/patch-gg/pixelfx"
+      ],
+      "previewImage": "/previews/pixelfx.webp",
+      "types": [
+        "interactive",
+        "motion"
+      ],
+      "tags": [
+        "pixel-art",
+        "canvas",
+        "effects",
+        "sprites",
+        "claude",
+        "game"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-30",
+      "updatedAt": "2026-11-02T01:10:00Z",
+      "qualityNote": "收录理由：代码驱动的像素特效库，并带 Claude Code skill 继续写新效果，适合游戏和界面动效。边界：方法来自 Hugo Duprez，部分效果改编自他的开源代码；画廊能看不代表本机导出可用。本库没有安装 skill，没有导出精灵表。",
+      "qualityNoteEn": "Why listed: a code-driven pixel-effect library with a Claude Code skill for writing more, useful for games and interface motion. Limits: the method is Hugo Duprez's, and some effects adapt his open-source code; a working gallery does not prove a local export. This library did not install the skill and did not export sprite sheets.",
+      "verifyLog": "2026-11-02 早间（Asia/Shanghai，约 09:10）：https://patch-gg.github.io/pixelfx/ HTTP 200，title “pixelfx”，description “Pixel art effects and animations, every one a small piece of code. Play them, recolor them, export sprite sheets.” 无头 google-chrome 实拍画廊首屏 1200×800，可见 “244 pixel art effects” 与分类芯片（all 244、moves 12、fire 12 等），moves 区有 Arrow shot、Dash strike、Earth stomp 在播放。https://github.com/patch-gg/pixelfx HTTP 200。gh api：license SPDX MIT，stargazers_count 2591，forks 333，created 2026-10-30T06:43:25Z，pushed 2026-10-31T08:44:14Z，homepage 指向画廊。README 分类表 21 行计数相加为 244；skill 安装为 /plugin marketplace add patch-gg/pixelfx 再 /plugin install pixelfx@pixelfx，或拷贝 skills/pixelfx。方法署名 Hugo Duprez（Sprite Fusion 博文由 README 链接，本库未单独打开该博文）。预览即上述画廊首屏 WebP。未安装 skill，未跑 tools/sheets.mjs，未导出精灵表。",
+      "verifyLogEn": "2026-11-02 morning (Asia/Shanghai, about 09:10): https://patch-gg.github.io/pixelfx/ HTTP 200, title “pixelfx”, description “Pixel art effects and animations, every one a small piece of code. Play them, recolor them, export sprite sheets.” Headless google-chrome capture of the gallery hero at 1200×800 showed “244 pixel art effects”, category chips (all 244, moves 12, fire 12, and the rest), and Arrow shot, Dash strike, and Earth stomp playing under moves. https://github.com/patch-gg/pixelfx HTTP 200. gh api: license SPDX MIT, stargazers_count 2591, forks 333, created 2026-10-30T06:43:25Z, pushed 2026-10-31T08:44:14Z, homepage points at the gallery. The 21 README category counts sum to 244. Skill install is /plugin marketplace add patch-gg/pixelfx then /plugin install pixelfx@pixelfx, or copy skills/pixelfx. Method credited to Hugo Duprez (the Sprite Fusion post is linked from the README; that post was not opened separately). Preview is that gallery hero as WebP. Skill not installed, tools/sheets.mjs not run, no sprite-sheet export."
+    },
+    {
+      "id": "hairline",
+      "slug": "hairline",
+      "title": "hairline：33 个会跟着指针动的等距线稿",
+      "titleEn": "hairline: 33 isometric line figures that answer the pointer",
+      "hook": "33 个等距线稿，指针一过就会跟着动。",
+      "hookEn": "33 isometric line figures that move with the pointer.",
+      "summary": "hairline（https://hairline.lucasmarkes.com ，仓库 lucasmarkes/hairline，MIT，作者 Lucas Marques）是 33 个等距线稿小件，给 React 和任何有 DOM 的页面：指针移过时，卡片、柱阵、分层窗口、键盘、转盘等会跟着动。npm 包 @lucasmarkes/hairline，演示站写 v0.5.1，无运行时依赖，React 18+ 只是可选 peer。也可以用 npx shadcn@latest add https://hairline.lucasmarkes.com/r/hairline.json 。这份注册表 JSON 的描述仍写 Six isometric line figures，包装文件注释也写 six，但同一文件再导出 25 个组件；README 表格和 npm 描述、演示站都写 33。差出来的部分本库没有安装核对。作者另有给编程助手画新图形的 skill：hairline 仓库的 skills/ 里有 hairline-create 和 hairline-adopt，lucasmarkes/skills 的说明指向它们，演示站也写 draw your own with the skill。这是设计组件，不是大模型产品。本库没有 npm install，也没有做无障碍或键盘测试。",
+      "summaryEn": "hairline (https://hairline.lucasmarkes.com , repo lucasmarkes/hairline, MIT, by Lucas Marques) is 33 isometric line figures for React and for any page with a DOM: cards, pillars, a layered window, a keyboard, a turntable, and the rest answer the pointer. The npm package is @lucasmarkes/hairline. The demo says v0.5.1, there are no runtime dependencies, and React 18+ is only an optional peer. You can also run npx shadcn@latest add https://hairline.lucasmarkes.com/r/hairline.json . That registry item's description still says Six isometric line figures, and the wrapper comment says six, while the same file re-exports 25 components. The README table, the npm description, and the demo all say 33. The gap was not checked by installing. The author also ships agent skills for drawing new figures: skills/ in the hairline repo contains hairline-create and hairline-adopt, the lucasmarkes/skills README points at them, and the demo says draw your own with the skill. This is a design component, not an LLM product. This library did not npm install and did not run accessibility or keyboard tests.",
+      "sourceUrl": "https://hairline.lucasmarkes.com",
+      "secondaryUrls": [
+        "https://github.com/lucasmarkes/hairline",
+        "https://hairline.lucasmarkes.com/r/hairline.json",
+        "https://github.com/lucasmarkes/skills",
+        "https://www.npmjs.com/package/@lucasmarkes/hairline"
+      ],
+      "previewImage": "/previews/hairline.webp",
+      "types": [
+        "component",
+        "interactive"
+      ],
+      "tags": [
+        "react",
+        "isometric",
+        "pointer",
+        "svg",
+        "shadcn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-01",
+      "updatedAt": "2026-11-02T01:10:00Z",
+      "qualityNote": "收录理由：指针一过就会动的等距线稿，可放进 React 或普通页面，演示站也指向让助手画新图形的 skill。边界：这是界面组件，不是语言模型产品；shadcn 注册表文案仍写六个图形，和 README、npm、演示站的 33 个不一致，包装层实际导出 25 个，差集没有安装核对。本库没有 npm install，也没有做无障碍或键盘测试。",
+      "qualityNoteEn": "Why listed: isometric line figures that answer the pointer, for React or a plain page, and the demo also points at skills for drawing new ones. Limits: this is a UI component, not a language-model product. The shadcn registry copy still says six figures, while the README, npm, and the demo say 33, and the wrapper file exports 25; the gap was not checked by installing. This library did not npm install and did not run accessibility or keyboard tests.",
+      "verifyLog": "2026-11-02 早间（Asia/Shanghai，约 09:10）：https://hairline.lucasmarkes.com HTTP 200，title “hairline”，description “Thirty-three isometric line figures that answer the pointer. SVG, no dependencies, for React and for everything else.” 无头 google-chrome 实拍首屏 1200×800：页眉 hairline v0.5.1，标题 Line drawings that answer the pointer，安装行 npm i @lucasmarkes/hairline，另有 Or draw your own with the skill，页脚 Built by Lucas Marques、MIT licensed。首屏图是分层窗口线稿；指针在首屏移动过，没有逐个打开 33 个图形。https://github.com/lucasmarkes/hairline HTTP 200。gh api：license SPDX MIT，stargazers_count 3245，forks 204，created 2026-10-01T13:52:19Z，pushed 2026-10-14T20:33:03Z，homepage https://hairline.lucasmarkes.com 。README 表格函数行（去掉 options 表）为 33。https://hairline.lucasmarkes.com/r/hairline.json HTTP 200，description 仍为 “Six isometric line figures…”，files 里 components/ui/hairline.tsx 有 25 个 export function。www.npmjs.com/package/@lucasmarkes/hairline HTTP 403；registry.npmjs.org/@lucasmarkes/hairline latest 0.5.1，license MIT，description “Thirty-three isometric line figures…”，时间 2026-10-14T20:39:19.328Z。gh api repos/lucasmarkes/hairline/contents/skills：hairline-adopt、hairline-create。gh api repos/lucasmarkes/skills：license MIT，stargazers_count 17，created 2026-10-06T18:18:34Z，pushed 2026-10-27T23:09:53Z，HTTP 200；其 skills/ 目录只有 specimen，README 把 hairline 两份 skill 指回 hairline 仓库。预览即演示站首屏 WebP。未 npm install，未跑 a11y / 键盘测试，未安装 skill。",
+      "verifyLogEn": "2026-11-02 morning (Asia/Shanghai, about 09:10): https://hairline.lucasmarkes.com HTTP 200, title “hairline”, description “Thirty-three isometric line figures that answer the pointer. SVG, no dependencies, for React and for everything else.” Headless google-chrome capture of the hero at 1200×800: header hairline v0.5.1, headline Line drawings that answer the pointer, install line npm i @lucasmarkes/hairline, plus Or draw your own with the skill, footer Built by Lucas Marques and MIT licensed. The hero drawing is the layered window; the pointer was moved on that hero, and the 33 figures were not opened one by one. https://github.com/lucasmarkes/hairline HTTP 200. gh api: license SPDX MIT, stargazers_count 3245, forks 204, created 2026-10-01T13:52:19Z, pushed 2026-10-14T20:33:03Z, homepage https://hairline.lucasmarkes.com . README function rows, excluding the options table, are 33. https://hairline.lucasmarkes.com/r/hairline.json HTTP 200, description still “Six isometric line figures…”, and components/ui/hairline.tsx in files has 25 export function declarations. www.npmjs.com/package/@lucasmarkes/hairline returned HTTP 403; registry.npmjs.org/@lucasmarkes/hairline latest 0.5.1, license MIT, description “Thirty-three isometric line figures…”, time 2026-10-14T20:39:19.328Z. gh api repos/lucasmarkes/hairline/contents/skills: hairline-adopt and hairline-create. gh api repos/lucasmarkes/skills: license MIT, stargazers_count 17, created 2026-10-06T18:18:34Z, pushed 2026-10-27T23:09:53Z, HTTP 200; its skills/ directory contains only specimen, and the README points the two Hairline skills back at the hairline repo. Preview is that demo hero as WebP. No npm install, no a11y or keyboard test, skill not installed."
+    },
+    {
       "id": "pure-particles",
       "slug": "pure-particles",
       "title": "Pure Particles：玻璃方盒里的粒子烟雾，可嵌入首屏、导出 4K 与无缝循环",
@@ -5541,9 +5611,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-29T12:30:00Z",
+    "updatedAt": "2026-11-02T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.80",
-    "count": 164
+    "version": "1.3.82",
+    "count": 166
   }
 }

@@ -1,6 +1,94 @@
 {
   "cases": [
     {
+      "id": "unslop",
+      "slug": "unslop",
+      "title": "unslop：把 AI 味界面按产品方向一版版改掉",
+      "titleEn": "unslop: turn AI-looking UI into a designed screen, pass by pass",
+      "kind": "tool",
+      "hook": "先点出 AI 味，再按产品方向逐遍改。",
+      "hookEn": "Find the AI look, then fix the screen pass by pass.",
+      "summary": "unslop（https://github.com/heydamir/unslop ，CC BY 4.0，作者 Damir Sokolovsky / @heydamir）是给 Claude Code 和 Codex 用的 skill：先找出 vibecode 界面上的 AI 味（紫渐变、发光、emoji 标签、吼叫式文案、间距不齐），再从产品本身定一个方向，然后像红线审阅那样一版版改。界面可以是 Next.js、React、Vue、Svelte、Tailwind 或纯 HTML/CSS，看板、应用和落地页都行，只给一个网址也可以对线上页面动手。Claude Code 里用 /unslop，Codex 里用 $unslop。它会先给出审计和方向再改；屏幕已经够好时只建议小修。需要故事短片时，README 写要另备无头浏览器和 ffmpeg，做成不到 10 秒的方形视频；需要配图时可以接图像服务，每次付费生成前先出示提示词。作者另开了代做页 https://heydamir.design/unslop ，页面写 3 天改一块关键屏，并链到价目，本库没有打开价目也没有下单。许可证允许商用，但要署名 Damir Sokolovsky 并链回仓库。本库没有安装 skill，没有对任何项目跑 /unslop，也没有生成故事短片。",
+      "summaryEn": "unslop (https://github.com/heydamir/unslop , CC BY 4.0, by Damir Sokolovsky / @heydamir) is a skill for Claude Code and Codex. It finds the AI look on a vibecoded screen (purple gradients, glows, emoji labels, shouty copy, uneven spacing), sets a direction from the product, then fixes the screen pass by pass like a redline review. It works on Next.js, React, Vue, Svelte, Tailwind, or plain HTML and CSS, for dashboards, apps, and landing pages, including a live URL. In Claude Code you type /unslop; in Codex, $unslop. It audits and proposes a direction before editing, and if the screen is already fine it only suggests small refinements. The README says a story video needs a headless browser and ffmpeg and comes out as a square clip under 10 seconds; image generation can use an image service, and it shows the prompt before any paid call. The author also offers a hire page at https://heydamir.design/unslop that says a key screen in 3 days and links to pricing; this library did not open the price or book it. Commercial use is allowed if you credit Damir Sokolovsky and link the repo. This library did not install the skill, did not run /unslop on a project, and did not generate a story video.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI UI cleanup skill",
+      "sourceUrl": "https://github.com/heydamir/unslop",
+      "secondaryUrls": [
+        "https://heydamir.design/unslop",
+        "https://x.com/heydamir/status/2116158176336970008",
+        "https://x.com/heydamir"
+      ],
+      "previewImage": "/previews/unslop.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "skill 会改你项目里的界面文件；出故事短片或付费生图前先看它给出的方向。本库没有代为安装或改稿。",
+      "approvalBoundaryEn": "The skill edits UI files in your project; review the direction it proposes before a story video or a paid image. This library did not install it or edit a screen for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-11-02T01:10:00Z",
+      "qualityNote": "收录理由：专门审计并改掉 AI 味界面的 skill，和库里从零生成设计系统的条目互补。边界：要装进 Claude Code 或 Codex 才会改你的文件；故事短片还要本机有浏览器自动化和 ffmpeg；CC BY 4.0，转用时要署名作者。卡片图裁自作者放在仓库里的故事帧，不是本库跑出来的结果。本库没有安装 skill，没有跑 /unslop，也没有生成故事短片。",
+      "qualityNoteEn": "Why listed: a skill that audits and cleans AI-looking UI, next to entries that generate a design system from scratch. Limits: it only edits files after you install it in Claude Code or Codex; a story video also needs browser automation and ffmpeg on your machine; CC BY 4.0 means you credit the author when you reuse it. The card image is cropped from the author's story frames in the repo, not from a run here. This library did not install the skill, did not run /unslop, and did not generate a story video.",
+      "verifyLog": "2026-11-02 早间（Asia/Shanghai，约 09:10）：https://github.com/heydamir/unslop HTTP 200。gh api repos/heydamir/unslop：license SPDX CC-BY-4.0，stargazers_count 4878，forks 242，created 2026-10-29T15:41:21Z，pushed 2026-11-01T16:46:10Z，homepage 空，default_branch main。README 写作者 Damir Sokolovsky（@heydamir），skill 路径 skills/unslop，Claude Code 拷进 ~/.claude/skills/，Codex 用 $skill-installer 或 ~/.agents/skills/；审计项含 purple gradients、glows、emoji labels、shouty copy、uneven spacing；故事短片要 Playwright 与 ffmpeg，方形、不到 10 秒。https://heydamir.design/unslop HTTP 200，title “Please unslop my product”，正文写 I'll unslop your product in 3 days，并有 See pricing，未打开价目、未下单。https://x.com/heydamir 与 https://x.com/heydamir/status/2116158176336970008 直接 GET 均为 HTTP 200（页面壳）；publish.twitter.com oEmbed HTTP 200，作者 Damir Sokolovsky，日期 October 30, 2026，正文 “I turned my unslopping process into a free Claude skill”。预览取仓库 skills/unslop/references/refs/story-dashboard-frames.webp（2400×1200），裁左侧三列 1800×1200 再缩到 1200×800 WebP，署 Damir Sokolovsky / CC BY 4.0。本库未安装 skill、未跑 /unslop、未生成故事短片。",
+      "verifyLogEn": "2026-11-02 morning (Asia/Shanghai, about 09:10): https://github.com/heydamir/unslop HTTP 200. gh api repos/heydamir/unslop: license SPDX CC-BY-4.0, stargazers_count 4878, forks 242, created 2026-10-29T15:41:21Z, pushed 2026-11-01T16:46:10Z, empty homepage, default_branch main. README names Damir Sokolovsky (@heydamir), skill path skills/unslop, Claude Code copy into ~/.claude/skills/, Codex via $skill-installer or ~/.agents/skills/; audit signs include purple gradients, glows, emoji labels, shouty copy, and uneven spacing; story video needs Playwright and ffmpeg, square, under 10 seconds. https://heydamir.design/unslop HTTP 200, title “Please unslop my product”, copy says I'll unslop your product in 3 days and See pricing; price not opened, nothing booked. Direct GET of https://x.com/heydamir and the status URL were HTTP 200 (X shell). publish.twitter.com oEmbed HTTP 200: Damir Sokolovsky, October 30, 2026, “I turned my unslopping process into a free Claude skill”. Preview is the repo file skills/unslop/references/refs/story-dashboard-frames.webp (2400×1200), left three columns cropped at 1800×1200 and scaled to a 1200×800 WebP, credited to Damir Sokolovsky / CC BY 4.0. Skill not installed, /unslop not run, story video not generated."
+    },
+    {
+      "id": "ui-ux-pro-max-skill",
+      "slug": "ui-ux-pro-max-skill",
+      "title": "UI UX Pro Max：给编程助手的配色、字体和界面规则",
+      "titleEn": "UI UX Pro Max: palettes, font pairings, and UI rules for coding agents",
+      "kind": "tool",
+      "hook": "给已有的编程助手一套可检索的界面规则。",
+      "hookEn": "Design rules a coding agent can search before it builds UI.",
+      "summary": "UI UX Pro Max（https://www.uupm.cc/ ，仓库 nextlevelbuilder/ui-ux-pro-max-skill，MIT）是一套给已有 AI 编程工具用的设计情报 skill：检索界面风格、配色、字体搭配和 UX 规则，再按产品生成一份设计系统建议。仓库 2025 年 11 月创建，不是当天新发布，默认分支在 2026-11-01 仍有提交。Claude Code 可以走插件市场两条命令；也可以装 npm 包 ui-ux-pro-max-cli，用 uipro init --ai claude、cursor 或 codex（README 还列了 Windsurf、Copilot 等）。检索脚本要本机 Python 3，只用标准库。README 把本仓库写成免费开源的 Basic，并另写付费 Premium（品牌、logo、幻灯片等）；官网导航也有 Premium。本条只写开源 skill。官网首屏计数（57 种 UI 风格、95 套配色、56 组字体、8 个技术栈、24 种图表、29 种落地页模式）和 README 写的 79 种可检索风格（其中 50 种在用）、192 种产品类型并不一致，数据文件行数也对不上，本库没有跑检索脚本对口径。本库没有安装 skill，也没有用它生成界面。",
+      "summaryEn": "UI UX Pro Max (https://www.uupm.cc/ , repo nextlevelbuilder/ui-ux-pro-max-skill, MIT) is a design-intelligence skill for the AI coding tools you already use: it searches UI styles, palettes, font pairings, and UX rules, then proposes a design system for the product. The repo was created in November 2025, so this is an established project rather than a same-day launch, and the default branch had another commit on 2026-11-01. Claude Code can install it from the plugin marketplace in two commands, or you install the npm package ui-ux-pro-max-cli and run uipro init --ai claude, cursor, or codex (the README also lists Windsurf, Copilot, and others). The search script needs Python 3 and uses only the standard library. The README calls this repo the free open-source Basic tier and describes a paid Premium tier (brand, logo, slides, and more); the site nav has Premium too. This entry covers the open-source skill only. The homepage counters (57 UI styles, 95 palettes, 56 font pairings, 8 tech stacks, 24 chart types, 29 landing patterns) do not match the README's 79 searchable styles (50 active) and 192 product types, and the data-file row counts do not line up either. The search script was not run. This library did not install the skill or generate a UI with it.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI design skill",
+      "sourceUrl": "https://www.uupm.cc/",
+      "secondaryUrls": [
+        "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+        "https://www.npmjs.com/package/ui-ux-pro-max-cli"
+      ],
+      "previewImage": "/previews/ui-ux-pro-max-skill.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装会把 skill 写进项目或本机技能目录；合并前自己核对配色、字体和对比度。本库没有代为安装。",
+      "approvalBoundaryEn": "Installing writes skill files into the project or your machine; check palettes, type, and contrast before merging. This library did not install it for you.",
+      "connectors": [
+        "Claude Code",
+        "Cursor",
+        "Codex"
+      ],
+      "publishedAt": "2025-11-30",
+      "updatedAt": "2026-11-02T01:10:00Z",
+      "qualityNote": "收录理由：给 Claude Code、Cursor、Codex 用的设计情报 skill，库里还缺这一条，拿来补 AI×设计。它是已经用开的项目，不是当天发布。边界：开源 Basic 之外官网另有付费 Premium，本条不覆盖付费档；首页数字和 README 数字不一致，未跑检索脚本核对。本库没有安装 skill，也没有用它生成界面。",
+      "qualityNoteEn": "Why listed: a design-intelligence skill for Claude Code, Cursor, and Codex that this catalog was still missing, so it fills an AI×design gap. It is an established project, not a same-day launch. Limits: the site also sells a Premium tier this entry does not cover; the homepage counters and the README counts do not match, and the search script was not run. This library did not install the skill or generate a UI with it.",
+      "verifyLog": "2026-11-02 早间（Asia/Shanghai，约 09:10）：https://www.uupm.cc/ HTTP 200，title “UI/UX Pro Max - AI-Powered Design Intelligence”。无头 google-chrome 实拍首屏 1200×800：导航有 Premium，星标徽显示 143.8k，助手芯片含 Claude Code、Cursor、Windsurf、Antigravity、GitHub Copilot、Kiro、Codex、Qoder，命令行停在 uipro init --ai claude，计数卡为 57 UI Styles、95 Color Palettes、56 Font Pairings、8 Tech Stacks、24 Chart Types、29 Landing Patterns。gh api repos/nextlevelbuilder/ui-ux-pro-max-skill：license SPDX MIT，stargazers_count 143829，forks 15230，created 2025-11-30T11:36:31Z，pushed 2026-11-01T07:04:29Z，homepage https://www.uupm.cc/ 。GitHub release latest v2.15.0，published 2026-08-13T17:10:40Z。registry.npmjs.org/ui-ux-pro-max-cli latest 2.15.0，时间 2026-08-13T17:10:39.965Z（www.npmjs.com 页面未打开）。README Basic 段写 79 searchable UI styles (50 active)、192 product types；src/ui-ux-pro-max/data 下 styles.csv 89 行、typography.csv 75 行、colors.csv 193 行、ui-reasoning.csv 193 行（均含表头）。三套数字没有对齐，未跑 search.py。预览为上述首屏 WebP。本库未 npm install、未 uipro init、未生成界面。",
+      "verifyLogEn": "2026-11-02 morning (Asia/Shanghai, about 09:10): https://www.uupm.cc/ HTTP 200, title “UI/UX Pro Max - AI-Powered Design Intelligence”. Headless google-chrome capture of the hero at 1200×800: nav includes Premium, the star chip showed 143.8k, assistant chips included Claude Code, Cursor, Windsurf, Antigravity, GitHub Copilot, Kiro, Codex, and Qoder, the command line was on uipro init --ai claude, and the counters were 57 UI Styles, 95 Color Palettes, 56 Font Pairings, 8 Tech Stacks, 24 Chart Types, and 29 Landing Patterns. gh api repos/nextlevelbuilder/ui-ux-pro-max-skill: license SPDX MIT, stargazers_count 143829, forks 15230, created 2025-11-30T11:36:31Z, pushed 2026-11-01T07:04:29Z, homepage https://www.uupm.cc/ . Latest GitHub release v2.15.0, published 2026-08-13T17:10:40Z. registry.npmjs.org/ui-ux-pro-max-cli latest 2.15.0 at 2026-08-13T17:10:39.965Z (the www.npmjs.com page was not opened). The README Basic section says 79 searchable UI styles (50 active) and 192 product types; under src/ui-ux-pro-max/data, styles.csv has 89 lines, typography.csv 75, colors.csv 193, and ui-reasoning.csv 193, headers included. The three sets of numbers were not reconciled; search.py was not run. Preview is that hero as WebP. No npm install, no uipro init, no generated UI."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11535,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-02T01:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.79",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11836,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://github.com/heydamir/unslop",
+      "https://heydamir.design/unslop",
+      "https://x.com/heydamir/status/2116158176336970008",
+      "https://x.com/heydamir",
+      "https://www.uupm.cc/",
+      "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
     ]
   }
 }
