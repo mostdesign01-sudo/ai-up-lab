@@ -1,6 +1,50 @@
 {
   "cases": [
     {
+      "id": "vectoys",
+      "slug": "vectoys",
+      "title": "Vectoys：给 React 落地页用的 SVG 手机、笔记本和小玩具，屏幕是活的 HTML",
+      "titleEn": "Vectoys: SVG phones, laptops and toys for React landing pages, with live HTML screens",
+      "kind": "tool",
+      "hook": "纯 SVG 画的手机电脑小玩具，屏幕能点能打字。",
+      "hookEn": "Phones, laptops and toys drawn in plain SVG, with screens you can tap and type into.",
+      "summary": "Vectoys（https://vectoys.com ，vinenastudio/vectoys，作者 Mert）是给 React 落地页用的一套设备与小玩具：手机、笔记本、显示器、浏览器窗口等全部用纯 SVG 路径画成，带透视可以拖着转，不用 WebGL、canvas 或图片；设备屏幕里是真实可选中、可点击、可输入的 HTML，跟着设备一起转。现有 14 件：keyboard、keycap、browser、card（翻面卡片）、dice、envelope、floppy、gift、laptop、laptop-front、monitor、phone、tablet、watch。像 shadcn 一样把源码拷进项目：`npx @vinena/vectoys-cli add <item>`，或 `npx shadcn add https://vectoys.com/r/<item>.json`；用 CSS 变量（--vectoys-finish / --vectoys-accent 等）套自己的品牌色，动效遵守 prefers-reduced-motion，服务端渲染可确定。官网给了一句给编码 agent 的提示词：Read https://vectoys.com/prompt.txt and follow it on my landing page——agent 会读你的落地页、挑 1～3 个合适位置，做 2～3 个变体页并排给你看，不改正式页面；没有合适的件时，`npx @vinena/vectoys-cli skill` 带 agent 新画一个玩具（create / check / preview）并可提交回库。需要 React 19 及以上；MIT 开源，免费。2026-11-03 以 Show HN 发布。适合想让落地页首屏直接演示产品、又不想上 3D 引擎或截图的独立开发者与设计师。本库没有跑 `npx … add`，没有嵌进真实落地页，也没有跑 agent 的 skill / 提交新玩具流程。",
+      "summaryEn": "Vectoys (https://vectoys.com , vinenastudio/vectoys, by Mert) is a set of devices and small toys for React landing pages: phones, laptops, monitors, browser windows and more, drawn as plain SVG paths with real perspective so you can drag them around—no WebGL, no canvas, no images. The screens are live, selectable HTML you can tap and type into, turning with the device. There are 14 items: keyboard, keycap, browser, card (flip card), dice, envelope, floppy, gift, laptop, laptop-front, monitor, phone, tablet, watch. Copy source into your project shadcn-style with `npx @vinena/vectoys-cli add <item>` or `npx shadcn add https://vectoys.com/r/<item>.json`; theme with CSS variables (--vectoys-finish / --vectoys-accent, etc.); motion respects prefers-reduced-motion and server rendering stays deterministic. The site offers a one-line agent prompt—Read https://vectoys.com/prompt.txt and follow it on my landing page—which has a coding agent read your landing page, pick 1–3 spots, and build 2–3 side-by-side variants without touching the real page; when nothing fits, `npx @vinena/vectoys-cli skill` walks the agent through drawing a new toy (create / check / preview) and submitting it. Needs React 19+. MIT, free. Launched as a Show HN on 2026-11-03. Good for indie makers and designers who want the hero to demo the product without a 3D engine or screenshots. This library did not run `npx … add`, embed it in a real landing page, or run the agent skill / submit-a-toy flow.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool / landing-page SVG toolkit",
+      "sourceUrl": "https://vectoys.com/",
+      "secondaryUrls": [
+        "https://github.com/vinenastudio/vectoys",
+        "https://news.ycombinator.com/item?id=50348853",
+        "https://www.npmjs.com/package/@vinena/vectoys-cli"
+      ],
+      "previewImage": "/previews/vectoys.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "CLI 会把源码拷进你的项目并安装 @vinena/vectoys 依赖；让 agent 按提示词改落地页时，先看它做的变体页，再决定要不要上线。本库没有代为安装或改页面。",
+      "approvalBoundaryEn": "The CLI copies source into your project and installs @vinena/vectoys packages; when an agent follows the prompt, review its variants page before shipping anything. This library did not install or edit a page for you.",
+      "connectors": [
+        "React",
+        "shadcn",
+        "npm"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-03T12:20:00Z",
+      "qualityNote": "收录理由：AI×设计×代码交界的落地页素材——设备与玩具是可交互的 SVG + 活 HTML，还自带一句话 agent 提示词和造新玩具的 skill，跟库里偏组件库 / 设计 skill 的条目互补。边界：只支持 React 19+；作者也说 agent 画 SVG 需要反复迭代，自己造新玩具不会一次成。本库没有跑 add 命令，没有嵌进真实落地页，也没有跑 agent skill / 提交流程。",
+      "qualityNoteEn": "Why listed: landing-page material at the AI × design × code seam—interactive SVG devices and toys with live HTML screens, plus a one-line agent prompt and a skill for drawing new toys; complements the component-library / design-skill entries. Limits: React 19+ only; the author notes agents need many iterations to draw good SVG, so a new toy will not land in one shot. This library did not run the add command, embed it in a real landing page, or run the agent skill / submit flow.",
+      "verifyLog": "2026-11-03 晚间（Asia/Shanghai）：https://vectoys.com/ HTTP 200，title「vectoys: open source SVG 3D engine for device mockups」；首屏 Draw anything on the web with SVGs，副文 Phones, laptops and small toys for your React landing page. The screen is live HTML you can tap and type into. No WebGL, no images, MIT，带 agent 提示词框；页内写 React 19 or later。https://vectoys.com/prompt.txt 200（读落地页→挑位置→做 2～3 变体→`npx @vinena/vectoys-cli skill` 造新玩具）。https://vectoys.com/r/<item>.json 14 件均 200（keyboard/keycap/browser/card/dice/envelope/floppy/gift/laptop/laptop-front/monitor/phone/tablet/watch）。gh api repos/vinenastudio/vectoys：license MIT，0★，created 2026-10-21，pushed 2026-11-03。npm @vinena/vectoys-cli latest 0.3.2，MIT。HN item?id=50348853：Show HN: Vectoys – 3D devices for landing pages, drawn as plain SVG，by mertduzgun，2026-11-03 06:47 UTC。预览为官网首屏 1440×960 实拍缩 1200×800 WebP 自托管。本库未跑 npx add、未嵌入真实落地页、未跑 skill / 提交流程。",
+      "verifyLogEn": "2026-11-03 evening (Asia/Shanghai): https://vectoys.com/ HTTP 200, title “vectoys: open source SVG 3D engine for device mockups”; hero Draw anything on the web with SVGs plus agent-prompt box; page states React 19 or later. https://vectoys.com/prompt.txt 200. All 14 https://vectoys.com/r/<item>.json return 200. gh api repos/vinenastudio/vectoys: MIT, 0★, created 2026-10-21, pushed 2026-11-03. npm @vinena/vectoys-cli latest 0.3.2, MIT. HN item?id=50348853 Show HN by mertduzgun, 2026-11-03 06:47 UTC. Preview is a 1440×960 hero capture scaled to a 1200×800 WebP. Did not run npx add, embed in a real landing page, or run the skill / submit flow."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11491,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-03T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11792,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://vectoys.com/",
+      "https://vectoys.com/prompt.txt",
+      "https://vectoys.com/r/laptop.json",
+      "https://github.com/vinenastudio/vectoys",
+      "https://news.ycombinator.com/item?id=50348853",
+      "https://www.npmjs.com/package/@vinena/vectoys-cli"
     ]
   }
 }
