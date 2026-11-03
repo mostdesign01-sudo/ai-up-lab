@@ -1,6 +1,137 @@
 {
   "cases": [
     {
+      "id": "recto",
+      "slug": "recto",
+      "title": "Recto：给已安装的编程助手一块本机视觉画布",
+      "titleEn": "Recto: a local visual canvas for the coding agents already on your machine",
+      "kind": "tool",
+      "hook": "本机画布接上已装的编程助手，改的是真 HTML。",
+      "hookEn": "A local canvas for the coding agents you already installed, editing real HTML.",
+      "summary": "Recto（https://recto.design）是一块跑在本机的视觉画布，给已经装在电脑上的编程助手用。官网列出 Claude Code、Codex、Cursor 和 OpenCode：助手会被自动发现，可以在同一块画布上一起改设计。能做的包括界面、动效、SVG 和 3D；底下是 HTML 与 CSS，你可以直接拖、改样式，或把网页上的界面贴进来再改，也可以把选中的部分连同评注发回助手。设计系统放在项目里的 CSS 变量中，助手动手前会读到。官网 FAQ 写明它不是另一个模型，免费，不需要 MCP，也不需要为 Recto 和助手之间再配 API。首页 FAQ 写可以从网页把界面带进来，Figma 导入仍标即将到来；同一站的更新日志却把「从 Figma 粘贴到画布」列进 0.1.0 已发布的导入能力，并在之后的更新里写上 Grok Build，以及应用内导出视频、glb 和 SVG。两处对 Figma 的说法不一致。下载区当前版本 v0.1.6，最新发布日写的是 2026-10-29，提供 Mac（Apple 芯片与 Intel）、Windows 和 Linux 安装包。适合想让已有编程助手在看得见的画布上改界面、又不想再装一套连接器的人。本库没有下载安装 Recto，没有连接本机助手，也没有在画布上生成或编辑过设计。",
+      "summaryEn": "Recto (https://recto.design) is a local visual canvas for coding agents already installed on your computer. The site lists Claude Code, Codex, Cursor, and OpenCode: agents are detected automatically, and more than one can work on the same design. It covers UI, motion, SVG, and 3D. Underneath is HTML and CSS, so you can drag and restyle, paste in an interface from the web, or send a selection plus a comment back to the agent. Each project keeps its design system as CSS variables, which the agent reads before it designs. The FAQ says Recto is not another model, is free, needs no MCP, and needs no API between Recto and the agent. That same FAQ still marks Figma import as coming soon, while the site’s changelog lists “paste from Figma onto the canvas” among what 0.1.0 already shipped, and later updates add Grok Build plus in-app export to video, glb, and SVG. The two pages do not agree about Figma. The download section lists v0.1.6, dated 2026-10-29, for Mac (Apple silicon and Intel), Windows, and Linux. Useful when you want an agent you already have to edit UI on a canvas without another connector. This library did not download or install Recto, did not connect a local agent, and did not generate or edit a design on the canvas.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://recto.design",
+      "secondaryUrls": [
+        "https://recto.design/changelog"
+      ],
+      "previewImage": "/previews/recto.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "安装包不经过应用商店，首次打开可能要系统放行；助手会改你电脑上的项目文件。对外使用导出的 HTML 前自己看一遍。本库没有代为安装或连接。",
+      "approvalBoundaryEn": "The build is not store-signed, so the first open may need a system override, and the agent edits project files on your machine. Review exported HTML before you ship it. This library did not install or connect it for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenCode",
+        "Grok Build"
+      ],
+      "publishedAt": "2026-10-29",
+      "updatedAt": "2026-11-03T01:20:00Z",
+      "qualityNote": "收录理由：给已经装好的编程助手一块本机画布，产出是可导出的 HTML 与 CSS，和库里的设计系统技能或送进剪辑软件的条目不是同一条路。边界：官网 FAQ 和更新日志都写免费，公开页没有看到开源仓库，本条不写成开源。首页 FAQ 与更新日志对 Figma 导入的说法不一致。本库没有下载安装，没有连接本机助手（包括更新日志里写的 Grok Build），也没有在画布上生成、编辑或导出。",
+      "qualityNoteEn": "Why listed: a local canvas for coding agents you already have, exporting real HTML and CSS, separate from design-system skills or motion-handoff tools. Limits: the FAQ and the changelog both say it is free, and no public source repository was found, so this entry does not call it open source. The homepage FAQ and the changelog disagree about Figma import. This library did not download or install it, did not connect a local agent (including the Grok Build named in the changelog), and did not generate, edit, or export on the canvas.",
+      "verifyLog": "2026-11-03 早间（Asia/Shanghai）：https://recto.design HTTP 200，title “Recto - The visual canvas for AI agents”，meta description 写 native AI design tool for Windows, Mac, and Linux，并点名 Claude Code、Codex、Cursor、OpenCode。FAQ 原文：不是模型；支持已安装的编程助手并可同时用多个；可在画布上直接改；底下是 HTML/CSS；不需要 MCP 或 API；可从网页导入，Figma import coming soon；Recto is free；Mac、Windows、Linux。下载对话框 data-release-date=\"2026-10-29\"，time 为 29th Oct 2026，版本徽标 v0.1.6，四个包：Recto-0.1.6-mac-arm64.dmg、mac-x64.dmg、win-x64.exe、linux-x64.AppImage（updates.recto.design）。页内未找到 GitHub / MIT / open source。https://recto.design/changelog HTTP 200，写 5,400+ commits、latest v0.1.6；0.1.0 的 Import 列 “Paste from Figma straight onto the canvas”，与首页 FAQ 的 Figma import coming soon 不一致；Since 0.1.0 写更新免费，并加入 Grok Build，以及应用内导出视频、glb、SVG。sourceType 记 official-launch，因为主来源就是产品自己的官网。预览为无头 Chrome（Playwright channel chrome）实拍首页首屏，视口 1200×800，sharp 覆盖裁成 1200×800 WebP。未下载安装包，未连接本机助手，未在画布上生成、编辑或导出，也没有核对 Figma 粘贴到底通不通。",
+      "verifyLogEn": "2026-11-03 morning (Asia/Shanghai): https://recto.design HTTP 200, title “Recto - The visual canvas for AI agents”. FAQ: not a model; uses installed coding agents, including more than one; canvas stays editable; HTML/CSS underneath; no MCP or API; web import, Figma import coming soon; free; Mac, Windows, and Linux. Download dialog data-release-date 2026-10-29, badge v0.1.6, four builds on updates.recto.design (mac arm64, mac x64, win x64, linux AppImage). No GitHub, MIT, or open-source claim on the page. https://recto.design/changelog HTTP 200: “5,400+ commits · latest v0.1.6”; the 0.1.0 import list says “Paste from Figma straight onto the canvas”, which disagrees with the homepage FAQ’s “Figma import coming soon”; later notes say updates are free and add Grok Build plus in-app video, glb, and SVG export. sourceType is official-launch because the product site is the primary source. Preview is a headless Chrome (Playwright channel) capture of the homepage hero at 1200×800, saved with sharp as a 1200×800 WebP. Did not download, connect an agent, generate, edit, or export, and did not check whether Figma paste actually works."
+    },
+    {
+      "id": "recraft-logo-maker",
+      "slug": "recraft-logo-maker",
+      "title": "Recraft Logo Maker：问答做出 Logo，看上实物再导出 SVG",
+      "titleEn": "Recraft Logo Maker: answer a few questions, preview the logo on products, export SVG",
+      "kind": "tool",
+      "hook": "问答选出四个 Logo 方向，改色看实物再导出矢量。",
+      "hookEn": "Answer a few questions, compare four logo directions, then export a vector.",
+      "summary": "Recraft Logo Maker（https://www.recraft.ai/logo ，页面标 Beta）是 Recraft 的问答式 Logo 流程，不从写提示词开始。官方更新日志 2026-11-02 的《Meet Recraft Logo Maker》写：填品牌名、业务、Logo 类型和气质；选设计师整理的风格或上传参考；一次看四个方向；改颜色、编辑或做变体；在包装、服饰和店面样机上看效果，样机不另收生成费用；导出 SVG。文档把同一步写得更具体：风格有 24 种，四个方向各自选更合适的模型，样机即时出现且不扣积分，生成和编辑本身会扣积分，扣多少取决于轮次，本条不写死数字。免费方案可以试，该方案做出的 Logo 公开且仅限个人使用；权利页写这些图仍属 Recraft、不授商用，付费方案才给完整所有权和商用权利，并在订阅结束后仍保持私有。文档另写它可在桌面和手机浏览器打开，Recraft 手机 App 里还没有。适合不想写提示词、又想先看到 Logo 上到实物再决定的人。本库没有登录 Recraft，没有跑完整生成流程，也没有付费导出。",
+      "summaryEn": "Recraft Logo Maker (https://www.recraft.ai/logo , marked Beta) is Recraft’s question-led logo flow. It does not start from a prompt. The 2026-11-02 changelog entry “Meet Recraft Logo Maker” says: give the brand name, what you do, the logo type, and the traits you want; pick a designer-curated style or upload references; review four directions; edit, recolor, or ask for variations; preview packaging, apparel, and storefronts at no extra generation cost; export SVG. The docs add that there are 24 logo styles, each direction uses the model that fits it, mockups appear instantly and do not spend credits, while generating and editing do spend credits, and the total depends on how many rounds you run. No credit figure is invented here. You can try it on the Free plan; those logos are public and for personal use only. The rights page says Free-plan images stay Recraft’s property and are not licensed for commercial use, while a paid plan grants full ownership and commercial rights and keeps the images private after the subscription ends. The docs also say it works in a desktop or phone browser and is not in the Recraft mobile app yet. Useful when you would rather answer questions and see the logo on a product before you commit. This library did not sign in to Recraft, did not run a full generation, and did not pay to export.",
+      "categories": [
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://www.recraft.ai/logo",
+      "secondaryUrls": [
+        "https://recraft.canny.io/changelog",
+        "https://www.recraft.ai/blog/ai-logo-maker-guide",
+        "https://www.recraft.ai/docs/recraft-studio/image-generation/how-to-generate-a-logo",
+        "https://www.recraft.ai/docs/plans-and-billing/commercial-rights-and-ownership",
+        "https://www.recraft.ai/generate/logos"
+      ],
+      "previewImage": "/previews/recraft-logo-maker.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "免费方案的 Logo 公开且限个人使用，商用前先看付费方案的权利说明。生成会消耗账号积分。本库没有代为登录或导出。",
+      "approvalBoundaryEn": "Free-plan logos are public and personal-use only; read the paid-plan rights before commercial use. Generation spends account credits. This library did not sign in or export for you.",
+      "connectors": [
+        "Recraft"
+      ],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-03T01:20:00Z",
+      "qualityNote": "收录理由：官方刚公开的问答式 Logo 流程，从品牌问题走到四个方向、实物预览和矢量导出。边界：免费方案的作品公开且限个人使用，权利页写仍属 Recraft、不授商用；付费方案才给所有权和商用权利。生成和编辑消耗积分，样机按文档不另扣生成积分。本库没有登录，没有跑完整流程，也没有付费导出。积分和价格以官网当时的说明为准，这里不写死数字。",
+      "qualityNoteEn": "Why listed: a newly posted official question-led logo flow, from a brand brief to four directions, product mockups, and a vector export. Limits: Free-plan logos are public and personal-use only; the rights page says they remain Recraft’s property and are not licensed for commercial use. A paid plan is what grants ownership and commercial rights. Generating and editing spend credits; the docs say mockups do not spend extra generation credits. This library did not sign in, did not run a full generation, and did not pay to export. Credit amounts and prices follow the site copy, and no figure is invented here.",
+      "verifyLog": "2026-11-03 早间（Asia/Shanghai）：https://www.recraft.ai/logo HTTP 200，title “Logo Maker - Recraft”，可见文案 Logo Maker · Beta，“Get a logo you’ll actually use… from business cards to signage”。未登录界面角标出现 “30” 与 Upgrade，像是界面占位，不当成公布的套餐数字，正文不引用。https://recraft.canny.io/changelog HTTP 200，首条日期 November 2, 2026，标题 Meet Recraft Logo Maker，步骤为品牌问答、设计师风格或自有参考、四个方向、改色/变体、包装服饰店面预览且 no extra generation cost、导出 SVG；Free plan 公开且个人使用，Paid plans full ownership and commercial rights。https://www.recraft.ai/blog/ai-logo-maker-guide HTTP 200，作者 Anna Abdulina，日期 November 2, 2026，标题 Recraft Logo Maker: How to Create a Logo with an AI Logo Generator，并写 public beta、桌面与 mobile web。文档 https://www.recraft.ai/docs/recraft-studio/image-generation/how-to-generate-a-logo.md HTTP 200：24 logo styles、four directions、mockups don’t use credits、export SVG；Credits 段写总量取决于轮次与编辑次数，未给单价。权利页 https://www.recraft.ai/docs/plans-and-billing/commercial-rights-and-ownership HTTP 200：Free plan 公开、仍属 Recraft、不授商用；付费方案完整所有权与商用，订阅结束后仍私有；不得用于训练模型。https://www.recraft.ai/generate/logos HTTP 200，FAQ 与上述免费/个人使用/商用表述一致。预览为无头 Chrome 实拍 /logo 首屏，1200×800 WebP。未登录，未跑完问答到导出，未付费。",
+      "verifyLogEn": "2026-11-03 morning (Asia/Shanghai): https://www.recraft.ai/logo HTTP 200, title “Logo Maker - Recraft”, visible copy “Logo Maker · Beta” and “Get a logo you’ll actually use… from business cards to signage”. A “30” beside Upgrade on the signed-out chrome looks like a UI placeholder and is not treated as a published plan number. https://recraft.canny.io/changelog HTTP 200, top entry November 2, 2026, “Meet Recraft Logo Maker”: brand questions, designer styles or your references, four directions, recolor/variations, packaging/apparel/storefront previews at no extra generation cost, SVG export; Free plan public and personal use; paid plans full ownership and commercial rights. Blog https://www.recraft.ai/blog/ai-logo-maker-guide HTTP 200, Anna Abdulina, November 2, 2026, public beta on desktop and mobile web. Docs markdown HTTP 200: 24 logo styles, four directions, mockups don’t use credits, SVG export; credit total depends on rounds and edits, no unit price. Rights page HTTP 200: Free-plan images stay public and Recraft’s property, not licensed commercially; paid plans grant full ownership and commercial rights and stay private after the subscription ends; no training use. https://www.recraft.ai/generate/logos HTTP 200, FAQ matches the free/personal/commercial wording. Preview is a headless Chrome capture of /logo, 1200×800 WebP. Did not sign in, finish the flow, or pay to export."
+    },
+    {
+      "id": "skill-video-studio",
+      "slug": "skill-video-studio",
+      "title": "skill-video-studio：用 Claude Code 把真机操作收成产品演示",
+      "titleEn": "skill-video-studio: a Claude Code skill that turns a real walkthrough into a product demo",
+      "kind": "tool",
+      "hook": "一条 Claude Code 技能，把真浏览器操作收成演示片。",
+      "hookEn": "A Claude Code skill that turns a real browser walkthrough into a demo.",
+      "summary": "skill-video-studio（https://github.com/aaitor/skill-video-studio ，MIT，作者 Aitor Argomaniz）是给 Claude Code 的本地技能 `/devrel-video`。README 写的路径是：按分镜在真浏览器里记录产品操作，用 HyperFrames 排标题、浏览器框、章节和结尾，再用 FFmpeg 做母版、检查和缩略图。可以先做无声走查，需要时再加旁白、本地音乐、字幕或你自己的出镜素材；旁白和虚拟形象要自备服务或 GPU，不是开箱就有。仓库带两个公开例子：Acme 产品走查，以及一段终端加浏览器的合成片，其中终端画面 README 写的是排好的 HTML 重演，不是实机终端录像。短的终端演示 GIF 停在采集和渲染之前。完整出片需要 Node.js 22+、FFmpeg、Chromium 和文档列出的 Python 依赖；竖屏和社媒规格仍在路线图上。技能说明写默认无声 16:9、大约 25–40 秒。适合想让助手按品牌节奏做产品演示、又希望主画面来自真浏览器的人。本库只读了 README 和技能说明，没有克隆后跑走查或渲染，没有安装整套出片环境，也没有播放示例成片。",
+      "summaryEn": "skill-video-studio (https://github.com/aaitor/skill-video-studio , MIT, by Aitor Argomaniz) is a local Claude Code skill, `/devrel-video`. The README’s path is: record the product in a real browser from a beat list, compose titles, a browser frame, chapters, and a CTA in HyperFrames, then master, check, and thumbnail with FFmpeg. You can start with a silent walkthrough and add narration, local music, subtitles, or your own presenter footage later. Narration and avatars need your own service or GPU. The repo ships two public examples: an Acme product walkthrough, and a terminal-plus-browser film whose terminal scenes the README describes as authored HTML reenactments, not a recording of a live terminal. The short terminal demo GIF stops before recording and rendering. A full film needs Node.js 22+, FFmpeg, Chromium, and the Python dependencies in the docs. Portrait and social profiles are still on the roadmap. The skill notes say the default is a silent 16:9 film of about 25–40 seconds. Useful when you want a repeatable product demo whose main shots come from a real browser. This library only read the README and the skill notes. It did not clone the repo to record or render, did not install the full toolchain, and did not play the sample film.",
+      "categories": [
+        "content",
+        "design",
+        "coding"
+      ],
+      "role": "AI design workflow",
+      "sourceUrl": "https://github.com/aaitor/skill-video-studio",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50340992",
+        "https://github.com/aaitor/skill-video-studio/releases/tag/v1.0.1"
+      ],
+      "previewImage": "/previews/skill-video-studio.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "技能会驱动本机浏览器和 FFmpeg，并打开你给出的产品地址。出片前自己看分镜和成片；旁白服务的密钥不要放进公开仓库。本库没有代为运行。",
+      "approvalBoundaryEn": "The skill drives a local browser and FFmpeg and opens the product URL you give it. Review the beats and the film before you publish, and keep narration keys out of the public repo. This library did not run it for you.",
+      "connectors": [
+        "Claude Code",
+        "HyperFrames",
+        "FFmpeg"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-03T01:20:00Z",
+      "qualityNote": "收录理由：把产品演示拆成真实浏览器走查、品牌画面和本地成片，适合要可重复演示的人。边界：完整出片要本机浏览器自动化、FFmpeg 和 Chromium；旁白和虚拟形象要自备服务。仓库说明里的短终端演示停在出片之前，合成片里的终端画面是排好的 HTML 重演。本库没有克隆后跑走查或渲染，没有安装整套出片环境，也没有播放示例成片。",
+      "qualityNoteEn": "Why listed: a product-demo skill that splits the work into a real-browser walkthrough, branded frames, and a local master. Limits: a finished film needs local browser automation, FFmpeg, and Chromium; narration and avatars need your own services. The short terminal demo in the docs stops before a film is made, and the composed example’s terminal scenes are authored HTML reenactments. This library did not clone the repo to record or render, did not install the full toolchain, and did not play the sample film.",
+      "verifyLog": "2026-11-03 早间（Asia/Shanghai）：https://github.com/aaitor/skill-video-studio HTTP 200。gh api：license SPDX MIT，stargazers_count 155，forks 5，created 2026-08-26T09:57:42Z，pushed 2026-11-02T18:11:15Z，description “Claude Code skill for product videos: real browser capture, branded composition, and local mastering.” topics 含 agent-skills、claude-code、devrel、ffmpeg、playwright、video。latest release v1.0.1，published 2026-11-02T18:11:11Z。README 与 .claude/skills/devrel-video/SKILL.md（name: devrel-video）写 /devrel-video：Playwright CLI page.screencast、HyperFrames、FFmpeg/ffprobe；默认无声 16:9、约 25–40 秒；终端镜头用 VHS；examples 短演示停在 capture/render 之前。HN https://news.ycombinator.com/item?id=50340992 GET 200（HEAD 405）。Firebase item 50340992：by aaitor，title “Skill to Create Product Videos”（没有 Show HN 前缀），score 65，descendants 20，time 1793643039 = 2026-11-02T18:10:39Z（上海 2026-11-03 02:10）。作者帖指向该仓库，并说帖里的片段用这个技能做的。sourceType 记 community，因为帖子标题不是 Show HN。预览为无头 Chrome 实拍仓库首页文件列表与 About（不是 README 正文），1200×800 WebP。星标按钮当时显示 159，早先 gh api stargazers_count 为 155，正文不采用这两个数。未 clone，未跑走查/渲染，未装 Playwright 全套，未播放 YouTube 示例（README 链到 youtu.be/H6npd3uuqls 与 youtu.be/lvpKaYUVNws）。",
+      "verifyLogEn": "2026-11-03 morning (Asia/Shanghai): https://github.com/aaitor/skill-video-studio HTTP 200. gh api: SPDX MIT, stargazers_count 155, forks 5, created 2026-08-26T09:57:42Z, pushed 2026-11-02T18:11:15Z. Latest release v1.0.1 published 2026-11-02T18:11:11Z. README and SKILL.md (name devrel-video) describe /devrel-video with Playwright CLI page.screencast, HyperFrames, and FFmpeg/ffprobe; default silent 16:9, about 25–40s; terminal beats use VHS; the short examples demo stops before capture/render. HN https://news.ycombinator.com/item?id=50340992 GET 200 (HEAD 405). Firebase item 50340992: by aaitor, title “Skill to Create Product Videos” (no Show HN prefix), score 65, descendants 20, time 1793643039 = 2026-11-02T18:10:39Z (02:10 on 2026-11-03 in Shanghai). sourceType is community because the title is not Show HN. Preview is a headless Chrome capture of the repository home (file list and About, not the README body), 1200×800 WebP. The star button then read 159; the earlier gh api stargazers_count was 155. Neither number is used in the reader-facing copy. Did not clone, record, render, install the Playwright stack, or play the YouTube samples linked from the README."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11578,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-03T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.80",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11879,21 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://recto.design",
+      "https://recto.design/changelog",
+      "https://www.recraft.ai/logo",
+      "https://recraft.canny.io/changelog",
+      "https://www.recraft.ai/blog/ai-logo-maker-guide",
+      "https://www.recraft.ai/docs/recraft-studio/image-generation/how-to-generate-a-logo",
+      "https://www.recraft.ai/docs/plans-and-billing/commercial-rights-and-ownership",
+      "https://www.recraft.ai/generate/logos",
+      "https://github.com/aaitor/skill-video-studio",
+      "https://news.ycombinator.com/item?id=50340992",
+      "https://github.com/aaitor/skill-video-studio/releases/tag/v1.0.1",
+      "https://p.migdal.pl/warsaw-vibe-voxel/",
+      "https://news.ycombinator.com/item?id=50339221",
+      "https://github.com/stared/warsaw-vibe-voxel"
     ]
   }
 }

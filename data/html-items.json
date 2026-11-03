@@ -1,6 +1,40 @@
 {
   "items": [
     {
+      "id": "warsaw-vibe-voxel",
+      "slug": "warsaw-vibe-voxel",
+      "title": "Warsaw in voxels：华沙市中心可走的体素地图",
+      "titleEn": "Warsaw in voxels: a walkable voxel map of central Warsaw",
+      "hook": "在体素里走华沙市中心，能改时间、天气和行人。",
+      "hookEn": "Walk central Warsaw in voxels, and change the hour, weather, and who you follow.",
+      "summary": "Warsaw in voxels（https://p.migdal.pl/warsaw-vibe-voxel/ ，作者 Piotr Migdał）是华沙市中心的可交互三维体素地图。页面说明用约 1 米的体素搭出市中心，可以改日期、一天里的时间和天气，在城里走，或点一个行人来控制；灵感来自 Minecraft、MagicaVoxel 和 Dungeon Keeper。数据来自 OpenStreetMap、波兰 GUGiK 的激光雷达与航拍，以及华沙的行道树库。README 写覆盖大约 3950×3150 米，绕文化科学宫展开，并有黄金时刻、正午和夜晚预设。作者在 Hacker News 的讨论里写，初稿之所以快，是因为 Opus 5.5 擅长处理开放数据并对照检查，打磨才花时间；页面角落也署名 Piotr Migdał 与 Opus 5.5，并写基于 GUGiK 2025 与 OpenStreetMap。这是作者自己的署名。仓库 MIT。打开时天气停在雨，控件里能看到晴、多云、雨、雪。适合想看一座真实市中心如何被做成可走动的视觉作品的人。本库只在无头浏览器里打开过页面，没有改时间、天气或行人，也没有导出。",
+      "summaryEn": "Warsaw in voxels (https://p.migdal.pl/warsaw-vibe-voxel/ , by Piotr Migdał) is an interactive 3D voxel map of central Warsaw. The page says the centre is built in roughly 1 m voxels: you can change the date, the hour, and the weather, walk the city, or click a pedestrian and control them. It cites Minecraft, MagicaVoxel, and Dungeon Keeper. The data is OpenStreetMap, Polish GUGiK LiDAR and aerial imagery, and Warsaw’s street-tree database. The README describes an area of about 3950×3150 m anchored on the Palace of Culture, with golden-hour, midday, and night presets. On Hacker News the author writes that the first draft was fast because Opus 5.5 is good at working with open data and checking it, and that polishing takes much longer. The page corner is also signed Piotr Migdał and Opus 5.5, and says the scene is based on GUGiK 2025 and OpenStreetMap. That credit is the author’s own. The repo is MIT. When opened, the weather control was on rain, with clear, cloudy, rain, and snow available. Useful when you want a real city centre as a walkable visual piece. This library only opened the page in a headless browser. It did not change the time, weather, or pedestrian, and it did not export.",
+      "sourceUrl": "https://p.migdal.pl/warsaw-vibe-voxel/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50339221",
+        "https://github.com/stared/warsaw-vibe-voxel"
+      ],
+      "previewImage": "/previews/warsaw-vibe-voxel.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "voxels",
+        "warsaw",
+        "3d",
+        "webgl",
+        "map",
+        "open-data"
+      ],
+      "featured": false,
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-03T01:20:00Z",
+      "qualityNote": "收录理由：把华沙市中心的开放数据做成可走动的体素场景，能改时间和天气，是可以直接打开的视觉作品。边界：作者说初次加载偏慢、桌面更合适；建筑高度来自公开数据，个别会和实景有差。不是要登录的设计生成器。页面角落对 Opus 5.5 的署名，和讨论里的说法一样，都是作者自己写的，本库没有核对提交记录。本库只在无头浏览器里打开过页面，看到的是雨天和还在加载的城市，没有改时间、天气和行人，也没有导出。",
+      "qualityNoteEn": "Why listed: central Warsaw’s open data turned into a walkable voxel scene where you can change the hour and the weather. Limits: the author says the first load is slow and desktop works better; heights come from public data and some buildings will differ from the street. It is not a sign-in design generator. The Opus 5.5 credit on the page, like the comment, is the author’s own wording; this library did not audit the commits. This library only opened the page in a headless browser, saw rain and a city that was still loading, and did not change the time, weather, or pedestrian, and did not export.",
+      "verifyLog": "2026-11-03 早间（Asia/Shanghai）：https://p.migdal.pl/warsaw-vibe-voxel/ HTTP 200，title “Warsaw in voxels: an interactive 3D map of the city centre”，meta description 写 Central Warsaw in 1 m voxels，数据为 OpenStreetMap、LiDAR 与城市树木库，可改日期、小时、天气，或控制行人。last-modified Mon, 02 Nov 2026 23:00:25 GMT。og:image https://p.migdal.pl/warsaw-vibe-voxel/preview.jpg?v=5 HTTP 200 image/jpeg。仓库 https://github.com/stared/warsaw-vibe-voxel HTTP 200；gh api license MIT，stargazers_count 19，forks 3，created 2026-10-13T07:41:03Z，pushed 2026-11-02T22:59:28Z，homepage 指向演示。gh api users/stared name “Piotr Migdał”。README 写 3950×3150 m、1 m voxels、绕 PKiN、黄金时刻/正午/夜晚预设。HN https://news.ycombinator.com/item?id=50339221 GET 200（HEAD 405）。Firebase item 50339221：by stared，title “Show HN: Warsaw in voxels – An interactive 3D map of the city centre”，score 208，descendants 35，time 1793636726 = 2026-11-02T16:25:26Z（上海 2026-11-03 00:25）。作者回复写 first draft 用 Opus 5.5 处理开放数据，打磨更花时间。页面可见文字含 “by Piotr Migdał & Opus 5.5, source code” 与 “based on GUGiK 2025 and © OpenStreetMap”，天气控件为 clear / cloudy / rain / snow，打开时停在 rain。预览为无头 Chrome（swiftshader）实拍，加载层消失后文化科学宫已可见，角标约 147/2120 tiles，仍在流式加载，1200×800 WebP。另一次打开时计数曾显示 0/2170 tiles。没有改时间、天气或行人，没有导出，没有 pnpm install。",
+      "verifyLogEn": "2026-11-03 morning (Asia/Shanghai): https://p.migdal.pl/warsaw-vibe-voxel/ HTTP 200, title “Warsaw in voxels: an interactive 3D map of the city centre”. Meta description: central Warsaw in 1 m voxels from OpenStreetMap, LiDAR, and the city tree database; change date, hour, and weather, or control a pedestrian. last-modified Mon, 02 Nov 2026 23:00:25 GMT. og:image preview.jpg HTTP 200 image/jpeg. Repo HTTP 200; gh api MIT, stargazers_count 19, forks 3, created 2026-10-13T07:41:03Z, pushed 2026-11-02T22:59:28Z. GitHub user stared is named Piotr Migdał. README: about 3950×3150 m, 1 m voxels, anchored on PKiN, golden-hour/midday/night presets. HN item 50339221 GET 200 (HEAD 405). Firebase: Show HN by stared, score 208, descendants 35, time 1793636726 = 2026-11-02T16:25:26Z (00:25 on 2026-11-03 in Shanghai). The author replies that the first draft used Opus 5.5 on open data and that polishing takes longer. Visible page text included “by Piotr Migdał & Opus 5.5, source code” and “based on GUGiK 2025 and © OpenStreetMap”; weather controls were clear / cloudy / rain / snow, and the open state was rain. Preview is a headless Chrome (swiftshader) capture after the loading layer left: the Palace of Culture was visible while the corner still read about 147/2120 tiles, saved as 1200×800 WebP. A later open showed 0/2170 tiles. Did not change time, weather, or a pedestrian, did not export, and did not pnpm install."
+    },
+    {
       "id": "pure-particles",
       "slug": "pure-particles",
       "title": "Pure Particles：玻璃方盒里的粒子烟雾，可嵌入首屏、导出 4K 与无缝循环",
@@ -5541,9 +5575,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-29T12:30:00Z",
+    "updatedAt": "2026-11-03T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.80",
-    "count": 164
+    "version": "1.3.81",
+    "count": 165
   }
 }
