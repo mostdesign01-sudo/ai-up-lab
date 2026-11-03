@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-03",
+      "title": "晚间收录 2026-11-03：Cases +1（Vectoys）",
+      "titleEn": "Evening catalog 2026-11-03: Cases +1 (Vectoys)",
+      "body": "AI×设计：vectoys（MIT，vinenastudio/vectoys，npm @vinena/vectoys-cli@0.3.2，Show HN by Mert）— 给 React 19 落地页用的 14 件纯 SVG 设备与小玩具，屏幕是可点可打字的活 HTML；`npx @vinena/vectoys-cli add <item>` 或 shadcn registry 拷源码，附一句话 agent 提示词与造新玩具的 skill。预览 3:2 WebP。本库未跑 add、未嵌入真实落地页、未跑 skill / 提交流程。cases 215→216（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold PR（#142/#141/#140/#139/#138…）。",
+      "bodyEn": "AI×design: vectoys (MIT, vinenastudio/vectoys, npm @vinena/vectoys-cli@0.3.2, Show HN by Mert) — 14 plain-SVG devices and toys for React 19 landing pages whose screens are live HTML you can tap and type into; copy source via `npx @vinena/vectoys-cli add <item>` or the shadcn registry, plus a one-line agent prompt and a skill for drawing new toys. Preview is a 3:2 WebP. This library did not run add, embed it in a real landing page, or run the skill / submit flow. cases 215→216 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Did not merge still-open catalog-hold PRs (#142/#141/#140/#139/#138…)."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
