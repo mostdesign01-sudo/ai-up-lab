@@ -1,11 +1,81 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-04T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "p-h3-image",
+      "slug": "p-h3-image",
+      "name": "P-H3-Image",
+      "vendor": "Pruna",
+      "title": "P-H3-Image：Pruna 基于 MiniMax-H3 的开权重 8MP 图像模型",
+      "titleEn": "P-H3-Image: Pruna’s open-weight 8 MP image model based on MiniMax-H3",
+      "summary": "P-H3-Image 是 Pruna 放在 Hugging Face 的开权重图像模型（PrunaAI/P-H3-Image），基于 MiniMax-H3，做文生图和图像编辑。模型卡写：8 步、不用 CFG，文生图按 8 MP，编辑可以带 1 到 8 张输入图；自带 prompt upsampler（基于 Qwen3.5-9B，默认开启），并写它更擅长照片、胶片、编辑风和带短引号文字的图形。同一张卡写 bf16 权重大约 100 GB（33.1B transformer、4B 文本编码器、VAE 和 upsampler），8 MP 时显存大约 101 GB（含 upsampler）或 83 GB（不含）。ComfyUI 仓库 PrunaAI/P-H3-Image-Comfy 写：最小一套下载大约 20 GB，8 MP 显存峰值大约 21 GB。这些数字都是厂商页面上的说法，本库没有下载，也没有出图。许可是 MiniMax H3 Community License：协议把适用范围限制在「适用地区」，排除的地区是欧盟、英国、大韩民国和美国；这些地区要另向 MiniMax 要授权。分发必须附上协议副本，改过的文件必须标明修改。协议鼓励（encouraged，条款用的是鼓励而不是 must）在产品或服务上标注 “Powered by MiniMax H3”。NOTICE 写 prompt upsampler，以及文本编码器里来自 Qwen3-VL-4B 的部分，为 Apache-2.0；transformer、VAE、text connector 和基于 H3 的文本编码器仍走上述社区许可。本库没有做法律意见，也没有在任何地区运行模型。",
+      "summaryEn": "P-H3-Image is Pruna’s open-weight image model on Hugging Face (PrunaAI/P-H3-Image), based on MiniMax-H3, for text-to-image and image editing. The model card says 8 steps with no CFG, 8 MP for text-to-image, and edits with 1 to 8 input images. It includes a prompt upsampler based on Qwen3.5-9B, on by default, and says it is strongest at photorealism, film, editorial looks, and graphic styles with short quoted text. The same card says the bf16 weights are about 100 GB (a 33.1B transformer, a 4B text encoder, a VAE, and the upsampler) and that 8 MP needs about 101 GB of GPU memory with the upsampler or 83 GB without it. The ComfyUI repo PrunaAI/P-H3-Image-Comfy says the smallest set is about a 20 GB download and peaks at about 21 GB of VRAM at 8 MP. Those figures are what the vendor pages say; this library did not download the weights or generate an image. The license is the MiniMax H3 Community License. It limits the grant to the Applicable Territory and excludes the European Union, the United Kingdom, the Republic of Korea, and the United States of America; those places need a separate license from MiniMax. Redistribution must include a copy of the agreement, and modified files must say they were modified. The agreement encourages (the clause says encouraged, not must) a notice that the product or service is “Powered by MiniMax H3”. The NOTICE file puts the prompt upsampler, and the Qwen3-VL-4B parts of the text encoder, under Apache-2.0; the transformer, VAE, text connector, and the H3-based text encoder stay under the community license. This library did not give a legal opinion and did not run the model in any territory.",
+      "announcedAt": "2026-11-03",
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-04T01:40:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Hugging Face：PrunaAI/P-H3-Image",
+          "labelEn": "Hugging Face: PrunaAI/P-H3-Image",
+          "url": "https://huggingface.co/PrunaAI/P-H3-Image",
+          "by": "Pruna",
+          "date": "2026-11-03"
+        },
+        {
+          "kind": "official",
+          "label": "Pruna 博文：开源发布",
+          "labelEn": "Pruna blog: open-weight launch",
+          "url": "https://www.pruna.ai/blog/oss-p-h3-image-launch",
+          "by": "Pruna",
+          "date": "2026-11-03"
+        },
+        {
+          "kind": "official",
+          "label": "ComfyUI 权重：PrunaAI/P-H3-Image-Comfy",
+          "labelEn": "ComfyUI weights: PrunaAI/P-H3-Image-Comfy",
+          "url": "https://huggingface.co/PrunaAI/P-H3-Image-Comfy",
+          "by": "Pruna",
+          "date": "2026-11-03"
+        },
+        {
+          "kind": "community",
+          "label": "Hugging Face Space（厂商试玩，本库未出图）",
+          "labelEn": "Hugging Face Space (vendor demo; no image generated here)",
+          "url": "https://huggingface.co/spaces/PrunaAI/P-H3-Image",
+          "by": "Pruna",
+          "date": "2026-11-03"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "模型卡称：8 MP 文生图，编辑 1 到 8 张图，8 步、无 CFG。这是厂商说法，本库没有出图。",
+          "textEn": "Model card: 8 MP text-to-image, edits with 1 to 8 images, 8 steps, no CFG. That is the vendor’s wording; this library did not generate a sample."
+        },
+        {
+          "text": "Comfy 卡称最小一套下载约 20 GB，8 MP 显存峰值约 21 GB。模型卡称 bf16 约 100 GB，8 MP 显存约 101 GB（含 upsampler）或 83 GB（不含）。",
+          "textEn": "The Comfy card says the smallest download is about 20 GB and peaks at about 21 GB of VRAM at 8 MP. The model card says bf16 is about 100 GB, and 8 MP needs about 101 GB with the upsampler or 83 GB without it."
+        },
+        {
+          "text": "MiniMax H3 社区许可排除欧盟、英国、大韩民国和美国。分发必须附协议；协议鼓励标注 “Powered by MiniMax H3”，不是写成强制条款。",
+          "textEn": "The MiniMax H3 community license excludes the European Union, the United Kingdom, the Republic of Korea, and the United States. Redistribution must include the agreement; “Powered by MiniMax H3” is encouraged, not written as a must."
+        }
+      ],
+      "qualityNote": "收录理由：当天公开的开权重图像生成和编辑模型，模型卡写明偏向照片、编辑风和短文字图形，和设计出图有关。边界：分辨率、步数和显存都是模型卡或 Comfy 卡的说法，本库没有复跑。许可地理限制以协议原文为准，排除欧盟、英国、大韩民国、美国；“Powered by MiniMax H3” 在协议里是鼓励标注，附上协议副本和标明修改才是必须。本库没有下载权重，没有出图，也没有做法律意见。",
+      "qualityNoteEn": "Why listed: an open-weight image generation and editing model released that day; the card says it leans toward photos, editorial looks, and short graphic text, which is relevant to design production. Limits: resolution, steps, and memory are the model card’s or the Comfy card’s figures and were not re-run here. The geographic limit is the license text: the European Union, the United Kingdom, the Republic of Korea, and the United States are excluded. “Powered by MiniMax H3” is encouraged in the agreement; including the agreement and marking modified files are the musts. This library did not download the weights, generate an image, or give a legal opinion.",
+      "verifyLog": "2026-11-04 UTC：HF API models/PrunaAI/P-H3-Image HTTP 200。createdAt 2026-10-27T09:16:58.000Z，lastModified 2026-11-03T16:08:56.000Z，pipeline text-to-image，library diffusers，base_model MiniMaxAI/MiniMax-H3，license other / minimax-h3-community-license-agreement。README 写 8 steps、No CFG、8 MP、editing with up to 8 images；Weights 33.1B-parameter transformer, 4B text encoder, VAE and prompt upsampler, 100 GB in bf16；GPU memory at 8 MP about 101 GB with the prompt upsampler, 83 GB without。Comfy README HTTP 200，写 From 21 GB of VRAM，smallest set is a 20 GB download that peaks at 21 GB of VRAM at 8 MP，against 143 GB of weights for MiniMax-H3，up to 8 images。博文 https://www.pruna.ai/blog/oss-p-h3-image-launch HTTP 200，页内日期 Nov 3, 2026（datetime 2026-11-03）。博文另写 2 to 16 megapixels、up to 9 input images、7x smaller（20 GB instead of 143 GB）、5x faster（2.6 s instead of 12.4 s for a 4 MP image on one B200）、about 21 GB of VRAM。其中「最多 9 张」与模型卡/Comfy 卡的「最多 8 张」不一致，正文采用模型卡与 Comfy 卡，博文速度与 2–16 MP 未复测。LICENSE HTTP 200，标题 MiniMax H3 COMMUNITY LICENSE AGREEMENT，release date August 2, 2026。定义：Applicable Territory means worldwide, excluding the Excluded Territories；Excluded Territories means the European Union, the United Kingdom, the Republic of Korea and the United States of America。排除地区可联系 MiniMax 另获授权。第三条：分发 must 附协议副本、must 标明修改过的文件；encouraged to display “Powered by MiniMax H3”。协议正文检索没有出现 Taiwan。NOTICE：prompt_upsampler 基于 Qwen3.5-9B，Apache-2.0；text encoder 的 Qwen3-VL-4B 部分 Apache-2.0；transformer、vae、text_connector 与基于 H3 的 text encoder 走社区许可。Space https://huggingface.co/spaces/PrunaAI/P-H3-Image HTTP 200。本库未下载权重、未出图。预览取自模型卡头图 https://huggingface.co/PrunaAI/P-H3-Image/resolve/main/assets/p-h3-image.jpg （JPEG 2400×1523），居中 cover 裁成 1200×800 WebP。头图是官方样张拼图加 Pruna 标题，不是分类插画。",
+      "verifyLogEn": "2026-11-04 UTC: HF API models/PrunaAI/P-H3-Image HTTP 200. createdAt 2026-10-27T09:16:58.000Z, lastModified 2026-11-03T16:08:56.000Z, pipeline text-to-image, library diffusers, base_model MiniMaxAI/MiniMax-H3, license other / minimax-h3-community-license-agreement. README: 8 steps, no CFG, 8 MP, editing with up to 8 images; weights 33.1B transformer, 4B text encoder, VAE and prompt upsampler, 100 GB in bf16; 8 MP GPU memory about 101 GB with the upsampler, 83 GB without. Comfy README HTTP 200: from 21 GB of VRAM; smallest set is a 20 GB download that peaks at 21 GB of VRAM at 8 MP, against 143 GB of MiniMax-H3 weights; up to 8 images. Blog https://www.pruna.ai/blog/oss-p-h3-image-launch HTTP 200, on-page date Nov 3, 2026 (datetime 2026-11-03). The blog also says 2 to 16 megapixels, up to 9 input images, 7x smaller (20 GB instead of 143 GB), 5x faster (2.6 s instead of 12.4 s for a 4 MP image on one B200), and about 21 GB of VRAM. “Up to 9 images” disagrees with the model card and Comfy card (“up to 8”); the entry follows the cards. Blog speed and the 2–16 MP range were not re-run. LICENSE HTTP 200, title MiniMax H3 COMMUNITY LICENSE AGREEMENT, release date August 2, 2026. Applicable Territory means worldwide excluding the Excluded Territories; Excluded Territories means the European Union, the United Kingdom, the Republic of Korea and the United States of America. People in excluded territories may contact MiniMax for a separate license. Section III: redistribution must include the agreement and must mark modified files; displaying “Powered by MiniMax H3” is encouraged. A search of the license text did not find Taiwan. NOTICE: prompt upsampler based on Qwen3.5-9B is Apache-2.0; Qwen3-VL-4B parts of the text encoder are Apache-2.0; transformer, VAE, text connector, and the H3-based text encoder stay under the community license. Space https://huggingface.co/spaces/PrunaAI/P-H3-Image HTTP 200. Weights were not downloaded and no image was generated. Preview is the model-card hero https://huggingface.co/PrunaAI/P-H3-Image/resolve/main/assets/p-h3-image.jpg (JPEG 2400×1523), center-cropped to a 1200×800 WebP. The hero is the vendor’s sample collage plus the Pruna title, not a category illustration.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/p-h3-image.webp",
+      "previewCredit": "预览取自 Pruna 模型卡头图 assets/p-h3-image.jpg，裁成 3:2",
+      "previewCreditEn": "Preview cropped from the model-card hero assets/p-h3-image.jpg to 3:2",
+      "featured": false
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",

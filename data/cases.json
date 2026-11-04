@@ -1,6 +1,175 @@
 {
   "cases": [
     {
+      "id": "shot-butcher",
+      "slug": "shot-butcher",
+      "title": "Shot Butcher：25 套 App Store 截图风格，一条 prompt 交给 Claude Code",
+      "titleEn": "Shot Butcher: 25 App Store screenshot styles, one prompt, as a Claude Code skill",
+      "kind": "tool",
+      "hook": "25 套店图风格，一条 prompt 配 skill 出图。",
+      "hookEn": "25 App Store styles, one prompt each, via a Claude Code skill.",
+      "summary": "Shot Butcher（https://graphicmeat.com/shot-butcher ，仓库 GraphicMeat/shot-butcher，MIT）是一套做 iPhone、iPad、Mac 应用商店截图的 Claude Code skill。落地页写 25 种风格（从 True Bento、Swiss Grid、Liquid Glass 到 Risograph 等），每种下面有可复制的一行 prompt；同一套截图、设备和语言保持同一种风格。页上列出的店图尺寸是 iPhone 1320×2868、iPad 2064×2752、Mac 2880×1800，输出为去掉透明通道的 PNG。安装是两条命令：`/plugin marketplace add GraphicMeat/shot-butcher`，再 `/plugin install shot-butcher@shot-butcher`。README 也写了不经插件的路径：装好依赖和渲染用的无头浏览器，再用 `node render/render.mjs` 出图。适合要给自己的 App 出一整套店图、又不想逐张手排的人。本库没有安装 plugin，没有跑渲染，也没有用自己的截图出图。",
+      "summaryEn": "Shot Butcher (https://graphicmeat.com/shot-butcher , repo GraphicMeat/shot-butcher, MIT) is a Claude Code skill for iPhone, iPad, and Mac App Store screenshots. The landing page lists 25 styles (True Bento, Swiss Grid, Liquid Glass, Risograph, and others), each with a one-line prompt you can copy, and says one style holds across the set, the devices, and the languages. Listed store sizes are iPhone 1320×2868, iPad 2064×2752, and Mac 2880×1800, exported as PNGs with no alpha. Install with `/plugin marketplace add GraphicMeat/shot-butcher` then `/plugin install shot-butcher@shot-butcher`. The README also documents a direct path: install the dependencies and the headless browser the renderer uses, then run `node render/render.mjs`. Useful when you want a whole store set without laying out every frame by hand. This library did not install the plugin, did not run the renderer, and did not export a set from its own captures.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design skill",
+      "sourceUrl": "https://graphicmeat.com/shot-butcher",
+      "secondaryUrls": [
+        "https://github.com/GraphicMeat/shot-butcher",
+        "https://news.ycombinator.com/item?id=50358826"
+      ],
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "skill 会按你的截图写出店图文案并导出 PNG；拿去商店上架前自己核对文案、截图是否为真实界面，以及字体授权。本库没有代为安装或出图。",
+      "approvalBoundaryEn": "The skill writes store copy from your captures and exports PNGs; review the copy, that the UI is real, and the font licenses before uploading to a store. This library did not install it or render a set.",
+      "connectors": [
+        "Claude Code",
+        "Playwright"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-04T01:40:00Z",
+      "qualityNote": "收录理由：可安装的 Claude Code skill，落地页把 25 套店图风格和对应 prompt 都摊开，拿来就能对着自己的 App 出一套图，贴 AI×设计。边界：风格数、尺寸和「真实截图、不要假界面」都是页面与 README 的说法。本库没有安装 plugin，没有跑渲染脚本，也没有出过一张店图。",
+      "qualityNoteEn": "Why listed: an installable Claude Code skill whose page shows 25 store-screenshot styles and a prompt for each, so you can aim it at your own app. Limits: the style count, sizes, and “real captures, not a mocked UI” are what the page and README say. This library did not install the plugin, run the renderer, or export a screenshot.",
+      "verifyLog": "2026-11-04 UTC：https://graphicmeat.com/shot-butcher HTTP 200。标题 Shot Butcher: 25 App Store screenshot styles。页内写 25 styles、iPhone 1320×2868、iPad 2064×2752、Mac 2880×1800，以及 Your app's screens, never a mocked UI。安装命令 `/plugin marketplace add GraphicMeat/shot-butcher` 与 `/plugin install shot-butcher@shot-butcher`。页内二级标题数出 25 个风格，从 True Bento 到 Stack Cascade，含 Swiss Grid、Liquid Glass、Risograph。raw README 与 LICENSE HTTP 200，MIT License，Copyright (c) 2026 Graphic Meat。gh api GraphicMeat/shot-butcher：license MIT，0★，创建 2026-10-31T20:00:11Z，推送 2026-11-03T20:36:10Z。Show HN https://news.ycombinator.com/item?id=50358826 HTTP 200，标题 Show HN: Shot-butcher: iOS, ipados, macOS apps screenshot maker skill。本库未装 plugin、未跑 render.mjs、未出店图。预览为 scripts/capture-case-previews.mjs（Playwright，本机 Chrome）实拍落地页首屏，脚本默认裁成 900×600 WebP（3:2，cover、靠上）。",
+      "verifyLogEn": "2026-11-04 UTC: https://graphicmeat.com/shot-butcher HTTP 200. Title Shot Butcher: 25 App Store screenshot styles. Page lists 25 styles and sizes iPhone 1320×2868, iPad 2064×2752, Mac 2880×1800, plus “Your app's screens, never a mocked UI.” Install commands are the two Claude Code plugin lines. Twenty-five style headings were counted on the page, True Bento through Stack Cascade, including Swiss Grid, Liquid Glass, and Risograph. Raw README and LICENSE HTTP 200, MIT, Copyright (c) 2026 Graphic Meat. gh api GraphicMeat/shot-butcher: MIT, 0★, created 2026-10-31T20:00:11Z, pushed 2026-11-03T20:36:10Z. Show HN https://news.ycombinator.com/item?id=50358826 HTTP 200. Did not install the plugin, run render.mjs, or export a set. Preview is a Playwright capture of the landing hero via scripts/capture-case-previews.mjs (local Chrome), cropped by that script to a 900×600 WebP (3:2, cover, top).",
+      "previewImage": "/previews/shot-butcher.webp"
+    },
+    {
+      "id": "designsystemet-elm",
+      "slug": "designsystemet-elm",
+      "title": "Designsystemet Elm：挪威公共设计系统的 Elm 移植，showcase 可点",
+      "titleEn": "Designsystemet for Elm: Norway’s public design system as Elm views, with a live showcase",
+      "kind": "tool",
+      "hook": "挪威设计系统的 Elm 移植，41 组件可点看。",
+      "hookEn": "Elm port of Norway's Designsystemet, 41 components in a showcase.",
+      "summary": "Designsystemet for Elm（https://ensolabs.github.io/designsystemet-elm/ ，仓库 ensolabs/designsystemet-elm）把挪威公共部门设计系统 Designsystemet 做成 Elm 视图函数。README 写它对照 `@digdir/designsystemet-react@1.23.0`：同样的组件、markup 和 CSS，类型把 React 只写在文档里的规则收紧（例如文本框必须带 label）。样式来自 `@digdir/designsystemet-css`，选项卡、弹出层、对话框等行为来自 `@digdir/designsystemet-web` 的 web components，Elm 包本身不重写这层。showcase 首页写 266 stories in 42 chapters。作者博文（2026-11-02）写这是 41 个组件模块，对应 React 包里每个未废弃组件，并写上游 271 个 story 里有 5 个跳过、其余进了 showcase。安装是 `elm install ensolabs/designsystemet-elm`，再精确安装 npm 包 `@ensolabs/designsystemet-elm@1.23.0` 与 `@digdir/designsystemet-css@1.23.0`。LICENSE 文件是 MIT（Copyright 2026 Konsulentselskapet Enso AS），并注明基于 Digdir 的 Designsystemet（MIT）。博文写明这是社区移植，不隶属、也不代表 Digdir 背书。适合已经用 Elm、又要跟挪威公共设计系统对齐的界面。本库没有 elm install，没有跑通示例，也没有逐个点开 showcase。",
+      "summaryEn": "Designsystemet for Elm (https://ensolabs.github.io/designsystemet-elm/ , repo ensolabs/designsystemet-elm) is the Norwegian public design system Designsystemet as Elm view functions. The README says it tracks `@digdir/designsystemet-react@1.23.0`: the same components, markup, and CSS, with types enforcing rules React only documents (a text field must have a label, for example). Styling comes from `@digdir/designsystemet-css`, and behaviour such as tabs, popovers, and dialogs comes from `@digdir/designsystemet-web` web components; the Elm package does not reimplement that layer. The showcase home page says 266 stories in 42 chapters. The author’s post (2026-11-02) says 41 component modules, one for every non-deprecated component in the React package, and that 5 of 271 upstream stories are skipped while the rest are in the showcase. Install with `elm install ensolabs/designsystemet-elm`, then pin `@ensolabs/designsystemet-elm@1.23.0` and `@digdir/designsystemet-css@1.23.0`. The LICENSE file is MIT (Copyright 2026 Konsulentselskapet Enso AS) and says it is based on Digdir’s Designsystemet (MIT). The post says this is a community port, not affiliated with or endorsed by Digdir. Useful if you already ship Elm and want to line up with that public design system. This library did not elm-install, did not run the sample, and did not click through the showcase.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design system",
+      "sourceUrl": "https://ensolabs.github.io/designsystemet-elm/",
+      "secondaryUrls": [
+        "https://github.com/ensolabs/designsystemet-elm",
+        "https://cekrem.github.io/posts/designsystemet-elm/",
+        "https://designsystemet.no",
+        "https://news.ycombinator.com/item?id=50354548"
+      ],
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "装进正式项目前自己核对 Elm 包版本、上游 CSS 是否要按文档原样链接（博文提醒 Bun 不能直接打包那份 CSS），以及这不是 Digdir 官方包。本库没有代为安装。",
+      "approvalBoundaryEn": "Before adding it to a production app, check the Elm package version, whether the upstream CSS must be linked as files (the post says Bun cannot bundle that CSS), and that this is not an official Digdir package. This library did not install it.",
+      "connectors": [
+        "Elm",
+        "npm"
+      ],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-04T01:40:00Z",
+      "qualityNote": "收录理由：公共设计系统的 Elm 移植，showcase 可以点，类型强制 label 等规则，和库里的组件库、设计系统条目同一路。边界：41 个组件模块是博文的说法，266 个 story、42 个章节是 showcase 首页的说法，本库没有逐条点开，也没有跑作者写的 parity 对照。本库没有安装 Elm 包或 npm 包。",
+      "qualityNoteEn": "Why listed: an Elm port of a public design system with a clickable showcase and types that require labels, in the same lane as the component-library entries. Limits: 41 component modules is the blog’s count; 266 stories and 42 chapters are what the showcase home page says. This library did not open each story or run the author’s parity check, and did not install the Elm or npm packages.",
+      "verifyLog": "2026-11-04 UTC：showcase https://ensolabs.github.io/designsystemet-elm/ 抓取成功，首页写 Every component of @digdir/designsystemet-react 1.23.0，以及 266 stories in 42 chapters。博文 https://cekrem.github.io/posts/designsystemet-elm/ 日期 November 2, 2026，写 That’s 41 component modules，并写 271 upstream stories、5 skipped。仓库默认分支 master。gh api ensolabs/designsystemet-elm：4★，license.spdx_id 为 NOASSERTION（GitHub 未给出 SPDX）；contents/LICENSE 正文以 MIT License 开头，Copyright (c) 2026 Konsulentselskapet Enso AS，并写 Based on Designsystemet，Digdir，MIT。创建 2026-10-28T15:51:59Z，推送 2026-11-02T08:27:06Z。博文写 community port, not affiliated with or endorsed by Digdir。上游 https://designsystemet.no HTTP 200。HN https://news.ycombinator.com/item?id=50354548 HTTP 200，标题 Designsystemet, Now in Elm。本库未 elm install、未跑 parity、未逐个打开 story。预览为同一脚本实拍 showcase 首页，900×600 WebP（3:2）。能看到组件目录（Alert、Button 等）和 Elm 示例，不是分类插画。",
+      "verifyLogEn": "2026-11-04 UTC: showcase https://ensolabs.github.io/designsystemet-elm/ fetched; home page says every component of @digdir/designsystemet-react 1.23.0 and 266 stories in 42 chapters. Post https://cekrem.github.io/posts/designsystemet-elm/ is dated November 2, 2026, says 41 component modules, and says 271 upstream stories with 5 skipped. Default branch is master. gh api ensolabs/designsystemet-elm: 4★, license.spdx_id NOASSERTION (GitHub did not emit an SPDX id); LICENSE file text starts with MIT License, Copyright (c) 2026 Konsulentselskapet Enso AS, and says it is based on Digdir’s Designsystemet, MIT. Created 2026-10-28T15:51:59Z, pushed 2026-11-02T08:27:06Z. Post says community port, not affiliated with or endorsed by Digdir. Upstream https://designsystemet.no HTTP 200. HN https://news.ycombinator.com/item?id=50354548 HTTP 200. Did not elm-install, run parity, or open every story. Preview is the same script’s capture of the showcase home, 900×600 WebP (3:2). It shows the component list (Alert, Button, and others) and an Elm sample, not a category illustration.",
+      "previewImage": "/previews/designsystemet-elm.webp"
+    },
+    {
+      "id": "simready-gallery",
+      "slug": "simready-gallery",
+      "title": "SimReady Gallery：在浏览器里翻 NVIDIA 的免费仿真三维资产",
+      "titleEn": "SimReady Gallery: browse NVIDIA’s free simulation-ready 3D assets in the browser",
+      "kind": "tool",
+      "hook": "浏览器里翻 2677 个免费 SimReady 资产。",
+      "hookEn": "Browse and download 2,677 free NVIDIA SimReady 3D assets.",
+      "summary": "SimReady Browser（https://simready.geronimo-labs.com/ ）是一个网页画廊，用来浏览和下载 NVIDIA SimReady 三维资产。页面的描述写：Browse and download 2,677 simulation-ready 3D assets from NVIDIA's SimReady dataset。对应的数据集在 Hugging Face：nvidia/simready-assets，数据集卡的许可是 CC-BY-4.0。官方还有一个 Space：nvidia/simready-central。数据集卡写这些是仿真就绪资产，并指向 SimReady Central。画廊页面本身几乎是一段前端脚本，打开后才画出网格；本条收的是这个可浏览的画廊，不是另一份图片站清单。适合要找可放进场景或产品视觉的免费三维资产、并愿意按 CC-BY-4.0 署名的人。本库没有逐个打开资产，没有下载文件，也没有把描述里的 2,677 逐条数完。",
+      "summaryEn": "SimReady Browser (https://simready.geronimo-labs.com/ ) is a web gallery for browsing and downloading NVIDIA SimReady 3D assets. Its page description says: browse and download 2,677 simulation-ready 3D assets from NVIDIA's SimReady dataset. The dataset is on Hugging Face at nvidia/simready-assets, and the dataset card’s license is CC-BY-4.0. NVIDIA also hosts the Space nvidia/simready-central. The dataset card calls these simulation-ready assets and points at SimReady Central. The gallery URL itself is a thin page that draws the grid in the browser; this entry is that browser, not another image-site list. Useful when you want free 3D assets for a scene or a product visual and can follow CC-BY-4.0 attribution. This library did not open assets one by one, did not download files, and did not count the described 2,677 items.",
+      "categories": [
+        "design"
+      ],
+      "role": "3D asset gallery",
+      "sourceUrl": "https://simready.geronimo-labs.com/",
+      "secondaryUrls": [
+        "https://huggingface.co/datasets/nvidia/simready-assets",
+        "https://huggingface.co/spaces/nvidia/simready-central",
+        "https://news.ycombinator.com/item?id=50358991"
+      ],
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "数据集卡写 CC-BY-4.0。放进对外作品前自己保留署名，并确认单个资产没有额外限制。本库没有代为下载。",
+      "approvalBoundaryEn": "The dataset card says CC-BY-4.0. Keep attribution before shipping an asset, and check that a given file has no extra limit. This library did not download anything.",
+      "connectors": [
+        "Hugging Face"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-04T01:40:00Z",
+      "qualityNote": "收录理由：公开可打开的 SimReady 三维资产画廊，背后是 NVIDIA 的 CC-BY-4.0 数据集，适合场景和产品视觉找素材。边界：2,677 来自画廊页面描述和 Show HN 标题，本库没有逐条清点；画廊是第三方浏览器，不是 NVIDIA 把数据集页本身做成的目录。本库没有下载资产，也没有打开单个模型。",
+      "qualityNoteEn": "Why listed: a public gallery of SimReady 3D assets backed by NVIDIA’s CC-BY-4.0 dataset, useful when a scene or product visual needs free models. Limits: 2,677 is the gallery description and the Show HN title; this library did not count the files. The gallery is a third-party browser, not NVIDIA’s dataset page turned into a catalog. This library did not download an asset or open a single model.",
+      "verifyLog": "2026-11-04 UTC：https://simready.geronimo-labs.com/ HTTP 200，last-modified Tue, 03 Nov 2026 22:11:43 GMT。HTML 约 2 KB，标题 SimReady Browser，meta description：Browse and download 2,677 simulation-ready 3D assets from NVIDIA's SimReady dataset。主体是 /static 下的前端脚本，首屏网格要等脚本画出来。HF API datasets/nvidia/simready-assets：license cc-by-4.0，createdAt 2026-06-29T15:38:26.000Z，lastModified 2026-11-02T20:05:32.000Z。数据集 README front matter 为 license: cc-by-4.0。官方 Space https://huggingface.co/spaces/nvidia/simready-central HTTP 200。HN https://news.ycombinator.com/item?id=50358991 HTTP 200，标题 Show HN: A browsable gallery of Nvidia's 2,677 free SimReady 3D assets。2,677 没有逐文件清点。本库未下载资产。预览为同一脚本实拍画廊首屏，900×600 WebP（3:2）。渲染后的搜索框写 Search 2,677 assets，与 meta description 一致。缩略图是资产网格，不是分类插画。",
+      "verifyLogEn": "2026-11-04 UTC: https://simready.geronimo-labs.com/ HTTP 200, last-modified Tue, 03 Nov 2026 22:11:43 GMT. HTML is about 2 KB, title SimReady Browser, meta description: Browse and download 2,677 simulation-ready 3D assets from NVIDIA's SimReady dataset. The body is a script under /static, so the grid waits on the client. HF API datasets/nvidia/simready-assets: license cc-by-4.0, createdAt 2026-06-29T15:38:26.000Z, lastModified 2026-11-02T20:05:32.000Z. Dataset README front matter says license: cc-by-4.0. Official Space https://huggingface.co/spaces/nvidia/simready-central HTTP 200. HN https://news.ycombinator.com/item?id=50358991 HTTP 200. 2,677 was not counted file by file. No asset was downloaded. Preview is the same script’s capture of the gallery’s first screen, 900×600 WebP (3:2). After render, the search field reads Search 2,677 assets, matching the meta description. Thumbnails are the asset grid, not a category illustration.",
+      "previewImage": "/previews/simready-gallery.webp"
+    },
+    {
+      "id": "vanilla-web",
+      "slug": "vanilla-web",
+      "title": "vanilla-web：给编程助手的无框架 HTML/CSS/JS skill",
+      "titleEn": "vanilla-web: an agent skill for library-free HTML, CSS, and JavaScript",
+      "kind": "tool",
+      "hook": "给 agent 的无框架网页 skill，浏览器即运行时。",
+      "hookEn": "An agent skill for library-free HTML, CSS, and JavaScript.",
+      "summary": "vanilla-web 是 baalimago/skills 仓库里的一条 agent skill（MIT，作者 Lorentz Kinde）。SKILL.md 写：用静态多页 HTML 做应用，custom elements、ES modules 和按需加载的 island 负责交互；没有框架、没有打包器、没有服务端逻辑，浏览器就是运行时。约定包括每份文档一个用途、脚本跑起来之前链接和表单就要能用、以及组件目录按 tag 分文件。根 README 的安装是 `npx skills@latest add baalimago/skills`，表里这一行写的是用它做无依赖的 HTML/CSS/JS，静态文档加 island。这条 skill 的文件在 2026-11-03 加进仓库。适合想让助手按无框架、可渐进增强的方式写网页，而不是再生成一套 React 工程的人。本库没有执行 npx skills add，没有按里面的示例搭过应用，也没有跑它列出的 html-validate 或 axe 检查。",
+      "summaryEn": "vanilla-web is one agent skill in the baalimago/skills repo (MIT, Lorentz Kinde). SKILL.md says to build the app as static multi-page HTML, with custom elements, ES modules, and islands that load on demand; no framework, no bundler, no server logic, and the browser is the runtime. Conventions include one purpose per document, links and forms that work before scripts run, and one folder per custom-element tag. The root README installs with `npx skills@latest add baalimago/skills` and describes this row as library-free HTML/CSS/JS: static documents plus islands. The skill file was added to the repo on 2026-11-03. Useful when you want an agent to write progressive, framework-free pages instead of another React app. This library did not run npx skills add, did not build the example app, and did not run the html-validate or axe checks the skill names.",
+      "categories": [
+        "coding",
+        "design"
+      ],
+      "role": "AI coding skill",
+      "sourceUrl": "https://github.com/baalimago/skills/tree/main/skills/vanilla-web",
+      "secondaryUrls": [
+        "https://github.com/baalimago/skills",
+        "https://github.com/baalimago/skills/blob/main/skills/vanilla-web/SKILL.md",
+        "https://news.ycombinator.com/item?id=50355595"
+      ],
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "装进助手后，它会按这套目录约定改你的 HTML/CSS/JS。合并前自己看生成的页面在没开脚本时是否还能用。本库没有代为安装或生成。",
+      "approvalBoundaryEn": "Once installed, the skill will shape your HTML, CSS, and JS around its layout. Before merging, check that the page still works with scripts off. This library did not install it or generate a page.",
+      "connectors": [
+        "npx skills"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-04T01:40:00Z",
+      "qualityNote": "收录理由：给编程助手的无框架网页约定，静态多页加 custom elements，和库里偏 React 组件或设计系统的 skill 不是同一条。边界：仓库根是一组 skill，本条只收 vanilla-web。本库没有安装，没有按 SKILL.md 搭示例，也没有跑它写的校验命令。",
+      "qualityNoteEn": "Why listed: agent conventions for framework-free pages, static documents plus custom elements, separate from the React component and design-system skills already listed. Limits: the root repo is a set of skills; this entry is only vanilla-web. This library did not install it, build the example, or run the validators the skill names.",
+      "verifyLog": "2026-11-04 UTC：raw https://raw.githubusercontent.com/baalimago/skills/main/skills/vanilla-web/SKILL.md HTTP 200。front matter：name vanilla-web，license MIT，version 1.0。正文写 static HTML documents、custom elements、no framework、no bundler，浏览器提供 modules 与 lazy loading。根 LICENSE HTTP 200，MIT，Copyright (c) 2026 Lorentz Kinde。gh api baalimago/skills：MIT，1★，仓库创建 2026-08-07T05:18:03Z，推送 2026-11-03T11:43:05Z。commits?path=skills/vanilla-web/SKILL.md 只有 1 条：2026-11-03T11:43:02Z，信息 skill: Added skill for efficient vanilla-web apps。根 README 写 `npx skills@latest add baalimago/skills`，表内 vanilla-web 描述为 library-free HTML/CSS/JS apps as static documents with islands。HN https://news.ycombinator.com/item?id=50355595 HTTP 200，标题 Show HN: Vanilla-web skill to replace all JavaScript frameworks。本库未 npx skills add，未搭示例。预览为同一脚本实拍 GitHub 目录页 https://github.com/baalimago/skills/tree/main/skills/vanilla-web ，900×600 WebP（3:2）。画面是仓库文件树和 skill README 开头，不是分类插画。",
+      "verifyLogEn": "2026-11-04 UTC: raw SKILL.md HTTP 200. Front matter: name vanilla-web, license MIT, version 1.0. Body says static HTML documents, custom elements, no framework, no bundler; the browser supplies modules and lazy loading. Root LICENSE HTTP 200, MIT, Copyright (c) 2026 Lorentz Kinde. gh api baalimago/skills: MIT, 1★, repo created 2026-08-07T05:18:03Z, pushed 2026-11-03T11:43:05Z. commits for skills/vanilla-web/SKILL.md: one commit, 2026-11-03T11:43:02Z, message skill: Added skill for efficient vanilla-web apps. Root README install line is npx skills@latest add baalimago/skills; the table row says library-free HTML/CSS/JS apps as static documents with islands. HN https://news.ycombinator.com/item?id=50355595 HTTP 200. Did not run npx skills add or build the example. Preview is the same script’s capture of the GitHub directory https://github.com/baalimago/skills/tree/main/skills/vanilla-web , a 900×600 WebP (3:2). It shows the repo file tree and the start of the skill README, not a category illustration.",
+      "previewImage": "/previews/vanilla-web.webp"
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11616,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-04T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 219,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11917,27 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://graphicmeat.com/shot-butcher",
+      "https://github.com/GraphicMeat/shot-butcher",
+      "https://news.ycombinator.com/item?id=50358826",
+      "https://ensolabs.github.io/designsystemet-elm/",
+      "https://github.com/ensolabs/designsystemet-elm",
+      "https://cekrem.github.io/posts/designsystemet-elm/",
+      "https://designsystemet.no",
+      "https://news.ycombinator.com/item?id=50354548",
+      "https://simready.geronimo-labs.com/",
+      "https://huggingface.co/datasets/nvidia/simready-assets",
+      "https://huggingface.co/spaces/nvidia/simready-central",
+      "https://news.ycombinator.com/item?id=50358991",
+      "https://github.com/baalimago/skills/tree/main/skills/vanilla-web",
+      "https://github.com/baalimago/skills",
+      "https://github.com/baalimago/skills/blob/main/skills/vanilla-web/SKILL.md",
+      "https://news.ycombinator.com/item?id=50355595",
+      "https://huggingface.co/PrunaAI/P-H3-Image",
+      "https://www.pruna.ai/blog/oss-p-h3-image-launch",
+      "https://huggingface.co/PrunaAI/P-H3-Image-Comfy",
+      "https://huggingface.co/spaces/PrunaAI/P-H3-Image"
     ]
   }
 }
