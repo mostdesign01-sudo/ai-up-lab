@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-04",
+      "title": "晚间收录 2026-11-04：Cases +1（TemPad Dev）",
+      "titleEn": "Evening catalog 2026-11-04: Cases +1 (TemPad Dev)",
+      "body": "AI×设计：tempad-dev（MIT，ecomfe/tempad-dev，约 644★，作者 Justineo）— Chrome 扩展 + 本机 MCP，把 Figma 接给 Codex / Claude Code / Cursor / VS Code 等编程助手：读设计系统、在可编辑文件里建原生图层（Auto Layout / 变量 / 组件）、按项目组件落代码；不接助手也可手动 inspect。作者 2026-11-04 在 X 宣布 1.0，npm @tempad-dev/mcp 1.0.1。预览 3:2 WebP。本库未装扩展、未开 MCP、未接助手、未写入 Figma。cases 215→216（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并、未叠加仍打开的 catalog-hold PR（#144/#143/#142/#141/#139…）。",
+      "bodyEn": "AI×design: tempad-dev (MIT, ecomfe/tempad-dev, ~644★, by Justineo) — Chrome extension plus local MCP connecting Figma to Codex / Claude Code / Cursor / VS Code and other coding agents: read the design system, create native layers in editable files (Auto Layout / variables / components), and implement with project components; manual inspect works without an agent. Author announced 1.0 on X on 2026-11-04; npm @tempad-dev/mcp 1.0.1. Preview is a 3:2 WebP. This library did not install the extension, enable MCP, connect an agent, or write to Figma. cases 215→216 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Did not merge or stack on still-open catalog-hold PRs (#144/#143/#142/#141/#139…)."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
