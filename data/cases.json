@@ -1,6 +1,53 @@
 {
   "cases": [
     {
+      "id": "tempad-dev",
+      "slug": "tempad-dev",
+      "title": "TemPad Dev：把 Figma 接给 Codex / Claude 等编程助手，读设计、改画布、落成代码",
+      "titleEn": "TemPad Dev: connect Figma to Codex, Claude, and other coding agents to read designs, edit the canvas, and ship code",
+      "kind": "tool",
+      "hook": "把 Figma 接给编程助手：直接画可编辑图层，再按项目组件写代码。",
+      "hookEn": "Your coding agent draws editable Figma layers, then builds them with your components.",
+      "summary": "TemPad Dev（https://tempad.dev ，仓库 ecomfe/tempad-dev，MIT，作者 Justineo / @_justineo）是一个 Chrome 扩展加本机 MCP 桥，把 Figma 和开发者、编程助手接在一起。不接助手也能用：在 Figma 设计文件里选中元素，扩展面板显示 CSS / JS、变量与布局，可深选、测距，并可装输出插件自定义代码格式。接助手时，在扩展里开 Preferences → Agent integration → MCP access，按 Set up agents 给出的命令接入；Codex 与 Claude Code 走原生插件市场，Cursor 与 VS Code 用可移植 Agent Plugin，其余 MCP 客户端（Gemini、Qwen Code、Kimi Code 等）单独装 MCP 与两个 skill。接上后助手可读取设计系统（组件、变量、样式），在可编辑的 Figma 文件里直接创建原生图层（Auto Layout、变量、组件，skill 名 design-in-figma），也可按你仓库的组件与样式把当前选区实现成代码（skill 名 figma-design-to-code）。2026-11-04 作者在 X 宣布 1.0；npm @tempad-dev/mcp 最新 1.0.1。要求 Node.js 22.x / 24.x / 26+，扩展需保持在对应 Figma 标签页打开；写画布需要该文件的编辑权限，只读文件与 Dev Mode 只能读。免费开源，助手本身用你自己的额度（BYO agent）。适合想让编程助手「先在 Figma 出可编辑稿、再按项目组件落代码」的设计与前端。本库没有安装 Chrome 扩展，没有开 MCP，没有接 Claude / Codex / Cursor，也没有写入任何 Figma 文件。",
+      "summaryEn": "TemPad Dev (https://tempad.dev , repo ecomfe/tempad-dev, MIT, by Justineo / @_justineo) is a Chrome extension plus a local MCP bridge connecting Figma with developers and their coding agents. Without an agent it still works: select an element in a Figma Design file and the panel shows CSS / JS, variables, and layout, with deep select, measuring, and output plugins for custom code formats. To connect an agent, enable Preferences → Agent integration → MCP access and follow Set up agents: Codex and Claude Code install through their native marketplaces, Cursor and VS Code use the portable Agent Plugin, and other MCP clients (Gemini, Qwen Code, Kimi Code, and more) install the MCP server and two skills separately. Once connected, the agent can read the design system (components, variables, styles), create native editable layers in an editable Figma file (Auto Layout, variables, components; skill design-in-figma), and implement the current selection with your repo's components and styling (skill figma-design-to-code). The author announced 1.0 on X on 2026-11-04; npm @tempad-dev/mcp latest is 1.0.1. Needs Node.js 22.x / 24.x / 26+ and the extension open in the Figma tab; canvas writes need edit access, while view-only files and Dev Mode stay read-only. Free and open source; the agent runs on your own plan (BYO agent). Good for designers and front-end devs who want an agent to draft editable Figma designs, then turn them into project code. This library did not install the Chrome extension, enable MCP, connect Claude / Codex / Cursor, or write to any Figma file.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://tempad.dev/",
+      "secondaryUrls": [
+        "https://github.com/ecomfe/tempad-dev",
+        "https://chromewebstore.google.com/detail/tempad-dev/lgoeakbaikpkihoiphamaeopmliaimpc",
+        "https://www.npmjs.com/package/@tempad-dev/mcp",
+        "https://x.com/_justineo/status/2117937251548307589"
+      ],
+      "previewImage": "/previews/tempad-dev.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "开 MCP 后助手可在有编辑权限的 Figma 文件里直接建、改图层；先在副本或分支文件里试，正式稿改动自己审。扩展会请求本机 127.0.0.1 回环连接。本库没有代为安装、连接或写入。",
+      "approvalBoundaryEn": "With MCP on, the agent can create and edit layers in any Figma file you can edit; try it on a copy or branch first and review changes to production files yourself. The extension asks for a loopback connection to 127.0.0.1. This library did not install, connect, or write for you.",
+      "connectors": [
+        "Figma",
+        "Codex",
+        "Claude Code",
+        "Cursor",
+        "VS Code"
+      ],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-04T12:20:00Z",
+      "qualityNote": "收录理由：开源 MIT 的 Figma ↔ 编程助手桥，既能让助手在 Figma 里出可编辑原生图层（Auto Layout / 变量 / 组件），又能按项目组件落代码，和库里设计→代码、设计系统 skill 类条目直接互补，AI×设计贴合度高。边界：需要 Chrome 扩展 + Node 22+ 本机 MCP，扩展要一直开着；写画布要编辑权限；助手额度自理。生成代码只是起点，仍需人审。本库没有安装扩展，没有开 MCP，没有接任何助手，也没有写入 Figma 文件。",
+      "qualityNoteEn": "Why listed: an MIT open-source bridge between Figma and coding agents—agents can draft native editable layers (Auto Layout / variables / components) and implement with project components—complementing the library's design→code and design-system skill entries; strong AI×design fit. Limits: needs the Chrome extension plus a Node 22+ local MCP, with the extension kept open; canvas writes need edit access; agent usage is on your own plan. Generated code is a starting point and still needs review. This library did not install the extension, enable MCP, connect any agent, or write to a Figma file.",
+      "verifyLog": "2026-11-04 晚间（Asia/Shanghai）：https://tempad.dev/ HTTP 200，title TemPad Dev: Design & dev. Connected.，meta 写 Inspect designs, edit native Figma layers, and implement UI with your coding agent. Free and open source。gh api ecomfe/tempad-dev：MIT、644★，创建 2024-03-13T10:08:27Z，最近推送 2026-11-04T04:58:08Z，homepage tempad.dev，描述 Create, edit, and implement Figma designs with your coding agent。README：Chrome Web Store 安装；手动 inspect 无需助手；MCP 需 Node.js 22.x / 24.x / 26+；写画布需编辑权限，只读与 Dev Mode 只读；Codex / Claude Code 原生市场、Cursor / VS Code 用 Agent Plugin；两个 skill design-in-figma 与 figma-design-to-code；setup 统一用 @tempad-dev/mcp@latest。npm registry：@tempad-dev/mcp latest 1.0.1（2026-10-30T03:56Z），MIT。X https://x.com/_justineo/status/2117937251548307589（作者 2026-11-04 宣布 1.0，未抓取正文，按任务提供内容引用）。预览为官网首屏实拍裁 3:2 WebP 自托管。本库未安装 Chrome 扩展、未开 MCP、未接 Claude / Codex / Cursor、未写入任何 Figma 文件。",
+      "verifyLogEn": "2026-11-04 evening (Asia/Shanghai): https://tempad.dev/ HTTP 200; title TemPad Dev: Design & dev. Connected.; meta says Inspect designs, edit native Figma layers, and implement UI with your coding agent. Free and open source. gh api ecomfe/tempad-dev: MIT, 644★, created 2024-03-13, pushed 2026-11-04T04:58:08Z, homepage tempad.dev. README: Chrome Web Store install; manual inspect needs no agent; MCP needs Node.js 22.x / 24.x / 26+; canvas writes need edit access (view-only and Dev Mode stay read-only); native marketplaces for Codex / Claude Code, Agent Plugin for Cursor / VS Code; skills design-in-figma and figma-design-to-code; setup uses @tempad-dev/mcp@latest. npm: @tempad-dev/mcp latest 1.0.1 (2026-10-30), MIT. X 1.0 announcement kept as secondary (post text not fetched). Preview is a 3:2 WebP of the landing hero. Did not install the extension, enable MCP, connect Claude / Codex / Cursor, or write to any Figma file."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11494,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-04T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11795,12 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://tempad.dev/",
+      "https://github.com/ecomfe/tempad-dev",
+      "https://chromewebstore.google.com/detail/tempad-dev/lgoeakbaikpkihoiphamaeopmliaimpc",
+      "https://www.npmjs.com/package/@tempad-dev/mcp",
+      "https://x.com/_justineo/status/2117937251548307589"
     ]
   }
 }
