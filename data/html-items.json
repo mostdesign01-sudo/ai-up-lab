@@ -1,6 +1,78 @@
 {
   "items": [
     {
+      "id": "walker-playground",
+      "slug": "walker-playground",
+      "title": "Walker Playground：纯 CSS 像素小人在网页上走路",
+      "titleEn": "Walker Playground: pure-CSS pixel walkers on any page",
+      "hook": "往页面上丢几个像素小人，边框和文字都能当路面。",
+      "hookEn": "Drop pixel walkers onto a page—borders and text become floors.",
+      "summary": "MarkBlah 的浏览器小品（前端约 228 分，2026-11-05）：纯 CSS 精灵、无图片依赖，小人会走在边框、按钮、图片和文字上，撞墙转弯、掉出窗口底部；可拖拽、甩出，或改窗口大小把它们弹射出去。一行 CDN script 就能挂到任意站，控制台 `__walker.add()` 加更多。GitHub MarkBlah/lemmings，未见 SPDX 许可证字段。本库打开了 playground、点了多次 Add a walker，没有把脚本挂到第三方站、也没测移动端。",
+      "summaryEn": "MarkBlah’s browser toy: pure-CSS sprites with no image assets; walkers trek on borders, buttons, images and text, turn at walls, and fall off the window; drag, flick, or resize to launch them. One CDN script drops onto any site; `__walker.add()` adds more. GitHub MarkBlah/lemmings; no SPDX license field on the repo. This library opened the playground and clicked Add a walker several times; it did not inject the script onto third-party sites or test mobile.",
+      "sourceUrl": "https://markblah.github.io/lemmings/",
+      "secondaryUrls": [
+        "https://github.com/MarkBlah/lemmings",
+        "https://news.ycombinator.com/item?id=50375354",
+        "https://cdn.jsdelivr.net/gh/MarkBlah/lemmings@main/walker.min.js"
+      ],
+      "previewImage": "/previews/walker-playground.webp",
+      "types": [
+        "interactive",
+        "demo",
+        "tool"
+      ],
+      "tags": [
+        "css",
+        "animation",
+        "pixel",
+        "playground",
+        "show-hn",
+        "demo"
+      ],
+      "featured": false,
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-05T12:20:00Z",
+      "qualityNote": "公开可玩；仓库无 SPDX 许可证字段。",
+      "qualityNoteEn": "Publicly playable; repo has no SPDX license field.",
+      "verifyLog": "HN item 50375354（Lemmings CSS Animation，2026-11-05 ~228 分）。打开 https://markblah.github.io/lemmings/，标题 Walker Playground；点 Add a walker 多次见小人走楼梯；GitHub MarkBlah/lemmings ~64★（api）；license 字段 null。未挂 CDN 到外站、未测 resize 弹射全路径、未测移动端。预览为本库 Playwright 实拍 3:2。",
+      "verifyLogEn": "HN item 50375354 (Lemmings CSS Animation, 2026-11-05, ~228 pts). Opened https://markblah.github.io/lemmings/ (title Walker Playground); clicked Add a walker several times and saw walkers on stairs; GitHub MarkBlah/lemmings ~64★ (api); license null. Did not inject the CDN onto other sites, did not fully exercise resize-launch, did not test mobile. Preview is a Playwright 3:2 capture."
+    },
+    {
+      "id": "colors-void",
+      "slug": "colors-void",
+      "title": "Anything to colors：用一句话生成可复制的配色",
+      "titleEn": "Anything to colors: turn a phrase into a copyable palette",
+      "hook": "写一句心情或场景，流出一盘能抄 HEX 的颜色。",
+      "hookEn": "Type a mood or scene and get a flowing palette with copyable HEX.",
+      "summary": "Show HN（2026-11-05）：colors.void.app 把文字、情绪和记忆转成流动配色，可复制 HEX，面向海报与设计草稿。页上 slogan「To every dream, its colors」。本库在浏览器输入 neon Tokyo sunset 类提示并点 Create palette，见到色板与 HEX；未登录、未付费路径探测（若有）、未核模型供应商条款。未见公开 GitHub。",
+      "summaryEn": "Show HN (2026-11-05): colors.void.app turns words, moods, and memories into flowing palettes with copyable HEX for posters and design drafts. Site slogan: “To every dream, its colors.” This library typed a neon-Tokyo-sunset-style prompt, clicked Create palette, and saw swatches plus HEX; it did not sign in, probe paid paths (if any), or audit model-vendor terms. No public GitHub found.",
+      "sourceUrl": "https://colors.void.app/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50377069"
+      ],
+      "previewImage": "/previews/colors-void.webp",
+      "types": [
+        "tool",
+        "demo",
+        "interactive"
+      ],
+      "tags": [
+        "color",
+        "palette",
+        "ai",
+        "design",
+        "hex",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-05T12:20:00Z",
+      "qualityNote": "公开可打开；未见自链开源仓。",
+      "qualityNoteEn": "Publicly open; no self-linked OSS repo found.",
+      "verifyLog": "HN Show item 50377069（Anything to colors，2026-11-05）。打开 colors.void.app，输入提示并 Create palette，见到色板与 HEX 列表；og:image 为 /social-card.png。未登录、未测导出/分享全路径、未确认背后模型。预览为本库实拍输入提示后的界面 3:2。",
+      "verifyLogEn": "HN Show item 50377069 (Anything to colors, 2026-11-05). Opened colors.void.app, entered a prompt and Create palette, saw swatches and HEX; og:image is /social-card.png. Did not sign in, did not fully test export/share, did not confirm the underlying model. Preview is a 3:2 capture after entering a prompt."
+    },
+    {
       "id": "pure-particles",
       "slug": "pure-particles",
       "title": "Pure Particles：玻璃方盒里的粒子烟雾，可嵌入首屏、导出 4K 与无缝循环",
@@ -5541,9 +5613,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-29T12:30:00Z",
+    "updatedAt": "2026-11-05T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.80",
-    "count": 164
+    "version": "1.3.81",
+    "count": 166
   }
 }
