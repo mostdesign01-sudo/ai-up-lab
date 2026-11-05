@@ -1,6 +1,180 @@
 {
   "cases": [
     {
+      "id": "homotope",
+      "slug": "homotope",
+      "title": "Homotope — 浏览器内把位图矢量化成干净 SVG（MIT 引擎）",
+      "titleEn": "Homotope — browser raster→clean SVG (MIT engine)",
+      "kind": "tool",
+      "hook": "浏览器里把 PNG/JPEG 收成干净 SVG。",
+      "hookEn": "Turn a PNG or JPEG into a clean SVG in the browser.",
+      "summary": "Homotope（https://homotope.app ，英文页 https://homotope.app/en/ ）在浏览器里把位图收成 SVG。英文页写：输入 PNG、JPG、WebP，最大 80 MB；默认在本机计算，不点保存、也不开服务器任务就不会上传。不要账号就能预览并下载 SVG 和 PNG；透明底和重新上色写在 Pro。DXF、EPS、PDF 等制作导出要账号：免费账号每月 2 次，Pro 不限，或每次 1 个点数。页面标价 Pro 每月 3.99 欧元，点数包 4.99 欧元买 10 点。七个预设是 Logo、Illustration、Pixel art、Line art、Single stroke、Black and white、Photo / Poster。引擎仓库 stevenroman91/homotope-engine 的 LICENSE 是 MIT，npm 包 @homotope/engine 当前版本 0.2.0；README 写这个版本已冻结，可在 Web Worker 或 Node 里跑，包本身没有编辑器、服务器、REST 或 MCP（那些在托管服务里）。适合要把客户发来的位图收成能放进 Figma、Illustrator 或 Inkscape 的 SVG，又不想先把原图传走的人。本库没有在工坊里完成矢量化导出，也没有安装或运行 npm 引擎。",
+      "summaryEn": "Homotope (https://homotope.app , English page https://homotope.app/en/ ) turns a bitmap into SVG in the browser. The English page says input is PNG, JPG, or WebP up to 80 MB, and that work stays on the machine unless you save or start a server job. SVG and PNG export need no account; transparent background and recolouring are listed as Pro. DXF, EPS, and PDF production exports need an account: 2 a month on a free account, unlimited on Pro, or 1 credit each. The page prices Pro at €3.99 per month and credits at €4.99 for 10. The seven presets are Logo, Illustration, Pixel art, Line art, Single stroke, Black and white, and Photo / Poster. The engine repo stevenroman91/homotope-engine has an MIT LICENSE, and npm @homotope/engine is at 0.2.0; the README says that version is frozen, runs in a Web Worker or Node, and the package itself has no editor, server, REST, or MCP (those live in the hosted service). Useful when a client logo arrives as a bitmap and you want an SVG for Figma, Illustrator, or Inkscape without uploading the file first. This library did not finish a vector export in the workshop and did not install or run the npm engine.",
+      "categories": [
+        "design",
+        "content",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://homotope.app",
+      "secondaryUrls": [
+        "https://homotope.app/atelier",
+        "https://homotope.app/en/",
+        "https://github.com/stevenroman91/homotope-engine",
+        "https://news.ycombinator.com/item?id=50370248"
+      ],
+      "previewImage": "/previews/homotope.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "免费路径是在浏览器里预览并下载 SVG 或 PNG。保存到账户、服务器计算、API 或 MCP 会离开本机或进入付费档。本库没有代为导出。",
+      "approvalBoundaryEn": "The free path is previewing and downloading SVG or PNG in the browser. Saving to an account, a server job, the API, or MCP leaves the machine or enters a paid tier. This library did not export for you.",
+      "connectors": [
+        "browser",
+        "npm"
+      ],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-05T01:20:00Z",
+      "qualityNote": "收录理由：浏览器内把位图收成干净 SVG，MIT 引擎可以单独装，贴合设计素材线。边界：托管页写明的免费路径是预览和 SVG/PNG 导出；透明底、重新上色、制作导出和服务器计算按页面另计。本库没有在工坊完成矢量化导出，没有安装 npm 包，也没有调用 API 或 MCP。",
+      "qualityNoteEn": "Why listed: in-browser bitmap to a clean SVG, with an MIT engine you can install on its own — a direct fit for design source files. Limits: the hosted page’s free path is preview plus SVG/PNG export; transparent backgrounds, recolouring, production exports, and server jobs are priced separately on the page. This library did not finish a vector export in the workshop, did not install the npm package, and did not call the API or MCP.",
+      "verifyLog": "2026-11-05 早间（Asia/Shanghai）：https://homotope.app 与 https://homotope.app/en/ 、https://homotope.app/atelier 均为 HTTP 200。英文页 title「Sharp SVGs from your images, in your browser — Homotope」；og:image https://homotope.app/accueil/og.png （1200×630）。FAQ 写无账号可矢量化并下载 SVG/PNG，透明底与 recolouring 属 Pro；制作导出 DXF/EPS/PDF 为免费账号每月 2 次、Pro 不限或每次 1 credit；Pro €3.99/月，credits €4.99/10。atelier 页写在本机免费、无账号矢量化，保存到账户前不上传。gh api stevenroman91/homotope-engine：license MIT，1★，0 forks，创建 2026-10-07T12:06:34Z，最近推送 2026-10-31T22:19:40Z；raw LICENSE 开头为 MIT License，Copyright (c) 2026 The Homotope authors。npm registry @homotope/engine：latest 0.2.0，license MIT，该版本 time 2026-10-21T07:31:18.362Z。README 写 frozen at 0.2.0、Web Worker、无 MCP。HN 页面 HTTP 419；Algolia item 50370248 HTTP 200，标题 Show HN: Homotope, vectorize images to SVG in the browser, MIT engine on NPM，创建 2026-11-04T19:18:26Z，points 3，url 指向引擎仓库。预览为 OG PNG 装进 1200×800 WebP（上下留边，未裁字）。未在工坊上传图片，未 npm install，未跑 vectorize。",
+      "verifyLogEn": "2026-11-05 morning (Asia/Shanghai): https://homotope.app , /en/ , and /atelier HTTP 200. English title “Sharp SVGs from your images, in your browser — Homotope”; og:image https://homotope.app/accueil/og.png (1200×630). FAQ: SVG/PNG with no account; transparent background and recolouring are Pro; DXF/EPS/PDF are 2 a month on a free account, unlimited on Pro, or 1 credit; Pro €3.99/month, credits €4.99/10. Atelier page: on-device, no account, nothing uploaded until you save. gh api stevenroman91/homotope-engine: MIT, 1★, 0 forks, created 2026-10-07T12:06:34Z, pushed 2026-10-31T22:19:40Z; raw LICENSE starts “MIT License”, Copyright (c) 2026 The Homotope authors. npm registry @homotope/engine latest 0.2.0, MIT, version time 2026-10-21T07:31:18.362Z. README says frozen at 0.2.0, Web Worker, no MCP in the package. HN HTML HTTP 419; Algolia item 50370248 HTTP 200, created 2026-11-04T19:18:26Z, points 3, URL is the engine repo. Preview is the OG PNG fitted to a 1200×800 WebP with bars, text not cropped. No upload in the workshop, no npm install, vectorize not run."
+    },
+    {
+      "id": "xuui",
+      "slug": "xuui",
+      "title": "xuui — 本地画布对比 agent UI 多版本并用 MCP 回传批注",
+      "titleEn": "xuui — local canvas to compare agent UI variants and send MCP feedback",
+      "kind": "tool",
+      "hook": "本地画布对比 agent 多版 UI，批注经 MCP 回传。",
+      "hookEn": "Compare agent UI variants on a local canvas and send notes over MCP.",
+      "summary": "xuui（https://xuui.com/ ，作者 Robin Humphreys，仓库 getxuui/xuui，MIT）是一块本地画布，用来看编程助手做出的界面。官网写：组件画在带尺子和图层的画布上，点到元素写批注，反馈经 MCP 回到助手。README 写：在 xuui.studies.ts 里登记一个或几个方案，用 All 对比，Play 试用，Select 看图层；按 C 点元素写评论，Submit review 把反馈收成 .xuui/reviews/ 里的可读文件，也可以经可选 MCP 让助手去读。本地评审不要账号、部署或数据库。README 标实验性 alpha，预期有破坏性改动，需要 Node 22.12 或更新；起步是 npx --package @getxuui/xuui@alpha xuui init。官网另写 npx skills add getxuui/skills。作者帖说它是免费开源画布，用来比版本、量间距、指出要改的地方。适合已经让助手出 UI、又想在代码和 Figma 之外把批注送回去的人。本库没有安装 xuui，没有连接 MCP，也没有做过多版对比。这条放在案例库，不是 Agent UI 组件库。",
+      "summaryEn": "xuui (https://xuui.com/ , by Robin Humphreys, repo getxuui/xuui, MIT) is a local canvas for UIs a coding agent already built. The site says components render on a canvas with rulers and layers, you comment on an element, and the feedback goes back to the agent over MCP. The README says you register one or more options in xuui.studies.ts, compare with All, try Play, and inspect layers with Select; press C, point, and comment, then Submit review writes readable files under .xuui/reviews/, which an agent can also read through the optional MCP connection. Local review needs no account, deployment, or database. The README marks it experimental alpha, expects breaking changes, and requires Node 22.12 or newer; the start command is npx --package @getxuui/xuui@alpha xuui init. The site also lists npx skills add getxuui/skills. The author’s post calls it a free open-source canvas for comparing versions, measuring gaps, and pointing at what should change. Useful when an agent is already producing UI and you want the notes back without living in Figma. This library did not install xuui, did not connect MCP, and did not compare variants. Filed under cases, not the Agent UI library.",
+      "categories": [
+        "design",
+        "content",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://xuui.com/",
+      "secondaryUrls": [
+        "https://github.com/getxuui/xuui",
+        "https://x.com/robinhumphreys/status/2118142209858167187"
+      ],
+      "previewImage": "/previews/xuui.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "批注会写成工作区里的文件，并可以经 MCP 交给编程助手。本库没有安装，也没有连接 MCP。",
+      "approvalBoundaryEn": "Comments are written as files in the workspace and can be handed to a coding agent over MCP. This library did not install xuui or connect MCP.",
+      "connectors": [
+        "MCP",
+        "React"
+      ],
+      "publishedAt": "2026-11-03",
+      "updatedAt": "2026-11-05T01:20:00Z",
+      "qualityNote": "收录理由：本地画布把助手做出的多版 UI 放在一起比，批注再送回助手，补的是会生成、少评审。边界：README 标实验性 alpha，并写这一版只支持独立的 React study，不会自动从任意应用导入。本库没有安装 xuui，没有连接 MCP，也没有做多版对比。",
+      "qualityNoteEn": "Why listed: a local canvas for comparing an agent’s UI variants and sending the notes back — the review step after generation. Limits: the README calls it experimental alpha and says this release is standalone React studies, not automatic import from an arbitrary app. This library did not install xuui, did not connect MCP, and did not compare variants.",
+      "verifyLog": "2026-11-05 早间（Asia/Shanghai）：https://xuui.com/ HTTP 200，title「xuui · Review the UIs your agents build」，description 写 local canvas、feedback over MCP；og:image https://xuui.com/og.png?v=2 （1200×630）。页内可见 npx skills add getxuui/skills、By Robin Humphreys、MIT licensed。gh api getxuui/xuui：license MIT，1★，0 forks，创建 2026-11-03T19:09:36Z，最近推送 2026-11-05T01:00:31Z，homepage https://xuui.com 。raw LICENSE 为 MIT License，Copyright (c) 2026 Robin Humphreys。README 写 Experimental alpha、Node 22.12+、init 命令、.xuui/reviews/、optional MCP、companion skill getxuui/skills。X https://x.com/robinhumphreys/status/2118142209858167187 HTTP 200，标题含 free, open source canvas；fxtwitter 同期 created Thu Nov 05 00:43:50 +0000 2026，likes 0。预览为 og.png 装进 1200×800 WebP。未执行 npx，未接 MCP，未登记 study。不进 agent-ui。",
+      "verifyLogEn": "2026-11-05 morning (Asia/Shanghai): https://xuui.com/ HTTP 200, title “xuui · Review the UIs your agents build”, description says local canvas and feedback over MCP; og:image https://xuui.com/og.png?v=2 (1200×630). Page shows npx skills add getxuui/skills, By Robin Humphreys, MIT licensed. gh api getxuui/xuui: MIT, 1★, 0 forks, created 2026-11-03T19:09:36Z, pushed 2026-11-05T01:00:31Z, homepage https://xuui.com . Raw LICENSE is MIT, Copyright (c) 2026 Robin Humphreys. README: experimental alpha, Node 22.12+, the init command, .xuui/reviews/, optional MCP, companion skill getxuui/skills. X https://x.com/robinhumphreys/status/2118142209858167187 HTTP 200; fxtwitter created Thu Nov 05 00:43:50 +0000 2026, 0 likes. Preview is og.png fitted to a 1200×800 WebP. npx not run, MCP not connected, no study registered. Not filed under agent-ui."
+    },
+    {
+      "id": "screenshot-to-tokens",
+      "slug": "screenshot-to-tokens",
+      "title": "Screenshot to Tokens — 截图拆设计 token 并写回 CSS 变量",
+      "titleEn": "Screenshot to Tokens — screenshot → named design tokens → CSS variables",
+      "kind": "tool",
+      "hook": "截运行中的网页，拆出 token 并写回 CSS 变量。",
+      "hookEn": "Screenshot a live page, name design tokens, and write them back as CSS variables.",
+      "summary": "Screenshot to Tokens（仓库 nhunsaker/screenshot-to-tokens，Apache-2.0）按 README 的流程：对一个还没有设计 token 的运行中网页截图，用 SAM 3.1 从像素把界面分段，把接近的数值聚在一起，再让 Muse Spark 给三层 token 起名（primitive、semantic、component，每个 token 附理由）。人可以接受、改名或合并，然后把写死的字面量改成 var(--token, original)，并用检查确认这次改写不改变画面、也不让文字更难读。README 写每个模型步骤都有离线替身，没有 API key 也能跑演示；有 key 时走 Meta Model API 上的 SAM 3.1，以及托管的 Muse Spark 或 Baseten 上的 Muse Spark Open。作品注明给 Meta Global AI Developer Hackathon（2026-10-26 至 2026-11-04）。README 另附作者自己的测量表和一条 YouTube 演示，本库没有复跑，也没有播放视频。演示页 https://s2t.sorbcloud.com/ 本次打开，标题是 Screenshot to Tokens。适合想从真实界面抽出可写回 CSS 变量的色板和字号、又不想从零手建 token 的人。本库没有安装依赖，没有跑这条流水线。",
+      "summaryEn": "Screenshot to Tokens (repo nhunsaker/screenshot-to-tokens, Apache-2.0) is described in the README as: screenshot a live web app that has no design tokens, segment the UI from pixels with SAM 3.1, cluster near-duplicate values, and have Muse Spark name a three-tier set (primitive, semantic, component, with a reason per token). A person accepts, renames, or merges, then hardcoded literals are rewritten to var(--token, original), with checks that the rewrite itself changes no pixels and does not make text harder to read. The README says every model step has an offline stand-in, so a demo can run without an API key; with keys it uses SAM 3.1 on the Meta Model API and Muse Spark, hosted or Muse Spark Open on Baseten. It is marked as built for the Meta Global AI Developer Hackathon (2026-10-26 to 2026-11-04). The README also includes the author’s own measurements and a YouTube demo; this library did not re-run them and did not play the video. https://s2t.sorbcloud.com/ opened with the title Screenshot to Tokens. Useful when you want palette and type tokens written back as CSS variables from a real UI. This library did not install dependencies and did not run the pipeline.",
+      "categories": [
+        "design",
+        "content",
+        "engineering"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://github.com/nhunsaker/screenshot-to-tokens",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50365053",
+        "https://s2t.sorbcloud.com/"
+      ],
+      "previewImage": "/previews/screenshot-to-tokens.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "流水线会改项目里的 CSS；README 写到检查通过后可以开 pull request。本库没有代为安装或改写。",
+      "approvalBoundaryEn": "The pipeline rewrites CSS in the project; the README says a pull request can open after the checks. This library did not install it or rewrite anything.",
+      "connectors": [
+        "CSS",
+        "SAM",
+        "Muse Spark"
+      ],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-05T01:20:00Z",
+      "qualityNote": "收录理由：从运行中的界面抽出命名 token，再写回 CSS 变量，是设计系统这边的 AI 用法。边界：README 写依赖 SAM 3.1 与 Muse Spark，无 key 时用离线替身。作者测量表没有复跑。本库没有安装，也没有跑流水线。",
+      "qualityNoteEn": "Why listed: named tokens taken from a live UI and written back as CSS variables — an AI path into a design system. Limits: the README says it depends on SAM 3.1 and Muse Spark, with an offline stand-in when there is no key. The author’s measurements were not re-run. This library did not install it and did not run the pipeline.",
+      "verifyLog": "2026-11-05 早间（Asia/Shanghai）：仓库页与 raw README、raw LICENSE HTTP 200。gh api nhunsaker/screenshot-to-tokens：license Apache-2.0，0★，0 forks，创建 2026-10-27T12:28:17Z，最近推送 2026-11-04T00:44:26Z，描述含 SAM 3.1、Muse Spark、CSS variables。LICENSE 文件开头为 Apache License Version 2.0。README 写 SAM 3.1 分段、Muse Spark 命名三层 token、改写为 var(--token, original)、离线替身、黑客松日期 Oct 26 – Nov 4, 2026，并链 YouTube https://www.youtube.com/watch?v=RpnO9HfF98E 与演示 https://s2t.sorbcloud.com 。演示页 HTTP 200，title「Screenshot to Tokens」；YouTube 未打开。HN 页面 HTTP 419；Algolia item 50365053 HTTP 200，标题 Show HN: Screenshot to Tokens – give a web app a design system from a screenshot，创建 2026-11-04T13:09:26Z，points 1，url 指向该仓库。GitHub social 图为通用仓库卡（1200×600）。预览用 README 的 docs/media/demo-thumb.jpg（1280×720）装进 1200×800 WebP。未 pnpm install，未跑 CLI。",
+      "verifyLogEn": "2026-11-05 morning (Asia/Shanghai): repo page, raw README, and raw LICENSE HTTP 200. gh api nhunsaker/screenshot-to-tokens: Apache-2.0, 0★, 0 forks, created 2026-10-27T12:28:17Z, pushed 2026-11-04T00:44:26Z. LICENSE file starts Apache License Version 2.0. README describes SAM 3.1 segmentation, Muse Spark three-tier names, rewrite to var(--token, original), offline stand-ins, hackathon Oct 26 – Nov 4, 2026, YouTube https://www.youtube.com/watch?v=RpnO9HfF98E , and https://s2t.sorbcloud.com . Demo HTTP 200, title “Screenshot to Tokens”; YouTube was not opened. HN HTML HTTP 419; Algolia item 50365053 HTTP 200, created 2026-11-04T13:09:26Z, points 1, URL is the repo. GitHub social image is the generic repo card (1200×600). Preview is README docs/media/demo-thumb.jpg (1280×720) fitted to a 1200×800 WebP. pnpm install not run, CLI not run."
+    },
+    {
+      "id": "amazing-posters",
+      "slug": "amazing-posters",
+      "title": "Amazing Posters — 4500+ 生成海报附完整结构化 prompt",
+      "titleEn": "Amazing Posters — 4,500+ generated posters with full structured prompts",
+      "kind": "showcase",
+      "hook": "四千多张生成海报，每张带版式色板与完整 prompt。",
+      "hookEn": "Thousands of generated posters, each with layout, palette, and a full prompt.",
+      "summary": "Amazing Posters 是 posterlet 公开的生成海报和对应的结构化 prompt。仓库 posterlet/amazing-posters 的 README 写有 4507 条 prompt 规格，每条配一张成图，并把版式、颜色、字体和主体分开写。本库只读了 data/halloween/event.jsonl 的第一条：字段里有 ratio、style、model（这条写 Flux 3），prompt 分段包含 Colors、Layout、Typography、Subject。没有把 4507 条逐条重数，也没有据此说全部记录都是同一个模型。站点 https://posterlet.com 首页是 SI 海报生成器，页面写 Beta、模型 Flux 3、不限次数免费生成，并写生成结果会出现在公开画廊，除非勾选 Keep private。仓库 LICENSE 文件写：README、gallery、data 里的 prompt 文本为 CC BY 4.0，可以分享和改编（含商用），需署名；示例海报图不在该许可内，只是链到 posterlet.com 供对照。GitHub 许可证接口把同一份 LICENSE 标成 SPDX NOASSERTION（key 为 other），没有识别成 CC-BY-4.0。适合要参考海报的版式、色板和文案结构，而不是只收藏一张成图的人。本库没有批量下载数据集，也没有用这些 prompt 复现海报。",
+      "summaryEn": "Amazing Posters is posterlet’s public set of generated posters and the structured prompts behind them. The README in posterlet/amazing-posters says there are 4507 prompt specs, each paired with a finished image, with layout, color, typography, and subject written separately. This library read only the first record of data/halloween/event.jsonl: it has ratio, style, and model (that record says Flux 3), and the prompt is split into Colors, Layout, Typography, and Subject. The 4507 records were not recounted one by one, and that single model field is not treated as true of every record. https://posterlet.com is an SI poster generator; the page says Beta, the model Flux 3, and unlimited free generations, and that the image is shown in the public gallery unless Keep private is checked. The repo LICENSE file says the prompt text in README, gallery, and data is CC BY 4.0 (share and adapt, including commercially, with credit); the example poster images are excluded and only linked on posterlet.com for reference. GitHub’s license API marks that same LICENSE as SPDX NOASSERTION (key other), not CC-BY-4.0. Useful when you want poster layout, palette, and copy structure, not only a finished image. This library did not bulk-download the dataset and did not regenerate posters from the prompts.",
+      "categories": [
+        "design",
+        "content",
+        "prompts"
+      ],
+      "role": "AI design reference",
+      "sourceUrl": "https://posterlet.com",
+      "secondaryUrls": [
+        "https://github.com/posterlet/amazing-posters",
+        "https://news.ycombinator.com/item?id=50367201"
+      ],
+      "previewImage": "/previews/amazing-posters.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "在 posterlet 上生成时，页面写结果默认进入公开画廊，除非勾选保持私密。prompt 文本按仓库 LICENSE 为 CC BY 4.0，成图不在该许可内。本库没有代为生成或下载整套数据。",
+      "approvalBoundaryEn": "On posterlet, the page says a generation is shown in the public gallery unless you check keep-private. Prompt text is CC BY 4.0 per the repo LICENSE; the poster images are not. This library did not generate or download the full set.",
+      "connectors": [
+        "Flux"
+      ],
+      "publishedAt": "2026-10-27",
+      "updatedAt": "2026-11-05T01:20:00Z",
+      "qualityNote": "收录理由：生成海报和可复制的结构化 prompt 放在一起，方便对照版式、色板、字体和文案。许可以仓库 LICENSE 文件为准：prompt 文本写明 CC BY 4.0，成图被排除；GitHub 接口的 SPDX 是 NOASSERTION，两处都记下。README 的 4507 没有逐条重数。本库没有批量下载，也没有用 prompt 出图。",
+      "qualityNoteEn": "Why listed: generated posters sit next to copyable structured prompts for layout, palette, type, and copy. The license follows the repo LICENSE file: prompt text is stated as CC BY 4.0, and the images are excluded; GitHub’s SPDX field is NOASSERTION, and both are recorded. The README’s 4507 was not recounted record by record. This library did not bulk-download the set and did not generate from the prompts.",
+      "verifyLog": "2026-11-05 早间（Asia/Shanghai）：https://posterlet.com HTTP 200，title「Free SI Poster Maker – Create Posters, Product Thumbnails & More」，og:image https://posterlet.com/og-home.png （1248×832）。正文可见 Beta、Flux 3、1:1、1K (1024x1024)、Image will be shown in the public gallery、Keep private、Unlimited free generations。gh api posterlet/amazing-posters：license.spdx_id NOASSERTION、key other，3★，创建 2026-10-27T09:08:08Z，最近推送 2026-10-27T17:13:16Z，homepage https://posterlet.com 。/license 接口同样 NOASSERTION。raw LICENSE 首行「CC BY 4.0 — Creative Commons Attribution 4.0 International」，写明 README.md、gallery/**、data/** 的 prompt 文本适用，示例海报图排除。README 徽章与首段写 4507。Range 读取 data/halloween/event.jsonl 前 1801 字节，第一条 slug a-wondrous-halloween-night-poster，model Flux 3，prompt 含 [Colors] [Layout] [Typography] [Subject]。HN 页面 HTTP 419；Algolia item 50367201 HTTP 200，标题 Show HN: Posters – open prompt dataset for generated poster design，创建 2026-11-04T15:43:29Z，points 1。预览为 og-home.png 缩到 1200×800 WebP。未点 Generate，未克隆仓库。",
+      "verifyLogEn": "2026-11-05 morning (Asia/Shanghai): https://posterlet.com HTTP 200, title “Free SI Poster Maker – Create Posters, Product Thumbnails & More”, og:image https://posterlet.com/og-home.png (1248×832). Visible copy includes Beta, Flux 3, 1:1, 1K (1024x1024), “Image will be shown in the public gallery”, Keep private, and unlimited free generations. gh api posterlet/amazing-posters: license.spdx_id NOASSERTION, key other, 3★, created 2026-10-27T09:08:08Z, pushed 2026-10-27T17:13:16Z. The /license endpoint is also NOASSERTION. Raw LICENSE begins “CC BY 4.0 — Creative Commons Attribution 4.0 International” and covers prompt text in README.md, gallery/**, and data/**, excluding example poster images. README badge and opening say 4507. A 1801-byte range of data/halloween/event.jsonl starts with slug a-wondrous-halloween-night-poster, model Flux 3, prompt sections [Colors] [Layout] [Typography] [Subject]. HN HTML HTTP 419; Algolia item 50367201 HTTP 200, created 2026-11-04T15:43:29Z, points 1. Preview is og-home.png scaled to a 1200×800 WebP. Generate was not clicked and the repo was not cloned."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11621,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-05T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 219,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11922,29 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://homotope.app",
+      "https://homotope.app/en/",
+      "https://homotope.app/atelier",
+      "https://github.com/stevenroman91/homotope-engine",
+      "https://registry.npmjs.org/@homotope/engine",
+      "https://news.ycombinator.com/item?id=50370248",
+      "https://xuui.com/",
+      "https://github.com/getxuui/xuui",
+      "https://x.com/robinhumphreys/status/2118142209858167187",
+      "https://github.com/nhunsaker/screenshot-to-tokens",
+      "https://s2t.sorbcloud.com/",
+      "https://news.ycombinator.com/item?id=50365053",
+      "https://posterlet.com",
+      "https://github.com/posterlet/amazing-posters",
+      "https://news.ycombinator.com/item?id=50367201",
+      "https://deploymentsafety.openai.com/chatgpt-images-2-6/gif-risks-safeguards-and-evaluations",
+      "https://developers.openai.com/api/docs/guides/image-generation",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst",
+      "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare",
+      "https://x.com/OpenAI/status/2118124944928432327",
+      "https://community.openai.com/t/images-upgraded-introducing-chatgpt-images-2-6/1412901",
+      "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6"
     ]
   }
 }

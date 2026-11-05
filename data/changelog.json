@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-05",
+      "title": "早间收录 2026-11-05：Cases +4、Models +1（Homotope / xuui / Screenshot to Tokens / Amazing Posters / Images 2.6）",
+      "titleEn": "Morning catalog 2026-11-05: Cases +4, Models +1 (Homotope / xuui / Screenshot to Tokens / Amazing Posters / Images 2.6)",
+      "body": "AI×设计。Cases：homotope（浏览器内 PNG/JPG/WebP→SVG；引擎 stevenroman91/homotope-engine 为 MIT，npm @homotope/engine 0.2.0；英文页写无账号可导出 SVG/PNG，制作导出与 Pro 另计。本库未在工坊导出，未跑 npm）；xuui（MIT，本地画布对比 agent UI，批注可经 MCP 回传；README 写 alpha、Node 22.12+。未安装、未接 MCP、未做多版对比。放在 cases，不是 agent-ui）；screenshot-to-tokens（Apache-2.0，README 写 SAM 3.1 分段、Muse Spark 命名 token 并写回 CSS 变量。未跑流水线）；amazing-posters（README 写 4507 条结构化 prompt；LICENSE 文件写 prompt 文本 CC BY 4.0、成图除外；GitHub API 的 SPDX 为 NOASSERTION。未批量下载、未复现）。Models：chatgpt-images-2-6（安全卡 2026-11-04：GIF、API SVG、Flare/Sunburst；官方 X 称 API 生图约快 50%，本库未计时、未生成。openai.com 索引页 HTTP 403）。五条预览均为公开图装进 1200×800 WebP，只做了 HTTP/页面核对。相对 main：cases 215→219（1.4.77→1.4.78），models 40→41（1.1.30→1.1.31）。未改 HTML、Agent UI、首页精选。未合并仍打开的 catalog-hold #138–#145。未合并，等「合」。",
+      "bodyEn": "AI×design. Cases: homotope (in-browser PNG/JPG/WebP→SVG; engine stevenroman91/homotope-engine is MIT, npm @homotope/engine 0.2.0; the English page says SVG/PNG export needs no account, and production exports and Pro are separate. No workshop export and the npm package was not run); xuui (MIT local canvas to compare agent UI, with notes that can go back over MCP; README says alpha and Node 22.12+. Not installed, MCP not connected, variants not compared. Filed under cases, not agent-ui); screenshot-to-tokens (Apache-2.0; README says SAM 3.1 segments the UI and Muse Spark names tokens written back as CSS variables. Pipeline not run); amazing-posters (README says 4507 structured prompts; the LICENSE file says prompt text is CC BY 4.0 and excludes the images; GitHub’s SPDX is NOASSERTION. Not bulk-downloaded and not regenerated). Models: chatgpt-images-2-6 (safety card 2026-11-04: GIF, API SVG, Flare/Sunburst; the official X post says API image generation is about 50% faster. Not timed and not generated here. The openai.com index returned HTTP 403). All five previews are public images fitted to 1200×800 WebP; checks were HTTP and pages only. Relative to main: cases 215→219 (1.4.77→1.4.78), models 40→41 (1.1.30→1.1.31). HTML, Agent UI, and home picks unchanged. Did not merge still-open catalog-hold #138–#145. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
