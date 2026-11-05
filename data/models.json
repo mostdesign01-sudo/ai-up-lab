@@ -1,11 +1,103 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-05T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "chatgpt-images-2-6",
+      "slug": "chatgpt-images-2-6",
+      "name": "ChatGPT Images 2.6",
+      "vendor": "OpenAI",
+      "title": "ChatGPT Images 2.6（GIF + SVG / Flare·Sunburst）",
+      "titleEn": "ChatGPT Images 2.6 (GIF + SVG / Flare·Sunburst)",
+      "summary": "OpenAI 在 2026-11-04 推出 ChatGPT Images 2.6。部署安全卡写发布日为 November 4, 2026：Sunburst 与 Flare 改进编辑一致性、细节保留，以及对草图和图像批注的响应；Flare 面向更快生成；ChatGPT 和 API 都加入 GIF 与照片标注，API 另支持 SVG 输出。图像指南写 GPT Image 2.6 含 Sunburst（细致画面）和 Flare（快速迭代），两者都可通过 Image API 做复杂度控制、按标注编辑、SVG 和动画 GIF。指南里的 SVG 与 GIF 写在生成接口的 output_format 上，并写编辑接口不支持这两种输出。模型页分别把 Sunburst 说成详细构图与编辑，把 Flare 说成快速迭代，并指向同一套 SVG 与 GIF 说明。官方 X 帖写现在可以做 GIF 和参考图，并称两个新模型进 API 后生图约快 50%。The Verge 同日报道：可以用提示或上传的照片做 GIF，调节速度、改单帧；Images 2.6 面向全部 ChatGPT 与 Codex 用户，API 中的 Flare 与 Sunburst 分别对应更快和更高质量。社区公告复述了发布说明，并链到官方索引。本库没有在 ChatGPT 或 API 里生成 GIF 或 SVG。官方索引页 https://openai.com/index/introducing-images-2-6/ 本次返回 403，那一页的正文没有读到。",
+      "summaryEn": "OpenAI introduced ChatGPT Images 2.6 on 2026-11-04. The deployment safety card is dated November 4, 2026: Sunburst and Flare improve editing consistency, detail, and responses to sketches and image annotations; Flare is aimed at faster generation; GIF creation and photo markup are in both ChatGPT and the API, and SVG output is in the API. The image guide says GPT Image 2.6 includes Sunburst for detailed visual work and Flare for fast iteration, and that both support complexity control, markup-guided edits, SVG output, and animated GIF output through the Image API. In that guide, SVG and GIF are output_format values on the generations endpoint, and the edit endpoint does not support either. The model pages describe Sunburst as detailed composition and editing, and Flare as fast iteration, and point at the same SVG and GIF notes. The official X post says GIFs and reference images are available, and that two new models come to the API with about 50% faster image generation. The Verge the same day says a prompt or an uploaded photo can become a GIF, with speed and per-frame edits, that Images 2.6 is rolling out to all ChatGPT and Codex users, and that API Flare and Sunburst are the faster and higher-quality pair. The community announcement restates the release and links the official index. This library did not generate a GIF or an SVG in ChatGPT or the API. https://openai.com/index/introducing-images-2-6/ returned 403, so that page’s body was not read.",
+      "announcedAt": "2026-11-04",
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-05T01:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "部署安全卡：ChatGPT Images 2.6",
+          "labelEn": "Deployment safety card: ChatGPT Images 2.6",
+          "url": "https://deploymentsafety.openai.com/chatgpt-images-2-6/gif-risks-safeguards-and-evaluations",
+          "by": "OpenAI",
+          "date": "2026-11-04"
+        },
+        {
+          "kind": "official",
+          "label": "图像指南：GPT Image 2.6 的 SVG 与 GIF",
+          "labelEn": "Image guide: SVG and GIF on GPT Image 2.6",
+          "url": "https://developers.openai.com/api/docs/guides/image-generation",
+          "by": "OpenAI"
+        },
+        {
+          "kind": "official",
+          "label": "模型页：GPT-Image-2.6 Sunburst",
+          "labelEn": "Model page: GPT-Image-2.6 Sunburst",
+          "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-sunburst",
+          "by": "OpenAI"
+        },
+        {
+          "kind": "official",
+          "label": "模型页：GPT-Image-2.6 Flare",
+          "labelEn": "Model page: GPT-Image-2.6 Flare",
+          "url": "https://developers.openai.com/api/docs/models/gpt-image-2.6-flare",
+          "by": "OpenAI"
+        },
+        {
+          "kind": "official",
+          "label": "官方帖：Images, upgraded — ChatGPT Images 2.6",
+          "labelEn": "Official post: Images, upgraded — ChatGPT Images 2.6",
+          "url": "https://x.com/OpenAI/status/2118124944928432327",
+          "by": "OpenAI",
+          "date": "2026-11-04"
+        },
+        {
+          "kind": "community",
+          "label": "社区公告：Images, upgraded",
+          "labelEn": "Community announcement: Images, upgraded",
+          "url": "https://community.openai.com/t/images-upgraded-introducing-chatgpt-images-2-6/1412901",
+          "by": "OpenAI Community",
+          "date": "2026-11-04"
+        },
+        {
+          "kind": "community",
+          "label": "The Verge：ChatGPT 可做动画 GIF",
+          "labelEn": "The Verge: ChatGPT can make animated GIFs",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1026474/openai-chatgpt-animated-gifs-images-2-6",
+          "by": "The Verge",
+          "date": "2026-11-04"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "安全卡：ChatGPT 与 API 可做 GIF，并有照片标注；API 另支持 SVG。指南写 SVG 与 GIF 用生成接口的 output_format，编辑接口不支持这两种输出。",
+          "textEn": "Safety card: GIF creation and photo markup are in ChatGPT and the API; SVG output is in the API. The guide puts SVG and GIF on the generations endpoint’s output_format, and says the edit endpoint supports neither."
+        },
+        {
+          "text": "安全卡称 Sunburst 与 Flare 改进编辑一致性与细节，Flare 面向更快生成。模型页把 Sunburst 写成详细构图与编辑，把 Flare 写成快速迭代。",
+          "textEn": "The safety card says Sunburst and Flare improve edit consistency and detail, and that Flare is for faster generation. The model pages describe Sunburst as detailed composition and editing, and Flare as fast iteration."
+        },
+        {
+          "text": "官方 X 帖称两个新模型进 API 后生图约快 50%。这是厂商说法，本库没有计时。安全卡和图像指南正文没有这句百分比。",
+          "textEn": "The official X post says the two new API models make image generation about 50% faster. That is the vendor’s claim; this library did not time it. The safety card and the image guide do not state that percentage."
+        }
+      ],
+      "qualityNote": "GIF、SVG、Flare 与 Sunburst 的分工按安全卡、图像指南和模型页。约快 50% 只来自官方 X 帖，本库没有计时；官方索引页没有打开，所以这句没有在那一页核对。本库没有在 ChatGPT 或 API 里生成 GIF 或 SVG。",
+      "qualityNoteEn": "GIF, SVG, and the Flare / Sunburst split follow the safety card, the image guide, and the model pages. The roughly 50% faster line is only the official X post; this library did not time it, and the official index page did not open, so that sentence was not checked there. This library did not generate a GIF or an SVG in ChatGPT or the API.",
+      "verifyLog": "2026-11-05 早间（Asia/Shanghai）：https://openai.com/index/introducing-images-2-6/ HTTP 403。安全卡 https://deploymentsafety.openai.com/chatgpt-images-2-6/gif-risks-safeguards-and-evaluations HTTP 200，title「ChatGPT Images 2.6 System Card」，正文写 Published November 4, 2026；Sunburst/Flare、GIF 与 photo markup 在 ChatGPT 和 API、SVG output support in the API、Flare is optimized for faster generation。该页 og:image 指向 localhost，未用作预览。图像指南 https://developers.openai.com/api/docs/guides/image-generation HTTP 200，可见段落写 Sunburst for detailed visual work、Flare for fast iteration，两者支持 complexity、markup-guided edits、SVG output、animated GIF；output_format svg / gif 在 POST /v1/images/generations，编辑接口不支持。指南里另一处 50% 是 JPEG 压缩，不是速度。模型页 gpt-image-2.6-sunburst 与 gpt-image-2.6-flare HTTP 200，可见句分别为 detailed compositions / fast iteration，并指向 SVG 与 GIF。官方 X https://x.com/OpenAI/status/2118124944928432327 HTTP 200，页面标题含 “two new models are coming to the API with 50% faster image generation”；fxtwitter created Wed Nov 04 23:35:14 +0000 2026，likes 7436。社区话题 JSON HTTP 200（HTML 路径曾 429），title「Images, upgraded—introducing ChatGPT Images 2.6」，创建 2026-11-04T23:49:58.998Z，作者 VeitB（staff / Community-Moderators），正文同样写 50% faster，并链官方索引与两个模型页。The Verge HTTP 200，article:published_time 2026-11-04T18:00:00+00:00，作者 Emma Roth；正文写 GIF、调速、改单帧，以及面向全部 ChatGPT 与 Codex，API 的 Flare / Sunburst。预览取社区公告配图 https://us1.discourse-cdn.com/openai1/original/4X/c/5/a/c5a276fdf28c2daa48c85c31963ddb99902aaa8a.jpeg （1280×720，画面字 Introducing GPT-Image-2.6、Sunburst、Flare），装进 1200×800 WebP。未登录 ChatGPT，未调用 API，未生成 GIF/SVG。",
+      "verifyLogEn": "2026-11-05 morning (Asia/Shanghai): https://openai.com/index/introducing-images-2-6/ HTTP 403. Safety card HTTP 200, title “ChatGPT Images 2.6 System Card”, body says Published November 4, 2026; Sunburst/Flare, GIF and photo markup in ChatGPT and the API, SVG output in the API, Flare optimized for faster generation. Its og:image pointed at localhost and was not used. Image guide HTTP 200: Sunburst for detailed visual work, Flare for fast iteration, both with complexity, markup-guided edits, SVG, and animated GIF; output_format svg/gif on POST /v1/images/generations; edit endpoint supports neither. A separate “50%” on that page is JPEG compression, not speed. Model pages for gpt-image-2.6-sunburst and gpt-image-2.6-flare HTTP 200, with the visible lines detailed compositions / fast iteration, pointing at SVG and GIF. Official X HTTP 200; the page title includes “two new models are coming to the API with 50% faster image generation”; fxtwitter created Wed Nov 04 23:35:14 +0000 2026, 7436 likes. Community topic JSON HTTP 200 (the HTML path returned 429), title “Images, upgraded—introducing ChatGPT Images 2.6”, created 2026-11-04T23:49:58.998Z, author VeitB (staff / Community-Moderators), same 50% line, linking the official index and both model pages. The Verge HTTP 200, article:published_time 2026-11-04T18:00:00+00:00, Emma Roth; body covers GIFs, speed, per-frame edits, rollout to all ChatGPT and Codex users, and API Flare / Sunburst. Preview is the community announcement image https://us1.discourse-cdn.com/openai1/original/4X/c/5/a/c5a276fdf28c2daa48c85c31963ddb99902aaa8a.jpeg (1280×720, on-image text Introducing GPT-Image-2.6, Sunburst, Flare), fitted to a 1200×800 WebP. Not signed in to ChatGPT, API not called, no GIF or SVG generated.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/chatgpt-images-2-6.webp",
+      "previewCredit": "OpenAI 社区公告中的 Introducing GPT-Image-2.6 静帧（旁注 Sunburst / Flare）",
+      "previewCreditEn": "Still from the OpenAI community announcement: Introducing GPT-Image-2.6 (Sunburst / Flare labeled beside it)",
+      "featured": false
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
