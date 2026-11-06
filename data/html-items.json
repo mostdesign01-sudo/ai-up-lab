@@ -1,6 +1,71 @@
 {
   "items": [
     {
+      "id": "pixel-cabinet",
+      "slug": "pixel-cabinet",
+      "title": "Cabinet of Distilled Pixels：一组可点开的小像素展品",
+      "titleEn": "Cabinet of Distilled Pixels: tiny pixel exhibits you can click through",
+      "hook": "蒸馏像素陈列柜：一组可点开的小像素展品。",
+      "hookEn": "A cabinet of distilled pixels—tiny exhibits you can click through.",
+      "summary": "Cabinet of Distilled Pixels（https://cjauvin.github.io/pixel-cabinet/）把经典街机规则蒸成同一张小格子：你控制什么、什么在追你、你要够到什么，都用五种颜色表示——玩家、威胁、奖励、物件、墙。打开后的页面分成 Origins、Golden age、Afterlives 三段，计数分别是 10、15、5。页首写这些格子用来一眼看懂 Pong 怎样长成 Breakout，或 Pac-Man 和 Bomberman 有什么共同点。灵感来自 Rikiya Takehi、Jayden Teoh、Alex Zhang 和 Omar Khattab（MIT CSAIL，2026）的文章 Sparks of Weight-Space Programming：文中为了试一个想法，做了 Breakout、Pong、Pac-Man、Freeway 的小格子，这一页把那些格子扩成可点开的展品。适合想看玩法骨架、或给像素和游戏原型找参照的人。不是 AI 生成工具。本库打开了陈列页，没有点开展品，也没有把整柜玩完。",
+      "summaryEn": "Cabinet of Distilled Pixels (https://cjauvin.github.io/pixel-cabinet/) boils classic arcade rules down to one small grid: what you control, what is out to get you, and what you are trying to reach, drawn in five colors — agent, threat, reward, object, and wall. The opened page splits into Origins, Golden age, and Afterlives, counted 10, 15, and 5. The intro says the grids show at a glance how Pong grew into Breakout, or what Pac-Man and Bomberman share. The idea comes from Sparks of Weight-Space Programming by Rikiya Takehi, Jayden Teoh, Alex Zhang, and Omar Khattab (MIT CSAIL, 2026): to test one idea, that post built tiny grids of Breakout, Pong, Pac-Man, and Freeway, and this page runs with those grids as exhibits you can open. Good when you want the skeleton of a mechanic, or a reference for pixel and game prototypes. It is not an AI generator. This library opened the cabinet page, did not open an exhibit, and did not play through the set.",
+      "sourceUrl": "https://cjauvin.github.io/pixel-cabinet/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50386559"
+      ],
+      "previewImage": "/previews/pixel-cabinet.webp",
+      "types": [
+        "interactive"
+      ],
+      "tags": [
+        "pixel",
+        "arcade",
+        "simulation",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06T01:40:00Z",
+      "qualityNote": "收录理由：同一套五色格子把街机规则摊开比较，适合做像素和玩法原型的视觉参照。边界：不是 AI 生成工具，玩法是抽象规则，不是原作复刻。本库只打开了陈列页，没有点开展品，也没有逐个玩完。",
+      "qualityNoteEn": "Why listed: one five-color grid for comparing arcade rules, a visual reference for pixel and mechanic prototypes. Limits: not an AI generator, and the pieces are abstract rules rather than remakes of the original games. This library only opened the cabinet page, did not open an exhibit, and did not play through them.",
+      "verifyLog": "2026-11-06 早间（Asia/Shanghai）：https://cjauvin.github.io/pixel-cabinet/ HTTP 200，title “Cabinet of Distilled Pixels”。无头 Chrome 打开后可见三段计数 ORIGINS 10、GOLDEN AGE 15、AFTERLIVES 5，图例 Agent / Threat / Reward / Object / Wall，以及 No. 01 Orbital duel、No. 02 Paddle duel 的卡片；另有 Pause 与 1×。公开脚本 engine.js 与 sims/*.js 用 add() 登记 30 条（1962 Orbital duel 到 2021 Auto-attack survival），与页面计数 10+15+5 一致。页内链到 https://rikiyat.github.io/blog/weight-space-programming/ 。未见许可证声明。Show HN https://news.ycombinator.com/item?id=50386559（cjauvin，2026-11-06T00:27:03Z，Algolia 3pts，标题 Show HN: Cabinet of Distilled Pixels）。预览为该次打开的首屏 1200×800，sharp 存 WebP。没有点开展品，没有改速度，没有完整游玩。",
+      "verifyLogEn": "2026-11-06 morning (Asia/Shanghai): https://cjauvin.github.io/pixel-cabinet/ HTTP 200, title “Cabinet of Distilled Pixels”. Headless Chrome showed section counts ORIGINS 10, GOLDEN AGE 15, AFTERLIVES 5, the Agent / Threat / Reward / Object / Wall legend, and cards No. 01 Orbital duel and No. 02 Paddle duel, plus Pause and 1×. Public scripts engine.js and sims/*.js register 30 add() exhibits (1962 Orbital duel through 2021 auto-attack survival), matching the 10+15+5 counts. The page links to https://rikiyat.github.io/blog/weight-space-programming/ . No license statement was on the page. Show HN https://news.ycombinator.com/item?id=50386559 (cjauvin, 2026-11-06T00:27:03Z, 3pts on Algolia). Preview is that first screen at 1200×800, saved with sharp as WebP. Exhibits were not opened, speed was not changed, and the cabinet was not played through."
+    },
+    {
+      "id": "la-wildfire-webgpu",
+      "slug": "la-wildfire-webgpu",
+      "title": "LA Wildfire WebGPU：在浏览器里回放三场洛杉矶山火",
+      "titleEn": "LA Wildfire WebGPU: three Los Angeles wildfires replayed in the browser",
+      "hook": "浏览器里用 WebGPU 回放三场洛杉矶山火蔓延。",
+      "hookEn": "Three LA wildfires replayed in the browser with WebGPU.",
+      "summary": "这是一个在浏览器里用 WebGPU 回放山火蔓延的演示（https://mattduran.dev/firedemo/fire/woolsey-2018）。页面说明写可以按真实起点看 Eaton、Palisades 和 Woolsey 三场洛杉矶山火，也可以在地图上自己点一把火并改风；它同时写明这是对过去火灾的研究，不是预报。随页界面文案还写不要拿它决定是否撤离，烧掉的建筑表示模型里的火到过哪里，不是预测损失，并且城镇在这个模型里不会燃烧。地图注明数据来自 OpenStreetMap。适合想在网页里看火灾蔓延，或参考 WebGPU 地图模拟的人。本库只打开了 Woolsey 这一页，没有等整场模拟跑完，也没有切换到另外两场火。",
+      "summaryEn": "A browser demo that replays wildfire spread with WebGPU (https://mattduran.dev/firedemo/fire/woolsey-2018). The page description says you can run the Eaton, Palisades, and Woolsey fires from their real starts, or start your own fire on the map and change the wind, and that this is a study of past fires, not a forecast. The interface copy also says not to use it to decide whether to evacuate, that burned-out buildings show where the model’s fire reached rather than predicted losses, and that towns do not burn in this model. The map credits OpenStreetMap. Good when you want wildfire spread in a web page, or a reference for a WebGPU map simulation. This library only opened the Woolsey page, did not wait for a full run, and did not switch to the other two fires.",
+      "sourceUrl": "https://mattduran.dev/firedemo/fire/woolsey-2018",
+      "secondaryUrls": [
+        "https://mattduran.dev/firedemo/",
+        "https://news.ycombinator.com/item?id=50385092"
+      ],
+      "previewImage": "/previews/la-wildfire-webgpu.webp",
+      "types": [
+        "interactive",
+        "demo"
+      ],
+      "tags": [
+        "webgpu",
+        "map",
+        "simulation",
+        "wildfire",
+        "show-hn"
+      ],
+      "featured": false,
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06T01:40:00Z",
+      "qualityNote": "收录理由：用 WebGPU 在浏览器里回放山火蔓延，是可打开的地图可视化。边界：页面写明这是对过去火灾的研究，不是预报，不要用来决定是否撤离。本库只打开了 Woolsey 页，没有等模拟跑完，也没有切换另外两场火。",
+      "qualityNoteEn": "Why listed: wildfire spread replayed in the browser with WebGPU, as a map you can open. Limits: the page says this is a study of past fires, not a forecast, and not something to use when deciding whether to evacuate. This library only opened the Woolsey page, did not wait for a full run, and did not switch to the other two fires.",
+      "verifyLog": "2026-11-06 早间（Asia/Shanghai）：https://mattduran.dev/firedemo/fire/woolsey-2018 与 https://mattduran.dev/firedemo/ 均为 HTTP 200，同一份 SPA 壳。meta description：“A wildfire model running live on your GPU. Run the Eaton, Palisades and Woolsey fires from their real starts, or start your own and change the wind. A study of past fires, not a forecast.” HTML 另有 robots noindex。打包脚本 index-BslGGTef.js 中的 fire-note 写 “A study of a past fire, not a forecast. Don't use it to decide whether to evacuate.” 以及 “Towns don't burn in this model.” 无头 Chrome（swiftshader，--enable-unsafe-webgpu）打开 Woolsey 地址后，面板标题是 Woolsey fire，下拉当前为 Woolsey fire，可见 “Towns don't burn in this model.” 与 Data credits © OpenStreetMap；地图没有画出来。日志为 SharedImage / WebGPUSwapBufferProvider 创建失败，以及 GpuControl.CreateCommandBuffer 失败。没有等模拟跑完，没有点开下拉，没有切换 Eaton 或 Palisades。Show HN 以 Algolia objectID 50385092 为准（duranduran，2026-11-05T22:00:45Z，3pts，标题 Show HN: Simulating three LA wildfires in the browser with WebGPU，url 即 Woolsey 页）。预览为该次 Woolsey 画面 1200×800，sharp 存 WebP。",
+      "verifyLogEn": "2026-11-06 morning (Asia/Shanghai): https://mattduran.dev/firedemo/fire/woolsey-2018 and https://mattduran.dev/firedemo/ both HTTP 200, the same SPA shell. Meta description: “A wildfire model running live on your GPU. Run the Eaton, Palisades and Woolsey fires from their real starts, or start your own and change the wind. A study of past fires, not a forecast.” The HTML also sets robots noindex. Bundled index-BslGGTef.js fire-note text includes “A study of a past fire, not a forecast. Don't use it to decide whether to evacuate.” and “Towns don't burn in this model.” Headless Chrome (swiftshader, --enable-unsafe-webgpu) opened the Woolsey URL: the panel title was Woolsey fire, the dropdown showed Woolsey fire, and “Towns don't burn in this model.” plus Data credits © OpenStreetMap were visible; the map did not draw. Logs were SharedImage / WebGPUSwapBufferProvider creation failure and GpuControl.CreateCommandBuffer failure. The run was not waited out, the dropdown was not opened, and Eaton and Palisades were not switched to. Show HN is Algolia objectID 50385092 (duranduran, 2026-11-05T22:00:45Z, 3pts, title Show HN: Simulating three LA wildfires in the browser with WebGPU, url is the Woolsey page). Preview is that Woolsey frame at 1200×800, saved with sharp as WebP."
+    },
+    {
       "id": "pure-particles",
       "slug": "pure-particles",
       "title": "Pure Particles：玻璃方盒里的粒子烟雾，可嵌入首屏、导出 4K 与无缝循环",
@@ -5541,9 +5606,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-29T12:30:00Z",
+    "updatedAt": "2026-11-06T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.3.80",
-    "count": 164
+    "version": "1.3.81",
+    "count": 166
   }
 }
