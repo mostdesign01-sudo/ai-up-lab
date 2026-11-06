@@ -1,6 +1,137 @@
 {
   "cases": [
     {
+      "id": "chorono",
+      "slug": "chorono",
+      "title": "Chorono：开源 2D 动画面板，Claude/Codex 经 MCP 起稿后仍可改图层与关键帧",
+      "titleEn": "Chorono: open-source 2D animation editor — agents draft via MCP, you still edit layers and keyframes",
+      "kind": "tool",
+      "hook": "助手经 MCP 起稿，你仍能改图层和关键帧。",
+      "hookEn": "Agents draft via MCP; you still edit layers and keyframes.",
+      "summary": "Chorono（https://www.chorono.com/ ，仓库 https://github.com/codie1982/chorono-editor ，MIT）是本机优先的开源 2D 动画和动态编辑器。浏览器里做时间轴、关键帧和粒子；也可以把 Claude Code 或 Codex 经 MCP 接上，让助手创建、检查并保存仍能继续改的项目。README 的安装要求 Node.js 20+、npm 和 Git：克隆后 `npm ci`、`npm run cli:build`，再 `npm run chorono -- setup` 与 `npm run chorono -- start`。setup 会装上两个自带 skill：`chorono-setup`（安装、启动、配置 MCP）和 `chorono`（改场景、关键帧和时间轴，检查预览并保存）。这条本地 MCP 流程按 README 不需要模型厂商的 API key。官网另有 npm 播放器 `@chorono/runtime`（登记版本 0.1.0，MIT）。Android 示例三处对不上：官网写 `com.chorono:chorono-android:1.0.0`，编辑器 README 写 `io.chorono:chorono-android:1.0.0`，官网链接的 https://github.com/codie1982/chorono-android-sdk 在 gradle 里发布成 `com.grntsoftware:chorono-android-sdk:1.0.0`（Apache-2.0，注释写核心以编译好的 .so 随包）。README 把 WebGL2 粒子渲染写在主文档里，并写没有 WebGL 时退回 Canvas 2D。Show HN：https://news.ycombinator.com/item?id=50391301 。适合想让编程助手起一版可编辑动画、自己再改图层和关键帧的人。本库没有克隆或安装编辑器，没有连接 MCP，没有导出场景，也没有在应用里跑 runtime。",
+      "summaryEn": "Chorono (https://www.chorono.com/ , repo https://github.com/codie1982/chorono-editor , MIT) is a local-first open-source 2D animation and motion editor. The browser editor has timelines, keyframes, and particles; Claude Code or Codex can also connect over MCP to create, inspect, and save projects you can keep editing. The README install needs Node.js 20+, npm, and Git: after clone, `npm ci`, `npm run cli:build`, then `npm run chorono -- setup` and `npm run chorono -- start`. Setup installs two bundled skills: `chorono-setup` (install, start, configure MCP) and `chorono` (edit scenes, keyframes, and timelines, inspect previews, and save). The README says this local MCP path needs no model-provider API key. The site also lists the npm player `@chorono/runtime` (registry version 0.1.0, MIT). The Android examples disagree: the site shows `com.chorono:chorono-android:1.0.0`, the editor README shows `io.chorono:chorono-android:1.0.0`, and the linked repo https://github.com/codie1982/chorono-android-sdk publishes `com.grntsoftware:chorono-android-sdk:1.0.0` in gradle (Apache-2.0; a comment says the core ships as a compiled .so). The README documents a WebGL2 particle renderer and a Canvas 2D fallback when WebGL is unavailable. Show HN: https://news.ycombinator.com/item?id=50391301 . Useful when you want an agent to draft an editable animation and then change layers and keyframes yourself. This library did not clone or install the editor, did not connect MCP, did not export a scene, and did not run the runtime in an app.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI motion editor",
+      "sourceUrl": "https://www.chorono.com/",
+      "secondaryUrls": [
+        "https://github.com/codie1982/chorono-editor",
+        "https://news.ycombinator.com/item?id=50391301"
+      ],
+      "previewImage": "/previews/chorono.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "setup 会改本机的 MCP 客户端配置并写入动画项目。放进正式仓库前自己看图层和关键帧。本库没有代为安装或导出。",
+      "approvalBoundaryEn": "Setup writes MCP client settings and animation projects on your machine. Review layers and keyframes before they land in a production repo. This library did not install or export for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "MCP",
+        "Node.js"
+      ],
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06T12:25:00Z",
+      "qualityNote": "收录理由：开源、本机优先的 2D 动画面板，助手经 MCP 起稿之后人还能改图层和关键帧，贴合 AI×设计。边界：仓库还很新；Android 示例在官网、编辑器 README 和 android-sdk 仓库里的坐标不一致，核心还被注释成随包的编译库，不要当成和编辑器一样的 MIT 源码。本库没有克隆或安装编辑器，没有连接 MCP，没有导出场景，也没有在应用里跑 runtime。",
+      "qualityNoteEn": "Why listed: a local-first open-source 2D animation editor where an agent drafts over MCP and a person still edits layers and keyframes — a direct AI×design fit. Limits: the repo is very new, and the Android coordinates on the site, in the editor README, and in the android-sdk repo do not match; a gradle comment says the core ships compiled, so do not treat it as MIT source like the editor. This library did not clone or install the editor, did not connect MCP, did not export a scene, and did not run the runtime in an app.",
+      "verifyLog": "2026-11-06 晚间（Asia/Shanghai）：https://www.chorono.com/ curl GET 200，首屏写 Create editable 2D animations，徽标 Free and open-source，并写 timelines, keyframes and particles，以及 connect Claude or Codex through MCP。右上 GitHub 徽标显示 1。gh api repos/codie1982/chorono-editor：license MIT，stargazers_count 1，forks 0，created 2026-05-23T09:17:27Z，pushed 2026-11-05T08:08:40Z，homepage https://www.chorono.com/ 。LICENSE 为 MIT，Copyright (c) 2025 Chorono Contributors。README 主分支写 Node.js 20+，命令为 npm ci、npm run cli:build、npm run chorono -- setup、npm run chorono -- start；skill 表为 chorono-setup 与 chorono；WebGL2 小节标题仍写 feature/gpu-particle-renderer-v1，并写 Automatic CPU fallback 到 Canvas 2D（性能表是 README 自述的 Apple M2 测量，本库未复跑）。npm registry @chorono/runtime latest 0.1.0，license MIT。官网 Android 片段为 com.chorono:chorono-android:1.0.0，并链到 codie1982/chorono-android-sdk；编辑器 README 示例为 io.chorono:chorono-android:1.0.0。该仓库 gh api license Apache-2.0，stars 0，pushed 2026-05-23T09:17:16Z；chorono-sdk/build.gradle.kts coordinates 为 com.grntsoftware:chorono-android-sdk:1.0.0，注释写核心 chorono-core 闭源、以编译 .so 放进 AAR。HN item 50391301，作者 tinnten，time 2026-11-06T11:56:56Z，抓取时 score 1，链接仓库。预览为无头 Chrome 实拍官网首屏，裁成 1200×800 WebP；画面是营销页上的时间轴示意（Chorono Preview / timeline.runtime），不是本库连上的 MCP 会话。本库未克隆、未 npm install 编辑器、未接 MCP、未导出场景、未跑 runtime、未装 Android SDK。",
+      "verifyLogEn": "2026-11-06 evening (Asia/Shanghai): https://www.chorono.com/ curl GET 200; hero says Create editable 2D animations, Free and open-source, timelines/keyframes/particles, and connect Claude or Codex through MCP. The GitHub badge on the page showed 1. gh api repos/codie1982/chorono-editor: MIT, stargazers_count 1, forks 0, created 2026-05-23T09:17:27Z, pushed 2026-11-05T08:08:40Z, homepage https://www.chorono.com/ . LICENSE is MIT, Copyright (c) 2025 Chorono Contributors. README on main: Node.js 20+, npm ci, npm run cli:build, npm run chorono -- setup, npm run chorono -- start; skills chorono-setup and chorono; the WebGL2 section is still titled feature/gpu-particle-renderer-v1 and says Automatic CPU fallback to Canvas 2D (the Apple M2 table is the README's own measurement and was not re-run). npm registry @chorono/runtime latest 0.1.0, MIT. The site's Android snippet is com.chorono:chorono-android:1.0.0 and links codie1982/chorono-android-sdk; the editor README sample is io.chorono:chorono-android:1.0.0. That repo's gh api license is Apache-2.0, stars 0, pushed 2026-05-23T09:17:16Z; chorono-sdk/build.gradle.kts coordinates are com.grntsoftware:chorono-android-sdk:1.0.0, and a comment says chorono-core is closed and shipped as a compiled .so inside the AAR. HN item 50391301 by tinnten at 2026-11-06T11:56:56Z, score 1 at fetch, URL is the repo. Preview is a headless Chrome capture of the marketing hero, cropped to 1200×800 WebP; the timeline is the page's Chorono Preview / timeline.runtime mock, not an MCP session this library connected. Did not clone, npm-install the editor, connect MCP, export a scene, run the runtime, or install the Android SDK."
+    },
+    {
+      "id": "purist",
+      "slug": "purist",
+      "title": "Purist：图层即真 HTML/CSS 的设计画布，编程助手经 MCP 同文档起稿",
+      "titleEn": "Purist: a design canvas whose layers are real HTML/CSS, drafted by agents over MCP in the same document",
+      "kind": "tool",
+      "hook": "图层是真 HTML，助手经 MCP 在同一份稿上起稿。",
+      "hookEn": "Layers are real HTML; agents draft the same document over MCP.",
+      "summary": "Purist（https://purist.design/ ）是商业设计画布。文档写每一层都是真实 HTML 元素加内联 CSS，不是自有场景图里的形状，悬停就是 CSS transition。桌面应用和浏览器版共用同一套画布，`purist.design/s/…` 打开的文档和 App 里是同一份节点、样式和历史。本地 MCP 用 `~/.purist/bin/purist mcp`；只收地址的助手在应用开着时可以用 http://127.0.0.1:29980/mcp 。文档列出的工具包括 write_html、update_styles、get_screenshot、get_jsx，以及 browser_open、browser_read、browser_act、browser_capture 等 browser_* ，助手可以先看真实网站，再把区块放进同一份稿。Branden Chong 2026-11-02 的博客介绍 Purist browser；公开更新日志从 2026-08-16 写到 2026-11-05，桌面版说明指向 Mac，浏览器版在 purist.design/app。定价页写设计和协作免费，生成用积分：Free 为 0 美元并写每周 300 次 MCP 工具调用，Pro 为每月 20 美元、每月 2000 积分且 MCP 不限次，Teams 另询。它和库里已有的 Kalka 不是同一个产品：Kalka 是 MIT 开源画布，Purist 没有把编辑器以 MIT 公开。本库没有下载或安装桌面应用，没有连接 MCP，没有打开共享画板，也没有用内置浏览器把网页带进文件。",
+      "summaryEn": "Purist (https://purist.design/ ) is a commercial design canvas. The docs say every layer is a real HTML element with inline CSS, not a shape in a private scene graph, and a hover is a CSS transition. The desktop app and the browser build share one canvas: a document opened at `purist.design/s/…` is the same nodes, styles, and history as in the app. Local MCP is `~/.purist/bin/purist mcp`; an agent that only accepts an address can use http://127.0.0.1:29980/mcp while the app is open. Documented tools include write_html, update_styles, get_screenshot, get_jsx, and browser_* tools such as browser_open, browser_read, browser_act, and browser_capture, so an agent can look at a real site and then place a section in the same file. Branden Chong's 2026-11-02 post introduces Purist browser; the public changelog runs from 2026-08-16 through 2026-11-05, the desktop notes point at the Mac app, and the browser build is at purist.design/app. The pricing page says designing and collaborating are free and generation spends credits: Free is $0 with 300 MCP tool calls a week, Pro is $20 per month with 2,000 credits a month and unlimited MCP calls, and Teams is custom. It is not the Kalka entry already in this library: Kalka is an MIT open-source canvas, and Purist does not publish the editor under MIT. This library did not download or install the desktop app, did not connect MCP, did not open a shared board, and did not use the in-app browser to bring a page into a file.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Agent design canvas",
+      "sourceUrl": "https://purist.design/",
+      "secondaryUrls": [
+        "https://purist.design/docs/what-is-purist",
+        "https://purist.design/docs/mcp",
+        "https://purist.design/blog/purist-browser",
+        "https://purist.design/docs/browser"
+      ],
+      "previewImage": "/previews/purist.webp",
+      "sourceType": "official-docs",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手能改画布，也能把真实网页带进文件；生成图片或视频会消耗积分。对外分享前自己看一遍。本库没有代为安装或连接。",
+      "approvalBoundaryEn": "An agent can edit the canvas and bring a live page into the file; image and video generation spends credits. Review before you share it. This library did not install or connect for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-06T12:25:00Z",
+      "qualityNote": "收录理由：图层就是真 HTML/CSS，编程助手经本地 MCP 在同一份文档里起稿，还能用内置浏览器看真实网站，是 AI×设计画布。边界：商业产品，设计和协作免费，生成按积分计费；桌面说明指向 Mac。它不是库里已有的 Kalka，那边是 MIT 开源画布，这边没有把编辑器以 MIT 公开。本库没有下载或安装桌面应用，没有连接 MCP，没有打开共享画板，也没有用内置浏览器把网页带进文件。",
+      "qualityNoteEn": "Why listed: layers are real HTML/CSS, coding agents draft in the same document over a local MCP server, and an in-app browser lets them look at real sites — an AI×design canvas. Limits: it is a commercial product, design and collaboration are free, and generation spends credits; the desktop notes point at Mac. It is not the Kalka entry already listed, which is an MIT open-source canvas; Purist does not publish the editor under MIT. This library did not download or install the desktop app, did not connect MCP, did not open a shared board, and did not use the in-app browser to bring a page into a file.",
+      "verifyLog": "2026-11-06 晚间（Asia/Shanghai）：https://purist.design/ 、/docs/what-is-purist 、/docs/mcp 、/docs/browser 、/blog/purist-browser 、/pricing 、/changelog curl GET 均为 200。what-is-purist 写 real HTML elements and real inline CSS，desktop app 与 browser build 共用同一 canvas，purist.design/s/ 与 App 是同一份文档。MCP 文档写 ~/.purist/bin/purist mcp，以及应用开着时 http://127.0.0.1:29980/mcp ；工具表含 write_html、update_styles、get_screenshot、get_jsx，并写完整工具集比该表更长。browser 文档列出 browser_open、browser_read、browser_act、browser_capture、browser_code、browser_screenshot、browser_record、browser_images、browser_size、browser_ask。博客标题 Purist browser，署名 Branden Chong，日期 Nov 2, 2026。changelog 可见条目从 August 16, 2026（Files in the cloud）到 November 5, 2026（GPT Image 2.6），November 2, 2026 为 Purist browser and a new Library；September 25, 2026 写 purist.design/app。定价：Free $0、300/week MCP tool calls；Pro $20 per month、2,000 credits a month、Unlimited MCP tool calls；Teams Custom。未找到 MIT 许可或公开编辑器仓库。首页在无头 Chrome 里长时间不完成导航，预览改为博文首屏实拍 1200×800 WebP；图中是博文里的产品界面（内置浏览器打开 stripe.com 并标 LAYERS），不是本库连接的 MCP，也不是本库打开的画板。本库未下载桌面版、未执行 purist mcp、未登录、未开共享文件、未用 browser_* 。",
+      "verifyLogEn": "2026-11-06 evening (Asia/Shanghai): curl GET 200 for https://purist.design/ , /docs/what-is-purist , /docs/mcp , /docs/browser , /blog/purist-browser , /pricing , and /changelog. what-is-purist says real HTML elements and real inline CSS, and that the desktop app and browser build share one canvas, including purist.design/s/ . The MCP doc says ~/.purist/bin/purist mcp and http://127.0.0.1:29980/mcp while the app is open; the tool table includes write_html, update_styles, get_screenshot, and get_jsx, and says the full set is longer. The browser doc lists browser_open, browser_read, browser_act, browser_capture, browser_code, browser_screenshot, browser_record, browser_images, browser_size, and browser_ask. The blog is titled Purist browser, by Branden Chong, dated Nov 2, 2026. Visible changelog entries run from August 16, 2026 (Files in the cloud) through November 5, 2026 (GPT Image 2.6); November 2, 2026 is Purist browser and a new Library; September 25, 2026 mentions purist.design/app. Pricing: Free $0 and 300/week MCP tool calls; Pro $20 per month, 2,000 credits a month, unlimited MCP tool calls; Teams custom. No MIT license or public editor repo was found. The homepage never finished navigating in headless Chrome, so the preview is a 1200×800 WebP of the blog hero; the picture is the post's product UI (in-app browser on stripe.com, marked LAYERS), not an MCP session this library connected and not a board this library opened. Did not download the desktop app, run purist mcp, sign in, open a shared file, or call browser_* ."
+    },
+    {
+      "id": "pixel-buddy",
+      "slug": "pixel-buddy",
+      "title": "Pixel Buddy：给 Claude Code 的像素宠物，写代码掉零食升级拿奖杯",
+      "titleEn": "Pixel Buddy: a pixel pet for Claude Code that eats your work drops, levels up, and earns trophies",
+      "kind": "tool",
+      "hook": "写代码掉零食，页脚像素宠物升级、拿奖杯。",
+      "hookEn": "A footer pixel pet eats your work drops, levels up, and earns trophies.",
+      "summary": "Pixel Buddy（https://github.com/SimakovIgor/pixel-buddy ，MIT，作者 Igor Simakov）是 Claude Code 的像素宠物插件。它待在页脚状态栏旁边：回答掉饼干，测试变绿掉鱼，提交或做完计划掉蛋糕，宠物走过去吃掉，经验够了升级，少见的工作时刻换成奖杯。README 写八种物种（猫、鸭、幽灵、章鱼、六角恐龙、机器人、忍者、企鹅），孵出来的每一只都留在本机的 nest 里，并写没有东西离开这台机器。安装需要 Claude Code 2.1.318 或更新，在提示符执行 `/plugin install pixel-buddy --marketplace SimakovIgor/pixel-buddy`，选 user scope 后每个会话都会孵。页脚要终端够宽（README 写 130 列）并支持鼠标。最新发布是 0.10.0（2026-11-06）。Show HN：https://news.ycombinator.com/item?id=50389351 。适合想在写代码时养一只只留在本机的像素宠物的人。本库没有安装插件，没有孵宠物，也没有在 Claude Code 里跑过。",
+      "summaryEn": "Pixel Buddy (https://github.com/SimakovIgor/pixel-buddy , MIT, by Igor Simakov) is a pixel-pet plugin for Claude Code. It sits in the footer beside the status line: an answer drops a cookie, green tests drop a fish, a commit or a finished plan drops a cake, the pet walks over and eats it, xp levels it up, and rare moments of the work become trophies. The README lists eight species (cat, duck, ghost, octopus, axolotl, robot, ninja, penguin), says every buddy you hatch stays in a local nest, and says nothing leaves the machine. Install needs Claude Code 2.1.318 or later and `/plugin install pixel-buddy --marketplace SimakovIgor/pixel-buddy` at the prompt; user scope hatches it in every session. The footer wants a wide terminal (the README says 130 columns) and a mouse. The latest release is 0.10.0 (2026-11-06). Show HN: https://news.ycombinator.com/item?id=50389351 . Useful when you want a pixel pet that stays on your machine while you code. This library did not install the plugin, did not hatch a buddy, and did not run it in Claude Code.",
+      "categories": [
+        "coding",
+        "skills"
+      ],
+      "role": "Claude Code plugin",
+      "sourceUrl": "https://github.com/SimakovIgor/pixel-buddy",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50389351"
+      ],
+      "previewImage": "/previews/pixel-buddy.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "插件会挂进 Claude Code 会话。安装前自己看钩子在读什么。本库没有代为安装。",
+      "approvalBoundaryEn": "The plugin attaches to Claude Code sessions. Read what the hooks observe before you install it. This library did not install it for you.",
+      "connectors": [
+        "Claude Code"
+      ],
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-06T12:25:00Z",
+      "qualityNote": "收录理由：Claude Code 插件，把写代码时的回答、测试和提交变成页脚像素宠物的零食、升级和奖杯，宠物留在本机。边界：它以 marketplace 插件安装，不是一份单独的设计技能文档；README 写数据不出本机，本库没有安装，也没有顺着钩子核对网络请求。本库没有安装插件，没有孵宠物，也没有在 Claude Code 里跑过。",
+      "qualityNoteEn": "Why listed: a Claude Code plugin that turns answers, tests, and commits into snacks, levels, and trophies for a footer pixel pet that stays on the machine. Limits: it installs as a marketplace plugin, not as a standalone design-skill document; the README says nothing leaves the machine, and this library did not install it or trace the hooks for network calls. This library did not install the plugin, did not hatch a buddy, and did not run it in Claude Code.",
+      "verifyLog": "2026-11-06 晚间（Asia/Shanghai）：https://github.com/SimakovIgor/pixel-buddy curl GET 200。gh api：license MIT，stargazers_count 3，forks 0，created 2026-11-04T17:29:59Z，pushed 2026-11-06T10:29:08Z，description 写 footer、eats what your work drops、levels up、rare trophies。releases：v0.10.0 发布于 2026-11-06T10:29:08Z（Pixel Buddy 0.10.0），同日还有 v0.9.1（2026-11-06T06:34:25Z）。README 与 pixel-buddy/README.md 写 Claude Code 2.1.318+、`/plugin install pixel-buddy --marketplace SimakovIgor/pixel-buddy`、user scope、130 列、八种物种、nest、nothing leaves your machine；卸载说明写宠物文件留在 ~/.claude/plugins/store。marketplace.json name simakovigor，owner Igor Simakov，plugin pixel-buddy。hooks.json 只列 ./register.tsx。HN item 50389351，作者 igorsimakov，time 2026-11-06T07:44:56Z，抓取时 score 2。预览为无头 Chrome 实拍 GitHub README，滚到 feed.gif（终端页脚里的像素宠物），裁成 1200×800 WebP；不是本库在 Claude Code 里跑出来的会话。本库未安装插件、未孵化、未跑 claude。",
+      "verifyLogEn": "2026-11-06 evening (Asia/Shanghai): https://github.com/SimakovIgor/pixel-buddy curl GET 200. gh api: MIT, stargazers_count 3, forks 0, created 2026-11-04T17:29:59Z, pushed 2026-11-06T10:29:08Z; the description says footer, eats what your work drops, levels up, rare trophies. Releases: v0.10.0 published 2026-11-06T10:29:08Z (Pixel Buddy 0.10.0); v0.9.1 the same day at 2026-11-06T06:34:25Z. README and pixel-buddy/README.md: Claude Code 2.1.318+, `/plugin install pixel-buddy --marketplace SimakovIgor/pixel-buddy`, user scope, 130 columns, eight species, a nest, nothing leaves your machine; the uninstall note says buddy files stay in ~/.claude/plugins/store. marketplace.json name simakovigor, owner Igor Simakov, plugin pixel-buddy. hooks.json lists only ./register.tsx. HN item 50389351 by igorsimakov at 2026-11-06T07:44:56Z, score 2 at fetch. Preview is a headless Chrome capture of the GitHub README scrolled to feed.gif (the pixel pet in a terminal footer), cropped to 1200×800 WebP; not a Claude Code session this library ran. Did not install the plugin, hatch a buddy, or run claude."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11578,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-06T12:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11879,21 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://www.chorono.com/",
+      "https://github.com/codie1982/chorono-editor",
+      "https://news.ycombinator.com/item?id=50391301",
+      "https://www.npmjs.com/package/@chorono/runtime",
+      "https://github.com/codie1982/chorono-android-sdk",
+      "https://purist.design/",
+      "https://purist.design/docs/what-is-purist",
+      "https://purist.design/docs/mcp",
+      "https://purist.design/blog/purist-browser",
+      "https://purist.design/docs/browser",
+      "https://purist.design/pricing",
+      "https://purist.design/changelog",
+      "https://github.com/SimakovIgor/pixel-buddy",
+      "https://news.ycombinator.com/item?id=50389351"
     ]
   }
 }
