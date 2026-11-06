@@ -1,6 +1,136 @@
 {
   "cases": [
     {
+      "id": "rivermark",
+      "slug": "rivermark",
+      "title": "Rivermark：超快的 AI 平面设计画布，并可走 Design API 批量出品牌物料",
+      "titleEn": "Rivermark: a fast AI graphic-design canvas, with a Design API for on-brand batches",
+      "kind": "tool",
+      "hook": "超快的 AI 平面画布，Design API 可批量出品牌物料。",
+      "hookEn": "A fast AI graphic-design canvas, plus a Design API for on-brand batches.",
+      "summary": "Rivermark（https://rivermark.ai/）是给做社媒和品牌物料的人用的 AI 平面设计画布。官网把它写成 “an AI design tool for creatives that works as your partner”：画布上可以分层改文字、字体、颜色和版式，也能拖进网站、品牌规范或 Canva 模板，让成稿锁在你自己的品牌上；页面还演示了边说边改，以及把一个视觉想法铺成一批帖子。Design API（https://rivermark.ai/design-api）面向产品、助手和营销流水线，用自然语言创建或修改设计，产出是真实 HTML/CSS，而不是一张改不动的栅格图；页面写字体、色值和标志会按原样使用。定价说明里，一条新的品牌内设计大约 0.10 美元，往已定稿里填文案大约 0.02 美元，并按参考材料大小和任务复杂度计费。适合要自己盯着品牌、又想批量出帖和物料的人。本库没有注册登录，没有在画布出图，也没有调用 Design API。",
+      "summaryEn": "Rivermark (https://rivermark.ai/) is an AI graphic-design canvas for social and brand work. The site calls it “an AI design tool for creatives that works as your partner”: edit type, color, and layout on layers, or drop in a site, brand guidelines, or Canva templates so the result stays on your brand. The page also shows a talk-while-it-edits flow and turning one visual idea into a batch of posts. The Design API (https://rivermark.ai/design-api) is for products, agents, and marketing pipelines: natural-language create and edit, with real HTML/CSS back instead of a flat image you cannot change. The page says fonts, hex values, and logos are used verbatim. Its pricing note puts a new on-brand design around $0.10 and filling copy into an approved design around $0.02, scaled by reference size and how much work the agent does. Good when you want to stay in control of the brand and still batch posts and assets. This library did not sign up, did not design on the canvas, and did not call the Design API.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://rivermark.ai/",
+      "secondaryUrls": [
+        "https://rivermark.ai/design-api",
+        "https://news.ycombinator.com/item?id=50364525",
+        "https://news.ycombinator.com/item?id=50379043"
+      ],
+      "previewImage": "/previews/rivermark.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "画布要注册，Design API 按用量计费，并可能保存品牌素材；对外发布前自己核对成稿。本库没有代为注册或调用。",
+      "approvalBoundaryEn": "The canvas asks you to sign up, the Design API is usage-priced, and brand files may be stored; review finished assets before you publish. This library did not sign up or call the API for you.",
+      "connectors": [
+        "Design API",
+        "HTML/CSS"
+      ],
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-06T01:40:00Z",
+      "qualityNote": "收录理由：平面设计画布加上可编程的 Design API，适合品牌物料和批量出图，和库里偏「设计到代码」的工具互补。边界：公开页按用量收费，画布要注册；速度和语音模式是作者的公开介绍，本库没有复测。本库没有注册登录，没有在画布出图，也没有调用 Design API。",
+      "qualityNoteEn": "Why listed: a graphic-design canvas plus a programmable Design API for on-brand batches, alongside the design-to-code tools already here. Limits: the public pages are usage-priced and the canvas asks for an account; speed and voice mode are the author’s public description and were not remeasured here. This library did not sign up, design on the canvas, or call the Design API.",
+      "verifyLog": "2026-11-06 早间（Asia/Shanghai）：https://rivermark.ai/ 与 https://rivermark.ai/design-api 均为 HTTP 200。首页 title “Rivermark: Design that looks like you made it”，description “The AI design canvas for creatives that keeps you in control.”；首屏有 Log in / Sign up，顶栏有 “Explore the Design API”。Design API 页 FAQ 写 new on-brand design typically around $0.10、filling copy around $0.02，并列出相对成本（1× fill template 到 36× import brand kit）；产出说明为 HTML/CSS。Show HN https://news.ycombinator.com/item?id=50364525（thegeomaster，2026-11-04T12:13:58Z，Algolia 2pts，标题 Show HN: Rivermark, a superfast AI graphic design canvas）；作者帖称 short-horizon agent、约 1000 tokens/s、非回合制语音，并写 MCP coming soon。Design API 帖 https://news.ycombinator.com/item?id=50379043（2026-11-05T13:50:19Z，Algolia 1pt）。预览为无头 Chrome 实拍官网首屏 1200×800，sharp 存 WebP。本库未注册、未在画布出图、未调 Design API，也未复测速度。",
+      "verifyLogEn": "2026-11-06 morning (Asia/Shanghai): https://rivermark.ai/ and https://rivermark.ai/design-api both HTTP 200. Home title “Rivermark: Design that looks like you made it”; Log in / Sign up and “Explore the Design API” were on the first screen. The Design API FAQ says a new on-brand design is typically around $0.10 and filling copy around $0.02, with relative costs from 1× fill template to 36× import brand kit, and HTML/CSS output. Show HN https://news.ycombinator.com/item?id=50364525 (thegeomaster, 2026-11-04T12:13:58Z, 2pts on Algolia); the post calls it a short-horizon agent at about 1000 tokens/s, with non-turn voice, and says MCP is coming soon. Design API post https://news.ycombinator.com/item?id=50379043 (2026-11-05T13:50:19Z, 1pt on Algolia). Preview is a headless Chrome capture of the landing hero at 1200×800, saved with sharp as WebP. Did not sign up, design on the canvas, call the API, or remeasure speed."
+    },
+    {
+      "id": "flawless-ui-ux",
+      "slug": "flawless-ui-ux",
+      "title": "Flawless UI/UX：给编程助手的界面 skill，再用本地 CLI 对照改前改后",
+      "titleEn": "Flawless UI/UX: a UI skill for coding agents, plus a local CLI that checks what changed",
+      "kind": "tool",
+      "hook": "给编程助手的 UI/UX skill，配本地巡检 CLI 对照改前改后。",
+      "hookEn": "A UI/UX skill for coding agents, plus a local CLI that checks what changed.",
+      "summary": "flawless-ui-ux（MIT，仓库 smokeeaasd/flawless-ui-ux，npm 包 flawless-ui-ux）是给编程助手用的 UI/UX skill，再加一个只在本地跑的巡检 CLI。skill 按产品来定视觉：构图、字体、颜色、疏密和交互跟你的栈走，不规定一套通用审美。`npx flawless-ui-ux@latest install` 可装进当前项目的 Codex、OpenCode、Antigravity、Kiro（也可用 --global）；README 写 CLI 需要 Node 22.12 或更新。巡检可以看选中源码，或在你自己打开的开发服务器上取样（默认 1440×900 和 390×844），检查对比度与可访问名称、字号和横向溢出、坏图、未捕获的脚本错误、重复文案和图标线索；`verify` 再对照改前改后，分出仍在、新增和不再出现的问题。README 写巡检不改源码、不启动服务器、不下载浏览器、不提交表单，样本也不等于完整无障碍达标。适合已经用编程助手写界面、又想在合并前对照改前改后的人。本库没有执行 npx install，没有跑 CLI，也没有接到任何编程助手。",
+      "summaryEn": "flawless-ui-ux (MIT, repo smokeeaasd/flawless-ui-ux, npm package flawless-ui-ux) is a UI/UX skill for coding agents plus a local inspection CLI. The skill ties composition, type, color, density, and interaction to the product and the stack you already have, and it does not prescribe one universal look. `npx flawless-ui-ux@latest install` targets Codex, OpenCode, Antigravity, and Kiro in the current project (or --global). The README says the CLI needs Node 22.12 or newer. Inspection can read selected source, or sample a dev server you already started (default 1440×900 and 390×844), covering contrast and accessible names, type size and horizontal overflow, broken images, uncaught script errors, and repeated copy and icon cues. `verify` then compares before and after, splitting findings that persist, appear, or go away. The README says inspection does not edit source, start a server, download a browser, or submit forms, and that these samples are not full accessibility conformance. Good when a coding agent already writes your UI and you want a before/after check before merging. This library did not run npx install, did not run the CLI, and did not connect any coding agent.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "AI design workflow",
+      "sourceUrl": "https://github.com/smokeeaasd/flawless-ui-ux",
+      "secondaryUrls": [
+        "https://www.npmjs.com/package/flawless-ui-ux",
+        "https://news.ycombinator.com/item?id=50381846"
+      ],
+      "previewImage": "/previews/flawless-ui-ux.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装会把 skill 写进项目或用户目录；把助手改过的界面合并进正式仓库前自己看巡检结果。本库没有代为安装或运行。",
+      "approvalBoundaryEn": "Install writes the skill into the project or your user profile; read the inspection before merging agent-edited UI. This library did not install or run it for you.",
+      "connectors": [
+        "Codex",
+        "OpenCode",
+        "Antigravity",
+        "Kiro",
+        "npm"
+      ],
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-06T01:40:00Z",
+      "qualityNote": "收录理由：给 Codex、OpenCode、Antigravity、Kiro 的 UI/UX skill，并用本地 CLI 对照改前改后，适合已经用编程助手写界面的人。边界：巡检只覆盖初始样本，不代表完整无障碍或视觉质量达标；安装会写入 skill 文件。本库没有执行安装，没有跑 CLI，也没有接到任何助手。",
+      "qualityNoteEn": "Why listed: a UI/UX skill for Codex, OpenCode, Antigravity, and Kiro, plus a local CLI that compares the interface before and after edits. Limits: inspection covers an initial sample, not full accessibility conformance or visual quality, and install writes skill files. This library did not install it, run the CLI, or connect an agent.",
+      "verifyLog": "2026-11-06 早间（Asia/Shanghai）：https://github.com/smokeeaasd/flawless-ui-ux HTTP 200。gh api：license SPDX MIT，stargazers_count 5，forks 0，created_at 2026-11-03T14:36:42Z，pushed_at 2026-11-06T00:23:54Z，description “A UI/UX skill for coding agents to build distinctive, usable interfaces.” registry.npmjs.org/flawless-ui-ux：latest 0.3.0，license MIT，engines.node >=22.12.0，该版本时间 2026-11-05T15:50:32.495Z。README 写支持 Codex / OpenCode / Antigravity / Kiro，CLI 命令含 install、context、inspect、verify，默认视口 1440×900 与 390×844，退出码 0/1/2。Show HN https://news.ycombinator.com/item?id=50381846（smokeeaasd，2026-11-05T17:30:09Z，Algolia 3pts，标题 Show HN: Flawless UI/UX – A design skill and inspection CLI for coding agents）。预览为无头 Chrome 实拍仓库文件页 1200×800（可见 About、MIT、5 stars、Release v0.3.0），sharp 存 WebP。本库未 npx install、未跑 CLI、未接任何 agent。",
+      "verifyLogEn": "2026-11-06 morning (Asia/Shanghai): https://github.com/smokeeaasd/flawless-ui-ux HTTP 200. gh api: SPDX MIT, stargazers_count 5, forks 0, created_at 2026-11-03T14:36:42Z, pushed_at 2026-11-06T00:23:54Z. registry.npmjs.org/flawless-ui-ux latest 0.3.0, MIT, engines.node >=22.12.0, version time 2026-11-05T15:50:32.495Z. README lists Codex / OpenCode / Antigravity / Kiro and CLI commands install, context, inspect, and verify, with default viewports 1440×900 and 390×844 and exit codes 0/1/2. Show HN https://news.ycombinator.com/item?id=50381846 (smokeeaasd, 2026-11-05T17:30:09Z, 3pts on Algolia). Preview is a headless Chrome capture of the repo file list at 1200×800 (About, MIT, 5 stars, Release v0.3.0), saved with sharp as WebP. Did not npx install, run the CLI, or connect an agent."
+    },
+    {
+      "id": "aireel",
+      "slug": "aireel",
+      "title": "Aireel：贴上落地页，一键生成成片级产品宣传片",
+      "titleEn": "Aireel: paste a landing page, get a produced promo film back",
+      "kind": "tool",
+      "hook": "贴落地页链接，一键生成成片级产品宣传片。",
+      "hookEn": "Paste a landing page URL, get a produced promo film back.",
+      "summary": "Aireel（https://aireel.tv/）把产品宣传片收成一次点击：贴上落地页链接，它读页面、排分镜、按产品的颜色和字体画场景、录旁白、配乐，并在你看到成片之前核对响度、真峰值、时长、空隙和口型。页面写影片是一份文档，场景由代码绘制，所以一条导演批注只改你点名的地方。film engine 大约十分钟从落地页出片，适合发布帖和短广告；director's cut 在页面上标为 coming soon，要先批准静帧再渲染。第一支短广告免费，带小水印，免费成片可能被放上产品页展示；短广告和宣传片等档位标为在售，导演剪辑标 $79（social）/ $149（promo）、Studio $299/月、Agency $799/月，后三档按钮为 coming soon。适合想从落地页直接拿到一条可发布宣传片、又不想自己剪时间线的人。本库没有粘贴落地页，没有生成视频，也没有下载成片。",
+      "summaryEn": "Aireel (https://aireel.tv/) reduces a product promo to one click: paste a landing-page URL and it reads the page, builds a storyboard, draws scenes in the product’s colors and type, records a voice, scores the cut, and checks loudness, true peak, duration, dead air, and voice sync before you see it. The page says the film is a document whose scenes are drawn from code, so a note changes only what you named. The film engine makes a film from the landing page in about ten minutes, for a launch post or a short ad; the director’s cut is marked coming soon and asks you to approve stills before any film is rendered. The first short ad is free with a small watermark, and free films may be featured on the product page. Short ads and promo films are listed as on sale; director’s cut is listed at $79 (social) / $149 (promo), Studio at $299/month, and Agency at $799/month, with those last three marked coming soon. Good when you want a publishable promo from a landing page without cutting a timeline yourself. This library did not paste a landing page, did not generate a video, and did not download a film.",
+      "categories": [
+        "content",
+        "design",
+        "marketing"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://aireel.tv/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50383912"
+      ],
+      "previewImage": "/previews/aireel.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "免费成片可能被展示在产品页，付费档会扣费；发布前自己看成片和水印。本库没有代为生成或下载。",
+      "approvalBoundaryEn": "Free films may be featured on the product page, and paid tiers charge you; watch the cut and the watermark before you publish. This library did not generate or download a film for you.",
+      "connectors": [
+        "landing page"
+      ],
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-06T01:40:00Z",
+      "qualityNote": "收录理由：从落地页一键到带分镜、品牌画面、旁白和配乐的宣传片，适合发布和广告。边界：第一支免费短片带水印，并可能被展示在产品页；导演剪辑、Studio、Agency 在页面上标为即将推出。本库没有粘贴落地页，没有生成视频，也没有下载成片。",
+      "qualityNoteEn": "Why listed: one click from a landing page to a promo with storyboard, on-brand scenes, voice, and score. Limits: the first free short ad carries a watermark and may be featured on the product page; director’s cut, Studio, and Agency are marked coming soon. This library did not paste a landing page, generate a video, or download a film.",
+      "verifyLog": "2026-11-06 早间（Asia/Shanghai）：https://aireel.tv/ HTTP 200，title “aireel.tv — a top-notch promo video in one click”，description “Paste your landing page. Get a fully produced promo film — script, motion design, voiceover, score — in one click.” 首屏输入框占位 https://your-product.com，按钮 “Make the film · 1 click”，并写 free films may be featured。静态 HTML 中 Free 为 $0 one film、small watermark；Director's cut coming soon $79 social · promo $149；Studio coming soon $299/月；Agency coming soon $799/月。短广告与宣传片的具体美元价在 HTML 里是省略号，购买按钮为 disabled，故正文不写这两个数字。页脚写 On sale today: the free film, the short ad, the promo film, the launch pack and the modification pack。Show HN https://news.ycombinator.com/item?id=50383912（sendar0，2026-11-05T20:17:19Z，Algolia 2pts）。作者回复写第一支视频免费；另一则回复里作者说配音用 ElevenLabs、矢量画面仍在试验，本库未核对该说法。预览为无头 Chrome 实拍首屏 1200×800，sharp 存 WebP。本库未粘贴落地页、未生成、未下载。",
+      "verifyLogEn": "2026-11-06 morning (Asia/Shanghai): https://aireel.tv/ HTTP 200, title “aireel.tv — a top-notch promo video in one click”. The hero field placeholder was https://your-product.com, the button “Make the film · 1 click”, with “free films may be featured”. Static HTML lists Free at $0 one film with a small watermark; Director's cut coming soon at $79 social · promo $149; Studio coming soon at $299/month; Agency coming soon at $799/month. The short-ad and promo dollar amounts are ellipses in the HTML and those buy buttons are disabled, so those two numbers are omitted. The footer says on sale today: the free film, the short ad, the promo film, the launch pack, and the modification pack. Show HN https://news.ycombinator.com/item?id=50383912 (sendar0, 2026-11-05T20:17:19Z, 2pts on Algolia). The author replied that the first video is free; in another reply the author said voices use ElevenLabs and vector drawings are still experimental — not checked here. Preview is a headless Chrome capture of the hero at 1200×800, saved with sharp as WebP. Did not paste a URL, generate, or download."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11577,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-06T01:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11878,16 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://rivermark.ai/",
+      "https://rivermark.ai/design-api",
+      "https://news.ycombinator.com/item?id=50364525",
+      "https://news.ycombinator.com/item?id=50379043",
+      "https://github.com/smokeeaasd/flawless-ui-ux",
+      "https://www.npmjs.com/package/flawless-ui-ux",
+      "https://news.ycombinator.com/item?id=50381846",
+      "https://aireel.tv/",
+      "https://news.ycombinator.com/item?id=50383912"
     ]
   }
 }
