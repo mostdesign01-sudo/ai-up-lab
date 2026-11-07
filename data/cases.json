@@ -1,6 +1,158 @@
 {
   "cases": [
     {
+      "id": "halo",
+      "slug": "halo",
+      "title": "Halo：iPhone 上的本机私人助理，邮件日历提醒合成一段简报",
+      "titleEn": "Halo: an on-device iPhone assistant that folds mail, calendar and reminders into one briefing",
+      "kind": "tool",
+      "hook": "邮件、日历、提醒读成一段简报，数据只在你手机上。",
+      "hookEn": "Mail, calendar and reminders read into one briefing, with the data kept on your phone.",
+      "summary": "Halo（https://meethalo.app ，App Store 名 Halo - Personal AI，开发者 Tanmay Sonawane）是 iOS 上的私人 AI 助理：读手机里已有的邮件、日历、提醒，合成每天一段简报和一条时间线，按你的写作风格起草邮件回复；把读到的事实整理成本机 Markdown「生活维基」记忆，语义检索在手机上跑；自带本机浏览器代理，可在你已登录的网站上执行操作；用 MCP 接 Notion、Slack、Spotify、Uber 等服务；支持定时自动化（如每晚准备明天的日程与待跟进事项）、会议录音本机转写分说话人，以及一个内置命令行文件工作区。模型自带（BYOK）：ChatGPT、Grok 或 Apple Intelligence，请求从手机直连所选服务商，官网称不存任何用户数据。官网把健康、音乐、备忘录标为「即将推出」（App Store 描述已写健康与音乐，以现版为准）。价格：App Store 免费下载，但必须买 Halo Pro 内购才能用，7 天试用不自动扣费；美区内购 $49.99，官网标 Lifetime 一次性 $49（划掉 $99），作者在 Show HN 写按地区购买力最多打 2 折。适合想要「先替我看一遍今天」、又不想把邮件交给云端的 iPhone 用户。本库没有安装 App，没有登录，没有接 MCP，也没有跑过简报。",
+      "summaryEn": "Halo (https://meethalo.app , App Store name Halo - Personal AI, developer Tanmay Sonawane) is a personal AI assistant for iOS: it reads the mail, calendar and reminders already on your phone, turns them into one daily briefing and a timeline, and drafts email replies in your style. Facts it learns go into an on-device Markdown \"wiki of your life\" with on-device semantic search. It ships a local browser agent that acts on sites you are already signed in to, MCP connectors (Notion, Slack, Spotify, Uber and more), scheduled automations (for example, prep tomorrow's calendar and follow-ups every night), on-device meeting transcription with speaker separation, and a built-in command-line workspace for files. Bring your own model: ChatGPT, Grok or Apple Intelligence, with requests going straight from the phone to that provider; the site says no user data is stored with them. The site marks Health, Music and Notes as coming soon (the App Store copy already lists health and music; check the current build). Pricing: free download, but the Halo Pro in-app purchase is required, with a 7-day trial that does not charge at the end; the US App Store lists $49.99 and the site shows a one-time Lifetime $49 (struck from $99), and the author's Show HN mentions regional pricing up to 80% off. Good for iPhone users who want a \"read my day first\" assistant without handing their inbox to a cloud service. This library did not install the app, sign in, connect MCP, or run a briefing.",
+      "categories": [
+        "productivity",
+        "daily-digest",
+        "automation"
+      ],
+      "role": "Personal assistant (iOS)",
+      "sourceUrl": "https://meethalo.app",
+      "secondaryUrls": [
+        "https://apps.apple.com/us/app/halo-personal-ai/id6783715054",
+        "https://news.ycombinator.com/item?id=49969988",
+        "https://meethalo.app/blog/how-halo-remembers/"
+      ],
+      "previewImage": "/previews/halo.webp",
+      "previewCredit": "预览：Playwright 实拍官网首屏，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the official homepage hero, cropped to 3:2 WebP",
+      "sourceType": "official-launch",
+      "language": "en",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "简报和回复草稿可以先跑；发邮件、浏览器代理在已登录网站下单或提交、MCP 写入外部服务前自己确认。本库没有代为授权或执行。",
+      "approvalBoundaryEn": "Briefings and reply drafts can run first; confirm before it sends mail, has the browser agent order or submit on signed-in sites, or writes to services over MCP. This library did not authorize or run anything.",
+      "connectors": [
+        "mail",
+        "calendar",
+        "reminders",
+        "browser",
+        "mcp",
+        "notion",
+        "slack"
+      ],
+      "publishedAt": "2026-10-05",
+      "updatedAt": "2026-11-07T12:20:00Z",
+      "qualityNote": "收录理由：真正跨邮件、日历、提醒、浏览器的私人助理，数据存手机、模型自带，正对本库主线。边界：只有 iOS；免费下载但必须买 Pro 才能用（美区 $49.99，官网写一次性 $49）；健康、音乐、备忘录官网仍标即将推出；浏览器代理和 MCP 动作会落到真实账号上。本库没有安装 App，没有登录，没有接 MCP，也没有跑过简报。",
+      "qualityNoteEn": "Why listed: a real cross-app personal assistant over mail, calendar, reminders and the browser, with data kept on the phone and your own model, squarely on this library's main track. Limits: iOS only; free to download but Pro is required (US $49.99, site shows one-time $49); Health, Music and Notes are still marked coming soon on the site; browser-agent and MCP actions land on real accounts. This library did not install the app, sign in, connect MCP, or run a briefing.",
+      "verifyLog": "2026-11-07 晚间（Asia/Shanghai）：https://meethalo.app 对 curl 返回 406（Mod_Security），Playwright 浏览器打开 200，title「Halo — Automate your life, right from your iPhone」；首屏写 Halo connects everything on your phone — mail, calendar, health, reminders, music — into one calm briefing；Sources 区列 Mail / Calendar / Reminders，Health* Music* Notes* 标 Coming soon，MCP 例 Notion、Swiggy、Zomato、Slack、Spotify、Uber；BYOK 列 ChatGPT、Grok、Apple Intelligence；Pricing 写 Halo Lifetime $99→$49 one-time，7-day free trial，no charge at end。App Store id6783715054：Halo - Personal AI，开发者 Tanmay Sonawane，Free · In-App Purchases（Halo Pro $49.99），Productivity，4+，657.5 MB，9 个评分 3.9；描述写 Halo Pro unlock is required、7 day no-payment trial。Show HN item 49969988（tanmay007，2026-10-05）写 US $49、PPP 最多 80% off、首周五折。预览为官网首屏实拍裁 3:2 WebP。本库未安装、未登录、未接 MCP、未跑简报。",
+      "verifyLogEn": "2026-11-07 evening (Asia/Shanghai): https://meethalo.app returns 406 to curl (Mod_Security) and 200 in a Playwright browser; title \"Halo — Automate your life, right from your iPhone\"; Sources lists Mail / Calendar / Reminders with Health, Music, Notes marked coming soon; MCP examples Notion, Swiggy, Zomato, Slack, Spotify, Uber; BYOK ChatGPT, Grok, Apple Intelligence; Pricing Halo Lifetime $99→$49 one-time with a 7-day no-charge trial. App Store id6783715054: Halo - Personal AI by Tanmay Sonawane, Free with In-App Purchases (Halo Pro $49.99), Productivity, 4+, 657.5 MB, 9 ratings at 3.9; copy says Halo Pro unlock is required. Show HN 49969988 (tanmay007, 2026-10-05) says US $49 with PPP up to 80% off. Preview is a 3:2 WebP of the homepage hero. Not installed, not signed in, no MCP, no briefing run."
+    },
+    {
+      "id": "coolwulf-ai",
+      "slug": "coolwulf-ai",
+      "title": "CoolWulf AI：Go 单文件本机个人代理，管邮件日历、浏览器和聊天软件",
+      "titleEn": "CoolWulf AI: a single-binary Go personal agent for email, calendar, browser and chat apps",
+      "kind": "tool",
+      "hook": "一个本机程序，替你管邮件、日历、浏览器和微信。",
+      "hookEn": "One local binary that runs your email, calendar, browser and chat apps.",
+      "summary": "CoolWulf AI（官网 http://coolwulfai.com ，中文页 http://coolwulfai.com/index_zh.html ，页面标题就叫「AI 助手」，作者 HN 账号 coolwulf）是用 Go 写的本机个人代理，macOS（arm64）与 Windows 10/11（x64）各一个压缩包，解压后在 .env 填模型密钥、启动可执行文件，再在本机 Web 仪表盘里走首次设置向导。能力按官网：Gmail 与 Yahoo Mail（OAuth / IMAP）读、搜、发、起草；Google 日历与 Apple 日历；基于 Chrome CDP 的浏览器自动化（填表、截图、Cookie 注入保持登录）；WhatsApp、Microsoft Teams、Telegram 收发消息，微信靠 macOS 辅助功能控制；Apple 备忘录、提醒事项、终端；SQLite + 向量嵌入的长期记忆；Org-Mode 层级任务；cron 定时任务与「心跳」后台巡检；20+ 模型服务商（含 Ollama / vLLM 本地模型）自动切换，支持 MCP。官网写 ~93 MB，实测下载头约 116 MB 一个，文件最后修改 2026-02-23。官网没有写价格，下载即用；没有找到公开源码仓库，本条不写开源。作者 2026-02 两次 Show HN，自称 OpenClaw 的 Go 替代，重点在浏览器 CDP。适合想在自己 Mac 上跑一个能碰邮件、日历和聊天软件的全能代理、又能自己配密钥的人。本库没有下载，没有运行，也没有测试 OAuth。",
+      "summaryEn": "CoolWulf AI (site http://coolwulfai.com , Chinese page http://coolwulfai.com/index_zh.html , the page title is simply \"AI Assistant\", author HN user coolwulf) is a local personal agent written in Go. There is one zip for macOS (arm64) and one for Windows 10/11 (x64): unzip, put a model key in .env, start the binary, and finish a setup wizard in a local web dashboard. Per the site: Gmail and Yahoo Mail (OAuth / IMAP) read, search, send and draft; Google Calendar and Apple Calendar; browser automation over Chrome CDP (forms, screenshots, cookie injection to stay signed in); WhatsApp, Microsoft Teams and Telegram messaging, with WeChat driven through macOS accessibility; Apple Notes, Reminders and Terminal; long-term memory in SQLite with vector embeddings; Org-Mode style task trees; cron jobs plus a background \"heartbeat\"; 20+ model providers (including Ollama / vLLM local models) with fallback, and MCP support. The site says ~93 MB; the download headers show about 116 MB each, last modified 2026-02-23. No price is stated and the download is direct; no public source repo was found, so this entry does not claim open source. The author posted two Show HNs in 2026-02, pitching it as a Go alternative to OpenClaw focused on browser CDP. Good for people who want an all-in-one agent on their own Mac that touches email, calendar and chat apps, and who are fine wiring their own keys. This library did not download it, run it, or test OAuth.",
+      "categories": [
+        "productivity",
+        "automation",
+        "daily-digest"
+      ],
+      "role": "Personal assistant (desktop agent)",
+      "sourceUrl": "http://coolwulfai.com",
+      "secondaryUrls": [
+        "http://coolwulfai.com/index_zh.html",
+        "https://news.ycombinator.com/item?id=47044036",
+        "https://news.ycombinator.com/item?id=47117434"
+      ],
+      "previewImage": "/previews/coolwulf-ai.webp",
+      "previewCredit": "预览：Playwright 实拍官网首屏，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the official homepage hero, cropped to 3:2 WebP",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "授权邮箱、日历和聊天软件前想清楚它能代发；定时任务和心跳会在后台动真实账号，发邮件、发消息、浏览器提交前保留人工确认。本库没有下载或授权。",
+      "approvalBoundaryEn": "Before granting mail, calendar and chat access, accept that it can send for you; cron jobs and the heartbeat act on real accounts in the background, so keep a human check before mail, messages or browser submits go out. This library did not download or authorize it.",
+      "connectors": [
+        "gmail",
+        "google-calendar",
+        "apple-calendar",
+        "browser",
+        "whatsapp",
+        "teams",
+        "telegram",
+        "wechat",
+        "mcp"
+      ],
+      "publishedAt": "2026-02-17",
+      "updatedAt": "2026-11-07T12:20:00Z",
+      "qualityNote": "收录理由：本机跑的全能个人代理，邮件、日历、浏览器、聊天软件、备忘录都接，正是本库优先的跨应用助理方向，中英双语官网。边界：闭源二进制，未找到公开源码仓库，不能自己审代码；安装包自 2026-02 后未见更新；后台定时任务和心跳会动真实账号；微信等靠系统辅助功能，权限很大。本库没有下载，没有运行，也没有测试 OAuth。",
+      "qualityNoteEn": "Why listed: an all-in-one personal agent that runs locally and reaches email, calendar, browser, chat apps and notes, exactly the cross-app assistant direction this library prioritizes, with a bilingual site. Limits: a closed binary with no public source repo found, so you cannot audit it; the downloads show no update since 2026-02; background jobs and the heartbeat act on real accounts; WeChat and similar rely on broad accessibility permissions. This library did not download it, run it, or test OAuth.",
+      "verifyLog": "2026-11-07 晚间（Asia/Shanghai）：http://coolwulfai.com 与 /index_zh.html HTTP 200，title「AI Assistant - Your Autonomous Personal AI Agent」/「AI 助手 - 您的自主个人 AI 代理」；首屏 macOS • Windows 10/11 • Self-Hosted • Privacy First，20+ LLM Providers / 40+ Built-in Tools / 10+ App Integrations；集成区列 Gmail、Google Calendar、WhatsApp、Teams、Yahoo Mail、Telegram、WeChat、Apple Notes/Reminders/Calendar、Terminal、Chrome/Playwright；架构区写 MCP 协议支持、SQLite + 向量嵌入、Go 1.25。下载链接 static/ai-assistant-mac.zip 与 ai-assistant-win64.zip，HEAD 各 200，Content-Length 121586156 / 120606097，Last-Modified 2026-02-23；页面写 ~93 MB / ~92 MB。页内无 GitHub 链接、无价格；未找到公开源码仓。HN Show HN 47044036（2026-02-17）与 47117434（2026-02-23），作者 coolwulf。预览为官网首屏实拍裁 3:2 WebP。本库未下载、未运行、未测 OAuth。",
+      "verifyLogEn": "2026-11-07 evening (Asia/Shanghai): http://coolwulfai.com and /index_zh.html HTTP 200; titles \"AI Assistant - Your Autonomous Personal AI Agent\" / Chinese equivalent; hero macOS • Windows 10/11 • Self-Hosted • Privacy First; integrations Gmail, Google Calendar, WhatsApp, Teams, Yahoo Mail, Telegram, WeChat, Apple Notes/Reminders/Calendar, Terminal, Chrome/Playwright; architecture lists MCP, SQLite + embeddings, Go 1.25. Downloads static/ai-assistant-mac.zip and ai-assistant-win64.zip: HEAD 200, Content-Length 121586156 / 120606097, Last-Modified 2026-02-23 (page says ~93 MB / ~92 MB). No GitHub link or price on the page; no public source repo found. Show HN 47044036 (2026-02-17) and 47117434 (2026-02-23) by coolwulf. Preview is a 3:2 WebP of the homepage hero. Not downloaded, not run, OAuth not tested."
+    },
+    {
+      "id": "result-personal-agent",
+      "slug": "result-personal-agent",
+      "title": "Result：在 iPhone 本机浏览器里替你办事的个人代理",
+      "titleEn": "Result: a personal agent that gets tasks done in your iPhone's own browser",
+      "kind": "tool",
+      "hook": "订位、填表、比价在你 iPhone 里跑，密码不离手机。",
+      "hookEn": "Bookings, forms and price checks run on your iPhone, passwords stay on it.",
+      "summary": "Result（App Store 名 Result: Your Personal Agent，开发者 Savio Martin，官网 https://result.dev ）是 iPhone / iPad 上的个人 AI 代理：不在远程云电脑里开浏览器，而是在 App 自带的本机浏览器里打开真实网站，替你找航班、比价、订位、填表，可以旁观、随时停下或接手；登录用 Apple 原生密码自动填充，支持的网站可用 Apple Pay，登录和付款这类敏感步骤可以自己接管。接 iOS 原生能力：日历（查看与管理日程）、提醒事项、地图、天气、文件（生成 PDF、文档、表格），也能从 Safari 等 App 分享文字、链接、截图给它。模型可选云端，或与自己的 Mac 配对跑本地模型；官网写可在锁屏后台运行、开放权重模型、零数据保留，另有 Mac 版下载。App Store 写免费，未列内购；需要 iOS 18+、账号和联网，Mac 可选。注意 App Store 描述原文：本地模型请求也经 Result 的服务中转，Mac 不响应时会改用云端；隐私标签列出位置、邮箱、浏览与搜索历史等与身份关联的数据。2026-11-07 刚上 Show HN，App Store 评分还不够显示。本库没有在真机上安装或测试。",
+      "summaryEn": "Result (App Store name Result: Your Personal Agent, developer Savio Martin, site https://result.dev ) is a personal AI agent for iPhone and iPad. Instead of a remote cloud computer, it opens real websites in the app's own on-device browser to find flights, compare prices, book reservations and fill forms; you can watch, stop it, or take over. Sign-in uses Apple's native password autofill, Apple Pay works on supported sites, and you can take over sensitive steps like sign-ins and payments. It uses native iOS features: Calendar (check and manage events), Reminders, Maps, Weather, and Files (create PDFs, documents, spreadsheets), and accepts text, links and screenshots from Safari and other apps through the share sheet. Models run in the cloud or on your own paired Mac; the site claims background runs while the phone is locked, open-weight models and zero data retention, and offers a Mac download too. The App Store lists it as free with no in-app purchases; it needs iOS 18+, an account and an internet connection, with a Mac optional. Note the App Store's own wording: local-model requests are still routed through Result's services, and cloud AI may be used when your Mac cannot respond; the privacy label lists location, email, browsing and search history among data linked to you. It hit Show HN on 2026-11-07 and does not have enough App Store ratings to display yet. This library did not install or test it on a device.",
+      "categories": [
+        "productivity",
+        "automation"
+      ],
+      "role": "Personal assistant (iOS agent)",
+      "sourceUrl": "https://apps.apple.com/us/app/result-your-personal-agent/id6825805595",
+      "secondaryUrls": [
+        "https://result.dev",
+        "https://news.ycombinator.com/item?id=50403433"
+      ],
+      "previewImage": "/previews/result-personal-agent.webp",
+      "previewCredit": "预览：Playwright 实拍官网首屏，裁成 3:2 WebP",
+      "previewCreditEn": "Preview: Playwright capture of the official homepage hero, cropped to 3:2 WebP",
+      "sourceType": "official-launch",
+      "language": "en",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "比价、查日程、生成文件可以先跑；订位、提交表单、Apple Pay 付款和登录一律自己接管确认。本库没有在真机上授权或下单。",
+      "approvalBoundaryEn": "Price checks, schedule lookups and file drafts can run first; take over and confirm every booking, form submit, Apple Pay payment and sign-in. This library did not authorize or order anything on a device.",
+      "connectors": [
+        "browser",
+        "calendar",
+        "reminders",
+        "maps",
+        "files",
+        "apple-pay"
+      ],
+      "publishedAt": "2026-11-07",
+      "updatedAt": "2026-11-07T12:20:00Z",
+      "qualityNote": "收录理由：在手机本机浏览器里执行任务的个人代理，账号与密码留在 iPhone，接日历、提醒、文件，属于真正替人办事的助理。边界：刚上架，评分不足、实际成功率未知；需要账号和联网，所谓本地模型请求仍经开发者服务中转，Mac 不在线时会回落云端；隐私标签收集位置与浏览历史等数据。本库没有在真机上安装或测试。",
+      "qualityNoteEn": "Why listed: a personal agent that executes tasks in the phone's own browser, keeping accounts and passwords on the iPhone and reaching Calendar, Reminders and Files: an assistant that actually does errands. Limits: just launched, too few ratings, real success rate unknown; needs an account and internet, local-model requests still route through the developer's service and fall back to cloud when the Mac is offline; the privacy label collects location and browsing history among others. This library did not install or test it on a device.",
+      "verifyLog": "2026-11-07 晚间（Asia/Shanghai）：App Store id6825805595 HTTP 200，title「Result: Your Personal Agent App - App Store」，副标题 Everyday tasks, taken care of；Free（页面未见 In-App Purchases 栏），Productivity，16+，21.1 MB，Seller / Copyright Savio Martin，iOS / iPadOS 18.0+，English，评分不足显示；描述写 on-device browser、Apple Password autofill、Apple Pay、Calendar / Reminders / Maps / Weather / Files、Cloud 或 pair your Mac，原文 Local AI requests are routed through Result's services, and cloud AI may be used when your Mac can't respond，An account and internet connection are required。隐私标签 Data Linked to You 含 Location、Contact Info、User Content、Search / Browsing History、Identifiers、Usage Data、Diagnostics。https://result.dev 200，title「Result — Personal Sovereign AI for iPhone and Mac」，写 zero data retention、open-weight models、works in the background even when locked，Download for Mac / iPhone。Show HN item 50403433（aaryankushwah，2026-11-07 10:57 UTC，1 分 0 评论）标题 First iOS personal agent that executes on device；HN 发帖人与 App Store 开发者名不同。预览为 result.dev 首屏实拍裁 3:2 WebP。本库未在真机安装或测试。",
+      "verifyLogEn": "2026-11-07 evening (Asia/Shanghai): App Store id6825805595 HTTP 200, title \"Result: Your Personal Agent App - App Store\", subtitle Everyday tasks, taken care of; Free (no In-App Purchases row seen), Productivity, 16+, 21.1 MB, seller/copyright Savio Martin, iOS/iPadOS 18.0+, English, not enough ratings; copy covers the on-device browser, Apple Password autofill, Apple Pay, Calendar/Reminders/Maps/Weather/Files, cloud or paired Mac, and says local AI requests are routed through Result's services with cloud fallback; an account and internet are required. Privacy label Data Linked to You includes Location, Contact Info, User Content, Search/Browsing History, Identifiers, Usage Data, Diagnostics. https://result.dev 200, title \"Result — Personal Sovereign AI for iPhone and Mac\", claims zero data retention, open-weight models, background runs while locked, Mac and iPhone downloads. Show HN 50403433 (aaryankushwah, 2026-11-07 10:57 UTC, 1 point, 0 comments); the HN poster differs from the App Store developer name. Preview is a 3:2 WebP of the result.dev hero. Not installed or tested on a device."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11599,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-07T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11900,19 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://meethalo.app/",
+      "https://apps.apple.com/us/app/halo-personal-ai/id6783715054",
+      "https://news.ycombinator.com/item?id=49969988",
+      "http://coolwulfai.com/",
+      "http://coolwulfai.com/index_zh.html",
+      "https://news.ycombinator.com/item?id=47044036",
+      "https://news.ycombinator.com/item?id=47117434",
+      "https://apps.apple.com/us/app/result-your-personal-agent/id6825805595",
+      "https://result.dev/",
+      "https://news.ycombinator.com/item?id=50403433",
+      "https://offstage.cloud/",
+      "https://news.ycombinator.com/item?id=50403588"
     ]
   }
 }
