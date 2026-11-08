@@ -1,6 +1,99 @@
 {
   "cases": [
     {
+      "id": "ywza",
+      "slug": "ywza",
+      "title": "ywza：让模型操作你自己的电脑，本机或另一台设备都能下指令",
+      "titleEn": "ywza: let a model use your own PC, from this machine or another",
+      "kind": "tool",
+      "hook": "看窗口、点击输入，配对一次后还能从另一台设备遥控这台电脑。",
+      "hookEn": "It sees windows, clicks and types, and once paired can drive this PC from another device.",
+      "summary": "ywza（https://github.com/alielmorsy/ywza ，作者 alielmorsy，AGPL-3.0）是跑在你自己电脑上的 computer-use 助手。README 开篇写：Let an AI model use your PC, from anywhere；它能查看窗口、在任意应用里点击和输入，也能操作你已打开的终端；本机或另一台设备都能给它指令。默认不是每一步都截屏，而是把窗口描述成一份编号元素列表（无障碍树），以降低 token、让模型更聚焦；需要看画面时仍可要截图。模型自带：任何兼容 OpenAI Chat API 的服务都行，包括本机 Ollama 与 LM Studio。架构拆成两个程序：ywza-agent 是跑在被控电脑上的后台服务，ywza 是下指令的命令行客户端。跨设备用一次性 6 位配对码（10 分钟过期）：被控端 ywza-agent pair，控制端 ywza pair <code> --name desktop。README 开篇写设备点对点连接、无需账号、无需自建服务器、不必为此把电脑暴露到公网；同一页的 MCP 小节又写跨网配对会走公共中继，自建中继仍在路线图——两边都按原文收录，不写成“完全不经过第三方”。也可作为 MCP 服务器接入 Claude 等客户端，一次对话里按调用选择本机或已配对设备。文档写 Windows 工作良好，Linux 目前只支持 X11；部分自绘文字、不向无障碍接口暴露内容的应用需编译时打开 OCR。Show HN（2026-11-07，https://news.ycombinator.com/item?id=50408730）标题为 “Ywza, a computer-use agent for your own PC, drivable from anywhere”。仓库演示视频展示了打开记事本写 Hello World 并移到显示器 0、用 Chrome 打开 Reddit、在空终端输入 Hello World 再启动 Claude——这是仓库里的演示，不是本库实测。仓还很新（Show HN 当天）。适合想让模型操作自己的电脑、又希望模型自带、本机运行的人。本库没有 clone 或编译 ywza，没有配置模型，没有配对设备，没有通过 MCP 接入，也没有让它点击、输入或截屏。",
+      "summaryEn": "ywza (https://github.com/alielmorsy/ywza , by alielmorsy, AGPL-3.0) is a computer-use agent that lives on your own PC. The README opens with “Let an AI model use your PC, from anywhere”: it can look at your windows, click and type in any app, and work in terminals you already have open; you can talk to it from the same machine or another device. Instead of sending a screenshot at every step, it describes each window as a numbered list of elements (an accessibility tree) to keep token use down and the model focused; it can still ask for a screenshot when it needs to see something. You bring your own model: anything that speaks the OpenAI chat API, including local ones like Ollama and LM Studio. Two programs: ywza-agent is the background service on the machine you want to control; ywza is the CLI client that issues instructions. Pairing uses a one-time 6-digit code that expires after 10 minutes (ywza-agent pair on the controlled PC, ywza pair <code> --name desktop on the controlling device). The README intro says devices connect peer to peer, with no account and no server to host, and that nothing has to be exposed to the internet for that to work; the MCP section on the same page says paired devices need not share a network and connect through public relays, with own-relay support planned—this entry records both sentences and does not claim traffic never touches a third party. It can also run as an MCP server for Claude or any other MCP client, picking the device per call so one chat can work on this PC and a paired machine side by side. Docs say it works well on Windows; Linux is X11 only. Apps that draw their own text and expose nothing to accessibility need an OCR engine compiled in. Show HN (2026-11-07, https://news.ycombinator.com/item?id=50408730) is titled “Ywza, a computer-use agent for your own PC, drivable from anywhere”. Repo demo videos show opening Notepad to type Hello World and moving it to monitor 0, opening Reddit in Chrome, and typing Hello World into an empty terminal then starting Claude—these are the repo’s demos, not tests by this library. The repo is brand-new (Show HN the same day). This library did not clone or build ywza, configure a model, pair a device, connect MCP, or let it click, type, or take a screenshot.",
+      "categories": [
+        "automation",
+        "coding"
+      ],
+      "role": "AI personal assistant",
+      "sourceUrl": "https://github.com/alielmorsy/ywza",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50408730"
+      ],
+      "previewImage": "/previews/ywza.webp",
+      "previewCredit": "预览：GitHub 仓库 Open Graph 图裁成 3:2 WebP（源 https://opengraph.githubassets.com/1/alielmorsy/ywza）",
+      "previewCreditEn": "Preview: GitHub repository Open Graph image cropped to 3:2 WebP (source https://opengraph.githubassets.com/1/alielmorsy/ywza)",
+      "sourceType": "show-hn",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它能查看窗口、点击和输入，等于在操作你自己的电脑；跨网配对的文档写会走公共中继。授权前先划清范围，不要对含密钥、付款或不可撤回操作的界面放权。本库没有代为安装或遥控你的电脑。",
+      "approvalBoundaryEn": "It can see windows, click, and type—i.e. operate your own PC; the docs say cross-network pairing uses public relays. Decide the scope before granting access, and do not point it at secrets, payments, or irreversible UI. This library did not install it or remote-control your computer.",
+      "connectors": [
+        "MCP",
+        "OpenAI API",
+        "Ollama",
+        "LM Studio"
+      ],
+      "publishedAt": "2026-11-07",
+      "updatedAt": "2026-11-08T12:10:00Z",
+      "stars": 4,
+      "qualityNote": "收录理由：真实的本机 computer-use / 跨设备个人助手，对上「浏览器与跨应用执行」方向，不是把普通工具改贴成助手。边界：仓很新（Show HN 当天）；README 开篇写点对点、无服务器，MCP 小节写跨网走公共中继，两边都按原文写；Linux 仅 X11；模型需自备。本库未编译、未配对、未让它操作电脑。",
+      "qualityNoteEn": "Why listed: a real local computer-use / cross-device personal assistant, matching the browser and cross-app direction—not a utility relabeled as an assistant. Limits: brand-new repo (Show HN the same day); README intro says peer-to-peer with no server, while the MCP section says public relays for cross-network pairing—both are recorded as written; Linux is X11 only; you bring your own model. This library did not build it, pair a device, or let it operate a PC.",
+      "verifyLog": "2026-11-08 晚间（Asia/Taipei）：仓库 https://github.com/alielmorsy/ywza README HTTP 200。开篇 Let an AI model use your PC, from anywhere；写可查看窗口、点击输入、操作已打开终端；默认用编号元素列表而非每步截屏；自带兼容 OpenAI Chat API 的模型（含 Ollama / LM Studio）；ywza-agent / ywza 二分；配对 ywza-agent pair 与 ywza pair 123456 --name desktop，验证码一次有效、10 分钟过期；开篇写点对点、无账号无自建服务器、不必为此暴露到公网；MCP 小节写 Paired devices don't need to be on the same network. They connect through public relays… Own relay support is planned；MCP 注册示例为 claude mcp add ywza -- uv run …；Linux Only X11 sessions are supported；演示视频说明为打开记事本写 Hello World 并移到 monitor 0、Chrome 打开 Reddit、空终端输入再启动 Claude。LICENSE 为 GNU AGPL v3。Show HN https://news.ycombinator.com/item?id=50408730 创建于 2026-11-07T22:42:08.000Z，标题 Ywza, a computer-use agent for your own PC, drivable from anywhere，当时 1 分，作者 alielmorsy19。GitHub API 稍早返回 created_at 2026-11-07T19:49:20Z、pushed_at 2026-11-08T11:26:49Z、stargazers_count 4、language Rust、license AGPL-3.0；同晚再次请求被 GitHub HTML 页拦截，星标未二次复核。预览为仓库 Open Graph PNG（1200×600，HTTP 200，content-length 107816）中心裁成 1200×800 WebP。本库未 clone、未 cargo build、未 set-llm、未 pair、未走 MCP、未点击或截屏。",
+      "verifyLogEn": "2026-11-08 evening (Asia/Taipei): README at https://github.com/alielmorsy/ywza HTTP 200. Opening line “Let an AI model use your PC, from anywhere”; windows/click/type/open terminals; numbered element list instead of per-step screenshots; BYO OpenAI-compatible LLM including Ollama/LM Studio; ywza-agent vs ywza; pairing code once/10 minutes; intro says peer-to-peer, no account, no hosted server; MCP section says public relays for cross-network pairing, own relay planned; Linux X11 only; demo captions as in the README. LICENSE is GNU AGPL v3. Show HN item 50408730 created 2026-11-07T22:42:08.000Z, 1 point, author alielmorsy19. GitHub API earlier this evening: created 2026-11-07T19:49:20Z, pushed 2026-11-08T11:26:49Z, 4★, Rust, AGPL-3.0; a later API call was intercepted by GitHub’s HTML interstitial, so the star count was not re-checked. Preview is the repo Open Graph PNG (1200×600, HTTP 200, 107816 bytes) center-cropped to 1200×800 WebP. Did not clone, build, set-llm, pair, use MCP, click, or screenshot."
+    },
+    {
+      "id": "qorqbot",
+      "slug": "qorqbot",
+      "title": "Qorqbot：用你已有的 Claude Code / Codex 订阅，在本机跑主动业务助手",
+      "titleEn": "Qorqbot: a local proactive business agent on the Claude Code / Codex subscriptions you already pay for",
+      "kind": "tool",
+      "hook": "业务工作流在后台接着跑，敏感动作先等你签字。",
+      "hookEn": "It carries business work forward in the background, and signoffs gate the sensitive moves.",
+      "summary": "Qorqbot（https://qorqbot.com ，仓库 https://github.com/49-Agents/qorqbot ，作者 49 Agents LLC）是跑在你自己机器上的主动业务助手。官网定位 “proactive agent for complex work”，并写 private, provider-agnostic, powered by subs you already pay for (or hosted models!)。README 标题是 proactive agent for business work：基于你已付费的 Codex、Claude Code 等订阅，在现成 agent harness 外再补一层共享上下文、操作工具和协作界面；可在后台推进业务工作流和长任务，面向客户、CRM、表格与通讯；敏感动作和决策用 signoff 等人批准（原文 Signoffs gate sensitive actions and decisions, pending your approval）；自称会学习你的流程、层级与偏好；并提供可插拔的 skill、workflow 与工具。当前下载是 v1.3.0-preview.3，下载页写明 For fresh installs. Existing preview installations cannot update to this version through the built-in updater。平台：Apple silicon + macOS 14 或更新（下载页写在 macOS 15 测过）；Linux 提供 Ubuntu 24.04 x64 包；Windows 需 WSL2 + Ubuntu 24.04，在 Windows 浏览器里看仪表盘。Mac 应用尚未公证，README 写首次打开需在系统设置里选 Open Anyway（或 xattr 去掉隔离属性）。同一仪表盘也可在浏览器打开，文档写默认 http://127.0.0.1:1049。许可证是 BSL 1.1，每个公开版本满两年后转为 Apache 2.0；允许个人与内部业务生产使用，不能把它做成面向第三方的竞争性托管或替代产品。Show HN（2026-11-07，https://news.ycombinator.com/item?id=50406534）标题为 “OS Grokbot, can run on Claude/codex subs”——这是作者投稿用语，本条不当成与 Grok Bot 功能对等的评测。官网首屏有演示式界面文案（如 Outreach draft ready for signoff、Messaged 2 Bots），不是本库跑出来的结果。适合已有 Claude Code 或 Codex 订阅、想在本机用一层带审批的业务助手的人。本库没有下载安装包，没有启动仪表盘，没有登录 Claude Code / Codex，没有连接 CRM 或邮箱，也没有让它起草外发或执行 signoff。",
+      "summaryEn": "Qorqbot (https://qorqbot.com , repo https://github.com/49-Agents/qorqbot , by 49 Agents LLC) is a local proactive business agent. The site calls it a “proactive agent for complex work” that is “private, provider-agnostic, powered by subs you already pay for (or hosted models!)”. The README titles it a proactive agent for business work: it runs on your machine on Codex, Claude Code, and similar subscriptions you already pay for, sitting around an existing agent harness with shared context, operational tools, and a collaboration UI; it carries business workflows and long-running tasks forward in the background for clients, CRMs, tables, and communications; “Signoffs gate sensitive actions and decisions, pending your approval”; it says it learns your processes, hierarchy, and preferences; and it offers pluggable skills, workflows, and tools. The current build is v1.3.0-preview.3. The downloads page says “For fresh installs. Existing preview installations cannot update to this version through the built-in updater.” Platforms: Apple silicon on macOS 14+ (downloads page says tested on macOS 15); Linux Ubuntu 24.04 x64 tarball; Windows via WSL2 with Ubuntu 24.04, viewing the dashboard in a Windows browser. The Mac app is not notarized yet; first launch needs Open Anyway in System Settings (or stripping the quarantine xattr). The same dashboard can open in a browser; docs give http://127.0.0.1:1049 as the default. License is BSL 1.1, converting to Apache 2.0 two years after each public version; personal and internal business production use is allowed, but you may not offer it to third parties as a competitive hosted/substitute product. Show HN (2026-11-07, https://news.ycombinator.com/item?id=50406534) is titled “OS Grokbot, can run on Claude/codex subs”—that is the author’s submission wording, not a claim by this library that it is equivalent to Grok Bot. Hero UI copy such as “Outreach draft ready for signoff” and “Messaged 2 Bots” is marketing chrome, not a result we ran. This library did not download the app, start the dashboard, sign in to Claude Code or Codex, connect a CRM or inbox, draft outbound mail, or complete a signoff.",
+      "categories": [
+        "automation",
+        "ops"
+      ],
+      "role": "AI personal assistant",
+      "sourceUrl": "https://qorqbot.com",
+      "secondaryUrls": [
+        "https://github.com/49-Agents/qorqbot",
+        "https://news.ycombinator.com/item?id=50406534",
+        "https://qorqbot.com/downloads/"
+      ],
+      "previewImage": "/previews/qorqbot.webp",
+      "previewCredit": "预览：仓库 docs/images/qorqbot-overview.png 裁成 3:2 WebP",
+      "previewCreditEn": "Preview: repo docs/images/qorqbot-overview.png cropped to 3:2 WebP",
+      "sourceType": "show-hn",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "敏感动作需 signoff；Mac 应用尚未公证，首次打开要系统放行。本库没有代为安装、登录订阅或对外发送。",
+      "approvalBoundaryEn": "Sensitive actions need a signoff; the Mac app is not notarized, so the first open needs a system override. This library did not install it, sign in to a subscription, or send anything outward.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-02",
+      "updatedAt": "2026-11-08T12:10:00Z",
+      "stars": 2,
+      "qualityNote": "收录理由：带审批门槛的本机主动业务助手，用已有 Claude Code / Codex 订阅，对上邮件/CRM/跨应用执行方向，不是把普通工具改贴成助手。边界：仍是 preview.3，只适合全新安装；BSL 1.1（满两年转 Apache 2.0），不是 OSI 常见宽松许可；Mac 应用未公证；Show HN 自称 OS Grokbot，本条不据此对标评测。本库未安装、未登录订阅、未外发。",
+      "qualityNoteEn": "Why listed: a local proactive business agent with signoff gates, running on existing Claude Code / Codex subscriptions—email/CRM/cross-app work, not a utility relabeled as an assistant. Limits: still preview.3, fresh installs only; BSL 1.1 (Apache 2.0 after two years), not a common OSI-permissive license; Mac app not notarized; Show HN calls it “OS Grokbot”, which this entry does not treat as a benchmark. This library did not install it, sign in, or send outbound mail.",
+      "verifyLog": "2026-11-08 晚间（Asia/Taipei）：https://qorqbot.com HTTP 200，标题 Qorqbot — get stuff done, stay independent；首屏 proactive agent for complex work，以及 private, provider-agnostic, powered by subs you already pay for (or hosted models!)；标注 preview.3 · fresh installs only。下载区提供 mac Apple silicon DMG、Windows intel/amd · wsl2 zip、Linux ubuntu 24.04 · x64 tar.gz，版本文件名均为 v1.3.0-preview.3。https://qorqbot.com/downloads/ 写 1.3.0-preview.3 · For fresh installs. Existing preview installations cannot update to this version through the built-in updater；Mac 链接旁写 tested on macOS 15。README：proactive agent for business work；Powered by the AI subscriptions you already pay for（点名 Codex、Claude Code）；Carries work forward in the background；Signoffs gate sensitive actions and decisions, pending your approval；Skills, workflows, and tools；Run it on a Mac 需 Apple silicon + macOS 14+，应用未公证；浏览器仪表盘默认 http://127.0.0.1:1049；Windows 走 WSL2 Ubuntu 24.04。LICENSE 为 Business Source License 1.1，Licensor 49 Agents LLC，Change License Apache 2.0，Change Date 为该版本首次公开发布两周年；Additional Use Grant 允许除 Competitive Offering 外的生产使用，个人与内部业务使用明确允许。GitHub API：created_at 2026-11-02T23:43:54Z，pushed_at 2026-11-08T05:12:14Z，stargazers_count 2，language Python，license Other/NOASSERTION（与 BSL 文件一致）。Show HN https://news.ycombinator.com/item?id=50406534 创建于 2026-11-07T17:59:08.000Z，标题 OS Grokbot, can run on Claude/codex subs，当时 1 分，作者 alpbahadur。预览为 raw docs/images/qorqbot-overview.png（1600×900，HTTP 200，content-length 87504）中心裁成 1200×800 WebP。本库未下载安装包、未启动仪表盘、未登录 Claude Code/Codex、未连 CRM/邮箱、未外发、未点 signoff。",
+      "verifyLogEn": "2026-11-08 evening (Asia/Taipei): https://qorqbot.com HTTP 200, title “Qorqbot — get stuff done, stay independent”; hero “proactive agent for complex work” and “private, provider-agnostic, powered by subs you already pay for (or hosted models!)”; labeled preview.3 · fresh installs only. Downloads list mac Apple-silicon DMG, Windows WSL2 zip, Linux Ubuntu 24.04 x64 tarball, all v1.3.0-preview.3. Downloads page: fresh installs only; existing preview installs cannot use the built-in updater; Mac link notes tested on macOS 15. README matches the summary (Claude Code/Codex, background work, signoffs, skills, Mac un-notarized, dashboard http://127.0.0.1:1049, Windows via WSL2 Ubuntu 24.04). LICENSE is BSL 1.1, Licensor 49 Agents LLC, Change License Apache 2.0 two years after each public version. GitHub API: created 2026-11-02T23:43:54Z, pushed 2026-11-08T05:12:14Z, 2★, Python, license Other. Show HN item 50406534 created 2026-11-07T17:59:08.000Z, title “OS Grokbot, can run on Claude/codex subs”, 1 point, author alpbahadur. Preview from raw docs/images/qorqbot-overview.png (1600×900, HTTP 200, 87504 bytes) center-cropped to 1200×800 WebP. Did not download, start the dashboard, sign in, connect CRM/email, send outbound mail, or complete a signoff."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11540,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-08T12:10:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11841,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://github.com/alielmorsy/ywza",
+      "https://news.ycombinator.com/item?id=50408730",
+      "https://qorqbot.com",
+      "https://github.com/49-Agents/qorqbot",
+      "https://news.ycombinator.com/item?id=50406534",
+      "https://qorqbot.com/downloads/"
     ]
   }
 }

@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-08",
+      "title": "晚间收录 2026-11-08：Cases +2（ywza / Qorqbot）",
+      "titleEn": "Evening catalog 2026-11-08: Cases +2 (ywza / Qorqbot)",
+      "body": "个人助手优先。ywza（AGPL-3.0，alielmorsy/ywza，Show HN 2026-11-07）— 跑在你自己电脑上的 computer-use 助手，用无障碍树描述窗口，可本机或配对后跨设备下指令，也可当 MCP 服务器；README 开篇写点对点无自建服务器，MCP 小节写跨网走公共中继。Qorqbot（BSL 1.1，满两年转 Apache 2.0，49-Agents/qorqbot，Show HN 2026-11-07）— 用已有 Claude Code / Codex 订阅在本机跑主动业务助手，敏感动作需 signoff；当前 v1.3.0-preview.3 只适合全新安装。预览各一枚 3:2 WebP（ywza 用 GitHub Open Graph，Qorqbot 用仓库 overview 图）。本库未编译 ywza、未装 Qorqbot、未配对设备、未连订阅、未让助手点击或外发。相对 main：cases 215→217（1.4.77→1.4.78）。版本从 main 加 1，不叠仍打开的 #150/#149（二者都曾把目标写成 cases 218 / v1.4.78，后合并需再变基版本号）。未改 HTML / Agent UI / Models / 首页精选。未合并，等「合」。",
+      "bodyEn": "Personal assistants first. ywza (AGPL-3.0, alielmorsy/ywza, Show HN 2026-11-07) — a computer-use agent on your own PC that describes windows via an accessibility tree, takes instructions locally or from a paired device, and can run as an MCP server; the README intro says peer-to-peer with no hosted server, while the MCP section says public relays for cross-network pairing. Qorqbot (BSL 1.1, converting to Apache 2.0 after two years, 49-Agents/qorqbot, Show HN 2026-11-07) — a local proactive business agent on existing Claude Code / Codex subscriptions, with signoffs for sensitive actions; current v1.3.0-preview.3 is for fresh installs only. One 3:2 WebP preview each (ywza from the GitHub Open Graph image, Qorqbot from the repo overview image). This library did not build ywza, install Qorqbot, pair a device, connect a subscription, or let an agent click or send outbound mail. Relative to main: cases 215→217 (1.4.77→1.4.78). Version bump is from main, not stacked on still-open #150/#149 (both targeted cases 218 / v1.4.78; later mergers will need a version rebase). HTML / Agent UI / Models / home picks unchanged. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
