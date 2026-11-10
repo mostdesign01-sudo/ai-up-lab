@@ -1,6 +1,108 @@
 {
   "cases": [
     {
+      "id": "fo",
+      "slug": "fo",
+      "title": "Fo（Wajo）：替你打电话、发邮件、订位、追退款和付款的 AI 个人助手，花钱前先问你",
+      "titleEn": "Fo by Wajo: an AI personal assistant that calls, emails, books, chases refunds and pays, and checks with you before it spends",
+      "kind": "tool",
+      "hook": "让 Fo 替你打电话、订位、追退款和付款，花钱前先问你。",
+      "hookEn": "Fo makes the calls, books, chases refunds and pays, and checks before it spends.",
+      "summary": "Fo（https://wajo.ai/ ，Wajo, Inc.，旧金山）是一个替你办日常琐事的 AI 个人助手。官网原话：告诉 Fo 要做什么，它会打电话、订预约、追退款、付款，并在花钱前先问你。它会和相关的人来回沟通：群聊、电话、邮件都能处理；遇到需要人来办的事，会找受过训练的行政助理一起完成。官网列的例子包括订周四下午的牙医、把下午 3 点的会挪到下周、找周日营业的理发店、改航班、给妈妈订生日花、和 Eva 约时间（演示里写“Both calendars updated”）、取消健身房会员、给团队订午饭。隐私做法（官网自述）：每笔购物用一次性虚拟卡结账，真实卡号不给商家，Fo 自己也看不到；Fo 用自己的邮箱地址发信，从不以你的名义发；替你登录网站时不看也不存密码；数据不用于训练第三方 AI 模型。FAQ 写它可以跨邮件、日历、Gmail / Google Calendar / Google Drive、Slack、网页和电话工作，每个连接都要授权；可以设成只起草、动手前先请你批准、或在你定的边界内自己办，难以撤回的动作会先问你；OAuth 令牌和缓存的 Google 数据在传输和存储时加密，不出售个人信息，不用 Google Workspace 数据训练通用模型，可随时撤销连接或申请删除。定价：Fo Mini 免费，每天 1000 个任务、每日重置；OG Fo 免费但需邀请，任务和通话时长不限，可以拉 Fo 进群聊，并写“Fo in your other AI tools”；Pro 标“即将推出”。页上没有开源许可或源码，是需要注册的托管服务。创始人 Shivani Poddar 2026-11-09 在 X 上发帖（https://x.com/shivanipod/status/2119938214429602046 ）称“Fo is the only personal agent with an MCP”，说用户把 coding agent 接到 Fo MCP 去下单实物，把工作 agent 接到 Fo 处理邮件、短信和电话——MCP 的说法来自这条创始人帖，官网首页正文没有出现 MCP 一词，只有上面那句“Fo in your other AI tools”。它不是今天才上线的新产品，这次因为这条帖子和个人助手优先的方向补收。适合想把订位、改期、退款、跑腿这类要打电话发邮件的事交出去的人。本库没有注册或登录，没有点 Get started，没有连接 Gmail、日历、Drive 或 Slack，没有绑定支付卡或付款，没有让它打电话、发信或订位，也没有试 MCP。",
+      "summaryEn": "Fo (https://wajo.ai/ , Wajo, Inc., San Francisco) is an AI personal assistant for everyday errands. In the site’s words: tell Fo what needs doing, and it makes the calls, books the appointments, chases refunds and pays—and checks with you before it spends. It handles the back-and-forth with the people involved over group chats, calls and email, and when a task needs a human touch it works with trained executive assistants. Examples on the site include booking a dentist for Thursday afternoon, moving a 3pm meeting to next week, finding a barber open on Sunday, changing a flight, sending Mom birthday flowers, finding a time with Eva (the demo shows “Both calendars updated”), cancelling a gym membership and ordering team lunch. Privacy practices, as the site describes them: each purchase uses a single-use card so your real card details are never shared with the merchant or seen by Fo; Fo emails from its own address and never sends as you; it signs in to websites without seeing or storing your password; your data is never used to train third-party AI models. The FAQ says it works across email, calendar, Gmail / Google Calendar / Google Drive, Slack, the web and phone, with every connection permissioned; it can run draft-only, ask for approval before acting, or work independently within boundaries you set, and asks before hard-to-reverse actions; OAuth tokens and cached Google data are encrypted in transit and at rest, personal information is not sold, Google Workspace data is not used to train generalized models, and you can revoke connections or request deletion. Pricing: Fo Mini is free with 1,000 tasks a day, resetting daily; OG Fo is free but invite-only, with unlimited tasks and call time, group chats with Fo, and “Fo in your other AI tools”; Pro is marked coming soon. The page shows no open-source license or source code; it is a hosted service that needs an account. Founder Shivani Poddar posted on X on 2026-11-09 (https://x.com/shivanipod/status/2119938214429602046 ) that “Fo is the only personal agent with an MCP”, describing users wiring coding agents to the Fo MCP to order real-world things and work agents to Fo for email, text and phone. The MCP claim comes from that founder post; the homepage body never says MCP, only “Fo in your other AI tools”. It is not a product that launched today; it is a catch-up listing prompted by that post and the personal-assistant priority. Good for people who want to hand off bookings, rescheduling, refunds and errands that take phone calls and email. This library did not sign up or sign in, click Get started, connect Gmail, Calendar, Drive or Slack, add a payment card or pay, let it call, email or book anything, or try the MCP.",
+      "categories": [
+        "automation",
+        "daily-digest"
+      ],
+      "role": "AI personal assistant",
+      "sourceUrl": "https://wajo.ai/",
+      "secondaryUrls": [
+        "https://x.com/shivanipod/status/2119938214429602046"
+      ],
+      "previewImage": "/previews/fo.webp",
+      "previewCredit": "预览：官网 Open Graph 图中心裁成 3:2 WebP（源 https://media.wajo.ai/uploads/og-card-fo-built-on-trust-v3-e2a10d3a.png）",
+      "previewCreditEn": "Preview: official Open Graph image center-cropped to 3:2 WebP (source https://media.wajo.ai/uploads/og-card-fo-built-on-trust-v3-e2a10d3a.png)",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它能替你打电话、发邮件、登录网站、订位和付款，连上 Gmail / 日历 / Drive / Slack 后等于代你办事。官网写花钱前先问你、难以撤回的动作先问你，也可以设成只起草或每步先批准；第一次用建议先开只起草或先批准模式，再决定给多大授权。本库没有注册、连接账号或绑定支付卡。",
+      "approvalBoundaryEn": "It can call, email, sign in to websites, book and pay for you; once Gmail, Calendar, Drive or Slack are connected it is acting on your behalf. The site says it checks with you before spending and before hard-to-reverse actions, and it can run draft-only or ask approval before acting; start in draft-only or approval mode before widening its scope. This library did not sign up, connect accounts or add a payment card.",
+      "connectors": [
+        "Email",
+        "Calendar",
+        "Gmail",
+        "Google Calendar",
+        "Google Drive",
+        "Slack",
+        "Web",
+        "Phone"
+      ],
+      "publishedAt": "2026-10-31",
+      "updatedAt": "2026-11-10T01:21:29Z",
+      "stars": 3,
+      "qualityNote": "收录理由：真正替你打电话、发邮件、订位、付款的个人助手，不是把普通工具改名叫助手，对上个人助手优先方向；一次性支付卡、用自己的邮箱发信、花钱前先问这几条边界写得清楚。补收：产品早于今天，这次因创始人在 X 上讲 MCP 的帖子补上；MCP 是创始人说法，官网首页没写。边界：不限量需要邀请，Pro 未推出；隐私与安全做法都是官网自述。本库未注册、未连账号、未付款、未让它对外联系任何人。",
+      "qualityNoteEn": "Why listed: a personal assistant that actually calls, emails, books and pays for you—not an ordinary tool renamed as an assistant—matching the personal-assistant priority, with clear boundaries such as single-use cards, its own email address and asking before it spends. Catch-up: the product predates today and is listed now because of the founder’s post about MCP on X; MCP is the founder’s claim, not homepage copy. Limits: unlimited use needs an invite and Pro is not out yet; the privacy and security practices are the vendor’s own claims. This library did not sign up, connect accounts, pay, or let it contact anyone.",
+      "verifyLog": "2026-11-10 上午（Asia/Taipei，约 09:14）：https://wajo.ai/ HTTP 200，标题 Fo by Wajo: the AI assistant that calls, books and pays；描述 Tell Fo what needs doing. It makes the calls, books the appointments, chases refunds and pays – and checks with you before it spends。正文核到：Fo calls, emails, and coordinates with people…With human help when the task needs it；One-time payment cards（Your real card details are never shared with the merchant or seen by Fo）；Fo emails from its own address and never sends as you；Your data is never used to train third-party AI models；signs in to websites for you without seeing or storing your password；定价 Start for free. Lift the daily limit with an invite：Fo Mini Free 1000 tasks per day / resets every day；OG Fo Free Invite only（Unlimited tasks、Unlimited call time、Group chats with Fo、Fo in your other AI tools）；Pro Coming soon；FAQ 03 draft-only mode / ask for approval before acting / ask before hard-to-reverse actions；FAQ 04 email, calendar, Gmail, Calendar and Drive, Slack, the web, phone；FAQ 06 encrypts OAuth tokens and cached Google data in transit and at rest；页脚 Wajo, Inc., 625 2nd St, San Francisco, CA 94107。首页原始 HTML 中 “MCP” 出现 0 次，MCP 说法只归给创始人 X 帖。商业页写 build a team of autonomous agents，但个人产品是单个 Fo 加人类行政助理，故 hasMultiAgent 记 false。X API 读 https://x.com/shivanipod/status/2119938214429602046 ：作者 Shivani Poddar（@shivanipod），created_at 2026-11-09T23:40:31Z，全文以 “Fo is the only personal agent with an MCP” 开头，列出 coding agents 接 Fo MCP 代买实物、work agents 接 Fo 处理 email/text/phones；读取时 20 赞、838 展示（调研简报记为 19 赞 / 802 展示，数字随时间增长）。官网首页没写上线日期；og:image https://media.wajo.ai/uploads/og-card-fo-built-on-trust-v3-e2a10d3a.png（1200×630，HTTP 200，image/png，26142 bytes）Last-Modified Sat, 31 Oct 2026 13:16:41 GMT，publishedAt 取这一可核日期 2026-10-31，表示产品至少当时已公开，不是今天发布。预览为该 og:image 中心裁成 1200×800 WebP。本库未注册、未点 Get started、未连接 Gmail / Calendar / Drive / Slack、未绑定支付卡、未让它打电话 / 发信 / 订位 / 付款、未验证 MCP 或 Fo in your other AI tools。",
+      "verifyLogEn": "2026-11-10 morning (Asia/Taipei, about 09:14): https://wajo.ai/ HTTP 200, title “Fo by Wajo: the AI assistant that calls, books and pays”; description “Tell Fo what needs doing. It makes the calls, books the appointments, chases refunds and pays – and checks with you before it spends.” Body checked: “Fo calls, emails, and coordinates with people… With human help when the task needs it”; one-time payment cards (“Your real card details are never shared with the merchant or seen by Fo”); “Fo emails from its own address and never sends as you”; “Your data is never used to train third-party AI models”; signs in “without seeing or storing your password”; pricing “Start for free. Lift the daily limit with an invite”: Fo Mini Free, 1000 tasks per day, resets daily; OG Fo Free, invite only (unlimited tasks, unlimited call time, group chats with Fo, Fo in your other AI tools); Pro coming soon; FAQ 03 draft-only / approval before acting / ask before hard-to-reverse actions; FAQ 04 email, calendar, Gmail, Calendar and Drive, Slack, web, phone; FAQ 06 OAuth tokens and cached Google data encrypted in transit and at rest; footer Wajo, Inc., 625 2nd St, San Francisco, CA 94107. “MCP” appears 0 times in the homepage’s raw HTML, so the MCP claim is attributed only to the founder’s X post. The business section mentions building “a team of autonomous agents”, but the personal product is one Fo plus human executive assistants, so hasMultiAgent is false. X API read of https://x.com/shivanipod/status/2119938214429602046 : author Shivani Poddar (@shivanipod), created_at 2026-11-09T23:40:31Z, full text opens “Fo is the only personal agent with an MCP” and lists coding agents on the Fo MCP ordering real-world things and work agents on Fo for email/text/phones; 20 likes and 838 impressions when read (the research brief had 19 / 802; the numbers grew). The homepage states no launch date; the og:image https://media.wajo.ai/uploads/og-card-fo-built-on-trust-v3-e2a10d3a.png (1200×630, HTTP 200, image/png, 26142 bytes) has Last-Modified Sat, 31 Oct 2026 13:16:41 GMT, so publishedAt uses that verifiable date, 2026-10-31, meaning the product was public at least by then and did not launch today. Preview is that og:image center-cropped to a 1200×800 WebP. Did not sign up, click Get started, connect Gmail/Calendar/Drive/Slack, add a payment card, let it call/email/book/pay, or test the MCP or “Fo in your other AI tools”."
+    },
+    {
+      "id": "vork",
+      "slug": "vork",
+      "title": "Vork（Voyager）：给 agent 用的无头 3D / VFX 引擎，场景写成代码、GPU 渲染、看图再改",
+      "titleEn": "Vork by Voyager: a headless 3D and VFX engine for agents—scenes as code, rendered on the GPU, inspected and revised",
+      "kind": "tool",
+      "hook": "让 agent 把 3D/VFX 镜头写成代码，GPU 渲染后看图再改。",
+      "hookEn": "Agents write 3D and VFX shots as code, render them on the GPU, look, and revise.",
+      "summary": "Vork（https://voyager.so/vork ，源码 https://github.com/voyager-so/vork ）是 Voyager 做的无头 3D / VFX 引擎，专门给 AI agent 用：agent 把整个镜头写成代码，包括自己的 shader、材质、相机、光照和物理，Vork 在 GPU 上渲染，agent 看结果再改代码；没有可视化编辑器要操作。官网说法：Blender、Houdini、Unreal、Nuke 为人设计，需要成千上万个设置；Vork 的内核只放 agent 临时写不出来的部分（几何、光线查询等），其余都是 agent 边做边写的程序，入门帮助约 2,500 token、含一个完整的首个场景。用 Rust 和 Slang 写成，经 Vulkan 和 Metal 渲染；场景可直接写 JSON，也可以用 Python / TypeScript SDK 生成。官网示例有一百万只自己转向的鸟、在真实素材上合成发光种子并重新打光、agent 自己写光线弯曲物理的黑洞、Blender 3.5 启动画面场景、GPU 液体模拟；官网称这些镜头里动的东西都是渲染的 3D 或真实素材加合成，不是视频模型生成（只有车戏里的远山和天空是图像模型画的背景）。鸟群镜头官网写 97 秒在一张 GPU（L4）上完成，并称 Blender EEVEE“预计（projected）”需要 13–18 分钟、约 8–11 倍——这是厂商标注为预测的数字，不是实测对比，本库也未复跑。系统要求（官网）：Windows / Linux 需较新的 NVIDIA GPU，Linux 为 Ubuntu 22.04+ 或 glibc 2.35+；Mac 需 Apple Silicon 与 Metal，自带 Slang 工具链面向 macOS 26，更早版本未验证。没有 GPU 可以从付费 Voyager 工作区租云 GPU，按秒计费。研究预览阶段有限制：还不支持雾和体积，复杂室内场景在 Mac 上可能中止，路径追踪在实测场景里比 Cycles 慢。许可：GitHub 许可字段为 Other（NOASSERTION），LICENSE 文件名为 vork Preview License（Nullframe, Inc.），写明 source-available、不是开源，研究预览期间免费、可商用，但不得转售、分发修改版或做成托管渲染服务，后续版本可能改为付费条款。仓库建于 2026-11-05，2026-11-09 上了 Show HN（https://news.ycombinator.com/item?id=50432998 ），写入时约 1,288 个 GitHub star。它不是个人助手，是 AI×设计里给 agent 的生成式 3D / VFX 工具。适合想让 coding agent 直接出 3D 镜头、动效或 VFX 的设计与技术美术。本库没有安装 CLI 或 SDK，没有运行 vork init / vork render，没有租用 Voyager 云 GPU，也没有让任何 agent 写场景。",
+      "summaryEn": "Vork (https://voyager.so/vork , source at https://github.com/voyager-so/vork ) is a headless 3D and VFX engine from Voyager, built for AI agents: an agent writes the whole shot as code—its own shaders, materials, cameras, light and physics—Vork renders it on the GPU, and the agent looks at the result and revises the code; there is no editor to drive. In the site’s framing, Blender, Houdini, Unreal and Nuke were built for humans and need thousands of settings; Vork’s kernel holds only what agents can’t write on the fly (geometry, ray queries and the like), and the rest of the shot is code the agent writes as it goes; getting-started help is about 2,500 tokens including a complete first scene. It is written in Rust and Slang and renders through Vulkan and Metal; scenes can be plain JSON or authored with the Python and TypeScript SDKs. Examples on the site include a million self-steering birds, a glowing seed composited into real footage with the room relit, a black hole whose light-bending physics the agent wrote, Blender’s 3.5 splash scene, and a GPU liquid simulation; the site says everything that moves is rendered 3D or real footage with compositing, not a video model (only the far mountains and sky in the car shot are an image-model backdrop). For the bird shot the site says 97 seconds on one GPU (an L4) and that Blender EEVEE would need a “projected” 13–18 minutes, about 8–11x longer—figures the vendor labels as projections, not a measured head-to-head, and not re-run here. System requirements (from the site): Windows or Linux with a recent NVIDIA GPU, Linux on Ubuntu 22.04+ or glibc 2.35+; Mac on Apple Silicon with Metal, with the bundled Slang toolchain targeting macOS 26 and older versions unqualified. Without a GPU you can lease a cloud GPU from a paid Voyager workspace, billed by the second. Research-preview limits: no fog or volumes yet, heavy interiors can abort on Mac, and the path tracer is slower than Cycles in the measured cases. License: GitHub’s license field is Other (NOASSERTION); the LICENSE file is the “vork Preview License” (Nullframe, Inc.), which says it is source-available and not open source, free during the research preview including commercial work, but forbids reselling, distributing modified versions or offering it as a hosted rendering service, and later versions may come under paid terms. The repo was created on 2026-11-05 and reached Show HN on 2026-11-09 (https://news.ycombinator.com/item?id=50432998 ), with about 1,288 GitHub stars when written up. It is not a personal assistant; it is an AI×design tool for generative 3D and VFX by agents. Good for designers and technical artists who want a coding agent to produce 3D shots, motion or VFX directly. This library did not install the CLI or SDKs, run vork init or vork render, lease a Voyager cloud GPU, or have any agent write a scene.",
+      "categories": [
+        "design",
+        "engineering",
+        "content"
+      ],
+      "role": "Headless 3D / VFX engine for agents",
+      "sourceUrl": "https://voyager.so/vork",
+      "secondaryUrls": [
+        "https://github.com/voyager-so/vork",
+        "https://news.ycombinator.com/item?id=50432998",
+        "https://github.com/voyager-so/vork/blob/main/LICENSE"
+      ],
+      "previewImage": "/previews/vork.webp",
+      "previewCredit": "预览：官网 Open Graph 图裁成 3:2 WebP（略偏左以保留完整标语；源 https://voyager.so/vork/opengraph-image.jpg）",
+      "previewCreditEn": "Preview: official Open Graph image cropped to 3:2 WebP (shifted slightly left to keep the full tagline; source https://voyager.so/vork/opengraph-image.jpg)",
+      "sourceType": "show-hn",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "安装脚本会在本机下载并校验发行包、跑 vork setup；agent 会在你的机器上写代码并占用 GPU。用 Voyager 云 GPU 会从付费工作区按秒扣费，官网给的 agent 提示词要求先报价、等你同意再租；正式渲染前先自己确认费用。许可不允许转售、分发修改版或做托管渲染服务。本库没有代为安装或租用。",
+      "approvalBoundaryEn": "The installer downloads and verifies a release and runs vork setup on your machine; the agent writes code there and uses your GPU. Voyager cloud GPUs bill a paid workspace by the second, and the site’s agent prompt asks the agent to quote cost and wait for your OK before leasing—confirm the cost yourself before final renders. The license forbids reselling, distributing modified versions or offering a hosted rendering service. This library did not install or lease anything.",
+      "connectors": [
+        "Vulkan",
+        "Metal",
+        "NVIDIA GPU",
+        "Python SDK",
+        "TypeScript SDK",
+        "Voyager cloud GPUs",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-05",
+      "updatedAt": "2026-11-10T01:21:29Z",
+      "stars": 3,
+      "qualityNote": "收录理由：AI×设计里少见的给 agent 用的 3D / VFX 渲染引擎，agent 写代码、看渲染结果、再改，正好接上 coding agent 出动效和镜头的工作流。它不是个人助手。边界：研究预览，雾和体积未支持、Mac 上复杂场景可能中止；source-available 不是开源，后续版本可能收费；和 EEVEE 的速度对比是厂商标注的预测值。补收说明：仓库建于 2026-11-05，因今天的 Show HN 收录。本库未安装、未渲染、未租云 GPU。",
+      "qualityNoteEn": "Why listed: a rare 3D and VFX rendering engine built for agents in the AI×design space—the agent writes code, looks at the render and revises—fitting coding-agent workflows for motion and shots. It is not a personal assistant. Limits: research preview, with no fog or volumes and heavy scenes that can abort on Mac; source-available rather than open source, and later versions may be paid; the speed comparison with EEVEE is a vendor projection. Timing: the repo dates to 2026-11-05 and is listed because of today’s Show HN. This library did not install it, render anything, or lease a cloud GPU.",
+      "verifyLog": "2026-11-10 上午（Asia/Taipei，约 09:14）：https://voyager.so/vork HTTP 200，标题 vork by Voyager: a headless 3D and VFX engine for agents；描述 An agent writes a scene as code, renders it on the GPU, looks at the result and revises the code. Source-available and free during the research preview。正文核到 Written in Rust and Slang, rendering on the GPU through Vulkan and Metal；Getting-started help is about 2,500 tokens, including a complete first scene；A million birds…simulated and rendered in 97 seconds on one GPU. Blender’s EEVEE would need a projected 13-18 minutes…about 8-11x longer，并注明 97 秒是在 L4 上、另有 244 秒 setup 与 166 秒 warmup，EEVEE 数字是 eight-frame draw-only projection；Install 区写 Windows / Linux recent NVIDIA GPU、Ubuntu 22.04+ or glibc 2.35+、Apple Silicon with Metal, the bundled Slang toolchain targets macOS 26, older macOS versions are unqualified；Render on Voyager cloud GPUs…billed by the second from a paid Voyager workspace；Research-preview limits（Fog and volumes aren’t in yet, heavy interiors can abort on Mac, path tracer is slower than Cycles in the measured cases）。与调研简报的出入，以页面为准：简报写“192 frames at 1080p rendered in 97 seconds on a single NVIDIA L4”，官网当前正文没有这句，只在 README 出现；简报写“核 API 约 2,500 tokens”，官网写的是入门帮助约 2,500 token（README 写 core API fits in about 2,500 tokens）；简报列 PyPI vork 为安装途径，README 写 pip 安装 Coming soon，且 PyPI 包只指回本仓，SDK 从本机 vork 目录安装。gh api repos/voyager-so/vork：created_at 2026-11-05T22:37:07Z，pushed_at 2026-11-09T06:09:36Z，language Rust，license key other / spdx_id NOASSERTION，stargazers_count 1288，forks 97（GitHub star 数只记在这里与摘要，不写入策展 stars 字段）。LICENSE 前文：vork Preview License，Copyright © 2026 Nullframe, Inc.，source-available、free to use during the research preview, including for commercial work、It is not open source；禁止 sell / relicense / distribute a modified version / hosted or managed service；This license covers this version of vork only；integrations/blender 为 GPL-3.0-or-later 单独组件。HN Algolia：https://news.ycombinator.com/item?id=50432998 created_at 2026-11-09T22:11:51Z，标题 Show HN: Vork – headless 3D and VFX engine for agents，链 GitHub 仓库，5 分，作者 raviparikh。publishedAt 取可核的仓库创建日 2026-11-05（Show HN 晚于此）。预览为 og:image https://voyager.so/vork/opengraph-image.jpg（1200×630，HTTP 200，image/jpeg，163132 bytes，未带 Last-Modified）裁成 1200×800 WebP，裁切框由中心左移约 100px 以保留完整标语。本库未安装 CLI / npm / SDK、未运行 vork init 或 vork render、未用 Voyager cloud GPU 或其 MCP、未让 coding agent 写场景。",
+      "verifyLogEn": "2026-11-10 morning (Asia/Taipei, about 09:14): https://voyager.so/vork HTTP 200, title “vork by Voyager: a headless 3D and VFX engine for agents”; description “An agent writes a scene as code, renders it on the GPU, looks at the result and revises the code. Source-available and free during the research preview.” Body checked: written in Rust and Slang, rendering through Vulkan and Metal; “Getting-started help is about 2,500 tokens, including a complete first scene”; “A million birds… simulated and rendered in 97 seconds on one GPU. Blender’s EEVEE would need a projected 13-18 minutes… about 8-11x longer”, with notes that the 97 seconds was on an L4 after 244 seconds of setup and 166 seconds of warmup, and the EEVEE figure is an eight-frame draw-only projection; install section: Windows/Linux with a recent NVIDIA GPU, Ubuntu 22.04+ or glibc 2.35+, Apple Silicon with Metal with the bundled Slang toolchain targeting macOS 26 and older macOS unqualified; Voyager cloud GPUs billed by the second from a paid workspace; research-preview limits (no fog/volumes, heavy interiors can abort on Mac, path tracer slower than Cycles in measured cases). Differences from the research brief, resolved in favor of the page: the brief quoted “192 frames at 1080p rendered in 97 seconds on a single NVIDIA L4”, which is not in the current page body, only in the README; the brief said the core API is about 2,500 tokens, while the page says getting-started help is about 2,500 tokens (the README says the core API fits in about 2,500 tokens); the brief listed PyPI vork as an install route, but the README says pip is coming soon, the PyPI package only points back to the repo, and the SDKs install from the local vork folder. gh api repos/voyager-so/vork: created_at 2026-11-05T22:37:07Z, pushed_at 2026-11-09T06:09:36Z, language Rust, license key other / spdx_id NOASSERTION, stargazers_count 1288, forks 97 (the GitHub star count is recorded only here and in the summary, never in the curator stars field). LICENSE opening: “vork Preview License”, Copyright © 2026 Nullframe, Inc.; source-available, free during the research preview including commercial work, “It is not open source”; no selling, relicensing, distributing modified versions, or hosted/managed service; covers this version only; integrations/blender is a separate GPL-3.0-or-later component. HN Algolia: item 50432998 created_at 2026-11-09T22:11:51Z, “Show HN: Vork – headless 3D and VFX engine for agents”, linking the GitHub repo, 5 points, author raviparikh. publishedAt uses the verifiable repo creation date, 2026-11-05 (the Show HN came later). Preview is the og:image https://voyager.so/vork/opengraph-image.jpg (1200×630, HTTP 200, image/jpeg, 163132 bytes, no Last-Modified) cropped to a 1200×800 WebP, with the crop box shifted about 100px left of center to keep the full tagline. Did not install the CLI/npm/SDKs, run vork init or vork render, use Voyager cloud GPUs or their MCP, or have a coding agent write a scene."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11549,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-10T01:21:29Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11850,22 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://wajo.ai/",
+      "https://x.com/shivanipod/status/2119938214429602046",
+      "https://media.wajo.ai/uploads/og-card-fo-built-on-trust-v3-e2a10d3a.png",
+      "https://voyager.so/vork",
+      "https://voyager.so/vork/opengraph-image.jpg",
+      "https://github.com/voyager-so/vork",
+      "https://api.github.com/repos/voyager-so/vork",
+      "https://github.com/voyager-so/vork/blob/main/LICENSE",
+      "https://news.ycombinator.com/item?id=50432998",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg",
+      "https://news.ycombinator.com/item?id=50429906",
+      "https://research.meta.ai/blog/muse-ember",
+      "https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp",
+      "https://news.ycombinator.com/item?id=50429024"
     ]
   }
 }
