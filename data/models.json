@@ -1,11 +1,130 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-10T01:21:29Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 42
   },
   "models": [
+    {
+      "id": "claude-fable-5-2",
+      "slug": "claude-fable-5-2",
+      "name": "Claude Fable 5.2 / Mythos 5.2",
+      "vendor": "Anthropic",
+      "title": "Claude Fable 5.2 / Mythos 5.2（Anthropic）：比 5.1 最多快约 30%，标价 $8 / $40 每百万 token",
+      "titleEn": "Claude Fable 5.2 / Mythos 5.2 (Anthropic): up to 30% faster than 5.1, listed at $8 / $40 per million tokens",
+      "summary": "Anthropic 2026-11-09 发布 Claude Fable 5.2 与 Claude Mythos 5.2（https://www.anthropic.com/claude-fable-and-mythos-5-2 ），是 9 月 Fable 5.1 / Mythos 5.1 的升级。官网说法：两者是同一个底层模型；Fable 带更强的网络安全与生物学防护，因此向所有用户开放，但这些防护会拦下大多数网络安全相关任务；Mythos 只给通过 Life Sciences / Cyber Verification Programs 审核的机构。相对 5.1，输出最多快约 30%，价格为每百万输入 token 8 美元、输出 40 美元；可选 fast mode 让生成再快最多约 2.5 倍，价格为每百万输入 16 美元、输出 80 美元。Fable 5.2 当天在所有平台上线，包括 AWS、Google Cloud 和 Microsoft Azure，开发者在 Claude Platform 用模型 id claude-fable-5-2。Fast mode 可用于 Claude Code、Claude Platform、Google Cloud 上的 Claude Models（Anthropic managed 与 Google managed）和 Microsoft Foundry（Anthropic hosted）；Mythos 的 fast mode 只对 Verification Programs 里的机构开放。本周符合条件的付费订阅有额外 Fable 用量：含 Fable 的计划和席位按订阅时长获得 1–3 次 Fable reset，Pro 计划与 Team 标准席位每周用量上限中 Fable 最多可占 50%。官方建议日常编码和知识工作先用 Claude Opus 5.5，遇到最难、最开放的技术任务再换 Fable 或 Mythos。官网还写了早期测试中拦截比 5.1 少约 55%（网络安全约少 60%、生物学约少 40%），以及预发布测试里的迁移服务、设计三款电子设备、黑洞物理问题、机器人评测、30 小时形式化费马大定理等例子，和一张与 Opus 5.5、GPT-6 Astra、Gemini 4 Carbon 的基准表——这些都是 Anthropic 自述，本库没有复核。它是模型发布，不是个人助手。本库没有登录 Claude.ai 或 Console，没有调用 claude-fable-5-2，没有试 fast mode，也没有申请 Mythos。",
+      "summaryEn": "Anthropic released Claude Fable 5.2 and Claude Mythos 5.2 on 2026-11-09 (https://www.anthropic.com/claude-fable-and-mythos-5-2 ), upgrading September’s Fable 5.1 / Mythos 5.1. Per the page: they are the same underlying model; Fable carries stronger cybersecurity and biology safeguards, which is why it is available to all users, though those safeguards block most cybersecurity tasks; Mythos is for organizations admitted through the Life Sciences and Cyber Verification Programs. Compared with 5.1, outputs are up to 30% faster, and pricing is USD 8 per million input tokens and USD 40 per million output tokens; an optional fast mode speeds generation by up to about 2.5x at USD 16 / 80 per million input / output tokens. Fable 5.2 is available on all platforms including AWS, Google Cloud and Microsoft Azure, and developers use the model id claude-fable-5-2 on the Claude Platform. Fast mode is available on Claude Code, the Claude Platform, Claude Models on Google Cloud (Anthropic managed and Google managed) and Microsoft Foundry (Anthropic hosted); Mythos fast mode is limited to organizations in the Verification Programs. This week eligible paid plans get extra Fable usage: plans and seats that include Fable get one to three Fable resets based on subscription length, and Fable counts for up to 50% of weekly limits on Pro and Team standard seats. Anthropic recommends starting with Claude Opus 5.5 for most coding and knowledge work and moving up to Fable or Mythos for the most ambitious technical tasks. The page also reports about 55% fewer blocks than 5.1 in early testing (about 60% fewer in cybersecurity, 40% fewer in biology), prerelease examples such as a service migration, three electronic devices, black-hole physics problems, robotics evaluations and formalizing Fermat’s Last Theorem in 30 hours, and a benchmark table against Opus 5.5, GPT-6 Astra and Gemini 4 Carbon—all Anthropic’s own claims, not checked here. It is a model release, not a personal assistant. This library did not sign in to Claude.ai or the Console, call claude-fable-5-2, try fast mode, or apply for Mythos.",
+      "announcedAt": "2026-11-09",
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10T01:21:29Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Anthropic 公告：Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+          "labelEn": "Anthropic announcement: Introducing Claude Fable 5.2 and Claude Mythos 5.2",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "by": "Anthropic",
+          "date": "2026-11-09"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Claude Fable 5.2 and Mythos 5.2",
+          "labelEn": "Hacker News: Claude Fable 5.2 and Mythos 5.2",
+          "url": "https://news.ycombinator.com/item?id=50429906",
+          "by": "Hacker News",
+          "date": "2026-11-09"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Fable 5.2 与 Mythos 5.2 是同一底层模型；Fable 有更强的网络安全与生物学防护、向所有用户开放，Mythos 需通过 Life Sciences / Cyber Verification Programs 申请。",
+          "textEn": "Vendor claim: Fable 5.2 and Mythos 5.2 are the same underlying model; Fable has stronger cybersecurity and biology safeguards and is open to all users, while Mythos requires the Life Sciences or Cyber Verification Programs."
+        },
+        {
+          "text": "官方称：输出比 5.1 最多快约 30%；标价每百万 token 输入 $8、输出 $40；可选 fast mode 最多再快约 2.5 倍，输入 $16、输出 $80。",
+          "textEn": "Vendor claim: outputs up to 30% faster than 5.1; USD 8 input / USD 40 output per million tokens; optional fast mode up to about 2.5x faster at USD 16 / USD 80."
+        },
+        {
+          "text": "官方称：Fable 5.2 当天在所有平台上线（含 AWS、Google Cloud、Microsoft Azure），Claude Platform 模型 id 为 claude-fable-5-2。",
+          "textEn": "Vendor claim: Fable 5.2 is available today on all platforms (including AWS, Google Cloud and Microsoft Azure); the Claude Platform model id is claude-fable-5-2."
+        },
+        {
+          "text": "官方称：早期测试中拦截比 Fable 5.1 少约 55%（网络安全约少 60%，生物学约少 40%）。基准表与科研例子均为厂商自述，本卡不复述分值。",
+          "textEn": "Vendor claim: about 55% fewer blocks than Fable 5.1 in early testing (about 60% fewer in cybersecurity, 40% fewer in biology). The benchmark table and research examples are vendor claims; this card does not restate the scores."
+        }
+      ],
+      "qualityNote": "收录理由：Anthropic 当天的旗舰升级，上了 HN 首页；Fable 向所有用户开放，已有 Claude 订阅或 API 的人当天就能换用。看板已有 5.1，按惯例另开 5.2 一张卡，不改 5.1。核实边界：提速约 30%、价格、fast mode、拦截减少比例、基准表和科研案例一律是 Anthropic 自述；本库未登录、未调用 API、未试 fast mode、未申请 Mythos。",
+      "qualityNoteEn": "Why listed: Anthropic’s flagship upgrade of the day, on the HN front page; Fable is open to all users, so anyone with a Claude plan or API access can switch the same day. The board already has 5.1, so 5.2 gets its own card and 5.1 is left unchanged. Boundary: the ~30% speedup, prices, fast mode, fewer-blocks figures, benchmark table and research examples are all Anthropic’s claims; this library did not sign in, call the API, try fast mode, or apply for Mythos.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "claude-fable-5-1",
+        "claude-opus-5-5"
+      ],
+      "previewImage": "/previews/claude-fable-5-2.webp",
+      "previewCredit": "预览：Anthropic 公告 Open Graph 图中心裁成 3:2 WebP（源 https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg）",
+      "previewCreditEn": "Preview: Anthropic announcement Open Graph image center-cropped to 3:2 WebP (source https://www-cdn.anthropic.com/images/4zrzovbb/website/b2dab182c77b4ccfd36423470106915b20f676ae-1200x630.jpg)",
+      "featured": false,
+      "verifyLog": "2026-11-10 上午（Asia/Taipei，约 09:14）：https://www.anthropic.com/claude-fable-and-mythos-5-2 HTTP 200，og:title Introducing Claude Fable 5.2 and Claude Mythos 5.2，页眉 November 9, 2026。正文核到：Claude Fable and Claude Mythos are the same underlying model；Fable has strong cybersecurity and biology safeguards…available to all users；Mythos 通过 recently expanded Life Sciences and Cyber Verification Programs 申请；generate outputs up to 30% faster than Claude Fable 5.1 and Claude Mythos 5.1…$8 per million input tokens and $40 per million output tokens；optional fast mode…up to 2.5 times…$16 per million input tokens and $80 per million output tokens；Availability：available today on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure；Developers can get started with claude-fable-5-2 on the Claude Platform；one to three Fable resets、up to 50% of weekly usage limits for Pro plans and standard seats on the Team plan；fast mode 可用平台为 Claude Code、Claude Platform、Claude Models on Google Cloud（Anthropic managed and Google managed）、Microsoft Foundry（Anthropic hosted），Mythos fast mode 仅限 Verification Programs；about 55% fewer blocks…60% fewer in cybersecurity and 40% fewer in biology；Claude Fable 5.2’s safeguards will block most cybersecurity-related tasks；非 EFS 客户 30-day retention for safety monitoring。与调研简报一致，未见出入。HN Algolia：https://news.ycombinator.com/item?id=50429906 created_at 2026-11-09T18:56:29Z，标题 Claude Fable 5.2 and Mythos 5.2，922 分，作者 meetpateltech（简报记 906 分，随时间增长）。另有 HN 50431144 标题称 Artificial Analysis 给 65 分，链 artificialanalysis.ai，本库未打开核对，不写入来源与正文。预览为 og:image（1200×630，HTTP 200，image/jpeg，42935 bytes，Last-Modified Mon, 09 Nov 2026 18:43:21 GMT）中心裁成 1200×800 WebP。未登录 Claude.ai / Console、未调用 claude-fable-5-2、未试 fast mode、未申请 Mythos。不打星：价格与性能均为厂商自述。",
+      "verifyLogEn": "2026-11-10 morning (Asia/Taipei, about 09:14): https://www.anthropic.com/claude-fable-and-mythos-5-2 HTTP 200, og:title “Introducing Claude Fable 5.2 and Claude Mythos 5.2”, page header November 9, 2026. Body checked: “Claude Fable and Claude Mythos are the same underlying model”; Fable’s cybersecurity and biology safeguards allow availability to all users; Mythos via the recently expanded Life Sciences and Cyber Verification Programs; “generate outputs up to 30% faster than Claude Fable 5.1 and Claude Mythos 5.1… $8 per million input tokens and $40 per million output tokens”; optional fast mode “up to 2.5 times… $16 per million input tokens and $80 per million output tokens”; Availability: “available today on all platforms, including Amazon Web Services, Google Cloud, and Microsoft Azure”; “Developers can get started with claude-fable-5-2 on the Claude Platform”; one to three Fable resets, up to 50% of weekly limits on Pro and Team standard seats; fast mode on Claude Code, the Claude Platform, Claude Models on Google Cloud (Anthropic managed and Google managed) and Microsoft Foundry (Anthropic hosted), Mythos fast mode limited to the Verification Programs; about 55% fewer blocks (60% cyber, 40% biology); “Claude Fable 5.2’s safeguards will block most cybersecurity-related tasks”; 30-day retention for safety monitoring for non-EFS customers. Matches the research brief; no differences found. HN Algolia: item 50429906 created_at 2026-11-09T18:56:29Z, “Claude Fable 5.2 and Mythos 5.2”, 922 points, author meetpateltech (the brief had 906; the count grew). A separate HN item 50431144 claims an Artificial Analysis score of 65 and links artificialanalysis.ai; not opened or verified here, so it is not used as a source or in the copy. Preview is the og:image (1200×630, HTTP 200, image/jpeg, 42935 bytes, Last-Modified Mon, 09 Nov 2026 18:43:21 GMT) center-cropped to a 1200×800 WebP. Did not sign in to Claude.ai/Console, call claude-fable-5-2, try fast mode, or apply for Mythos. Unrated: prices and performance are vendor claims."
+    },
+    {
+      "id": "muse-ember",
+      "slug": "muse-ember",
+      "name": "Muse Ember",
+      "vendor": "Meta",
+      "title": "Muse Ember（Meta）：给 agent 跑重复子任务的最小、最省模型，每百万 token 输入 $0.10 / 输出 $0.50",
+      "titleEn": "Muse Ember (Meta): Meta’s smallest, most efficient model for the subtasks agents repeat, at $0.10 / $0.50 per million tokens",
+      "summary": "Muse Ember 是 Meta 2026-11-09 在研究博客发布的模型（https://research.meta.ai/blog/muse-ember ），官方称是它最小、最高效的模型，面向 agent 整天重复做的工作：工具调用、编码子任务、路由、信息抽取和长文档解析。注意它不是 Meta 的消费级个人助手 Muse（muse.ai），也不是看板里已有的 Fireworks Ember-1。博客写的可用性：今天起在 Muse Code 和 Meta Model API 上提供，模型名 muse-ember-1.0，支持 Responses API；上下文窗口 1M token，最多输出 512K token；200K token 以内的提示每百万 token 输入 0.10 美元、缓存输入 0.004 美元、输出 0.50 美元，更长的提示为 0.30 / 0.012 / 1.50 美元；原生理解文字、图片、音频和视频；Muse Ember、Muse Spark、Muse Wonder 也已上 Google Cloud 和 Oracle Cloud。博客称 Muse Ember 是第一个用 Muse Wonder Full 训练的专用模型，建议最难的问题交给 Muse Wonder 规划、Muse Ember 处理大量执行。性能说法都出自博客：在任一推理档位上单位美元智力高于 Claude Haiku 5.5 和 GPT-6 Luna，以约三分之一的成本追平 Haiku 的最好成绩，并位于 Artificial Analysis 全榜的效率前沿；博客引用的 Artificial Analysis Intelligence Index 为 36、每个任务约 0.14 美元。图表注释一处写 Muse Ember 成本是按“拟定价格”估算，另一处写按标价计算，口径以博客原文为准；部分评测是 Meta 内部评测。点名的早期试用方有 Box、Cline、Oracle、Cloudflare、You.com。博客没有提到开放权重或许可证。它是模型发布，不是个人助手。本库没有注册 Meta Model API 或 Muse Code，没有调用 muse-ember-1.0，也没有自己对比 Haiku 5.5 或 GPT-6 Luna。",
+      "summaryEn": "Muse Ember is a model Meta announced on its research blog on 2026-11-09 (https://research.meta.ai/blog/muse-ember ), described as its smallest and most efficient model, built for the work agents repeat all day: tool calls, coding subtasks, routing, extraction and long-document parsing. It is not Meta’s consumer personal assistant Muse (muse.ai), and not the Fireworks Ember-1 already on this board. Availability per the blog: available today on Muse Code and the Meta Model API as muse-ember-1.0, with Responses API support; a 1M-token context window and up to 512K output tokens; for prompts up to 200K tokens, USD 0.10 per million input tokens, USD 0.004 per million cached input tokens and USD 0.50 per million output tokens, rising to 0.30 / 0.012 / 1.50 for longer prompts; native understanding of text, images, audio and video; Muse Ember, Muse Spark and Muse Wonder are also on Google Cloud and Oracle Cloud. The blog says Muse Ember is the first specialized model trained using Muse Wonder Full, and suggests Muse Wonder plans the hardest problems while Muse Ember handles the volume. Performance claims all come from the blog: more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna at any reasoning setting, matching Haiku’s best score at about a third of the cost, and sitting on the efficiency frontier of the full Artificial Analysis leaderboard; the blog cites an Artificial Analysis Intelligence Index of 36 at about USD 0.14 per task. One chart note says Muse Ember costs are estimates at proposed pricing and another says list pricing; the blog’s own wording stands, and some evaluations are Meta-internal. Named early partners are Box, Cline, Oracle, Cloudflare and You.com. The blog says nothing about open weights or a license. It is a model release, not a personal assistant. This library did not sign up for the Meta Model API or Muse Code, call muse-ember-1.0, or compare it with Haiku 5.5 or GPT-6 Luna itself.",
+      "announcedAt": "2026-11-09",
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-10T01:21:29Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Meta AI Research 博客：Introducing Our Smallest, Most Efficient Model: Muse Ember",
+          "labelEn": "Meta AI Research blog: Introducing Our Smallest, Most Efficient Model: Muse Ember",
+          "url": "https://research.meta.ai/blog/muse-ember",
+          "by": "Meta",
+          "date": "2026-11-09"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Our Smallest, Most Efficient Model: Muse Ember",
+          "labelEn": "Hacker News: Our Smallest, Most Efficient Model: Muse Ember",
+          "url": "https://news.ycombinator.com/item?id=50429024",
+          "by": "Hacker News",
+          "date": "2026-11-09"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Meta 最小、最高效的模型，面向工具调用、编码子任务、路由、抽取和长文档解析这类 agent 重复工作。不是消费级 Muse 助手，也不是 Fireworks Ember-1。",
+          "textEn": "Vendor claim: Meta’s smallest, most efficient model, aimed at the work agents repeat—tool calls, coding subtasks, routing, extraction and long-document parsing. Not the consumer Muse assistant, and not Fireworks Ember-1."
+        },
+        {
+          "text": "官方称：Meta Model API 与 Muse Code 上线，模型名 muse-ember-1.0；200K 以内每百万 token 输入 $0.10、缓存输入 $0.004、输出 $0.50；1M 上下文、最多 512K 输出。",
+          "textEn": "Vendor claim: live on the Meta Model API and Muse Code as muse-ember-1.0; up to 200K-token prompts cost USD 0.10 input, USD 0.004 cached input and USD 0.50 output per million tokens; 1M context, up to 512K output."
+        },
+        {
+          "text": "博客所述：单位美元智力高于 Claude Haiku 5.5 与 GPT-6 Luna，约三分之一成本追平 Haiku 最好成绩；Artificial Analysis 相关数字由博客引用，本库未复核。",
+          "textEn": "Per the blog: more intelligence per dollar than Claude Haiku 5.5 and GPT-6 Luna, matching Haiku’s best score at about a third of the cost; the Artificial Analysis figures are cited by the blog and not checked here."
+        }
+      ],
+      "qualityNote": "收录理由：Meta 当天发布、上了 HN 首页的小模型，专门做 agent 的高频子任务，价格低到可以当子 agent 大量调用。和消费级 Muse 助手、看板已有的 Fireworks Ember-1 都不是同一个东西，单独开卡。核实边界：价格、上下文、多模态是博客原文；“约三分之一 Haiku 成本”、效率前沿和 Artificial Analysis 分数是博客引用的说法，图表的成本口径前后不一，本库没有复核；博客未提开放权重。本库未注册、未调用 API。",
+      "qualityNoteEn": "Why listed: a small Meta model released the same day and on the HN front page, built for agents’ high-frequency subtasks and cheap enough to run as a subagent at volume. It is neither the consumer Muse assistant nor the Fireworks Ember-1 already on the board, so it gets its own card. Boundary: price, context and multimodality are the blog’s own wording; “about a third of Haiku’s cost”, the efficiency frontier and the Artificial Analysis scores are claims the blog cites, the charts describe their cost basis inconsistently, and none of it was checked here; the blog does not mention open weights. This library did not sign up or call the API.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "claude-haiku-5-5"
+      ],
+      "previewImage": "/previews/muse-ember.webp",
+      "previewCredit": "预览：Meta 博客头图（og:image）中心裁成 3:2 并压缩为 WebP（源 https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp）",
+      "previewCreditEn": "Preview: Meta blog hero image (og:image) center-cropped to 3:2 and recompressed as WebP (source https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp)",
+      "featured": false,
+      "verifyLog": "2026-11-10 上午（Asia/Taipei，约 09:14）：https://research.meta.ai/blog/muse-ember HTTP 200，og:title Introducing Our Smallest, Most Efficient Model: Muse Ember，页眉 November 9, 2026 · 4 minute read，article:published_time 2026-11-09T00:00:00.000Z。正文核到：smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing；more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna at any reasoning setting: it matches Haiku's best score at about a third of the cost；图注 Muse Ember costs are estimates at proposed pricing 与 Muse Ember cost at list pricing 两种写法并存；available today on the Meta Model API, at $0.10 per million input tokens and $0.50 per million output tokens；Availability 段：available today on Muse Code and Meta Model API as muse-ember-1.0，$0.004 per million cached input tokens，1M-token context window and up to 512K output tokens，supports the Responses API，first trained using Muse Wonder Full，about $0.14 per Artificial Analysis task；脚注 2：pricing for prompts up to 200K tokens，更长为 $0.30 / $0.012 / $1.50；Muse Ember, Muse Spark and Muse Wonder are now available on Google Cloud and Oracle Cloud；合作方 Box、Cline、Oracle、Cloudflare、You.com。页内未见 open weights、权重下载或许可证声明。与调研简报的出入：简报只记了输入 / 输出价，页面另有模型名 muse-ember-1.0、缓存输入价、1M 上下文、512K 输出和 200K 以上的阶梯价，已按页面补入。HN Algolia：https://news.ycombinator.com/item?id=50429024 created_at 2026-11-09T17:58:46Z，标题 Our Smallest, Most Efficient Model: Muse Ember，238 分，作者 dvaplima（简报记 236 分）。预览为 og:image https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp（3840×2160，HTTP 200，image/webp，1301718 bytes；本次 Last-Modified Tue, 10 Nov 2026 00:31:50 GMT，与简报记的 00:52:28 不同，同一 URL 与大小）中心裁 3240×2160 后缩到 1200×800，重压为约 94 KB WebP；资源路径里的 muse-glint 是 Meta 站点的原路径，按 og:image 原样记录。未注册 Meta Model API / Muse Code、未调用 muse-ember-1.0、未核 Artificial Analysis 榜单原页、未自行对比 Haiku 5.5 或 GPT-6 Luna。不打星：性能与成本对比均为博客自述或引用。",
+      "verifyLogEn": "2026-11-10 morning (Asia/Taipei, about 09:14): https://research.meta.ai/blog/muse-ember HTTP 200, og:title “Introducing Our Smallest, Most Efficient Model: Muse Ember”, header “November 9, 2026 · 4 minute read”, article:published_time 2026-11-09T00:00:00.000Z. Body checked: “smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing”; “more intelligence per dollar than Claude Haiku 5.5 or GPT-6 Luna at any reasoning setting: it matches Haiku's best score at about a third of the cost”; chart notes say both “Muse Ember costs are estimates at proposed pricing” and “Muse Ember cost at list pricing”; “available today on the Meta Model API, at $0.10 per million input tokens and $0.50 per million output tokens”; Availability section: available on Muse Code and the Meta Model API as muse-ember-1.0, $0.004 per million cached input tokens, 1M-token context and up to 512K output tokens, Responses API support, first trained using Muse Wonder Full, about $0.14 per Artificial Analysis task; footnote 2: pricing for prompts up to 200K tokens, longer prompts $0.30 / $0.012 / $1.50; Muse Ember, Muse Spark and Muse Wonder on Google Cloud and Oracle Cloud; partners Box, Cline, Oracle, Cloudflare, You.com. No mention of open weights, weight downloads or a license. Difference from the research brief: the brief recorded only input/output prices; the page also gives the model name muse-ember-1.0, cached-input price, 1M context, 512K output and above-200K tiered pricing, added from the page. HN Algolia: item 50429024 created_at 2026-11-09T17:58:46Z, “Our Smallest, Most Efficient Model: Muse Ember”, 238 points, author dvaplima (the brief had 236). Preview is the og:image https://research.meta.ai/articles/muse-glint/hero/blog-header-light-v1.webp (3840×2160, HTTP 200, image/webp, 1301718 bytes; Last-Modified now Tue, 10 Nov 2026 00:31:50 GMT versus 00:52:28 in the brief, same URL and size) center-cropped to 3240×2160, scaled to 1200×800 and recompressed to a ~94 KB WebP; the muse-glint segment is Meta’s own asset path, recorded as served in og:image. Did not sign up for the Meta Model API or Muse Code, call muse-ember-1.0, open the Artificial Analysis leaderboard, or compare against Haiku 5.5 or GPT-6 Luna. Unrated: performance and cost comparisons are the blog’s own or cited claims."
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
