@@ -1,6 +1,160 @@
 {
   "cases": [
     {
+      "id": "fable-52-polished-ui-bento",
+      "slug": "fable-52-polished-ui-bento",
+      "title": "Fable 5.2 抛光 UI 组件盒",
+      "titleEn": "Fable 5.2 polished UI component bento",
+      "kind": "showcase",
+      "hook": "分账组件盒分步做：选风格、补零件、再看入出场。",
+      "hookEn": "Build a bill-split bento in steps: pick a style, add parts, then motion.",
+      "summary": "Dom（@dominikmartn）在 2026-11-10 贴出一条 24 秒视频，配文 “fable 5.2 can actually design.”。画面是浅灰白卡片、绿色强调的分账组件盒。能复用的是他随后写明的顺序，不是一段完整提示词：先要一套 polished UI components 的 bento，让模型出多种风格并选一个，再补组件、加微交互，然后要求入场、出场并循环。适合想分步打磨界面演示、而不是一次生成整页的人。成片是组件状态与入出场动画演示：按钮在加载和完成之间切换，金额、日期、标签和音频进度各自变化，整屏会缩小清空再进入。没有鼠标或触摸，各块状态不连成一笔分账业务，外观切换只发生在局部。作者要求循环，但成片首尾不同，不能当成无缝循环。这不能证明有可运行的应用、真实收款，或模型当场生成的过程，也不能说明以前的模型做不到同样的界面打磨。作者回复 effort 用了 high、没有使用 skill、没有接入自己的设计系统，都只记他本人的话。本库没有登录 Claude，没有调用 API，没有照做一遍，也没有运行支付。没有公开源码，没有可点击的演示。",
+      "summaryEn": "On 2026-11-10 Dom (@dominikmartn) posted a 24-second video with the line “fable 5.2 can actually design.” The frame is a light gray and white card bento with green emphasis, themed as splitting a bill. What you can reuse is the order he wrote afterward, not a full prompt: ask for a bento of polished UI components, let it generate several styles and pick one, ask for more components, add micro-interactions, then ask for animate-in, animate-out, and a loop. Useful when you want to polish an interface demo in passes instead of generating a whole page at once. The clip is a demo of component states and enter/exit motion: buttons move between loading and done, amounts, dates, tags, and an audio progress indicator change on their own, and the whole board shrinks away and comes back. There is no mouse or touch, the pieces do not form one bill-splitting flow, and look changes stay local. He asked for a loop; the clip’s start and end differ, so it is not a seamless loop. The video does not show a runnable app, a real payment, or the model generating the file, and it does not show that older models could not polish a UI this way. His replies that effort was high, that he used no skill, and that he did not connect his own design system are his own words. This library did not sign in to Claude, call the API, reproduce the thread, or run a payment. There is no public source and no clickable demo.",
+      "categories": [
+        "design"
+      ],
+      "role": "Community UI design demo",
+      "sourceUrl": "https://x.com/dominikmartn/status/2120154832694858224",
+      "secondaryUrls": [
+        "https://x.com/dominikmartn/status/2120233568475775157",
+        "https://x.com/jarahmacf/status/2120232598060364261",
+        "https://x.com/dominikmartn/status/2120243126522589480",
+        "https://x.com/akusssssssssss/status/2120239024187019717",
+        "https://x.com/dominikmartn/status/2120235537118441857",
+        "https://x.com/weskcode/status/2120235123975278928",
+        "https://x.com/dominikmartn/status/2120231838656364604",
+        "https://x.com/builtbysasha/status/2120171722791936434",
+        "https://x.com/dominikmartn/status/2120231797380485470",
+        "https://x.com/rpnickson/status/2120231217853260268",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+        "https://platform.claude.com/docs/en/models/fable-5-2/overview"
+      ],
+      "previewImage": "/previews/fable-52-polished-ui-bento.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "把生成的界面放进真实产品，或让人以为可以在里面付款之前，先自己看过。本库没有代为生成，也没有代为收款。",
+      "approvalBoundaryEn": "Review the generated interface yourself before it goes into a real product or before anyone could think they can pay inside it. This library did not generate it or take a payment for you.",
+      "connectors": [
+        "Claude"
+      ],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-11T02:40:00Z",
+      "qualityNote": "收录理由：作者把界面打磨拆成可以照着做的几步，先要抛光 UI 组件盒，在多种风格里选一个，再补组件、加微交互，并要求入场和出场后循环。这是社区演示里的做法，不是 Fable 5.2 独有、旧版做不到的新能力。边界：只有作者自述和原帖视频。画面是组件状态与入出场动画演示，各状态独立展示，不是从发起到付款的完整业务流程。没有鼠标或触摸，所以不是连贯的真实交互。作者要求循环，成片里的动作会重复，但视频开头和结尾不一样，不能写成已经核实的无缝循环。视频不能证明可运行应用、真实支付或模型生成过程，本库也没有独立复现。没有完整逐字提示词，没有公开源码，没有可点击演示。本库没有登录 Claude，没有调用 API，没有运行支付。",
+      "qualityNoteEn": "Why it is listed: the author split interface polish into steps you can follow. Ask for a polished UI component bento, pick one of several styles, add components, add micro-interactions, then ask for enter and exit motion and a loop. This is a community demo of that process. It is not a claim that only Fable 5.2 can polish UI, or that older models cannot. Limits: the author’s own account and the post video. The picture is a demo of component states and enter/exit motion. States are shown on their own, not as one bill from start to payment. There is no mouse or touch, so it is not a continuous hands-on test. He asked for a loop, and motion repeats inside the clip, but the start and end differ, so this is not a verified seamless loop. The video does not prove a runnable app, a real payment, or the model generating the work, and this library did not reproduce it. There is no full verbatim prompt, no public source, and no clickable demo. This library did not sign in to Claude, call the API, or run a payment.",
+      "verifyLog": "2026-11-11 核对。主帖 https://x.com/dominikmartn/status/2120154832694858224 ，作者 Dom，用户名 dominikmartn，user id 529276705，created_at 2026-11-10T14:01:17.000Z（台北 22:01）。全文 “fable 5.2 can actually design.” 加一条视频。X 媒体元数据：type video，duration_ms 24000，宽 1600，高 1200，未见 alt_text。get_posts_by_ids 当时公开计数：impression 133616，like 3275，repost 101，reply 61，quote 9，bookmark 2613（计数会变）。做法帖 https://x.com/dominikmartn/status/2120233568475775157 （2026-11-10T19:14:09Z）回复 @jarahmacf “So what prompt did you use to get this”（https://x.com/jarahmacf/status/2120232598060364261）。作者原文五句：asked for a bento of polished ui components / let it generate multiple styles and chose one / told it to make more components / told it to add micro interactions / add animate in and animate out and let it loop。没有贴出完整逐字提示词。同线程另有较短回复 “just ask it for nice things bro”（https://x.com/dominikmartn/status/2120232366883168503），不把它当成步骤。effort：https://x.com/dominikmartn/status/2120243126522589480 （2026-11-10T19:52:08Z）只回复 high，上一条是 @akusssssssssss “fable 5.2 in medium?. high?…”（https://x.com/akusssssssssss/status/2120239024187019717）。没有用量或账单。skill：https://x.com/dominikmartn/status/2120235537118441857 （2026-11-10T19:21:58Z）回复 @weskcode “what skills do you use?”（https://x.com/weskcode/status/2120235123975278928）为 none。另回复 @rpnickson “Using Stageshow skill?”（https://x.com/rpnickson/status/2120231217853260268）为 “nope. first time i’m hearing about it”（https://x.com/dominikmartn/status/2120231797380485470）。设计系统：https://x.com/dominikmartn/status/2120231838656364604 （2026-11-10T19:07:16Z）回复 @builtbysasha “did you connect your own design system?”（https://x.com/builtbysasha/status/2120171722791936434）为 nope。以上均为作者自述。视觉现象由收录委托方核看原帖 24 秒视频后确认：浅灰白卡、绿色强调的分账 bento；组件状态自动变化，包括按钮加载/完成、金额/日期/标签切换、音频进度；整体缩小清空再进入；无鼠标或触摸；金额等状态不联动，外观切换只局部改变；动画模式在片内重复，但视频首尾不同，故不称无缝循环。作者文字要求 loop，成片不写成已核实无缝。本条整理时没有在当前环境播放该视频，也没有运行产品。视频不能证明可运行应用、真实支付或模型生成过程。不转写画面里的具体人名和金额。官方模型身份仅作对照，不是本演示的能力证明：https://www.anthropic.com/claude-fable-and-mythos-5-2 页首 November 9, 2026，标题 Claude Fable 5.2 and Mythos 5.2；https://platform.claude.com/docs/en/models/fable-5-2/overview 写 Released November 9, 2026，模型 id claude-fable-5-2，API 默认 effort 为 high。作者回复的 high 没有和他的会话设置对上。官网页的基准、价格和其他应用例子不写入本条要点。未把非官方镜像当作模型来源。未登录 Claude，未调用 API。main 已有 cases id claude-fable-5-1，是 Fable 5.1 官方资讯，不是本帖。main 的 models.json 没有 claude-fable-5-2。draft PR #153 尚未合并，其中准备新增该模型卡；本条不链尚未在 main 上的模型页。Cases 没有 relatedModelIds 字段。预览：委托方提供的作者封面静帧，JPEG 1200×900。本站用 sharp 居中裁切 top 50、高 800，得到 1200×800 WebP，路径 /previews/fable-52-polished-ui-bento.webp。没有重绘。未下载 X 视频文件做逐帧比对，不声称附件与视频每一帧像素一致。去重：main 6f016876 与当时 50 个开放 PR 的 diff 均无 dominikmartn、2120154832694858224、fable-52-polished-ui-bento。不打星。",
+      "verifyLogEn": "Checked 2026-11-11. Main post https://x.com/dominikmartn/status/2120154832694858224 by Dom, username dominikmartn, user id 529276705, created_at 2026-11-10T14:01:17.000Z (22:01 in Taipei). Full text: “fable 5.2 can actually design.” plus one video. X media metadata: type video, duration_ms 24000, width 1600, height 1200, no alt_text returned. Public counts on get_posts_by_ids at that read: impression 133616, like 3275, repost 101, reply 61, quote 9, bookmark 2613 (counts move). Method post https://x.com/dominikmartn/status/2120233568475775157 (2026-11-10T19:14:09Z) replies to @jarahmacf, “So what prompt did you use to get this” (https://x.com/jarahmacf/status/2120232598060364261). The author’s five lines: asked for a bento of polished ui components / let it generate multiple styles and chose one / told it to make more components / told it to add micro interactions / add animate in and animate out and let it loop. No full verbatim prompt. A shorter reply in the same thread, “just ask it for nice things bro” (https://x.com/dominikmartn/status/2120232366883168503), is not treated as the procedure. Effort: https://x.com/dominikmartn/status/2120243126522589480 (2026-11-10T19:52:08Z) replies only “high” to @akusssssssssss, “fable 5.2 in medium?. high?…” (https://x.com/akusssssssssss/status/2120239024187019717). No usage or invoice. Skill: https://x.com/dominikmartn/status/2120235537118441857 (2026-11-10T19:21:58Z) replies “none” to @weskcode, “what skills do you use?” (https://x.com/weskcode/status/2120235123975278928). A separate reply to @rpnickson, “Using Stageshow skill?” (https://x.com/rpnickson/status/2120231217853260268), is “nope. first time i’m hearing about it” (https://x.com/dominikmartn/status/2120231797380485470). Design system: https://x.com/dominikmartn/status/2120231838656364604 (2026-11-10T19:07:16Z) replies “nope” to @builtbysasha, “did you connect your own design system?” (https://x.com/builtbysasha/status/2120171722791936434). All of that is the author’s own account. Visual notes were confirmed by the requester after watching the 24-second post video: light gray and white cards, green emphasis, a bill-split bento; component states change on their own, including button loading/done, amount/date/tag switches, and audio progress; the board shrinks clear and enters again; no mouse or touch; amounts and other states do not stay in sync, and look changes are local; motion repeats inside the clip, but the start and end differ, so it is not called seamless. The author asked for a loop; the finished clip is not described as a verified seamless loop. This entry was written without playing the video in this environment and without running the product. The video does not prove a runnable app, a real payment, or the model generating the work. Specific names and amounts visible in frames are not transcribed. Official model identity is context only, not proof of this demo: https://www.anthropic.com/claude-fable-and-mythos-5-2 opens with November 9, 2026 and the title Claude Fable 5.2 and Mythos 5.2; https://platform.claude.com/docs/en/models/fable-5-2/overview says Released November 9, 2026, model id claude-fable-5-2, API default effort high. The author’s “high” was not matched to his session settings. Benchmarks, prices, and other application claims on the official pages are not copied into this entry’s highlights. An unofficial mirror was not used as a model source. Claude was not signed in, and the API was not called. main already has cases id claude-fable-5-1, which is Fable 5.1 launch news, not this post. models.json on main has no claude-fable-5-2. Draft PR #153 is unmerged and is the one that would add that model card; this entry does not link a model page that is not on main. Cases have no relatedModelIds field. Preview: the author’s cover still supplied with the request, a 1200×900 JPEG. sharp center-cropped it at top 50 and height 800 into a 1200×800 WebP at /previews/fable-52-polished-ui-bento.webp. Nothing was redrawn. The X video file was not downloaded for a frame-by-frame compare, so the still is not claimed to match every video frame. Dedup: main 6f016876 and the diffs of the 50 open PRs at check time contain neither dominikmartn, nor 2120154832694858224, nor fable-52-polished-ui-bento. Unrated.",
+      "landing": {
+        "what": "这是 Dom 贴出的一条社区界面演示，不是可安装的组件库，也不是能点开的分账产品。他用的模型按他自己的配文是 Fable 5.2。你能带走的是他后来写明的分步顺序：先要一整盒抛光过的 UI 组件，再在几种风格里留一个，然后补组件、加小交互，最后要求入场和出场并循环。官方页把 Fable 5.2 记为 2026-11-09 发布的模型。那只说明模型身份。本站 main 上已有的 Fable 5.1 是另一条资讯，本条不链尚未出现在 main 上的 5.2 模型页。",
+        "whatEn": "This is a community interface demo Dom posted. It is not an installable component library, and it is not a bill-splitting product you can click through. The model, in his own caption, is Fable 5.2. What you can take away is the order he wrote later: ask for a bento of polished UI components, keep one of several styles, add more components and small interactions, then ask for enter and exit motion and a loop. The official pages record Fable 5.2 as a model released on 2026-11-09. That identifies the model. The Fable 5.1 entry already on this site’s main branch is a different news item, and this entry does not link a 5.2 model page that is not on main yet.",
+        "contrast": {
+          "caption": "左列是作者帖子里的说法和成片看起来在做什么。右列是本站怎么记，避免把演示说成产品或新能力。",
+          "captionEn": "Left: what the author wrote and what the clip appears to show. Right: how this library records it, so the demo stays a demo.",
+          "leftLabel": "作者的帖",
+          "leftLabelEn": "The author’s posts",
+          "rightLabel": "本站口径",
+          "rightLabelEn": "This library’s framing",
+          "rows": [
+            {
+              "aspect": "画面",
+              "aspectEn": "What is on screen",
+              "left": "24 秒浅灰白卡片、绿色强调的分账组件盒。按钮、金额、日期、标签和音频进度自己变化，整屏缩小清空再进入。",
+              "leftEn": "A 24-second light gray and white card bento with green emphasis, about splitting a bill. Buttons, amounts, dates, tags, and audio progress change on their own, and the board shrinks away and comes back.",
+              "right": "记成组件状态与入出场动画演示。没有指针操作，状态彼此不联动，不是一笔分账的完整业务流程，也不是可点击应用。",
+              "rightEn": "Recorded as a demo of component states and enter/exit motion. No pointer input, states do not stay in sync, it is not a full bill-splitting flow, and it is not a clickable app."
+            },
+            {
+              "aspect": "做法",
+              "aspectEn": "The procedure",
+              "left": "先要 polished UI components bento，出多种风格后选一个，再补组件、加微交互，最后要求入场、出场并循环。",
+              "leftEn": "Ask for a polished UI components bento, pick one of several styles, add components, add micro-interactions, then ask for animate-in, animate-out, and a loop.",
+              "right": "这是可以换主题再试的顺序。帖里没有完整逐字提示词，本库没有照着跑通。",
+              "rightEn": "That order can be tried again on another theme. The thread has no full verbatim prompt, and this library did not run it through."
+            },
+            {
+              "aspect": "作者还说了什么",
+              "aspectEn": "What else he said",
+              "left": "effort 回 high。问用了什么 skill，答 none。问是否接入自己的设计系统，答 nope。另说没听说过 Stageshow skill。",
+              "leftEn": "He answered high for effort, none for which skill, and nope for connecting his own design system. He also said he had not heard of the Stageshow skill.",
+              "right": "这些只算作者自述。high 没有用量或账单可对，也不能用来证明旧模型做不到，或成片已是无缝循环。",
+              "rightEn": "Those lines are his own account. high has no usage or invoice behind it here, and it does not prove older models could not do this, or that the clip is a seamless loop."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先把原帖当成演示来看",
+            "titleEn": "Watch the post as a demo",
+            "body": "打开 Dom 的帖子。配文是 “fable 5.2 can actually design.”，附件是约 24 秒的视频。把它看成组件状态与入出场动画演示：各块自己在变，没有鼠标或触摸把它们串成一笔真实分账。",
+            "bodyEn": "Open Dom’s post. The caption is “fable 5.2 can actually design.” and the attachment is a video of about 24 seconds. Treat it as a demo of component states and enter/exit motion: the pieces change on their own, with no mouse or touch tying them into a real bill.",
+            "links": [
+              {
+                "href": "https://x.com/dominikmartn/status/2120154832694858224",
+                "label": "Dom 的原帖",
+                "labelEn": "Dom’s post"
+              }
+            ]
+          },
+          {
+            "title": "按他写的顺序换一个主题再试",
+            "titleEn": "Try the same order on your own theme",
+            "body": "他没有贴出完整提示词。顺序是：要一套抛光 UI 组件的 bento；让它出多种风格，选一个；让它再补组件；让它加微交互；再要求入场、出场，并让它循环。每一步看过结果再写下一句。作者说没有用 skill，也没有接入自己的设计系统。你要求循环之后，仍要自己看开头和结尾是否接得上，不要默认成片已经无缝。",
+            "bodyEn": "He did not paste a full prompt. The order is: ask for a bento of polished UI components; let it offer several styles and pick one; ask for more components; ask for micro-interactions; then ask for animate-in, animate-out, and a loop. Look at the result before the next line. He said he used no skill and did not connect his own design system. After you ask for a loop, still check whether the start and end meet. Do not assume the clip is already seamless.",
+            "links": [
+              {
+                "href": "https://x.com/dominikmartn/status/2120233568475775157",
+                "label": "作者写的五步",
+                "labelEn": "The author’s five lines"
+              }
+            ]
+          },
+          {
+            "title": "先确认模型页，再决定要不要花额度",
+            "titleEn": "Check the model pages before you spend quota",
+            "body": "官方公告和平台文档都写 Claude Fable 5.2，发布日期是 2026 年 11 月 9 日。文档里的 API 默认 effort 是 high。作者回复的 high 只是他的一句话，本库没有打开他的会话去对设置。生成界面会用掉你自己的额度。本站 main 还没有这张模型卡，这条案例也不是模型评测。",
+            "bodyEn": "The announcement and the platform docs both name Claude Fable 5.2, released on November 9, 2026. The docs list high as the API’s default effort. The author’s “high” is one word from him; this library did not open his session to match the setting. Generating an interface spends your own quota. This site’s main branch does not have that model card yet, and this case is not a model evaluation.",
+            "links": [
+              {
+                "href": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+                "label": "Anthropic 公告",
+                "labelEn": "Anthropic announcement"
+              },
+              {
+                "href": "https://platform.claude.com/docs/en/models/fable-5-2/overview",
+                "label": "平台模型说明",
+                "labelEn": "Platform model overview"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "画面现象来自对原帖 24 秒视频的核看：无鼠标或触摸，组件状态各自展示，不连成一笔分账业务，外观切换只在局部，片内动作会重复但首尾不同。本条整理时没有在当前环境播放该视频，也没有运行这个界面。",
+            "textEn": "What the picture does comes from a review of the 24-second post video: no mouse or touch, component states shown on their own, not one bill-splitting flow, look changes only in places, motion that repeats inside the clip while the start and end differ. This entry was written without playing that video in this environment, and without running the interface."
+          },
+          {
+            "text": "作者要求循环。这不能写成已经核实的无缝循环。视频也不能证明有可运行应用、真实支付，或模型正在生成文件。",
+            "textEn": "The author asked for a loop. That is not a verified seamless loop. The video also does not prove a runnable app, a real payment, or the model generating the file."
+          },
+          {
+            "text": "没有完整逐字提示词，没有公开源码，没有可点击演示。本库没有登录 Claude，没有调用 API，没有独立复现。",
+            "textEn": "There is no full verbatim prompt, no public source, and no clickable demo. This library did not sign in to Claude, did not call the API, and did not reproduce it."
+          },
+          {
+            "text": "effort、skill 和设计系统都只记作者回复。不把这次界面打磨写成 Fable 5.2 才新增、旧版不能做的能力。官方页上的基准和价格没有在本条里复测。",
+            "textEn": "Effort, skill, and the design system are recorded only as the author’s replies. This polish pass is not written up as a new Fable 5.2 ability that older models cannot do. Benchmarks and prices on the official pages were not re-run for this entry."
+          }
+        ],
+        "previewCredit": "静帧来自 Dom（@dominikmartn）原帖视频。原图 1200×900，本站居中裁去上下各 50 像素，存成 1200×800。原帖 https://x.com/dominikmartn/status/2120154832694858224",
+        "previewCreditEn": "Still from Dom (@dominikmartn)’s post video. The source frame is 1200×900; this site center-cropped 50px from the top and bottom to 1200×800. Post: https://x.com/dominikmartn/status/2120154832694858224"
+      }
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11601,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-11T02:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11902,20 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://x.com/dominikmartn/status/2120154832694858224",
+      "https://x.com/dominikmartn/status/2120233568475775157",
+      "https://x.com/jarahmacf/status/2120232598060364261",
+      "https://x.com/dominikmartn/status/2120243126522589480",
+      "https://x.com/akusssssssssss/status/2120239024187019717",
+      "https://x.com/dominikmartn/status/2120235537118441857",
+      "https://x.com/weskcode/status/2120235123975278928",
+      "https://x.com/dominikmartn/status/2120231838656364604",
+      "https://x.com/builtbysasha/status/2120171722791936434",
+      "https://x.com/dominikmartn/status/2120231797380485470",
+      "https://x.com/rpnickson/status/2120231217853260268",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "https://platform.claude.com/docs/en/models/fable-5-2/overview"
     ]
   }
 }

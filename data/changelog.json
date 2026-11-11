@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-11",
+      "title": "收录 2026-11-11：Cases +1（Fable 5.2 抛光 UI 组件盒）",
+      "titleEn": "Catalog 2026-11-11: Cases +1 (Fable 5.2 polished UI component bento)",
+      "body": "AI×设计。Cases：fable-52-polished-ui-bento（Dom @dominikmartn，2026-11-10T14:01:17Z / 台北 22:01，配文 fable 5.2 can actually design.，24 秒浅灰白卡、绿色强调的分账组件盒视频）。收录的是作者自述的分步做法：先要 polished UI components bento，多种风格选一个，补组件，加微交互，再要求入场/出场并循环。成片按委托方视频核看记为组件状态与入出场动画演示：状态各自变化，无鼠标或触摸，不连成业务流程，片内动画重复但首尾不同，不称无缝循环。不能证明可运行应用、真实支付或模型生成过程。作者称 effort high、skill none、未接自己的设计系统，只记自述。无完整逐字提示词、无公开源码、无可点击 demo。预览用作者封面静帧 1200×900 居中裁成 1200×800 WebP 自托管。本环境未播放视频，未登录 Claude、未调用 API、未复现、未运行支付。不新建模型卡，不链尚未在 main 上的 claude-fable-5-2 模型页（draft #153 未合）。已有 claude-fable-5-1 不是本帖。相对 main：cases 215→216（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold 与 draft PR。等「合」。",
+      "bodyEn": "AI×design. Cases: fable-52-polished-ui-bento (Dom @dominikmartn, 2026-11-10T14:01:17Z / 22:01 Taipei, caption “fable 5.2 can actually design.”, a 24-second light gray card bill-split bento with green emphasis). What is catalogued is the author’s own sequence: ask for a polished UI components bento, pick one of several styles, add components, add micro-interactions, then ask for enter/exit motion and a loop. After the requester’s video review, the clip is recorded as a demo of component states and enter/exit motion: states change on their own, no mouse or touch, not one business flow, motion repeats inside the clip but the start and end differ, so it is not called seamless. It does not prove a runnable app, a real payment, or the model generating the work. The author said effort high, skill none, and no personal design system; those stay his own words. No full verbatim prompt, no public source, no clickable demo. The preview is the author’s 1200×900 cover still, center-cropped to a self-hosted 1200×800 WebP. This environment did not play the video, sign in to Claude, call the API, reproduce the thread, or run a payment. No new model card, and no link to a claude-fable-5-2 model page that is not on main (draft #153 is unmerged). The existing claude-fable-5-1 entry is not this post. Relative to main: cases 215→216 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Still-open catalog-hold and draft PRs were not merged. Waiting for 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
