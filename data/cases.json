@@ -1,6 +1,220 @@
 {
   "cases": [
     {
+      "id": "yogurt",
+      "slug": "yogurt",
+      "title": "Yogurt：会议录音和笔记留在你自己的电脑上",
+      "titleEn": "Yogurt: AI meeting notes that stay on your computer",
+      "kind": "tool",
+      "hook": "在自己的电脑上记下会议，转写后整理成计划。",
+      "hookEn": "Record a meeting on your computer, jot a note, and turn it into a plan.",
+      "summary": "Yogurt（https://yogurt.so/ ，Frigade 出品，页面写 Backed by Y Combinator）是装在你电脑上的会议记录应用。官网标题是 “Yogurt · AI meeting notes that stay on your computer”，并写 “Private AI meeting notes. Free and open source.”。它录麦克风和电脑正在播放的声音，不以机器人身份加入通话；转写之后你可以随手记一条，再整理成计划和摘要，也可以在转录旁边提问。帮助文档写：录音要点一下才开始；日历、通知、辅助功能都是可选；没有遥测。联网用于从 Hugging Face 下载模型、Mac 上可选的 Apple 端侧语音资源，以及向 GitHub 检查更新。一次下载模型之后，转写和摘要在本机离线运行。更好的笔记模型会在后台继续下载，文档写 Mac 内存 64 GB 时大约 14 GB、96 GB 或更多时大约 63 GB，这是文档里的数字，不是本库测量。系统要求照 FAQ：Apple silicon 且 macOS 14.4 或更新，或 Windows 10 版本 2004 及更新的 x64，或 Ubuntu 22.04 及更新的 x64；至少 8 GB 内存；太慢会在安装时告知。日历和通话里的说话人名字目前只有 Mac。Windows 安装包还没签名，系统弹出 “Windows protected your PC” 时要点 More info 再 Run anyway。Linux 帮助文档还写需要 PulseAudio 或 PipeWire，打不开时要先装 FUSE 2。许可是 MIT，免费。可选的 Settings → AI apps 打开只读 MCP：别的应用可以读会议、笔记和转录，不能改它们；默认关闭；接通的在线模型可能把读到的内容上传。仓库 2026-11-10 就创建了，2026-11-11 的 Show HN 和当天的 v0.3.6 是这次公开钩子，不是今天才有的产品。库里的 meeting-notes-tasks 是把 Granola 笔记整理成任务的用法，不是这个本机录音应用，两条不要并成一条。本库没有安装，没有录音，没有接日历，没有打开 MCP，没有核对离线或模型体积，也没有和其他会议笔记产品对比。",
+      "summaryEn": "Yogurt (https://yogurt.so/ , by Frigade; the page says Backed by Y Combinator) is a meeting recorder that stays on your computer. The site title is “Yogurt · AI meeting notes that stay on your computer”, and it says “Private AI meeting notes. Free and open source.” It records the microphone and audio playing on the computer, and it does not join the call as a bot. It transcribes, lets you jot a note, then builds a plan and summary; you can ask questions with the transcript nearby. The help doc says recording waits for a click; Calendar, Notifications, and Accessibility are optional; there is no telemetry. Network use is the Hugging Face model download, optional Apple on-device speech assets on a Mac, and GitHub update checks. After a one-time model download, transcription and summaries run offline. A better notes model keeps downloading in the background; the doc says about 14 GB on a Mac with 64 GB of memory, and about 63 GB with 96 GB or more. Those are figures from the doc, not measurements made here. The FAQ lists Apple silicon with macOS 14.4 or newer, Windows 10 version 2004 or newer on x64, or Ubuntu 22.04 or newer on x64, with at least 8 GB of memory; a machine that is too slow is told during setup. Calendar and speaker names from calls are Mac-only for now. The Windows build is unsigned: “Windows protected your PC” means More info, then Run anyway. The Linux help also says PulseAudio or PipeWire, and FUSE 2 if the AppImage does not open. The license is MIT, and it is free. Optional Settings → AI apps turns on a read-only MCP: other apps can read meetings, notes, and transcripts but cannot change them; it is off by default; a connected online model may upload what it reads. The repo was created on 2026-11-10. The public hook is the 2026-11-11 Show HN and that day’s v0.3.6 release, not a product invented today. The existing meeting-notes-tasks entry is a Granola-notes-to-tasks playbook, not this local recorder, and the two should not be merged. This library did not install it, record a meeting, connect a calendar, turn on MCP, check offline mode or model size, or compare it with another meeting-notes product.",
+      "categories": [
+        "productivity",
+        "automation"
+      ],
+      "role": "AI meeting notes tool",
+      "sourceUrl": "https://yogurt.so/",
+      "secondaryUrls": [
+        "https://github.com/FrigadeHQ/yogurt",
+        "https://github.com/FrigadeHQ/yogurt/releases/latest",
+        "https://github.com/FrigadeHQ/yogurt/blob/main/docs/README.md",
+        "https://news.ycombinator.com/item?id=50454625"
+      ],
+      "previewImage": "/previews/yogurt.webp",
+      "previewCredit": "预览：Yogurt 官方 README 产品图，居中裁成 3:2",
+      "previewCreditEn": "Preview: official Yogurt README product still, center-cropped to 3:2",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "录音前告知通话里的其他人。MCP 默认关闭；打开后，接通的在线模型可能上传它读到的会议内容。本库没有代为安装或录音。",
+      "approvalBoundaryEn": "Tell the other people on the call before you record. MCP is off by default; once it is on, a connected online model may upload the meeting content it reads. This library did not install it or record for you.",
+      "connectors": [
+        "microphone",
+        "system audio",
+        "calendar",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-12T01:00:00Z",
+      "landing": {
+        "what": "装在你自己电脑上的会议记录：录本机声音、转写、随手记一条，再整理成计划。它不进会当机器人，也不是邮件或浏览器助手。",
+        "whatEn": "A meeting recorder on your own computer: it records local audio, transcribes, takes a note you jot, and turns that into a plan. It does not join the call as a bot, and it is not an email or browser assistant.",
+        "previewCredit": "预览：Yogurt 官方 README 产品图，居中裁成 3:2",
+        "previewCreditEn": "Preview: official Yogurt README product still, center-cropped to 3:2"
+      },
+      "qualityNote": "收录理由：本机会议笔记，录音不上传，适合不想让会议机器人进会的人。这是今天的新钩子。边界：不是邮件或浏览器助手；日历和说话人名字目前只有 Mac；Windows 安装包未签名；MCP 默认关闭，接通后在线模型可能把读到的内容上传。笔记模型体积是帮助文档里的数字。本库没有安装，没有录音，没有接日历或 MCP，没有核对离线和模型大小，也没有和其他会议笔记产品对比。库里的 meeting-notes-tasks 是另一条用法，不要并成这一条。",
+      "qualityNoteEn": "Why listed: local meeting notes whose recordings are not uploaded, for people who do not want a bot in the call. This is one of today’s new hooks. Limits: it is not an email or browser assistant; calendar and speaker names are Mac-only for now; the Windows build is unsigned; MCP is off by default, and a connected online model may upload what it reads. The notes-model sizes are figures from the help doc. This library did not install it, record a meeting, connect a calendar or MCP, check offline mode or model size, or compare it with another meeting-notes product. The existing meeting-notes-tasks entry is a different playbook and should not be folded into this one.",
+      "verifyLog": "2026-11-12 早间（Asia/Shanghai，约 09:00）：https://yogurt.so/ HTTP 308 到 https://www.yogurt.so/ ，正文 HTTP 200。title / og:title 为 Yogurt · AI meeting notes that stay on your computer；og:description 写 No bot joins the call. Free and open source。首屏 Backed by Y Combinator、Private AI meeting notes. Free and open source.、Made by Frigade。FAQ 写 Apple silicon + macOS 14.4+、Windows 10 version 2004+ x64、Ubuntu 22.04+ x64、至少 8 GB、太慢会在安装时告知、日历和说话人名字目前仅 Mac、Windows 未签名（More info → Run anyway）、MIT 免费、一次下载模型后转写和摘要离线。帮助文档 https://github.com/FrigadeHQ/yogurt/blob/main/docs/README.md 的 raw HTTP 200：录音等点击；Calendar / Notifications / Accessibility 可选；无遥测；联网是 Hugging Face 模型、Mac 可选 Apple 端侧语音、GitHub 更新检查；后台笔记模型约 14 GB（Mac 64 GB 内存）或约 63 GB（96 GB 或更多）；Settings → AI apps 的 MCP 只读、默认关闭，接通的在线模型可能上传读到的内容；Linux 另写 PulseAudio 或 PipeWire，打不开时安装 FUSE 2。api.github.com/repos/FrigadeHQ/yogurt：MIT，created_at 2026-11-10T20:01:01Z，homepage https://yogurt.so；研究时点约 403 stars，同日约 09:07 复读 stargazers_count 为 405。latest release v0.3.6，published_at 2026-11-11T23:59:48Z，资产含 Yogurt-mac-arm64.dmg、Yogurt-windows-x64.exe、Yogurt-linux-x86_64.AppImage。Show HN https://news.ycombinator.com/item?id=50454625 ，Algolia created_at 2026-11-11T15:33:06Z，研究时点约 163 points，同日复读 165。预览取官方 README 静帧 https://raw.githubusercontent.com/FrigadeHQ/yogurt/main/docs/assets/yogurt-screenshot.webp （HTTP 200，image/webp，84136 字节，2192×1408），居中裁成 1200×800 WebP，没有用生成模型重绘，也没有改用分类插画。未安装、未录音、未接日历、未开 MCP、未核对离线或模型体积、未和其他会议笔记产品对比。",
+      "verifyLogEn": "2026-11-12 morning (Asia/Shanghai, about 09:00): https://yogurt.so/ returned HTTP 308 to https://www.yogurt.so/ , and the page was HTTP 200. title / og:title is Yogurt · AI meeting notes that stay on your computer; the og:description says no bot joins the call and that it is free and open source. The hero says Backed by Y Combinator, Private AI meeting notes. Free and open source., and Made by Frigade. The FAQ lists Apple silicon and macOS 14.4+, Windows 10 version 2004+ x64, Ubuntu 22.04+ x64, at least 8 GB, a too-slow warning during setup, Mac-only calendar and speaker names, the unsigned Windows dialog (More info → Run anyway), MIT and free, and offline transcription and summaries after a one-time model download. Help doc raw https://raw.githubusercontent.com/FrigadeHQ/yogurt/main/docs/README.md was HTTP 200: recording waits for a click; Calendar / Notifications / Accessibility are optional; no telemetry; network use is Hugging Face models, optional Apple on-device speech on Mac, and GitHub update checks; the background notes model is about 14 GB on a Mac with 64 GB of memory or about 63 GB with 96 GB or more; Settings → AI apps MCP is read-only and off by default, and a connected online model may upload what it reads; Linux also lists PulseAudio or PipeWire and FUSE 2 if the AppImage does not open. api.github.com/repos/FrigadeHQ/yogurt: MIT, created_at 2026-11-10T20:01:01Z, homepage https://yogurt.so ; about 403 stars at research time, and a re-read around 09:07 the same morning showed stargazers_count 405. Latest release v0.3.6, published_at 2026-11-11T23:59:48Z, assets include Yogurt-mac-arm64.dmg, Yogurt-windows-x64.exe, and Yogurt-linux-x86_64.AppImage. Show HN https://news.ycombinator.com/item?id=50454625 , Algolia created_at 2026-11-11T15:33:06Z, about 163 points at research time, 165 on the same-morning re-read. The preview is the official README still https://raw.githubusercontent.com/FrigadeHQ/yogurt/main/docs/assets/yogurt-screenshot.webp (HTTP 200, image/webp, 84136 bytes, 2192×1408), center-cropped to a 1200×800 WebP. It was not redrawn by a generative model, and a category illustration was not used in its place. Not installed, no recording, no calendar, no MCP, no offline or model-size check, and no comparison with another meeting-notes product."
+    },
+    {
+      "id": "klad",
+      "slug": "klad",
+      "title": "klad：编程助手用真笔画，每一笔你都能改",
+      "titleEn": "klad: your coding agent paints, and either of you can edit any stroke",
+      "kind": "tool",
+      "hook": "让编程助手用真笔画，画完每一笔你都能改。",
+      "hookEn": "Let a coding agent paint with real brushes, then edit any stroke yourself.",
+      "summary": "klad（https://klad.studio/ ，Indicode BV）是绘画和动画编辑器，编程助手用同一套笔来画。官网标题是 “your coding agent paints, and either of you can edit any stroke”，并写里面没有图像生成器。Claude Code、Codex，或任何能跑命令的助手，通过 klad 命令行用和你一样的笔绘画，笔触大约一秒后出现在编辑器里。你可以钉一条笔记，或选中一块区域。每一笔保留路径、压力、笔刷和颜色；涂抹仍然是可以挪走的笔触。人和助手用同一个文件。官网还写 23 支笔刷、图层、带洋葱皮的时间轴和骨骼；道具、角色和片段可以变成 Godot 的精灵帧；也有矢量、渐变和真文本。许可证是 PolyForm Internal Use 1.0.0 加附录，Copyright 2026 Indicode BV，不是整仓 MIT。个人使用（包括从源码编译）免费；公司内部使用只在上一纳税年度总营收低于 50 万欧元（许可证写或其他货币的同等金额）时免费，更大的公司要为每个使用者购买许可。画作归用户。docs/format.md、docs/cli.md、docs/skill/、crates/client/ 这些路径是 MIT。官网写：今天可以为自己、以及年营收低于 50 万欧元的公司从源码编译，很像 Aseprite；想双击安装的话，Windows、macOS、Linux 的预编译包在邮件名单上，名单上的人先以 15 美元得到，首发价 19 美元，含全部 1.x 更新。许可证正文把 itch.io 或 Steam 写成购买编译包时的例子，官网今天给出的路径仍是邮件名单，不要当成商店里已经能下载。仓库 2026-11-04 已存在，2026-11-11 的 Show HN 是这次公开钩子；GitHub Releases 为零。本库没有从源码编译，没有加入名单，没有跑命令行，没有用助手作画，也没有导出到 Godot。",
+      "summaryEn": "klad (https://klad.studio/ , Indicode BV) is a painting and animation editor that a coding agent drives with the same brushes you use. The site title is “your coding agent paints, and either of you can edit any stroke”, and it says there is no image generator inside. Claude Code, Codex, or anything that can run commands paints through the klad command line; strokes show up in the editor in about a second. You can pin a note or select a region. Every stroke keeps its path, pressure, brush, and colour; a smudge stays a stroke you can move. Human and agent share one file. The site also lists 23 brushes, layers, a timeline with onion skin, and bones; props, characters, and clips can land in Godot as sprite frames; vectors, gradients, and real text are there too. The license is PolyForm Internal Use 1.0.0 plus addenda, Copyright 2026 Indicode BV, not an MIT license for the whole repo. Personal use, including building from source, is free. Internal business use is free only when the company’s prior-year revenue was under 500,000 euros (the license also says the same amount in another currency); a larger company needs a bought licence for each person who uses it. Drawings belong to the user. docs/format.md, docs/cli.md, docs/skill/, and crates/client/ are MIT. The site says you can build from source today for yourself and for companies under 500,000 euros a year, much like Aseprite. Prebuilt Windows, macOS, and Linux builds are on an email list: people on the list get them first at $15, the launch price is $19, and all 1.x updates are included. The license text names itch.io or Steam as examples of buying a build, but the path the site gives today is still that email list, not a store download that is already shipping. The repo existed on 2026-11-04; the public hook is the 2026-11-11 Show HN. GitHub Releases is empty. This library did not build from source, join the list, run the CLI, drive it with an agent, or export to Godot.",
+      "categories": [
+        "design",
+        "automation"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://klad.studio/",
+      "secondaryUrls": [
+        "https://github.com/klad-app/klad",
+        "https://news.ycombinator.com/item?id=50454951"
+      ],
+      "previewImage": "/previews/klad.webp",
+      "previewCredit": "预览：klad.studio 官方开放图，上下补齐成 3:2，没有拉伸",
+      "previewCreditEn": "Preview: official klad.studio open-graph image, padded to 3:2 without stretching",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "上年营收达到 50 万欧元的公司，商用前需要购买许可。预编译包还在邮件名单上，不要当成已经能双击安装。本库没有代为编译或报名。",
+      "approvalBoundaryEn": "A company whose prior-year revenue reached 500,000 euros needs a bought licence before business use. Prebuilt builds are still on an email list, not a double-click install that is already shipping. This library did not compile it or join the list for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Godot"
+      ],
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-12T01:00:00Z",
+      "landing": {
+        "what": "给编程助手真笔的绘画和动画编辑器。助手通过命令行一笔一笔地画，你也能改其中任何一笔。里面没有图像生成器。",
+        "whatEn": "A painting and animation editor whose brushes a coding agent can drive. The agent paints through the command line, stroke by stroke, and you can edit any of those strokes. There is no image generator inside.",
+        "previewCredit": "预览：klad.studio 官方开放图，上下补齐成 3:2，没有拉伸",
+        "previewCreditEn": "Preview: official klad.studio open-graph image, padded to 3:2 without stretching"
+      },
+      "qualityNote": "收录理由：AI×设计。编程助手用真笔画，人和助手改的是同一批笔触，不是重新抽一张图。这是今天的新钩子。边界：整仓不是 MIT；上年营收达到 50 万欧元的公司需要购买许可；今天可以编译源码，预编译安装包仍在邮件名单，还不能当成已经上架的双击安装包。本库没有编译，没有报名，没有跑命令行，没有让助手作画，也没有导出到 Godot。",
+      "qualityNoteEn": "Why listed: AI×design. A coding agent paints with real brushes, and you and the agent edit the same strokes instead of rolling a new picture. This is one of today’s new hooks. Limits: the whole repo is not MIT; a company at 500,000 euros of prior-year revenue needs a bought licence; source can be built today, and prebuilt installers are still on an email list, not a double-click build that is already shipping. This library did not compile it, join the list, run the command line, have an agent paint, or export to Godot.",
+      "verifyLog": "2026-11-12 早间（Asia/Shanghai）：https://klad.studio/ HTTP 200。og:title 为 klad: your coding agent paints, and either of you can edit any stroke；og:description 写 no image generator，笔触含涂抹仍可编辑。正文写 23 brushes、layers、timeline with onion skin、bones、Godot sprite frames、vectors / gradients / real text；免费从源码编译（自己以及年营收低于 500,000 euros 的公司，much like Aseprite）；预编译 Windows / macOS / Linux 在邮件名单，名单先以 $15 得到，launch price $19，含全部 1.x。https://klad.app/ 当天是 Spaceship 待售页（title Klad.app for sale），未用作来源。README raw HTTP 200：source-available, not open source；Claude Code、Codex 或任何能跑命令的助手；约一秒出现在编辑器；可钉笔记或选区；PolyForm Internal Use 1.0.0 加附录。LICENSE raw：Copyright 2026 Indicode BV；个人用途含免费从源码编译；上一纳税年度总营收低于 500,000 euros（或其他货币同等金额）才算允许的内部商用，超过则每人需购买许可；画作归用户；itch.io 或 Steam 只是许可证里购买编译包的例子。LICENSE-MIT 覆盖 docs/format.md、docs/cli.md、docs/skill/、crates/client/。api.github.com/repos/klad-app/klad：stargazers_count 123，created_at 2026-11-04T15:19:25Z，homepage https://klad.studio ，license SPDX 为 NOASSERTION；/releases 为空数组。Show HN https://news.ycombinator.com/item?id=50454951 ，Algolia created_at 2026-11-11T16:00:50Z，复读 69 points（研究时点约 69）。预览为官方开放图 https://klad.studio/opengraph-image.png （HTTP 200，PNG 1200×630，186774 字节），按角落色上下补齐成 1200×800 WebP，没有拉伸，也没有把 README 的 creature-hero.gif 当成静帧。未编译、未报名、未跑 CLI、未用助手作画、未导出 Godot。",
+      "verifyLogEn": "2026-11-12 morning (Asia/Shanghai): https://klad.studio/ HTTP 200. og:title is “klad: your coding agent paints, and either of you can edit any stroke”; the og:description says there is no image generator and that strokes, including smudges, stay editable. The page lists 23 brushes, layers, a timeline with onion skin, bones, Godot sprite frames, and vectors / gradients / real text. It says building from source is free for you and for companies under 500,000 euros a year, much like Aseprite. Prebuilt Windows / macOS / Linux builds are on an email list, first at $15, launch price $19, with all 1.x updates. https://klad.app/ was a Spaceship for-sale page that morning (title Klad.app for sale) and is not used as a source. README raw was HTTP 200: source-available, not open source; Claude Code, Codex, or anything that can run commands; strokes appear in about a second; pin a note or select a region; PolyForm Internal Use 1.0.0 plus addenda. LICENSE raw: Copyright 2026 Indicode BV; personal use includes building from source free of charge; internal business use is permitted only if prior-tax-year revenue was under 500,000 euros (or the same amount in another currency), otherwise each person needs a bought licence; drawings belong to the user. itch.io and Steam appear only as examples of buying a build. LICENSE-MIT covers docs/format.md, docs/cli.md, docs/skill/, and crates/client/. api.github.com/repos/klad-app/klad: stargazers_count 123, created_at 2026-11-04T15:19:25Z, homepage https://klad.studio , SPDX license NOASSERTION; /releases was an empty array. Show HN https://news.ycombinator.com/item?id=50454951 , Algolia created_at 2026-11-11T16:00:50Z, 69 points on the re-read (about 69 at research time). The preview is the official open-graph image https://klad.studio/opengraph-image.png (HTTP 200, PNG 1200×630, 186774 bytes), padded top and bottom with the corner colour to a 1200×800 WebP, not stretched. The README creature-hero.gif was not used as the still. Not compiled, not signed up for the list, CLI not run, no agent painting, no Godot export."
+    },
+    {
+      "id": "claude-whiteboards-sheets-data",
+      "slug": "claude-whiteboards-sheets-data",
+      "title": "Claude 白板、表格与 Claude Data",
+      "titleEn": "Claude Whiteboards, Claude Sheets, and Claude Data",
+      "kind": "tool",
+      "hook": "在 Claude 里一起改白板、表格和数据看板。",
+      "hookEn": "Brainstorm on a whiteboard, build a sheet, and share data dashboards in Claude.",
+      "summary": "Anthropic 2026-11-10 的文章宣布 Claude Whiteboards 和 Claude Sheets 进入 beta，并把 Claude Dashboards 转正、改名为 Claude Data。开放图写 “Available today on all paid plans.” 正文写这三样在所有付费计划上可用。白板是一块和同事一起用的板：你口头讲一个还很乱的计划，Claude 可以把它变成带负责人和日期的时间线；大家把自己的笔记放到板上，Claude 按主题归组并起草每人的行动项；框选一块区域再提问；做完可以变成文档或幻灯，或带到 Lucid、Miro、Vani by Zoho。表格可以从一句提示生成带标签页、公式、格式和下拉的表，单元格上的修改会被标出来；正文写 “For now, sheets have simple spreadsheet functionality”；可以导出 xlsx 或 CSV，或用 Claude for Excel，也可以继续留在 Airtable、Asana、monday.com、Smartsheet。Claude Data：Dashboards 曾在 10 月以 beta 推出，现在转正并改名，因为用法比看板更宽。官方写可以认证指标、做数据故事或配音视频（分享前由人审阅）、实时分享、设计系统、刷新和缓存、变更记录和回滚；合作方包括 Amplitude、Mixpanel、Omni、PostHog、Sigma。交互连接器可以在对话旁边或全屏打开完整应用，例子有 Adobe、Atlassian、Box、Notion。入手：白板、表格和 Data 在网页、桌面和手机上；Claude Data 需要一个数据连接器，例如仓库或 CRM。管理：Team 计划这三样默认打开；Enterprise 的白板和表格默认关闭，Claude Data 在 2026-11-19 默认打开；可在 Organization settings > Artifacts 里改。库里已有的 claude-dashboards-motion 仍保留，那条是 2026-10-08 的 Motion 和 Dashboards beta，不要用本条覆盖。这条是昨天早间建议收录的，当时没有开 PR。本库没有登录 Claude，没有在付费计划里打开这三样，没有连接仓库或 CRM，也没有导出 xlsx。",
+      "summaryEn": "Anthropic’s 2026-11-10 article launches Claude Whiteboards and Claude Sheets in beta, and makes Claude Dashboards generally available under the name Claude Data. The open-graph text says “Available today on all paid plans.” The body says the three are available on all paid plans. Whiteboards is a shared board: talk through a messy plan and Claude can turn it into a timeline with owners and dates; people add their own notes and Claude groups them by theme and drafts action items; select a region and ask; when you are done it can become a doc or a deck, or go to Lucid, Miro, or Vani by Zoho. Sheets can generate a tabbed sheet with formulas, formatting, and dropdowns from a prompt, and cell edits are marked. The article says “For now, sheets have simple spreadsheet functionality.” You can export xlsx or CSV, use Claude for Excel, or keep the work in Airtable, Asana, monday.com, or Smartsheet. Claude Data: Dashboards launched in beta in October and is now generally available under the new name, because the work is broader than dashboards. The post describes certified metrics, data stories or a voiceover video (reviewed by a person before sharing), live sharing, design systems, refresh and cache, and change tracking with rollback. Partners named are Amplitude, Mixpanel, Omni, PostHog, and Sigma. Interactive connectors can open as full apps beside the conversation or full screen; examples are Adobe, Atlassian, Box, and Notion. Getting started: Whiteboards, Sheets, and Data on web, desktop, and mobile; Claude Data needs a data connector, such as a warehouse or a CRM. Admins: Team plans enable all three by default; on Enterprise, Whiteboards and Sheets are off by default, and Claude Data turns on by default on 2026-11-19; change them in Organization settings > Artifacts. The existing claude-dashboards-motion card stays. That one is the 2026-10-08 Motion and Dashboards beta, and this card does not replace it. This item was recommended yesterday morning, and no pull request was opened then. This library did not log into Claude, did not open these on a paid plan, did not connect a warehouse or a CRM, and did not export xlsx.",
+      "categories": [
+        "design",
+        "automation"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "secondaryUrls": [
+        "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+        "https://claude.com/resources/articles/interactive-connectors-full-tool",
+        "https://news.ycombinator.com/item?id=50443716",
+        "https://x.com/claudeai/status/2120206365759094857"
+      ],
+      "previewImage": "/previews/claude-whiteboards-sheets-data.webp",
+      "previewCredit": "预览：Claude 官方文章开放图，居中裁成 3:2",
+      "previewCreditEn": "Preview: official Claude article open-graph image, center-cropped to 3:2",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "数据故事和配音视频，官方写分享前要人先看过；表格会标出单元格修改。这不是每一步都要不可逆审批的产品。本库没有代为登录或导出。",
+      "approvalBoundaryEn": "The post says a person reviews data stories and voiceover videos before they are shared, and sheet edits are marked. This is not a product where every step is an irreversible approval. This library did not sign in or export for you.",
+      "connectors": [
+        "Lucid",
+        "Miro",
+        "Airtable",
+        "Excel",
+        "Notion"
+      ],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-12T01:00:00Z",
+      "landing": {
+        "what": "Claude 里的共享白板、表格，以及转正后的 Claude Data。适合把计划和数据留在对话旁边一起改，而不是把它当成个人邮件或浏览器助手。",
+        "whatEn": "A shared whiteboard, sheets, and the now generally available Claude Data, inside Claude. It is a work surface next to the conversation, not a personal email or browser assistant.",
+        "previewCredit": "预览：Claude 官方文章开放图，居中裁成 3:2",
+        "previewCreditEn": "Preview: official Claude article open-graph image, center-cropped to 3:2"
+      },
+      "qualityNote": "收录理由：AI×设计。2026-11-10 白板和表格进入 beta，10 月的 Dashboards beta 转正并改名为 Claude Data。旧卡 claude-dashboards-motion 继续留着。边界：官方写付费计划可用，Enterprise 的开关默认值不同，Claude Data 要有数据连接器；表格目前是简单表格功能；数据故事和视频分享前要人看过。昨天早间建议过这条，当时没有开 PR。本库没有登录，没有在付费计划里打开，没有接仓库或 CRM，也没有导出 xlsx。",
+      "qualityNoteEn": "Why listed: AI×design. On 2026-11-10 Whiteboards and Sheets entered beta, and the October Dashboards beta became generally available as Claude Data. The older claude-dashboards-motion card stays. Limits: the post says paid plans, Enterprise defaults differ, and Claude Data needs a data connector; sheets are simple spreadsheet functionality for now; a person reviews data stories and videos before sharing. This was recommended yesterday morning, and no pull request was opened then. This library did not sign in, did not open these on a paid plan, did not connect a warehouse or CRM, and did not export xlsx.",
+      "verifyLog": "2026-11-12 早间（Asia/Shanghai）重读 https://claude.com/resources/articles/sheets-whiteboards-data HTTP 200。title 为 Claude Whiteboards, Claude Sheets, and Claude Data。og:description 含 Available today on all paid plans。正文日期 November 10, 2026。article:published_time 在页面元数据里是 2026-11-10。正文：Today we’re launching Claude Whiteboards and Claude Sheets in beta, and Claude Dashboards becomes generally available as Claude Data；These are available on all paid plans。白板：timeline with owners and dates、notes、action items、dragging a box、Lucid / Miro / Vani by Zoho。表格：tabs, formulas, formatting, and drop-downs；edits marked；For now, sheets have simple spreadsheet functionality；xlsx / CSV、Claude for Excel、Airtable、Asana、monday.com、Smartsheet。Claude Data：October beta，certified metrics，data stories or narrated videos for you to review before sharing，live sharing，design systems，caching and refresh，tracked changes and rollback；partners Amplitude、Mixpanel、Omni、PostHog、Sigma。交互连接器例子 Adobe、Atlassian、Box、Notion。Getting started：web, desktop, and mobile；Claude Data needs a data connector。Team 默认全开；Enterprise 白板和表格默认关，Claude Data 2026-11-19 默认开；Organization settings > Artifacts。页面上没有 “sticky notes” 这个说法，按正文的 notes 写。2026-11-11 简报里的 “rollout is gradual / you may not see them all right away” 在这次重读的正文里没有找到。次来源 https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors 与 https://claude.com/resources/articles/interactive-connectors-full-tool 均为 HTTP 200。HN https://news.ycombinator.com/item?id=50443716 ，Algolia 复读 281 points（研究时点约 281），created_at 2026-11-10T17:55:07Z。X https://x.com/claudeai/status/2120206365759094857 未登录打开。预览为文章开放图 https://claude.com/resources/articles/sheets-whiteboards-data/opengraph-image/og （HTTP 200，PNG 2400×1260，50639 字节），居中裁成 1200×800 WebP。未登录 Claude，未在付费计划打开，未接仓库或 CRM，未导出 xlsx。未覆盖 claude-dashboards-motion。",
+      "verifyLogEn": "Re-read on the morning of 2026-11-12 (Asia/Shanghai): https://claude.com/resources/articles/sheets-whiteboards-data HTTP 200. Title: Claude Whiteboards, Claude Sheets, and Claude Data. The og:description includes Available today on all paid plans. The page date is November 10, 2026, and article:published_time in the metadata is 2026-11-10. Body: launching Claude Whiteboards and Claude Sheets in beta, and Claude Dashboards becomes generally available as Claude Data; these are available on all paid plans. Whiteboards: a timeline with owners and dates, notes, action items, dragging a box, Lucid / Miro / Vani by Zoho. Sheets: tabs, formulas, formatting, and drop-downs; edits marked; “For now, sheets have simple spreadsheet functionality”; xlsx / CSV, Claude for Excel, Airtable, Asana, monday.com, Smartsheet. Claude Data: October beta, certified metrics, data stories or narrated videos to review before sharing, live sharing, design systems, caching and refresh, tracked changes and rollback; partners Amplitude, Mixpanel, Omni, PostHog, Sigma. Interactive connector examples: Adobe, Atlassian, Box, Notion. Getting started: web, desktop, and mobile; Claude Data needs a data connector. Team plans default all three on; Enterprise defaults Whiteboards and Sheets off, and Claude Data on from 2026-11-19; Organization settings > Artifacts. The page does not say “sticky notes”; the card follows the page’s “notes”. The “rollout is gradual / you may not see them all right away” line from the 2026-11-11 brief was not on the article at this re-read. Secondary pages for the longer connectors piece and the interactive-connectors article were both HTTP 200. HN https://news.ycombinator.com/item?id=50443716 , 281 points on the Algolia re-read (about 281 at research time), created_at 2026-11-10T17:55:07Z. The X post https://x.com/claudeai/status/2120206365759094857 was not opened while signed in. The preview is the article open-graph image (HTTP 200, PNG 2400×1260, 50639 bytes), center-cropped to a 1200×800 WebP. No Claude login, not opened on a paid plan, no warehouse or CRM, no xlsx export. claude-dashboards-motion was not overwritten."
+    },
+    {
+      "id": "aircad",
+      "slug": "aircad",
+      "title": "Aircad：浏览器里的绘图和三维建模，现已开放注册",
+      "titleEn": "Aircad: browser drafting and 3D modeling, now open to everyone",
+      "kind": "tool",
+      "hook": "在浏览器里绘图建模，AI 的改动要你确认才写入。",
+      "hookEn": "Draft and model in the browser; an AI edit lands only after you apply it.",
+      "summary": "Aircad（https://aircad.com/）是浏览器里的二维绘图和三维建模。开放图写：精密二维绘图和三维建模，多人一起改，AI 助手在旁边绘图、建模和渲染。首页写不用安装，打开浏览器就能画，能打开带布局、图块和标注的 DWG；二维工具和 NURBS 实体都在；内置门窗家具等图块库。AI：可选 Auto、Claude、GPT、Gemini、DeepSeek、GLM 等；没有你的确认什么都不会改；每次改动以高亮草稿到来，由你应用或丢弃；对话线程跟文件一起保存，并且是私密的；整个 AI 是可选的。协作：链接分享、多人同时编辑、钉在图上的评论、红线和 PDF 标注、版本历史。导入导出：DWG / DXF 进出，Rhino .3dm、STEP、glTF、SVG 进入，PDF 导出，STL / OBJ 网格进出。JavaScript 脚本用的是和内置命令同一套 API。页面上的 “250,000+ entities in one file” 和 “108 floors. 38,510 editable solids” 是厂商页面上的数字，不是本库测量。博客 “Aircad is open” 日期 November 10, 2026，作者 Peter Boyer：没有安装、没有候补名单，今天任何人都能注册。正文感谢在今天之前就用 Aircad 画过真实项目的人，所以这条是因为它向所有人开放而收录，不是因为它今天才被发明出来。价格页在 2026-11-12 早间仍是：Free 永久 $0，3 个个人文件，每月 3 次 DWG/DXF 转换，实时协作，30 天历史，脚本，一开始 200 个 AI 额度。Founder's Club Pro 给新账号的限时价：每月 $19（原 $29）或每年 $190（原 $290），到 2027-01-31 或名额用完；订阅不中断就保持这个价格，取消或付款中断后新订阅按标准价。Pro 是无限文件和 DWG/DXF、完整历史、可发布和链接图库、每月 AI 额度、前沿模型和加购。Team 每位编辑每月 $35，14 天试用；查看和审阅的人免费。Founder's Club 还剩多少名额，本库没有查。这条是昨天早间建议收录的，当时没有开 PR。本库没有注册，没有导入 DWG，没有让助手改图，也没有花额度。",
+      "summaryEn": "Aircad (https://aircad.com/) is 2D drafting and 3D modeling in the browser. The open-graph text says precision 2D drafting and 3D modeling, multiplayer editing, and an AI agent that drafts, models, and renders alongside you. The home page says there is no install, a browser is enough, and it opens DWG files with their layouts, blocks, and dimensions. 2D tools and NURBS solids are both there, with built-in fixture libraries. AI: a choice of Auto, Claude, GPT, Gemini, DeepSeek, GLM, and more; nothing changes without your OK; every change arrives as a highlighted draft to apply or discard; threads are saved with the file and are private; the AI is optional. Collaboration: share a link, multiplayer editing, pinned comments, redlines and PDF markup, and version history. Import and export: DWG / DXF in and out, Rhino .3dm, STEP, glTF, and SVG in, PDF out, and STL / OBJ meshes in and out. JavaScript scripts use the same API as the built-in commands. “250,000+ entities in one file” and “108 floors. 38,510 editable solids” are figures on the vendor page, not measurements made here. The blog post “Aircad is open”, dated November 10, 2026, by Peter Boyer, says there is no install and no waitlist, and anyone can sign up. It also thanks people who drew real projects in Aircad before that day, so this card exists because the product opened to everyone, not because it was invented that day. The pricing page on the morning of 2026-11-12 still showed: Free at $0 forever, 3 personal files, 3 DWG/DXF conversions a month, realtime collaboration, 30-day history, scripting, and 200 AI credits to start. Founder's Club Pro, a limited-time price for new accounts: $19 a month (was $29) or $190 a year (was $290), until 2027-01-31 or until the places are taken; the price stays while the subscription is uninterrupted, and a new subscription after a cancel or a lapsed payment is at the standard price. Pro adds unlimited files and DWG/DXF, full history, publish and link libraries, a monthly AI allowance, and frontier models plus top-ups. Team is $35 per editor each month, with a 14-day trial; viewers and reviewers are free. How many Founder's Club places remain was not checked. This item was recommended yesterday morning, and no pull request was opened then. This library did not sign up, did not import a DWG, did not let an agent edit, and did not spend credits.",
+      "categories": [
+        "design",
+        "automation"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://aircad.com/",
+      "secondaryUrls": [
+        "https://aircad.com/blog/aircad-is-open",
+        "https://aircad.com/pricing",
+        "https://news.ycombinator.com/item?id=50441350"
+      ],
+      "previewImage": "/previews/aircad.webp",
+      "previewCredit": "预览：Aircad 官网开放图，居中裁成 3:2",
+      "previewCreditEn": "Preview: official Aircad open-graph image, center-cropped to 3:2",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "助手的改动以高亮草稿到来，要点应用才写入；丢弃就留下原图。本库没有代为注册或改图。",
+      "approvalBoundaryEn": "An agent change arrives as a highlighted draft and is written only if you apply it; discard leaves the drawing as it was. This library did not sign up or edit for you.",
+      "connectors": [
+        "DWG",
+        "DXF",
+        "Rhino",
+        "STEP",
+        "browser"
+      ],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-12T01:00:00Z",
+      "landing": {
+        "what": "浏览器里的绘图和三维建模，带多人协作和一个可选的 AI 助手。助手的改动要你应用才写进文件。",
+        "whatEn": "Drafting and 3D modeling in the browser, with multiplayer editing and an optional AI agent. An agent change is written into the file only after you apply it.",
+        "previewCredit": "预览：Aircad 官网开放图，居中裁成 3:2",
+        "previewCreditEn": "Preview: official Aircad open-graph image, center-cropped to 3:2"
+      },
+      "qualityNote": "收录理由：AI×设计。浏览器里绘图、建模，助手的每一改都先变成草稿。收录是因为它向所有人开放注册，不是因为它今天才出现；博客感谢在开放之前就用它画过真实项目的人。边界：文件规模和楼层数字是厂商页面上的说法；Founder's Club 是限时价，名额是否还在本库没有查；免费档有文件数、转换次数和额度限制。昨天早间建议过这条，当时没有开 PR。本库没有注册，没有导入 DWG，没有让助手改图，也没有花额度。",
+      "qualityNoteEn": "Why listed: AI×design. Draft and model in the browser, and every agent edit starts as a draft. It is catalogued because it opened to everyone, not because it appeared that day; the blog thanks people who already drew real projects in it. Limits: the file-size and floor-count figures are on the vendor page; Founder's Club is a limited-time price, and whether places remain was not checked; the free tier caps files, conversions, and credits. This was recommended yesterday morning, and no pull request was opened then. This library did not sign up, import a DWG, let an agent edit, or spend credits.",
+      "verifyLog": "2026-11-12 早间（Asia/Shanghai）重读 https://aircad.com/ 、https://aircad.com/blog/aircad-is-open 、https://aircad.com/pricing ，三者 HTTP 200。首页 og:title Aircad - Draft, model, and document. Together.；og:description 写 precision 2D drafting and 3D modeling, multiplayer, and an AI agent that drafts, models, and renders alongside you。首页还有 Opens your DWGs（layouts, blocks, dimensions）、NURBS、内置图块库、模型选择 Auto / Claude / GPT / Gemini / DeepSeek / GLM and more、Nothing changes without your OK、highlighted draft、threads saved with the file and private、Entirely optional。导入导出列表含 DWG/DXF、PDF、3DM、STEP、glTF、SVG、STL/OBJ。性能区写 250,000+ entities in one file，以及 108 floors. 38,510 editable solids，按厂商页面数字记录。脚本区写 JavaScript，和内置命令同一套 API。博客 title Aircad is open，Date November 10, 2026，Peter Boyer；no install, no waitlist；并感谢 drew real projects in Aircad before today 的人。价格页：Free $0 forever（3 personal files、3 DWG/DXF a month、realtime collab、30-day history、scripting、200 AI credits to start）；Founder's Club Pro $19/month（页面同时显示原 $29）或 $190/year（原 $290），until January 31, 2027 or until places are taken，订阅保持则保留价格，取消或付款中断后按标准价；Pro 为无限文件与 DWG/DXF、完整历史、publish/link libraries、每月 AI 额度、frontier models and top-ups；Team $35 per editor / month，14-day trial，viewers and reviewers free。开放图 https://aircad.com/opengraph-image.jpg?4c867f4482e9a211 HTTP 200，JPEG 1200×630，91818 字节，Last-Modified Wed, 11 Nov 2026 21:32:28 GMT，居中裁成 1200×800 WebP。HN https://news.ycombinator.com/item?id=50441350 ，Algolia 复读 46 points（昨天早间约 7，研究时点约 46），created_at 2026-11-10T15:01:19Z。未注册、未导入 DWG、未跑助手、未花额度、未核剩余名额。",
+      "verifyLogEn": "Re-read on the morning of 2026-11-12 (Asia/Shanghai): https://aircad.com/ , https://aircad.com/blog/aircad-is-open , and https://aircad.com/pricing were all HTTP 200. Home og:title is Aircad - Draft, model, and document. Together. The og:description says precision 2D drafting and 3D modeling, multiplayer, and an AI agent that drafts, models, and renders alongside you. The home page also says it opens DWGs with layouts, blocks, and dimensions, NURBS, built-in fixture libraries, model choice Auto / Claude / GPT / Gemini / DeepSeek / GLM and more, nothing changes without your OK, a highlighted draft, threads saved with the file and private, and that AI is entirely optional. Import/export lists DWG/DXF, PDF, 3DM, STEP, glTF, SVG, and STL/OBJ. The performance section says 250,000+ entities in one file, and 108 floors / 38,510 editable solids, recorded as vendor-page figures. The scripting section says JavaScript on the same API as built-in commands. Blog title Aircad is open, date November 10, 2026, Peter Boyer; no install and no waitlist; it thanks people who drew real projects in Aircad before that day. Pricing: Free $0 forever (3 personal files, 3 DWG/DXF a month, realtime collab, 30-day history, scripting, 200 AI credits to start); Founder's Club Pro $19/month (the page also shows the previous $29) or $190/year (previous $290), until January 31, 2027 or until the places are taken; the price stays while the subscription continues, and a cancel or a lapsed payment returns a new subscription to the standard price. Pro is unlimited files and DWG/DXF, full history, publish/link libraries, a monthly AI allowance, frontier models and top-ups. Team is $35 per editor / month, 14-day trial, viewers and reviewers free. Open-graph image HTTP 200, JPEG 1200×630, 91818 bytes, Last-Modified Wed, 11 Nov 2026 21:32:28 GMT, center-cropped to a 1200×800 WebP. HN https://news.ycombinator.com/item?id=50441350 , 46 points on the Algolia re-read (about 7 the previous morning, about 46 at research time), created_at 2026-11-10T15:01:19Z. No signup, no DWG import, no agent edit, no credit spend, and the remaining Founder's Club allocation was not checked."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11661,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-12T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.81",
+    "count": 219,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11962,25 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://yogurt.so/",
+      "https://github.com/FrigadeHQ/yogurt",
+      "https://github.com/FrigadeHQ/yogurt/releases/latest",
+      "https://github.com/FrigadeHQ/yogurt/blob/main/docs/README.md",
+      "https://news.ycombinator.com/item?id=50454625",
+      "https://klad.studio/",
+      "https://github.com/klad-app/klad",
+      "https://news.ycombinator.com/item?id=50454951",
+      "https://claude.com/resources/articles/sheets-whiteboards-data",
+      "https://claude.com/resources/articles/more-ways-to-work-with-claude-sheets-whiteboards-and-interactive-connectors",
+      "https://claude.com/resources/articles/interactive-connectors-full-tool",
+      "https://news.ycombinator.com/item?id=50443716",
+      "https://aircad.com/",
+      "https://aircad.com/blog/aircad-is-open",
+      "https://aircad.com/pricing",
+      "https://news.ycombinator.com/item?id=50441350",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "https://news.ycombinator.com/item?id=50442303"
     ]
   }
 }
