@@ -1,11 +1,88 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-12T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "gemini-4-carbon",
+      "slug": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "vendor": "Google",
+      "title": "Gemini 4 Carbon（Google）",
+      "titleEn": "Gemini 4 Carbon (Google)",
+      "summary": "Google 于 2026-11-10 发表文章，作者署名为 Koray Kavukcuoglu。开篇是 Google 的原话：“Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers.” Google 把 Carbon 写成他们在前沿网络安全和长程代理工作流上最强的模型；已收录的 Gemini 4 Argon 仍适合大多数软件工程和知识工作，Carbon 面向更极端的多步编码、调试和开放式研究，会用比 Argon 更多的 token 去探索和核验。文章写两周前已通过 Fairwind 把 Carbon 给了一部分网络安全防御方。基准和降本是厂商或合作方的说法，本库没有复跑：CursorBench 4.0、Perplexity 的 WANDR、Zapier 的 AutomationBench 上称排名第一，并且相对下一个外部模型每任务成本低 2 倍以上；与 Artificial Analysis 合作的 Multimodal Knowledge Agent 上称排名第二，平均每任务成本比第一名低 6 倍以上。入门 API 价格与 Argon 相同，每百万输入 token 2 美元、每百万输出 token 10 美元；脚注写入门期到 2026-11-30 结束之后改为 4 美元和 20 美元，并且只适用于准备公开使用的那个 Carbon 模型。入手路径照文章：付费 Gemini API 在 AI Studio 和 Android Studio；Google AI Ultra 订户可在 Antigravity 和 AI Studio 里用；Ultra 订户也可在 Gemini 应用和 Search 的 AI Mode 里用；研究者可申请六个月使用权；网络安全防御方通过 Fairwind 申请 “Carbon for cyber”。文章里的演示应用是厂商叙述。文章还链接了模型卡 PDF 和开发者指南，正文没有给出可复制的 API 模型 id，本条不编一个。AlphaProof Code 和 Signal 协议那段是研究上下文，不是这张卡的消费者功能。同板 relatedModelIds 指向 gemini-4-argon，不覆盖那张卡。这条是昨天早间建议收录的，当时没有开 PR。本库没有登录 AI Studio、Gemini 应用或 Antigravity，没有调用 API，没有打开模型卡核对模型 id，没有申请 Fairwind 或研究者名额，没有复跑基准，也没有和 Argon 对比运行。",
+      "summaryEn": "Google published this on 2026-11-10. The byline is Koray Kavukcuoglu. The opening sentence, in Google’s words, is: “Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers.” Google describes Carbon as its strongest model for frontier cybersecurity and long-horizon agentic workflows. Gemini 4 Argon, already on this board, remains the one they point to for most software engineering and knowledge work. Carbon is for more extreme multi-step coding and debugging and for open-ended research, and it uses more tokens than Argon to explore and to verify. The article says Carbon reached some cybersecurity defenders through Fairwind two weeks earlier. Benchmarks and cost claims are the vendor’s or a partner’s, and this library did not re-run them: number one on CursorBench 4.0, Perplexity’s WANDR, and Zapier’s AutomationBench, at more than 2X lower cost per task than the next external model; number two on the Multimodal Knowledge Agent benchmark made with Artificial Analysis, at more than 6X lower average cost per task than the top model. The introductory API price matches Argon: $2 per million input tokens and $10 per million output tokens. The footnote says that after the introductory period expires on 2026-11-30 the price is $4 and $20, and that this applies only to the Carbon model intended for public access. Getting-started paths follow the article: the paid Gemini API in AI Studio and Android Studio; Google AI Ultra subscribers in Antigravity and AI Studio; Ultra subscribers in the Gemini app and in AI Mode in Search; a six-month researcher application; and Fairwind for “Carbon for cyber”. Demo apps on the page are vendor narration. The article links a model-card PDF and a developer guide. The body does not quote a copyable API model id, and this card does not invent one. The AlphaProof Code and Signal-protocol passage is research context, not a consumer feature of this card. relatedModelIds points at gemini-4-argon, and that card is not overwritten. This item was recommended yesterday morning, and no pull request was opened then. This library did not sign in to AI Studio, the Gemini app, or Antigravity, did not call the API, did not open the model card to check a model id, did not apply to Fairwind or the researcher program, did not re-run a benchmark, and did not run a comparison against Argon.",
+      "announcedAt": "2026-11-10",
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-12T01:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 官方博文：Gemini 4 Carbon is now available",
+          "labelEn": "Google official post: Gemini 4 Carbon is now available",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+          "by": "Koray Kavukcuoglu",
+          "date": "2026-11-10"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Gemini 4 Carbon is now available",
+          "labelEn": "Hacker News: Gemini 4 Carbon is now available",
+          "url": "https://news.ycombinator.com/item?id=50442303",
+          "by": "Hacker News",
+          "date": "2026-11-10"
+        },
+        {
+          "kind": "community",
+          "label": "Google AI 官方 X 帖",
+          "labelEn": "Official Google AI post on X",
+          "url": "https://x.com/GoogleAI/status/2120187753329791341",
+          "by": "Google AI",
+          "date": "2026-11-10"
+        },
+        {
+          "kind": "community",
+          "label": "Google 官方 X 帖",
+          "labelEn": "Official Google post on X",
+          "url": "https://x.com/Google/status/2120186185423159331",
+          "by": "Google",
+          "date": "2026-11-10"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "Google 称：即日起向开发者、企业、科研人员和消费者提供 Gemini 4 Carbon。Carbon 是他们在前沿网络安全和长程代理工作流上最强的模型；Argon 仍适合大多数软件工程和知识工作；Carbon 用于更极端的多步编码、调试和开放式研究，并用比 Argon 更多的 token 去探索和核验。两周前已通过 Fairwind 向一部分网络防御方提供。",
+          "textEn": "Google’s claim: Gemini 4 Carbon is available from this post to developers, enterprises, scientists, and consumers. Carbon is their strongest model for frontier cybersecurity and long-horizon agentic workflows; Argon remains the choice for most software engineering and knowledge work; Carbon is for more extreme multi-step coding and debugging and for open-ended research, using more tokens than Argon to explore and verify. Some cyber defenders received it through Fairwind two weeks earlier."
+        },
+        {
+          "text": "Google 称：入门 API 价格与 Argon 相同，每百万输入 token 2 美元、每百万输出 token 10 美元。脚注：入门期于 2026-11-30 结束后为 4 美元和 20 美元，且只适用于准备公开使用的那个 Carbon 模型。",
+          "textEn": "Google’s claim: the introductory API price matches Argon, $2 per million input tokens and $10 per million output tokens. The footnote says $4 and $20 after the introductory period expires on 2026-11-30, and that this applies only to the Carbon model intended for public access."
+        },
+        {
+          "text": "Google 列出的入手路径：付费 Gemini API（AI Studio 与 Android Studio）；Google AI Ultra 订户在 Antigravity 和 AI Studio；Ultra 订户在 Gemini 应用和 Search 的 AI Mode；研究者申请六个月使用权；网络安全防御方经 Fairwind 申请 Carbon for cyber。正文没有给出可复制的 API 模型 id。",
+          "textEn": "Paths Google lists: the paid Gemini API in AI Studio and Android Studio; Google AI Ultra subscribers in Antigravity and AI Studio; Ultra subscribers in the Gemini app and in AI Mode in Search; a six-month application for researchers; Fairwind for Carbon for cyber. The article does not quote a copyable API model id."
+        },
+        {
+          "text": "厂商或合作方称（本库未复跑）：CursorBench 4.0、Perplexity WANDR、Zapier AutomationBench 排名第一，每任务成本比下一个外部模型低 2 倍以上；与 Artificial Analysis 的 MKA 排名第二，平均每任务成本比第一名低 6 倍以上。Gray Swan IPI 的 “0% prompt injection attack success rate” 是 Google 转述的外部测试；同一节写提示注入稳健性仍要继续改进。文中演示应用是厂商叙述。",
+          "textEn": "Vendor or partner claims, not re-run here: number one on CursorBench 4.0, Perplexity WANDR, and Zapier AutomationBench, at more than 2X lower cost per task than the next external model; number two on the MKA benchmark with Artificial Analysis, at more than 6X lower average cost per task than the top model. The Gray Swan IPI “0% prompt injection attack success rate” is Google reporting an outside test; the same section says prompt-injection robustness still needs work. Demo apps in the post are vendor narration."
+        }
+      ],
+      "qualityNote": "收录理由：Google 宣布 Carbon 向开发者、企业、科研人员和消费者开放，并写明它和已收录的 Gemini 4 Argon 怎么分工。边界：基准、降本、安全数字和演示应用都是厂商或合作方叙述，本库没有复跑。没有登录 AI Studio、Gemini 应用或 Antigravity，没有调用 API，没有打开模型卡核对 API 模型 id，没有申请 Fairwind 或研究者名额，也没有和 Argon 对比运行。AlphaProof Code 与 Signal 协议是文章里的研究上下文，不是这张卡的消费者功能。昨天早间建议过这条，当时没有开 PR。不覆盖 gemini-4-argon。",
+      "qualityNoteEn": "Why listed: Google says Carbon is now available to developers, enterprises, scientists, and consumers, and says how it differs from Gemini 4 Argon, which is already on this board. Limits: benchmarks, cost multiples, safety figures, and demo apps are vendor or partner narration, not re-run here. No sign-in to AI Studio, the Gemini app, or Antigravity, no API call, the model card was not opened to check an API model id, no Fairwind or researcher application, and no comparison run against Argon. AlphaProof Code and the Signal protocol are research context in the article, not a consumer feature of this card. This was recommended yesterday morning, and no pull request was opened then. gemini-4-argon is not overwritten.",
+      "verifyLog": "2026-11-12 早间（Asia/Shanghai）重读 https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ HTTP 200。title 与 og:title 为 Gemini 4 Carbon is now available。og:description 即开篇那句 Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers。article:published_time 2026-11-10T16:00:00+00:00。作者元数据 Koray Kavukcuoglu。正文区分 Carbon 与 Argon、Fairwind 提前两周、入门价 $2/$10、脚注 2026-11-30 后 $4/$20 且只适用于准备公开使用的 Carbon、入手路径（付费 API、Ultra、研究者六个月、Fairwind 的 Carbon for cyber）、CursorBench 4.0 / Perplexity WANDR / Zapier AutomationBench 的 2X、与 Artificial Analysis 的 MKA 的 6X、Gray Swan IPI 0% 以及 “remains an area for continued improvement”。模型卡链接为 https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Carbon-Model-Card.pdf ，开发者指南链接为 https://aistudio.google.com/learn/gemini-4-carbon-developer-guide ；两份都没有打开，所以没有抄 API 模型 id。主视觉 https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini_4_carbon_key_art_16-9_lockup.width-1300.jpg HTTP 200，JPEG 79801 字节，1300×731，Last-Modified Tue, 10 Nov 2026 03:28:18 GMT，可能早于这篇 “now available”；收录日期跟文章，不跟图片修改时间。居中裁成 1200×800 WebP。HN https://news.ycombinator.com/item?id=50442303 ，Algolia 复读 291 points，created_at 2026-11-10T16:07:15Z。两条 X 链接按文章发布日收录，本库没有登录 X 去打开。未登录 AI Studio / Gemini 应用 / Antigravity，未调用 API，未申请 Fairwind 或研究者计划，未复跑基准，未与 Argon 对比运行。",
+      "verifyLogEn": "Re-read on the morning of 2026-11-12 (Asia/Shanghai): https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ HTTP 200. title and og:title are Gemini 4 Carbon is now available. The og:description is the opening sentence, Today, we’re making Gemini 4 Carbon available to developers, enterprises, scientists, and consumers. article:published_time is 2026-11-10T16:00:00+00:00. Author metadata: Koray Kavukcuoglu. The body distinguishes Carbon from Argon, mentions Fairwind two weeks earlier, the $2/$10 introductory price, the footnote of $4/$20 after 2026-11-30 for the Carbon model intended for public access only, the getting-started paths (paid API, Ultra, a six-month researcher application, Fairwind for Carbon for cyber), the 2X claim on CursorBench 4.0 / Perplexity WANDR / Zapier AutomationBench, the 6X claim on MKA with Artificial Analysis, and the Gray Swan IPI 0% figure next to “remains an area for continued improvement”. The model card link is https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Carbon-Model-Card.pdf and the developer guide link is https://aistudio.google.com/learn/gemini-4-carbon-developer-guide . Neither was opened, so no API model id was copied. Key art HTTP 200, JPEG 79801 bytes, 1300×731, Last-Modified Tue, 10 Nov 2026 03:28:18 GMT, which may predate the “now available” article; the catalog date follows the article, not the image mtime. Center-cropped to a 1200×800 WebP. HN https://news.ycombinator.com/item?id=50442303 , 291 points on the Algolia re-read, created_at 2026-11-10T16:07:15Z. The two X URLs are kept as the launch posts; this library did not open X while signed in. No AI Studio / Gemini app / Antigravity login, no API call, no Fairwind or researcher application, no benchmark re-run, and no comparison run against Argon.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gemini-4-argon"
+      ],
+      "previewImage": "/previews/gemini-4-carbon.webp",
+      "previewCredit": "预览：Google 官方 Gemini 4 Carbon 主视觉，居中裁成 3:2",
+      "previewCreditEn": "Preview: official Google Gemini 4 Carbon key art, center-cropped to 3:2",
+      "featured": false
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
