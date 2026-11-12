@@ -1,11 +1,123 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-12T12:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "gemini-decision-1",
+      "slug": "gemini-decision-1",
+      "name": "Gemini Decision 1",
+      "vendor": "Google",
+      "title": "Gemini Decision 1：Google 的多模态决策模型与 Decisions API",
+      "titleEn": "Gemini Decision 1: Google's multimodal decision model and Decisions API",
+      "summary": "Google DeepMind 于 2026-11-11 推出 Gemini Decisions API，并由新模型 Gemini Decision 1（`gemini-decision-1`）驱动，经 Gemini Developer API（v1beta）与 Google AI Studio 提供。它不按 token 逐字生成答案：对同一份共享多模态输入（文本、图片、视频、音频、PDF），在一次前向 / prefill 里为最多 1,000 个有界问题打分，返回校准概率与置信度，输出 token 上限为 0。问题类型（文档）：是否（`noul`，概率 0.01–0.99 + 置信度）、单选（`choice`，2–255 选项，返回最优项、各选项概率与置信度）、有序打分（`score`，2–255 级，文档多数场景建议 2–10；返回概率加权期望分、各级概率与置信度）。上下文窗口按模型卡 / API 限制为 262,144 token（博客有时写作 256K；本条以文档 262,144 为准）。问题说明只能是文本；不支持 YouTube URL 或 `gs://`，媒体走 Files API URI、公开/签名 HTTPS 或内联 base64；也不接受对话历史 / thought / tool-call 输入块。模型卡标明不支持文本生成、thinking、函数调用、结构化输出、Batch API、上下文缓存、Flex / Priority inference、Live API 等。价目（官方定价页 Standard）：付费档输入 $0.10 / 百万 token（文本/图/视频/音频/PDF），输出价不适用（0 输出 token），上下文缓存不可用；免费档输入免费，输出 N/A；「Used to improve our products」免费 Yes、付费 No。共享 input 按请求计一次，每道题另计其说明/标准/格式 token。博客另称 AI Studio 有 API 无成本原型档、无单独音频转写或 OCR 费用——属博客说法。速率限制（官方 rate-limits，standard interactive）：Free 200 RPM / 50,000 TPM / 10,000 RPD；Tier 1 1,500 / 1,000,000 / 50,000；Tier 2 5,000 / 4,000,000 / Unlimited；Tier 3 15,000 / 10,000,000 / Unlimited。延迟等为博客自称（约 150–250 ms 端到端、50–100 ms 中位模型计算；1–100 题近乎平坦，多模态与最多约 16K token 上下文），本库未实测，也不把 16K 延迟叙述外推到整窗 262,144。博客叙述的 Google 产品用法（Doorstep Parcels、Speed Sketch / Stitch Rapid、Find the Zoo Keeper、CC emoji、Search MCP 安全等）与生态集成名单（OpenRouter、LangChain、Vercel、LiteLLM、Pydantic AI、Pipecat、LiveKit、OpenCode；Cloud 即将支持）均属厂商叙述，本库未逐一核实。权重未开源，是 API 模型。",
+      "summaryEn": "Google DeepMind launched the Gemini Decisions API on 2026-11-11, powered by the new Gemini Decision 1 model (`gemini-decision-1`) on the Gemini Developer API (v1beta) via Google AI Studio. It does not generate answer text token by token: over one shared multimodal input (text, image, video, audio, PDF) it scores up to 1,000 bounded questions in a single forward/prefill pass and returns calibrated probabilities plus confidence, with an output token limit of 0. Question types (docs): yes/no (`noul`, probability 0.01–0.99 + confidence), single-select (`choice`, 2–255 options; top option, per-option probabilities, confidence), and ordered rubric (`score`, 2–255 levels; docs recommend 2–10 for most rubrics; probability-weighted expected score, per-level probabilities, confidence). The context window is 262,144 tokens per the model card / API limits (the blog sometimes says 256K; this entry uses 262,144 from the docs). Question instructions are text only; YouTube URLs and `gs://` URIs are unsupported—media via Files API URI, public/signed HTTPS, or inline base64; conversation-history / thought / tool-call input blocks are also unsupported. The model card marks text generation, thinking, function calling, structured outputs, Batch API, context caching, Flex / Priority inference, Live API, and similar as unsupported. Pricing (official pricing page, Standard): paid tier $0.10 per 1M input tokens (text, image, video, audio, PDF); output price not applicable (0 output tokens); context caching not available; free tier input free of charge, output N/A; \"Used to improve our products\" is Yes on free and No on paid. Shared input is billed once per request; each question adds its own instruction/criteria/formatting tokens. The blog also claims an API no-cost tier in Google AI Studio for prototyping and no separate audio transcription or OCR charges—those are blog claims. Rate limits (official rate-limits page, standard interactive): Free 200 RPM / 50,000 TPM / 10,000 RPD; Tier 1 1,500 / 1,000,000 / 50,000; Tier 2 5,000 / 4,000,000 / Unlimited; Tier 3 15,000 / 10,000,000 / Unlimited. Latency figures are blog claims only (about 150–250 ms end-to-end, 50–100 ms median model compute; nearly flat from 1 to 100 questions across multimodal inputs and contexts up to 16K tokens)—not measured here, and the 16K latency claim is not treated as covering the full 262,144 window. Blog narrations of Google-product uses (Doorstep Parcels, Speed Sketch / Stitch Rapid, Find the Zoo Keeper, CC emoji selection, Search MCP safety) and the ecosystem rollout list (OpenRouter, LangChain, Vercel, LiteLLM, Pydantic AI, Pipecat, LiveKit, OpenCode; support coming soon to Gemini in Google Cloud) are vendor claims, not verified integration-by-integration here. Weights are not open; this is an API model.",
+      "announcedAt": "2026-11-11",
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-12T12:00:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 博客：Gemini Decisions API（2026-11-11，Min Choi & Felix Yu）",
+          "labelEn": "Google blog: Gemini Decisions API (2026-11-11, Min Choi & Felix Yu)",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+          "by": "Min Choi & Felix Yu, Google DeepMind",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "模型卡：Gemini Decision 1（AI Studio / Gemini API docs）",
+          "labelEn": "Model card: Gemini Decision 1 (AI Studio / Gemini API docs)",
+          "url": "https://aistudio.google.com/docs/models/gemini-decision-1",
+          "by": "Google",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "Decisions API 文档",
+          "labelEn": "Decisions API documentation",
+          "url": "https://aistudio.google.com/docs/decisions-api",
+          "by": "Google",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "定价：Gemini Decision",
+          "labelEn": "Pricing: Gemini Decision",
+          "url": "https://aistudio.google.com/docs/pricing#gemini-decision",
+          "by": "Google",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "速率限制：Gemini Decision",
+          "labelEn": "Rate limits: Gemini Decision",
+          "url": "https://aistudio.google.com/docs/rate-limits#gemini-decision",
+          "by": "Google",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News：Gemini Decisions API",
+          "labelEn": "Hacker News: Gemini Decisions API",
+          "url": "https://news.ycombinator.com/item?id=50456791",
+          "by": "Hacker News",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "官方 X：@GoogleAIStudio 宣布 Decisions API",
+          "labelEn": "Official X: @GoogleAIStudio announces Decisions API",
+          "url": "https://x.com/GoogleAIStudio/status/2120581284690801060",
+          "by": "Google AI Studio",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "official",
+          "label": "官方 X：@Google 宣布 Decisions API",
+          "labelEn": "Official X: @Google announces Decisions API",
+          "url": "https://x.com/Google/status/2120583966272983331",
+          "by": "Google",
+          "date": "2026-11-11"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "钩子：不逐 token 写答案；一次前向 / prefill 对共享多模态输入上的有界问题（是否 / 单选 / 打分）返回校准概率与置信度，输出 token = 0。面向路由、策略检查、工具选择、量表打分、分类——不是写长文。",
+          "textEn": "Hook: it does not write answers token by token; one forward/prefill pass scores bounded questions (yes/no, choice, rubric) over shared multimodal input and returns calibrated probabilities plus confidence, with zero output tokens. Built for routing, policy checks, tool selection, rubric scoring, classification — not article writing."
+        },
+        {
+          "text": "文档：最多 1,000 题 / 请求，共享上下文 262,144 token（博客偶写 256K，以文档为准）；`noul` / `choice`（2–255）/ `score`（2–255，多数建议 2–10）；SDK 需 google-genai 3.2+，`v1beta`，示例端点 `https://generativelanguage.googleapis.com/v1beta/decisions`。",
+          "textEn": "Docs: up to 1,000 questions per request over a 262,144-token shared window (blog sometimes says 256K; docs win); `noul` / `choice` (2–255) / `score` (2–255, recommend 2–10 for most); SDK google-genai 3.2+, `v1beta`, example endpoint `https://generativelanguage.googleapis.com/v1beta/decisions`."
+        },
+        {
+          "text": "官方定价页 Standard：付费输入 $0.10 / 百万 token，输出 N/A；免费档输入免费；共享 input 按请求计一次。官方速率限制 Free→Tier 3：200/1,500/5,000/15,000 RPM 等（见条目正文）。延迟 150–250 ms 等为博客自称，本库未测。",
+          "textEn": "Official pricing Standard: paid input $0.10 / 1M tokens, output N/A; free tier input free of charge; shared input billed once per request. Official rate limits Free→Tier 3: 200/1,500/5,000/15,000 RPM etc. (see summary). 150–250 ms latency is a blog claim, not measured here."
+        },
+        {
+          "text": "模型卡 Latest update：November 2026。权重未开源（API 模型）。博客称生态集成在 OpenRouter / LangChain / Vercel 等滚动上线——属博客名单，本库未逐一核实。官方示例应用：Decisions Playground、Doorstep Parcels、Find the Zookeeper（本库未登录、未运行）。",
+          "textEn": "Model card Latest update: November 2026. Weights are not open (API model). Blog lists ecosystem integrations rolling out across OpenRouter / LangChain / Vercel and others — vendor list, not verified here. Official sample apps: Decisions Playground, Doorstep Parcels, Find the Zookeeper (this library did not sign in or run them)."
+        }
+      ],
+      "qualityNote": "本库没有调用 Decisions API，没有获取或使用 API key，没有登录 Google AI Studio，没有打开或运行 Playground / Doorstep Parcels / Speed Sketch / Zoo Keeper 等应用，没有测量延迟、定价、速率限制或校准，也没有核实第三方集成。延迟、基准领先 / 校准误差、Google 产品用法故事均为厂商自述。权重未开源，是 API 模型。博客写作 256K token，模型卡与 API 限制写 262,144——本条以文档为准。时间诚实：官方博客日期 2026-11-11；官方 X 与 HN 线程约 2026-11-11 18:15–18:47 UTC（上海约 2026-11-12 02:15–02:47），早于当日早间收录；早间 PR #155 收了 Gemini 4 Carbon（及 Yogurt / Klad / Claude 白板 / Aircad）但未收本模型。晚间相对 main 收录，不叠 #155。与库内 fovea-4b / thx-01 / strands-decider-2b 同属「决策」任务类型，但不是同一产品；与 gemini-4-argon 同厂商不同产品。不把未合并的 gemini-4-carbon 写成已上线 related id。",
+      "qualityNoteEn": "This library did not call the Decisions API, did not obtain or use an API key, did not log into Google AI Studio, did not open or run the Playground / Doorstep Parcels / Speed Sketch / Zoo Keeper apps, did not measure latency, pricing, rate limits, or calibration, and did not verify third-party integrations. Latency, benchmark-leadership / calibration-error claims, and Google-product usage stories are vendor claims. Weights are not open; this is an API model. The blog sometimes says 256K tokens; the model card and API limits say 262,144 — this entry uses the docs. Timing honesty: the official blog is dated 2026-11-11; official X and the HN thread appeared about 2026-11-11 18:15–18:47 UTC (about 2026-11-12 02:15–02:47 Asia/Shanghai), before the morning catalog run. Morning PR #155 added Gemini 4 Carbon (and Yogurt / Klad / Claude whiteboards / Aircad) but not this model. Evening catalogs it against main, without stacking on #155. Related to fovea-4b / thx-01 / strands-decider-2b only as the same task type, not the same product; related to gemini-4-argon as same vendor, different product. Do not treat unmerged gemini-4-carbon as a live related id.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gemini-4-argon",
+        "fovea-4b",
+        "thx-01",
+        "strands-decider-2b"
+      ],
+      "previewImage": "/previews/gemini-decision-1.webp",
+      "previewCredit": "预览取自 Google 官方博客头图，居中裁成 3:2；不是本库运行结果截图",
+      "previewCreditEn": "Preview from the official Google blog header art, center-cropped to 3:2; not a screenshot of a run by this library",
+      "featured": false,
+      "verifyLog": "2026-11-12 晚间（上海）：相对 main 收录，不叠仍打开的 catalog-hold（含 #155）。博客 HTTP 200，作者 Min Choi / Felix Yu，日期 Nov 11, 2026；头图 URL 与本条 preview 同源。模型卡（ai.google.dev 与 aistudio 同源页）HTTP 200：Latest update November 2026；Input token limit 262,144；Output token limit 0（最多 1,000 题）；Inputs Text/Image/Video/Audio/PDF；多能力标 not-supported（含 Text generation、Thinking、Function calling、Structured outputs、Batch API、Caching、Flex/Priority、Live API 等）。Decisions API 文档 HTTP 200：SDK 3.2+（`pip install -U google-genai`）；Python `genai.Client(http_options={\"api_version\": \"v1beta\"})`；JS `new GoogleGenAI({ apiVersion: \"v1beta\" })`；REST 示例 `https://generativelanguage.googleapis.com/v1beta/decisions`；题型 noul/choice/score；限制表写 1–1,000 题、受 262,144 窗约束；无 YouTube/`gs://`；问题说明仅文本。定价页 Standard 与 brief 一致（$0.10 付费输入等）。速率限制页与 brief 一致。博客写 256K / 150–250 ms / 生态名单——标为博客，未当文档第二上限。HN item 50456791 createdAt 2026-11-11T18:32:42Z（点数会变，不固化为实测）。X @GoogleAIStudio 2026-11-11T18:15:51Z、@Google 2026-11-11T18:26:30Z（fxtwitter）。示例应用三 URL 均见于官方文档（本库未登录、未运行）。预览：官方博客头图 PNG 1300×731，ffmpeg 居中放大裁切为 1200×800 WebP。未调 API、未持 key、未测延迟/校准/集成。",
+      "verifyLogEn": "2026-11-12 evening (Shanghai): cataloged against main; did not stack on still-open catalog-hold PRs (including #155). Blog HTTP 200, authors Min Choi / Felix Yu, dated Nov 11, 2026; header image URL matches this preview source. Model card (ai.google.dev and aistudio share the page) HTTP 200: Latest update November 2026; Input token limit 262,144; Output token limit 0 (up to 1,000 questions); Inputs Text/Image/Video/Audio/PDF; many capabilities marked not-supported (including text generation, thinking, function calling, structured outputs, Batch API, caching, Flex/Priority, Live API, etc.). Decisions API docs HTTP 200: SDK 3.2+ (`pip install -U google-genai`); Python `genai.Client(http_options={\"api_version\": \"v1beta\"})`; JS `new GoogleGenAI({ apiVersion: \"v1beta\" })`; REST example `https://generativelanguage.googleapis.com/v1beta/decisions`; question types noul/choice/score; limits table 1–1,000 questions bounded by the 262,144 window; no YouTube/`gs://`; question instructions text only. Pricing Standard matches the brief ($0.10 paid input, etc.). Rate-limits page matches the brief. Blog wording 256K / 150–250 ms / ecosystem list kept as blog claims, not a second official window. HN item 50456791 createdAt 2026-11-11T18:32:42Z (score changes; not hard-coded as a measurement). X @GoogleAIStudio 2026-11-11T18:15:51Z and @Google 2026-11-11T18:26:30Z (via fxtwitter). Three sample-app URLs appear on the official docs pages (not signed in, not run). Preview: official blog header PNG 1300×731, ffmpeg center scale-crop to 1200×800 WebP. No API call, no key, no latency/calibration/integration measurement."
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",

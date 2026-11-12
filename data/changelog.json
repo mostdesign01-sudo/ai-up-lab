@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-12",
+      "title": "晚间收录 2026-11-12：Models +1（Gemini Decision 1）",
+      "titleEn": "Evening catalog 2026-11-12: Models +1 (Gemini Decision 1)",
+      "body": "Models：gemini-decision-1（Google Gemini Decision 1 + Decisions API，2026-11-11）。一次前向对共享多模态输入上的有界问题（noul/choice/score）返回校准概率与置信度，输出 token=0；面向路由/策略/工具选择/打分，不是写文章。官方来源：Google 博客、模型卡、Decisions API 文档、定价与速率限制页；社区/社交：HN #50456791、@GoogleAIStudio / @Google 官方帖。博客偶写 256K，文档写 262,144——以文档为准。延迟与生态集成名单为厂商/博客说法。本库未调 API、未持 key、未登录 AI Studio、未跑示例应用、未测延迟/校准/第三方集成。预览为官方博客头图裁 3:2 WebP。models 40→41（1.1.30→1.1.31），`updatedAt` 2026-11-12T12:00:00Z。未改 Cases / HTML / Agent UI / 首页精选。未合并、不叠仍打开的 catalog-hold（含早间 #155 Gemini 4 Carbon / Yogurt / Klad / Claude 白板 / Aircad，以及 #154/#153/#152/#151 等）；#155 也把 models 推到 1.1.31，合并时需择一 rebase。未合并，等「合」。",
+      "bodyEn": "Models: gemini-decision-1 (Google Gemini Decision 1 + Decisions API, 2026-11-11). One forward pass scores bounded questions (noul/choice/score) over shared multimodal input and returns calibrated probabilities plus confidence, with zero output tokens; for routing/policy/tool selection/scoring, not article writing. Official sources: Google blog, model card, Decisions API docs, pricing and rate-limits pages; community/social: HN #50456791, official @GoogleAIStudio / @Google posts. Blog sometimes says 256K; docs say 262,144 — docs win. Latency and the ecosystem integration list are vendor/blog claims. This library did not call the API, hold a key, sign into AI Studio, run sample apps, or measure latency/calibration/third-party integrations. Preview is the official blog header cropped to a 3:2 WebP. models 40→41 (1.1.30→1.1.31), updatedAt 2026-11-12T12:00:00Z. Cases / HTML / Agent UI / home picks unchanged. Did not merge or stack still-open catalog-hold PRs (including morning #155 Gemini 4 Carbon / Yogurt / Klad / Claude whiteboards / Aircad, plus #154/#153/#152/#151 and others); #155 also bumps models to 1.1.31, so one will need a rebase on merge. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
