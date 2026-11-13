@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-13",
+      "title": "晚间收录 2026-11-13：Cases +1（ZigZag）",
+      "titleEn": "Evening catalog 2026-11-13: Cases +1 (ZigZag)",
+      "body": "AI×设计：zigzag（zigzag.diy，Apache-2.0，simpsoka/zigzag，作者 Kathy Korevec）— 免费开源的机绣打版编辑器（Rust，Mac / Windows）：SVG 变针迹、可视化改针法，导出 PES / DST / EXP / JEF / VP3，或经蓝牙发到 Brother Skitch（PP1）；内置本机 MCP 服务，Claude Code 等助手可在同一份文档上画稿、检查、出针迹预览。最新 release v0.1.2；约 446★，Show HN 当时约 565 点，都会变。Windows 包首次运行有 SmartScreen 警告；Linux 没有官方安装包。预览一枚 3:2 WebP（官方 Studio 截图裁切）。本库未下载、未安装、未接 MCP、未导出机绣文件、未向 Skitch 发送；Skitch 真机测试是作者的说法。cases 215→216（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。本 PR 只相对 main，和仍打开的 catalog PR 在 count / version 上会撞（#157 也写 1.4.78、Cases +4；另有 #156 / #155 / #154…），未合并也未调和这些 PR。",
+      "bodyEn": "AI×design: zigzag (zigzag.diy, Apache-2.0, simpsoka/zigzag, by Kathy Korevec) — a free, open-source embroidery digitizing editor (Rust, Mac / Windows): SVG to stitches, visual stitch editing, export to PES / DST / EXP / JEF / VP3 or send to a Brother Skitch (PP1) over Bluetooth; a built-in local MCP server lets Claude Code and other agents draw, check, and preview stitches in the same document. Latest release v0.1.2; ~446★ and about 565 Show HN points when checked, both will change. The Windows build triggers a SmartScreen warning on first run; there is no official Linux installer. One 3:2 WebP preview (cropped from the official studio screenshot). This library did not download, install, connect MCP, export a machine file, or send to a Skitch; the real-Skitch test is the author's claim. cases 215→216 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. This PR is relative to main only and will collide on count / version with still-open catalog PRs (#157 also claims 1.4.78 with Cases +4; also #156 / #155 / #154…); none of them were merged or reconciled."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
