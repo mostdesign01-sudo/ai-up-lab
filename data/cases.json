@@ -1,6 +1,54 @@
 {
   "cases": [
     {
+      "id": "zigzag",
+      "slug": "zigzag",
+      "title": "ZigZag：开源刺绣编辑器，助手经 MCP 画稿，导出能上机的绣花文件",
+      "titleEn": "ZigZag: open-source embroidery editor where agents draw over MCP and you export machine files",
+      "kind": "tool",
+      "hook": "开源刺绣编辑器：SVG 变针迹，助手经 MCP 在同一窗口画稿。",
+      "hookEn": "Open-source embroidery editor: SVG to stitches, with agents drawing over MCP beside you.",
+      "summary": "ZigZag（https://zigzag.diy/ ，GitHub simpsoka/zigzag，作者 Kathy Korevec / @simpsoka）是免费、开源（Apache-2.0）的机绣打版编辑器，用 Rust 写成，面向 Mac 与 Windows：导入 SVG 或直接在画布上画，给每个形状选针法，边改边看针迹预览，再导出 PES、DST、EXP、JEF 或 VP3，或经蓝牙直接发到 Brother Skitch（PP1）。Studio 的布局照着 Illustrator 来：钢笔、形状、路径查找器、文字、图像描摹、线色面板、问题列表和针迹播放。官网写十一种针法，README 列为 fill（tatami 填充）、satin（缎纹）、run（走针）、contour、blanket、appliqué（贴布）、manual、meander、ripple、cross-stitch（十字绣）、tartan（格纹）。和 AI 的接点是内置 MCP 服务：Studio 在本机 http://127.0.0.1:7878/mcp 提供 Streamable HTTP（只听 localhost，校验 Origin），助手改的就是你眼前最前面那个标签页的文档，每次调用算一步撤销。Claude Code 用 `claude mcp add --transport http zigzag http://127.0.0.1:7878/mcp` 接入；Claude Desktop 等 stdio 客户端走 zigzag-mcp。工具包括 get_design、add_svg、set_object / move_object / transform_objects / duplicate_objects / delete_object、add_text / edit_text、render_preview（返回针迹 PNG）、check_design、open_file、export（机绣格式或 HTML 工单）、send_to_skitch、trace_image、batch 等。Studio 里还有 Agent 面板，可在后台跑你已登录的 Claude Code 或 Codex；README 写它只能用设计工具，不能跑 shell 或改文件。README 给的示例提示词：“Draw a 50 mm round badge with mountains and a sun for my thin cotton cap, check it, and show me the preview.” 下载：Mac 是 DMG（macOS 11+，Apple Silicon 与 Intel，README 写已由 Apple 签名并公证）；Windows 是 64 位 zip（Windows 10 1709+ / 11），没有微软信任签名，首次运行 SmartScreen 会警告，要点 More info → Run anyway；两者都不必装 Rust。Linux 没有官方安装包，只能带 gui feature 从源码构建。适合想把矢量稿变成能上机的绣花文件、又想让助手先画一版的人。README 写「在真实 Brother Skitch（PP1）上测试过」，那是作者的说法。本库没有下载 DMG 或 zip，没有安装应用，没有接 Claude 或 MCP，没有导出机绣文件，也没有向 Skitch 发送任何东西。",
+      "summaryEn": "ZigZag (https://zigzag.diy/ , GitHub simpsoka/zigzag, by Kathy Korevec / @simpsoka) is a free, open-source (Apache-2.0) embroidery digitizing editor written in Rust for Mac and Windows: import an SVG or draw on the canvas, pick a stitch type per shape, watch the stitch preview update as you edit, then export PES, DST, EXP, JEF, or VP3, or send the design to a Brother Skitch (PP1) over Bluetooth. The studio is laid out like Illustrator: pen, shapes, Pathfinder, type, Image Trace, a threads panel, an issues list, and a stitch player. The site advertises eleven stitch types; the README lists fill (tatami), satin, run, contour, blanket, appliqué, manual, meander, ripple, cross-stitch, and tartan. The AI hook is a built-in MCP server: the studio serves Streamable HTTP on http://127.0.0.1:7878/mcp (localhost only, Origin-checked), agents edit the live document in the front tab, and each call is one undo step. Claude Code connects with `claude mcp add --transport http zigzag http://127.0.0.1:7878/mcp`; Claude Desktop and other stdio clients go through zigzag-mcp. Tools include get_design, add_svg, set_object / move_object / transform_objects / duplicate_objects / delete_object, add_text / edit_text, render_preview (a PNG of the stitches), check_design, open_file, export (machine formats or an HTML worksheet), send_to_skitch, trace_image, and batch. An Agent panel in the studio can also run the Claude Code or Codex you are already signed in to; the README says it can only use the design tools, with no shell and no file edits. The README's example prompt: \"Draw a 50 mm round badge with mountains and a sun for my thin cotton cap, check it, and show me the preview.\" Downloads: a Mac DMG (macOS 11+, Apple Silicon and Intel, signed and notarized by Apple per the README) and a 64-bit Windows zip (Windows 10 1709+ / 11) that lacks a Microsoft-trusted signature, so SmartScreen warns on first run (More info → Run anyway); neither needs Rust installed. There is no official Linux installer; Linux means building from source with the gui feature. Good when you want vector art turned into a file a machine can sew and want an agent to draft the first pass. The README says it was tested on a real Brother Skitch (PP1); that is the author's claim. This library did not download the DMG or zip, install the app, connect Claude or MCP, export a machine file, or send anything to a Skitch.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://zigzag.diy/",
+      "secondaryUrls": [
+        "https://github.com/simpsoka/zigzag",
+        "https://github.com/simpsoka/zigzag#agents-mcp",
+        "https://github.com/simpsoka/zigzag/releases/tag/v0.1.2",
+        "https://news.ycombinator.com/item?id=50470488",
+        "https://x.com/simpsoka/status/2115254318161182876"
+      ],
+      "previewImage": "/previews/zigzag.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "把设计发到 Skitch、或导出要拿去上机的文件之前，先由你本人看过针迹预览和检查结果再确认：助手能调用 send_to_skitch，真机缝制会用掉布料和线。Windows 首次运行要自己放行 SmartScreen。本库没有代为安装、导出或发送。",
+      "approvalBoundaryEn": "Before a design goes to a Skitch or is exported to be sewn, review the stitch preview and check results yourself: agents can call send_to_skitch, and a real stitch-out uses up fabric and thread. On Windows you clear the SmartScreen warning yourself on first run. This library did not install, export, or send anything for you.",
+      "connectors": [
+        "MCP",
+        "Claude Code",
+        "Claude Desktop",
+        "Codex",
+        "Brother Skitch"
+      ],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-13T12:30:00Z",
+      "qualityNote": "收录理由：AI×设计里少见的落到实物的工具。可视化刺绣编辑器加内置 MCP，助手和人在同一份文档上画稿、检查、看针迹预览，最后得到能上机的绣花文件；开源（Apache-2.0），Mac 与 Windows 有现成下载。边界：版本还在 0.1.x；Windows 包没有微软信任签名，首次运行会被 SmartScreen 拦一下；Linux 没有官方安装包，要带 gui feature 从源码构建；MCP 只听本机；Skitch 蓝牙协议是逆向得来的，README 建议别升级固件；「在真实 Brother Skitch（PP1）上测试过」是作者的说法，不是本库的测试。本库没有下载 DMG 或 zip，没有安装应用，没有接 Claude 或 MCP，没有导出机绣文件，也没有向 Skitch 发送任何东西。",
+      "qualityNoteEn": "Why listed: a rare AI×design tool that ends in a physical object. A visual embroidery editor with a built-in MCP server lets an agent and a person draw, check, and preview stitches in the same document, ending in a file a machine can sew; open source (Apache-2.0) with ready downloads for Mac and Windows. Limits: still 0.1.x; the Windows build lacks a Microsoft-trusted signature, so SmartScreen warns on first run; no official Linux installer, only a source build with the gui feature; the MCP server listens on localhost only; the Skitch Bluetooth protocol was reverse-engineered and the README advises against firmware updates; \"tested on a real Brother Skitch (PP1)\" is the author's claim, not a test by this library. This library did not download the DMG or zip, install the app, connect Claude or MCP, export a machine file, or send anything to a Skitch.",
+      "verifyLog": "2026-11-13 晚间（Asia/Shanghai）：https://zigzag.diy/ HTTP 200，title 为 ZigZag | Free embroidery digitizing software for Mac and Windows；首屏 Embroidery software shouldn’t be stuck in the past.；按钮 Download for Mac（macOS · DMG，指向 releases/latest/download/ZigZag.dmg）与 Download for Windows（指向 GitHub releases/latest）；三块卖点 Eleven stitch types / Files for your machine / Works with AI agents；页脚 ZigZag is free under the Apache 2.0 license；Documentation 链到 GitHub README，站内没有独立文档页，也没有 Linux 下载。gh api repos/simpsoka/zigzag：Apache-2.0，Rust，默认分支 main，homepage https://zigzag.diy/，创建于 2026-10-30，最近推送 2026-11-13T00:51:11Z，当时 446★ / 26 fork，会变。gh api users/simpsoka：name Kathy Korevec，twitter_username simpsoka，blog http://kathy.pm。最新 release v0.1.2（ZigZag 0.1.2，published_at 2026-11-13T01:01:05Z；仓库 CHANGELOG 记 0.1.2 — 2026-11-12），资产 ZigZag-0.1.2.dmg、ZigZag.dmg、ZigZag-0.1.2-x86_64-windows.zip、SHA256SUMS.txt、SHA256SUMS-windows.txt，没有 Linux 包；v0.1.0（initial release）与 v0.1.1 都发布于 2026-11-11。README 逐项对过：MCP 地址与 claude mcp add 命令、zigzag-mcp、工具清单、Agent 面板、示例提示词、十一种针法表、Mac 签名公证、Windows SmartScreen、Linux 需 gui feature 源码构建、Tested on a real Brother Skitch (PP1)、协议为逆向并建议避免固件更新。Show HN https://news.ycombinator.com/item?id=50470488（Show HN: My $300 embroidery machine needed a subscription, so I built my own app，2026-11-12T17:02:42Z，发帖人 simpsoka）HTTP 200；Firebase 当时 565 点 / 193 条评论，Algolia 当时 564 点，会变。X https://x.com/simpsoka/status/2115254318161182876 HTTP 200（只拿到页面壳），经 fxtwitter 读到发帖时间 2026-10-28T01:28:23Z、带视频；README 里的 Skitch 演示 MP4（GitHub raw，packaging/media/skitch-pp1-demo.mp4）HTTP 200，没有播放。publishedAt 取 Show HN 日期 2026-11-12。预览取仓库官方截图 examples/studio.png（1360×860，浅色），裁成 3:2（保留 x=6 起的 1290×860，右缘 Stitch 面板约 64px 被裁掉）后缩到 1200×800 WebP 自托管；不是本库运行出来的画面。本库未下载 DMG / zip、未安装、未接 Claude / MCP、未导出机绣文件、未向 Skitch 发送。",
+      "verifyLogEn": "2026-11-13 evening (Asia/Shanghai): https://zigzag.diy/ HTTP 200; title ZigZag | Free embroidery digitizing software for Mac and Windows; hero Embroidery software shouldn’t be stuck in the past.; buttons Download for Mac (macOS · DMG → releases/latest/download/ZigZag.dmg) and Download for Windows (→ GitHub releases/latest); three feature blocks Eleven stitch types / Files for your machine / Works with AI agents; footer ZigZag is free under the Apache 2.0 license; Documentation links to the GitHub README, with no separate docs page and no Linux download on the site. gh api repos/simpsoka/zigzag: Apache-2.0, Rust, default branch main, homepage https://zigzag.diy/, created 2026-10-30, last push 2026-11-13T00:51:11Z, 446★ / 26 forks at check time (will change). gh api users/simpsoka: name Kathy Korevec, twitter_username simpsoka, blog http://kathy.pm. Latest release v0.1.2 (ZigZag 0.1.2, published_at 2026-11-13T01:01:05Z; the repo CHANGELOG dates 0.1.2 as 2026-11-12) with assets ZigZag-0.1.2.dmg, ZigZag.dmg, ZigZag-0.1.2-x86_64-windows.zip, SHA256SUMS.txt, SHA256SUMS-windows.txt and no Linux package; v0.1.0 (initial release) and v0.1.1 were both published 2026-11-11. Checked against the README: MCP address and the claude mcp add command, zigzag-mcp, the tool list, the Agent panel, the example prompt, the eleven-row stitch table, Mac signing and notarization, Windows SmartScreen, Linux source build with the gui feature, Tested on a real Brother Skitch (PP1), and the reverse-engineered protocol with the advice to avoid firmware updates. Show HN https://news.ycombinator.com/item?id=50470488 (Show HN: My $300 embroidery machine needed a subscription, so I built my own app, 2026-11-12T17:02:42Z, posted by simpsoka) HTTP 200; Firebase showed 565 points / 193 comments and Algolia 564 points at check time (will change). X https://x.com/simpsoka/status/2115254318161182876 HTTP 200 (page shell only); fxtwitter gave a post time of 2026-10-28T01:28:23Z with a video. The Skitch demo MP4 from the README (GitHub raw, packaging/media/skitch-pp1-demo.mp4) HTTP 200, not played. publishedAt uses the Show HN date 2026-11-12. Preview: the repo's official screenshot examples/studio.png (1360×860, light theme), cropped to 3:2 (the 1290×860 window starting at x=6, which trims about 64px off the right edge of the Stitch panel), scaled to a self-hosted 1200×800 WebP; it is not a run by this library. Did not download the DMG / zip, install, connect Claude / MCP, export a machine file, or send to a Skitch."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11495,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-13T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11796,12 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://zigzag.diy/",
+      "https://github.com/simpsoka/zigzag",
+      "https://github.com/simpsoka/zigzag/releases/tag/v0.1.2",
+      "https://news.ycombinator.com/item?id=50470488",
+      "https://x.com/simpsoka/status/2115254318161182876"
     ]
   }
 }
