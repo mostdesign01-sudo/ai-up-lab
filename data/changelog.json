@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-13",
+      "title": "早间收录 2026-11-13：Cases +4（Nod / Whizra / Pomerado / Animate4Me）",
+      "titleEn": "Morning catalog 2026-11-13: Cases +4 (Nod / Whizra / Pomerado / Animate4Me)",
+      "body": "早间目录。Cases：nod（n8n Labs 的开源个人助手，本机沙箱自带电脑和浏览器；Apache-2.0；不必 n8n 账号，也不是 n8n AI Assistant。官网评测为厂商 2026 年 10 月、GPT-6.1 Sol 的数字，未复测）；whizra（Mac 上一句话做文件活，小模型在本机；首发价会上涨，打开时按钮为 9.99 美元；不删原件；不是开源，也不是通用个人助手）；pomerado（YC F26，把网站做成给助手用的 API/MCP，MIT 核心仓；免费档与 50 美元档照首页；速度和费用对比是厂商说法，未复测；它自己不是邮箱或日历助手）；animate4me（提示词或图片导出 Spine 4.2；定价页含测试模式横幅；角色 win 写即将推出；说明仓库无源码）。四条各一枚 3:2 WebP。相对 main：cases 215→219（1.4.77→1.4.78）。HTML / Agent UI / Models / 首页精选未改。版本只相对 main 加 1，不叠仍打开的 catalog-hold PR（#156/#155/#154–#142 以及更早的）。这四条都没有安装或端到端试过；厂商基准、差事分数和官方计时未复测。未合并，等「合」。",
+      "bodyEn": "Morning catalog. Cases: nod (n8n Labs’ open-source personal assistant, a local sandbox with its own computer and browser; Apache-2.0; no n8n account, and not the n8n AI Assistant. The site’s scores are the vendor’s October 2026 GPT-6.1 Sol figures and were not re-tested); whizra (one-sentence file jobs on a Mac, on-device model; the launch price rises, and the button showed $9.99; it does not delete originals; not open source, and not a general personal assistant); pomerado (YC F26, websites as an API/MCP for agents, MIT core repo; free tier and $50 tier as on the homepage; speed and cost comparisons are the vendor’s and were not re-tested; it is not itself an email or calendar assistant); animate4me (a prompt or image exports Spine 4.2; the pricing page showed a test-mode banner; character win is marked coming soon; the description repo has no source). One 3:2 WebP each. Relative to main: cases 215→219 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. The bump is main plus one, not stacked on still-open catalog-hold PRs (#156/#155/#154–#142 and earlier). None of the four was installed or tried end to end. Vendor benchmarks, errand scores, and official timings were not re-tested. Not merged; waiting for 「合」."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",

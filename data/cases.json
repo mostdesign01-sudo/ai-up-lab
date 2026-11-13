@@ -1,6 +1,591 @@
 {
   "cases": [
     {
+      "id": "nod",
+      "slug": "nod",
+      "title": "Nod：n8n Labs 的开源个人助手，本机自带电脑和浏览器办事",
+      "titleEn": "Nod: n8n Labs’ open-source personal assistant, with its own computer and browser on your machine",
+      "kind": "tool",
+      "hook": "本机开源个人助手，自带电脑办事，没让你做的事先问。",
+      "hookEn": "An open-source assistant on your computer that asks before it sends, pays, or posts.",
+      "summary": "Nod（https://nod.n8n.io/）是 n8n Labs 做的独立个人助手，研究预览。它跑在你自己的电脑上，沙箱是一台私有虚拟机，自带浏览器；能连 Gmail、日历、Drive、Slack、Notion，没有现成集成的网站也可以用你保存的登录去办。对话在应用里、Telegram 或 WhatsApp。官方写明：不必有 n8n 账号，它也不是 n8n AI Assistant。软件免费、Apache-2.0，模型自备：OpenAI、Anthropic、Google、OpenRouter，ChatGPT Plus 或 Pro，或本机的 Ollama、LM Studio、vLLM、llama.cpp。模型费用另算；Usage 里有估算花费；官方还写了月度上限，以及一件事超过 5 美元会跟你确认（这个数可以改）。平台：macOS 14+；Windows 11 预览；Linux x64 Flatpak 预览；也可以给一个人自托管。笔记本睡眠它就停（有人用一直开着的 Mac mini 或自己的服务器）；一个安装一个主人；不能打电话。托管和团队共用在路线图上，现在没有。信任模型是官方说法：发送、付款、发帖、删除，如果这次请求没覆盖，会先问你；登录和卡加密存在这台机器上；密码走模型读不到的私人表单。应用连接默认用 n8n 和 Composio；除了更新检查，n8n 还会收到用来改进产品的用量数据，可以在设置里关掉。官网评测写的是 2026 年 10 月、模型 GPT-6.1 Sol，并写结果取决于你的模型和你用的网站：678 次测试里没有一次未经允许的动作；226 件差事各跑三次，完成率 98%；LongMemEval-S 500 题里 93.2%；WhisperBench 上 108 封攻击邮件、两种方式，216 次里 0 次植入假记忆。这些是厂商数字，本库未复测。本库没有下载或安装 Nod，没有连接 Gmail、日历、Slack 或 Notion，没有保存网站登录，没有跑任何差事，也没有核对真实模型花费。",
+      "summaryEn": "Nod (https://nod.n8n.io/) is a research-preview personal assistant from n8n Labs. It runs on your machine in a local sandbox / private VM with its own browser. It connects Gmail, Calendar, Drive, Slack, and Notion, and can use saved logins on sites with no integration. You chat in the app, on Telegram, or on WhatsApp. The site says you do not need an n8n account, and that Nod is not the n8n AI Assistant. The app is free under Apache-2.0. You bring a model: OpenAI, Anthropic, Google, OpenRouter, ChatGPT Plus or Pro, or a local model via Ollama, LM Studio, vLLM, or llama.cpp. Provider fees apply. Usage shows an estimated cost. The vendor also describes a monthly limit and a check-in after a task passes $5 (you can change that amount). Platforms: macOS 14+, Windows 11 preview, Linux x64 Flatpak preview, or self-hosting for one person. It stops when the laptop sleeps (some testers use a Mac mini or their own server). One owner per installation. It cannot make phone calls. Managed hosting and team sharing are on the roadmap, not available now. The published trust model: it asks before a send, payment, post, or delete that your request does not cover; saved logins and cards are encrypted on the machine; passwords go through private forms the model is not supposed to read. App connections use n8n and Composio by default, and n8n receives usage data you can turn off in Settings. The homepage evaluation is dated October 2026 on GPT-6.1 Sol, and the site says results depend on your model and the sites you use: 678 test runs with zero actions without permission; 98% of 226 errands, each run three times; LongMemEval-S 93.2% of 500 questions; WhisperBench 0 of 216 planted-memory attacks (108 emails, two ways). Those figures are the vendor’s. This library did not re-test them, did not install Nod, did not connect Gmail, Calendar, Slack, or Notion, did not save website logins, did not run an errand, and did not check a real model bill.",
+      "categories": [
+        "automation",
+        "productivity"
+      ],
+      "role": "personal agent",
+      "sourceUrl": "https://nod.n8n.io/",
+      "secondaryUrls": [
+        "https://nod.n8n.io/docs/",
+        "https://github.com/n8n-io/nod",
+        "https://blog.n8n.io/meet-nod/",
+        "https://news.ycombinator.com/item?id=50453875"
+      ],
+      "previewImage": "/previews/nod.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "发送、付款、发帖、删除，如果这次话没覆盖，官方写它会先问你。本库没有代为安装、登录或发出任何东西。",
+      "approvalBoundaryEn": "The vendor says Nod asks before a send, payment, post, or delete that your request does not cover. This library did not install it, sign in, or send anything.",
+      "connectors": [
+        "Gmail",
+        "Calendar",
+        "Drive",
+        "Slack",
+        "Notion",
+        "Telegram",
+        "WhatsApp"
+      ],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-13T01:20:00Z",
+      "qualityNote": "收录理由：开源的本机个人助手，自带电脑和浏览器，能做早晨简报这类定时活，和库里偏设计或编程的条目不是一路。边界：不必有 n8n 账号，也不是 n8n AI Assistant；模型费另算；睡眠会停，一个安装一个主人，不能打电话；托管和团队共用还在路线图上。应用连接默认经过 n8n 和 Composio，用量数据可以关掉。官网那组差事、记忆和邮件攻击数字是 2026 年 10 月、GPT-6.1 Sol 的厂商结果，本库未复测，也取决于你的模型和网站。本库没有下载安装，没有连接邮箱、日历、Slack 或 Notion，没有保存网站登录，没有跑差事，也没有核对真实花费。",
+      "qualityNoteEn": "Why listed: an open-source personal assistant that runs on your machine with its own computer and browser, including scheduled jobs such as a morning brief. It sits apart from the design and coding tools already in the library. Limits: no n8n account is required, and it is not the n8n AI Assistant. Model fees are separate. It stops when the computer sleeps, one installation has one owner, and it cannot make phone calls. Managed hosting and team sharing are still on the roadmap. App connections use n8n and Composio by default; usage data can be turned off. The errand, memory, and planted-email figures are the vendor’s October 2026 results on GPT-6.1 Sol. This library did not re-test them, and the site says they depend on your model and the sites you use. This library did not install Nod, connect mail, calendar, Slack, or Notion, save website logins, run an errand, or check a real bill.",
+      "verifyLog": "2026-11-13 上午约 09:20（Asia/Shanghai，UTC 2026-11-13T01:20:00Z）：https://nod.n8n.io/ HTTP 200；https://nod.n8n.io/docs/ HTTP 200；https://blog.n8n.io/meet-nod/ HTTP 200，作者 Ophir Prusak，日期 November 10, 2026，正文写 research preview、standalone、不必 n8n 账号、不是 n8n 里的 agent、Apache-2.0、私有虚拟机和自己的浏览器、Gmail/Calendar/Drive/Slack、Telegram 或 WhatsApp、月度上限、单次超过 $5 会确认且可改、睡眠即停、一个主人、不能打电话。首页 FAQ 另写 Google、OpenRouter、Ollama/LM Studio/vLLM/llama.cpp，Linux x64 Flatpak 预览，应用连接默认 n8n 与 Composio，用量数据可在 Settings 关掉；评测句为 October 2026, GPT-6.1 Sol：678 test runs / zero actions without permission，226 errands ×3 的 98%，LongMemEval-S 500 题 93.2%，WhisperBench 108 emails two ways、0 of 216。gh api repos/n8n-io/nod：Apache-2.0，stargazers_count 835，created 2026-09-25T13:46:42Z，pushed 2026-11-12T19:24:55Z，homepage https://nod.n8n.io/。最新 release nod-v0.7.3，name Nod v0.7.3，published 2026-11-12T18:30:43Z。同一时刻首页星标徽章显示 778，与 API 的 835 不同，正文不采用徽章数。HN https://news.ycombinator.com/item?id=50453875 Firebase：title Nod – open-source personal agent with its own computer，by qainsights，time 1794407397 = 2026-11-11T14:29:57Z，score 2，descendants 0（点数会变）。预览为 Chrome 实拍 nod.n8n.io 首屏，裁成 1200×800 WebP。未下载安装包，未连账号，未跑差事，未复测分数，未核对账单。",
+      "verifyLogEn": "2026-11-13 morning ~09:20 Asia/Shanghai (UTC 2026-11-13T01:20:00Z): https://nod.n8n.io/ HTTP 200; https://nod.n8n.io/docs/ HTTP 200; https://blog.n8n.io/meet-nod/ HTTP 200, Ophir Prusak, November 10, 2026, research preview, standalone, no n8n account, not an agent built inside n8n, Apache-2.0, private VM and its own browser, Gmail/Calendar/Drive/Slack, Telegram or WhatsApp, monthly limit, check-in past $5 (editable), stops on sleep, one owner, no phone calls. Homepage FAQ also lists Google, OpenRouter, Ollama/LM Studio/vLLM/llama.cpp, the Linux x64 Flatpak preview, default app connections via n8n and Composio, and usage data that can be turned off. Evaluation line: October 2026, GPT-6.1 Sol — 678 test runs / zero actions without permission, 98% of 226 errands ×3, LongMemEval-S 93.2% of 500, WhisperBench 0 of 216 (108 emails, two ways). gh api repos/n8n-io/nod: Apache-2.0, stargazers_count 835, created 2026-09-25T13:46:42Z, pushed 2026-11-12T19:24:55Z. Latest release nod-v0.7.3 / Nod v0.7.3, published 2026-11-12T18:30:43Z. The homepage star badge showed 778 at the same check; the entry does not use the badge count. HN https://news.ycombinator.com/item?id=50453875 via Firebase: time 1794407397 = 2026-11-11T14:29:57Z, score 2, descendants 0 (points change). Preview is a Chrome capture of the nod.n8n.io hero, cropped to a 1200×800 WebP. No install, no connected accounts, no errand, scores not re-tested, bill not checked.",
+      "landing": {
+        "what": "给想把跟进、简报、发票和网站上的差事交给一个本机助手的人。Nod 由 n8n Labs 做，跑在你的电脑上，自带一台沙箱电脑和浏览器。你在应用、Telegram 或 WhatsApp 里说活。它不是 n8n 账号里的功能，也不是 n8n AI Assistant。",
+        "whatEn": "For someone who wants follow-ups, briefs, invoices, and website errands handled by an assistant on their own machine. Nod is from n8n Labs. It runs locally, with a sandbox computer and a browser. You talk to it in the app, on Telegram, or on WhatsApp. It is not a feature of an n8n account, and it is not the n8n AI Assistant.",
+        "contrast": {
+          "leftLabel": "Nod",
+          "leftLabelEn": "Nod",
+          "rightLabel": "n8n 账号里的助手",
+          "rightLabelEn": "An assistant inside an n8n account",
+          "rows": [
+            {
+              "aspect": "要不要 n8n",
+              "aspectEn": "n8n account",
+              "left": "官方写不用 n8n 账号。它是单独的应用。",
+              "leftEn": "The vendor says no n8n account. It is a separate app.",
+              "right": "官方写它不是 n8n AI Assistant，也不是你在 n8n 里搭的 agent。",
+              "rightEn": "The vendor says it is not the n8n AI Assistant and not an agent you build inside n8n."
+            },
+            {
+              "aspect": "跑在哪",
+              "aspectEn": "Where it runs",
+              "left": "你的电脑上的私有虚拟机，自带浏览器。睡眠就停。",
+              "leftEn": "A private VM on your computer, with its own browser. It stops when the machine sleeps.",
+              "right": "官方把团队共用的流程仍放在 n8n 上。Nod 现在一个安装一个主人。",
+              "rightEn": "The vendor still places shared team processes on n8n. Nod is one owner per installation today."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读官方页，再决定要不要装",
+            "titleEn": "Read the official pages before installing",
+            "body": "官网、文档和 2026-11-10 的博客把安装、模型和信任模型写在一起。本库只打开了这些页，没有下载安装包。",
+            "bodyEn": "The site, the docs, and the 2026-11-10 blog put install, models, and the trust model in one place. This library only opened those pages and did not download an installer.",
+            "links": [
+              {
+                "href": "https://nod.n8n.io/",
+                "label": "Nod 官网",
+                "labelEn": "Nod site"
+              },
+              {
+                "href": "https://nod.n8n.io/docs/",
+                "label": "文档",
+                "labelEn": "Docs"
+              },
+              {
+                "href": "https://blog.n8n.io/meet-nod/",
+                "label": "发布博客",
+                "labelEn": "Launch blog"
+              },
+              {
+                "href": "https://github.com/n8n-io/nod",
+                "label": "GitHub（Apache-2.0）",
+                "labelEn": "GitHub (Apache-2.0)"
+              }
+            ]
+          },
+          {
+            "title": "自备模型，再连你自己的应用",
+            "titleEn": "Bring a model, then connect your own apps",
+            "body": "官方写可选 OpenAI、Anthropic、Google、OpenRouter、ChatGPT Plus/Pro，或本机 Ollama、LM Studio、vLLM、llama.cpp。Gmail、日历、Drive、Slack、Notion 用一次登录接上；没有集成的网站可以存登录。模型费另算，Usage 里看估算。本库没有接任何账号。",
+            "bodyEn": "The site lists OpenAI, Anthropic, Google, OpenRouter, ChatGPT Plus/Pro, or a local model via Ollama, LM Studio, vLLM, or llama.cpp. Gmail, Calendar, Drive, Slack, and Notion connect with a sign-in; sites without an integration can use a saved login. Provider fees are separate, and Usage shows an estimate. This library connected nothing.",
+            "links": [
+              {
+                "href": "https://nod.n8n.io/",
+                "label": "模型与费用（官网 FAQ）",
+                "labelEn": "Models and cost (site FAQ)"
+              },
+              {
+                "href": "https://nod.n8n.io/docs/",
+                "label": "文档里的连接说明",
+                "labelEn": "Connections in the docs"
+              }
+            ]
+          },
+          {
+            "title": "定时活可以开，对外动作先看它问不问",
+            "titleEn": "Schedules are available; watch the ask on outward actions",
+            "body": "早晨简报、隔几小时看一次网页，官方写可以排程。发送、付款、发帖、删除如果这次请求没覆盖，它应先问。评测数字是厂商的，未复测。",
+            "bodyEn": "Morning briefs and checks every few hours can be scheduled, according to the site. A send, payment, post, or delete outside your request should wait for you. The published scores are the vendor’s and were not re-tested.",
+            "links": [
+              {
+                "href": "https://blog.n8n.io/meet-nod/",
+                "label": "博客里的费用护栏",
+                "labelEn": "Cost guardrails on the blog"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "不必有 n8n 账号。它不是 n8n AI Assistant。",
+            "textEn": "An n8n account is not required. Nod is not the n8n AI Assistant."
+          },
+          {
+            "text": "笔记本睡眠会停。一个安装一个主人。不能打电话。托管和几个人共用还在路线图上。",
+            "textEn": "It stops when the laptop sleeps. One owner per installation. It cannot make phone calls. Managed hosting and sharing with other people are still on the roadmap."
+          },
+          {
+            "text": "应用连接默认走 n8n 和 Composio。用量数据可以在设置里关掉。模型服务仍会收到这一单需要的内容。",
+            "textEn": "App connections use n8n and Composio by default. Usage data can be turned off in Settings. The model service still receives what that task needs."
+          },
+          {
+            "text": "678 次、98%、93.2%、0/216 都是官网在 2026 年 10 月用 GPT-6.1 Sol 写的结果。本库未复测。",
+            "textEn": "The 678 runs, 98%, 93.2%, and 0/216 figures are the site’s October 2026 results on GPT-6.1 Sol. This library did not re-test them."
+          },
+          {
+            "text": "本库没有下载、安装、连邮箱或日历、保存网站登录、跑差事，也没有核对真实模型账单。",
+            "textEn": "This library did not download, install, connect mail or calendar, save website logins, run an errand, or check a real model bill."
+          }
+        ],
+        "previewCredit": "预览：Nod 官网首屏（nod.n8n.io）",
+        "previewCreditEn": "Preview: Nod homepage above the fold (nod.n8n.io)"
+      }
+    },
+    {
+      "id": "whizra",
+      "slug": "whizra",
+      "title": "Whizra：本机小模型读懂一句话，在 Mac 上压缩、转换、整理文件",
+      "titleEn": "Whizra: an on-device model reads one sentence and compresses, converts, or organizes files on a Mac",
+      "kind": "tool",
+      "hook": "在 Mac 上一句话压缩、转换、整理文件，不删原件。",
+      "hookEn": "On a Mac, one sentence compresses, converts, or organizes files without deleting them.",
+      "summary": "Whizra（https://whizra.com/）是 Mac 应用（macOS 15+，Apple 芯片或 Intel）。你在任意应用里连按两下 Option，用一句话下文件活。读这句话的小模型装在大约 190 MB 的应用里，留在这台 Mac 上。官方写 Intel Mac 上这句话只靠规则读，因为语言模型需要 Apple 芯片。文件不离开 Mac。官方写的上网只有：输入钥匙时以及大约每周一次的许可证检查（Dodo Payments），和可以关掉的更新检查；离线不会把你锁在外面。首页隐私段还写「告诉作者」会打开你自己的邮件，网站自己统计访问、不用 cookie。能做的活：PDF 压缩、合并、拆分、旋转、页码、密码、可搜索扫描、抽出图片、PDF 转 Word；Office 和照片转 PDF；图片转换、缩放、去背景、压缩；AES-256 加密压缩包；查找、整理、改名、移动、复制、标签；一部分 Mac 快捷（按名字关窗口、退出应用）；课件变笔记。官方限制：不做视频和音频；不改 PDF 里的文字、不填表、不签名；写不出 WebP；从不删除文件。新文件写在原件旁边，不覆盖；改名和移动可以撤销。价格是上涨的首发价，不是一个固定标价：页上写前 50 人 9.99 美元，接下来 50 人 14.99 美元，之后 19.99 美元；2026-11-13 上午打开时按钮写 now $9.99。一次付款，一把钥匙三台 Mac，Whizra 1 的更新免费，7 天退款。定价页另写大功能以后可能作为附加项。前 3 次活对任何文件免费，查找、改名、移动在那之后仍免费。浏览器沙箱里有三件活在你的设备上跑（示例条是真 Mac 运行的录像；「你自己的文件」官方写不上传）。浏览器只能把这三件做好，其余要 Mac 应用。合并用 pdf-lib（MIT）；Safari 以外，HEIC 用 libheif（LGPL）。这是带本机小模型的文件助手，不是 Nod 那种邮件、日历、浏览器总助手。官方页没有公开的应用源码仓，本条不写开源。Sample.pdf 3.1 MB 到 361 KB、0.3 秒这类数字是官网录像，不是本库计时。本库没有下载或安装 Mac 应用，没有购买许可证，没有跑那 3 次免费活，也没有自己测压缩或转换时间。",
+      "summaryEn": "Whizra (https://whizra.com/) is a Mac app (macOS 15+, Apple silicon or Intel). Double-tap Option in any app and type a file job in one sentence. A small language model that reads the sentence ships inside the ~190 MB app and stays on the Mac. The site says Intel Macs read the sentence with rules alone, because the language model needs Apple silicon. Files do not leave the Mac. The only online traffic the site describes is a license check with Dodo Payments when you enter a key and about weekly, plus an update check you can turn off. Being offline does not lock you out. The homepage privacy block also says “Tell the maker” opens your own mail app, and that this website counts visits with no cookies. Jobs: PDF compress, merge, split, rotate, page numbers, password, searchable scans, extract images, PDF to Word; Office and photos to PDF; image convert, resize, background removal, compress; AES-256 password zips; find, organize, rename, move, copy, tags; some Mac shortcuts (close windows, quit apps); lecture slides to notes. Official limits: no video or audio jobs; it does not edit text inside a PDF, fill forms, or sign; it cannot write WebP; it never deletes files. New files land beside the originals and nothing is overwritten; rename and move can be undone. The price is a rising launch ladder, not one fixed tag: the page lists $9.99 for the first 50 buyers, $14.99 for the next 50, then $19.99. On the morning of 2026-11-13 the button said now $9.99. One payment, one key for 3 Macs, free updates to Whizra 1, 7-day refunds. The pricing page also says big new features may come as add-ons. The first 3 jobs are free on any files; finding, renaming, and moving stay free after that. The browser sandbox runs three jobs in the tab on your device (the sample bar is recordings of real Mac runs; the “your own files” path says it does not upload). A browser can only do those three well. Merging uses pdf-lib (MIT); outside Safari, HEIC uses libheif (LGPL). This is a file assistant with an on-device model, not a general mail, calendar, and browser agent. No public app source repo is linked from the official pages, so this entry does not call it open source. Timings such as Sample.pdf 3.1 MB → 361 KB in 0.3 s are the site’s recordings, not measurements from this library. This library did not download or install the Mac app, buy a license, run the 3 free jobs, or time a compress or convert.",
+      "categories": [
+        "productivity",
+        "automation"
+      ],
+      "role": "local file assistant",
+      "sourceUrl": "https://whizra.com/",
+      "secondaryUrls": [
+        "https://whizra.com/sandbox/",
+        "https://whizra.com/pricing/",
+        "https://news.ycombinator.com/item?id=50443987",
+        "https://news.ycombinator.com/item?id=50459273"
+      ],
+      "previewImage": "/previews/whizra.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "官方写新文件落在原件旁边，不覆盖，也从不删除。改名和移动可以撤销。它没有一道「删除前请批准」的门，因为页面写它不删文件。买钥匙是你自己的一次性付款。本库没有代下载。",
+      "approvalBoundaryEn": "The site says new files land beside the originals, nothing is overwritten, and files are never deleted. Rename and move can be undone. There is no “approve before delete” gate in the product copy, because the page says it does not delete. Buying a key is your own one-time payment. This library did not download it for you.",
+      "connectors": [],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-13T01:20:00Z",
+      "qualityNote": "收录理由：本机、一句话的 Mac 文件助手，小模型只负责读这句话，文件不上传。适合不想把合同或报税材料交给网站的人。边界：它做压缩、转换、压缩包和整理，不是邮件、日历或浏览器总助手。Intel 上不跑那个语言模型，只靠规则。不做视频音频，不改 PDF 正文，不填表，不签名，写不出 WebP，不删除文件。价格是会上涨的首发阶梯，打开时按钮写 9.99 美元，不是永远这个价。大功能以后可能另卖。官方页没有公开应用源码仓，不要写成开源。沙箱示例是录像；压缩耗时是厂商记录，本库未复测。本库没有安装应用，没有买钥匙，也没有跑那三次免费活。",
+      "qualityNoteEn": "Why listed: a local, one-sentence Mac file assistant. The small model reads the sentence, and files are not uploaded. Useful when a contract or a tax PDF should not go to a website. Limits: it compresses, converts, zips, and organizes. It is not a mail, calendar, or browser agent. On Intel the language model does not run; rules read the sentence. No video or audio, no editing text inside a PDF, no forms, no signing, no writing WebP, and it never deletes files. The price is a rising launch ladder; the button showed $9.99 when opened, which is not a permanent price. Big new features may be sold later as add-ons. The official pages do not link a public app source repo, so do not call it open source. Sandbox samples are recordings. Compress timings are the vendor’s and were not re-tested. This library did not install the app, buy a key, or run the three free jobs.",
+      "verifyLog": "2026-11-13 上午约 09:20（Asia/Shanghai）：https://whizra.com/ HTTP 200；https://whizra.com/sandbox/ HTTP 200；https://whizra.com/pricing/ HTTP 200。首页与定价页都写 First 50 buyers $9.99、Next 50 $14.99、After that $19.99，按钮 “Pay once · now $9.99”；定价页另有 “Big new features may come as add-ons”、一把钥匙 3 台 Mac、Remove frees a Mac、Whizra 1 更新免费、7-day refunds、macOS 15+、约 190 MB。FAQ 写 Intel 只用规则、语言模型需要 Apple 芯片；前 3 次活免费，查找/改名/移动之后仍免费；从不覆盖或删除。沙箱 FAQ 写三件活在标签页里跑、pdf-lib MIT、Safari 以外 HEIC 用 libheif LGPL，示例条是录像。首页演示句 Sample.pdf “compress it” 3.1 MB → 361 KB、0.3 s，并写 This demo plays back recordings。HN Firebase：item 50443987 score 1，time 1794334436 = 2026-11-10T18:13:56Z，title Show HN: Whizra – Local, offline-first command bar to manage files on Mac，by IanXavier；item 50459273 score 2，time 1794434397 = 2026-11-11T21:59:57Z，沙箱帖。点数会变。GitHub 按名称搜 whizra，没有指向 whizra.com 的公开应用仓。预览为 Chrome 实拍 whizra.com 首屏，裁成 1200×800 WebP，画面含 now $9.99 与官网录像窗口。未下载应用，未购买，未跑活，未自行计时。",
+      "verifyLogEn": "2026-11-13 morning ~09:20 Asia/Shanghai: https://whizra.com/ HTTP 200; https://whizra.com/sandbox/ HTTP 200; https://whizra.com/pricing/ HTTP 200. Home and pricing both list first 50 buyers $9.99, next 50 $14.99, then $19.99, with the button “Pay once · now $9.99”. Pricing also says big new features may come as add-ons, one key for 3 Macs, remove frees a Mac, free updates to Whizra 1, 7-day refunds, macOS 15+, about 190 MB. FAQ: Intel uses rules only because the language model needs Apple silicon; first 3 jobs free; find/rename/move stay free; never overwrite or delete. Sandbox FAQ: three jobs in the tab, pdf-lib MIT, libheif LGPL for HEIC outside Safari, sample bar is recordings. Homepage demo line: Sample.pdf “compress it”, 3.1 MB → 361 KB, 0.3 s, and “this demo plays back recordings”. HN Firebase: item 50443987 score 1 at 2026-11-10T18:13:56Z; item 50459273 score 2 at 2026-11-11T21:59:57Z. Points change. A GitHub name search for whizra found no public app repo pointing at whizra.com. Preview is a Chrome capture of the whizra.com hero, cropped to a 1200×800 WebP; the frame shows now $9.99 and the site’s recording window. App not downloaded, license not bought, jobs not run, timings not measured here.",
+      "landing": {
+        "what": "给想在 Mac 上用一句话压缩 PDF、转格式、打包或整理文件、又不想把文件传到网站的人。读句子的小模型在应用里面。它只管文件活，不代收邮件，也不替你浏览网页办事。",
+        "whatEn": "For someone who wants to compress a PDF, convert a file, zip a folder, or tidy files on a Mac in one sentence, without uploading them. The small model that reads the sentence is inside the app. It does file jobs. It does not read your mail or browse the web as a general assistant.",
+        "contrast": {
+          "leftLabel": "Whizra",
+          "leftLabelEn": "Whizra",
+          "rightLabel": "通用个人助手",
+          "rightLabelEn": "A general personal assistant",
+          "rows": [
+            {
+              "aspect": "它接什么活",
+              "aspectEn": "What it takes on",
+              "left": "压缩、转换、加密压缩包、查找和整理，都在这台 Mac 上。",
+              "leftEn": "Compress, convert, password-zip, find, and organize, on this Mac.",
+              "right": "官方没有把它写成邮箱、日历或带浏览器的总助手。",
+              "rightEn": "The site does not describe it as a mail, calendar, or browser agent."
+            },
+            {
+              "aspect": "会不会改掉原件",
+              "aspectEn": "Original files",
+              "left": "新文件写在旁边。官方写不覆盖、不删除。",
+              "leftEn": "New files land beside the originals. The site says it does not overwrite or delete.",
+              "right": "没有一道删除前审批，因为页面写它不删文件。",
+              "rightEn": "There is no approve-before-delete step, because the page says it never deletes."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看官网和浏览器沙箱",
+            "titleEn": "Read the site and the browser sandbox",
+            "body": "沙箱里的示例条是真 Mac 运行的录像，不是在你浏览器里现算的。自己的文件那一栏官方写只在这个标签页里做三件活。本库没有安装应用。",
+            "bodyEn": "The sample bar plays recordings of real Mac runs. It is not computing the job in your browser. The “your own files” tab says it does three jobs in the tab. This library did not install the app.",
+            "links": [
+              {
+                "href": "https://whizra.com/",
+                "label": "Whizra 官网",
+                "labelEn": "Whizra site"
+              },
+              {
+                "href": "https://whizra.com/sandbox/",
+                "label": "浏览器沙箱",
+                "labelEn": "Browser sandbox"
+              }
+            ]
+          },
+          {
+            "title": "其余活要 Mac 应用",
+            "titleEn": "The other jobs need the Mac app",
+            "body": "官方写浏览器只能把那三件做好。PDF 转 Word、去背景、AES 压缩包和按你的文件查找，要 macOS 15+ 的应用。Intel 上句子靠规则，不靠那个小模型。",
+            "bodyEn": "The site says a browser can only do those three well. PDF to Word, background removal, AES zips, and finding your files need the macOS 15+ app. On Intel, rules read the sentence; the small model does not run.",
+            "links": [
+              {
+                "href": "https://whizra.com/",
+                "label": "系统要求（首页 FAQ）",
+                "labelEn": "Requirements (homepage FAQ)"
+              }
+            ]
+          },
+          {
+            "title": "看清当下的阶梯价再付",
+            "titleEn": "Read the ladder price before paying",
+            "body": "页上写前 50 人、接下来 50 人、之后三档，会往上涨。2026-11-13 上午按钮是 9.99 美元。一把钥匙三台 Mac，7 天退款。前三次活免费。本库没有付款。",
+            "bodyEn": "The page lists three rungs — first 50, next 50, then after that — and says the launch price rises. On the morning of 2026-11-13 the button was $9.99. One key covers 3 Macs, with 7-day refunds. The first three jobs are free. This library did not pay.",
+            "links": [
+              {
+                "href": "https://whizra.com/pricing/",
+                "label": "定价页",
+                "labelEn": "Pricing"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "文件助手，不是邮件、日历或浏览器总助手。",
+            "textEn": "A file assistant, not a mail, calendar, or browser agent."
+          },
+          {
+            "text": "Intel Mac 不跑句内的语言模型，只靠规则。Apple 芯片才把模型跑在本机。",
+            "textEn": "Intel Macs do not run the in-app language model; they use rules. Apple silicon is what runs that model on device."
+          },
+          {
+            "text": "不做视频和音频。不改 PDF 里的文字，不填表，不签名。写不出 WebP。从不删除文件。",
+            "textEn": "No video or audio. It does not edit text inside a PDF, fill forms, or sign. It cannot write WebP. It never deletes files."
+          },
+          {
+            "text": "价格会按已售数量上涨。打开时看到的 9.99 美元是当时那一档。大功能以后可能作为附加项。",
+            "textEn": "The price rises as copies sell. The $9.99 on the button was the rung showing at open time. Big new features may come as add-ons."
+          },
+          {
+            "text": "官方页没有公开应用源码仓。沙箱计时和 Sample.pdf 的 0.3 秒是厂商录像，本库未复测，也没有安装。",
+            "textEn": "The official pages do not link a public app source repo. Sandbox timings and the 0.3 s Sample.pdf figure are the vendor’s recordings. This library did not re-test them and did not install the app."
+          }
+        ],
+        "previewCredit": "预览：Whizra 官网首屏（whizra.com）。右侧窗口是官网标明的 Mac 录像回放。",
+        "previewCreditEn": "Preview: Whizra homepage above the fold (whizra.com). The window on the right is a Mac recording the site labels as playback."
+      }
+    },
+    {
+      "id": "pomerado",
+      "slug": "pomerado",
+      "title": "Pomerado：把任意网站变成给助手用的 API / MCP（YC F26）",
+      "titleEn": "Pomerado: turn any website into an API or MCP for agents (YC F26)",
+      "kind": "tool",
+      "hook": "把网站做成助手能调用的接口，它自己不看你的邮箱。",
+      "hookEn": "Turns websites into APIs and MCP tools for agents. It is not your inbox.",
+      "summary": "Pomerado（https://pomerado.ai/，YC F26）把一个网站做成确定性的托管 API / MCP，让别的助手做网站上的事，而不是只靠电脑使用或浏览器代理点页面。官方设置提示里有 Claude Code 和 Codex 的添加命令，无账号试一把的地址写的是 https://mcp.pomerado.ai/mcp/keyless 。文档入口 https://docs.pomerado.ai/getting-started 打开后跳到 https://docs.pomerado.ai/quickstart/connect 。仓库 https://github.com/Pomerado/pomerado 是 MIT，官方描述为开源的核心集成生成器；仓库主页字段是空的，产品站是 pomerado.ai。它是给个人助手和工作代理用的网站接口，自己不是邮箱或日历助手。首页价格（没有单独的 /pricing，该路径 404）：免费 0 美元/月，每天 100 次工具调用，每月 10 个新集成，自动登录含双重验证，每个网站 1 个账号；Premium 50 美元/月，每天 1000 次、每月 100 个新集成；Business 写联系，页面还列了每天 10 万次以上、自定义双重验证等。有 Monthly / Yearly 切换，静态页面上标出的价格是每月 50 美元，年付金额没有写在这段 HTML 里。厂商性能说法，本库未复测：客户见过 7 倍加速；在厂商描述的 30 个任务、25 个应用基准上，比 Astra Computer Use、Instinct 和 Muse 的浏览器使用「快 2 倍、便宜 10 到 1000 倍、准确 30%」；演示里给 2 名员工办入职「8 分 16 秒、3 美分」，对照「Codex Computer Use 21 分 22 秒、41.01 美元」，并写以 321 倍速播放。登录、双重验证和在第三方网站上的写入要你自己批。本库没有注册，没有添加 MCP，没有跑无钥匙工具，没有生成集成，没有存放凭证或双重验证，也没有重跑任何基准。HN 上提到的走查视频本库没有播放。",
+      "summaryEn": "Pomerado (https://pomerado.ai/, YC F26) turns a website into a deterministic hosted API or MCP so other agents can do site tasks without relying only on computer-use or browser agents. The setup prompt on the homepage shows Claude Code and Codex add commands. The keyless try URL it prints is https://mcp.pomerado.ai/mcp/keyless . https://docs.pomerado.ai/getting-started redirects to https://docs.pomerado.ai/quickstart/connect . The repo https://github.com/Pomerado/pomerado is MIT; the vendor calls it an open-source core integration-minting harness. The repo homepage field is empty; the product site is pomerado.ai. This is website infrastructure for personal assistants and work agents. It is not itself an email or calendar assistant. Prices are on the homepage (there is no separate /pricing page; that path 404s): Free is $0/month, 100 tool calls per day, 10 new integrations per month, automatic sign-in including 2FA, 1 account per website. Premium is $50/month, 1,000 calls per day and 100 new integrations per month. Business says contact, and the page also lists 100,000+ calls per day and custom 2FA. A Monthly/Yearly toggle is on the page; the price in the static HTML is $50 per month, and a separate yearly dollar amount was not in that HTML. Vendor performance claims, not re-tested here: “Customers have seen 7x speedups”; “2x faster, 10 to 1,000 times cheaper, and 30% more accurate than Astra Computer Use, Instinct, and Muse for browser use” on a 30-task / 25-app benchmark the vendor describes; a demo of onboarding 2 employees in “8 minutes 16 seconds for 3 cents” versus “Codex Computer Use took 21 minutes 22 seconds and cost $41.01”, shown at 321× speed. Sign-in, 2FA, and writes on third-party sites are yours to approve. This library did not sign up, add the MCP, run keyless tools, mint an integration, store credentials or 2FA, or re-run any benchmark. A walkthrough video mentioned on Hacker News was not played.",
+      "categories": [
+        "automation",
+        "engineering"
+      ],
+      "role": "agent website integration",
+      "sourceUrl": "https://pomerado.ai/",
+      "secondaryUrls": [
+        "https://docs.pomerado.ai/getting-started",
+        "https://docs.pomerado.ai/quickstart/connect",
+        "https://docs.pomerado.ai/llms.txt",
+        "https://github.com/Pomerado/pomerado",
+        "https://mcp.pomerado.ai/mcp/keyless",
+        "https://news.ycombinator.com/item?id=50455811",
+        "https://youtu.be/Bi4jci7rgHo"
+      ],
+      "previewImage": "/previews/pomerado.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "登录第三方网站、交出双重验证、或让集成在网站上写入之前，自己确认。无钥匙地址官方写可以先做只读试。本库没有代为注册或调用。",
+      "approvalBoundaryEn": "Confirm before signing into a third-party site, handing over 2FA, or letting an integration write on that site. The vendor says the keyless URL can start with a read-only try. This library did not sign up or call it for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-13T01:20:00Z",
+      "qualityNote": "收录理由：给已经在用的助手接网站的基础设施。助手不必只靠浏览器点页面。边界：它自己不收邮件、不排日历。免费档和 50 美元档以首页当时写的次数为准。速度、费用和准确率对比是厂商基准和演示，本库未复测。登录和双重验证会碰到真实账号。仓库是 MIT 的核心生成器，主页字段为空。本库没有注册，没有添加 MCP，没有跑无钥匙工具，没有生成集成，没有存凭证，也没有看 HN 上的走查视频。",
+      "qualityNoteEn": "Why listed: infrastructure that lets an assistant you already use call a website, instead of only clicking through a browser. Limits: it is not an inbox and it does not run your calendar. The free tier and the $50 tier are whatever the homepage listed when it was opened. Speed, cost, and accuracy comparisons are the vendor’s benchmark and demo. This library did not re-test them. Sign-in and 2FA touch real accounts. The repo is an MIT core harness and its homepage field is empty. This library did not sign up, add the MCP, run the keyless tools, mint an integration, store credentials, or watch the walkthrough linked from Hacker News.",
+      "verifyLog": "2026-11-13 上午约 09:20（Asia/Shanghai）：https://pomerado.ai/ HTTP 200。首页设置提示含 claude mcp add --transport http pomerado https://mcp.pomerado.ai/mcp/keyless 与 codex mcp add。价格块在首页：Free $0/month、100 tool calls/day、10 new integrations/month、automatic sign-in including 2FA、1 account per website；Premium $50/month、1,000 calls/day、100 new integrations；Business Contact us，另列 100,000+ calls/day 等。Yearly 按钮在，静态 HTML 里的金额是 $50 per month，没有另写年付美元数。https://pomerado.ai/pricing HTTP 404。https://docs.pomerado.ai/getting-started HTTP 200 最终 URL https://docs.pomerado.ai/quickstart/connect 。https://docs.pomerado.ai/llms.txt HTTP 200。https://mcp.pomerado.ai/mcp/keyless 对 GET 返回 HTTP 405 Method Not Allowed，未 POST、未调用工具。gh api repos/Pomerado/pomerado：MIT，stargazers_count 1679，created 2026-10-05T19:56:00Z，pushed 2026-11-12T23:41:39Z，homepage 空，description 含 YC F26 与 Open source core integration minting harness。首页徽章显示 1.6K。HN https://news.ycombinator.com/item?id=50455811 Firebase：Launch HN: Pomerado (YC F26)，by alanjm23，time 1794417116 = 2026-11-11T17:11:56Z，score 60，descendants 47（点数和评论会变）。https://youtu.be/Bi4jci7rgHo HTTP 200 转到 watch 页，未播放。厂商句包括 Customers have seen 7x speedups；2x faster, 10 to 1,000 times cheaper, and 30% more accurate；8 minutes 16 seconds for 3 cents vs 21 minutes 22 seconds and $41.01，shown at 321× speed；30 tasks in 25 business apps。预览为 Chrome 实拍 pomerado.ai 首屏，裁成 1200×800 WebP；主标题在 any website 等词之间轮换，这张停在 legacy portals。未注册，未加 MCP，未跑工具，未复测基准。",
+      "verifyLogEn": "2026-11-13 morning ~09:20 Asia/Shanghai: https://pomerado.ai/ HTTP 200. The setup prompt includes claude mcp add --transport http pomerado https://mcp.pomerado.ai/mcp/keyless and the Codex add command. Prices are on the homepage: Free $0/month, 100 tool calls/day, 10 new integrations/month, automatic sign-in including 2FA, 1 account per website; Premium $50/month, 1,000 calls/day, 100 new integrations; Business is contact, with 100,000+ calls/day also listed. A Yearly control is present; the static HTML shows $50 per month and no separate yearly dollar amount. https://pomerado.ai/pricing HTTP 404. https://docs.pomerado.ai/getting-started HTTP 200, final URL https://docs.pomerado.ai/quickstart/connect. https://docs.pomerado.ai/llms.txt HTTP 200. GET https://mcp.pomerado.ai/mcp/keyless returned HTTP 405 Method Not Allowed. No POST and no tool call. gh api repos/Pomerado/pomerado: MIT, stargazers_count 1679, created 2026-10-05T19:56:00Z, pushed 2026-11-12T23:41:39Z, empty homepage, description includes YC F26 and open-source core integration minting harness. The site badge showed 1.6K. HN https://news.ycombinator.com/item?id=50455811 via Firebase: by alanjm23, 2026-11-11T17:11:56Z, score 60, descendants 47 (points and comments change). https://youtu.be/Bi4jci7rgHo HTTP 200, redirected to the watch page, not played. Vendor lines include 7x speedups; 2x faster, 10 to 1,000 times cheaper, 30% more accurate; 8 minutes 16 seconds for 3 cents vs 21 minutes 22 seconds and $41.01 at 321× speed; 30 tasks in 25 business apps. Preview is a Chrome capture of the pomerado.ai hero, cropped to a 1200×800 WebP. The headline rotates through phrases such as any website; this frame stopped on legacy portals. No signup, no MCP add, no tool call, benchmark not re-tested.",
+      "landing": {
+        "what": "给已经有助手、想让它稳定调用某个网站的人。Pomerado 把网站做成托管的 API / MCP。调用方可以是编程助手，也可以是你自己的个人助手。Pomerado 自己不收邮件，也不排日历。",
+        "whatEn": "For someone who already has an agent and wants it to call a website in a fixed way. Pomerado turns the site into a hosted API or MCP. The caller can be a coding agent or your own personal assistant. Pomerado itself does not read mail or run a calendar.",
+        "contrast": {
+          "leftLabel": "Pomerado",
+          "leftLabelEn": "Pomerado",
+          "rightLabel": "邮箱或日历助手",
+          "rightLabelEn": "An email or calendar assistant",
+          "rows": [
+            {
+              "aspect": "它是什么",
+              "aspectEn": "What it is",
+              "left": "把网站做成给别的助手调用的接口。",
+              "leftEn": "A website turned into tools other agents call.",
+              "right": "它不是收件箱，也不是日程本。那些助手如果要用网站，才来接它。",
+              "rightEn": "It is not an inbox and not a calendar. Those assistants would call it when they need a website."
+            },
+            {
+              "aspect": "登录",
+              "aspectEn": "Sign-in",
+              "left": "官方写可自动登录，包括双重验证。免费档每个网站 1 个账号。",
+              "leftEn": "The site says sign-in is automatic, including 2FA. The free plan is 1 account per website.",
+              "right": "凭证和验证码要你自己决定交不交。本库没有存过。",
+              "rightEn": "You decide whether to hand over credentials and codes. This library stored none."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "看首页上的接入提示",
+            "titleEn": "Read the setup prompt on the homepage",
+            "body": "首页可以直接复制给 Claude Code 或 Codex 的命令，无钥匙地址也写在里面。文档旧入口会跳到 quickstart/connect。本库没有把命令贴进任何助手。",
+            "bodyEn": "The homepage has copy-ready commands for Claude Code and Codex, including the keyless URL. The older docs URL redirects to quickstart/connect. This library did not paste the commands into an agent.",
+            "links": [
+              {
+                "href": "https://pomerado.ai/",
+                "label": "Pomerado 首页",
+                "labelEn": "Pomerado homepage"
+              },
+              {
+                "href": "https://docs.pomerado.ai/llms.txt",
+                "label": "给助手的文档索引",
+                "labelEn": "Docs index for agents"
+              },
+              {
+                "href": "https://docs.pomerado.ai/quickstart/connect",
+                "label": "连接说明",
+                "labelEn": "Connect guide"
+              }
+            ]
+          },
+          {
+            "title": "先只读，再考虑登录",
+            "titleEn": "Start read-only, then decide about sign-in",
+            "body": "官方提示写：无账号可以先做只读，例如找航班搜索工具。要给新网站造工具或登录时，它会给你一个登录链接。本库没有调用。GET 那个无钥匙地址返回 405，这只说明它不是普通网页。",
+            "bodyEn": "The vendor prompt says you can try a read-only task with no account, such as finding a flight-search tool. When a task needs a new site or a login, Pomerado gives you a sign-in link. This library did not call it. A GET to the keyless URL returned 405, which only means it is not an ordinary web page.",
+            "links": [
+              {
+                "href": "https://pomerado.ai/",
+                "label": "首页上的无钥匙提示",
+                "labelEn": "Keyless prompt on the homepage"
+              },
+              {
+                "href": "https://github.com/Pomerado/pomerado",
+                "label": "GitHub（MIT）",
+                "labelEn": "GitHub (MIT)"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "网站接口，不是邮箱助手，也不是日历助手。",
+            "textEn": "Website infrastructure, not an email assistant and not a calendar assistant."
+          },
+          {
+            "text": "7 倍、2 倍、便宜 10 到 1000 倍、多 30% 准确、8 分 16 秒对 3 美分，都是厂商页面上的说法。本库未复测。",
+            "textEn": "The 7×, 2×, 10 to 1,000× cheaper, 30% more accurate, and 8 minutes 16 seconds for 3 cents lines are the vendor’s. This library did not re-test them."
+          },
+          {
+            "text": "免费档按首页：每天 100 次调用、每月 10 个新集成、每个网站 1 个账号。Premium 是每月 50 美元。年付按钮在，静态页面没有另写年付金额。",
+            "textEn": "The free plan on the homepage is 100 calls a day, 10 new integrations a month, and 1 account per website. Premium is $50 per month. A yearly toggle is there; the static page did not show a separate yearly price."
+          },
+          {
+            "text": "本库没有注册，没有添加 MCP，没有跑工具，没有生成集成，没有存放凭证或双重验证，也没有播放走查视频。",
+            "textEn": "This library did not sign up, add the MCP, run tools, mint an integration, store credentials or 2FA, or play the walkthrough video."
+          }
+        ],
+        "previewCredit": "预览：Pomerado 官网首屏（pomerado.ai）。主标题在几种网站说法之间轮换。",
+        "previewCreditEn": "Preview: Pomerado homepage above the fold (pomerado.ai). The headline rotates through several kinds of sites."
+      }
+    },
+    {
+      "id": "animate4me",
+      "slug": "animate4me",
+      "title": "Animate4Me：一句话或一张图，出 Spine 4.2 装骨动画",
+      "titleEn": "Animate4Me: a sentence or an image becomes a rigged Spine 4.2 animation",
+      "kind": "tool",
+      "hook": "一句话或一张图，导出 Spine 4.2 装骨动画。",
+      "hookEn": "A prompt or an image comes out as a rigged Spine 4.2 animation.",
+      "summary": "Animate4Me（https://animate4me.com/）用一段提示或一张图做出 Spine 4.2 装骨动画：自动骨骼、权重网格、物理和模板动画，导出 skeleton.json、图集和 PNG。图片可以是 PNG、JPG 或 WebP，最大 10 MB，至少 256 像素。分类有符号、物体和角色。符号和物体的模板包括 idle、land、win、dissolve、anticipation、appear、open、collect、explode 等。符号或物体做好之后可以改文字；官方写改出来的质量不像模板那样有保证。定价页 https://animate4me.com/pricing.html 在 2026-11-13 上午写的是：模板符号或物体动画 20 token；用描述先出物体图再套模板 30 token；角色从图片 60 token、从提示词 70 token，并写角色目前是 idle 循环，win 即将推出；改文字，或再出 5 张候选图，5 token。套餐 Indie 每月 19 美元、300 token；Studio 每月 59 美元、1200 token；Pro 每月 199 美元、5000 token，API 写着即将推出。订阅者可一次性充值，从 9 美元 100 token 起，页上还有 39 美元 500 token 和 129 美元 2000 token。年付写付 10 个月得 12 个月。同一页顶部写着 TEST MODE、支付走 Stripe 沙箱、只有测试账号能买。把 Spine Runtime 放进自己的产品需要你自己向 Esoteric Software 买 Spine 许可证。它不是 Spine 编辑器的替代。还没有 Live2D 导出。首页那个可切换 Idle / Win 的角色是厂商用 Spine Runtime 播的演示，不是本库生成的。公开仓库 axiosdevs/animate4me 的主页指向这个站，但仓库写明只有说明、没有源码、也没有许可证，所以不把产品写成开源。本库没有注册，没有花 token，没有上传图，没有生成或下载 Spine 导出，也没有拿去游戏引擎里导入。",
+      "summaryEn": "Animate4Me (https://animate4me.com/) turns a prompt or an image into a Spine 4.2 rig: bones, weighted meshes, physics, and template animations, exported as skeleton.json, an atlas, and PNG pages. Images can be PNG, JPG, or WebP, up to 10 MB, at least 256 px. Categories are symbols, objects, and characters. Symbol and object templates include idle, land, win, dissolve, anticipation, appear, open, collect, and explode. After a symbol or object build, text edits are possible; the site says quality is not guaranteed for edits the way it is for templates. The pricing page https://animate4me.com/pricing.html , opened on the morning of 2026-11-13, lists 20 tokens for a template symbol or object animation; 30 tokens to make an object from a description and then apply a template; 60 tokens for a character from an image and 70 from a prompt, and it says a character is an idle loop for now, with win coming soon; 5 tokens for a text edit or for 5 new picture variants. Plans: Indie $19 a month for 300 tokens, Studio $59 a month for 1,200, Pro $199 a month for 5,000, with API marked coming soon. Subscribers can buy one-time top-ups from $9 for 100 tokens; the page also lists $39 for 500 and $129 for 2,000. Yearly billing is described as pay for 10 months and get 12. The top of that page says TEST MODE, payments run in the Stripe sandbox, and only test accounts can buy. Using a Spine Runtime in a product needs your own Spine license from Esoteric Software. This is not a replacement for the Spine editor. There is no Live2D export yet. The character on the homepage with Idle and Win controls is the vendor’s Spine runtime demo, not a generation from this library. The public repo axiosdevs/animate4me points its homepage at the site, and the repo says it is a description page only, with no source code and no license, so this entry does not call the product open source. This library did not create an account, spend tokens, upload art, generate or download a Spine export, or import one into an engine.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI animation tool",
+      "sourceUrl": "https://animate4me.com/",
+      "secondaryUrls": [
+        "https://animate4me.com/pricing.html",
+        "https://news.ycombinator.com/item?id=50475387",
+        "https://github.com/axiosdevs/animate4me"
+      ],
+      "previewImage": "/previews/animate4me.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "生成要花 token，上传的是你的图。定价页当时写着沙箱测试支付。本库没有代为注册、上传或生成。",
+      "approvalBoundaryEn": "Generation spends tokens, and the upload is your artwork. The pricing page was showing sandbox test payments when opened. This library did not sign up, upload, or generate for you.",
+      "connectors": [
+        "Spine"
+      ],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-13T01:20:00Z",
+      "qualityNote": "收录理由：提示词或图片直接出 Spine 4.2 装骨文件，给做游戏符号和角色的人一条少手搓骨骼的路。边界：要花 token，并上传你的图。定价页当时顶部写测试模式、Stripe 沙箱、只有测试账号能买，不要当成已经能正式扣款。角色成品页写的是 idle，win 即将推出；首页另有厂商自己的实时演示。文字修改不保证质量和模板一样。放进产品要用你自己的 Spine 许可证。它不是 Spine 编辑器，也还没有 Live2D。公开仓库只有说明、没有源码、没有许可证，不要写成开源。首页演示不是本库生成的。本库没有注册，没有花 token，没有上传，没有下载导出，也没有进引擎试导入。",
+      "qualityNoteEn": "Why listed: a prompt or an image comes back as Spine 4.2 rig data, a shorter path to bones for game symbols and characters. Limits: it spends tokens and you upload artwork. The pricing page was headed as test mode, Stripe sandbox, test accounts only, so do not treat it as a live charge. The pricing page says a character export is an idle loop and that win is coming soon; the homepage also plays the vendor’s own live demo. Text edits are not guaranteed the way templates are. A product that uses a Spine Runtime needs your own Spine license. It does not replace the Spine editor, and there is no Live2D export. The public repo is a description only, with no source and no license, so do not call it open source. The homepage demo was not generated by this library. This library did not sign up, spend tokens, upload, download an export, or import one into an engine.",
+      "verifyLog": "2026-11-13 上午约 09:20（Asia/Shanghai）：https://animate4me.com/ HTTP 200；https://animate4me.com/pricing.html HTTP 200。首页 FAQ 写 symbol/object 20 token、character 60 from image 或 70 from prompt、text edit 5 token、plans from $19/month for 300、top-ups from $9 for 100。首页分步示意另写 “≈ 120 tokens (example pricing)”，标的是示例，不当成定价。定价页更细：模板符号或物体 20；描述生成物体再套模板 30；角色图片 60、提示词 70，并写 win is coming soon、目前 idle；文字修改或 5 张新候选图 5 token。Indie $19/300、Studio $59/1200、Pro $199/5000（API coming soon）。充值 $9/100、$39/500、$129/2000，需已订阅。年付：pay for 10 months and get 12。页顶原文 TEST MODE — no real charges，Payments run in the Stripe sandbox，only test accounts can buy。失败可退 token 的句子在同一页。gh api repos/axiosdevs/animate4me：created 2026-11-12T23:41:16Z，pushed 2026-11-12T23:48:59Z，stargazers_count 0，license null，homepage https://animate4me.com，README 写 This repository is a description page only. It contains no source code。README 另把「符号或物体从提示词」写成 30 token，年付写成 $190 / $590 / $1,990，并写没有免费试用。与定价页不完全同一句，正文价格以定价页为准，README 数字只记在这里。HN https://news.ycombinator.com/item?id=50475387 Firebase：Show HN: Animate4Me – The first prompt-to-Spine 2D animation tool，by AxiDev，time 1794523023 = 2026-11-12T22:37:03Z，score 2，descendants 0（点数会变）。预览为 Chrome 实拍 animate4me.com 首屏，裁成 1200×800 WebP，含厂商实时 Spine 演示。未注册，未上传，未生成，未下载 zip，未进引擎。",
+      "verifyLogEn": "2026-11-13 morning ~09:20 Asia/Shanghai: https://animate4me.com/ HTTP 200; https://animate4me.com/pricing.html HTTP 200. Homepage FAQ: symbol/object 20 tokens, character 60 from an image or 70 from a prompt, text edit 5, plans from $19/month for 300, top-ups from $9 for 100. The homepage walkthrough also says “≈ 120 tokens (example pricing)”; that line is an example, not the price list. The pricing page is more specific: template symbol or object 20; object from a description then a template 30; character from an image 60 or from a prompt 70, with win coming soon and idle for now; text edit or 5 new variants 5 tokens. Indie $19/300, Studio $59/1200, Pro $199/5000 (API coming soon). Top-ups $9/100, $39/500, $129/2000, subscribers only. Yearly: pay for 10 months and get 12. Banner text: TEST MODE — no real charges; payments run in the Stripe sandbox; only test accounts can buy. The same page says failed jobs return tokens. gh api repos/axiosdevs/animate4me: created 2026-11-12T23:41:16Z, pushed 2026-11-12T23:48:59Z, stargazers_count 0, license null, homepage https://animate4me.com. README says the repository is a description page only and contains no source code. The README also lists symbol-or-object-from-a-prompt as 30 tokens, yearly prices as $190 / $590 / $1,990, and no free trial. Those sentences are not identical to the pricing page; the entry’s prices follow the pricing page, and the README figures stay in this log. HN https://news.ycombinator.com/item?id=50475387 via Firebase: by AxiDev, 2026-11-12T22:37:03Z, score 2, descendants 0 (points change). Preview is a Chrome capture of the animate4me.com hero, cropped to a 1200×800 WebP, including the vendor’s live Spine demo. No account, no upload, no generation, no zip download, no engine import.",
+      "landing": {
+        "what": "给要做游戏符号、道具或角色骨骼动画、又不想从零绑骨的人。提示词或一张图进去，出来是 Spine 4.2 的 skeleton.json、图集和 PNG。首页上那个会动的角色是厂商自己的演示。",
+        "whatEn": "For someone making rigged motion for a game symbol, prop, or character who does not want to place every bone by hand. A prompt or an image comes back as Spine 4.2 skeleton.json, an atlas, and PNG pages. The moving character on the homepage is the vendor’s own demo.",
+        "contrast": {
+          "leftLabel": "Animate4Me",
+          "leftLabelEn": "Animate4Me",
+          "rightLabel": "Spine 编辑器",
+          "rightLabelEn": "The Spine editor",
+          "rows": [
+            {
+              "aspect": "你拿到什么",
+              "aspectEn": "What you get",
+              "left": "按模板生成的 Spine 4.2 数据。符号和物体还可以再改文字，质量不保证。",
+              "leftEn": "Spine 4.2 data from a template. Symbols and objects can take a text edit, without a quality guarantee.",
+              "right": "官方写它不能代替 Spine 编辑器。有编辑器的人可以再导入 JSON。",
+              "rightEn": "The site says it does not replace the Spine editor. If you own the editor, you can import the JSON and keep editing."
+            },
+            {
+              "aspect": "许可证",
+              "aspectEn": "License",
+              "left": "导出文件按页面说法归你。放进产品要用 Spine Runtime 时，要自己的 Esoteric 许可证。",
+              "leftEn": "The page says the exported files are yours. Playing them in a product with a Spine Runtime needs your own Esoteric license.",
+              "right": "还没有 Live2D 导出。",
+              "rightEn": "There is no Live2D export yet."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看首页和定价，不要只看示例价",
+            "titleEn": "Read the homepage and the pricing page",
+            "body": "首页流程示意里有一行示例 token，页面自己标成 example pricing。真价格在定价页：模板 20、描述生成物体 30、角色 60 或 70、改文字 5。套餐从每月 19 美元起。页顶当时写着测试模式。",
+            "bodyEn": "The homepage walkthrough includes an example token line marked example pricing. The live list is on the pricing page: template 20, object from a description 30, character 60 or 70, text edit 5. Plans start at $19 a month. The top of the page was in test mode when opened.",
+            "links": [
+              {
+                "href": "https://animate4me.com/",
+                "label": "Animate4Me 首页",
+                "labelEn": "Animate4Me homepage"
+              },
+              {
+                "href": "https://animate4me.com/pricing.html",
+                "label": "定价页",
+                "labelEn": "Pricing"
+              }
+            ]
+          },
+          {
+            "title": "上传或写提示词都会花 token",
+            "titleEn": "An upload or a prompt spends tokens",
+            "body": "图要 PNG、JPG 或 WebP，10 MB 以内，至少 256 像素。角色页写目前是 idle，win 即将推出。本库没有上传，也没有生成。",
+            "bodyEn": "Images are PNG, JPG, or WebP, up to 10 MB, at least 256 px. The pricing page says a character is an idle loop for now and that win is coming soon. This library did not upload or generate.",
+            "links": [
+              {
+                "href": "https://animate4me.com/",
+                "label": "上传要求（首页 FAQ）",
+                "labelEn": "Upload rules (homepage FAQ)"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=50475387",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          },
+          {
+            "title": "导出之后还要自己的 Spine 许可证",
+            "titleEn": "The export still needs your own Spine license",
+            "body": "产品里播放官方 Spine Runtime，需要你向 Esoteric Software 买许可证。这不是编辑器的替代。公开仓库没有源码。",
+            "bodyEn": "Playing an official Spine Runtime in a product needs a license you buy from Esoteric Software. This does not replace the editor. The public repo has no source code.",
+            "links": [
+              {
+                "href": "https://github.com/axiosdevs/animate4me",
+                "label": "说明仓库（无源码）",
+                "labelEn": "Description repo (no source)"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "定价页当时写 TEST MODE、Stripe 沙箱、只有测试账号能买。正式扣款以你打开时页面为准。",
+            "textEn": "The pricing page said TEST MODE, Stripe sandbox, and test accounts only. Whether a real charge is possible depends on what the page says when you open it."
+          },
+          {
+            "text": "角色的 win 在定价页写即将推出。首页演示可以切到 Win，那是厂商自己的例子。",
+            "textEn": "Character win is marked coming soon on the pricing page. The homepage demo can switch to Win; that clip is the vendor’s example."
+          },
+          {
+            "text": "文字修改不保证质量。失败的生成，定价页写会把 token 退回余额。",
+            "textEn": "Text edits are not quality-guaranteed. The pricing page says a failed generation returns its tokens."
+          },
+          {
+            "text": "不是开源。说明仓库没有源码，也没有许可证。没有 Live2D。不是 Spine 编辑器的替代。",
+            "textEn": "Not open source. The description repo has no source code and no license. No Live2D. Not a replacement for the Spine editor."
+          },
+          {
+            "text": "本库没有注册，没有花 token，没有上传图，没有下载导出，也没有在引擎里导入。",
+            "textEn": "This library did not sign up, spend tokens, upload art, download an export, or import one into an engine."
+          }
+        ],
+        "previewCredit": "预览：Animate4Me 官网首屏（animate4me.com）。右侧是厂商用 Spine Runtime 播放的演示，不是本库生成的。",
+        "previewCreditEn": "Preview: Animate4Me homepage above the fold (animate4me.com). The figure on the right is the vendor’s Spine runtime demo, not a generation from this library."
+      }
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +12032,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-13T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 219,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +12333,30 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://nod.n8n.io/",
+      "https://nod.n8n.io/docs/",
+      "https://github.com/n8n-io/nod",
+      "https://github.com/n8n-io/nod/releases/tag/nod-v0.7.3",
+      "https://blog.n8n.io/meet-nod/",
+      "https://news.ycombinator.com/item?id=50453875",
+      "https://whizra.com/",
+      "https://whizra.com/sandbox/",
+      "https://whizra.com/pricing/",
+      "https://news.ycombinator.com/item?id=50443987",
+      "https://news.ycombinator.com/item?id=50459273",
+      "https://pomerado.ai/",
+      "https://docs.pomerado.ai/getting-started",
+      "https://docs.pomerado.ai/quickstart/connect",
+      "https://docs.pomerado.ai/llms.txt",
+      "https://github.com/Pomerado/pomerado",
+      "https://mcp.pomerado.ai/mcp/keyless",
+      "https://news.ycombinator.com/item?id=50455811",
+      "https://youtu.be/Bi4jci7rgHo",
+      "https://animate4me.com/",
+      "https://animate4me.com/pricing.html",
+      "https://news.ycombinator.com/item?id=50475387",
+      "https://github.com/axiosdevs/animate4me"
     ]
   }
 }
