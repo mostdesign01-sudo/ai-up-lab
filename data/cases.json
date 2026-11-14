@@ -1,6 +1,89 @@
 {
   "cases": [
     {
+      "id": "fable52-games",
+      "slug": "fable52-games",
+      "title": "Fable52.games：社区街机，一句话做出的 HTML 小游戏打开就能玩",
+      "titleEn": "Fable52.games: a community arcade of one-prompt HTML games you can play in the browser",
+      "kind": "showcase",
+      "hook": "一句话做出的 HTML 小游戏，打开就能玩，提示词和源码就在旁边。",
+      "hookEn": "One-prompt HTML games you can open and play, with the prompt and source beside them.",
+      "summary": "Fable52.games（https://fable52.games/）是独立、社区运营的浏览器小游戏街机，站方把这些作品归因于 Claude Fable 5.2。关于页写明它不是 Anthropic 的产品，未获关联、背书或赞助。站点的定位是：一句提示词 → 一个 HTML 文件 → 一个游戏。多数游戏以自包含的 .html 发布，可以在浏览器里直接玩，并查看或下载源码；公开了提示词的条目，提示词就在游戏旁边。首页写着 34 个浏览器游戏，置顶精选是 Saltline，卡片文案为 “the original one-prompt FPS”、“8h Autonomous Build”、“1.4MB Pure HTML”、“Zero External Assets”。关于页还写：本站托管的游戏跑在隔离沙箱里，碰不到本站的 cookie 或存储；有的游戏由作者自己托管（嵌入或链接）并署名；排序按热度，另有最多三个编辑精选；投稿会先检查安全和可玩性再上线；每个游戏归创作者所有；联系 support@fable52.games。Show HN 于 2026-11-12 由用户 felixne 提交（https://news.ycombinator.com/item?id=50469007）。适合打开就玩、并想对照单文件源码的人。本库没有把游戏打通关，没有重跑 Fable 5.2，也没有核过提示词能否复现作品。",
+      "summaryEn": "Fable52.games (https://fable52.games/) is an independent, community-run arcade of browser games the site attributes to Claude Fable 5.2. The about page says it is not an Anthropic product and is not affiliated with, endorsed by, or sponsored by Anthropic. The site’s line is one prompt → one HTML file → one game. Most titles ship as a self-contained .html file you can play in the browser, then inspect or download; when a prompt is published, it sits next to the game. The homepage said 34 browser games and featured Saltline, with the card text “the original one-prompt FPS”, “8h Autonomous Build”, “1.4MB Pure HTML”, and “Zero External Assets”. The about page also says hosted games run in an isolated sandbox that cannot touch the site’s cookies or storage; some games are author-hosted (embed or link) and credited; ranking is by popularity plus up to three editor’s picks; submissions are checked for safety and playability before going live; each game belongs to its creator; contact support@fable52.games. Show HN was submitted on 2026-11-12 by felixne (https://news.ycombinator.com/item?id=50469007). Good for playing in the browser and reading a single-file source. This library did not play the games through, did not re-run Fable 5.2, and did not check that prompts reproduce the games.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "AI game arcade",
+      "sourceUrl": "https://fable52.games/",
+      "secondaryUrls": [
+        "https://fable52.games/about",
+        "https://fable52.games/submit",
+        "https://news.ycombinator.com/item?id=50469007",
+        "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+      ],
+      "previewImage": "/previews/fable52-games.webp",
+      "sourceType": "community-show",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "只供游玩和学习。每个游戏归其创作者所有；再分发或公开发布改编前，先自行确认权利。",
+      "approvalBoundaryEn": "Playing and studying only. Each game belongs to its creator; check rights before redistributing or publishing a remix.",
+      "connectors": [],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-14T12:30:00Z",
+      "qualityNote": "收录理由：社区街机把一句提示、一个 HTML 文件的小游戏摊开，打开就能玩，也能看源码。边界：独立项目，不是 Anthropic 官方站点。不要当成每条都公开了提示词——首页筛选里标成带提示词的只是一部分；Show HN 上有人指出有的游戏没有提示词，提交者 felixne 回复说有的作者只给了可玩的 HTML 和源码，他不会编造提示词，并打算加上只看有提示词的筛选，且新投稿要附提示词。投稿页有提示词输入框，但打开时标成必填的是标题，不是提示词。也不要当成本库核实过每条游戏都由 Fable 5.2 生成。游玩次数以及 “8h / 1.4MB” 这类数字是站点或作者的说法，这里没有复测。本库打开了首页、关于页和 Saltline 游戏页，没有把游戏玩完，没有重跑 Fable 5.2，没有核过提示词能否复现游戏，也没有逐条审计许可。",
+      "qualityNoteEn": "Why listed: a community arcade of one-prompt, one-HTML-file games you can play in the browser and read the source of. Limits: an independent project, not an official Anthropic site. Do not treat every listing as having a published prompt — the homepage filter tagged only some titles as with a prompt. On Show HN a commenter noted missing prompts; submitter felixne replied that some creators shared only the playable HTML and source, that he would not invent a prompt, and that he planned a prompt-only filter and to require a prompt on new submissions. The submit form has a prompt field, but when opened only the title was marked required. Do not treat this library as having verified that every game was produced by Fable 5.2. Play counts and “8h / 1.4MB” style figures are site or author claims, not re-measured here. This library opened the homepage, the about page, and the Saltline game page, but did not play the games through, did not re-run Fable 5.2, did not verify that prompts reproduce the games, and did not audit the license of every title.",
+      "verifyLog": "2026-11-14 晚间（Asia/Shanghai；页面 GET 约 12:29Z，首页条数与 HN API 复核 2026-11-14T12:47:21Z）。GET https://fable52.games/ 200。首屏文案 “One prompt → one HTML file → one game”；Featured Saltline，站点文案 “the original one-prompt FPS” / “8h Autonomous Build” / “1.4MB Pure HTML” / “Zero External Assets”。页面写 “34 browser games”。JSON-LD ItemList 34 条（2026-11-14T12:47:21Z 再数仍为 34），第 1 条 Saltline，第 34 条 Becario del Universo。meta description 写 “Play 30+ browser games”，列表标题是 “34 browser games”（源码里 34 与 browser games 之间有 HTML 注释）。筛选 “With Prompt” 旁的数字是 7，不是全部 34 条都标了提示词。GET https://fable52.games/about 200：独立社区、非 Anthropic 关联/背书/赞助、本站托管游戏隔离沙箱碰不到 cookie 或存储、作者托管为嵌入或链接并署名、按热度排序加最多三个编辑精选、投稿先查安全与可玩性、权利归创作者、support@fable52.games。GET https://fable52.games/submit 200：表单有 name=promptText 的输入框；HTML 里带 required 的是 name=title，promptText 没有 required。GET https://fable52.games/play/saltline-fable-5-2-fps 200：有 Play Game / View Prompt / Inspect Source；页内写 Streamed from realcodebear.github.io，属 Author-hosted；署名 “Created by Felix Rieseberg” 只记游戏页上的作者行，不把它写成 HN 用户 felixne 的法定姓名。该页还写 8h build、1.4 MB、约 $550 API cost、4.2k plays，均为页面/作者说法，未复测，未点 Launch。GET https://news.ycombinator.com/item?id=50469007 200。Firebase item 50469007：by felixne，time 1794497401 = 2026-11-12T15:30:01Z；2026-11-14T12:47:21Z score 72、descendants 59（点数会变，不写入标题或摘要）。评论 50470208 指出有的游戏没有提示词；felixne 于 2026-11-12T16:46:42（评论 50470250）回复有的作者只分享了可玩 HTML 和源码，他不会编造提示词；2026-11-13T06:56:12（评论 50479383）说会加 prompt-only 筛选，并让新投稿必须附提示词。GET https://www.anthropic.com/claude-fable-and-mythos-5-2 200，标题 “Introducing Claude Fable 5.2 and Claude Mythos 5.2”，只作模型身份，不是本街机官网。未写 relatedModelIds：main 上没有 claude-fable-5-2。预览为无头 Chrome（google-chrome --headless=new --screenshot，视口 1200×800，deviceScaleFactor 1）实拍首页首屏，ffmpeg libwebp quality 80 存成 /previews/fable52-games.webp。未通关，未重跑 Fable 5.2。难度按本库枚举记 starter（schema 无 beginner；游玩浏览不是 advanced）。",
+      "verifyLogEn": "2026-11-14 evening (Asia/Shanghai; page GETs around 12:29Z, homepage count and HN API re-read 2026-11-14T12:47:21Z). GET https://fable52.games/ 200. Hero: “One prompt → one HTML file → one game”. Featured Saltline with site text “the original one-prompt FPS”, “8h Autonomous Build”, “1.4MB Pure HTML”, “Zero External Assets”. Page said “34 browser games”. JSON-LD ItemList had 34 entries (still 34 at 2026-11-14T12:47:21Z), Saltline first and Becario del Universo 34th. The meta description says “Play 30+ browser games”; the list heading is “34 browser games” (an HTML comment sits between 34 and the words). The With Prompt filter’s number was 7, so not every title was tagged with a prompt. GET https://fable52.games/about 200: independent community project, not affiliated/endorsed/sponsored by Anthropic; hosted games in an isolated sandbox that cannot touch cookies or storage; author-hosted games embedded or linked and credited; popularity ranking plus up to three editor’s picks; submissions checked for safety and playability; each game belongs to its creator; support@fable52.games. GET https://fable52.games/submit 200: form includes promptText; the only required control in the HTML was name=title. GET https://fable52.games/play/saltline-fable-5-2-fps 200: Play Game / View Prompt / Inspect Source; “Streamed from realcodebear.github.io” (author-hosted). The page credits “Created by Felix Rieseberg”; that is the game-page byline, not a legal name assigned to HN user felixne. The same page states 8h build, 1.4 MB, about $550 API cost, and 4.2k plays — page/author claims, not re-measured; Launch was not clicked. GET https://news.ycombinator.com/item?id=50469007 200. Firebase item 50469007: by felixne, time 1794497401 = 2026-11-12T15:30:01Z; at 2026-11-14T12:47:21Z score 72, descendants 59 (live counts, not put in the title or summary). Comment 50470208 noted missing prompts; felixne at 2026-11-12T16:46:42 (comment 50470250) said some creators shared only playable HTML and source and he would not invent a prompt; at 2026-11-13T06:56:12 (comment 50479383) he said he would add a prompt-only filter and require a prompt on new submissions. GET https://www.anthropic.com/claude-fable-and-mythos-5-2 200, title “Introducing Claude Fable 5.2 and Claude Mythos 5.2”, identity only, not this arcade’s official site. No relatedModelIds: claude-fable-5-2 is not on main. Preview is a headless Chrome first-screen shot (google-chrome --headless=new --screenshot, viewport 1200×800, deviceScaleFactor 1), saved with ffmpeg libwebp quality 80 as /previews/fable52-games.webp. Games were not played through and Fable 5.2 was not re-run. Difficulty is starter because the schema has no beginner value; browsing the arcade is not marked advanced."
+    },
+    {
+      "id": "agentrun",
+      "slug": "agentrun",
+      "title": "AgentRun：在已有的 agent harness 上加自我改进、持久执行和控制面",
+      "titleEn": "AgentRun: self-improvement, durable execution, and a control plane around your harness",
+      "kind": "tool",
+      "hook": "已有的编程助手继续推理，AgentRun 管运行、恢复和学习。",
+      "hookEn": "Your harness keeps reasoning; AgentRun manages runs, recovery, and learning.",
+      "summary": "AgentRun（https://agentrun.ai/ ，仓库 https://github.com/Parcha-ai/agentrun ，Apache-2.0）是 Parcha / GREP.AI 的开源平台，加在你已经在用的 agent harness 之上。官网写它提供自我改进、持久执行和控制面：你的 harness 负责推理和工具调用，AgentRun 用一套 API 管理运行、工作区、恢复和学习。首页写支持 Claude Code、Codex、Pi 和 OpenCode。介绍博客日期为 2026-11-10，作者 Miguel Rios Berrios（页面写他是 Parcha Labs 创始人，GREP.ai 与 AgentRun 的制作者）；博客把 Pi 写成默认，并写任何说 Agent Client Protocol（ACP）的 harness 也可以。文档概览列出的适配器是 Pi、Claude Code、Codex、OpenCode。仓库 README 的 Coming next 仍把 “Harnesses over the Agent Client Protocol” 列在后续项；本库没有跑通任何 harness，因此不把 ACP 写成已经在仓库里验收过。文档写：学习留在学会它的那个 agent 上；提议会先测试再接受；之后的运行可以复用已接受的 skill 和 workflow。可以自托管，README 含 Render 一键部署；也可以打开托管控制台 https://console.agentrun.ai 。README 与 npm 注册表能对上的包名是 @parcha/agentrun 与 @parcha/agentrun-client。Show HN 于 2026-11-12 由 miguelrios 提交（https://news.ycombinator.com/item?id=50471650），帖子自称 GREP.AI（YC F26）。官网标题有 “Use fewer tokens”，同页动画写明是示意、不是测过的 token 基准；本库不把省 token 或降成本当成已核实的事实。本库没有 npm/npx 安装，没有部署到 Render 或托管控制台，没有接入模型密钥，也没有运行 agent。",
+      "summaryEn": "AgentRun (https://agentrun.ai/ , repo https://github.com/Parcha-ai/agentrun , Apache-2.0) is an open-source platform from Parcha / GREP.AI that sits on top of an agent harness you already use. The site says it adds self-improvement, durable execution, and a control plane: your harness does reasoning and tool use, and AgentRun manages runs, workspace, recovery, and learning through one API. The homepage lists Claude Code, Codex, Pi, and OpenCode. The intro blog is dated 2026-11-10 and bylined Miguel Rios Berrios (the page says he is founder of Parcha Labs, makers of GREP.ai and AgentRun). That post calls Pi the default and also says any harness that speaks the Agent Client Protocol (ACP). The docs overview lists adapters for Pi, Claude Code, Codex, and OpenCode. The repo README still lists “Harnesses over the Agent Client Protocol” under Coming next; this library did not run any harness, so ACP is not treated as accepted against the repo. The docs say learning stays with the agent that learned it, proposals are tested before they are accepted, and later runs can reuse accepted skills and workflows. You can self-host — the README includes a one-click Render deploy — or open the hosted console at https://console.agentrun.ai . Package names matched in the README and the npm registry are @parcha/agentrun and @parcha/agentrun-client. Show HN was submitted on 2026-11-12 by miguelrios (https://news.ycombinator.com/item?id=50471650); the post calls the team GREP.AI (YC F26). The homepage headline says “Use fewer tokens”, and the same page labels the diagram illustrative rather than a measured token benchmark; this library does not treat token or cost savings as checked facts. This library did not npm/npx install, did not deploy to Render or the hosted console, did not connect a model key, and did not run an agent.",
+      "categories": [
+        "engineering",
+        "automation"
+      ],
+      "role": "AI agent platform",
+      "sourceUrl": "https://agentrun.ai/",
+      "secondaryUrls": [
+        "https://github.com/Parcha-ai/agentrun",
+        "https://agentrun.ai/docs/overview",
+        "https://agentrun.ai/blog/introducing-agentrun-run-smarter-agents-use-fewer-tokens",
+        "https://news.ycombinator.com/item?id=50471650",
+        "https://console.agentrun.ai"
+      ],
+      "previewImage": "/previews/agentrun.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "安装、部署，或接入模型/API 密钥并让 agent 调用工具、消耗预算，都需要所有者同意。这张卡片只是目录指针。",
+      "approvalBoundaryEn": "Installing, deploying, or connecting model/API keys and letting agents run tools or spend budget needs the owner's OK. This card is only a catalog pointer.",
+      "connectors": [],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-14T12:30:00Z",
+      "qualityNote": "收录理由：它不替换你的 harness，而是在外面加运行、恢复和学习；文档写学习留在原 agent，提议会先测再复用。边界：安装、部署、接入模型或 API 密钥、让 agent 调工具或花预算，都要所有者自己同意。这张卡片只是目录指针。官网和博客里更省 token、更便宜一类说法是厂商主张；首页动画自己标明是示意，不是测过的基准。讨论里有人对厂商的效果倍数提出异议，本库没有复测，正文不引用这些数字。本库没有 npm/npx 安装，没有部署到 Render 或托管控制台，没有接入模型密钥，没有运行 agent，也没有测量 token 用量、费用或质量。",
+      "qualityNoteEn": "Why listed: it does not replace your harness; it adds run management, recovery, and learning around it. The docs say learning stays with the agent that learned it, and proposals are tested before they are reused. Limits: installing, deploying, connecting a model or API key, and letting an agent call tools or spend budget need the owner’s OK. This card is only a catalog pointer. Fewer-token and lower-cost language on the site and blog is the vendor’s claim; the homepage animation is labeled illustrative, not a measured benchmark. A commenter disputed the vendor’s quality multiple; this library did not re-measure it and does not repeat the figure. This library did not npm/npx install, did not deploy to Render or the hosted console, did not connect a model key, did not run an agent, and did not measure token use, cost, or quality.",
+      "verifyLog": "2026-11-14 晚间（Asia/Shanghai；页面 GET 约 12:29Z，GitHub / HN API 2026-11-14T12:47:21Z）。GET https://agentrun.ai/ 200，title “AgentRun: Open-source AI agent management | agent.run()”。首屏 “Run smarter agents. / Use fewer tokens.”，正文写 self-improvement、durable execution、control plane，以及 Works with Claude Code, Codex, Pi, and OpenCode。同页动画说明写 illustrative，不是测过的速度或 token 基准。GET https://agentrun.ai/docs/overview 200：适配器 Pi、Claude Code、Codex、OpenCode；学习属于该 agent；文档 Based on AgentRun release，Synced 2026-11-11；quickstart 写启动器 @parcha/agentrun@0.4。GET https://agentrun.ai/blog/introducing-agentrun-run-smarter-agents-use-fewer-tokens 200：Engineering · Nov 10, 2026，作者 Miguel Rios Berrios，页面写 founder of Parcha Labs, makers of GREP.ai and AgentRun.ai；Pi 为默认，并写 Agent Client Protocol。GET https://github.com/Parcha-ai/agentrun 200。gh api 2026-11-14T12:47:21Z：stargazers_count 937，forks_count 69，license SPDX Apache-2.0，created_at 2026-09-23T00:27:34Z，pushed_at 2026-11-14T12:45:14Z，homepage https://agentrun.ai。星数只记在本段，不写入编辑 stars 字段。raw LICENSE 200，文本为 Apache License Version 2.0。README 徽章 Apache-2.0，Copyright 2026 Parcha Labs, Inc.，Built by Grep.ai；含 npx @parcha/agentrun、npm install @parcha/agentrun-client，以及 Deploy to Render 一键按钮。README “Coming next” 仍列出 “Harnesses over the Agent Client Protocol”。GET https://console.agentrun.ai 200（落到 https://console.agentrun.ai/），正文 “The AgentRun console needs JavaScript.”，未登录、未部署。GET https://www.npmjs.com/package/@parcha/agentrun 返回 403，未放入 secondaryUrls。npm registry GET https://registry.npmjs.org/@parcha/agentrun 200，latest 0.4.5，license Apache-2.0；https://registry.npmjs.org/@parcha/agentrun-client 200，latest 0.1.0-beta.37。GET https://news.ycombinator.com/item?id=50471650 200。Firebase item 50471650：by miguelrios，time 1794507348 = 2026-11-12T18:15:48Z；2026-11-14T12:47:21Z score 135、descendants 39。帖文自称 GREP.AI（YC F26），并链到介绍博客。厂商成本/token 数字未写入摘要。预览为无头 Chrome DevTools（Page.captureScreenshot，Emulation 1200×800，deviceScaleFactor 1）实拍首页首屏；Cookiebot 对话框点了 ALLOW ALL 后再截，ffmpeg libwebp quality 80 存成 /previews/agentrun.webp。未 npm/npx 安装，未部署 Render 或控制台，未接模型密钥，未跑 agent。",
+      "verifyLogEn": "2026-11-14 evening (Asia/Shanghai; page GETs around 12:29Z, GitHub/HN API 2026-11-14T12:47:21Z). GET https://agentrun.ai/ 200, title “AgentRun: Open-source AI agent management | agent.run()”. Hero “Run smarter agents. / Use fewer tokens.” Body names self-improvement, durable execution, a control plane, and “Works with Claude Code, Codex, Pi, and OpenCode.” The on-page animation is labeled illustrative, not a measured speed or token benchmark. GET https://agentrun.ai/docs/overview 200: adapters Pi, Claude Code, Codex, OpenCode; learning belongs to the agent; “Synced 2026-11-11”; quickstart names launcher @parcha/agentrun@0.4. GET the intro blog 200: Engineering · Nov 10, 2026, Miguel Rios Berrios, “founder of Parcha Labs, the makers of GREP.ai and AgentRun.ai”; Pi as default, plus the Agent Client Protocol. GET https://github.com/Parcha-ai/agentrun 200. gh api 2026-11-14T12:47:21Z: stargazers_count 937, forks_count 69, license SPDX Apache-2.0, created_at 2026-09-23T00:27:34Z, pushed_at 2026-11-14T12:45:14Z, homepage https://agentrun.ai. Star count stays in this log, not in the curator stars field. Raw LICENSE 200, Apache License Version 2.0. README badge Apache-2.0, Copyright 2026 Parcha Labs, Inc., Built by Grep.ai; npx @parcha/agentrun, npm install @parcha/agentrun-client, and a Deploy to Render button. README “Coming next” still lists “Harnesses over the Agent Client Protocol”. GET https://console.agentrun.ai 200 (https://console.agentrun.ai/), body “The AgentRun console needs JavaScript.” Not signed in and not deployed. GET https://www.npmjs.com/package/@parcha/agentrun returned 403, so it is not a secondary URL. npm registry GET @parcha/agentrun 200, latest 0.4.5, Apache-2.0; @parcha/agentrun-client 200, latest 0.1.0-beta.37. GET https://news.ycombinator.com/item?id=50471650 200. Firebase item 50471650: by miguelrios, time 1794507348 = 2026-11-12T18:15:48Z; at 2026-11-14T12:47:21Z score 135, descendants 39. The post text says GREP.AI (YC F26) and links the intro blog. Vendor cost/token figures are not in the summary. Preview is a headless Chrome DevTools capture (Page.captureScreenshot, Emulation 1200×800, deviceScaleFactor 1) of the homepage first screen after clicking Cookiebot ALLOW ALL, saved with ffmpeg libwebp quality 80 as /previews/agentrun.webp. No npm/npx install, no Render or console deploy, no model key, no agent run."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11530,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-14T12:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11831,18 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://fable52.games/about",
+      "https://fable52.games/submit",
+      "https://news.ycombinator.com/item?id=50469007",
+      "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+      "https://fable52.games/",
+      "https://github.com/Parcha-ai/agentrun",
+      "https://agentrun.ai/docs/overview",
+      "https://agentrun.ai/blog/introducing-agentrun-run-smarter-agents-use-fewer-tokens",
+      "https://news.ycombinator.com/item?id=50471650",
+      "https://console.agentrun.ai",
+      "https://agentrun.ai/"
     ]
   }
 }

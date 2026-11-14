@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-14",
+      "title": "晚间收录 2026-11-14：Cases +2（Fable52.games / AgentRun）",
+      "titleEn": "Evening catalog 2026-11-14: Cases +2 (Fable52.games / AgentRun)",
+      "body": "fable52-games（https://fable52.games/ ，独立社区街机，非 Anthropic 官方）— 一句提示做出的单文件 HTML 小游戏，打开就能玩、可看源码；首页当时写 34 个浏览器游戏，精选 Saltline（站方文案含 8h / 1.4MB）。Show HN 由 felixne 提交。部分条目没有公开提示词，本库未逐条核实是否真由 Fable 5.2 生成。agentrun（Apache-2.0，https://github.com/Parcha-ai/agentrun ，https://agentrun.ai/ ）— Parcha / GREP.AI 的开源平台，在 Claude Code、Codex、Pi、OpenCode 等已有 harness 上加自我改进、持久执行和控制面；介绍博客 2026-11-10，Miguel Rios Berrios。厂商的省 token / 费用说法未复测。预览各一枚实拍 3:2 WebP。本库未通关游戏、未重跑 Fable 5.2、未 npm 安装或部署 AgentRun、未接模型密钥、未测量 token 或费用。cases 215→217（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并仍打开的 catalog-hold PR（#158/#157/#156/#155/#154… 以及更早的 #134/#133/#131/#130/#129/#128/#100…）。版本只相对 main 加 1，不与这些草稿对齐。谁先合并，后来的条目数和版本号要重算。",
+      "bodyEn": "fable52-games (https://fable52.games/ , an independent community arcade, not an official Anthropic product) — one-prompt single-file HTML games you can play in the browser and read the source of; the homepage then said 34 browser games and featured Saltline (site copy includes 8h / 1.4MB). Show HN was submitted by felixne. Some listings have no published prompt, and this library did not verify that every title was produced by Fable 5.2. agentrun (Apache-2.0, https://github.com/Parcha-ai/agentrun , https://agentrun.ai/ ) — an open-source platform from Parcha / GREP.AI that adds self-improvement, durable execution, and a control plane around harnesses such as Claude Code, Codex, Pi, and OpenCode; intro blog 2026-11-10 by Miguel Rios Berrios. Vendor token/cost claims were not re-measured. One captured 3:2 WebP preview each. This library did not play the games through, did not re-run Fable 5.2, did not npm-install or deploy AgentRun, did not connect a model key, and did not measure tokens or cost. cases 215→217 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Did not merge still-open catalog-hold PRs (#158/#157/#156/#155/#154… and earlier #134/#133/#131/#130/#129/#128/#100…). Version is main plus one only, not aligned with those drafts. Whoever merges first forces a later recount."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
