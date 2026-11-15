@@ -1,6 +1,98 @@
 {
   "cases": [
     {
+      "id": "crossfade",
+      "slug": "crossfade",
+      "title": "Crossfade：把编程助手接进你打开的 Figma 文件，直接搭可编辑图层",
+      "titleEn": "Crossfade: plug your coding agent into the Figma file you have open and build real, editable layers",
+      "kind": "tool",
+      "hook": "把编程助手接进当前 Figma 文件，用现成组件搭可编辑图层。",
+      "hookEn": "Let a coding agent build editable layers with your components in your open Figma file.",
+      "summary": "Crossfade（https://crossfade.company/ ，作者 Sabarish Sanjay）是一个 Figma 桌面端插件加一段本机桥接（crossfade-bridge，以本机 MCP 服务的形式接入助手）：编程助手经 localhost 连到你正打开的文件，读取当前选区，再用真实图层往里写——组件、变量、自动布局都能用，电脑上的字体可以直接用，图片在同一次运行里放好；写完自己截图检查，还能把开发交接说明作为标注留在图层上。官网写 Figma Design、FigJam、Slides 都能用，也可以同时接多个助手；每次运行算一步撤销，中途失败会自行撤回，大改前可先存一个命名版本。作者说它在 Claude Code 上开发并测试；Codex、Cursor 和其他 MCP 客户端走同一个本机服务，但还没有测试过。价格写一次性 19 美元，一个许可密钥可用于两台 Mac，没有用量费，经 Gumroad 购买下载。不需要 Crossfade 账号，桥接只监听本机并要求私有令牌；但助手读到的内容仍会发给它自己的模型服务商。使用时要开着 Figma 桌面端并运行插件，安装指南还要求 Node 18 以上；官网说不需要付费的 Figma 套餐，对文件有编辑权限即可。官网给出的速度数字（如读取选区约 1.5 毫秒）是它自己在一台 Mac 上的测量，不是本库的测试；它与 Figma 自家 MCP 服务的对比同样是作者整理的，并写明后者另有 Code Connect 等能力，两者可以并存。这是付费插件，官网没有给出公开源码仓库，本条不把它写成开源；官网声明与 Figma、Anthropic、OpenAI、Cursor 均无隶属关系。适合已经在用编程助手、又想让它按现有组件直接在设计稿里搭界面或做开发交接的设计师与前端。本库没有购买许可，没有安装插件，没有接入 Claude Code、Codex 或 Cursor，也没有往任何 Figma 文件里写过东西。",
+      "summaryEn": "Crossfade (https://crossfade.company/ , by Sabarish Sanjay) is a Figma desktop plugin plus a local bridge (crossfade-bridge, added to the agent as a local MCP server). Your coding agent reaches the file you have open over localhost, reads the current selection, and writes real layers into it: components, variables, and auto layout, fonts installed on your computer, and images placed in the same run. It then checks its own screenshot and can leave dev-handoff notes on the layers as annotations. The site says it works in Figma Design, FigJam, and Slides, and that more than one agent can work in the same file; every run is one undo step, a run that fails part way undoes itself, and it can save a named version before a bigger change. The author says it is built and tested on Claude Code; Codex, Cursor, and other MCP clients connect through the same local server but have not been tested yet. Pricing on the site is $19 once, one licence key covers two Macs, with no usage fees, sold through Gumroad. There is no Crossfade account; the bridge listens on localhost only and asks for a private token, though whatever the agent reads still goes to that agent's own model provider. The Figma desktop app must be open with the plugin running, and the setup guide also asks for Node 18 or later; the site says no paid Figma plan is needed, only edit access to the file. The speed figures on the site (about 1.5 ms to read a selection, for example) are its own measurements on one Mac, not tests by this library; the comparison with Figma's own MCP server is also the author's, and it notes that Figma's server covers things like Code Connect and that you can keep both. It is a paid plugin with no public source repository on the site, so this entry does not call it open source; the site states it is not affiliated with Figma, Anthropic, OpenAI, or Cursor. Good for designers and front-end developers who already use a coding agent and want it to build screens or do dev handoff inside the design file with existing components. This library did not buy a licence, install the plugin, connect Claude Code, Codex, or Cursor, or write to any Figma file.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://crossfade.company/",
+      "secondaryUrls": [
+        "https://crossfade.company/setup",
+        "https://www.producthunt.com/products/crossfade"
+      ],
+      "previewImage": "/previews/crossfade.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "写入你正在打开的 Figma / FigJam / Slides 文件前先自己看选区和结果；本库没有代为购买、安装插件或让助手改文件。",
+      "approvalBoundaryEn": "Check the selection and the result yourself before anything is written into the Figma / FigJam / Slides file you have open; this library did not buy a licence, install the plugin, or let an agent edit a file for you.",
+      "connectors": [
+        "Figma",
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-15T11:59:00Z",
+      "qualityNote": "收录理由：让编程助手直接在你打开的 Figma 文件里用现有组件搭出可编辑图层，并把交接说明留在图层上，和库里「设计稿交给代码」方向的条目互补，是一条 AI×设计的跨产品工作流；在本机运行、每次运行可一步撤销，决定了敢不敢让助手动真实文件。边界：这是独立作者的付费插件，不是 Figma 官方产品，官网没有给出公开源码，本条不写开源；作者只在 Claude Code 上测试过，Codex 和 Cursor 是「接法相同但尚未测试」；必须开着 Figma 桌面端；官网的速度数字和它与 Figma 自家 MCP 服务的对比都是作者自述，本库没有复核。本库没有购买许可，没有安装插件，没有接入任何编程助手，也没有往 Figma 文件里写入。",
+      "qualityNoteEn": "Why listed: it lets a coding agent build editable layers with your existing components inside the Figma file you have open and leave handoff notes on the layers, which complements this library's design-to-code entries as a cross-product AI×design workflow; running locally with one undo step per run is what makes it reasonable to let an agent touch a real file. Limits: this is an independent author's paid plugin, not an official Figma product, and the site offers no public source, so this entry does not call it open source; the author has tested only Claude Code, while Codex and Cursor are described as the same setup but not tested yet; the Figma desktop app must be open; the speed figures and the comparison with Figma's own MCP server are the author's own claims and were not re-checked here. This library did not buy a licence, install the plugin, connect any coding agent, or write to a Figma file.",
+      "verifyLog": "2026-11-15 晚间（Asia/Shanghai）：https://crossfade.company/ 与 https://crossfade.company/setup 均 HTTP 200（/guides、/privacy、/sitemap.xml 也是 200；首页响应头 last-modified 2026-11-13）。首页 title「Crossfade: Claude Code, Codex and Cursor in your Figma file」，首屏 Let your agents design for you。对比表写 $19 once, plus your own agent、Your machine, over localhost、Fonts on your computer work too、Images: Placed in the same run、No usage fees；Agents 区 Claude Code 标 Tested，Codex / Cursor / Anything else 均标 Not tested yet；FAQ 写 Two per licence key（Macs）、Every run is a single undo step, and a run that fails part way undoes itself、works in Figma Design files, FigJam boards and Slides decks、Can two agents work at once? Yes、Do I need a paid Figma plan? No。数字区 1.5 ms / 15 ms 的脚注为 Measured on a Mac with Figma desktop, 5 Nov 2026（50 次选区读取、20 次检查的中位数）；与 Figma MCP 的对比脚注写依据 Figma 文档 7 Nov 2026。页脚 by Sabarish Sanjay，Not affiliated with or endorsed by Figma, Anthropic, OpenAI or Cursor。/setup 写六步，需 Figma desktop app、Node 18 or later、a coding agent；zip 与许可密钥在 Gumroad；手动接法 `npx -y crossfade-bridge setup`，其他助手加名为 crossfade 的 stdio MCP server。npm registry 的 crossfade-bridge：latest 1.1.0，license 字段 UNLICENSED，首次发布 2026-11-06；sitemap 的 lastmod 多为 2026-11-07。Product Hunt https://www.producthunt.com/products/crossfade ：本环境 curl 得 403，改用网页抓取工具读到正文（Launched this week、#28 Day Rank、55 followers，作者留言 $19 once、one license covers two machines）；票数与日期来自第三方统计页 hunted.space/product/crossfade：Featured on November 12th, 2026、83 upvotes、7 comments，publishedAt 取这一天。官网与 npm 均未见公开源码仓库或开源许可。预览：2026-11-15 用无头 Chrome 以 1200×800 视口实拍官网首页首屏，缩为 3:2 WebP 自托管；画面里的插件窗口是官网自己的演示，页面上标着 Example, not a live file；官方 OG 图 https://crossfade.company/og.jpg （1200×630）已核对，未采用。本库未购买许可、未安装插件、未接入 Claude Code / Codex / Cursor、未写入任何 Figma 文件。",
+      "verifyLogEn": "2026-11-15 evening (Asia/Shanghai): https://crossfade.company/ and https://crossfade.company/setup both HTTP 200 (/guides, /privacy, /sitemap.xml also 200; home last-modified header 2026-11-13). Home title “Crossfade: Claude Code, Codex and Cursor in your Figma file”; hero Let your agents design for you. Comparison table: $19 once, plus your own agent; Your machine, over localhost; Fonts on your computer work too; Images placed in the same run; No usage fees. Agents section: Claude Code Tested; Codex / Cursor / Anything else Not tested yet. FAQ: two Macs per licence key; every run is a single undo step and a failed run undoes itself; works in Figma Design, FigJam, and Slides; two agents can work at once; no paid Figma plan needed. The 1.5 ms / 15 ms figures carry the footnote Measured on a Mac with Figma desktop, 5 Nov 2026 (medians of 50 selection reads and 20 inspections); the Figma MCP comparison footnote cites Figma docs, 7 Nov 2026. Footer: by Sabarish Sanjay; not affiliated with or endorsed by Figma, Anthropic, OpenAI or Cursor. /setup: six steps; needs the Figma desktop app, Node 18 or later, a coding agent; zip and licence key via Gumroad; manual route `npx -y crossfade-bridge setup`, or a stdio MCP server named crossfade for other agents. npm registry crossfade-bridge: latest 1.1.0, license field UNLICENSED, first published 2026-11-06; sitemap lastmod mostly 2026-11-07. Product Hunt https://www.producthunt.com/products/crossfade : curl from this environment got 403; the page body was read through a web-fetch tool (Launched this week, #28 Day Rank, 55 followers, maker comment with $19 once and one license covers two machines). Vote count and date come from the third-party tracker hunted.space/product/crossfade: Featured on November 12th, 2026, 83 upvotes, 7 comments; publishedAt uses that day. No public source repo or open-source licence found on the site or npm. Preview: a headless-Chrome shot of the official landing hero at a 1200×800 viewport on 2026-11-15, scaled to a self-hosted 3:2 WebP; the plugin window in it is the site's own demo, labelled Example, not a live file; the official OG image https://crossfade.company/og.jpg (1200×630) was checked and not used. Did not buy a licence, install the plugin, connect Claude Code / Codex / Cursor, or write to any Figma file."
+    },
+    {
+      "id": "agweb",
+      "slug": "agweb",
+      "title": "Agweb：给编程助手用的 macOS 浏览器，不抢键盘，一个看板看全所有标签",
+      "titleEn": "Agweb: a macOS browser for coding agents that never steals focus, with one dashboard for every tab",
+      "kind": "tool",
+      "hook": "给编程助手用的 macOS 浏览器，不抢键盘，一个看板看完所有标签。",
+      "hookEn": "A macOS browser for coding agents: never steals focus, one dashboard for all agents' tabs.",
+      "summary": "Agweb（https://github.com/paul-nameless/agweb ，MIT，作者 Paul Nameless）是一款给编程助手用的 macOS 浏览器，基于 WebKit（Safari 的引擎）。作者同时跑好几个编程助手：自动化工具弹出的 Chrome 窗口老是抢键盘，无头浏览器又会被一些网站拦住、出了问题也看不到。Agweb 是一个从不抢焦点的窗口，助手在终端里用 `agweb` 命令驱动它，命令尽量沿用助手已经熟悉的浏览器自动化命令行写法；每个助手有自己的工作区和标签。按 ⌘D 打开看板，能同时看到每个助手的每个标签实时画面和它最后一条命令。具名 profile（如 `-p work`）登录一次，多个助手可以同时共用；`fill --secret-cmd` 让密码由你指定的命令取出后直接键入，助手在回复里看不到，README 写 1Password、Bitwarden 的命令行也能用；`ask` 把标签交给人来处理登录、MFA 验证码或 CAPTCHA，同样不抢焦点。空闲标签会被挂起；默认用 uBlock Origin 的规则表拦广告和追踪器，单个工作区可以关掉；`video-start` 能把一个标签录成 MP4。README 里五个空闲页面的内存对比（agweb 590 MB，无头 Chrome 730 MB，另一种带窗口的 Chrome 自动化方案 1.6 GB）和 CPU 说法是作者在自己 Mac 上的数字，不是本库的测试。安装：需要 macOS 26 或更高版本，从 GitHub Releases 下载 Agweb.dmg，或用 Xcode 26 及以上自行构建；装好后在 Help 菜单里安装命令行工具和给 Claude Code、Codex 用的 Agent Skill。限制（README）：只有 WebKit，没有 Chrome DevTools Protocol（CDP），依赖 CDP 的自动化框架和 Chrome 扩展都接不上，只认 Chrome 的网站可能表现异常，README 建议它做不到的事改用常规的浏览器自动化框架；广告拦截跑不了 uBlock 的脚本，YouTube 广告和一些「请关闭广告拦截」的墙会漏过去；`route` 只能模拟 fetch 和 XHR。适合在 Mac 上同时开着几个编程助手、又不想被弹出的浏览器窗口打断的人。本库没有下载 DMG，没有从源码构建，也没有运行 agweb 或它的 Agent Skill。",
+      "summaryEn": "Agweb (https://github.com/paul-nameless/agweb , MIT, by Paul Nameless) is a macOS browser built for coding agents, on WebKit (Safari's engine). The author runs several coding agents at once: Chrome windows opened by automation tooling kept stealing the keyboard, while headless browsers got blocked by some sites and hid what went wrong. Agweb is one window that never takes focus. Agents drive it from the shell with the `agweb` command, which keeps to the browser-automation CLI commands agents already know where possible, and each agent works in its own workspace with its own tabs. The ⌘D dashboard shows every tab of every agent live, with each agent's last command. A named profile (such as `-p work`) logs in once and is shared by several agents at the same time; `fill --secret-cmd` types a secret fetched by a command you choose, so the agent never sees it in replies, and the README says the 1Password and Bitwarden CLIs work too; `ask` hands a tab to you for a login, MFA code, or CAPTCHA, again without taking focus. Idle tabs are suspended; ads and trackers are blocked by default with uBlock Origin's lists, and a workspace can switch that off; `video-start` records a tab to MP4. The README's memory table for five idle pages (agweb 590 MB, headless Chrome 730 MB, another windowed Chrome automation setup 1.6 GB) and its CPU remarks are the author's own figures on their Mac, not tests by this library. Install: macOS 26 or later; download Agweb.dmg from GitHub Releases, or build it with Xcode 26 or later; then use the Help menu to install the command line tool and the Agent Skill for Claude Code and Codex. Limits (README): WebKit only, with no Chrome DevTools Protocol (CDP), so CDP-based automation frameworks and Chrome extensions cannot attach and Chrome-only sites may misbehave, and the README says to use a regular browser-automation framework for what it cannot do; the ad blocker cannot run uBlock's scripts, so YouTube ads and some turn-off-your-ad-blocker walls get through; `route` mocks fetch and XHR only. Good if you keep several coding agents running on a Mac and do not want browser windows popping up over your work. This library did not download the DMG, build from source, or run agweb or its Agent Skill.",
+      "categories": [
+        "automation",
+        "engineering",
+        "coding",
+        "multi-agent"
+      ],
+      "role": "Agent browser",
+      "sourceUrl": "https://github.com/paul-nameless/agweb",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50497147",
+        "https://github.com/paul-nameless/agweb/releases"
+      ],
+      "previewImage": "/previews/agweb.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装或让助手驱动浏览、使用共享登录、填写密码或对外提交之前，先自己确认；本库没有代为下载安装或运行。",
+      "approvalBoundaryEn": "Confirm it yourself before installing it, letting agents drive browsing, using shared logins, typing passwords, or submitting anything outward; this library did not download, install, or run it for you.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "1Password",
+        "Bitwarden",
+        "macOS"
+      ],
+      "publishedAt": "2026-11-14",
+      "updatedAt": "2026-11-15T11:59:00Z",
+      "qualityNote": "收录理由：同时跑多个编程助手时，浏览器抢焦点、看不到助手在网页上做了什么，是很具体的麻烦；Agweb 把不抢焦点、一个看板看全、登录共用、密码不进对话做进一个 macOS 原生窗口，还带给 Claude Code 和 Codex 的 Agent Skill，开源可自己构建。边界：只支持较新的 macOS；只有 WebKit、没有 CDP，依赖 CDP 的自动化框架和 Chrome 扩展用不了，只认 Chrome 的网站可能出问题；广告拦截挡不住 YouTube 广告和部分反拦截墙；内存与 CPU 对比是作者自己机器上的数字。多个助手共用同一个 profile 的登录，一个助手登出或换账号会影响其他助手，讨论里已有人提到。项目刚发布不久，命令和行为可能还会变。本库没有下载 DMG，没有从源码构建，也没有运行 agweb 或它的 Agent Skill。",
+      "qualityNoteEn": "Why listed: when several coding agents run at once, a browser that steals focus and hides what the agents did on the page is a concrete problem; Agweb puts no focus stealing, one dashboard for everything, shared logins, and passwords kept out of the transcript into one native macOS window, ships an Agent Skill for Claude Code and Codex, and is open source so you can build it yourself. Limits: recent macOS only; WebKit only with no CDP, so CDP-based automation frameworks and Chrome extensions do not work and Chrome-only sites may misbehave; the ad blocker does not stop YouTube ads or some anti-adblock walls; the memory and CPU comparison is the author's own figures on their own machine. Agents on one profile share its logins, so one agent logging out or switching accounts affects the others, as people in the discussion pointed out. The project is very new, so commands and behaviour may still change. This library did not download the DMG, build from source, or run agweb or its Agent Skill.",
+      "verifyLog": "2026-11-15 晚间（Asia/Shanghai）：https://github.com/paul-nameless/agweb HTTP 200；gh api：MIT（LICENSE 署 Copyright (c) 2026 Paul Nameless）、209★、6 fork，默认分支 master，创建 2026-11-11T17:08:07Z，最近推送 2026-11-14T23:18:54Z。README（raw master，HTTP 200）逐项核对：built on WebKit (Safari's engine)、one window that never takes focus、a playwright-cli-style command、dashboard (⌘D)、`-p work` 共享登录、`fill --secret-cmd 'pass show site'`（1Password and Bitwarden CLIs work too）、`ask`、idle tabs suspended、uBlock Origin's lists（每 4 天下载）、`video-start` 录 MP4。内存表原文：agweb 590 MB / Headless Chrome 730 MB / Playwright Chrome 1.6 GB，并写 five open pages sit at 0% CPU。Install 原文：Needs macOS 26 or later、Agweb.dmg from Releases、Xcode 26 or later、Help ▸ Install Command Line Tool、Help ▸ Install Agent Skill (for Claude Code and Codex)。Limits 原文：WebKit only: no Chrome DevTools Protocol, so Playwright and Chrome extensions can't attach, and Chrome-only sites may misbehave；`route` mocks fetch and XHR only；The ad blocker can't run uBlock's scripts, so YouTube ads and some “turn off your ad blocker” walls get through；For what it can't do, use Playwright。摘要与收录理由里的「自动化工具 / 常规的浏览器自动化框架」即 README 点名的 Playwright（本站构建检查不允许该词出现在读者向字段）。仓库含 skill/SKILL.md（name: agweb）。https://github.com/paul-nameless/agweb/releases HTTP 200：v0.1.0（2026-11-11）、v0.2.0（2026-11-13）、v0.3.0（2026-11-14），各带 Agweb.dmg。Show HN https://news.ycombinator.com/item?id=50497147 HTTP 200，标题 Show HN: Agweb – a browser for agents that stays out of your way，发帖账号 paul_nameless，发布 2026-11-14T14:08:12Z，核对时 100 points、30 条评论，publishedAt 取这一天；评论里有人问共用 profile 时助手互相影响的问题。预览：仓库 README 的官方看板截图 docs/images/dashboard.png（1600×1071 PNG，透明边垫白），缩裁为 1200×800 的 3:2 WebP 自托管，界面内容未改动。本库未下载 DMG、未从源码构建、未运行 agweb 或其 skill。",
+      "verifyLogEn": "2026-11-15 evening (Asia/Shanghai): https://github.com/paul-nameless/agweb HTTP 200; gh api: MIT (LICENSE reads Copyright (c) 2026 Paul Nameless), 209★, 6 forks, default branch master, created 2026-11-11T17:08:07Z, last push 2026-11-14T23:18:54Z. README (raw master, HTTP 200) checked line by line: built on WebKit (Safari's engine); one window that never takes focus; a playwright-cli-style command; dashboard (⌘D); `-p work` shared logins; `fill --secret-cmd 'pass show site'` (1Password and Bitwarden CLIs work too); `ask`; idle tabs suspended; uBlock Origin's lists (downloaded every 4 days); `video-start` to MP4. Memory table as written: agweb 590 MB / Headless Chrome 730 MB / Playwright Chrome 1.6 GB, plus five open pages sit at 0% CPU. Install as written: Needs macOS 26 or later; Agweb.dmg from Releases; Xcode 26 or later; Help ▸ Install Command Line Tool; Help ▸ Install Agent Skill (for Claude Code and Codex). Limits as written: WebKit only: no Chrome DevTools Protocol, so Playwright and Chrome extensions can't attach, and Chrome-only sites may misbehave; `route` mocks fetch and XHR only; the ad blocker can't run uBlock's scripts, so YouTube ads and some “turn off your ad blocker” walls get through; For what it can't do, use Playwright. Where the summary and listing note say automation tooling or a regular browser-automation framework, the README names Playwright (this site's build lint does not allow that word in reader-facing fields). The repo contains skill/SKILL.md (name: agweb). https://github.com/paul-nameless/agweb/releases HTTP 200: v0.1.0 (2026-11-11), v0.2.0 (2026-11-13), v0.3.0 (2026-11-14), each with Agweb.dmg. Show HN https://news.ycombinator.com/item?id=50497147 HTTP 200, title Show HN: Agweb – a browser for agents that stays out of your way, posted by paul_nameless at 2026-11-14T14:08:12Z, 100 points and 30 comments when checked; publishedAt uses that day; commenters asked about agents affecting each other on a shared profile. Preview: the project's official dashboard screenshot from the README, docs/images/dashboard.png (1600×1071 PNG, transparent margin flattened to white), scaled and cropped to a self-hosted 1200×800 3:2 WebP with the interface untouched. Did not download the DMG, build from source, or run agweb or its skill."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11539,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-15T11:59:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11840,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://crossfade.company/",
+      "https://crossfade.company/setup",
+      "https://www.producthunt.com/products/crossfade",
+      "https://github.com/paul-nameless/agweb",
+      "https://news.ycombinator.com/item?id=50497147",
+      "https://github.com/paul-nameless/agweb/releases"
     ]
   }
 }

@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-15",
+      "title": "晚间收录 2026-11-15：Cases +2（Crossfade / Agweb）",
+      "titleEn": "Evening catalog 2026-11-15: Cases +2 (Crossfade / Agweb)",
+      "body": "AI×设计与编程助手工具：crossfade（crossfade.company，作者 Sabarish Sanjay）— Figma 桌面端插件加本机桥接，让编程助手读取当前选区并往打开的 Figma / FigJam / Slides 文件里写可编辑图层；官网写一次性 19 美元、一个密钥两台 Mac，作者只在 Claude Code 上测试过，Codex / Cursor 尚未测试；付费插件，未见公开源码，不写开源。agweb（MIT，paul-nameless/agweb）— 给编程助手用的 macOS WebKit 浏览器，不抢焦点，⌘D 看板看全所有助手的标签，共享登录、密码不进对话；需要 macOS 26 以上；没有 CDP，README 写 Playwright 和 Chrome 扩展接不上，只认 Chrome 的站点可能出问题，广告拦截挡不住 YouTube 广告。预览各一枚 3:2 WebP：Crossfade 为官网首屏实拍，Agweb 为仓库 README 的官方看板截图。本库未购买或安装 Crossfade、未写入任何 Figma 文件；未下载、构建或运行 Agweb。cases 215→217（1.4.77→1.4.78）。未改 HTML / Agent UI / Models / 首页精选。未合并、未改动其他仍打开的收录 PR（#151–#159 及更早的 catalog-hold）。",
+      "bodyEn": "AI×design and coding-agent tooling: crossfade (crossfade.company, by Sabarish Sanjay) — a Figma desktop plugin plus a local bridge that lets a coding agent read the current selection and write editable layers into the open Figma / FigJam / Slides file; the site lists $19 once with one key for two Macs, and the author has tested only Claude Code, with Codex / Cursor not tested yet; a paid plugin with no public source found, so not listed as open source. agweb (MIT, paul-nameless/agweb) — a macOS WebKit browser for coding agents that never steals focus, with a ⌘D dashboard for every agent's tabs, shared logins, and passwords kept out of the transcript; needs macOS 26 or later; no CDP, so the README says Playwright and Chrome extensions cannot attach, Chrome-only sites may misbehave, and the ad blocker lets YouTube ads through. One 3:2 WebP preview each: a shot of the official landing hero for Crossfade, and the project's own README dashboard screenshot for Agweb. This library did not buy or install Crossfade or write to any Figma file, and did not download, build, or run Agweb. cases 215→217 (1.4.77→1.4.78). HTML / Agent UI / Models / home picks unchanged. Did not merge or touch the other still-open catalog PRs (#151–#159 and earlier catalog-holds)."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
