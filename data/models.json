@@ -1,11 +1,111 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-16T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.31",
+    "count": 41
   },
   "models": [
+    {
+      "id": "qwen4-max",
+      "slug": "qwen4-max",
+      "name": "Qwen4-Max",
+      "vendor": "Alibaba (Qwen)",
+      "title": "Qwen4-Max：Qwen 旗舰，文本图像视频进，官方牌价是人民币",
+      "titleEn": "Qwen4-Max: the Qwen flagship, text image and video in, with official list prices in CNY",
+      "summary": "Qwen4-Max 是阿里云 Qwen 在 2026-11-16 发布的旗舰模型，Model Studio 文档把它标成 Latest Model，调用 ID 是 qwen4-max。阿里云社区博文（杭州，2026-11-16）称它是目前 Qwen 家族里能力最强的一档：稀疏 MoE，总参数 2.4 万亿，每 token 激活 710 亿，比同为 2.4 万亿的 Qwen3.8-Max 少激活 25%；原生视觉，上下文一百万 token。博文写现在可以在 QwenCloud 用 Token Plan 和 API，也能在 QwenWork 和 QwenStudio 里用。更小的 Qwen4 开源权重博文写即将发布，没有给日期；Max 本身不是开源权重。博文把隐式缓存命中的输入价写成每百万 token 0.075 美元，同一段没有写明 1.50 / 4.50 美元的输入输出牌价。Model Studio 文档写输入是文本、图像和视频，输出是文本；支持流式、深度思考、并行工具调用、联网搜索、前缀补全、函数调用、OpenAI Chat Completions 与 Responses、Anthropic Messages、DashScope、结构化 JSON，以及显式和隐式缓存。批量推理、微调和模型部署，文档写不支持。上下文长度 1,000,000；非思考最长输入 991,808、最长输出 131,072；思考模式最长输入 983,616、最长输出 262,144、思维链最长 262,144。enable_thinking 默认 true，reasoning_effort 默认 high，thinking_budget 默认 131072。文档和价目页的牌价是人民币，不是美元：多数列出的区域（中国北京、美国弗吉尼亚、德国、日本、中国香港）在 0<Token≤1M、思考与非思考两种模式下都是每百万 token 输入 CNY 10、输出 CNY 30；新加坡国际是 CNY 10.938 / CNY 32.813。价目页能读清的缓存价，多数区域是 5 分钟写入 CNY 12.5、1 小时写入 CNY 20、显式或隐式缓存读取 CNY 0.5；新加坡是 CNY 13.672 / CNY 21.875 / CNY 0.547。价目页写免费额度只在中国北京，这一档是 100 万 token。博文称在自有的 Work360（721 个领域）上整体超过 Qwen3.8-Max，High effort 少用 35% 的 token，单任务平均成本大约下降 60%；并称 Code Arena 排第 6，还点名 Agents' Last Exam、Vals Index、JobBench 和 Chartography，这些名字在博文里没有配上全部分数。博文里的一则厂商展示是汽车零件编程从大约 475 分钟降到 24 分钟，这是官方称，不是本库复现。第三方 Artificial Analysis 写它是专有模型、2026 年 11 月发布，智能指数 43；页面把上下文显示成 984k，和官方的 1,000,000 不一样，两套都留着；价格写成每百万 token 输入 1.50 美元、输出 4.50 美元，缓存折扣 95%，每项智能指数任务 3.27 美元，输入模态只写了文本和图像。qwen.ai 的发布页是客户端渲染，页面脚本里的标题是「Qwen4-Max：新同事，已就位」和 Qwen4-Max: Your New Teammate Has Arrived，正文没有抽出来，所以不从标题编细节。预览版文档写预览只走 Token Plan，时间是 2026-11-11 10:00 到 2026-11-25 24:00（UTC+8），并建议改用已经上线的正式版。分数和价格都没有在这里复跑或下单。本库没有登录 QwenCloud / Model Studio，没有开通 Token Plan，没有调用 API，没有复跑榜单。",
+      "summaryEn": "Qwen4-Max is the Qwen flagship Alibaba released on 16 November 2026. The Model Studio docs mark it as the Latest Model, and the invocation id is qwen4-max. The Alibaba Cloud Community post (Hangzhou, 16 November 2026) calls it the most capable Qwen model so far: a sparse MoE with 2.4 trillion total parameters and 71 billion active per token, 25% fewer activated parameters than Qwen3.8-Max at the same 2.4T scale, with native vision and a one-million-token context. The post says it is available now on QwenCloud via the Token Plan and the API, and also on QwenWork and QwenStudio. It says smaller open-weight Qwen4 models will soon be released, with no date; Max itself is not open-weight. The post prices implicit-cache-hit input at $0.075 per 1M tokens and does not state a $1.50 / $4.50 input/output list price in that passage. The Model Studio docs say the inputs are text, image, and video, and the output is text. They list streaming, deep thinking, parallel tool calling, web search, prefix completion, function calling, OpenAI Chat Completions and Responses, Anthropic Messages, DashScope, structured JSON, and explicit and implicit cache. Batch inference, fine-tuning, and model deployment are listed as not supported. Context length is 1,000,000. Non-thinking limits are 991,808 input and 131,072 output. Thinking-mode limits are 983,616 input, 262,144 output, and 262,144 of chain-of-thought. enable_thinking defaults to true, reasoning_effort to high, and thinking_budget to 131072. List prices on the docs and the pricing page are in CNY, not USD: for most listed regions (China Beijing, US Virginia, Germany, Japan, Hong Kong), both thinking and non-thinking, 0<Token≤1M, input is CNY 10 and output is CNY 30 per 1M tokens. Singapore International is CNY 10.938 / CNY 32.813. Cache rows that could be read on the pricing page are, for most regions, CNY 12.5 for a 5-minute cache write, CNY 20 for a 1-hour write, and CNY 0.5 for an explicit or implicit cache read; Singapore is CNY 13.672 / CNY 21.875 / CNY 0.547. The pricing page says the free quota is only in China (Beijing), and that quota is 1 million tokens. The post says that on its proprietary Work360 benchmark (721 fields) Qwen4-Max beats Qwen3.8-Max overall, uses 35% fewer tokens at High effort, and cuts average cost per task by around 60%. It also says the model ranked 6th on Code Arena and names Agents' Last Exam, Vals Index, JobBench, and Chartography without giving every score. One vendor showcase in the post is automotive workpiece programming falling from about 475 minutes to 24 minutes. That is a vendor claim, not something rerun here. Third-party Artificial Analysis calls it a proprietary model released in November 2026 with an Intelligence Index of 43. That page shows a 984k context, which differs from the official 1,000,000; both figures stay. It lists $1.50 input and $4.50 output per 1M tokens, a 95% cache discount, and $3.27 per Intelligence Index task, and it mentions text and image input only. The qwen.ai launch page is client-rendered. Its script sets the titles Qwen4-Max：新同事，已就位 and Qwen4-Max: Your New Teammate Has Arrived. The body text was not extracted, so no detail is taken from the title alone. The qwen4-max-preview docs limit that early window to the Token Plan, from 10:00 on 11 November 2026 to 24:00 on 25 November 2026 (UTC+8), and they recommend the production model that is already available. Scores and prices were not re-run or purchased here. This library did not sign in to QwenCloud or Model Studio, did not open a Token Plan, did not call the API, and did not re-run the benchmarks.",
+      "announcedAt": "2026-11-16",
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-16T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Qwen 官方博客：Qwen4-Max（标题在页面脚本里，正文为客户端渲染）",
+          "labelEn": "Qwen official blog: Qwen4-Max (title in the page script; body is client-rendered)",
+          "url": "https://qwen.ai/blog?id=qwen4-max",
+          "by": "Qwen",
+          "date": "2026-11-16"
+        },
+        {
+          "kind": "official",
+          "label": "阿里云社区：发布 Qwen4-Max",
+          "labelEn": "Alibaba Cloud Community: Qwen4-Max announcement",
+          "url": "https://www.alibabacloud.com/blog/alibaba-unveils-qwen4-max-new-ai-teammate-for-work-creativity-and-discovery_603783",
+          "by": "Alibaba Cloud Community",
+          "date": "2026-11-16"
+        },
+        {
+          "kind": "official",
+          "label": "Model Studio 文档：qwen4-max（Latest Model）",
+          "labelEn": "Model Studio docs: qwen4-max (Latest Model)",
+          "url": "https://help.aliyun.com/en/model-studio/qwen4-max",
+          "by": "Alibaba Cloud Model Studio"
+        },
+        {
+          "kind": "official",
+          "label": "Model Studio 价目：模型推理价格（含缓存行）",
+          "labelEn": "Model Studio pricing: model inference prices, including cache rows",
+          "url": "https://help.aliyun.com/en/model-studio/model-pricing",
+          "by": "Alibaba Cloud Model Studio"
+        },
+        {
+          "kind": "official",
+          "label": "Model Studio 更新日志：2026-11-16，qwen4-max，International",
+          "labelEn": "Model Studio changelog: 2026-11-16, qwen4-max, International",
+          "url": "https://docs.modelstudio.console.alibabacloud.com/en/model-studio/newly-released-models",
+          "by": "Alibaba Cloud Model Studio",
+          "date": "2026-11-16"
+        },
+        {
+          "kind": "official",
+          "label": "Model Studio 文档：qwen4-max-preview（预览，建议改用正式版）",
+          "labelEn": "Model Studio docs: qwen4-max-preview (preview; production is recommended)",
+          "url": "https://help.aliyun.com/en/model-studio/qwen4-max-preview",
+          "by": "Alibaba Cloud Model Studio",
+          "date": "2026-11-11"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50513215",
+          "by": "ilreb",
+          "date": "2026-11-16"
+        },
+        {
+          "kind": "community",
+          "label": "Artificial Analysis 第三方页面",
+          "labelEn": "Artificial Analysis third-party page",
+          "url": "https://artificialanalysis.ai/models/qwen4-max",
+          "by": "Artificial Analysis"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方博文称：稀疏 MoE，总参数 2.4 万亿，每 token 激活 710 亿，比同规模的 Qwen3.8-Max 少激活 25%。现可在 QwenCloud 的 Token Plan 与 API 使用，也在 QwenWork、QwenStudio。Max 本身不开源权重；更小的 Qwen4 开源权重博文写即将发布，没有日期。本库没有调用。",
+          "textEn": "Vendor post: a sparse MoE, 2.4 trillion total parameters, 71 billion active per token, 25% fewer activated parameters than Qwen3.8-Max at the same scale. Available on QwenCloud via the Token Plan and API, and on QwenWork and QwenStudio. Max itself is not open-weight; the post says smaller open-weight Qwen4 models will be released soon, with no date. Not called here."
+        },
+        {
+          "text": "官方文档和价目页的牌价是人民币：多数区域每百万 token 输入 CNY 10、输出 CNY 30；新加坡国际 CNY 10.938 / CNY 32.813。价目页缓存行，多数区域为 5 分钟写入 CNY 12.5、1 小时 CNY 20、读取 CNY 0.5；新加坡为 CNY 13.672 / 21.875 / 0.547。社区博文另写隐式缓存命中输入 0.075 美元/百万 token。本库没有下单，也没有把人民币换算成美元。",
+          "textEn": "Official docs and the pricing page list prices in CNY: most regions are CNY 10 input and CNY 30 output per 1M tokens; Singapore International is CNY 10.938 / CNY 32.813. Pricing-page cache rows are CNY 12.5 / CNY 20 / CNY 0.5 for a 5-minute write, a 1-hour write, and a read in most regions; Singapore is CNY 13.672 / 21.875 / 0.547. The community post separately prices implicit-cache-hit input at $0.075 per 1M tokens. No order was placed here, and CNY was not converted into USD."
+        },
+        {
+          "text": "第三方 Artificial Analysis 写智能指数 43，上下文显示 984k，输入 1.50 美元、输出 4.50 美元/百万 token，缓存折扣 95%，每项智能指数任务 3.27 美元；输入只写了文本和图像。官方文档上下文是 1,000,000，并包含视频。两套数字都留着。分数和价格没有在这里复跑。",
+          "textEn": "Third-party Artificial Analysis lists an Intelligence Index of 43, a 984k context, $1.50 input and $4.50 output per 1M tokens, a 95% cache discount, and $3.27 per Intelligence Index task; it mentions text and image input only. The official docs say 1,000,000 of context and include video. Both sets of figures stay. Scores and prices were not re-run here."
+        }
+      ],
+      "qualityNote": "收录理由：这是 2026-11-16 当天的 Qwen 旗舰，Model Studio 文档标成 Latest Model，模型 ID 是 qwen4-max，可以走 API 和 Token Plan，权重未开放，官方文档把牌价写成人民币。边界：参数规模、Work360、Code Arena 名次和汽车编程展示都是厂商说法；Artificial Analysis 的指数、984k 上下文和美元标价是第三方页面。官方牌价以文档和价目页的人民币为准。qwen.ai 博客正文是客户端渲染，没有抽到正文，标题只用来确认官方有这篇发布。本库没有登录 QwenCloud / Model Studio，没有开通 Token Plan，没有调用 API，没有复跑榜单。",
+      "qualityNoteEn": "Why it belongs: this is the Qwen flagship announced on 16 November 2026. The Model Studio docs mark it Latest Model, the id is qwen4-max, it is offered through the API and the Token Plan, the weights are closed, and the official docs price it in CNY. Boundary: parameter counts, Work360, the Code Arena rank, and the automotive programming showcase are vendor claims. The Intelligence Index, the 984k context, and the dollar prices are from the third-party Artificial Analysis page. Official list prices are the CNY figures on the docs and the pricing page. The qwen.ai blog body is client-rendered and was not extracted; the title only confirms that the official post exists. This library did not sign in to QwenCloud or Model Studio, did not open a Token Plan, did not call the API, and did not re-run the benchmarks.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/qwen4-max.webp",
+      "previewCredit": "阿里云社区博文的官方配图，画面是 Qwen 标志和 Qwen 4 Is Now Available",
+      "previewCreditEn": "Official art from the Alibaba Cloud Community post, showing the Qwen mark and Qwen 4 Is Now Available",
+      "featured": false,
+      "verifyLog": "2026-11-16T12:20:00Z（上海 20:20）核对。qwen.ai/blog?id=qwen4-max HTTP 200，HTML 约 88KB。去掉 script 后可见正文只剩 Qwen。页面脚本按语言设置标题：zh 为「Qwen4-Max：新同事，已就位」，否则为 Qwen4-Max: Your New Teammate Has Arrived。该页 og:image 是一张小图标（meta 指向 img.alicdn.com 的 80px 图），没有用它做预览，也不从标题编造正文。阿里云社区博文 HTTP 抽取成功，日期 November 16, 2026，页计数当时显示 3,528。正文有 2.4 trillion、71 billion per token、25% fewer activated parameters than Qwen3.8-Max、one-million-token context、native vision、QwenCloud Token Plan and API、QwenWork、QwenStudio、Input (Implicit Cache Hit) $0.075 per 1M tokens、open-weight smaller Qwen4 will soon be released、Code Arena 6th、Agents' Last Exam、Vals Index、JobBench、Chartography、Work360 721 fields、35% fewer tokens at High effort、average cost per task around 60%。同页还有冷却液分子 48 小时、阿尔茨海默 454 次工具调用 / 24 个候选、云调度成本 9% 与离线 CPU 重调度 14 倍；摘要只留了汽车编程大约 475 分钟到 24 分钟这一则厂商展示，其余不进正文。Model Studio 文档 https://help.aliyun.com/en/model-studio/qwen4-max 抽取成功，标题含 qwen4-max (Latest Model)，Updated at 为空。六区能力表一致：输入 Text, image, video，输出 Text；批量推理、微调、模型部署为 Not supported。上下文 1,000,000；输入/输出 991,808 / 131,072；思考模式 983,616 / 262,144，思维链 262,144。默认 enable_thinking true、reasoning_effort high、thinking_budget 131072。思考档位文档写 low / high / xhigh。牌价表：北京、弗吉尼亚、德国、日本、香港为 CNY 10 / CNY 30；新加坡 CNY 10.938 / CNY 32.813。模型页抽取里缓存只出现 Cache price (per million tokens) 字样，没有展开成三列数字。价目总页 https://help.aliyun.com/en/model-studio/model-pricing 能读清：多数区域缓存写入 5 分钟 CNY 12.5、1 小时 CNY 20、显式/隐式读取 CNY 0.5；新加坡 CNY 13.672 / CNY 21.875 / CNY 0.547。该页注记写免费额度只在中国北京，qwen4-max 北京行是 1 million tokens。更新日志页 HTTP 200（HTML 很大），可见条目 2026-11-16 qwen4-max，Service deployment scope: International；另有 2026-11-11 qwen4-max-preview，Token Plan。预览文档 HTTP 200，写 production Qwen4-Max is available and recommended，预览仅 Token Plan，10:00 on November 11, 2026 到 24:00 on November 25, 2026 (UTC+8)，模型 ID qwen4-max-preview，上下文 1M，最长输出 393,216（思考与回答共用），Base URL https://token-plan.cn-beijing.maas.aliyuncs.com 。HN item 50513215，标题 Qwen4-Max，作者 ilreb，created_at 2026-11-16T02:14:44Z，链到 qwen.ai 博客。HN 页面 score 显示 608 points；同一轮 Algolia API /items/50513215 返回 points 606，点数在动，只记在这里。Artificial Analysis HTTP 200。可见文案：Alibaba • Proprietary model • Released November 2026；智能指数 43（页面内嵌数值约 42.891，展示为 43）；上下文 984k；In $1.50、Out $4.50、Cache discount 95%、每项智能指数任务 $3.27；text and image input, outputs text。本次抓到的 HTML 里没有 “#38 / 81” 或 “38 of 81” 这串字，名次不写入正文。同页图表控件里出现 No publicly available API，同时又有 title 为 Alibaba Cloud 的提供方链接和上述美元价格，这个不一致只记在这里。984k 接近文档里思考模式最长输入 983,616，官方上下文长度仍是 1,000,000，两套都留着，不选边。没有登录，没有开通 Token Plan，没有调用 API，没有复跑。预览用社区博文 OG https://yqintl.alicdn.com/5ce929bcb11bf8dd978023d5d3b05b709b1cf85e.png ，HTTP 200，1920×1080，画面是 Qwen 标志和 Qwen 4 Is Now Available。上下补白边装进 1200×800 WebP，标志和标题都留着。",
+      "verifyLogEn": "Checked at 2026-11-16T12:20:00Z (20:20 Asia/Shanghai). qwen.ai/blog?id=qwen4-max returned HTTP 200, about 88KB of HTML. After scripts were stripped, the visible body was only the word Qwen. The page script sets the title to Qwen4-Max：新同事，已就位 when the language starts with zh, and otherwise to Qwen4-Max: Your New Teammate Has Arrived. That page’s og:image is a small icon (the meta points at an 80px img.alicdn.com file). It was not used as the preview, and no body claim is taken from the title. The Alibaba Cloud Community post extracted cleanly, dated November 16, 2026, with a page counter showing 3,528. The body includes 2.4 trillion parameters, 71 billion active per token, 25% fewer activated parameters than Qwen3.8-Max, a one-million-token context, native vision, QwenCloud Token Plan and API, QwenWork, QwenStudio, implicit cache hit input at $0.075 per 1M tokens, smaller open-weight Qwen4 models to be released soon, 6th on Code Arena, Agents' Last Exam, Vals Index, JobBench, Chartography, Work360 across 721 fields, 35% fewer tokens at High effort, and average cost per task down around 60%. The same page also describes a 48-hour coolant-molecule run, an Alzheimer’s workflow with 454 tool calls and 24 candidates, and cloud scheduling at 9% and 14×. The summary keeps only the automotive programming showcase, about 475 minutes to 24 minutes. The Model Studio doc at https://help.aliyun.com/en/model-studio/qwen4-max extracted, titled with qwen4-max (Latest Model); Updated at was empty. All six regions list input Text, image, video and output Text, and batch inference, fine-tuning, and model deployment as Not supported. Context 1,000,000; input/output 991,808 / 131,072; thinking mode 983,616 / 262,144 with chain-of-thought 262,144. Defaults: enable_thinking true, reasoning_effort high, thinking_budget 131072. The thinking-effort values listed are low / high / xhigh. Price tables: Beijing, Virginia, Germany, Japan, and Hong Kong are CNY 10 / CNY 30; Singapore is CNY 10.938 / CNY 32.813. The model-page extract shows the label Cache price (per million tokens) without the three numeric cache columns. Those numbers are on https://help.aliyun.com/en/model-studio/model-pricing : most regions CNY 12.5 / CNY 20 / CNY 0.5 for a 5-minute write, a 1-hour write, and an explicit or implicit read; Singapore CNY 13.672 / CNY 21.875 / CNY 0.547. That page says the free quota is only in China (Beijing); the Beijing qwen4-max row is 1 million tokens. The changelog page returned HTTP 200 (a very large HTML file) with a visible entry 2026-11-16 qwen4-max, Service deployment scope: International, plus 2026-11-11 qwen4-max-preview on Token Plan. The preview doc returned HTTP 200 and says the production Qwen4-Max is available and recommended, the preview is Token Plan only from 10:00 on November 11, 2026 to 24:00 on November 25, 2026 (UTC+8), model id qwen4-max-preview, 1M context, maximum output 393,216 shared by thinking and the answer, Base URL https://token-plan.cn-beijing.maas.aliyuncs.com . HN item 50513215, title Qwen4-Max, author ilreb, created_at 2026-11-16T02:14:44Z, linking the qwen.ai blog. The HN page score read 608 points; the Algolia API /items/50513215 in the same pass returned 606 points, so the count was moving. Recorded only here. Artificial Analysis returned HTTP 200. Visible copy: Alibaba • Proprietary model • Released November 2026; Intelligence Index 43 (an embedded value of about 42.891, displayed as 43); context 984k; In $1.50, Out $4.50, cache discount 95%, $3.27 per Intelligence Index task; text and image input, text output. The fetched HTML does not contain the strings “#38 / 81” or “38 of 81”, so that rank is not repeated in the entry. A chart widget on the same page says No publicly available API while the page also has a provider link titled Alibaba Cloud and the dollar prices above. That inconsistency stays here. 984k is close to the docs’ thinking-mode max input of 983,616; the official context length remains 1,000,000. Both stay, with no winner picked. No sign-in, no Token Plan, no API call, no re-run. The preview is the community-post OG at https://yqintl.alicdn.com/5ce929bcb11bf8dd978023d5d3b05b709b1cf85e.png , HTTP 200, 1920×1080, showing the Qwen mark and Qwen 4 Is Now Available. White bars above and below fit it into a 1200×800 WebP so the mark and the headline stay."
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
