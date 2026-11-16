@@ -1,6 +1,141 @@
 {
   "cases": [
     {
+      "id": "minea",
+      "slug": "minea",
+      "title": "Minea：不问就先做的 Mac 秘书",
+      "titleEn": "Minea: the Mac secretary that acts before you ask",
+      "kind": "tool",
+      "hook": "不问就先做的 Mac 秘书：盯屏幕和邮件，日历自己改。",
+      "hookEn": "A Mac secretary that acts first, watching screen and mail and editing the calendar.",
+      "summary": "Minea（https://minea.minea.workers.dev/en ，作者 suji park，仓库 sujipar/minea）是官网称为「不问就先做」的 Mac 秘书：盯着屏幕、邮件和消息，把约会、截止日期和要回复的事抽出来；日历和提醒（含 Google Calendar，双向）可以新建、改期、删除；回信只起草，发送由你按；付款和预订停在最后一颗按钮前；约会前可以打电话叫你，睡晚了会把起床电话推迟 30 分钟（后面紧挨着有安排则仍会叫你）；iPhone、Telegram 和锁屏也能把活交回这台 Mac；任何文本框可打 @minea、@MINEA 或韩文 @미네아。要它自己盯着，需在本机再下一份 5.2GB 的判断模型，页面还写这份模型会随使用涨到更好的 15GB；跳过的话 @minea 仍能用，自动盯屏幕保持关闭。官网隐私表写：决定要不要开口所用的屏幕内容留在这台 Mac 上。需要打开屏幕录制和辅助功能，然后重启应用。页面标 v1.1.4，写明外拨电话不响、响了也听不见，以及 10 月 3 日至 23 日打不开的启动问题都已修好。下载行写 Apple 芯片约 192MB、Intel 约 203MB；无 Claude 账号可试 30 次、不绑卡，定价未定，有 Claude 账号则走你自己的订阅。英文说明写安装包经 Apple 公证，Mac 要 macOS 11 或更新。界面和它对你说的话是英文，但页面写明打电话的声音仍是韩语，页内短片字幕也标着韩语。合上盖子它就停。仓库许可写明不公开应用源码，只许个人使用，不许修改再分发，本条不称开源。本库没有安装这个 Mac 应用，没有打开屏幕录制或辅助功能，没有连接 iPhone、Telegram 或 Chrome 扩展，也没有把演示看完。",
+      "summaryEn": "Minea (https://minea.minea.workers.dev/en , by suji park, repo sujipar/minea) is what the site calls the Mac secretary that acts before you ask. It watches your screen, mail, and messages and pulls out appointments, deadlines, and things that need a reply. It can create, move, and delete Calendar and Reminders events, including two-way Google Calendar. Replies are drafts until you press send. Payments and bookings stop before the last button. It can call you before an appointment, and if you went to bed late it pushes the wake-up call back 30 minutes unless something is scheduled right after. You can hand it work from an iPhone, Telegram, or the lock screen. In any text field, @minea, @MINEA, and Korean @미네아 all work. Letting it watch on its own downloads a 5.2GB on-device judgement model; the page also says that model grows toward a better 15GB as you use it. Skip the download and @minea still works, while autonomous watching stays off. The privacy table says screen contents used to decide whether to speak stay on the Mac. Setup needs Screen Recording and Accessibility, then a restart. The page marks v1.1.4 and says outgoing calls that did not ring, calls you could not hear, and a launch failure from 3–23 October are fixed. The download lines list about 192MB for Apple silicon and about 203MB for Intel. Without a Claude account there are 30 trial runs and no card; pricing is not set. A Claude account uses your own subscription. The English readme says the build is notarized by Apple and needs macOS 11 or later. The interface and what it says to you are in English, but the page says the voice that calls you is still Korean, and the short clip’s captions are labeled Korean. Close the lid and it stops. The repo license says the app source is not published, personal use of the downloaded app is allowed, and modification or redistribution is not, so this entry does not call it open source. This library did not install the Mac app, did not turn on Screen Recording or Accessibility, did not connect an iPhone, Telegram, or the Chrome extension, and did not watch the demo through.",
+      "categories": [
+        "automation"
+      ],
+      "role": "Mac secretary",
+      "sourceUrl": "https://minea.minea.workers.dev/en",
+      "secondaryUrls": [
+        "https://github.com/sujipar/minea",
+        "https://github.com/sujipar/minea/blob/main/README.en.md",
+        "https://github.com/sujipar/minea/blob/main/LICENSE.md",
+        "https://github.com/sujipar/minea/releases/tag/v1.1.4",
+        "https://news.ycombinator.com/item?id=50511627"
+      ],
+      "previewImage": "/previews/minea.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "回信只起草，发送、付款和预订的最后一下必须你自己按。屏幕录制和辅助功能要你在本机打开。本库没有代为安装、授权、打电话或外发。",
+      "approvalBoundaryEn": "Mail is drafted only; you press send, and you press the last button on a payment or booking. Screen Recording and Accessibility stay your choice on the Mac. This library did not install, grant those permissions, place a call, or send anything.",
+      "connectors": [
+        "Calendar",
+        "Reminders",
+        "Google Calendar",
+        "Mail",
+        "Telegram",
+        "Chrome",
+        "Claude"
+      ],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-16T01:15:00Z",
+      "qualityNote": "收录理由：它会自己看屏幕、邮件和日历，回信和付款有明确的人停点，和「你问一句它才动」的聊天不一样。边界：官网英文页和仓库英文说明都没有写「不抢光标」，Show HN 标题里的那句不当成产品事实。仓库写明不公开源码，不要当成开源。合上笔记本盖子它会停。打电话的声音，页面写明仍是韩语。本库没有安装，没有授予屏幕录制或辅助功能，没有连接 iPhone、Telegram 或浏览器扩展，也没有把演示看完。",
+      "qualityNoteEn": "Why listed: it watches the screen, mail, and calendar on its own, and mail plus payments have a clear human stop, which is a different shape from a chat that waits for a prompt. Limits: the official English page and the English readme never say it avoids taking the cursor, so the Show HN headline is not treated as a product fact. The repo says the app source is not published, so this is not open source. Closing the lid stops it. The page says the calling voice is still Korean. This library did not install it, did not grant Screen Recording or Accessibility, did not connect an iPhone, Telegram, or a browser extension, and did not watch the demo through.",
+      "verifyLog": "2026-11-16 上午（Asia/Shanghai）：https://minea.minea.workers.dev/en HTTP 200，title “MINEA — the Mac secretary that acts before you ask”。页内英文没有 cursor / steal。首屏 “It acts before you ask”，v1.1.4 修复条、Download MINEA、macOS 11+、Intel 约 203MB、Apple 芯片约 192MB、30 free runs。隐私表写决定要不要开口的屏幕内容不离开这台 Mac；邮件由本机模型读完，只放行少数已过滤的行，银行/券商/信用卡内容不看，账号与证件号会打码。速度表写应用 192–364MB，判断模型 5.2GB 并可能涨到 15GB；合盖即停。https://minea.workers.dev 在本环境 DNS 无法解析（curl 退出码 6），没有用它做截图，也没有复现到 HTTP 500。Algolia item 50511627：作者 sujisss，创建 2026-11-15T22:39:55Z（上海 11-16 06:39），3 points，1 条评论（ydna404：视频是韩语，很难看清在做什么），标题含 “never steals your cursor (36-min raw run)”，故事 URL 已是英文页。英文页嵌的短片标 29 seconds、字幕韩语；本库没有把这段或标题里的 36 分钟演示看完，英文页上也没有再找到一支 36 分钟播放器。仓库 https://github.com/sujipar/minea ：gh api license.spdx_id NOASSERTION，stargazers_count 2，created 2026-09-16T03:57:02Z，pushed 2026-10-27T10:03:52Z，homepage 为英文站。LICENSE.md 韩文写明不公开应用源码，个人使用可以，不许修改、再分发或重做售卖。README.en.md 写 Apple 公证、30 次免费、Claude Pro 或 Max、TestFlight（iOS 16+，链接未打开）、5.2GB。Release v1.1.4 发布于 2026-10-27T10:03:38Z，资产 MINEA-arm64.dmg / x64 / universal，韩文说明写三份都已公证；本库没有下载 dmg。sourceType 用 community：schema.md 与 SourceType 没有 show-hn。预览为无头 Chrome 1200×800 视口打开英文页后的截图，sharp 存成 3:2 WebP。没有安装应用，没有授予屏幕录制或辅助功能，没有连接 iPhone、Telegram、Chrome 扩展或 Claude，没有注册或付款。",
+      "verifyLogEn": "2026-11-16 morning (Asia/Shanghai): https://minea.minea.workers.dev/en HTTP 200, title “MINEA — the Mac secretary that acts before you ask”. The English HTML has no “cursor” or “steal”. Hero: “It acts before you ask”, the v1.1.4 fix note, Download MINEA, macOS 11+, about 203MB Intel, about 192MB Apple silicon, 30 free runs. The privacy table says screen contents used to decide whether to speak never leave the Mac; a local model reads mail and only a few filtered lines leave; bank, brokerage, and card messages are skipped and account or ID numbers are masked. The speed table lists the app at 192–364MB and a 5.2GB judgement model that can grow toward 15GB; closing the lid stops it. https://minea.workers.dev did not resolve here (curl exit 6), so it was not used for the screenshot and an HTTP 500 was not reproduced. Algolia item 50511627: author sujisss, created 2026-11-15T22:39:55Z (06:39 on 16 Nov in Shanghai), 3 points, 1 comment (ydna404: the video is in Korean, so it is hard to tell what is happening), title includes “never steals your cursor (36-min raw run)”, and the story URL is already the English page. The embedded clip is labeled 29 seconds with Korean captions. That clip and the 36-minute demo named in the title were not watched through, and no 36-minute player was found on the English page. Repo https://github.com/sujipar/minea : gh api license.spdx_id NOASSERTION, stargazers_count 2, created 2026-09-16T03:57:02Z, pushed 2026-10-27T10:03:52Z. LICENSE.md says the app source is not published; personal use is allowed; modification, redistribution, and resale are not. README.en.md says Apple notarization, 30 free runs, Claude Pro or Max, TestFlight for iOS 16+ (link not opened), and the 5.2GB model. Release v1.1.4 published 2026-10-27T10:03:38Z with arm64, x64, and universal dmgs; the Korean notes say all three are notarized. No dmg was downloaded. sourceType is community because schema.md and the SourceType union do not list show-hn. Preview is a headless Chrome 1200×800 viewport shot of the English page, saved with sharp as 3:2 WebP. The app was not installed; Screen Recording and Accessibility were not granted; iPhone, Telegram, the Chrome extension, and Claude were not connected; no signup and no payment."
+    },
+    {
+      "id": "minute",
+      "slug": "minute",
+      "title": "Minute：免费离线的 Mac 会议笔记，不派机器人进会",
+      "titleEn": "Minute: free offline meeting notes on your Mac, with no bot in the call",
+      "kind": "tool",
+      "hook": "免费离线会议笔记：本机录音写摘要，不派机器人进会。",
+      "hookEn": "Free offline meeting notes. Your Mac records and summarizes; no bot joins.",
+      "summary": "Minute（https://minutenotes.app ，仓库 mraza007/minute，MIT）是免费、不用账号的 Mac 离线会议笔记：在你自己的机器上录音、转写并写摘要，不派机器人加入 Zoom、Teams、Meet、Slack、FaceTime、Webex 或 Discord。它录麦克风；macOS 13 及以后还可以录系统音频，这需要屏幕录制权限，没有这项权限就只录麦克风。转写用本机 Whisper，摘要、决定和待办用本机语言模型，有说话人标签；可以向这一场会提问，回答带时间戳。可选把摘要写进 Obsidian，或导出 Markdown。会议检测默认关闭。模型第一次下载之后可以断网使用。官网写 v1.14.0，经 Apple 签名并公证，需要 macOS 11 或更新；会议应用不退出时要察觉通话结束，需要 macOS 14.2 或更新。Apple 芯片是已测过的目标；FAQ 写 Intel 构建还没有在真正的 Intel 机器上测过，大号 Whisper 需要 Apple 芯片，小模型要 8GB 内存、大模型要 16GB。官网写它是带 whisper.cpp 和 llama.cpp 的 Rust 应用，没有 Electron，也没有 Python 运行时。对照表把自己和 Granola、Otter 放在一起，并写这些价格是 2026-11-10 对照对方页面核对的：Granola Basic 0 美元、Business 每用户每月 14 美元；Otter Basic 免费、Pro 每用户每月 16.99 美元。本库没有再打开那两家的价目页。这是公开网站的再展示，2026 年 7 月已经有过一次以仓库为主的 Show HN，不是今天才发明的产品。它也不是本库已有的 meeting-notes-tasks：那条是 Grok Bot 配 Granola 的用法，Minute 是本机 Mac 应用。本库没有下载，也没有运行这个应用。",
+      "summaryEn": "Minute (https://minutenotes.app , repo mraza007/minute, MIT) is a free, no-account Mac app for offline meeting notes. It records, transcribes, and writes the summary on your machine, and no bot joins Zoom, Teams, Meet, Slack, FaceTime, Webex, or Discord. It records the microphone and, on macOS 13 or later, system audio, which needs the Screen Recording permission; without that permission it records the microphone only. Local Whisper transcribes. A local language model writes the summary, decisions, and action items, with speaker labels. You can ask the meeting a question and the answer cites a timestamp. Obsidian and Markdown export are optional. Meeting detection is off by default. After the first model download it works offline. The site lists v1.14.0, signed and notarized by Apple, for macOS 11 or later; noticing that a call ended while the meeting app stays open needs macOS 14.2 or later. Apple silicon is the tested target. The FAQ says the Intel build is not yet tested on real Intel hardware, large Whisper models need Apple silicon, and the smaller models need 8GB of memory while the larger ones need 16GB. The site says it is a Rust app with whisper.cpp and llama.cpp, with no Electron and no Python runtime. Its comparison table places itself next to Granola and Otter and says those prices were checked on 2026-11-10: Granola Basic $0 and Business $14 per user per month; Otter Basic free and Pro $16.99 per user per month. This library did not reopen those two pricing pages. This public site is a re-show: a Show HN pointed at the repo already existed in July 2026, so the product was not invented today. It is also not the existing meeting-notes-tasks entry, which is a Grok Bot playbook that uses Granola; Minute is a local Mac app. This library did not download or run the app.",
+      "categories": [
+        "automation"
+      ],
+      "role": "Offline meeting notes",
+      "sourceUrl": "https://minutenotes.app",
+      "secondaryUrls": [
+        "https://github.com/mraza007/minute",
+        "https://news.ycombinator.com/item?id=50510760",
+        "https://news.ycombinator.com/item?id=49088771"
+      ],
+      "previewImage": "/previews/minute.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "麦克风、系统音频，以及系统音频所需的屏幕录制，都要你在本机授权。本库没有代为下载或开麦。",
+      "approvalBoundaryEn": "The microphone, system audio, and the Screen Recording permission that system audio needs are granted on your Mac. This library did not download the app or open the mic.",
+      "connectors": [
+        "Whisper",
+        "llama.cpp",
+        "Obsidian"
+      ],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-16T01:15:00Z",
+      "qualityNote": "收录理由：本机 Whisper 加本地模型做会议摘要，不派机器人进会，免费且 MIT。边界：这是公开站点的再展示，2026 年 7 月已有一次 Show HN，不是今天的新发明。和已有的 meeting-notes-tasks 不是同一条，那条是 Grok Bot 配 Granola 的用法，Minute 是本机 Mac 应用。会议检测默认关闭，所以不算例行。FAQ 写 Intel 构建尚未在真 Intel 硬件上测过。Granola 与 Otter 的价格只转述 Minute 官网对照表，本库没有再打开那两家价目页。本库没有下载或运行这个 Mac 应用，没有开麦克风或屏幕录制。",
+      "qualityNoteEn": "Why listed: local Whisper plus a local model write the meeting summary, no bot joins the call, and the app is free under MIT. Limits: the public site is a re-show; a Show HN already existed in July 2026, so this is not a new invention today. It is not the existing meeting-notes-tasks entry, which is a Grok Bot playbook that uses Granola; Minute is a local Mac app. Meeting detection is off by default, so this is not filed as a routine. The FAQ says the Intel build is not yet tested on real Intel hardware. Granola and Otter prices are only what Minute’s own comparison table says; those pricing pages were not reopened. This library did not download or run the Mac app, and did not open the microphone or Screen Recording.",
+      "verifyLog": "2026-11-16 上午（Asia/Shanghai）：https://minutenotes.app HTTP 200，title “Minute: Free, Offline AI Note Taker for Mac”。首屏 “Meeting notes that never leave your Mac.”，Version 1.14.0 · Signed and notarized by Apple · macOS 11 or later。不入会的应用列表含 Zoom、Teams、Meet、Slack、FaceTime、Webex、Discord。系统音频要 macOS 13+ 与屏幕录制；会议检测默认关闭；通话结束检测要 macOS 14.2+。FAQ：免费、无账号、MIT、首次下载模型后可离线；Apple 芯片为已测目标，Intel 构建尚未在真 Intel 硬件上测试；小模型 8GB、大模型 16GB；Rust + whisper.cpp + llama.cpp + Metal，无 Electron、无 Python。对照表写 Granola Basic $0、Business $14 per user per month，Otter Basic free、Pro $16.99 per user per month，并注明 Checked on 10 November 2026 against granola.ai/pricing、granola.ai/security、otter.ai/pricing。本库没有再打开那三页。仓库 https://github.com/mraza007/minute ：gh api license SPDX MIT，stargazers_count 25，forks 2，created 2026-07-26T03:20:05Z，pushed 2026-11-12T01:21:53Z，homepage https://minutenotes.app 。Algolia 今日帖 item 50510760：作者 mr_o47，创建 2026-11-15T21:06:26Z（上海 11-16 05:06），5 points，拉取时 children 为空，URL https://minutenotes.app/ ，标题 “Minute – An Offline Meeting Notetaker Using Local LLMs”。更早帖 item 49088771：作者 mraza007，创建 2026-07-28T19:31:17Z，12 points，URL https://github.com/mraza007/minute ，标题 “Offline meeting notes on macOS with Whisper and llama.cpp”。publishedAt 用这次公开站点再展示的日期。sourceType 用 community，schema 不收 show-hn。预览为无头 Chrome 1200×800 视口打开官网后的截图，sharp 存成 3:2 WebP。没有下载安装包，没有运行应用，没有开麦克风、系统音频或屏幕录制。",
+      "verifyLogEn": "2026-11-16 morning (Asia/Shanghai): https://minutenotes.app HTTP 200, title “Minute: Free, Offline AI Note Taker for Mac”. Hero: “Meeting notes that never leave your Mac.” Version 1.14.0, signed and notarized by Apple, macOS 11 or later. Apps with no bot: Zoom, Teams, Meet, Slack, FaceTime, Webex, Discord. System audio needs macOS 13+ and Screen Recording. Meeting detection is off by default. Noticing a call ended while the meeting app stays open needs macOS 14.2+. FAQ: free, no account, MIT, offline after the first model download; Apple silicon is the tested target; the Intel build is not yet tested on real Intel hardware; 8GB for smaller models and 16GB for larger ones; Rust with whisper.cpp, llama.cpp, and Metal; no Electron and no Python. The comparison table says Granola Basic $0 and Business $14 per user per month, Otter Basic free and Pro $16.99 per user per month, “Checked on 10 November 2026” against granola.ai/pricing, granola.ai/security, and otter.ai/pricing. Those three pages were not reopened. Repo https://github.com/mraza007/minute : gh api license SPDX MIT, stargazers_count 25, forks 2, created 2026-07-26T03:20:05Z, pushed 2026-11-12T01:21:53Z, homepage https://minutenotes.app . Algolia item 50510760 (today’s thread): author mr_o47, created 2026-11-15T21:06:26Z (05:06 on 16 Nov in Shanghai), 5 points, empty children when fetched, URL https://minutenotes.app/ . Earlier item 49088771: author mraza007, created 2026-07-28T19:31:17Z, 12 points, URL https://github.com/mraza007/minute . publishedAt is the date of this public-site re-show. sourceType is community because the schema does not list show-hn. Preview is a headless Chrome 1200×800 viewport shot of the official site, saved with sharp as 3:2 WebP. The installer was not downloaded, the app was not run, and the microphone, system audio, and Screen Recording were not enabled."
+    },
+    {
+      "id": "turbo-browser-mcp",
+      "slug": "turbo-browser-mcp",
+      "title": "Turbo-Browser-MCP：给编程助手的浏览器 MCP，提交前先停",
+      "titleEn": "Turbo-Browser-MCP: a browser MCP for coding agents that stops before submit",
+      "kind": "tool",
+      "hook": "编程助手用的浏览器 MCP：一次填表，提交前先停。",
+      "hookEn": "A browser MCP for coding agents: fill the form, then stop before submit.",
+      "summary": "Turbo-Browser-MCP（https://github.com/Tthanh2k6/turbo-browser-mcp ，MIT，package.json 与 README 徽标写 v0.5.0，需要 Node.js 20 或更新）是给编程助手用的浏览器 MCP 服务，不是个人秘书。它把许多细碎的浏览器操作收成更少的工具：页面快照可以只返回变化过的部分；一次填完表单，包括 React 控件、Shadow DOM 和 iframe；文件用磁盘路径上传，不把文件内容塞进对话；可以并行开标签；可以按预设挡住图片和媒体。默认在提交、发布或付款这一类按钮前停住，要明确放行才继续。文首写收成 10 个工具，后面的工具表列出 11 个，多出来的是把某一步交给人接手。README 有一张作者自己跑出来的 token 与回合对照表，本库没有复跑，那些数字不当成已经核实的成绩。它和尚未进入本目录的 Agweb 不是同一个东西：Agweb 是 macOS 上的代理浏览器，这一条是接到编程助手的 MCP 服务。本库没有安装，也没有拿它去打开任何真实网站。",
+      "summaryEn": "Turbo-Browser-MCP (https://github.com/Tthanh2k6/turbo-browser-mcp , MIT, v0.5.0 in package.json and on the README badge, Node.js 20 or newer) is a browser MCP server for coding agents, not a personal secretary. It batches many small browser actions into fewer tools: a page snapshot can return only what changed; one call can fill a form, including React controls, Shadow DOM, and iframes; files upload from a disk path instead of placing the file contents in the chat; tabs can open in parallel; image and media requests can be blocked with a preset. By default it stops before buttons that look like submit, publish, or pay, and continues only if that is explicitly allowed. The opening says the surface is 10 tools; the later tool table lists 11, the extra one hands a step to a person. The README includes the author’s own token and turn comparison table. This library did not re-run it, so those figures are not treated as checked results. It is not the same thing as Agweb, which is not in this catalog yet: Agweb is a macOS agent browser, and this entry is an MCP server for a coding agent. This library did not install it and did not point it at any real site.",
+      "categories": [
+        "coding",
+        "automation"
+      ],
+      "role": "Browser MCP server",
+      "sourceUrl": "https://github.com/Tthanh2k6/turbo-browser-mcp",
+      "secondaryUrls": [
+        "https://github.com/Tthanh2k6/turbo-browser-mcp/blob/main/README.md",
+        "https://github.com/Tthanh2k6/turbo-browser-mcp/blob/main/package.json",
+        "https://news.ycombinator.com/item?id=50503930"
+      ],
+      "previewImage": "/previews/turbo-browser-mcp.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "默认会在提交、发布或付款按钮前停住，放行要你自己决定。本库没有安装，也没有拿它去打开真实网站。",
+      "approvalBoundaryEn": "By default it stops before a submit, publish, or payment button, and allowing that click is your decision. This library did not install it or point it at a real site.",
+      "connectors": [
+        "MCP",
+        "Node.js"
+      ],
+      "publishedAt": "2026-11-15",
+      "updatedAt": "2026-11-16T01:15:00Z",
+      "qualityNote": "收录理由：这是编程助手用的浏览器 MCP，把填表、快照和多标签收成更少的调用，并默认在提交前停住，适合跨页面的浏览器流程。它不是私人秘书。尚未进入本目录的 Agweb 是另一类 macOS 代理浏览器，不要当成重复条目。边界：README 自称能省 token 和来回回合，数字是作者自测，本库没有复跑。文首和工具表的工具个数不一致（10 与 11）。本库没有安装，没有跑它的对照脚本，也没有用它打开真实网站。",
+      "qualityNoteEn": "Why listed: a browser MCP for coding agents that batches form fills, snapshots, and tabs into fewer calls and stops before submit by default, which fits cross-page browser work. It is not a personal secretary. Agweb, which is not in this catalog yet, is a different kind of macOS agent browser, so this is not a duplicate. Limits: the README claims token and turn savings, the figures are the author’s own run, and this library did not re-run them. The opening and the tool table disagree on the tool count (10 versus 11). This library did not install it, did not run its comparison script, and did not open a real site with it.",
+      "verifyLog": "2026-11-16 上午（Asia/Shanghai）：https://github.com/Tthanh2k6/turbo-browser-mcp HTTP 200。gh api：license SPDX MIT，stargazers_count 106，forks 6，created 2026-11-14T12:11:07Z，pushed 2026-11-15T14:05:38Z，homepage 空。package.json name turbo-browser-mcp、version 0.5.0、license MIT、engines node >=20.0.0、dependencies 仅 playwright-core >=1.49.0。README 原文写 “Playwright-based” MCP，把 25–33 个细操作收成 10 个批量工具；后文 “All 11 Tools” 含 wait_for_human。默认 allowSubmit=false，提交/发布/付款类按钮要显式放行。README 基准表（benchmarks/benchmark.mjs，作者自称 headless Chromium 与 tiktoken o200k_base）列出压缩快照、增量 DOM、一次填 10 字段、磁盘上传等 token/回合数字；本库没有 npm install，没有 npm run benchmark，没有对这些数字做独立复核。README 徽标写 407 passing（86 suites），文末 Verification 又写 424 passing / 87 suites，两处不一致，测试没有跑。Algolia item 50503930：作者 tthanh2k6，创建 2026-11-15T04:09:11Z（上海 11-15 12:09），47 points，9 条评论，标题 “Turbo-Browser-MCP – Batch forms, DOM deltas and submit guards for MCP”，URL 即本仓库。作者评论写 MIT、Node >= 20、playwright-core only。sourceType 用 community，schema 不收 show-hn。读者向字段不写 Playwright：构建检查把这个词当成截图日志；README 原文只留在本核验记录。Agweb 在未合并的草稿 PR #160，不在 main，本条不把它写成已上线。预览为无头 Chrome 1200×800 视口打开仓库页（文件列表与 About 侧栏）后的截图，sharp 存成 3:2 WebP；README 主体是表格，没有另做假界面。没有安装，没有对第三方网站开浏览器会话。",
+      "verifyLogEn": "2026-11-16 morning (Asia/Shanghai): https://github.com/Tthanh2k6/turbo-browser-mcp HTTP 200. gh api: license SPDX MIT, stargazers_count 106, forks 6, created 2026-11-14T12:11:07Z, pushed 2026-11-15T14:05:38Z, empty homepage. package.json name turbo-browser-mcp, version 0.5.0, license MIT, engines node >=20.0.0, dependency playwright-core >=1.49.0 only. The README calls it a Playwright-based MCP that batches 25–33 fine-grained primitives into 10 tools; the later “All 11 Tools” table adds wait_for_human. Default allowSubmit=false blocks submit, publish, and payment-like buttons unless explicitly allowed. The README benchmark table (benchmarks/benchmark.mjs, described by the author as headless Chromium with tiktoken o200k_base) lists token and turn figures for compact snapshots, DOM deltas, a 10-field fill, and disk upload. This library did not npm install, did not run npm run benchmark, and did not independently check those figures. The README badge says 407 passing (86 suites) while the Verification section says 424 passing across 87 suites; tests were not run. Algolia item 50503930: author tthanh2k6, created 2026-11-15T04:09:11Z (12:09 on 15 Nov in Shanghai), 47 points, 9 comments, title “Turbo-Browser-MCP – Batch forms, DOM deltas and submit guards for MCP”, URL is this repo. The author’s comment says MIT, Node >= 20, playwright-core only. sourceType is community because the schema does not list show-hn. Reader-facing fields omit the word Playwright because the build lint treats it as capture-log wording; the README’s wording stays in this log. Agweb is in unmerged draft PR #160, not on main, and is not described as already live. Preview is a headless Chrome 1200×800 viewport shot of the repo page (file list and About sidebar), saved with sharp as 3:2 WebP. The README body is mostly tables; no fake UI was drawn. Not installed, and no browser session was driven against a third-party site."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11582,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-16T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11883,21 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://minea.minea.workers.dev/en",
+      "https://github.com/sujipar/minea",
+      "https://github.com/sujipar/minea/blob/main/README.en.md",
+      "https://github.com/sujipar/minea/blob/main/LICENSE.md",
+      "https://github.com/sujipar/minea/releases/tag/v1.1.4",
+      "https://news.ycombinator.com/item?id=50511627",
+      "https://minutenotes.app",
+      "https://github.com/mraza007/minute",
+      "https://news.ycombinator.com/item?id=50510760",
+      "https://news.ycombinator.com/item?id=49088771",
+      "https://github.com/Tthanh2k6/turbo-browser-mcp",
+      "https://github.com/Tthanh2k6/turbo-browser-mcp/blob/main/README.md",
+      "https://github.com/Tthanh2k6/turbo-browser-mcp/blob/main/package.json",
+      "https://news.ycombinator.com/item?id=50503930"
     ]
   }
 }
