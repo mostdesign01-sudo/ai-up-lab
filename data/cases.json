@@ -1,6 +1,54 @@
 {
   "cases": [
     {
+      "id": "touchsynth",
+      "slug": "touchsynth",
+      "title": "TouchSynth：用 Claude Code 和 KiCad 做出一块能出声的模拟合成器板",
+      "titleEn": "TouchSynth: an analog synthesizer board that makes sound, made with Claude Code and KiCad",
+      "kind": "showcase",
+      "hook": "用 Claude Code 和 KiCad 做出能出声的合成器板。",
+      "hookEn": "Claude Code and KiCad produced an analog synth board that makes sound.",
+      "summary": "TouchSynth 是作者 Tim（GitHub cpldcpu）做完的一块 MCU 控制的模拟单音合成器。2026-11-14 的博客写：他在 VS Code 里用 Claude Code 和 Claude Opus 5.5，从空文件夹开始，把零件范围指到 JLCPCB 的免费零件表；KiCad 10 在 Windows 上，ngspice、pdflatex、RISC-V 工具链和 Python 走 WSL。作者审过设计，并写自己没有手改电路。成品是 100×100 mm 的四层板，没有电位器和机械开关：13 个电容触摸键，加上 SHIFT、减号和加号（README 的关键数字表把这 16 个触点写成经两片 CD4051 扫描），16 颗 LED。MCU 是 CH32V003、V002 或 V006。模拟声部是 DCO（TL072 积分器，由 MCU 定时器复位）、24 dB/oct 晶体管梯形 VCF（BC847BS；同一份 README 的关键数字表写成 −23 dB/oct，两套都留着）、差分对 VCA，以及可选的 MIDI 输入。设计署名是 cpldcpu 与 Claude Opus 5.5。README 写贴装件来自 JLCPCB 的 Basic 或 Promotional Extended，40 行 BOM、196 个贴装位，按标价大约每板 3.65 美元零件；MCU、排针和 MIDI 零件是手焊的。同一页的关键数字表又写 242 个零件，和 196 个贴装位并记，都是作者给出的数字。状态日期写在 README 的 2026-10-18：board 1（rev 0.1，CH32V006）已经做出并点亮，通过 T1、T2 和 T4 到 T12（噪声大约 −55 dB，作者标成勉强），T3（触摸扫描率）和 T14（MIDI）没有测。固件 0.1 能跑，包括多轨示范；校准存在 flash 里这件事还没做。作者写触摸键太灵敏，物理尺寸也偏小，所以经常改由 MCU 里的程序来演奏。点亮时他经 SSH 连到实验室电脑，示波器（MSO5074）接在音频输出，音频再环回进 MCU 的 ADC。博客写第一次是两层板，Freerouting 没有布完，换成四层叠层之后 DRC 干净；板子大约两周回来；他提到的唯一硬件修补，是自己手焊 MCU 时造成的连锡。SPICE 的 S1 到 S4 和 Board 1 对得上，是作者的判断。作者的时间表写，从第一次提示到生成下单文件大约 19 小时，其中大部分是不用人守着的布线。音频从 board 1 的线路输出录出；合成器是单音的，多轨曲子是一个声部一个声部录完再混。仓库和项目站有硬件与行为模型的对照，包括示范、Purcell 的 Queen Mary's March、Bach BWV 565 的片段，README 里还有别的曲子。项目站写页面上可点的键盘只是浏览器里的锯齿波草图，不是电路发出的声音；标明 Board 1 的录音才是第一块板的线路输出。许可是 MIT。本库没有跑 Claude Code，没有打开 KiCad 工程，没有下单或组装，没有把音频听完，也没有重做作者的测量。",
+      "summaryEn": "TouchSynth is a finished MCU-controlled analog monophonic synthesizer by Tim (GitHub cpldcpu). The 14 November 2026 blog says he used Claude Code with Claude Opus 5.5 in VS Code, starting from a blank folder, and pointed the agent at the JLCPCB free parts list. KiCad 10 ran on Windows; ngspice, pdflatex, the RISC-V toolchain, and Python ran in WSL. He reviewed the design and says he did not change the circuit by hand. The result is a 100×100 mm, 4-layer board with no potentiometers and no mechanical switches: 13 capacitive touch keys plus SHIFT, minus, and plus (the README key-numbers table describes those 16 pads as scanned through two CD4051s) and 16 LEDs. The MCU is a CH32V003, V002, or V006. The analog voice is a DCO (a TL072 integrator reset by the MCU timer), a 24 dB/oct transistor-ladder VCF (BC847BS; the same README’s key-numbers table says −23 dB/oct, and both figures stay), a differential-pair VCA, and optional MIDI in. The design credit is cpldcpu and Claude Opus 5.5. The README says the assembled parts are JLCPCB Basic or Promotional Extended parts: 40 BOM lines, 196 placements, about USD 3.65 of parts per board at list price. The MCU, headers, and MIDI parts are hand-soldered. The key-numbers table on the same page says 242 parts, which stays next to the 196 placements; both numbers are the author’s. The status date in the README is 18 October 2026: board 1 (rev 0.1, CH32V006) is built and brought up. It passes T1, T2, and T4 through T12 (noise marginal at about −55 dB); T3 (touch scan rate) and T14 (MIDI) were not measured. Firmware 0.1 runs, including multitrack demo pieces. Storing calibration in flash is still open. The author says the touch keys were too sensitive and physically small, so he often drove the instrument from MCU programs instead. For bring-up he used SSH to a lab PC, an MSO5074 oscilloscope on the audio output, and an audio loopback into the MCU ADC. The blog says the first route was 2-layer and Freerouting never finished, then a 4-layer stack-up was DRC clean; the boards came back in about two weeks; the only hardware fix he mentions is a solder bridge on the MCU that he introduced while hand-soldering. The match between SPICE benches S1 through S4 and Board 1 is the author’s claim. His log says about 19 hours from the first prompt to the ordering files, most of it unattended routing. Audio was recorded from board 1’s line out. The synth is monophonic, so multitrack pieces were played one part at a time and mixed. The repo and the project site have hardware-versus-model comparisons, including the demo, Purcell’s Queen Mary's March, and a Bach BWV 565 excerpt, and the README lists further pieces. The project site says the clickable keyboard on the page is a browser saw-wave sketch, not the circuit; recordings marked Board 1 are the line output of the first board. The license is MIT. This library did not run Claude Code, did not open the KiCad project, did not order or assemble a board, did not play the audio through, and did not repeat the author’s measurements.",
+      "categories": [
+        "engineering",
+        "coding"
+      ],
+      "role": "Claude Code · Claude Opus 5.5",
+      "sourceUrl": "https://cpldcpu.github.io/2026/11/14/touchsynth/",
+      "secondaryUrls": [
+        "https://github.com/cpldcpu/TouchSynth",
+        "https://cpldcpu.github.io/TouchSynth/",
+        "https://news.ycombinator.com/item?id=50512933"
+      ],
+      "previewImage": "/previews/touchsynth.webp",
+      "sourceType": "case-study",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "下单打板、手焊、给 MCU 烧录，以及把示波器接到实验室电脑，都要人自己确认。本库没有代下单、代焊接或代测量。",
+      "approvalBoundaryEn": "Ordering boards, hand-soldering, flashing the MCU, and connecting a scope to a lab PC need a person to confirm. This library did not order, solder, or measure for you.",
+      "connectors": [
+        "Claude Code",
+        "Claude Opus 5.5",
+        "KiCad",
+        "ngspice",
+        "JLCPCB",
+        "VS Code",
+        "WSL"
+      ],
+      "publishedAt": "2026-11-14",
+      "updatedAt": "2026-11-16T12:20:00Z",
+      "qualityNote": "收录理由：这是一篇做完的个人硬件记录，Claude Code 和 Claude Opus 5.5 从空文件夹做到一块能出声的模拟合成器板，仓库以 MIT 公开，作者是 cpldcpu。它是作者自己的板子和文章，不是一个可注册的托管产品。边界：电路没有手改、SPICE 和 Board 1 对得上、两层改成四层、大约两周回板、唯一的硬件修补是作者自己焊上的 MCU 连锡，都是博客里的说法。README 把 2026-10-18 的状态写成 board 1（rev 0.1，CH32V006）已做出并点亮。图用的是作者博客上的电路板渲染，署名 cpldcpu。本库没有跑 Claude Code，没有打开 KiCad 工程，没有下单或组装电路板，没有把音频听完，也没有重做作者的测量。",
+      "qualityNoteEn": "Why it belongs: a finished personal hardware write-up in which Claude Code and Claude Opus 5.5 go from a blank folder to an analog synthesizer board that makes sound. The repo is public under MIT and the author is cpldcpu. It is the author’s own board and article, rather than a hosted product with accounts. Boundary: the unedited circuit, the SPICE-to-Board-1 match, the move from two layers to four, the roughly two-week turnaround, and the only hardware fix being an MCU solder bridge the author introduced are all statements in the blog. The README dates the 18 October 2026 status as board 1 (rev 0.1, CH32V006) built and brought up. The image is the author’s PCB render on the blog, credited to cpldcpu. This library did not run Claude Code, did not open the KiCad project, did not order or assemble a board, did not play the audio through, and did not repeat the author’s measurements.",
+      "verifyLog": "2026-11-16T12:20:00Z（上海 20:20）核对。博客 https://cpldcpu.github.io/2026/11/14/touchsynth/ HTTP 200，标题 Agentic AI Designs an Analog Synthesizer · Tim's Blog，日期 14 November 2026。正文有 Claude Code with Opus 5.5 in VS Code、blank project folder、JLCPCB free parts list、KiCad 10 on Windows、WSL 上的 ngspice、pdflatex、RISC-V toolchain、Python；作者写 reviewed the design, but without changing anything。布线日志：2-layer Freerouting never fully routed，随后 4-layer、DRC clean；从第一次提示到下单约 19 小时。回板 about two weeks。示波器 MSO5074，SSH 到 lab PC，audio loopback。唯一硬件修补是作者手焊造成的 MCU solder bridge。SPICE S1-S4 与 Board 1 的吻合是作者的判断。触摸键 initially too sensitive、small size。项目站 https://cpldcpu.github.io/TouchSynth/ HTTP 200，标题 TouchSynth: an analog mono synth on a 100 mm PCB。页面写 100×100 mm、13 capacitive touch keys、CH32V003 / V002 / V006、24 dB/oct、4-layer、about USD 3.65，并写 Render of the board；可点键盘那句写 That sound is a rough sketch made by your browser, not the circuit。录音说明是 line output、one part per take。README raw master HTTP 200。设计行 Design: cpldcpu & Claude Opus 5.5。状态段日期 2026-10-18，board 1 rev 0.1 CH32V006，T1、T2、T4–T12，噪声 about −55 dB，T3 与 T14 未测，固件 0.1，校准存储仍 open。BOM：40 lines、196 placements、about USD 3.65 at list price；MCU、headers、MIDI 手焊。关键数字表另写 242 parts、166 nets、滤波器 −23 dB/oct、16 pads via 2 × CD4051，与开头的 196 placements 和 24 dB/oct 并记。音频表有 demo、Purcell Queen Mary's March、Bach BWV 565、Aerosphere、suite。gh api repos/cpldcpu/TouchSynth：license MIT，default_branch master，stargazers_count 1，forks 0，created_at 2026-10-17T15:28:50Z，pushed_at 2026-11-15T18:35:43Z，description Analog Monophonic Synthesizer with a touch keyboard。星数只记在这里。HN item 50512933，标题 Agentic AI Designs an Analog Synthesizer，作者 oidar，created_at 2026-11-16T01:28:10Z，页面 score 与 Algolia 都是 14 points。预览用博客 featured.png（https://cpldcpu.github.io/2026/11/14/touchsynth/featured.png），HTTP 200，1992×1992，是电路板渲染，不是本库拍的实物。缩成 800×800 后左右补黑边装进 1200×800 WebP，整块板都在画面里。没有克隆后打开 KiCad，没有下单，没有焊接，没有把 mp3 听完，没有重做测量。",
+      "verifyLogEn": "Checked at 2026-11-16T12:20:00Z (20:20 Asia/Shanghai). Blog https://cpldcpu.github.io/2026/11/14/touchsynth/ HTTP 200, title Agentic AI Designs an Analog Synthesizer · Tim's Blog, dated 14 November 2026. The body includes Claude Code with Opus 5.5 in VS Code, a blank project folder, the JLCPCB free parts list, KiCad 10 on Windows, and ngspice, pdflatex, the RISC-V toolchain, and Python under WSL. The author says he reviewed the design but did not change it. The routing log: 2-layer Freerouting never fully routed, then a 4-layer board that was DRC clean; about 19 hours from the first prompt to the order. Boards returned in about two weeks. Scope MSO5074, SSH to a lab PC, audio loopback. The only hardware fix is an MCU solder bridge the author introduced while hand-soldering. The S1–S4 versus Board 1 match is the author’s claim. Touch keys were initially too sensitive and small. Project site https://cpldcpu.github.io/TouchSynth/ HTTP 200, title TouchSynth: an analog mono synth on a 100 mm PCB. It says 100×100 mm, 13 capacitive touch keys, CH32V003 / V002 / V006, 24 dB/oct, 4-layer, about USD 3.65, and Render of the board. The clickable keys are described as a rough browser sketch, not the circuit. Recordings are line output, one part per take. README on raw master HTTP 200. Design line: cpldcpu & Claude Opus 5.5. Status paragraph dated 2026-10-18, board 1 rev 0.1 CH32V006, T1, T2, T4–T12, noise about −55 dB, T3 and T14 not measured, firmware 0.1, calibration storage still open. BOM: 40 lines, 196 placements, about USD 3.65 at list price; MCU, headers, and MIDI hand-soldered. The key-numbers table also says 242 parts, 166 nets, filter −23 dB/oct, and 16 pads via 2 × CD4051, kept beside the intro’s 196 placements and 24 dB/oct. The audio table lists the demo, Purcell Queen Mary's March, Bach BWV 565, Aerosphere, and a suite. gh api repos/cpldcpu/TouchSynth: license MIT, default_branch master, stargazers_count 1, forks 0, created_at 2026-10-17T15:28:50Z, pushed_at 2026-11-15T18:35:43Z, description Analog Monophonic Synthesizer with a touch keyboard. The star count stays here. HN item 50512933, title Agentic AI Designs an Analog Synthesizer, author oidar, created_at 2026-11-16T01:28:10Z; the page score and Algolia both read 14 points. The preview is the blog featured.png (https://cpldcpu.github.io/2026/11/14/touchsynth/featured.png), HTTP 200, 1992×1992, a PCB render, not a photo taken here. It is scaled to 800×800 and padded with black side bars into a 1200×800 WebP so the whole board stays in frame. The KiCad project was not opened after a clone, no board was ordered or soldered, the mp3s were not played through, and the measurements were not repeated."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11495,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-16T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 216,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11796,12 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://cpldcpu.github.io/2026/11/14/touchsynth/",
+      "https://cpldcpu.github.io/TouchSynth/",
+      "https://github.com/cpldcpu/TouchSynth",
+      "https://news.ycombinator.com/item?id=50512933",
+      "https://cpldcpu.github.io/2026/11/14/touchsynth/featured.png"
     ]
   }
 }

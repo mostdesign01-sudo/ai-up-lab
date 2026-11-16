@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-16",
+      "title": "晚间收录 2026-11-16：Models +1（Qwen4-Max）、Cases +1（TouchSynth）",
+      "titleEn": "Evening catalog 2026-11-16: Models +1 (Qwen4-Max), Cases +1 (TouchSynth)",
+      "body": "Models：qwen4-max（Alibaba (Qwen)，2026-11-16）。Model Studio 文档的模型 ID 是 qwen4-max，输入文本、图像、视频，输出文本，上下文 1,000,000。牌价是人民币：多数区域每百万 token 输入 CNY 10、输出 CNY 30，新加坡国际 CNY 10.938 / 32.813。阿里云社区博文称稀疏 MoE、总参数 2.4 万亿、每 token 激活 710 亿，可在 QwenCloud 的 Token Plan 与 API 使用，Max 不开源权重；隐式缓存命中写成每百万 token 0.075 美元。Artificial Analysis 写智能指数 43，上下文显示 984k，与官方 1,000,000 并记。qwen.ai/blog 是客户端渲染，正文没有抽到。Cases：touchsynth（Tim / cpldcpu，博客 2026-11-14，MIT）。Claude Code 与 Claude Opus 5.5 从空文件夹做到 100×100 mm 四层模拟单音合成器；README 的 2026-10-18 状态写 board 1 已做出并点亮。两条预览都是 1200×800 WebP。本库没有登录 QwenCloud / Model Studio，没有开通 Token Plan，没有调用 API，没有复跑榜单；没有跑 Claude Code，没有打开 KiCad，没有下单或组装，没有把音频听完，没有重做测量。models 40→41（1.1.30→1.1.31），cases 215→216（1.4.77→1.4.78）。未改 HTML / Agent UI / 首页精选。未合并、未叠仍打开的 catalog-hold PR（#161、#160、#138–#159）。",
+      "bodyEn": "Models: qwen4-max (Alibaba (Qwen), 2026-11-16). The Model Studio docs use model id qwen4-max, with text, image, and video in, text out, and a 1,000,000 context. List prices are in CNY: most regions CNY 10 input and CNY 30 output per 1M tokens, Singapore International CNY 10.938 / 32.813. The Alibaba Cloud Community post describes a sparse MoE, 2.4 trillion total parameters, 71 billion active per token, availability on QwenCloud via the Token Plan and API, and closed weights for Max; implicit-cache-hit input is written as $0.075 per 1M tokens. Artificial Analysis lists an Intelligence Index of 43 and shows a 984k context, kept beside the official 1,000,000. qwen.ai/blog is client-rendered and its body was not extracted. Cases: touchsynth (Tim / cpldcpu, blog 2026-11-14, MIT). Claude Code and Claude Opus 5.5 go from a blank folder to a 100×100 mm 4-layer analog monosynth; the README status dated 2026-10-18 says board 1 is built and brought up. Both previews are 1200×800 WebP. This library did not sign in to QwenCloud or Model Studio, did not open a Token Plan, did not call the API, and did not re-run benchmarks; it did not run Claude Code, open the KiCad project, order or assemble a board, play the audio through, or repeat the measurements. models 40→41 (1.1.30→1.1.31), cases 215→216 (1.4.77→1.4.78). HTML / Agent UI / home picks unchanged. Still-open catalog-hold PRs (#161, #160, #138–#159) were not merged and this entry is not stacked on them."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
