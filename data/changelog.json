@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-11-17",
+      "title": "收录 Sac 的 HolyMolly 塞尔达风格 3D 演示",
+      "titleEn": "Catalog: Sac's HolyMolly Zelda-style 3D demo",
+      "body": "Cases：holymolly-zelda-style-demo（Sac / @Saccc_c，2026-11-17T11:01:15Z，台北 2026-11-17 19:01:15）。约 25 秒社区概念演示，左右分屏，作者归给 HolyMolly，并引用官方帖 2122604857127325911。官方产品页 https://holymolly.ai/ 只核对了公开标题，没有注册或试玩。kind showcase，分类 content 与 design。库里没有 HolyMolly 工具条目，不另开工具卡。不进提示词库，不进 HTML。底部时间和花费对照不写入正文。预览裁掉该行后做成 1200×800 WebP，视频文件不进仓库。已有 little-prince-across-the-stars 是另一条帖子，未改。相对 main 0042169：cases 217→218（1.4.79→1.4.80）。未改自动合并流程。",
+      "bodyEn": "Cases: holymolly-zelda-style-demo (Sac / @Saccc_c, 2026-11-17T11:01:15Z, 2026-11-17 19:01:15 Taipei). A community concept demo of about 25 seconds, split screen, credited by the author to HolyMolly, quoting official post 2122604857127325911. The product page https://holymolly.ai/ was checked for its public title only; no sign-up and no playtest. Kind showcase, categories content and design. The catalog had no HolyMolly tool entry, and this does not add a tool card. Not the prompt library, not HTML. The bottom time-and-cost line stays out of the body. Preview crops that line into a 1200×800 WebP; the video file is not in the repo. The existing little-prince-across-the-stars case is a different post and was left unchanged. Relative to main 0042169: cases 217→218 (1.4.79→1.4.80). The auto-merge workflow was not changed."
+    },
+    {
+      "date": "2026-11-17",
       "title": "收录两条 Fable 5.2 社区演示：网页交互与猫咪漫游",
       "titleEn": "Catalog: two Fable 5.2 community demos, web interactions and a cat's-eye walk",
       "body": "Cases 两条，都是作者对 Fable 5.2 的社区成品，不是官方发布，本站没有复现。fable-52-eight-web-interactions：Viktor Oddy / @viktoroddy，2026-11-15T23:16:51Z（台北 2026-11-16 07:16:51）。配文只有 “Fable 5.2 is the first model i'd hire as a designer.” 视频约 5.8 秒，两列四行八个网页成品。kind showcase，分类 design。抽帧里 Lookbook 标题为 SPRING SUMMER 2027。画面上的人数、金额和价格不记为效果。fable-52-cat-garden-walk：BubbleBrain / @BubbleBrain，2026-11-16T13:00:55Z（台北 2026-11-16 21:00:55）。约 110 秒猫咪贴地漫游。作者称看见的和听见的都完全用代码做成。kind showcase，分类 content 与 design，与已有代码成片同属内容与设计，不进提示词库。两条都没有可打开的页面，所以不进 HTML；也不进模型卡。预览各一张 1200×800 WebP，视频文件不进仓库。相对 main 6f01687：cases 215→217（1.4.77→1.4.79）。未改 HTML、Agent UI、Models、首页精选。未合并。",
