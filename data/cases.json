@@ -1,6 +1,139 @@
 {
   "cases": [
     {
+      "id": "paisty",
+      "slug": "paisty",
+      "title": "Paisty：菜单栏读眼前窗口，用你已有的内容起草回复",
+      "titleEn": "Paisty: a menu-bar Mac app that drafts replies from what you already have",
+      "kind": "tool",
+      "hook": "菜单栏读眼前窗口起草回复，发送仍由你点。",
+      "hookEn": "A menu-bar Mac app drafts the reply in front of you. You still send it.",
+      "summary": "Paisty（https://www.paisty.com/ ，作者 hailports）是给 Apple Silicon Mac 用的菜单栏回复助手。官网写：菜单栏标记读取眼前的窗口并复制一份草稿；允许辅助功能后，会把草稿放进回复框，发送仍由你完成。它点名的表面有邮件（回复框上方的那封信；草稿进剪贴板，开了辅助功能则放进回复框）、聊天（屏幕上的对话；横幅和电话号码不进草稿）、笔记（Obsidian、Apple Notes 或一个文件夹；取几条相关笔记，不是整堆）和浏览器（工单、文档或网页；步骤不在页面上它会直说）。「工作大脑」是免费的 AI 辅助设置，从邮件、聊天、笔记和日历建议来源，连接前先问，再帮你建好。「你的模型」是把 paisty 指向你自己在跑的模型，之后草稿用你的。试用对所有人开放，7 天密钥发到邮箱，每个邮箱一次；设置免费。官网定价：月付 15 美元，年付 144 美元（按年结算为每月 12 美元），创始会员一次 150 美元（页面写 Lifetime key, through Dec 31，没有写年份），终身一次 250 美元（密钥不过期）。结账走 Stripe，并写明自带 AI。首次打开要在系统设置的隐私与安全性里选择仍要打开。下载链接指向 hailports/StackMini 的 paisty-mac 安装包；官网没有把它写成开源，本条也不写成开源。适合想在已经打开的邮件或聊天窗口里起草、又自己点发送的人。本库没有下载安装，没有授予辅助功能，没有连接邮件、聊天、笔记或日历，没有填写试用邮箱，也没有付款。",
+      "summaryEn": "Paisty (https://www.paisty.com/ , by hailports) is a menu-bar reply assistant for Apple Silicon Macs. The site says the menu-bar mark reads the window in front and copies a draft; with Accessibility allowed, it places that draft in the reply box, and you still send it. Named surfaces: Mail (the message above the box; the draft is copied, and with Accessibility it is placed in the reply box), Chat (the thread on screen; banners and phone numbers stay out of the draft), Notes (Obsidian, Apple Notes, or a folder; a few matching notes, not the pile), and the browser (a ticket, a doc, or a page; if the steps are not there, paisty says so). “Your work brain” is a free AI-assisted setup that suggests sources from mail, chat, notes, and calendar, asks before it connects, and builds the brain. “Your model” means pointing paisty at the model you run, after which drafts use yours. Trials are open to everyone; a 7-day key arrives by email, one per email; setup is free. Official prices: $15 a month, $144 a year ($12/mo billed yearly), Founding Member $150 once (the page says “Lifetime key, through Dec 31” and does not name the year), and Lifetime $250 once (the key does not expire). Checkout is Stripe, and the page says bring your own AI. The first open asks you to confirm under System Settings, Privacy & Security, Open Anyway. The download link points at the paisty-mac build on hailports/StackMini; the site does not call it open source, and neither does this entry. Useful when you want a draft in a mail or chat window you already have open, and you still press send. This library did not download or install it, grant Accessibility, connect mail, chat, notes, or calendar, request a trial, or pay.",
+      "categories": [
+        "automation"
+      ],
+      "role": "Mac reply assistant",
+      "sourceUrl": "https://www.paisty.com/",
+      "secondaryUrls": [
+        "https://news.ycombinator.com/item?id=50519397",
+        "https://github.com/hailports/StackMini/releases/tag/paisty-mac"
+      ],
+      "previewImage": "/previews/paisty.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "开启辅助功能、连接邮件聊天笔记或日历、以及付款之前都要你自己确认；草稿仍由你发送。本库没有代为安装、授权、申请试用或付款。",
+      "approvalBoundaryEn": "Confirm Accessibility, any mail/chat/notes/calendar connection, and payment yourself; you still send the draft. This library did not install, grant access, request a trial, or pay.",
+      "connectors": [
+        "Mail",
+        "Chat",
+        "Notes",
+        "Calendar",
+        "Browser"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T00:55:00Z",
+      "qualityNote": "收录理由：它在你已经打开的邮件、聊天、笔记或网页上起草回复，连接邮箱和日历前会先问，发送仍由你完成。边界：页面写的是 Apple Silicon Mac；官网标了 7 天试用和四档价格，结账走 Stripe；页面没有开源声明。本库没有下载安装，没有授予辅助功能，没有连接邮件、聊天、笔记或日历，没有申请试用密钥，也没有付款。",
+      "qualityNoteEn": "Why listed: it drafts a reply from the mail, chat, notes, or page already on screen, asks before connecting mail or calendar, and leaves sending to you. Limits: the page names Apple Silicon Macs; it lists a 7-day trial and four prices, with Stripe checkout; it does not claim to be open source. This library did not download or install it, grant Accessibility, connect mail, chat, notes, or calendar, request a trial key, or pay.",
+      "verifyLog": "2026-11-17 早间（Asia/Shanghai，约 08:55）：https://www.paisty.com/ HTTP 200。title “paisty — AI drafts your replies with everything you already have”。首屏 “One click. The reply is yours.” 与 “AI drafts your replies with everything you already have.”。正文：菜单栏标记读眼前窗口并复制草稿；Accessibility allowed 则放进回复框；You still send it。试用文案 “Trials are open to everyone. Your 7-day key arrives by email in a moment.” “Setup is free.” 定价区另写 “Apple Silicon Macs. One 7-day trial per email.” 平台句 “For Apple Silicon Macs. The first time you open it, macOS asks you to confirm: System Settings, Privacy & Security, Open Anyway.” Mail / Chat / Notes / The browser / Your work brain / Your model 与正文一致。定价标题 “Try it free for 7 days. Then pick a plan.”：Monthly $15/month，Yearly $144/year（$12/mo billed yearly），Founding Member $150 once（Lifetime key, through Dec 31），Lifetime $250 once（One payment. The key does not expire.）。“Checkout is Stripe. Your key shows on the next page and is emailed to you. Bring your own AI.” 页内未见 open source。Download href 为 https://github.com/hailports/StackMini/releases/download/paisty-mac/paisty.dmg 。GitHub releases API HTTP 200：tag paisty-mac，name paisty，published_at 2026-11-15T16:55:35Z，asset paisty.dmg（约 40MB）；未下载。仓库元数据接口没有返回 license 字段，故不把 StackMini 或 Paisty 写成开源。Show HN https://news.ycombinator.com/item?id=50519397 标题 “Show HN: Paisty, a Mac app that reads the front window and pastes a reply draft”，by hailports，1 point，页面上未见评论。sourceType 用 community：data/schema.md 的允许值没有 show-hn（main 上仅 latch 用过该值，详情页来源标签会空）。任务简报提到作者 X 帖写过一次性 399 美元；本轮没有打开那条帖，正文价格只采用官网的 15/144/150/250。预览为无头 Chrome（Playwright，channel chrome）实拍官网首屏，sharp 存成 1200×800 WebP，/previews/paisty.webp。未点 Start a free trial，未填邮箱，未安装，未授予辅助功能，未连接邮件、聊天、笔记或日历，未付款。",
+      "verifyLogEn": "2026-11-17 morning (Asia/Shanghai, about 08:55): https://www.paisty.com/ HTTP 200. Title “paisty — AI drafts your replies with everything you already have”. Hero “One click. The reply is yours.” The page says the menu-bar mark reads the front window and copies a draft; with Accessibility allowed it places the draft in the reply box; you still send it. Trial copy: open to everyone, 7-day key by email, setup free, one 7-day trial per email. First open: System Settings, Privacy & Security, Open Anyway. Surfaces Mail, Chat, Notes, the browser, Your work brain, and Your model match the body. Pricing: Monthly $15/month, Yearly $144/year ($12/mo billed yearly), Founding Member $150 once (“Lifetime key, through Dec 31”), Lifetime $250 once (key does not expire). Checkout is Stripe; bring your own AI. No open-source claim on the page. Download href is the paisty-mac dmg on hailports/StackMini. GitHub releases API HTTP 200: tag paisty-mac, published_at 2026-11-15T16:55:35Z, asset paisty.dmg (~40MB); not downloaded. The repo metadata call did not return a license, so neither StackMini nor Paisty is called open source. Show HN https://news.ycombinator.com/item?id=50519397 by hailports, 1 point, no comments visible. sourceType is community because data/schema.md does not list show-hn. The task brief mentioned an author X post with a $399 one-time price; that post was not opened this round, so the entry uses only the on-site 15/144/150/250 prices. Preview is a headless Chrome (Playwright, channel chrome) capture of the landing hero, saved with sharp as a 1200×800 WebP at /previews/paisty.webp. Did not start a trial, type an email, install, grant Accessibility, connect mail/chat/notes/calendar, or pay."
+    },
+    {
+      "id": "whiboard",
+      "slug": "whiboard",
+      "title": "Whiboard：一句话把计划、流程和架构画成可编辑的白板",
+      "titleEn": "Whiboard: say it once and the plan, flow, or diagram lands as editable shapes",
+      "kind": "tool",
+      "hook": "一句话画出计划、流程和架构，形状还能改。",
+      "hookEn": "One sentence becomes an editable plan, flowchart, or system diagram.",
+      "summary": "Whiboard（https://whiboard.com/ ，免登录试用 https://whiboard.com/try ）是一块 AI 白板。官网拼写是 Whiboard。你用一句话描述想法，它把计划、步骤、流程图、思维导图和带云厂商与品牌图标的系统图，画成普通形状，可以移动、改样式、一步步撤销；画完它会看白板的画面自查。可以附照片或视频，或读板上已有的文档、表格和幻灯片。首页列出的用法包括把想法拆成步骤、画流程图、画系统图，以及 Summary（要点、决定、行动项和未决问题）、Organize（把便签按主题分组）和 Ideas（避开板上已有内容再出 5 到 20 个主意）。协作有实时光标、评论和 @、版本历史；看分享链接的人不用付费。首页写每个计划都能导出 PNG、SVG、PDF、draw.io 和 JSON，并写明导出不会变成付费功能；备份是明文、带版本的 JSON；账号或整个工作区可以下载成一个文件。免费计划写明永久 0 美元、无需信用卡、无限白板、每天 3 次 AI 提示（每人每月 25 万 token）、每个工作区最多 5 名成员。定价页列出 Team 每位编辑每月 5 美元、Business 每位编辑每月 12 美元，并写明免费线以上的功能在开始计费前仍然免费。问答写可从 Miro 导入（一次最多 1 万项，令牌用一次、不保存）以及放入 draw.io。官网正文没有把它写成开源，本条也不写开源。适合想让助手直接画在白板上、而不是只在聊天里回一段图的人。本库打开了免登录试用板，上面已有示例便签和一张流程图，没有点 AI 绘图，没有注册，没有绑卡，没有导出，没有和他人一起编辑，也没有上传文件。",
+      "summaryEn": "Whiboard (https://whiboard.com/ , no-account try board https://whiboard.com/try ) is an AI whiteboard. The official spelling is Whiboard. Describe an idea and it draws plans, steps, flowcharts, mind maps, and system diagrams with real cloud and brand icons as ordinary shapes you can move, restyle, and undo one step at a time; after drawing it looks at a picture of the board. You can attach photos or video, or let it read documents, spreadsheets, and decks already on the board. The homepage names turning an idea into steps, flowcharts, and system diagrams, plus Summary (key points, decisions, action items, and open questions), Organize (group sticky notes by theme), and Ideas (5 to 20 ideas that skip what the board already says). Collaboration includes live cursors, comments and @mentions, and version history; people opening a share link do not pay. The homepage says every plan exports PNG, SVG, PDF, draw.io, and JSON, and that exporting will never become a paid feature; backups are plain versioned JSON; an account or a whole workspace downloads as one file. The free plan is listed as $0 forever, no card, unlimited boards, 3 AI prompts a day (250,000 tokens a month per person), and up to 5 members per workspace. The pricing page lists Team at $5 per editor a month and Business at $12 per editor a month, and says everything above the free line is free until billing opens. The FAQ says Miro import copies up to 10,000 items at a time, the token is used once and not stored, and draw.io files drop onto a board. The site does not call Whiboard open source, and neither does this entry. Useful when you want the assistant to draw on the board instead of answering with a picture in chat. This library opened the no-account try board, which already showed sample notes and a flowchart, and did not run an AI draw, sign up, enter a card, export, edit with someone else, or upload a file.",
+      "categories": [
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://whiboard.com/",
+      "secondaryUrls": [
+        "https://whiboard.com/try",
+        "https://whiboard.com/pricing",
+        "https://news.ycombinator.com/item?id=50523024",
+        "https://dev.to/pierreneter/i-built-an-ai-whiteboard-that-draws-on-the-board-instead-of-answering-in-chat-bd9"
+      ],
+      "previewImage": "/previews/whiboard.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "与他人共享编辑、上传文件或升级付费计划前自己确认。本库没有代为注册、绑卡、导出或发起 AI 绘图。",
+      "approvalBoundaryEn": "Confirm shared editing, file uploads, and any paid upgrade yourself. This library did not sign up, enter a card, export, or start an AI draw.",
+      "connectors": [
+        "draw.io",
+        "Miro"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T00:55:00Z",
+      "qualityNote": "收录理由：助手把计划、流程和系统图画成可以移动和逐步撤销的普通形状，免费计划无需信用卡，导出在每个计划上都有。边界：定价页列出 Team 与 Business 的标价，同时写明开始计费前免费线以上仍免费；官网没有把它写成开源。本库打开了免登录试用板，没有注册、没有绑卡、没有跑 AI 绘图，也没有和他人协作或上传文件。",
+      "qualityNoteEn": "Why listed: the assistant draws plans, flows, and system diagrams as ordinary shapes you can move and undo, the free plan needs no card, and export is on every plan. Limits: the pricing page lists Team and Business prices and also says everything above the free line stays free until billing opens; the site does not call it open source. This library opened the no-account try board and did not sign up, enter a card, run an AI draw, collaborate, or upload a file.",
+      "verifyLog": "2026-11-17 早间（Asia/Shanghai）：https://whiboard.com/ HTTP 200，title “Whiboard — the AI whiteboard”。首屏 “The AI whiteboard: Bring your ideas to life.” “Free plan with 3 AI prompts a day. No card needed.” 首页后部 “Free: unlimited boards, 5 editors, 3 AI prompts a day, no card. Team: $5 per editor a month. Viewers never pay.” 导出段写 PNG、SVG、PDF、draw.io and JSON are on the free plan, and exporting will never become a paid feature；备份 plain, versioned JSON；账号或工作区下载为一个文件。功能名包括 Plan、Understand、Explain、Summary、Organize、Ideas、Context、Review。问答：免费档每天 3 次提示、每月最多 250,000 tokens；Team 每位编辑每月 1M tokens、Business 3.5M，工作区共享；Miro 导入一次最多 10,000 项，token 用一次且不保存；看链接的人不用账号；免费档每个工作区 5 席、可拥有 5 个工作区。https://whiboard.com/pricing HTTP 200，title “Pricing: free plan, Team and Business · Whiboard”。免费档 $0 forever、无卡、每天 3 次提示、每人每月 250K tokens、5 名成员和 15 名访客、256 MB、7 天版本历史、5 个自己的工作区；该卡的导出子弹是 PNG、SVG、PDF and JSON（没有写 draw.io）。Team $5 per editor / month，Business $12 per editor / month，均写 Available at launch、Billed monthly。页内句 “Everything above the free line is free until billing opens.” 年付写 a year costs ten months（Team $50/编辑/年，Business $120）。加购存储 100 GB $3.99/月、200 GB $5.99/月、2 TB $19.99/月。https://whiboard.com/try HTTP 200，title “Try the whiteboard, no account · Whiboard”，描述 “A real Whiboard board, no account needed.” 无头 Chrome 打开后可见 Try board、Only in this browser、Export、Exit、Sign up to keep it，标题 “This board is real. Draw on it.”，示例便签和一张 New idea → Sketch it → Clear enough? → Share it 的流程图，缩放 91%。这是试用板自带的界面，不是本库发起的 AI 绘图。Show HN https://news.ycombinator.com/item?id=50523024 标题 “Show HN: WhiBoard – A fast Miro alternative with AI diagramming”（标题用 WhiBoard，官网用 Whiboard），by pierreneter，1 point，未见评论。作者 DEV 文 https://dev.to/pierreneter/i-built-an-ai-whiteboard-that-draws-on-the-board-instead-of-answering-in-chat-bd9 描述了他自己在试用板上的一次绘图，并写试用板每个 IP 2 次提示、Team 每月每位编辑 5 美元；5 美元与定价页一致，2 次提示没有出现在首页或定价页，本库没有发提示，故不把 2 次写成实测。正文不采用该文里的帧率或 82 秒演示。页内未见开源仓库。sourceType 用 community，原因同 Paisty。预览为无头 Chrome（Playwright，channel chrome）实拍 /try 首屏，sharp 存成 1200×800 WebP，/previews/whiboard.webp。未点 AI，未注册，未绑卡，未导出，未上传，未邀请他人。",
+      "verifyLogEn": "2026-11-17 morning (Asia/Shanghai): https://whiboard.com/ HTTP 200, title “Whiboard — the AI whiteboard”. Hero offers a free plan with 3 AI prompts a day and no card. Later on the page: unlimited boards, 5 editors, 3 AI prompts a day, no card; Team $5 per editor a month; viewers never pay. Export section: PNG, SVG, PDF, draw.io, and JSON on the free plan, exporting will never become a paid feature; plain versioned JSON backups; account or workspace as one file. Named uses include Plan, Understand, Explain, Summary, Organize, Ideas, Context, and Review. FAQ: 3 prompts a day and up to 250,000 tokens a month on free; Team 1M tokens per editor a month and Business 3.5M, pooled; Miro import up to 10,000 items, token used once and not stored; viewers need no account; free plan has five seats and five owned workspaces. https://whiboard.com/pricing HTTP 200. Free is $0 forever, no card, 3 prompts/day, 250K tokens/person/month, 5 members and 15 guests, 256 MB, 7-day history, 5 owned workspaces; that card’s export bullet lists PNG, SVG, PDF, and JSON (draw.io is not on the bullet). Team $5 per editor/month and Business $12 per editor/month, both “Available at launch” and billed monthly. The page says everything above the free line is free until billing opens. Yearly billing is ten months (Team $50 per editor a year, Business $120). Extra storage: 100 GB $3.99/mo, 200 GB $5.99/mo, 2 TB $19.99/mo. https://whiboard.com/try HTTP 200. Headless Chrome showed Try board, Only in this browser, Export, Exit, Sign up to keep it, the heading “This board is real. Draw on it.”, sample notes, and a New idea → Sketch it → Clear enough? → Share it flowchart at 91% zoom. That starter board was already there; this library did not run an AI draw. Show HN https://news.ycombinator.com/item?id=50523024 uses “WhiBoard” in the title; the site uses Whiboard. By pierreneter, 1 point, no comments visible. The author’s DEV post describes his own try-board run and says the try board allows 2 prompts per IP and Team is $5 per editor a month. $5 matches the pricing page; the 2-prompt try limit was not on the homepage or pricing page, and no prompt was sent here, so it is not treated as tested. Frame-rate and the 82-second demo from that post are not used in the entry. No OSS repo on the site. sourceType is community, same reason as Paisty. Preview is a headless Chrome (Playwright, channel chrome) capture of /try, saved with sharp as a 1200×800 WebP at /previews/whiboard.webp. Did not click AI, sign up, enter a card, export, upload, or invite anyone."
+    },
+    {
+      "id": "opencode-browse",
+      "slug": "opencode-browse",
+      "title": "OpenCode Browse：让编程助手用你已经登录的浏览器",
+      "titleEn": "OpenCode Browse: let coding agents use the browser you are already signed into",
+      "kind": "tool",
+      "hook": "编程助手用你已登录的浏览器，登录付款时交还你。",
+      "hookEn": "Coding agents use your signed-in browser, then hand login and payment back to you.",
+      "summary": "OpenCode Browse（https://opencode.ai/product/browse ，仓库 https://github.com/anomalyco/browse ，MIT）是一个 MCP 服务加 Chromium 扩展，让编程助手使用你真实的浏览器：你的标签、登录状态和扩展。助手的标签在后台、折叠的分组里打开；可以读页面、点击、输入、截图、录制标签，并抓取网络流量。遇到登录、双重验证或付款，它把标签交还你，你点继续之后它再接着做。工具栏可以把你已经打开的标签借给助手。允许站点列表可以把助手限制在你点名的网站。官网列出的浏览器是 Chrome、Edge、Brave、Arc、Helium、Vivaldi、Opera 和 Chromium。官网点名的 MCP 客户端有 OpenCode、Claude Code、Cursor、Codex、Zed，并写还有更多。安装是先从 Chrome 网上应用店添加扩展，扩展会带你做后面的步骤；页面也列了 curl、irm、npm 和 bun 的命令行安装。它面向编程和 MCP 助手，走的是你已经登录的 Chromium。Turbo Browser MCP 做表单填写、页面快照，并在提交前停下；Agweb 是 macOS 上的代理浏览器。OpenCode Browse 是扩展加 MCP，登录、双重验证和付款会交还给人。它也不做个人邮件或日历秘书。本库没有安装扩展，没有运行那些安装命令，没有出借已登录的标签，也没有把它接到 Claude Code、Cursor 或 Codex。",
+      "summaryEn": "OpenCode Browse (https://opencode.ai/product/browse , repo https://github.com/anomalyco/browse , MIT) is an MCP server plus a Chromium extension that lets coding agents use your real browser: your tabs, logins, and extensions. Agent tabs open in the background in collapsed groups. They can read pages, click, type, take screenshots, record tabs, and capture network traffic. For a login, a 2FA prompt, or a payment, they hand the tab back to you and continue once you click Continue. The toolbar can lend the agent a tab you already have open. An allowed-sites list can keep an agent on the sites you name. The page lists Chrome, Edge, Brave, Arc, Helium, Vivaldi, Opera, and Chromium. Named MCP clients on the page are OpenCode, Claude Code, Cursor, Codex, Zed, and many more. Install starts with the Chrome Web Store extension, which walks through the rest; the page also lists curl, irm, npm, and bun commands. It is framed for coding and MCP agents using the Chromium browser you are already signed into. Turbo Browser MCP fills forms, takes snapshots, and stops before submit; Agweb is a macOS agent browser. OpenCode Browse is the extension plus MCP, and it hands login, 2FA, and payment back to the person. It is not a personal mail or calendar secretary. This library did not install the extension, run those install commands, lend a signed-in tab, or connect it to Claude Code, Cursor, or Codex.",
+      "categories": [
+        "coding",
+        "automation"
+      ],
+      "role": "Browser MCP",
+      "sourceUrl": "https://opencode.ai/product/browse",
+      "secondaryUrls": [
+        "https://github.com/anomalyco/browse",
+        "https://news.ycombinator.com/item?id=50523459"
+      ],
+      "previewImage": "/previews/opencode-browse.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它能使用你已登录的浏览器；出借标签，以及登录、双重验证和付款，都要你自己确认。本库没有代为安装或连接任何编程助手。",
+      "approvalBoundaryEn": "It can use the browser you are signed into; confirm lending a tab, and any login, 2FA, or payment, yourself. This library did not install it or connect a coding agent.",
+      "connectors": [
+        "Chrome",
+        "MCP",
+        "OpenCode",
+        "Claude Code",
+        "Cursor",
+        "Codex"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T00:55:00Z",
+      "qualityNote": "收录理由：编程助手可以走你已经登录的 Chromium，登录、双重验证和付款会把标签交还给你。边界：这是浏览器扩展加 MCP。Turbo Browser MCP 做表单填写、页面快照，并在提交前停下；Agweb 是 macOS 上的代理浏览器。本条也不把它写成个人邮件或日历秘书。本库没有做安全审计。讨论区对 OpenCode 新版本的权限和升级做法褒贬不一，那些评论不能当成对 Browse 本身的结论。本库没有安装扩展，没有运行安装命令，没有出借已登录标签，也没有接到任何编程助手。",
+      "qualityNoteEn": "Why listed: coding agents can use the Chromium browser you are already signed into, and login, 2FA, and payment hand the tab back to you. Limits: it is a browser extension plus an MCP server. Turbo Browser MCP fills forms, takes snapshots, and stops before submit; Agweb is a macOS agent browser. This entry also does not treat it as a personal mail or calendar secretary. This library did not audit security. The discussion of OpenCode’s newer permission and upgrade practice is mixed, and those comments are not a finding about Browse itself. This library did not install the extension, run an install command, lend a signed-in tab, or connect a coding agent.",
+      "verifyLog": "2026-11-17 早间（Asia/Shanghai）：https://opencode.ai/product/browse HTTP 200。页面标题 Browse。首段：An MCP server and a Chromium extension that let your agents use your real browser, with your tabs, your logins and your extensions。功能列表与正文一致：Chrome、Edge、Brave、Arc、Helium、Vivaldi、Opera、Chromium；后台折叠分组；登录 / 2FA / payment 交还后点 Continue；工具栏借出标签；截图、录制、网络流量；MCP 客户端点名 OpenCode、Claude Code、Cursor、Codex、Zed and many more；允许站点列表。安装：先 Chrome Web Store；另列 curl -fsSL https://opencode.ai/browse/install | bash 、irm https://opencode.ai/browse/install.ps1 | iex 、npm install -g @opencode/browse && browse install 、bun add -g @opencode/browse && browse install。这些命令都没有运行，扩展也没有安装。仓库 https://github.com/anomalyco/browse 。gh api：license SPDX MIT，stargazers_count 699，forks 54，created_at 2026-10-27T14:33:24Z，pushed_at 2026-11-17T00:47:01Z，default_branch dev，description 与产品页一致。License 文件 Copyright (c) 2025 opencode，SPDX MIT。README 还列出更多 MCP 客户端和安装方式；正文只采用产品页点名的客户端。HN https://news.ycombinator.com/item?id=50523459 标题 “OpenCode Browse”，不是 Show HN，by mfiguiere，核对时 95 points、42 comments（简报里看到的是 93 points，以本轮页面为准）。讨论褒贬不一：有评论批评 OpenCode V2 的权限与升级方式，也有人反驳，并有人拿 Playwright MCP、Chrome DevTools MCP 作比较；页面列出的浏览器里没有 Firefox。本库没有做安全审计，不把评论区的安全说法写成结论。与未合并的 turbo-browser-mcp（目录 PR #161）和 agweb（目录 PR #160）不是同一产品；这两条都不在 main。sourceType 用 community，因为这是首页故事而不是 Show HN，也不是 schema 里的 show-hn。预览为无头 Chrome（Playwright，channel chrome）实拍产品页首屏，sharp 存成 1200×800 WebP，/previews/opencode-browse.webp。未安装扩展，未跑 curl/irm/npm/bun，未出借已登录标签，未连接 Claude Code、Cursor 或 Codex。",
+      "verifyLogEn": "2026-11-17 morning (Asia/Shanghai): https://opencode.ai/product/browse HTTP 200. Page title Browse. Opening sentence: an MCP server and a Chromium extension that let agents use your real browser, with your tabs, logins, and extensions. The feature list matches: Chrome, Edge, Brave, Arc, Helium, Vivaldi, Opera, Chromium; background collapsed groups; login / 2FA / payment handed back until you click Continue; lend a tab from the toolbar; screenshots, recordings, and network traffic; MCP clients named OpenCode, Claude Code, Cursor, Codex, Zed, and many more; an allowed-sites list. Install: Chrome Web Store first, plus curl, irm, npm, and bun commands on the page. None of those commands were run, and the extension was not installed. Repo https://github.com/anomalyco/browse . gh api: SPDX MIT, stargazers_count 699, forks 54, created_at 2026-10-27T14:33:24Z, pushed_at 2026-11-17T00:47:01Z, default_branch dev. LICENSE copyright (c) 2025 opencode, SPDX MIT. The README names more MCP clients and install paths; the entry quotes only the clients named on the product page. HN https://news.ycombinator.com/item?id=50523459 title “OpenCode Browse”, not a Show HN, by mfiguiere, 95 points and 42 comments when checked (the brief had seen 93 points; this round’s page is the figure used). The thread is mixed: comments criticize OpenCode V2’s permission and upgrade practice, others reply, and some compare it with Playwright MCP and Chrome DevTools MCP; Firefox is not in the browser list on the page. This library did not audit security and does not turn comment claims into findings. Distinct from unmerged turbo-browser-mcp (catalog PR #161) and agweb (catalog PR #160); neither is on main. sourceType is community because this is a front-page story, not a Show HN, and show-hn is not in the schema. Preview is a headless Chrome (Playwright, channel chrome) capture of the product page, saved with sharp as a 1200×800 WebP at /previews/opencode-browse.webp. Did not install the extension, run curl/irm/npm/bun, lend a signed-in tab, or connect Claude Code, Cursor, or Codex."
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11580,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-17T00:55:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.78",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11881,18 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://www.paisty.com/",
+      "https://news.ycombinator.com/item?id=50519397",
+      "https://github.com/hailports/StackMini/releases/tag/paisty-mac",
+      "https://whiboard.com/",
+      "https://whiboard.com/try",
+      "https://whiboard.com/pricing",
+      "https://news.ycombinator.com/item?id=50523024",
+      "https://dev.to/pierreneter/i-built-an-ai-whiteboard-that-draws-on-the-board-instead-of-answering-in-chat-bd9",
+      "https://opencode.ai/product/browse",
+      "https://github.com/anomalyco/browse",
+      "https://news.ycombinator.com/item?id=50523459"
     ]
   }
 }
