@@ -1,6 +1,227 @@
 {
   "cases": [
     {
+      "id": "fable-52-cat-garden-walk",
+      "slug": "fable-52-cat-garden-walk",
+      "title": "Fable 5.2：猫咪视角花园漫游",
+      "titleEn": "Fable 5.2: a garden walk from a little cat's eyes",
+      "kind": "showcase",
+      "hook": "猫咪视角的花园漫游，作者称由 Fable 5.2 用代码做成。",
+      "hookEn": "A cat's-eye garden walk the author says Fable 5.2 made in code.",
+      "summary": "BubbleBrain（@BubbleBrain）发了一段约 110 秒的成片。镜头贴着地面，以一只小猫的视角在花园和温室里走：落叶草地上的瓢虫、花坛、长椅下方、有锦鲤的睡莲池、玻璃温室里的植物和蝴蝶，最后跃上石墙，露出猫爪并眨眼。画面是这种贴地的长镜头，能看到景深和运动模糊。作者说，Fable 5.2 把这段视频交给他，他很吃惊；眼睛看到的和耳朵听到的，都完全是用代码做成的。声音和画面一起走，有脚步、鸟鸣、风、水滴、嗅探和呼噜。适合当一条代码创作的成品动画来看。视频里没有制作过程、代码、编辑器或提示词。",
+      "summaryEn": "BubbleBrain (@BubbleBrain) posted a finished film of about 110 seconds. The camera stays near the ground and walks a garden and greenhouse as a little cat: a ladybug on leafy grass, a flower bed, the space under a bench, a lily pond with koi, plants and butterflies in a glass greenhouse, then a jump onto a stone wall where a paw shows and the cat blinks. It is a long take from that low point of view, with depth of field and motion blur visible. The author says Fable 5.2 gave him this video and he was blown away, and that everything seen and everything heard was created entirely with code. Sound stays with the picture: footsteps, birds, wind, water drops, sniffing, and a purr. Useful as a finished animation from a code-making claim. The video shows no making process, code, editor, or prompt.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "Community code-made film",
+      "sourceUrl": "https://x.com/BubbleBrain/status/2122313967473434639",
+      "secondaryUrls": [
+        "https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4"
+      ],
+      "previewImage": "/previews/fable-52-cat-garden-walk.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-17T11:00:00Z",
+      "qualityNote": "收录理由：一条社区动画成品，贴地的猫咪视角把花园和温室走完，画面和声音是一起设计的。和已有的代码成片条目放在同一类：内容与设计下的实践案例。边界：画面和声音都由代码做成，只是 BubbleBrain 自己的说法，本站不另外背书。成片不能证明用了什么做法。视频里没有制作过程、代码、编辑器、工具名或提示词，本条不补写。没有可打开的网页，也没有公开源码。本站没有复现这段漫游。",
+      "qualityNoteEn": "Why it is listed: a community animation, a ground-level cat's-eye walk through a garden and greenhouse, with picture and sound designed together. It sits with the existing code-made films: a case study under content and design. Boundary: that code made both the picture and the sound is BubbleBrain's own statement, and this library does not add an endorsement. The finished film cannot show which method was used. The video has no making process, code, editor, tool name, or prompt, and this entry does not fill those in. There is no page to open and no public source. This library did not reproduce the walk.",
+      "verifyLog": "2026-11-17 核对。主帖 https://x.com/BubbleBrain/status/2122313967473434639 ，作者 BubbleBrain，用户名 BubbleBrain，user id 1777908734741872640。get_posts_by_id：created_at 2026-11-16T13:00:55.000Z（台北时间 2026-11-16 21:00:55）。全文为 “When Fable 5.2 give this video to me, I was genuinely blown away.” 以及 “Everything you see, and even everything you hear, was created entirely with code.” 再加邀请看小猫眼里的世界，前面有一个警报符号，t.co 展开到同一帖的 /video/1。媒体元数据：type video，duration_ms 110000，宽 1920，高 1080，preview_image_url 为 https://pbs.twimg.com/amplify_video_thumb/2122309998470639616/img/s7YqYiontIsHOmzE.jpg ，未见 alt_text。1080p mp4 为 https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4 。同一次读取的公开计数：impression 64115，like 1181，repost 74，reply 63，quote 16，bookmark 641（计数会变）。curl：原帖 HTTP 200；封面 JPEG HTTP 200，1200×675；上述 mp4 HTTP 200，content-length 153254944，last-modified Mon, 16 Nov 2026 12:43:08 GMT。另取 480×270 公开档，ffprobe 时长 110.058667 秒，只在临时目录抽了约 1 秒、25 秒、55 秒、85 秒、105 秒五帧：贴地的落叶与花园、花坛、池塘、玻璃温室内的植物、石沿上的爪子和旁边的温室。瓢虫、锦鲤、蝴蝶和眨眼不在这五帧里，路线按对全片的核看写入正文。该小档和 1080p 文件都没有放进仓库。预览取封面原图，左右各裁 94 像素后缩成 1200×800 WebP，约 99KB，路径 /previews/fable-52-cat-garden-walk.webp 。没有重绘。本环境没有逐段重听，声音种类按成片核看记录。没有把回复串写成做法。没有登录模型，没有调用 API，没有复现。去重：origin/main 6f01687 与当时开放 PR 的 diff 都没有 2122313967473434639、2122309998470639616 或本条 id。不打星。",
+      "verifyLogEn": "Checked 2026-11-17. Main post https://x.com/BubbleBrain/status/2122313967473434639 by BubbleBrain, username BubbleBrain, user id 1777908734741872640. get_posts_by_id: created_at 2026-11-16T13:00:55.000Z (2026-11-16 21:00:55 in Taipei). The text says “When Fable 5.2 give this video to me, I was genuinely blown away.” and “Everything you see, and even everything you hear, was created entirely with code.” then invites a journey through a little cat's eyes. It opens with an alarm emoji, and the t.co link expands to /video/1 on the same post. Media metadata: type video, duration_ms 110000, width 1920, height 1080, preview_image_url https://pbs.twimg.com/amplify_video_thumb/2122309998470639616/img/s7YqYiontIsHOmzE.jpg , no alt_text returned. The 1080p mp4 is https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4 . Public counts on that read: impression 64115, like 1181, repost 74, reply 63, quote 16, bookmark 641 (counts move). curl: the post HTTP 200; the poster JPEG HTTP 200 at 1200×675; that mp4 HTTP 200, content-length 153254944, last-modified Mon, 16 Nov 2026 12:43:08 GMT. A public 480×270 file probed at 110.058667 seconds was used only to sample about 1s, 25s, 55s, 85s, and 105s in a temp directory: ground-level leaves and garden, a flower bed, a pond, plants inside a glass greenhouse, and paws on a stone edge beside the greenhouse. The ladybug, koi, butterflies, and blink are not in those five stills; the route in the body follows a viewing of the full film. Neither that small file nor the 1080p file is in the repo. Preview is the poster, 94 pixels cropped from each side and scaled to a 1200×800 WebP, about 99KB, at /previews/fable-52-cat-garden-walk.webp . Nothing was redrawn. This environment did not listen through the track; the sound list follows the film viewing. Replies are not written up as a method. No model sign-in, no API call, and the walk was not reproduced. Dedup: origin/main 6f01687 and the diffs of the open PRs at check time contain neither 2122313967473434639, nor 2122309998470639616, nor this id. Unrated.",
+      "landing": {
+        "what": "这是 BubbleBrain 的一条社区成片，不是能点开的网页，也不是模型厂商的发布。他称 Fable 5.2 交来的这段视频里，看见的和听见的都完全用代码做成。能看的是一只小猫贴地走过花园的成品，不是一套可以照着写的代码。",
+        "whatEn": "This is a community film from BubbleBrain. It is not a page you can open, and it is not a vendor launch. He says Fable 5.2 gave him the video, and that everything seen and heard in it was created entirely with code. What you can watch is a finished ground-level walk through a garden as a little cat, not code you can follow.",
+        "contrast": {
+          "caption": "左列是原帖和成片能支持的内容。右列是本站收录时停住的地方。",
+          "captionEn": "Left: what the post and the film support. Right: where this library stops.",
+          "leftLabel": "原帖",
+          "leftLabelEn": "The post",
+          "rightLabel": "本站",
+          "rightLabelEn": "This library",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "约 110 秒的成品漫游：贴地的猫咪视角走过花园和温室，声音和画面一起走。",
+              "leftEn": "A finished walk of about 110 seconds: a ground-level cat's-eye view through a garden and greenhouse, with sound moving alongside the picture.",
+              "right": "内容与设计下的实践案例，和已有的代码成片放在一起。只记录看得见、听得到的成品。",
+              "rightEn": "A case study under content and design, filed with the existing code-made films. It records the finished picture and sound."
+            },
+            {
+              "aspect": "代码",
+              "aspectEn": "Code",
+              "left": "作者说看见的和听见的都完全用代码做成，并把它归给 Fable 5.2。",
+              "leftEn": "The author says everything seen and heard was created entirely with code, and he credits Fable 5.2.",
+              "right": "这句只记成作者的声称。成片本身不能证明做法，本站也不另外背书。",
+              "rightEn": "That sentence is recorded as the author's claim. The finished film cannot prove the method, and this library does not add an endorsement."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看原帖里的成片",
+            "titleEn": "Watch the finished film in the post",
+            "body": "打开 BubbleBrain 的帖子。正文说 Fable 5.2 把视频交给他，看见的和听见的都完全用代码做成，然后邀请以小猫的眼睛看世界。附件约 110 秒。片中没有制作过程、代码、编辑器或提示词。",
+            "bodyEn": "Open BubbleBrain's post. The text says Fable 5.2 gave him the video, that everything seen and heard was created entirely with code, then invites a journey through a little cat's eyes. The attachment is about 110 seconds. It shows no making process, code, editor, or prompt.",
+            "links": [
+              {
+                "href": "https://x.com/BubbleBrain/status/2122313967473434639",
+                "label": "BubbleBrain 的原帖",
+                "labelEn": "BubbleBrain's post"
+              }
+            ]
+          },
+          {
+            "title": "把它当成成品漫游，不补做法",
+            "titleEn": "Treat it as a finished walk, and do not invent a method",
+            "body": "沿贴地的镜头看花园：落叶和瓢虫、花坛、长椅下、睡莲池里的锦鲤、温室里的植物和蝴蝶，最后是石墙上的猫爪和眨眼。作者没有写出代码或工具。公开的视频文件大约 146MB，在原帖里看即可。",
+            "bodyEn": "Follow the ground-level camera through the garden: leaves and a ladybug, a flower bed, under a bench, koi in a lily pond, plants and butterflies in the greenhouse, then a paw on the stone wall and a blink. The author did not publish code or a tool. The public video file is about 146MB; watch it in the post.",
+            "links": []
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "画面和声音都由代码做成，只来自作者这句声称，并归给 Fable 5.2。这不是官方演示。本站没有登录模型，没有调用接口，也没有自己做出这段漫游。",
+            "textEn": "That code made both the picture and the sound comes only from the author's statement, credited to Fable 5.2. This is not an official demo. This library did not sign in to a model, did not call an API, and did not build this walk."
+          },
+          {
+            "text": "成片不能证明做法。视频里没有制作过程、代码、编辑器、工具名或提示词，本条不编写，也不把成品说成某种引擎的结果。",
+            "textEn": "The finished film cannot prove the method. It shows no making process, code, editor, tool name, or prompt. This entry does not write those in, and does not treat the film as the result of a named engine."
+          },
+          {
+            "text": "没有可以点击的线上页面，也没有公开源码。",
+            "textEn": "There is no live page to click, and there is no public source."
+          }
+        ],
+        "previewCredit": "封面帧来自 BubbleBrain（@BubbleBrain）原帖视频。原图 1200×675，左右各裁 94 像素后缩成 1200×800。这是贴地看向落叶和花园的一帧，不是石墙上的结尾。原帖 https://x.com/BubbleBrain/status/2122313967473434639",
+        "previewCreditEn": "Cover frame from BubbleBrain's (@BubbleBrain) post video. The 1200×675 poster is cropped 94 pixels on each side and scaled to 1200×800. This frame looks along the ground toward leaves and the garden, not the ending on the stone wall. Post: https://x.com/BubbleBrain/status/2122313967473434639"
+      }
+    },
+    {
+      "id": "fable-52-eight-web-interactions",
+      "slug": "fable-52-eight-web-interactions",
+      "title": "Fable 5.2：8个网页交互设计演示",
+      "titleEn": "Fable 5.2: eight web interaction design demos",
+      "kind": "showcase",
+      "hook": "八个网页交互成品，作者称由 Fable 5.2 完成。",
+      "hookEn": "Eight finished web interactions the author credits to Fable 5.2.",
+      "summary": "Viktor Oddy（@viktoroddy）发了一段约 5.8 秒的短片，两列四行同时放着八个网页。片里能看到运动服饰 Try the Look 在换装，TALUS 虚拟店在切换陈列并出现夹克，两款立体书架点开后进入图文详情，Measure the Living Planet 从苔藓生态岛推进到传感器数据卡，裙装页 Silhouettes that hang right 展开购买，Product & UI Designer 的作品集在滚动，画面标题为 SPRING SUMMER 2027 的 Lookbook 在不同 Look 之间切换。配文只有一句：Fable 5.2 是他愿意雇来做设计的第一个模型。适合拿来看这些成品页的交互和版式。视频里没有编辑器，也没有提示词或生成过程。",
+      "summaryEn": "Viktor Oddy (@viktoroddy) posted a clip of about 5.8 seconds: eight web pages playing at once, in two columns and four rows. The clip shows a sportswear Try the Look outfit change, the TALUS virtual shop changing its display until a jacket appears, two bookshelves opening into an image-and-text detail, Measure the Living Planet moving from a moss island to a sensor data card, the dress page Silhouettes that hang right opening a purchase view, a Product & UI Designer portfolio scrolling, and a lookbook titled SPRING SUMMER 2027 switching between looks. The caption is one sentence: Fable 5.2 is the first model he would hire as a designer. Useful as a look at the interaction and layout of finished pages. The video has no editor, and it shows no prompt or generation process.",
+      "categories": [
+        "design"
+      ],
+      "role": "Community web interaction demo",
+      "sourceUrl": "https://x.com/viktoroddy/status/2122106585136959664",
+      "secondaryUrls": [
+        "https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4"
+      ],
+      "previewImage": "/previews/fable-52-eight-web-interactions.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [],
+      "publishedAt": "2026-11-16",
+      "updatedAt": "2026-11-17T10:45:00Z",
+      "qualityNote": "收录理由：一条社区网页交互参考，八个成品页放在同一画面里，能对照换装、商品陈列、点开详情、数据卡、购买页、作品集和 Lookbook。边界：Fable 5.2 是 Viktor Oddy 自己的评价，不是官方发布。视频只展示做好的页面。制作流程、提示词、源码和实现技术都没有公开，本条不补写。画面上的人数、金额和价格是演示界面里的文案。没有可以打开操作的网页。本站没有复现这八页，也没有把它收成一键生成。",
+      "qualityNoteEn": "Why it is listed: a community web-interaction reference, with eight finished pages in one frame so you can compare an outfit change, a shop display, opening a detail, a data card, a purchase view, a portfolio, and a lookbook. Boundary: Fable 5.2 is Viktor Oddy’s own evaluation, not an official launch. The video shows finished pages only. The making process, prompt, source, and implementation are not public, and this entry does not fill them in. Counts, amounts, and prices on screen are interface copy. There is no page you can open and operate. This library did not reproduce the eight pages and does not present them as one-click generation.",
+      "verifyLog": "2026-11-17 核对。主帖 https://x.com/viktoroddy/status/2122106585136959664 ，作者 Viktor Oddy，用户名 viktoroddy，user id 893369654768529408。get_posts_by_id：created_at 2026-11-15T23:16:51.000Z（台北时间 2026-11-16 07:16:51）。全文 “Fable 5.2 is the first model i'd hire as a designer.” 加一条视频，t.co 展开到同一帖的 /video/1。媒体元数据：type video，duration_ms 5800，宽 1612，高 1836，preview_image_url 为 https://pbs.twimg.com/amplify_video_thumb/2122106503335448576/img/1ZN1XVXFUZk-wJYO.jpg ，未见 alt_text。最高一档 mp4 为 https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4 。同一次读取的公开计数：impression 127884，like 3275，repost 265，reply 80，quote 18，bookmark 2690（计数会变）。curl：原帖 HTTP 200；封面 JPEG HTTP 200，1054×1200；上述 mp4 HTTP 200，content-length 4301377，last-modified Sun, 15 Nov 2026 23:14:31 GMT。另取 720×820 公开档核对时长 5.800 秒，并抽片头、片中、片尾看八格在动；该小档没有放进仓库。抽帧里 Lookbook 标题为 SPRING SUMMER 2027，本条按画面书写。作品集格和商品卡上的人数、金额、价格没有抄进正文。预览取封面原图，ffmpeg 按高度缩进 1200×800，左右用 #f4efe6 留白，八格都保留，约 40KB WebP，路径 /previews/fable-52-eight-web-interactions.webp 。没有重绘，没有把视频文件放进仓库。本条只核对原帖正文和视频，没有把回复串写成制作流程。没有登录模型，没有调用 API，没有复现页面。去重：origin/main 6f01687 与当时开放 PR 的 diff 都没有 2122106585136959664、2122106503335448576 或本条 id。不打星。",
+      "verifyLogEn": "Checked 2026-11-17. Main post https://x.com/viktoroddy/status/2122106585136959664 by Viktor Oddy, username viktoroddy, user id 893369654768529408. get_posts_by_id: created_at 2026-11-15T23:16:51.000Z (2026-11-16 07:16:51 in Taipei). Full text: “Fable 5.2 is the first model i'd hire as a designer.” plus one video; the t.co link expands to /video/1 on the same post. Media metadata: type video, duration_ms 5800, width 1612, height 1836, preview_image_url https://pbs.twimg.com/amplify_video_thumb/2122106503335448576/img/1ZN1XVXFUZk-wJYO.jpg , no alt_text returned. The highest mp4 is https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4 . Public counts on that read: impression 127884, like 3275, repost 265, reply 80, quote 18, bookmark 2690 (counts move). curl: the post HTTP 200; the poster JPEG HTTP 200 at 1054×1200; that mp4 HTTP 200, content-length 4301377, last-modified Sun, 15 Nov 2026 23:14:31 GMT. A public 720×820 variant was used only to confirm duration 5.800s and to sample the opening, middle, and end so the eight cells are seen moving; that smaller file is not in the repo. The lookbook title in those frames reads SPRING SUMMER 2027, and the entry follows the picture. Counts, amounts, and prices on the portfolio cell and product cards were not copied into the body. Preview is the poster, scaled by height into 1200×800 with ffmpeg and #f4efe6 side padding so all eight cells remain, about 40KB WebP, at /previews/fable-52-eight-web-interactions.webp . Nothing was redrawn, and the video file was not added to the repo. This entry checks the post text and the video only; replies are not written up as a making process. No model sign-in, no API call, and the pages were not reproduced. Dedup: origin/main 6f01687 and the diffs of the open PRs at check time contain neither 2122106585136959664, nor 2122106503335448576, nor this id. Unrated.",
+      "landing": {
+        "what": "这是 Viktor Oddy 的一条社区演示，不是能点开的网站，也不是模型厂商的发布。他用一句话把设计归给 Fable 5.2。能参考的是八个已经做好的网页各自怎么动，不是一套可以照着做的步骤。",
+        "whatEn": "This is a community demo from Viktor Oddy. It is not a site you can click through, and it is not a vendor launch. He credits the design to Fable 5.2 in one sentence. What you can study is how eight finished web pages move, not a procedure you can follow.",
+        "contrast": {
+          "caption": "左列是原帖和视频能支持的内容。右列是本站收录时停住的地方。",
+          "captionEn": "Left: what the post and the video support. Right: where this library stops.",
+          "leftLabel": "原帖",
+          "leftLabelEn": "The post",
+          "rightLabel": "本站",
+          "rightLabelEn": "This library",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "一句评价，加上一段约 5.8 秒的成品视频，两列四行八个网页同时在动。",
+              "leftEn": "One evaluation, plus a finished clip of about 5.8 seconds: eight web pages moving at once in two columns and four rows.",
+              "right": "设计分类下的实践案例，只记录看得见的网页交互。",
+              "rightEn": "A case study in the design category, recording the web interactions that are visible."
+            },
+            {
+              "aspect": "Fable 5.2",
+              "aspectEn": "Fable 5.2",
+              "left": "作者说这是他愿意雇来做设计的第一个模型。",
+              "leftEn": "The author says it is the first model he would hire as a designer.",
+              "right": "只记这句评价。不写成官方演示，不写成已经复现，也不写成一键生成。",
+              "rightEn": "That sentence is recorded as his evaluation. It is not written as an official demo, as a reproduction, or as one-click generation."
+            },
+            {
+              "aspect": "画面上的数字",
+              "aspectEn": "Numbers on screen",
+              "left": "作品集和商品卡上有人数、金额和价格。",
+              "leftEn": "The portfolio and product cards show counts, amounts, and prices.",
+              "right": "这些是演示界面里的文案，不记成效果或销量。",
+              "rightEn": "They are interface copy in the demo, and are not recorded as results or sales."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看原帖里的成品",
+            "titleEn": "Watch the finished pages in the post",
+            "body": "打开 Viktor Oddy 的帖子。正文只有 “Fable 5.2 is the first model i'd hire as a designer.” 附件是约 5.8 秒的视频。片中没有编辑器、工具界面、提示词或生成过程。",
+            "bodyEn": "Open Viktor Oddy’s post. The text is only “Fable 5.2 is the first model i'd hire as a designer.” The attachment is a video of about 5.8 seconds. It shows no editor, tool UI, prompt, or generation process.",
+            "links": [
+              {
+                "href": "https://x.com/viktoroddy/status/2122106585136959664",
+                "label": "Viktor Oddy 的原帖",
+                "labelEn": "Viktor Oddy’s post"
+              }
+            ]
+          },
+          {
+            "title": "按八个格子看交互，不补做法",
+            "titleEn": "Read the eight cells, and do not invent a method",
+            "body": "Try the Look 在换装；TALUS 在切换陈列，能看到夹克；两款立体书架点开后进入图文详情；Measure the Living Planet 从苔藓生态岛走到传感器数据卡；Silhouettes that hang right 展开购买；Product & UI Designer 的作品集在滚动；标题为 SPRING SUMMER 2027 的 Lookbook 在不同 Look 之间切换。作者没有写出制作流程。",
+            "bodyEn": "Try the Look changes outfits; TALUS changes its display and a jacket appears; two bookshelves open into an image-and-text detail; Measure the Living Planet moves from a moss island to a sensor data card; Silhouettes that hang right opens a purchase view; the Product & UI Designer portfolio scrolls; the lookbook titled SPRING SUMMER 2027 switches between looks. The author did not publish how it was made.",
+            "links": [
+              {
+                "href": "https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4",
+                "label": "公开视频文件",
+                "labelEn": "Public video file"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Fable 5.2 只来自作者这句评价。这不是官方演示。本站没有登录模型，没有调用接口，也没有自己做出这八个页面。",
+            "textEn": "Fable 5.2 comes only from the author’s sentence. This is not an official demo. This library did not sign in to a model, did not call an API, and did not build these eight pages."
+          },
+          {
+            "text": "视频只展示成品效果。制作流程、提示词、开源地址和实现技术都没有出现，本条不编写。",
+            "textEn": "The video shows finished results only. The process, prompt, source repository, and implementation do not appear, and this entry does not write them."
+          },
+          {
+            "text": "没有可以点击的线上网页。画面里的人数、金额和价格是演示文案，不是效果数据。",
+            "textEn": "There is no live page to click. Counts, amounts, and prices in the picture are demo copy, not outcome figures."
+          }
+        ],
+        "previewCredit": "封面帧来自 Viktor Oddy（@viktoroddy）原帖视频。原图 1054×1200，按原比例放进 1200×800，左右留白，八格都在。这是片头：作品集那一格这时几乎是黑的，换装之后的夹克、详情、数据卡和购买页在后面的帧里。原帖 https://x.com/viktoroddy/status/2122106585136959664",
+        "previewCreditEn": "Cover frame from Viktor Oddy’s (@viktoroddy) post video. The 1054×1200 poster is fitted into 1200×800 with side padding so all eight cells stay. This is the opening: the portfolio cell is nearly black here, and the later jacket, detail, data card, and purchase view are in later frames. Post: https://x.com/viktoroddy/status/2122106585136959664"
+      }
+    },
+    {
       "id": "motif",
       "slug": "motif",
       "title": "Motif：在画布上设计 UI，一键干净地送进 After Effects",
@@ -11447,10 +11668,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-31T12:20:00Z",
+    "updatedAt": "2026-11-17T11:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.77",
-    "count": 215,
+    "version": "1.4.79",
+    "count": 217,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11748,7 +11969,13 @@
       "https://opendesigner.dev/docs/",
       "https://opendesigner.dev/docs/install/",
       "https://opendesigner.dev/showcase/",
-      "https://x.com/OpenDesigner_/status/2116500082099097682"
+      "https://x.com/OpenDesigner_/status/2116500082099097682",
+      "https://x.com/viktoroddy/status/2122106585136959664",
+      "https://pbs.twimg.com/amplify_video_thumb/2122106503335448576/img/1ZN1XVXFUZk-wJYO.jpg",
+      "https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4",
+      "https://x.com/BubbleBrain/status/2122313967473434639",
+      "https://pbs.twimg.com/amplify_video_thumb/2122309998470639616/img/s7YqYiontIsHOmzE.jpg",
+      "https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4"
     ]
   }
 }
