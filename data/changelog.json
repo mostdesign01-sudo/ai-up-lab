@@ -1,6 +1,13 @@
 {
   "notes": [
     {
+      "date": "2026-11-17",
+      "title": "收录两条 Fable 5.2 社区演示：网页交互与猫咪漫游",
+      "titleEn": "Catalog: two Fable 5.2 community demos, web interactions and a cat's-eye walk",
+      "body": "Cases 两条，都是作者对 Fable 5.2 的社区成品，不是官方发布，本站没有复现。fable-52-eight-web-interactions：Viktor Oddy / @viktoroddy，2026-11-15T23:16:51Z（台北 2026-11-16 07:16:51）。配文只有 “Fable 5.2 is the first model i'd hire as a designer.” 视频约 5.8 秒，两列四行八个网页成品。kind showcase，分类 design。抽帧里 Lookbook 标题为 SPRING SUMMER 2027。画面上的人数、金额和价格不记为效果。fable-52-cat-garden-walk：BubbleBrain / @BubbleBrain，2026-11-16T13:00:55Z（台北 2026-11-16 21:00:55）。约 110 秒猫咪贴地漫游。作者称看见的和听见的都完全用代码做成。kind showcase，分类 content 与 design，与已有代码成片同属内容与设计，不进提示词库。两条都没有可打开的页面，所以不进 HTML；也不进模型卡。预览各一张 1200×800 WebP，视频文件不进仓库。相对 main 6f01687：cases 215→217（1.4.77→1.4.79）。未改 HTML、Agent UI、Models、首页精选。未合并。",
+      "bodyEn": "Two Cases, both community finished pieces an author credits to Fable 5.2, not an official launch, and not reproduced here. fable-52-eight-web-interactions: Viktor Oddy / @viktoroddy, 2026-11-15T23:16:51Z (2026-11-16 07:16:51 Taipei). The caption is only “Fable 5.2 is the first model i'd hire as a designer.” The video is about 5.8 seconds, eight finished web pages in two columns and four rows. Kind showcase, category design. The lookbook title in sampled frames reads SPRING SUMMER 2027. Counts, amounts, and prices on screen are not recorded as results. fable-52-cat-garden-walk: BubbleBrain / @BubbleBrain, 2026-11-16T13:00:55Z (2026-11-16 21:00:55 Taipei). About 110 seconds, a ground-level cat's-eye walk. The author says everything seen and heard was created entirely with code. Kind showcase, categories content and design, with the existing code-made films, not in the prompt library. Neither has a page to open, so neither is HTML, and neither is a model card. One 1200×800 WebP preview each; the video files are not in the repo. Relative to main 6f01687: cases 215→217 (1.4.77→1.4.79). HTML, Agent UI, Models, and home picks unchanged. Not merged."
+    },
+    {
       "date": "2026-10-31",
       "title": "晚间收录 2026-10-31：Cases +2（Motif / OpenDesigner）",
       "titleEn": "Evening catalog 2026-10-31: Cases +2 (Motif / OpenDesigner)",
