@@ -1,6 +1,124 @@
 {
   "cases": [
     {
+      "id": "holymolly-zelda-style-demo",
+      "slug": "holymolly-zelda-style-demo",
+      "title": "HolyMolly：塞尔达风格3D游戏 Demo",
+      "titleEn": "HolyMolly: a Zelda-style 3D game demo",
+      "kind": "showcase",
+      "hook": "Sac 分享的社区概念演示，左右对照塞尔达风格的 3D 画面。",
+      "hookEn": "Sac shares a Zelda-style 3D concept demo in a side-by-side view.",
+      "summary": "Sac（@Saccc_c）分享了一段约 25 秒的社区概念演示。画面左右分屏：左边标着 HolyMolly 复刻版，能看到小溪、木桥、草地、村庄房屋和牛，以及通往城堡的路，一个外形接近林克的角色以第三人称奔跑，左上角有红心；右边标着 Nintendo 原版，是草地、岩石和山峰。全片没有工具、编辑器、代码、提示词或生成过程，也看不出更复杂的玩法。作者说这是 Vibe Gaming，不需要 Blender 和第三方游戏引擎，他用 AI 做了这个 PC 上的塞尔达风格 demo，一晚上完成，并把做法归给 HolyMolly：上传原场景参考图，再用简单描述来做。这些都是作者自己的说法。他引用的官方帖宣传：放入想法或图片就能得到可玩的 3D 世界，对话可以改角色、物理和动画，发布到 Feed 后别人可以玩和改编，产品页写着 holymolly.ai。那是宣传，不是本站实测。这条不是完整的 PC 移植，不是任天堂的发行或官方重制，也不能据此说已经不需要游戏引擎。库里原先没有 HolyMolly 工具条目，本条只收这条演示。没有可玩链接，也没有公开的提示词或源码。",
+      "summaryEn": "Sac (@Saccc_c) shares a community concept demo of about 25 seconds. The frame is split: the left side is labeled a HolyMolly remake and shows a stream, a wooden bridge, grass, a village with houses and cows, and a road toward a castle, with a Link-like character running in third person and hearts at the upper left. The right side is labeled the Nintendo original: grass, rocks, and peaks. The film shows no tool, editor, code, prompt, or generation process, and it does not demonstrate more complex play. The author calls this Vibe Gaming, says it needs no Blender and no third-party game engine, says he made this Zelda-style PC demo with AI in one night, and credits HolyMolly: upload reference images of the original scenes, then describe the request simply. Those are his own statements. The official post he quotes announces that an idea or an image can become a playable 3D world, that conversation can change characters, physics, and animation, and that posting to a Feed lets others play and remix, with the product page at holymolly.ai. That is promotion, not something this library tested. This is not a complete PC port, not a Nintendo release or official remake, and it is not evidence that a game engine is unnecessary. The catalog had no HolyMolly tool entry; this item records only this demo. There is no playable link, and no public prompt or source.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "Community 3D game demo",
+      "sourceUrl": "https://x.com/Saccc_c/status/2122646241939165596",
+      "secondaryUrls": [
+        "https://x.com/HolyMolly_AI/status/2122604857127325911",
+        "https://holymolly.ai/"
+      ],
+      "previewImage": "/previews/holymolly-zelda-style-demo.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "这是对照商业游戏的社区演示视频。公开传播自己的改编前，先看权利。本站没有可玩文件。",
+      "approvalBoundaryEn": "This is a community demo video set beside a commercial game. Check the rights before publishing your own adaptation. This library has no playable file.",
+      "connectors": [],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T11:40:00Z",
+      "qualityNote": "收录理由：一条社区 3D 游戏概念演示，左右对照着看画面。库里没有 HolyMolly 的工具条目，所以这里补的是 Sac 的这条演示，不另开工具卡。边界：不需要 Blender、不需要第三方游戏引擎、一晚上完成，都是作者的说法。官方帖里的可玩世界、对话改动画、Feed 供人玩和改编，是宣传，本站没有注册、登录或试玩。视频不能证明这是完整的 PC 移植、任天堂发行或官方重制。片中没有工具、编辑器、代码、提示词或生成过程，本条不补写。底部的时间和花费对照没有写入正文。没有这条 demo 的可玩链接，也没有公开源码。",
+      "qualityNoteEn": "Why it is listed: a community 3D game concept demo, watched as a side-by-side. The catalog had no HolyMolly tool entry, so this adds Sac's demo and does not open a separate tool card. Boundary: needing no Blender, needing no third-party game engine, and finishing in one night are the author's statements. A playable world, changing animation by conversation, and a Feed where others play and remix are the official post's promotion; this library did not sign up, sign in, or play. The video does not show a complete PC port, a Nintendo release, or an official remake. It has no tool, editor, code, prompt, or generation process, and this entry does not fill those in. The time-and-cost line at the bottom is left out of the body. There is no playable link for this demo, and no public source.",
+      "verifyLog": "2026-11-17 核对。主帖 https://x.com/Saccc_c/status/2122646241939165596 ，作者 Sac，用户名 Saccc_c，user id 1869683226178146304。get_posts_by_id：created_at 2026-11-17T11:01:15.000Z（台北时间 2026-11-17 19:01:15）。短正文从 “Vibe Gaming 时代真的到来” 写到一晚上完成 demo，并引用 https://x.com/HolyMolly_AI/status/2122604857127325911 。note_tweet 把做法归给 HolyMolly，写上传原场景参考图和简单描述；其中的时间和花费数字没有写入读者向字段。同一次读取的公开计数：impression 1266，like 22，repost 0，reply 4，quote 0，bookmark 8（计数会变）。媒体：type video，duration_ms 25366，原始宽 3840，高 2160，preview_image_url 为 https://pbs.twimg.com/amplify_video_thumb/2122644657821868032/img/ttgUQZ1239BNEVtR.jpg ，未见 alt_text。用户指定的 720p 为 https://video.twimg.com/amplify_video/2122644657821868032/vid/avc1/1280x720/vDAJWDve9cvLkios.mp4 。curl：主帖与引用帖 HTTP 200；封面 JPEG HTTP 200，1200×675；720p HTTP 200，content-length 4315525，last-modified Tue, 17 Nov 2026 10:52:57 GMT。另取 480×270 公开档，ffprobe 时长 25.425850 秒，只在临时目录抽了约 1 秒、8 秒、16 秒、23 秒：左右分屏，左标 HolyMolly 复刻版，右标 Nintendo 原版；左有木桥小溪、村庄房屋、通往城堡的路、红心和第三人称奔跑；右有草地与山峰。牛不在这四帧里，按全片核看写入正文。片中未见编辑器、代码或提示词。该小档和 720p 都没有放进仓库。底部字幕是时间和花费对照，预览从封面裁掉这一行（取 y=90 到 y=520），上下用接近 #050503 的边留成 1200×800 WebP，约 17KB，路径 /previews/holymolly-zelda-style-demo.webp 。引用帖作者 HolyMolly，用户名 HolyMolly_AI，user id 2087519594810576896，created_at 2026-11-17T08:16:48.000Z；note_tweet 的产品链接展开为 http://holymolly.ai 。该地址 HTTP 301 到 https://holymolly.ai/ ，再 HTTP 200，title 为 HolyMolly | Make anything a playable 3D world. 只读了公开标题，没有注册、登录、付费或发布。去重：origin/main 0042169 与当时开放 PR 的 diff 都没有本帖、引用帖、HolyMolly 或 holymolly.ai。已有 little-prince-across-the-stars 是 Sac 的另一条帖子，未改。不打星。",
+      "verifyLogEn": "Checked 2026-11-17. Main post https://x.com/Saccc_c/status/2122646241939165596 by Sac, username Saccc_c, user id 1869683226178146304. get_posts_by_id: created_at 2026-11-17T11:01:15.000Z (2026-11-17 19:01:15 in Taipei). The short text runs from “Vibe Gaming 时代真的到来” through finishing the demo in one night, and quotes https://x.com/HolyMolly_AI/status/2122604857127325911 . The note_tweet credits the method to HolyMolly and mentions uploading reference images plus a simple description; its time and cost figures are not in the reader-facing fields. Public counts on that read: impression 1266, like 22, repost 0, reply 4, quote 0, bookmark 8 (counts move). Media: type video, duration_ms 25366, native width 3840, height 2160, preview_image_url https://pbs.twimg.com/amplify_video_thumb/2122644657821868032/img/ttgUQZ1239BNEVtR.jpg , no alt_text returned. The 720p named for this entry is https://video.twimg.com/amplify_video/2122644657821868032/vid/avc1/1280x720/vDAJWDve9cvLkios.mp4 . curl: the post and the quoted post HTTP 200; the poster JPEG HTTP 200 at 1200×675; the 720p HTTP 200, content-length 4315525, last-modified Tue, 17 Nov 2026 10:52:57 GMT. A public 480×270 file probed at 25.425850 seconds was used only to sample about 1s, 8s, 16s, and 23s in a temp directory: a split screen, HolyMolly remake on the left and Nintendo original on the right; the left shows a wooden bridge and stream, village houses, a road toward a castle, hearts, and third-person running; the right shows grass and peaks. A cow is not in those four stills; the body follows a viewing of the full film. No editor, code, or prompt appears. Neither that small file nor the 720p is in the repo. The bottom line is a time-and-cost comparison; the preview crops it off the poster (y=90 through y=520) and pads toward #050503 to 1200×800 WebP, about 17KB, at /previews/holymolly-zelda-style-demo.webp . The quoted post is by HolyMolly, username HolyMolly_AI, user id 2087519594810576896, created_at 2026-11-17T08:16:48.000Z; its note_tweet product link expands to http://holymolly.ai . That address returns HTTP 301 to https://holymolly.ai/ , then HTTP 200, with title HolyMolly | Make anything a playable 3D world. Only the public title was read. No sign-up, sign-in, payment, or publish. Dedup: origin/main 0042169 and the diffs of the open PRs at check time contain neither this post, nor the quoted post, nor HolyMolly, nor holymolly.ai. The existing little-prince-across-the-stars case is a different post by Sac and was left unchanged. Unrated.",
+      "landing": {
+        "what": "这是 Sac 分享的一条社区概念演示，不是任天堂的发行，也不是本站测过的 HolyMolly 工具。能看的是约 25 秒的左右对照视频。作者把画面归给 HolyMolly，官方帖则用宣传口吻介绍产品。",
+        "whatEn": "This is a community concept demo Sac shared. It is not a Nintendo release, and it is not a HolyMolly tool this library tested. What you can watch is a side-by-side video of about 25 seconds. The author credits the picture to HolyMolly, and the official post introduces the product in promotional language.",
+        "contrast": {
+          "caption": "左列是原帖、引用帖和视频能支持的内容。右列是本站收录时停住的地方。",
+          "captionEn": "Left: what the post, the quoted post, and the video support. Right: where this library stops.",
+          "leftLabel": "来源",
+          "leftLabelEn": "The sources",
+          "rightLabel": "本站",
+          "rightLabelEn": "This library",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "约 25 秒的分屏：左边是作者标成 HolyMolly 复刻版的塞尔达风格画面，右边标着 Nintendo 原版。",
+              "leftEn": "About 25 seconds, split: the left is a Zelda-style view the author labels a HolyMolly remake, and the right is labeled the Nintendo original.",
+              "right": "内容与设计下的实践案例。库里没有 HolyMolly 工具卡，本条只记录这条社区演示。",
+              "rightEn": "A case study under content and design. There is no HolyMolly tool card; this item records only this community demo."
+            },
+            {
+              "aspect": "说法",
+              "aspectEn": "Claims",
+              "left": "作者说不用 Blender 和第三方游戏引擎，一晚上做成。官方帖宣传放入想法或图片就能得到可玩的 3D 世界。",
+              "leftEn": "The author says it needs no Blender and no third-party game engine, and that he finished it in one night. The official post promotes turning an idea or image into a playable 3D world.",
+              "right": "两处都只记成来源自己的说法。本站没有注册，没有试玩，也不把它写成已验证的结论。",
+              "rightEn": "Both stay the sources' own statements. This library did not sign up or play, and does not write them up as tested conclusions."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看 Sac 的原帖",
+            "titleEn": "Start with Sac's post",
+            "body": "打开这条帖子，看约 25 秒的分屏。左边是小溪、木桥、村庄和城堡路，角色在跑，有红心；右边是标成原版的草地和山峰。片中没有工具、编辑器、代码或提示词。",
+            "bodyEn": "Open this post and watch the split screen of about 25 seconds. The left has a stream, a wooden bridge, a village, and a road to a castle, with a character running and hearts on screen. The right is grass and peaks labeled as the original. The film has no tool, editor, code, or prompt.",
+            "links": [
+              {
+                "href": "https://x.com/Saccc_c/status/2122646241939165596",
+                "label": "Sac 的原帖",
+                "labelEn": "Sac's post"
+              }
+            ]
+          },
+          {
+            "title": "把官方介绍当成宣传",
+            "titleEn": "Read the official introduction as promotion",
+            "body": "作者引用的官方帖介绍 HolyMolly，并给出产品页。宣传包括：放入想法或图片得到可玩的 3D 世界，用对话改角色、物理和动画，发布到 Feed 后供人玩和改编。本站没有登录这个产品，也没有这条 demo 的可玩地址。",
+            "bodyEn": "The official post Sac quotes introduces HolyMolly and gives a product page. The promotion includes a playable 3D world from an idea or image, changing characters, physics, and animation by conversation, and a Feed where others can play and remix. This library did not sign in, and this demo has no playable address.",
+            "links": [
+              {
+                "href": "https://x.com/HolyMolly_AI/status/2122604857127325911",
+                "label": "HolyMolly 官方帖",
+                "labelEn": "HolyMolly's official post"
+              },
+              {
+                "href": "https://holymolly.ai/",
+                "label": "官方写出的产品页",
+                "labelEn": "The product page named in the post"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "这是 Sac 的社区概念演示。它不是完整的 PC 移植，不是任天堂的发行，也不是官方重制。",
+            "textEn": "This is Sac's community concept demo. It is not a complete PC port, not a Nintendo release, and not an official remake."
+          },
+          {
+            "text": "不需要 Blender、不需要第三方游戏引擎，以及一晚上完成，都是作者的说法。视频本身不能证明这些结论。",
+            "textEn": "Needing no Blender, needing no third-party game engine, and finishing in one night are the author's statements. The video itself cannot prove those conclusions."
+          },
+          {
+            "text": "官方帖的功能介绍是宣传。本站没有注册、登录、付费或发布游戏，也没有把底部的时间和花费对照写进正文。",
+            "textEn": "The feature list in the official post is promotion. This library did not sign up, sign in, pay, or publish a game, and it leaves the bottom time-and-cost line out of the body."
+          }
+        ],
+        "previewCredit": "封面帧来自 Sac（@Saccc_c）原帖视频。原图 1200×675，裁掉底部的时间和花费对照，上下留边成为 1200×800。这一帧是左右分屏，左边较暗。原帖 https://x.com/Saccc_c/status/2122646241939165596",
+        "previewCreditEn": "Cover frame from Sac's (@Saccc_c) post video. The 1200×675 poster has the bottom time-and-cost line cropped off and is padded to 1200×800. This frame is the split screen, and the left side is dark. Post: https://x.com/Saccc_c/status/2122646241939165596"
+      }
+    },
+    {
       "id": "fable-52-cat-garden-walk",
       "slug": "fable-52-cat-garden-walk",
       "title": "Fable 5.2：猫咪视角花园漫游",
@@ -11668,10 +11786,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-17T11:00:00Z",
+    "updatedAt": "2026-11-17T11:40:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.79",
-    "count": 217,
+    "version": "1.4.80",
+    "count": 218,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -11975,7 +12093,12 @@
       "https://video.twimg.com/amplify_video/2122106503335448576/vid/avc1/1612x1836/eCPNATUUQFgkmew4.mp4",
       "https://x.com/BubbleBrain/status/2122313967473434639",
       "https://pbs.twimg.com/amplify_video_thumb/2122309998470639616/img/s7YqYiontIsHOmzE.jpg",
-      "https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4"
+      "https://video.twimg.com/amplify_video/2122309998470639616/vid/avc1/1920x1080/owvgO57-T0VvUrRF.mp4",
+      "https://x.com/Saccc_c/status/2122646241939165596",
+      "https://x.com/HolyMolly_AI/status/2122604857127325911",
+      "https://pbs.twimg.com/amplify_video_thumb/2122644657821868032/img/ttgUQZ1239BNEVtR.jpg",
+      "https://video.twimg.com/amplify_video/2122644657821868032/vid/avc1/1280x720/vDAJWDve9cvLkios.mp4",
+      "https://holymolly.ai/"
     ]
   }
 }
