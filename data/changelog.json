@@ -2,6 +2,13 @@
   "notes": [
     {
       "date": "2026-11-17",
+      "title": "晚间收录 2026-11-17：Cases +2（Muzli MCP / Blobby）",
+      "titleEn": "Evening catalog 2026-11-17: Cases +2 (Muzli MCP / Blobby)",
+      "body": "Cases 两条。muzli-mcp：Petras Baukys 2026-11-17 的博文和产品页，把 Muzli 接到 Claude、ChatGPT、Cursor 或 VS Code，助手先看设计参考再做页面，并有一句「Publish this to Muzli」放到 muzli.space。厂商文案。本站没有注册、没有连接、没有复现对照、没有发布。用时和用户规模没有写入正文。blobby：Ravindra Bisht 的本机 Electron 画布，仓库 LICENSE 读到 MIT，页面是 HTML/CSS，由已有的助手经 MCP 来画。README 写 Windows 和 Linux 支持但作者未测，路线图仍未勾选打包安装包和 React 导出；官网却提供安装包和每月 8 美元的 Pro。两套说法没有在本机对上。本站没有安装 Electron、没有连接、没有跑设计、没有付款。和已收的 OpenPencil、Kalka、Doop、Mowgli、WunderUI、ProtoPie MCP 不是同一条。两条都是 kind tool，分类 design 与 coding，不进 HTML、Agent UI、Models。预览各一张 1200×800 WebP。相对 main 5b0eda3：cases 218→220（1.4.80→1.4.82）。未改首页精选和自动合并流程。本 PR 保持草稿并带 catalog-hold，等 Hao 说「合」。未合并，未部署。",
+      "bodyEn": "Two Cases. muzli-mcp: Petras Baukys’s post and product page of 2026-11-17 connect Muzli to Claude, ChatGPT, Cursor, or VS Code so the assistant looks at design references before it builds, with a “Publish this to Muzli” line for muzli.space. Vendor copy. This library did not sign up, connect, reproduce the comparison, or publish. Timing and audience-size claims stay out of the body. blobby: Ravindra Bisht’s local Electron canvas. The repo LICENSE file reads as MIT, pages are HTML/CSS, and the assistant you already have draws over MCP. The README says Windows and Linux are supported but untested by the author, and packaged installers and React export are still unchecked on the roadmap; the site offers installers and Pro at $8 a month. The two accounts were not matched on a machine. This library did not install Electron, connect, run a design, or pay. Distinct from the OpenPencil, Kalka, Doop, Mowgli, WunderUI, and ProtoPie MCP entries already listed. Both are kind tool, categories design and coding, and neither is HTML, Agent UI, or Models. One 1200×800 WebP preview each. Relative to main 5b0eda3: cases 218→220 (1.4.80→1.4.82). Home picks and the auto-merge workflow were not changed. This PR stays a draft with catalog-hold until Hao says 「合」. Not merged and not deployed."
+    },
+    {
+      "date": "2026-11-17",
       "title": "收录 Sac 的 HolyMolly 塞尔达风格 3D 演示",
       "titleEn": "Catalog: Sac's HolyMolly Zelda-style 3D demo",
       "body": "Cases：holymolly-zelda-style-demo（Sac / @Saccc_c，2026-11-17T11:01:15Z，台北 2026-11-17 19:01:15）。约 25 秒社区概念演示，左右分屏，作者归给 HolyMolly，并引用官方帖 2122604857127325911。官方产品页 https://holymolly.ai/ 只核对了公开标题，没有注册或试玩。kind showcase，分类 content 与 design。库里没有 HolyMolly 工具条目，不另开工具卡。不进提示词库，不进 HTML。底部时间和花费对照不写入正文。预览裁掉该行后做成 1200×800 WebP，视频文件不进仓库。已有 little-prince-across-the-stars 是另一条帖子，未改。相对 main 0042169：cases 217→218（1.4.79→1.4.80）。未改自动合并流程。",

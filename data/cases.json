@@ -1,6 +1,250 @@
 {
   "cases": [
     {
+      "id": "muzli-mcp",
+      "slug": "muzli-mcp",
+      "title": "Muzli MCP：先看设计参考，再让助手做页面",
+      "titleEn": "Muzli MCP: look at design references before the assistant builds",
+      "kind": "tool",
+      "hook": "把 Muzli 接到助手上，让它先看设计参考再做页面。",
+      "hookEn": "Connect Muzli so the assistant checks design references before it builds.",
+      "summary": "Petras Baukys 在 2026-11-17 的博文里介绍 Muzli MCP。产品页的说法是：用一个 Muzli 账号，把服务接到 Claude、ChatGPT、Cursor 或 VS Code，助手先在 Muzli 上找真实的设计参考，说明从每条参考借了什么，再自己做页面。产品页写出的查找包括按页面类型找例子、看这一周的点击、打开合集、按颜色找，以及使用你保存在 Muzli 的设计。博文写了一句「Publish this to Muzli」：把做好的页面放到 your-project.muzli.space，并在个人资料里留一份草稿。产品页还写可以在同一地址更新、回滚或下线。免费档在产品页上写成每周一次完整设计，同时在线最多 10 个站点；Pro 从每月 7.50 美元起，按年计费，每天不限次数。免费的 Claude 账号可以添加一个自定义连接器；ChatGPT 能不能加，产品页写要看套餐。这些都是厂商页面上的说法。博文里有作者自己做的前后对照，并给出三个演示地址。本站没有注册，没有连接 MCP，没有打开那些演示来对照，也没有发布页面。",
+      "summaryEn": "Petras Baukys introduces Muzli MCP in a post dated 2026-11-17. The product page says you use a Muzli account to connect Claude, ChatGPT, Cursor, or VS Code, and the assistant looks up real design references on Muzli, says what it takes from each, and then makes its own page. The lookups named on the page are examples for a page type, what people clicked this week, collections, color search, and the designs you saved on Muzli. The post gives the line “Publish this to Muzli”: the finished page goes to your-project.muzli.space, with a draft on your profile. The product page also says a later version can replace that address, or the previous version can be restored, or the site taken offline. On the product page the free tier is one full design a week and up to 10 sites online; Pro starts at $7.50 a month, billed yearly, with a design every day. A free Claude account can add one custom connector; the product page says ChatGPT depends on the plan. All of that is the vendor’s own wording. The post includes the author’s own before-and-after and names three demo addresses. This library did not sign up, did not connect MCP, did not open those demos to compare them, and did not publish a page.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Design reference MCP",
+      "sourceUrl": "https://muz.li/blog/muzli-mcp-design-with-ai/",
+      "secondaryUrls": [
+        "https://muz.li/mcp",
+        "https://mcp.muz.li/mcp"
+      ],
+      "previewImage": "/previews/muzli-mcp.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "登录 Muzli 和把页面发布到网上，都要你自己确认。本站没有代为注册或发布。",
+      "approvalBoundaryEn": "Signing in to Muzli and publishing a page are yours to confirm. This library did not sign up or publish for you.",
+      "connectors": [
+        "Claude",
+        "ChatGPT",
+        "Cursor",
+        "VS Code",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T12:20:00Z",
+      "qualityNote": "收录理由：这是设计参考库接到 Claude、ChatGPT、Cursor 和 VS Code 的官方连接，并带一条把页面放到 muzli.space 的发布说法。边界：查找参考、免费档与 Pro、连接步骤和发布，都是产品页和博文的说法。博文里的前后对照是作者自己的演示。本站没有注册，没有连接，没有复现对照，也没有发布。文中的用时和用户规模没有写进正文。",
+      "qualityNoteEn": "Why it is listed: an official connection from a design-reference library to Claude, ChatGPT, Cursor, and VS Code, plus a stated way to put a page on muzli.space. Boundary: lookups, the free tier and Pro, the connect steps, and publishing are what the product page and the post say. The before-and-after in the post is the author's own demo. This library did not sign up, did not connect, did not reproduce the comparison, and did not publish. Timing claims and audience-size claims in the post are left out of the body.",
+      "verifyLog": "2026-11-17 晚间核对，抓取窗口约 2026-11-17T11:48:08Z 至 2026-11-17T12:02:24Z（台北同日 19:48 至 20:02）。博文 https://muz.li/blog/muzli-mcp-design-with-ai/ HTTP 200，响应头 date Tue, 17 Nov 2026 11:48:08 GMT，content-length 160655，title 为 Build sites that don’t smell like AI, and host them on Muzli for free | Muzli Blog。署名 Published by Petras Baukys on November 17, 2026。og:image 为 https://feed.muzli.cloud/muzli_feed/wp-content/uploads/2026/11/17120127/muzli-mcp-design-with-ai-featured-v7.jpg ，该 JPEG HTTP 200，174241 字节，1920×1080。产品页 https://muz.li/mcp HTTP 301 到 https://muz.li/mcp/ ，再 HTTP 200，date Tue, 17 Nov 2026 11:58:59 GMT，content-length 137714，title 为 Muzli MCP: better design from Claude, ChatGPT and Cursor。产品页 og:image https://muz.li/images/og-mcp.png HTTP 200，1200×630，未用作预览。连接地址 https://mcp.muz.li/mcp 用 GET 得到 HTTP 401，空正文，www-authenticate 为 Bearer realm=\"OAuth\"，resource_metadata 指向 https://mcp.muz.li/.well-known/oauth-protected-resource/mcp ，scope 为 designs:read projects:write，date Tue, 17 Nov 2026 12:02:24 GMT。没有提交令牌，没有走完登录。博文点名的三个演示只做了 HEAD：https://overdue-default.muzli.space 、https://overdue-plain.muzli.space 、https://overdue-k6hf.muzli.space 都是 HTTP 200、text/html，content-length 分别为 33590、36375、34528。没有读取正文，没有对照版式。产品页正文里有 “900,000+ designers”，博文 TL;DR 有 “seven minutes”，正文另有作者自述的十到十五分钟和 29 分钟。这些数字没有写入读者向字段。预览取博文头图，居中 cover 裁成 1200×800 WebP（quality 74），裁掉的是两侧深色边，两扇浏览器示意和标题都还在。没有用 Playwright，没有注册，没有连接 MCP，没有发布。去重：origin/main 5b0eda3 的四库正文没有 Muzli MCP；当时 60 个打开的 PR diff 里搜 muzli / blobby / useblobby 无命中。不进 HTML、Agent UI、Models。",
+      "verifyLogEn": "Checked on the evening of 2026-11-17. Fetch window about 2026-11-17T11:48:08Z through 2026-11-17T12:02:24Z (19:48–20:02 the same day in Taipei). Post https://muz.li/blog/muzli-mcp-design-with-ai/ HTTP 200, response date Tue, 17 Nov 2026 11:48:08 GMT, content-length 160655, title Build sites that don’t smell like AI, and host them on Muzli for free | Muzli Blog. Byline: Published by Petras Baukys on November 17, 2026. og:image https://feed.muzli.cloud/muzli_feed/wp-content/uploads/2026/11/17120127/muzli-mcp-design-with-ai-featured-v7.jpg HTTP 200, 174241 bytes, 1920×1080 JPEG. Product page https://muz.li/mcp HTTP 301 to https://muz.li/mcp/ then HTTP 200, date Tue, 17 Nov 2026 11:58:59 GMT, content-length 137714, title Muzli MCP: better design from Claude, ChatGPT and Cursor. Product og:image https://muz.li/images/og-mcp.png HTTP 200, 1200×630, not used as the preview. GET https://mcp.muz.li/mcp returned HTTP 401, empty body, www-authenticate Bearer realm=\"OAuth\", resource_metadata https://mcp.muz.li/.well-known/oauth-protected-resource/mcp , scope designs:read projects:write, date Tue, 17 Nov 2026 12:02:24 GMT. No token was sent and sign-in was not completed. The three demos named in the post were HEAD only: https://overdue-default.muzli.space , https://overdue-plain.muzli.space , and https://overdue-k6hf.muzli.space each HTTP 200, text/html, content-length 33590, 36375, and 34528. Bodies were not read and the layouts were not compared. The product page text includes “900,000+ designers”. The post TL;DR includes “seven minutes”, and the article also gives the author’s own ten-to-fifteen minutes and 29 minutes. Those figures are not in the reader-facing fields. The preview is the post’s featured image, center-covered to a 1200×800 WebP (quality 74); the crop is the dark side margin, and both browser mockups and the headline remain. Playwright was not used. No sign-up, no MCP connection, no publish. Dedup: the four libraries on origin/main 5b0eda3 do not mention Muzli MCP; a search of the diffs of the 60 open PRs for muzli / blobby / useblobby had no hit. Not HTML, not Agent UI, not Models.",
+      "landing": {
+        "what": "这是 Muzli 在 2026-11-17 的博文和产品页里写出的 MCP 连接。厂商的说法是：助手先看 Muzli 上的设计参考，再按一句「Publish this to Muzli」把页面放到 muzli.space。本站没有注册，也没有把这条连接跑通。",
+        "whatEn": "This is the MCP connection described on Muzli’s post and product page of 2026-11-17. The vendor’s account is that the assistant looks at design references on Muzli first, then puts a page on muzli.space when asked to “Publish this to Muzli”. This library did not sign up and did not get the connection running.",
+        "contrast": {
+          "caption": "左列是产品页和博文写出的内容。右列是本站收录时停住的地方。",
+          "captionEn": "Left: what the product page and the post say. Right: where this library stops.",
+          "leftLabel": "厂商页面",
+          "leftLabelEn": "The vendor pages",
+          "rightLabel": "本站",
+          "rightLabelEn": "This library",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "一个接到 Claude、ChatGPT、Cursor 或 VS Code 的设计参考连接，并有一句把页面发布到 muzli.space 的说明。",
+              "leftEn": "A design-reference connection for Claude, ChatGPT, Cursor, or VS Code, plus a line that publishes a page to muzli.space.",
+              "right": "Cases 里的一条工具。不是可单独打开的 HTML 玩具，也不是免费的界面套件或模型卡。",
+              "rightEn": "A tool in Cases. Not a standalone HTML toy, and not a free UI kit or a model card."
+            },
+            {
+              "aspect": "对照演示",
+              "aspectEn": "The comparison",
+              "left": "博文放了作者自己的前后对照，并写出三个 muzli.space 地址。",
+              "leftEn": "The post shows the author’s own before-and-after and names three muzli.space addresses.",
+              "right": "本站没有打开这些页面来对照，也没有复现这次制作。头图只当作厂商配图。",
+              "rightEn": "This library did not open those pages to compare them and did not reproduce the build. The featured image is kept as the vendor’s picture."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读发布文",
+            "titleEn": "Read the launch post",
+            "body": "博文写了连接的目的、作者自己的对照，以及「Publish this to Muzli」。用时和用户规模是宣传数字，本条正文没有照抄。",
+            "bodyEn": "The post describes the connection, the author’s own comparison, and “Publish this to Muzli”. Timing and audience-size lines are promotion, and this entry does not copy them into the body.",
+            "links": [
+              {
+                "href": "https://muz.li/blog/muzli-mcp-design-with-ai/",
+                "label": "2026-11-17 的发布文",
+                "labelEn": "Launch post dated 2026-11-17"
+              }
+            ]
+          },
+          {
+            "title": "再看产品页上的地址和档位",
+            "titleEn": "Then read the address and the tiers",
+            "body": "产品页写出连接地址、Claude / ChatGPT / Cursor / VS Code 的添加步骤、免费档和 Pro。第一次使用要登录，并选择只查找，或查找并且允许发布。本站没有登录。",
+            "bodyEn": "The product page gives the connector address, the add steps for Claude, ChatGPT, Cursor, and VS Code, and the free tier and Pro. The first use asks you to sign in and to choose lookup only, or lookup plus publishing. This library did not sign in.",
+            "links": [
+              {
+                "href": "https://muz.li/mcp",
+                "label": "Muzli MCP 产品页",
+                "labelEn": "Muzli MCP product page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "查找参考、免费档每周一次、Pro 的月价、以及发布到 muzli.space，都是厂商页面的说法。本站没有注册，没有连接，也没有发布。",
+            "textEn": "Reference lookup, one free design a week, the Pro monthly price, and publishing to muzli.space are what the vendor pages say. This library did not sign up, connect, or publish."
+          },
+          {
+            "text": "博文里的前后对照是作者自己的演示。三个演示地址只核对了能够响应，没有打开来比较。",
+            "textEn": "The before-and-after in the post is the author’s own demo. The three demo addresses were checked only for a response, and were not opened for comparison."
+          },
+          {
+            "text": "文中的用时和用户规模没有写入正文。连接端点要求登录，本站没有提交凭证。",
+            "textEn": "Timing and audience-size claims are left out of the body. The connector endpoint asks for a sign-in, and this library sent no credentials."
+          }
+        ],
+        "previewCredit": "预览是博文头图，原图 1920×1080。居中裁成 3:2 后缩到 1200×800，裁掉的是两侧深色边。画面是文章作者自己的对照图，不是本站复现的结果。https://muz.li/blog/muzli-mcp-design-with-ai/",
+        "previewCreditEn": "Preview is the post’s featured image, originally 1920×1080. It is center-cropped to 3:2 and scaled to 1200×800; the crop is the dark margin at the sides. The picture is the author’s own comparison, not a result reproduced here. https://muz.li/blog/muzli-mcp-design-with-ai/"
+      }
+    },
+    {
+      "id": "blobby",
+      "slug": "blobby",
+      "title": "Blobby：本机设计画布，由已有的助手经 MCP 来画",
+      "titleEn": "Blobby: a local design canvas your existing assistant drives over MCP",
+      "kind": "tool",
+      "hook": "本机画布不带模型，已有的助手经 MCP 在上面画。",
+      "hookEn": "A local canvas with no model of its own. Your assistant draws on it over MCP.",
+      "summary": "Blobby 是放在本机上的设计画布。公开仓库的作者是 Ravindra Bisht，package.json 版本 0.1.0，许可证文件是 MIT。应用是 Electron，项目是电脑上的普通文件夹，页面是 HTML 和 CSS。README 写它没有自带模型，也不另要一套模型密钥：Claude、Cursor、Codex、VS Code 等经 MCP 写页面、改样式、看截图、做检查，再导出 HTML。源码里登记了这些工具。README 写 macOS 测过；Windows 和 Linux 写了支持，但是作者还没测。路线图里，组件库、Figma 与 React 导出、打包安装包仍未勾选。官网另有一套说法：下载页提供 macOS、Windows 和 Linux 安装包，并要注册账号；定价写免费档含画布、注释、检查和 HTML/CSS 导出，限 3 个项目，Pro 为每月 8 美元，含品牌调研以及 React、Shopify、WordPress 导出。下载页把 ChatGPT 列进可连接的应用，README 则写 ChatGPT 连不上本机应用。本库没有下载安装包，没有把安装包和仓库对上。它和已收的 OpenPencil、Kalka 不同，仓库不读写 .fig，也不是那两个项目的分叉；和 Doop 不同，它不是浏览器里的多人画布；和 Mowgli 不同，README 写明没有自带模型；也不是 WunderUI 那种组件库，或 ProtoPie 里的原型连接。本库没有安装 Electron，没有连接 MCP，也没有跑过一次设计。",
+      "summaryEn": "Blobby is a design canvas that stays on your computer. The public repo is by Ravindra Bisht, package.json is version 0.1.0, and the license file is MIT. The app is Electron, a project is an ordinary folder, and a page is HTML and CSS. The README says it has no model of its own and does not ask for a separate model key: Claude, Cursor, Codex, VS Code, and others write pages, change styles, take screenshots, run checks, and export HTML over MCP. Those tools are registered in the source. The README says macOS was tested; Windows and Linux are described as supported, and the author has not tested them. On the roadmap, a component library, Figma and React export, and packaged installers are still unchecked. The website says something else: the download page offers macOS, Windows, and Linux installers and asks you to create an account; pricing lists a free tier with the canvas, comments, checks, and HTML/CSS export, limited to 3 projects, and Pro at $8 a month with brand research plus React, Shopify, and WordPress export. The download page lists ChatGPT among the apps you can connect, while the README says ChatGPT cannot reach a local app. This library did not download an installer and did not match an installer to the repo. Unlike the OpenPencil and Kalka entries already listed, the repo does not read or write .fig and is not a fork of those projects. Unlike Doop, it is not a multiplayer canvas in the browser. Unlike Mowgli, the README says there is no model of its own. It is also not the WunderUI component library, or the prototype connection inside ProtoPie. This library did not install Electron, did not connect MCP, and did not run a design.",
+      "categories": [
+        "design",
+        "coding"
+      ],
+      "role": "Local MCP design canvas",
+      "sourceUrl": "https://useblobby.com/",
+      "secondaryUrls": [
+        "https://github.com/Ravindrabisht12/blobby",
+        "https://useblobby.com/download",
+        "https://news.ycombinator.com/item?id=50527557"
+      ],
+      "previewImage": "/previews/blobby.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "官网安装包要求注册，Pro 要付款，助手会改本机上的项目文件夹。本库没有代为安装、注册或付款。",
+      "approvalBoundaryEn": "The website installer asks for an account, Pro costs money, and the assistant writes project folders on the computer. This library did not install, sign up, or pay.",
+      "connectors": [
+        "Claude",
+        "Cursor",
+        "Codex",
+        "VS Code",
+        "MCP"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-17T12:20:00Z",
+      "qualityNote": "收录理由：仓库里有可阅读的 Electron 画布、MCP 工具和本地文件夹结构，不是只有一页宣传。它和已收的 OpenPencil、Kalka、Doop、Mowgli、WunderUI、ProtoPie MCP 不是同一条。边界：README 把打包安装包和 React 导出留在未完成的路线图里，官网却提供安装包，并在 Pro 里写 React、Shopify、WordPress 导出；两套说法没有在本机对过。README 写 Windows 和 Linux 支持但作者未测，官网下载页写成可以用。许可证文件读到的是 MIT。本库没有安装 Electron，没有连接 MCP，没有跑设计，没有注册，也没有付款。",
+      "qualityNoteEn": "Why it is listed: the repo has a readable Electron canvas, MCP tools, and a local folder layout, rather than only a marketing page. It is a different entry from OpenPencil, Kalka, Doop, Mowgli, WunderUI, and ProtoPie MCP. Boundary: the README leaves packaged installers and React export unchecked on the roadmap, while the site offers installers and lists React, Shopify, and WordPress export on Pro; the two accounts were not matched on a machine. The README says Windows and Linux are supported but untested by the author, and the download page says they can be used. The license file reads as MIT. This library did not install Electron, did not connect MCP, did not run a design, did not sign up, and did not pay.",
+      "verifyLog": "2026-11-17 晚间核对。官网 https://useblobby.com/ HTTP 200，date Tue, 17 Nov 2026 11:58:59 GMT，content-length 36181，title 为 Blobby · The design canvas for your AI。下载页 https://useblobby.com/download HTTP 200，18131 字节，列出 Apple silicon 与 Intel 的 dmg、Blobby-Setup.exe、.deb 和 AppImage，并写首次打开后要注册。四个安装地址只做了 HEAD，没有下载正文：https://downloads.useblobby.com/download/Blobby-mac-arm64.dmg HTTP 200，content-length 124604594，last-modified Mon, 16 Nov 2026 09:23:01 GMT；Blobby-Setup.exe HTTP 200，116421129，09:23:51 GMT；Blobby-amd64.deb HTTP 200，103997660，09:22:45 GMT；Blobby-x86_64.AppImage HTTP 200，129617956，09:23:35 GMT。没有安装，没有运行。仓库 https://github.com/Ravindrabisht12/blobby 页面 HTTP 200。gh api：fork 为 false，license SPDX MIT，stargazers_count 4，forks_count 2，created_at 2026-10-29T14:42:49Z，pushed_at 2026-11-01T15:34:08Z，description 为 The design canvas your AI drives. Open-source MCP design tool.。LICENSE 经 contents API 读到 1071 字节，全文是 MIT 许可，Copyright (c) 2026 Ravindra Bisht，sha 28488576beb42477bfbf21b061b2887a30bea565。package.json name blobby、version 0.1.0、license MIT、author Ravindra Bisht，依赖为 MCP SDK、linkedom、zod，Electron 在 devDependencies。src/mcp/tools.js 里 tool() 登记数过是 33 个，registerPrompt 是 design_page 与 apply_feedback 两条，与 README 的 “33 tools and 2 prompts” 一致。同一文件里 McpServer 的 version 字符串是 0.2.0，和 package.json 的 0.1.0 不一致，正文只写 package.json。README 写 macOS tested，Windows and Linux supported but not tested，路线图未勾选组件库、Figma and React exports、Packaged installers，并写 ChatGPT 不能直接连本机应用。Show HN https://news.ycombinator.com/item?id=50527557 页面 HTTP 200，当时显示 1 point、by bisht3404。Firebase API https://hacker-news.firebaseio.com/v0/item/50527557.json HTTP 200，date Tue, 17 Nov 2026 12:01:25 GMT，id 50527557，by bisht3404，time 1794890675 即 2026-11-17T04:44:35Z，score 1，descendants 0，url https://useblobby.com/ 。预览用仓库 https://raw.githubusercontent.com/Ravindrabisht12/blobby/main/docs/editor.png ，HTTP 200，1600×1002。按宽度缩到 1200（高 752），上下各用边缘像素补 24 像素，成为 1200×800 WebP。官网 https://useblobby.com/assets/shots/editor-light.jpg 也 HTTP 200，2400×1500，是样例店铺的宣传图，没有用作预览。没有 npm install，没有安装 Electron，没有连接 MCP，没有跑设计，没有注册，没有付款。点数和星数只写在这里。去重：origin/main 5b0eda3 与当时 60 个打开的 PR diff 都没有 blobby 或 useblobby。不进 HTML。",
+      "verifyLogEn": "Checked on the evening of 2026-11-17. Site https://useblobby.com/ HTTP 200, date Tue, 17 Nov 2026 11:58:59 GMT, content-length 36181, title Blobby · The design canvas for your AI. Download page https://useblobby.com/download HTTP 200, 18131 bytes, listing Apple silicon and Intel dmg files, Blobby-Setup.exe, a .deb, and an AppImage, and saying the first open is followed by an account. The four installer URLs were HEAD only, bodies not downloaded: https://downloads.useblobby.com/download/Blobby-mac-arm64.dmg HTTP 200, content-length 124604594, last-modified Mon, 16 Nov 2026 09:23:01 GMT; Blobby-Setup.exe HTTP 200, 116421129, 09:23:51 GMT; Blobby-amd64.deb HTTP 200, 103997660, 09:22:45 GMT; Blobby-x86_64.AppImage HTTP 200, 129617956, 09:23:35 GMT. Not installed and not run. Repo page https://github.com/Ravindrabisht12/blobby HTTP 200. gh api: fork false, license SPDX MIT, stargazers_count 4, forks_count 2, created_at 2026-10-29T14:42:49Z, pushed_at 2026-11-01T15:34:08Z, description The design canvas your AI drives. Open-source MCP design tool. LICENSE via the contents API is 1071 bytes of the MIT license text, Copyright (c) 2026 Ravindra Bisht, sha 28488576beb42477bfbf21b061b2887a30bea565. package.json name blobby, version 0.1.0, license MIT, author Ravindra Bisht, dependencies the MCP SDK, linkedom, and zod, with Electron in devDependencies. In src/mcp/tools.js the tool() registrations count to 33, and registerPrompt is design_page and apply_feedback, matching the README’s “33 tools and 2 prompts”. The McpServer version string in that file is 0.2.0, which does not match package.json 0.1.0; the body cites package.json only. The README says macOS was tested, Windows and Linux are supported but not tested, the roadmap leaves a component library, Figma and React exports, and packaged installers unchecked, and ChatGPT cannot reach a local app directly. Show HN https://news.ycombinator.com/item?id=50527557 HTTP 200 and showed 1 point by bisht3404 at that fetch. Firebase API https://hacker-news.firebaseio.com/v0/item/50527557.json HTTP 200, date Tue, 17 Nov 2026 12:01:25 GMT, id 50527557, by bisht3404, time 1794890675 which is 2026-11-17T04:44:35Z, score 1, descendants 0, url https://useblobby.com/ . Preview is https://raw.githubusercontent.com/Ravindrabisht12/blobby/main/docs/editor.png , HTTP 200, 1600×1002. Scaled to width 1200 (height 752), then 24 pixels of edge copy above and below, to a 1200×800 WebP. https://useblobby.com/assets/shots/editor-light.jpg was also HTTP 200 at 2400×1500, a promotional shot of a sample store, and was not used. No npm install, no Electron install, no MCP connection, no design run, no sign-up, no payment. The point count and the star count stay in this log. Dedup: origin/main 5b0eda3 and the diffs of the 60 open PRs contain neither blobby nor useblobby. Not HTML.",
+      "landing": {
+        "what": "这是一个本机设计画布。公开仓库能读到 Electron、MCP 和 HTML 页面；官网另外提供安装包和 Pro。本站没有安装，也没有把两套说法对到同一次运行上。",
+        "whatEn": "This is a design canvas for the local computer. The public repo shows Electron, MCP, and HTML pages; the website also offers installers and Pro. This library did not install it, and did not line the two accounts up in one run.",
+        "contrast": {
+          "caption": "左列是仓库和官网分别写出的内容。右列是本站没有做的事。",
+          "captionEn": "Left: what the repo and the site each say. Right: what this library did not do.",
+          "leftLabel": "来源",
+          "leftLabelEn": "The sources",
+          "rightLabel": "本站",
+          "rightLabelEn": "This library",
+          "rows": [
+            {
+              "aspect": "仓库",
+              "aspectEn": "The repo",
+              "left": "MIT。Electron 画布，页面是本机文件夹里的 HTML 和 CSS，由已有的助手经 MCP 来画。macOS 写了测过，Windows 和 Linux 写了支持但作者未测。",
+              "leftEn": "MIT. An Electron canvas whose pages are HTML and CSS in a local folder, drawn by the assistant you already have, over MCP. macOS is described as tested; Windows and Linux as supported but untested by the author.",
+              "right": "读了许可证、README 和工具登记。没有 npm install，没有安装 Electron，没有连接 MCP，没有跑设计。",
+              "rightEn": "The license, the README, and the tool registrations were read. No npm install, no Electron install, no MCP connection, and no design run."
+            },
+            {
+              "aspect": "官网",
+              "aspectEn": "The website",
+              "left": "下载页有 macOS、Windows、Linux 安装包，并要注册。定价写免费档 3 个项目，Pro 每月 8 美元，含 React、Shopify、WordPress 导出。",
+              "leftEn": "The download page has macOS, Windows, and Linux installers and asks for an account. Pricing says 3 projects on the free tier and Pro at $8 a month, including React, Shopify, and WordPress export.",
+              "right": "安装地址只核对了响应头，没有下载。没有注册，没有付款，也没有证明安装包就是这份仓库。",
+              "rightEn": "The installer addresses were checked by response headers only and were not downloaded. No sign-up, no payment, and no proof that an installer is this repo."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读官网的下载和定价",
+            "titleEn": "Read the site’s download and pricing",
+            "body": "官网写免费档和 Pro，下载页列出三个系统的安装包，并写注册账号后再连接助手。Windows 和 Linux 在这里写成可以用。",
+            "bodyEn": "The site describes a free tier and Pro. The download page lists installers for three systems and says to create an account before connecting an assistant. Windows and Linux are written here as usable.",
+            "links": [
+              {
+                "href": "https://useblobby.com/",
+                "label": "Blobby 官网",
+                "labelEn": "Blobby site"
+              },
+              {
+                "href": "https://useblobby.com/download",
+                "label": "下载页",
+                "labelEn": "Download page"
+              }
+            ]
+          },
+          {
+            "title": "再读仓库里的许可证和路线图",
+            "titleEn": "Then read the license and the roadmap",
+            "body": "仓库的许可证文件是 MIT。README 写从源码启动，Windows 和 Linux 作者还没测，打包安装包和 React 导出仍在未完成列表里。下载页把 ChatGPT 算进去，README 写它连不上本机应用。",
+            "bodyEn": "The repo’s license file is MIT. The README says to start from source, that the author has not tested Windows and Linux, and that packaged installers and React export are still unfinished. The download page includes ChatGPT; the README says it cannot reach a local app.",
+            "links": [
+              {
+                "href": "https://github.com/Ravindrabisht12/blobby",
+                "label": "公开仓库",
+                "labelEn": "Public repo"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "许可证以仓库里的 LICENSE 文件为准，读到的是 MIT，版权人 Ravindra Bisht。不要把官网安装包直接当成这份源码。",
+            "textEn": "The license follows the LICENSE file in the repo, which reads as MIT, copyright Ravindra Bisht. Do not treat a website installer as that source tree."
+          },
+          {
+            "text": "Windows 和 Linux：README 写支持但作者未测，官网下载页写成可以用。本库两个系统都没有安装。",
+            "textEn": "Windows and Linux: the README says supported but untested by the author, and the download page says they can be used. This library installed neither."
+          },
+          {
+            "text": "本库没有安装 Electron，没有连接 MCP，没有跑设计，没有注册，也没有为 Pro 付款。",
+            "textEn": "This library did not install Electron, did not connect MCP, did not run a design, did not sign up, and did not pay for Pro."
+          }
+        ],
+        "previewCredit": "预览是仓库 docs/editor.png，原图 1600×1002。整张按宽度缩进 1200×800，上下不足的 24 像素用画面边缘补上，没有裁掉侧栏或评论。这是仓库里的界面截图，本站没有打开这个应用。https://github.com/Ravindrabisht12/blobby",
+        "previewCreditEn": "Preview is docs/editor.png from the repo, originally 1600×1002. The whole frame is fitted to 1200×800, and the extra 24 pixels above and below are copies of the frame’s own edge, so the sidebar and comments are not cropped. It is a screenshot from the repo. This library did not open the app. https://github.com/Ravindrabisht12/blobby"
+      }
+    },
+    {
       "id": "holymolly-zelda-style-demo",
       "slug": "holymolly-zelda-style-demo",
       "title": "HolyMolly：塞尔达风格3D游戏 Demo",
@@ -11786,10 +12030,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-17T11:40:00Z",
+    "updatedAt": "2026-11-17T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.80",
-    "count": 218,
+    "version": "1.4.82",
+    "count": 220,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12098,7 +12342,20 @@
       "https://x.com/HolyMolly_AI/status/2122604857127325911",
       "https://pbs.twimg.com/amplify_video_thumb/2122644657821868032/img/ttgUQZ1239BNEVtR.jpg",
       "https://video.twimg.com/amplify_video/2122644657821868032/vid/avc1/1280x720/vDAJWDve9cvLkios.mp4",
-      "https://holymolly.ai/"
+      "https://holymolly.ai/",
+      "https://muz.li/blog/muzli-mcp-design-with-ai/",
+      "https://muz.li/mcp",
+      "https://mcp.muz.li/mcp",
+      "https://feed.muzli.cloud/muzli_feed/wp-content/uploads/2026/11/17120127/muzli-mcp-design-with-ai-featured-v7.jpg",
+      "https://overdue-default.muzli.space",
+      "https://overdue-plain.muzli.space",
+      "https://overdue-k6hf.muzli.space",
+      "https://useblobby.com/",
+      "https://useblobby.com/download",
+      "https://github.com/Ravindrabisht12/blobby",
+      "https://news.ycombinator.com/item?id=50527557",
+      "https://hacker-news.firebaseio.com/v0/item/50527557.json",
+      "https://raw.githubusercontent.com/Ravindrabisht12/blobby/main/docs/editor.png"
     ]
   }
 }
