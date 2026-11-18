@@ -1,6 +1,127 @@
 {
   "cases": [
     {
+      "id": "directors-lookbook",
+      "slug": "directors-lookbook",
+      "title": "Director's Lookbook：说出感觉，发一手有名字的风格卡和可粘贴的提示词",
+      "titleEn": "Director's Lookbook: say a feeling, get named look cards and paste-ready prompts",
+      "kind": "tool",
+      "hook": "说出一种感觉，拿到有名字的风格卡和能直接粘贴的提示词。",
+      "hookEn": "Say a feeling, get named look cards and prompts to paste into image, video, or music AI.",
+      "summary": "Director's Lookbook（https://directorslookbook.app/ ，River Road Labs 出品）是一个免费、不用注册的 AI 风格库。首页写「798 named looks」：把导演和摄影师常说的镜头、运镜、布光、胶片、调色、配色、字体和音乐风格，做成一张张有名字的卡。用法是输入一种感觉、一个地方或一个流行词（页面举例 cozy bakery、y2k、dark academia），它发一手配好的卡，再拼成能直接粘贴的图像、视频、音乐或网站提示词；页面点名的去处有 ChatGPT、Midjourney、Runway、Kling 和 Suno。不想打字也可以直接选现成的 look，或者一张张自己搭。卡片的规则是只写技法、不写人名。另有一个只读的 MCP 服务，文档列出 deal_hand、brief、find_styles、show_card、lint_hand、list_suits 六个工具，不用账号和密钥，可以加进 Claude、Cursor、VS Code 或 Claude Code，让助手替你挑卡、写提示词。使用条款写明，服务返回的提示词、卡名和配色可以用在自己的作品里，商用也行，不必署名；但不能把整库或示例图整体搬走另做一个库。隐私页写明，网页上输入的那句「感觉」会按天匿名保存，所以别往里写个人信息；MCP 服务不保存请求文字。没有找到公开的源码仓库或开源许可证，本条不写开源。适合写图像、视频或音乐提示词时，说不出想要哪种风格的人。本库没有连接 MCP，没有登录任何生成工具，也没有把提示词粘进 Midjourney、Runway、Kling 或 Suno 复现过任何一个 look。",
+      "summaryEn": "Director's Lookbook (https://directorslookbook.app/ , by River Road Labs) is a free, no-account AI style library. The homepage says “798 named looks”: the shots, camera moves, light, film stocks, grades, palettes, type, and music styles directors and photographers already have names for, each as one named card. You type a feeling, a place, or a trend (the page suggests cozy bakery, y2k, dark academia), it deals a matched hand of cards, and turns them into prompts you can paste into image, video, music, or site tools; the page names ChatGPT, Midjourney, Runway, Kling, and Suno. You can also skip typing and pick a ready look or build one card by card. Every card names a technique, never a person. There is also a read-only MCP server; its docs list six tools (deal_hand, brief, find_styles, show_card, lint_hand, list_suits), no account or key, and setup for Claude, Cursor, VS Code, and Claude Code, so an assistant can pick cards and write the prompts for you. The terms say you may use the returned prompt text, card names, and palettes in your own work, commercial or not, without credit, but may not copy the card library or example images as a whole to build a competing library. The privacy page says the feeling you type on the website is stored by day with no link to you, so do not type personal information; the MCP server does not store request text. No public source repository or open-source license was found, so this entry does not call it open source. Good when you are writing an image, video, or music prompt and cannot name the style you want. This library did not connect the MCP, did not sign in to any generator, and did not paste a prompt into Midjourney, Runway, Kling, or Suno to reproduce a look.",
+      "categories": [
+        "design",
+        "content",
+        "prompts"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://directorslookbook.app/",
+      "secondaryUrls": [
+        "https://directorslookbook.app/mcp/",
+        "https://directorslookbook.app/how-the-cards-are-made/",
+        "https://directorslookbook.app/gallery/",
+        "https://directorslookbook.app/privacy/",
+        "https://directorslookbook.app/terms/",
+        "https://news.ycombinator.com/item?id=50541419"
+      ],
+      "previewImage": "/previews/directors-lookbook.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "MCP",
+        "Claude",
+        "Cursor",
+        "ChatGPT",
+        "Midjourney",
+        "Runway",
+        "Kling",
+        "Suno"
+      ],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-18T12:20:00Z",
+      "qualityNote": "收录理由：AI×设计里少见的「风格词典」型工具，把说不清的感觉换成有名字的镜头、布光、胶片和调色卡，再给出可粘贴的提示词，网页和只读 MCP 两种用法都不用账号，和库里的 Kapwing 镜头词互补。边界：798 这个数字、免费、不留请求文字等都是站点与作者自己的说法，不是本库数出来或测出来的；解读「感觉」的是作者托管的小模型，作者说有每日免费额度，具体额度页面没写；没有确认到公开源码仓库或开源许可证，不要当成开源。本库没有连接 MCP，没有登录，也没有把提示词粘进 Midjourney、Runway、Kling 或 Suno，没有复现任何 look。",
+      "qualityNoteEn": "Why listed: a rare style-dictionary tool for AI×design. It turns a feeling you cannot name into named shot, light, film, and grade cards with paste-ready prompts, on the web or through a read-only MCP, with no account either way; it complements the Kapwing camera words already listed. Limits: the 798 count, free use, and no stored request text are the site's and author's own statements, not counted or tested here; the feeling reader is a small model the author hosts with a free daily allowance, and the page gives no number for it; no public source repository or open-source license was confirmed, so do not treat it as open source. This library did not connect the MCP, did not sign in, and did not paste a prompt into Midjourney, Runway, Kling, or Suno or reproduce any look.",
+      "verifyLog": "2026-11-18 晚间（Asia/Taipei，约 20:04–20:15）：https://directorslookbook.app/ HTTP 200，title 为 Director's Lookbook: Named Looks for AI Image, Video and Music Prompts，meta description 与页头均写 798 named looks: an AI style library for image, video and music prompts；页头另写 Say the feeling. Get the look. … Free. No account.；正文写 Every card gives you words to paste into any AI image or video tool (ChatGPT, Midjourney, Runway, Kling and more)，以及 Music prompt · Suno or any music AI、Every card follows two rules: it names a technique, never a person。798 是页面自己写的数字，本库没有逐张数卡。https://directorslookbook.app/mcp/ HTTP 200：写 Free. Read-only. No account or key needed.，Server URL https://lookbook-mcp.riverroadlabs.workers.dev/mcp（Streamable HTTP. No authentication.），列出 Claude 自定义连接器、Cursor / VS Code 一键安装、claude mcp add --transport http 的写法，以及六个只读工具 deal_hand、brief、find_styles、show_card、lint_hand、list_suits；Limits 一节写约每分钟 60 次请求、文本输入最长 300 字符、每次最多 12 个卡片 id；Privacy 一节写不记录请求内容，只留匿名的每日计数（工具名、任务类型、客户端自报的应用名、返回的卡片 id）和一个两天的加盐哈希用于数不同调用方。/how-the-cards-are-made/、/gallery/、/privacy/、/terms/ 均 HTTP 200：隐私页生效日期 November 17, 2026，署名 Matthew R Malham（以 River Road Labs 名义发布），写网页上输入的 feeling 连同所选类型按天保存、不关联到人，Cloudflare 当日免费 AI 额度用完时改由 Anthropic 的 Claude API 读取这句话；条款页生效日期 October 20, 2026，写 no accounts, no paid tiers and no purchases，以及返回的 prompt text、card names、palettes 可商用、不必署名，不得整体复制卡库或示例图。条款日期早于 Show HN，说明站点在发帖前已经存在。Show HN https://news.ycombinator.com/item?id=50541419 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Director's Lookbook, named looks for image, video and music prompts，作者 RiverRoadLabs，2026-11-18T03:16:28Z（台北 11:16:28），核对时 4 points、2 条评论；作者正文写 small artisanal studio based out of Central NJ、feeling reader is a small hosted model with a free daily allowance、MCP read only, no auth, no key、The connector keeps no request text, only daily counts of which tools were called。开源核对：MCP 目录里猜到的 github.com/qxxx5vyd77-byte/directors-lookbook 返回 404；gh search repos “directors lookbook” 无结果，“lookbook-mcp” 的结果都不是这个产品；首页与文档没有源码仓库链接，也没有 MIT / Apache 等许可证字样，所以不写开源。预览：官方分享图 https://directorslookbook.app/media/og.jpg?v=2（HTTP 200，1200×630），上下各补 85px 同色边（取图片边缘的底色）成 1200×800 WebP，没有裁切，也没有加字。去重：main 5b0eda3 与全部打开的 PR（含 #138–#167）里没有这一条。未做：没有向 MCP 地址发任何请求，没有在网页上输入 feeling，没有登录或调用 ChatGPT、Midjourney、Runway、Kling、Suno，没有复现任何 look。",
+      "verifyLogEn": "2026-11-18 evening (Asia/Taipei, about 20:04–20:15): https://directorslookbook.app/ HTTP 200, title Director's Lookbook: Named Looks for AI Image, Video and Music Prompts; the meta description and the page header both read 798 named looks: an AI style library for image, video and music prompts; the header also says Say the feeling. Get the look. … Free. No account.; body copy says Every card gives you words to paste into any AI image or video tool (ChatGPT, Midjourney, Runway, Kling and more), Music prompt · Suno or any music AI, and Every card follows two rules: it names a technique, never a person. 798 is the page's own number; the cards were not counted here. https://directorslookbook.app/mcp/ HTTP 200: Free. Read-only. No account or key needed.; Server URL https://lookbook-mcp.riverroadlabs.workers.dev/mcp (Streamable HTTP. No authentication.); setup for a Claude custom connector, one-click Cursor / VS Code installs, and claude mcp add --transport http; six read-only tools deal_hand, brief, find_styles, show_card, lint_hand, list_suits; the Limits section gives about 60 requests a minute per connection, text inputs up to 300 characters, and up to 12 card ids per call; the Privacy section says request content is not logged, only anonymous daily counts (tool name, job type, the app name the client reports, returned card ids) plus a two-day salted hash to count distinct callers. /how-the-cards-are-made/, /gallery/, /privacy/, and /terms/ all HTTP 200: the privacy policy is effective November 17, 2026 and names Matthew R Malham (publishing as River Road Labs); it says the feeling typed on the website is stored by day with the chosen job and no link to you, and that Anthropic's Claude API reads the feeling when Cloudflare's free AI allowance for the day is used up; the terms are effective October 20, 2026 and say no accounts, no paid tiers and no purchases, that returned prompt text, card names, and palettes may be used commercially without credit, and that the card library or example images may not be copied as a whole. The terms date is earlier than the Show HN, so the site existed before the post. Show HN https://news.ycombinator.com/item?id=50541419 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Director's Lookbook, named looks for image, video and music prompts, author RiverRoadLabs, 2026-11-18T03:16:28Z (11:16:28 Taipei), 4 points and 2 comments at the check; the author text says small artisanal studio based out of Central NJ, the feeling reader is a small hosted model with a free daily allowance, MCP read only, no auth, no key, and The connector keeps no request text, only daily counts of which tools were called. Open-source check: the path guessed from an MCP directory, github.com/qxxx5vyd77-byte/directors-lookbook, returned 404; gh search repos “directors lookbook” returned nothing and the “lookbook-mcp” results are other products; the homepage and docs link no source repository and show no MIT / Apache or other license wording, so the entry does not say open source. Preview: the official share image https://directorslookbook.app/media/og.jpg?v=2 (HTTP 200, 1200×630), padded 85px top and bottom with the image's own edge colour to a 1200×800 WebP; nothing cropped, no text added. Dedupe: absent from main 5b0eda3 and from every open PR (including #138–#167). Not done: no request was sent to the MCP URL, no feeling was typed on the site, no sign-in or call to ChatGPT, Midjourney, Runway, Kling, or Suno, and no look was reproduced.",
+      "landing": {
+        "what": "给写图像、视频、音乐提示词时，脑子里有感觉、嘴上说不出风格名的人。River Road Labs（作者自述是美国新泽西中部的小工作室）把镜头、运镜、布光、胶片、调色、配色、字体和音乐风格做成有名字的卡。「卡片怎么做」一页写，每张卡有六部分：名字、可粘贴的词、示例画面、它不是什么、情绪与搭配、上线前的检查；名字用行内已有的叫法，不用在世艺术家的名字。",
+        "whatEn": "For people who have a feeling in mind but not the name of the style when writing image, video, or music prompts. River Road Labs (a small studio in Central New Jersey, by the author's account) turns shots, camera moves, light, film stocks, grades, palettes, type, and music styles into named cards. The “How the cards are made” page says each card has six parts: the name, the words you paste, an example frame, what it is not, moods and pairs, and the checks before it ships; names are the ones the craft already uses, never a living artist's name.",
+        "steps": [
+          {
+            "title": "在网页上发一手卡",
+            "titleEn": "Deal a look on the website",
+            "body": "打开首页，先选要做的东西，再输入一种感觉、一个地方或一个流行词，点 Get the look。不喜欢的卡可以单独换，留下的卡会拼成图像、视频和音乐提示词，一键复制。不想打字就选现成的 look，或在卡库里一张张挑。不用注册。",
+            "bodyEn": "Open the homepage, choose what you are making, type a feeling, a place, or a trend, and press Get the look. Swap any card you do not like; the cards you keep become image, video, and music prompts you copy in one click. To skip typing, pick a ready look or choose cards from the library. No sign-up.",
+            "links": [
+              {
+                "href": "https://directorslookbook.app/",
+                "label": "Director's Lookbook 首页",
+                "labelEn": "Director's Lookbook home"
+              },
+              {
+                "href": "https://directorslookbook.app/gallery/",
+                "label": "示例图库：每个 look 和它的提示词",
+                "labelEn": "Example gallery: every look with its prompt"
+              }
+            ]
+          },
+          {
+            "title": "接进你的 AI 助手（可选）",
+            "titleEn": "Add it to your AI assistant (optional)",
+            "body": "文档给出的服务地址是 `https://lookbook-mcp.riverroadlabs.workers.dev/mcp`，Streamable HTTP，不用认证。Claude 在 Settings → Connectors 里加自定义连接器；Cursor 和 VS Code 有一键安装；Claude Code 用 `claude mcp add --transport http directors-lookbook https://lookbook-mcp.riverroadlabs.workers.dev/mcp`。六个工具都是只读的，先用 deal_hand 发卡，再用 brief 出提示词。本库没有连接这个服务。",
+            "bodyEn": "The docs give the server URL `https://lookbook-mcp.riverroadlabs.workers.dev/mcp`, Streamable HTTP, no authentication. In Claude, add a custom connector under Settings → Connectors; Cursor and VS Code have one-click installs; in Claude Code run `claude mcp add --transport http directors-lookbook https://lookbook-mcp.riverroadlabs.workers.dev/mcp`. All six tools are read-only: start with deal_hand, then use brief for the prompts. This library did not connect the server.",
+            "links": [
+              {
+                "href": "https://directorslookbook.app/mcp/",
+                "label": "Lookbook MCP 文档",
+                "labelEn": "Lookbook MCP docs"
+              }
+            ]
+          },
+          {
+            "title": "把提示词带去你常用的生成工具",
+            "titleEn": "Take the prompt to the generator you use",
+            "body": "页面点名 ChatGPT、Midjourney、Runway、Kling 和 Suno；文档写 brief 可以按 Midjourney、Runway 或 Suno 的格式输出。出来的画面取决于你用的模型和额度，站点条款也写明不保证第三方工具怎么渲染同一段词。本库没有复现过任何 look。",
+            "bodyEn": "The page names ChatGPT, Midjourney, Runway, Kling, and Suno; the docs say brief can format for Midjourney, Runway, or Suno. What you get depends on the model and plan you use, and the site's terms make no claim about how a third-party tool renders the same words. This library did not reproduce any look.",
+            "links": [
+              {
+                "href": "https://directorslookbook.app/how-the-cards-are-made/",
+                "label": "卡片怎么做",
+                "labelEn": "How the cards are made"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "免费、不用账号是站点与作者的说法。解读「感觉」的是作者托管的小模型，作者说有每日免费额度，页面没给具体数字。",
+            "textEn": "Free and no account are the site's and author's statements. The feeling reader is a small hosted model with a free daily allowance, by the author's account; the page gives no number."
+          },
+          {
+            "text": "隐私页写：网页上输入的感觉会按天匿名保存；Cloudflare 当日免费 AI 额度用完时，这句话会交给 Anthropic 的 Claude API 读取。别写个人信息。MCP 服务不保存请求文字，只留匿名的每日计数。",
+            "textEn": "The privacy page says the feeling typed on the website is stored by day with no link to you, and that Anthropic's Claude API reads it when Cloudflare's free AI allowance for the day is used up. Do not type personal information. The MCP server does not store request text, only anonymous daily counts."
+          },
+          {
+            "text": "条款写：返回的提示词、卡名和配色可以用在自己的作品里，商用也行，不必署名；不能把整库或示例图整体复制去做另一个库。没有确认到公开源码仓库或开源许可证。",
+            "textEn": "The terms say returned prompt text, card names, and palettes may be used in your own work, commercial or not, without credit; the library or example images may not be copied as a whole to build another library. No public source repository or open-source license was confirmed."
+          },
+          {
+            "text": "本库没有连接 MCP，没有登录，也没有把提示词粘进 Midjourney、Runway、Kling 或 Suno。",
+            "textEn": "This library did not connect the MCP, did not sign in, and did not paste a prompt into Midjourney, Runway, Kling, or Suno."
+          }
+        ],
+        "previewCredit": "预览：Director's Lookbook 官方分享图，上下补同色边成 3:2，未裁切",
+        "previewCreditEn": "Preview: Director's Lookbook's official share image, padded top and bottom in its own background colour to 3:2, not cropped"
+      }
+    },
+    {
       "id": "holymolly-zelda-style-demo",
       "slug": "holymolly-zelda-style-demo",
       "title": "HolyMolly：塞尔达风格3D游戏 Demo",
@@ -11786,10 +11907,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-17T11:40:00Z",
+    "updatedAt": "2026-11-18T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.80",
-    "count": 218,
+    "version": "1.4.81",
+    "count": 219,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12098,7 +12219,15 @@
       "https://x.com/HolyMolly_AI/status/2122604857127325911",
       "https://pbs.twimg.com/amplify_video_thumb/2122644657821868032/img/ttgUQZ1239BNEVtR.jpg",
       "https://video.twimg.com/amplify_video/2122644657821868032/vid/avc1/1280x720/vDAJWDve9cvLkios.mp4",
-      "https://holymolly.ai/"
+      "https://holymolly.ai/",
+      "https://directorslookbook.app/",
+      "https://directorslookbook.app/mcp/",
+      "https://directorslookbook.app/how-the-cards-are-made/",
+      "https://directorslookbook.app/gallery/",
+      "https://directorslookbook.app/privacy/",
+      "https://directorslookbook.app/terms/",
+      "https://directorslookbook.app/media/og.jpg?v=2",
+      "https://news.ycombinator.com/item?id=50541419"
     ]
   }
 }

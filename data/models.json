@@ -1,11 +1,175 @@
 {
   "meta": {
-    "updatedAt": "2026-10-25T12:20:00Z",
+    "updatedAt": "2026-11-18T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.30",
-    "count": 40
+    "version": "1.1.32",
+    "count": 42
   },
   "models": [
+    {
+      "id": "gpt-6-2-astra-sol",
+      "slug": "gpt-6-2-astra-sol",
+      "name": "GPT-6.2 Astra / Sol",
+      "vendor": "OpenAI",
+      "title": "GPT-6.2 Astra 与 Sol（OpenAI）",
+      "titleEn": "GPT-6.2 Astra and Sol (OpenAI)",
+      "summary": "OpenAI 于 2026-11-17 同时发布的两款新一代模型，在 ChatGPT Work、Codex 和 API 上线。官方定位：GPT-6.2 Astra 是做复杂专业工作的前沿款，幻灯片、表格和文档更贴近你给的模板和行业惯例，代码更干净，网站、游戏和 3D 设计这类前端做得更好看、更好用，官方还说它是「对科学家最好的模型」；GPT-6.2 Sol 是日常工作的主力款，官方称比 GPT-6.1 Sol 更聪明、更省，同一付费方案能完成更多任务。API 价格（官方公告）：Astra 每百万 token 输入 $8、缓存输入 $0.40、输出 $40，输入和输出比 GPT-6 Astra 低 20%，缓存输入降价 60%；Sol 沿用 GPT-6.1 Sol 的 $2 / $0.10 / $10。API id 是 `gpt-6.2-astra` 和 `gpt-6.2-sol`，两款上线即支持 Ultrafast。可用性：公告写 Plus、Pro、Enterprise、Edu 用户可在 ChatGPT Work 与 Codex 里用；ChatGPT Learn 页写 Plus、Pro、Business、Enterprise 或 Edu，Enterprise 与 Edu 要管理员先在工作区设置里开启。在 ChatGPT 里要用这两款得打开 Work，Chat 里能选的模型另见官方列表。安全方面，公告称 Astra 是 OpenAI 第一个对外发布、达到「AI 自我改进」High 阈值的模型，并附系统卡。评测分和「最好」这类说法都是 OpenAI 自述。本库没有调用 API，没有打开 ChatGPT Work，也没有在 Codex 里跑过 6.2。",
+      "summaryEn": "Two next-generation models OpenAI announced together on 2026-11-17, launched in ChatGPT Work, Codex, and the API. Official pitch: GPT-6.2 Astra is the frontier model for complex professional work, with slides, spreadsheets, and documents that follow your templates and your field's conventions more closely, cleaner code, and frontends that look and work better, particularly for websites, gaming, and 3D design; OpenAI also says it believes Astra is the best model in the world for scientists. GPT-6.2 Sol is the go-to model for everyday work; OpenAI says it is smarter and more efficient than GPT-6.1 Sol and lets you complete more tasks on the same paid plan. API prices (announcement): Astra is $8 input / $0.40 cached input / $40 output per million tokens, input and output 20% below GPT-6 Astra with a 60% discount on cached input; Sol keeps GPT-6.1 Sol's $2 / $0.10 / $10. The API ids are `gpt-6.2-astra` and `gpt-6.2-sol`, both with Ultrafast at launch. Availability: the announcement lists Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex; the ChatGPT Learn page lists Plus, Pro, Business, Enterprise, or Edu, and says Enterprise and Edu admins must first enable the models in workspace settings. In ChatGPT you open Work to use them; the models selectable in Chat are listed separately by OpenAI. On safety, the announcement says Astra is OpenAI's first externally released model to meet the High threshold for AI Self-improvement, with a system card. Benchmark results and “best” statements are OpenAI's own. This library did not call the API, open ChatGPT Work, or run 6.2 in Codex.",
+      "announcedAt": "2026-11-17",
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "OpenAI 公告：Introducing GPT-6.2 Astra and Sol",
+          "labelEn": "OpenAI announcement: Introducing GPT-6.2 Astra and Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/",
+          "by": "OpenAI",
+          "date": "2026-11-17"
+        },
+        {
+          "kind": "official",
+          "label": "ChatGPT Learn：GPT-6.2（Work、Codex 与 API 的用法和可用范围）",
+          "labelEn": "ChatGPT Learn: GPT-6.2 (use and availability in Work, Codex, and the API)",
+          "url": "https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol",
+          "by": "OpenAI",
+          "date": "2026-11-17"
+        },
+        {
+          "kind": "official",
+          "label": "OpenAI 系统卡：GPT-6.2",
+          "labelEn": "OpenAI system card: GPT-6.2",
+          "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+          "by": "OpenAI"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：GPT‑6.2 Astra and Sol",
+          "labelEn": "Hacker News thread: GPT‑6.2 Astra and Sol",
+          "url": "https://news.ycombinator.com/item?id=50535230",
+          "by": "Hacker News",
+          "date": "2026-11-17"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：GPT-6.2 Astra 面向复杂专业工作，幻灯片、表格和文档更贴近模板与行业惯例，代码更干净，网站、游戏和 3D 前端更好；GPT-6.2 Sol 是日常工作的主力款，比 GPT-6.1 Sol 更聪明、更省，同一付费方案能完成更多任务。",
+          "textEn": "Vendor claim: GPT-6.2 Astra targets complex professional work, with slides, spreadsheets, and documents closer to your templates and field conventions, cleaner code, and better frontends for websites, gaming, and 3D; GPT-6.2 Sol is the go-to model for everyday work, smarter and more efficient than GPT-6.1 Sol, completing more tasks on the same paid plan."
+        },
+        {
+          "text": "官方称：Astra 标准 API 价为每百万 token 输入 $8、缓存输入 $0.40、输出 $40，输入输出比 GPT-6 Astra 低 20%，缓存输入降价 60%；Sol 沿用 GPT-6.1 Sol 的 $2 / $0.10 / $10。",
+          "textEn": "Vendor claim: Astra's standard API rates are $8 input / $0.40 cached input / $40 output per million tokens, input and output 20% below GPT-6 Astra with a 60% discount on cached input; Sol carries forward GPT-6.1 Sol's $2 / $0.10 / $10."
+        },
+        {
+          "text": "官方称：发布当日起 Plus、Pro、Enterprise、Edu 可在 ChatGPT Work 与 Codex 使用（Learn 页另列 Business；Enterprise 与 Edu 需管理员开启）。API id 为 `gpt-6.2-astra` 与 `gpt-6.2-sol`，两款上线即支持 Ultrafast；Pro 500 订阅两款都可用 Ultrafast，Pro 200 订阅先开放 Sol。",
+          "textEn": "Vendor claim: from launch day, Plus, Pro, Enterprise, and Edu users get both models in ChatGPT Work and Codex (the Learn page also lists Business; Enterprise and Edu need an admin to enable them). API ids are `gpt-6.2-astra` and `gpt-6.2-sol`, both with Ultrafast at launch; Pro 500 subscribers can use Ultrafast with either model, Pro 200 subscribers with Sol first."
+        },
+        {
+          "text": "官方称（评测节选，本库未复跑）：Agents’ Last Exam 上 Astra 比 GPT-6 Astra 高 5.2 分、成本不到三分之一，比 Claude Fable 5.2 高 5.5 分、成本约为其 5%（页内脚注：Fable 5.2 的榜单成绩排除了九个用了回退模型的任务）；Terminal-Bench-Science 0.1 上比 GPT-6 Astra 高 9 个百分点、成本不到三分之一；Cognition 的 FrontierCode 2.0 上 Sol 与 Astra 相差 0.5 分以内、成本约五分之一（两者均为 max）。",
+          "textEn": "Vendor claim (eval excerpts, not re-run here): on Agents’ Last Exam, Astra scores 5.2 points above GPT-6 Astra at less than a third of the cost, and 5.5 points ahead of Claude Fable 5.2 at about 5% of the cost (page footnote: the leaderboard results for Fable 5.2 exclude nine tasks that used a fallback model); on Terminal-Bench-Science 0.1 it is 9 percentage points above GPT-6 Astra at less than one-third the cost; on Cognition’s FrontierCode 2.0, Sol comes within 0.5 points of Astra at about one-fifth the cost (both at max)."
+        },
+        {
+          "text": "官方称：Astra 是 OpenAI 第一个对外发布、达到「AI 自我改进」High 阈值的模型。公告也写到，两款在两项测试里更容易漏报挡住工作的障碍（如文件缺失、搜索工具不可用），OpenAI 称已在 Codex 里加了说明来大幅减少这类遗漏，并在继续调查。",
+          "textEn": "Vendor claim: Astra is OpenAI's first externally released model to meet the High threshold for AI Self-improvement. The announcement also says that in two tests both models were more likely to omit mentioning obstacles that blocked their work (such as a missing file or an unavailable search tool); OpenAI says it added instructions in Codex that substantially reduce these omissions and is still investigating."
+        }
+      ],
+      "qualityNote": "收录理由：OpenAI 新一代的前沿款和日常款同一天发布，直接影响 ChatGPT Work、Codex 和 API 的选型与成本。板上已有 GPT-6 Astra 与 GPT-6.1 Sol 两张上一代的卡，这次是一份公告里的成对发布，所以合成一张，并和两张旧卡互链。边界：定位、评测分、「对科学家最好」、价格、可用范围和 Ultrafast 都是 OpenAI 公告与 ChatGPT Learn 页的说法，不是本库测出来的；公告和 Learn 页列的可用方案略有出入（Learn 页多列了 Business），以你账号里实际看到的为准。互链只表示同板相关，不表示评测对齐。本库没有调用 API，没有打开 ChatGPT Work，也没有在 Codex 里跑过 6.2。整理质量 4 星（官方来源齐、边界清），不代表基准分。",
+      "qualityNoteEn": "Why listed: OpenAI's new frontier model and everyday model shipped on the same day and change model choice and cost in ChatGPT Work, Codex, and the API. The board already has the previous-generation GPT-6 Astra and GPT-6.1 Sol cards; this is one paired launch in one announcement, so it is one card, cross-linked with both older cards. Boundary: positioning, benchmark results, “best for scientists”, prices, availability, and Ultrafast are statements from OpenAI's announcement and the ChatGPT Learn page, not measured here; the two pages list slightly different plans (the Learn page adds Business), so go by what your own account shows. Cross-links are same-board only, not an aligned-eval claim. This library did not call the API, open ChatGPT Work, or run 6.2 in Codex. 4 stars for curation quality (complete official sources, clear boundaries), not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-astra",
+        "gpt-6-1-sol"
+      ],
+      "previewImage": "/previews/gpt-6-2-astra-sol.webp",
+      "previewCredit": "预览：OpenAI 公告页的官方分享图，等比缩放后上下补边成 3:2，未裁切",
+      "previewCreditEn": "Preview: the official share image from OpenAI's announcement page, scaled and padded top and bottom to 3:2, not cropped",
+      "featured": true,
+      "stars": 4,
+      "verifyLog": "2026-11-18 晚间（Asia/Taipei，约 20:04–20:15）：官方公告 https://openai.com/index/introducing-gpt-6-2-astra-sol/ 用 curl 取回 HTTP 403（Cloudflare challenge，cf-mitigated: challenge）；改用无头 Chrome 打开同一地址取到页面，title 为 Introducing GPT-6.2 Astra and Sol | OpenAI，页内日期 November 17, 2026，og:image 为 https://cdn.openai.com/mdx-assets/e193aefe-5e58-431c-8cd2-adadac0c1496/44573edd-9653-49b3-ba07-7b3643545ef9.d3072be3.png ，alt 写 Astra GPT-6.2 Sol in white lettering between gold and blue-white star trails。正文原句核对：…$8 for input, $0.40 for cached input, and $40 for output, all per million tokens… GPT‑6.2 Sol keeps GPT‑6.1 Sol’s API token prices；GPT‑6.2 Sol carries forward GPT‑6.1 Sol’s rates of $2 for input, $0.10 for cached input, and $10 for output；Starting today, GPT-6.2 Astra and Sol are available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex… Developers can also access gpt-6.2-astra and gpt-6.2-sol through the OpenAI API, with Ultrafast available for both models at launch；We believe GPT-6.2 Astra is the best model in the world for scientists；first externally released model to meet the High threshold for AI Self-improvement。评测数字（Agents’ Last Exam、Terminal-Bench-Science 0.1、FrontierCode 2.0 及脚注）照公告转述，未复跑。ChatGPT Learn https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol HTTP 200，title 为 GPT-6.2 | ChatGPT Learn，条目日期 November 17, 2026，写 Use Astra or Sol in Work on the web, desktop, or mobile with Plus, Pro, Business, Enterprise, or Edu. Enterprise and Edu admins must first enable the models in workspace settings，以及 Use gpt-6.2-astra or gpt-6.2-sol in the Responses API。两页都出现了这两个 API id，本条只写页面上看到的写法。系统卡 https://deploymentsafety.openai.com/gpt-6-2-astra-sol HTTP 200，title 为 GPT-6.2 System Card - OpenAI Deployment Safety Hub，只作安全部署入口，没有逐条核对其中的评测。HN https://news.ycombinator.com/item?id=50535230 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 GPT‑6.2 Astra and Sol，2026-11-17T17:46:43Z（台北 2026-11-18 01:46:43），核对时 1291 points、808 条评论。预览：公告 og:image（HTTP 200，3840×2162 PNG）等比缩到 1200 宽，上下各用边缘像素延伸 62px，补成 1200×800 WebP；没有裁掉画面，没有加字，也没有放分数。去重：main 5b0eda3 只有 gpt-6-astra、gpt-6-1-sol、gpt-6-intelligent-ui，全部打开的 PR 里没有 6.2。给 gpt-6-astra 和 gpt-6-1-sol 的 relatedModelIds 各加了本卡 id，其余字段没动。未做：没有调用 API，没有打开 ChatGPT Work，没有在 Codex 里用 6.2，没有复跑任何评测。",
+      "verifyLogEn": "2026-11-18 evening (Asia/Taipei, about 20:04–20:15): the official announcement https://openai.com/index/introducing-gpt-6-2-astra-sol/ returned HTTP 403 to curl (Cloudflare challenge, cf-mitigated: challenge); headless Chrome on the same URL loaded the page, title Introducing GPT-6.2 Astra and Sol | OpenAI, on-page date November 17, 2026, og:image https://cdn.openai.com/mdx-assets/e193aefe-5e58-431c-8cd2-adadac0c1496/44573edd-9653-49b3-ba07-7b3643545ef9.d3072be3.png , alt Astra GPT-6.2 Sol in white lettering between gold and blue-white star trails. Sentences checked in the body: …$8 for input, $0.40 for cached input, and $40 for output, all per million tokens… GPT‑6.2 Sol keeps GPT‑6.1 Sol’s API token prices; GPT‑6.2 Sol carries forward GPT‑6.1 Sol’s rates of $2 for input, $0.10 for cached input, and $10 for output; Starting today, GPT-6.2 Astra and Sol are available to all Plus, Pro, Enterprise, and Edu users in ChatGPT Work and Codex… Developers can also access gpt-6.2-astra and gpt-6.2-sol through the OpenAI API, with Ultrafast available for both models at launch; We believe GPT-6.2 Astra is the best model in the world for scientists; first externally released model to meet the High threshold for AI Self-improvement. Eval figures (Agents’ Last Exam, Terminal-Bench-Science 0.1, FrontierCode 2.0, and the footnote) are restated from the announcement, not re-run. ChatGPT Learn https://learn.chatgpt.com/docs/whats-new/gpt-62-astra-sol HTTP 200, title GPT-6.2 | ChatGPT Learn, entry dated November 17, 2026: Use Astra or Sol in Work on the web, desktop, or mobile with Plus, Pro, Business, Enterprise, or Edu. Enterprise and Edu admins must first enable the models in workspace settings, and Use gpt-6.2-astra or gpt-6.2-sol in the Responses API. Both pages show the two API ids; the card only writes ids seen on those pages. System card https://deploymentsafety.openai.com/gpt-6-2-astra-sol HTTP 200, title GPT-6.2 System Card - OpenAI Deployment Safety Hub; kept as a deployment-safety entry point, its evals were not checked line by line. HN https://news.ycombinator.com/item?id=50535230 page HTTP 200 and the Algolia items API HTTP 200: title GPT‑6.2 Astra and Sol, 2026-11-17T17:46:43Z (2026-11-18 01:46:43 Taipei), 1291 points and 808 comments at the check. Preview: the announcement og:image (HTTP 200, 3840×2162 PNG) scaled to 1200 wide and extended 62px top and bottom from its edge pixels to a 1200×800 WebP; nothing cropped, no text added, no scores. Dedupe: main 5b0eda3 had only gpt-6-astra, gpt-6-1-sol, and gpt-6-intelligent-ui, and no open PR had 6.2. This card's id was added to relatedModelIds on gpt-6-astra and gpt-6-1-sol; no other field on them changed. Not done: no API call, ChatGPT Work not opened, 6.2 not used in Codex, no eval re-run."
+    },
+    {
+      "id": "mai-code-2",
+      "slug": "mai-code-2",
+      "name": "MAI Code 2 / Code 2 Flash",
+      "vendor": "Microsoft AI",
+      "title": "MAI Code 2 与 Code 2 Flash（Microsoft AI）",
+      "titleEn": "MAI Code 2 and Code 2 Flash (Microsoft AI)",
+      "summary": "Microsoft AI 于 2026-11-17 在 Ignite 上发布的两款编码模型，当天进入 GitHub Copilot。官方定位：MAI Code 2 做日常的企业编码，把代码推到上线、深度调试、多文件实现、全仓库推理和界面，主打「维护者愿意合并的改动」和性价比，也强调仪表盘、可视化这类视觉编码；MAI Code 2 Flash 做量大的轻活，解释代码、定点修改、例行修复和快速迭代。官方也直说，这两款暂时没有为基础科研和很长程的 agent 任务调优。可用性（GitHub Changelog）：Code 2 在 Copilot Pro、Pro+、Max、Business、Enterprise；Flash 还包括 Copilot Free 和 Student。两款按用量计费，可在 VS Code、Visual Studio、Copilot CLI、Copilot 云端 agent、Copilot app、github.com、GitHub Mobile、JetBrains、Xcode 和 Eclipse 的模型选择器里选，Business 与 Enterprise 由管理员在模型策略里管理。公告还写 Code 2 Flash 在 Microsoft Foundry 是限量预览，并说「很快」会上 Open Router、Vercel、Hermes、Open Code 和 Kilo；这是厂商的计划，写稿时不算已经上线。公告另外提到，微软从 Code 2 Flash 再优化出一款 MAI Work Flash，用在 M365 和 Fabric IQ 的产品里；本条只带这一句，不另开卡。官方评测称，Code 2 在四项编码基准的均值上达到 GPT 6.1 Sol 98% 的表现、成本为其 40%，脚注写明成本按 Code 2 的五折促销价计算。这些都是微软自述。本库没有在 Copilot 里启用这两款模型，没有打开 Foundry，也没有跑任何编码评测。",
+      "summaryEn": "Two coding models Microsoft AI announced at Ignite on 2026-11-17, available in GitHub Copilot the same day. Official pitch: MAI Code 2 is for everyday enterprise coding (taking code to production, deep debugging, multi-file implementation, repo-wide reasoning, and UI), with “changes code maintainers would merge” and price-performance as the headline, plus dashboards, visualizations, and visual coding; MAI Code 2 Flash is for high-volume work such as code explanations, targeted edits, routine fixes, and rapid iterations. Microsoft also says plainly that the two are not yet tuned for fundamental science research or very long-horizon agentic work. Availability (GitHub Changelog): Code 2 on Copilot Pro, Pro+, Max, Business, and Enterprise; Flash also on Copilot Free and Student. Both use usage-based billing and can be picked in the model picker in VS Code, Visual Studio, Copilot CLI, the Copilot cloud agent, the Copilot app, github.com, GitHub Mobile, JetBrains, Xcode, and Eclipse; Business and Enterprise admins manage access through the model policy. The announcement also says Code 2 Flash is in limited-access preview in Microsoft Foundry and that it is coming “soon” to Open Router, Vercel, Hermes, Open Code, and Kilo; that is the vendor's plan and does not count as available at the time of writing. The announcement further mentions MAI Work Flash, a model optimized from Code 2 Flash for Microsoft products across M365 and Fabric IQ; it gets this one line here, not its own card. Microsoft's evaluation says Code 2 delivers 98% of GPT 6.1 Sol's performance at 40% of the cost, averaged over four coding benchmarks, with a footnote that the cost uses Code 2's 50% promotional price. All of this is Microsoft's own account. This library did not enable either model in Copilot, open Foundry, or run any coding eval.",
+      "announcedAt": "2026-11-17",
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-18T12:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Microsoft AI 公告：MAI Code 2 and Code 2 Flash",
+          "labelEn": "Microsoft AI announcement: MAI Code 2 and Code 2 Flash",
+          "url": "https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/",
+          "by": "Microsoft AI",
+          "date": "2026-11-17"
+        },
+        {
+          "kind": "official",
+          "label": "Microsoft AI 模型页：MAI Code 2",
+          "labelEn": "Microsoft AI model page: MAI Code 2",
+          "url": "https://microsoft.ai/models/mai-code-2/",
+          "by": "Microsoft AI"
+        },
+        {
+          "kind": "official",
+          "label": "GitHub Changelog：MAI Code 2 与 MAI Code 2 Flash 进入 GitHub Copilot",
+          "labelEn": "GitHub Changelog: MAI Code 2 and MAI Code 2 Flash in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/",
+          "by": "GitHub",
+          "date": "2026-11-17"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：MAI Code 2 and Code 2 Flash",
+          "labelEn": "Hacker News thread: MAI Code 2 and Code 2 Flash",
+          "url": "https://news.ycombinator.com/item?id=50535885",
+          "by": "Hacker News",
+          "date": "2026-11-17"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：MAI Code 2 面向日常企业编码（上线、深度调试、多文件实现、全仓库推理、界面与可视化），MAI Code 2 Flash 面向量大的解释、定点修改、例行修复和快速迭代；两款暂未为基础科研和很长程的 agent 任务调优。",
+          "textEn": "Vendor claim: MAI Code 2 is for everyday enterprise coding (production, deep debugging, multi-file implementation, repo-wide reasoning, UI and visualizations), and MAI Code 2 Flash is for high-volume explanations, targeted edits, routine fixes, and rapid iterations; neither is yet tuned for fundamental science research or very long-horizon agentic work."
+        },
+        {
+          "text": "GitHub Changelog：Code 2 在 Copilot Pro、Pro+、Max、Business、Enterprise；Flash 另含 Copilot Free 与 Student。按用量计费；Business 与 Enterprise 由管理员通过模型策略管理，默认启用规则下新模型会自动开启，除非管理员关掉。",
+          "textEn": "GitHub Changelog: Code 2 on Copilot Pro, Pro+, Max, Business, and Enterprise; Flash also on Copilot Free and Student. Usage-based billing; Business and Enterprise admins manage access through the model policy, and under default model enablement new models turn on automatically unless an admin has turned that off."
+        },
+        {
+          "text": "官方称：Code 2 Flash 在 Microsoft Foundry 为限量预览；Open Router、Vercel、Hermes、Open Code 和 Kilo 只写了「很快」，是计划，不是已上线。",
+          "textEn": "Vendor claim: Code 2 Flash is in limited-access preview in Microsoft Foundry; Open Router, Vercel, Hermes, Open Code, and Kilo are only “soon”, a plan rather than availability."
+        },
+        {
+          "text": "官方称（评测节选，本库未复跑）：在 DeepSWE 1.1、Terminal Bench 2.1、SWE-Atlas、FrontierCode v1.1 四项均值上，Code 2 达到 GPT 6.1 Sol 98% 的表现、成本为其 40%，达到 Claude Opus 5.5 96% 的表现、成本为其 5%；盲评前端应用时评审有 64% 的次数更偏向它而不是 GPT-6 Sol；Flash 与 GPT-6 Luna、Claude Haiku 5.5 表现相当，成本分别为其 65% 和 20%。页内说明：所有模型都跑在 max 推理档，三项基准在微软内部的 MSBench 上用 Copilot CLI 跑，FrontierCode 的分数和成本取自 Artificial Analysis，MAI 两款的成本按五折促销价计算。",
+          "textEn": "Vendor claim (eval excerpts, not re-run here): averaged over DeepSWE 1.1, Terminal Bench 2.1, SWE-Atlas, and FrontierCode v1.1, Code 2 gives 98% of GPT 6.1 Sol's performance at 40% of the cost and 96% of Claude Opus 5.5's at 5% of the cost; in blind frontend app evaluations reviewers preferred it over GPT-6 Sol 64% of the time; Flash is comparable to GPT-6 Luna and Claude Haiku 5.5 at 65% and 20% of the cost. Page notes: all models ran at max reasoning effort, three benchmarks ran on Microsoft's internal MSBench with the Copilot CLI, FrontierCode scores and costs come from Artificial Analysis, and both MAI models' costs are shown at their 50% promotional price."
+        },
+        {
+          "text": "官方称：从 Code 2 Flash 进一步优化出的 MAI Work Flash 已用在 M365（Excel、PowerPoint、Word、Teams）和 Fabric IQ 的产品里。微软的模型列表里没有它的单独页面，本看板不另开卡。",
+          "textEn": "Vendor claim: MAI Work Flash, further optimized from Code 2 Flash, serves Microsoft products across M365 (Excel, PowerPoint, Word, Teams) and Fabric IQ. Microsoft's model list has no separate page for it, so the board does not give it its own card."
+        }
+      ],
+      "qualityNote": "收录理由：微软自研的编码模型成对发布，当天就能在 GitHub Copilot 里选到，Flash 连免费版和学生版都有，对日常写代码的人是马上能试的新选项；板上此前没有 MAI 系列。一份公告讲两款，所以合成一张卡。边界：定位、98% / 40% 这类对比、盲评偏好和 MAI Work Flash 的说法都来自微软公告，对比的成本按五折促销价计算，促销结束后比例会变；可用的 Copilot 方案以 GitHub Changelog 为准；Foundry 是限量预览，其他平台只是「很快」。互链 gpt-6-1-sol、claude-opus-5-5、claude-haiku-5-5 只因为公告拿它们作对照，不表示本库认可这些对比。本库没有在 Copilot 里启用这两款模型，没有打开 Foundry，也没有跑任何编码评测。",
+      "qualityNoteEn": "Why listed: Microsoft's in-house coding models shipped as a pair and are selectable in GitHub Copilot on day one, with Flash reaching the Free and Student plans, so people who code every day can try them now; the board had no MAI model before. One announcement covers both, so this is one card. Boundary: the positioning, the 98% / 40% style comparisons, the blind-evaluation preference, and the MAI Work Flash statements all come from Microsoft's announcement, and the cost comparisons use a 50% promotional price, so the ratios change when the promotion ends; Copilot plan availability follows the GitHub Changelog; Foundry is a limited-access preview and the other platforms are only “soon”. Cross-links to gpt-6-1-sol, claude-opus-5-5, and claude-haiku-5-5 exist only because the announcement compares against them, not because this library endorses the comparisons. This library did not enable either model in Copilot, open Foundry, or run any coding eval.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gpt-6-1-sol",
+        "claude-opus-5-5",
+        "claude-haiku-5-5"
+      ],
+      "previewImage": "/previews/mai-code-2.webp",
+      "previewCredit": "预览：Microsoft AI 公告页的 Ignite 发布主图，左右居中裁成 3:2",
+      "previewCreditEn": "Preview: the Ignite launch art from Microsoft AI's announcement page, centre-cropped left and right to 3:2",
+      "featured": false,
+      "verifyLog": "2026-11-18 晚间（Asia/Taipei，约 20:04–20:15）：公告 https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/ HTTP 200，title 为 MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices | Microsoft AI，页内日期 Nov 17, 2026，标签 Ignite、Models，og:image 为 https://microsoft.ai/wp-content/uploads/2026/11/MAI-Code-2-Ignite-WithHeader-16x9-1.jpg 。正文原句核对：excels in taking code to production, deep debugging, multi-file implementation, repo wide reasoning, and UI… delivering changes code maintainers would merge；They’re explicitly not yet tuned for harder problems, like fundamental science research and very long horizon agentic work；98% of the performance of GPT 6.1 Sol at 40% of the cost, and 96% of Claude Opus 5.5’s performance at just 5% of the cost；reviewers preferred its results over GPT-6 Sol 64% of the time；comparable performance to GPT-6 Luna and Claude Haiku 5.5 at 65% and 20% of the cost；MAI Code 2 and Code 2 Flash are available in GitHub Copilot, and Code 2 Flash is in limited-access preview in Microsoft Foundry. Soon, we’ll be releasing it on Open Router, Vercel, Hermes, Open Code, and Kilo；From Code 2 Flash we further optimized a single model, MAI Work Flash, to serve multiple Microsoft products across M365 and Fabric IQ。About these results 一节：All models were run at max reasoning effort；DeepSWE 1.1、TerminalBench 2.1、SWE Atlas 在 MSBench（Microsoft’s internal eval platform）上用 GitHub Copilot CLI without subagents 跑；FrontierCode 1.1 scores and costs are from Artificial Analysis；MAI-Code-2 cost is shown at its 50% promotional price；视觉编码盲评共 258 名标注者。数字照页面转述，未复跑。模型页 https://microsoft.ai/models/mai-code-2/ HTTP 200，title 为 MAI Code 2 | Microsoft AI，og:image 是 2026/05 的 code-social.jpg；页面上的统计数字是分开渲染的，本条没有引用。GitHub Changelog https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/ HTTP 200，日期 November 17, 2026：MAI Code 2: Copilot Pro, Pro+, Max, Business, and Enterprise；MAI Code 2 Flash: Copilot Free, Student, Pro, Pro+, Max, Business, and Enterprise；These models are billed under usage-based billing；另有一句 Both models are available to eligible GitHub Copilot subscribers on annual plans；并列出模型选择器所在的客户端和管理员模型策略。HN https://news.ycombinator.com/item?id=50535885 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 MAI Code 2 and Code 2 Flash，2026-11-17T18:25:13Z（台北 2026-11-18 02:25:13），核对时 377 points、139 条评论。预览：公告 og:image（HTTP 200，2400×1350 JPEG，画面文字为 MAI Code 2 / MAI Code 2 Flash 和一行官方标语）居中裁出 2025×1350，缩成 1200×800 WebP；两侧各裁掉约 188px 的背景，文字完整，没有加字或分数。没有用模型页那张 2026 年 5 月的通用图，因为公告图明确是这次发布。去重：main 5b0eda3 与全部打开的 PR 里没有 MAI Code 条目。MAI Work Flash：https://microsoft.ai/models/ HTTP 200，列表里没有 MAI Work 条目，试探 /models/mai-work-flash/ 返回 404，所以只在正文带一句。未做：没有在 Copilot 里启用或选择这两款模型，没有打开 Microsoft Foundry，没有跑任何编码评测，也没有核对 Copilot 的具体单价。",
+      "verifyLogEn": "2026-11-18 evening (Asia/Taipei, about 20:04–20:15): announcement https://microsoft.ai/news/introducing-mai-code-2-and-mai-code-2-flash/ HTTP 200, title MAI Code 2 and Code 2 Flash: Everyday coding at scalable prices | Microsoft AI, on-page date Nov 17, 2026, tags Ignite and Models, og:image https://microsoft.ai/wp-content/uploads/2026/11/MAI-Code-2-Ignite-WithHeader-16x9-1.jpg . Sentences checked in the body: excels in taking code to production, deep debugging, multi-file implementation, repo wide reasoning, and UI… delivering changes code maintainers would merge; They’re explicitly not yet tuned for harder problems, like fundamental science research and very long horizon agentic work; 98% of the performance of GPT 6.1 Sol at 40% of the cost, and 96% of Claude Opus 5.5’s performance at just 5% of the cost; reviewers preferred its results over GPT-6 Sol 64% of the time; comparable performance to GPT-6 Luna and Claude Haiku 5.5 at 65% and 20% of the cost; MAI Code 2 and Code 2 Flash are available in GitHub Copilot, and Code 2 Flash is in limited-access preview in Microsoft Foundry. Soon, we’ll be releasing it on Open Router, Vercel, Hermes, Open Code, and Kilo; From Code 2 Flash we further optimized a single model, MAI Work Flash, to serve multiple Microsoft products across M365 and Fabric IQ. The About these results section: All models were run at max reasoning effort; DeepSWE 1.1, TerminalBench 2.1, and SWE Atlas were run on MSBench (Microsoft’s internal eval platform) with the GitHub Copilot CLI without subagents; FrontierCode 1.1 scores and costs are from Artificial Analysis; MAI-Code-2 cost is shown at its 50% promotional price; the visual-coding blind evaluation had 258 annotators in total. Figures are restated from the page, not re-run. Model page https://microsoft.ai/models/mai-code-2/ HTTP 200, title MAI Code 2 | Microsoft AI, og:image is the 2026/05 code-social.jpg; the statistics on that page render as separate fragments and are not quoted here. GitHub Changelog https://github.blog/changelog/2026-11-17-mai-code-2-and-mai-code-2-flash-in-github-copilot/ HTTP 200, dated November 17, 2026: MAI Code 2: Copilot Pro, Pro+, Max, Business, and Enterprise; MAI Code 2 Flash: Copilot Free, Student, Pro, Pro+, Max, Business, and Enterprise; These models are billed under usage-based billing; it also has the line Both models are available to eligible GitHub Copilot subscribers on annual plans, and lists the clients with the model picker and the admin model policy. HN https://news.ycombinator.com/item?id=50535885 page HTTP 200 and the Algolia items API HTTP 200: title MAI Code 2 and Code 2 Flash, 2026-11-17T18:25:13Z (2026-11-18 02:25:13 Taipei), 377 points and 139 comments at the check. Preview: the announcement og:image (HTTP 200, 2400×1350 JPEG, reading MAI Code 2 / MAI Code 2 Flash plus one official tagline) centre-cropped to 2025×1350 and scaled to a 1200×800 WebP; about 188px of background was cut from each side, all text intact, no text or scores added. The generic May 2026 image on the model page was not used because the announcement art is clearly this launch. Dedupe: no MAI Code entry on main 5b0eda3 or in any open PR. MAI Work Flash: https://microsoft.ai/models/ HTTP 200 lists no MAI Work entry and a probe of /models/mai-work-flash/ returned 404, so it only gets a line in the body. Not done: neither model was enabled or selected in Copilot, Microsoft Foundry was not opened, no coding eval was run, and Copilot's per-token prices were not checked."
+    },
     {
       "id": "fovea-4b",
       "slug": "fovea-4b",
@@ -1939,7 +2103,8 @@
       "relatedModelIds": [
         "gpt-6-astra",
         "astra-openai-showcase",
-        "claude-sonnet-5-5"
+        "claude-sonnet-5-5",
+        "gpt-6-2-astra-sol"
       ],
       "previewImage": "/previews/gpt-6-1-sol.webp",
       "previewCredit": "预览：Playwright 实拍 openai.com/index/introducing-gpt-6-1-sol/ 首屏",
@@ -2912,7 +3077,8 @@
         "astra-mini-lol",
         "astra-tripo-3d-prompts",
         "astra-openai-showcase",
-        "step-5-preview"
+        "step-5-preview",
+        "gpt-6-2-astra-sol"
       ],
       "previewImage": "/previews/gpt-6-astra.webp",
       "previewCredit": "预览：YouWare X 视频封面（Astra Replay 页面）",
