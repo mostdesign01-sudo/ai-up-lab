@@ -1,11 +1,96 @@
 {
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-19T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.32",
-    "count": 42
+    "version": "1.1.33",
+    "count": 43
   },
   "models": [
+    {
+      "id": "gemini-4-neon",
+      "slug": "gemini-4-neon",
+      "name": "Gemini 4 Neon",
+      "vendor": "Google",
+      "title": "Gemini 4 Neon（Google）",
+      "titleEn": "Gemini 4 Neon (Google)",
+      "summary": "Google 于 2026-11-18 发布的 Gemini 4 Neon，官方定位是：在复杂的软件工程、知识工作和科学流程里，用前沿一级的能力较快地做完一整件事。Koray Kavukcuoglu 的官方博客把家族说成三档：Carbon 做最难、最长程的项目，Hydrogen 做快速的日常执行，Neon 取深度和效率之间的平衡。AI Studio 的新功能页也写，Neon 位于 Hydrogen 和 Carbon 之间，模型 id 是 `gemini-4-neon`。价格按官方博客：$3 / 百万输入 token，缓存输入 $0.15 / 百万（博客写是 95% 折扣），$15 / 百万输出 token，上下文窗口 100 万 token。AI Studio 的价格表核对了输入 $3.00、输出 $15.00；文档另写统一上下文是 1,048,576 token，默认同步输出上限 65,536，长输出可以沿这个窗口继续。思考档官方写了四档：low、medium、high（默认）和 xhigh；Antigravity 的博客把这一档的两端叫做 Low 到 Extra High，并写在默认的 high 上，每个任务的成本比 Carbon 低 32%（厂商说法）。可用性以「今天开始推出」为准，不是免费档：开发者走 Google AI Studio 和 Android Studio 里的 Gemini API 付费档；付费的 Google AI Pro 或 Ultra 订户可以在 Google Antigravity 里试，全部 Pro 和 Ultra 订户可以在 AI Studio 里试；企业走 Gemini for business（API 或模型下拉）和 Google Antigravity；消费者里，Google AI Pro 或 Ultra 订户可以在 Gemini 应用的模型下拉里选它；网络安全方面，合格的 Fairwind Program 成员将在随后数日开始获得访问。官方博客和文档都没有写台湾、香港或中国大陆是否可用，本条也不写。博客里的评测是 Google 转述的已发布数字，不是本库复跑：xhigh 上 Artificial Analysis Intelligence Index 61，Google 称总排名第 3；Artificial Analysis Coding Agent Index 58.6，Google 称第 1；Vals Index 第 2（70.9%）；Zapier AutomationBench 56.3%，Google 称第 1。Antigravity 写 Orchestrator 可以在同一次会话里用 Neon 做规划、用 Hydrogen 做执行。博客里的 /swarm、Blender MCP 等是官方演示里的说法，本库没有复现。Gemini 应用一节写 Tasks 现在可以跑在 Neon 上；这只在模型卡里提一句，不另开一条案例（Gemini Tasks 已在未合并的 #167）。文档有一节是从 Carbon、Argon 或 Hydrogen 把模型 id 改成 gemini-4-neon，那是切换写法，不是「Argon 已下线」。本库没有登录 Google AI Studio、Antigravity 或 Gemini 应用，也没有调用 API。",
+      "summaryEn": "Gemini 4 Neon, announced by Google on 2026-11-18, is positioned as frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows. Koray Kavukcuoglu’s official post describes the family in three bands: Carbon for the hardest long-horizon projects, Hydrogen for fast everyday execution, and Neon for a balance of depth and efficiency. The AI Studio what’s-new page also places Neon between Hydrogen and Carbon, with the model id `gemini-4-neon`. Prices as the official blog states them: $3 per million input tokens, $0.15 per million cached input tokens (the blog calls that a 95% discount), $15 per million output tokens, and a 1 million-token context window. The AI Studio price table checks out at $3.00 input and $15.00 output; the docs separately say the unified context is 1,048,576 tokens, the default synchronous output cap is 65,536, and long decode can continue up to that window. The official thinking levels are four: low, medium, high (the default), and xhigh. The Antigravity post calls the ends of that range Low to Extra High, and says that at the default high setting the cost per task is 32% lower than Carbon (a vendor claim). Availability is “begins rolling out today”, not a free tier: developers use the paid Gemini API tier in Google AI Studio and Android Studio; paid Google AI Pro or Ultra subscribers can try Neon in Google Antigravity, and all Pro and Ultra subscribers can try it in AI Studio; enterprises use Gemini for business (API or model drop-down) and Google Antigravity; among consumers, Google AI Pro or Ultra subscribers can select it in the Gemini app model drop-down; for cybersecurity, eligible Fairwind Program members begin receiving access over the next few days. Neither the blog nor the docs say whether it is available in Taiwan, Hong Kong, or mainland China, and this card does not either. Benchmark lines on the blog are figures Google cites, not re-run here: Artificial Analysis Intelligence Index 61 at xhigh, which Google calls #3 overall; Artificial Analysis Coding Agent Index 58.6, which Google calls #1; Vals Index #2 (70.9%); Zapier AutomationBench 56.3%, which Google calls #1. Antigravity says Orchestrator can pair Neon as the planner with Hydrogen as the executor in one session. /swarm, Blender MCP, and the other scenes on the blog are official demo claims, not reproduced here. The Gemini app section says Tasks in Gemini can now run on Neon; that is one line on this model card, not a second case (Gemini Tasks is already in unmerged #167). The docs include a section for switching the model id from Carbon, Argon, or Hydrogen to gemini-4-neon; that is a model-id change, not a statement that Argon is retired. This library did not sign in to Google AI Studio, Antigravity, or the Gemini app, and did not call the API.",
+      "announcedAt": "2026-11-18",
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-19T01:15:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Google 官方博客：Introducing Gemini 4 Neon",
+          "labelEn": "Google official blog: Introducing Gemini 4 Neon",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+          "by": "Koray Kavukcuoglu, Google",
+          "date": "2026-11-18"
+        },
+        {
+          "kind": "official",
+          "label": "Google Antigravity：Gemini 4 Neon in Google Antigravity",
+          "labelEn": "Google Antigravity: Gemini 4 Neon in Google Antigravity",
+          "url": "https://antigravity.google/blog/gemini-4-neon-in-google-antigravity/",
+          "by": "The Antigravity Team",
+          "date": "2026-11-18"
+        },
+        {
+          "kind": "official",
+          "label": "Google AI Studio 文档：Gemini 4 Neon",
+          "labelEn": "Google AI Studio docs: Gemini 4 Neon",
+          "url": "https://aistudio.google.com/docs/models/gemini-4-neon",
+          "by": "Google"
+        },
+        {
+          "kind": "official",
+          "label": "Google AI Studio：What’s new in Gemini 4 Neon",
+          "labelEn": "Google AI Studio: What’s new in Gemini 4 Neon",
+          "url": "https://aistudio.google.com/docs/whats-new-gemini-4-neon",
+          "by": "Google",
+          "date": "2026-11-18"
+        },
+        {
+          "kind": "official",
+          "label": "Gemini 4 Neon 模型卡（博客所链的 PDF）",
+          "labelEn": "Gemini 4 Neon model card (the PDF linked from the blog)",
+          "url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf",
+          "by": "Google DeepMind",
+          "date": "2026-11-18"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：Carbon 做最难的长程项目，Hydrogen 做快速的日常执行，Neon 取深度和效率之间的平衡。模型 id 为 `gemini-4-neon`。思考档四档：low、medium、high（默认）、xhigh。",
+          "textEn": "Vendor claim: Carbon is for the hardest long-horizon projects, Hydrogen for fast everyday execution, and Neon for a balance of depth and efficiency. The model id is `gemini-4-neon`. Four thinking levels: low, medium, high (default), and xhigh."
+        },
+        {
+          "text": "官方博客的价格：每百万 token 输入 $3、缓存输入 $0.15（博客写 95% 折扣）、输出 $15，上下文 100 万 token。AI Studio 价格表核对了 $3 / $15，并写明只在付费档，不在免费档。",
+          "textEn": "Prices on the official blog: $3 input, $0.15 cached input (the blog says a 95% discount), and $15 output per million tokens, with a 1 million-token context. The AI Studio price table checks at $3 / $15 and says the paid tier only, not the free tier."
+        },
+        {
+          "text": "官方称，2026-11-18 开始推出：开发者用付费 API（AI Studio 与 Android Studio）；Pro 或 Ultra 可在 Antigravity 试，全部 Pro 与 Ultra 可在 AI Studio 试；企业用 Gemini for business 和 Antigravity；消费者需 Pro 或 Ultra 才能在 Gemini 应用里选择；Fairwind 的合格成员将在随后数日获得网络安全向的访问。",
+          "textEn": "Vendor claim, rolling out from 2026-11-18: developers on the paid API (AI Studio and Android Studio); Pro or Ultra can try it in Antigravity, and all Pro and Ultra subscribers can try it in AI Studio; enterprises via Gemini for business and Antigravity; consumers need Pro or Ultra to select it in the Gemini app; eligible Fairwind members begin receiving the cybersecurity access over the next few days."
+        },
+        {
+          "text": "官方称（评测节选，本库未复跑）：xhigh 上 Artificial Analysis Intelligence Index 61，Google 称总排名第 3；Coding Agent Index 58.6，Google 称第 1；Vals Index 第 2（70.9%）；Zapier AutomationBench 56.3%，Google 称第 1。默认 high 上，Antigravity 写每个任务的成本比 Carbon 低 32%。",
+          "textEn": "Vendor claim (eval excerpts, not re-run here): Artificial Analysis Intelligence Index 61 at xhigh, which Google calls #3 overall; Coding Agent Index 58.6, which Google calls #1; Vals Index #2 (70.9%); Zapier AutomationBench 56.3%, which Google calls #1. At the default high setting, Antigravity says cost per task is 32% lower than Carbon."
+        }
+      ],
+      "qualityNote": "收录理由：2026-11-18 的官方模型发布，官方把它放在 Carbon 和 Hydrogen 之间，API id 已写在 AI Studio 文档里。板上已有 Gemini 4 Argon，这次是新的一档，所以单独一张，并和 Argon 互链。Carbon 已在未合并的 catalog-hold PR 里，本卡不加 Carbon，也不加 Hydrogen。边界：定位、价格、32% 的成本比较和榜单名次都是 Google 或它点名的第三方已发布数字，不是本库复跑的。文档里「从 Argon 迁到 Neon」是改模型 id，不是 Argon 下线。Gemini 应用里的 Tasks 可以跑在 Neon 上，只在这里提一句；Gemini Tasks 的案例在未合并的 #167，不另开。博客和文档都没有写台湾、香港或中国大陆是否可用。本库没有登录 Google AI Studio、Antigravity 或 Gemini 应用，没有调用 API，也没有复现 /swarm 或 Blender 演示。整理质量 4 星（官方来源齐、可用范围写清），不代表基准分。",
+      "qualityNoteEn": "Why listed: an official model launch on 2026-11-18. Google places it between Carbon and Hydrogen, and the API id is on the AI Studio docs. The board already has Gemini 4 Argon; this is a new tier, so it is its own card, cross-linked with Argon. Carbon is already in an unmerged catalog-hold PR, and this card adds neither Carbon nor Hydrogen. Limits: the positioning, the prices, the 32% cost comparison, and the leaderboard places are Google’s figures or published third-party figures Google cites, not re-run here. The docs’ “migrate from Argon to Neon” is a model-id change, not a retirement of Argon. Tasks in the Gemini app can run on Neon, and that is one line here; the Gemini Tasks case is in unmerged #167 and is not opened again. Neither the blog nor the docs say whether it is available in Taiwan, Hong Kong, or mainland China. This library did not sign in to Google AI Studio, Antigravity, or the Gemini app, did not call the API, and did not reproduce the /swarm or Blender demos. 4 stars for curation quality (official sources in place, availability spelled out), not a benchmark rating.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [
+        "gemini-4-argon"
+      ],
+      "previewImage": "/previews/gemini-4-neon.webp",
+      "previewCredit": "预览：Google 官方博客 Introducing Gemini 4 Neon 的首屏，缩成 3:2，未加字",
+      "previewCreditEn": "Preview: the first screen of Google’s official Introducing Gemini 4 Neon post, scaled to 3:2, no text added",
+      "featured": true,
+      "stars": 4,
+      "verifyLog": "2026-11-19 上午（Asia/Taipei，约 09:03–09:15）：官方博客 https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ 无头 Chrome HTTP 200，title 为 Introducing Gemini 4 Neon，页内日期 Nov 18, 2026，作者 Koray Kavukcuoglu，SVP, Google DeepMind and Chief AI Architect, Google，og:image 为 https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png 。正文原句核对：frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows；priced at $3 per million input tokens ($0.15 per million cached input tokens, a 95% discount) and $15 per million output tokens, with a 1 million-token context window；While Carbon tackles your hardest, long-horizon projects and Hydrogen handles fast everyday execution, Neon balances depth and efficiency；At its default high thinking level … 32% lower cost per task than Carbon；Neon ranks ahead of comparable models and #3 overall with a score of 61 on the Artificial Analysis Intelligence Index at its xhigh thinking level；ranking #1 overall on the Artificial Analysis Coding Agent Index (58.6)；On the Vals Index, Neon ranks #2（正文后文给出 70.9%）；#1 overall on both Zapier’s AutomationBench (56.3%)；Tasks in Gemini can now run on Neon；Gemini 4 Neon begins rolling out today，随后四条分别写 developers 的 paid tier、enterprises 的 Gemini for business、consumers 的 Pro or Ultra、cybersecurity 的 Fairwind Program over the next few days。模型卡链接为 https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf ，curl HTTP 200，文件头 %PDF-1.4，共 8 页；页面文字画在图里，没有抽出可复制的文本层，所以价格和可用范围改以博客与 AI Studio 文档为准，没有从 PDF 里另抄数字。Antigravity 博客 https://antigravity.google/blog/gemini-4-neon-in-google-antigravity/ HTTP 200，日期 Nov 18, 2026，title 为 Gemini 4 Neon in Google Antigravity。原句：sweet spot between Gemini 4 Carbon for your deepest long-horizon projects and Gemini 4 Hydrogen for rapid everyday execution；four thinking levels (Low to Extra High)；32% lower cost per task than Carbon；Orchestrator … pairing Gemini 4 Neon as the planner with Gemini 4 Hydrogen as the executor in a single session；paid Google AI Pro and Google AI Ultra subscribers in the Antigravity desktop app, Antigravity CLI, and Antigravity IDE extensions。AI Studio 模型页 https://aistudio.google.com/docs/models/gemini-4-neon HTTP 200，title 为 Gemini 4 Neon - Gemini API | Google AI Studio，模型代码 gemini-4-neon，上下文 1,048,576，默认同步最大输出 65,536，long decode 最高 1,048,576，Latest update November 2026。新功能页 https://aistudio.google.com/docs/whats-new-gemini-4-neon HTTP 200：sits between Gemini 4 Hydrogen and Gemini 4 Carbon；paid tier only（not on the free tier）；thinking levels low, medium, high (default), and xhigh；价格表 $3.00 / 1M input, $15.00 / 1M output。该页有 Migrate from Gemini 4 Carbon, Argon, or Hydrogen，要求把 model 设为 gemini-4-neon，并写 Neon defaults to high，Carbon and Argon default to medium and cap at high。这是切换模型 id 的说明，页面没有写 Argon 停止提供，本条也不写。博客上的网络安全基准表没有抄进摘要，只保留 Fairwind 的开放范围。预览：无头 Chrome 视口 1440×960 截取博客首屏（标题、日期和霓虹标题图），缩成 1200×800 WebP，没有加字，也没有把分数印上去。去重：main 30e8265a1bb6 的模型只有 gemini-4-argon，没有 neon；Carbon 在未合并的 #155，不在本 PR 重复添加。给 gemini-4-argon 的 relatedModelIds 加了本卡 id，其余字段没动。未做：没有登录 AI Studio、Antigravity 或 Gemini 应用，没有调用 API，没有复跑评测，没有复现 /swarm 或 Blender MCP。",
+      "verifyLogEn": "2026-11-19 morning (Asia/Taipei, about 09:03–09:15): official blog https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ loaded in headless Chrome at HTTP 200, title Introducing Gemini 4 Neon, on-page date Nov 18, 2026, by Koray Kavukcuoglu, SVP, Google DeepMind and Chief AI Architect, Google, og:image https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-neon__blog-header__sm.width-1300.png . Sentences checked: frontier-level intelligence with fast end-to-end task completion across complex software engineering, knowledge work, and science workflows; priced at $3 per million input tokens ($0.15 per million cached input tokens, a 95% discount) and $15 per million output tokens, with a 1 million-token context window; While Carbon tackles your hardest, long-horizon projects and Hydrogen handles fast everyday execution, Neon balances depth and efficiency; At its default high thinking level … 32% lower cost per task than Carbon; Neon ranks ahead of comparable models and #3 overall with a score of 61 on the Artificial Analysis Intelligence Index at its xhigh thinking level; ranking #1 overall on the Artificial Analysis Coding Agent Index (58.6); On the Vals Index, Neon ranks #2 (70.9% later in the body); #1 overall on both Zapier’s AutomationBench (56.3%); Tasks in Gemini can now run on Neon; Gemini 4 Neon begins rolling out today, followed by the paid tier for developers, Gemini for business for enterprises, Pro or Ultra for consumers, and the Fairwind Program over the next few days for cybersecurity. The model-card link is https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf , curl HTTP 200, header %PDF-1.4, 8 pages; the words are drawn as graphics and there is no extractable text layer, so prices and availability follow the blog and the AI Studio docs, and no figure was copied out of the PDF. Antigravity blog https://antigravity.google/blog/gemini-4-neon-in-google-antigravity/ HTTP 200, dated Nov 18, 2026, title Gemini 4 Neon in Google Antigravity. Sentences: sweet spot between Gemini 4 Carbon for your deepest long-horizon projects and Gemini 4 Hydrogen for rapid everyday execution; four thinking levels (Low to Extra High); 32% lower cost per task than Carbon; Orchestrator … pairing Gemini 4 Neon as the planner with Gemini 4 Hydrogen as the executor in a single session; paid Google AI Pro and Google AI Ultra subscribers in the Antigravity desktop app, Antigravity CLI, and Antigravity IDE extensions. AI Studio model page https://aistudio.google.com/docs/models/gemini-4-neon HTTP 200, title Gemini 4 Neon - Gemini API | Google AI Studio, model code gemini-4-neon, context 1,048,576, default synchronous max output 65,536, long decode up to 1,048,576, Latest update November 2026. What’s new https://aistudio.google.com/docs/whats-new-gemini-4-neon HTTP 200: sits between Gemini 4 Hydrogen and Gemini 4 Carbon; paid tier only (not on the free tier); thinking levels low, medium, high (default), and xhigh; price table $3.00 / 1M input, $15.00 / 1M output. That page has Migrate from Gemini 4 Carbon, Argon, or Hydrogen, which sets model to gemini-4-neon, and says Neon defaults to high while Carbon and Argon default to medium and cap at high. That is a model-id switch; the page does not say Argon is discontinued, and this card does not either. The cybersecurity benchmark tables on the blog were not copied into the summary; only the Fairwind access line was kept. Preview: headless Chrome viewport 1440×960 of the blog’s first screen (title, date, and the neon title art), scaled to a 1200×800 WebP, no text added and no scores printed on it. Dedupe: models on main 30e8265a1bb6 include gemini-4-argon and not neon; Carbon is in unmerged #155 and is not added again here. This card’s id was added to relatedModelIds on gemini-4-argon; no other field there changed. Not done: no sign-in to AI Studio, Antigravity, or the Gemini app, no API call, no eval re-run, and no reproduction of /swarm or Blender MCP."
+    },
     {
       "id": "gpt-6-2-astra-sol",
       "slug": "gpt-6-2-astra-sol",
@@ -2016,6 +2101,7 @@
       "qualityNoteEn": "Boundary: Fairwind-only at launch; vendor evals and internal-use figures are vendor narration, not re-run here; AA speed is N/A; introductory pricing is time-limited. No subjective ranking beyond the board’s stars field.",
       "relatedCaseIds": [],
       "relatedModelIds": [
+        "gemini-4-neon",
         "beam",
         "gpt-6-1-sol",
         "gpt-6-astra",
