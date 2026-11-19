@@ -1,6 +1,299 @@
 {
   "cases": [
     {
+      "id": "vercel-board",
+      "slug": "vercel-board",
+      "title": "Vercel Board：给人和各家编程 agent 共用的任务留言板",
+      "titleEn": "Vercel Board: a shared task board for people and coding agents across harnesses",
+      "kind": "tool",
+      "hook": "人和各家编程 agent 共用一块留言板，认领任务、回帖、留结果。",
+      "hookEn": "People and coding agents share one board to claim tasks, reply, and record results.",
+      "summary": "Vercel Board（https://vercel.com/docs/board ，Vercel 官方，2026 年 11 月 18 日发布）是一块给团队里的人和编程 agent 共用的留言板，官方把它叫作实验性的 agent 协作基础件。一个 board 分频道和帖子串（thread）：帖子串把一件事的讨论、上下文和结果放在一起，标签（label，写成 key=value）记状态或关联的 PR。任务是带状态的帖子串：agent 用 `vercel board tasks claim` 认领，认领是一份有期限的租约，干活时用 `tasks renew` 续期，做完用 `tasks complete` 收尾；任务之间可以设依赖，也可以用 `tasks block` 停下来等人答复或批准。其它能力：按频道给人、项目和 agent 分权限（grants），每次改动都进同一条事件日志；消息可以带按自定义 schema 校验的结构化数据；watcher 在有新回复或标签变化时唤起 agent，`vercel board schedule` 让 agent 给自己定回访；通过 Vercel Connect 和 Slack 帖子串、GitHub 的 PR 与 issue、Linear issue 同步（文档写 Slack 和 Linear 是双向，GitHub 默认只进不出，除非你自己写回去）。agent 从 Vercel CLI（`vercel board`）或 JavaScript SDK（`@vercel/board`）读写，官方 skill 用 `npx skills add vercel/board` 安装，`npx @vercel/board inspect` 打开查看界面。官方博客说它不挑 harness，点名 Claude Code、Codex、Pi、OpenCode、eve、fx、Mastra 和 LangChain。博客还写，Vercel 把 v0 的软件工厂重建在 Board 上之后，它「现在合并超过 50% 的 PR」；这是 Vercel 自己的说法，不是本库测的。目前所有套餐可用，实验期免费，文档写明以后可能收费；使用受 Public Beta Agreement 约束，行为、API 和限额都可能变。用团队的 board 要有 Vercel 团队并 `vercel login`；文档写数据存在美国、不能选区域，同步出去的频道谁能看由 Slack、GitHub、Linear 那边决定。SDK、CLI、skill 和模板的源码在 https://github.com/vercel/board ，许可证 Apache-2.0；默认的团队 board 是 Vercel 托管的服务。适合已经同时跑好几个编程 agent、想给它们一份共用待办和交接记录的团队。本库没有安装 Board skill，没有 vercel login，没有创建 board，没有跑 CLI 或 SDK，也没有接 Slack、GitHub、Linear。",
+      "summaryEn": "Vercel Board (https://vercel.com/docs/board , official, announced November 18, 2026) is a message board that a team's people and coding agents share; Vercel calls it an experimental primitive for coordinating agents. A board has channels and threads: a thread keeps one piece of work's discussion, context, and result together, and labels (key=value) track state or the linked pull request. A task is a thread with a state the board keeps: an agent claims it with `vercel board tasks claim`, the claim is a time-limited lease that the agent renews with `tasks renew` while it works, and `tasks complete` settles it; tasks can depend on each other, and `tasks block` holds one until a person answers or approves. Also in the docs: grants that decide what each person, project, and agent can do in each channel, with every change written to one event log; messages that carry structured data validated against a schema you define; watchers that wake an agent when a reply arrives or a label changes, and `vercel board schedule` so an agent can set its own follow-up; and sync through Vercel Connect with Slack threads, GitHub pull requests and issues, and Linear issues (the docs say Slack and Linear sync both ways, while GitHub comes into the board only unless you send something back). Agents read and write through the Vercel CLI (`vercel board`) or the JavaScript SDK (`@vercel/board`); the official skill installs with `npx skills add vercel/board`, and `npx @vercel/board inspect` opens the viewer. The announcement says it is harness agnostic and names Claude Code, Codex, Pi, OpenCode, eve, fx, Mastra, and LangChain. It also says that after Vercel rebuilt v0's software factory on Board, it “now merges over 50% of PRs”; that is Vercel's claim, not something measured here. It is available on all plans and free while experimental, and the docs say Vercel may charge later; use is subject to the Public Beta Agreement, and behavior, APIs, and limits may change. A team board needs a Vercel team and `vercel login`; the docs say data is stored in the United States with no region setting, and that a synced channel is as readable as the Slack, GitHub, or Linear side it syncs with. The source for the SDK, CLI, skill, and templates is at https://github.com/vercel/board under Apache-2.0; the default team board is a service Vercel hosts. Good for teams already running several coding agents that want one shared backlog and handoff record. This library did not install the Board skill, did not run vercel login, did not create a board, did not run the CLI or SDK, and did not connect Slack, GitHub, or Linear.",
+      "categories": [
+        "automation",
+        "coding",
+        "multi-agent",
+        "project-management"
+      ],
+      "role": "coding agents",
+      "sourceUrl": "https://vercel.com/blog/introducing-vercel-board",
+      "secondaryUrls": [
+        "https://vercel.com/changelog/vercel-board-is-now-available",
+        "https://vercel.com/docs/board",
+        "https://vercel.com/docs/board/concepts/tasks",
+        "https://vercel.com/docs/board/concepts/sync",
+        "https://vercel.com/docs/board/access",
+        "https://github.com/vercel/board",
+        "https://news.ycombinator.com/item?id=50555456"
+      ],
+      "previewImage": "/previews/vercel-board.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [
+        "Vercel CLI",
+        "JavaScript SDK",
+        "Vercel Connect",
+        "Slack",
+        "GitHub",
+        "Linear",
+        "Claude Code",
+        "Codex",
+        "Pi",
+        "OpenCode",
+        "eve",
+        "fx",
+        "Mastra",
+        "LangChain"
+      ],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-19T12:20:00Z",
+      "qualityNote": "收录理由：这是 Vercel 官方给「一群 agent 一起干活」做的共用留言板，不绑定某一家 harness，Claude Code、Codex、Pi、OpenCode 等都能读写同一块板，适合搭 agent 群（swarm）和软件工厂时当共用待办与交接记录；它是 Vercel 的产品，不是 Grok Bot 的角色卡。边界：目前是实验性功能，受 Public Beta Agreement 约束，行为、API 和限额都可能变；实验期免费，文档写明以后可能收费；用团队的 board 要有 Vercel 团队并登录；数据存在美国；同步到 Slack、GitHub、Linear 的频道，可见范围跟对方平台走，Board 的权限在那边不生效；「v0 软件工厂现在合并超过 50% 的 PR」是 Vercel 自己的说法，不是本库测出来的。本库没有安装 Board skill、没有 vercel login、没有创建 board、没有跑 CLI/SDK、没有接 Slack/GitHub/Linear。",
+      "qualityNoteEn": "Why listed: Vercel's own shared board for agents working as a group. It is not tied to one harness, so Claude Code, Codex, Pi, OpenCode, and others can read and write the same board, which makes it a shared backlog and handoff record for agent swarms and software factories; it is a Vercel product, not a Grok Bot role card. Limits: it is experimental and under the Public Beta Agreement, so behavior, APIs, and limits may change; it is free while experimental and the docs say Vercel may charge later; a team board needs a Vercel team and a login; data is stored in the United States; a channel synced with Slack, GitHub, or Linear is as visible as that platform makes it, and Board's grants do not apply there; “v0's software factory now merges over 50% of PRs” is Vercel's claim, not a result measured here. This library did not install the Board skill, did not run vercel login, did not create a board, did not run the CLI or SDK, and did not connect Slack, GitHub, or Linear.",
+      "verifyLog": "2026-11-19 晚间（Asia/Taipei，约 19:57–20:10）：https://vercel.com/blog/introducing-vercel-board HTTP 200，title 为 Introducing Vercel Board - Vercel，页面日期 18 Nov 2026；正文写 Today we are launching Vercel Board as an experimental agentic primitive、Board is a headless communication primitive and message store for your agents across tools and environments. Your agents read from and write to Board through the CLI or JavaScript SDK、npx skills add vercel/board、Run npx @vercel/board inspect to open the Board viewer，以及 It is harness agnostic … Claude Code, Codex, Pi, OpenCode, eve, fx, Mastra, and LangChain can collaborate as if they were a single harness；厂商数字原文是 we rebuilt v0's software factory on it, and it now merges over 50% of PRs，本库没有办法核对。https://vercel.com/changelog/vercel-board-is-now-available HTTP 200，日期 18 Nov 2026：Vercel Board is now available on all plans. It’s an experimental message board that gives agents a shared, secure place to coordinate tasks and keep context together；Messages and replies that sync both ways with Slack, GitHub, and other tools through Vercel Connect；给 agent 的提示词里写 npm i -g vercel、vercel login、npx skills add vercel/board、vercel board whoami。https://vercel.com/docs/board HTTP 200：页头标 Experimental，Board is available as an Experimental feature on all plans；Pricing 一节写 Board is free while it's experimental. Vercel may charge for Board in the future.；注意事项写 Board stores its data in the United States … Board has no region setting、Board is experimental. Behavior, APIs, and limits may change. Your use of Board is subject to the Public Beta Agreement、A synced channel is as readable as the platform channel it syncs with … Board's grants don't apply on those platforms、Everyone on your team can read every channel by default、Agents read messages as instructions、Keep secrets off the board，以及单条消息最多 10,000 字符、10 个附件、每个最大 100 MB。https://vercel.com/docs/board/concepts/tasks HTTP 200：A claim is a lease … A lease lasts up to 5 minutes … tasks renew <id> extends the lease from now；tasks block <id> … --kind awaiting_approval 用来等人答复或批准；--needs 写任务依赖。博客示例里另有 tasks renew <id> --lease 1h，租约时长两处写法不同，正文不写具体时长。https://vercel.com/docs/board/concepts/sync HTTP 200：Sync connects Board threads with Slack threads, GitHub pull requests and issues, and Linear issues；对照表写 Slack 与 Linear 为 Both ways，GitHub 为 Into the board only … nothing goes back to GitHub unless you send it。https://vercel.com/docs/board/access、/docs/board/cli-reference、/docs/board/sdk、/docs/board/guides/agent-swarm、/docs/board/guides/agents-in-slack、/docs/release-phases、/docs/release-phases/public-beta-agreement 与 https://vercel.com/board-getting-started.md 均 HTTP 200。各页都没有出现 routine 一词，所以 hasRoutine 记 false；等人批准是任务上的可选做法（tasks block），不是产品级的强制开关，所以 requiresApproval 记 false；sourceType 按本库已有取值记 official-launch。仓库 https://github.com/vercel/board HTTP 200，gh api repos/vercel/board：属于 vercel 组织，公开，homepage 为 https://vercel.com/docs/board，创建于 2026-10-01，license 为 Apache-2.0，核对时 49 stars、3 forks；LICENSE 文件为 Apache License 2.0，Copyright 2026 Vercel Inc.；README 写 It lives in Vercel's API, so there's nothing to deploy and no database to keep，另写 npx @vercel/board serve 可在本机起一块本地 board（127.0.0.1:4100）。npm registry 的 @vercel/board HTTP 200：latest 0.52.0，license Apache-2.0，engines node >=22.18。Show HN https://news.ycombinator.com/item?id=50555456 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Vercel Board – a shared, secure message board for agents (public beta)，作者 andrewqu，2026-11-19T02:50:52Z（台北 10:50:52），指向博客，核对时 10 points、0 条评论。预览：博客官方分享图 og-board__1_.png（assets.vercel.com，HTTP 200，2400×1256），等比缩到 1200×628，上下各补 86px 黑边（图片自身的底色）成 1200×800 WebP，没有裁切，也没有加字。去重：main 30e8265 的 data、src、public 里没有 vercel-board、vercel.com/docs/board 或 github.com/vercel/board；逐个看过当时打开的 63 个 PR 的 diff（含 #169），也没有。未做：没有安装 Vercel CLI 或 Board skill，没有 vercel login，没有创建 board、频道或任务，没有运行 vercel board、npx @vercel/board 或 SDK，没有接 Slack、GitHub、Linear 或 Vercel Connect。",
+      "verifyLogEn": "2026-11-19 evening (Asia/Taipei, about 19:57–20:10): https://vercel.com/blog/introducing-vercel-board HTTP 200, title Introducing Vercel Board - Vercel, dated 18 Nov 2026; the body says Today we are launching Vercel Board as an experimental agentic primitive; Board is a headless communication primitive and message store for your agents across tools and environments. Your agents read from and write to Board through the CLI or JavaScript SDK; npx skills add vercel/board; Run npx @vercel/board inspect to open the Board viewer; and It is harness agnostic … Claude Code, Codex, Pi, OpenCode, eve, fx, Mastra, and LangChain can collaborate as if they were a single harness. The vendor figure reads we rebuilt v0's software factory on it, and it now merges over 50% of PRs; it could not be checked here. https://vercel.com/changelog/vercel-board-is-now-available HTTP 200, dated 18 Nov 2026: Vercel Board is now available on all plans. It’s an experimental message board that gives agents a shared, secure place to coordinate tasks and keep context together; Messages and replies that sync both ways with Slack, GitHub, and other tools through Vercel Connect; the prompt for coding agents lists npm i -g vercel, vercel login, npx skills add vercel/board, and vercel board whoami. https://vercel.com/docs/board HTTP 200: the header is marked Experimental, Board is available as an Experimental feature on all plans; the Pricing section says Board is free while it's experimental. Vercel may charge for Board in the future.; the cautions say Board stores its data in the United States … Board has no region setting; Board is experimental. Behavior, APIs, and limits may change. Your use of Board is subject to the Public Beta Agreement; A synced channel is as readable as the platform channel it syncs with … Board's grants don't apply on those platforms; Everyone on your team can read every channel by default; Agents read messages as instructions; Keep secrets off the board; and a message holds up to 10,000 characters and 10 attachments of up to 100 MB each. https://vercel.com/docs/board/concepts/tasks HTTP 200: A claim is a lease … A lease lasts up to 5 minutes … tasks renew <id> extends the lease from now; tasks block <id> … --kind awaiting_approval holds a task for a person's answer or approval; --needs sets what a task waits for. The blog example also shows tasks renew <id> --lease 1h; the two pages give different lease lengths, so the entry states no number. https://vercel.com/docs/board/concepts/sync HTTP 200: Sync connects Board threads with Slack threads, GitHub pull requests and issues, and Linear issues; its table lists Slack and Linear as Both ways and GitHub as Into the board only … nothing goes back to GitHub unless you send it. https://vercel.com/docs/board/access, /docs/board/cli-reference, /docs/board/sdk, /docs/board/guides/agent-swarm, /docs/board/guides/agents-in-slack, /docs/release-phases, /docs/release-phases/public-beta-agreement, and https://vercel.com/board-getting-started.md all HTTP 200. None of these pages uses the word routine, so hasRoutine is false; waiting for approval is an optional step on a task (tasks block), not a product-wide gate, so requiresApproval is false; sourceType uses this library's existing value official-launch. Repository https://github.com/vercel/board HTTP 200; gh api repos/vercel/board: owned by the vercel organization, public, homepage https://vercel.com/docs/board, created 2026-10-01, license Apache-2.0, 49 stars and 3 forks when checked; the LICENSE file is Apache License 2.0, Copyright 2026 Vercel Inc.; the README says It lives in Vercel's API, so there's nothing to deploy and no database to keep, and also that npx @vercel/board serve runs a local board on your machine (127.0.0.1:4100). The npm registry entry for @vercel/board HTTP 200: latest 0.52.0, license Apache-2.0, engines node >=22.18. Show HN https://news.ycombinator.com/item?id=50555456 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Vercel Board – a shared, secure message board for agents (public beta), author andrewqu, 2026-11-19T02:50:52Z (10:50:52 Taipei), linking to the blog post, 10 points and 0 comments when checked. Preview: the blog's official share image og-board__1_.png (assets.vercel.com, HTTP 200, 2400×1256), scaled to 1200×628 and padded 86px top and bottom in black (the image's own background) to a 1200×800 WebP; nothing cropped, no text added. Dedupe: main 30e8265 has no vercel-board, vercel.com/docs/board, or github.com/vercel/board under data, src, or public; the diffs of all 63 pull requests open at the time (including #169) were checked and have none either. Not done: the Vercel CLI and the Board skill were not installed, vercel login was not run, no board, channel, or task was created, vercel board, npx @vercel/board, and the SDK were not run, and Slack, GitHub, Linear, and Vercel Connect were not connected.",
+      "landing": {
+        "what": "给已经同时跑着几个编程 agent，或者想搭 agent 群和软件工厂的团队。Board 不替你跑 agent，它是一块所有人和 agent 都能读写的板：谁认领了什么、做到哪一步、结果在哪，都留在同一条帖子串里。Vercel 说它起于内部两个项目：一群查代码漏洞并提交修复的安全 agent，以及 v0 的软件工厂。文档里的数据结构是 团队 → board → 频道 → 帖子串 → 消息，外加权限（grants）和一条按顺序记录所有改动的事件日志。",
+        "whatEn": "For teams already running several coding agents, or planning an agent swarm or a software factory. Board does not run your agents; it is one board that every person and agent can read and write, so who claimed what, how far it got, and where the result is all stay in one thread. Vercel says it grew out of two internal projects: a swarm of security agents that look for vulnerabilities and push fixes, and v0's software factory. The data model in the docs is team → board → channel → thread → message, plus grants and one event log that records every change in order.",
+        "steps": [
+          {
+            "title": "装 CLI、登录，再装 Board skill",
+            "titleEn": "Install the CLI, sign in, then add the Board skill",
+            "body": "更新日志给 agent 的提示词是：先确认装了 Vercel CLI（`npm i -g vercel`）并已 `vercel login`，再 `npx skills add vercel/board`，然后跑 `vercel board whoami`，看清用的是哪块 board、以谁的身份写。文档建议 agent 每条命令带 `--as <名字>`，板上会显示成「fx via ada」这样；这个名字只改显示，不改权限，agent 用的是你的权限。本库没有安装，也没有登录。",
+            "bodyEn": "The changelog's prompt for coding agents is: make sure the Vercel CLI is installed (`npm i -g vercel`) and you are signed in (`vercel login`), run `npx skills add vercel/board`, then run `vercel board whoami` to see which board and identity will be used. The docs tell agents to pass `--as <name>` on every command, which the board shows as “fx via ada”; the name changes what is displayed, never the permissions, and the agent acts with your access. This library did not install anything or sign in.",
+            "links": [
+              {
+                "href": "https://vercel.com/changelog/vercel-board-is-now-available",
+                "label": "更新日志：Vercel Board is now available",
+                "labelEn": "Changelog: Vercel Board is now available"
+              },
+              {
+                "href": "https://vercel.com/docs/board",
+                "label": "Board 文档总览",
+                "labelEn": "Board docs overview"
+              }
+            ]
+          },
+          {
+            "title": "发一个任务，让 agent 认领",
+            "titleEn": "Create a task and let an agent claim it",
+            "body": "文档的例子是 `vercel board tasks create work \"fix the flaky deploy test\"` 建任务，agent 用 `vercel board tasks claim --ready work --as fx` 认领，在帖子串里回帖记进度，做完用 `vercel board tasks complete <id> \"<结果>\"`。认领是有期限的租约，干活时要 `tasks renew` 续期，过期后任务回到队列。需要人拍板时，用 `tasks block <id> \"approve the prod deploy?\" --kind awaiting_approval` 停下来等答复。想在浏览器里看，博客写的是 `npx @vercel/board inspect`。",
+            "bodyEn": "The docs' example creates a task with `vercel board tasks create work \"fix the flaky deploy test\"`; an agent claims it with `vercel board tasks claim --ready work --as fx`, logs progress as replies in the thread, and finishes with `vercel board tasks complete <id> \"<result>\"`. A claim is a time-limited lease: renew it with `tasks renew` while working, and when it runs out the task returns to the queue. When a person has to decide, `tasks block <id> \"approve the prod deploy?\" --kind awaiting_approval` holds the task until they answer. To watch it in a browser, the blog gives `npx @vercel/board inspect`.",
+            "links": [
+              {
+                "href": "https://vercel.com/docs/board/concepts/tasks",
+                "label": "文档：Tasks",
+                "labelEn": "Docs: Tasks"
+              },
+              {
+                "href": "https://vercel.com/docs/board/cli-reference",
+                "label": "Board CLI 参考",
+                "labelEn": "Board CLI reference"
+              }
+            ]
+          },
+          {
+            "title": "接上 Slack、GitHub、Linear，或从官方指南起步（可选）",
+            "titleEn": "Sync Slack, GitHub, or Linear, or start from the official guides (optional)",
+            "body": "同步走 Vercel Connect，文档写这样项目里不用存各平台的密钥。Slack 和 Linear 是双向同步，GitHub 的 PR 和 issue 默认只进 board、不往回写。官方有两篇指南：Agent Swarm（一个 lead 拆任务，一组 worker 认领）和 Agents in Slack（人在 Slack 里提需求，agent 在同一条帖子串里回）。源码、skill 和模板在 GitHub 仓库里。",
+            "bodyEn": "Sync goes through Vercel Connect, which the docs say keeps platform secrets out of your project. Slack and Linear sync both ways; GitHub pull requests and issues come into the board only and nothing is written back by default. There are two official guides: Agent Swarm (a lead splits the work into tasks and a pool of workers claims them) and Agents in Slack (people ask in Slack and agents answer in the same thread). The source, skill, and templates are in the GitHub repository.",
+            "links": [
+              {
+                "href": "https://vercel.com/docs/board/concepts/sync",
+                "label": "文档：Sync",
+                "labelEn": "Docs: Sync"
+              },
+              {
+                "href": "https://vercel.com/docs/board/guides/agent-swarm",
+                "label": "指南：Agent Swarm",
+                "labelEn": "Guide: Agent Swarm"
+              },
+              {
+                "href": "https://vercel.com/docs/board/guides/agents-in-slack",
+                "label": "指南：Agents in Slack",
+                "labelEn": "Guide: Agents in Slack"
+              },
+              {
+                "href": "https://github.com/vercel/board",
+                "label": "GitHub：vercel/board",
+                "labelEn": "GitHub: vercel/board"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "实验性功能：文档写行为、API 和限额都可能变，使用受 Public Beta Agreement 约束。所有套餐可用，实验期免费，以后可能收费。",
+            "textEn": "Experimental: the docs say behavior, APIs, and limits may change, and use is subject to the Public Beta Agreement. Available on all plans and free while experimental; Vercel may charge later."
+          },
+          {
+            "text": "默认团队里每个人、每个项目的部署（含预览部署）和已安装的 app 都能读所有频道。要收窄，得自己关频道、建私有频道或另开一块 board。",
+            "textEn": "By default everyone on the team, every project's deployments (preview deployments included), and every installed app can read every channel. To narrow that you close a channel, create a private one, or use a separate board."
+          },
+          {
+            "text": "同步出去的频道，谁能看由 Slack、GitHub、Linear 那边决定，Board 的权限在那边不生效。别把密钥贴到板上。",
+            "textEn": "A synced channel is as readable as the Slack, GitHub, or Linear side makes it; Board's grants do not apply there. Keep secrets off the board."
+          },
+          {
+            "text": "agent 会把板上的消息当指令读。文档提醒：先看清谁能在 agent 干活的频道里发帖。数据存在美国，没有区域选项。",
+            "textEn": "Agents read messages as instructions, so the docs say to review who can post in the channels your agents work from. Data is stored in the United States, with no region setting."
+          },
+          {
+            "text": "「v0 软件工厂现在合并超过 50% 的 PR」是 Vercel 博客的说法，本库没有核对。SDK、CLI、skill 和模板的源码是 Apache-2.0；团队的 board 默认是 Vercel 托管的服务。",
+            "textEn": "“v0's software factory now merges over 50% of PRs” is the Vercel blog's claim and was not checked here. The SDK, CLI, skill, and template source is Apache-2.0; the team board is by default a service Vercel hosts."
+          },
+          {
+            "text": "本库没有安装 Board skill，没有 vercel login，没有创建 board，没有跑 CLI 或 SDK，也没有接 Slack、GitHub、Linear。",
+            "textEn": "This library did not install the Board skill, did not run vercel login, did not create a board, did not run the CLI or SDK, and did not connect Slack, GitHub, or Linear."
+          }
+        ],
+        "previewCredit": "预览：Vercel 博客官方分享图，上下补黑边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the Vercel blog's official share image, padded top and bottom in black to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "drisp",
+      "slug": "drisp",
+      "title": "Drisp：把截图放上真实尺寸的 3D 设备样机，AI 编辑器可以用 MCP 调",
+      "titleEn": "Drisp: app screenshots on true-size 3D device mockups, callable from AI editors over MCP",
+      "kind": "tool",
+      "hook": "丢一张截图，换回真实尺寸的 3D 设备样机，AI 编辑器也能调。",
+      "hookEn": "Drop a screenshot, get a true-size 3D device mockup; AI editors can call it over MCP.",
+      "summary": "Drisp（https://drint.io/drisp ，Drint 旗下，页脚署名 DANHOANGDA）把应用或网页截图放到 3D 设备样机上：拖进一张截图，得到带玻璃反光和影棚光的 iPhone、Galaxy、Pixel、iPad、Mac、手表或显示器。页面强调设备是 3D 模型，由 Drint 的 3D 引擎画出来，不是把平面边框贴在照片上；写明的用途是 App Store 和 Google Play 页面、落地页首屏、演示稿和发布帖。首页写 102 款设备：手机 50、折叠屏 2、平板 24、手表 23、笔记本 2、显示器 1，每款标出截图该用的像素尺寸，例如 iPhone 18 Pro 是 1206 × 2622 px，Samsung Galaxy S25 Ultra 是 1440 × 3120 px，24 寸显示器是 1920 × 1080 px；比例不对的截图会从中间裁切。导出是 PNG，背景可选影棚灰、白或透明。另有一个 MCP 服务，地址 https://drint.io/drisp/mcp ，页面写可以加进 Claude、Claude Code、Cursor、ChatGPT 或任何 MCP 客户端，然后用一句话要样机：`list_devices` 给出每块屏幕的截图尺寸，`device_mockup` 返回 PNG。还有一页专做 App Store 和 Google Play 的截图套图。价格页写：Free 是 $0，全部设备可用，图片最大 1024 px、带浅水印网格；Pro 是 $15/月或 $120/年，无水印、最大 2048 px，还能把录屏做成设备上播放的视频（最长 30 秒）；另有一次性 $5 的 7 天 Pro。「不用新账号」的意思是沿用 Drint 账号，登录一次两边通用，不等于不用登录；Drint 在 GitHub 上的接入说明写，MCP 不登录也能出图，但有尺寸、水印和频率限制。没有看到服务的源码或开源许可证，本条不写开源。适合要给应用商店页、落地页或发布帖配设备图，又不想自己搭 3D 场景的人。本库没有登录 Drint，没有连接 MCP，没有上传截图，也没有生成过一张样机。",
+      "summaryEn": "Drisp (https://drint.io/drisp , part of Drint; the footer credits DANHOANGDA) puts an app or website screenshot on a 3D device mockup: drop a screenshot and get an iPhone, Galaxy, Pixel, iPad, Mac, watch, or monitor with glass reflections and studio light. The page stresses that each device is a 3D model drawn by Drint's 3D engine, not a flat frame pasted on a photo, and names App Store and Google Play pages, landing heroes, decks, and launch posts as the uses. The homepage says 102 devices: 50 phones, 2 foldables, 24 tablets, 23 watches, 2 laptops, and 1 monitor, each with the screenshot size in pixels it expects, for example 1206 × 2622 px for iPhone 18 Pro, 1440 × 3120 px for Samsung Galaxy S25 Ultra, and 1920 × 1080 px for the 24-inch monitor; a screenshot with other proportions is cropped from the centre. Exports are PNG on studio grey, white, or transparent. There is also an MCP server at https://drint.io/drisp/mcp ; the page says to add it to Claude, Claude Code, Cursor, ChatGPT, or any MCP client and ask for a mockup in plain words: `list_devices` gives each screen's screenshot size and `device_mockup` returns the PNG. A separate page makes App Store and Google Play screenshot sets. The pricing page lists Free at $0 with every device, pictures up to 1024 px, and a light watermark grid; Pro at $15 a month or $120 a year with no watermark, pictures up to 2048 px, and video of a screen recording playing on the device (up to 30 seconds); and a one-time $5 for 7 days of Pro. “No new account” means it uses your Drint account, one login for both, which is not the same as no login; Drint's setup notes on GitHub say the MCP server works without signing in, with size, watermark, and rate limits. No source code or open-source license for the service was found, so this entry does not call it open source. Good when you need device shots for a store page, landing page, or launch post and do not want to build a 3D scene yourself. This library did not sign in to Drint, did not connect the MCP server, did not upload a screenshot, and did not generate a single mockup.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://drint.io/drisp",
+      "secondaryUrls": [
+        "https://drint.io/drisp/pricing",
+        "https://drint.io/drisp/iphone-18-pro",
+        "https://drint.io/drisp/store-screenshots",
+        "https://drint.io/terms",
+        "https://drint.io/privacy",
+        "https://github.com/drint-io/drisp-mcp",
+        "https://news.ycombinator.com/item?id=50557691"
+      ],
+      "previewImage": "/previews/drisp.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "MCP",
+        "Claude",
+        "Claude Code",
+        "Cursor",
+        "ChatGPT"
+      ],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-19T12:20:00Z",
+      "qualityNote": "收录理由：AI×设计里很实用的一小步。丢一张截图，拿到一张真实尺寸的 3D 设备样机，编辑器里的助手还能通过 MCP 直接调用，做应用商店图、落地页首屏和发布帖时省掉摆设备的工夫。边界：102 款设备、「真 3D」「真实玻璃和光」都是站点自己的说法，本库没有逐个核对设备，也没有看过成品；免费档有 1024 px 上限和浅水印网格，无水印和更大尺寸要付费；它沿用 Drint 账号，「不用新账号」不等于不用登录，页面没有写清网页版免登录能做到哪一步；没有看到服务的源码或开源许可证，不要当成开源。本库没有登录 Drint、没有连接 MCP、没有上传截图、没有生成过一张样机。",
+      "qualityNoteEn": "Why listed: a small, practical step for AI×design. Drop a screenshot and get a true-size 3D device mockup, and an assistant in your editor can call it over MCP, which saves staging devices for store images, landing heroes, and launch posts. Limits: the 102-device count, “real 3D”, and “real glass and light” are the site's own statements; the devices were not checked one by one here and no output was seen; the free tier is limited to 1024 px with a light watermark grid, and clean or larger pictures are paid; it uses a Drint account, so “no new account” is not the same as no login, and the page does not say how far the web tool goes without signing in; no source code or open-source license for the service was found, so do not treat it as open source. This library did not sign in to Drint, did not connect the MCP server, did not upload a screenshot, and did not generate a single mockup.",
+      "verifyLog": "2026-11-19 晚间（Asia/Taipei，约 19:57–20:10）：https://drint.io/drisp HTTP 200，title 为 Drisp — 3D device mockups for app and web screenshots，meta description 写 Drop an app or website screenshot, get an iPhone, Samsung Galaxy, Google Pixel, iPad, Mac or watch mockup with real glass and light. Free, no new account — and an MCP server for Claude, Cursor and ChatGPT.；首屏写 Your screenshot, on a real device. … drawn by Drint’s 3D engine, not pasted on a photo，三个数字位是 102 devices、No new account、MCP for AI editors；分类计数 Phones 50、Foldables 2、Tablets 24、Watches 23、Laptops 2、Monitors 1（合计 102），品牌计数 Apple 77、Samsung 7、Google 7、Xiaomi 2、OPPO 1、OnePlus 1、vivo 1、Any brand 6；设备卡写 iPhone 18 Pro, 6.3-inch · 1206 × 2622 px、Samsung Galaxy S25 Ultra, 6.9-inch · 1440 × 3120 px、24-inch monitor · 1920 × 1080 px；Real glass. Real light. 一节写 Not a flat frame … The device is a 3D model 与 PNG on studio grey, white or transparent；MCP 一节写 Add the Drisp MCP server to Claude, Claude Code, Cursor, ChatGPT or any MCP client … list_devices gives each screen’s exact screenshot size; device_mockup returns the PNG，配置示例为 \"drisp\": { \"url\": \"https://drint.io/drisp/mcp\" }；FAQ 写 Do I need a new account? No. Drisp uses your Drint account — sign in once, the same login works for both.；页脚写 A product of DANHOANGDA。102 是页面自己的数字，本库只把页面上的分类计数加了一遍，没有逐个打开设备页。页面源码里的注释写 Drisp (2026-11-13)，早于 Show HN；publishedAt 按 Show HN 当天记 2026-11-19。https://drint.io/drisp/pricing HTTP 200：Free $0（Every device、Pictures up to 1024 px、Light watermark grid、MCP: device_mockup, a few an hour）；Pro $15/month，Or $120 a year（No watermark、Pictures up to 2048 px、Video … up to 30 s）；7 days of Pro for $5, paid once。https://drint.io/drisp/iphone-18-pro HTTP 200：iPhone 18 Pro at its true size, 71.85 × 150.01 × 8.75 mm … modelled from the published dimensional drawing；接受 PNG, JPEG, WebP 与 MP4, MOV, WebM。https://drint.io/drisp/store-screenshots HTTP 200：Drop up to 10 screenshots, write a headline for each … gives you the set as JPEGs at the store’s exact size。https://drint.io/login?next=%2Fdrisp HTTP 200：You are signing in to Drisp … it uses your Drint account。https://drint.io/terms HTTP 200，Last updated: 12 November 2026：Drint is a danhoangda.com product, run by Nguyễn Thành Dân, an individual based in Vietnam。https://drint.io/privacy HTTP 200，Last updated: 3 November 2026：on Drict and Drisp, how many checks and mockups were made, with the country checked or the device drawn — never the words on the label or the picture。MCP 地址 https://drint.io/drisp/mcp：只发过一次普通 GET，返回 HTTP 405 与 JSON-RPC 错误 Method not allowed: POST JSON-RPC to this address，说明端点存在；没有建立 MCP 会话，没有调用任何工具。https://github.com/drint-io/drisp-mcp HTTP 200，gh api：drint-io 组织（名称 Drint，blog 为 https://drint.io，is_verified 为 true），仓库创建于 2026-11-19，homepage 为 https://drint.io/drisp，核对时 0 stars；README 写 This repository holds the setup files for the hosted Drisp MCP server、Transport: Streamable HTTP、Sign-in: optional. Without it, pictures are up to 1024 px with a light watermark grid, about 20 an hour per address、a PNG link kept for an hour、The files in this repository are MIT-licensed. The drint.io service follows the Drint Terms。MIT 只覆盖这些接入配置文件，服务本身没有开源许可证，所以不写开源；drint.io/drisp 页面本身没有链接到这个仓库。Show HN https://news.ycombinator.com/item?id=50557691 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Drisp – put app screenshots on true-size 3D device models，作者 Dan96，2026-11-19T09:02:04Z（台北 17:02:04），核对时 2 points、0 条评论。官方 X 帖：本次没有检索 X，也没有核对到作者或官方帖，所以不引用。预览：页面没有 og:image，取官方页面里的主视觉 https://drint.io/drisp/hero-laptop.webp（HTTP 200，2000×1400，透明底，alt 为 A laptop mockup with the Drisp page on its screen），铺在该图所在版块的底色 #111216 上，等比缩到 1143×800，左右补同色边成 1200×800 WebP，没有裁切，也没有加字。去重：main 30e8265 的 data、src、public 里没有 drisp 或 drint.io；逐个看过当时打开的 63 个 PR 的 diff（含 #169），也没有。未做：没有注册或登录 Drint，没有上传截图，没有生成或下载任何样机，没有把 MCP 加进任何客户端，没有付费。",
+      "verifyLogEn": "2026-11-19 evening (Asia/Taipei, about 19:57–20:10): https://drint.io/drisp HTTP 200, title Drisp — 3D device mockups for app and web screenshots; the meta description reads Drop an app or website screenshot, get an iPhone, Samsung Galaxy, Google Pixel, iPad, Mac or watch mockup with real glass and light. Free, no new account — and an MCP server for Claude, Cursor and ChatGPT.; the hero says Your screenshot, on a real device. … drawn by Drint’s 3D engine, not pasted on a photo, with three proof points: 102 devices, No new account, MCP for AI editors; category counts Phones 50, Foldables 2, Tablets 24, Watches 23, Laptops 2, Monitors 1 (102 in total) and brand counts Apple 77, Samsung 7, Google 7, Xiaomi 2, OPPO 1, OnePlus 1, vivo 1, Any brand 6; device cards read iPhone 18 Pro, 6.3-inch · 1206 × 2622 px, Samsung Galaxy S25 Ultra, 6.9-inch · 1440 × 3120 px, and 24-inch monitor · 1920 × 1080 px; the Real glass. Real light. section says Not a flat frame … The device is a 3D model and PNG on studio grey, white or transparent; the MCP section says Add the Drisp MCP server to Claude, Claude Code, Cursor, ChatGPT or any MCP client … list_devices gives each screen’s exact screenshot size; device_mockup returns the PNG, with the config example \"drisp\": { \"url\": \"https://drint.io/drisp/mcp\" }; the FAQ says Do I need a new account? No. Drisp uses your Drint account — sign in once, the same login works for both.; the footer says A product of DANHOANGDA. 102 is the page's own number; the category counts on the page were added up here, and the device pages were not opened one by one. A comment in the page source reads Drisp (2026-11-13), earlier than the Show HN; publishedAt uses the Show HN day, 2026-11-19. https://drint.io/drisp/pricing HTTP 200: Free $0 (Every device, Pictures up to 1024 px, Light watermark grid, MCP: device_mockup, a few an hour); Pro $15/month, Or $120 a year (No watermark, Pictures up to 2048 px, Video … up to 30 s); 7 days of Pro for $5, paid once. https://drint.io/drisp/iphone-18-pro HTTP 200: iPhone 18 Pro at its true size, 71.85 × 150.01 × 8.75 mm … modelled from the published dimensional drawing; it accepts PNG, JPEG, WebP and MP4, MOV, WebM. https://drint.io/drisp/store-screenshots HTTP 200: Drop up to 10 screenshots, write a headline for each … gives you the set as JPEGs at the store’s exact size. https://drint.io/login?next=%2Fdrisp HTTP 200: You are signing in to Drisp … it uses your Drint account. https://drint.io/terms HTTP 200, Last updated: 12 November 2026: Drint is a danhoangda.com product, run by Nguyễn Thành Dân, an individual based in Vietnam. https://drint.io/privacy HTTP 200, Last updated: 3 November 2026: on Drict and Drisp, how many checks and mockups were made, with the country checked or the device drawn — never the words on the label or the picture. MCP URL https://drint.io/drisp/mcp: one plain GET was sent and returned HTTP 405 with the JSON-RPC error Method not allowed: POST JSON-RPC to this address, which shows the endpoint exists; no MCP session was opened and no tool was called. https://github.com/drint-io/drisp-mcp HTTP 200; gh api: the drint-io organization (name Drint, blog https://drint.io, is_verified true), repository created 2026-11-19, homepage https://drint.io/drisp, 0 stars when checked; the README says This repository holds the setup files for the hosted Drisp MCP server; Transport: Streamable HTTP; Sign-in: optional. Without it, pictures are up to 1024 px with a light watermark grid, about 20 an hour per address; a PNG link kept for an hour; and The files in this repository are MIT-licensed. The drint.io service follows the Drint Terms. MIT covers only those setup files and the service has no open-source license, so the entry does not say open source; the drint.io/drisp page itself does not link to this repository. Show HN https://news.ycombinator.com/item?id=50557691 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Drisp – put app screenshots on true-size 3D device models, author Dan96, 2026-11-19T09:02:04Z (17:02:04 Taipei), 2 points and 0 comments when checked. Official X post: X was not searched in this run and no author or official post was verified, so none is cited. Preview: the page has no og:image, so the hero art from the official page was used, https://drint.io/drisp/hero-laptop.webp (HTTP 200, 2000×1400, transparent, alt A laptop mockup with the Drisp page on its screen), placed on #111216, the background of the section it sits in, scaled to 1143×800 and padded left and right in the same colour to a 1200×800 WebP; nothing cropped, no text added. Dedupe: main 30e8265 has no drisp or drint.io under data, src, or public; the diffs of all 63 pull requests open at the time (including #169) were checked and have none either. Not done: no Drint sign-up or sign-in, no screenshot uploaded, no mockup generated or downloaded, the MCP server was not added to any client, and nothing was paid for.",
+      "landing": {
+        "what": "给要为应用商店页、落地页首屏、演示稿或发布帖配设备图的人。Drisp 是 Drint 旗下的产品：Drint 做包装和印刷设计，条款写它由越南的个人开发者 Nguyễn Thành Dân 运营，Drisp 页脚署名 DANHOANGDA。它沿用 Drint 的 3D 引擎，页面写新设备按厂商公布的尺寸建模，截图铺满整块屏幕。设备页举的例子是 iPhone 18 Pro 按 71.85 × 150.01 × 8.75 mm 的真实尺寸建模。",
+        "whatEn": "For people who need device shots for a store page, a landing hero, a deck, or a launch post. Drisp is part of Drint: Drint makes packaging and print design tools, its terms say it is run by Nguyễn Thành Dân, an individual based in Vietnam, and the Drisp footer credits DANHOANGDA. It uses Drint's 3D engine; the page says new devices are modelled from the makers' published sizes and the screenshot fills the screen edge to edge. The device page's example is iPhone 18 Pro modelled at its true size, 71.85 × 150.01 × 8.75 mm.",
+        "steps": [
+          {
+            "title": "在网页上放一张截图",
+            "titleEn": "Drop a screenshot on the website",
+            "body": "打开任意设备页（首页的 Try it free 指向 iPhone 18 Pro），把截图拖进去或粘贴，支持 PNG、JPEG、WebP。可以选机身颜色、角度和背景（影棚灰、白、透明），再下载 PNG。截图最好按该设备页写的像素尺寸导出，比例不对会从中间裁切。本库没有上传过截图。",
+            "bodyEn": "Open any device page (Try it free on the homepage goes to iPhone 18 Pro) and drop or paste a screenshot; PNG, JPEG, and WebP work. Pick the frame colour, angle, and background (studio grey, white, or transparent), then download the PNG. Export the screenshot at the pixel size shown on that device page; other proportions are cropped from the centre. This library did not upload a screenshot.",
+            "links": [
+              {
+                "href": "https://drint.io/drisp",
+                "label": "Drisp 首页与设备列表",
+                "labelEn": "Drisp home and device list"
+              },
+              {
+                "href": "https://drint.io/drisp/iphone-18-pro",
+                "label": "设备页示例：iPhone 18 Pro",
+                "labelEn": "Example device page: iPhone 18 Pro"
+              }
+            ]
+          },
+          {
+            "title": "接进 AI 编辑器（可选）",
+            "titleEn": "Add it to your AI editor (optional)",
+            "body": "页面给的配置是在 `claude_desktop_config.json` 或 `.cursor/mcp.json` 里加 `\"drisp\": { \"url\": \"https://drint.io/drisp/mcp\" }`，然后直接说「把 screenshots/home.png 放到手机上，透明背景」。`list_devices` 列出设备和各自的截图尺寸，`device_mockup` 返回 PNG。Drint 在 GitHub 上的接入说明写，Claude Code 可以用 `claude mcp add --transport http drisp https://drint.io/drisp/mcp`，不登录也能出图，要无水印或更大尺寸时才需要登录 Drint。本库没有连接这个服务。",
+            "bodyEn": "The page's config adds `\"drisp\": { \"url\": \"https://drint.io/drisp/mcp\" }` to `claude_desktop_config.json` or `.cursor/mcp.json`; then you ask in plain words, for example “Put screenshots/home.png on a phone, transparent background.” `list_devices` lists the devices with their screenshot sizes and `device_mockup` returns the PNG. Drint's setup notes on GitHub give `claude mcp add --transport http drisp https://drint.io/drisp/mcp` for Claude Code and say it works without signing in, with a Drint sign-in needed only for clean or larger pictures. This library did not connect the server.",
+            "links": [
+              {
+                "href": "https://drint.io/drisp#developers",
+                "label": "Drisp 页面的 MCP 一节",
+                "labelEn": "The MCP section on the Drisp page"
+              },
+              {
+                "href": "https://github.com/drint-io/drisp-mcp",
+                "label": "GitHub：drint-io/drisp-mcp 接入说明",
+                "labelEn": "GitHub: drint-io/drisp-mcp setup notes"
+              }
+            ]
+          },
+          {
+            "title": "做应用商店套图，先看清免费档的限制",
+            "titleEn": "Make a store screenshot set, and check the free tier's limits first",
+            "body": "Store sets 一页可以一次放最多 10 张截图，每张写一句标题，按 App Store 和 Google Play 要求的尺寸出一套 JPEG。免费档的图最大 1024 px、带浅水印网格；Pro 是 $15/月或 $120/年，无水印、最大 2048 px；只为一次发布，可以买一次性 $5 的 7 天 Pro。价格以官方价格页为准。",
+            "bodyEn": "The Store sets page takes up to 10 screenshots with a headline each and returns a set of JPEGs at the sizes the App Store and Google Play ask for. Free pictures are up to 1024 px with a light watermark grid; Pro is $15 a month or $120 a year with no watermark and pictures up to 2048 px; for a single launch there is a one-time $5 for 7 days of Pro. The official pricing page is the reference.",
+            "links": [
+              {
+                "href": "https://drint.io/drisp/store-screenshots",
+                "label": "App Store 与 Google Play 截图套图",
+                "labelEn": "App Store and Google Play screenshot sets"
+              },
+              {
+                "href": "https://drint.io/drisp/pricing",
+                "label": "Drisp 价格页",
+                "labelEn": "Drisp pricing"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "102 款设备、「真 3D」「真实玻璃和光」是站点自己的说法，本库没有逐个核对设备，也没有看过成品。",
+            "textEn": "The 102-device count, “real 3D”, and “real glass and light” are the site's own statements; the devices were not checked one by one here and no output was seen."
+          },
+          {
+            "text": "「不用新账号」指沿用 Drint 账号，不等于不用登录。页面没有写清网页版免登录能做到哪一步；GitHub 上的接入说明只写了 MCP 不登录可用，有尺寸、水印和频率限制。",
+            "textEn": "“No new account” means it uses your Drint account, which is not the same as no login. The page does not say how far the web tool goes without signing in; the setup notes on GitHub only say the MCP server works without sign-in, with size, watermark, and rate limits."
+          },
+          {
+            "text": "免费档有 1024 px 上限和浅水印网格，无水印、2048 px 和视频要付费。价格是核对当天价格页上的数字，可能会变。",
+            "textEn": "The free tier is limited to 1024 px with a light watermark grid; clean pictures, 2048 px, and video are paid. Prices are the pricing page's numbers on the day it was checked and may change."
+          },
+          {
+            "text": "隐私页写 Drisp 只统计做了多少张样机和画的是哪款设备，不记录图片内容；接入说明写 MCP 返回的图片链接保留一小时。截图里有敏感信息时，自己先处理再上传。",
+            "textEn": "The privacy page says Drisp counts how many mockups were made and which device was drawn, never the picture; the setup notes say the picture link the MCP server returns is kept for an hour. Clean up anything sensitive in a screenshot before uploading it."
+          },
+          {
+            "text": "没有看到服务的源码或开源许可证；GitHub 上 MIT 许可的只是 MCP 接入配置文件，服务按 Drint 的条款使用。",
+            "textEn": "No source code or open-source license for the service was found; the MIT license on GitHub covers only the MCP setup files, and the service follows Drint's terms."
+          },
+          {
+            "text": "本库没有登录 Drint，没有连接 MCP，没有上传截图，也没有生成过一张样机。",
+            "textEn": "This library did not sign in to Drint, did not connect the MCP server, did not upload a screenshot, and did not generate a single mockup."
+          }
+        ],
+        "previewCredit": "预览：Drisp 官方页面主视觉（笔记本样机），铺在页面版块底色上，左右补同色边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the hero art from Drisp's official page (a laptop mockup), on the section's own background colour, padded left and right in the same colour to 3:2, not cropped"
+      }
+    },
+    {
       "id": "directors-lookbook",
       "slug": "directors-lookbook",
       "title": "Director's Lookbook：说出感觉，发一手有名字的风格卡和可粘贴的提示词",
@@ -11907,10 +12200,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-19T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.81",
-    "count": 219,
+    "version": "1.4.82",
+    "count": 221,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12227,7 +12520,33 @@
       "https://directorslookbook.app/privacy/",
       "https://directorslookbook.app/terms/",
       "https://directorslookbook.app/media/og.jpg?v=2",
-      "https://news.ycombinator.com/item?id=50541419"
+      "https://news.ycombinator.com/item?id=50541419",
+      "https://vercel.com/blog/introducing-vercel-board",
+      "https://vercel.com/changelog/vercel-board-is-now-available",
+      "https://vercel.com/docs/board",
+      "https://vercel.com/docs/board/concepts/tasks",
+      "https://vercel.com/docs/board/concepts/sync",
+      "https://vercel.com/docs/board/access",
+      "https://vercel.com/docs/board/cli-reference",
+      "https://vercel.com/docs/board/sdk",
+      "https://vercel.com/docs/board/guides/agent-swarm",
+      "https://vercel.com/docs/board/guides/agents-in-slack",
+      "https://vercel.com/docs/release-phases",
+      "https://vercel.com/docs/release-phases/public-beta-agreement",
+      "https://vercel.com/board-getting-started.md",
+      "https://github.com/vercel/board",
+      "https://registry.npmjs.org/@vercel/board",
+      "https://assets.vercel.com/image/upload/contentful/image/e5382hct74si/ca600397c120c7550d2d2c36/e9a2d078b2229c537525478b237c707a/og-board__1_.png",
+      "https://news.ycombinator.com/item?id=50555456",
+      "https://drint.io/drisp",
+      "https://drint.io/drisp/pricing",
+      "https://drint.io/drisp/iphone-18-pro",
+      "https://drint.io/drisp/store-screenshots",
+      "https://drint.io/terms",
+      "https://drint.io/privacy",
+      "https://drint.io/drisp/hero-laptop.webp",
+      "https://github.com/drint-io/drisp-mcp",
+      "https://news.ycombinator.com/item?id=50557691"
     ]
   }
 }
