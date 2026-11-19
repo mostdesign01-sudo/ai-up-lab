@@ -1,6 +1,235 @@
 {
   "cases": [
     {
+      "id": "m365-copilot-home",
+      "slug": "m365-copilot-home",
+      "title": "Microsoft 365 Copilot Home：把聊天和跨应用办事放进同一个工作入口",
+      "titleEn": "Microsoft 365 Copilot Home: chat and cross-app work in one starting place",
+      "kind": "tool",
+      "hook": "Copilot Home 把聊天和跨应用办事放在同一个入口。",
+      "hookEn": "Copilot Home puts chat and cross-app work in one starting place.",
+      "summary": "这是 Microsoft 365 Copilot 在 Ignite 2026 的工作入口升级，不是一个另起炉灶的独立应用。Jared Spataro 2026-11-17 的官方博客（https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/）写：Home（Chat 和 Cowork 合在一处）以及 Office in Copilot 已经一般可用；Code 要到未来数周才一般可用，今天还不是；Copilot Managed Runtime 已经一般可用；Autopilot 开始向 Frontier 客户推出，不是全面一般可用。Home 只有一个由 Auto 驱动的输入框，按任务把工作分到模型和力度；更复杂的工作，Auto 可能建议从 Chat 转到 Cowork，你同意才转。Home 里面的 Today 是邮件、日历、Teams 会话、会议和任务的指挥台：主动标出错过的、现在要处理的、可以稍后的，并起草回复、提议改日程、把忘掉的跟进排好等你自己发送。Spataro 的博客写 Today 目前在 Copilot 应用和 Outlook 里是 private preview；同一天的 Home 专页写得更具体，是 Frontier private preview，并注明最终设计可能还会改。不要把它写成已经一般可用。Autopilot 是租户里一直开着的个人代理，有自己的身份、记忆和工具，会出现在 Teams、Outlook、聊天、频道和文档里，可以盯频道、跟进邮件、做重复的工作、管一个项目；博客举的例子是一整套供应商评审。每个 Autopilot 有自己的 Microsoft Entra Agent ID 和一位具名管理者，IT 可以限定它的权限或随时阻止，登录和动作记在它自己的名字下。你决定它接什么工作，也可以让它在关键动作前先问你。Workspaces（Copilot Notebooks 的演进，人和代理共用一份上下文）在 Frontier 可用，不是一般可用。Home 专页还写：Projects 已经一般可用，用来把相关的 Chat、Cowork 任务和产出放在一起；Automations 也已经一般可用，用来查看和管理已排程、正在进行的任务。Windows 上的 Hybrid Intelligence，博客的原意是 Copilot 可以依据你这台电脑上的上下文、完成本机动作，并把一部分工作交给本机上的模型；这里只按这句写，不把它说成一个完整的桌面代理。Work IQ 是微软自称的上下文层，用来在邮件、Teams、Word、PowerPoint 这些碎片里找出和当前任务有关的部分；博客给出的 19.5 EB、每周 900 亿封邮件等数字是微软自己的说法。同一篇还宣布了插件目录、Dynamics 365、Salesforce、销售/客服/财务/法务技能、Agent 365 和 FinOps，那是企业平台消息，本条只带到这里，不另开卡。微软还引用一份 GigaOm 报告，称对日常用户 Copilot 比 Claude 便宜 84%、比 ChatGPT 便宜 63%，这是微软转述，不是本库复算。这是 Microsoft 365 Copilot 里的能力，不是免费的个人下载；这两页都没有写出具体 SKU 或价格，也没有写中国大陆、台湾或香港是否可用。本库没有登录 Microsoft，没有打开工作租户，没有开启 Today 或 Autopilot。",
+      "summaryEn": "This is the Ignite 2026 upgrade to Microsoft 365 Copilot’s work entry, not a separate new app. Jared Spataro’s official post of 2026-11-17 (https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/) says Home, where Chat and Cowork come together, and Office in Copilot are generally available; Code becomes generally available in the coming weeks, not today; Copilot Managed Runtime is generally available; Autopilot is beginning to roll out to Frontier customers, which is not general availability. Home has one composer powered by Auto, which routes work to models and effort; for more complex work Auto may recommend moving from Chat to Cowork if you agree. Today, inside Home, is a command center across mail, calendar, Teams threads, meetings, and tasks: it shows what you missed, what needs attention now, and what can wait, and it drafts replies, proposes schedule changes, and queues forgotten follow-ups for you to send. Spataro’s post says Today is currently in private preview in the Copilot app and Outlook; the same-day Home page is more specific and says Frontier private preview, and that the final design is subject to change. Do not read Today as generally available. Autopilot is a personal always-on agent in the tenant, with its own identity, memory, and tools. It shows up in Teams, Outlook, chats, channels, and documents, and can watch channels, follow up on emails, run recurring work, and manage a project; the post’s example is a supplier review process. Each Autopilot has its own Microsoft Entra Agent ID and a named manager; IT can scope its access and block it, and sign-ins and actions are logged under its own name. You decide what work it takes on and can have it check before key actions. Workspaces, the evolution of Copilot Notebooks, with people and agents in a shared context, is available in Frontier, not generally available. The Home page also says Projects is generally available, keeping related Chat conversations, Cowork tasks, and outputs together, and that Automations is generally available as one view of scheduled and ongoing tasks. On Windows, Hybrid Intelligence is worded as Copilot grounding itself in local PC context, completing local actions, and offloading some work to models running locally; this entry stays with that wording and does not call it a full desktop agent. Work IQ is Microsoft’s own name for a context layer that picks what matters across mail, Teams, Word, and PowerPoint; the 19.5 exabytes and 90 billion emails a week are Microsoft’s figures. The same post also announces a plugin catalog, Dynamics 365, Salesforce, sales, service, finance, and legal skills, Agent 365, and FinOps; those are enterprise-platform news and get this mention only, not their own card. Microsoft also cites a GigaOm report claiming Copilot is 84% cheaper than Claude and 63% cheaper than ChatGPT for an everyday user; that is Microsoft’s citation, not a figure recomputed here. This is a Microsoft 365 Copilot capability set, not a free consumer download. Neither page states a SKU or a price, and neither says whether it is available in mainland China, Taiwan, or Hong Kong. This library did not sign in to Microsoft, did not open a work tenant, and did not turn on Today or Autopilot.",
+      "categories": [
+        "automation",
+        "productivity"
+      ],
+      "role": "Microsoft 365 Copilot",
+      "sourceUrl": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/",
+      "secondaryUrls": [
+        "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/home-your-starting-place-for-work-in-the-microsoft-copilot-app/4573945",
+        "https://www.microsoft.com/en-us/copilot/features/autopilot"
+      ],
+      "previewImage": "/previews/m365-copilot-home.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "代发邮件、改写日程，或让一直开着的 Autopilot 自己行动之前，先由人确认。本库没有登录，也没有开启 Today 或 Autopilot。",
+      "approvalBoundaryEn": "A person confirms before mail is sent, a calendar is rewritten, or an always-on Autopilot acts on its own. This library did not sign in and did not turn on Today or Autopilot.",
+      "connectors": [
+        "Outlook",
+        "Calendar",
+        "Teams",
+        "Word",
+        "Excel",
+        "PowerPoint",
+        "OneDrive"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-19T01:15:00Z",
+      "qualityNote": "收录理由：Ignite 2026 里，Copilot 的工作入口写进了官方博客。Home 把聊天和跨应用办事放在一起；Today 和 Autopilot 还在更窄的范围内。昨天晚上的目录收了同一波的 MAI Code 2，没有收这个工作面。边界：Home、Office in Copilot 和 Managed Runtime 是一般可用；Code 是未来数周；Autopilot 和 Workspaces 是 Frontier；Today 是 private preview，Home 专页写成 Frontier private preview，并说最终设计可能还会改，所以不是一般可用。财富 500 强的使用比例、GigaOm 的价格比较，以及 19.5 EB 这类数字，都是微软自己的说法，不是本库测出来的。两页都没有给出 SKU 或价格，也没有写中国大陆、台湾、香港是否可用。本库没有登录 Microsoft，没有打开工作租户，没有开启 Today 或 Autopilot，没有发邮件，也没有改日程。",
+      "qualityNoteEn": "Why listed: the Ignite 2026 Copilot work entry is on the official blog. Home puts chat and cross-app work in one place; Today and Autopilot are still on a narrower rollout. Yesterday evening’s catalog took MAI Code 2 from the same wave and did not take this work surface. Limits: Home, Office in Copilot, and Managed Runtime are generally available; Code is the coming weeks; Autopilot and Workspaces are Frontier; Today is a private preview, and the Home page calls it a Frontier private preview whose final design may still change, so it is not generally available. The Fortune 500 line, the GigaOm price comparison, and figures such as 19.5 exabytes are Microsoft’s own statements, not measured here. Neither page states a SKU or a price, or whether this is available in mainland China, Taiwan, or Hong Kong. This library did not sign in to Microsoft, did not open a work tenant, did not turn on Today or Autopilot, did not send mail, and did not change a calendar.",
+      "verifyLog": "2026-11-19 上午（Asia/Taipei，与上海同一时区，约 09:03–09:15）：Spataro 博客用 curl 取回 HTTP 403；改用无头 Chrome（playwright-core 驱动系统 Chrome）打开同一地址，HTTP 200，title 为 Copilot at Microsoft Ignite: Expanding what’s possible with intelligence built for work | Microsoft Copilot Blog，页内日期 Nov 17, 2026，作者 Jared Spataro，og:image 为 https://www.microsoft.com/en-us/copilot/blog/wp-content/uploads/sites/2/2026/11/Copilot-Blog-Header_Hero-Blog_Ignite-FY27_social-resize.png 。正文原句核对：Home, where Chat and Cowork come together, and Office in Copilot are now generally available. Code will become generally available in the coming weeks… Copilot Managed Runtime … is now generally available. And Autopilot is beginning to roll out to Frontier customers today；Today is currently in private preview in the Copilot app and Outlook；Home has one composer, powered by Auto… For more complex work, Auto may recommend moving from Chat to Cowork. If you agree；Autopilot … has its own identity, memory, and tools… can watch Teams channels, follow up on emails, run recurring work, and manage a project；set up and manage a full supplier review process；Each Autopilot has its own Microsoft Entra Agent ID and a named manager. IT can scope its access and block it anytime. Its sign-ins and actions are logged under its own name；You decide what work Autopilot takes on and can check with you before key actions；Workspaces is now available in Frontier；Hybrid Intelligence allows Copilot to ground itself in all the context on your local PC, complete local actions, and even offload the right work to models running locally on your PC；Work IQ… understands what you’re looking for and identifies what you can ignore；Microsoft 365 holds more than 19.5 exabytes of data, with 90 billion emails…；Today nearly 80% of the Fortune 500 companies use Cowork；Based on a recent GigaOm report, for comparable quality, Copilot is 84% cheaper than Claude and 63% cheaper than ChatGPT for an everyday user。这些比例和价格比较只按微软的句子转述，未复算。博客正文里的 Home 链到 https://aka.ms/Copilotapp_home_blog ，无头 Chrome 跟随到 HTTP 200：https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/home-your-starting-place-for-work-in-the-microsoft-copilot-app/4573945 ，title 为 Home: Your starting place for work in the Microsoft Copilot app，作者 anniepearl，日期 Nov 17, 2026。该页把 Today 写成 available in Frontier private preview in the Copilot app and Outlook，并有 Note: Final design for Today is subject to change；另写 Chat to Cowork recommendations are now generally available；Office … generally available，文件存到 OneDrive；Projects, now generally available；Automations, now generally available，管理 scheduled and ongoing Copilot tasks；Autopilot is now accessible from Home and rolling out in Frontier；Workspaces is now available in Frontier。该页还写 Auto routing in Cowork … uses Microsoft-Decision-1.1 … rolling out to Frontier this week。本条只在核验里记下这一句，不把这张卡改成 Decision 1.1 的模型卡（打开的 #156 是另一条 Gemini Decision）。Autopilot 产品页 https://www.microsoft.com/en-us/copilot/features/autopilot HTTP 200，title 为 Microsoft Autopilot | Always-On Personal AI Agent for Work，首屏写 always-on, cloud-based personal agent，并指向 Frontier program。页上有 How does pricing work for Autopilot 的折叠问题，展开前的正文没有给出价格，本条因此不写价格。hasRoutine 为 true，依据是 Spataro 文的 run recurring work，以及 Home 专页里已一般可用的 Automations（scheduled and ongoing tasks）。hasMultiAgent 为 false：Workspaces 是人和代理的共享上下文，仍在 Frontier，这张卡记的是工作入口，不是一份多 Bot 配方。hasSkill 为 false：帖子里的销售、法务等技能是企业插件，不是本库收录的一份可复用 skill 文件。预览：无头 Chrome 视口 1440×960 截取 Spataro 博客首屏（含页面上的 Home 界面图，左侧有 Today、Autopilot，输入区有 Chat / Cowork），再缩成 1200×800 WebP，没有加字，也没有改图。去重：main 30e8265a1bb6 的 cases 里没有这条 id；不把同一篇 Ignite 帖里的 MAI Code 2（已在 main）或 MAI Cyber / Image / Realtime / Transcribe / Decision 1.1 拿来顶替。未做：没有登录 Microsoft，没有打开工作租户，没有点 Sign in，没有开启 Today 或 Autopilot，没有发邮件，没有改日程，没有启用 Hybrid Intelligence，没有核对任何地区的 SKU。",
+      "verifyLogEn": "2026-11-19 morning (Asia/Taipei, same offset as Shanghai, about 09:03–09:15): curl on Spataro’s post returned HTTP 403; headless Chrome (system Chrome driven by playwright-core) loaded the same URL at HTTP 200, title Copilot at Microsoft Ignite: Expanding what’s possible with intelligence built for work | Microsoft Copilot Blog, on-page date Nov 17, 2026, by Jared Spataro, og:image https://www.microsoft.com/en-us/copilot/blog/wp-content/uploads/sites/2/2026/11/Copilot-Blog-Header_Hero-Blog_Ignite-FY27_social-resize.png . Sentences checked: Home, where Chat and Cowork come together, and Office in Copilot are now generally available. Code will become generally available in the coming weeks… Copilot Managed Runtime … is now generally available. And Autopilot is beginning to roll out to Frontier customers today; Today is currently in private preview in the Copilot app and Outlook; Home has one composer, powered by Auto… For more complex work, Auto may recommend moving from Chat to Cowork. If you agree; Autopilot … has its own identity, memory, and tools… can watch Teams channels, follow up on emails, run recurring work, and manage a project; set up and manage a full supplier review process; Each Autopilot has its own Microsoft Entra Agent ID and a named manager. IT can scope its access and block it anytime. Its sign-ins and actions are logged under its own name; You decide what work Autopilot takes on and can check with you before key actions; Workspaces is now available in Frontier; Hybrid Intelligence allows Copilot to ground itself in all the context on your local PC, complete local actions, and even offload the right work to models running locally on your PC; Work IQ… understands what you’re looking for and identifies what you can ignore; Microsoft 365 holds more than 19.5 exabytes of data, with 90 billion emails…; Today nearly 80% of the Fortune 500 companies use Cowork; Based on a recent GigaOm report, for comparable quality, Copilot is 84% cheaper than Claude and 63% cheaper than ChatGPT for an everyday user. Those ratios are restated from Microsoft and were not recomputed. The Home link in the post, https://aka.ms/Copilotapp_home_blog , followed in headless Chrome to HTTP 200 at https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/home-your-starting-place-for-work-in-the-microsoft-copilot-app/4573945 , title Home: Your starting place for work in the Microsoft Copilot app, by anniepearl, dated Nov 17, 2026. That page calls Today available in Frontier private preview in the Copilot app and Outlook, with Note: Final design for Today is subject to change; it also says Chat to Cowork recommendations are now generally available; Office is generally available and files are saved to OneDrive; Projects, now generally available; Automations, now generally available, for scheduled and ongoing Copilot tasks; Autopilot is now accessible from Home and rolling out in Frontier; Workspaces is now available in Frontier. The same page says Auto routing in Cowork … uses Microsoft-Decision-1.1 … rolling out to Frontier this week. That sentence stays in this log; the card is not turned into a Decision 1.1 model card (open #156 is a different Gemini Decision item). Autopilot product page https://www.microsoft.com/en-us/copilot/features/autopilot HTTP 200, title Microsoft Autopilot | Always-On Personal AI Agent for Work, above-the-fold copy always-on, cloud-based personal agent, and a pointer to the Frontier program. A collapsed question asks How does pricing work for Autopilot; the visible text before expanding it states no price, so this entry states none. hasRoutine is true because Spataro’s post says run recurring work and the Home page says Automations (scheduled and ongoing tasks) is generally available. hasMultiAgent is false: Workspaces is shared context for people and agents and is still Frontier; this card records the work entry, not a multi-bot playbook. hasSkill is false: the sales and legal skills in the post are enterprise plugins, not a reusable skill file this library catalogs. Preview: headless Chrome viewport 1440×960 of the Spataro post’s first screen (the on-page Home art, with Today and Autopilot in the sidebar and Chat / Cowork in the composer), scaled to a 1200×800 WebP; no text added and the picture not redrawn. Dedupe: this id is not in cases on main 30e8265a1bb6; MAI Code 2 (already on main) and the other Ignite models in the same family post are not substituted in. Not done: no Microsoft sign-in, no work tenant opened, Sign in not clicked, Today and Autopilot not enabled, no mail sent, no calendar change, Hybrid Intelligence not enabled, and no regional SKU checked.",
+      "landing": {
+        "what": "给已经在用 Microsoft 365 Copilot、想少在邮件、日历、Teams 和文档之间来回跳的人。官方把新的起点叫做 Home：一个输入框里可以先问一句，也可以把多步工作交出去。Today 和 Autopilot 是这个入口里更进一步的两块，公开范围比 Home 窄。",
+        "whatEn": "For people who already use Microsoft 365 Copilot and want less jumping between mail, calendar, Teams, and documents. The official name for the new starting place is Home: one composer for a quick question or a multi-step handoff. Today and Autopilot sit inside that entry and are public on a narrower basis than Home.",
+        "contrast": {
+          "caption": "左列是 2026-11-17 两篇官方页面写明的范围。右列是读的时候容易混成「全部已经一般可用」的地方。",
+          "captionEn": "Left: what the two official pages of 2026-11-17 actually say is available. Right: the mix-up to avoid.",
+          "leftLabel": "官方页面",
+          "leftLabelEn": "Official pages",
+          "rightLabel": "不要读成",
+          "rightLabelEn": "Do not read it as",
+          "rows": [
+            {
+              "aspect": "Home",
+              "aspectEn": "Home",
+              "left": "Chat 和 Cowork 合在一处，以及 Office in Copilot，两页都写已经一般可用。",
+              "leftEn": "Chat and Cowork together, and Office in Copilot, are generally available on both pages.",
+              "right": "一个可以单独下载的新 App，或一份免费的个人产品。",
+              "rightEn": "A separately downloadable new app, or a free consumer product."
+            },
+            {
+              "aspect": "Today",
+              "aspectEn": "Today",
+              "left": "Spataro 的博客：Copilot 应用和 Outlook 里的 private preview。Home 专页：Frontier private preview，设计还可能改。",
+              "leftEn": "Spataro’s post: private preview in the Copilot app and Outlook. The Home page: Frontier private preview, and the design may still change.",
+              "right": "已经一般可用的收件箱。",
+              "rightEn": "A generally available inbox."
+            },
+            {
+              "aspect": "Autopilot",
+              "aspectEn": "Autopilot",
+              "left": "开始向 Frontier 客户推出。有自己的 Entra Agent ID，关键动作前可以先问你。",
+              "leftEn": "Beginning to roll out to Frontier customers. It has its own Entra Agent ID, and it can check with you before key actions.",
+              "right": "所有租户今天都能打开的全自动同事。",
+              "rightEn": "A fully automatic coworker every tenant can turn on today."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读范围，再决定要不要开",
+            "titleEn": "Read the scope before turning anything on",
+            "body": "先看 Spataro 的 Ignite 博客，再看它链出的 Home 专页。对上一般可用、Frontier 和 private preview 这三档，再决定要不要在自己的租户里找 Home。本库没有登录。",
+            "bodyEn": "Read Spataro’s Ignite post, then the Home page it links. Match general availability, Frontier, and private preview before looking for Home in your own tenant. This library did not sign in.",
+            "links": [
+              {
+                "href": "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/",
+                "label": "Copilot Ignite 官方博客",
+                "labelEn": "Official Copilot Ignite post"
+              },
+              {
+                "href": "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/home-your-starting-place-for-work-in-the-microsoft-copilot-app/4573945",
+                "label": "Home 专页",
+                "labelEn": "Home page"
+              }
+            ]
+          },
+          {
+            "title": "让人确认会发出去的动作",
+            "titleEn": "Have a person confirm anything that sends",
+            "body": "Today 起草的回复和日程改动是等你发送的。Autopilot 可以在关键动作前先问你；官方也写 IT 可以限定或阻止它。本库没有代发邮件，也没有改日程。",
+            "bodyEn": "Replies and schedule changes that Today drafts wait for you to send. Autopilot can check with you before key actions; the post also says IT can scope or block it. This library did not send mail or change a calendar.",
+            "links": [
+              {
+                "href": "https://www.microsoft.com/en-us/copilot/features/autopilot",
+                "label": "Autopilot 产品页",
+                "labelEn": "Autopilot product page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Today 不是一般可用。Spataro 写 private preview；Home 专页写 Frontier private preview，并说最终设计可能还会改。",
+            "textEn": "Today is not generally available. Spataro says private preview; the Home page says Frontier private preview and that the final design may still change."
+          },
+          {
+            "text": "Autopilot 和 Workspaces 在 Frontier，不是全面一般可用。Code 要到未来数周。公告没有写出 SKU、价格，或中国大陆、台湾、香港是否可用。",
+            "textEn": "Autopilot and Workspaces are in Frontier, not general availability. Code is the coming weeks. The posts state no SKU, no price, and nothing about mainland China, Taiwan, or Hong Kong."
+          },
+          {
+            "text": "本库没有登录 Microsoft，没有打开工作租户，没有开启 Today 或 Autopilot。",
+            "textEn": "This library did not sign in to Microsoft, did not open a work tenant, and did not turn on Today or Autopilot."
+          }
+        ],
+        "previewCredit": "预览：Microsoft Copilot 官方博客首屏，含页面上的 Home 界面图，缩成 3:2，未加字",
+        "previewCreditEn": "Preview: the first screen of Microsoft’s official Copilot blog, including the Home art on the page, scaled to 3:2, no text added"
+      }
+    },
+    {
+      "id": "klistra",
+      "slug": "klistra",
+      "title": "Klistra：按书面计划做动效，改一处就只重做那一处",
+      "titleEn": "Klistra: motion design from a written plan, where one change re-renders only that change",
+      "kind": "tool",
+      "hook": "按书面计划做动效：改一处，只重做那一处。",
+      "hookEn": "Motion design from a written plan: change one thing, and only that re-renders.",
+      "summary": "Klistra（https://klistra.ai/）把自己放在动效设计，而不是逐帧从噪声里猜的视频生成器。首页的句子是 Designed, not generated：你描述要做什么、放上自己的文件，它和你一起写计划，再按每个尺寸设计和做动画。页面上的五步是：带入照片、标志、素材或声音，也可以在这里生成一段画面、一条声音、一段曲子或一张图；说出要什么，它按场景写计划，并对上你的声音；它按计划做出字、版面、运动和你的文件；拖到某一帧、点中一个东西、写一句修改，只改那一处；按每个屏幕下载，或分享链接。站点自己的对照是：视频生成器每一帧都从噪声里画，每次都是一次新的猜测；Klistra 用零件搭每个场景，重做时除了你改的地方都保持原样。它也写，你仍可以让它生成一段画面、一张图、一条声音或一段曲子，作为场景里的一个零件。Show HN 的作者（自述是独立开发者）写：不要把它当成扩散模型的替代，它适合动效、用你自己字体的准确文字、标志和旁白、以及和你的界面一致的动画界面；需要照片级的画面时，扩散模型更合适，Klistra 可以把生成的素材嵌进场景。文档写：可以从一句话开始，拖入照片、素材、标志、音乐或旁白，也可以贴一个网址，让它读标志、颜色和文字；计划写成可亲手改的脚本；用 @ 点名素材；Ask first 会在花额度之前先问，auto 则直接做；Generate 可以做旁白、音乐、音效、图片或短片；工作区有 Direct、Advanced 和 Review；除了视频也可以做图片。价格页（https://klistra.ai/pricing）以美元计，按月付，或按年付打八折。Free：一开始 350 个额度，够做第一条视频，60 天内用完，给前 200 个账号，不用信用卡。这不是长期免费档。Pro：每月 $25，或按年折合每月 $20（一年 $240），每月 600 个额度，没用完的可以结转一次，分享页可以带下载，并有 Plan from Claude Code。Team：每月 $79，或按年折合每月 $63（一年 $756），5 个人、每月 2,000 个共享额度；每多一个人每月 $19 并带 400 个额度。Enterprise：单点登录、审计日志、自有声音和模型、发票，页面没有公开价格。没有套餐也可以买额度包。页面给的是典型区间，不是本库测出来的：第一版大约 50–150 个额度，一轮修改大约 20–150，一条规划消息大约 1–3，把 15 秒渲成三个尺寸大约 1。Plan from Claude Code 是把你电脑上的 Claude Code 接进来，规划走你自己的 Claude 订阅，Klistra 的额度只付它制作和渲染的部分。本库没有注册，没有花那 350 个额度，没有建项目，没有连接 Claude Code，也没有上传品牌文件。",
+      "summaryEn": "Klistra (https://klistra.ai/) positions itself as motion design, not a video generator that paints every frame from noise. The homepage line is Designed, not generated: you describe the piece and add your files, it plans with you, then designs and animates it in every size. The five steps on the page are: bring in photos, a logo, footage, or a voice, or generate a clip, a voice, a tune, or a picture here; say what you want and it writes the plan scene by scene, timed to your sound; it makes the type, layout, motion, and your files; scrub to a moment, click a thing, write the note, and only that changes; download it laid out for each screen, or share a link. The site’s own contrast is that video generators paint every frame from noise, so each try is a new guess, while Klistra builds every scene from parts and re-renders everything the same except what you changed. It also says you can still have it generate a clip, a picture, a voice, or a tune as one part of a scene. The Show HN author, who describes themselves as a solo developer, says not to think of it as a replacement for diffusion models: it shines for motion design, exact text in your fonts, logos and voiceovers, and animated UI; diffusion models do better at photorealistic images and video, and Klistra can place that generated media inside a scene. The docs say you can start from a sentence, drop in photos, footage, a logo, music, or a voiceover, or paste a website so it reads the logo, colours, and words; the plan is a script you can edit by hand; you name media with @; Ask first checks before anything that spends credits, and auto does not; Generate covers voice, music, sound effects, pictures, and clips; the workspaces are Direct, Advanced, and Review; pictures as well as videos. The pricing page (https://klistra.ai/pricing) is in US dollars, billed monthly, or yearly at 20% off. Free: 350 credits to start, enough for a first video, to use within 60 days, for the first 200 accounts, no card. That is not an ongoing free tier. Pro: $25 a month, or $20 a month billed yearly ($240 a year), 600 credits a month, unused credits roll over once, share pages with downloads, and Plan from Claude Code. Team: $79 a month, or $63 a month billed yearly ($756 a year), 5 people and 2,000 shared credits a month; each extra person is $19 a month with 400 credits. Enterprise: single sign-on, an audit log, your own voices and models, and invoicing, with no public price. Credit packs exist without a plan. The ranges on the page are its own typical ranges, not measured here: a first version about 50–150 credits, a round of changes about 20–150, a planning message about 1–3, and rendering 15 seconds in three sizes about 1. Plan from Claude Code connects Claude Code on your computer; planning runs on your own Claude subscription, and Klistra credits pay for what Klistra makes and renders. This library did not create an account, did not spend the 350 credits, did not start a project, did not connect Claude Code, and did not upload brand files.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI motion design studio",
+      "sourceUrl": "https://klistra.ai/",
+      "secondaryUrls": [
+        "https://klistra.ai/pricing",
+        "https://klistra.ai/docs",
+        "https://news.ycombinator.com/item?id=50548740"
+      ],
+      "previewImage": "/previews/klistra.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "花额度，或让 Claude Code 读取你电脑上的文件之前，先由人确认。本库没有注册，没有建项目，也没有连接 Claude Code。",
+      "approvalBoundaryEn": "A person confirms before credits are spent or Claude Code reads files on your computer. This library did not create an account, did not start a project, and did not connect Claude Code.",
+      "connectors": [
+        "Claude Code"
+      ],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-19T01:15:00Z",
+      "qualityNote": "收录理由：AI 和设计里少见的「先写计划、再按零件做动效」工具。它自己把边界说清楚了：不是扩散视频生成器的替代，改一处只重做那一处，也可以把生成的画面当成场景里的零件。边界：350 个额度、前 200 个账号、60 天、各档价格和典型额度区间都是定价页和作者自己的说法，不是本库花额度测出来的；没有长期免费档。Claude Code 集成在付费方案里，规划走用户自己的 Claude 订阅。文档里没有看到定时或例行任务。本库没有注册，没有花那 350 个额度，没有建项目，没有连接 Claude Code，没有上传品牌文件，也没有导出成片。",
+      "qualityNoteEn": "Why listed: an uncommon AI×design tool that writes a plan first and builds the motion from parts. It states its own limit: it is not a replacement for a diffusion video generator, one change re-renders only that change, and generated media can still sit in a scene as a part. Limits: the 350 credits, the first 200 accounts, the 60 days, the plan prices, and the typical credit ranges are the pricing page’s and the author’s own statements, not measured by spending credits here; there is no ongoing free tier. The Claude Code integration is on paid plans, and planning runs on the user’s own Claude subscription. The docs do not describe a scheduler or a routine. This library did not create an account, did not spend the 350 credits, did not start a project, did not connect Claude Code, did not upload brand files, and did not export a finished piece.",
+      "verifyLog": "2026-11-19 上午（Asia/Taipei，约 09:03–09:15）：https://klistra.ai/ HTTP 200，title 为 Klistra · Designed, not generated。首页原句：Designed, not generated. Describe it, add your files. Klistra plans it with you, then designs and animates it in every size。五步标题为 Bring in your media, or generate it / Say what you want / Klistra makes it / Point at a thing. Say what should change / Keep it, in every size。对照节原句：Video generators paint every frame from noise, so each try is a new guess. Klistra builds every scene from parts and sets each detail on purpose. Change anything, and it renders again exactly the same, except what you changed。https://klistra.ai/pricing HTTP 200，title 为 Pricing · Klistra。核对：350 credits to start, enough for your first video, to use within 60 days, for the first 200 accounts，No card needed；Pro $25 / $20 a month，Billed yearly, $240 a year，600 credits a month，unused ones roll over once，Share pages with downloads，Plan from Claude Code；Team $79 / $63 a month，Billed yearly, $756 a year，5 people，2,000 credits a month, shared，each one more is $19 a month with 400 credits；Enterprise 列出 Single sign-on and an audit log、Your own voices and models、Invoicing，没有公开价格；Billing：Prices are in US dollars. Plans are billed monthly, or yearly at 20% off；典型区间 first version ≈ 50–150，a round of changes ≈ 20–150，a chat planning message ≈ 1–3，Rendering 15 seconds in three sizes ≈ 1；没有套餐也可买额度，页面有 200 · $12 这一档。Plan from Claude Code 一节：Connect Claude Code on your computer… Its planning runs on your own Claude subscription. Credits pay for what Klistra makes and renders。https://klistra.ai/docs HTTP 200，title 为 Guides · Klistra。核对：从一句话或拖入照片、素材、标志、音乐、旁白开始；也可以贴网址读取 logo, colours and words；脚本可亲手改；@ 点名素材；Ask first 在花额度前询问，旁边是 auto；Generate 做 voice, music, a sound, a picture or a clip；工作区 Direct、Advanced、Review；项目可以是 video or a picture。文档通篇没有定时或例行任务，所以 hasRoutine 为 false。Show HN https://news.ycombinator.com/item?id=50548740 的 Algolia items 接口 HTTP 200：标题 Show HN: Klistra – A complete studio for spec-driven AI motion design and video，作者 pvarghav，url https://klistra.ai/ ，created_at 2026-11-18T16:58:53.000Z（台北 2026-11-19 00:58:53），核对时 2 points、0 条评论。作者正文写 solo-dev、Don’t think of this as a replacement for diffusion models、exact text with your fonts、logos or voiceovers、animated UI，以及 first 200 of you who sign up 350 free credits，the advanced tutorial used around 250 credits，Pro starting at $25/mo and packs at $12，并链到 https://klistra.ai/docs/basic 与 https://klistra.ai/docs/advanced 。这两篇教程页本次没有单独打开，工作室说明以 /docs 为准。站点页面没有更早的公开上线日期，publishedAt 用 Show HN 这一天。预览：无头 Chrome 视口 1440×960 截取首页首屏（Designed, not generated 和页面上的示例界面），缩成 1200×800 WebP，没有加字。首页示例界面上的金额和百分比是营销页自己的示例，没有写进读者向字段。去重：main 30e8265a1bb6 没有这个 id。未做：没有注册，没有点 Sign up，没有花 350 个额度，没有建项目，没有连接 Claude Code，没有上传文件，没有导出。",
+      "verifyLogEn": "2026-11-19 morning (Asia/Taipei, about 09:03–09:15): https://klistra.ai/ HTTP 200, title Klistra · Designed, not generated. Homepage sentences: Designed, not generated. Describe it, add your files. Klistra plans it with you, then designs and animates it in every size. The five step titles are Bring in your media, or generate it / Say what you want / Klistra makes it / Point at a thing. Say what should change / Keep it, in every size. The contrast section: Video generators paint every frame from noise, so each try is a new guess. Klistra builds every scene from parts and sets each detail on purpose. Change anything, and it renders again exactly the same, except what you changed. https://klistra.ai/pricing HTTP 200, title Pricing · Klistra. Checked: 350 credits to start, enough for your first video, to use within 60 days, for the first 200 accounts, No card needed; Pro $25 / $20 a month, Billed yearly, $240 a year, 600 credits a month, unused ones roll over once, Share pages with downloads, Plan from Claude Code; Team $79 / $63 a month, Billed yearly, $756 a year, 5 people, 2,000 credits a month, shared, each one more is $19 a month with 400 credits; Enterprise lists Single sign-on and an audit log, Your own voices and models, and Invoicing, with no public price; Billing: Prices are in US dollars. Plans are billed monthly, or yearly at 20% off; typical ranges first version ≈ 50–150, a round of changes ≈ 20–150, a chat planning message ≈ 1–3, Rendering 15 seconds in three sizes ≈ 1; credits can be bought without a plan, including a 200 · $12 pack. The Plan from Claude Code section: Connect Claude Code on your computer… Its planning runs on your own Claude subscription. Credits pay for what Klistra makes and renders. https://klistra.ai/docs HTTP 200, title Guides · Klistra. Checked: start from a sentence or drop in photos, footage, a logo, music, or a voiceover; or paste a website so it reads the logo, colours, and words; the script can be edited by hand; media is named with @; Ask first checks before a credit spend, with auto beside it; Generate makes a voice, music, a sound, a picture, or a clip; workspaces Direct, Advanced, and Review; a project can be a video or a picture. The docs describe no scheduler, so hasRoutine is false. Show HN https://news.ycombinator.com/item?id=50548740 via the Algolia items API, HTTP 200: title Show HN: Klistra – A complete studio for spec-driven AI motion design and video, author pvarghav, url https://klistra.ai/ , created_at 2026-11-18T16:58:53.000Z (2026-11-19 00:58:53 Taipei), 2 points and 0 comments at the check. The author text says solo-dev, Don’t think of this as a replacement for diffusion models, exact text with your fonts, logos or voiceovers, animated UI, the first 200 sign-ups get 350 free credits, the advanced tutorial used around 250 credits, Pro starting at $25/mo and packs at $12, and links https://klistra.ai/docs/basic and https://klistra.ai/docs/advanced . Those two tutorial pages were not opened separately; the studio description follows /docs. No earlier public launch date was on the pages, so publishedAt is the Show HN day. Preview: headless Chrome viewport 1440×960 of the homepage first screen (Designed, not generated and the sample UI on the page), scaled to a 1200×800 WebP, no text added. Amounts and percentages in that sample UI are the marketing page’s own example and are not in the reader-facing fields. Dedupe: this id is not on main 30e8265a1bb6. Not done: no account, Sign up not clicked, the 350 credits not spent, no project started, Claude Code not connected, no file uploaded, nothing exported.",
+      "landing": {
+        "what": "给要做短发布片、说明片、海报或带准确文字的动效、又不想每次重跑都换一套画面的人。Klistra 先和你写成一份可以改的计划，再按零件把画面做出来。扩散模型仍然可以负责其中某一段生成的素材。",
+        "whatEn": "For short launch films, explainers, posters, and motion with exact text, when you do not want every retry to replace the whole picture. Klistra writes an editable plan with you, then builds the picture from parts. A diffusion model can still supply one generated piece inside that plan.",
+        "steps": [
+          {
+            "title": "先看首页怎么分五步",
+            "titleEn": "Read the five steps on the homepage",
+            "body": "首页从一句话和你自己的文件开始，计划按场景写，改的时候点中一个东西。不需要注册就能读完这五步。本库没有往输入框里提交句子。",
+            "bodyEn": "The homepage starts from a sentence and your own files, writes the plan scene by scene, and changes whatever you click. You can read the five steps without an account. This library did not submit a sentence.",
+            "links": [
+              {
+                "href": "https://klistra.ai/",
+                "label": "Klistra 首页",
+                "labelEn": "Klistra homepage"
+              },
+              {
+                "href": "https://klistra.ai/docs",
+                "label": "工作室文档",
+                "labelEn": "Studio docs"
+              }
+            ]
+          },
+          {
+            "title": "花额度之前先看价格页",
+            "titleEn": "Read the pricing page before spending credits",
+            "body": "开头的 350 个额度只给前 200 个账号，而且要在 60 天内用。付费方案才有 Plan from Claude Code，它会读你电脑上的文件。本库没有注册，也没有连接。",
+            "bodyEn": "The opening 350 credits are for the first 200 accounts and must be used within 60 days. Plan from Claude Code is on the paid plans and can read files on your computer. This library did not sign up and did not connect it.",
+            "links": [
+              {
+                "href": "https://klistra.ai/pricing",
+                "label": "价格与额度",
+                "labelEn": "Pricing and credits"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "站点自己写：它不是扩散视频生成器的替代。每次重做应只变你改过的地方；这是页面上的说法，本库没有建项目验证。",
+            "textEn": "The site says it is not a replacement for a diffusion video generator. A re-render should change only what you edited; that is the page’s claim, and this library did not start a project to check it."
+          },
+          {
+            "text": "350 个额度不是长期免费档。价格、结转规则和典型区间都以价格页为准。",
+            "textEn": "The 350 credits are not an ongoing free tier. Prices, rollover, and the typical ranges follow the pricing page."
+          },
+          {
+            "text": "本库没有注册，没有花额度，没有连接 Claude Code，没有上传品牌文件。",
+            "textEn": "This library did not create an account, did not spend credits, did not connect Claude Code, and did not upload brand files."
+          }
+        ],
+        "previewCredit": "预览：Klistra 官网首页首屏，缩成 3:2，未加字",
+        "previewCreditEn": "Preview: the first screen of the Klistra homepage, scaled to 3:2, no text added"
+      }
+    },
+    {
       "id": "directors-lookbook",
       "slug": "directors-lookbook",
       "title": "Director's Lookbook：说出感觉，发一手有名字的风格卡和可粘贴的提示词",
@@ -11907,10 +12136,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-19T01:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.81",
-    "count": 219,
+    "version": "1.4.83",
+    "count": 221,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12227,7 +12456,21 @@
       "https://directorslookbook.app/privacy/",
       "https://directorslookbook.app/terms/",
       "https://directorslookbook.app/media/og.jpg?v=2",
-      "https://news.ycombinator.com/item?id=50541419"
+      "https://news.ycombinator.com/item?id=50541419",
+      "https://www.microsoft.com/en-us/copilot/blog/2026/11/17/copilot-at-microsoft-ignite-expanding-whats-possible-with-intelligence-built-for-work/",
+      "https://aka.ms/Copilotapp_home_blog",
+      "https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/home-your-starting-place-for-work-in-the-microsoft-copilot-app/4573945",
+      "https://www.microsoft.com/en-us/copilot/features/autopilot",
+      "https://klistra.ai/",
+      "https://klistra.ai/pricing",
+      "https://klistra.ai/docs",
+      "https://news.ycombinator.com/item?id=50548740",
+      "https://hn.algolia.com/api/v1/items/50548740",
+      "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+      "https://antigravity.google/blog/gemini-4-neon-in-google-antigravity/",
+      "https://aistudio.google.com/docs/models/gemini-4-neon",
+      "https://aistudio.google.com/docs/whats-new-gemini-4-neon",
+      "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-4-Neon-Model-Card.pdf"
     ]
   }
 }
