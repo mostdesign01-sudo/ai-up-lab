@@ -1,6 +1,404 @@
 {
   "cases": [
     {
+      "id": "mindie",
+      "slug": "mindie",
+      "title": "Mindie：在 WhatsApp 里发句话，变成提醒、清单、笔记或日历事项",
+      "titleEn": "Mindie: text it on WhatsApp, get a reminder, list, note, or calendar event",
+      "kind": "tool",
+      "hook": "在 WhatsApp 里发句话，变成提醒、清单或日历事项。",
+      "hookEn": "Text a WhatsApp contact; it becomes a reminder, list, note, or calendar event.",
+      "summary": "Mindie（https://www.getmindie.app ，Flownix Labs 的 Tamil Iniyan 出品）是一个住在 WhatsApp 里的联系人，官网写 Telegram 上也能用。你像给朋友发消息一样发一句文字、一段语音或一张截图，它判断这是提醒、清单、笔记还是日历事项，替你存好，到点在聊天里叫你。提醒可以只响一次，也可以重复（官网举例每周一 9 点）；回一句 push it to 7 就能改时间，也可以问 what's on tomorrow?。连上 Google Calendar 或 Outlook 之后，可以用消息加日程、问接下来有什么安排；消息里带一个 #标签，就会存进 Notion 的对应分类。官网写它用英文效果最好，也能懂西班牙语、法语、德语、葡萄牙语等，并用你写的语言回复。它只在你和它的私聊里工作，不进群；官网也写明它不回答通用问题、不上网查资料、不写长文，只记录你发给它的东西并到点跟进。首页有一个不用注册的可输入演示。价格以官网为准：没有免费版，全部功能免费试用 7 天，开始试用要先留银行卡、试用期内不扣费；之后每月 9 美元或每年 90 美元，首次付款 7 天内可以退款；另有一次性 99 美元的 Lifetime，官网写只限前 50 名，英国和欧盟不卖。适合整天泡在 WhatsApp 里、想把「发给自己的备忘」变成真会到点提醒的人。本库没有注册、没有绑卡、没有给它发过消息，也没有连接 WhatsApp、Telegram、日历或 Notion。",
+      "summaryEn": "Mindie (https://www.getmindie.app , by Tamil Iniyan at Flownix Labs) is a contact that lives in WhatsApp; the site says it works on Telegram too. You text it the way you would text a friend, or send a voice note or a screenshot, and it works out whether that is a reminder, a list, a note, or a calendar event, saves it, and messages you in the chat when it is time. Reminders can fire once or repeat (the site's example is every Monday at 9); you move one by replying “push it to 7”, and you can ask “what's on tomorrow?”. Once Google Calendar or Outlook is connected you can add events by message and ask what is coming up; add a #hashtag to a message and it is saved to Notion under that category. The site says it works best in English, understands Spanish, French, German, Portuguese and more, and replies in the language you write in. It works only in your own chat with it, not in groups; the site also says it does not answer general questions, look things up on the web, or write essays, it only keeps what you send and follows up on time. The homepage has a typable demo that needs no sign-up. Pricing as the site states it: there is no free plan; every feature is free for 7 days, a card is saved to start the trial and nothing is charged during it; after that it is $9 a month or $90 a year, with a refund available within 7 days of the first payment; there is also a one-time $99 Lifetime plan that the site limits to the first 50 buyers and does not sell in the UK or EU. Good for people who live in WhatsApp and want their notes-to-self to become reminders that actually fire. This library did not sign up, did not save a card, did not message it, and did not connect WhatsApp, Telegram, a calendar, or Notion.",
+      "categories": [
+        "productivity",
+        "automation",
+        "daily-digest"
+      ],
+      "role": "个人助手",
+      "sourceUrl": "https://www.getmindie.app",
+      "secondaryUrls": [
+        "https://www.getmindie.app/features",
+        "https://www.getmindie.app/pricing",
+        "https://www.getmindie.app/features/telegram",
+        "https://www.getmindie.app/roadmap",
+        "https://www.getmindie.app/privacy",
+        "https://www.getmindie.app/terms",
+        "https://www.getmindie.app/refund",
+        "https://www.getmindie.app/security",
+        "https://news.ycombinator.com/item?id=50567911"
+      ],
+      "previewImage": "/previews/mindie.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "开始试用就要留银行卡，试用结束后会自动按月或按年扣费，不想付费要在到期前回复 cancel。连接 Google Calendar、Outlook 或 Notion 是用你自己的账号授权，它会往你的日历和 Notion 里写东西。留卡和授权之前自己看清价格页和条款。本库没有注册、留卡或授权。",
+      "approvalBoundaryEn": "Starting the trial saves a card, and billing begins automatically, monthly or yearly, when the trial ends unless you reply “cancel” first. Connecting Google Calendar, Outlook, or Notion grants access with your own account, and Mindie writes to your calendar and Notion. Read the pricing page and terms before you save a card or grant access. This library did not sign up, save a card, or grant access.",
+      "connectors": [
+        "WhatsApp",
+        "Telegram",
+        "Google Calendar",
+        "Outlook Calendar",
+        "Notion"
+      ],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-20T01:30:00Z",
+      "qualityNote": "收录理由：很多人本来就在给自己发消息当备忘，Mindie 把这件事接上了真会到点提醒、还能写进日历和 Notion 的助手，不用再装一个 app；官网把价格、每月消息上限、退款办法和数据交给了谁都写得比较清楚。边界：功能、价格和「不卖数据、不拿消息训练模型」都是官网自己的说法，本库没有验证。Todoist、Asana、ClickUp、Trello、Slack 这几项，官网的路线图写已经上线，功能页的问答却写即将推出，本条只按各页说法一致的 Google Calendar、Outlook 和 Notion 来写。没有免费版，试用要先留卡。条款写它不保证提醒一定送达或准时，要紧的事别只靠它。官网没有源码仓库，条款写功能和品牌归其专有，不是开源项目。你所在的地方能不能正常用 WhatsApp、能不能完成付款，官网没有逐一说明，要自己确认。本库没有注册、没有留卡、没有给 Mindie 发过任何消息，没有试首页的演示，也没有连接 WhatsApp、Telegram、日历或 Notion，提醒是否准时没有测过。",
+      "qualityNoteEn": "Why listed: many people already message themselves as a memo. Mindie attaches that habit to an assistant that actually reminds you on time and can write to your calendar and Notion, with no extra app to install; the site is fairly clear about price, the monthly message allowance, refunds, and who handles your data. Limits: the features, the prices, and “no data sales, no training on your messages” are the site's own statements, not verified here. For Todoist, Asana, ClickUp, Trello, and Slack, the site's roadmap says they are live while the features page FAQ says they are coming soon, so this entry only relies on Google Calendar, Outlook, and Notion, which every page agrees on. There is no free plan, and the trial needs a card. The terms say delivery and timing of reminders are not guaranteed, so do not rely on it alone for anything critical. The site links no source repository and the terms call the features and branding proprietary, so it is not open source. Whether WhatsApp works normally and checkout completes where you live is not spelled out place by place; confirm that yourself. This library did not sign up, did not save a card, did not send Mindie any message, did not try the homepage demo, and did not connect WhatsApp, Telegram, a calendar, or Notion; whether reminders arrive on time was not tested.",
+      "verifyLog": "2026-11-20 上午（Asia/Shanghai，约 09:00–09:30）：https://www.getmindie.app HTTP 200，title 为 Mindie · Reminders, Notes, Lists and Calendar in WhatsApp，meta description 写 Text Mindie on WhatsApp or Telegram to set reminders, save notes and lists, and add calendar events. 7-day free trial.，author 为 Flownix Labs；正文写 Lives in WhatsApp and Telegram. Saves to the tools you already use.、Try it right here. … No sign-up needed for this part.、One-off or every Monday at 9. Mindie messages you on time, and you move them by replying.、Google Calendar or Outlook. Add events, or ask what's coming up.、send them to Notion with a #hashtag、Voice notes and screenshots work everywhere a text does.；首页 FAQ 写不注册也能先在 WhatsApp 上试（up to 3 reminders and 10 messages, no account and no card），Which tools does Mindie connect to 一问只答 Google Calendar, Outlook Calendar and Notion；首页另写 Join 150+ people，这是厂商自己的数字，没有写进正文。/features HTTP 200：写 Mindie is a contact in your WhatsApp，不在 WhatsApp 群里工作；该页 FAQ 写 Google Calendar, Outlook Calendar and Notion today. Telegram, Asana, Todoist, ClickUp, Trello, Slack and Google Workspace are coming soon.。/roadmap HTTP 200 却把 Slack、Todoist、Asana、ClickUp、Trello、Telegram 列在 Live 之下，/mindie.md（HTTP 200）和 /privacy 也按已上线来写。几处说法不一致，本条只按一致的三项写；Telegram 另有独立功能页 /features/telegram（HTTP 200，Updated 3 November 2026），写 Telegram 需要已有套餐并绑定 WhatsApp 号码、bot 为 @mindieapp_bot、只在私聊里工作、免注册试用只限 WhatsApp。/mindie.md 的 What it is not 一节写 Mindie doesn't answer general questions, look things up on the web or write essays。/pricing HTTP 200：meta description 写 Mindie Pro is $9/month or $90/year with every feature included, after a 7-day free trial. Lifetime access is $99 for the first 50 buyers.；FAQ 写没有免费版、Pro 每月最多 1,000 条消息、Lifetime 300 条、试用 50 条、Lifetime 不向英国和欧盟出售、Prices in USD, excluding tax, and may vary by location。/terms HTTP 200（Last updated: January 2026，经营主体 Flownix Labs）：写 A payment method is required to start the trial、付款由 Dodo Payments 处理、does not guarantee delivery, timing accuracy, or completion of any task。/refund HTTP 200（Last updated: January 2026）：首次付款 7 天内可退。/privacy HTTP 200（Last updated: 05.11.2026）：写消息、语音和图片会交给 AI providers 处理且不得用于训练，传输用 TLS 1.2+、存储用 AES-256。/security HTTP 200。/llms.txt HTTP 200，检索 China、Chinese、country、region 均无结果，所以正文不写任何地区可用性。条款日期早于 Show HN，说明产品在发帖前已经存在，但官网没有给出可引用的公开上线日，publishedAt 取 Show HN 的 UTC 日期。Show HN https://news.ycombinator.com/item?id=50567911 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Mindie – Reminders, notes and calendars on WhatsApp，作者 tamilini92，2026-11-19T23:13:22Z（上海 2026-11-20 07:13:22），核对时 1 point、0 条评论，帖子没有正文。sourceType 记 community：这是作者本人在 Show HN 的自荐帖，事实都取自作者自己的官网，沿用 directors-lookbook 的处理，不挂「官方」角标。开源核对：官网没有源码仓库链接，页脚写 All rights reserved，条款写内容、功能与品牌归其专有；gh search repos 搜 getmindie 无结果，搜 mindie 得到的都是别的项目；所以不写开源。预览：官方分享图 https://www.getmindie.app/og-image.png（HTTP 200，1200×630），上下各补 85px 白边（图片上下边缘本来就是白色）成 1200×800 WebP，没有裁切，也没有加字。去重：main 30e8265 与全部 64 个打开的 PR 的 diff 里都没有 mindie、getmindie。未做：没有注册、没有登录、没有留卡，没有在首页演示框里输入，没有给 Mindie 的 WhatsApp 或 Telegram 发消息，没有连接 Google Calendar、Outlook 或 Notion。",
+      "verifyLogEn": "2026-11-20 morning (Asia/Shanghai, about 09:00–09:30): https://www.getmindie.app HTTP 200, title Mindie · Reminders, Notes, Lists and Calendar in WhatsApp; the meta description reads Text Mindie on WhatsApp or Telegram to set reminders, save notes and lists, and add calendar events. 7-day free trial.; author Flownix Labs; body copy says Lives in WhatsApp and Telegram. Saves to the tools you already use., Try it right here. … No sign-up needed for this part., One-off or every Monday at 9. Mindie messages you on time, and you move them by replying., Google Calendar or Outlook. Add events, or ask what's coming up., send them to Notion with a #hashtag, and Voice notes and screenshots work everywhere a text does.; the homepage FAQ says you can try on WhatsApp before signing up (up to 3 reminders and 10 messages, no account and no card) and answers Which tools does Mindie connect to with only Google Calendar, Outlook Calendar and Notion; the homepage also says Join 150+ people, which is the vendor's own number and is not used in the entry. /features HTTP 200: Mindie is a contact in your WhatsApp, and it does not work in WhatsApp groups; that page's FAQ says Google Calendar, Outlook Calendar and Notion today. Telegram, Asana, Todoist, ClickUp, Trello, Slack and Google Workspace are coming soon. /roadmap HTTP 200 nevertheless lists Slack, Todoist, Asana, ClickUp, Trello, and Telegram under Live, and /mindie.md (HTTP 200) and /privacy describe them as available. The pages disagree, so the entry relies only on the three they agree on; Telegram has its own feature page /features/telegram (HTTP 200, Updated 3 November 2026), which says Telegram needs an active plan and a linked WhatsApp number, the bot is @mindieapp_bot, it works only in a private chat, and trying without signing up is WhatsApp only. The What it is not section of /mindie.md says Mindie doesn't answer general questions, look things up on the web or write essays. /pricing HTTP 200: the meta description reads Mindie Pro is $9/month or $90/year with every feature included, after a 7-day free trial. Lifetime access is $99 for the first 50 buyers.; the FAQ says there is no free plan, Pro includes up to 1,000 messages a month, Lifetime 300, the trial 50, Lifetime is not sold in the UK or EU, and Prices in USD, excluding tax, and may vary by location. /terms HTTP 200 (Last updated: January 2026, business name Flownix Labs): A payment method is required to start the trial, payments are processed by Dodo Payments, and it does not guarantee delivery, timing accuracy, or completion of any task. /refund HTTP 200 (Last updated: January 2026): a refund within 7 days of the first payment. /privacy HTTP 200 (Last updated: 05.11.2026): messages, voice notes, and photos go to AI providers that may not train on them; TLS 1.2+ in transit and AES-256 at rest. /security HTTP 200. /llms.txt HTTP 200; a search of it for China, Chinese, country, and region found nothing, so the entry makes no regional availability claim. The terms date is earlier than the Show HN, so the product existed before the post, but the site gives no citable public launch date, and publishedAt uses the Show HN's UTC date. Show HN https://news.ycombinator.com/item?id=50567911 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Mindie – Reminders, notes and calendars on WhatsApp, author tamilini92, 2026-11-19T23:13:22Z (2026-11-20 07:13:22 Shanghai), 1 point and 0 comments at the check, no post text. sourceType is community: this is the maker's own Show HN post and every fact comes from the maker's own site, handled the same way as directors-lookbook, without the Official badge. Open-source check: the site links no source repository, the footer says All rights reserved, and the terms call the content, features, and branding proprietary; gh search repos for getmindie returned nothing and the results for mindie are other projects; so the entry does not say open source. Preview: the official share image https://www.getmindie.app/og-image.png (HTTP 200, 1200×630), padded 85px top and bottom in white (the image's top and bottom edges are already white) to a 1200×800 WebP; nothing cropped, no text added. Dedupe: mindie and getmindie are absent from main 30e8265 and from the diffs of all 64 open PRs. Not done: no sign-up, no login, no card saved, nothing typed into the homepage demo, no message sent to Mindie on WhatsApp or Telegram, and no connection to Google Calendar, Outlook, or Notion.",
+      "landing": {
+        "what": "给整天在 WhatsApp 里处理事情、备忘总被新消息埋掉的人。作者 Tamil Iniyan 在官网自述是一个靠 WhatsApp 跑生意的独立创业者，试过 Asana、Notion 和 ClickUp 都没坚持下来，因为他根本不会去打开它们，于是把助手做进了 WhatsApp。它在你的通讯录里就是一个联系人：带时间的话变成提醒，几样东西变成清单，说 note 或 save this 变成笔记，会议进日历。",
+        "whatEn": "For people who run their day in WhatsApp and lose their notes-to-self under new messages. The maker, Tamil Iniyan, says on the site that he is a solopreneur running his business through WhatsApp; he tried Asana, Notion, and ClickUp and none stuck because he never opened them, so he built the assistant into WhatsApp. It is simply a contact in your chat list: a message with a time becomes a reminder, several items become a list, “note” or “save this” becomes a note, and a meeting goes into your calendar.",
+        "steps": [
+          {
+            "title": "先在首页试打一句",
+            "titleEn": "Type one line into the homepage demo first",
+            "body": "首页的「Try it right here」写明这一步不用注册：照着示例打一句，比如 remind me to call Sam friday 5pm，看它会怎么归类。官网还写，不注册也可以先在 WhatsApp 上给它发消息试用，上限是 3 条提醒和 10 条消息。本库这两种都没有试。",
+            "bodyEn": "The homepage section “Try it right here” says this part needs no sign-up: type a line like the examples, such as “remind me to call Sam friday 5pm”, and see how it is sorted. The site also says you can message it on WhatsApp before signing up, up to 3 reminders and 10 messages. This library tried neither.",
+            "links": [
+              {
+                "href": "https://www.getmindie.app",
+                "label": "Mindie 首页",
+                "labelEn": "Mindie home"
+              },
+              {
+                "href": "https://www.getmindie.app/features",
+                "label": "全部功能",
+                "labelEn": "All features"
+              }
+            ]
+          },
+          {
+            "title": "开始试用前，先把价格和退款看清",
+            "titleEn": "Read the price and refund terms before starting the trial",
+            "body": "没有免费版。试用 7 天、全部功能，但开始时就要留银行卡；官网写到期前两天会在 WhatsApp 上提醒你，回复 cancel 就不会扣费，否则自动转为每月 9 美元或每年 90 美元。首次付款后 7 天内可以发邮件申请全额退款。",
+            "bodyEn": "There is no free plan. The trial is 7 days with every feature, but it needs a card up front; the site says it reminds you on WhatsApp two days before the trial ends, and replying “cancel” means you pay nothing, otherwise it continues at $9 a month or $90 a year. You can email for a full refund within 7 days of the first payment.",
+            "links": [
+              {
+                "href": "https://www.getmindie.app/pricing",
+                "label": "价格页",
+                "labelEn": "Pricing"
+              },
+              {
+                "href": "https://www.getmindie.app/refund",
+                "label": "取消与退款",
+                "labelEn": "Cancellations and refunds"
+              }
+            ]
+          },
+          {
+            "title": "绑定 WhatsApp，再按需连接 Telegram、日历和 Notion",
+            "titleEn": "Link WhatsApp, then add Telegram, a calendar, and Notion as needed",
+            "body": "官网的步骤是：选套餐，用邮箱验证码注册，绑定 WhatsApp 号码，然后直接给它发消息。Telegram 在后台的 Integrations 页连接，需要已有套餐和绑定好的 WhatsApp 号码，提醒发到哪一边可以自己选。Google Calendar、Outlook 和 Notion 也在后台连接一次，官网写走各家自己的授权登录，不保存你的密码。",
+            "bodyEn": "The site's steps: pick a plan, sign up with an email code, link your WhatsApp number, then just text it. Telegram is connected from the Integrations page in the dashboard and needs an active plan and a linked WhatsApp number; you choose where reminders arrive. Google Calendar, Outlook, and Notion are also connected once from the dashboard; the site says each uses its own secure login and your passwords are never stored.",
+            "links": [
+              {
+                "href": "https://www.getmindie.app/features/telegram",
+                "label": "Mindie on Telegram",
+                "labelEn": "Mindie on Telegram"
+              },
+              {
+                "href": "https://www.getmindie.app/security",
+                "label": "安全与隐私说明",
+                "labelEn": "Security and privacy"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "付费：没有免费版；试用要先留卡。官网写 Pro 每月最多 1,000 条消息，试用期 50 条，Lifetime 每月 300 条；价格以美元计、不含税，可能因地区不同。Lifetime 只限前 50 名，英国和欧盟不卖。付款由 Dodo Payments 处理。",
+            "textEn": "Paid: there is no free plan, and the trial needs a card. The site says Pro includes up to 1,000 messages a month, the trial 50, and Lifetime 300; prices are in USD, exclude tax, and may vary by location. Lifetime is limited to the first 50 buyers and is not sold in the UK or EU. Payments are processed by Dodo Payments."
+          },
+          {
+            "text": "数据：隐私页写，你发给它的消息、语音和图片会交给 AI 服务商来理解和转写，并称这些服务商不得拿去训练模型；传输和存储都加密；它只看得到你发给它的内容，看不到你的其它聊天。发 clear our chat 可以删掉聊天记录。这些都是官网的说法。",
+            "textEn": "Data: the privacy page says the messages, voice notes, and photos you send go to AI providers to be understood and transcribed, and that those providers may not train on them; data is encrypted in transit and at rest; it only sees what you send it, never your other chats. Texting “clear our chat” deletes the chat history. These are the site's statements."
+          },
+          {
+            "text": "可靠性：条款写明不保证提醒一定送达、时间一定准确，也不对错过的提醒负责。吃药、航班、付款截止这类要紧的事，别只靠它。",
+            "textEn": "Reliability: the terms say delivery and timing accuracy are not guaranteed and that the company is not responsible for missed reminders. Do not rely on it alone for medication, flights, or payment deadlines."
+          },
+          {
+            "text": "集成：Google Calendar、Outlook 和 Notion 在各页说法一致。Todoist、Asana、ClickUp、Trello、Slack 在路线图里写已上线，功能页的问答写即将推出，用之前自己确认。它不在群里工作，也不回答通用问题。",
+            "textEn": "Integrations: every page agrees on Google Calendar, Outlook, and Notion. Todoist, Asana, ClickUp, Trello, and Slack are listed as live on the roadmap while the features page FAQ says coming soon; check before you count on them. It does not work in groups and does not answer general questions."
+          },
+          {
+            "text": "本库没有注册、没有留卡、没有发过任何消息，也没有连接 WhatsApp、Telegram、日历或 Notion。",
+            "textEn": "This library did not sign up, did not save a card, did not send any message, and did not connect WhatsApp, Telegram, a calendar, or Notion."
+          }
+        ],
+        "previewCredit": "预览：Mindie 官方分享图，上下补白边成 3:2，未裁切",
+        "previewCreditEn": "Preview: Mindie's official share image, padded top and bottom in white to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "daksha",
+      "slug": "daksha",
+      "title": "Daksha：写下或说出每天的事，之后问它，每个答案都带出处",
+      "titleEn": "Daksha: write or say your days, ask later, and every answer shows its source",
+      "kind": "tool",
+      "hook": "写日记或说出来，之后问自己的过去，每个答案都带出处。",
+      "hookEn": "Keep a journal, ask about your own life, and see the entry each answer came from.",
+      "summary": "Daksha（https://www.daksha.life ，原名 Debo）是一个带记忆的个人助手，也可以看成一本能提问的生活日记。你用自己的话写日记，一行或一页都行；之后用大白话问自己的过去和计划（官网举例「出发前我还有什么要处理？」），它只根据你写过的内容回答，每个答案下面列出用到的条目和日期，点开就是原文；找不到，或者条目本身没说清，它会直说，不去猜。每存一条日记，它会挑出人、地点、计划这类长期事实，写成一句话的「记忆」放在同一页，每条都带出处；记错了可以改，不想留可以让它忘掉。也可以按下通话键直接开口聊，官网写支持英语或印地语，通话内容会以文字存进日记。官网把账号、日记、提问、记忆和语音通话标为「现在能用」；录语音或视频并转成文字、连接邮箱和日历、提醒、画图、自带模型密钥、自定义聊天对象（可以用文字描述，也可以导入 WhatsApp 聊天记录等材料）都标为「新、早期版本」，并说明实际使用中测得很少。官网写可以免费开始，每人每天有提问次数上限，付费方案还没定。电脑或手机的浏览器都能用；Android 有一个要自己下载安装的早期测试包，还没上 Google Play；iPhone 应用还没有。数据方面官网说得很直白：不是端到端加密，服务器要读你的条目才能搜索，回答时相关片段会发给 AI 公司；你可以查看、修改、导出和删除全部内容。代码仓库是公开的，但根目录没有许可证，README 写权利保留，所以本条不写开源。本库没有注册、没有写日记、没有录音录像，也没有导入任何聊天记录。",
+      "summaryEn": "Daksha (https://www.daksha.life , formerly Debo) is a personal assistant with a memory, or a life journal you can question. You keep a journal in your own words, a line or a page; later you ask about your own past and plans in plain words (the site's example is “What do I need to sort out before the trip?”), and it answers only from what you wrote, lists the entries it used with their dates under each answer, and opens the original when you press a source; if it cannot find it, or the entry itself is unclear, it says so instead of guessing. After each saved entry it picks out lasting facts such as people, places, and plans, and keeps them on one page as one-sentence memories, each with its source; you can fix a wrong one or make Daksha forget it. You can also press talk and speak with it out loud, in English or Hindi according to the site, and each call is kept in your journal as text. The site marks accounts, the journal, asking, memories, and talking out loud as working today; recording a voice note or video and getting the words written out, connecting mail and calendar, reminders, pictures, your own model key, and making your own people to talk to (from a description, or from material such as WhatsApp chat exports) are all marked “New, early version”, with a note that they have had little real-world testing. The site says it is free to start, each person has a daily limit on questions, and plans are not set yet. It works in a browser on a computer or a phone; Android has an early test build you download and install yourself, not on Google Play yet; there is no iPhone app yet. On data the site is blunt: it is not end-to-end encrypted, its servers have to read your entries to search them, and the matching pieces go to an AI company to write the answer; you can see, fix, export, and delete everything. The code repository is public, but its root has no licence and the README says all rights are reserved, so this entry does not call it open source. This library did not sign up, did not write a journal, did not record audio or video, and did not import any chats.",
+      "categories": [
+        "productivity",
+        "daily-digest"
+      ],
+      "role": "个人助手",
+      "sourceUrl": "https://www.daksha.life",
+      "secondaryUrls": [
+        "https://daksha.life/privacy",
+        "https://github.com/playlikeboy/daksha",
+        "https://news.ycombinator.com/item?id=50564967"
+      ],
+      "previewImage": "/previews/daksha.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "写进去的是私人生活记录。官网写明它不是端到端加密，条目会经过它的服务器和几家 AI 公司，其中 Mem0 会不会拿数据训练，官网说还没确认。写真实隐私、连接邮箱和日历、安装 Android 测试包之前，先读隐私页再决定。本库没有注册，也没有写入任何内容。",
+      "approvalBoundaryEn": "What goes in is a private record of your life. The site says it is not end-to-end encrypted and that entries pass through its servers and several AI companies; whether Mem0 trains on the data is, by the site's own account, not yet confirmed. Read the privacy page before you write real private details, connect mail or a calendar, or install the Android test build. This library did not sign up or write anything into it.",
+      "connectors": [
+        "Web",
+        "Android",
+        "Anthropic",
+        "Mem0"
+      ],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-20T01:30:00Z",
+      "qualityNote": "收录理由：个人助手里少见的做法，只从你自己写过的内容回答，给出带日期的出处，找不到就说不知道；它记住了什么也能逐条查看、修改和忘掉。官网对哪些功能成熟、哪些刚做出来、数据交给了哪些公司都写得很坦白，适合当「带出处的个人记忆」这类产品的参照。边界：这是早期版本，以上都是官网、隐私页和仓库说明里的说法，本库没有验证回答是否真的只来自日记、出处是否准确。连接邮箱和日历、提醒、语音和视频笔记、画图、自定义聊天对象和声音复制，都被官网标为新功能、实测很少，不要当成已经可靠。它不是端到端加密；隐私页写在确认之前，应当假定 Mem0 可能拿数据训练。Android 只有需要手动安装的测试包，官网自己写还没人在真机上试过；iPhone 应用还没有。代码公开但没有许可证，不是开源；付费方案未定。本库没有注册账号、没有写日记、没有提问、没有录音或录像、没有通话、没有导入聊天记录，也没有下载或安装 Android 包。",
+      "qualityNoteEn": "Why listed: an uncommon approach among personal assistants. It answers only from what you wrote, gives a dated source, and says it does not know when it finds nothing; what it remembers can be read, fixed, and forgotten one item at a time. The site is candid about which parts are mature, which are brand new, and which companies handle your data, so it is a useful reference for “personal memory with sources” products. Limits: this is an early version, and everything above comes from the site, its privacy page, and the repository notes; this library did not verify that answers really come only from the journal or that the sources are accurate. Connecting mail and calendar, reminders, voice and video notes, pictures, custom people, and voice copying are all marked by the site as new with little real-world testing; do not treat them as reliable yet. It is not end-to-end encrypted, and the privacy page says to assume Mem0 may train on the data until that is confirmed. Android is only a test build you install by hand, which the site itself says nobody has tried on a real phone yet; there is no iPhone app. The code is public but has no licence, so it is not open source; paid plans are not set. This library did not create an account, did not write a journal, did not ask a question, did not record audio or video, did not make a call, did not import chats, and did not download or install the Android build.",
+      "verifyLog": "2026-11-20 上午（Asia/Shanghai，约 09:00–09:30）：https://www.daksha.life HTTP 200，title 为 Daksha: a friendly assistant that remembers your life，meta description 写 Write things down or say them out loud. Ask Daksha about your own life and see the source of every answer. You can see, fix, download and delete everything.；正文写 Free to start, in any web browser. It is an early version, and this page says which parts are new.；标 Works today 的四块是 Write it down, or record it、Ask about your life（Daksha answers only from what you wrote. / If Daksha cannot find it, it says so instead of guessing.）、See what Daksha knows（Every memory is one plain sentence, with the entry it came from.）、Or just talk（in English or Hindi）；标 New, early version 的有：录语音或视频并转文字、Choose who you talk to、Make your own people（可添加 WhatsApp chats, photos, videos, voice notes and call recordings；声音复制写 For now this needs your own Cartesia key）、Connect your apps、Reminders that come to you、A page for every entry、Make a picture（Up to 20 a day）、Use your own key。Get the app 一节写 Daksha works in any web browser, on a computer or a phone. There is also an early app for Android phones.；Android 标 Early test build（It is not on Google Play yet, and nobody has tried it on a real phone yet）；iPhone 标 Not available yet。FAQ 写 Each person has a daily limit on questions、Plans are not set yet, and we will tell you before anything costs money.。https://daksha.life/privacy HTTP 200（Last updated 19 November 2026）：账号、条目和文件存在 Neon（美国，AWS us-east-2），记忆存在 Mem0，回答由 Anthropic 生成，向量由 Neon AI Gateway（Databricks）生成，语音通话经 LiveKit、Deepgram、Cartesia；写 Daksha is not end-to-end encrypted、assume Mem0 may train on what Daksha sends it，以及 LiveKit、Deepgram、Cartesia 的条款尚未核对；页面自述这还不是正式的隐私政策。https://my.daksha.life HTTP 200，只确认地址可达，没有注册或登录。仓库 https://github.com/playlikeboy/daksha 由官网 Get the app 一节的链接指向（APK 放在它的 Releases 里），仓库 homepage 字段为 https://daksha.life，确认是同一产品：公开仓库，TypeScript，created 2026-11-10T02:35:16Z，pushed 2026-11-19T19:25:43Z，核对时 1 star、0 fork，license 字段为空，根目录没有 LICENSE 文件；README 写 The root of the repo has no licence file yet, so all rights are reserved by the owner for the code outside os/，os/ 目录来自 CopilotKit 的 OpenFuse 模板（MIT），CONTRIBUTING.md 写 No licence has been chosen yet；所以写「代码公开、没有许可证」，不写开源。README 顶部写 Debo is now Daksha，并写 There is no iPhone app yet。最新 Release 为 v0.1.0-build.19（2026-11-19T18:55:09Z，early test build），附件含 daksha.apk，本库没有下载。Show HN https://news.ycombinator.com/item?id=50564967 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Daksha – personal assistant that remembers your life, cites sources，作者 sh20raj，2026-11-19T19:25:59Z（上海 2026-11-20 03:25:59），核对时 2 points、1 条评论，帖子没有正文；发帖账号与仓库所有者 playlikeboy 是不是同一个人，没有核对。官网和仓库没有给出早于发帖的公开上线日，publishedAt 取 Show HN 的 UTC 日期。sourceType 记 community，理由同 mindie：项目方在 Show HN 的自荐帖，事实取自项目自己的官网、隐私页和仓库说明。预览：官方分享图 https://www.daksha.life/og.png?v=4（HTTP 200，1200×630），上下各补 85px 浅灰边（#f1f1f1，取图片上下边缘占比最大的底色；原图右侧有一层淡粉色渐变，补边处看得出接缝）成 1200×800 WebP，没有裁切，也没有加字。去重：main 30e8265 与全部 64 个打开的 PR 的 diff 里都没有 daksha、playlikeboy。未做：没有注册账号，没有写日记，没有提问，没有录音、录像或通话，没有导入聊天记录或其它文件，没有连接邮箱或日历，没有下载或安装 APK，也没有运行仓库代码。",
+      "verifyLogEn": "2026-11-20 morning (Asia/Shanghai, about 09:00–09:30): https://www.daksha.life HTTP 200, title Daksha: a friendly assistant that remembers your life; the meta description reads Write things down or say them out loud. Ask Daksha about your own life and see the source of every answer. You can see, fix, download and delete everything.; body copy says Free to start, in any web browser. It is an early version, and this page says which parts are new.; the four blocks marked Works today are Write it down, or record it, Ask about your life (Daksha answers only from what you wrote. / If Daksha cannot find it, it says so instead of guessing.), See what Daksha knows (Every memory is one plain sentence, with the entry it came from.), and Or just talk (in English or Hindi); marked New, early version are: recording a voice note or video with the words written out, Choose who you talk to, Make your own people (you can add WhatsApp chats, photos, videos, voice notes and call recordings; voice copying says For now this needs your own Cartesia key), Connect your apps, Reminders that come to you, A page for every entry, Make a picture (Up to 20 a day), and Use your own key. The Get the app section says Daksha works in any web browser, on a computer or a phone. There is also an early app for Android phones.; Android is marked Early test build (It is not on Google Play yet, and nobody has tried it on a real phone yet); iPhone is marked Not available yet. The FAQ says Each person has a daily limit on questions and Plans are not set yet, and we will tell you before anything costs money. https://daksha.life/privacy HTTP 200 (Last updated 19 November 2026): accounts, entries, and files are stored with Neon (United States, AWS us-east-2), memories with Mem0, answers are written by Anthropic, embeddings come from the Neon AI Gateway (Databricks), and voice calls run through LiveKit, Deepgram, and Cartesia; it says Daksha is not end-to-end encrypted, assume Mem0 may train on what Daksha sends it, and that LiveKit's, Deepgram's, and Cartesia's terms have not been checked yet; the page says it is not yet a full privacy policy. https://my.daksha.life HTTP 200, checked only for reachability, with no sign-up or login. The repository https://github.com/playlikeboy/daksha is linked from the site's Get the app section (the APK sits in its Releases) and its homepage field is https://daksha.life, which confirms it is the same product: public, TypeScript, created 2026-11-10T02:35:16Z, pushed 2026-11-19T19:25:43Z, 1 star and 0 forks at the check, an empty license field, and no LICENSE file in the root; the README says The root of the repo has no licence file yet, so all rights are reserved by the owner for the code outside os/, the os/ directory started from CopilotKit's OpenFuse template (MIT), and CONTRIBUTING.md says No licence has been chosen yet; so the entry says the code is public with no licence and does not say open source. The top of the README says Debo is now Daksha, and it says There is no iPhone app yet. The latest release is v0.1.0-build.19 (2026-11-19T18:55:09Z, early test build) with daksha.apk among its assets; it was not downloaded. Show HN https://news.ycombinator.com/item?id=50564967 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Daksha – personal assistant that remembers your life, cites sources, author sh20raj, 2026-11-19T19:25:59Z (2026-11-20 03:25:59 Shanghai), 2 points and 1 comment at the check, no post text; whether the posting account and the repository owner playlikeboy are the same person was not checked. Neither the site nor the repository gives a public launch date earlier than the post, so publishedAt uses the Show HN's UTC date. sourceType is community for the same reason as mindie: the project's own Show HN post, with facts taken from the project's own site, privacy page, and repository notes. Preview: the official share image https://www.daksha.life/og.png?v=4 (HTTP 200, 1200×630), padded 85px top and bottom in light grey (#f1f1f1, the most common colour along the image's top and bottom edges; the original has a faint pink gradient on the right, so the join is visible there) to a 1200×800 WebP; nothing cropped, no text added. Dedupe: daksha and playlikeboy are absent from main 30e8265 and from the diffs of all 64 open PRs. Not done: no account created, no journal written, no question asked, no audio, video, or call recorded, no chats or other files imported, no mail or calendar connected, no APK downloaded or installed, and the repository code was not run.",
+      "landing": {
+        "what": "给想把日子记下来、过后还问得出来的人。Daksha 把三样东西放在一起：一本日记，一个只读这本日记的问答助手，和一页「它记住了什么」的清单。官网反复强调两条规矩：每个答案都要带出处，没有出处就不猜；在 Daksha 之外发送、发布、付款、删除或修改任何东西之前，要等你在屏幕上点同意。它原名 Debo，旧地址会跳到新地址。",
+        "whatEn": "For people who want to write their days down and still be able to ask about them later. Daksha puts three things together: a journal, an assistant that answers only from that journal, and a page listing what it has remembered. The site keeps returning to two rules: every answer shows its source, and with no source there is no guess; and before it sends, posts, pays, deletes, or changes anything outside Daksha, it waits for a clear yes from you on the screen. It used to be called Debo, and the old addresses lead to the new ones.",
+        "steps": [
+          {
+            "title": "先看一分钟短片，分清哪些是早期功能",
+            "titleEn": "Watch the one-minute film and note which parts are early",
+            "body": "首页有一段约一分钟的动画短片和一段从应用演示模式录下的完整走查，官网说明里面的名字和条目都是编的示例。往下每一块功能都标着 Works today 或 New, early version，先看清你想用的那块属于哪一类。",
+            "bodyEn": "The homepage has an animated film of about a minute and a full walkthrough recorded from the app in demo mode; the site says every name and entry in them is made-up sample text. Each feature block below is labelled Works today or New, early version, so check which label the part you want carries.",
+            "links": [
+              {
+                "href": "https://www.daksha.life",
+                "label": "Daksha 首页",
+                "labelEn": "Daksha home"
+              },
+              {
+                "href": "https://www.daksha.life/daksha-launch.mp4",
+                "label": "一分钟短片",
+                "labelEn": "The one-minute film"
+              }
+            ]
+          },
+          {
+            "title": "读完隐私页，再决定往里写什么",
+            "titleEn": "Read the privacy page before deciding what to write",
+            "body": "隐私页逐项写了数据在哪、谁会看到：账号和条目存在美国的 Neon，记忆存在 Mem0，回答由 Anthropic 生成，语音通话经过 LiveKit、Deepgram 和 Cartesia。页面也直说哪些公司的条款它还没核对完。介意的话，先只写不敏感的内容。",
+            "bodyEn": "The privacy page lists where data lives and who sees it: accounts and entries are stored with Neon in the United States, memories with Mem0, answers are written by Anthropic, and voice calls pass through LiveKit, Deepgram, and Cartesia. It also says plainly which companies' terms it has not finished checking. If that worries you, start with entries that are not sensitive.",
+            "links": [
+              {
+                "href": "https://daksha.life/privacy",
+                "label": "Daksha 如何处理你的数据",
+                "labelEn": "How Daksha handles your data"
+              }
+            ]
+          },
+          {
+            "title": "在浏览器里打开，写一行今天的事，再问它",
+            "titleEn": "Open it in a browser, write one line about today, then ask",
+            "body": "官网写应用在 my.daksha.life，电脑或手机浏览器都能用；iPhone 上可以用 Safari 的「添加到主屏幕」。写一条、存下来，再问一个和它有关的问题，看答案下面的出处，然后去「What Daksha knows」页改一条或忘一条。Android 测试包在仓库的 Releases 里，官网提醒要允许浏览器安装，而且还没人在真机上试过。本库这些都没有做。",
+            "bodyEn": "The site says the app is at my.daksha.life and works in a browser on a computer or a phone; on an iPhone, use Safari's Add to Home Screen. Write an entry, save it, ask a question about it, look at the source under the answer, then fix or forget a memory on the “What Daksha knows” page. The Android test build is in the repository's Releases; the site warns that you must allow installs from your browser and that nobody has tried it on a real phone yet. This library did none of this.",
+            "links": [
+              {
+                "href": "https://my.daksha.life",
+                "label": "打开 Daksha（需注册）",
+                "labelEn": "Open Daksha (sign-up needed)"
+              },
+              {
+                "href": "https://github.com/playlikeboy/daksha/releases",
+                "label": "Android 早期测试包（Releases）",
+                "labelEn": "Android early test build (Releases)"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "早期版本。官网写账号、日记、提问、记忆和语音通话现在能用；语音和视频笔记、连接邮箱日历、提醒、画图、自带密钥、自定义聊天对象都是新功能，实际使用中测得很少。",
+            "textEn": "An early version. The site says accounts, the journal, asking, memories, and talking out loud work today; voice and video notes, connecting mail and calendar, reminders, pictures, your own key, and custom people are new and have had little real-world testing."
+          },
+          {
+            "text": "隐私：不是端到端加密，服务器要读你的条目才能搜索；回答时相关片段会发给 Anthropic。隐私页写，在确认 Mem0 的账户类型之前，应当假定 Mem0 可能拿数据训练；语音通话经过的几家公司的条款也还没核对，介意就打字。",
+            "textEn": "Privacy: it is not end-to-end encrypted, and its servers have to read your entries to search them; the matching pieces go to Anthropic to write the answer. The privacy page says to assume Mem0 may train on the data until its account type is confirmed, and that the terms of the companies carrying voice calls have not been checked yet; if that worries you, type instead."
+          },
+          {
+            "text": "自定义聊天对象和声音复制：官网写声音复制目前需要你自己的 Cartesia 密钥，只能在对方同意、或对方是已去世的近亲时使用，不能是公众人物；它始终说明自己是 AI。这部分是新的，本库没有试，也不建议一上来就导入别人的聊天记录。",
+            "textEn": "Custom people and voice copying: the site says voice copying currently needs your own Cartesia key and is allowed only with the person's permission, or for close family who have died, never a public figure; it always says it is an AI. This part is new and untested here, and importing other people's chats is not a good first step."
+          },
+          {
+            "text": "费用与平台：可以免费开始，每天有提问上限，付费方案未定。浏览器可用；Android 只有需手动安装的测试包，没上 Google Play；iPhone 应用还没有。",
+            "textEn": "Cost and platforms: free to start with a daily limit on questions, and paid plans are not set. It works in a browser; Android is only a test build installed by hand, not on Google Play; there is no iPhone app yet."
+          },
+          {
+            "text": "许可证：代码仓库公开，但根目录没有许可证，README 写权利保留（os/ 目录沿用上游模板的 MIT）。不要当成可以随意取用的开源项目。",
+            "textEn": "Licence: the code repository is public, but its root has no licence and the README says all rights are reserved (the os/ directory keeps the upstream template's MIT). Do not treat it as open source you can freely reuse."
+          },
+          {
+            "text": "本库没有注册、没有写日记、没有提问、没有录音录像或通话、没有导入聊天记录，也没有安装 Android 包。",
+            "textEn": "This library did not sign up, did not write a journal, did not ask a question, did not record audio or video or make a call, did not import chats, and did not install the Android build."
+          }
+        ],
+        "previewCredit": "预览：Daksha 官方分享图，上下补浅灰边成 3:2，未裁切",
+        "previewCreditEn": "Preview: Daksha's official share image, padded top and bottom in light grey to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "mingle",
+      "slug": "mingle",
+      "title": "Mingle：把你已在用的编码助手放进微信、飞书、Slack 等聊天软件",
+      "titleEn": "Mingle: put the coding agent you already use into WeChat, Feishu, Slack, and more",
+      "kind": "tool",
+      "hook": "把你已在用的编码助手放进微信、飞书、Slack 等聊天软件。",
+      "hookEn": "Run the coding agent you already use inside WeChat, Feishu, Slack, Telegram, and more.",
+      "summary": "Mingle（https://mingle.build/ ，作者 earayu，MIT 许可证）是一个装在自己电脑上的程序：把你已经装好并登录的编码助手，接进你常用的聊天软件，变成一个有名字、有记忆的助手。官网列出的可选「大脑」有 Claude Code、Codex、Cursor、OpenCode、Kimi Code、Grok Build、Qwen Code、Qoder、CodeBuddy Code、DeepSeek Harness、Pi、Antigravity、Devin、Factory Droid，其中写明端到端测过的是 Claude Code、Codex、OpenCode 和 Kimi Code。可接入的聊天软件有微信、企业微信、飞书、钉钉、QQ、Slack、Discord、Telegram，另外还有 GitHub 和 Mac 上的 iMessage。同一个助手在它加入的所有聊天软件里共用一个名字和一份记忆：上午在飞书群里定的事，晚上可以在微信里问；在 Telegram 交代一句，它去 Discord 转达。可以私聊，也可以在群里 @ 它。它会记任务、设提醒（还能盯着 CI、网页或新版本，有变化才动），文件可以双向收发；耗时的活放到一边做，同时继续回别人的消息，官网写最多同时做三件事。没有 /new 和 /switch，唯一的命令是 /stop，由主人发出，用来停掉当前任务。官网强调没有 Mingle 服务器、不用注册、没有遥测：控制台只监听本机，记忆和文件留在自己硬盘上，机器人令牌存在系统的凭据库里；但消息仍然会经过聊天软件和你的模型服务商。模型由你登录的编码助手来调用，用的是你自己的订阅或密钥，Mingle 本身免费。仓库说明写它还在早期开发：飞书在真实租户上验证过，其它聊天软件是对着接口和测试验证的。它是给已有编码助手搭的一座跨聊天软件的桥，不是日历或邮件产品。本库没有安装 Mingle，没有扫码，也没有连接任何聊天软件或编码助手。",
+      "summaryEn": "Mingle (https://mingle.build/ , by earayu, MIT licence) is a program that runs on your own computer: it takes the coding agent you already have installed and signed in to and brings it into the chat apps you use, as one agent with a name and a memory. The site lists these harnesses as the agent's “brain”: Claude Code, Codex, Cursor, OpenCode, Kimi Code, Grok Build, Qwen Code, Qoder, CodeBuddy Code, DeepSeek Harness, Pi, Antigravity, Devin, and Factory Droid, and says it is tested end to end with Claude Code, Codex, OpenCode, and Kimi Code. The chat apps it joins are WeChat, WeCom, Feishu, DingTalk, QQ, Slack, Discord, and Telegram, plus GitHub and iMessage on a Mac. The same agent keeps one name and one memory in every chat app it joins: something decided in a Feishu group in the morning can be asked about on WeChat at night, and something you tell it on Telegram it can pass on in Discord. You can message it directly or @ it in a group. It keeps tasks and sets reminders (it can also watch CI, a web page, or a new release and act only when something changes), and files go both ways; long jobs run on the side while it keeps answering everyone else, up to three things at once according to the site. There is no /new and no /switch; the one command is /stop, sent by the owner to stop the current task. The site stresses that there is no Mingle server, no account, and no telemetry: the console listens on the local machine only, memory and files stay on your disk, and bot tokens live in the system's credential store; your messages still pass through the chat app and your model provider. The model is called by the harness you signed in to, on your own subscription or key, and Mingle itself is free. The repository notes say it is in early development: Feishu is verified on a real tenant, the other chat apps against their APIs and in tests. It is a cross-chat-app bridge for a coding agent you already have, not a calendar or email product. This library did not install Mingle, did not scan a login code, and did not connect any chat app or harness.",
+      "categories": [
+        "productivity",
+        "automation",
+        "coding"
+      ],
+      "role": "个人助手",
+      "sourceUrl": "https://mingle.build/",
+      "secondaryUrls": [
+        "https://mingle.build/zh/",
+        "https://mingle.build/llms.txt",
+        "https://github.com/earayu/Mingle",
+        "https://github.com/earayu/Mingle/blob/main/LICENSE",
+        "https://news.ycombinator.com/item?id=50561948"
+      ],
+      "previewImage": "/previews/mingle.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "它让聊天里的人能指挥一个在你电脑上读文件、跑命令的编码助手，花的是你自己的订阅额度。安装、扫码登录、粘贴机器人令牌、把它拉进群之前，先想清楚谁能指挥它、它碰得到哪些目录。仓库说明写 Windows 版还没有签名。本库没有安装，也没有连接任何账号。",
+      "approvalBoundaryEn": "It lets people in a chat direct a coding agent that reads files and runs commands on your computer, on your own subscription quota. Before you install it, scan a login code, paste a bot token, or add it to a group, decide who may direct it and which folders it can reach. The repository notes say the Windows app is not signed yet. This library did not install it or connect any account.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Cursor",
+        "OpenCode",
+        "Kimi Code",
+        "WeChat",
+        "WeCom",
+        "Feishu",
+        "DingTalk",
+        "QQ",
+        "Slack",
+        "Discord",
+        "Telegram",
+        "GitHub",
+        "iMessage"
+      ],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-20T01:30:00Z",
+      "qualityNote": "收录理由：很多人已经在用 Claude Code、Codex 这类编码助手，Mingle 做的是把它接进微信、企业微信、飞书、钉钉、QQ、Slack 这些日常聊天软件，而且是同一个助手、同一份记忆，跑在自己电脑上、不经过它的服务器；许可证是 MIT，适合当「跨应用助手桥」的参照。边界：以上都是官网和仓库说明里的说法，本库没有验证。仓库说明写它还在早期开发，端到端测过的只有 Claude Code、Codex、OpenCode 和 Kimi Code，聊天软件里只有飞书在真实租户上验证过；Cursor 等其余编码助手只是出现在支持列表里。它等于让聊天里的人指挥一个能在你电脑上读文件、跑命令的助手，消息也仍然经过聊天软件和模型服务商，额度花的是你自己的订阅。它不是日历、邮件或通用秘书产品。本库没有安装 Mingle，没有运行安装脚本，没有扫码登录，没有粘贴任何令牌，没有连接任何聊天软件或编码助手，也没有通读源码。",
+      "qualityNoteEn": "Why listed: many people already use a coding agent such as Claude Code or Codex. Mingle brings it into everyday chat apps such as WeChat, WeCom, Feishu, DingTalk, QQ, and Slack as one agent with one memory, running on your own computer with no server of its own in between; it is MIT licensed and a useful reference for a cross-app agent bridge. Limits: everything above comes from the site and the repository notes and was not verified here. The repository notes say it is in early development, tested end to end only with Claude Code, Codex, OpenCode, and Kimi Code, with Feishu the only chat app verified on a real tenant; Cursor and the other harnesses simply appear in the supported list. In effect it lets people in a chat direct an agent that can read files and run commands on your computer; messages still pass through the chat app and the model provider, and the quota spent is your own subscription. It is not a calendar, email, or general secretary product. This library did not install Mingle, did not run the install script, did not scan a login code, did not paste any token, did not connect any chat app or harness, and did not read the full source.",
+      "verifyLog": "2026-11-20 上午（Asia/Shanghai，约 09:00–09:30）：https://mingle.build/ HTTP 200，title 为 Mingle: one agent in every chat app，meta description 写 Mingle brings the coding agent you already use, like Claude Code or Codex, into WeChat, Feishu, Slack, Telegram and more, plus GitHub and iMessage: one agent with a name and a memory, in all of them at once, doing several things at a time. It runs on your computer. There is no Mingle server.；页头写 v0.4.3 · Open source；Harnesses 一栏依次列 Claude Code、Codex、Cursor、OpenCode、Kimi Code、Grok Build、Qwen Code、Qoder、CodeBuddy Code、DeepSeek Harness、Pi、Antigravity、Devin、Factory Droid；Chat apps 一栏列 WeChat、WeCom、Feishu、DingTalk、QQ、Slack、Discord、Telegram、GitHub、iMessage；正文写 There is no /new and no /switch; the one command is /stop、Up to three things run at once、Tested end to end with Claude Code, Codex, OpenCode and Kimi Code、Mingle never calls a model itself、No account, no cloud relay, no telemetry、The console listens on 127.0.0.1 and nowhere else、Bot tokens live in the macOS Keychain, Windows DPAPI or the Linux Secret Service、Your messages still pass through the chat app and your model provider、On apps anyone can find, like Telegram, Discord and QQ, a new person or group waits for your OK；连接方式写微信、企业微信、飞书、钉钉、QQ 扫码，Slack、Discord、Telegram 粘贴 token，GitHub 用助手自己的账号凭码登录，iMessage 用 Mac 上自己和自己的对话；页脚写 © 2026 Mingle · MIT。https://mingle.build/zh/ HTTP 200（中文版，用来核对各聊天软件的中文叫法）。https://mingle.build/llms.txt HTTP 200，写 Price: free. No account, no Mingle server, no telemetry.，以及 GitHub 上它用自己的账号回应仓库所有者、成员和协作者在 issue、pull request 和 review 里的 @。仓库 https://github.com/earayu/Mingle HTTP 200：gh api 返回 license 为 MIT，LICENSE 文件正文是 MIT License / Copyright (c) 2026 earayu，已读；TypeScript，created 2026-11-11T07:47:51Z，pushed 2026-11-19T22:01:23Z，核对时 51 stars、5 forks；Releases 共 30 个，最早 v0.1.0（2026-11-13T05:36:14Z），最新 v0.4.3（2026-11-19T22:18:19Z）；README 写 Mingle is in early development. The core works end to end with Claude Code, Codex, OpenCode and Kimi Code. Feishu is verified on a real tenant; the other chat apps against their APIs and in tests.、The macOS app is signed and notarized by Apple. The Windows app is not signed yet、We aren't accepting pull requests for now，各 harness 通过 OAR（github.com/botiverse/oar）接入。Show HN https://news.ycombinator.com/item?id=50561948 页面 HTTP 200，Algolia items 接口 HTTP 200：标题 Show HN: Any agent, in any chat app，作者 earayu（与仓库所有者同名），2026-11-19T16:09:53Z（上海 2026-11-20 00:09:53），核对时 4 points、0 条评论，帖子没有正文。仓库最早的 Release 比发帖早六天，但没法确认仓库当时是否已经公开，publishedAt 取 Show HN 的 UTC 日期。sourceType 记 community，理由同 mindie：作者本人在 Show HN 的自荐帖，事实取自作者自己的官网和仓库说明。预览：官网的分享图兼首屏图 https://mingle.build/img/agent-en-light.png（HTTP 200，2560×1600），等比缩到 1200×750，上下各补 25px 白边成 1200×800 WebP，没有裁切，也没有加字；图里是官方的示例控制台，不是本库的截图。去重：main 30e8265 与全部 64 个打开的 PR 的 diff 里都没有 mingle、mingle.build。未做：没有下载或安装 Mingle，没有运行安装脚本或源码，没有扫码登录，没有粘贴任何令牌，没有连接任何聊天软件或编码助手，也没有通读源码。",
+      "verifyLogEn": "2026-11-20 morning (Asia/Shanghai, about 09:00–09:30): https://mingle.build/ HTTP 200, title Mingle: one agent in every chat app; the meta description reads Mingle brings the coding agent you already use, like Claude Code or Codex, into WeChat, Feishu, Slack, Telegram and more, plus GitHub and iMessage: one agent with a name and a memory, in all of them at once, doing several things at a time. It runs on your computer. There is no Mingle server.; the header says v0.4.3 · Open source; the Harnesses row lists, in order, Claude Code, Codex, Cursor, OpenCode, Kimi Code, Grok Build, Qwen Code, Qoder, CodeBuddy Code, DeepSeek Harness, Pi, Antigravity, Devin, Factory Droid; the Chat apps row lists WeChat, WeCom, Feishu, DingTalk, QQ, Slack, Discord, Telegram, GitHub, iMessage; body copy says There is no /new and no /switch; the one command is /stop, Up to three things run at once, Tested end to end with Claude Code, Codex, OpenCode and Kimi Code, Mingle never calls a model itself, No account, no cloud relay, no telemetry, The console listens on 127.0.0.1 and nowhere else, Bot tokens live in the macOS Keychain, Windows DPAPI or the Linux Secret Service, Your messages still pass through the chat app and your model provider, and On apps anyone can find, like Telegram, Discord and QQ, a new person or group waits for your OK; to connect, WeChat, WeCom, Feishu, DingTalk, and QQ scan a code, Slack, Discord, and Telegram take a pasted token, GitHub signs in the agent's own account with a code, and iMessage uses your chat with yourself on a Mac; the footer says © 2026 Mingle · MIT. https://mingle.build/zh/ HTTP 200 (the Chinese edition, used to check the Chinese names of the chat apps). https://mingle.build/llms.txt HTTP 200: Price: free. No account, no Mingle server, no telemetry., and on GitHub it uses an account of its own and answers @mentions in issues, pull requests, and review threads from repository owners, members, and collaborators. Repository https://github.com/earayu/Mingle HTTP 200: gh api returns the MIT license, and the LICENSE file reads MIT License / Copyright (c) 2026 earayu, which was read; TypeScript, created 2026-11-11T07:47:51Z, pushed 2026-11-19T22:01:23Z, 51 stars and 5 forks at the check; 30 releases, the earliest v0.1.0 (2026-11-13T05:36:14Z) and the latest v0.4.3 (2026-11-19T22:18:19Z); the README says Mingle is in early development. The core works end to end with Claude Code, Codex, OpenCode and Kimi Code. Feishu is verified on a real tenant; the other chat apps against their APIs and in tests., The macOS app is signed and notarized by Apple. The Windows app is not signed yet, and We aren't accepting pull requests for now, with harnesses connected through OAR (github.com/botiverse/oar). Show HN https://news.ycombinator.com/item?id=50561948 page HTTP 200 and the Algolia items API HTTP 200: title Show HN: Any agent, in any chat app, author earayu (the same name as the repository owner), 2026-11-19T16:09:53Z (2026-11-20 00:09:53 Shanghai), 4 points and 0 comments at the check, no post text. The repository's earliest release is six days before the post, but whether the repository was already public then cannot be confirmed, so publishedAt uses the Show HN's UTC date. sourceType is community for the same reason as mindie: the author's own Show HN post, with facts taken from the author's own site and repository notes. Preview: the site's share and hero image https://mingle.build/img/agent-en-light.png (HTTP 200, 2560×1600), scaled to 1200×750 and padded 25px top and bottom in white to a 1200×800 WebP; nothing cropped, no text added; it shows the vendor's sample console, not a screenshot taken by this library. Dedupe: mingle and mingle.build are absent from main 30e8265 and from the diffs of all 64 open PRs. Not done: Mingle was not downloaded or installed, neither the install script nor the source was run, no login code was scanned, no token was pasted, no chat app or harness was connected, and the full source was not read.",
+      "landing": {
+        "what": "给已经在用 Claude Code、Codex 这类编码助手，又希望在微信、飞书、Slack 里随时能叫到它的人。Mingle 不自带模型，也不是一个新的聊天平台：它在你电脑上起一个本地程序，一头通过各聊天软件的官方机器人接口收发消息，一头把消息交给你已登录的编码助手的一个长期会话。官网的说法是「像一个人，而不是每个软件里各有一个机器人」。",
+        "whatEn": "For people who already use a coding agent such as Claude Code or Codex and want to reach it from WeChat, Feishu, or Slack. Mingle brings no model of its own and is not a new chat platform: it runs a local program on your computer that sends and receives messages through each chat app's official bot API on one side and hands them to a single long-lived session of the coding agent you are signed in to on the other. The site's phrase is “like a person, not a bot per app”.",
+        "steps": [
+          {
+            "title": "先看清它需要什么",
+            "titleEn": "See what it needs first",
+            "body": "它跑在你自己的电脑上（macOS、Windows 或 Linux），还需要一个已经装好并登录的编码助手。官网写端到端测过的是 Claude Code、Codex、OpenCode 和 Kimi Code；仓库说明写项目还在早期开发。先读官网和 README 的现状说明。",
+            "bodyEn": "It runs on your own computer (macOS, Windows, or Linux) and needs a coding agent that is already installed and signed in. The site says it is tested end to end with Claude Code, Codex, OpenCode, and Kimi Code; the repository notes say the project is in early development. Read the status notes on the site and in the README first.",
+            "links": [
+              {
+                "href": "https://mingle.build/zh/",
+                "label": "Mingle 中文官网",
+                "labelEn": "Mingle site (Chinese)"
+              },
+              {
+                "href": "https://github.com/earayu/Mingle",
+                "label": "GitHub 仓库与 README",
+                "labelEn": "GitHub repository and README"
+              }
+            ]
+          },
+          {
+            "title": "安装，并建一个助手",
+            "titleEn": "Install it and create an agent",
+            "body": "官网提供桌面版下载和终端里的一行安装命令，也可以用 Node.js 24 和 pnpm 从源码构建。仓库说明写 macOS 版已由 Apple 签名并公证，Windows 版还没有签名。装好后新建一个助手：起个名字，用大白话写它是谁，再从本机已有的编码助手里选一个当它的「大脑」。",
+            "bodyEn": "The site offers a desktop download and a one-line install from a terminal, and you can also build from source with Node.js 24 and pnpm. The repository notes say the macOS app is signed and notarized by Apple and the Windows app is not signed yet. Then create an agent: give it a name, say who it is in plain words, and pick its “brain” from the harnesses already on this computer.",
+            "links": [
+              {
+                "href": "https://github.com/earayu/Mingle/releases",
+                "label": "Releases 下载",
+                "labelEn": "Releases"
+              }
+            ]
+          },
+          {
+            "title": "接入聊天软件，认领主人",
+            "titleEn": "Connect a chat app and claim ownership",
+            "body": "官网写：微信、企业微信、飞书、钉钉和 QQ 用手机扫码；Slack、Discord 和 Telegram 粘贴机器人令牌；GitHub 用助手自己的账号凭码登录；Mac 上的 iMessage 用你和自己的对话。扫码的人，或把控制台显示的 6 位码发给它的人，就是它的主人。之后私聊它，或在群里 @ 它；要停下当前任务，主人发 /stop。",
+            "bodyEn": "The site says: scan a code with your phone for WeChat, WeCom, Feishu, DingTalk, and QQ; paste a bot token for Slack, Discord, and Telegram; sign in the agent's own GitHub account with a code; on a Mac, iMessage uses your chat with yourself. Whoever scans the code, or sends the bot the 6-digit code the console shows, is its owner. Then message it directly or @ it in a group; to stop the current task, the owner sends /stop.",
+            "links": [
+              {
+                "href": "https://mingle.build/llms.txt",
+                "label": "llms.txt：功能与命令行摘要",
+                "labelEn": "llms.txt: features and CLI summary"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "权限：助手背后是一个能在你电脑上读文件、跑命令的编码助手。把它拉进群，就等于让群里的人能向它派活。官网写在 Telegram、Discord、QQ 这类谁都能找到它的软件上，新的人或群要等主人同意后它才干活；其它软件上的规则，用之前自己确认。",
+            "textEn": "Permissions: behind the agent is a coding agent that can read files and run commands on your computer. Adding it to a group lets the people there hand it work. The site says that on apps anyone can find, like Telegram, Discord, and QQ, a new person or group waits for the owner's OK before the agent works for them; check the rules for other apps before you rely on them."
+          },
+          {
+            "text": "数据：没有 Mingle 服务器、不用注册、没有遥测，是官网的说法；控制台只监听本机，令牌存在系统凭据库里；iMessage 没有机器人接口，官网写它走你 Mac 上自己的 Apple ID，不经过云端中转。但消息仍然经过聊天软件和你的模型服务商，那部分由它们各自的规则决定。",
+            "textEn": "Data: no Mingle server, no account, and no telemetry are the site's statements; the console listens on the local machine only and tokens live in the system credential store; iMessage has no bot API, and the site says it runs on your own Apple ID on your Mac, never through a cloud bridge. Messages still pass through the chat app and your model provider, and that part follows their rules."
+          },
+          {
+            "text": "费用：Mingle 本身免费，MIT 许可证。模型调用走你已登录的编码助手，花的是你自己的订阅额度或密钥；群里的人用得多，你的额度就掉得快。",
+            "textEn": "Cost: Mingle itself is free and MIT licensed. Model calls go through the harness you are signed in to and spend your own subscription quota or key; the more a group uses it, the faster your quota goes."
+          },
+          {
+            "text": "成熟度：仓库说明写它还在早期开发，只有飞书在真实租户上验证过，其它聊天软件是对着接口和测试验证的；Cursor 等编码助手在支持列表里，但不在「端到端测过」的四个之内。各聊天软件对机器人账号有各自的规则，本库没有核对。",
+            "textEn": "Maturity: the repository notes say it is in early development, with only Feishu verified on a real tenant and the other chat apps checked against their APIs and in tests; Cursor and other harnesses are in the supported list but not among the four tested end to end. Each chat app has its own rules for bot accounts, which this library did not check."
+          },
+          {
+            "text": "本库没有安装 Mingle，没有扫码登录，没有粘贴令牌，也没有连接任何聊天软件或编码助手。",
+            "textEn": "This library did not install Mingle, did not scan a login code, did not paste a token, and did not connect any chat app or harness."
+          }
+        ],
+        "previewCredit": "预览：Mingle 官网首屏的官方示例控制台图，等比缩小后上下补白边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the official sample console image from Mingle's homepage, scaled down and padded top and bottom in white to 3:2, not cropped"
+      }
+    },
+    {
       "id": "directors-lookbook",
       "slug": "directors-lookbook",
       "title": "Director's Lookbook：说出感觉，发一手有名字的风格卡和可粘贴的提示词",
@@ -11907,10 +12305,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-20T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.81",
-    "count": 219,
+    "version": "1.4.82",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12227,7 +12625,33 @@
       "https://directorslookbook.app/privacy/",
       "https://directorslookbook.app/terms/",
       "https://directorslookbook.app/media/og.jpg?v=2",
-      "https://news.ycombinator.com/item?id=50541419"
+      "https://news.ycombinator.com/item?id=50541419",
+      "https://www.getmindie.app",
+      "https://www.getmindie.app/features",
+      "https://www.getmindie.app/features/telegram",
+      "https://www.getmindie.app/pricing",
+      "https://www.getmindie.app/roadmap",
+      "https://www.getmindie.app/privacy",
+      "https://www.getmindie.app/terms",
+      "https://www.getmindie.app/refund",
+      "https://www.getmindie.app/security",
+      "https://www.getmindie.app/mindie.md",
+      "https://www.getmindie.app/llms.txt",
+      "https://www.getmindie.app/og-image.png",
+      "https://news.ycombinator.com/item?id=50567911",
+      "https://www.daksha.life",
+      "https://daksha.life/privacy",
+      "https://my.daksha.life",
+      "https://github.com/playlikeboy/daksha",
+      "https://www.daksha.life/og.png?v=4",
+      "https://news.ycombinator.com/item?id=50564967",
+      "https://mingle.build/",
+      "https://mingle.build/zh/",
+      "https://mingle.build/llms.txt",
+      "https://github.com/earayu/Mingle",
+      "https://github.com/earayu/Mingle/blob/main/LICENSE",
+      "https://mingle.build/img/agent-en-light.png",
+      "https://news.ycombinator.com/item?id=50561948"
     ]
   }
 }
