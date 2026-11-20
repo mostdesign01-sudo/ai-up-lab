@@ -50,6 +50,21 @@ Image 2.5 提示词看板（Image prompts）与三套内容库、可跑路径、
 | `relatedModelIds` | string[] | 可选，指向 `data/models.json` 里已有的 `id`（例如日后开了 GPT-Image-2.5 模型卡）；构建时必须能解析 |
 | `featured` | boolean | 是否在看板靠前 |
 | `stars` | number | 可选，编辑星级 1–5 整数（★ 显示在卡片与详情）。只表示这张卡的整理质量，不为原站内容背书；不填则不显示 |
+| `prompt` | string | 可选，本库存下的完整提示词。没有原文就不要填；摘要、收录理由、来源说明都不能拿来冒充提示词。画廊页缺这个字段时显示「提示词待补充」，复制按钮停用 |
+| `promptEn` | string | 可选，英文提示词。只有一份原文时只填实际语言的那一栏 |
+| `images` | string[] | 可选，多图。站内路径如 `/previews/{id}.webp`，或已核实的绝对 URL。有此项时按数组顺序做灯箱；第一张是卡片主图。多于一张才显示 `1/n` 角标和左右切换。不填则只用 `previewImage` |
+| `params` | object[] | 可选，确实记下的生成参数，见下。没有就不写，界面不显示参数区 |
+| `author` | string | 可选，作者署名。不填时灯箱用 `sourceBy`（如果有） |
+| `authorEn` | string | 可选，英文署名 |
+| `recreateUrl` | string | 可选，「做同款」链接：`https://` 外链，或站内 `/tools/` 这类路径。不填且站内有工具目录时，按钮链到 `/tools/`；两者都没有则不显示按钮 |
+
+### `params[]`
+
+| 字段 | 类型 | 说明 |
+| --- | --- | --- |
+| `label` | string | 参数名（中文） |
+| `labelEn` | string | 可选，英文参数名；不填则沿用 `label` |
+| `value` | string | 记下的值。不要用猜测的步数、比例或种子充数 |
 
 ### `secondaryUrls[]`
 
