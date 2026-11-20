@@ -1,6 +1,233 @@
 {
   "cases": [
     {
+      "id": "dreamcoder",
+      "slug": "dreamcoder",
+      "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
+      "titleEn": "DreamCoder: a local coding harness that tiles agents, terminals, and reviews in your browser",
+      "kind": "tool",
+      "hook": "装在自己机器上的编程工作台，浏览器里平铺多个 agent 和终端。",
+      "hookEn": "A local AI coding harness that tiles agents, terminals, and reviews in one browser window.",
+      "summary": "DreamCoder（https://www.dreamcoder.ai/ ）是 Mastering Emacs 作者 Mickey Petersen 发布的本地优先 AI 编程 harness：程序装在你自己的机器上，用浏览器打开 http://localhost:9889 使用，界面是一个平铺式窗口管理器。每个 agent、终端、代码审阅和计划各占一格，可以拖动、隐藏、拆分，也可以把一段对话分叉到新窗口；右上角的小地图给每一格亮红绿灯：在跑、等你处理、已完成。官网的说法是「一屏几十个 agent，管理几百个」。键盘优先：进入键盘模式后用 WASD 移动、交换和缩放窗格，Q/E 切换工作区；按 Alt+W（官网叫 winch）给对话里的链接、表格、按钮和图片各标一个字母，按字母就能打开链接，或把表格复制成 Markdown / TSV。其它功能按官网列出的写：对话里渲染 LaTeX、Mermaid 和 Markdown，终端并排放；事件图把每次提示、工具调用、结果和目标连成可以回看的节点；大任务会写成嵌套的目标，每个目标带完成检查；Agent Studio 用一句话描述来搭自己的 agent，可以选模型、增减可用动作；子 agent 在后台干活并回报；接 MCP 服务器也是一句话，支持网址或本地命令，登录方式有 OAuth、保存的密钥或免登录。手机和平板用浏览器连到同一台机器，看到的是同一套界面的单列排版。模型方面，官网写支持从前沿托管模型到自己显卡上的小模型，走标准接口，原生支持 GitHub Copilot for Business，也可以用 OpenAI Codex 订阅。平台：macOS 14+（Apple Silicon）、Windows 10 / 11、Linux x86_64，以及 Docker / Podman 镜像。价格页写：个人用途免费，五人以内的公司也免费；超过五人用于工作时需要 Pro，每席每月 20 美元，另加适用的 VAT，从第六个人起所有人都要买席位，包括前五个；Pro 不多给功能，只是许可；Enterprise 需要联系 hello@dreamcoder.ai。停止付费后，除了和 AI 模型对话，其它功能照常，数据留在本机数据库。它不是开源软件：以安装包和容器镜像分发，受 EULA 约束，首次启动要登录或注册 DreamCoder 账号。适合同时开很多编程 agent、嫌终端标签页来回切看不清进度的人。本库没有下载、安装或运行 DreamCoder，没有注册账号，也没有通过它和任何模型对话。",
+      "summaryEn": "DreamCoder (https://www.dreamcoder.ai/ ) is a local-first AI coding harness released by Mickey Petersen, the author of Mastering Emacs. The program is installed on your own machine and used from a browser at http://localhost:9889; the interface is a tiling window manager. Every agent, terminal, code review, and plan gets its own pane that you can drag, hide, split, or fork into a new window, and a minimap in the top-right corner puts a traffic light on every pane: running, needs you, or done. The site's own line is “Dozens of agents on one screen; hundreds under management.” It is keyboard-first: in keyboard mode WASD moves, swaps, and resizes panes and Q/E jumps between workspaces; Alt+W (the site calls it winch) gives every link, table, button, and image in a chat a letter, so you can open a link or copy a table as Markdown or TSV by typing it. Other features, as the site lists them: LaTeX, Mermaid, and Markdown rendered in the chat with terminals alongside; an event graph that links every prompt, tool call, result, and objective into nodes you can walk; big requests written as nested objectives, each with the checks that finish it; Agent Studio for building your own agents from a one-sentence description, choosing the model and granting or revoking actions; sub-agents that work in the background and report back; and MCP servers connected in one sentence, by web address or local command, signing in with OAuth, a saved key, or nothing. A phone or tablet reaches the same machine through a browser and gets the same interface reflowed to one column. For models, the site says frontier hosted models down to small ones on your own GPU over any standard endpoint, native support for GitHub Copilot for Business, or your OpenAI Codex subscription. Platforms: macOS 14+ on Apple Silicon, Windows 10 and 11, Linux x86_64, and Docker / Podman images. The pricing page says it is free for personal use and for businesses of up to five people; when more than five people use it for work, Pro is $20 per seat a month plus VAT where it applies, and from the sixth person everyone needs a paid seat, including the first five; Pro adds no features, it is the licence; Enterprise means emailing hello@dreamcoder.ai. If you stop paying, everything keeps working except talking to AI models, and your data stays in a local database. It is not open source: it ships as installers and a container image under a EULA, and the first launch asks you to sign in with or create a DreamCoder account. Good for people who run many coding agents at once and cannot see what each one is doing across terminal tabs. This library did not download, install, or run DreamCoder, did not create an account, and did not talk to any model through it.",
+      "categories": [
+        "coding",
+        "multi-agent",
+        "engineering"
+      ],
+      "role": "AI coding harness",
+      "sourceUrl": "https://www.dreamcoder.ai/",
+      "secondaryUrls": [
+        "https://www.dreamcoder.ai/pricing/",
+        "https://www.dreamcoder.ai/downloads",
+        "https://www.masteringemacs.org/article/announcing-dreamcoder",
+        "https://www.dreamcoder.ai/eula/",
+        "https://www.dreamcoder.ai/licence-schedule/",
+        "https://news.ycombinator.com/item?id=50573266"
+      ],
+      "previewImage": "/previews/dreamcoder.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "运行安装脚本或安装包、接受 EULA、注册账号，或把服务开放给本机以外的设备之前，先读脚本和条款；超过五人用于工作要先买 Pro。本库没有代为安装或注册。",
+      "approvalBoundaryEn": "Read the install script and the terms before you run the script or an installer, accept the EULA, create an account, or expose the server beyond your own machine; work use by more than five people needs Pro first. This library did not install it or sign up.",
+      "connectors": [
+        "MCP",
+        "GitHub Copilot",
+        "OpenAI Codex",
+        "Docker"
+      ],
+      "publishedAt": "2026-11-20",
+      "updatedAt": "2026-11-20T12:15:00Z",
+      "qualityNote": "收录理由：同时开很多编程 agent 时，终端标签页很难看清谁在跑、谁在等你。DreamCoder 把 agent、终端、审阅和计划放进一个浏览器里的平铺窗口，用键盘就能调度；作者是写 Mastering Emacs 的 Mickey Petersen，发布文说做了十五个月。边界：不是开源软件，只有安装包和容器镜像，受 EULA 约束，条款禁止反编译取得源码；首次启动要登录或注册账号，许可会不定期联网续期。个人用途和五人以内的公司免费，超过五人用于工作要买 Pro（每席每月 20 美元，另加适用的 VAT），以官方价格页为准。「一屏几十个 agent、管理几百个」「99% 缓存命中」「能连跑几天」都是官网和作者的说法，不是本库测出来的。模型调用的费用和数据去向取决于你自己接的模型服务商。不要和 GitHub 上同名的 GoDiao/dreamcoder 混淆，那是另一个无关项目。本库没有下载、安装或运行，没有注册账号，也没有通过它和任何模型对话。",
+      "qualityNoteEn": "Why listed: with many coding agents open, terminal tabs make it hard to see which one is running and which one is waiting for you. DreamCoder puts agents, terminals, reviews, and plans into one tiled browser window you can drive from the keyboard; it comes from Mickey Petersen, the author of Mastering Emacs, whose announcement says it took fifteen months. Limits: it is not open source; it ships only as installers and a container image under a EULA that forbids decompiling it to obtain the source; the first launch needs a DreamCoder account, and the licence renews over the internet from time to time. Personal use and businesses of up to five people are free; work use by more than five people needs Pro ($20 per seat a month plus VAT where it applies), and the official pricing page is the reference. “Dozens of agents on one screen; hundreds under management”, the 99% cache hit, and runs lasting days are the site's and the author's statements, not measured here. Model costs and where your data goes depend on the model provider you connect. Do not confuse it with the same-named GitHub repository GoDiao/dreamcoder, which is an unrelated project. This library did not download, install, or run it, did not create an account, and did not talk to any model through it.",
+      "verifyLog": "2026-11-20 晚间（Asia/Taipei，约 19:59–20:15）：https://www.dreamcoder.ai/ HTTP 200，title 为 DreamCoder — Turn your dreams into code；页头写 One window. Every agent. 和 Dozens of agents on one screen; hundreds under management … It runs on your own machine; you reach it from any browser, at your desk or on your phone.，平台行写 macOS 14+ on Apple Silicon · Windows 10 and 11 · Linux x86_64 · Docker；各功能段的演示框标着 http://localhost:9889；正文写 Tap into keyboard mode and use WASD to move, swap and resize panes, and Q/E to jump between workspaces、Press Alt+W and every link, table, button and image in a chat gets a letter、Every prompt, tool call, result and objective is a node you can walk、nested objectives, each with the checks that say when it is done、Agent Studio lets you build sub-agents and conversation AI、Connecting a server is one sentence（A web address or a local command; OAuth, a saved key, or no sign-in）、The same app, in your pocket、DreamCoder does not require tinkering with configuration files. It has none.、Frontier hosted models down to small ones on your own GPU, over any standard endpoint. Native support for GitHub Copilot for Business, or bring your OpenAI Codex subscription.；安装段写 A ZIP for macOS, a Windows setup package, a .deb for Linux, and an OCI image for containers，apt 安装示例的输出里有 Setting up dreamcoder (1.0.11)，状态示意图写 dreamcoder · v1.0.11 和 listen 127.0.0.1:9889，自定义主机示例是 https://dreamcoder.acme.lan:8443，并写 Tailscale, Cloudflare Tunnel and plain old port-forwarding are first-class；Where this is going 一段写 It isn't all there yet。1.0.11 只是首页示例里的数字：下载页的当前版本和文件列表由脚本加载，这次抓到的静态页面只有 Checking for the latest release…，没有读到实际版本号，所以正文不写版本。https://www.dreamcoder.ai/pricing/ HTTP 200：meta description 为 DreamCoder is free for personal use and for businesses of up to five people. Past that, Pro is $20 per seat a month.；Pro 写 $20 per seat a month、Each seat covers that person on up to five installations、Paid by card in US dollars, plus VAT where it applies；Enterprise 写 Talk to us（invoiced and paid by bank transfer），邮件链接指向 hello@dreamcoder.ai；Five people or fewer pay nothing. From the sixth person, everyone needs a paid seat, including the first five.；VAT 一栏写 UK buyers pay 20%，有有效 VAT 号的 EU 企业不付，其它 EU 买家按本国税率，其余地区没有 VAT；FAQ 写 Does Pro unlock extra features? No. DreamCoder is the same app on Free and Pro.、Personal use means your own non-commercial projects.、After that, everything in DreamCoder keeps working except talking to AI models. Your data is stored locally, in a database on your own machine.、Your licence is issued when you create an account and renewed automatically over the internet from time to time.。https://www.dreamcoder.ai/downloads HTTP 200：On first launch, sign in with your DreamCoder account or create one.；macOS 推荐 curl … https://www.dreamcoder.ai/install.sh | sh，或下载 ZIP 后执行 xattr -dr com.apple.quarantine \"/Applications/DreamCoder.app\"（页面写 Without it, macOS may say it cannot verify the app and refuse to open it.）；Windows 是 setup package；Debian · Ubuntu 是 amd64 的 .deb（sudo apt install ./dreamcoder*_amd64.deb）；容器段给了 docker run 示例（-p 9889:9889、-p 127.0.0.1:1455:1455、DREAMCODER_ALLOWED_ORIGINS=http://localhost:9889），镜像地址在静态页面上是占位符 <registry-host>/dreamcoder:<release-tag>。install.sh 本身没有抓取。https://www.dreamcoder.ai/eula/ HTTP 200：DreamCoder End User Licence Agreement，Version 1.1，Effective date 2026-10-11，许可方 Polyhedron Investment Limited（England & Wales，company number 13208993）；第 4 条禁止 reverse engineer, decompile or disassemble the compiled DreamCoder distribution to obtain its source code；第 8 条写 These connections may transmit prompts, code, files or other information needed for the functions you enable.。https://www.dreamcoder.ai/licence-schedule/ HTTP 200：Schedule version 1.2，Effective date 2026-10-11，Free Business Threshold 为 Five (5) Seats，Instances per Seat 为 Five (5)，Post-expiry access 写 All DreamCoder functionality except AI communication. All user data is stored locally in a database.。https://www.dreamcoder.ai/privacy-policy/ HTTP 200：收集项里有 Account information 和 Telemetry related to the use of the application。https://www.dreamcoder.ai/blog/ HTTP 200，写 Nothing posted yet。发布文 https://www.masteringemacs.org/article/announcing-dreamcoder HTTP 200：标题 Announcing DreamCoder，By Mickey Petersen，20 November 2026；写 after 15 months of work … culminating in a successful beta test, I am now ready to release DreamCoder、DreamCoder is a frontier coding harness with a tiling window manager that runs in your browser on all 3 platforms、DreamCoder is not an Emacs-related application、Alt+x / Alt+c / Alt+m（keyboard mode）、a big, honking minimap in the top-right corner、Support for open weight models like Qwen, Gemma, Deepseek, GLM、MCP, backgroundable sub agents and shell commands, terminal windows, skills, hooks, 99% cache hit, it runs for days、importer for your Pi, OpenCode or Codex configs；文中的渗透测试套件写的是 upcoming，本条没有当作现有功能。Hacker News：Algolia 搜索接口 HTTP 200，找到 https://news.ycombinator.com/item?id=50573266（页面 HTTP 200），标题 Dreamcoder – coding harness from the author of Mastering Emacs，指向发布文，提交者 hiyer，2026-11-20T11:34:46Z（台北 19:34:46），核对时 1 point、0 条评论。同一次搜索还看到一条更早的提交 item 49362971（2026-08-19，标题 Dream Coder ADE，指向 dreamcoder.ai，1 point），说明站点在公测期间已经公开；publishedAt 取正式发布文的日期 2026-11-20。开源核对：首页、价格页、下载页和发布文里没有 github.com 链接，也没有 MIT / Apache 等开源许可字样；gh search repos dreamcoder 的结果是同名的 DreamCoder 程序学习研究相关仓库和无关仓库；GoDiao/dreamcoder（gh api：2026-05-26 创建，主页 godiao.github.io/dreamcoder）是另一个项目，和 dreamcoder.ai 无关，本条没有引用。预览：官网首页的官方截图 https://www.dreamcoder.ai/assets/first-look.webp（HTTP 200，2880×1620；与发布文里的 https://www.masteringemacs.org/static/uploads/dreamcoder/first-look.webp 逐字节相同），等比缩到 1200×675，上方补 62px、下方补 63px 的图片边缘色，成 1200×800 WebP，没有裁切，也没有加字。站点的 og:image 是月亮图标 moon-1024.png（1024×1024），没有采用。去重：main 30e8265 的 data、src 里没有 dreamcoder；逐个检查了全部 PR 分支的 data 目录（含 #163、#166、#167、#169、#170、#171），也没有这一条。未做：没有下载或执行安装脚本、安装包和镜像，没有运行 DreamCoder，没有注册或登录账号，没有接任何模型或 MCP 服务器，没有打开 billing.dreamcoder.ai。",
+      "verifyLogEn": "2026-11-20 evening (Asia/Taipei, about 19:59–20:15): https://www.dreamcoder.ai/ HTTP 200, title DreamCoder — Turn your dreams into code; the header reads One window. Every agent. and Dozens of agents on one screen; hundreds under management … It runs on your own machine; you reach it from any browser, at your desk or on your phone.; the platform line reads macOS 14+ on Apple Silicon · Windows 10 and 11 · Linux x86_64 · Docker; the demo frames in each feature section are labelled http://localhost:9889; body copy says Tap into keyboard mode and use WASD to move, swap and resize panes, and Q/E to jump between workspaces; Press Alt+W and every link, table, button and image in a chat gets a letter; Every prompt, tool call, result and objective is a node you can walk; nested objectives, each with the checks that say when it is done; Agent Studio lets you build sub-agents and conversation AI; Connecting a server is one sentence (A web address or a local command; OAuth, a saved key, or no sign-in); The same app, in your pocket; DreamCoder does not require tinkering with configuration files. It has none.; and Frontier hosted models down to small ones on your own GPU, over any standard endpoint. Native support for GitHub Copilot for Business, or bring your OpenAI Codex subscription. The install section says A ZIP for macOS, a Windows setup package, a .deb for Linux, and an OCI image for containers; the apt install example output includes Setting up dreamcoder (1.0.11); the status illustration reads dreamcoder · v1.0.11 and listen 127.0.0.1:9889; the custom host example is https://dreamcoder.acme.lan:8443; and it says Tailscale, Cloudflare Tunnel and plain old port-forwarding are first-class. The Where this is going section says It isn't all there yet. 1.0.11 is only the number in the homepage examples: the downloads page loads the current release and file list by script, the static page fetched here shows only Checking for the latest release…, and no actual release number was read, so the entry text gives no version. https://www.dreamcoder.ai/pricing/ HTTP 200: the meta description is DreamCoder is free for personal use and for businesses of up to five people. Past that, Pro is $20 per seat a month.; Pro reads $20 per seat a month, Each seat covers that person on up to five installations, and Paid by card in US dollars, plus VAT where it applies; Enterprise reads Talk to us (invoiced and paid by bank transfer) with a mail link to hello@dreamcoder.ai; Five people or fewer pay nothing. From the sixth person, everyone needs a paid seat, including the first five.; the VAT row says UK buyers pay 20%, EU businesses with a valid VAT number pay none, other EU buyers pay their country's rate, and everywhere else there is no VAT; the FAQ says Does Pro unlock extra features? No. DreamCoder is the same app on Free and Pro.; Personal use means your own non-commercial projects.; After that, everything in DreamCoder keeps working except talking to AI models. Your data is stored locally, in a database on your own machine.; and Your licence is issued when you create an account and renewed automatically over the internet from time to time. https://www.dreamcoder.ai/downloads HTTP 200: On first launch, sign in with your DreamCoder account or create one.; macOS recommends curl … https://www.dreamcoder.ai/install.sh | sh, or downloading the ZIP and running xattr -dr com.apple.quarantine \"/Applications/DreamCoder.app\" (the page says Without it, macOS may say it cannot verify the app and refuse to open it.); Windows is a setup package; Debian · Ubuntu is an amd64 .deb (sudo apt install ./dreamcoder*_amd64.deb); the container section gives a docker run example (-p 9889:9889, -p 127.0.0.1:1455:1455, DREAMCODER_ALLOWED_ORIGINS=http://localhost:9889), and the image address on the static page is the placeholder <registry-host>/dreamcoder:<release-tag>. install.sh itself was not fetched. https://www.dreamcoder.ai/eula/ HTTP 200: DreamCoder End User Licence Agreement, Version 1.1, Effective date 2026-10-11, licensor Polyhedron Investment Limited (England & Wales, company number 13208993); clause 4 forbids reverse engineer, decompile or disassemble the compiled DreamCoder distribution to obtain its source code; clause 8 says These connections may transmit prompts, code, files or other information needed for the functions you enable. https://www.dreamcoder.ai/licence-schedule/ HTTP 200: Schedule version 1.2, Effective date 2026-10-11, Free Business Threshold Five (5) Seats, Instances per Seat Five (5), and Post-expiry access reads All DreamCoder functionality except AI communication. All user data is stored locally in a database. https://www.dreamcoder.ai/privacy-policy/ HTTP 200: the collected items include Account information and Telemetry related to the use of the application. https://www.dreamcoder.ai/blog/ HTTP 200 and reads Nothing posted yet. The announcement https://www.masteringemacs.org/article/announcing-dreamcoder HTTP 200: title Announcing DreamCoder, By Mickey Petersen, 20 November 2026; it says after 15 months of work … culminating in a successful beta test, I am now ready to release DreamCoder; DreamCoder is a frontier coding harness with a tiling window manager that runs in your browser on all 3 platforms; DreamCoder is not an Emacs-related application; Alt+x / Alt+c / Alt+m (keyboard mode); a big, honking minimap in the top-right corner; Support for open weight models like Qwen, Gemma, Deepseek, GLM; MCP, backgroundable sub agents and shell commands, terminal windows, skills, hooks, 99% cache hit, it runs for days; and importer for your Pi, OpenCode or Codex configs. The pentest suite in the post is described as upcoming and is not treated as an existing feature here. Hacker News: the Algolia search API returned HTTP 200 and found https://news.ycombinator.com/item?id=50573266 (page HTTP 200), title Dreamcoder – coding harness from the author of Mastering Emacs, linking the announcement, submitted by hiyer at 2026-11-20T11:34:46Z (19:34:46 Taipei), 1 point and 0 comments at the check. The same search also showed an earlier submission, item 49362971 (2026-08-19, title Dream Coder ADE, linking dreamcoder.ai, 1 point), so the site was already public during the beta; publishedAt uses the date of the formal announcement, 2026-11-20. Open-source check: the homepage, pricing page, downloads page, and announcement contain no github.com link and no MIT / Apache or other open-source licence wording; gh search repos dreamcoder returns repositories for the same-named DreamCoder program-learning research and unrelated repositories; GoDiao/dreamcoder (gh api: created 2026-05-26, homepage godiao.github.io/dreamcoder) is a different project unrelated to dreamcoder.ai and is not cited here. Preview: the official screenshot on the homepage, https://www.dreamcoder.ai/assets/first-look.webp (HTTP 200, 2880×1620; byte-identical to https://www.masteringemacs.org/static/uploads/dreamcoder/first-look.webp in the announcement), scaled to 1200×675 and padded 62px above and 63px below with the image's own edge colours to a 1200×800 WebP; nothing cropped, no text added. The site's og:image is the moon icon moon-1024.png (1024×1024) and was not used. Dedupe: dreamcoder is absent from data and src on main 30e8265; the data directory of every PR branch was checked one by one (including #163, #166, #167, #169, #170, #171) and does not contain it either. Not done: no install script, installer, or image was downloaded or run; DreamCoder was not run; no account was created or signed in to; no model or MCP server was connected; billing.dreamcoder.ai was not opened.",
+      "landing": {
+        "what": "一个装在自己电脑或服务器上的编程 agent 工作台，作者叫它 coding harness。Mickey Petersen 在发布文里说，他不满意终端里「鞋架大小」的窗口和千篇一律的侧边栏聊天界面，也看不惯有人用 tmux 开十个 agent、来回切着看谁做完了，于是花十五个月做了一个带平铺窗口管理器的 harness。它不是 Emacs 插件，是独立程序加网页前端。发布文还提到可以从 Pi、OpenCode 或 Codex 的配置导入模型设置，并支持 Qwen、Gemma、DeepSeek、GLM 这类开放权重模型。官网自己也写「还没有全部做完」，功能会随版本增加。许可方是在英格兰和威尔士注册的 Polyhedron Investment Limited。",
+        "whatEn": "A workbench for coding agents that you install on your own computer or server; the author calls it a coding harness. In the announcement Mickey Petersen says he disliked the “shoe rack-sized” terminal window and the look-alike sidebar chat interfaces, and people cycling through ten agents in tmux to see which one had finished, so he spent fifteen months building a harness with a tiling window manager. It is not an Emacs package; it is a standalone program with a web front end. The post also mentions an importer for Pi, OpenCode, or Codex configs to bring in model settings, and support for open-weight models such as Qwen, Gemma, DeepSeek, and GLM. The site itself says “It isn't all there yet”, with more arriving in each release. The licensor is Polyhedron Investment Limited, registered in England and Wales.",
+        "steps": [
+          {
+            "title": "先看价格和条款",
+            "titleEn": "Read the pricing and the terms first",
+            "body": "自己的非商业项目算个人用途，免费；给雇主、客户或任何组织干活算商业用途。公司里用它的人不超过五个也免费，从第六个人起所有人都要买 Pro 席位，每席每月 20 美元，另加适用的 VAT。Pro 和免费版是同一个程序。安装时要接受 EULA。",
+            "bodyEn": "Your own non-commercial projects count as personal use and are free; work for an employer, a client, or any organisation is business use. A business with five or fewer people using it also pays nothing; from the sixth person everyone needs a Pro seat at $20 per seat a month plus VAT where it applies. Pro and Free are the same app. Installing means accepting the EULA.",
+            "links": [
+              {
+                "href": "https://www.dreamcoder.ai/pricing/",
+                "label": "DreamCoder 价格页",
+                "labelEn": "DreamCoder pricing"
+              },
+              {
+                "href": "https://www.dreamcoder.ai/eula/",
+                "label": "最终用户许可协议（EULA）",
+                "labelEn": "End User Licence Agreement"
+              }
+            ]
+          },
+          {
+            "title": "按下载页安装，再用浏览器打开",
+            "titleEn": "Install from the downloads page, then open it in a browser",
+            "body": "下载页给了四种方式：macOS（Apple Silicon）的 ZIP 或一行安装脚本，Windows 安装包，Debian / Ubuntu 的 .deb（`sudo apt install ./dreamcoder*_amd64.deb`），以及 Docker / Podman 镜像。首次启动要登录或注册 DreamCoder 账号，然后在浏览器打开 `http://localhost:9889`。一行安装命令是把脚本直接交给 sh 执行，页面给了脚本链接，建议先读再跑。本库没有执行其中任何一步。",
+            "bodyEn": "The downloads page gives four routes: a ZIP or a one-line install script for macOS on Apple Silicon, a Windows setup package, a .deb for Debian / Ubuntu (`sudo apt install ./dreamcoder*_amd64.deb`), and Docker / Podman images. The first launch asks you to sign in with or create a DreamCoder account; then open `http://localhost:9889` in a browser. The one-line command pipes a script straight into sh; the page links the script, so read it before you run it. This library did not carry out any of these steps.",
+            "links": [
+              {
+                "href": "https://www.dreamcoder.ai/downloads",
+                "label": "DreamCoder 下载页",
+                "labelEn": "DreamCoder downloads"
+              }
+            ]
+          },
+          {
+            "title": "接上模型和 MCP，需要时从别的设备连进来",
+            "titleEn": "Connect models and MCP, and reach it from other devices if you need to",
+            "body": "官网写模型走标准接口，原生支持 GitHub Copilot for Business 和 OpenAI Codex 订阅，也能接自己显卡上的小模型。MCP 服务器填名字、地址和登录方式就能连，再选哪些项目可以用它的工具。想在手机或另一台电脑上看，官网点名了 Tailscale、Cloudflare Tunnel 和端口转发；把服务开放到本机以外之前，自己确认谁能访问。",
+            "bodyEn": "The site says models connect over any standard endpoint, with native support for GitHub Copilot for Business and OpenAI Codex subscriptions, down to small models on your own GPU. For an MCP server you give a name, its address, and how it signs in, then choose which projects get its tools. To look in from a phone or another computer, the site names Tailscale, Cloudflare Tunnel, and port-forwarding; before you expose the server beyond your own machine, check who can reach it.",
+            "links": [
+              {
+                "href": "https://www.dreamcoder.ai/",
+                "label": "DreamCoder 官网",
+                "labelEn": "DreamCoder home"
+              },
+              {
+                "href": "https://www.masteringemacs.org/article/announcing-dreamcoder",
+                "label": "发布文：Announcing DreamCoder",
+                "labelEn": "Announcement: Announcing DreamCoder"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "不是开源软件：只分发安装包和容器镜像，受 EULA（1.1 版，2026-10-11 生效）约束，条款禁止反编译取得源码，官网也没有源码仓库链接。GitHub 上的 GoDiao/dreamcoder 是另一个无关项目。",
+            "textEn": "Not open source: it ships only as installers and a container image under a EULA (version 1.1, effective 2026-10-11) that forbids decompiling it to obtain the source, and the site links no source repository. GoDiao/dreamcoder on GitHub is an unrelated project."
+          },
+          {
+            "text": "首次启动要登录或注册 DreamCoder 账号；价格页写许可在注册时签发，之后不定期联网自动续期。停止付费后，除了和 AI 模型对话，其它功能照常，数据留在本机数据库。",
+            "textEn": "The first launch needs a DreamCoder account; the pricing page says the licence is issued when you create the account and renewed automatically over the internet from time to time. If you stop paying, everything keeps working except talking to AI models, and your data stays in a local database."
+          },
+          {
+            "text": "程序跑在本机，但你接的模型服务商和 MCP 服务会收到你发过去的提示、代码和文件，EULA 第 8 条写明了这一点；模型费用按你和服务商的约定另算。隐私声明列出的收集项里有账号信息和应用使用遥测。",
+            "textEn": "The program runs on your machine, but the model providers and MCP services you connect receive the prompts, code, and files you send them, as clause 8 of the EULA says; model charges are billed under your own agreement with the provider. The privacy notice lists account information and application-use telemetry among the data collected."
+          },
+          {
+            "text": "macOS 用 ZIP 安装时，下载页要求先执行 `xattr -dr com.apple.quarantine` 去掉隔离标记，否则系统可能提示无法验证并拒绝打开。执行前自己判断是否信任这个来源。",
+            "textEn": "For the macOS ZIP route, the downloads page tells you to run `xattr -dr com.apple.quarantine` first, or macOS may say it cannot verify the app and refuse to open it. Decide for yourself whether you trust the source before you do."
+          },
+          {
+            "text": "「一屏几十个 agent、管理几百个」「99% 缓存命中」「能连跑几天」是官网和作者的说法。本库没有下载、安装或运行 DreamCoder，没有注册账号，也没有通过它和任何模型对话。",
+            "textEn": "“Dozens of agents on one screen; hundreds under management”, the 99% cache hit, and runs lasting days are the site's and the author's statements. This library did not download, install, or run DreamCoder, did not create an account, and did not talk to any model through it."
+          }
+        ],
+        "previewCredit": "预览：DreamCoder 官网首页的官方界面截图（发布文里用的是同一张），等比缩小后上下补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the official app screenshot from the DreamCoder homepage (the announcement uses the same image), scaled down and padded top and bottom to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "pika-enact",
+      "slug": "pika-enact",
+      "title": "Pika Enact 研究预览：视频边播边导，拖演员、说戏、控镜头（暂未对外开放）",
+      "titleEn": "Pika Enact research preview: direct a video while it plays — staging, actor notes, camera (not publicly available)",
+      "kind": "showcase",
+      "hook": "Pika 研究预览：视频边播边导，普通用户目前还用不上。",
+      "hookEn": "Pika's research preview of directing video as it plays. Not available to consumers.",
+      "summary": "Pika Enact（https://pika.art/blog/pika-enact ）是 Pika 在 2026 年 11 月 18 日的官方博客上公布的研究预览，目前不对普通用户开放：文章结尾写明 Enact 现在是 research preview、unavailable for consumer use，想试用或谈集成只能联系 enterprise@pika.art。文章没有给出公开演示地址、候补名单、价格或上线时间。它想做的事，是让 AI 视频创作更像在片场导戏：一个建立在 Pika H3 Flex 之上的实验性实时流式环境，以不到一秒的小段连续生成画面和声音，一边延续场景上下文，一边把新的指令并进正在生成的内容。文章介绍了三种互动方式。一是实时调度（Live Staging）：在正在播放的视频里用鼠标拖动演员或物体，画面不停；文章说被拖动的对象是和场景一起生成的，姿态、光线和影子会跟着环境变，不是抠图合成。二是实时演员指导（Live Actor Direction）：打字或开口给演员提要求，演员用角色自己的声音回应，并记住你提过的要求；先排练，喊「Action」之后，排练过的内容会重新拍成一条从第一帧开始的连续镜头。三是实时镜头控制（Live Camera Control）：场景持续生成的同时，用鼠标操控虚拟镜头，平移、推近或环绕。文章配有官方演示视频，说明文字提到抬起并搬动人物、把一个人放进播放中的城市广场、带演员排练一场戏、实时移动虚拟镜头等，并分别交代了训练数据和技术架构。文章里的延迟和速度数字都是 Pika 自己的说法，记在核验记录里。适合关注 AI 视频和实时生成交互的创作者、设计师当作方向参考，它不是今天能打开的工具。本库没有拿到 Enact 的使用权限，没有联系 Pika，也没有播放、下载或保存官方演示视频。",
+      "summaryEn": "Pika Enact (https://pika.art/blog/pika-enact ) is a research preview that Pika published on its official blog on November 18, 2026, and it is not open to consumers: the post ends by saying Enact is currently a research preview, unavailable for consumer use, and that anyone interested in trying it or discussing integration should contact enterprise@pika.art. The post gives no public demo address, waitlist, price, or release date. The aim is to make AI video creation feel like directing on set: an experimental live-streaming environment built on Pika H3 Flex that generates video and sound in sub-second chunks, carrying scene context forward while folding new direction into the ongoing generation. The post describes three ways to interact. Live Staging: drag actors or objects with the mouse inside a running video while the scene keeps playing; the post says the moved subject is generated together with the rest of the scene, with pose, lighting, and shadows adapting to the surroundings, not composited as a cut-out. Live Actor Direction: type or speak a note to the actors, who answer in character in their own voices and remember your notes; you rehearse first, and when you call “Action” what you rehearsed is shot again as one continuous take from the first frame. Live Camera Control: steer a virtual camera with the mouse while the scene keeps generating, panning, dollying in, or orbiting. The post includes official demo videos whose captions mention lifting and moving people, bringing a person into a playing city square, rehearsing a scene with the actors, and moving the virtual camera on the fly, and it explains the training data and architecture for each mode. The latency and speed figures in the post are Pika's own statements and are kept in the verification log. Useful as a direction reference for creators and designers following AI video and real-time generative interaction; it is not a tool you can open today. This library did not get access to Enact, did not contact Pika, and did not play, download, or save the official demo videos.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "AI video research preview",
+      "sourceUrl": "https://pika.art/blog/pika-enact",
+      "secondaryUrls": [
+        "https://pika.art/pika-h3-flex"
+      ],
+      "previewImage": "/previews/pika-enact.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "approvalBoundary": "这是研究预览，目前不能试用。给 enterprise@pika.art 发邮件属于商务接洽，由你自己决定；本库没有代为联系。",
+      "approvalBoundaryEn": "This is a research preview and cannot be tried today. Emailing enterprise@pika.art is a business enquiry and your own decision; this library did not make contact.",
+      "connectors": [
+        "Pika H3 Flex"
+      ],
+      "publishedAt": "2026-11-18",
+      "updatedAt": "2026-11-20T12:15:00Z",
+      "qualityNote": "先说能不能用：现在不能。Enact 是研究预览，官方写明目前不对普通用户开放，想试用或谈集成只能发邮件到 enterprise@pika.art；文章没有公开演示地址、候补名单、价格或上线时间，本条也不表示你今天能打开它。收录理由：这是 AI 视频交互方式的一次官方展示，从「写提示词、等结果」变成视频边播边改，拖演员、对演员说戏、鼠标控镜头三种做法讲得具体，还交代了训练数据和架构，适合当方向参考。边界：所有效果、延迟和速度都来自 Pika 的文章和它自己的演示，不是本库测的；演示视频由官方提供，文章自己注明排练那一段为了长度做过剪辑，字幕和导演的摄像头小画面是后加的。本库没有拿到使用权限，没有联系 Pika，也没有播放或下载演示视频。",
+      "qualityNoteEn": "First, can you use it: not now. Enact is a research preview that Pika says is currently unavailable for consumer use; the only route for trying it or discussing integration is an email to enterprise@pika.art. The post has no public demo address, waitlist, price, or release date, and this entry does not suggest you can open it today. Why listed: it is an official look at a different way to work with AI video, from writing a prompt and waiting to changing the video while it plays; the three modes (dragging actors, giving actors notes, steering the camera with the mouse) are described concretely, with the training data and architecture explained, which makes it a useful direction reference. Limits: every effect, latency, and speed figure comes from Pika's post and its own demos and was not tested here; the demo videos are Pika's, and the post itself notes that the rehearsal clip was edited for length, with subtitles and the director's webcam inset added afterwards. This library did not get access, did not contact Pika, and did not play or download the demo videos.",
+      "verifyLog": "2026-11-20 晚间（Asia/Taipei，约 19:59–20:15）：https://pika.art/blog/pika-enact HTTP 200，title 为 Research Preview: Pika Enact — Pika Blog，article:published_time 为 2026-11-18，页面显示 November 18, 2026 · Research，副题 Creating Scenes that Respond to You。正文写 It's an experimental live-streaming environment built on Pika H3 Flex that generates video and sound in sub-second chunks, carrying scene context forward while incorporating new direction into the ongoing generation.；三种模式的原文是 Live Staging. Place and reposition actors or objects within a running video with your mouse. The scene continues while you move them.、Live Actor Direction: Speak directly to actors on set, and shape their performances. They'll remember your notes, and deliver a fresh, continuous take when you call “Action.”、Live Camera Control. Direct camera movement with your mouse around a live, playing scene.。结尾 Contact Us 一节的原文：Currently, Enact is a research preview, unavailable for consumer use. If you're interested in trying it or talking about integration opportunities, contact our team at enterprise@pika.art.；What's Next 一节写 it's only in research preview right now。页面上没有 Enact 的候补名单、公开演示地址、价格或上线日期；导航里的 Try Pika / Login 指向 Pika 现有产品，不是 Enact。以下数字全部是官方文章的说法，本库没有测量：Live Staging 写 on a single server the model generates it 1.8× faster than it plays、In our low-latency setting, the picture responds in under 0.4 seconds on H100, decoding included、short causal chunks (0.7 s standard, 0.17 s low-latency)、24 fps mouse states、采样 from twenty steps to just a few；Live Actor Direction 写 The video generates picture and sound 1.75× faster than they play；Live Camera Control 写 On an 8×NVIDIA B300 node (640×480 @ 24 fps), the model renders initial frames in 0.51 s and generates subsequent chunks at 1.50× real-time speed、about 0.71 s chunks、0.473 s per 0.708 s chunk, or 1.50 x real time。演示视频：页面内嵌 6 个 cdn.pika.art 上的 mp4，说明文字有 Lifting, moving and setting down people across several scenes. A red dot marks a held mouse button; a white ring marks release.、City square: bringing a person into the playing scene.、Left: source video, nobody touches the person. Right: training target, the person is lifted and carried.、A rehearsal with Enact: greeting the actors, then running the scene line by line. Edited for length; subtitles and the director's webcam inset were added afterwards.、A live session with Live Camera Control: starting from an appearance reference and a 3D motion proxy, moving the virtual camera on the fly while the characters and room stay consistent.；这些 mp4 一个都没有请求、播放或保存，本条对演示的描述只来自说明文字。文章链到的 https://pika.art/pika-h3-flex HTTP 200，title 为 Pika H3 Flex — Faster-than-real-time video model；它的 meta description 里有 open weights 字样，那是 H3 Flex 页面对 H3 Flex 的说法，本库没有核对，也不代表 Enact 有公开权重；Enact 文章没有提到 Enact 的代码或权重下载。Hacker News：Algolia 搜索 pika enact 没有找到对应的提交，所以没有附 HN 链接。预览：文章的 og:image https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp（HTTP 200，image/webp；页面 meta 声明 1200×630，实际文件是 1600×1326），是带 Pika Labs 和 Enact 字样的封面图，不是产品界面；等比缩到 965×800，左补 117px、右补 118px 深色边（#111111），成 1200×800 WebP，没有裁切，也没有加字。去重：main 30e8265 的 data、src 里没有 pika-enact 或 pika.art/blog/pika-enact；逐个检查了全部 PR 分支的 data 目录（含 #163、#166、#167、#169、#170、#171），也没有这一条。未做：没有拿到 Enact 权限，没有给 enterprise@pika.art 发邮件，没有注册或登录 Pika，没有试用 H3 Flex，没有请求任何演示视频文件，仓库里没有提交视频。",
+      "verifyLogEn": "2026-11-20 evening (Asia/Taipei, about 19:59–20:15): https://pika.art/blog/pika-enact HTTP 200, title Research Preview: Pika Enact — Pika Blog, article:published_time 2026-11-18, the page shows November 18, 2026 · Research and the subtitle Creating Scenes that Respond to You. The body says It's an experimental live-streaming environment built on Pika H3 Flex that generates video and sound in sub-second chunks, carrying scene context forward while incorporating new direction into the ongoing generation. The three modes in the post's words: Live Staging. Place and reposition actors or objects within a running video with your mouse. The scene continues while you move them.; Live Actor Direction: Speak directly to actors on set, and shape their performances. They'll remember your notes, and deliver a fresh, continuous take when you call “Action.”; Live Camera Control. Direct camera movement with your mouse around a live, playing scene. The closing Contact Us section reads: Currently, Enact is a research preview, unavailable for consumer use. If you're interested in trying it or talking about integration opportunities, contact our team at enterprise@pika.art. The What's Next section says it's only in research preview right now. The page has no Enact waitlist, public demo address, price, or release date; Try Pika / Login in the navigation lead to Pika's existing products, not to Enact. All figures below are the official post's statements and were not measured here: Live Staging says on a single server the model generates it 1.8× faster than it plays; In our low-latency setting, the picture responds in under 0.4 seconds on H100, decoding included; short causal chunks (0.7 s standard, 0.17 s low-latency); 24 fps mouse states; and sampling from twenty steps to just a few. Live Actor Direction says The video generates picture and sound 1.75× faster than they play. Live Camera Control says On an 8×NVIDIA B300 node (640×480 @ 24 fps), the model renders initial frames in 0.51 s and generates subsequent chunks at 1.50× real-time speed; about 0.71 s chunks; and 0.473 s per 0.708 s chunk, or 1.50 x real time. Demo videos: the page embeds 6 mp4 files on cdn.pika.art, with captions including Lifting, moving and setting down people across several scenes. A red dot marks a held mouse button; a white ring marks release.; City square: bringing a person into the playing scene.; Left: source video, nobody touches the person. Right: training target, the person is lifted and carried.; A rehearsal with Enact: greeting the actors, then running the scene line by line. Edited for length; subtitles and the director's webcam inset were added afterwards.; and A live session with Live Camera Control: starting from an appearance reference and a 3D motion proxy, moving the virtual camera on the fly while the characters and room stay consistent. None of these mp4 files was requested, played, or saved; the entry describes the demos from the captions only. The linked https://pika.art/pika-h3-flex returned HTTP 200 with the title Pika H3 Flex — Faster-than-real-time video model; its meta description includes the words open weights, which is the H3 Flex page's statement about H3 Flex, was not checked here, and does not mean Enact has public weights; the Enact post mentions no code or weight download for Enact. Hacker News: an Algolia search for pika enact found no matching submission, so no HN link is attached. Preview: the post's og:image https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp (HTTP 200, image/webp; the page meta declares 1200×630, the actual file is 1600×1326) is a cover image carrying the words Pika Labs and Enact, not a product interface; scaled to 965×800 and padded 117px on the left and 118px on the right with a dark edge (#111111) to a 1200×800 WebP; nothing cropped, no text added. Dedupe: pika-enact and pika.art/blog/pika-enact are absent from data and src on main 30e8265; the data directory of every PR branch was checked one by one (including #163, #166, #167, #169, #170, #171) and does not contain them either. Not done: no Enact access was obtained, no email was sent to enterprise@pika.art, no Pika account was created or signed in to, H3 Flex was not tried, no demo video file was requested, and no video was committed to the repository.",
+      "landing": {
+        "what": "Pika 官方博客上的一篇研究预览文章，讲的是一个还没有对外开放的实时视频环境。Pika 的说法是，下一代 AI 创作应该走出提示词输入框，更像拍电影时的工作方式：调度场面、给演员说戏、控制镜头，而且都在视频播放的同时进行。演员指导这一部分，文章说每个演员是一个有自己性格和记忆的 AI agent，由一个脚本模型负责理解和规划，一个实时视频模型负责表演；镜头控制这一部分不需要现成的视频，用一张外观参考图加一个轻量的 3D 运动代理（文章举的例子是没有贴图的 Blender 视口）来引导镜头路径。",
+        "whatEn": "A research-preview post on Pika's official blog about a real-time video environment that has not been opened to the public. Pika's argument is that the next generation of AI creation should go beyond the prompt box and resemble how films are made: stage the scene, direct the cast, and move the camera, all while the video is playing. For actor direction, the post says each actor is an AI agent with its own personality and memory, with a script model doing the thinking and a real-time video model doing the acting; camera control needs no existing video and uses an appearance image plus a lightweight 3D motion proxy (the post's example is an untextured Blender viewport) to guide the camera path.",
+        "steps": [
+          {
+            "title": "现在不能试：它只是研究预览",
+            "titleEn": "You cannot try it today: it is a research preview only",
+            "body": "官方文章结尾写明，Enact 目前是研究预览，不对普通用户开放。文章没有公开演示地址、候补名单或价格。现在能做的，是读这篇文章、看文章里的官方演示视频。",
+            "bodyEn": "The official post ends by saying Enact is currently a research preview, unavailable for consumer use. It gives no public demo address, waitlist, or price. What you can do today is read the post and watch the official demo videos embedded in it.",
+            "links": [
+              {
+                "href": "https://pika.art/blog/pika-enact",
+                "label": "Pika 官方博客：Research Preview: Pika Enact",
+                "labelEn": "Pika blog: Research Preview: Pika Enact"
+              }
+            ]
+          },
+          {
+            "title": "有业务需求：文章只留了一个邮箱",
+            "titleEn": "Business interest: the post gives one email address",
+            "body": "文章说，想试用或谈集成的人联系 enterprise@pika.art；想了解训练数据、数据获取或定制训练，也是这个邮箱。回不回复、给不给权限由 Pika 决定。本库没有联系过。",
+            "bodyEn": "The post says people interested in trying it or discussing integration should contact enterprise@pika.art; questions about the training data, data access, or custom training go to the same address. Whether Pika replies or grants access is up to Pika. This library did not make contact.",
+            "links": []
+          },
+          {
+            "title": "想了解底层模型：看 Pika H3 Flex 的页面",
+            "titleEn": "To learn about the underlying model, see the Pika H3 Flex page",
+            "body": "Enact 建立在 Pika H3 Flex 之上，文章链到了它的介绍页。H3 Flex 是另一个产品，能用 H3 Flex 不等于能用 Enact。本库没有试用 H3 Flex。",
+            "bodyEn": "Enact is built on Pika H3 Flex, and the post links to its page. H3 Flex is a separate product; being able to use H3 Flex does not mean you can use Enact. This library did not try H3 Flex.",
+            "links": [
+              {
+                "href": "https://pika.art/pika-h3-flex",
+                "label": "Pika H3 Flex 介绍页",
+                "labelEn": "Pika H3 Flex page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Enact 是研究预览，目前不对普通用户开放；文章写出来的唯一联系方式是 enterprise@pika.art。没有公开演示、候补名单、价格或上线时间，文章也没有提到 Enact 的代码或模型权重下载。",
+            "textEn": "Enact is a research preview and is currently unavailable for consumer use; the only contact the post gives is enterprise@pika.art. There is no public demo, waitlist, price, or release date, and the post mentions no code or model-weight download for Enact."
+          },
+          {
+            "text": "文章里的数字（响应延迟、比播放快多少倍、每段多长、用的什么硬件）都是 Pika 在自己设定的条件下的说法，本库没有测过，具体数字见核验记录。",
+            "textEn": "The figures in the post (response latency, how many times faster than playback, chunk lengths, the hardware used) are Pika's statements under its own conditions and were not tested here; the numbers are in the verification log."
+          },
+          {
+            "text": "演示视频由官方提供。文章注明排练那一段为了长度做过剪辑，字幕和导演的摄像头小画面是后加的。",
+            "textEn": "The demo videos are Pika's own. The post notes that the rehearsal clip was edited for length and that the subtitles and the director's webcam inset were added afterwards."
+          },
+          {
+            "text": "本库没有拿到使用权限，没有联系 Pika，没有播放或下载演示视频，仓库里也没有存任何视频文件。预览图是官方博客的封面图，不是产品界面截图。",
+            "textEn": "This library did not get access, did not contact Pika, did not play or download the demo videos, and stores no video file in the repository. The preview is the official blog's cover image, not a screenshot of the product."
+          }
+        ],
+        "previewCredit": "预览：Pika 官方博客这篇文章的分享封面图（不是产品界面截图），等比缩小后左右补深色边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the share cover image of this post on Pika's official blog (not a product screenshot), scaled down and padded left and right with a dark edge to 3:2, not cropped"
+      }
+    },
+    {
       "id": "directors-lookbook",
       "slug": "directors-lookbook",
       "title": "Director's Lookbook：说出感觉，发一手有名字的风格卡和可粘贴的提示词",
@@ -11907,10 +12134,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-20T12:15:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.81",
-    "count": 219,
+    "version": "1.4.82",
+    "count": 221,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12227,7 +12454,20 @@
       "https://directorslookbook.app/privacy/",
       "https://directorslookbook.app/terms/",
       "https://directorslookbook.app/media/og.jpg?v=2",
-      "https://news.ycombinator.com/item?id=50541419"
+      "https://news.ycombinator.com/item?id=50541419",
+      "https://www.dreamcoder.ai/",
+      "https://www.dreamcoder.ai/pricing/",
+      "https://www.dreamcoder.ai/downloads",
+      "https://www.dreamcoder.ai/eula/",
+      "https://www.dreamcoder.ai/licence-schedule/",
+      "https://www.dreamcoder.ai/privacy-policy/",
+      "https://www.dreamcoder.ai/blog/",
+      "https://www.dreamcoder.ai/assets/first-look.webp",
+      "https://www.masteringemacs.org/article/announcing-dreamcoder",
+      "https://news.ycombinator.com/item?id=50573266",
+      "https://pika.art/blog/pika-enact",
+      "https://pika.art/pika-h3-flex",
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
     ]
   }
 }
