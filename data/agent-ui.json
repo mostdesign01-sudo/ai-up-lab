@@ -1,6 +1,44 @@
 {
   "items": [
     {
+      "id": "dithercn",
+      "slug": "dithercn",
+      "title": "dithercn：shadcn 抖动/半调引擎 + Agent skill",
+      "titleEn": "dithercn: a shadcn dither engine + agent skill",
+      "hook": "Bayer、半调抖动进 React，再给 Agent 一条 skill。",
+      "hookEn": "Bayer and halftone dither in React, plus a skill for your agent.",
+      "summary": "dithercn 是给 shadcn/ui 项目用的抖动引擎，再加一条 Agent skill。首页写：向编程助手要任意一种抖动，它会在引擎上、按你的 shadcn 主题做出来；文档里的背景、图表和界面件是示例。页脚写 MIT。引擎以源码进 lib/dither，把 0 到 1 的色调用 Bayer 和蓝噪声变成点：会动的用 WebGL，静止的用 SVG 图案和 CSS 遮罩，照片和标志另做一次处理，颜色跟主题走，也可以导出 PNG、SVG 或 CSS。技能写给 Claude Code、Codex、Cursor、Gemini 等，安装后落在 .agents/skills/dithercn 和 .claude/skills/dithercn，并带上 dither-core 与 dither-export。首页和目录都写 52 个示例、分 5 组（背景 24、图表 11、界面 8、文字 4、图像 5）。公开注册表当天是 58 项，比这 52 个示例多出引擎、导出和 skill 等条目。已经在用 shadcn 时，`npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json` 会把技能和引擎一起装上；单个示例走 `https://dithercn.dev/r/<name>.json`。技能正文写需要 React 19 和 Tailwind CSS v4。这和本库已有的 creative-ui（另一套带半调组件的 shadcn 注册表）不是同一条。本库没有执行 shadcn add，没有把 skill 装进助手，也没有导出一张图。",
+      "summaryEn": "dithercn is a dither engine for shadcn/ui projects, plus an agent skill. The homepage says you ask a coding agent for any dither and it builds that dither on the engine in your shadcn theme; the backgrounds, charts, and interface pieces in the docs are examples. The footer says MIT. The engine lands as source in lib/dither and turns a tone from 0 to 1 into dots with Bayer and blue-noise matrices: WebGL when it moves, SVG patterns and CSS masks when it is still, and a separate pass for photos and logos. Colors follow the theme, and a dither can be exported as PNG, SVG, or CSS. The skill is written for Claude Code, Codex, Cursor, Gemini, and others. Once installed it sits in .agents/skills/dithercn and .claude/skills/dithercn, and it brings dither-core and dither-export. The homepage and the catalog both say 52 examples in 5 groups (backgrounds 24, charts 11, interface 8, text 4, images 5). The public registry listed 58 items that day, the extras being the engine, export, the skill, and similar entries beyond those 52 examples. In an existing shadcn project, `npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json` installs the skill and the engine together; a single example uses `https://dithercn.dev/r/<name>.json`. The skill text says it needs React 19 and Tailwind CSS v4. This is a different entry from creative-ui, the other shadcn registry in this library that includes halftone components. This library did not run shadcn add, did not install the skill, and did not export an image.",
+      "sourceUrl": "https://dithercn.dev/",
+      "secondaryUrls": [
+        "https://dithercn.dev/r/dithercn-skill.json",
+        "https://dithercn.dev/docs/examples",
+        "https://x.com/leodev/status/2114688757404447027",
+        "https://github.com/leoisadev1"
+      ],
+      "previewImage": "/previews/dithercn.webp",
+      "promptHint": "在已有 shadcn 项目里执行 npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json。技能会写入 .agents/skills/dithercn 和 .claude/skills/dithercn，并带上 dither-core 与 dither-export。示例组件用 https://dithercn.dev/r/<name>.json。本库没有实际安装，也没有导出抖动图。",
+      "promptHintEn": "In an existing shadcn project run npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json. The skill writes into .agents/skills/dithercn and .claude/skills/dithercn and brings dither-core plus dither-export. Example components use https://dithercn.dev/r/<name>.json. This library did not run an install or export a dither.",
+      "types": [
+        "ui",
+        "background"
+      ],
+      "tags": [
+        "dither",
+        "shadcn",
+        "registry",
+        "skill",
+        "halftone"
+      ],
+      "featured": false,
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-10-26T12:20:00Z",
+      "qualityNote": "收录理由：给 shadcn 项目一套抖动引擎和一条 Agent skill，背景、图表和界面件都能从示例改。边界：MIT 是站点页脚和页面结构化数据里的说法。技能正文要求 React 19 和 Tailwind CSS v4。本库没有执行 shadcn add，没有安装 skill，也没有导出 PNG、SVG 或 CSS。",
+      "qualityNoteEn": "Why: a dither engine and an agent skill for shadcn projects, so backgrounds, charts, and interface pieces can start from an example. Boundary: MIT is what the site footer and the page's structured data say. The skill text requires React 19 and Tailwind CSS v4. This library did not run shadcn add, did not install the skill, and did not export PNG, SVG, or CSS.",
+      "verifyLog": "2026-10-26 晚间（Asia/Shanghai）：https://dithercn.dev/ HTTP 200，标题 dithercn - Add dithers to anything in your app。正文含 Dithered shaders and UI for shadcn/ui、52 components in 5 groups、52 examples in 5 groups（Backgrounds 24、Charts 11、Interface 8、Text 4、Images 5，合计 52）。页脚原文 A dither engine with an agent skill, for shadcn projects. MIT licensed。JSON-LD SoftwareSourceCode 的 license 为 https://opensource.org/license/mit ，isAccessibleForFree 为 true，author.url 与 link rel=author 均为 https://github.com/leoisadev1（HTTP 200）。codeRepository 与页脚 GitHub 链接均为 https://github.com/opencoredev/dithercn ，HTTP 404。https://dithercn.dev/docs/examples HTTP 200，标题 Catalog | dithercn，分组与首页相同。https://dithercn.dev/r/registry.json HTTP 200，shadcn registry schema，name dithercn，58 items；不在五个目录分组里的六项是 dither-tokens、dither-core、world-land、cartesian-chart、dithercn-skill、dither-export。https://dithercn.dev/r/dithercn-skill.json HTTP 200，type registry:item，registryDependencies 为 dither-core.json 与 dither-export.json，文件目标同时写 .agents/skills/dithercn 与 .claude/skills/dithercn；技能正文写 React 19 与 Tailwind CSS v4。页面正文给出 npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json（技能和引擎一起装）。另有 skills CLI 标签，当场展开的是 pnpm dlx skills add https://dithercn.dev ；示例安装标签当场展开的是 pnpm dlx shadcn@latest add https://dithercn.dev/r/dither-gradient.json。作者 X https://x.com/leodev/status/2114688757404447027 HTTP 200，标题含 Introducing dithercn 与 52 dithered shaders（页面正文写的是 52 个示例，不是 52 shaders）。预览为 Playwright + 系统 Chrome（SwiftShader）实拍首页首屏，视口 1440×960，sharp 收到 1200×800 WebP。未执行 shadcn add，未安装 skill，未导出 PNG、SVG 或 CSS。写入前核对 main 与当时打开的 PR，id、slug 与上述 URL 都不在 data/agent-ui.json、html-items.json、cases.json、models.json。",
+      "verifyLogEn": "2026-10-26 evening (Asia/Shanghai): https://dithercn.dev/ HTTP 200, title dithercn - Add dithers to anything in your app. On-page copy includes Dithered shaders and UI for shadcn/ui, 52 components in 5 groups, and 52 examples in 5 groups (Backgrounds 24, Charts 11, Interface 8, Text 4, Images 5, totaling 52). Footer text: A dither engine with an agent skill, for shadcn projects. MIT licensed. JSON-LD SoftwareSourceCode license is https://opensource.org/license/mit , isAccessibleForFree is true, and both author.url and link rel=author are https://github.com/leoisadev1 (HTTP 200). codeRepository and the footer GitHub link are https://github.com/opencoredev/dithercn , HTTP 404. https://dithercn.dev/docs/examples HTTP 200, title Catalog | dithercn, same groups as the homepage. https://dithercn.dev/r/registry.json HTTP 200, shadcn registry schema, name dithercn, 58 items; the six not in the five catalog groups are dither-tokens, dither-core, world-land, cartesian-chart, dithercn-skill, and dither-export. https://dithercn.dev/r/dithercn-skill.json HTTP 200, type registry:item, registryDependencies dither-core.json and dither-export.json, file targets for both .agents/skills/dithercn and .claude/skills/dithercn; the skill text says React 19 and Tailwind CSS v4. The page body gives npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json (skill and engine together). A skills CLI tab was also present; the open tab was pnpm dlx skills add https://dithercn.dev . The example install tab that was open was pnpm dlx shadcn@latest add https://dithercn.dev/r/dither-gradient.json. Author X post https://x.com/leodev/status/2114688757404447027 HTTP 200; the title includes Introducing dithercn and 52 dithered shaders (the page body says 52 examples, not 52 shaders). Preview is a Playwright capture with system Chrome (SwiftShader) of the homepage first screen, viewport 1440×960, fitted with sharp to a 1200×800 WebP. Did not run shadcn add, did not install the skill, and did not export PNG, SVG, or CSS. Checked main and the open PRs before writing; the id, slug, and URLs above were not in data/agent-ui.json, html-items.json, cases.json, or models.json."
+    },
+    {
       "id": "shadcn-ai-elements",
       "slug": "shadcn-ai-elements",
       "title": "shadcn AI Elements：给 AI 聊天界面的组件套件",
@@ -2660,9 +2698,9 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-10-26T01:14:00Z",
+    "updatedAt": "2026-10-26T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.34",
-    "count": 73
+    "version": "1.4.35",
+    "count": 74
   }
 }
