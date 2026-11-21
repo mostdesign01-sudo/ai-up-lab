@@ -1,11 +1,142 @@
 {
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-21T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.32",
-    "count": 42
+    "version": "1.1.33",
+    "count": 43
   },
   "models": [
+    {
+      "id": "inkling-2-mini",
+      "slug": "inkling-2-mini",
+      "name": "Inkling 2 Mini",
+      "vendor": "Thinking Machines Lab, Inc.",
+      "title": "Inkling 2 Mini（Thinking Machines Lab）",
+      "titleEn": "Inkling 2 Mini (Thinking Machines Lab)",
+      "summary": "Thinking Machines Lab, Inc. 于 2026-11-20 发布 Inkling 2 Mini，开放权重，模型卡写许可证 Apache 2.0。官方定位是小到可以在笔记本上跑的 looped transformer / looped MoE。模型卡写：24 层 decoder-only，中间 12 层对每个 token 用共享权重跑 3 次（24 层权重、每个 token 48 次层计算），每层把 token 路由到 128 个专家里的 8 个；原生多模态，文本和图像输入、文本输出，上下文最多 1M tokens。参数写的是总 26.4B、激活 3.4B；模型卡注明每多一次循环大约增加 1.0B 有效激活参数，跑三次后每个 token 约 5.4B effective active。新闻写权重大多是 NVFP4，最后四层 MXFP8，总内存约 20GB，可以在消费级笔记本和台式机上跑。模型卡的硬件建议是 Apple silicon 32GB 或更多内存，其它 GPU 建议 32GB 或更多显存；Apple 上点名 Ollama 和 Exo Labs，Exo Labs 在模型卡上没有单独链接。Ollama 页面把同一模型写成 26B、每 token 5.4B active，标签是 26b-a5b，没有把 3.4B 激活和 5.4B 有效激活分开；本条以模型卡为准。新闻称，在总参数小于 100B 的开源权重模型里，DeepSWE v1.1 为 48.2%、Vals Index v2.2 为 46.5%，对照表的列还有 Gemma 4 31B、Muse Glimmer、Qwen3.8-27B，以及总参数写为 124.5B 的 Nemotron 3.5 Super VL。同一张 Vals 行里，Gemma、Muse、Qwen 三格是空的。这些都是厂商表格里的数字。新闻还写研究人员在飞机上用 MacBook Pro（页上写 M5 Pro, 48GB）离线做出可玩的飞行模拟器，页上有 PlaneBench 演示。另有可变循环次数的研究变体 TML-d24-varloop-research，新闻写它是为了做 monitorability 实验，因为 2 Mini 本身只支持固定循环次数；那不是这张卡的权重。新闻说 2 Mini 的强项和 Inkling 2 Small 同一类，Small 是更大的型号，本卡不收。新闻写当天可以在 Tinker 上做推理和定制。本库没有下载权重，没有在本地或 API 上运行，没有登录 Tinker，没有播放演示视频，也没有复跑基准。",
+      "summaryEn": "Thinking Machines Lab, Inc. released Inkling 2 Mini on 2026-11-20 with open weights. The model card lists the license as Apache 2.0. The official pitch is a looped transformer / looped MoE small enough to run on a laptop. The model card says it is a 24-layer decoder-only model, the middle 12 layers run three times per token on shared weights (48 layer applications per token from 24 layers of weights), and each token is routed to 8 of 128 experts; it is natively multimodal, with text and image inputs and text output, and a context of up to 1M tokens. The parameters are 26.4B total and 3.4B active; the card notes that each extra pass adds about 1.0B effective active parameters, so three passes are about 5.4B effective active per token. The news post says most weights are NVFP4, the last four layers are MXFP8, the total memory footprint is about 20GB, and it can run on consumer laptops and desktops. The card's hardware line is Apple silicon with 32GB or more of memory, and 32GB or more of VRAM recommended for other GPUs; on Apple it names Ollama and Exo Labs, and Exo Labs has no separate link on the card. The Ollama page describes the same model as 26B parameters with 5.4B active per token and tags it 26b-a5b, without separating 3.4B active from 5.4B effective active; this card follows the model card. The news post says that among open-weights models with less than 100B total parameters it scores 48.2% on DeepSWE v1.1 and 46.5% on Vals Index v2.2, and the comparison table also has columns for Gemma 4 31B, Muse Glimmer, Qwen3.8-27B, and Nemotron 3.5 Super VL, whose total parameters are listed as 124.5B. On that same Vals row the Gemma, Muse, and Qwen cells are blank. All of these are figures from the vendor's table. The post also says researchers on a flight ran it offline on a MacBook Pro (the page says M5 Pro, 48GB) and built a playable flight simulator, with a PlaneBench demo on the page. A separate variable-loop research model, TML-d24-varloop-research, is described as the one used for the monitorability experiments, because 2 Mini itself only supports a fixed number of loops; those are not this card's weights. The post says 2 Mini's strengths mirror Inkling 2 Small, which is a larger model and is not this card. The post says 2 Mini is available on Tinker the same day for inference and customization. This library did not download the weights, did not run the model locally or through an API, did not sign in to Tinker, did not play the demo videos, and did not re-run the benchmarks.",
+      "announcedAt": "2026-11-20",
+      "publishedAt": "2026-11-21",
+      "updatedAt": "2026-11-21T12:45:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Thinking Machines Lab 新闻：Introducing Inkling 2 Mini",
+          "labelEn": "Thinking Machines Lab news: Introducing Inkling 2 Mini",
+          "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+          "by": "Thinking Machines Lab",
+          "date": "2026-11-20"
+        },
+        {
+          "kind": "official",
+          "label": "Inkling 2 Mini 模型卡",
+          "labelEn": "Inkling 2 Mini model card",
+          "url": "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+          "by": "Thinking Machines Lab",
+          "date": "2026-11-20"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face 权重：thinkingmachines/Inkling-2-Mini",
+          "labelEn": "Hugging Face weights: thinkingmachines/Inkling-2-Mini",
+          "url": "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+          "by": "Thinking Machines Lab"
+        },
+        {
+          "kind": "official",
+          "label": "研究变体权重（不是 2 Mini 本体）：TML-d24-varloop-research",
+          "labelEn": "Research-variant weights (not 2 Mini itself): TML-d24-varloop-research",
+          "url": "https://huggingface.co/thinkingmachines/TML-d24-varloop-research",
+          "by": "Thinking Machines Lab"
+        },
+        {
+          "kind": "official",
+          "label": "Inkling 2 Small 新闻（本卡不收这一型号）",
+          "labelEn": "Inkling 2 Small news (not this card)",
+          "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+          "by": "Thinking Machines Lab"
+        },
+        {
+          "kind": "official",
+          "label": "Tinker 产品页",
+          "labelEn": "Tinker product page",
+          "url": "https://thinkingmachines.ai/tinker/",
+          "by": "Thinking Machines Lab"
+        },
+        {
+          "kind": "official",
+          "label": "Tinker Cookbook",
+          "labelEn": "Tinker Cookbook",
+          "url": "https://github.com/thinking-machines-lab/tinker-cookbook",
+          "by": "Thinking Machines Lab"
+        },
+        {
+          "kind": "product",
+          "label": "Ollama：inkling-2-mini",
+          "labelEn": "Ollama: inkling-2-mini",
+          "url": "https://ollama.com/library/inkling-2-mini",
+          "by": "Ollama"
+        },
+        {
+          "kind": "product",
+          "label": "Unsloth 本地运行指南（模型卡上的那条链接打不开，这是能打开的文档）",
+          "labelEn": "Unsloth local-run guide (the link on the model card did not open; this is the page that did)",
+          "url": "https://unsloth.ai/docs/models/inkling-2-mini",
+          "by": "Unsloth"
+        },
+        {
+          "kind": "community",
+          "label": "Hugging Face 博客：Welcome Inkling 2 Mini",
+          "labelEn": "Hugging Face blog: Welcome Inkling 2 Mini",
+          "url": "https://huggingface.co/blog/inkling2mini",
+          "by": "Hugging Face",
+          "date": "2026-11-20"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：Inkling 2 Mini",
+          "labelEn": "Hacker News thread: Inkling 2 Mini",
+          "url": "https://news.ycombinator.com/item?id=50581260",
+          "by": "Hacker News",
+          "date": "2026-11-20"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "模型卡：24 层 decoder-only looped MoE，中间 12 层共享权重、每个 token 跑 3 次，每层 8/128 专家；文本和图像输入、文本输出，上下文最多 1M tokens。许可证 Apache 2.0，发布日 November 20, 2026，提供方 Thinking Machines Lab, Inc.。",
+          "textEn": "Model card: a 24-layer decoder-only looped MoE, middle 12 layers shared and run three times per token, 8 of 128 experts per layer; text and image in, text out, context up to 1M tokens. License Apache 2.0, release date November 20, 2026, provider Thinking Machines Lab, Inc."
+        },
+        {
+          "text": "模型卡：总参数 26.4B，激活 3.4B；每多一次循环约增加 1.0B 有效激活参数，三次循环后每个 token 约 5.4B effective active。新闻：权重大多 NVFP4，最后四层 MXFP8，总内存约 20GB。硬件建议是 Apple silicon 32GB+，其它平台建议 32GB+ 显存。Ollama 写成 26B / 5.4B active，本条不采用这句缩写。",
+          "textEn": "Model card: 26.4B total, 3.4B active; each extra loop adds about 1.0B effective active parameters, and three passes are about 5.4B effective active per token. News post: most weights NVFP4, last four layers MXFP8, about 20GB. Hardware guidance is Apple silicon 32GB+, and 32GB+ VRAM recommended elsewhere. Ollama's “26B / 5.4B active” wording is not the line this card uses."
+        },
+        {
+          "text": "官方称（评测节选，本库未复跑）：在总参数小于 100B 的开源权重模型中，DeepSWE v1.1 为 48.2%（mini-swe-agent v2.4.6），Vals Index v2.2 为 46.5%。新闻对照表的列是 Gemma 4 31B、Muse Glimmer、Qwen3.8-27B 和 Nemotron 3.5 Super VL（表上总参数 124.5B，已经超出导语里的 100B 范围）。Vals 这一行前三格是空的。",
+          "textEn": "Vendor claim (eval excerpt, not re-run here): among open-weights models under 100B total parameters, DeepSWE v1.1 is 48.2% (mini-swe-agent v2.4.6) and Vals Index v2.2 is 46.5%. The news table's columns are Gemma 4 31B, Muse Glimmer, Qwen3.8-27B, and Nemotron 3.5 Super VL (124.5B total on the table, outside the under-100B sentence). The first three cells of the Vals row are blank."
+        },
+        {
+          "text": "新闻：当天可在 Tinker 上做推理和定制；Apple 32GB+ 可通过 Ollama 跑，也列出 SGLang、vLLM、Unsloth、llama.cpp 等。Unsloth 自己的指南另外写了更小的 GGUF 内存（例如 4-bit 约 17.6GB，并写 16GB 或 24GB），那是量化说明，不是模型卡的 32GB 建议。模型卡上的 Unsloth 链接打不开，能打开的是另一条文档路径。",
+          "textEn": "News post: inference and customization on Tinker the same day; Apple machines with 32GB+ can run it through Ollama, and the post also lists SGLang, vLLM, Unsloth, llama.cpp, and others. Unsloth's own guide separately lists smaller GGUF footprints (for example about 17.6GB at 4-bit, and 16GB or 24GB), which is a quantization note, not the model card's 32GB guidance. The Unsloth link printed on the model card did not open; a different docs path did."
+        },
+        {
+          "text": "新闻里的飞机演示是厂商自述：MacBook Pro（M5 Pro, 48GB）、飞行模式、几分钟内做出可玩飞行模拟器，页上有 PlaneBench 视频。本库没有播放或下载。可变循环研究变体 TML-d24-varloop-research 是另一套权重，不并进这张卡。Inkling 2 Small 只在新闻对照里带一句。",
+          "textEn": "The in-flight demo is the vendor's account: a MacBook Pro (M5 Pro, 48GB), airplane mode, and a playable flight simulator in a few minutes, with a PlaneBench video on the page. This library did not play or download it. The variable-loop research model TML-d24-varloop-research is a separate set of weights and is not folded into this card. Inkling 2 Small gets one line because the news compares against it."
+        },
+        {
+          "text": "模型卡自己写的短板：多轮对话和约束很多的指令不是它最强的地方（MultiChallenge 50.0%，ComplexConstraints v1.1 33.4%，两项都落后于 Qwen3.8-27B）；用工具时可能不经确认就删除或覆盖文件；事实记忆弱于更大的 Inkling 2 Small；英文以外质量会下降。",
+          "textEn": "Limits the model card states itself: multi-turn chat and instructions with many constraints are not where it is strongest (MultiChallenge 50.0%, ComplexConstraints v1.1 33.4%, behind Qwen3.8-27B on both); with tools it may delete or overwrite files without confirmation; factual recall lags the larger Inkling 2 Small; quality can drop outside English."
+        }
+      ],
+      "qualityNote": "收录理由：这是一张开放权重、模型卡写 Apache 2.0、官方说可以放在消费级笔记本上的循环 MoE，上下文写到 1M，当天进入 Tinker；板上还没有 Inkling 系列。边界：48.2%、46.5% 和整张对照表都是厂商数字，本库没有复跑；「小于 100B」是新闻导语的范围，表里同时有总参数 124.5B 的 Nemotron。参数以模型卡的 26.4B / 3.4B 激活 / 约 5.4B 有效激活为准，Ollama 的 26B / 5.4B active 和 Hugging Face 博客的约 26B / 3B 都是另外的说法。约 20GB 和 32GB 内存或显存是模型卡和新闻的硬件建议；Unsloth 指南里的更小 GGUF 是他们的量化说明。模型卡上的 Unsloth 地址打不开。Exo Labs 只有名字，没有链接。PlaneBench 和 Thinkyville 是页上的官方演示，本库没有播放。可变循环研究变体和 Inkling 2 Small 都不是这张卡。本库没有下载权重，没有在本地或 API 上运行，没有登录 Tinker。",
+      "qualityNoteEn": "Why listed: an open-weights looped MoE, Apache 2.0 on the model card, described by the vendor as able to run on a consumer laptop, with a 1M context and Tinker access the same day; the board had no Inkling model. Boundary: 48.2%, 46.5%, and the rest of the comparison table are the vendor's figures and were not re-run here; “under 100B” is the scope of the news lead, while the table also includes Nemotron at 124.5B total. Parameter counts follow the model card, 26.4B / 3.4B active / about 5.4B effective active; Ollama's 26B / 5.4B active and the Hugging Face blog's roughly 26B / 3B are different wordings. About 20GB and 32GB of memory or VRAM are the card's and the news post's hardware guidance; the smaller GGUFs in the Unsloth guide are their quantization notes. The Unsloth address printed on the model card did not open. Exo Labs is a name with no link. PlaneBench and Thinkyville are official demos on the page and were not played here. The variable-loop research model and Inkling 2 Small are not this card. This library did not download the weights, did not run the model locally or through an API, and did not sign in to Tinker.",
+      "relatedCaseIds": [],
+      "previewImage": "/previews/inkling-2-mini.webp",
+      "previewCredit": "预览：新闻页的官方分享图（白底黑色四叶标志），等比缩小后上下补白边成 3:2，未裁切",
+      "previewCreditEn": "Preview: the official share image from the news post (a black four-lobe mark on white), scaled and padded top and bottom with white to 3:2, not cropped",
+      "featured": false,
+      "verifyLog": "2026-11-21 晚间（Asia/Shanghai，约 20:03–20:45）：新闻 https://thinkingmachines.ai/news/inkling-2-mini/ HTTP 200，title 为 Introducing Inkling 2 Mini - Thinking Machines Lab，页内日期 Nov 20, 2026，og:description 为 Inkling 2 Mini is an open-weights model small enough to run on your laptop. It loops its middle layers to reason more per token and reach answers in fewer tokens.，og:image 为 https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png 。正文原句核对：Today we are releasing Inkling 2 Mini, a fast, powerful model that’s small enough to run on your laptop.；Inkling 2 Mini is a looped transformer, running the middle layers of the model three times for every token.；Inkling 2 Mini leads every open-weights model with less than 100B total parameters on benchmarks such as DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%).；Inkling 2 Mini is a Mixture-of-Experts model with 26.4B total parameters, 3.4B active, and 5.4B weight activations per token to account for looping.；Most of Inkling 2 Mini’s weights were trained and are deployed natively in NVFP4, with the last four layers in MXFP8. The total memory footprint of Inkling 2 Mini is ~20GB, allowing it to run on local devices such as consumer laptops and desktop AI computers.；Our researchers took Inkling 2 Mini on a flight, where it ran offline on a MacBook Pro and built a playable flight simulator in a few minutes. 该段图注为 MacBook Pro (M5 Pro, 48GB) Airplane mode，并有 Open video: PlaneBench flight simulator demo。同页还有 Thinkyville 演示。两段视频都没有请求媒体文件，没有播放，仓库里没有视频。Inkling 2 Mini is released with open weights and is available on Tinker today for inference and customization. 强项原句：Inkling 2 Mini’s strengths mirror those of Inkling 2 Small。限制原句：Inkling 2 Mini is not the strongest small model for multi-turn chat or for instructions with many constraints: it scores 50.0% on MultiChallenge and 33.4% on ComplexConstraints v1.1, behind Qwen3.8-27B on both. 架构原句：Inkling 2 Mini has 24 layers, divided into four blocks of six layers each. The two middle blocks run three times, while the first and last blocks each run once. 研究变体原句：we also trained a variable-looped model, TML-d24-varloop-research, because Inkling 2 Mini only supports a fixed number of looping passes，并链到 https://huggingface.co/thinkingmachines/TML-d24-varloop-research （HTTP 200）。对照表表头为 Inkling 2 Mini、Gemma 4 31B、Muse Glimmer、Qwen3.8-27B、Nemotron 3.5 Super VL；Params (B) activated / total 为 5.4/26.4、30.7/30.7、30.0/30.0、27.0/27.0、12.0/124.5。DeepSWE v1.1（mini-swe-agent v2.4.6）一行是 48.2%、0.3%、4.4%、42.2%、24.7%。Vals Index (v2.2) 一行是 46.5%，Gemma、Muse、Qwen 三格为破折号，Nemotron 为 29.8%。因此「小于 100B」是导语的范围，表本身包含总参数 124.5B 的 Nemotron。本地运行原句：At launch we support Inkling 2 Mini running on any Mac system (MacBook, Mac Mini) with at least 32GB RAM via Ollama. … Quantized GGUF versions are available via Unsloth and llama.cpp for local inference. 结尾还列出 SGLang、vLLM、NVIDIA Dynamo、TokenSpeed、Llama App，以及 SkyRL、Miles、NVIDIA AutoModel。模型卡 https://thinkingmachines.ai/model-card/inkling-2-mini/ HTTP 200，title 为 Inkling 2 Mini Model Card - Thinking Machines Lab。核对：Legal name of the model provider Thinking Machines Lab, Inc.；Date of release November 20, 2026；License Apache 2.0；A 24-layer decoder-only transformer … The middle 12 layers run three times with shared weights, giving 48 layer applications per token from 24 layers of weights. In each layer, each token is routed to 8 of 128 experts. … natively multimodal … image and text inputs … text outputs；Parameters 26.4B, 3.4B active；each extra pass through the looped layers adds about 1.0B effective active parameters. Since the model runs with three passes, there are 5.4B effective active parameters per token；context window of up to 1M tokens；single checkpoint of about 20GB, in mixed NVFP4 and MXFP8 precisions；Apple silicon devices with 32GB or more memory (MacBooks, Mac minis and Studios)；Other GPUs and platforms are possible, with 32GB or more of VRAM recommended；For Apple silicon: Ollama（href https://ollama.com/library/inkling-2-mini）、Exo Labs（无 href）。模型卡里 Unsloth 的 href 是 https://unsloth.ai/docs/inkling-2-mini ，本次 HTTP 404。https://unsloth.ai/docs/models/inkling-2-mini HTTP 200，title 为 Inkling 2 Mini - Run Locally Guide | Unsloth Documentation。该页写 26.4B MoE (5.4B active)，并写 Run on 16GB RAM or 24GB RAM for full precision，推荐 UD-Q4_K_XL (17.6 GB)，内存表从 1-bit 9 GB 到 8-bit 24 GB。这是 Unsloth 的量化指南，本库没有下载 GGUF，也没有按该页运行。安全节原句：Across all areas, we concluded that Inkling 2 Mini does not give material uplift beyond what is already available from open-weights models. 短板原句包括 may take destructive actions, such as deleting or overwriting files, without confirmation。Hugging Face 权重页 HTTP 200。API https://huggingface.co/api/models/thinkingmachines/Inkling-2-Mini HTTP 200：id thinkingmachines/Inkling-2-Mini，createdAt 2026-11-17T00:26:57.000Z，lastModified 2026-11-20T22:55:20.000Z，pipeline_tag image-text-to-text，cardData.license apache-2.0，gated false，downloads 7944，likes 1199。创建时间早于模型卡的发布日，本条 announcedAt 仍用 November 20, 2026，没有把 11 月 17 日写成发布日，也没有下载权重。HF 博客 https://huggingface.co/blog/inkling2mini HTTP 200，Published November 20, 2026，把参数写成 ~26B physical total and 3B active parameters per token，是约数，本条不采用。Ollama https://ollama.com/library/inkling-2-mini HTTP 200，页面写 7,543 Downloads，标签 inkling-2-mini:latest、inkling-2-mini:26b-a5b、inkling-2-mini:26b-a5b-nvfp4（MLX），都标 20GB、1M、Text, Image；readme 写 26B parameters with 5.4B active per token。本库没有执行 ollama run。Tinker 页 https://thinkingmachines.ai/tinker/ HTTP 200，title 为 Tinker - Thinking Machines Lab，页首是训练平台和其它客户的例子，那些数字没有写入本卡。模型卡给出的 Playground https://tinker.thinkingmachines.ai/playground 跳到 auth.thinkingmachines.ai 的登录页，本库没有登录，没有调用，没有微调；跳转地址里的会话参数没有写入仓库。Tinker Cookbook https://github.com/thinking-machines-lab/tinker-cookbook HTTP 200。Inkling 2 Small 新闻 HTTP 200，title 为 Introducing Inkling 2 Small - Thinking Machines Lab，只核对了标题，没有摘 Small 的规格。HN 页面与 Algolia https://hn.algolia.com/api/v1/items/50581260 都是 HTTP 200：作者 jasondavies，2026-11-20T20:12:19.000Z，标题 Inkling 2 Mini，url 指向新闻页，核对时 1060 points、198 comments。预览：og:image HTTP 200，PNG 2400×1260（10815 字节），白底黑色四叶标志，不是运行截图；等比缩到 1200×630（缩放 0.5），上下各补 85px，颜色取缩放后上下边缘中点 RGB(255,255,255)，存成 1200×800 WebP，没有裁切，没有加字。模型卡 og:image https://thinkingmachines.ai/images/home.png 没有下载，也没有采用。去重：main c088c54 的 data JSON 没有 inkling；当时 65 个开放 PR 的 files 接口补丁里没有 inkling、xsquad、musset。未做：没有下载权重或 GGUF，没有在 Ollama、Unsloth、llama.cpp、SGLang、vLLM 或 Tinker 上运行，没有登录，没有播放或下载 PlaneBench 和 Thinkyville，没有复跑基准。",
+      "verifyLogEn": "2026-11-21 evening (Asia/Shanghai, about 20:03–20:45): news post https://thinkingmachines.ai/news/inkling-2-mini/ HTTP 200, title Introducing Inkling 2 Mini - Thinking Machines Lab, on-page date Nov 20, 2026, og:description Inkling 2 Mini is an open-weights model small enough to run on your laptop. It loops its middle layers to reason more per token and reach answers in fewer tokens., og:image https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png . Sentences checked: Today we are releasing Inkling 2 Mini, a fast, powerful model that’s small enough to run on your laptop.; Inkling 2 Mini is a looped transformer, running the middle layers of the model three times for every token.; Inkling 2 Mini leads every open-weights model with less than 100B total parameters on benchmarks such as DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%).; Inkling 2 Mini is a Mixture-of-Experts model with 26.4B total parameters, 3.4B active, and 5.4B weight activations per token to account for looping.; Most of Inkling 2 Mini’s weights were trained and are deployed natively in NVFP4, with the last four layers in MXFP8. The total memory footprint of Inkling 2 Mini is ~20GB, allowing it to run on local devices such as consumer laptops and desktop AI computers.; Our researchers took Inkling 2 Mini on a flight, where it ran offline on a MacBook Pro and built a playable flight simulator in a few minutes. That figure is captioned MacBook Pro (M5 Pro, 48GB) Airplane mode and includes Open video: PlaneBench flight simulator demo. The same page also has a Thinkyville demo. Neither video file was requested or played, and the repo stores no video. Inkling 2 Mini is released with open weights and is available on Tinker today for inference and customization. Strengths sentence: Inkling 2 Mini’s strengths mirror those of Inkling 2 Small. Limit sentence: Inkling 2 Mini is not the strongest small model for multi-turn chat or for instructions with many constraints: it scores 50.0% on MultiChallenge and 33.4% on ComplexConstraints v1.1, behind Qwen3.8-27B on both. Architecture sentence: Inkling 2 Mini has 24 layers, divided into four blocks of six layers each. The two middle blocks run three times, while the first and last blocks each run once. Research-variant sentence: we also trained a variable-looped model, TML-d24-varloop-research, because Inkling 2 Mini only supports a fixed number of looping passes, linking https://huggingface.co/thinkingmachines/TML-d24-varloop-research (HTTP 200). Table headers are Inkling 2 Mini, Gemma 4 31B, Muse Glimmer, Qwen3.8-27B, Nemotron 3.5 Super VL; Params (B) activated / total are 5.4/26.4, 30.7/30.7, 30.0/30.0, 27.0/27.0, 12.0/124.5. The DeepSWE v1.1 row (mini-swe-agent v2.4.6) is 48.2%, 0.3%, 4.4%, 42.2%, 24.7%. The Vals Index (v2.2) row is 46.5%, with dashes for Gemma, Muse, and Qwen, and 29.8% for Nemotron. So “under 100B” is the lead's scope, while the table itself includes Nemotron at 124.5B total. Local-run sentence: At launch we support Inkling 2 Mini running on any Mac system (MacBook, Mac Mini) with at least 32GB RAM via Ollama. … Quantized GGUF versions are available via Unsloth and llama.cpp for local inference. The close also lists SGLang, vLLM, NVIDIA Dynamo, TokenSpeed, Llama App, and SkyRL, Miles, NVIDIA AutoModel. Model card https://thinkingmachines.ai/model-card/inkling-2-mini/ HTTP 200, title Inkling 2 Mini Model Card - Thinking Machines Lab. Checked: Legal name of the model provider Thinking Machines Lab, Inc.; Date of release November 20, 2026; License Apache 2.0; A 24-layer decoder-only transformer … The middle 12 layers run three times with shared weights, giving 48 layer applications per token from 24 layers of weights. In each layer, each token is routed to 8 of 128 experts. … natively multimodal … image and text inputs … text outputs; Parameters 26.4B, 3.4B active; each extra pass through the looped layers adds about 1.0B effective active parameters. Since the model runs with three passes, there are 5.4B effective active parameters per token; context window of up to 1M tokens; single checkpoint of about 20GB, in mixed NVFP4 and MXFP8 precisions; Apple silicon devices with 32GB or more memory (MacBooks, Mac minis and Studios); Other GPUs and platforms are possible, with 32GB or more of VRAM recommended; For Apple silicon: Ollama (href https://ollama.com/library/inkling-2-mini) and Exo Labs (no href). The Unsloth href on the card is https://unsloth.ai/docs/inkling-2-mini , which returned HTTP 404. https://unsloth.ai/docs/models/inkling-2-mini returned HTTP 200, title Inkling 2 Mini - Run Locally Guide | Unsloth Documentation. That page says 26.4B MoE (5.4B active) and Run on 16GB RAM or 24GB RAM for full precision, recommends UD-Q4_K_XL (17.6 GB), and lists a memory table from 9 GB at 1-bit to 24 GB at 8-bit. That is Unsloth's quantization guide; no GGUF was downloaded and the guide was not followed. Safety sentence: Across all areas, we concluded that Inkling 2 Mini does not give material uplift beyond what is already available from open-weights models. A stated limit includes may take destructive actions, such as deleting or overwriting files, without confirmation. The Hugging Face weights page returned HTTP 200. API https://huggingface.co/api/models/thinkingmachines/Inkling-2-Mini HTTP 200: id thinkingmachines/Inkling-2-Mini, createdAt 2026-11-17T00:26:57.000Z, lastModified 2026-11-20T22:55:20.000Z, pipeline_tag image-text-to-text, cardData.license apache-2.0, gated false, downloads 7944, likes 1199. The creation time is earlier than the model card's release date; announcedAt stays November 20, 2026, and 17 November is not written as the release date. The weights were not downloaded. HF blog https://huggingface.co/blog/inkling2mini HTTP 200, Published November 20, 2026, phrases the size as ~26B physical total and 3B active parameters per token, a rounding this card does not use. Ollama https://ollama.com/library/inkling-2-mini HTTP 200, the page showed 7,543 Downloads, tags inkling-2-mini:latest, inkling-2-mini:26b-a5b, and inkling-2-mini:26b-a5b-nvfp4 (MLX), each marked 20GB, 1M, Text, Image; the readme says 26B parameters with 5.4B active per token. ollama run was not executed. Tinker page https://thinkingmachines.ai/tinker/ HTTP 200, title Tinker - Thinking Machines Lab; the hero is the training platform and other customers' examples, and those figures are not on this card. The playground URL on the model card, https://tinker.thinkingmachines.ai/playground , redirected to a login page on auth.thinkingmachines.ai. This library did not sign in, call the API, or fine-tune; the session query on the redirect was not written into the repo. Tinker Cookbook https://github.com/thinking-machines-lab/tinker-cookbook HTTP 200. The Inkling 2 Small news post returned HTTP 200, title Introducing Inkling 2 Small - Thinking Machines Lab; only the title was checked, and Small's specs were not copied here. The HN page and Algolia https://hn.algolia.com/api/v1/items/50581260 both returned HTTP 200: author jasondavies, 2026-11-20T20:12:19.000Z, title Inkling 2 Mini, url pointing at the news post, 1060 points and 198 comments at the check. Preview: the og:image returned HTTP 200, a 2400×1260 PNG (10815 bytes), a black four-lobe mark on white, not a runtime screenshot; scaled to 1200×630 (scale 0.5) and padded 85px above and below with the midpoint color of the scaled top and bottom edges, RGB(255,255,255), saved as a 1200×800 WebP; nothing cropped, no text added. The model card og:image https://thinkingmachines.ai/images/home.png was not downloaded and was not used. Dedupe: no inkling string in data JSON on main c088c54; the files-API patches of the 65 open PRs at the time contained no inkling, xsquad, or musset. Not done: weights and GGUFs were not downloaded; the model was not run on Ollama, Unsloth, llama.cpp, SGLang, vLLM, or Tinker; nobody signed in; PlaneBench and Thinkyville were not played or downloaded; no benchmark was re-run."
+    },
     {
       "id": "gpt-6-2-astra-sol",
       "slug": "gpt-6-2-astra-sol",
