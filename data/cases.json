@@ -1,6 +1,249 @@
 {
   "cases": [
     {
+      "id": "musset",
+      "slug": "musset",
+      "title": "Musset：开源 Mac 书稿编辑器，AI 只审不写",
+      "titleEn": "Musset: an open-source Mac book editor whose AI never writes the book",
+      "kind": "tool",
+      "hook": "开源的 Mac 书稿编辑器，AI 只批注提问，不代写正文。",
+      "hookEn": "An open-source Mac book editor. Its AI comments and asks, and never writes the book.",
+      "summary": "Musset（https://musset.app/ ）是一个开源的 Mac 小说和书稿编辑器，官网把它放在 Scrivener、Ulysses 这一类的位置上，同时反复写明边界：Musset never writes a word of your book. 导语写它像出版社里的人，读、提问、批注，It never writes a word for you. 页脚又写 Musset never writes a line for you. AI 可以关掉，关掉之后其它功能照旧。官网写 macOS 14 或更新、Apple silicon，界面语言是 English、Français、Deutsch、Español、Italiano、Português，许可证 GPL v3。书在官网和 README 里都是一文件夹的纯文本，背后是 git，用户不必自己会 git。修订在 README 和 Show HN 里写的是 CriticMarkup；官网写的是正文里的增删和批注，以及把 Word 的修订导回来。PDF 用内嵌的 Typst，按书的语言排版；拼写和语法用内嵌的 LanguageTool，官网写在 Mac 上、默认不外发。README 补了一句：如果你改选 languagetool.org，才会把文本发到那边。键盘有四套，官网和 README 都写了 Mac（默认，含 Word 的快捷键）、WordStar、vi 和 Emacs。AI 在官网写的是用你自己的 Claude 或 ChatGPT 账号；README 和 Show HN 写得更具体，走你自己的 Claude Code 或 Codex 命令行，README 还写 Musset 不保存模型服务商的密钥。Show HN 作者是 julienmarie。价格：官网和 README 写 beta 期间免费，从 1.0 起一次性 US$9.90，并且继续开源；同步是唯一的订阅。官网和 README 都写 Musset Sync 每月 €4.99。Show HN 的说法更松：若到了 1.0 且有足够兴趣，想法是一次性 $9.90；同步只说是付费的 git hosting，没有写 €4.99。页面上的结构化数据把当前价格写成 0。下载地址本次跳到 Musset-0.5.1.dmg，和「还在 1.0 之前」一致，但本库没有安装这个包。官网还写了给 iPhone 和 iPad 的 Musset Reader，并写 coming to the App Store，本库没有打开 App Store。页上有可暂停的产品演示（Pause the demonstration），那是官方演示，本库没有播放。仓库 https://github.com/Musset-App/musset 的许可证是 GPL-3.0。本库没有安装，没有用 CLI 接模型，没有导出 PDF。",
+      "summaryEn": "Musset (https://musset.app/ ) is an open-source Mac editor for novels and book manuscripts. The site puts it next to Scrivener and Ulysses, and it repeats one limit: Musset never writes a word of your book. The lede says the AI is like someone at a publisher who reads, asks, and annotates, and that it never writes a word for you. The footer says again that Musset never writes a line for you. The AI can be turned off, and the rest of the app still works. The site says macOS 14 or later on Apple silicon, interface languages English, Français, Deutsch, Español, Italiano, and Português, and the GPL v3. On the site and in the README a book is a folder of plain text with git underneath, and you do not have to know git. Revisions are CriticMarkup in the README and the Show HN; the site describes additions, deletions, and notes in the text, and bringing Word's tracked changes back in. PDFs are typeset with Typst embedded in the app, following the book's language; spelling and grammar use LanguageTool embedded in the app, which the site says runs on the Mac and does not send anything by default. The README adds that text goes to languagetool.org only if you choose that instead. There are four keyboard modes; the site and the README both list Mac (the default, including Word's shortcuts), WordStar, vi, and Emacs. The site says the AI uses your own Claude or ChatGPT account; the README and the Show HN are more specific and say your own Claude Code or Codex command-line tool, and the README says Musset holds no provider keys. The Show HN author is julienmarie. Price: the site and the README say it is free during the beta, US$9.90 once from version 1.0, and it stays open source; sync is the only subscription. Both the site and the README price Musset Sync at €4.99 a month. The Show HN is looser: if it reaches 1.0 and there is sufficient interest, the idea is a one-time $9.90; sync is described only as paid git hosting, with no €4.99. Structured data on the page lists the current price as 0. The download URL redirected to Musset-0.5.1.dmg, which fits “before 1.0,” but this library did not install that package. The site also describes Musset Reader for iPhone and iPad and says it is coming to the App Store; the App Store was not opened. The page has a product demonstration that can be paused (Pause the demonstration); that is the vendor's demo, and it was not played here. The repository https://github.com/Musset-App/musset is licensed GPL-3.0. This library did not install the app, did not connect a CLI to a model, and did not export a PDF.",
+      "categories": [
+        "content"
+      ],
+      "role": "Mac writing app",
+      "sourceUrl": "https://musset.app/",
+      "secondaryUrls": [
+        "https://github.com/Musset-App/musset",
+        "https://musset.app/download",
+        "https://news.ycombinator.com/item?id=50586323"
+      ],
+      "previewImage": "/previews/musset.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "git",
+        "Typst",
+        "LanguageTool"
+      ],
+      "publishedAt": "2026-11-21",
+      "updatedAt": "2026-11-21T12:45:00Z",
+      "qualityNote": "收录理由：它是一个开源的 Mac 书稿编辑器，把 AI 的位置写成出版社审稿人：引用原句、提问、批注，并在标题和正文里反复写绝不代写。适合不想把正文交给模型生成的人。边界：官网和 README 写 beta 免费、1.0 起一次性 US$9.90，同步每月 €4.99；Show HN 把 $9.90 写成「如果有足够兴趣」的想法，也没有写欧元价。当前下载跳到 0.5.1，仍在 1.0 之前。结构化数据写价格为 0。这些都不是本库付过款的收据。LanguageTool 默认在本机，README 写改选官网服务才会外发；AI 只用你自己的 Claude 或 ChatGPT 账号，README 写走 Claude Code 和 Codex 命令行，并且不替你保存密钥。关掉 AI 之后写作功能还在。Musset Reader 写的是即将上 App Store，本库没有核对应商店。Intel 版 README 写仍在测试。官网演示没有播放。仓库比 Show HN 更早公开，日期差在核验记录里。本库没有安装或打开应用，没有保留安装包，没有用 CLI 接模型，没有导出 PDF。",
+      "qualityNoteEn": "Why listed: an open-source Mac book editor that places the AI as a publisher's reader: it quotes the sentence, asks, and annotates, and the title and the body repeat that it will not write the book. Useful for someone who does not want a model to draft the prose. Limits: the site and the README say the beta is free and version 1.0 is US$9.90 once, with sync at €4.99 a month; the Show HN calls $9.90 an idea if there is sufficient interest, and it does not name the euro price. The download redirected to 0.5.1, which is still before 1.0. Structured data lists the price as 0. None of this is a receipt this library paid. LanguageTool stays on the machine by default, and the README says text leaves only if you switch to the hosted service; the AI uses your own Claude or ChatGPT account, and the README says that is the Claude Code and Codex command-line tools and that Musset keeps no provider keys. Writing still works with the AI off. Musset Reader is described as coming to the App Store, which was not checked. The README says an Intel build is still being tested. The on-site demonstration was not played. The repository was public before the Show HN; the date gap is in the verification log. This library did not install or open the app, did not keep the installer, did not connect a CLI to a model, and did not export a PDF.",
+      "verifyLog": "2026-11-21 晚间（Asia/Shanghai，约 20:03–20:45）：https://musset.app/ HTTP 200，title 为 Musset — the Mac app for people who finish books，og:image 为 https://musset.app/assets/en/editor.jpg?v=bcba6be4 。导语原句：a publisher inside, who reads, questions and annotates. It never writes a word for you. 页脚：Musset never writes a word of your book. 另一处：Musset never writes a line for you. 规格行：macOS 14 or later · Apple silicon；English, Français, Deutsch, Español, Italiano, Português；Free and open source (GPL v3)。键盘段有四格：Mac（The shortcuts of every Mac app and of Word. The default.）、WordStar、vi、Emacs。价格标题 Free until 1.0. Then $9.90, once. 正文：Musset is free while it is a beta. From version 1.0 it will cost US$9.90, once, and it stays open source. Sync is the only subscription, and only if you want your books in the cloud. 同步价格 €4.99 / month。下载段：macOS 14 Sonoma or later · Apple silicon · Signed and notarized by Apple。Reader 一句：Musset Reader for iPhone and iPad is free — coming to the App Store. 本库没有打开 App Store。页面有 button，aria-label 为 Pause the demonstration。没有播放该演示，也没有下载演示视频。结构化数据 SoftwareApplication 的 offers.price 为 0，priceCurrency USD，license 指向 GPL-3.0，operatingSystem 为 macOS 14 or later。AI 段：Only when you ask for a reading, and then only to the Claude or ChatGPT account you already have. Proofreading runs on your Mac. With the AI off, nothing is sent. 以及 Uses your own Claude or ChatGPT subscription. https://musset.app/assets/en/editor.jpg HTTP 200，JPEG 1920×1200。https://musset.app/download 跟随跳转后的地址是 https://musset.app/download/Musset-0.5.1.dmg ，HTTP 200。请求时响应体没有留在仓库里，没有安装，没有打开应用。版本号 0.5.1 只说明跳转目标，不代表本库跑过这个版本。README https://raw.githubusercontent.com/Musset-App/musset/main/README.md HTTP 200。核对：Free while it is a beta, then US$9.90 once from version 1.0, and open source either way. macOS 14 or later, Apple silicon.；The AI in Musset critiques, quotes and asks; on principle, it never generates prose for your book.；Corrections are stored as CriticMarkup；PDFs are typeset with Typst；LanguageTool … runs inside Musset, on your Mac；The AI runs through your own account … Claude through the official Claude Code command-line tool, ChatGPT through the official Codex command-line tool. Musset holds no AI provider keys；Musset Sync (€4.99 a month)；A build for Intel Macs is being tested: see issue 1；从源码构建写需要 Xcode 26.5、Rust 和 XcodeGen。隐私节还写：可选把检查发给 languagetool.org；只有在你自己加入 Pangram 密钥时才发给 Pangram；查地点或 ISBN/DOI 时才会用到 Apple Maps、Open Library 或 Crossref；订阅同步才会把书发给 Musset Sync；每天向 musset.app 查一次更新，服务端按日、版本和国家做计数，不保留地址。这些外发条件官网首页没有全部写上，本条以 README 为准补上，本库没有触发其中任何一条。gh api https://api.github.com/repos/Musset-App/musset HTTP 200：full_name Musset-App/musset，license GPL-3.0，stargazers_count 6，forks_count 0，language Swift，created_at 2026-11-10T00:26:29Z，pushed_at 2026-11-20T01:20:06Z，open_issues_count 1，homepage https://musset.app 。https://github.com/musset-app/musset 也返回 HTTP 200，规范名用 API 里的 Musset-App/musset。星数是核对时的 6，不是 0；不写入标题或 hook。Show HN https://news.ycombinator.com/item?id=50586323 与 Algolia 都是 HTTP 200：作者 julienmarie，2026-11-21T05:42:49.000Z，标题 Show HN: Musset, open-source Scrivener alternative with an AI that never writes，url 为 https://github.com/Musset-App/musset 的小写形式，核对时 5 points、1 comment。帖子写：A book is a folder of plain Markdown files；Revisions are CriticMarkup；PDFs are typeset using Typst；Spelling and grammar … LanguageTool, also embedded；Mac/Word, WordStar, vi and Emacs keyboard modes；The AI is optional and uses your Codex or Claude Code CLI；It’s GPL-3.0 and free during the beta. When or if it reaches 1.0, if there is sufficient interest, the idea is to make it a small one-time payment ($9.90). There is a paid sync service (git hosting). 唯一的评论在问有没有 Linux 版，页面上没有作者回复，本条不写有 Linux 版。publishedAt 用这条 Show HN 的日期 2026-11-21；仓库 created_at 是 2026-11-10，更早，写在这里而不是写成同一天发布。sourceType 用 official-launch，因为官网和仓库是产品本身，Show HN 是作者的公开介绍。预览：editor.jpg HTTP 200，1920×1200 JPEG，是编辑器界面（章节列表和一章正文）；等比缩到 1200×750（缩放 0.625），上下各补 25px，颜色取缩放后上下边缘中点 RGB(255,255,255)，成 1200×800 WebP，没有裁切，没有加字。去重：main c088c54 的 data JSON 与当时 65 个开放 PR 的补丁里没有 musset。未做：没有安装或打开应用，没有保留 dmg，没有克隆仓库，没有按 README 构建，没有用 Claude Code 或 Codex，没有导出 PDF 或 EPUB，没有播放官网演示，没有打开 App Store，没有付款。",
+      "verifyLogEn": "2026-11-21 evening (Asia/Shanghai, about 20:03–20:45): https://musset.app/ HTTP 200, title Musset — the Mac app for people who finish books, og:image https://musset.app/assets/en/editor.jpg?v=bcba6be4 . Lede: a publisher inside, who reads, questions and annotates. It never writes a word for you. Footer: Musset never writes a word of your book. Another line: Musset never writes a line for you. Spec line: macOS 14 or later · Apple silicon; English, Français, Deutsch, Español, Italiano, Português; Free and open source (GPL v3). The keyboard section has four cells: Mac (The shortcuts of every Mac app and of Word. The default.), WordStar, vi, and Emacs. Price heading: Free until 1.0. Then $9.90, once. Body: Musset is free while it is a beta. From version 1.0 it will cost US$9.90, once, and it stays open source. Sync is the only subscription, and only if you want your books in the cloud. Sync price €4.99 / month. Download line: macOS 14 Sonoma or later · Apple silicon · Signed and notarized by Apple. Reader line: Musset Reader for iPhone and iPad is free — coming to the App Store. The App Store was not opened. The page has a button whose aria-label is Pause the demonstration. That demonstration was not played and no demo video was downloaded. Structured data for SoftwareApplication has offers.price 0, priceCurrency USD, a license link to GPL-3.0, and operatingSystem macOS 14 or later. AI section: Only when you ask for a reading, and then only to the Claude or ChatGPT account you already have. Proofreading runs on your Mac. With the AI off, nothing is sent. Also: Uses your own Claude or ChatGPT subscription. https://musset.app/assets/en/editor.jpg HTTP 200, a 1920×1200 JPEG. https://musset.app/download redirected to https://musset.app/download/Musset-0.5.1.dmg and returned HTTP 200. The response body was not kept in the repo, the app was not installed, and it was not opened. The version 0.5.1 only names the redirect target; this library did not run that build. README https://raw.githubusercontent.com/Musset-App/musset/main/README.md HTTP 200. Checked: Free while it is a beta, then US$9.90 once from version 1.0, and open source either way. macOS 14 or later, Apple silicon.; The AI in Musset critiques, quotes and asks; on principle, it never generates prose for your book.; Corrections are stored as CriticMarkup; PDFs are typeset with Typst; LanguageTool … runs inside Musset, on your Mac; The AI runs through your own account … Claude through the official Claude Code command-line tool, ChatGPT through the official Codex command-line tool. Musset holds no AI provider keys; Musset Sync (€4.99 a month); A build for Intel Macs is being tested: see issue 1; building from source asks for Xcode 26.5, Rust, and XcodeGen. The privacy section also says text is sent to languagetool.org only if you choose it; Pangram only if you add your own key; Apple Maps, Open Library, or Crossref only when you look up a place or an ISBN/DOI; the book is sent to Musset Sync only if you subscribe; once a day it asks musset.app whether there is a newer version, and the server counts by day, version, and country without keeping an address. The homepage does not list every one of those outbound cases, so this entry adds them from the README. None of them was triggered here. gh api https://api.github.com/repos/Musset-App/musset HTTP 200: full_name Musset-App/musset, license GPL-3.0, stargazers_count 6, forks_count 0, language Swift, created_at 2026-11-10T00:26:29Z, pushed_at 2026-11-20T01:20:06Z, open_issues_count 1, homepage https://musset.app . https://github.com/musset-app/musset also returned HTTP 200; the canonical name used is Musset-App/musset from the API. The star count at the check was 6, not 0; it is not in the title or the hook. Show HN https://news.ycombinator.com/item?id=50586323 and Algolia both returned HTTP 200: author julienmarie, 2026-11-21T05:42:49.000Z, title Show HN: Musset, open-source Scrivener alternative with an AI that never writes, url the lowercase form of https://github.com/Musset-App/musset , 5 points and 1 comment at the check. The post says: A book is a folder of plain Markdown files; Revisions are CriticMarkup; PDFs are typeset using Typst; Spelling and grammar … LanguageTool, also embedded; Mac/Word, WordStar, vi and Emacs keyboard modes; The AI is optional and uses your Codex or Claude Code CLI; It’s GPL-3.0 and free during the beta. When or if it reaches 1.0, if there is sufficient interest, the idea is to make it a small one-time payment ($9.90). There is a paid sync service (git hosting). The only comment asks about a Linux version, and the page shows no author reply, so no Linux version is claimed. publishedAt uses the Show HN date 2026-11-21; the repo created_at is 2026-11-10, earlier, and is recorded here rather than treated as the same day. sourceType is official-launch because the site and the repository are the product, and the Show HN is the author's public introduction. Preview: editor.jpg HTTP 200, a 1920×1200 JPEG of the editor (chapter list and one chapter); scaled to 1200×750 (scale 0.625) and padded 25px above and below with the midpoint color of the scaled top and bottom edges, RGB(255,255,255), as a 1200×800 WebP; nothing cropped, no text added. Dedupe: no musset string in data JSON on main c088c54 or in the patches of the 65 open PRs at the time. Not done: the app was not installed or opened, the dmg was not kept, the repo was not cloned, it was not built from the README, Claude Code and Codex were not used, no PDF or EPUB was exported, the on-site demonstration was not played, the App Store was not opened, and nothing was paid.",
+      "landing": {
+        "what": "一个在 Mac 上写长稿的编辑器。官网把它说成安静的正文、能看见全书结构的手稿，外加一个只审不写的编辑。书是文件夹里的 Markdown，版本由程序在背后用 git 记下。",
+        "whatEn": "An editor for long manuscripts on a Mac. The site describes a calm page, a manuscript you can see as a whole, and an editor that reads but does not write. A book is Markdown in a folder, and the app keeps versions with git behind the scenes.",
+        "steps": [
+          {
+            "title": "先记住它不代写，再看价格",
+            "titleEn": "Keep the no-writing rule, then read the price",
+            "body": "官网反复写 Musset never writes a word of your book。beta 期间免费；官网和 README 写 1.0 起一次性 US$9.90，同步每月 €4.99。Show HN 把 $9.90 写成有足够兴趣时的想法。当前下载文件名是 0.5.1，本库没有安装。",
+            "bodyEn": "The site repeats that Musset never writes a word of your book. The beta is free; the site and the README say version 1.0 is US$9.90 once, and sync is €4.99 a month. The Show HN calls $9.90 an idea if there is enough interest. The current download name is 0.5.1, and this library did not install it.",
+            "links": [
+              {
+                "href": "https://musset.app/",
+                "label": "Musset 官网",
+                "labelEn": "Musset home"
+              },
+              {
+                "href": "https://github.com/Musset-App/musset",
+                "label": "源码仓库",
+                "labelEn": "Source repository"
+              }
+            ]
+          },
+          {
+            "title": "用官网的安装包，或自己读仓库",
+            "titleEn": "Use the site's installer, or read the repository",
+            "body": "官网写 macOS 14 或更新、Apple silicon，并写已签名和公证。下载地址会跳到一个 dmg。README 写 Intel 版仍在测试，从源码构建需要 Xcode 26.5。本库没有安装，也没有编译。",
+            "bodyEn": "The site says macOS 14 or later on Apple silicon, and that the app is signed and notarized. The download URL redirects to a dmg. The README says an Intel build is still being tested, and building from source asks for Xcode 26.5. This library did not install it or compile it.",
+            "links": [
+              {
+                "href": "https://musset.app/download",
+                "label": "Musset 下载",
+                "labelEn": "Musset download"
+              }
+            ]
+          },
+          {
+            "title": "AI 是可关的，而且用你自己的账号",
+            "titleEn": "The AI is optional and uses your own account",
+            "body": "官网写只有在你要求审读时，才把内容送到你自己的 Claude 或 ChatGPT 账号；校对默认在本机。README 写具体走 Claude Code 和 Codex 命令行，Musset 不保存密钥。关掉 AI 之后书仍然能写。",
+            "bodyEn": "The site says text goes to your own Claude or ChatGPT account only when you ask for a reading; proofreading stays on the Mac by default. The README says the path is the Claude Code and Codex command-line tools, and that Musset keeps no keys. The book can still be written with the AI off.",
+            "links": [
+              {
+                "href": "https://musset.app/",
+                "label": "官网里的编辑说明",
+                "labelEn": "The editor section on the site"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "它不代写正文。官网写 never writes a word / a line，README 写 never generates prose for your book。不要把它当成又一个会帮你把书写完的工具。",
+            "textEn": "It does not write the prose. The site says never writes a word / a line, and the README says never generates prose for your book. Do not treat it as another tool that finishes the book for you."
+          },
+          {
+            "text": "1.0 的 US$9.90 还不是当前结账价。官网和 README 写从 1.0 起；Show HN 多了一个「有足够兴趣」的条件。同步价 €4.99 写在官网和 README，Show HN 没有写金额。",
+            "textEn": "US$9.90 at 1.0 is not a current checkout price. The site and the README say from version 1.0; the Show HN adds “if there is sufficient interest.” The €4.99 sync price is on the site and in the README, and the Show HN does not name the amount."
+          },
+          {
+            "text": "默认不外发拼写检查，但 README 写你若改用 languagetool.org、打开 AI、订阅同步，或做地图和文献查询，对应的内容会离开这台 Mac。",
+            "textEn": "Proofreading does not leave the Mac by default, but the README says text leaves if you switch to languagetool.org, turn the AI on, subscribe to sync, or look something up on a map or in a library."
+          },
+          {
+            "text": "Musset Reader 被写成即将上 App Store。本库没有在商店里查找。Intel Mac 的构建 README 写仍在测试。",
+            "textEn": "Musset Reader is described as coming to the App Store. This library did not look for it in the store. The README says the Intel Mac build is still being tested."
+          },
+          {
+            "text": "本库没有安装或打开 Musset，没有保留安装包，没有播放官网演示，没有用 CLI 接模型，也没有导出 PDF。",
+            "textEn": "This library did not install or open Musset, did not keep the installer, did not play the on-site demonstration, did not connect a CLI to a model, and did not export a PDF."
+          }
+        ],
+        "previewCredit": "预览：Musset 官网的编辑器界面图，等比缩小后上下补白边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the editor image from the Musset site, scaled down and padded top and bottom with white to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "xsquads",
+      "slug": "xsquads",
+      "title": "xSquads：给知识工作者一组专属 AI 队友，成品先进入 Review",
+      "titleEn": "xSquads: a personal squad of AI teammates on your own files, reviewed before anything is sent",
+      "kind": "tool",
+      "hook": "桌面里的个人 AI 小队，成品先等你批准，再算发出。",
+      "hookEn": "A desktop AI squad on your files. Nothing counts as sent until you approve.",
+      "summary": "xSquads（https://xsquads.ai ）是一个 Mac 和 Windows 桌面应用，官网把它写成给每个知识工作者一组专属 AI teammates：对着本机文件夹做研究、草稿、跟进和报告，成品先进入 Review，人批准之前不当作已发送。博客《xSquads for Work is live》的作者是 Raina Rufus，Founder of xSquads，页上写 Published October 26, 2026。博客明确写这是桌面应用，不是手机应用。下载页写 Mac 为 Apple Silicon（M1 及以后）的 .dmg，Windows 为 Windows 10 和 11 的 .exe。官网按工作区列了 squad，包括 Go-to-market、Research、Customer support、Operations 和 Chief of staff。定价页的 Chief of Staff Squad 标成 Free 全员，角色名是 Aide（Chief of Staff）、Digest（Inbox Triage）、Prep（Meeting Prep）；博客把这个 squad 写成 inbox triage、meeting prep、follow-ups 和每周更新。页面没有写它已经接上某一家邮箱、日历或浏览器，本条也不这么写。安全页标题是 Security and Data Flow，Last updated: 3 October 2026，比这篇「已上线」博客更早。安全页写：应用跑在你的机器上，文件在原地读写，不复制到 xSquads 服务器；机器人由云端语言模型引擎驱动，做任务时会把提示和该任务需要的文件内容（例如摘录或被要求修改的文件）发给对应引擎，并受该引擎提供方的条款和保留政策约束；不该出站的文件就不要交给 squad。定价页写三档都是同一套 squad 和任务板，差别是能用哪些 agent：Free 每月 $0，22 of 51 agents，核心写作、规划和整理；Pro 每月 $100，37 of 51，加上增长、销售、研究、代码审查和财务；Premium 每月 $250，51 of 51，加上语音外呼（页上写 Vapi）、安全和法律，以及生命科学。定价页 FAQ 写每一档都是起草而不发送，邮件、帖子、电话或合同都要等人批准。下载页正文和博客末尾却写 xSquads for Work is free with Pro agents。两句原文不一致，本条两边都保留，不选一边。Hacker News 上另有一条 Show HN，作者名是 vincirufus，和博客署名 Raina Rufus 不同，本库没有核实是不是同一个人。那篇帖子写它是套在你已有订阅上的 meta harness，名单是 Claude Code、Codex、Pi Coding Agent、Open Code、Antigravity、Hermes 和 Grok。官网、博客、定价页和安全页没有这段名单。页脚还有 xSquad for Codex 等其它产品链接，本条没有打开，也不把它们写成这项功能。定价 FAQ 写定制 squad 由 Infinite Agenci 来做。本库没有下载安装，没有注册，没有付费，也没有让它改任何文件。",
+      "summaryEn": "xSquads (https://xsquads.ai ) is a Mac and Windows desktop app. The site describes it as a personal squad of AI teammates for each knowledge worker: research, drafts, follow-ups, and reports on a folder on the machine, with finished work waiting in Review and not treated as sent until a person approves it. The blog post “xSquads for Work is live” is by Raina Rufus, Founder of xSquads, and the page says Published October 26, 2026. The post says plainly that it is a desktop app and not a phone app. The downloads page lists a .dmg for Mac on Apple Silicon (M1 and later) and an .exe for Windows 10 and 11. The site groups squads by work area, including Go-to-market, Research, Customer support, Operations, and Chief of staff. On the pricing page the Chief of Staff Squad is marked full squad on Free, with the roles Aide (Chief of Staff), Digest (Inbox Triage), and Prep (Meeting Prep); the blog describes that squad as inbox triage, meeting prep, follow-ups, and the weekly update. The pages do not say it is already connected to a particular inbox, calendar, or browser, and this entry does not say that either. The security page is titled Security and Data Flow, Last updated: 3 October 2026, which is earlier than the “is live” post. It says the app runs on your machine, files are read and edited in place and are not copied to an xSquads server; bots are powered by cloud language-model engines, and when a bot works on a task the prompt and the file content that task needs (an excerpt, or the contents of a file it was asked to edit) are sent to the engine handling it, under that provider's terms including its retention policy; if a file must never reach a cloud model, do not give the squad access to it. The pricing page says every plan runs the same squads and task board, and what changes is which agents you can use: Free is $0 per month, 22 of 51 agents, for core writing, planning, and organizing; Pro is $100 per month, 37 of 51, adding growth, sales, research, code review, and finance; Premium is $250 per month, 51 of 51, adding voice calling (the page says Vapi), security, and legal, plus life sciences. The pricing FAQ says that on every plan squads draft and do not send, and that an email, a post, a call, or a contract waits for a person. The downloads page and the end of the blog instead say xSquads for Work is free with Pro agents. Those sentences do not match, and this entry keeps both rather than picking one. A separate Show HN post is by vincirufus, which is not the same name as Raina Rufus on the blog; this library did not check whether they are the same person. That post says it works as a meta harness on subscriptions you already have, listing Claude Code, Codex, Pi Coding Agent, Open Code, Antigravity, Hermes, and Grok. The home page, the blog, the pricing page, and the security page do not carry that list. The footer also links other products such as xSquad for Codex; those pages were not opened and are not described as features of this entry. The pricing FAQ says custom squads are built by Infinite Agenci. This library did not download or install it, did not register, did not pay, and did not let it change any file.",
+      "categories": [
+        "daily-digest",
+        "automation",
+        "multi-agent"
+      ],
+      "role": "Personal assistant",
+      "sourceUrl": "https://xsquads.ai/",
+      "secondaryUrls": [
+        "https://xsquads.ai/pricing",
+        "https://xsquads.ai/downloads",
+        "https://xsquads.ai/blog/give-every-knowledge-worker-their-own-xsquad",
+        "https://xsquads.ai/security",
+        "https://news.ycombinator.com/item?id=50582844"
+      ],
+      "previewImage": "/previews/xsquads.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "定价页写每一档都是起草而不发送，邮件、帖子、电话和合同要等人批准。安全页写不该交给云端模型的文件就不要放进 squad。本库没有代为安装、注册或批准任何成品。",
+      "approvalBoundaryEn": "The pricing page says every plan drafts and does not send, and that email, posts, calls, and contracts wait for a person. The security page says not to give the squad a file that must never reach a cloud model. This library did not install it, register, or approve any output.",
+      "connectors": [
+        "local folders",
+        "cloud AI engines",
+        "Vapi"
+      ],
+      "publishedAt": "2026-10-26",
+      "updatedAt": "2026-11-21T12:45:00Z",
+      "qualityNote": "收录理由：它把一组有角色的 AI 队友放在你自己的文件夹上，成品先进入 Review，人批准前不算发出；Chief of Staff 这一组在定价页上属于免费档，角色名包括收件分拣和会议准备。它是知识工作的桌面应用，不是 Grok Bot。边界：博客的公开日期是 2026-10-26，安全页写的更新日期更早，发现它的 Show HN 更晚，日期差在核验记录里。定价页是 Free $0 / 22 of 51、Pro $100 / 37 of 51、Premium $250 / 51 of 51；下载页和博客末尾另写免费且带 Pro agents。两句都留着。Show HN 把它写成接在已有编程订阅上的 meta harness，名单里有 Grok，官网这几页没有这么写，帖子作者名也和博客署名不同。Inbox triage 和 meeting prep 只是角色名和博客里的工作描述，没有写成已经接上邮箱、日历或浏览器。文件不进 xSquads 服务器，但任务需要的提示和文件内容会发给云端引擎，并受对方保留政策约束。语音外呼只在 Premium 的说明里出现，页上写通过 Vapi。「10x」是官网口号，不是测出来的。本库没有下载安装，没有注册，没有付费，没有让它改文件。",
+      "qualityNoteEn": "Why listed: it puts a squad of role-named AI teammates on your own folder, and finished work waits in Review until a person approves it; the Chief of Staff squad is on the free plan on the pricing page, with role names for inbox triage and meeting prep. It is a desktop app for knowledge work, not a Grok Bot. Limits: the blog's public date is 2026-10-26, the security page's update date is earlier, and the Show HN that surfaced it is later; the date gap is in the verification log. The pricing page says Free $0 / 22 of 51, Pro $100 / 37 of 51, and Premium $250 / 51 of 51; the downloads page and the end of the blog separately say it is free with Pro agents. Both sentences stay. The Show HN describes it as a meta harness on coding subscriptions you already have, and the list includes Grok; the official pages opened here do not say that, and the post's author name is not the blog byline. Inbox triage and meeting prep are role names and the blog's description of the work, not a claim that mail, calendar, or a browser are already connected. Files are not copied to an xSquads server, but the prompt and the file content a task needs are sent to a cloud engine under that provider's retention policy. Outbound voice appears only in the Premium description, and the page says it uses Vapi. “10x” is the site's slogan, not a measurement. This library did not download or install it, did not register, did not pay, and did not let it change a file.",
+      "verifyLog": "2026-11-21 晚间（Asia/Shanghai，约 20:03–20:45）：https://xsquads.ai/ HTTP 200，title 为 xSquads - Personal AI Assistant for Work，og:title 为 Give every knowledge worker their own xSquad，og:image 为 https://xsquads.ai/og/default.png 。正文核对：The productivity multiplexer for knowledge workers: a personal squad of AI teammates that takes on the busywork, on your own files and folders, while you direct the work and review the results. 下载块写 Mac Apple Silicon (M1 and later)、Download for Mac (.dmg)，Windows 10 and 11、Download for Windows (.exe)。工作区列表含 Go-to-market、Research、Customer support、Operations、Chief of staff。How it works 写 Point the mission at a local folder、Finished work waits in Review until you say Done。另有一句 Roles, channels and routines 和 Many AI engines under one squad，没有点名具体引擎。页内任务板是 HTML，不是单独的图片文件，列了 Nova / Quill / Scout 和 Backlog 到 Done。https://xsquads.ai/pricing HTTP 200，title 为 xSquads Pricing: Free, Pro and Premium AI Agent Plans。核对：Free $0 per month，22 of 51 agents；Pro $100 per month，37 of 51 agents；Premium $250 per month，51 of 51 agents。Pro 的说明是 Adds the growth, sales, research, code review and finance specialists. Premium 的说明是 Every agent, including voice calling, security, legal and life sciences. 以及 Outbound voice calling with Vapi。Chief of Staff Squad 标 Full squad on Free，角色为 Aide Chief of Staff、Digest Inbox Triage、Prep Meeting Prep。FAQ 原句：On every plan, squads draft and do not send. Anything that leaves your company, such as an email, a post, a call or a contract, waits in Review until a person approves it. 定制一句：Infinite Agenci builds custom xSquads。https://xsquads.ai/downloads HTTP 200，title 为 Download xSquads for Mac and Windows，可见正文为 The xSquads desktop app for Mac and Windows. xSquads for Work is free with Pro agents. meta description 同一句。https://xsquads.ai/blog/give-every-knowledge-worker-their-own-xsquad HTTP 200，title 为 xSquads for Work is live，作者 Raina Rufus, Founder of xSquads，Published October 26, 2026。核对：The app is a desktop app. It is not a phone app.；The app runs on your machine. Your files and folders are read and edited in place. They are not copied to an xSquads server. When a bot works on a task, the prompt and the file content it needs for that task are sent to the AI engine handling it.；Chief of Staff Squad: inbox triage, meeting prep, follow-ups, and the weekly update. 文末又写 xSquads for Work is free with Pro agents. 因此和定价页的 $100 Pro 并列保留。https://xsquads.ai/security HTTP 200，title 为 Security and Data Flow - xSquads，Last updated: 3 October 2026，早于博客日期。核对：We do not copy your folders to an xSquads server.；Bots are powered by AI engines, which are cloud language model services.；the prompt and any file content it needs for that task (for example an excerpt or the contents of a file it was asked to edit) is sent to the engine handling the task；That content is processed under the engine provider's terms, including its retention policy. If a file must never reach a cloud model, do not give the squad access to it.；Nothing is treated as final until you approve it, and irreversible actions are escalated to you instead of being executed. mailto 为 raina@infiniteagenci.com，页面上的可见文字被做成了邮箱占位。试探 https://xsquads.ai/security-and-data-flow HTTP 404，安全说明在 /security。Hacker News https://news.ycombinator.com/item?id=50582844 与 Algolia https://hn.algolia.com/api/v1/items/50582844 都是 HTTP 200：作者 vincirufus，2026-11-20T21:56:16.000Z，标题 Show HN: XSquads– Set a mission, agents work on it autonomously in your harness，url https://xsquads.ai ，核对时 4 points、2 comments。帖子正文：Works as a meta harness, with your existing subscriptions on the following harnesses，名单为 Claude Code、Codex、Pi Coding Agent、Open Code、Antigravity、Hermes、Grok。官网上述四页没有这段名单。publishedAt 用博客的 October 26, 2026，不用这条更晚的 Show HN，也不用安全页更早的 October 3。sourceType 用 official-launch，因为条目以官网和官方博客为准，Show HN 的说法和官网不一致，只作为第二条来源写明。页脚链接了 xSquad for Codex、xSquad Zap、xSquad Shopify 等，本次没有打开。预览：og:image HTTP 200，PNG 1200×630，是深色分享卡，不是应用窗口截图；原图已经宽 1200，高度 630，上下各用原图第一行和最后一行延伸 85px（左缘绿条因此继续到补边里，RGB 左缘约 155,217,44，画面中点底色 RGB 25,29,23），成 1200×800 WebP，原图像素没有裁掉，没有加字。首页没有另找产品界面位图。去重：main c088c54 的 data JSON 与当时 65 个开放 PR 的补丁里没有 xsquad。未做：没有下载 .dmg 或 .exe，没有安装，没有注册，没有付费，没有把文件夹交给它，没有发出邮件或电话。",
+      "verifyLogEn": "2026-11-21 evening (Asia/Shanghai, about 20:03–20:45): https://xsquads.ai/ HTTP 200, title xSquads - Personal AI Assistant for Work, og:title Give every knowledge worker their own xSquad, og:image https://xsquads.ai/og/default.png . Checked: The productivity multiplexer for knowledge workers: a personal squad of AI teammates that takes on the busywork, on your own files and folders, while you direct the work and review the results. The download block says Mac Apple Silicon (M1 and later), Download for Mac (.dmg), and Windows 10 and 11, Download for Windows (.exe). Work areas include Go-to-market, Research, Customer support, Operations, and Chief of staff. How it works says Point the mission at a local folder and Finished work waits in Review until you say Done. It also says Roles, channels and routines and Many AI engines under one squad, without naming the engines. The task board on the page is HTML, not a separate image file, and lists Nova / Quill / Scout and columns from Backlog to Done. https://xsquads.ai/pricing HTTP 200, title xSquads Pricing: Free, Pro and Premium AI Agent Plans. Checked: Free $0 per month, 22 of 51 agents; Pro $100 per month, 37 of 51 agents; Premium $250 per month, 51 of 51 agents. Pro reads Adds the growth, sales, research, code review and finance specialists. Premium reads Every agent, including voice calling, security, legal and life sciences. and Outbound voice calling with Vapi. Chief of Staff Squad is marked Full squad on Free, with Aide Chief of Staff, Digest Inbox Triage, and Prep Meeting Prep. FAQ sentence: On every plan, squads draft and do not send. Anything that leaves your company, such as an email, a post, a call or a contract, waits in Review until a person approves it. Custom line: Infinite Agenci builds custom xSquads. https://xsquads.ai/downloads HTTP 200, title Download xSquads for Mac and Windows, visible text The xSquads desktop app for Mac and Windows. xSquads for Work is free with Pro agents. The meta description is the same sentence. https://xsquads.ai/blog/give-every-knowledge-worker-their-own-xsquad HTTP 200, title xSquads for Work is live, by Raina Rufus, Founder of xSquads, Published October 26, 2026. Checked: The app is a desktop app. It is not a phone app.; The app runs on your machine. Your files and folders are read and edited in place. They are not copied to an xSquads server. When a bot works on a task, the prompt and the file content it needs for that task are sent to the AI engine handling it.; Chief of Staff Squad: inbox triage, meeting prep, follow-ups, and the weekly update. The end of the post again says xSquads for Work is free with Pro agents. That sentence is kept beside the pricing page's $100 Pro. https://xsquads.ai/security HTTP 200, title Security and Data Flow - xSquads, Last updated: 3 October 2026, earlier than the blog date. Checked: We do not copy your folders to an xSquads server.; Bots are powered by AI engines, which are cloud language model services.; the prompt and any file content it needs for that task (for example an excerpt or the contents of a file it was asked to edit) is sent to the engine handling the task; That content is processed under the engine provider's terms, including its retention policy. If a file must never reach a cloud model, do not give the squad access to it.; Nothing is treated as final until you approve it, and irreversible actions are escalated to you instead of being executed. The mailto is raina@infiniteagenci.com; the visible text on the page is an obfuscated email placeholder. A probe of https://xsquads.ai/security-and-data-flow returned HTTP 404; the security copy is at /security. Hacker News https://news.ycombinator.com/item?id=50582844 and Algolia https://hn.algolia.com/api/v1/items/50582844 both returned HTTP 200: author vincirufus, 2026-11-20T21:56:16.000Z, title Show HN: XSquads– Set a mission, agents work on it autonomously in your harness, url https://xsquads.ai , 4 points and 2 comments at the check. Post text: Works as a meta harness, with your existing subscriptions on the following harnesses, listing Claude Code, Codex, Pi Coding Agent, Open Code, Antigravity, Hermes, and Grok. The four official pages above do not carry that list. publishedAt uses the blog's October 26, 2026, not the later Show HN and not the security page's earlier October 3. sourceType is official-launch because the entry follows the site and the official blog; the Show HN wording does not match those pages and is recorded as a second source. The footer links xSquad for Codex, xSquad Zap, xSquad Shopify, and others; those pages were not opened. Preview: og:image HTTP 200, a 1200×630 PNG, a dark share card rather than an app-window screenshot; the source was already 1200 wide and 630 tall, so the first row and the last row were each extended 85px (the green bar at the left edge therefore continues into the pad; the left-edge green is about RGB 155,217,44 and the midpoint background is RGB 25,29,23), making a 1200×800 WebP. No source pixel was cropped and no text was added. The homepage had no separate product-interface bitmap. Dedupe: no xsquad string in data JSON on main c088c54 or in the patches of the 65 open PRs at the time. Not done: the .dmg and the .exe were not downloaded, it was not installed, nobody registered or paid, no folder was handed to it, and no email or call was sent.",
+      "landing": {
+        "what": "一个装在 Mac 或 Windows 上的个人工作小队。官网的说法是每个知识工作者自己带一组有角色的 AI 队友，任务指向本机文件夹，成品先停在 Review。它不是手机应用，博客也把它和「电脑合上还在跑的代理」分开写。",
+        "whatEn": "A personal work squad you install on a Mac or on Windows. The site's account is that each knowledge worker directs their own role-named AI teammates, points a mission at a folder on the machine, and sees finished work stop in Review. It is not a phone app, and the blog also separates it from an agent that keeps going with the laptop closed.",
+        "steps": [
+          {
+            "title": "先对一下价格页和下载页",
+            "titleEn": "Read the pricing page against the downloads page",
+            "body": "定价页写 Free 每月 $0（22 of 51）、Pro 每月 $100（37 of 51）、Premium 每月 $250（51 of 51）。下载页和博客末尾写 xSquads for Work is free with Pro agents。两处不一致，以你打开时的原文为准，不要只记其中一句。",
+            "bodyEn": "The pricing page says Free $0 a month (22 of 51), Pro $100 a month (37 of 51), and Premium $250 a month (51 of 51). The downloads page and the end of the blog say xSquads for Work is free with Pro agents. The two do not match; use the wording on the pages when you open them, and do not keep only one sentence.",
+            "links": [
+              {
+                "href": "https://xsquads.ai/pricing",
+                "label": "xSquads 价格页",
+                "labelEn": "xSquads pricing"
+              },
+              {
+                "href": "https://xsquads.ai/downloads",
+                "label": "xSquads 下载页",
+                "labelEn": "xSquads downloads"
+              }
+            ]
+          },
+          {
+            "title": "只在自己的电脑上安装",
+            "titleEn": "Install it only on your own computer",
+            "body": "下载页给了 Apple Silicon（M1 及以后）的 .dmg 和 Windows 10 / 11 的 .exe。博客写它不是手机应用。本库没有下载，也没有安装。",
+            "bodyEn": "The downloads page offers a .dmg for Apple Silicon (M1 and later) and an .exe for Windows 10 and 11. The blog says it is not a phone app. This library did not download it or install it.",
+            "links": [
+              {
+                "href": "https://xsquads.ai/downloads",
+                "label": "下载 xSquads",
+                "labelEn": "Download xSquads"
+              }
+            ]
+          },
+          {
+            "title": "先读安全页，再决定文件夹和批准",
+            "titleEn": "Read the security page before you choose a folder or approve anything",
+            "body": "安全页写文件留在本机、不复制到 xSquads 服务器，但任务需要的提示和文件内容会发给云端引擎。定价页写邮件、帖子、电话和合同都要人批准后才算发出。不该出站的文件不要放进任务。",
+            "bodyEn": "The security page says files stay on the machine and are not copied to an xSquads server, but the prompt and the file content a task needs are sent to a cloud engine. The pricing page says email, posts, calls, and contracts count as sent only after a person approves them. Do not put a file in a mission if it must not leave the machine.",
+            "links": [
+              {
+                "href": "https://xsquads.ai/security",
+                "label": "Security and Data Flow",
+                "labelEn": "Security and Data Flow"
+              },
+              {
+                "href": "https://xsquads.ai/blog/give-every-knowledge-worker-their-own-xsquad",
+                "label": "博客：xSquads for Work is live",
+                "labelEn": "Blog: xSquads for Work is live"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "定价页和下载页对「Pro 是否要钱」说法不同：一边是每月 $100 才解锁 37 个 agent，一边是 xSquads for Work is free with Pro agents。本条不替你选。",
+            "textEn": "The pricing page and the downloads page disagree about whether Pro costs money: one side is $100 a month to unlock 37 agents, the other says xSquads for Work is free with Pro agents. This entry does not choose for you."
+          },
+          {
+            "text": "文件不复制到 xSquads 服务器，但安全页写任务会把提示和所需文件内容发给云端语言模型，并受该提供方的保留政策约束。",
+            "textEn": "Files are not copied to an xSquads server, but the security page says a task sends the prompt and the needed file content to a cloud language model, under that provider's retention policy."
+          },
+          {
+            "text": "Show HN 写它可以套在 Claude Code、Codex、Grok 等已有订阅上。官网这几页没有这段名单。不要把它当成 Grok Bot，也不要把名单当成已经核实的接口。",
+            "textEn": "The Show HN says it can sit on subscriptions you already have, including Claude Code, Codex, and Grok. The official pages opened here do not carry that list. Do not treat it as a Grok Bot, and do not treat the list as a verified interface."
+          },
+          {
+            "text": "Chief of Staff 的 Digest、Prep 只说明角色叫收件分拣和会议准备。页面没有写已经接上邮箱、日历或浏览器。",
+            "textEn": "Digest and Prep on the Chief of Staff squad only name the roles as inbox triage and meeting prep. The pages do not say an inbox, a calendar, or a browser is already connected."
+          },
+          {
+            "text": "本库没有下载安装，没有注册或付费，也没有让它读过或改过任何文件。",
+            "textEn": "This library did not download or install it, did not register or pay, and did not let it read or change any file."
+          }
+        ],
+        "previewCredit": "预览：xSquads 官网的分享图，等比放置后用原图上下边缘行补成 3:2，未裁切",
+        "previewCreditEn": "Preview: the share image from the xSquads site, placed at its own scale and padded to 3:2 with the image's own top and bottom rows, not cropped"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12377,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-21T12:45:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 223,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12710,41 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "https://thinkingmachines.ai/model-card/inkling-2-mini/",
+      "https://thinkingmachines.ai/news/inkling-2-small/",
+      "https://thinkingmachines.ai/tinker/",
+      "https://tinker.thinkingmachines.ai/playground",
+      "https://huggingface.co/blog/inkling2mini",
+      "https://huggingface.co/thinkingmachines/Inkling-2-Mini",
+      "https://huggingface.co/api/models/thinkingmachines/Inkling-2-Mini",
+      "https://huggingface.co/thinkingmachines/TML-d24-varloop-research",
+      "https://ollama.com/library/inkling-2-mini",
+      "https://unsloth.ai/docs/models/inkling-2-mini",
+      "https://unsloth.ai/docs/inkling-2-mini",
+      "https://github.com/thinking-machines-lab/tinker-cookbook",
+      "https://thinkingmachines.ai/news/inkling-2-mini/images/cover-social.png",
+      "https://news.ycombinator.com/item?id=50581260",
+      "https://hn.algolia.com/api/v1/items/50581260",
+      "https://xsquads.ai/",
+      "https://xsquads.ai/pricing",
+      "https://xsquads.ai/downloads",
+      "https://xsquads.ai/blog/give-every-knowledge-worker-their-own-xsquad",
+      "https://xsquads.ai/security",
+      "https://xsquads.ai/security-and-data-flow",
+      "https://xsquads.ai/og/default.png",
+      "https://news.ycombinator.com/item?id=50582844",
+      "https://hn.algolia.com/api/v1/items/50582844",
+      "https://musset.app/",
+      "https://musset.app/assets/en/editor.jpg",
+      "https://musset.app/download",
+      "https://musset.app/download/Musset-0.5.1.dmg",
+      "https://github.com/Musset-App/musset",
+      "https://api.github.com/repos/Musset-App/musset",
+      "https://raw.githubusercontent.com/Musset-App/musset/main/README.md",
+      "https://news.ycombinator.com/item?id=50586323",
+      "https://hn.algolia.com/api/v1/items/50586323"
     ]
   }
 }
