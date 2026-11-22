@@ -1,6 +1,121 @@
 {
   "cases": [
     {
+      "id": "amuse",
+      "slug": "amuse",
+      "title": "Amuse：跑在自己电脑上的个人助手，研究、浏览、做小应用，对外先问你",
+      "titleEn": "Amuse: a personal assistant on your own computer that researches, browses, builds small apps, and asks first",
+      "kind": "tool",
+      "hook": "自托管的个人助手：研究、浏览、做小应用，对外先问你。",
+      "hookEn": "Self-hosted assistant for research, browsing, and small apps. It asks first.",
+      "summary": "Amuse（https://github.com/replit/amuse ）是 Replit 公开的个人助手，Apache-2.0，给一个人用，跑在你自己的电脑上。仓库的 homepage 是空的，本条不另写产品官网。README 写它能做带出处的网页研究（用 OpenAI 的网页搜索）、在对话里开一个你可以看着、接管或停掉的实时浏览器、提醒、监视和只在有事时才出声的后台心跳、把目标拆成步骤继续做，以及文档、PDF、图片、播客和带保存数据的小应用（它叫 spaces）。你给助手起名、定样子，也可以开主题分开的 side chat。记忆是工作区里的纯文本，你可以自己读、自己改；README 写这些文件的布局沿用 OpenClaw。登录信息和 API key 放在加密保险库里，模型只看见占位符。审批卡覆盖发送、提交表单、付款和新的日程，范围可以是这一次、这项任务、这个网站或始终；README 还写，打开你没有点名的网站之前，以及读完网页后要改记忆之前，它会先问你。它没有登录：Docker Compose 只把应用发布在 127.0.0.1:3000，README 写不要暴露到局域网或公网，助手也只能访问公网地址。模型只用 OpenAI，要自备 key。README 写代理用 gpt-6.2-sol，短步骤用 gpt-6-luna，出图用 gpt-image-2，听写和朗读用 gpt-4o-mini-transcribe 与 gpt-4o-mini-tts；.env.example 里这几行是注释掉的默认值。它不接 MCP，README 写连接方式是 API key 和实时浏览器。天气问题会请求免费的 Open-Meteo。从源码跑需要 Node.js 22.9+、pnpm 10.26.1 和 PostgreSQL 14+；Docker Compose 的数据库镜像是 postgres:17-alpine。CHANGELOG 仍是 0.1.0，标题写 unreleased，正文是 First public release。官方帖称它是免费的开源助手，并说用 Replit Missions 三天做完、用 Security Scanner 查过漏洞；许可是开源的，但模型调用花的是你自己的 OpenAI 额度。README 让你在 OpenAI 项目上设花费上限，Amuse 另有一个默认 2000 用量单位的当日上限，到了就停到第二天，后台任务也暂停。适合想把个人助手放在自己机器上、并且希望对外动作先经过自己的人。本库没有执行 docker compose up，没有准备 OpenAI key，没有安装 PostgreSQL，没有登录 Replit，没有让它发送、提交或付款，也没有把浏览器交给它。",
+      "summaryEn": "Amuse (https://github.com/replit/amuse ) is a personal assistant Replit published under Apache-2.0. It is for one person and runs on your own computer. The repository homepage field is empty, so this entry invents no product site. The README says it can research the web with sources (using OpenAI web search), open a live browser in the chat that you can watch, take over, or stop, run reminders, monitors, and a background heartbeat that only messages you when something matters, turn goals into steps it keeps working on, and make documents, PDFs, images, podcasts, and small apps with saved data (it calls them spaces). You name the agent and set how it looks, and you can open side chats for separate topics. Memory is plain text in the workspace that you can read and edit; the README says that file layout follows OpenClaw. Logins and API keys sit in an encrypted vault, and the model only sees stand-in tokens. Approval cards cover sends, form submissions, payments, and new schedules, with once, task, site, or always scopes; the README also says it asks before opening a site you did not name, and before it changes memory after reading the web. There is no login: Docker Compose publishes the app on 127.0.0.1:3000 only, the README says not to expose it to a LAN or the internet, and the agent can reach public addresses only. Models are OpenAI only, on a key you provide. The README says the agent uses gpt-6.2-sol, quick steps use gpt-6-luna, images use gpt-image-2, and transcription and speech use gpt-4o-mini-transcribe and gpt-4o-mini-tts; those lines in .env.example are commented defaults. It does not use MCP; the README says it connects through API keys and the live browser. Weather questions call the free Open-Meteo API. Running from source needs Node.js 22.9+, pnpm 10.26.1, and PostgreSQL 14+; the Docker Compose database image is postgres:17-alpine. The CHANGELOG is still 0.1.0, headed unreleased, and the body says First public release. The official post calls it a free open-source assistant and says it was built in three days with Replit Missions and checked with their Security Scanner; the license is open source, but model calls spend your own OpenAI credit. The README tells you to set a spend limit on the OpenAI project, and Amuse also stops for the day at a default of 2,000 usage units, pausing background jobs until the next day. Good when you want a personal assistant on your own machine and want outward actions to come through you first. This library did not run docker compose up, did not prepare an OpenAI key, did not install PostgreSQL, did not sign in to Replit, did not let it send, submit, or pay, and did not hand it the browser.",
+      "categories": [
+        "automation",
+        "research"
+      ],
+      "role": "Personal assistant",
+      "sourceUrl": "https://github.com/replit/amuse",
+      "secondaryUrls": [
+        "https://x.com/Replit/status/2123525657451954420",
+        "https://github.com/replit/amuse/blob/main/CHANGELOG.md",
+        "https://github.com/replit/amuse/blob/main/.env.example",
+        "https://github.com/replit/amuse/blob/main/docker-compose.yml"
+      ],
+      "previewImage": "/previews/amuse.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "发送、提交表单、付款和新建日程，以及打开你没有点名的网站、读完网页后改记忆，README 都写要先问你。本库没有代为运行，也没有让它对外动作。",
+      "approvalBoundaryEn": "The README says it asks before sends, form submissions, payments, and new schedules, before it opens a site you did not name, and before it changes memory after reading the web. This library did not run it or let it act outward.",
+      "connectors": [
+        "OpenAI",
+        "PostgreSQL",
+        "browser",
+        "Open-Meteo"
+      ],
+      "publishedAt": "2026-11-19",
+      "updatedAt": "2026-11-22T12:02:00Z",
+      "qualityNote": "收录理由：这是 Replit 公开仓库里的个人助手，研究、实时浏览器、提醒和小应用都写在 README 里，对外动作要先审批；跑在你自己的电脑上，不是又一张 Grok Bot 角色卡。边界：CHANGELOG 仍是 0.1.0，标题写 unreleased。要自备 OpenAI key 和 PostgreSQL，模型调用花的是你自己的额度。官方帖说用 Replit Missions 三天做完，并用 Security Scanner 查过漏洞，这是官方说法，本库没有核工期，也没有复现扫描。README 写提醒、监视和后台心跳；官方演示画面上有一条名叫 Heartbeat 的日程。本库没有跑起来，没有核对它会不会按时触发。本库没有执行 docker compose up，没有准备 OpenAI key，没有安装 PostgreSQL，没有登录 Replit，没有让它发送、提交或付款，也没有把浏览器交给它。",
+      "qualityNoteEn": "Why listed: this is the personal assistant in Replit's public repository. Research, a live browser, reminders, and small apps are in the README, and outward actions wait for approval. It runs on your own computer. It is not another Grok Bot character card. Limits: the CHANGELOG is still 0.1.0 and headed unreleased. You bring your own OpenAI key and PostgreSQL, and model calls spend your credit. The official post says Replit Missions finished it in three days and that their Security Scanner checked it; those are the post's statements. This library did not check the schedule or repeat the scan. The README describes reminders, monitors, and a background heartbeat, and the official demo shows a scheduled task named Heartbeat. This library did not run it and did not check whether that task fires on time. This library did not run docker compose up, did not prepare an OpenAI key, did not install PostgreSQL, did not sign in to Replit, did not let it send, submit, or pay, and did not hand it the browser.",
+      "verifyLog": "2026-11-22 晚间核对（Asia/Shanghai 约 20:00，UTC 2026-11-22T12:02:01Z）。gh api repos/replit/amuse：created_at 2026-11-19T04:34:09Z，pushed_at 2026-11-19T19:29:16Z，updated_at 2026-11-22T11:12:50Z（元数据时间，不是新的推送），stargazers_count 140，forks_count 20，license SPDX Apache-2.0，homepage 为 null，language TypeScript，default_branch main，description 为 Self-hosted personal AI agent: research, a live browser, reminders and small apps, with approvals before actions. Runs on your own computer with an OpenAI key. topics 为 ai-agent, browser-automation, openai, personal-assistant, postgresql, self-hosted, typescript。星数只记在这里。README（仓库根目录，本次按原文读完）：开头即 Self-hosted personal AI agent，需要 OpenAI API key 和 PostgreSQL，No account, hosted service or other API key is required；功能列表含 side chats、OpenAI web search、live browser（watch, take over or stop）、Reminders, monitors and a background heartbeat that only message you when something matters、Goals、Documents, PDFs, images, podcasts and spaces、Memory as plain workspace files、Approval cards for sends, form submissions, payments and new schedules, with once, task, site or always scopes、encrypted vault（the model only sees stand-in tokens）、Voice mode。Docker Compose 段写 publishes the app on 127.0.0.1 only，打开 http://localhost:3000。从源码：Node.js 22.9+、pnpm 10.26.1、PostgreSQL 14+，pnpm setup:browser 会下载 Chromium。Your OpenAI key 一段写 The agent (gpt-6.2-sol, with gpt-6-luna for quick steps)、image generation (gpt-image-2)、AMUSE_DAILY_LIMIT usage units (2,000 by default)。Besides OpenAI 一段写天气走 Open-Meteo（CC BY 4.0）。Scope 一段写 one person on one computer、OpenAI models only、rather than MCP servers、no push to your phone yet。Security model 一段写 no login、listens on 127.0.0.1 only、Don't expose it to a network or the internet、consequential actions ask you first，并指向 SECURITY.md 与 docs/AUDIT.md；这两个文件本次没有打开。Docker Compose 下浏览器没有 Chromium 自己的沙箱，容器是隔离边界。加密钥匙在首次运行时写到 .data/secret.key 或 amuse-data 卷。Acknowledgements 写工作区文件布局沿用 OpenClaw（MIT）。License 段写 Apache License 2.0，并写 Amuse is an independent project, not affiliated with or endorsed by OpenAI。LICENSE 文件是 Apache 2.0 正文，附录的版权行仍是模板占位 Copyright [yyyy] [name of copyright owner]，没有填版权人。CHANGELOG.md：## 0.1.0 (unreleased)，First public release，条目含 onboarding、main chat、side chats、voice、web research、live browser、Reminders, monitors, goals with plans, and a background heartbeat、spaces、approval cards、encrypted credential vault、Docker Compose with PostgreSQL, running as a non-root user。.env.example：OPENAI_API_KEY 与 DATABASE_URL=postgres://amuse:amuse@localhost:5432/amuse 为必填示例；模型行都是注释：AMUSE_AGENT_MODEL=gpt-6.2-sol、AMUSE_FAST_MODEL=gpt-6-luna、AMUSE_IMAGE_MODEL=gpt-image-2、AMUSE_TRANSCRIBE_MODEL=gpt-4o-mini-transcribe、AMUSE_SPEECH_MODEL=gpt-4o-mini-tts；AMUSE_DAILY_LIMIT=2000 也是注释，说明 about 1 unit per 1k input tokens；HOST 注释写 default 127.0.0.1，anything other than a loopback address lets other machines control it。docker-compose.yml：db 镜像 postgres:17-alpine，amuse 服务 ports 为 127.0.0.1:3000:3000，注释 Published on localhost only: Amuse has no login。这和从源码那段写的 PostgreSQL 14+ 不是同一个数字，两处都按原文保留。官方帖 https://x.com/Replit/status/2123525657451954420 ，作者 @Replit，created_at 2026-11-19T21:15:44.000Z。正文（fxtwitter 展开后的全文）：Companies have spent billions on personal AI assistants. But you rent them, and your memories, chats and logins live on their servers. We gave Replit Missions a challenge: replicate the leading AI assistant. 链接展开为 https://github.com/replit/amuse 。3 days later, it was done. We used our Security Scanner to find & patch vulnerabilities, and make sure that the end product was safe to use. Meet Amuse: a free, open-source AI assistant that runs on your own computer. It researches, browses, sets reminders and builds small apps, and it asks before it acts. Your data and logins stay with you. 「三天」和 Security Scanner 只作为官方说法。核对时 X 接口给出的公开计数：bookmark 504、impression 102123、like 377、quote 32、reply 41、repost 41；这些不是本库测的产品效果。帖内三条 animated_gif，都是 960×570：HXhHUSoXQAA8W7q.mp4 时长 8.08s（起名与打招呼，抽看的帧上时钟 6:53 AM，助手名正在输入 Juni，建议名有 Juniper、Biscuit、Atlas、Pebble、Nova，随后画面是名叫 Juniper 的助手）；HXhHUSrXoAEJbZb.mp4 时长 12.33s（做小应用，活动记录时钟 6:53 AM 与 6:54 AM）；HXhHUSpWcAAwIfN.mp4 时长 9.41s（浏览器，时钟 6:45 AM）。三条时钟不衔接，是分段演示，不是一条连续实拍。礼物清单那一帧上的小应用标题是 Gift Ideas，画面文字有 Mom、Birthday 2027-02-14、$0 spent of $50 budget、$28/$85、Alex (best friend)、$28 spent of $35 budget 等，这些是演示里的例子，不是产品指标。浏览器那一帧里，助手回报的文字含 3,308 points、3,019 comments、https://news.ycombinator.com/item?id=50467087 ，并写 I only read the HN listing and didn't open the article。右侧栏在抽看的帧上写 1 scheduled task、Heartbeat、Every 30 minutes；「每 30 分钟」是画面文字，README 只写 background heartbeat，没有写 30 分钟，本库没有跑调度。README 里的 docs/media/build-an-app.gif 与 browser.gif 已下载，只打开了各自第一帧：同一套界面和 Juniper，时钟分别是 1:42 AM 与 2:40 AM，和帖子里的三段不是同一条片子；hatch.gif 与 voice.gif 没有下载。预览取帖子里做小应用那段约第 7 秒的一帧（源 960×570），宽缩到 1200、高取整为 712（按比例是 712.5），上、下各补 44px 的 #181818（四角采样约 rgb 23–25），setsar=1，得到 1200×800 WebP，没有裁切，没有加字。去重：main c088c54 的 data/cases.json、html-items、agent-ui、models 没有 id amuse 或 replit/amuse；66 个打开的 PR 的 data JSON diff 里没有新增 id amuse、replit-amuse 或 openpencil，也没有 askhooman、homebrain。openpencil 已在 main（id openpencil，sourceUrl https://openpencil.dev/ ，预览 /previews/openpencil.webp ，publishedAt 2026-10-15），本次不重复收录，也没有重开官网。未做：没有 docker compose up，没有 pnpm install，没有准备 OpenAI key，没有安装 PostgreSQL，没有登录 Replit，没有让助手发送、提交或付款，没有接管浏览器，没有打开 SECURITY.md、docs/AUDIT.md、hatch.gif、voice.gif。",
+      "verifyLogEn": "Checked on the evening of 2026-11-22 (about 20:00 Asia/Shanghai, UTC 2026-11-22T12:02:01Z). gh api repos/replit/amuse: created_at 2026-11-19T04:34:09Z, pushed_at 2026-11-19T19:29:16Z, updated_at 2026-11-22T11:12:50Z (metadata time, not a new push), stargazers_count 140, forks_count 20, license SPDX Apache-2.0, homepage null, language TypeScript, default_branch main, description Self-hosted personal AI agent: research, a live browser, reminders and small apps, with approvals before actions. Runs on your own computer with an OpenAI key. Topics: ai-agent, browser-automation, openai, personal-assistant, postgresql, self-hosted, typescript. The star count is recorded only here. README (repository root, read in full this pass): it opens with Self-hosted personal AI agent, requires an OpenAI API key and PostgreSQL, and says No account, hosted service or other API key is required. The feature list includes side chats, OpenAI web search, a live browser (watch, take over or stop), Reminders, monitors and a background heartbeat that only message you when something matters, Goals, Documents, PDFs, images, podcasts and spaces, Memory as plain workspace files, Approval cards for sends, form submissions, payments and new schedules, with once, task, site or always scopes, an encrypted vault (the model only sees stand-in tokens), and Voice mode. The Docker Compose section says it publishes the app on 127.0.0.1 only and to open http://localhost:3000. From source: Node.js 22.9+, pnpm 10.26.1, PostgreSQL 14+, and pnpm setup:browser downloads Chromium. The Your OpenAI key section says The agent (gpt-6.2-sol, with gpt-6-luna for quick steps), image generation (gpt-image-2), and AMUSE_DAILY_LIMIT usage units (2,000 by default). The Besides OpenAI section says weather uses Open-Meteo (CC BY 4.0). The Scope section says one person on one computer, OpenAI models only, rather than MCP servers, and no push to your phone yet. The Security model section says no login, listens on 127.0.0.1 only, Don't expose it to a network or the internet, and consequential actions ask you first, and it points at SECURITY.md and docs/AUDIT.md; those two files were not opened. Under Docker Compose the browser runs without Chromium's own sandbox and the container is the isolation boundary. The encryption key is written on first run to .data/secret.key or the amuse-data volume. Acknowledgements says the workspace file layout follows OpenClaw (MIT). The License section says Apache License 2.0 and Amuse is an independent project, not affiliated with or endorsed by OpenAI. The LICENSE file is the Apache 2.0 text, and the appendix copyright line is still the template placeholder Copyright [yyyy] [name of copyright owner], with no owner filled in. CHANGELOG.md: ## 0.1.0 (unreleased), First public release, covering onboarding, a main chat, side chats, voice, web research, a live browser, Reminders, monitors, goals with plans, and a background heartbeat, spaces, approval cards, an encrypted credential vault, and Docker Compose with PostgreSQL, running as a non-root user. .env.example: OPENAI_API_KEY and DATABASE_URL=postgres://amuse:amuse@localhost:5432/amuse are the required examples; the model lines are comments: AMUSE_AGENT_MODEL=gpt-6.2-sol, AMUSE_FAST_MODEL=gpt-6-luna, AMUSE_IMAGE_MODEL=gpt-image-2, AMUSE_TRANSCRIBE_MODEL=gpt-4o-mini-transcribe, AMUSE_SPEECH_MODEL=gpt-4o-mini-tts; AMUSE_DAILY_LIMIT=2000 is also a comment, described as about 1 unit per 1k input tokens; the HOST comment says the default is 127.0.0.1 and anything other than a loopback address lets other machines control it. docker-compose.yml: the db image is postgres:17-alpine, the amuse service ports are 127.0.0.1:3000:3000, and the comment says Published on localhost only: Amuse has no login. That image tag is not the same number as the PostgreSQL 14+ line in the from-source section; both are kept as written. Official post https://x.com/Replit/status/2123525657451954420 by @Replit, created_at 2026-11-19T21:15:44.000Z. Full text after expanding the link: Companies have spent billions on personal AI assistants. But you rent them, and your memories, chats and logins live on their servers. We gave Replit Missions a challenge: replicate the leading AI assistant. The link expands to https://github.com/replit/amuse . 3 days later, it was done. We used our Security Scanner to find & patch vulnerabilities, and make sure that the end product was safe to use. Meet Amuse: a free, open-source AI assistant that runs on your own computer. It researches, browses, sets reminders and builds small apps, and it asks before it acts. Your data and logins stay with you. The three days and the Security Scanner are recorded only as the post's statements. Public counts from the X API at this check: bookmark 504, impression 102123, like 377, quote 32, reply 41, repost 41; these are not product results measured here. The post has three animated GIFs, each 960×570: HXhHUSoXQAA8W7q.mp4, duration 8.08s (naming and greeting; sampled frames show 6:53 AM, the name field mid-typing Juni, suggestions Juniper, Biscuit, Atlas, Pebble, Nova, then an agent named Juniper); HXhHUSrXoAEJbZb.mp4, duration 12.33s (building a small app; activity times 6:53 AM and 6:54 AM); HXhHUSpWcAAwIfN.mp4, duration 9.41s (the browser; clock 6:45 AM). The clocks do not continue from one clip to the next; they are separate segments, not one continuous take. The gift-list frame shows a small app titled Gift Ideas, with on-screen text including Mom, Birthday 2027-02-14, $0 spent of $50 budget, $28/$85, Alex (best friend), and $28 spent of $35 budget. Those are examples inside the demo, not product metrics. In the browser frame the agent's reply includes 3,308 points, 3,019 comments, https://news.ycombinator.com/item?id=50467087 , and the sentence I only read the HN listing and didn't open the article. The side panel in the sampled frames reads 1 scheduled task, Heartbeat, Every 30 minutes. The 30 minutes is on-screen text; the README says background heartbeat and does not say 30 minutes, and this library did not run the scheduler. README media docs/media/build-an-app.gif and browser.gif were downloaded and only their first frames were opened: the same interface and Juniper, clocks 1:42 AM and 2:40 AM, a different recording from the three clips on the post. hatch.gif and voice.gif were not downloaded. Preview is the frame at about 7 seconds of the small-app clip (source 960×570), scaled to width 1200 and height rounded to 712 (712.5 by proportion), padded 44px above and below with #181818 (corner samples about rgb 23–25), setsar=1, as a 1200×800 WebP. Nothing was cropped and no text was added. Dedupe: main c088c54 has no id amuse and no replit/amuse in data/cases.json, html-items, agent-ui, or models. The data JSON diffs of 66 open PRs add no id amuse, replit-amuse, or openpencil, and do not mention askhooman or homebrain. openpencil is already on main (id openpencil, sourceUrl https://openpencil.dev/ , preview /previews/openpencil.webp , publishedAt 2026-10-15), so it is not added again and its site was not reopened. Not done: no docker compose up, no pnpm install, no OpenAI key prepared, no PostgreSQL installed, no Replit sign-in, the agent was not allowed to send, submit, or pay, the browser was not handed over, and SECURITY.md, docs/AUDIT.md, hatch.gif, and voice.gif were not opened.",
+      "landing": {
+        "what": "Replit 放在公开仓库里的个人助手，给一个人在自己的电脑上用。仓库描述写：研究、实时浏览器、提醒和小应用，对外动作之前先审批，需要你自己的 OpenAI key。它不是托管在别人服务器上的聊天账号，也没有单独的产品官网（仓库 homepage 为空）。CHANGELOG 把这一版写成 0.1.0，标题仍是 unreleased。",
+        "whatEn": "A personal assistant Replit put in a public repository, for one person on their own computer. The repository description says: research, a live browser, reminders and small apps, with approvals before actions, and you bring an OpenAI key. It is not a chat account hosted on someone else's server, and there is no separate product site (the repository homepage is empty). The CHANGELOG calls this version 0.1.0 and still heads it unreleased.",
+        "steps": [
+          {
+            "title": "先读仓库，准备自己的 OpenAI key",
+            "titleEn": "Read the repository and bring your own OpenAI key",
+            "body": "代码、README、CHANGELOG 和 .env.example 都在 https://github.com/replit/amuse 。许可是 Apache-2.0。模型调用走你的 key，README 写要在 OpenAI 项目上设花费上限。本库没有注册，也没有填 key。",
+            "bodyEn": "The code, README, CHANGELOG, and .env.example are at https://github.com/replit/amuse . The license is Apache-2.0. Model calls use your key, and the README says to set a spend limit on the OpenAI project. This library did not sign up or fill in a key.",
+            "links": [
+              {
+                "href": "https://github.com/replit/amuse",
+                "label": "replit/amuse 仓库",
+                "labelEn": "replit/amuse repository"
+              },
+              {
+                "href": "https://x.com/Replit/status/2123525657451954420",
+                "label": "Replit 官方发布帖",
+                "labelEn": "Replit's official post"
+              }
+            ]
+          },
+          {
+            "title": "在本机启动，不要暴露到网络",
+            "titleEn": "Start it on your machine, and do not expose it",
+            "body": "README 的 Docker Compose 路径是克隆仓库、复制 .env.example 为 .env、填上 OPENAI_API_KEY，然后 docker compose up -d --build，再打开 http://localhost:3000 。compose 文件把端口绑在 127.0.0.1:3000。从源码则要 Node.js 22.9+、pnpm 10.26.1、PostgreSQL 14+，并执行 pnpm setup:browser。本库没有执行这些命令。",
+            "bodyEn": "The README's Docker Compose path is to clone the repo, copy .env.example to .env, set OPENAI_API_KEY, run docker compose up -d --build, and open http://localhost:3000 . The compose file binds the port to 127.0.0.1:3000. From source you need Node.js 22.9+, pnpm 10.26.1, PostgreSQL 14+, and pnpm setup:browser. This library did not run these commands.",
+            "links": [
+              {
+                "href": "https://github.com/replit/amuse/blob/main/docker-compose.yml",
+                "label": "docker-compose.yml",
+                "labelEn": "docker-compose.yml"
+              },
+              {
+                "href": "https://github.com/replit/amuse/blob/main/.env.example",
+                "label": ".env.example",
+                "labelEn": ".env.example"
+              }
+            ]
+          },
+          {
+            "title": "对外动作先看审批卡",
+            "titleEn": "Read the approval card before it acts outward",
+            "body": "README 写发送、提交表单、付款和新的日程会先问你；打开你没有点名的网站，以及读完网页后改记忆，也会先问。官方演示是分段的，助手名叫 Juniper，画面里有礼物清单小应用和一次打开 news.ycombinator.com 的浏览器。那些金额和分数是演示里的例子。本库没有让它发送或浏览。",
+            "bodyEn": "The README says sends, form submissions, payments, and new schedules ask you first, as do opening a site you did not name and changing memory after reading the web. The official demo is in separate clips: the agent is named Juniper, and the frames show a gift-list app and one browser visit to news.ycombinator.com. The amounts and scores in those frames are examples inside the demo. This library did not let it send or browse.",
+            "links": []
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "软件是 Apache-2.0，仓库 homepage 为空。官方帖说 free，README 写模型、搜索、出图、听写和朗读都走你的 OpenAI key，并让你设花费上限。两句话都保留：许可不收费，调用模型要花钱。",
+            "textEn": "The software is Apache-2.0 and the repository homepage is empty. The official post says free, and the README says the model, search, images, transcription, and speech all use your OpenAI key and tells you to set a spend limit. Both stay: the license does not charge, and model calls cost money."
+          },
+          {
+            "text": "没有登录，默认只听 127.0.0.1。README 写不要暴露到网络；换成别的监听地址，别的机器就能控制它。Docker 里浏览器没有 Chromium 自己的沙箱。",
+            "textEn": "There is no login, and the default listen address is 127.0.0.1. The README says not to expose it to a network; any other listen address lets other machines control it. In Docker the browser runs without Chromium's own sandbox."
+          },
+          {
+            "text": "CHANGELOG 仍是 0.1.0（unreleased）。它不接 MCP。提醒、监视和心跳按 README 书写；演示画面上的「每 30 分钟」没有在 README 里看到对应句子，本库也没有跑起来核对。",
+            "textEn": "The CHANGELOG is still 0.1.0 (unreleased). It does not use MCP. Reminders, monitors, and the heartbeat are written as the README states them. The “every 30 minutes” label on the demo was not matched to a sentence in the README, and this library did not run it to check."
+          },
+          {
+            "text": "官方帖里的三天工期和 Security Scanner 是 Replit 的说法。演示里的礼物金额和新闻站点分数是画面内容，不是本库测到的效果。本库没有安装、没有登录、没有把浏览器交给它。",
+            "textEn": "The three-day schedule and the Security Scanner in the official post are Replit's statements. Gift amounts and the news-site scores in the demo are what the frames show, not results measured here. This library did not install it, did not sign in, and did not hand it the browser."
+          }
+        ],
+        "previewCredit": "预览：Replit 官方帖里做小应用那段演示约第 7 秒的一帧，等比缩到宽 1200 后上下补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: a frame at about 7 seconds of the small-app clip in Replit's official post, scaled to width 1200 and padded top and bottom to 3:2, not cropped"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,11 +12249,22 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-22T12:02:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
+      "https://github.com/replit/amuse",
+      "https://github.com/replit/amuse/blob/main/CHANGELOG.md",
+      "https://github.com/replit/amuse/blob/main/.env.example",
+      "https://github.com/replit/amuse/blob/main/docker-compose.yml",
+      "https://github.com/replit/amuse/blob/main/LICENSE",
+      "https://x.com/Replit/status/2123525657451954420",
+      "https://video.twimg.com/tweet_video/HXhHUSoXQAA8W7q.mp4",
+      "https://video.twimg.com/tweet_video/HXhHUSrXoAEJbZb.mp4",
+      "https://video.twimg.com/tweet_video/HXhHUSpWcAAwIfN.mp4",
+      "https://raw.githubusercontent.com/replit/amuse/main/docs/media/build-an-app.gif",
+      "https://raw.githubusercontent.com/replit/amuse/main/docs/media/browser.gif",
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
       "https://openpencil.dev/programmable/mcp-server",
