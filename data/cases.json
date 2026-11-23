@@ -1,6 +1,357 @@
 {
   "cases": [
     {
+      "id": "homebrain",
+      "slug": "homebrain",
+      "title": "HomeBrain：自己家里的 AI 书记，用消息处理文件、家居和密码",
+      "titleEn": "HomeBrain: a local home clerk you message about files, the house, and passwords",
+      "kind": "tool",
+      "hook": "家里的 AI 书记，用 Telegram 或邮件处理文件、家居和密码。",
+      "hookEn": "A local clerk for files, the home, and passwords, on Telegram or email.",
+      "summary": "HomeBrain（https://www.homebrain.house ）是 Oliver Altergott 做的家用私人书记。官网的话是 “A personal clerk. Always available.”：一台放在自己家里的设备，用 Telegram 或邮件跟它说话，让它处理文件、智能家居和密码，或检索网页。数据存在这台设备上，书记在本地运行。软件开源，许可证是 BSD-3-Clause，官网写今天就可以安装。没有 GPU 时，同一套安装是 HomeCloud，只包含文件、家居和密码库，树莓派 5 也可以；会在 Telegram 上回话的书记需要 GPU，不要把每一次安装都理解成已经带上书记。它把钉住版本的 Nextcloud、Home Assistant、Vaultwarden、llama.cpp、Whisper 和 OpenClaw 收成一件事。官网列出的用法：在 Nextcloud 里找文件、取最新发票、看日历；用 Home Assistant 调灯、跑场景、看传感器；在兼容 Bitwarden 的密码库里查或存登录，库要先在仪表盘上解锁，在对话里透露一条密码需要你点头，并且会留下记录；用它自己的邮箱，在你连接的账户里搜索、整理和起草；用盒子上自己的搜索引擎和浏览器做网页检索；也可以看系统状态、做备份、重启一项服务。开放组件页把搜索写成 SearXNG，把浏览器写成 Camoufox，并把 Proton Mail Bridge 列为连接 Proton 邮箱的组件，没有把 Gmail 写成它自己的接口。敏感步骤会先问。消息经过 Telegram 或你的邮件服务商，对方能读到内容；网页搜索只从你自己的连接发出那条查询。安装走浏览器向导，没有订阅，没有 HomeBrain 账号，也没有 HomeBrain 的服务器。人在外面时走你自己的 Tailscale，README 也写了你自己运行的隧道。仪表盘按官网的说法不从互联网加载任何东西。硬件还不能买：最终规格、价格和发售会先告诉候补名单，加入候补不是预订，也不付款。页面上的工作室图是根据实物原型做的视觉图，不是在售成品的照片；站点记录的这台原型是 AMD Ryzen 5 5600、ASRock Intel Arc Pro B60 Creator 24 GB、32 GB 内存和 2 TB NVMe。作者在 Hacker News 的回复里把眼前这台盒子估在大约 2500 到 2600 美元，那是他的想象，不是官方标价。适合想把文件、家居和密码留在家里、再用一个本地书记去操作的人。本库没有安装 HomeBrain 或 HomeCloud，没有运行安装脚本或 provision 脚本，没有配对 Telegram，也没有连接家居、邮箱或密码库。",
+      "summaryEn": "HomeBrain (https://www.homebrain.house ) is a home clerk built by Oliver Altergott. The site's line is “A personal clerk. Always available.”: an appliance in your own home that you message on Telegram or by email to work with files, the smart home, and passwords, or to research the web. Data stays on the device, and the clerk runs locally. The software is open source under the BSD-3-Clause licence, and the site says it is installable today. Without a GPU the same install is HomeCloud — files, home, and vault only, including on a Raspberry Pi 5. The clerk that talks on Telegram needs a GPU, so not every install includes it. It pins Nextcloud, Home Assistant, Vaultwarden, llama.cpp, Whisper, and OpenClaw into one setup. The site lists these jobs: find a document, fetch the latest invoice, and check the calendar in Nextcloud; dim a light, run a scene, or check a sensor in Home Assistant; look up or save a login in a Bitwarden-compatible vault, which opens only after you unlock it on the dashboard, and revealing a password needs your OK in chat and is logged; search, sort, and draft mail in the accounts you connect, from a mailbox of its own; research the web through a search engine and a browser on the box; and check status, run a backup, or restart a service. The open-source component page names the search engine as SearXNG and the browser as Camoufox, and lists Proton Mail Bridge for Proton mailboxes. It does not present a Gmail connector of its own. Sensitive steps ask first. Messages travel through Telegram or your mail provider, which can read them. A web search sends only the query, from your own connection. Setup is a browser wizard, with no subscription, no HomeBrain account, and no HomeBrain servers. Away from home you use your own Tailscale; the README also describes a tunnel you run yourself. The site says the dashboard loads nothing from the internet. The hardware is not for sale: final specifications, pricing, and availability go to the waitlist first, and joining is not a preorder or a payment. The studio images are visualisations based on the physical prototype, not photographs of a product you can buy. The prototype recorded on the site is an AMD Ryzen 5 5600, an ASRock Intel Arc Pro B60 Creator with 24 GB, 32 GB of memory, and a 2 TB NVMe. In a Hacker News reply the author imagined the current box at about 2500 to 2600 dollars. That is his estimate, not an official price. Useful if you want files, the home, and passwords to stay in the house, with a local clerk to operate them. This library did not install HomeBrain or HomeCloud, did not run the install script or the provision script, did not pair Telegram, and did not connect a home, an email account, or a vault.",
+      "categories": [
+        "automation"
+      ],
+      "role": "Personal home clerk",
+      "sourceUrl": "https://www.homebrain.house",
+      "secondaryUrls": [
+        "https://github.com/oalterg/HomeBrain",
+        "https://www.homebrain.house/open-source",
+        "https://raw.githubusercontent.com/oalterg/HomeBrain/main/README.md",
+        "https://raw.githubusercontent.com/oalterg/HomeBrain/main/LICENSE",
+        "https://news.ycombinator.com/item?id=50598402"
+      ],
+      "previewImage": "/previews/homebrain.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "运行安装脚本、执行 provision、配对 Telegram、连接邮箱、解锁密码库、透露一条密码、改智能家居或做备份之前，先读脚本和你要连上的服务。硬件还不能买，加入候补不是下单。本库没有代为安装或连接。",
+      "approvalBoundaryEn": "Read the script and the services you are about to connect before you run the installer, run provision, pair Telegram, connect mail, unlock the vault, reveal a password, change the smart home, or run a backup. The hardware is not for sale, and the waitlist is not an order. This library did not install it or connect anything.",
+      "connectors": [
+        "Telegram",
+        "email",
+        "Nextcloud",
+        "Home Assistant",
+        "Vaultwarden",
+        "Tailscale"
+      ],
+      "publishedAt": "2026-11-22",
+      "updatedAt": "2026-11-23T01:20:00Z",
+      "qualityNote": "收录理由：想把文件、家居和密码留在自己家里，再用一个能收消息的书记去操作，公开可装的选择不多。HomeBrain 把这件事写成一台家用设备和今天就能装的开源软件，敏感操作要先问你。边界：硬件还不能买，工作室图不是在售成品的照片；没有 GPU 的安装是 HomeCloud，不包含会在 Telegram 上说话的书记。作者把眼前这台盒子估在大约 2500 到 2600 美元，那是他的想象，不是标价。页面上的对话发生在一台正在运行的系统上，这是官网的说法，不是本库看到的现场。本库没有安装 HomeBrain 或 HomeCloud，没有运行安装脚本或 provision 脚本，没有配对 Telegram，也没有连接家居、邮箱或密码库。",
+      "qualityNoteEn": "Why listed: there are few installable ways to keep files, the home, and passwords in your own house and still operate them by message. HomeBrain describes that as a home appliance plus open-source software you can install today, and it asks before sensitive steps. Limits: the hardware is not for sale, and the studio images are not photographs of a product on sale. An install without a GPU is HomeCloud and does not include the clerk that talks on Telegram. The author imagined the current box at about 2500 to 2600 dollars; that is his estimate, not a price. The site says the conversations on the page happened on a running system; this library did not see that system. This library did not install HomeBrain or HomeCloud, did not run the install script or the provision script, did not pair Telegram, and did not connect a home, an email account, or a vault.",
+      "verifyLog": "2026-11-23 早间（Asia/Shanghai，约 08:50–09:20）：https://www.homebrain.house HTTP 200，title 为 HomeBrain — A personal clerk. Always available.，meta description 写 a personal AI clerk on Telegram and email。页头原文 A personal clerk. Always available. 以及 An AI clerk on your own home appliance. Message it on Telegram or by email to work with your files, smart home and passwords, or research the web. Your data is stored on your device. The clerk runs locally. 软件段写 The open-source software is available today. 以及 Open source, and installable today. BSD-3-Clause licensed. Runs on Ubuntu 24.04 or later; without a GPU, the same install runs as HomeCloud (files, home and vault), even on a Raspberry Pi 5. Built on Nextcloud, Home Assistant, Vaultwarden, llama.cpp, Whisper and OpenClaw, with pinned versions and one-click updates. 集成六行的原文是 Files and calendar / Nextcloud，Smart home / Home Assistant，Passwords / Bitwarden-compatible vault，Email / Searches, sorts and drafts mail in the accounts you connect, from a mailbox of its own，Web research / its own search engine on the box, and reads pages in its own browser，HomeBrain itself / status, backup, restart a service。隐私段原文：The vault opens only after you unlock it on the dashboard. Revealing a password needs your OK in chat, and every reveal is logged. Messages travel through Telegram or your mail provider, which can read them. A web search sends only the query, from your own connection. 向导段写 no subscription and no HomeBrain account。仪表盘句：The dashboard loads nothing from the internet, so it works with the WAN unplugged. 首页「In action」字幕：Telegram: a daily 11 am cleaning schedule, created in Home Assistant. 配图 alt 写书记确认 Daily vacuum start is now scheduled、Elefant robot vacuum、11:00 daily。这是首页上的定时家居场景，不是书记按计划给你发消息的说明。FAQ：Can I buy a HomeBrain yet? Not yet. 并写 every conversation on this page happened on a running system，Joining isn’t a preorder or a reservation。照片 FAQ 写 The studio and home-setting images are AI-assisted visualisations based on photographs of the physical prototype，original photograph of the enclosure 在画廊里，The design is still evolving。原型表：AMD Ryzen 5 5600，ASRock Intel Arc Pro B60 Creator 24 GB，32 GB G.Skill Ripjaws V，Lexar NM790 2 TB，ASRock B550M-ITX/ac，Noctua NH-L9a-AM4，Corsair SF750 Platinum，LINKUP AVA5 Armour，Custom 3D-printed PETG。表下写 not a final retail configuration，750 W 是电源容量不是实测功耗。https://www.homebrain.house/open-source HTTP 200，title Open source — HomeBrain。列出 Nextcloud AGPL-3.0、Home Assistant Apache-2.0、Vaultwarden AGPL-3.0、MariaDB GPL-2.0、Redis、Caddy、llama.cpp MIT、whisper.cpp MIT、OpenClaw MIT、SearXNG AGPL-3.0、Camoufox MPL-2.0、camofox-browser MIT、Proton Mail Bridge GPL-3.0、rclone MIT、Tailscale BSD-3-Clause、Newt（Optional Pangolin tunnel）AGPL-3.0、cloudflared Apache-2.0。https://www.homebrain.house/opensource 先 308 到 https://homebrain.house/opensource，最终 HTTP 404。首页「See every open-source component」的 href 是 /open-source，不是 /opensource。README https://raw.githubusercontent.com/oalterg/HomeBrain/main/README.md HTTP 200。架构表：Nextcloud、Home Assistant、Vaultwarden、MariaDB、Tailscale optional、Pangolin Newt optional、llama-server GPU only、whisper-server GPU only、OpenClaw GPU only。硬件表把 HomeBrain 的 GPU 写成 AMD Radeon RX 9060 XT (16 GB) or Intel Arc Pro B60 (24 GB)，和站点记录的这一台原型（B60）并列，没有改成同一句。安装段的两行是 curl -fsSL https://raw.githubusercontent.com/oalterg/HomeBrain/main/install | sudo bash 和 sudo /opt/homebrain/scripts/provision.sh。本库没有下载 install，也没有执行这两行。README 另写 Scheduled, encrypted, off-site 备份，以及 Health alerts while the box is up。Telegram 段写 It is the one path on the box a third party can read, and it is optional. LICENSE https://raw.githubusercontent.com/oalterg/HomeBrain/main/LICENSE HTTP 200，三句 BSD 文本，Copyright 2026 Oliver Altergott。gh api repos/oalterg/HomeBrain HTTP 200：license SPDX BSD-3-Clause，stargazers_count 6，forks 0，created_at 2025-08-14T16:24:23Z，pushed_at 2026-11-22T15:57:48Z，homepage 为空。仓库创建日不是一份写明的公开发布日，publishedAt 仍用 Show HN 的 2026-11-22。Show HN：Algolia items 接口 HTTP 200，https://news.ycombinator.com/item?id=50598402 ，标题 Show HN: HomeBrain – Your private cloud box, local agent. Data stays on Device，作者 oalterg，2026-11-22T10:53:52Z（上海 18:53:52），核对时 6 points、4 条评论。作者回复写 periodically or event based send you a message, when e.g. surveillance camera detects a person。这句话只出现在这条回复里，官网和 README 没有摄像头告警，所以 hasRoutine 记 false，摘要也不把摄像头告警写成功能。另一条评论把许可证说成 BSD 2；LICENSE 文件和 GitHub SPDX 都是 BSD-3-Clause，摘要只用三句 BSD。作者回复写 The current box I imagine around 2500-2600$，并写过去一年半从 RPi5 加 RX 9060 换到现在的 Arc B60。sourceType 记 community：这条是从作者的 Show HN 收进来的，事实取自官网、开放组件页、README 和 LICENSE，不取自评论分数。预览：官网仪表盘图 https://www.homebrain.house/images/software-dashboard.png HTTP 200，PNG 2040×1470，alt 为 The HomeBrain dashboard。等比缩到 1110×800，左补 45px、右补 45px 的图片边缘色，成 1200×800 WebP，没有裁切，没有加字。没有用工作室图 homebrain-studio.jpg（alt 写 Studio visualisation）。headless Chrome 打开过首页，首屏大图就是那张工作室视觉图，并带有 Studio visualisation based on the real build 的说明，所以不用它当预览。去重：main c088c54 的 data/cases.json 没有 id homebrain、没有 homebrain.house、没有 oalterg/HomeBrain。67 个打开 PR 的 diff 里，只有 #174 的 changelog 写了 HomeBrain 本次不收；没有任何 PR 新增这个 id 或这条来源。未做：没有执行 curl 管道或 provision.sh，没有安装 HomeBrain 或 HomeCloud，没有配对 Telegram，没有连接 Nextcloud、Home Assistant、Vaultwarden、邮箱或 Tailscale，没有加入候补名单，没有打开 PRODUCT_REVIEW_2026-08.md。",
+      "verifyLogEn": "2026-11-23 morning (Asia/Shanghai, about 08:50–09:20): https://www.homebrain.house HTTP 200, title HomeBrain — A personal clerk. Always available., meta description a personal AI clerk on Telegram and email. The header reads A personal clerk. Always available. and An AI clerk on your own home appliance. Message it on Telegram or by email to work with your files, smart home and passwords, or research the web. Your data is stored on your device. The clerk runs locally. The software section says The open-source software is available today. and Open source, and installable today. BSD-3-Clause licensed. Runs on Ubuntu 24.04 or later; without a GPU, the same install runs as HomeCloud (files, home and vault), even on a Raspberry Pi 5. Built on Nextcloud, Home Assistant, Vaultwarden, llama.cpp, Whisper and OpenClaw, with pinned versions and one-click updates. The six integration lines are Files and calendar / Nextcloud, Smart home / Home Assistant, Passwords / Bitwarden-compatible vault, Email / Searches, sorts and drafts mail in the accounts you connect, from a mailbox of its own, Web research / its own search engine on the box, and reads pages in its own browser, and HomeBrain itself / status, backup, restart a service. The privacy section says The vault opens only after you unlock it on the dashboard. Revealing a password needs your OK in chat, and every reveal is logged. Messages travel through Telegram or your mail provider, which can read them. A web search sends only the query, from your own connection. The wizard section says no subscription and no HomeBrain account. The dashboard sentence is The dashboard loads nothing from the internet, so it works with the WAN unplugged. The In action caption is Telegram: a daily 11 am cleaning schedule, created in Home Assistant. The image alt says the clerk confirms Daily vacuum start is now scheduled, names an Elefant robot vacuum, and says 11:00 daily. That is a scheduled home scene on the homepage, not a statement that the clerk messages you on a schedule. The FAQ says Can I buy a HomeBrain yet? Not yet. and every conversation on this page happened on a running system, and Joining isn’t a preorder or a reservation. The photograph FAQ says The studio and home-setting images are AI-assisted visualisations based on photographs of the physical prototype, that the original photograph of the enclosure is in the gallery, and The design is still evolving. The prototype table lists an AMD Ryzen 5 5600, an ASRock Intel Arc Pro B60 Creator with 24 GB, 32 GB G.Skill Ripjaws V, a Lexar NM790 2 TB, an ASRock B550M-ITX/ac, a Noctua NH-L9a-AM4, a Corsair SF750 Platinum, a LINKUP AVA5 Armour, and a custom 3D-printed PETG enclosure. The note says not a final retail configuration, and that 750 W is the power supply’s capacity, not measured consumption. https://www.homebrain.house/open-source HTTP 200, title Open source — HomeBrain. It lists Nextcloud AGPL-3.0, Home Assistant Apache-2.0, Vaultwarden AGPL-3.0, MariaDB GPL-2.0, Redis, Caddy, llama.cpp MIT, whisper.cpp MIT, OpenClaw MIT, SearXNG AGPL-3.0, Camoufox MPL-2.0, camofox-browser MIT, Proton Mail Bridge GPL-3.0, rclone MIT, Tailscale BSD-3-Clause, Newt (Optional Pangolin tunnel) AGPL-3.0, and cloudflared Apache-2.0. https://www.homebrain.house/opensource returned 308 to https://homebrain.house/opensource and then HTTP 404. The homepage link See every open-source component points at /open-source, not /opensource. README https://raw.githubusercontent.com/oalterg/HomeBrain/main/README.md HTTP 200. The architecture table lists Nextcloud, Home Assistant, Vaultwarden, MariaDB, optional Tailscale, optional Pangolin Newt, llama-server GPU only, whisper-server GPU only, and OpenClaw GPU only. The hardware table gives the HomeBrain GPU as AMD Radeon RX 9060 XT (16 GB) or Intel Arc Pro B60 (24 GB), kept alongside the site’s recorded prototype (the B60), not collapsed into one sentence. The install section’s two lines are curl -fsSL https://raw.githubusercontent.com/oalterg/HomeBrain/main/install | sudo bash and sudo /opt/homebrain/scripts/provision.sh. This library did not download install and did not run either line. The README also says Scheduled, encrypted, off-site backups and Health alerts while the box is up. The Telegram section says It is the one path on the box a third party can read, and it is optional. LICENSE https://raw.githubusercontent.com/oalterg/HomeBrain/main/LICENSE HTTP 200, the three-clause BSD text, Copyright 2026 Oliver Altergott. gh api repos/oalterg/HomeBrain HTTP 200: license SPDX BSD-3-Clause, stargazers_count 6, forks 0, created_at 2025-08-14T16:24:23Z, pushed_at 2026-11-22T15:57:48Z, empty homepage. The repo creation date is not a stated public launch, so publishedAt stays the Show HN date 2026-11-22. Show HN: the Algolia items API HTTP 200, https://news.ycombinator.com/item?id=50598402 , title Show HN: HomeBrain – Your private cloud box, local agent. Data stays on Device, author oalterg, 2026-11-22T10:53:52Z (18:53:52 Shanghai), 6 points and 4 comments at the check. The author’s reply says periodically or event based send you a message, when e.g. surveillance camera detects a person. That sentence appears only in the reply. The site and the README do not describe a camera alert, so hasRoutine is false and the summary does not list camera alerts as a feature. Another comment called the licence BSD 2. The LICENSE file and the GitHub SPDX field are BSD-3-Clause, and the summary uses only the three-clause BSD. The author’s reply says The current box I imagine around 2500-2600$ and describes a year and a half moving from a Raspberry Pi 5 plus an RX 9060 to the current Arc B60. sourceType is community because the entry was found through the author’s Show HN; the facts come from the site, the open-source page, the README, and the LICENSE, not from comment scores. Preview: the dashboard image on the site, https://www.homebrain.house/images/software-dashboard.png , HTTP 200, PNG 2040×1470, alt The HomeBrain dashboard. Scaled to 1110×800 and padded 45px on the left and 45px on the right with the image’s edge colour to a 1200×800 WebP. Nothing cropped, no text added. The studio image homebrain-studio.jpg was not used; its alt says Studio visualisation. Headless Chrome opened the homepage, and the large hero image is that studio visualisation, captioned Studio visualisation based on the real build, so it is not the preview. Dedupe: main c088c54 data/cases.json has no id homebrain, no homebrain.house, and no oalterg/HomeBrain. Across the diffs of 67 open PRs, only #174’s changelog says HomeBrain was not added this time. No open PR adds this id or this source. Not done: the curl pipe and provision.sh were not run, HomeBrain and HomeCloud were not installed, Telegram was not paired, Nextcloud, Home Assistant, Vaultwarden, email, and Tailscale were not connected, the waitlist was not joined, and PRODUCT_REVIEW_2026-08.md was not opened.",
+      "landing": {
+        "what": "一台放在家里的设备，加上今天就能装的开源软件。Oliver Altergott 把 Nextcloud、Home Assistant、Vaultwarden 和本地模型收成一个浏览器向导能配完的盒子；有 GPU 时，OpenClaw 上的书记可以通过 Telegram 或邮件去操作它们。没有 GPU 时，同一套安装叫 HomeCloud，没有这个书记。",
+        "whatEn": "An appliance for the home, plus open-source software the site says you can install today. Oliver Altergott packs Nextcloud, Home Assistant, Vaultwarden, and a local model into a box a browser wizard can finish. With a GPU, a clerk on OpenClaw can operate them from Telegram or email. Without a GPU the same install is called HomeCloud and does not include that clerk.",
+        "steps": [
+          {
+            "title": "先分清软件和还不能买的硬件",
+            "titleEn": "Separate the software from hardware you cannot buy yet",
+            "body": "官网写软件今天可装，机器还不能买。候补名单只接收发布、价格和供货的消息，不是预订，也不付款。工作室图是根据原型做的视觉图。作者把眼前这台盒子估在大约 2500 到 2600 美元，那是他的想象，不是标价。",
+            "bodyEn": "The site says the software is installable today and the machine is not for sale yet. The waitlist only hears about launch, pricing, and availability. It is not a preorder and it takes no payment. The studio images are visualisations based on the prototype. The author imagined the current box at about 2500 to 2600 dollars. That is his estimate, not a price.",
+            "links": [
+              {
+                "href": "https://www.homebrain.house",
+                "label": "HomeBrain 官网",
+                "labelEn": "HomeBrain site"
+              },
+              {
+                "href": "https://www.homebrain.house/open-source",
+                "label": "开放组件页",
+                "labelEn": "Open-source components"
+              }
+            ]
+          },
+          {
+            "title": "读完安装段再决定要不要跑",
+            "titleEn": "Read the install section before you decide to run it",
+            "body": "README 的安装段是一行把仓库脚本交给 sudo bash，然后再运行 provision.sh，最后在浏览器打开设备地址。把脚本直接交给 bash 之前，先自己打开脚本看它做什么。没有 GPU 时得到的是 HomeCloud，不是会在 Telegram 上说话的书记。本库没有下载或执行这些命令。",
+            "bodyEn": "The README install section is one line that hands a repository script to sudo bash, then provision.sh, then you open the device address in a browser. Before you hand a script to bash, open it and see what it does. Without a GPU you get HomeCloud, not the clerk that talks on Telegram. This library did not download or run these commands.",
+            "links": [
+              {
+                "href": "https://github.com/oalterg/HomeBrain#install",
+                "label": "README 的安装段",
+                "labelEn": "README install section"
+              },
+              {
+                "href": "https://github.com/oalterg/HomeBrain",
+                "label": "HomeBrain 仓库",
+                "labelEn": "HomeBrain repository"
+              }
+            ]
+          },
+          {
+            "title": "只连接你准备让它碰到的东西",
+            "titleEn": "Connect only what you are ready for it to touch",
+            "body": "仪表盘上每一项集成可以连接、测试或撤销。密码库要先在仪表盘解锁；在对话里透露密码需要你点头，并且会留下记录。Telegram 是可选的，也是 README 写明的、第三方能读到内容的那条路。邮件走你自己的邮件服务商。",
+            "bodyEn": "Each integration on the dashboard can be connected, tested, or revoked. The vault opens only after you unlock it on the dashboard. Revealing a password in chat needs your OK and is logged. Telegram is optional, and the README names it as the path a third party can read. Mail goes through your own mail provider.",
+            "links": [
+              {
+                "href": "https://raw.githubusercontent.com/oalterg/HomeBrain/main/README.md",
+                "label": "HomeBrain README",
+                "labelEn": "HomeBrain README"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "软件是 BSD-3-Clause，版权 2026 Oliver Altergott。硬件还不能买，没有官方标价。工作室图不是在售成品的照片。",
+            "textEn": "The software is BSD-3-Clause, copyright 2026 Oliver Altergott. The hardware is not for sale and has no official price. The studio images are not photographs of a product on sale."
+          },
+          {
+            "text": "没有 GPU 的安装是 HomeCloud：文件、家居和密码库，不包含 Telegram 上的书记。不要把树莓派上的安装说成已经有本地书记。",
+            "textEn": "An install without a GPU is HomeCloud: files, home, and vault, without the clerk on Telegram. Do not describe a Raspberry Pi install as already including the local clerk."
+          },
+          {
+            "text": "消息经过 Telegram 或你的邮件服务商。网页搜索只发出查询，但是从你自己的连接出去。远程访问用的是你自己的 Tailscale 或你自己运行的隧道，不是 HomeBrain 的服务器。",
+            "textEn": "Messages pass through Telegram or your mail provider. A web search sends only the query, but it leaves from your own connection. Remote access uses your own Tailscale or a tunnel you run, not a HomeBrain server."
+          },
+          {
+            "text": "本库没有安装，没有运行安装脚本或 provision 脚本，没有配对 Telegram，也没有连接家居、邮箱或密码库。",
+            "textEn": "This library did not install it, did not run the install script or the provision script, did not pair Telegram, and did not connect a home, an email account, or a vault."
+          }
+        ],
+        "previewCredit": "预览：官网首页的仪表盘图（软件界面，不是工作室视觉图），等比缩小后左右补边成 3:2，未裁切、未加字",
+        "previewCreditEn": "Preview: the dashboard image from the HomeBrain homepage (the software screen, not the studio visualisation), scaled down and padded left and right to 3:2, not cropped, no text added"
+      }
+    },
+    {
+      "id": "inbox-envoy",
+      "slug": "inbox-envoy",
+      "title": "Inbox Envoy：教已有的个人助手筛推销信的开源技能",
+      "titleEn": "Inbox Envoy: an open-source skill that teaches your agent to screen sales email",
+      "kind": "tool",
+      "hook": "给已有助手的开源技能：先预览推销信，你同意才改邮箱。",
+      "hookEn": "An open skill that teaches your agent to screen sales email, starting read-only.",
+      "summary": "Inbox Envoy（https://salespeak.ai/inbox-envoy/ ）是 Salespeak 维护的免费开源技能，MIT 许可，公开测试版。它不是新的邮箱、邮件服务商、持续监控服务，也不是一条新的邮箱接口。它教你已经在用的个人助手去筛未经请求的推销信：把推销分出来，用公开信息看陌生的报价，把值得你看的留在眼前。助手必须本来就能碰你的邮箱；如果要没人值守地跑，还得本来就有日程能力。装上这个技能不会因此获得邮箱权限，也不会自动打开任何一步。步骤各自要你点头。Observe 只预览，邮箱不变。Label-only 加上你批准的 Envoy 标签，信仍留在收件箱。Archive 只归档你批准的、高置信度的噪音，可以搜回来，可以撤销，不永久删除，也不自动进垃圾箱。调查一个陌生报价，和回复发件人，是另外两项权限，默认都关着。批准归档不会顺便打开发信。技能不会自己升级。它没有 Salespeak 账号、服务、API key 或遥测，也不把东西发给 Salespeak。你的模型服务商和邮件服务商仍按他们自己的规则处理邮件。产品页写：还没有一个点名的助手通过它的验收测试；技能会先让助手检查并报告自己实际上能做什么，再去改任何东西。兼容表把话说得很窄：Claude Code 2.1.202 在 2026-11-17 干净装过 v0.1.0-beta.3，并在练习收件箱上跑过，那不是真实邮箱测试；Grok Bot 在 2026-11-20 把 v0.1.0-beta.4 的技能文件载入一次会话，用 9 封练习信在预览模式跑过，模板导入、真实邮箱、标签和日程都没测，分拣隔离只是指令层面；ChatGPT 和其他助手写的是未验证。不要写成已经支持 Grok Bot、ChatGPT 或 Claude。当前公开测试版是 v0.1.0-beta.4。这一版把读信和动手分开；藏起来的、对着助手下命令的文字被当成安全信号，不能把信挪进 Important 或 Opportunities。在 Gmail 上加标签需要 gmail.modify，而这个权限同时允许发信；Outlook 把发信留在单独的 Mail.Send。Salespeak 还卖面向公司的产品，这个技能与之独立，不会因为对方是 Salespeak 的客户就抬高排序。筛选信里的可选说明链接默认关闭。安装可以下载最新 release 的 skill.zip，或用 npx skills add salespeak-ai/inbox-envoy，Claude Code 另有 marketplace 命令。练习信在仓库的 examples/test-inbox/，beta.4 起不再打进 skill.zip。README 写，准备就绪报告会默认提议一个你先批准才创建的、每 30 分钟一次、为期七天的分拣日程。适合已经有个人助手、又厌烦推销信的人。本库没有安装这个技能，没有连接邮箱，没有跑练习收件箱，也没有做验收测试。",
+      "summaryEn": "Inbox Envoy (https://salespeak.ai/inbox-envoy/ ) is a free, open-source skill maintained by Salespeak, under the MIT licence, in public beta. It is not a new mailbox, an email provider, a continuous-monitoring service, or a new mailbox connector. It teaches the personal agent you already use to screen unsolicited sales pitches: sort the pitches, look into unfamiliar offers with public information, and surface the ones worth your time. The agent must already be able to reach your mailbox, and it needs a scheduler of its own if you want unattended runs. Installing the skill grants no mailbox access and turns nothing on. Each step waits for you. Observe is a preview only; the mailbox does not change. Label-only adds the Envoy labels you approved, and the mail stays in the inbox. Archive files only the high-confidence noise you approved. It stays searchable and reversible. There is no permanent deletion and no automatic Trash. Researching an unfamiliar offer and replying to senders are separate permissions, both off unless you turn them on. Approving archive never turns on sending. The skill never upgrades itself. It has no Salespeak account, service, API key, or telemetry, and it sends nothing to Salespeak. Your model provider and your email provider still process mail under their own policies. The product page says no named agent has passed its acceptance tests yet, and the skill has the agent check and report what it can actually do before it changes anything. The compatibility table stays narrow: Claude Code 2.1.202 had a clean install of v0.1.0-beta.3 and a practice-inbox run on 2026-11-17, which was not a live-mailbox test. A Grok Bot session on 2026-11-20 loaded the v0.1.0-beta.4 skill files and passed a 9-email practice inbox in preview mode. Template import, a live mailbox, labels, and schedules were not tested, and triage isolation is instruction-only. ChatGPT and other agents are marked not verified. Do not read this as support for Grok Bot, ChatGPT, or Claude. The current public beta is v0.1.0-beta.4. That release separates reading a message from acting on it. Hidden or agent-directed text is treated as a security signal and cannot move a message into Important or Opportunities. On Gmail, applying labels needs gmail.modify, which also allows sending. Outlook keeps sending on a separate Mail.Send permission. Salespeak also sells company-side products. This skill is independent of them and does not boost a company because it is a Salespeak customer. An optional guidance link in screening email is off unless you opt in. Install paths are a skill.zip from the latest release, npx skills add salespeak-ai/inbox-envoy, and Claude Code marketplace commands. The practice inbox lives in examples/test-inbox/ in the repository and, as of beta.4, is no longer inside skill.zip. The README says the readiness report asks, by default, for a 30-minute triage schedule over seven days, and the host creates that schedule only after you approve it. Useful if you already have a personal agent and are tired of sales pitches. This library did not install the skill, did not connect a mailbox, did not run the practice inbox, and did not perform the acceptance tests.",
+      "categories": [
+        "automation"
+      ],
+      "role": "Email triage skill",
+      "sourceUrl": "https://salespeak.ai/inbox-envoy/",
+      "secondaryUrls": [
+        "https://github.com/salespeak-ai/inbox-envoy",
+        "https://github.com/salespeak-ai/inbox-envoy/blob/main/README.md",
+        "https://github.com/salespeak-ai/inbox-envoy/blob/main/COMPATIBILITY.md",
+        "https://github.com/salespeak-ai/inbox-envoy/releases/tag/v0.1.0-beta.4",
+        "https://news.ycombinator.com/item?id=50605502"
+      ],
+      "previewImage": "/previews/inbox-envoy.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装不会打开邮箱权限。从只预览走到加标签、归档、调查报价或回复发件人，每一步都要另批。批准归档不会打开发信。在 Gmail 上，加标签用的权限同时允许发信，批准之前先看清宿主实际拿到的权限。本库没有代为安装或连接邮箱。",
+      "approvalBoundaryEn": "Installing does not grant mailbox access. Moving from preview to labels, archive, research, or replies needs a separate approval each time. Approving archive does not turn on sending. On Gmail, the permission used to apply labels also allows sending, so read what the host actually received before you approve it. This library did not install the skill or connect a mailbox.",
+      "connectors": [
+        "existing agent mailbox"
+      ],
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-23T01:20:00Z",
+      "qualityNote": "收录理由：这是加在你已经有的个人助手上的技能，用来筛推销信，而不是又一个邮箱。它从只预览开始，加标签、归档、调查和回复都要另批，技能也不会自己升级。边界：产品页写还没有一个点名的助手通过验收测试。兼容表里的 Claude Code 和 Grok Bot 记录都是练习收件箱，不是真实邮箱，也不能写成已经支持某个助手。在 Gmail 上加标签需要的权限同时允许发信；Outlook 把发信分开。Salespeak 还卖面向公司的产品，这个技能写明不因此抬高任何一家公司。本库没有安装这个技能，没有连接邮箱，没有跑练习收件箱，也没有做验收测试。",
+      "qualityNoteEn": "Why listed: this is a skill you add to a personal agent you already have, to screen sales email, rather than another mailbox. It starts as a preview, and labels, archive, research, and replies each need their own approval. The skill does not upgrade itself. Limits: the product page says no named agent has passed the acceptance tests. The Claude Code and Grok Bot notes in the compatibility table are practice-inbox runs, not a live mailbox, and they are not a claim that a named agent is supported. On Gmail, the permission used to apply labels also allows sending. Outlook keeps sending separate. Salespeak also sells company-side products, and the skill says that does not boost any company. This library did not install the skill, did not connect a mailbox, did not run the practice inbox, and did not perform the acceptance tests.",
+      "verifyLog": "2026-11-23 早间（Asia/Shanghai，约 08:50–09:20）：https://salespeak.ai/inbox-envoy/ HTTP 200，title Inbox Envoy by Salespeak: Open-Source Skill to Screen Sales Email。正文写 free, open-source skill, made and maintained by Salespeak，screen unsolicited sales pitches，starts read-only and changes nothing in your mailbox until you approve each step。About the name 写 It is not an email provider, a separate inbox or a hosted service。三步原文 Observe / Label-only / Archive，Archive 写 searchable and reversible，no permanent deletion and no automatic Trash。另写 Researching an unfamiliar offer and replying to senders are separate permissions, and both are off unless you turn them on. Approving archiving never turns on sending. Inbox Envoy never upgrades itself. Where your mail goes 写 no Salespeak account, service, API key or telemetry。Which agents 写 no named agent has passed its acceptance tests yet，并点名 Meta Muse、Hark、ChatGPT、Claude and Grok Bot (which has a copy-ready template)，本条不把这份名单写成已通过测试。安装三条：latest release 的 skill.zip，npx skills add salespeak-ai/inbox-envoy，以及 /plugin marketplace add salespeak-ai/inbox-envoy 后 /plugin install inbox-envoy@inbox-envoy。Installing grants no mailbox access and turns nothing on. Setup starts in Observe. FAQ 写 MIT license，以及 Your agent, model provider and email provider may still charge。页面上还有一句 Writing to someone who uses an inbox agent?，链接目的地没有打开。README https://raw.githubusercontent.com/salespeak-ai/inbox-envoy/main/README.md HTTP 200，徽章 version 0.1.0-beta.4、status public beta、License MIT。动图说明写 Claude Code 2.1.202 running Inbox Envoy v0.1.0-beta.3 on Nov 17, 2026, sorting eight made-up emails。另一处写 examples/test-inbox/ 是 nine made-up emails。两句都保留，没有合成一个数字。准备就绪报告默认提议 a dedicated 30-minute, seven-day triage schedule，Approve the schedule before the host creates it。因此 hasRoutine 为 true，日程仍要先批准。COMPATIBILITY.md HTTP 200。Claude Code 2.1.202：clean install of v0.1.0-beta.3 and a practice-inbox run passed Nov 17, 2026. Not a live-mailbox test. Grok bot or template：v0.1.0-beta.4 skill files loaded in a Grok Bot agent session passed the 9-email practice inbox (preview mode, both injections flagged), Nov 20, 2026. Template import, live mailbox, labels and schedules not tested; triage isolation is instruction-only. ChatGPT：Not verified by this release. 表下写 Do not interpret this table as asserting a platform feature。gh api repos/salespeak-ai/inbox-envoy HTTP 200：license MIT，stargazers_count 2，forks 0，created_at 2026-11-06T21:06:45Z，pushed_at 2026-11-22T06:47:34Z。releases 接口 HTTP 200，四条都是 prerelease。v0.1.0-beta.1 published_at 2026-11-06T21:09:13Z，正文写 First public beta，所以 publishedAt 用 2026-11-06，不用更晚的 Show HN。v0.1.0-beta.4 published_at 2026-11-19T19:05:34Z。beta.4 正文：reading 与 acting 分开；Hidden or agent-directed text … can never move a message into Important or Opportunities；On Gmail, applying labels needs gmail.modify, which also allows sending. Outlook keeps sending separate (Mail.Send). The practice inbox in examples/ is no longer inside skill.zip。SHA-256（skill.zip）adc392800882d55c2cccde7da528cb764b0a09fab1f85250f71c8165ffeff449，本库没有下载 zip，没有核对这个哈希。Show HN：Algolia HTTP 200，https://news.ycombinator.com/item?id=50605502 ，标题 Show HN: Inbox Envoy, an open-source email triage skill for your own AI agent，作者 omergotlieb，2026-11-23T00:00:35Z（上海 08:00:35），核对时 1 point、0 条评论，链接指向 GitHub 仓库。sourceType 记 community：从作者的 Show HN 收进，事实取自产品页、README、COMPATIBILITY 和 release 说明。预览：headless Chrome 打开产品页，点过 Reject All 关掉同意条，视口 1440×893，等比缩到 1200×744，上补 28px、下补 28px 白边，成 1200×800 WebP，没有再裁切，没有加字。README 动图 .github/media/observe-run.gif HTTP 200，68 帧，每帧 828×587；第 1 帧已经是练习信输出的中段，不用它当预览，也不把它说成真实 Gmail。去重：main c088c54 与 67 个打开 PR 的 diff 里没有 id inbox-envoy，也没有 salespeak.ai/inbox-envoy 或 salespeak-ai/inbox-envoy。未做：没有下载 skill.zip，没有运行 npx skills add，没有把技能装进任何助手，没有连接邮箱，没有跑 examples/test-inbox，没有做 tests/ACCEPTANCE.md。",
+      "verifyLogEn": "2026-11-23 morning (Asia/Shanghai, about 08:50–09:20): https://salespeak.ai/inbox-envoy/ HTTP 200, title Inbox Envoy by Salespeak: Open-Source Skill to Screen Sales Email. The body says free, open-source skill, made and maintained by Salespeak, screen unsolicited sales pitches, and starts read-only and changes nothing in your mailbox until you approve each step. About the name says It is not an email provider, a separate inbox or a hosted service. The three steps are Observe, Label-only, and Archive. Archive says searchable and reversible, no permanent deletion and no automatic Trash. It also says Researching an unfamiliar offer and replying to senders are separate permissions, and both are off unless you turn them on. Approving archiving never turns on sending. Inbox Envoy never upgrades itself. Where your mail goes says no Salespeak account, service, API key or telemetry. Which agents says no named agent has passed its acceptance tests yet, and names Meta Muse, Hark, ChatGPT, Claude and Grok Bot (which has a copy-ready template). This entry does not treat that list as agents that passed. The three install lines are skill.zip from the latest release, npx skills add salespeak-ai/inbox-envoy, and /plugin marketplace add salespeak-ai/inbox-envoy then /plugin install inbox-envoy@inbox-envoy. Installing grants no mailbox access and turns nothing on. Setup starts in Observe. The FAQ says MIT license and Your agent, model provider and email provider may still charge. The page also shows Writing to someone who uses an inbox agent? The destination of that link was not opened. README https://raw.githubusercontent.com/salespeak-ai/inbox-envoy/main/README.md HTTP 200, badges version 0.1.0-beta.4, status public beta, License MIT. The animation caption says Claude Code 2.1.202 running Inbox Envoy v0.1.0-beta.3 on Nov 17, 2026, sorting eight made-up emails. Another line says examples/test-inbox/ is nine made-up emails. Both numbers are kept and not merged into one. The readiness report by default asks for a dedicated 30-minute, seven-day triage schedule, and says Approve the schedule before the host creates it. hasRoutine is therefore true, and the schedule still needs approval first. COMPATIBILITY.md HTTP 200. Claude Code 2.1.202: clean install of v0.1.0-beta.3 and a practice-inbox run passed Nov 17, 2026. Not a live-mailbox test. Grok bot or template: v0.1.0-beta.4 skill files loaded in a Grok Bot agent session passed the 9-email practice inbox (preview mode, both injections flagged), Nov 20, 2026. Template import, live mailbox, labels and schedules not tested; triage isolation is instruction-only. ChatGPT: Not verified by this release. Under the table: Do not interpret this table as asserting a platform feature. gh api repos/salespeak-ai/inbox-envoy HTTP 200: license MIT, stargazers_count 2, forks 0, created_at 2026-11-06T21:06:45Z, pushed_at 2026-11-22T06:47:34Z. The releases API HTTP 200, four prereleases. v0.1.0-beta.1 published_at 2026-11-06T21:09:13Z, body First public beta, so publishedAt is 2026-11-06 rather than the later Show HN. v0.1.0-beta.4 published_at 2026-11-19T19:05:34Z. The beta.4 notes say reading is separated from acting; Hidden or agent-directed text can never move a message into Important or Opportunities; On Gmail, applying labels needs gmail.modify, which also allows sending. Outlook keeps sending separate (Mail.Send). The practice inbox in examples/ is no longer inside skill.zip. The SHA-256 of skill.zip is adc392800882d55c2cccde7da528cb764b0a09fab1f85250f71c8165ffeff449. This library did not download the zip and did not check that hash. Show HN: Algolia HTTP 200, https://news.ycombinator.com/item?id=50605502 , title Show HN: Inbox Envoy, an open-source email triage skill for your own AI agent, author omergotlieb, 2026-11-23T00:00:35Z (08:00:35 Shanghai), 1 point and 0 comments at the check, linking the GitHub repository. sourceType is community because the entry was found through the author’s Show HN; the facts come from the product page, the README, COMPATIBILITY, and the release notes. Preview: headless Chrome opened the product page, Reject All was clicked to dismiss the consent bar, viewport 1440×893, scaled to 1200×744 and padded 28px above and 28px below with white to a 1200×800 WebP. No further crop, no text added. The README animation .github/media/observe-run.gif HTTP 200, 68 frames, each 828×587. Frame 1 is already the middle of the practice-inbox output, so it is not the preview and is not described as a live Gmail screenshot. Dedupe: main c088c54 and the diffs of 67 open PRs contain no id inbox-envoy and no salespeak.ai/inbox-envoy or salespeak-ai/inbox-envoy. Not done: skill.zip was not downloaded, npx skills add was not run, the skill was not installed into any agent, no mailbox was connected, examples/test-inbox was not run, and tests/ACCEPTANCE.md was not performed.",
+      "landing": {
+        "what": "一个装进你已经在用的个人助手里的技能，不是一个新邮箱。Salespeak 用它教助手筛未经请求的推销信，从只预览开始。Salespeak 同时还卖面向公司的产品；技能页写明不会因为一家公司用了那些产品就把它排得更靠前。",
+        "whatEn": "A skill you add to a personal agent you already use, not a new mailbox. Salespeak uses it to teach the agent to screen unsolicited sales pitches, starting as a preview. Salespeak also sells company-side products. The skill page says a company is not ranked higher because it uses those products.",
+        "steps": [
+          {
+            "title": "先看兼容表，不要把它当成已支持的助手",
+            "titleEn": "Read the compatibility table before treating any agent as supported",
+            "body": "产品页写还没有一个点名的助手通过验收测试。表里的 Claude Code 和 Grok Bot 记录都是练习收件箱，不是真实邮箱。ChatGPT 写的是未验证。助手会先报告自己实际上能做什么。",
+            "bodyEn": "The product page says no named agent has passed the acceptance tests. The Claude Code and Grok Bot notes are practice-inbox runs, not a live mailbox. ChatGPT is marked not verified. The agent is supposed to report what it can actually do before it changes anything.",
+            "links": [
+              {
+                "href": "https://salespeak.ai/inbox-envoy/",
+                "label": "Inbox Envoy 产品页",
+                "labelEn": "Inbox Envoy product page"
+              },
+              {
+                "href": "https://github.com/salespeak-ai/inbox-envoy/blob/main/COMPATIBILITY.md",
+                "label": "兼容表",
+                "labelEn": "Compatibility table"
+              }
+            ]
+          },
+          {
+            "title": "装进已有助手，从只预览开始",
+            "titleEn": "Add it to the agent you have, and start read-only",
+            "body": "可以从最新 release 下载 skill.zip，或用 npx skills add salespeak-ai/inbox-envoy。装上不会获得邮箱权限，也不会打开任何一步。练习信在仓库的 examples/test-inbox/，不在 beta.4 的 skill.zip 里。本库没有安装，也没有跑练习信。",
+            "bodyEn": "You can download skill.zip from the latest release, or use npx skills add salespeak-ai/inbox-envoy. Installing grants no mailbox access and turns nothing on. The practice inbox is in examples/test-inbox/ in the repository, not inside the beta.4 skill.zip. This library did not install it and did not run the practice inbox.",
+            "links": [
+              {
+                "href": "https://github.com/salespeak-ai/inbox-envoy/releases/tag/v0.1.0-beta.4",
+                "label": "v0.1.0-beta.4 发布页",
+                "labelEn": "v0.1.0-beta.4 release"
+              },
+              {
+                "href": "https://github.com/salespeak-ai/inbox-envoy",
+                "label": "Inbox Envoy 仓库",
+                "labelEn": "Inbox Envoy repository"
+              }
+            ]
+          },
+          {
+            "title": "每一步另批，尤其是会改邮箱或发信的步骤",
+            "titleEn": "Approve each step, especially anything that changes mail or sends it",
+            "body": "只预览、加标签、归档、调查报价、回复发件人，是分开的许可。批准归档不会打开发信。在 Gmail 上，加标签需要的权限同时允许发信；Outlook 把发信分开。README 里的定时分拣也要你先批准，宿主才会创建。",
+            "bodyEn": "Preview, labels, archive, research, and replies are separate permissions. Approving archive does not turn on sending. On Gmail, the permission used to apply labels also allows sending. Outlook keeps sending separate. The scheduled triage in the README is created by the host only after you approve it.",
+            "links": [
+              {
+                "href": "https://github.com/salespeak-ai/inbox-envoy/blob/main/README.md",
+                "label": "Inbox Envoy README",
+                "labelEn": "Inbox Envoy README"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "这是技能，不是邮箱、邮件服务商或新的邮箱接口。助手必须本来就能访问你的邮箱。安装本身不授予这个权限。",
+            "textEn": "This is a skill, not a mailbox, an email provider, or a new mailbox connector. The agent must already be able to reach your mailbox. Installation itself does not grant that access."
+          },
+          {
+            "text": "还没有一个点名的助手通过验收测试。练习收件箱上的记录不能写成已经支持 Grok Bot、ChatGPT 或 Claude。",
+            "textEn": "No named agent has passed the acceptance tests. A practice-inbox note is not a claim that Grok Bot, ChatGPT, or Claude is supported."
+          },
+          {
+            "text": "在 Gmail 上加标签需要的权限同时允许发信。Outlook 把发信留在单独的权限。批准加标签之前，先看宿主实际拿到了什么。",
+            "textEn": "On Gmail, the permission used to apply labels also allows sending. Outlook keeps sending on a separate permission. Before you approve labels, see what the host actually received."
+          },
+          {
+            "text": "本库没有安装技能，没有连接邮箱，没有跑练习收件箱，也没有做验收测试。",
+            "textEn": "This library did not install the skill, did not connect a mailbox, did not run the practice inbox, and did not perform the acceptance tests."
+          }
+        ],
+        "previewCredit": "预览：Inbox Envoy 产品页首屏，关掉同意条后拍摄，上下补白边成 3:2。不是练习收件箱，也不是真实邮箱",
+        "previewCreditEn": "Preview: the top of the Inbox Envoy product page, taken after dismissing the consent bar, padded top and bottom to 3:2. Not the practice inbox, and not a live mailbox"
+      }
+    },
+    {
+      "id": "vemlora",
+      "slug": "vemlora",
+      "title": "Vemlora：在浏览器里改已经导出的图片上的文字",
+      "titleEn": "Vemlora: edit the text in an image you already exported, in the browser",
+      "kind": "tool",
+      "hook": "在浏览器里改成品图上的字，不用源文件，周围版式不动。",
+      "hookEn": "Edit text in an exported image in the browser, without the source file.",
+      "summary": "Vemlora（https://vemlora.io/ ）是浏览器里的 AI 文字编辑器，改的是已经导出的平面图片：海报上的日期、商品图上的价格、截图上的标签。它不需要源文件，也不需要原来的字体。官网把步骤写成三步：上传 PNG、JPEG、WebP、HEIC 或 HEIF，单张不超过 20 MB；框住要改的字，或输入原来的文字；写下新文字，生成，对照字形、间距和背景，再下载。原文件不动。它只改文字，周围的版式、颜色和物体保持原样。你可以不登录就选一张图、把修改准备好；生成和上传需要登录。不要把它写成完全不用账号的生成器。官网自己写了限度：很小的字和很强的重复纹理可能要再试一次；结果的字形或小细节可能不一样，发布前要检查。中文和其他语言可以输入，同时提醒你先看文字、字形和细节。价格页写一次性信用包，一包 2,500 点，6 美元，不过期，没有订阅，也不会自动续费。生成失败时点数自动退回；做完了但你不满意，不算失败。输出有 Standard 2K 和 Pro 4K，实际尺寸随原图比例变化。信用包一般不退款，法律或支付渠道另有要求的除外。试用页写符合条件的首次用户可以拿到一次试用点数，没有写出具体数字，所以这里不写免费点数是多少。首页的前后对比把改后的那一侧标成 illustration。适合手里只有导出图、要改上面几个字的人。本库没有登录，没有上传图片，没有生成，也没有购买点数。",
+      "summaryEn": "Vemlora (https://vemlora.io/ ) is an in-browser AI text editor for a flat image you already exported: a date on a poster, a price on a product photo, a label on a screenshot. It does not need the source file or the original font. The site describes three steps: upload a PNG, JPEG, WebP, HEIC, or HEIF up to 20 MB; box the words, or type the original text; write the new text, generate, compare the lettering, spacing, and background, then download. The original file stays untouched. Only the text changes. The surrounding layout, colors, and objects stay as they are. You can select an image and prepare the edit without signing in. Generating and uploading require a sign-in. Do not describe it as a generator that needs no account at all. The site states its own limits: very small text and strong repeating textures can need a second try, and results can differ in lettering or small details, so check before you publish. Chinese and other languages can be entered, with a reminder to review the text, the typography, and the details. The pricing page sells one-time credit packs: 2,500 credits for 6 US dollars, they never expire, there is no subscription, and there is no automatic renewal. Credits come back automatically when a generation fails. A finished result you do not like is not a failure. Output is offered as Standard 2K and Pro 4K, and the actual dimensions vary with the original aspect ratio. Credit packs are generally nonrefundable, except where the law or the payment provider requires otherwise. The trial page says eligible first-time users can receive trial credits once, and it states no number, so this entry states no free-credit figure. The before-and-after on the homepage labels the changed side as an illustration. Useful when all you have is an exported image and a few words on it need to change. This library did not sign in, did not upload an image, did not generate, and did not buy credits.",
+      "categories": [
+        "design"
+      ],
+      "role": "AI design tool",
+      "sourceUrl": "https://vemlora.io/",
+      "secondaryUrls": [
+        "https://vemlora.io/pricing",
+        "https://vemlora.io/about",
+        "https://vemlora.io/trial",
+        "https://news.ycombinator.com/item?id=50571058"
+      ],
+      "previewImage": "/previews/vemlora.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "选图和准备修改可以不登录。生成和上传需要登录，并会消耗点数。购买信用包是付费。本库没有代为登录、上传、生成或付款。",
+      "approvalBoundaryEn": "You can select an image and prepare an edit without signing in. Generating and uploading require a sign-in and spend credits. Buying a credit pack is a payment. This library did not sign in, upload, generate, or pay.",
+      "connectors": [],
+      "publishedAt": "2026-11-20",
+      "updatedAt": "2026-11-23T01:20:00Z",
+      "qualityNote": "收录理由：设计已经导出成一张平面图之后，往往只想改日期、价格或截图上的几个字，又不想重做版式。Vemlora 把这件事放在浏览器里，并写明只改文字。边界：不登录可以选图和准备，生成和上传仍要登录，所以不是不用账号的生成器。试用页没有写出免费点数的数字。很小的字、重复纹理，以及字形上的差别，都是官网自己提醒要检查的。首页对比图被标成 illustration，不是本库生成的结果。一包 2,500 点、6 美元，是价格页的写法。本库没有登录，没有上传图片，没有生成，也没有购买点数。",
+      "qualityNoteEn": "Why listed: once a design has been exported to a flat image, the usual job is to change a date, a price, or a few words on a screenshot without rebuilding the layout. Vemlora puts that in the browser and says it changes only the text. Limits: you can select an image and prepare an edit without signing in, but generating and uploading still require a sign-in, so it is not a no-account generator. The trial page states no number of free credits. Very small text, repeating textures, and differences in lettering are limits the site itself tells you to check. The homepage comparison is labelled an illustration and was not generated by this library. A pack of 2,500 credits for 6 US dollars is the pricing page’s figure. This library did not sign in, did not upload an image, did not generate, and did not buy credits.",
+      "verifyLog": "2026-11-23 早间（Asia/Shanghai，约 08:50–09:20）：https://vemlora.io/ HTTP 200，title Edit Text in Images Online — Match the Font and Layout。可见正文：Update a poster date, sale price, or headline using the image you already have. Choose and edit an image without signing in. It uploads when you're ready to generate. 格式句：PNG, JPEG, WebP, HEIC, and HEIF images up to 20 MB. Text changes only: the surrounding layout, colors, and objects stay as they are. Very small text and strong repeating textures can need a second try or a manual check. Results can differ in lettering or small details. Check the downloaded image before publishing. FAQ：You can enter new text in Chinese or other languages. Work directly in your browser. You can select an image and prepare edits without signing in. Sign in to generate and upload the image. Purchased credits never expire. Buy multiple packs at once for US$6 per pack of 2,500 credits. Credits are returned automatically when a generation fails. A completed result that does not meet your expectations is not treated as a failed generation. No. Vemlora works on the exported image; you do not need a PSD or the original font. 首页价格卡写 US$ 6 / pack、2,500 credits。对比区按钮写 Before 和 After · illustration。两张官方图 HTTP 200：改前 https://cdn.vemlora.io/gen-gate/sys/2026-11-21/4b9d0fa8615e475fb5777f93313f6a52.png ，改后 https://cdn.vemlora.io/gen-gate/sys/2026-11-21/f51ff6f53dcb404296b0df0d76e4d3ae.png ，都是 1440×591。路径里的 2026-11-21 晚于 Show HN，不当作发布日。https://vemlora.io/pricing HTTP 200。正文：One pack costs $6 and includes 2,500 credits. Credits stay in your account balance, never expire. there is no subscription. Image output in Standard 2K and Pro 4K. Actual output dimensions for 2K and 4K vary with the original image’s aspect ratio. Credit packs are generally nonrefundable. Exceptions may apply under applicable law or the payment provider’s rules. No monthly plan and no automatic renewal. https://vemlora.io/about HTTP 200，写 The original file stays untouched，以及 It is a text-editing tool, not a replacement for building a new layout from scratch. https://vemlora.io/trial HTTP 200，title Free trial details。正文只有 Eligible first-time users can receive trial credits once. Repeat registrations are excluded. Trial credits are added automatically. 没有写出 35 或任何点数，所以摘要不写免费点数。首页、价格页、关于页的可见文字里也没有这个数字。https://vemlora.io/opengraph-image HTTP 404，没有用作预览。页面没有日程或自动任务，hasRoutine 为 false。Show HN：Algolia HTTP 200，https://news.ycombinator.com/item?id=50571058 ，标题 Show HN: Vemlora – Edit text in images while preserving the original design，作者 abelce，2026-11-20T06:55:31Z（上海 14:55:31），核对时 1 point、0 条评论。官网这几页没有更早的发布日期，publishedAt 用 2026-11-20。sourceType 记 community：从 Show HN 收进，事实取自官网、价格页、关于页和试用页。预览：headless Chrome 打开首页，视口 1440×1000，首屏对比卡完整，含 After · illustration 和 $32 → $28。等比缩到 1152×800，左补 24px、右补 24px 白边，成 1200×800 WebP，没有再裁切，没有加字。本库没有点生成。去重：main c088c54 与 67 个打开 PR 的 diff 里没有 id vemlora，也没有 vemlora.io。未做：没有登录，没有上传图片，没有生成，没有购买点数，没有打开退款之外的支付页面。",
+      "verifyLogEn": "2026-11-23 morning (Asia/Shanghai, about 08:50–09:20): https://vemlora.io/ HTTP 200, title Edit Text in Images Online — Match the Font and Layout. Visible copy: Update a poster date, sale price, or headline using the image you already have. Choose and edit an image without signing in. It uploads when you're ready to generate. The format lines: PNG, JPEG, WebP, HEIC, and HEIF images up to 20 MB. Text changes only: the surrounding layout, colors, and objects stay as they are. Very small text and strong repeating textures can need a second try or a manual check. Results can differ in lettering or small details. Check the downloaded image before publishing. The FAQ says You can enter new text in Chinese or other languages. Work directly in your browser. You can select an image and prepare edits without signing in. Sign in to generate and upload the image. Purchased credits never expire. Buy multiple packs at once for US$6 per pack of 2,500 credits. Credits are returned automatically when a generation fails. A completed result that does not meet your expectations is not treated as a failed generation. No. Vemlora works on the exported image; you do not need a PSD or the original font. The homepage price card says US$ 6 / pack and 2,500 credits. The comparison controls say Before and After · illustration. Both official images returned HTTP 200: the before image https://cdn.vemlora.io/gen-gate/sys/2026-11-21/4b9d0fa8615e475fb5777f93313f6a52.png and the after image https://cdn.vemlora.io/gen-gate/sys/2026-11-21/f51ff6f53dcb404296b0df0d76e4d3ae.png , each 1440×591. The 2026-11-21 in the path is later than the Show HN and is not used as the launch date. https://vemlora.io/pricing HTTP 200. The body says One pack costs $6 and includes 2,500 credits. Credits stay in your account balance, never expire. there is no subscription. Image output in Standard 2K and Pro 4K. Actual output dimensions for 2K and 4K vary with the original image’s aspect ratio. Credit packs are generally nonrefundable. Exceptions may apply under applicable law or the payment provider’s rules. No monthly plan and no automatic renewal. https://vemlora.io/about HTTP 200. It says The original file stays untouched and It is a text-editing tool, not a replacement for building a new layout from scratch. https://vemlora.io/trial HTTP 200, title Free trial details. The body only says Eligible first-time users can receive trial credits once. Repeat registrations are excluded. Trial credits are added automatically. It states neither 35 nor any other count, so the summary states no free-credit figure. The visible text of the homepage, the pricing page, and the about page does not state that number either. https://vemlora.io/opengraph-image returned HTTP 404 and was not used as the preview. The pages describe no schedule or automatic task, so hasRoutine is false. Show HN: Algolia HTTP 200, https://news.ycombinator.com/item?id=50571058 , title Show HN: Vemlora – Edit text in images while preserving the original design, author abelce, 2026-11-20T06:55:31Z (14:55:31 Shanghai), 1 point and 0 comments at the check. These official pages give no earlier launch date, so publishedAt is 2026-11-20. sourceType is community because the entry was found through the Show HN; the facts come from the homepage, the pricing page, the about page, and the trial page. Preview: headless Chrome opened the homepage, viewport 1440×1000, with the comparison card complete, including After · illustration and $32 → $28. Scaled to 1152×800 and padded 24px on the left and 24px on the right with white to a 1200×800 WebP. No further crop, no text added. This library did not press generate. Dedupe: main c088c54 and the diffs of 67 open PRs contain no id vemlora and no vemlora.io. Not done: no sign-in, no image upload, no generation, no credit purchase, and no payment page beyond the public pricing and refund wording.",
+      "landing": {
+        "what": "一个浏览器里的文字编辑器，对象是已经导出的平面图，不是整套设计软件，也不是个人助手。Vemlora 的说法是：日期、价格或截图标签变了，就在这张图上改字，不必找回源文件或原来的字体。",
+        "whatEn": "A text editor in the browser for a flat image you already exported. It is not a full design suite and not a personal assistant. Vemlora’s account is: when a date, a price, or a screenshot label has changed, edit the words on that image instead of finding the source file or the original font.",
+        "steps": [
+          {
+            "title": "可以先选图，生成要登录",
+            "titleEn": "You can select an image first; generating requires a sign-in",
+            "body": "官网写可以不登录就选一张图、把修改准备好。上传和生成需要登录。试用页写符合条件的首次用户可以拿到一次试用点数，但没有写出数量。",
+            "bodyEn": "The site says you can select an image and prepare the edit without signing in. Uploading and generating require a sign-in. The trial page says eligible first-time users can receive trial credits once, and it states no amount.",
+            "links": [
+              {
+                "href": "https://vemlora.io/",
+                "label": "Vemlora 首页",
+                "labelEn": "Vemlora home"
+              },
+              {
+                "href": "https://vemlora.io/trial",
+                "label": "试用说明",
+                "labelEn": "Trial details"
+              }
+            ]
+          },
+          {
+            "title": "按三步改字，下载前自己对照",
+            "titleEn": "Follow the three steps, and compare before you download",
+            "body": "上传不超过 20 MB 的 PNG、JPEG、WebP、HEIC 或 HEIF，标出要改的字，写下新文字，生成后对照字形、间距和背景。原文件不动。很小的字和很强的重复纹理，官网写可能要再试一次。",
+            "bodyEn": "Upload a PNG, JPEG, WebP, HEIC, or HEIF up to 20 MB, mark the words, write the new text, and compare the lettering, spacing, and background after it generates. The original file stays untouched. The site says very small text and strong repeating textures can need a second try.",
+            "links": [
+              {
+                "href": "https://vemlora.io/about",
+                "label": "关于 Vemlora",
+                "labelEn": "About Vemlora"
+              }
+            ]
+          },
+          {
+            "title": "要生成再看价格",
+            "titleEn": "Read the price before you generate",
+            "body": "价格页写一包 2,500 点、6 美元，不过期，没有订阅，也不会自动续费。生成失败会退回点数；做完了但你不满意，不算失败。本库没有购买，也没有生成。",
+            "bodyEn": "The pricing page says one pack is 2,500 credits for 6 US dollars. Credits never expire. There is no subscription and no automatic renewal. A failed generation returns its credits. A finished result you do not like is not a failure. This library did not buy credits and did not generate.",
+            "links": [
+              {
+                "href": "https://vemlora.io/pricing",
+                "label": "Vemlora 价格页",
+                "labelEn": "Vemlora pricing"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "它改的是已经导出的图片上的文字，不是从源文件重建版式，也不是一整套设计软件。",
+            "textEn": "It edits text on an image you already exported. It does not rebuild the layout from a source file, and it is not a full design suite."
+          },
+          {
+            "text": "不登录可以准备修改。生成和上传需要登录。试用页没有写出免费点数的数字。",
+            "textEn": "You can prepare an edit without signing in. Generating and uploading require a sign-in. The trial page states no number of free credits."
+          },
+          {
+            "text": "官网提醒：很小的字、重复纹理，以及字形或小细节上的差别，发布前要自己检查。首页的改后图被标成 illustration。",
+            "textEn": "The site says very small text, repeating textures, and differences in lettering or small details need your own check before you publish. The changed image on the homepage is labelled an illustration."
+          },
+          {
+            "text": "本库没有登录，没有上传图片，没有生成，也没有购买点数。",
+            "textEn": "This library did not sign in, did not upload an image, did not generate, and did not buy credits."
+          }
+        ],
+        "previewCredit": "预览：Vemlora 官网首页首屏，对比卡完整，页面把改后一侧标成 illustration。等比缩小后左右补白边成 3:2，未再裁切、未加字",
+        "previewCreditEn": "Preview: the top of the Vemlora homepage, comparison card complete, with the changed side labelled an illustration on the page. Scaled down and padded left and right with white to 3:2, not cropped further, no text added"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12485,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-23T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 224,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12818,33 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://www.homebrain.house",
+      "https://www.homebrain.house/open-source",
+      "https://www.homebrain.house/opensource",
+      "https://homebrain.house/opensource",
+      "https://github.com/oalterg/HomeBrain",
+      "https://raw.githubusercontent.com/oalterg/HomeBrain/main/README.md",
+      "https://raw.githubusercontent.com/oalterg/HomeBrain/main/LICENSE",
+      "https://www.homebrain.house/images/software-dashboard.png",
+      "https://news.ycombinator.com/item?id=50598402",
+      "https://hn.algolia.com/api/v1/items/50598402",
+      "https://salespeak.ai/inbox-envoy/",
+      "https://github.com/salespeak-ai/inbox-envoy",
+      "https://raw.githubusercontent.com/salespeak-ai/inbox-envoy/main/README.md",
+      "https://raw.githubusercontent.com/salespeak-ai/inbox-envoy/main/COMPATIBILITY.md",
+      "https://github.com/salespeak-ai/inbox-envoy/releases",
+      "https://github.com/salespeak-ai/inbox-envoy/releases/tag/v0.1.0-beta.4",
+      "https://github.com/salespeak-ai/inbox-envoy/releases/tag/v0.1.0-beta.1",
+      "https://news.ycombinator.com/item?id=50605502",
+      "https://hn.algolia.com/api/v1/items/50605502",
+      "https://vemlora.io/",
+      "https://vemlora.io/pricing",
+      "https://vemlora.io/about",
+      "https://vemlora.io/trial",
+      "https://vemlora.io/opengraph-image",
+      "https://news.ycombinator.com/item?id=50571058",
+      "https://hn.algolia.com/api/v1/items/50571058"
     ]
   }
 }
