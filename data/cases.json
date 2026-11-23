@@ -1,6 +1,162 @@
 {
   "cases": [
     {
+      "id": "thanes-quest",
+      "slug": "thanes-quest",
+      "title": "Thane's Quest：套着打字冒险外壳的开源浏览器动作 RPG",
+      "titleEn": "Thane's Quest: an open-source browser action RPG in a typing-adventure shell",
+      "kind": "showcase",
+      "hook": "开源浏览器像素 RPG，打开就能玩，作者称用 Fable 做成。",
+      "hookEn": "An open-source pixel RPG to play in the browser; its author says it was made with Fable.",
+      "summary": "Thane's Quest 是一个在浏览器里打开就能玩的开放世界动作 RPG，外面套着早期打字冒险游戏的壳：在一个冰封的小山谷里走动、实时战斗，其余的事靠点击、触屏、按数字键或打字完成。README 说不打字也能玩，但打字是更丰富的玩法，能问到菜单上没有列出的话题。Hacker News 用户 rdh18 在 2026-11-23 把它发到 Show HN，标题是「I used Fable to make an open source 80s-style Skyrim browser game」（我用 Fable 做了一个开源的、八十年代风格的《天际》式浏览器游戏），介绍里说灵感来自《天际》和 King's Quest 这类老 Sierra 游戏。源码在 GitHub 的 rdhelms/thanes-quest，MIT 许可，版权署名 Robby Helms；README 说代码、故事、画面和音乐都在这份许可之内，世界、人名、角色、美术、声音和文字都是原创。按 README 的写法：没有运行时依赖，用 TypeScript 把 320×200 的索引色帧缓冲画到 canvas 上，声音走 WebAudio。战斗是实时的，看时机：敌人出手前会亮一个金色的「!」，这时举起防御就能格开这一击。六种技能只靠使用提升。背包有负重上限，客栈里有箱子可以存东西。每进一个画面自动存档，另有三个手动存档位，存档留在浏览器里。手机和平板有触控布局。谷地由八个室外画面组成；走出谷地边缘，旷野一屏一屏生成，每次回去都是同一个地方，走得越远越难。第一段故事结束后还有第二段，可以有两种结局。Show HN 的介绍另外列了昼夜、下雪和融雪、交易、铁匠铺、可重复的有偿工作、地图、日记、人物页和事迹表，以及十一条支线故事。关于它是怎么做出来的，两处公开文字写得不一样。Show HN 的功能列表把谷地的八处地点和室内写成「fable-made」，把野外的十八个小场景写成「fable-written」。仓库 README 里没有出现 Fable、Claude 或任何模型名，也没有提示词，同样的内容写的是「hand-made」和「written by hand」。Show HN 和 README 都没有写用的是 Fable 的哪个版本。作者在 Show HN 里自己列了不足：故事有前后不一致的地方，故事和描述与画面状态可能对不上，并说肯定还有更多。适合想玩一局复古打字冒险的人直接打开，也适合想读一份完整小游戏源码的人。本库只读了公开页面和仓库文件，没有安装依赖，没有运行测试，没有试玩或通关，也没有复现制作过程。",
+      "summaryEn": "Thane's Quest is an open-world action RPG you can play by opening a web page, set inside the shell of an early typing adventure: you walk a small frozen valley, fight in real time, and do everything else by clicking, tapping, pressing a number, or typing. The README says nothing has to be typed, but that typing is the richer way to play and reaches subjects no menu lists. Hacker News user rdh18 posted it to Show HN on 2026-11-23 under the title “I used Fable to make an open source 80s-style Skyrim browser game”, and the post says it was inspired by Skyrim and the old Sierra games like King's Quest. The source is on GitHub at rdhelms/thanes-quest under the MIT licence, copyright Robby Helms; the README says the code, the story, the pictures, and the music are all covered by it, and that the world, names, characters, art, sound, and text are original. As the README describes it: no runtime dependencies, TypeScript drawing a 320x200 indexed framebuffer to a canvas, and WebAudio for sound. Fights are in real time and reward timing: an enemy about to strike shows a gold “!”, and raising your guard while it shows parries the blow. Six skills rise only by use. The pack has a weight limit, and the inn has a chest for storage. The game saves itself each time you enter a room and has three manual slots; saves stay in the browser. Phones and tablets get a touch layout. The valley is eight outdoor screens; walk off its edge and new country is generated a screen at a time, the same place every time you return and tougher the further you go. After the first story there is a second, which can end in two ways. The Show HN post also lists day and night, snow and a thaw, trading, a forge, repeatable paid work, a map, journal, character sheet, and deeds list, and eleven side stories. The two public texts describe how it was made differently. The Show HN feature list calls the valley's eight places and interiors “fable-made” and the eighteen scenes in the wild “fable-written”. The repository README has no mention of Fable, Claude, or any model name, and no prompts; it calls the same things “hand-made” and “written by hand”. Neither the Show HN post nor the README says which version of Fable was used. The Show HN post carries the author's own list of limitations: story inconsistencies, mismatches between story or description and visual state, and “I'm sure plenty more”. Good for anyone who wants to play a retro typing adventure right away, and for anyone who wants to read the source of a complete small game. This library read only the public pages and repository files; it did not install dependencies, run the tests, play or finish the game, or reproduce how it was made.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "Community browser RPG",
+      "sourceUrl": "https://thanes-quest.daventry.io/",
+      "secondaryUrls": [
+        "https://github.com/rdhelms/thanes-quest",
+        "https://news.ycombinator.com/item?id=50606209"
+      ],
+      "previewImage": "/previews/thanes-quest.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "browser"
+      ],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-23T12:05:00Z",
+      "qualityNote": "收录理由：刚在 Show HN 公开、在浏览器里打开就能玩的开源 RPG，源码以 MIT 许可放在 GitHub；发帖人在 Show HN 标题里说是用 Fable 做成的，所以放进社区实践案例。边界：「用 Fable 做」是作者在 Show HN 上的说法；介绍里的「fable-made」「fable-written」也是那里的用词，README 对同样的内容写的是手作、手写，并且没有出现 Fable、Claude 或任何模型名，也没有提示词。Show HN 和 README 都没有写是 Fable 的哪个版本，本条也不替作者补。仓库的配置文件和提交记录里与 Claude 有关的痕迹（包括提交署名）只记在核验记录里，本库不据此判断哪一部分由谁完成，也不把它写成已核实的制作流程。功能和数量按 README 与 Show HN 介绍书写，不是本库测出来的。作者自己列的不足有故事前后不一致、故事和描述与画面状态对不上。本库只读了公开页面和仓库文件，没有安装依赖，没有运行开发服务器、测试或构建，没有试玩或通关，没有调用 Fable 或其他模型，也没有复现制作过程。",
+      "qualityNoteEn": "Why it is listed: an open-source RPG, newly shared on Show HN, that you can open and play in a browser, with the source on GitHub under the MIT licence; the poster's Show HN title says it was made with Fable, so it is filed as a community showcase. Boundary: “made with Fable” is the author's statement on Show HN; “fable-made” and “fable-written” in the introduction are the wording used there, while the README calls the same things hand-made and written by hand, and has no mention of Fable, Claude, or any model name, and no prompts. Neither the Show HN post nor the README says which version of Fable, and this entry does not fill that in for the author. Traces related to Claude in the repository's config files and commit history (including commit sign-offs) are recorded only in the verification log; this library does not use them to judge which part was made by whom, and does not write them up as a verified process. Features and counts follow the README and the Show HN introduction and were not measured here. The author's own list of limitations includes story inconsistencies and mismatches between story or description and visual state. This library read only the public pages and repository files; it did not install dependencies, did not run the dev server, tests, or build, did not play or finish the game, did not call Fable or any other model, and did not reproduce how it was made.",
+      "verifyLog": "2026-11-23 晚间核对（UTC 11:56–12:05，Asia/Shanghai 19:56–20:05）。可玩页 https://thanes-quest.daventry.io/ ：curl HTTP 200，text/html，title 为 Thane's Quest；meta description 写 An open-world action RPG in an early typing-adventure shell. Walk, fight in real time, and type everything else.；og:description 写 A typing adventure in the north. Walk a frozen valley, fight in real time, and type everything else. Free, in the browser.；og:image 指向 https://thanes-quest.daventry.io/card.png ，声明 1200×630；静态 HTML 里可见 Tab Bag、Esc Menu 两个按钮，触控布局的 Menu / Bag / Hit / Guard / OK，输入框占位 Type a command，以及两个外链：More at daventry.io（title 为 Make and play retro adventure games at daventry.io）和 Source（指向 https://github.com/rdhelms/thanes-quest ）。这只是抓取静态 HTML：没有在浏览器里运行页面脚本，没有看到游戏画面，没有按键、战斗或存档。https://daventry.io/ 只确认 HTTP 200、title 为 Daventry，没有读内容。GitHub（gh api repos/rdhelms/thanes-quest，UTC 11:56）：full_name rdhelms/thanes-quest；description 为 An open-world action RPG in an early typing-adventure shell, playable in the browser.；homepage 为空；created_at 2026-11-17T23:17:07Z；pushed_at 2026-11-23T02:09:10Z；default_branch main；language TypeScript；license MIT；不是 fork，未归档；核对时 2 star、0 fork（会变）；main 头提交 1415441。README（raw，HTTP 200）原文：No runtime dependencies: TypeScript, a 320x200 indexed framebuffer drawn to a canvas, and WebAudio.；A built copy is hosted at https://thanes-quest.daventry.io. Saves are kept by the browser, for the address they were made at.；Nothing has to be typed 和 Typing is the richer way to play；An enemy about to strike shows a gold `!`; raise your guard while it shows and the blow is parried；There are six skills, and they rise only by use；The game saves itself each time you enter a room … and has three manual slots；On a phone or tablet the page adds a thumb pad；Eight hand-made outdoor screens are the valley；new country is generated a screen at a time: the same place every time you return, and tougher the further you go；Eighteen small scenes written by hand；A second story, Where the Wind Stops … It can end in two ways；Everything in it is original: the world, names, characters, art, sound and text；命令表里 npm test 一行写 Unit tests plus a headless play-through of the whole game；public/card.png 写 drawn by `npm run shot -- public/card.png card village --night`；Licence 一节写 MIT … The code, the story, the pictures and the music are all covered by it … The one condition is that the licence text goes along with copies。README 全文不含 Fable、Claude、Anthropic 这些词，没有提到 AI 模型或提示词，也没有不足或限制清单。LICENSE（raw，HTTP 200）：MIT License，Copyright (c) 2026 Robby Helms（拼写是 Robby）。Show HN：https://news.ycombinator.com/item?id=50606209 HTTP 200；Hacker News Firebase 接口的同一条：by rdh18，time 1795396559（2026-11-23T01:15:59Z），title 为 Show HN: I used Fable to make an open source 80s-style Skyrim browser game，url 指向可玩页；核对时 7 points、descendants 2（会变）。正文开头 Inspired by both Skyrim and the old Sierra games like King's Quest。Features 列表：Playable in the browser on desktop and mobile；Play by clicking, tapping, number keys, or typing；Original code-drawn pixel art and synthesised music；Day and night, snow, and a thaw；Real-time combat with timed parries；Six skills that rise by use, with perks；Five spells and four runewords；Trading, a forge, and repeatable paid work；Weight limit for what you carry, and a storage chest；Map, journal, character sheet, and deeds list；Two-part main story with two endings；Eleven side stories；Valley with eight fable-made places and interiors；Endlessly generated open country beyond the valley；Eighteen fable-written scenes to find in the wild；Three far landmarks；Walls of rock with passes guarded by enemies；Vaults under ruined towers；Autosave plus three manual slots；No runtime dependencies。Limitations 列表：Story inconsistencies；Mismatches between story/description and visual state；I'm sure plenty more。这份不足清单只在 Show HN 正文里，README 没有。rdh18 在评论里贴了仓库链接（Here's the GitHub repo）。四条子评论里有两条是 dead / flagged。fable-made、fable-written 只出现在这份介绍里；README 对应处写的是 hand-made 和 written by hand。仓库里与 Claude 有关的公开痕迹，只作记录，不据此断言制作流程：.claude/launch.json 是 dev（npm run dev，端口 5173）和 built（npm run preview，端口 4173）两个本地启动配置；vitest.config.ts 把 **/.claude/** 排除在测试之外，注释写 Working copies made for helpers during a session；.gitignore 忽略 .claude/worktrees/；根目录有 CLAUDE.md（4403 字节），内容是游戏愿景、写故事的准则和 How to work here，没有写模型名。gh api 列出的提交共 91 条（作者时间 2026-11-18 到 2026-11-23）：81 条的作者是 Claude <noreply@anthropic.com>，10 条是 Robby Helms；82 条提交说明带 Co-Authored-By 行，其中 67 条写 Claude Fable 5.2，9 条写 Claude Opus 5.5，6 条只写 Claude；66 条带 Claude-Session 行，共 8 个不同的会话链接（没有打开）。Fable 5.2 这个版本名只出现在这些提交署名里，Show HN 和 README 都没有写，所以读者向字段不写版本，也不把署名当成对每一部分由谁完成的证明。另把 main 头提交 1415441 的源码包下到临时目录只做文字检索（75 个文件，含隐藏文件）：没有任何文件含 fable 一词。源码包没有放进本仓库，也没有安装或运行。预览：仓库的 public/card.png（raw，HTTP 200，40463 字节，1200×630 RGB PNG）；可玩页的 /card.png 与它 sha256 相同（d760ff5dc6cd…）。原图宽度已是 1200，没有缩放；上下各补 85 像素 #000000（可玩页自己的背景色）成 1200×800，无损 WebP，约 13KB，路径 /previews/thanes-quest.webp 。中间 630 行与原图逐像素相同；没有裁切，没有加字，图上的 THANE'S QUEST 金色像素字是原图自带的。没有打开浏览器截取实机画面。去重：origin/main c088c54 的 data、src、public，以及 origin 上全部远程分支（含 #173、#174、#175 的分支）的 data、src、public 里，都没有 thanes-quest、Thane's Quest、daventry.io、rdhelms 或 50606209。publishedAt 取 Show HN 公开日 2026-11-23；仓库创建于 2026-11-17。未做：没有 npm install，没有运行 npm run dev、npm test、npm run build 或任何 QA 脚本，没有在浏览器里试玩、战斗、存档或通关，没有调用 Fable 或其他模型，没有复现制作过程，没有注册账号，没有对外部系统做写操作。不打星。",
+      "verifyLogEn": "Checked on the evening of 2026-11-23 (UTC 11:56–12:05, Asia/Shanghai 19:56–20:05). Playable page https://thanes-quest.daventry.io/ : curl HTTP 200, text/html, title Thane's Quest; the meta description reads An open-world action RPG in an early typing-adventure shell. Walk, fight in real time, and type everything else.; og:description reads A typing adventure in the north. Walk a frozen valley, fight in real time, and type everything else. Free, in the browser.; og:image points to https://thanes-quest.daventry.io/card.png and declares 1200×630; the static HTML shows the Tab Bag and Esc Menu buttons, the touch layout's Menu / Bag / Hit / Guard / OK, the input placeholder Type a command, and two outbound links: More at daventry.io (title Make and play retro adventure games at daventry.io) and Source (to https://github.com/rdhelms/thanes-quest ). This was a fetch of static HTML only: the page script was not run in a browser, no game picture was seen, and nothing was pressed, fought, or saved. https://daventry.io/ was only confirmed as HTTP 200 with title Daventry; its content was not read. GitHub (gh api repos/rdhelms/thanes-quest, UTC 11:56): full_name rdhelms/thanes-quest; description An open-world action RPG in an early typing-adventure shell, playable in the browser.; homepage empty; created_at 2026-11-17T23:17:07Z; pushed_at 2026-11-23T02:09:10Z; default_branch main; language TypeScript; license MIT; not a fork, not archived; 2 stars and 0 forks at the check (these move); head commit of main 1415441. README (raw, HTTP 200), in its own words: No runtime dependencies: TypeScript, a 320x200 indexed framebuffer drawn to a canvas, and WebAudio.; A built copy is hosted at https://thanes-quest.daventry.io. Saves are kept by the browser, for the address they were made at.; Nothing has to be typed and Typing is the richer way to play; An enemy about to strike shows a gold `!`; raise your guard while it shows and the blow is parried; There are six skills, and they rise only by use; The game saves itself each time you enter a room … and has three manual slots; On a phone or tablet the page adds a thumb pad; Eight hand-made outdoor screens are the valley; new country is generated a screen at a time: the same place every time you return, and tougher the further you go; Eighteen small scenes written by hand; A second story, Where the Wind Stops … It can end in two ways; Everything in it is original: the world, names, characters, art, sound and text; the npm test row of the command table reads Unit tests plus a headless play-through of the whole game; public/card.png is described as drawn by `npm run shot -- public/card.png card village --night`; the Licence section reads MIT … The code, the story, the pictures and the music are all covered by it … The one condition is that the licence text goes along with copies. The README does not contain the words Fable, Claude, or Anthropic, does not mention AI models or prompts, and has no list of limitations. LICENSE (raw, HTTP 200): MIT License, Copyright (c) 2026 Robby Helms (spelled Robby). Show HN: https://news.ycombinator.com/item?id=50606209 HTTP 200; the same item from the Hacker News Firebase API: by rdh18, time 1795396559 (2026-11-23T01:15:59Z), title Show HN: I used Fable to make an open source 80s-style Skyrim browser game, url pointing to the playable page; 7 points and descendants 2 at the check (these move). The text opens with Inspired by both Skyrim and the old Sierra games like King's Quest. Features list: Playable in the browser on desktop and mobile; Play by clicking, tapping, number keys, or typing; Original code-drawn pixel art and synthesised music; Day and night, snow, and a thaw; Real-time combat with timed parries; Six skills that rise by use, with perks; Five spells and four runewords; Trading, a forge, and repeatable paid work; Weight limit for what you carry, and a storage chest; Map, journal, character sheet, and deeds list; Two-part main story with two endings; Eleven side stories; Valley with eight fable-made places and interiors; Endlessly generated open country beyond the valley; Eighteen fable-written scenes to find in the wild; Three far landmarks; Walls of rock with passes guarded by enemies; Vaults under ruined towers; Autosave plus three manual slots; No runtime dependencies. Limitations list: Story inconsistencies; Mismatches between story/description and visual state; I'm sure plenty more. That list of limitations is only in the Show HN text; the README has none. rdh18 posted the repository link in a comment (Here's the GitHub repo). Two of the four child comments are dead / flagged. fable-made and fable-written appear only in this introduction; the README says hand-made and written by hand in the matching places. Public traces related to Claude in the repository, recorded only as observations and not used to assert a process: .claude/launch.json holds two local launch configurations, dev (npm run dev, port 5173) and built (npm run preview, port 4173); vitest.config.ts excludes **/.claude/** from the tests, with the comment Working copies made for helpers during a session; .gitignore ignores .claude/worktrees/; the root has a CLAUDE.md (4403 bytes) covering the game's vision, story-writing guidance, and How to work here, with no model name. gh api lists 91 commits (author dates 2026-11-18 through 2026-11-23): 81 are authored as Claude <noreply@anthropic.com> and 10 as Robby Helms; 82 commit messages carry a Co-Authored-By line, of which 67 say Claude Fable 5.2, 9 say Claude Opus 5.5, and 6 say only Claude; 66 carry a Claude-Session line, across 8 distinct session links (not opened). The version name Fable 5.2 appears only in those commit sign-offs; neither the Show HN post nor the README states it, so the reader-facing fields give no version and do not treat the sign-offs as proof of who made which part. The source archive of main's head commit 1415441 was also downloaded to a temp directory for text search only (75 files, hidden files included): no file contains the word fable. The archive is not in this repository and was not installed or run. Preview: the repository's public/card.png (raw, HTTP 200, 40463 bytes, 1200×630 RGB PNG); the playable page's /card.png has the same sha256 (d760ff5dc6cd…). The original is already 1200 wide and was not scaled; 85 pixels of #000000 (the playable page's own background colour) were added above and below to make 1200×800, lossless WebP, about 13KB, at /previews/thanes-quest.webp . The middle 630 rows are pixel-identical to the original; nothing was cropped, no text was added, and the gold pixel lettering THANE'S QUEST is part of the original image. No browser was opened to take a live screenshot. Dedupe: data, src, and public on origin/main c088c54, and data, src, and public on every remote branch on origin (including the branches of #173, #174, and #175), contain none of thanes-quest, Thane's Quest, daventry.io, rdhelms, or 50606209. publishedAt uses the Show HN date 2026-11-23; the repository was created on 2026-11-17. Not done: no npm install; npm run dev, npm test, npm run build, and the QA scripts were not run; the game was not played, fought, saved, or finished in a browser; neither Fable nor any other model was called; the making process was not reproduced; no account was created; nothing was written to any external system. Unrated.",
+      "landing": {
+        "what": "这是一个个人开源游戏项目，不是厂商发布，也不是本库测过的工具。能做的事很简单：打开网页就开始玩，或者去 GitHub 读源码。发帖人说它是用 Fable 做的。仓库 README 把它写成一个引擎加一份数据，并列了四条规则：模拟是无界面、确定性的，输入是消息，状态是纯数据，内容是数据而不是代码；后面还有怎么加物品、加房间、加野外小场景的说明。可玩页底部有两个外链，一个去 daventry.io，一个去源码仓库。",
+        "whatEn": "This is one person's open-source game project. It is not a vendor launch, and it is not a tool this library tested. What you can do is simple: open the page and start playing, or read the source on GitHub. The poster says it was made with Fable. The repository README describes it as an engine plus data and lists four rules: the simulation is headless and deterministic, input is messages, state is plain data, and content is data, not code; it then explains how to add an item, a room, or something to find in the wild. The playable page has two outbound links at the bottom, one to daventry.io and one to the source repository.",
+        "contrast": {
+          "caption": "左列是发帖人在 Show HN 上的写法，右列是仓库 README 的写法。两边都是来源自己的文字，本库没有判断哪一边更准。",
+          "captionEn": "Left: how the poster puts it on Show HN. Right: how the repository README puts it. Both are the sources' own words; this library did not judge which is more accurate.",
+          "leftLabel": "Show HN",
+          "leftLabelEn": "Show HN",
+          "rightLabel": "README",
+          "rightLabelEn": "README",
+          "rows": [
+            {
+              "aspect": "怎么做的",
+              "aspectEn": "How it was made",
+              "left": "标题写「I used Fable to make an open source 80s-style Skyrim browser game」，没有写 Fable 的版本。",
+              "leftEn": "The title reads “I used Fable to make an open source 80s-style Skyrim browser game”, with no Fable version given.",
+              "right": "没有出现 Fable、Claude 或任何模型名，也没有提示词。写的是没有运行时依赖、TypeScript、320×200 帧缓冲和 WebAudio。",
+              "rightEn": "No mention of Fable, Claude, or any model name, and no prompts. It describes no runtime dependencies, TypeScript, a 320x200 framebuffer, and WebAudio."
+            },
+            {
+              "aspect": "谷地",
+              "aspectEn": "The valley",
+              "left": "「Valley with eight fable-made places and interiors」",
+              "leftEn": "“Valley with eight fable-made places and interiors”",
+              "right": "「Eight hand-made outdoor screens are the valley」",
+              "rightEn": "“Eight hand-made outdoor screens are the valley”"
+            },
+            {
+              "aspect": "野外小场景",
+              "aspectEn": "Scenes in the wild",
+              "left": "「Eighteen fable-written scenes to find in the wild」",
+              "leftEn": "“Eighteen fable-written scenes to find in the wild”",
+              "right": "「Eighteen small scenes written by hand」",
+              "rightEn": "“Eighteen small scenes written by hand”"
+            },
+            {
+              "aspect": "不足",
+              "aspectEn": "Limitations",
+              "left": "自己列了故事前后不一致、故事和描述与画面状态对不上，以及「I'm sure plenty more」。",
+              "leftEn": "Lists story inconsistencies, mismatches between story or description and visual state, and “I'm sure plenty more”.",
+              "right": "没有单列不足。测试一节写 npm test 包含引擎测试和一次无界面的整局通关。",
+              "rightEn": "No list of limitations. The tests section says npm test covers engine tests and a headless play-through of the whole game."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "打开可玩页",
+            "titleEn": "Open the playable page",
+            "body": "用桌面或手机浏览器打开链接就能开始，不用注册。按 README 的说明：方向键走路，点一下画面也能走过去；画面下方有一排带数字的按钮，列出当前能做的事；Ctrl 挥武器，按住 Shift 防御，Tab 打开背包，Esc 打开菜单。想打字就直接输入，比如 `look`、`talk to woman`、`map`。存档由浏览器保存。这些操作照 README 书写，本库没有试玩。",
+            "bodyEn": "Open the link in a desktop or phone browser to start; there is no sign-up. As the README explains: arrow keys walk, and a click on the picture walks there too; a row of numbered buttons under the picture offers what can be done where you stand; Ctrl swings your weapon, holding Shift raises a guard, Tab opens the bag, and Esc opens the menu. To type, just type, for example `look`, `talk to woman`, or `map`. Saves are kept by the browser. These controls follow the README; this library did not play.",
+            "links": [
+              {
+                "href": "https://thanes-quest.daventry.io/",
+                "label": "Thane's Quest 可玩页",
+                "labelEn": "Play Thane's Quest"
+              }
+            ]
+          },
+          {
+            "title": "读 README 和 Show HN 原帖",
+            "titleEn": "Read the README and the Show HN post",
+            "body": "README 写了玩法、世界怎么生成、代码怎么分层和测试怎么跑。Show HN 原帖有作者的功能列表和他自己列的不足，「fable-made」「fable-written」的说法也在那里。两处对照着看，自己判断作者说的「用 Fable 做」指的是什么。",
+            "bodyEn": "The README covers how to play, how the world is generated, how the code is layered, and how the tests run. The Show HN post has the author's feature list and the author's own limitations, and it is where “fable-made” and “fable-written” appear. Read the two side by side and judge for yourself what the author's “made with Fable” refers to.",
+            "links": [
+              {
+                "href": "https://github.com/rdhelms/thanes-quest/blob/main/README.md",
+                "label": "仓库 README",
+                "labelEn": "Repository README"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=50606209",
+                "label": "Show HN 原帖",
+                "labelEn": "The Show HN post"
+              }
+            ]
+          },
+          {
+            "title": "想在本地跑或改，先看许可",
+            "titleEn": "To run or change it locally, read the licence first",
+            "body": "README 给的命令是 `npm install` 后 `npm run dev`，再打开 Vite 打印的地址；`npm test` 会跑引擎测试和一次无界面通关。许可是 MIT，README 说代码、故事、画面和音乐都在内，唯一的条件是分发时带上许可文本。本库没有执行这些命令。",
+            "bodyEn": "The README's commands are `npm install`, then `npm run dev`, then open the address Vite prints; `npm test` runs the engine tests and a headless play-through. The licence is MIT; the README says the code, the story, the pictures, and the music are all covered, and the one condition is that the licence text goes along with copies. This library did not run these commands.",
+            "links": [
+              {
+                "href": "https://github.com/rdhelms/thanes-quest",
+                "label": "GitHub 仓库 rdhelms/thanes-quest",
+                "labelEn": "GitHub repository rdhelms/thanes-quest"
+              },
+              {
+                "href": "https://github.com/rdhelms/thanes-quest/blob/main/LICENSE",
+                "label": "LICENSE（MIT）",
+                "labelEn": "LICENSE (MIT)"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "「用 Fable 做」是作者在 Show HN 上的说法，「fable-made」「fable-written」也是那里的用词。README 没有出现 Fable、Claude 或任何模型名，也没有提示词，同样的内容写的是手作、手写。Show HN 和 README 都没有写 Fable 的版本。本条不把它写成已核实的制作流程。",
+            "textEn": "“Made with Fable” is the author's statement on Show HN, and “fable-made” and “fable-written” are the wording used there. The README has no mention of Fable, Claude, or any model name, and no prompts; it calls the same things hand-made and written by hand. Neither the Show HN post nor the README gives a Fable version. This entry does not write it up as a verified process."
+          },
+          {
+            "text": "本库没有安装依赖，没有运行开发服务器、测试或构建，没有试玩或通关，没有调用 Fable 或其他模型，也没有复现制作过程。功能和数量照 README 与 Show HN 介绍书写。",
+            "textEn": "This library did not install dependencies, did not run the dev server, tests, or build, did not play or finish the game, did not call Fable or any other model, and did not reproduce how it was made. Features and counts follow the README and the Show HN introduction."
+          },
+          {
+            "text": "作者在 Show HN 里自己列的不足：故事有前后不一致的地方，故事和描述与画面状态可能对不上，并说肯定还有更多。",
+            "textEn": "The author's own limitations in the Show HN post: story inconsistencies, mismatches between story or description and visual state, and “I'm sure plenty more”."
+          },
+          {
+            "text": "许可是 MIT，版权署名 Robby Helms。README 说存档由浏览器保存，并且只对存档时所在的地址有效。作者说灵感来自《天际》和老 Sierra 游戏；这不是那些游戏的官方作品，README 说世界、人名、角色、美术、声音和文字都是原创。",
+            "textEn": "The licence is MIT, copyright Robby Helms. The README says saves are kept by the browser, for the address they were made at. The author says it was inspired by Skyrim and the old Sierra games; it is not an official work of those games, and the README says the world, names, characters, art, sound, and text are original."
+          }
+        ],
+        "previewCredit": "预览：仓库公开的分享图 public/card.png（可玩页的分享图是同一张），README 写它由游戏自己的截图脚本画出。原图 1200×630，上下各补 85 像素黑边成 1200×800，没有裁切，也没有加字；图上的「THANE'S QUEST」字样是原图自带的。",
+        "previewCreditEn": "Preview: the repository's public share image public/card.png (the playable page's share image is the same file), which the README says is drawn by the game's own screenshot script. The 1200×630 original is padded with 85 pixels of black above and below to 1200×800; nothing cropped, no text added, and the “THANE'S QUEST” lettering is part of the original image."
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12290,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-23T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12623,16 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://thanes-quest.daventry.io/",
+      "https://thanes-quest.daventry.io/card.png",
+      "https://github.com/rdhelms/thanes-quest",
+      "https://raw.githubusercontent.com/rdhelms/thanes-quest/main/README.md",
+      "https://raw.githubusercontent.com/rdhelms/thanes-quest/main/LICENSE",
+      "https://raw.githubusercontent.com/rdhelms/thanes-quest/main/CLAUDE.md",
+      "https://raw.githubusercontent.com/rdhelms/thanes-quest/main/public/card.png",
+      "https://news.ycombinator.com/item?id=50606209",
+      "https://hacker-news.firebaseio.com/v0/item/50606209.json"
     ]
   }
 }
