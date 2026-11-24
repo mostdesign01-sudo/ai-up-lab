@@ -1,11 +1,103 @@
 {
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-24T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.32",
-    "count": 42
+    "version": "1.1.33",
+    "count": 43
   },
   "models": [
+    {
+      "id": "glm-5-4",
+      "slug": "glm-5-4",
+      "name": "GLM-5.4",
+      "vendor": "Z.ai",
+      "title": "GLM-5.4（Z.ai）",
+      "titleEn": "GLM-5.4 (Z.ai)",
+      "summary": "Z.ai 于 2026-11-23 发布的旗舰模型，官方博客称为第一款旗舰 Loop Transformer，面向 Generalized Coding。官方博客写：把 GLM-5 基座的 28 层循环两次，规模在 750B；并称智能水平可比 2T–3T 参数的模型。后一句是厂商说法。可用性以文档页顶部的原句为准：GLM-5.4 现已向所有 GLM Coding Plan 用户提供；周配额计划上，GLM-5.4 的可用配额提高到 GLM-5.3 的 1.5 倍；Model API 将在安全评估完成后提供。本条因此不写公开 Model API 已经上线。核对时 https://chat.z.ai 的标题仍是 GLM-5.3-Flash，页面 HTML 里没有 GLM-5.4；https://z.ai/model-api 的标题是 Start building with GLM-5.3，HTML 里也没有 GLM-5.4。Coding Plan 订阅页的标题和说明把 GLM-5.4 列在可使用的模型里，和 GLM-5.3、GLM-5.3-Flash 等放在一起；本库没有登录，没有在任何一个编程工具的模型选择器里看见它。文档卡片写输入可以是视频、图像、文本、文件，输出是文本，上下文 1M，最大输出 128K。速度「非高峰最多 200 tokens/s、高峰 70–80」是博客和文档的厂商说法。博客写权重计划在完成必要的安全加固后负责任地开源，现在不是已公开权重。博客也写模型容易陷入过长的「马拉松式思考」。本库没有注册 Z.ai，没有使用 Coding Plan，也没有调用任何 GLM-5.4 接口。",
+      "summaryEn": "Z.ai’s flagship model announced on 2026-11-23. The official blog calls it the first flagship Loop Transformer, aimed at Generalized Coding. The blog says it loops 28 layers of the GLM-5 base for two iterations, at 750B scale, and that its intelligence is comparable to 2T–3T parameter models. That comparison is a vendor claim. Availability follows the sentence at the top of the docs: GLM-5.4 is now available to all GLM Coding Plan users; on weekly quota plans its quota is 1.5× that of GLM-5.3; the Model API will be made available upon completion of the security assessment. This card therefore does not say the public Model API is live. At this check the title of https://chat.z.ai was still GLM-5.3-Flash, and the page HTML did not contain GLM-5.4; the title of https://z.ai/model-api was Start building with GLM-5.3, and that HTML did not contain GLM-5.4 either. The Coding Plan subscribe page’s title and description list GLM-5.4 among the models you can use, next to GLM-5.3, GLM-5.3-Flash, and others; this library did not sign in and did not see it in any coding tool’s model picker. The docs cards say input can be video, image, text, or file, output is text, context is 1M, and maximum output is 128K. The speed line “up to 200 tokens/s off-peak, 70–80 at peak” is a vendor claim on the blog and the docs. The blog says the weights are planned to be open-sourced responsibly after necessary safety hardening, which is not a public weight release. The blog also says the model tends to get caught in overly long “marathon thinking” loops. This library did not create a Z.ai account, did not use a Coding Plan, and did not call any GLM-5.4 API.",
+      "announcedAt": "2026-11-23",
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-24T01:20:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "Z.ai 博客：GLM-5.4",
+          "labelEn": "Z.ai blog: GLM-5.4",
+          "url": "https://z.ai/blog/glm-5.4",
+          "by": "Z.ai",
+          "date": "2026-11-23"
+        },
+        {
+          "kind": "official",
+          "label": "Z.ai 文档：GLM-5.4",
+          "labelEn": "Z.ai docs: GLM-5.4",
+          "url": "https://docs.z.ai/guides/llm/glm-5.4",
+          "by": "Z.ai",
+          "date": "2026-11-23"
+        },
+        {
+          "kind": "official",
+          "label": "GLM Coding Plan 订阅页",
+          "labelEn": "GLM Coding Plan subscribe page",
+          "url": "https://z.ai/subscribe",
+          "by": "Z.ai"
+        },
+        {
+          "kind": "product",
+          "label": "Z.ai Chat（标题仍是 GLM-5.3-Flash）",
+          "labelEn": "Z.ai Chat (title still GLM-5.3-Flash)",
+          "url": "https://chat.z.ai",
+          "by": "Z.ai"
+        },
+        {
+          "kind": "product",
+          "label": "Z.ai Model API 页（标题仍是 GLM-5.3）",
+          "labelEn": "Z.ai Model API page (title still GLM-5.3)",
+          "url": "https://z.ai/model-api",
+          "by": "Z.ai"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论：GLM-5.4",
+          "labelEn": "Hacker News thread: GLM-5.4",
+          "url": "https://news.ycombinator.com/item?id=50609685",
+          "by": "Hacker News",
+          "date": "2026-11-23"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方博客：GLM-5.4 是第一款旗舰 Loop Transformer。它把 GLM-5 基座的 28 层循环两次，规模在 750B。官方称智能水平可比 2T–3T 参数的模型。",
+          "textEn": "Official blog: GLM-5.4 is the first flagship Loop Transformer. It loops 28 layers of the GLM-5 base for two iterations, at 750B scale. Vendor claim: intelligence comparable to 2T–3T parameter models."
+        },
+        {
+          "text": "官方文档原句：GLM-5.4 现已向所有 GLM Coding Plan 用户提供。周配额计划上，GLM-5.4 的可用配额是 GLM-5.3 的 1.5 倍。Model API 将在安全评估完成后提供。本卡不把公开 Model API 写成已经上线。",
+          "textEn": "Docs, verbatim in meaning: GLM-5.4 is now available to all GLM Coding Plan users. On weekly quota plans, GLM-5.4’s quota is 1.5× GLM-5.3’s. The Model API will be made available upon completion of the security assessment. This card does not say the public Model API is live."
+        },
+        {
+          "text": "官方称：非高峰最多 200 tokens/s，高峰维持 70–80 tokens/s。文档卡片写上下文 1M、最大输出 128K，输入可以是视频、图像、文本或文件，输出是文本。",
+          "textEn": "Vendor claim: up to 200 tokens/s off-peak, and 70–80 tokens/s at peak. The docs cards say 1M context, 128K maximum output, input of video, image, text, or file, and text output."
+        },
+        {
+          "text": "官方博客：权重计划在完成必要的安全加固后开源，现在还不是公开权重。官方也写模型容易陷入过长的「马拉松式思考」，并称这种拉长的反思会提高准确度。",
+          "textEn": "Official blog: the weights are planned to be open-sourced after necessary safety hardening, which is not a public release now. The vendor also says the model tends to get caught in overly long “marathon thinking” loops, and that this prolonged reflection improves accuracy."
+        },
+        {
+          "text": "核对时 Z.ai Chat 的标题仍是 GLM-5.3-Flash，Model API 页的标题仍是 GLM-5.3，两页 HTML 都没有 GLM-5.4。Coding Plan 订阅页的标题把 GLM-5.4 和 GLM-5.3-Flash 写在一起。",
+          "textEn": "At this check the Z.ai Chat title was still GLM-5.3-Flash and the Model API page title was still GLM-5.3; neither page’s HTML contained GLM-5.4. The Coding Plan subscribe page’s title names GLM-5.4 together with GLM-5.3-Flash."
+        }
+      ],
+      "qualityNote": "收录理由：这是 Z.ai 的新旗舰，文档写 Coding Plan 用户已经可以用，周配额相对 GLM-5.3 提高到 1.5 倍，同时写明 Model API 还要等安全评估。选模型和接口的人需要把「计划里能用」和「公开 API 还没有」分开。边界：可比 2T–3T、每秒 token 数、上下文和最大输出都是厂商页面上的话，本库没有复跑。聊天页和 Model API 页当时都还没有出现这个名字。权重只是计划开源。订阅页说明里有一句没有货币符号的价格片段，本卡不引用。本库没有注册 Z.ai，没有使用 Coding Plan，也没有调用接口。",
+      "qualityNoteEn": "Why listed: this is Z.ai’s new flagship. The docs say Coding Plan users can use it now, with weekly quota at 1.5× GLM-5.3, and they also say the Model API waits on a security assessment. People choosing a model or an API need “usable on the plan” kept separate from “the public API is not there yet.” Limits: the 2T–3T comparison, the tokens per second, the context, and the maximum output are what the vendor pages say, and this library did not re-run them. The chat page and the Model API page did not show this name at the check. The weights are only planned to be open. The subscribe page’s description has a price fragment with no currency symbol, and this card does not quote it. This library did not create a Z.ai account, did not use a Coding Plan, and did not call an API.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/glm-5-4.webp",
+      "previewCredit": "预览：Z.ai 官方博客 GLM-5.4 的分享图，等比缩小后上下补边成 3:2，未裁切",
+      "previewCreditEn": "Preview: the share image from Z.ai’s official GLM-5.4 blog post, scaled down and padded top and bottom to 3:2, not cropped",
+      "featured": false,
+      "verifyLog": "2026-11-24 上午（Asia/Taipei，约 08:55–09:20）：博客 https://z.ai/blog/glm-5.4 curl HTTP 200，但只有约 1997 字节的页面壳，title 为空；og:title 为 Toward Generalized Coding with Our First Loop Transformer，og:image 为 https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/20261123-173242.jpeg 。文章正文从渲染后的页面读到，日期 2026-11-23，标签 Research。核对原句：GLM-5.4 is our first flagship model built on the Loop Transformer architecture, reaching intelligence levels comparable to 2T-3T parameter models；GLM-5.4 loops 28 layers of the GLM-5 base model for two iterations（750B scale）；GLM-5.4 reaches up to 200 tokens/s during off-peak hours and maintains 70–80 tokens/s at peak load；API (Coming Soon): https://z.ai/model-api ；Open Weights: We plan to open-source the model weights responsibly after completing necessary safety hardening；it tends to get caught in overly long \"marathon thinking\" loops。文末还链了 https://z.ai/subscribe 、https://zcode.z.ai/en 、https://chat.z.ai 。文档 https://docs.z.ai/guides/llm/glm-5.4 HTTP 200，title GLM-5.4 - Overview - Z.AI DEVELOPER DOCUMENT。同一篇的 Markdown https://docs.z.ai/guides/llm/glm-5.4.md 也可打开。顶部提示原句：GLM-5.4 is now available to all GLM Coding Plan users. For users on weekly quota plans, the available quota for GLM-5.4 is increased to 1.5× that of GLM-5.3. The Model API will be made available upon completion of the security assessment. 文档卡片：Input Video / Image / Text / File，Output Text，Context Length 1M，Maximum Output Tokens 128K。页面里没有请求示例，也没有读到 API model id，本条不编。文档静态资源路径里出现 zhipu 字样，页面上的厂商名写的是 Z.ai，本卡的 vendor 用 Z.ai，不另造法律实体名称。https://chat.z.ai HTTP 200，title Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash；HTML 中 GLM-5.4 出现 0 次。https://z.ai/model-api HTTP 200，title Z.ai API Platform — Start building with GLM-5.3；HTML 中 GLM-5.4 出现 0 次。https://z.ai/subscribe HTTP 200，title GLM Coding Plan — AI Coding Powered by GLM-5.4 & GLM-5.3-Flash for Agents & IDEs；meta description 以 Use GLM models like GLM-5.4, GLM-5.3, GLM-5.3-Flash… 开头，并有 Plans from 18/month，这串文字里没有货币符号，所以正文和要点都不写这个价格。HN https://news.ycombinator.com/item?id=50609685 HTTP 200：标题 GLM-5.4: Toward generalized coding with our first loop transformer，指向博客，foohis，2026-11-23T10:06:43Z（台北 2026-11-23 18:06），核对时 1041 points、339 comments。晚间草稿 #176 的更新说明里把 GLM-5.4 写成未收（不写薄模型资讯卡），那个分支的 models.json 里没有这条；本卡是完整模型卡，不叠在 #176 上。预览：上述 jpeg HTTP 200，1280×720，缩到 1200×675，上补 62px、下补 63px 边缘色，成 1200×800 WebP，没有裁切，没有加字。未做：没有注册 Z.ai，没有订阅 Coding Plan，没有打开 ZCode，没有调用 Model API，没有下载权重。",
+      "verifyLogEn": "2026-11-24 morning (Asia/Taipei, about 08:55–09:20): blog https://z.ai/blog/glm-5.4 returned HTTP 200 to curl but only a shell of about 1997 bytes with an empty title; og:title Toward Generalized Coding with Our First Loop Transformer, og:image https://z-ai-bj.oss-cn-beijing.aliyuncs.com/prompts-rich-media-resources/5.4-blog/20261123-173242.jpeg . The article body was read from the rendered page, dated 2026-11-23, tag Research. Sentences checked: GLM-5.4 is our first flagship model built on the Loop Transformer architecture, reaching intelligence levels comparable to 2T-3T parameter models; GLM-5.4 loops 28 layers of the GLM-5 base model for two iterations (750B scale); GLM-5.4 reaches up to 200 tokens/s during off-peak hours and maintains 70–80 tokens/s at peak load; API (Coming Soon): https://z.ai/model-api ; Open Weights: We plan to open-source the model weights responsibly after completing necessary safety hardening; it tends to get caught in overly long \"marathon thinking\" loops. The end of the post also links https://z.ai/subscribe , https://zcode.z.ai/en , and https://chat.z.ai . Docs https://docs.z.ai/guides/llm/glm-5.4 HTTP 200, title GLM-5.4 - Overview - Z.AI DEVELOPER DOCUMENT. The same page’s Markdown at https://docs.z.ai/guides/llm/glm-5.4.md also opened. The tip at the top, verbatim: GLM-5.4 is now available to all GLM Coding Plan users. For users on weekly quota plans, the available quota for GLM-5.4 is increased to 1.5× that of GLM-5.3. The Model API will be made available upon completion of the security assessment. Docs cards: Input Video / Image / Text / File, Output Text, Context Length 1M, Maximum Output Tokens 128K. No request sample was on the page, and no API model id was read, so none is invented. A docs asset path contains the string zhipu; the vendor name on the page is Z.ai, and this card’s vendor is Z.ai, with no legal-entity name added. https://chat.z.ai HTTP 200, title Z.ai - Advanced AI Chatbot & Agent powered by GLM-5.3-Flash; GLM-5.4 occurred 0 times in the HTML. https://z.ai/model-api HTTP 200, title Z.ai API Platform — Start building with GLM-5.3; GLM-5.4 occurred 0 times in the HTML. https://z.ai/subscribe HTTP 200, title GLM Coding Plan — AI Coding Powered by GLM-5.4 & GLM-5.3-Flash for Agents & IDEs; the meta description begins Use GLM models like GLM-5.4, GLM-5.3, GLM-5.3-Flash… and includes Plans from 18/month, with no currency symbol in that string, so neither the body nor the highlights quote that price. HN https://news.ycombinator.com/item?id=50609685 HTTP 200: title GLM-5.4: Toward generalized coding with our first loop transformer, linking the blog, by foohis, 2026-11-23T10:06:43Z (2026-11-23 18:06 Taipei), 1041 points and 339 comments at the check. Evening draft #176’s changelog lists GLM-5.4 as not added (no thin model-news card), and that branch’s models.json does not contain this card; this is a full model card and is not stacked on #176. Preview: the jpeg above HTTP 200, 1280×720, scaled to 1200×675 and padded 62px above and 63px below with edge colors to a 1200×800 WebP; nothing cropped, no text added. Not done: no Z.ai account, no Coding Plan subscription, ZCode not opened, no Model API call, no weights downloaded."
+    },
     {
       "id": "gpt-6-2-astra-sol",
       "slug": "gpt-6-2-astra-sol",
