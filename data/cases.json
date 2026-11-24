@@ -1,6 +1,138 @@
 {
   "cases": [
     {
+      "id": "declarelang",
+      "slug": "declarelang",
+      "title": "Declare：给人和 AI 用的界面语言",
+      "titleEn": "Declare: a UI language for you and your AI",
+      "kind": "tool",
+      "hook": "给人和 AI 写界面的开源语言，浏览器里就能打开演示。",
+      "hookEn": "An open-source UI language for people and AIs. Demos open in the browser.",
+      "summary": "Declare（https://davidtemkin.github.io/declarelang/ ，仓库 https://github.com/davidtemkin/declarelang ，MIT，作者 David Temkin）是一门给人写、也给 AI 写的界面 DSL。官网把它比作查询用的 SQL：`[ … ]` 是视图树，`{ … }` 里是 TypeScript 约束，这些关系会一直保持成立，不用再写一套更新步骤。README 写，首页本身就是一个 Declare 应用，由 LLM 写成；日历、桌面和文档浏览器也是。编译器在浏览器里就能跑，所以页面可以当场改完再编译，同一个程序也能放到静态托管上。给 agent 的入口是仓库里的 skill/SKILL.md，按 Agent Skills 标准写；Claude Code 也可以从 `.claude/skills/` 读到，或用 `/declare` 调用。AGENTS.md 要求先加载这个 skill，再改 `.declare` 源码。README 里的 declare-verify 是六级阶梯：structure、resolution、typecheck、boot、真实输入下的行为、视觉基线。仓库还带 calendar、tracker、desktop、birds、weather 等完整应用。谱系按 README 的原话：它是 OpenLaszlo 的 heir，但不是移植，从一开始就考虑 LLM。本机按 README 的 Quick start：clone 之后 `npm install`，再 `npm start`，开发服务器默认 http://127.0.0.1:8200/ ，自己的程序写到 `my-apps/`。package.json 写 name 为 declarelang、version 为 0.7.1，并且 `\"private\": true`；公共 npm 登记处没有这个名字的包。作者在首页放了一次对照，并写明是单次、还不是基准，每次运行都在仓库里：同一份 brief、同一个 agent，购票应用 Declare 1,279 行、React 2,666 行，Declare 第一次能跑的构建通过全部 11 项隐藏检查，React 通过 6 项。这些数字是作者的自述。适合先在浏览器里看这门语言和演示、再决定要不要在本机写的人。本库没有 clone，没有执行 npm install 或 npm start，没有跑测试或 declare-verify，没有加载 skill，没有让 agent 写 .declare，也没有打开或重跑那次对照。",
+      "summaryEn": "Declare (https://davidtemkin.github.io/declarelang/ , repo https://github.com/davidtemkin/declarelang , MIT, by David Temkin) is a UI DSL for people and for AIs. The site compares it to SQL for queries: `[ … ]` is the view tree, `{ … }` is TypeScript constraints, and those relationships stay true without a separate update step. The README says the homepage is itself a Declare app, written by an LLM, and so are the calendar, the desktop, and the documentation browser. The compiler runs in the browser, so a page can be edited and compiled in place, and the same program can sit on a static host. The agent entry point is skill/SKILL.md, written to the Agent Skills standard; Claude Code can also read it from `.claude/skills/` or invoke `/declare`. AGENTS.md says to load that skill before changing `.declare` source. The README's declare-verify is a six-rung ladder: structure, resolution, typecheck, boot, behavior under real input, and visual baselines. The repo also ships complete apps including calendar, tracker, desktop, birds, and weather. Lineage, in the README's words: it is the heir to OpenLaszlo, but not a port, and it was shaped with LLMs in mind from the start. Local use follows the README quick start: after clone, `npm install`, then `npm start`; the dev server defaults to http://127.0.0.1:8200/ , and your programs go in `my-apps/`. package.json sets the name to declarelang, the version to 0.7.1, and `\"private\": true`; the public npm registry has no package by that name. The homepage includes one comparison and says it is a single run, not yet a benchmark, with every run in the repository: the same brief and the same agent, a ticket-buying app at 1,279 Declare lines against 2,666 React lines, the first Declare build that ran passing all 11 hidden checks and the React build passing 6. Those figures are the author's account. Useful if you want to open the language and its demos in a browser before deciding to write it locally. This library did not clone, did not run npm install or npm start, did not run tests or declare-verify, did not load the skill, did not have an agent write .declare, and did not open or rerun that comparison.",
+      "categories": [
+        "design",
+        "coding",
+        "skills"
+      ],
+      "role": "UI language for people and agents",
+      "sourceUrl": "https://davidtemkin.github.io/declarelang/",
+      "secondaryUrls": [
+        "https://github.com/davidtemkin/declarelang",
+        "https://github.com/davidtemkin/declarelang/blob/main/README.md",
+        "https://github.com/davidtemkin/declarelang/blob/main/skill/SKILL.md",
+        "https://github.com/davidtemkin/declarelang/blob/main/AGENTS.md",
+        "https://github.com/davidtemkin/declarelang/blob/main/docs/declare.md",
+        "https://github.com/davidtemkin/declarelang/blob/main/LICENSE",
+        "https://github.com/davidtemkin/declarelang/blob/main/package.json",
+        "https://github.com/davidtemkin/declarelang/blob/main/docs/legal/THIRD-PARTY-NOTICES.md",
+        "https://github.com/davidtemkin/declarelang/tree/main/evals/reports",
+        "https://davidtemkin.github.io/declarelang/apps/calendar/",
+        "https://davidtemkin.github.io/declarelang/apps/docs/",
+        "https://news.ycombinator.com/item?id=50622854"
+      ],
+      "previewImage": "/previews/declarelang.webp",
+      "sourceType": "community",
+      "language": "en",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": false,
+      "connectors": [],
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-24T12:05:00Z",
+      "qualityNote": "收录理由：今天在 Hacker News 被讨论到的开源界面语言，浏览器里就能打开首页和演示，首页和那些演示就是用它写成的。边界：官网自己写这页文案由 LLM 写成；购票应用那次行数和隐藏检查是作者的单次自述，作者写明还不是基准；package.json 标了 private，公共登记处没有这个包，所以它不是一个可直接安装的 npm 包。本库没有克隆仓库，没有执行安装或启动开发服务器，没有跑测试或校验阶梯，没有加载官方 skill，也没有让 agent 写过程序或重跑那次对照。",
+      "qualityNoteEn": "Why listed: an open-source UI language discussed on Hacker News today, with a homepage and demos you can open in the browser, and those pages are written in the language. Limits: the site itself says this page was written by an LLM; the ticket-app line counts and hidden checks are the author's single-run account, and the author says they are not yet a benchmark; package.json marks the package private, and the public registry has no such package, so it is not an npm package you install by name. This library did not clone the repository, did not install or start the dev server, did not run tests or the verification ladder, did not load the official skill, and did not have an agent write a program or rerun that comparison.",
+      "verifyLog": "2026-11-24 晚间（Asia/Shanghai，约 20:00–20:05，UTC 12:00–12:05）：https://davidtemkin.github.io/declarelang/ HTTP 200，text/html，139169 字节，last-modified Tue, 24 Nov 2026 01:49:40 GMT，title 与 og:title 均为 Declare — a UI language for you and your AI，og:description 为 Designed from the ground up for interfaces that act and move like the best native apps, in a few hundred lines your AI can write and its compiler can check.，og:image 指向 https://davidtemkin.github.io/declarelang/assets/og-image.png ，meta 写 1200×630。首页正文写 Just as SQL is a domain-specific language for database queries, Declare is a DSL for user interfaces，以及 This page is written in it. By an LLM.；日历、桌面、Tracker 等演示可从首页链到；Tracker 卡片写 1,000,000 issues，是页面自己的演示规模说法。对照段原文：Measured: given the same brief, the same agent built a ticket-buying app twice. The Declare app was 1,279 lines to React’s 2,666, and its first build that ran passed all eleven hidden checks; React’s passed six. Single runs, not yet a benchmark — every run is in the repository. 同页还有一段作者自述：Over a hundred runs … the same ticket-buying app went from 48 minutes to 24, compiler errors per build from 32 to 6，同样标明 Single runs, not yet a benchmark。这些数字都只记在这里，不当成已复核的基准。故事段署名 David Temkin，第一人称写 I co-founded Laszlo Systems and led the team behind OpenLaszlo，以及 In June I handed the original OpenLaszlo compiler to an LLM and got back a modern port；这是作者在本页的自述，本库没有另找传记核对，标题和 hook 不用这个头衔。首页还把校验说成 from parse to pixels。README https://raw.githubusercontent.com/davidtemkin/declarelang/main/README.md HTTP 200：The homepage is itself a Declare app — the whole page you're looking at is written in the language, by an LLM；`[ … ]` 是视图树，`{ … }` 是 TypeScript；the compiler runs in the browser as readily as in a Node server；skill/SKILL.md follows the Agent Skills standard，Claude Code finds it in `.claude/skills/` or invoke it as `/declare`；AGENTS.md tells every agent working in this repository to load it before touching `.declare` source；declare-verify 六级为 structure → resolution → typecheck → boot → behavior under real input → visual baselines；Quick start 是 git clone 后 npm install、npm start，默认 http://127.0.0.1:8200/ ，程序写到 my-apps/；apps 列出 calendar、tracker、desktop、birds、weather；Lineage 原文 Declare is the heir to OpenLaszlo … but it is not a port … shaped from the start with LLMs in mind；MIT，Copyright © 2026 David Temkin，分发带 TypeScript compiler（Apache-2.0），见 docs/legal/THIRD-PARTY-NOTICES.md。该第三方声明 HTTP 200，实际写了两样：TypeScript 编译器（Apache-2.0，Copyright Microsoft）和 Roboto 字体（SIL OFL 1.1）。LICENSE HTTP 200：MIT License，Copyright (c) 2026 David Temkin. All rights reserved. package.json HTTP 200：name declarelang，version 0.7.1，private true，license MIT，author David Temkin；bin 是仓库内的 declare-dev、declarec、declare-verify 等脚本。https://registry.npmjs.org/declarelang HTTP 404，正文 {\"error\":\"Not found\"}。语言说明页提到 npx declare-help，本库没有运行，也不把它写成已发布的 npm 包。skill/SKILL.md HTTP 200，frontmatter name 为 declare。AGENTS.md HTTP 200，全文一句：Before writing, reviewing or changing `.declare` source, load the `declare` skill。docs/declare.md HTTP 200。日历目录 https://davidtemkin.github.io/declarelang/apps/calendar/ HTTP 200，text/html，title 为 calendar · Declare，是 bake-app-stubs 生成的冷启动页，会加载 bundles/declare-boot.js；本库只取了这段 HTML，没有在浏览器里执行 boot，没有看到渲染后的日历。文档目录 https://davidtemkin.github.io/declarelang/apps/docs/ HTTP 200，title 为 docs · Declare，同样没有执行 boot。evals/reports 的 GitHub 目录页 HTTP 200，没有打开其中任何一次 run 的文件。GitHub API https://api.github.com/repos/davidtemkin/declarelang HTTP 200（约 2026-11-24T12:00:36Z）：full_name davidtemkin/declarelang，description The UI language for you and your AI，created_at 2026-07-08T17:26:34Z，pushed_at 2026-11-24T01:49:02Z，updated_at 2026-11-24T11:44:30Z，stargazers_count 34，forks_count 4，open_issues_count 19（该字段含 pull request），language JavaScript，default_branch main，license SPDX MIT，homepage 为空，size 397454（API 的 KB）。星数、创建日、issue 计数字段和体积只写在本记录。Hacker News Firebase item 50622854 HTTP 200：by ilamont，time 1795487816 即 2026-11-24T02:36:56Z，title Declare is a UI language for you and your AI，url 指向官网，score 52，descendants 43；页面 HTTP 200，subline 为 52 points、提交者 ilamont、43 comments。不是 Show HN，提交者不是作者。publishedAt 用讨论公开日 2026-11-24，不把仓库创建日 2026-07-08 写成今日发布。hasSkill 为 true：仓库自带 Agent Skills 文件 skill/SKILL.md（name: declare），和已收的 opendesigner 一样，把「产品自带 agent skill」记在这个字段上；这不是本库写的 Grok Bot 技能。详情页有 landing.steps，通用的「存成 Skill」路径不会当成这条的上手步骤。预览：重新下载 https://davidtemkin.github.io/declarelang/assets/og-image.png HTTP 200，image/png，93906 字节，sha256 d39b0190100ae3f7a669ac0739293e66d66072a4afc3a011b622312d7f2c326f，1200×630 8-bit RGB，与任务附带的官方图逐字节相同。ffmpeg pad 到 1200×800，输入放在 y=85，上下各 85px，颜色 #0B141B（原图上下边缘最常见的 rgb(11,20,27)），libwebp 无损，alpha 全为 255。抽出的中间 1200×630 与原图逐像素相同，没有缩放，没有裁切，没有加字。去重：main c088c54 的 data 与 src 没有 declarelang、davidtemkin 或 declarelang.org；git grep 扫过 origin 上全部远程分支的 data 与 public，也没有。未做：没有 clone，没有 npm install，没有 npm start，没有跑 npm test 或 declare-verify，没有加载 skill，没有写 .declare，没有重跑购票对照，没有注册账号，没有对外部系统做写操作。",
+      "verifyLogEn": "2026-11-24 evening (Asia/Shanghai, about 20:00–20:05, UTC 12:00–12:05): https://davidtemkin.github.io/declarelang/ HTTP 200, text/html, 139169 bytes, last-modified Tue, 24 Nov 2026 01:49:40 GMT, title and og:title both Declare — a UI language for you and your AI, og:description Designed from the ground up for interfaces that act and move like the best native apps, in a few hundred lines your AI can write and its compiler can check., og:image https://davidtemkin.github.io/declarelang/assets/og-image.png with meta 1200×630. The page says Just as SQL is a domain-specific language for database queries, Declare is a DSL for user interfaces, and This page is written in it. By an LLM. Calendar, desktop, Tracker, and other demos are linked from the page; the Tracker card says 1,000,000 issues, which is the page's own demo-scale line. The comparison reads: Measured: given the same brief, the same agent built a ticket-buying app twice. The Declare app was 1,279 lines to React’s 2,666, and its first build that ran passed all eleven hidden checks; React’s passed six. Single runs, not yet a benchmark — every run is in the repository. The same page also says, in the author's voice, Over a hundred runs … the same ticket-buying app went from 48 minutes to 24, compiler errors per build from 32 to 6, again marked Single runs, not yet a benchmark. Those figures stay in this log and are not treated as a re-checked benchmark. The story is signed David Temkin and says, in the first person, I co-founded Laszlo Systems and led the team behind OpenLaszlo, and In June I handed the original OpenLaszlo compiler to an LLM and got back a modern port. That is the author's wording on this page; this library did not check a separate biography, and the title and hook do not use that credential. The page also describes checking as from parse to pixels. README https://raw.githubusercontent.com/davidtemkin/declarelang/main/README.md HTTP 200: The homepage is itself a Declare app — the whole page you're looking at is written in the language, by an LLM; `[ … ]` is the view tree and `{ … }` is TypeScript; the compiler runs in the browser as readily as in a Node server; skill/SKILL.md follows the Agent Skills standard, and Claude Code finds it in `.claude/skills/` or as `/declare`; AGENTS.md tells every agent working in this repository to load it before touching `.declare` source; declare-verify's six rungs are structure → resolution → typecheck → boot → behavior under real input → visual baselines; the quick start is git clone, then npm install and npm start, default http://127.0.0.1:8200/ , programs in my-apps/; apps listed include calendar, tracker, desktop, birds, and weather; the lineage line is Declare is the heir to OpenLaszlo … but it is not a port … shaped from the start with LLMs in mind; MIT, Copyright © 2026 David Temkin, and the distribution bundles the TypeScript compiler (Apache-2.0), see docs/legal/THIRD-PARTY-NOTICES.md. That notice returned HTTP 200 and names two components: the TypeScript compiler (Apache-2.0, Copyright Microsoft) and the Roboto typeface (SIL OFL 1.1). LICENSE HTTP 200: MIT License, Copyright (c) 2026 David Temkin. All rights reserved. package.json HTTP 200: name declarelang, version 0.7.1, private true, license MIT, author David Temkin; the bin entries are in-repo scripts such as declare-dev, declarec, and declare-verify. https://registry.npmjs.org/declarelang HTTP 404, body {\"error\":\"Not found\"}. The language page mentions npx declare-help; it was not run, and it is not described as a published npm package. skill/SKILL.md HTTP 200, frontmatter name declare. AGENTS.md HTTP 200, one sentence: Before writing, reviewing or changing `.declare` source, load the `declare` skill. docs/declare.md HTTP 200. The calendar directory https://davidtemkin.github.io/declarelang/apps/calendar/ HTTP 200, text/html, title calendar · Declare, a cold-start page generated by bake-app-stubs that loads bundles/declare-boot.js; this library fetched that HTML and did not execute the boot in a browser, so the rendered calendar was not seen. The docs directory https://davidtemkin.github.io/declarelang/apps/docs/ HTTP 200, title docs · Declare, also not booted. The GitHub tree page for evals/reports returned HTTP 200; no individual run file was opened. GitHub API https://api.github.com/repos/davidtemkin/declarelang HTTP 200 (about 2026-11-24T12:00:36Z): full_name davidtemkin/declarelang, description The UI language for you and your AI, created_at 2026-07-08T17:26:34Z, pushed_at 2026-11-24T01:49:02Z, updated_at 2026-11-24T11:44:30Z, stargazers_count 34, forks_count 4, open_issues_count 19 (that field includes pull requests), language JavaScript, default_branch main, license SPDX MIT, homepage empty, size 397454 (the API's KB). Stars, the creation date, the issues field, and the size stay in this log. Hacker News Firebase item 50622854 HTTP 200: by ilamont, time 1795487816 which is 2026-11-24T02:36:56Z, title Declare is a UI language for you and your AI, url the homepage, score 52, descendants 43; the HTML page HTTP 200, subline 52 points, submitter ilamont, 43 comments. Not a Show HN, and the submitter is not the author. publishedAt uses the discussion date 2026-11-24, not the repository creation date 2026-07-08. hasSkill is true because the repo ships an Agent Skills file, skill/SKILL.md (name: declare), the same reading as the existing opendesigner entry for a product-shipped agent skill; it is not a Grok Bot skill written by this catalog. The detail page has landing.steps, so the generic save-as-Skill path is not this entry's how-to. Preview: re-downloaded https://davidtemkin.github.io/declarelang/assets/og-image.png HTTP 200, image/png, 93906 bytes, sha256 d39b0190100ae3f7a669ac0739293e66d66072a4afc3a011b622312d7f2c326f, 1200×630 8-bit RGB, byte-identical to the official image attached to the task. ffmpeg pad to 1200×800, input placed at y=85, 85px above and below, color #0B141B (the most common top and bottom edge color, rgb(11, 20, 27)), lossless libwebp, alpha 255 throughout. The center 1200×630 matches the source pixel for pixel; nothing scaled, nothing cropped, no text added. Dedupe: data and src on main c088c54 have no declarelang, davidtemkin, or declarelang.org; git grep across data and public on every origin remote branch found none either. Not done: no clone, no npm install, no npm start, no npm test or declare-verify, the skill was not loaded, no .declare was written, the ticket comparison was not rerun, no account was created, and no write was sent to an external system.",
+      "landing": {
+        "what": "一门把界面的结构、样式和行为写在同一棵树上的 DSL，作者希望人和模型都能读、编译器能查。官网的说法是，`[ … ]` 装视图，`{ … }` 里才是 TypeScript。README 写编译器在浏览器里就能跑，所以首页上的例子是当场编译的，不是事先烘好的图片。仓库把自己写成 OpenLaszlo 的继承者，并写明不是把旧语言移植过来。",
+        "whatEn": "A DSL that puts an interface's structure, style, and behavior in one tree, meant to be readable by a person and a model and checkable by a compiler. The site's account is that `[ … ]` holds the view and `{ … }` is where TypeScript starts. The README says the compiler runs in the browser, so the examples on the homepage are compiling in place rather than baked pictures. The repository calls itself the heir to OpenLaszlo and says it is not a port of the old language.",
+        "steps": [
+          {
+            "title": "先在浏览器里打开首页和日历",
+            "titleEn": "Open the homepage and the calendar in a browser",
+            "body": "首页就是一个 Declare 应用，页面自己写由 LLM 写成。日历演示在 apps/calendar/，目录页的标题是 calendar · Declare，由站点的启动脚本接着把程序跑起来。本库打开了首页和这个目录的 HTML，没有在浏览器里执行启动脚本，所以没有看到渲染之后的日历画面。",
+            "bodyEn": "The homepage is a Declare app, and the page says an LLM wrote it. The calendar demo is at apps/calendar/; the directory page is titled calendar · Declare and a boot script then runs the program. This library opened the homepage and that directory's HTML and did not execute the boot script in a browser, so the rendered calendar was not seen.",
+            "links": [
+              {
+                "href": "https://davidtemkin.github.io/declarelang/",
+                "label": "Declare 首页",
+                "labelEn": "Declare homepage"
+              },
+              {
+                "href": "https://davidtemkin.github.io/declarelang/apps/calendar/",
+                "label": "日历演示",
+                "labelEn": "Calendar demo"
+              }
+            ]
+          },
+          {
+            "title": "要在本机写，再按 README 克隆",
+            "titleEn": "To write locally, clone as the README says",
+            "body": "README 的 Quick start 是 clone https://github.com/davidtemkin/declarelang.git ，然后 `npm install`，再 `npm start`。开发服务器默认打印 http://127.0.0.1:8200/ ，端口被占用时会改口并给出下一个端口。程序写到 my-apps/，用服务器地址打开对应的 .declare。package.json 是 private，公共 npm 上没有 declarelang 这个包。本库没有执行这些命令。",
+            "bodyEn": "The README quick start is to clone https://github.com/davidtemkin/declarelang.git , then `npm install`, then `npm start`. The dev server prints http://127.0.0.1:8200/ by default and names the next port if that one is taken. Programs go in my-apps/ and you open the .declare file at the server's address. package.json is private, and the public npm registry has no package named declarelang. This library did not run these commands.",
+            "links": [
+              {
+                "href": "https://github.com/davidtemkin/declarelang/blob/main/README.md",
+                "label": "README 的 Quick start",
+                "labelEn": "README quick start"
+              },
+              {
+                "href": "https://github.com/davidtemkin/declarelang",
+                "label": "davidtemkin/declarelang",
+                "labelEn": "davidtemkin/declarelang"
+              }
+            ]
+          },
+          {
+            "title": "让 agent 写之前，先加载官方 skill",
+            "titleEn": "Load the official skill before an agent writes",
+            "body": "skill/SKILL.md 的名字是 declare，按 Agent Skills 标准放在仓库里。AGENTS.md 只有一句：改 .declare 之前先加载这个 skill。Claude Code 也可以从 `.claude/skills/` 找到它，或用 `/declare`。本库没有把这个文件装进任何 agent。",
+            "bodyEn": "skill/SKILL.md is named declare and lives in the repo as an Agent Skills file. AGENTS.md is one sentence: load that skill before changing .declare source. Claude Code can also find it under `.claude/skills/` or via `/declare`. This library did not install the file into any agent.",
+            "links": [
+              {
+                "href": "https://github.com/davidtemkin/declarelang/blob/main/skill/SKILL.md",
+                "label": "skill/SKILL.md",
+                "labelEn": "skill/SKILL.md"
+              },
+              {
+                "href": "https://github.com/davidtemkin/declarelang/blob/main/AGENTS.md",
+                "label": "AGENTS.md",
+                "labelEn": "AGENTS.md"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "MIT，Copyright (c) 2026 David Temkin。分发里捆了两样第三方：TypeScript 编译器（Apache-2.0）和 Roboto 字体（SIL OFL 1.1），见仓库的 THIRD-PARTY-NOTICES.md。",
+            "textEn": "MIT, Copyright (c) 2026 David Temkin. The distribution bundles two third-party pieces: the TypeScript compiler (Apache-2.0) and the Roboto typeface (SIL OFL 1.1), listed in the repo's THIRD-PARTY-NOTICES.md."
+          },
+          {
+            "text": "官网自己写首页由 LLM 写成。本库没有改写这句话，也没有把它当成对作者的评价。",
+            "textEn": "The site itself says an LLM wrote the homepage. This library repeats that sentence and does not turn it into a judgment of the author."
+          },
+          {
+            "text": "购票应用的 1,279 对 2,666 行、11 项对 6 项，以及同页提到的上百次运行里耗时和报错下降，都是作者的单次或自述数字。作者写明还不是基准，运行记录在仓库的 evals/reports。本库没有打开那些 run，也没有重跑。",
+            "textEn": "The ticket app's 1,279 lines against 2,666, 11 hidden checks against 6, and the hundred-run note about time and compiler errors dropping are the author's figures. The author says they are not yet a benchmark, and the runs are in the repo's evals/reports. This library did not open those runs and did not rerun them."
+          },
+          {
+            "text": "package.json 是 private，版本 0.7.1。公共 npm 登记处没有 declarelang。本地命令是 clone 之后的 npm install 和 npm start，不是安装一个已发布的包。",
+            "textEn": "package.json is private, version 0.7.1. The public npm registry has no declarelang package. The local commands are npm install and npm start after a clone, not installing a published package."
+          },
+          {
+            "text": "本库没有 clone，没有安装依赖，没有启动开发服务器，没有跑测试或 declare-verify，没有加载 skill，也没有让 agent 写过 .declare。",
+            "textEn": "This library did not clone, did not install dependencies, did not start the dev server, did not run tests or declare-verify, did not load the skill, and did not have an agent write .declare."
+          }
+        ],
+        "previewCredit": "预览：官网官方分享图 og-image.png（1200×630），保持原尺寸，上下各补 85px 成 3:2，未裁切，未加字。",
+        "previewCreditEn": "Preview: the official share image og-image.png (1200×630), kept at its original size and padded 85px top and bottom to 3:2, not cropped, no text added."
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12266,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-24T12:05:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12599,23 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://davidtemkin.github.io/declarelang/",
+      "https://davidtemkin.github.io/declarelang/assets/og-image.png",
+      "https://davidtemkin.github.io/declarelang/apps/calendar/",
+      "https://davidtemkin.github.io/declarelang/apps/docs/",
+      "https://github.com/davidtemkin/declarelang",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/README.md",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/LICENSE",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/package.json",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/skill/SKILL.md",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/AGENTS.md",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/docs/declare.md",
+      "https://raw.githubusercontent.com/davidtemkin/declarelang/main/docs/legal/THIRD-PARTY-NOTICES.md",
+      "https://github.com/davidtemkin/declarelang/tree/main/evals/reports",
+      "https://news.ycombinator.com/item?id=50622854",
+      "https://registry.npmjs.org/declarelang",
+      "https://api.github.com/repos/davidtemkin/declarelang"
     ]
   }
 }
