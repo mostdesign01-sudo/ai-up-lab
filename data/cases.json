@@ -1,6 +1,472 @@
 {
   "cases": [
     {
+      "id": "kagi-mail",
+      "slug": "kagi-mail",
+      "title": "Kagi Mail：私人邮箱和日历，用自己的话整理收件箱",
+      "titleEn": "Kagi Mail: a private inbox and calendar you organize in your own words",
+      "kind": "tool",
+      "hook": "私人邮箱和日历，能用自己的话整理，也能直接问收件箱。",
+      "hookEn": "A private inbox and calendar you brief in your own words and can ask in plain language.",
+      "summary": "Kagi Mail（https://blog.kagi.com/kagi-mail-public-beta ）是 Kagi 在 2026 年 11 月 23 日宣布的公开测试：一套私人电子邮件和日历，地址可以用 @kagimail.com，也可以用自己的域名。它同时是完整的邮箱服务，不是只做摘要的插件。公告把智能部分单独列出来：用自己的话交代规则，像给助理布置工作（例子是「把测试用户发来的产品反馈打上标签，可能来自 @kagimail.com，但要自己判断」），每条规则的权限由你定，可以读正文，也可以不进收件箱；Inbox Highlights 标出今天需要你处理的信，并会从你划掉的内容里学习；用平常的话问收件箱，回答带原来的那封信，扫描版 PDF 和照片里的字也包括在内；Newsletter 视图把通讯单独看成一条信息流；还有一个开关可以把 AI 全部关掉。产品页把 Highlights、Previews、Triage、Newsletters 都放进这个开关，并写明 Highlights 不是摘要，而是指出该读、该处理的信，每条都能点回原信。产品页还写：没有 AI 假装是你、替你起草回信；写信时听到的是你本人。公告另写写信时带校对和翻译，并有 Email Assistant：写信到 assistant@kagimail.com 可以问关于自己邮件的问题，动作「即将推出」，现在不能把它说成已经能代你操作。开发者功能里有只读邮件的 MCP 服务器；公告没有另给一份 MCP 文档地址。基础设施按公告写的是开放标准：Stalwart、IMAP、JMAP、CalDAV，所以也能用 Kagi 自己的网页应用，或 Apple Mail、Thunderbird 等兼容客户端。基础规格：无限别名、无限域名、内置日历、50 GB。价格按公告和产品页首页的写法：Kagi Ultimate 包含；否则先有 60 天免费试用，之后每年 99 美元，另加销售税。公告写 AI 功能从你已有的 Allowance 里扣。产品页 FAQ 又说独立订阅可以按月或按年，但这两页都没有写出月付金额，本条不补。还没到的，按公告表格：通讯录在 2027 年一季度，完整的 Kagi Assistant 整合在 2027 年一季度，原生手机应用在 2027 年三季度；共享邮箱标注即将推出。产品页对手机应用只写 2027 年到。网页应用在 https://kagimail.com ，未登录会转到登录。适合想把收件箱从「全靠自己翻」里挪开、又要能关掉 AI 的人。本库没有注册，没有开始试用，没有连接 IMAP 或 MCP，也没有给 assistant@kagimail.com 写过信。",
+      "summaryEn": "Kagi Mail (https://blog.kagi.com/kagi-mail-public-beta ) is the public beta Kagi announced on November 23, 2026: a private email and calendar service, with a @kagimail.com address or your own domains. It is a full mail service, not a summary plugin. The announcement lists the intelligence features on their own: you organize mail in your own words, the way you would brief an assistant (the example is “Label anything where beta users send product feedback. It might come from @kagimail.com, but use judgment.”), and you set what each rule may do, including reading the content or skipping the inbox; Inbox Highlights show what needs you today and learn from what you dismiss; you ask the inbox in plain language and get an answer with the source email, including text inside scanned PDFs and photos; Newsletter view reads newsletters like a feed; and one switch turns all of the AI off. The product page puts Highlights, Previews, Triage, and Newsletters behind that switch, and says Highlights are not summaries: they show which emails to read and act on, and each one links back to the message. The product page also says there is no AI pretending to be you and drafting replies; when you write to someone, they hear from you. The announcement separately says proofreading and translation are included while you write, and that the Email Assistant at assistant@kagimail.com answers questions about your mail, with actions “coming soon”, so this entry does not say it can act for you. For developers the announcement lists an MCP server with read access to your mail, and it does not link a separate MCP docs page. The stack, as the announcement writes it, is open standards: Stalwart, IMAP, JMAP, and CalDAV, so you can use Kagi’s web app or a compatible client such as Apple Mail or Thunderbird. The basics: unlimited aliases, unlimited domains, a built-in calendar, and 50 GB. Pricing, as the announcement and the product-page hero write it: included with Kagi Ultimate; otherwise a free 60-day trial, then $99 a year plus sales tax. The announcement says AI features draw from your existing Allowance. The product-page FAQ also says a standalone subscription can be monthly or annual, but neither page shows a monthly amount, and this entry does not invent one. Not here yet, from the announcement’s table: contacts in Q1 2027, full Kagi Assistant integration in Q1 2027, and native mobile apps in Q3 2027; shared mailboxes are marked coming soon. The product page only says mobile apps are coming in 2027. The web app is at https://kagimail.com and sends you to sign in if you are not logged in. For people who want the inbox to surface what needs them, and who also want AI to be switchable. This library did not sign up, did not start the trial, did not connect IMAP or MCP, and did not write to assistant@kagimail.com.",
+      "categories": [
+        "daily-digest",
+        "content"
+      ],
+      "role": "AI-assisted inbox",
+      "sourceUrl": "https://blog.kagi.com/kagi-mail-public-beta",
+      "secondaryUrls": [
+        "https://kagi.com/products/mail",
+        "https://kagimail.com",
+        "https://news.ycombinator.com/item?id=50615481"
+      ],
+      "previewImage": "/previews/kagi-mail.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "IMAP",
+        "JMAP",
+        "CalDAV",
+        "MCP",
+        "Apple Mail",
+        "Thunderbird"
+      ],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-24T01:20:00Z",
+      "qualityNote": "收录理由：这是带智能整理的私人邮箱和日历，不是又一个只有收发的主机。你可以用自己的话写规则，Inbox Highlights 指出今天要处理的信，也可以用平常的话问收件箱，并且有一个开关把 AI 关掉。边界：它仍然是完整的电子邮件服务，地址、域名、别名、日历和 50 GB 都在。Email Assistant 目前只写了可以回答关于邮件的问题，动作即将推出，不能当成已经会代发、代改。MCP 按公告是只读。产品页写它不会假装是你去起草回信。价格以公告和产品页首页为准：Ultimate 包含，否则 60 天试用后每年 99 美元另加销售税；FAQ 提到可以按月或按年单独订阅，但页面上没有月付金额。AI 是否读取邮件、离开后数据留多久，两页的说法不完全一样，以你打开时的页面为准。本库没有注册，没有开始试用，没有连接 IMAP 或 MCP，也没有给助理地址写过信。",
+      "qualityNoteEn": "Why listed: this is a private inbox and calendar with intelligent filing, not another host that only sends and receives. You write rules in your own words, Inbox Highlights point at what needs you today, you can ask the inbox in plain language, and one switch turns the AI off. Limits: it is still a full email service, with addresses, domains, aliases, a calendar, and 50 GB. The Email Assistant is described as answering questions about your mail, with actions coming soon, so it is not something that already sends or edits for you. The MCP, as the announcement describes it, is read access. The product page says it will not pretend to be you and draft replies. Pricing follows the announcement and the product-page hero: included with Ultimate, otherwise $99 a year plus sales tax after a 60-day trial; the FAQ mentions a monthly or annual standalone subscription, and neither page shows a monthly amount. The two pages do not describe AI access to mail, or how long data stays after you leave, in exactly the same way, so go by the page in front of you. This library did not sign up, did not start the trial, did not connect IMAP or MCP, and did not write to the assistant address.",
+      "verifyLog": "2026-11-24 上午（Asia/Taipei，约 08:48–09:20）：公告 https://blog.kagi.com/kagi-mail-public-beta HTTP 200，title 为 Kagi Blog - Kagi Mail is here (Public Beta)，栏目 Announcements，日期 November 23, 2026。og:image 是 https://blog.kagi.com/og-image.png（博客吉祥物，不是产品界面）。正文核对：the public beta of Kagi Mail. A private email and calendar with a @kagimail.com address, or with your own domains.；Try Kagi Mail free for 60 days / $99/year (+ Sales Tax) after that. Included with Kagi Ultimate.；Kagi Mail is included in Ultimate. Sign in with your Kagi account, and you’re set. AI features draw from your existing Allowance. On another plan, or no Kagi account yet? After the free 60-day trial, you can get Kagi Mail for $99/year (+ Sales Tax).；open standards and open-source infrastructure (the Stalwart server, IMAP, JMAP, and CalDAV)；The basics：A @kagimail.com address、Unlimited aliases、Unlimited domains、Built-in Calendar、50 GB of storage；Intelligence：Organize your mail in your own words… You decide what permissions each rule gets (read the content, or skip the inbox). Inbox Highlights show what needs you today, and learn from what you dismiss. Ask your inbox in plain language and get direct answers with the source email, including text inside scanned PDFs and photos. Newsletter view… Responsible AI, with one switch to turn it all off.；Email Assistant: Write to assistant@kagimail.com for answers about your mail (actions coming soon)；Rule-based filtering with Sieve, no AI involved；MCP server with read access to your mail；Works with Apple Mail, Thunderbird, and any IMAP/JMAP/CalDAV client。未到的表格：Contacts and address book / Q1 2027，Full Kagi Assistant integration / Q1 2027，Native mobile apps / Q3 2027；Coming soon: Shared mailboxes。离开的承诺：export them at any time；You’ll keep access to your mailbox for six months after leaving Kagi Mail. You can send and receive emails for the first 60 days, then read and export your mail with one click for the remaining four months。公告里的产品链接 https://kagi.com/products/mail HTTP 200，title 为 Kagi Mail - Stop chasing inbox zero. Focus on emails that need you. 首页同样是 Try free for 60 days、$99/year (+ Sales Tax) after that、Included with Kagi Ultimate。产品页另有：There is no AI inside Kagi Mail pretending it’s you, drafting replies；Highlights… They aren't summaries；keep Highlights, Previews, Triage, or Newsletters on, or turn them all off with one switch；Mail is included with every Kagi Ultimate subscription。FAQ：Does Kagi Mail write emails for me? No.；Which email apps… Native mobile apps are coming in 2027.；Who can use Kagi Mail today? … public beta … 60-day free trial … included in the Kagi Ultimate subscription with no additional cost, and available as a monthly or annual standalone subscription otherwise。月付金额这两页都没有。加密：Yes, at rest and in transit. Kagi Mail doesn't offer end-to-end encryption or PGP。取消：You can export everything before you go. After that, your data is deleted from Kagi's systems on a set schedule。这句和公告的六个月窗口不是同一套说法，两条都保留。产品页「Try free」按钮指向 https://kagimail.com/ 。https://kagimail.com HTTP 303，Location: /login?next=%2Fmailbox；https://kagimail.com/login?interactive=1 HTTP 302 到 account.kagi.com 的 OAuth 授权（带一次性 state，不写入本条链接）。没有登录。https://kagi.com/pricing HTTP 200，静态页面里有指向 /products/mail 的导航，没有读到 Mail 的单独价格，所以不把这一页当作价格依据。公告里「what AI is allowed to do and infer」链到 https://help.kagi.com/kagi/why-kagi/ai-philosophy.html HTTP 200，title 为 Kagi's AI Integration Philosophy | Kagi's Docs；页面是 Kagi 的一般 AI 原则，正文检索没有 kagimail，不把它写成 Mail 的功能文档，也不放进读者向链接。界面图：https://media.kagi.com/kagi-mail-inbox-1.webp HTTP 200，1484×1154，是产品页 Inbox Highlights 的官方界面图；等比缩到 1029×800，左补 85px、右补 86px 白色边缘，成 1200×800 WebP，没有裁切，没有加字。公告配图 https://media.kagi.com/kagi-mail-announcement.jpg HTTP 200，1920×1080，是吉祥物插画，没有采用。HN https://news.ycombinator.com/item?id=50615481 页面 HTTP 200：标题 Kagi Mail (public beta)，指向公告，rdmuser，2026-11-23T17:17:01Z（台北 2026-11-24 01:17），核对时 347 points、266 comments。同时的 Algolia items 接口是 344 points，children 长度不是评论总数，计数以 HN 页面为准。去重：main c088c54 的 data 里没有 kagi-mail、kagimail；当时 69 个打开的 PR 分支的 data 里也没有这条。未做：没有注册 Kagi，没有开始 60 天试用，没有登录 kagimail.com，没有连接 IMAP、JMAP、CalDAV 或 MCP，没有给 assistant@kagimail.com 或 feedback@kagimail.com 写信，没有导入邮箱。",
+      "verifyLogEn": "2026-11-24 morning (Asia/Taipei, about 08:48–09:20): announcement https://blog.kagi.com/kagi-mail-public-beta HTTP 200, title Kagi Blog - Kagi Mail is here (Public Beta), section Announcements, date November 23, 2026. The og:image is https://blog.kagi.com/og-image.png (the blog mascot, not the product). Sentences checked: the public beta of Kagi Mail. A private email and calendar with a @kagimail.com address, or with your own domains.; Try Kagi Mail free for 60 days / $99/year (+ Sales Tax) after that. Included with Kagi Ultimate.; Kagi Mail is included in Ultimate. Sign in with your Kagi account, and you’re set. AI features draw from your existing Allowance. On another plan, or no Kagi account yet? After the free 60-day trial, you can get Kagi Mail for $99/year (+ Sales Tax).; open standards and open-source infrastructure (the Stalwart server, IMAP, JMAP, and CalDAV); The basics: A @kagimail.com address, Unlimited aliases, Unlimited domains, Built-in Calendar, 50 GB of storage; Intelligence: Organize your mail in your own words… You decide what permissions each rule gets (read the content, or skip the inbox). Inbox Highlights show what needs you today, and learn from what you dismiss. Ask your inbox in plain language and get direct answers with the source email, including text inside scanned PDFs and photos. Newsletter view… Responsible AI, with one switch to turn it all off.; Email Assistant: Write to assistant@kagimail.com for answers about your mail (actions coming soon); Rule-based filtering with Sieve, no AI involved; MCP server with read access to your mail; Works with Apple Mail, Thunderbird, and any IMAP/JMAP/CalDAV client. The not-yet table: Contacts and address book / Q1 2027, Full Kagi Assistant integration / Q1 2027, Native mobile apps / Q3 2027; Coming soon: Shared mailboxes. The leaving promise: export them at any time; You’ll keep access to your mailbox for six months after leaving Kagi Mail. You can send and receive emails for the first 60 days, then read and export your mail with one click for the remaining four months. The product link in the post, https://kagi.com/products/mail , HTTP 200, title Kagi Mail - Stop chasing inbox zero. Focus on emails that need you. The hero repeats Try free for 60 days, $99/year (+ Sales Tax) after that, Included with Kagi Ultimate. The product page also says: There is no AI inside Kagi Mail pretending it’s you, drafting replies; Highlights… They aren't summaries; keep Highlights, Previews, Triage, or Newsletters on, or turn them all off with one switch; Mail is included with every Kagi Ultimate subscription. FAQ: Does Kagi Mail write emails for me? No.; Which email apps… Native mobile apps are coming in 2027.; Who can use Kagi Mail today? … public beta … 60-day free trial … included in the Kagi Ultimate subscription with no additional cost, and available as a monthly or annual standalone subscription otherwise. Neither page shows a monthly amount. Encryption: Yes, at rest and in transit. Kagi Mail doesn't offer end-to-end encryption or PGP. Cancellation: You can export everything before you go. After that, your data is deleted from Kagi's systems on a set schedule. That is not the same wording as the announcement’s six-month window; both are kept. The product page’s Try free button points at https://kagimail.com/ . https://kagimail.com returned HTTP 303, Location: /login?next=%2Fmailbox; https://kagimail.com/login?interactive=1 returned HTTP 302 to account.kagi.com OAuth (one-time state, not linked here). Not signed in. https://kagi.com/pricing HTTP 200; the static page has a nav link to /products/mail and no Mail price was read, so that page is not used as the price source. The announcement’s “what AI is allowed to do and infer” links to https://help.kagi.com/kagi/why-kagi/ai-philosophy.html HTTP 200, title Kagi's AI Integration Philosophy | Kagi's Docs; it is Kagi’s general AI philosophy, a search of the page found no kagimail, and it is not treated as Mail feature docs or as a reader-facing link. UI image: https://media.kagi.com/kagi-mail-inbox-1.webp HTTP 200, 1484×1154, the official Inbox Highlights screenshot on the product page; scaled to 1029×800 and padded 85px on the left and 86px on the right with the white edge, to a 1200×800 WebP; nothing cropped, no text added. The announcement art https://media.kagi.com/kagi-mail-announcement.jpg HTTP 200, 1920×1080, is a mascot illustration and was not used. HN https://news.ycombinator.com/item?id=50615481 page HTTP 200: title Kagi Mail (public beta), linking the announcement, by rdmuser, 2026-11-23T17:17:01Z (2026-11-24 01:17 Taipei), 347 points and 266 comments at the check. The Algolia items endpoint at the same time said 344 points, and its children length is not the comment total; the counts used are the HN page’s. Dedupe: kagi-mail and kagimail are absent from data on main c088c54 and from data on the 69 open PR branches checked then. Not done: no Kagi account, the 60-day trial was not started, kagimail.com was not signed in to, IMAP, JMAP, CalDAV, and MCP were not connected, and no mail was sent to assistant@kagimail.com or feedback@kagimail.com. No mailbox was imported.",
+      "landing": {
+        "what": "Kagi 自己做的邮箱和日历，公开测试。你可以要一个 @kagimail.com 地址，或把已有域名接进来。智能部分是：用句子交代怎么归类，看今天该处理什么，以及用问句查旧信。它不是只在别人的邮箱上加一层摘要。",
+        "whatEn": "Kagi’s own email and calendar service, in public beta. You can take a @kagimail.com address or bring a domain you already have. The intelligent part is filing in sentences, seeing what needs you today, and asking old mail a question. It is not a summary layer on someone else’s mailbox.",
+        "contrast": {
+          "caption": "左列是公告和产品页写明的做法。右列是「只有收发和手写过滤规则的邮箱」，不是某一家对手的实测。",
+          "captionEn": "Left: what the announcement and the product page say. Right: a mailbox that only sends, receives, and uses filters you build by hand. Not a test of any named competitor.",
+          "leftLabel": "Kagi Mail",
+          "leftLabelEn": "Kagi Mail",
+          "rightLabel": "只有收发的邮箱",
+          "rightLabelEn": "A send-and-receive mailbox",
+          "rows": [
+            {
+              "aspect": "整理",
+              "aspectEn": "Filing",
+              "left": "用自己的话写规则，并给每条规则权限。另外还有不含 AI 的 Sieve 过滤。",
+              "leftEn": "Rules in your own words, each with the permissions you set. Sieve filtering without AI is also there.",
+              "right": "规则要自己写成条件。没有「像交代助理那样说一句话」这一层。",
+              "rightEn": "Rules are conditions you write yourself. There is no layer for briefing it in a sentence."
+            },
+            {
+              "aspect": "找信",
+              "aspectEn": "Finding mail",
+              "left": "Inbox Highlights 指出今天要处理的信；也可以用问句得到带原信的回答。产品页写 Highlights 不是摘要。",
+              "leftEn": "Inbox Highlights point at what needs you today, and a question can return an answer with the source email. The product page says Highlights are not summaries.",
+              "right": "靠搜索和文件夹自己翻。问句不会变成一条带出处的回答。",
+              "rightEn": "You search and you open folders. A question does not become an answer with a source message."
+            },
+            {
+              "aspect": "AI 开关",
+              "aspectEn": "The AI switch",
+              "left": "一个开关关掉 AI。产品页写它不会替你起草回信。助理地址的动作还没到。",
+              "leftEn": "One switch turns the AI off. The product page says it will not draft replies for you. Actions at the assistant address are not here yet.",
+              "right": "没有这层 AI，也就没有「关掉之后还是同一个邮箱」的问题。",
+              "rightEn": "With no AI layer, there is also no question of the same mailbox remaining after you switch it off."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先读公告和产品页上的价格与边界",
+            "titleEn": "Read the price and the limits on the announcement and the product page",
+            "body": "两页首页都写：60 天免费试用，之后每年 99 美元，另加销售税；Kagi Ultimate 包含。公告写 AI 从已有 Allowance 扣。FAQ 说也可以按月或按年单独订，但没有月付数字。产品页写它不替你写回信。助理地址的「动作」公告写的是即将推出。",
+            "bodyEn": "Both heroes say: a free 60-day trial, then $99 a year plus sales tax, included with Kagi Ultimate. The announcement says AI draws from your existing Allowance. The FAQ says a monthly or annual standalone subscription is also available, and it shows no monthly figure. The product page says it does not write replies for you. The announcement marks actions at the assistant address as coming soon.",
+            "links": [
+              {
+                "href": "https://blog.kagi.com/kagi-mail-public-beta",
+                "label": "公告：Kagi Mail 公开测试",
+                "labelEn": "Announcement: Kagi Mail public beta"
+              },
+              {
+                "href": "https://kagi.com/products/mail",
+                "label": "Kagi Mail 产品页",
+                "labelEn": "Kagi Mail product page"
+              }
+            ]
+          },
+          {
+            "title": "从产品页的试用入口打开网页应用",
+            "titleEn": "Open the web app from the trial button on the product page",
+            "body": "产品页的「Try free for 60 days」指向 https://kagimail.com 。未登录会去登录，登录走 Kagi 账号。本库停在登录门口，没有创建邮箱，也没有导入旧邮件。公告写也可以用 Apple Mail、Thunderbird 或任何 IMAP、JMAP、CalDAV 客户端。",
+            "bodyEn": "The product page’s “Try free for 60 days” points at https://kagimail.com . Signed-out visits go to login, and login uses a Kagi account. This library stopped at that door: no mailbox was created and no old mail was imported. The announcement also says you can use Apple Mail, Thunderbird, or any IMAP, JMAP, or CalDAV client.",
+            "links": [
+              {
+                "href": "https://kagimail.com",
+                "label": "Kagi Mail 网页应用",
+                "labelEn": "Kagi Mail web app"
+              }
+            ]
+          },
+          {
+            "title": "要问收件箱或接 MCP，先看公告里的原句",
+            "titleEn": "Before you ask the inbox or connect MCP, read the announcement’s own lines",
+            "body": "问收件箱、扫描件里的字、只读 MCP、以及 assistant@kagimail.com，都写在公告里。公告没有单独的 MCP 文档链接。只读就是只读；助理的动作还没到。本库没有连接，也没有发那封信。",
+            "bodyEn": "Asking the inbox, text inside scans, the read-only MCP, and assistant@kagimail.com are all in the announcement. The post does not link a separate MCP document. Read-only means read-only, and the assistant’s actions are not here yet. This library did not connect it and did not send that message.",
+            "links": [
+              {
+                "href": "https://blog.kagi.com/kagi-mail-public-beta",
+                "label": "公告里的 Intelligence 与 MCP",
+                "labelEn": "Intelligence and MCP in the announcement"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=50615481",
+                "label": "Hacker News 讨论",
+                "labelEn": "Hacker News thread"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "这是完整的邮箱，不只是 AI 功能。地址、别名、域名、日历、50 GB、IMAP / JMAP / CalDAV 都在。不要把它收成「一个会总结邮件的机器人」。",
+            "textEn": "This is a full mailbox, not only the AI features. Addresses, aliases, domains, the calendar, 50 GB, and IMAP / JMAP / CalDAV are all part of it. Do not reduce it to a bot that summarizes mail."
+          },
+          {
+            "text": "assistant@kagimail.com 按公告可以回答关于你邮件的问题，动作即将推出。不要写成它已经能代你发送、删除或改信。MCP 是读邮件。",
+            "textEn": "assistant@kagimail.com, as the announcement writes it, answers questions about your mail, and actions are coming soon. Do not write that it already sends, deletes, or edits for you. The MCP reads mail."
+          },
+          {
+            "text": "产品页写它不替你起草回信，也不会假装是你。公告另写写信时有校对和翻译。两件是不同的事。",
+            "textEn": "The product page says it does not draft replies for you and will not pretend to be you. The announcement separately includes proofreading and translation while you write. Those are different things."
+          },
+          {
+            "text": "价格只记页面上有的：60 天试用后每年 99 美元另加销售税，Ultimate 包含，AI 从 Allowance 扣。FAQ 说可以按月或按年单独订，月付金额没有出现。",
+            "textEn": "The price recorded is only what the pages show: $99 a year plus sales tax after a 60-day trial, included with Ultimate, with AI drawing from Allowance. The FAQ says monthly or annual standalone billing, and no monthly amount appears."
+          },
+          {
+            "text": "产品页写邮件在存储和传输中加密，但没有端到端加密或 PGP，因为它要读信才能标出该处理的和回答问题。离开后的保留时间，公告写六个月窗口，产品页 FAQ 写导出后按时间表删除。",
+            "textEn": "The product page says mail is encrypted at rest and in transit, and that there is no end-to-end encryption or PGP, because it has to read mail to flag what needs you and to answer questions. On leaving, the announcement describes a six-month window, and the product-page FAQ says data is deleted on a schedule after you export."
+          },
+          {
+            "text": "本库没有注册，没有开始试用，没有连接 IMAP 或 MCP，也没有给助理地址写过信。",
+            "textEn": "This library did not sign up, did not start the trial, did not connect IMAP or MCP, and did not write to the assistant address."
+          }
+        ],
+        "previewCredit": "预览：Kagi Mail 产品页的官方收件箱界面图（Inbox Highlights），等比缩小后左右补白边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the official inbox screenshot on the Kagi Mail product page (Inbox Highlights), scaled down and padded left and right to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "second-brain",
+      "slug": "second-brain",
+      "title": "Second Brain：一份相连的笔记，给各个 AI 应用共用",
+      "titleEn": "Second Brain: one linked note workspace shared by the AI apps you connect",
+      "kind": "tool",
+      "hook": "一份相连的笔记，接到的 AI 应用都能读、能写。",
+      "hookEn": "One linked note workspace that every connected AI app can read and write.",
+      "summary": "Second Brain（https://www.getsecondbrain.io ）是一个托管的个人记忆：笔记是相连的 Markdown，Claude、ChatGPT、Cursor、Codex、Gemini CLI，或任何支持远程 MCP 的客户端，都通过同一个地址读写。官网写的地址是 https://mcp.getsecondbrain.io/mcp 。笔记用双向链接和标签，浏览器里有网络视图。技能放在 Skills/，形状是 SKILL.md，应用可以列出并调用。这里有一处没有对齐：首页「Teach it once」写应用可以使用技能，但不能写、也不能改；同一页 FAQ 又写，你允许写入的应用可以添加和更新技能，每次改动留着上一版。README 列出的工具有 list_skills 和 use_skill，没有单独的改技能工具。本库没有登录，不知道线上是哪一种。README 还写 Granola 的会议笔记按小时同步；这次打开的首页正文里没有 Granola。写入会记上是哪个应用做的，并留下版本。应用可以把笔记放进回收站，不能永久删除，只有你在网页里可以。费用按首页 FAQ：测试期间免费，每个工作区公平使用上限是最多 10,000 条笔记、每天 2,000 次保存。源码里的默认值与这两项一致，另外还有工作区数据库 200 MB、每人最多拥有 10 个工作区；首页那句没有写后两项。用 Google 登录，得到一个空的工作区。仓库 https://github.com/bhushan/getsecondbrain.io 是托管服务的源代码，许可证 AGPL-3.0，可以自己架。首页写笔记在存储和传输中加密，但不是端到端，因为服务要读笔记才能搜索、才能回答应用。适合已经在好几个 AI 应用里各记各的、想要同一份笔记的人。本库没有用 Google 登录，没有创建工作区，也没有把 MCP 接到任何应用。",
+      "summaryEn": "Second Brain (https://www.getsecondbrain.io ) is a hosted personal memory: notes are linked Markdown, and Claude, ChatGPT, Cursor, Codex, Gemini CLI, or any client that speaks remote MCP reads and writes them through one address. The site gives that address as https://mcp.getsecondbrain.io/mcp . Notes use wikilinks and tags, and the browser has a network view. Skills live under Skills/ in the SKILL.md shape, and apps can list and load them. One point does not line up: the homepage section “Teach it once” says apps can use skills but can never write or edit one; the FAQ on the same page says apps you allow to write can add and update skills, and every change keeps its earlier version. The README’s tool list has list_skills and use_skill, and no separate tool for editing a skill. This library did not sign in, so it does not know which behavior is live. The README also says Granola meeting notes sync hourly; the homepage text opened this time does not mention Granola. Writes are attributed to the app and versioned. An app can move a note to the trash and cannot delete it for good; only you can, in the web app. Price, from the homepage FAQ: free while in beta, with fair-use limits of up to 10,000 notes and 2,000 saves a day per workspace. The defaults in the source match those two numbers and also set a 200 MB workspace database and at most 10 workspaces a person can own; the homepage sentence does not mention the last two. You sign in with Google and get an empty workspace. The repository https://github.com/bhushan/getsecondbrain.io is the source of the hosted service, under AGPL-3.0, and you can run your own copy. The homepage says notes are encrypted at rest and in transit, not end to end, because the service has to read them to search and to answer apps. For people whose notes are split across several AI apps and who want one workspace. This library did not sign in with Google, did not create a workspace, and did not connect the MCP to any app.",
+      "categories": [
+        "research"
+      ],
+      "role": "Shared AI memory",
+      "sourceUrl": "https://www.getsecondbrain.io",
+      "secondaryUrls": [
+        "https://app.getsecondbrain.io",
+        "https://mcp.getsecondbrain.io/mcp",
+        "https://github.com/bhushan/getsecondbrain.io",
+        "https://news.ycombinator.com/item?id=50615312"
+      ],
+      "previewImage": "/previews/second-brain.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": false,
+      "connectors": [
+        "MCP",
+        "Claude",
+        "ChatGPT",
+        "Cursor",
+        "Codex",
+        "Gemini CLI",
+        "Granola"
+      ],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-24T01:20:00Z",
+      "qualityNote": "收录理由：好几个 AI 应用各有各的记忆，这份产品用一个远程地址把同一份相连笔记交给它们读和写，笔记留在你能打开的工作区里，而不是锁在某一个聊天里。边界：测试期免费和每天的保存上限是官网的说法；源码里还有数据库大小和工作区个数，首页那句没写。技能谁能改，首页两处说法不一致，本库没有登录核对。Granola 每小时同步写在 README 和定时任务里，没有写在这次打开的首页上。应用可以丢进回收站，永久删除只有你能做。不是端到端加密。本库没有用 Google 登录，没有创建工作区，也没有把 MCP 接到任何应用。",
+      "qualityNoteEn": "Why listed: when several AI apps each keep their own memory, this product gives them one remote address for the same linked notes, and the notes stay in a workspace you can open, rather than locked inside one chat. Limits: free-while-in-beta and the daily save cap are what the site says; the source also sets a database size and a workspace count that the homepage sentence does not mention. Who may edit skills is described two different ways on the homepage, and this library did not sign in to check. The hourly Granola sync is in the README and the scheduled job, not on the homepage opened this time. Apps can trash a note, and only you can delete it for good. It is not end-to-end encrypted. This library did not sign in with Google, did not create a workspace, and did not connect the MCP to any app.",
+      "verifyLog": "2026-11-24 上午（Asia/Taipei，约 08:50–09:20）：https://www.getsecondbrain.io HTTP 200，title 区域为 Second Brain: one memory for every AI app。og:image https://www.getsecondbrain.io/og/social.png HTTP 200，1200×630。首页核对：Save something in Claude, find it in ChatGPT, Cursor or your terminal；连接地址 https://mcp.getsecondbrain.io/mcp ；应用列表含 Claude、Claude Code、ChatGPT、Cursor、VS Code、Codex、Gemini CLI、Any MCP app。Teach it once：Only you change them / Apps can use your skills but can never write or edit one。FAQ What are skills：Apps you allow to write can add and update skills too, and every change keeps its earlier version。FAQ How much does it cost：Free while Second Brain is in beta, with fair-use limits on each workspace. It is also open source。FAQ How do I start：Sign in with Google. You get your own empty workspace… up to 10,000 notes and 2,000 saves a day。FAQ 加密：encrypted at rest and in transit, but not end to end。删除：Apps can move a note to the trash, never delete it. You review the trash。首页全文检索没有 Granola、没有 hourly。https://app.getsecondbrain.io HTTP 200，title Second Brain，HTML 约 1 KB，是应用壳，没有登录。https://mcp.getsecondbrain.io/mcp 用 GET 得到 HTTP 401、空正文，没有走 OAuth。仓库 https://github.com/bhushan/getsecondbrain.io HTTP 200。gh api：license AGPL-3.0，stargazers_count 2，forks 1，created 2026-11-21T18:14:23Z，pushed 2026-11-23T16:52:40Z，description 写 Linked markdown notes that Claude, ChatGPT, Cursor and any MCP client can read and write。README（raw）HTTP 200：这是托管服务的完整源码；MCP 地址同上；Skills/ 与 SKILL.md，工具 list_skills、use_skill，以及 MCP prompts；Sources：Granola meeting notes sync in hourly；Every write is attributed to the app and versioned. Apps can move a note to the trash but never delete it for good。工具列表还有 search、get_note、list_recent、get_linked、list_tags、save_note、update_note、append_to_note、link_notes、trash_note，没有改技能的工具名。limits.ts：notes 10_000，bytes 200 * 1024 * 1024，writesPerDay 2_000；注释写计数含回收站直到永久删除，每天的次数含保存和重命名，按 UTC 日；MAX_WORKSPACES = 10。wrangler.jsonc：注释 Hourly job: sync sources (Granola)；crons 为 17 3 * * * 与 41 * * * *；production 的 SIGNUP 是 open，顶层 vars 的 SIGNUP 是 invite（本地），production 的 triggers 同样两条 cron。schedule.ts 注释：Hourly: sync every connected source…，循环里只对 provider granola 调用 syncGranola。https://news.ycombinator.com/item?id=50615312 HTTP 200：标题 Show HN: Second Brain – One Memory Shared by Claude, ChatGPT and Cursor via MCP，链到仓库，rckstrbhushan，2026-11-23T17:07:55Z（台北 2026-11-24 01:07），核对时 4 points，链接文字是 discuss（没有评论）。publishedAt 用这条公开帖的 UTC 日期 2026-11-23。预览用 README 的 docs/screenshot.png（HTTP 200，1600×1000，即官网首屏），等比缩到 1200×750，上下各补 25px 边缘色，成 1200×800 WebP，没有裁切，没有加字。分享图 social.png 没有用作预览。去重：main c088c54 与当时 69 个打开的 PR 分支的 data 里没有 second-brain、getsecondbrain。未做：没有用 Google 登录，没有创建工作区，没有导入 Obsidian，没有连接 Granola，没有把 MCP 加到 Claude、ChatGPT、Cursor 或任何应用，没有自建部署。",
+      "verifyLogEn": "2026-11-24 morning (Asia/Taipei, about 08:50–09:20): https://www.getsecondbrain.io HTTP 200, titled Second Brain: one memory for every AI app. og:image https://www.getsecondbrain.io/og/social.png HTTP 200, 1200×630. Homepage lines checked: Save something in Claude, find it in ChatGPT, Cursor or your terminal; connector address https://mcp.getsecondbrain.io/mcp ; the app list includes Claude, Claude Code, ChatGPT, Cursor, VS Code, Codex, Gemini CLI, and Any MCP app. Teach it once: Only you change them / Apps can use your skills but can never write or edit one. FAQ What are skills: Apps you allow to write can add and update skills too, and every change keeps its earlier version. FAQ How much does it cost: Free while Second Brain is in beta, with fair-use limits on each workspace. It is also open source. FAQ How do I start: Sign in with Google. You get your own empty workspace… up to 10,000 notes and 2,000 saves a day. Encryption FAQ: encrypted at rest and in transit, but not end to end. Deletion: Apps can move a note to the trash, never delete it. You review the trash. A search of the homepage text found no Granola and no hourly. https://app.getsecondbrain.io HTTP 200, title Second Brain, about 1 KB of HTML, an app shell, not signed in. GET https://mcp.getsecondbrain.io/mcp returned HTTP 401 with an empty body; OAuth was not followed. Repository https://github.com/bhushan/getsecondbrain.io HTTP 200. gh api: license AGPL-3.0, stargazers_count 2, forks 1, created 2026-11-21T18:14:23Z, pushed 2026-11-23T16:52:40Z, description says linked markdown notes that Claude, ChatGPT, Cursor and any MCP client can read and write. README (raw) HTTP 200: this repository is the full source of the hosted service; the MCP address is the same; Skills/ and SKILL.md, tools list_skills and use_skill, and MCP prompts; Sources: Granola meeting notes sync in hourly; Every write is attributed to the app and versioned. Apps can move a note to the trash but never delete it for good. The tool list also has search, get_note, list_recent, get_linked, list_tags, save_note, update_note, append_to_note, link_notes, and trash_note, and no tool name for editing a skill. limits.ts: notes 10_000, bytes 200 * 1024 * 1024, writesPerDay 2_000; the comment says the note count includes trash until permanent delete, and the daily count includes saves and renames, per UTC day; MAX_WORKSPACES = 10. wrangler.jsonc: comment Hourly job: sync sources (Granola); crons are 17 3 * * * and 41 * * * *; production SIGNUP is open, the top-level vars SIGNUP is invite (local), and production triggers repeat the same two crons. schedule.ts comment: Hourly: sync every connected source…, and the loop calls syncGranola only when provider is granola. https://news.ycombinator.com/item?id=50615312 HTTP 200: title Show HN: Second Brain – One Memory Shared by Claude, ChatGPT and Cursor via MCP, linking the repo, by rckstrbhushan, 2026-11-23T17:07:55Z (2026-11-24 01:07 Taipei), 4 points at the check, and the link text is discuss (no comments). publishedAt uses the UTC date of that public post, 2026-11-23. Preview is docs/screenshot.png from the README (HTTP 200, 1600×1000, the homepage first screen), scaled to 1200×750 and padded 25px top and bottom with edge colors to a 1200×800 WebP; nothing cropped, no text added. The share image social.png was not used as the preview. Dedupe: second-brain and getsecondbrain are absent from data on main c088c54 and from data on the 69 open PR branches checked then. Not done: no Google sign-in, no workspace created, no Obsidian import, Granola not connected, the MCP not added to Claude, ChatGPT, Cursor, or any app, and no self-hosted deploy.",
+      "landing": {
+        "what": "一个你能在浏览器里打开的笔记工作区。接到的 AI 应用共用这一份，而不是各自记一份。笔记是带链接和标签的 Markdown。托管这套服务的源代码公开，许可证是 AGPL-3.0，也可以自己架。",
+        "whatEn": "A note workspace you can open in the browser. The AI apps you connect share that one workspace instead of each keeping its own. Notes are Markdown with links and tags. The source of the hosted service is public under AGPL-3.0, and you can run your own copy.",
+        "contrast": {
+          "caption": "左列是官网和 README 写明的。右列是笔记只留在一个聊天里的做法，不是对某一个应用的实测。",
+          "captionEn": "Left: what the site and the README say. Right: notes that stay inside one chat. Not a test of any one app.",
+          "leftLabel": "Second Brain",
+          "leftLabelEn": "Second Brain",
+          "rightLabel": "留在一个聊天里",
+          "rightLabelEn": "Left in one chat",
+          "rows": [
+            {
+              "aspect": "记在哪",
+              "aspectEn": "Where it lives",
+              "left": "一个工作区。Claude 里保存的，ChatGPT 或 Cursor 可以再找到。",
+              "leftEn": "One workspace. What Claude saves, ChatGPT or Cursor can find.",
+              "right": "记在那一次对话里。换一个应用就看不到。",
+              "rightEn": "It stays in that conversation. Another app cannot see it."
+            },
+            {
+              "aspect": "谁能删",
+              "aspectEn": "Who can delete",
+              "left": "应用最多放进回收站。永久删除只有你在网页里能做。每次写入有版本、有应用名字。",
+              "leftEn": "An app can go as far as the trash. Only you can delete for good, in the web app. Each write has a version and an app name.",
+              "right": "聊天记录通常跟着那个应用的账号走，没有这套「应用不能彻底删」的说法。",
+              "rightEn": "Chat history usually follows that app’s account, without this “an app cannot delete for good” rule."
+            },
+            {
+              "aspect": "定时",
+              "aspectEn": "Schedule",
+              "left": "README 写 Granola 会议笔记按小时同步。首页这次没有写这一句。",
+              "leftEn": "The README says Granola meeting notes sync hourly. The homepage did not say that this time.",
+              "right": "没有这份仓库里的定时同步。",
+              "rightEn": "No scheduled sync from this repository."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看官网怎么说费用和删除",
+            "titleEn": "Read what the site says about cost and deletion",
+            "body": "FAQ 写测试期间免费，每个工作区最多 10,000 条笔记、每天 2,000 次保存。用 Google 登录，得到空工作区。应用不能永久删除。技能谁能改，首页有两处不同的说法，登录前自己再看一眼。",
+            "bodyEn": "The FAQ says it is free while in beta, up to 10,000 notes and 2,000 saves a day per workspace. Sign in with Google and you get an empty workspace. Apps cannot delete for good. Who may change skills is described two ways on the homepage, so read that again before you sign in.",
+            "links": [
+              {
+                "href": "https://www.getsecondbrain.io",
+                "label": "Second Brain 官网",
+                "labelEn": "Second Brain site"
+              }
+            ]
+          },
+          {
+            "title": "打开应用，或只把地址加进 MCP 客户端",
+            "titleEn": "Open the app, or only add the address to an MCP client",
+            "body": "应用在 https://app.getsecondbrain.io 。连接地址是 https://mcp.getsecondbrain.io/mcp 。官网写：在应用里添加自定义连接器，登录后选工作区，再选只读或可写。本库打开了应用壳，GET 这个 MCP 地址得到未授权，没有登录，也没有在 Claude、ChatGPT 或 Cursor 里添加。",
+            "bodyEn": "The app is at https://app.getsecondbrain.io . The connector address is https://mcp.getsecondbrain.io/mcp . The site says: add it as a custom connector, sign in, pick a workspace, then choose read only or read and write. This library opened the app shell, and a GET of the MCP address was unauthorized. It did not sign in, and it did not add the connector in Claude, ChatGPT, or Cursor.",
+            "links": [
+              {
+                "href": "https://app.getsecondbrain.io",
+                "label": "Second Brain 应用",
+                "labelEn": "Second Brain app"
+              },
+              {
+                "href": "https://mcp.getsecondbrain.io/mcp",
+                "label": "MCP 地址",
+                "labelEn": "MCP address"
+              }
+            ]
+          },
+          {
+            "title": "要自己架，读仓库而不是只读首页",
+            "titleEn": "To run your own copy, read the repository, not only the homepage",
+            "body": "仓库写明它就是托管服务的源代码，许可证 AGPL-3.0。Granola 的每小时同步、10,000 条之外的数据库上限，都在仓库里，不在首页那句 FAQ 里。本库没有部署。",
+            "bodyEn": "The repository says it is the source of the hosted service, under AGPL-3.0. The hourly Granola sync, and the database cap beyond the 10,000 notes, are in the repository, not in that homepage FAQ sentence. This library did not deploy it.",
+            "links": [
+              {
+                "href": "https://github.com/bhushan/getsecondbrain.io",
+                "label": "源代码仓库",
+                "labelEn": "Source repository"
+              },
+              {
+                "href": "https://news.ycombinator.com/item?id=50615312",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "首页两处对技能的说法不一致：一处写应用不能写、也不能改技能；FAQ 写你允许写入的应用可以添加和更新。README 的工具名单里有列出和调用，没有改技能的工具。本库没有登录验证。",
+            "textEn": "The homepage describes skills two ways: one section says apps can never write or edit a skill; the FAQ says apps you allow to write can add and update them. The README’s tool list has list and use, and no tool for editing a skill. This library did not sign in to check."
+          },
+          {
+            "text": "Granola 按小时同步是 README 和仓库定时任务里的话（每小时第 41 分的 cron，以及只处理 granola 的同步函数）。这次打开的首页没有写 Granola。",
+            "textEn": "Hourly Granola sync is what the README and the repository’s schedule say (a cron at minute 41 of every hour, and a sync function that only handles granola). The homepage opened this time does not mention Granola."
+          },
+          {
+            "text": "公平使用：首页写最多 10,000 条笔记、每天 2,000 次保存。源码默认值还有 200 MB 数据库和每人 10 个工作区。笔记计数含回收站，每日次数含重命名，按 UTC 日。",
+            "textEn": "Fair use: the homepage says up to 10,000 notes and 2,000 saves a day. The source defaults also set a 200 MB database and 10 workspaces per person. The note count includes trash, the daily count includes renames, and the day is UTC."
+          },
+          {
+            "text": "不是端到端加密。官网写服务要读笔记才能搜索和回答应用，笔记不会用来训练模型、也不会出售。连接时你选只读还是可写，应用只能看到你选的那个工作区。",
+            "textEn": "Not end-to-end encrypted. The site says the service has to read notes to search and to answer apps, and that notes are not used to train models and are not sold. When you connect, you choose read only or read and write, and an app only sees the workspace you picked."
+          },
+          {
+            "text": "本库没有用 Google 登录，没有创建工作区，也没有把 MCP 接到任何应用。",
+            "textEn": "This library did not sign in with Google, did not create a workspace, and did not connect the MCP to any app."
+          }
+        ],
+        "previewCredit": "预览：Second Brain 仓库 README 里的官网首屏图，等比缩小后上下补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the homepage first screen from the Second Brain repository README, scaled down and padded top and bottom to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "alter",
+      "slug": "alter",
+      "title": "Alter：用一句话改网页的样子，脚本要你先看过",
+      "titleEn": "Alter: describe how a page should look, and review any script before it runs",
+      "kind": "tool",
+      "hook": "用一句话改网页的样子，脚本要你看过再跑。",
+      "hookEn": "Type how a site should look. Scripts run only after you approve them.",
+      "summary": "Alter（https://github.com/AxelVandenHeuvel/alter ）是一个 Chrome 扩展：在任何网页上说出你希望它看起来或读起来怎样，例如「做一个深色模式」「隐藏短视频」「把这个表格导出成 CSV」，改动会以预览出现在页面上。保存之后，以后再打开这个网站会再套上。改动可以是 CSS、内置的深色主题引擎，或脚本；脚本要你先看过并批准才会跑。也可以做一次性的页面动作，例如把文章下载成文本，同样要先批准，而且不会存成以后自动套用的规则。作者在 README 里写，那些演示录像是真实的 Claude Sonnet 运行，把等待加快了；这是作者的话，不是本库测的。安装不走 Chrome 网上应用店：从发布页下载 zip，在开发者模式里「加载已解压的扩展程序」。README 要求 Chrome 138 或更新，以及你自己的 Anthropic API 密钥；密钥留在浏览器里，只发给 Anthropic。需要脚本的改动还要在扩展详情里打开 Allow User Scripts。README 写默认模型是 Claude Sonnet 5.5，也可以在设置里选 Haiku 5.5 或 Opus 5.5；费用由你付给 Anthropic，每条回复显示花费，设置里可以看本月累计并设一个月度上限。核对时最新发布是 v0.2.0，附件名 alter-0.2.0.zip。许可证 MIT。README 写它不替你在网站上点击或提交，拒绝自动点赞、关注、评论、绕过广告或付费墙、批量收集；调用 .click() 或 dispatchEvent 的脚本会被拒绝。邮件、登录、密码、银行、支付、政府和云控制台站点不跑脚本。适合想按自己的句子改某个网站的阅读方式、又要先看见代码再让它跑的人。本库没有安装扩展，没有在 Chrome 里加载，也没有使用 Anthropic 密钥。",
+      "summaryEn": "Alter (https://github.com/AxelVandenHeuvel/alter ) is a Chrome extension: on any page you type how it should look or read, for example “create a dark mode”, “hide reels”, or “export this table to CSV”, and the change shows up as a preview. Save it and later visits to that site apply it again. A change can be CSS, a built-in dark-theme engine, or a script; a script runs only after you review and approve it. One-time page actions, such as downloading an article as text, also wait for approval, and they are not saved as a rule for later visits. The README says the demo recordings are real Claude Sonnet runs with the wait sped up; that is the author’s statement, not a test by this library. It is not installed from the Chrome Web Store: download a zip from the releases page and use Load unpacked in developer mode. The README requires Chrome 138 or newer and your own Anthropic API key; the key stays in the browser and goes only to Anthropic. Script changes also need Allow User Scripts turned on in the extension’s details. The README says the default model is Claude Sonnet 5.5, and Settings can switch to Haiku 5.5 or Opus 5.5; you pay Anthropic for what you use, every reply shows the cost, and Settings can total the month and set a monthly limit. At this check the latest release was v0.2.0, with the asset alter-0.2.0.zip. The license is MIT. The README says it never acts on a site for you: it declines automatic likes, follows, comments, getting around ads or paywalls, and bulk collection; scripts that call .click() or dispatchEvent are rejected. Scripts do not run on email, sign-in, password, banking, payment, government, or cloud-console sites. For people who want to change how a site reads by typing a sentence, and who want to see the code before it runs. This library did not install the extension, did not load it in Chrome, and did not use an Anthropic key.",
+      "categories": [
+        "content",
+        "engineering"
+      ],
+      "role": "Browser restyle extension",
+      "sourceUrl": "https://github.com/AxelVandenHeuvel/alter",
+      "secondaryUrls": [
+        "https://github.com/AxelVandenHeuvel/alter/releases/latest",
+        "https://news.ycombinator.com/item?id=50617387"
+      ],
+      "previewImage": "/previews/alter.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "脚本和一次性页面动作在你点批准之前不会跑。CSS 和深色主题会先以预览出现，保存之后才在以后的访问里自动套上。本库没有安装，也没有替你批准任何脚本。",
+      "approvalBoundaryEn": "Scripts and one-time page actions do not run until you approve them. CSS and the dark theme appear as a preview first, and only a saved change applies on later visits. This library did not install it and did not approve any script for you.",
+      "connectors": [
+        "Chrome",
+        "Anthropic API"
+      ],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-24T01:20:00Z",
+      "qualityNote": "收录理由：用一句话描述网页该怎么看，先看到预览，脚本还要你批准，适合「改这个网站的读法」而不是再写一份用户脚本。边界：不在 Chrome 网上应用店，要自己加载解压后的发布包，需要 Chrome 138 或更新和你自己的 Anthropic 密钥，密钥按 README 只发给 Anthropic。演示录像是作者说的真实运行并加快了等待，本库没有复现。它不替你点击或提交。保存的按站点改动会在以后的访问再套上，这不是目录里的定时例行。本库没有安装扩展，没有在 Chrome 里加载，也没有使用密钥。",
+      "qualityNoteEn": "Why listed: you describe how a page should read, you see a preview first, and a script still waits for your approval, which fits “change how this site reads” better than writing another userscript by hand. Limits: it is not in the Chrome Web Store; you load an unpacked release yourself; it needs Chrome 138 or newer and your own Anthropic key, which the README says goes only to Anthropic. The demo recordings are the author’s statement of real runs with the wait sped up, and this library did not reproduce them. It does not click or submit for you. Saved per-site changes apply again on later visits, and that is not a scheduled routine in this catalog. This library did not install the extension, did not load it in Chrome, and did not use a key.",
+      "verifyLog": "2026-11-24 上午（Asia/Taipei，约 08:52–09:20）：https://github.com/AxelVandenHeuvel/alter HTTP 200。gh api：license MIT，stargazers_count 1，forks 0，created 2026-11-20T15:24:53Z，pushed 2026-11-23T18:04:27Z，description Describe how a website should look, and it changes. A Chrome extension powered by Claude. README raw HTTP 200。安装段：Alter isn't in the Chrome Web Store；Chrome 138 or newer；your own Anthropic API key；Download alter-.zip from the latest release；Developer mode；Load unpacked；Create a key at https://console.anthropic.com/settings/keys … It stays in your browser and goes only to Anthropic；可选 Allow User Scripts。使用段：Changes are CSS, a built-in dark theme engine, and, for things CSS can't do, scripts that you review and approve before they run；one-time actions；The recordings are real runs with Claude Sonnet, with the wait while it works sped up。模型：Claude Sonnet 5.5 is the default; Haiku 5.5 (cheapest) and Opus 5.5 (most capable)。费用：You pay Anthropic for what you use. Every reply shows what it cost。不做的事：it never acts on a site for you；scripts that call .click() or dispatchEvent are rejected；不在邮件、登录、密码管理器、银行、支付、政府、云控制台站点跑脚本。发布页 https://github.com/AxelVandenHeuvel/alter/releases/latest HTTP 200，跳到 tag v0.2.0；gh api releases/latest：tag v0.2.0，published 2026-11-22T21:51:39Z，asset alter-0.2.0.zip。没有下载 zip。HN https://news.ycombinator.com/item?id=50617387 HTTP 200：标题 Show HN: Alter – Restyle any website by typing what you want (extension, BYOK)，axel2moon，2026-11-23T19:11:59Z（台北 2026-11-24 03:11），核对时 2 points，链接文字 discuss（没有评论）。publishedAt 用这条帖的 UTC 日期 2026-11-23。预览取 README 演示 docs/demo/hacker-news-dark.gif（HTTP 200，960×600，126 帧）的最后一帧：页面已是深色，面板写着 give this a modern dark theme，并有 Saved。等比放到 1200×750，上下各补 25px 边缘色，成 1200×800 WebP，没有裁切，没有加字。作者称录像是真实运行并加快等待，本库没有复跑。去重：main c088c54 与当时 69 个打开的 PR 分支的 data 里没有 id alter，也没有 AxelVandenHeuvel/alter。未做：没有下载或解压发布包，没有在 Chrome 里加载，没有打开开发者模式，没有创建或粘贴 Anthropic 密钥，没有打开 Allow User Scripts，没有在任何网站上跑预览。",
+      "verifyLogEn": "2026-11-24 morning (Asia/Taipei, about 08:52–09:20): https://github.com/AxelVandenHeuvel/alter HTTP 200. gh api: license MIT, stargazers_count 1, forks 0, created 2026-11-20T15:24:53Z, pushed 2026-11-23T18:04:27Z, description Describe how a website should look, and it changes. A Chrome extension powered by Claude. README raw HTTP 200. Install section: Alter isn't in the Chrome Web Store; Chrome 138 or newer; your own Anthropic API key; Download alter-.zip from the latest release; Developer mode; Load unpacked; Create a key at https://console.anthropic.com/settings/keys … It stays in your browser and goes only to Anthropic; optional Allow User Scripts. Using it: Changes are CSS, a built-in dark theme engine, and, for things CSS can't do, scripts that you review and approve before they run; one-time actions; The recordings are real runs with Claude Sonnet, with the wait while it works sped up. Models: Claude Sonnet 5.5 is the default; Haiku 5.5 (cheapest) and Opus 5.5 (most capable). Cost: You pay Anthropic for what you use. Every reply shows what it cost. What it doesn't do: it never acts on a site for you; scripts that call .click() or dispatchEvent are rejected; scripts do not run on email, sign-in, password-manager, banking, payment, government, or cloud-console sites. Releases https://github.com/AxelVandenHeuvel/alter/releases/latest HTTP 200, redirecting to tag v0.2.0; gh api releases/latest: tag v0.2.0, published 2026-11-22T21:51:39Z, asset alter-0.2.0.zip. The zip was not downloaded. HN https://news.ycombinator.com/item?id=50617387 HTTP 200: title Show HN: Alter – Restyle any website by typing what you want (extension, BYOK), by axel2moon, 2026-11-23T19:11:59Z (2026-11-24 03:11 Taipei), 2 points at the check, link text discuss (no comments). publishedAt uses the UTC date of that post, 2026-11-23. The preview is the last frame of the README demo docs/demo/hacker-news-dark.gif (HTTP 200, 960×600, 126 frames): the page is already dark, and the panel shows “give this a modern dark theme” with Saved. Scaled to 1200×750 and padded 25px top and bottom with edge colors to a 1200×800 WebP; nothing cropped, no text added. The author says the recordings are real runs with the wait sped up; this library did not re-run them. Dedupe: id alter and AxelVandenHeuvel/alter are absent from data on main c088c54 and from data on the 69 open PR branches checked then. Not done: the release zip was not downloaded or unpacked, it was not loaded in Chrome, developer mode was not turned on, no Anthropic key was created or pasted, Allow User Scripts was not enabled, and no preview was run on any site.",
+      "landing": {
+        "what": "一个装在你自己 Chrome 里的扩展。你用句子说这个网站该怎么看，它给出 CSS、深色主题或一段脚本的预览。脚本和一次性动作要你点头才跑。它不在网上应用店里。",
+        "whatEn": "An extension in your own Chrome. You say in a sentence how the site should look, and it previews CSS, a dark theme, or a script. Scripts and one-time actions wait until you approve them. It is not in the web store.",
+        "contrast": {
+          "caption": "左列是 README 写的。右列是自己维护一份用户样式或用户脚本，不是对另一个扩展的实测。",
+          "captionEn": "Left: what the README says. Right: maintaining a user style or userscript yourself. Not a test of another extension.",
+          "leftLabel": "Alter",
+          "leftLabelEn": "Alter",
+          "rightLabel": "自己写样式",
+          "rightLabelEn": "Styles you write",
+          "rows": [
+            {
+              "aspect": "怎么改",
+              "aspectEn": "How you change it",
+              "left": "打一句话，先看预览。CSS 和深色主题可以直接预览；脚本要再批准。",
+              "leftEn": "Type a sentence and see a preview first. CSS and the dark theme preview directly; a script needs another approval.",
+              "right": "自己写 CSS 或脚本，写错了页面就坏，没有这层「先预览再保存」。",
+              "rightEn": "You write the CSS or the script yourself. A mistake breaks the page, without this preview-then-save step."
+            },
+            {
+              "aspect": "模型",
+              "aspectEn": "The model",
+              "left": "用你自己的 Anthropic 密钥，README 写密钥只发给 Anthropic。默认是 Claude Sonnet 5.5。",
+              "leftEn": "Your own Anthropic key, which the README says goes only to Anthropic. The default is Claude Sonnet 5.5.",
+              "right": "不调用模型，也就没有按句改页面这一步，费用也不发生。",
+              "rightEn": "No model call, so there is no sentence-to-page step, and no model charge."
+            },
+            {
+              "aspect": "它不做什么",
+              "aspectEn": "What it refuses",
+              "left": "README 写它不替你点击、提交、绕过付费墙或批量抓取。",
+              "leftEn": "The README says it does not click, submit, get around a paywall, or collect in bulk for you.",
+              "right": "你自己写的脚本可以做这些。那是另一类工具。",
+              "rightEn": "A script you write yourself can do those things. That is a different kind of tool."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "读 README 里的安装和密钥",
+            "titleEn": "Read the install and key section in the README",
+            "body": "不在 Chrome 网上应用店。需要 Chrome 138 或更新。密钥按 README 留在浏览器里，只发给 Anthropic。你按使用量付钱。本库没有创建密钥。",
+            "bodyEn": "It is not in the Chrome Web Store. You need Chrome 138 or newer. The README says the key stays in the browser and goes only to Anthropic. You pay for what you use. This library did not create a key.",
+            "links": [
+              {
+                "href": "https://github.com/AxelVandenHeuvel/alter",
+                "label": "Alter 仓库与 README",
+                "labelEn": "Alter repository and README"
+              }
+            ]
+          },
+          {
+            "title": "从发布页拿 zip，用开发者模式加载",
+            "titleEn": "Take the zip from Releases and load it in developer mode",
+            "body": "核对时最新发布是 v0.2.0，文件名 alter-0.2.0.zip。README 的步骤是：解压，打开 chrome://extensions，打开开发者模式，加载已解压的文件夹，并留着这个文件夹。需要脚本时再打开 Allow User Scripts。本库没有下载，也没有加载。",
+            "bodyEn": "At this check the latest release was v0.2.0, file name alter-0.2.0.zip. The README’s steps: unzip, open chrome://extensions, turn on developer mode, Load unpacked, and keep that folder. Turn on Allow User Scripts when a change needs a script. This library did not download it and did not load it.",
+            "links": [
+              {
+                "href": "https://github.com/AxelVandenHeuvel/alter/releases/latest",
+                "label": "最新发布",
+                "labelEn": "Latest release"
+              }
+            ]
+          },
+          {
+            "title": "在网页上打一句话，先看预览再决定保存",
+            "titleEn": "On a page, type a sentence, look at the preview, then decide to save",
+            "body": "README 的例子是深色模式、隐藏短视频、把表格导出成 CSV。脚本和一次性下载要你批准。作者说演示录像是真实的 Claude Sonnet 运行并加快了等待。本库没有在 Chrome 里打开这个面板。",
+            "bodyEn": "The README’s examples are a dark mode, hiding reels, and exporting a table to CSV. Scripts and one-time downloads wait for your approval. The author says the demo recordings are real Claude Sonnet runs with the wait sped up. This library did not open the panel in Chrome.",
+            "links": [
+              {
+                "href": "https://news.ycombinator.com/item?id=50617387",
+                "label": "Show HN",
+                "labelEn": "Show HN"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "侧载，不在 Chrome 网上应用店。要留着解压后的文件夹，Chrome 从那里运行。更新不会自动装上，README 写要自己换文件再在扩展卡片上点重新加载。",
+            "textEn": "Sideloaded, not in the Chrome Web Store. Keep the unpacked folder; Chrome runs it from there. Installs from a release do not update themselves; the README says you replace the files and reload the extension card."
+          },
+          {
+            "text": "密钥是你自己的。README 写它留在浏览器里，只发给 Anthropic。本库没有创建或粘贴密钥，也没有产生费用。",
+            "textEn": "The key is yours. The README says it stays in the browser and goes only to Anthropic. This library did not create or paste a key, and it incurred no charge."
+          },
+          {
+            "text": "脚本和一次性动作必须你批准。保存之后，这个主机名上的改动会在以后的访问再套上。那不是定时任务。",
+            "textEn": "Scripts and one-time actions need your approval. After you save, the change for that hostname applies on later visits. That is not a schedule."
+          },
+          {
+            "text": "README 写它不替你点击、提交、绕过限制或批量收集。演示录像是作者所称的真实运行并加快等待，本库没有复现。",
+            "textEn": "The README says it does not click, submit, get around restrictions, or collect in bulk for you. The demo recordings are what the author calls real runs with the wait sped up, and this library did not reproduce them."
+          },
+          {
+            "text": "本库没有安装扩展，没有在 Chrome 里加载，也没有使用 Anthropic 密钥。",
+            "textEn": "This library did not install the extension, did not load it in Chrome, and did not use an Anthropic key."
+          }
+        ],
+        "previewCredit": "预览：Alter README 演示录像的最后一帧（作者称是真实的 Claude Sonnet 运行并加快了等待），等比放大后上下补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the last frame of the demo recording in the Alter README (the author says it is a real Claude Sonnet run with the wait sped up), scaled up and padded top and bottom to 3:2, not cropped"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12600,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-24T01:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 224,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12933,29 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://blog.kagi.com/kagi-mail-public-beta",
+      "https://kagi.com/products/mail",
+      "https://kagimail.com",
+      "https://kagi.com/pricing",
+      "https://help.kagi.com/kagi/why-kagi/ai-philosophy.html",
+      "https://media.kagi.com/kagi-mail-inbox-1.webp",
+      "https://media.kagi.com/kagi-mail-announcement.jpg",
+      "https://news.ycombinator.com/item?id=50615481",
+      "https://www.getsecondbrain.io",
+      "https://www.getsecondbrain.io/og/social.png",
+      "https://app.getsecondbrain.io",
+      "https://mcp.getsecondbrain.io/mcp",
+      "https://github.com/bhushan/getsecondbrain.io",
+      "https://raw.githubusercontent.com/bhushan/getsecondbrain.io/main/README.md",
+      "https://raw.githubusercontent.com/bhushan/getsecondbrain.io/main/src/worker/workspace/limits.ts",
+      "https://raw.githubusercontent.com/bhushan/getsecondbrain.io/main/wrangler.jsonc",
+      "https://news.ycombinator.com/item?id=50615312",
+      "https://github.com/AxelVandenHeuvel/alter",
+      "https://github.com/AxelVandenHeuvel/alter/releases/latest",
+      "https://raw.githubusercontent.com/AxelVandenHeuvel/alter/main/README.md",
+      "https://raw.githubusercontent.com/AxelVandenHeuvel/alter/main/docs/demo/hacker-news-dark.gif",
+      "https://news.ycombinator.com/item?id=50617387"
     ]
   }
 }
