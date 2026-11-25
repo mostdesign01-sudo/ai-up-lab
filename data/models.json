@@ -1,11 +1,93 @@
 {
   "meta": {
-    "updatedAt": "2026-11-18T12:20:00Z",
+    "updatedAt": "2026-11-25T01:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.1.32",
-    "count": 42
+    "version": "1.1.33",
+    "count": 43,
+    "sourcesCrawled": [
+      "https://prismml.com/news/bonsai-2-5-27b",
+      "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+      "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF/raw/main/LICENSE",
+      "https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-5-27b-whitepaper.pdf",
+      "https://news.ycombinator.com/item?id=50633922",
+      "https://cdn-thumbnails.huggingface.co/social-thumbnails/models/prism-ml/Ternary-Bonsai-2.5-27B-GGUF.png"
+    ]
   },
   "models": [
+    {
+      "id": "ternary-bonsai-2-5-27b",
+      "slug": "ternary-bonsai-2-5-27b",
+      "name": "Ternary Bonsai 2.5 27B",
+      "vendor": "PrismML",
+      "title": "Ternary Bonsai 2.5 27B：面向工具调用的三值本地模型（PrismML）",
+      "titleEn": "Ternary Bonsai 2.5 27B: a local ternary model for tool use (PrismML)",
+      "summary": "PrismML 于 2026-11-24 发布的 Ternary Bonsai 2.5 27B，是 Ternary Bonsai 2 27B 的升级，底座是 Qwen3.8 27B。新闻稿说它保持原来的紧凑体积（原文写 same 5.9 GB footprint），并加强了 agent 式编码、多轮工具使用和多步执行，也说比 Bonsai 2 更少过度思考和打转。模型卡把体积写得更细：仍是每权重 1.76 bit、5.93 GB（PTQ1_0），对照 FP16 的 53.8 GB。新闻稿上的基准表是 PrismML 自己的数字，不是本库复跑的。表头是 Qwen3.8 27B / Bonsai 2 27B / Bonsai 2.5 27B：SWE-bench Verified 80.6 / 60.8 / 75.6；DeepSWE v1.1（mini-swe-agent）30.1 / 0 / 27；Terminal-Bench 2.1 70.8 / 52.8 / 60.1；AppWorld 93.2 / 51.2 / 90.5；τ³-Bench 72.8 / 69.1 / 73.9；BigCodeBench 61.5 / 57.2 / 60.3；LiveCodeBench v6 87.6 / 83.8 / 83.0。最后一行 2.5 低于 Bonsai 2，不是每一项都在涨。速度也是新闻稿自己的：单张 H100 在打开 MTP 时生成 291 tok/s，2000 token 的提示处理 3200 tok/s；RTX 4090 打开 MTP 时 204 tok/s，提示处理约 3060 tok/s。新闻稿说它在 NVIDIA 和 Intel GPU 上通过 llama.cpp 运行，在 Mac、iPhone、iPad 上通过 MLX 运行。模型卡把文件拆开了：Q2_0 能在上游 llama.cpp 上跑，但要从 b11556 起，更旧的官方构建会在没有警告的情况下加载 Q2_0 并输出乱码；PTQ1_0 和 PQ2_0 需要 PrismML 的 llama.cpp 分支，PTQ1_0 还在上游评审中；Apple Silicon 的 MLX 走他们的 MLX 分支。页上的两段演示（复现并修一个 pytest 回归、按截图重做网页）是厂商演示。权重许可证是 Apache 2.0：Hugging Face 仓库里的 LICENSE 文件是标准 Apache License 2.0 正文，新闻稿和模型卡都这么写，模型卡另请读者看 NOTICE.txt 里的上游归属。本库没有下载权重，也没有运行这个模型。",
+      "summaryEn": "Ternary Bonsai 2.5 27B, released by PrismML on 2026-11-24, is an upgrade of Ternary Bonsai 2 27B on a Qwen3.8 27B base. The news post says it keeps the previous compact size (the post's words: same 5.9 GB footprint) and is stronger at agentic coding, multi-turn tool use, and multi-step execution, with less excessive thinking and fewer loops than Bonsai 2. The model card states the size more precisely: still 1.76 bits per weight and 5.93 GB (PTQ1_0), against 53.8 GB for FP16. The benchmark table on the news post is PrismML's own numbers, not re-run here. Columns are Qwen3.8 27B / Bonsai 2 27B / Bonsai 2.5 27B: SWE-bench Verified 80.6 / 60.8 / 75.6; DeepSWE v1.1 (mini-swe-agent) 30.1 / 0 / 27; Terminal-Bench 2.1 70.8 / 52.8 / 60.1; AppWorld 93.2 / 51.2 / 90.5; τ³-Bench 72.8 / 69.1 / 73.9; BigCodeBench 61.5 / 57.2 / 60.3; LiveCodeBench v6 87.6 / 83.8 / 83.0. The last row is lower for 2.5 than for Bonsai 2, so not every score went up. Speeds are also the news post's: on one H100, 291 tok/s with MTP and 3,200 tok/s processing a 2,000-token prompt; on an RTX 4090, 204 tok/s with MTP and about 3,060 tok/s of prompt processing. The post says it runs on NVIDIA and Intel GPUs via llama.cpp and on Mac, iPhone, and iPad via MLX. The model card splits the files: Q2_0 runs on upstream llama.cpp, but only from build b11556. Older stock builds load Q2_0 with no warning and produce garbage. PTQ1_0 and PQ2_0 need PrismML's llama.cpp fork, and PTQ1_0 is still under upstream review. MLX on Apple Silicon uses their MLX fork. The two demos on the page (reproducing and fixing a pytest regression, rebuilding a web page from a screenshot) are the vendor's demos. The weight license is Apache 2.0: the LICENSE file in the Hugging Face repo is the standard Apache License 2.0 text, the news post and the model card both say so, and the card also points readers at NOTICE.txt for upstream attribution. This library did not download the weights and did not run the model.",
+      "announcedAt": "2026-11-24",
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-25T01:25:00Z",
+      "sources": [
+        {
+          "kind": "official",
+          "label": "PrismML 新闻：Introducing Ternary Bonsai 2.5 27B",
+          "labelEn": "PrismML news: Introducing Ternary Bonsai 2.5 27B",
+          "url": "https://prismml.com/news/bonsai-2-5-27b",
+          "by": "PrismML",
+          "date": "2026-11-24"
+        },
+        {
+          "kind": "official",
+          "label": "Hugging Face：Ternary-Bonsai-2.5-27B-GGUF",
+          "labelEn": "Hugging Face: Ternary-Bonsai-2.5-27B-GGUF",
+          "url": "https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF",
+          "by": "PrismML",
+          "date": "2026-11-24"
+        },
+        {
+          "kind": "official",
+          "label": "Bonsai 2.5 27B 白皮书（PDF）",
+          "labelEn": "Bonsai 2.5 27B whitepaper (PDF)",
+          "url": "https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-5-27b-whitepaper.pdf",
+          "by": "PrismML"
+        },
+        {
+          "kind": "community",
+          "label": "Hacker News 讨论",
+          "labelEn": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=50633922",
+          "by": "Hacker News",
+          "date": "2026-11-24"
+        }
+      ],
+      "highlights": [
+        {
+          "text": "官方称：这是 Bonsai 2 27B 的升级，底座 Qwen3.8 27B，体积仍是新闻稿里的 5.9 GB；模型卡写每权重 1.76 bit、PTQ1_0 为 5.93 GB，对照 FP16 的 53.8 GB。",
+          "textEn": "Vendor claim: an upgrade of Bonsai 2 27B on Qwen3.8 27B, still the 5.9 GB the news post names; the model card says 1.76 bits per weight and 5.93 GB for PTQ1_0, against 53.8 GB for FP16."
+        },
+        {
+          "text": "官方称（新闻稿基准表，本库未复跑）：SWE-bench Verified 75.6（Bonsai 2 为 60.8，Qwen3.8 27B 为 80.6）；DeepSWE v1.1 为 27（Bonsai 2 为 0）；Terminal-Bench 2.1 为 60.1；AppWorld 为 90.5；τ³-Bench 为 73.9。LiveCodeBench v6 为 83.0，低于 Bonsai 2 的 83.8。",
+          "textEn": "Vendor claim (news-post table, not re-run here): SWE-bench Verified 75.6 (Bonsai 2 was 60.8, Qwen3.8 27B 80.6); DeepSWE v1.1 is 27 (Bonsai 2 was 0); Terminal-Bench 2.1 is 60.1; AppWorld is 90.5; τ³-Bench is 73.9. LiveCodeBench v6 is 83.0, below Bonsai 2's 83.8."
+        },
+        {
+          "text": "官方称：单张 H100 打开 MTP 时 291 tok/s，2000 token 提示处理 3200 tok/s；RTX 4090 打开 MTP 时 204 tok/s，提示处理约 3060 tok/s。",
+          "textEn": "Vendor claim: 291 tok/s on one H100 with MTP, and 3,200 tok/s processing a 2,000-token prompt; 204 tok/s on an RTX 4090 with MTP, and about 3,060 tok/s of prompt processing."
+        },
+        {
+          "text": "官方称：Q2_0 从上游 llama.cpp b11556 起可以跑，更旧的构建会无警告地输出乱码。PTQ1_0 与 PQ2_0 要 PrismML 的 llama.cpp 分支。不是每一个文件都能在原版 llama.cpp 里跑。",
+          "textEn": "Vendor claim: Q2_0 runs on upstream llama.cpp from b11556. Older builds emit garbage with no warning. PTQ1_0 and PQ2_0 need PrismML's llama.cpp fork. Not every file runs in stock llama.cpp."
+        }
+      ],
+      "qualityNote": "收录理由：这是一款面向本地工具调用的三值 27B 模型，PrismML 用同一档体积换更强的多步执行，并公开了和 Bonsai 2、全精度 Qwen3.8 27B 的对照表。边界：表上的分数和 H100、RTX 4090 的速度都是厂商自己的测量，LiveCodeBench v6 这一行 2.5 还低于 Bonsai 2。新闻稿写 5.9 GB，模型卡写 5.93 GB 和每权重 1.76 bit，两处都照原文记。Q2_0 才是原版 llama.cpp 的文件，而且要 b11556 或更新；另外两种打包要他们的分支。页上的 pytest 和网页重做演示是厂商演示。权重是 Apache 2.0。本库没有下载权重，也没有运行模型。",
+      "qualityNoteEn": "Why listed: a ternary 27B model aimed at local tool use. PrismML keeps the same size class and claims stronger multi-step execution, with a public table against Bonsai 2 and full-precision Qwen3.8 27B. Limits: the scores and the H100 and RTX 4090 speeds are the vendor's own measurements. On LiveCodeBench v6, 2.5 is below Bonsai 2. The news post says 5.9 GB. The model card says 5.93 GB and 1.76 bits per weight. Both are recorded as written. Only Q2_0 is the stock llama.cpp file, and it needs b11556 or newer. The other two packings need their fork. The pytest and web-page demos on the page are the vendor's demos. The weights are Apache 2.0. This library did not download the weights and did not run the model.",
+      "verifyLog": "2026-11-25 上午（Asia/Shanghai，约 09:00–09:25）：https://prismml.com/news/bonsai-2-5-27b HTTP 200，title 为 PrismML — Introducing Ternary Bonsai 2.5 27B: Powering Agentic Coding and Private Knowledge Work，页内日期 November 24, 2026 · PrismML。HTML 注释 Last Published: Tue Nov 24 2026 19:31:20 GMT。meta description：Ternary Bonsai 2.5 27B brings substantially stronger agentic coding, multi-turn tool use, and multi-step task execution to the same 5.9 GB footprint. 正文：an upgrade to Ternary Bonsai 2 27B… Based on Qwen3.8 27B… retains the previous release’s 5.9 GB model footprint。addressing excessive thinking and repetitive loops… completes tasks in fewer turns, uses fewer tokens。基准表已按列抄进摘要。速度句：On a single NVIDIA H100, Ternary Bonsai 2.5 27B achieves a generation speed of 291 tokens/s with MTP and processes a 2,000-token prompt at 3,200 tokens/s. Even on a consumer-grade RTX 4090, it delivers 204 tokens/s with MTP and a prompt processing speed of approximately 3,060 tokens/s. 平台句：runs on NVIDIA and Intel GPUs via llama.cpp and on Apple devices (Mac, iPhone, iPad) via MLX. Model weights are available today under the Apache 2.0 License. 演示标题 Demo I: Reproducing and fixing a pytest regression；Demo II: Rebuilding a web page from a screenshot。这两个演示没有播放。白皮书链接 https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-5-27b-whitepaper.pdf ，本库没有逐页核对 PDF。新闻页 og:image 是 PrismML 品牌卡（Concentrating intelligence，以及 14× / 8× / 5× 的口号），那些倍数不是这篇 2.5 新闻稿里的测量，所以没有用作预览。https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF HTTP 200。模型卡：1.76 bits per weight and 5.93 GB, against 53.8 GB for the FP16 model。Q2_0 files run on upstream llama.cpp; PTQ1_0 is under upstream review。Q2_0 runs on stock llama.cpp from release b11556 onward… Older stock builds load Q2_0 without any warning and produce garbage。PTQ1_0 and PQ2_0 need the PrismML-Eng/llama.cpp fork. Stock llama.cpp rejects them as unknown types。Low-bit kernels 链到 PrismML 的 llama.cpp、MLX、mlx-swift 分支。License 行写 Apache 2.0。原始 LICENSE https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF/raw/main/LICENSE HTTP 200，开头是 Apache License Version 2.0, January 2004，正文到 END OF TERMS AND CONDITIONS，没有另加的商业限制条款。模型卡请读者另看 NOTICE.txt 的上游归属，本库没有逐条抄 NOTICE。Hacker News https://news.ycombinator.com/item?id=50633922 HTTP 200，标题 Ternary Bonsai 2.5 27B，核对时 309 points、约 107 条评论。讨论区有人写 Mac Mini M5 Pro 24G 上生成大约 22–25 tok/s（其中一条样本 Generation speed 22.3 tok/s）；另有人说 M1 Max 上差不多这个速度、预填充更慢。这些是评论者自述，不是本库或 PrismML 新闻稿的测量。预览用的是 Hugging Face 这个模型页的社交图 https://cdn-thumbnails.huggingface.co/social-thumbnails/models/prism-ml/Ternary-Bonsai-2.5-27B-GGUF.png （HTTP 200，1200×648），上下各补 76px 边缘色（约 #324C5E），成 1200×800 WebP，没有裁切，没有加字。去重：main c088c54 的 data 里没有 ternary-bonsai、bonsai-2-5 或 prismml.com/news/bonsai-2-5-27b；打开的 71 个 PR diff 里也没有。未做：没有下载 GGUF，没有安装 llama.cpp，没有跑模型，没有打开白皮书的每一页。",
+      "verifyLogEn": "2026-11-25 morning (Asia/Shanghai, about 09:00–09:25): https://prismml.com/news/bonsai-2-5-27b HTTP 200, title PrismML — Introducing Ternary Bonsai 2.5 27B: Powering Agentic Coding and Private Knowledge Work, on-page date November 24, 2026 · PrismML. HTML comment Last Published: Tue Nov 24 2026 19:31:20 GMT. Meta description: Ternary Bonsai 2.5 27B brings substantially stronger agentic coding, multi-turn tool use, and multi-step task execution to the same 5.9 GB footprint. Body: an upgrade to Ternary Bonsai 2 27B… Based on Qwen3.8 27B… retains the previous release’s 5.9 GB model footprint. addressing excessive thinking and repetitive loops… completes tasks in fewer turns, uses fewer tokens. The benchmark table is copied into the summary. Speed sentences: On a single NVIDIA H100, Ternary Bonsai 2.5 27B achieves a generation speed of 291 tokens/s with MTP and processes a 2,000-token prompt at 3,200 tokens/s. Even on a consumer-grade RTX 4090, it delivers 204 tokens/s with MTP and a prompt processing speed of approximately 3,060 tokens/s. Platform sentence: runs on NVIDIA and Intel GPUs via llama.cpp and on Apple devices (Mac, iPhone, iPad) via MLX. Model weights are available today under the Apache 2.0 License. Demo titles: Demo I: Reproducing and fixing a pytest regression; Demo II: Rebuilding a web page from a screenshot. Those demos were not played. Whitepaper link https://github.com/PrismML-Eng/Bonsai-demo/blob/main/bonsai-2-5-27b-whitepaper.pdf . The PDF was not checked page by page. The news-page og:image is a PrismML brand card (Concentrating intelligence, plus 14× / 8× / 5× slogans). Those multiples are not measurements in this 2.5 post, so that image was not used as the preview. https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF HTTP 200. Model card: 1.76 bits per weight and 5.93 GB, against 53.8 GB for the FP16 model. Q2_0 files run on upstream llama.cpp; PTQ1_0 is under upstream review. Q2_0 runs on stock llama.cpp from release b11556 onward… Older stock builds load Q2_0 without any warning and produce garbage. PTQ1_0 and PQ2_0 need the PrismML-Eng/llama.cpp fork. Stock llama.cpp rejects them as unknown types. Low-bit kernels link PrismML's llama.cpp, MLX, and mlx-swift forks. The license row says Apache 2.0. Raw LICENSE https://huggingface.co/prism-ml/Ternary-Bonsai-2.5-27B-GGUF/raw/main/LICENSE HTTP 200, opening Apache License Version 2.0, January 2004, through END OF TERMS AND CONDITIONS, with no extra commercial restriction. The card also points at NOTICE.txt for upstream attribution. NOTICE was not copied line by line. Hacker News https://news.ycombinator.com/item?id=50633922 HTTP 200, title Ternary Bonsai 2.5 27B, 309 points and about 107 comments at the check. A commenter reports about 22–25 tok/s generation on a Mac Mini M5 Pro 24G (one sample lists Generation speed 22.3 tok/s). Another says an M1 Max is about this fast, with slower prefill. Those are commenters' own reports, not measurements by this library or by the PrismML news post. The preview is the social image on this Hugging Face model page, https://cdn-thumbnails.huggingface.co/social-thumbnails/models/prism-ml/Ternary-Bonsai-2.5-27B-GGUF.png (HTTP 200, 1200×648), padded 76px top and bottom with the edge color (about #324C5E) to a 1200×800 WebP. Nothing cropped, no text added. Dedupe: ternary-bonsai, bonsai-2-5, and prismml.com/news/bonsai-2-5-27b are absent from data on main c088c54 and from the diffs of the 71 open PRs. Not done: no GGUF download, llama.cpp was not installed, the model was not run, and the whitepaper was not read page by page.",
+      "relatedCaseIds": [],
+      "relatedModelIds": [],
+      "previewImage": "/previews/ternary-bonsai-2-5-27b.webp",
+      "previewCredit": "预览：Hugging Face 上这个模型的官方社交图，上下补边成 3:2，未裁切",
+      "previewCreditEn": "Preview: the official social image for this model on Hugging Face, padded top and bottom to 3:2, not cropped",
+      "featured": false
+    },
     {
       "id": "gpt-6-2-astra-sol",
       "slug": "gpt-6-2-astra-sol",

@@ -1,6 +1,257 @@
 {
   "cases": [
     {
+      "id": "linger",
+      "slug": "linger",
+      "title": "Linger：跑在你自己电脑上的开源个人助手 Another Me",
+      "titleEn": "Linger: Another Me, an open-source personal agent on your own computer",
+      "kind": "tool",
+      "hook": "开源个人助手，跑在你自己的电脑上，先要接好 Runtime。",
+      "hookEn": "An open-source personal agent on your computer. It needs Claude Code, Codex, or Pi.",
+      "summary": "Linger（https://heylinger.com/ ）是 SimplexAI 的开源个人助手，官网的定位是 “Your personal agent, on your own computer.” 文档里替你干活的那个助手叫 Another Me。它记着你的人、客户和项目，能用你电脑上的应用和已经登录的 Chrome，也会先看收件箱和日历再来找你；长任务可以交给后台 Task，可以录会或对着它说话，需要人手时可以在一个聊天 Room 里组一支 agent 小队。它不是一台自己带模型、装上就能独立思考的产品：文档写明，真正干活的 Runtime 必须已经装在同一台电脑上并完成登录，三选一，Claude Code、Codex 或 Pi。安装向导可以帮你装一个并带着登录。本地模型是可选的，安装程序会按硬件给一个方案，在你点头之前不下载；云模型也可以后加。文档里的速度表是 PolyStrata 项目自己的测量，不是本库测的：Qwen3.8-Flash-Next 在 RTX 3060 12 GB 上写 45.5 tok/s，在 RTX 5090 32 GB 上写 179 tok/s。本地模型的硬件门槛，文档写的是 Apple 芯片 Mac 至少 16 GiB 统一内存，或至少 8 GiB 显存的 NVIDIA 显卡再加足够的系统内存（NVIDIA 参考配置常常从 32 GiB 内存起）。Intel Mac 不支持。桌面版文档写 macOS 14 及以上的 Apple 芯片、Windows 11 x64、glibc 2.35 及以上的 Linux x64。2026-11-25 上午官网下载区仍写 macOS / Windows / Linux “Coming soon”，但 GitHub Releases 的稳定版已经是 Linger Desktop 0.1.8（2026-11-24），文档让人从 releases 页安装；想自己装的人看文档和 releases，不要以为没有安装包。安装还有 Docker Compose 和 pnpm dev 两条路。专用连接器文档列了八个：Gmail、Outlook、Google Calendar、Slack、Notion、Google Drive、Figma、GitHub，登录由外部的 Composio 保管。主动提醒看的是 Gmail 和 Outlook 收件箱、Google Calendar 的变化，以及 Slack 提及。Mac 和 Windows 上可以连一次日常 Chrome；Linux 的桌面控制只支持 X11，文档的表写明 Linux 不能用已登录的 Chrome。发信、发 Slack、部分写入要等你确认，但文档也写了有些写入会直接执行，例如创建日历事件。语音不是全部本地：会议和听写要 Soniox，实时对话要 xAI 的密钥，文档把实时对话叫 Grok Live。许可证以仓库 LICENSE 为准：它是改过的 Apache License 2.0，不是普通 Apache-2.0。商业使用可以，包括公司自己用、以及给自己的应用当后端；但要把 Linger 做成给组织以外的人用的托管或托管式服务，需要另拿商业许可，也不能去掉前端里的标志和版权信息。文档管它叫 Co-Workspace Open Source License，README 叫 Linger Open Source License，以 LICENSE 文件为准。README 里有一句把产品比作 Grok Bot 的厂商文案，本条不把它当成实验室的说法，也不表示 Linger 和 Grok Bot 有官方关系。本库没有安装桌面版或 Docker，没有登录任何 Runtime，没有连接 Gmail、Outlook、日历、Slack 或 Chrome，也没有跑本地模型。",
+      "summaryEn": "Linger (https://heylinger.com/ ) is SimplexAI's open-source personal agent. The homepage line is “Your personal agent, on your own computer.” In the docs, the agent that works for you is called Another Me. It keeps a personal memory of people, clients, and projects, can use the apps and the signed-in Chrome on your computer, and can reach out first about inbox and calendar matters. Long jobs can go to a background Task, it can record a meeting or talk with you, and it can assemble a team of agents in a chat Room. It is not a model you install and then think with on its own: the docs say the Runtime that does the work must already be installed and signed in on the same computer, one of Claude Code, Codex, or Pi. Setup can install one and walk through sign-in. A local model is optional. Setup proposes a plan for the hardware and downloads nothing until you approve it; a cloud model can be added later. The speed table in the docs is the PolyStrata project's own measurement, not measured here: Qwen3.8-Flash-Next writes 45.5 tok/s on an RTX 3060 12 GB and 179 tok/s on an RTX 5090 32 GB. For a local model, the docs ask for an Apple silicon Mac with at least 16 GiB of unified memory, or an NVIDIA GPU with at least 8 GiB of VRAM plus enough system RAM (NVIDIA reference configurations often start at 32 GiB of RAM). Intel Macs are not supported. The desktop docs list Apple silicon on macOS 14 or later, Windows 11 x64, and Linux x64 with glibc 2.35 or later. On the morning of 2026-11-25 the homepage download row still said macOS / Windows / Linux “Coming soon”, while GitHub Releases already had stable Linger Desktop 0.1.8 (2026-11-24) and the docs point at the releases page. Someone who wants the app should use the docs and the releases page. Docker Compose and pnpm dev are the other two install routes. The connected-apps page names eight dedicated apps: Gmail, Outlook, Google Calendar, Slack, Notion, Google Drive, Figma, and GitHub, with sign-in held by Composio, an outside service. Proactive checks cover Gmail and Outlook inboxes, Google Calendar changes, and Slack mentions. On Mac and Windows you can connect everyday Chrome once. On Linux, desktop control is X11 only, and the docs table says signed-in Chrome is not supported. Sending mail, posting to Slack, and some other writes wait for confirmation, but the docs also say some writes run immediately, including creating a calendar event. Voice is not all local: meetings and dictation need Soniox, and live conversation needs an xAI key; the docs call live conversation Grok Live. The license follows the repository LICENSE file: a modified Apache License 2.0, not plain Apache-2.0. Commercial use is allowed, including a company's own work and use as a backend for its own applications. Offering Linger as a hosted or managed service for people outside your organization needs a separate commercial license, and you may not remove the logo or copyright from the frontend. The docs call it the Co-Workspace Open Source License and the README calls it the Linger Open Source License; the LICENSE file is the source of truth. The README includes a vendor line comparing the product to Grok Bot. This entry does not repeat that as a lab claim, and it does not imply an official relationship with Grok Bot. This library did not install the desktop app or Docker, did not sign in to a Runtime, did not connect Gmail, Outlook, Calendar, Slack, or Chrome, and did not run a local model.",
+      "categories": [
+        "productivity",
+        "automation",
+        "multi-agent"
+      ],
+      "role": "Personal desktop agent",
+      "sourceUrl": "https://heylinger.com/",
+      "secondaryUrls": [
+        "https://docs.heylinger.com/",
+        "https://docs.heylinger.com/install/desktop-app.md",
+        "https://docs.heylinger.com/models/choose-a-runtime.md",
+        "https://docs.heylinger.com/agents/proactive.md",
+        "https://docs.heylinger.com/computer/connected-apps.md",
+        "https://docs.heylinger.com/computer/desktop-and-browser.md",
+        "https://github.com/simplexai-labs/linger",
+        "https://github.com/simplexai-labs/linger/blob/main/LICENSE",
+        "https://github.com/simplexai-labs/linger/releases/tag/desktop-v0.1.8"
+      ],
+      "previewImage": "/previews/linger.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装 Runtime、下载本地模型、连接邮箱日历和聊天、让它操作桌面或浏览器、以及发出邮件或消息之前，先看文档里哪些动作会等你确认、哪些会直接执行。本库没有代为安装、登录或连接。",
+      "approvalBoundaryEn": "Before you install a Runtime, download a local model, connect mail, calendar, or chat, let it drive the desktop or browser, or send mail or a message, read which actions the docs say wait for you and which run immediately. This library did not install, sign in, or connect anything.",
+      "connectors": [
+        "Claude Code",
+        "Codex",
+        "Pi",
+        "Gmail",
+        "Outlook",
+        "Google Calendar",
+        "Slack",
+        "Notion",
+        "Google Drive",
+        "Figma",
+        "GitHub",
+        "Chrome"
+      ],
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-25T01:25:00Z",
+      "qualityNote": "收录理由：这是一个放在自己电脑上的个人助手，能记人、看收件箱和日历、用已登录的浏览器，也会按事情主动来找你。边界先说清楚：它不能单独当模型用，电脑上要先有 Claude Code、Codex 或 Pi 其中一个并登录；本地模型要你批准才下载，Apple 芯片 Mac 至少 16 GiB 统一内存，NVIDIA 至少 8 GiB 显存，Intel Mac 不支持。官网下载区这天上午仍写 Coming soon，安装包在 GitHub 的稳定版桌面 0.1.8 和文档里，不要理解成没有下载。许可证是改过的 Apache License 2.0，对外提供托管服务需要另外的商业许可，也不能去掉前端标志。README 里把体验比作 Grok Bot 的那句是厂商文案，这里不重复，也不表示官方关系。速度数字是 PolyStrata 项目自己的测量。语音要外部的 Soniox 和 xAI，不是全部在本机。本库没有安装桌面版或 Docker，没有登录 Runtime，没有连接 Gmail、Outlook、日历、Slack 或 Chrome，也没有跑本地模型。",
+      "qualityNoteEn": "Why listed: it is a personal agent that stays on your own computer, remembers people, watches inbox and calendar, uses a signed-in browser, and can come to you first. The limit comes first: it is not a model you use alone. The computer needs Claude Code, Codex, or Pi, installed and signed in. A local model downloads only after you approve it. An Apple silicon Mac needs at least 16 GiB of unified memory, NVIDIA needs at least 8 GiB of VRAM, and Intel Macs are not supported. The homepage download row still said Coming soon this morning. The installer is the stable desktop 0.1.8 on GitHub and in the docs, so this is not “there is no download”. The license is a modified Apache License 2.0. Offering it as a hosted service needs a separate commercial license, and the frontend logo may not be removed. A README line that compares the experience to Grok Bot is vendor copy. It is not repeated here, and it is not an official relationship. The speed figures are the PolyStrata project's own measurements. Voice needs outside Soniox and xAI keys, so it is not all on the machine. This library did not install the desktop app or Docker, did not sign in to a Runtime, did not connect Gmail, Outlook, Calendar, Slack, or Chrome, and did not run a local model.",
+      "verifyLog": "2026-11-25 上午（Asia/Shanghai，约 09:00–09:25）：https://heylinger.com/ HTTP 200，title 为 Linger — Your personal agent, on your own computer. 下载区 #download 的状态仍是 Coming soon，三行分别是 macOS / Apple silicon、Windows / 64-bit Intel or AMD、Linux / x64 · glibc 2.35+，每一行的动作都是 Coming soon。页上例子：Weekdays · 8:30 AM “Your first meeting is at 10. The proposal needs a reply before then.”；30 minutes before a meeting “Before you meet Alex: the scope changed, and the revised proposal is ready.”；Friday · 3:00 PM “You planned to check in with Alex today.” 语音例子包括会议记录、让日历空出两小时写作、问今天下午日历上有什么。FAQ：How can I try Linger? The open-source app on GitHub runs on macOS, Windows and Linux. For hosted access, join the early access list. Does everything stay on my computer? Your files, memory and knowledge base stay on your computer. Local models run on-device; cloud models and connected services use external providers. Voice requires provider setup: Soniox for meetings and xAI for live conversation. What do I need to get started? Install Linger, then connect a runtime and a local or cloud model. Can I use my existing AI subscription? You can use supported providers through Claude Code, Codex or Pi. 首页还有厂商说法 Top AI models, tuned to run locally、up to 5x faster、125B model on a 12 GB gaming GPU、60–100 tok/s，这些不是本库测的。页脚 © 2026 SimplexAI，联系草稿指向 tonyzhang@simplexai.com。https://docs.heylinger.com/llms.txt HTTP 200。Introduction（index.md）HTTP 200：Linger is your open-source personal agent, and it runs fully on your computer. Your agent is called Another Me. 需要 one computer and one agent Runtime：Claude Code, Codex, or Pi, installed and signed in。本地模型：Apple silicon Mac with at least 16 GiB of unified memory, or an NVIDIA GPU with at least 8 GiB of VRAM and enough available system RAM. NVIDIA reference configurations start at 32 GiB of RAM. 速度表写明 Those are writing speeds of PolyStrata alone，Qwen3.8-Flash-Next 在 Laptop RTX 4070 8 GB 为 Needs 12 GB，RTX 3060 12 GB 为 45.5，RTX 5090 32 GB 为 179。许可证段：open source under the Co-Workspace Open Source License. The license is the Apache License 2.0 with extra conditions. 引言页配图 https://mintcdn.com/lev9-doc/EF9C0t7F_1A7y3-l/images/feature-local-stack.jpg HTTP 200，1816×1292。图上 Runtime 一排里 Claude Code、Codex、Pi 是实线，Gemini CLI、OpenCode、Hermes 是虚线。Choose a runtime 正文只写三个：Claude Code, Codex, or Pi。Linger does not include them. 虚线上的名字本条不写成已支持的 Runtime，图上的 Research Analyst / Market Scout / Deal Modeler 也不写成固定角色表。Quickstart HTTP 200：desktop app、Docker Compose、pnpm dev 三条路，Every way needs an agent Runtime。桌面安装页 HTTP 200：Starting with Linger 0.1.8, the official macOS package is signed with an Apple Developer ID and notarized by Apple. The Windows package is not yet code-signed。Mac 要 Apple silicon and macOS 14 Sonoma or later；Windows 11 x64；Linux x64 glibc 2.35 or later。Intel Macs are not supported。8 GiB Mac has no automatic local-model plan。Linux 示例命令写成 tar -xzf Linger-0.16.20-linux-x64.tar.gz，并说 Replace 0.16.20 with the version you downloaded，这个示例数字和现有 0.1.x 标签对不上，以同一页表格里的 Linger-<version>-linux-x64.tar.gz 为准。下载入口是 https://github.com/simplexai-labs/linger/releases/latest ，这次 HEAD 请求 302 到 /releases/tag/desktop-v0.1.8。GitHub API：仓库 simplexai-labs/linger，created_at 2026-11-10T03:50:38Z，default_branch main，homepage heylinger.com，license SPDX 为 NOASSERTION / Other，description 为厂商原文。核对时 stargazers_count 4369，pushed_at 2026-11-25T00:47:16Z。Releases：稳定版最新 desktop-v0.1.8，published 2026-11-24T06:52:10Z，资产含 macos-arm64.dmg、windows-x64-setup.exe、linux-x64.tar.gz 等。其后 desktop-v0.1.9-rc.1（2026-11-24T20:54:52Z）和 rc.0 都是 prerelease。更早的稳定桌面包从 desktop-v0.1.0（2026-11-10T14:11:25Z）起就有。publishedAt 取仓库创建和第一份桌面版同一天的 2026-11-10，不把 2026-11-25 的报道写成产品首次出现。LICENSE 原文：modified version of the Apache License 2.0；commercial use allowed including a company for its own work and as a backend for its own applications；commercial license required to offer Linger to third parties as a hosted or managed service（people outside your own organization）；may not remove or modify the LOGO or copyright information in the frontend（apps/web/ 或 Docker 的 web 镜像）。producer 为 SIMPLEX AI TECHNOLOGIES PTE. LTD. README 标题句是 Linger is an open-source personal agent with a Claude-class brain running locally on your PC，其中一条厂商文案是 The Grok Bot experience on your PC. README 链到 https://x.com/HeyLingerAI 。本条不引用该账号的帖子。Another Me 页：watches Gmail, Outlook, Google Calendar, and Slack。Proactive 页：tell you now, follow up later, or stay silent；Follow up later 会 sets up routines，例子是 a reminder before a deadline or a check on a reply you are waiting for。因此 hasRoutine 为 true。Connected apps 页：八个专用命令 Gmail、Outlook、Google Calendar、Slack、Notion、Google Drive、Figma、GitHub；Other connected apps, such as Canva or Linear, have no dedicated commands。Another Me polls Gmail and Outlook inboxes, Google Calendar changes, and Slack mentions every 10 minutes。gmail send / outlook send / slack send 等要确认卡；gcal create、gmail draft、gmail archive、gdrive upload、figma comment、slack react 写明 Runs at once。钥匙在 Composio。Desktop and browser 页：Mac 与 Windows 可以 Connect my browser，The connection uses the token of the official Playwright Extension in your Chrome. The token is stored only on your computer。公开字段只写官方 Chrome 扩展，这个产品词留在本段。Linux：desktop control is X11 only；Use your signed-in Chrome 一栏为 No。Voice Mode：Soniox only 是听写；有 xAI 密钥则是 Live，A Grok voice model listens and answers out loud。Enable voice：SONIOX_API_KEY 开录音、听写和存档恢复；XAI_API_KEY 开 Grok Live。Skills 页写明内置 Skill（docx、pdf、pptx、xlsx、artifact 等），所以 hasSkill 为 true。其中 xiaohongshu-browse 默认关闭，只通过 Mac 上的电脑工具打开小红书网站，本条不把它列进连接器。Rooms 可以组队，所以 hasMultiAgent 为 true。预览：引言页官方结构图 feature-local-stack.jpg（HTTP 200，1816×1292）等比缩到 1124×800，左右各补 38px 边缘色（约 #F7F8F3），成 1200×800 WebP，没有裁切，没有加字。README 的 assets/linger-story.webp 是约 6 MB 的动画，配套海报是一台黑屏笔记本，没有采用。去重：main c088c54 的 data 里没有 linger、heylinger、simplexai-labs/linger；打开的 71 个 PR 的 diff 里也没有这些字符串。未做：没有安装桌面包、没有跑 Docker Compose、没有 pnpm dev、没有登录 Runtime、没有连接 Gmail / Outlook / Google Calendar / Slack / Chrome、没有下载或运行本地模型、没有打开 X 账号。这次没有打开 36氪或量子位的报道，所以正文不引用这两家。",
+      "verifyLogEn": "2026-11-25 morning (Asia/Shanghai, about 09:00–09:25): https://heylinger.com/ HTTP 200, title Linger — Your personal agent, on your own computer. The #download status is still Coming soon, with three rows: macOS / Apple silicon, Windows / 64-bit Intel or AMD, and Linux / x64 · glibc 2.35+, each action Coming soon. Examples on the page: Weekdays · 8:30 AM “Your first meeting is at 10. The proposal needs a reply before then.”; 30 minutes before a meeting “Before you meet Alex: the scope changed, and the revised proposal is ready.”; Friday · 3:00 PM “You planned to check in with Alex today.” Voice examples include meeting notes, making two hours of writing room on the calendar, and asking what is on the calendar this afternoon. FAQ: How can I try Linger? The open-source app on GitHub runs on macOS, Windows and Linux. For hosted access, join the early access list. Does everything stay on my computer? Your files, memory and knowledge base stay on your computer. Local models run on-device; cloud models and connected services use external providers. Voice requires provider setup: Soniox for meetings and xAI for live conversation. What do I need to get started? Install Linger, then connect a runtime and a local or cloud model. Can I use my existing AI subscription? You can use supported providers through Claude Code, Codex or Pi. The homepage also has vendor lines Top AI models, tuned to run locally, up to 5x faster, 125B model on a 12 GB gaming GPU, and 60–100 tok/s. Those were not measured here. Footer © 2026 SimplexAI; the contact draft points at tonyzhang@simplexai.com. https://docs.heylinger.com/llms.txt HTTP 200. Introduction (index.md) HTTP 200: Linger is your open-source personal agent, and it runs fully on your computer. Your agent is called Another Me. It needs one computer and one agent Runtime: Claude Code, Codex, or Pi, installed and signed in. Local models: Apple silicon Mac with at least 16 GiB of unified memory, or an NVIDIA GPU with at least 8 GiB of VRAM and enough available system RAM. NVIDIA reference configurations start at 32 GiB of RAM. The speed table says Those are writing speeds of PolyStrata alone. Qwen3.8-Flash-Next is Needs 12 GB on a laptop RTX 4070 8 GB, 45.5 on an RTX 3060 12 GB, and 179 on an RTX 5090 32 GB. License section: open source under the Co-Workspace Open Source License. The license is the Apache License 2.0 with extra conditions. The introduction diagram https://mintcdn.com/lev9-doc/EF9C0t7F_1A7y3-l/images/feature-local-stack.jpg HTTP 200, 1816×1292. In the runtime row, Claude Code, Codex, and Pi are solid; Gemini CLI, OpenCode, and Hermes are dashed. The Choose a runtime page names only three: Claude Code, Codex, or Pi. Linger does not include them. The dashed names are not written here as supported Runtimes, and Research Analyst / Market Scout / Deal Modeler on the diagram are not written as a fixed roster. Quickstart HTTP 200: desktop app, Docker Compose, and pnpm dev. Every way needs an agent Runtime. Desktop install page HTTP 200: Starting with Linger 0.1.8, the official macOS package is signed with an Apple Developer ID and notarized by Apple. The Windows package is not yet code-signed. Mac requires Apple silicon and macOS 14 Sonoma or later; Windows 11 x64; Linux x64 with glibc 2.35 or later. Intel Macs are not supported. An 8 GiB Mac has no automatic local-model plan. The Linux example is tar -xzf Linger-0.16.20-linux-x64.tar.gz and says Replace 0.16.20 with the version you downloaded. That sample number does not match the current 0.1.x tags. The table on the same page, Linger-<version>-linux-x64.tar.gz, is the reference. The download link is https://github.com/simplexai-labs/linger/releases/latest . A HEAD request returned 302 to /releases/tag/desktop-v0.1.8. GitHub API: repo simplexai-labs/linger, created_at 2026-11-10T03:50:38Z, default_branch main, homepage heylinger.com, license SPDX NOASSERTION / Other. At the check, stargazers_count was 4369 and pushed_at was 2026-11-25T00:47:16Z. Releases: newest stable desktop-v0.1.8, published 2026-11-24T06:52:10Z, with macos-arm64.dmg, windows-x64-setup.exe, linux-x64.tar.gz, and others. Later desktop-v0.1.9-rc.1 (2026-11-24T20:54:52Z) and rc.0 are prereleases. Stable desktop packages go back to desktop-v0.1.0 (2026-11-10T14:11:25Z). publishedAt uses 2026-11-10, the day the repo was created and the first desktop package shipped, not the 2026-11-25 press as a first appearance. LICENSE text: modified version of the Apache License 2.0; commercial use allowed, including a company for its own work and as a backend for its own applications; a commercial license is required to offer Linger to third parties as a hosted or managed service (people outside your own organization); you may not remove or modify the LOGO or copyright information in the frontend (apps/web/ or the Docker web image). The producer is SIMPLEX AI TECHNOLOGIES PTE. LTD. The README lead is Linger is an open-source personal agent with a Claude-class brain running locally on your PC, and one vendor line is The Grok Bot experience on your PC. The README links https://x.com/HeyLingerAI . No post from that account is cited. Another Me page: watches Gmail, Outlook, Google Calendar, and Slack. Proactive page: tell you now, follow up later, or stay silent. Follow up later sets up routines, for example a reminder before a deadline or a check on a reply you are waiting for. hasRoutine is therefore true. Connected apps page: eight dedicated commands, Gmail, Outlook, Google Calendar, Slack, Notion, Google Drive, Figma, and GitHub. Other connected apps, such as Canva or Linear, have no dedicated commands. Another Me polls Gmail and Outlook inboxes, Google Calendar changes, and Slack mentions every 10 minutes. gmail send / outlook send / slack send and similar wait for a confirmation card; gcal create, gmail draft, gmail archive, gdrive upload, figma comment, and slack react are written as Runs at once. Keys stay with Composio. Desktop and browser page: on Mac and Windows, Connect my browser. The connection uses the token of the official Playwright Extension in your Chrome. The token is stored only on your computer. Public fields say official Chrome extension only; the product name stays in this log. Linux: desktop control is X11 only; the signed-in Chrome column is No. Voice Mode: Soniox only is dictation; with an xAI key, Live is A Grok voice model listens and answers out loud. Enable voice: SONIOX_API_KEY turns on recording, dictation, and archive recovery; XAI_API_KEY turns on Grok Live. The Skills page lists built-in Skills (docx, pdf, pptx, xlsx, artifact, and others), so hasSkill is true. xiaohongshu-browse is off by default and only opens the Xiaohongshu site through computer tools on a Mac. It is not listed as a connector. Rooms can hold a team, so hasMultiAgent is true. Preview: the official diagram on the introduction page, feature-local-stack.jpg (HTTP 200, 1816×1292), scaled to 1124×800 and padded 38px on the left and right with the edge color (about #F7F8F3) to a 1200×800 WebP. Nothing cropped, no text added. The README file assets/linger-story.webp is an animation of about 6 MB, and its poster is a laptop with a black screen. Neither was used. Dedupe: linger, heylinger, and simplexai-labs/linger are absent from data on main c088c54; the diffs of the 71 open PRs do not contain those strings either. Not done: no desktop package installed, no Docker Compose, no pnpm dev, no Runtime sign-in, no connection to Gmail / Outlook / Google Calendar / Slack / Chrome, no local model downloaded or run, and the X account was not opened. 36氪 and 量子位 were not opened, so neither is cited.",
+      "landing": {
+        "what": "一个放在你自己电脑上的开源个人助手。文档里这个助手叫 Another Me：它记人、看你连上的邮箱和日历、可以用已登录的 Chrome，也会按事情决定现在说、以后提醒，或者不说。长活交给后台，人不够就在 Room 里再叫 agent。它依赖你已经登录的 Claude Code、Codex 或 Pi，自己不带这三样。",
+        "whatEn": "An open-source personal agent that stays on your own computer. The docs call that agent Another Me: it remembers people, watches the mail and calendar you connect, can use signed-in Chrome, and decides whether to tell you now, remind you later, or stay quiet. Long work goes to the background, and it can call more agents into a Room. It depends on Claude Code, Codex, or Pi already signed in. It does not include those three.",
+        "steps": [
+          {
+            "title": "先确认 Runtime、硬件和许可证",
+            "titleEn": "Check the Runtime, the hardware, and the license first",
+            "body": "电脑上要有 Claude Code、Codex 或 Pi 其中一个，并完成登录。本地模型不是必选项，批准之前不会下载。Apple 芯片 Mac 至少 16 GiB 统一内存，NVIDIA 至少 8 GiB 显存，Intel Mac 不支持。许可证是改过的 Apache License 2.0，不是普通 Apache-2.0。",
+            "bodyEn": "The computer needs Claude Code, Codex, or Pi, signed in. A local model is optional and is not downloaded before you approve it. An Apple silicon Mac needs at least 16 GiB of unified memory, NVIDIA needs at least 8 GiB of VRAM, and Intel Macs are not supported. The license is a modified Apache License 2.0, not plain Apache-2.0.",
+            "links": [
+              {
+                "href": "https://docs.heylinger.com/models/choose-a-runtime.md",
+                "label": "文档：Choose a runtime",
+                "labelEn": "Docs: Choose a runtime"
+              },
+              {
+                "href": "https://github.com/simplexai-labs/linger/blob/main/LICENSE",
+                "label": "仓库 LICENSE（改过的 Apache 2.0）",
+                "labelEn": "Repository LICENSE (modified Apache 2.0)"
+              }
+            ]
+          },
+          {
+            "title": "安装包在 Releases，不在首页 Coming soon 那一行",
+            "titleEn": "The installer is on Releases, not the homepage Coming soon row",
+            "body": "2026-11-25 上午首页下载区仍写 Coming soon。文档让你到 GitHub Releases 安装桌面版。当时 latest 指向稳定版 0.1.8；0.1.9 的 rc 包是预发布。macOS 包从 0.1.8 起有签名和公证，Windows 安装包还没签名，第一次打开会碰到 SmartScreen。本库没有下载或安装。",
+            "bodyEn": "On the morning of 2026-11-25 the homepage download row still said Coming soon. The docs send you to GitHub Releases for the desktop app. latest pointed at stable 0.1.8; the 0.1.9 rc packages are prereleases. From 0.1.8 the macOS package is signed and notarized. The Windows installer is not signed yet, so the first open hits SmartScreen. This library did not download or install it.",
+            "links": [
+              {
+                "href": "https://docs.heylinger.com/install/desktop-app.md",
+                "label": "文档：Install the desktop app",
+                "labelEn": "Docs: Install the desktop app"
+              },
+              {
+                "href": "https://github.com/simplexai-labs/linger/releases/tag/desktop-v0.1.8",
+                "label": "Linger Desktop 0.1.8",
+                "labelEn": "Linger Desktop 0.1.8"
+              }
+            ]
+          },
+          {
+            "title": "连接应用和浏览器之前，看哪些动作会直接发生",
+            "titleEn": "Before you connect apps or the browser, see which actions run immediately",
+            "body": "发邮件和发 Slack 会等确认卡。文档写创建日历事件等一些写入会直接执行。Mac 和 Windows 可以连接一次日常 Chrome；Linux 不能用已登录的 Chrome，桌面控制只支持 X11。本库没有连接任何一项。",
+            "bodyEn": "Sending mail and posting to Slack wait for a confirmation card. The docs say some writes, including creating a calendar event, run immediately. Mac and Windows can connect everyday Chrome once. Linux cannot use signed-in Chrome, and desktop control is X11 only. This library did not connect any of these.",
+            "links": [
+              {
+                "href": "https://docs.heylinger.com/computer/connected-apps.md",
+                "label": "文档：Connected apps",
+                "labelEn": "Docs: Connected apps"
+              },
+              {
+                "href": "https://docs.heylinger.com/computer/desktop-and-browser.md",
+                "label": "文档：Desktop and browser",
+                "labelEn": "Docs: Desktop and browser"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Linger 需要已安装并登录的 Claude Code、Codex 或 Pi。没有 Runtime 时电脑可以连上，但 agent 做不了真正的工作。",
+            "textEn": "Linger needs Claude Code, Codex, or Pi installed and signed in. The computer can connect with no Runtime, but agents cannot do real work."
+          },
+          {
+            "text": "首页下载区仍写 Coming soon。桌面安装包在 GitHub 稳定版 0.1.8 和安装文档里。0.1.9 的 rc 是预发布。",
+            "textEn": "The homepage download row still says Coming soon. The desktop packages are stable 0.1.8 on GitHub and in the install docs. The 0.1.9 rc builds are prereleases."
+          },
+          {
+            "text": "许可证不是普通 Apache-2.0。给组织以外的人提供托管或托管式服务需要商业许可，前端里的标志和版权信息不能去掉。",
+            "textEn": "The license is not plain Apache-2.0. A hosted or managed service for people outside your organization needs a commercial license, and the logo and copyright in the frontend may not be removed."
+          },
+          {
+            "text": "本库没有安装、没有登录、没有连接邮箱日历聊天或浏览器，也没有运行本地模型。预览是文档里的官方结构图，不是运行中的界面截图。",
+            "textEn": "This library did not install, sign in, connect mail, calendar, chat, or a browser, or run a local model. The preview is the official diagram from the docs, not a screenshot of a running app."
+          }
+        ],
+        "previewCredit": "预览：Linger 文档 Introduction 页的官方结构图，等比缩小后左右补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the official diagram on the Linger docs introduction page, scaled down and padded left and right to 3:2, not cropped"
+      }
+    },
+    {
+      "id": "canva-mcp",
+      "slug": "canva-mcp",
+      "title": "Canva MCP 全面开放：不再排队，并加上 API、CLI、服务账号和 Craft",
+      "titleEn": "Canva MCP generally available: no waitlist, plus APIs, a CLI, service accounts, and Craft",
+      "kind": "tool",
+      "hook": "Canva MCP 取消等候，设计能力可以接进自己的产品。",
+      "hookEn": "Canva MCP is generally available, so a product can build in its design tools.",
+      "summary": "这是 Canva 新闻室 2026-11-23 的更新，不是 Canva MCP 的第一次出现。2026-10-27 的开发者博客已经写过：你可以自己把 Canva MCP 加进助手或平台，不用等审批；当时也写了每个用户要用自己的 Canva 账号登录，MCP 不支持组织级或服务账号认证，用客户端元数据文档（CIMD）的客户端还要走等候名单。新闻室这篇的变化是：Canva MCP 现在没有等候名单，可以在 Canva Developer Portal 注册、登记直接 URL、打开 MCP 访问后就开始做。新闻室还宣布了新的 REST API、扩大后的 Canva CLI，以及服务账号。服务账号写在 REST API 的计费和自动化流程里：客户可以在你的产品里用 Canva 的能力，而不必每个人都登录 Canva，用量和费用由开发者管。同一天仍有效的 MCP 访问文档写的是另一件事：每个用户仍要单独登录，每个使用 Canva 工具的人都要有自己的 Canva 账号，权限按人而不是按组织。所以本条不把「服务账号」写成 MCP 已经支持免登录。新闻室点名的能力包括：生成可编辑的设计、单独的图片或视频，去背景，把平面图变成可编辑的分层文件，改尺寸，导出；结果留在 Canva 里可编辑。Canva 自己的图像模型 Craft，新闻室说正通过 MCP 和 API 开放。更早的 2026-10-22 Craft 新闻稿已经写过 Craft 在 Canva 里可用，并且开发者可以通过公开 API 使用，所以 11 月 23 日不是 Craft 第一次离开 Canva 产品内部。新闻室说 ChatGPT、Claude、Gemini 和 Muse 里的 agent 已经在用这台 MCP 服务器。帮助中心的连接页另列了个人助手的接法：ChatGPT、Claude、Gemini 和 Microsoft Copilot。当前快速开始文档仍写远程服务器地址 https://api.canva.com/connect/v1/mcp 。新闻室里的注册人数和用量涨幅是 Canva 自己的数字，写在核验记录里，不记成这间实验室测到的结果。本库没有创建 Canva 开发者应用，没有连接 MCP，也没有生成或导出任何设计。",
+      "summaryEn": "This is Canva's newsroom update of 2026-11-23, not the first appearance of Canva MCP. A developers' blog post on 2026-10-27 already said you could add Canva MCP to an assistant or platform yourself, with no waiting on approval. That post also said each user signs in with their own Canva account, that MCP did not support organization-level or service-account authentication, and that clients using a Client ID Metadata Document (CIMD) still applied through a waitlist. What the newsroom changes is: Canva MCP now has no waitlist. You sign up in the Canva Developer Portal, register direct URLs, enable MCP access, and start building. The newsroom also announces new REST APIs, an expanded Canva CLI, and service accounts. Service accounts are described with REST API billing and automated workflows: customers can use Canva capabilities inside your product without each person signing in to Canva, while you manage usage and cost. The MCP access page that was still current the same day says something else: each user still authenticates individually, each person using Canva's tools needs their own Canva account, and permissions are per user rather than per organization. This entry does not say that service accounts mean MCP now works without a sign-in. Capabilities named in the newsroom include generating an editable design, a standalone image or video, removing a background, turning a flat image into an editable layered file, resizing, and exporting. Results stay editable in Canva. The newsroom says Craft, Canva's own image model, is being opened through MCP and the API. The earlier Craft newsroom post of 2026-10-22 already said Craft was available in Canva and to developers through the public API, so 23 November is not the first time Craft left the inside of Canva's products. The newsroom says agents in ChatGPT, Claude, Gemini, and Muse were already using the MCP server. The help-center connection page lists a separate path for a personal assistant: ChatGPT, Claude, Gemini, and Microsoft Copilot. The current quickstart still gives the remote server address https://api.canva.com/connect/v1/mcp . Signup and usage figures in the newsroom are Canva's own numbers. They are in the verification log, not recorded as measurements from this library. This library did not create a Canva developer app, did not connect MCP, and did not generate or export a design.",
+      "categories": [
+        "design",
+        "content"
+      ],
+      "role": "AI design connector",
+      "sourceUrl": "https://www.canva.com/newsroom/news/canva-mcp-update/",
+      "secondaryUrls": [
+        "https://www.canva.dev/docs/apps/mcp/",
+        "https://www.canva.dev/docs/apps/mcp/access/",
+        "https://www.canva.dev/docs/apps/quickstart/",
+        "https://www.canva.dev/blog/developers/canva-mcp-ga/",
+        "https://www.canva.com/help/mcp-agent-setup/",
+        "https://www.canva.com/newsroom/news/canva-craft/"
+      ],
+      "previewImage": "/previews/canva-mcp.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "创建开发者应用、打开 MCP、用 REST API 或服务账号跑自动化、以及让助手生成或导出设计之前，先看当前文档：MCP 仍要每个用户自己的 Canva 账号。本库没有代为注册或调用。",
+      "approvalBoundaryEn": "Before you create a developer app, turn on MCP, run automation with the REST API or a service account, or let an assistant generate or export a design, read the current docs: MCP still needs each user's own Canva account. This library did not sign up or call it.",
+      "connectors": [
+        "Canva",
+        "Canva MCP",
+        "Canva REST API",
+        "Canva CLI",
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Muse",
+        "Microsoft Copilot"
+      ],
+      "publishedAt": "2026-11-23",
+      "updatedAt": "2026-11-25T01:25:00Z",
+      "qualityNote": "收录理由：Canva 把设计能力从自家编辑器往外放，新闻室宣布 MCP 不再排队，并加上 REST API、扩大的命令行、服务账号，以及把自家图像模型 Craft 接到 MCP 和 API。这是一次扩大，不是 MCP 的发明。十月的开发者博客已经允许自助接入。边界：新闻室把服务账号和 REST API 计费写在一起，让产品可以不要求每个最终用户登录；同一时期的 MCP 访问文档仍要求每个人用自己的 Canva 账号。两处一起读，不要只记新闻室的一句。Craft 在十月的新闻稿里已经写了可在 Canva 内使用，也可通过公开 API 给开发者。注册人数、十月用量翻倍、命令行里来自 agent 的比例，都是 Canva 自己的数字。本库没有创建开发者应用，没有连接 MCP，也没有生成或导出设计。",
+      "qualityNoteEn": "Why listed: Canva is opening design work beyond its own editor. The newsroom says MCP no longer has a waitlist, and adds REST APIs, a wider command line, service accounts, and access to Canva's own image model, Craft, through MCP and the API. This is an expansion, not the invention of MCP. An October developers' post already allowed self-serve access. Limits: the newsroom pairs service accounts with REST API billing so a product need not ask every end user to sign in. The MCP access page from the same period still requires each person to use their own Canva account. Read both. Do not keep only the newsroom sentence. The October Craft post already said Craft was available inside Canva and to developers through the public API. Signup counts, the October usage doubling, and the share of command-line use from agents are Canva's own figures. This library did not create a developer app, did not connect MCP, and did not generate or export a design.",
+      "verifyLog": "2026-11-25 上午（Asia/Shanghai，约 09:00–09:25）：直接 curl https://www.canva.com/newsroom/news/canva-mcp-update/ 返回 HTTP 403，cf-mitigated: challenge。同一 URL 的文本抓取读到正文，标题 Building the design layer of the internet: opening Canva to every agent and developer。新闻室列表 https://www.canva.com/newsroom/news/ 的文本抓取把这篇标为 November 23, 2026，所以 publishedAt 用 2026-11-23。文章页本身的日期控件没有在浏览器里打开，无头 Chrome 也停在 Cloudflare 的 Just a moment。TL;DR 原文：Canva MCP is now generally available；New REST APIs, an expanded Canva CLI, and service accounts；Nearly 500,000 people signed up for Canva through MCP in the last month, and MCP usage nearly doubled in October. 后文又写 Nearly 500,000 people have signed up for Canva through MCP since October，和 TL;DR 的 in the last month 不是同一句，两句都只当 Canva 的说法。另有：four out of 10 people using it for the first time are new to Canva and usage nearly doubled in October, up 93% from September。Until recently, access was limited to developers in our community and to connectors we've built with partners like OpenAI and Anthropic, but that changes today. Canva MCP now has no waitlist, so you can sign up in the Canva Developer Portal, register your direct URLs, enable MCP access and start building right away. 能力句：generate an editable design, standalone image or video, remove a background, turn a flat image or graphic into an editable layered design, resize creative, and export the finished result. 服务账号段：With new service accounts, API billing is available for Canva’s REST API… Your customers will be able to use Canva capabilities inside your product without each person signing in to a Canva account, while you manage usage and associated costs. Craft 段：We're opening access to our image generation model, Canva Craft, through MCP and API. 文中还写 the Canva MCP server powers millions of design tasks inside AI assistants like ChatGPT, Claude, Gemini, and Muse。CLI：72% of typed commands in October came from agents。开发者增长：month-on-month growth in new developers doubled from 22% in September to nearly 46% in October，API clients rose 38%，people coming through an AI assistant 2.5x more likely to use Canva AI，more than 300% increase in expected annual recurring revenue from September to October。这些全是 Canva 的说法。署名 Written by Anwar Haneef。新闻室链到的 MCP 介绍是 https://www.canva.dev/solutions/mcp/ 。官方横幅 https://content-management-files.canva.com/2ba5ed0b-fb50-4b28-b485-2104e0f2db67/Canva_MCP_Newsroom_Banner_2880x880_A_centre-safe.png HTTP 200，2880×880。https://www.canva.dev/docs/apps/mcp/ HTTP 200，title About Canva MCP。帮助链接 https://www.canva.com/help/mcp-agent-setup/ 与 https://www.canva.com/help/mcp-canva-usage/ 。帮助页文本：You can connect supported AI assistants like ChatGPT, Claude, Gemini, and Microsoft Copilot。这和新闻室的 Muse 不是同一份名单。https://www.canva.dev/docs/apps/mcp/access/ HTTP 200：Every user of the Canva MCP server authenticates individually。Canva requires each user to authenticate individually to access the MCP. This also means each user of Canva's tools in your AI assistant will need to have a Canva account. Canva stores and manages designs, assets, and permissions on a per-user basis, not at the organization level. 付费档：All plans 含生成、编辑、搜索、导出等；Canva Pro and above 才有改尺寸、autofill、brand kits、brand templates。https://www.canva.dev/docs/apps/quickstart/ 文本抓取：Canva uses a remote MCP server at https://api.canva.com/connect/v1/mcp 。Each user needs to authenticate。十月博客 https://www.canva.dev/blog/developers/canva-mcp-ga/ HTTP 200，article:published_time 2026-10-27T00:00:00.000Z，作者 Meredith Hassett。原文：You can now add Canva MCP to your AI assistant, platform, or connector yourself, with no waiting on approval。Each user must authenticate with their own Canva account. The tools respect that user's Canva permissions; Canva MCP doesn't support organization-level or service-account authentication。CIMD 客户端 apply through the Canva MCP waitlist。服务器地址同样是 https://api.canva.com/connect/v1/mcp using Streamable HTTP。Craft 旧稿 https://www.canva.com/newsroom/news/canva-craft/ 文本抓取，新闻室列表标 October 22, 2026。原文：Available now in Canva and to developers through our public API。文中 DesignArena 排名是 Canva 的比较，本条不把它写成实验室结论。预览：新闻室横幅 2880×880 等比缩到 1200×367，上补 216px、下补 217px 边缘色（约 #D9E7FB），成 1200×800 WebP，没有裁切，没有加字。去重：main c088c54 的 data 里没有 canva-mcp 或这篇新闻稿 URL；打开的 71 个 PR diff 里也没有。未做：没有注册开发者应用，没有打开 Developer Portal 的登录态，没有连接 MCP，没有调用 REST 或 CLI，没有生成、编辑或导出设计。",
+      "verifyLogEn": "2026-11-25 morning (Asia/Shanghai, about 09:00–09:25): a direct curl of https://www.canva.com/newsroom/news/canva-mcp-update/ returned HTTP 403, cf-mitigated: challenge. A text fetch of the same URL returned the article, title Building the design layer of the internet: opening Canva to every agent and developer. A text fetch of the newsroom index https://www.canva.com/newsroom/news/ dates that story November 23, 2026, so publishedAt is 2026-11-23. The date control on the article itself was not opened in a browser. Headless Chrome also stopped on Cloudflare's Just a moment. TL;DR, in the post's words: Canva MCP is now generally available; New REST APIs, an expanded Canva CLI, and service accounts; Nearly 500,000 people signed up for Canva through MCP in the last month, and MCP usage nearly doubled in October. Later the same post says Nearly 500,000 people have signed up for Canva through MCP since October, which is not the same sentence as in the last month. Both are kept only as Canva's statements. Also: four out of 10 people using it for the first time are new to Canva and usage nearly doubled in October, up 93% from September. Until recently, access was limited to developers in our community and to connectors we've built with partners like OpenAI and Anthropic, but that changes today. Canva MCP now has no waitlist, so you can sign up in the Canva Developer Portal, register your direct URLs, enable MCP access and start building right away. Capabilities: generate an editable design, standalone image or video, remove a background, turn a flat image or graphic into an editable layered design, resize creative, and export the finished result. Service accounts: With new service accounts, API billing is available for Canva’s REST API… Your customers will be able to use Canva capabilities inside your product without each person signing in to a Canva account, while you manage usage and associated costs. Craft: We're opening access to our image generation model, Canva Craft, through MCP and API. The post also says the Canva MCP server powers millions of design tasks inside AI assistants like ChatGPT, Claude, Gemini, and Muse. CLI: 72% of typed commands in October came from agents. Developer growth: month-on-month growth in new developers doubled from 22% in September to nearly 46% in October, API clients rose 38%, people coming through an AI assistant are 2.5x more likely to use Canva AI, and more than 300% increase in expected annual recurring revenue from September to October. All of these are Canva's statements. Byline: Written by Anwar Haneef. The newsroom links the MCP overview at https://www.canva.dev/solutions/mcp/ . Official banner https://content-management-files.canva.com/2ba5ed0b-fb50-4b28-b485-2104e0f2db67/Canva_MCP_Newsroom_Banner_2880x880_A_centre-safe.png HTTP 200, 2880×880. https://www.canva.dev/docs/apps/mcp/ HTTP 200, title About Canva MCP. Help links https://www.canva.com/help/mcp-agent-setup/ and https://www.canva.com/help/mcp-canva-usage/ . Help text: You can connect supported AI assistants like ChatGPT, Claude, Gemini, and Microsoft Copilot. That list is not the same as the newsroom's Muse. https://www.canva.dev/docs/apps/mcp/access/ HTTP 200: Every user of the Canva MCP server authenticates individually. Canva requires each user to authenticate individually to access the MCP. This also means each user of Canva's tools in your AI assistant will need to have a Canva account. Canva stores and manages designs, assets, and permissions on a per-user basis, not at the organization level. Plans: All plans include generation, editing, search, export, and similar; Canva Pro and above adds resizing, autofill, brand kits, and brand templates. Text of https://www.canva.dev/docs/apps/quickstart/ : Canva uses a remote MCP server at https://api.canva.com/connect/v1/mcp . Each user needs to authenticate. October blog https://www.canva.dev/blog/developers/canva-mcp-ga/ HTTP 200, article:published_time 2026-10-27T00:00:00.000Z, author Meredith Hassett. Text: You can now add Canva MCP to your AI assistant, platform, or connector yourself, with no waiting on approval. Each user must authenticate with their own Canva account. The tools respect that user's Canva permissions; Canva MCP doesn't support organization-level or service-account authentication. CIMD clients apply through the Canva MCP waitlist. The server address there is also https://api.canva.com/connect/v1/mcp using Streamable HTTP. Older Craft post https://www.canva.com/newsroom/news/canva-craft/ , dated October 22, 2026 on the newsroom index. Text: Available now in Canva and to developers through our public API. DesignArena rankings in that post are Canva's comparison and are not a lab result. Preview: the newsroom banner, 2880×880, scaled to 1200×367 and padded 216px above and 217px below with the edge color (about #D9E7FB) to a 1200×800 WebP. Nothing cropped, no text added. Dedupe: canva-mcp and this newsroom URL are absent from data on main c088c54, and from the diffs of the 71 open PRs. Not done: no developer app created, the Developer Portal was not opened while signed in, MCP was not connected, REST and the CLI were not called, and no design was generated, edited, or exported.",
+      "landing": {
+        "what": "Canva 新闻室在 2026-11-23 宣布的一次扩大：MCP 不再排队，同时给出 REST API、更大的命令行和服务账号，并把自家图像模型 Craft 接到 MCP 和 API。MCP 本身在 2026-10-27 已经可以自助接入。",
+        "whatEn": "An expansion Canva's newsroom announced on 2026-11-23: MCP no longer has a waitlist, and the post adds REST APIs, a wider command line, and service accounts, and opens Canva's own image model, Craft, through MCP and the API. MCP itself was already self-serve on 2026-10-27.",
+        "steps": [
+          {
+            "title": "先分清十月的接入和十一月的新闻稿",
+            "titleEn": "Separate the October access from the November newsroom post",
+            "body": "十月的开发者博客已经说可以自己打开 Canva MCP，不用等审批，但每个用户要自己的 Canva 账号，并且明确不支持服务账号。十一月的新闻室说等候名单取消，并加上 API、CLI 和服务账号。",
+            "bodyEn": "The October developers' post already said you could turn on Canva MCP yourself, with no waiting on approval, but each user needed their own Canva account, and service accounts were explicitly unsupported. The November newsroom says the waitlist is gone and adds APIs, a CLI, and service accounts.",
+            "links": [
+              {
+                "href": "https://www.canva.com/newsroom/news/canva-mcp-update/",
+                "label": "Canva 新闻室：2026-11-23",
+                "labelEn": "Canva newsroom: 2026-11-23"
+              },
+              {
+                "href": "https://www.canva.dev/blog/developers/canva-mcp-ga/",
+                "label": "开发者博客：2026-10-27",
+                "labelEn": "Developers' blog: 2026-10-27"
+              }
+            ]
+          },
+          {
+            "title": "开发者走门户；个人助手走帮助中心",
+            "titleEn": "Developers use the portal; a personal assistant uses the help center",
+            "body": "新闻室让开发者在 Developer Portal 注册、登记 URL、打开 MCP。当前快速开始仍写服务器地址 https://api.canva.com/connect/v1/mcp 。已经在用 ChatGPT、Claude、Gemini 或 Microsoft Copilot 的人，按帮助中心的连接说明。本库没有注册，也没有连接。",
+            "bodyEn": "The newsroom tells developers to sign up in the Developer Portal, register URLs, and turn on MCP. The current quickstart still gives the server address https://api.canva.com/connect/v1/mcp . People already using ChatGPT, Claude, Gemini, or Microsoft Copilot follow the help-center connection guide. This library did not sign up or connect.",
+            "links": [
+              {
+                "href": "https://www.canva.dev/docs/apps/quickstart/",
+                "label": "Canva MCP 快速开始",
+                "labelEn": "Canva MCP quickstart"
+              },
+              {
+                "href": "https://www.canva.com/help/mcp-agent-setup/",
+                "label": "帮助中心：把 Canva 接到 AI 助手",
+                "labelEn": "Help center: connect Canva to an AI assistant"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "MCP 访问文档仍要求每个用户用自己的 Canva 账号登录。新闻室里的服务账号写在 REST API 计费和自动化流程上，不要理解成 MCP 已经可以不登录。",
+            "textEn": "The MCP access docs still require each user to sign in with their own Canva account. Service accounts in the newsroom are described with REST API billing and automated workflows. That is not the same as MCP working without a sign-in."
+          },
+          {
+            "text": "Craft 在 2026-10-22 的新闻稿里已经写了可在 Canva 内使用，也可通过公开 API 给开发者。11 月 23 日是把它接到 MCP，并再次写到 API。",
+            "textEn": "The 2026-10-22 Craft post already said Craft was available in Canva and to developers through the public API. 23 November connects it to MCP and mentions the API again."
+          },
+          {
+            "text": "注册人数、用量涨幅和收入说法都是 Canva 新闻室自己的数字。本库没有创建应用，没有连接 MCP，也没有生成或导出设计。",
+            "textEn": "Signup counts, usage growth, and revenue statements are the Canva newsroom's own figures. This library did not create an app, connect MCP, or generate or export a design."
+          }
+        ],
+        "previewCredit": "预览：Canva 新闻室这篇文章的官方横幅，等比缩小后上下补边成 3:2，未裁切",
+        "previewCreditEn": "Preview: the official banner of this Canva newsroom article, scaled down and padded top and bottom to 3:2, not cropped"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12385,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-25T01:25:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 223,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12718,35 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://heylinger.com/",
+      "https://docs.heylinger.com/",
+      "https://docs.heylinger.com/llms.txt",
+      "https://docs.heylinger.com/index.md",
+      "https://docs.heylinger.com/quickstart.md",
+      "https://docs.heylinger.com/install/desktop-app.md",
+      "https://docs.heylinger.com/models/choose-a-runtime.md",
+      "https://docs.heylinger.com/models/polystrata.md",
+      "https://docs.heylinger.com/agents/another-me.md",
+      "https://docs.heylinger.com/agents/proactive.md",
+      "https://docs.heylinger.com/computer/desktop-and-browser.md",
+      "https://docs.heylinger.com/computer/connected-apps.md",
+      "https://docs.heylinger.com/voice/voice-mode.md",
+      "https://docs.heylinger.com/admin/voice.md",
+      "https://docs.heylinger.com/skills/overview.md",
+      "https://github.com/simplexai-labs/linger",
+      "https://github.com/simplexai-labs/linger/blob/main/LICENSE",
+      "https://github.com/simplexai-labs/linger/releases/tag/desktop-v0.1.8",
+      "https://mintcdn.com/lev9-doc/EF9C0t7F_1A7y3-l/images/feature-local-stack.jpg",
+      "https://www.canva.com/newsroom/news/canva-mcp-update/",
+      "https://www.canva.com/newsroom/news/",
+      "https://www.canva.dev/docs/apps/mcp/",
+      "https://www.canva.dev/docs/apps/mcp/access/",
+      "https://www.canva.dev/docs/apps/quickstart/",
+      "https://www.canva.dev/blog/developers/canva-mcp-ga/",
+      "https://www.canva.com/help/mcp-agent-setup/",
+      "https://www.canva.com/newsroom/news/canva-craft/",
+      "https://content-management-files.canva.com/2ba5ed0b-fb50-4b28-b485-2104e0f2db67/Canva_MCP_Newsroom_Banner_2880x880_A_centre-safe.png"
     ]
   }
 }
