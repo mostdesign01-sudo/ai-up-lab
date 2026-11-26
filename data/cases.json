@@ -1,6 +1,203 @@
 {
   "cases": [
     {
+      "id": "muse-video-open-skills",
+      "slug": "muse-video-open-skills",
+      "title": "四个开源 Muse 视频 Skill：提示词、动画短片、虚拟剧组，以及第三方 API",
+      "titleEn": "Four open Muse video skills: prompts, animated shorts, a virtual crew, and a third-party API",
+      "kind": "tool",
+      "hook": "四个开源 Skill，帮 Muse 做出电影感短片。",
+      "hookEn": "Four open-source skills that help Muse make cinematic shorts.",
+      "summary": "7ik.（@777iiikk）在 https://x.com/777iiikk/status/2125536028341723497 （2026-11-25）贴了一条约 10 秒的海上突袭短片：战术人员乘小艇，驶向阳光下的岩岸。作者写这是用 Muse 直接生成的。这是作者的成片和作者的说法，本库没有复现，也没有安装 Muse。帖子接着建议收藏四个公开的 GitHub Skill，四个仓库都是 MIT。1）https://github.com/masonmosen/muse-video-prompt-skill （masonmosen）给 Muse 内置视频用：README 写六段式提示词，单段大约 10 秒，用 snapshot ID 接多段，再用 ffmpeg 拼到 30 秒以上，并抽帧核对；锁脸弱，参考图不一定像。安装示例是把仓库克隆进助手的 skills 目录。2）https://github.com/sonlovinbot-team/Muse-animated-short-film （sonlovinbot-team）做动画短片。帖子只写了名字 Muse-animated-short-film，没有给链接；对上的公开仓库是这个。README 写在 Muse AI 上从想法做到 MP4：角色设定、故事圣经、带 match-cut 的关键帧、mega prompt、视频、旁白，再用 ffmpeg 合成。示例是 8 个场景的 The Last Lantern，作者署名为 Đặng Hữu Sơn（sonlovinbot）。安装按 README：把文件夹拷进 Muse 的 skills 目录，或把仓库链接贴进 Muse 对话。3）https://github.com/LuoJiangYong/muse-video-skill （LuoJiangYong）是虚拟剧组。README 写从想法走到剧本、分镜、美术和提示词，再编译成模型可执行的调用；38 个案例，六个角色（导演、编剧、摄影、美术、特效、声音）。它做前期和调用指令，不负责把片子渲染出来；masonmosen 的 README 也是这样区分的。仓库创建于 2026-06-12，最后一次推送在 2026-09-30，比另外三个更早。4）https://github.com/useapi/muse-api （useapi）是第三方，不是 Meta 官方接口。帖子自己写「第三方 API，非 Meta 官方接口」，仓库说明也写 By useapi.net, third-party。README 把它写成：托管的 MCP 服务器、37 个工具，在你自己的 Muse 订阅上生成图片和大约 10 秒、带声音的视频，并包含免费档，以及老照片修复、照片说话、视频换人，示例有 Node、Python、n8n 和 skill。这些都是厂商说法，本库没有调用。帖子里的安装命令是 npx skills add useapi/muse-api --skill muse-video，本库没有执行。这条不是 shipwithmuse.live 的社区作品目录，也不是 Muse 官方发布稿。本库没有安装 Muse，没有把这四个 Skill 装进任何助手，没有登录，没有生成视频，没有付费。",
+      "summaryEn": "7ik. (@777iiikk) posted an about-10-second sea-raid clip at https://x.com/777iiikk/status/2125536028341723497 on 2026-11-25: tactical operators in a small boat, heading toward a sunlit rocky coast. The author says Muse generated it directly. The clip and that claim are the author's; this library did not reproduce it and did not install Muse. The post then recommends four public GitHub skills. All four repositories are MIT. 1) https://github.com/masonmosen/muse-video-prompt-skill (masonmosen) is a workflow for Muse's built-in video. The README describes a six-part prompt, clips of about 10 seconds, continuity through snapshot IDs, an ffmpeg stitch to 30 seconds and beyond, and a frame check; it also says face-lock is weak and a reference likeness is not guaranteed. The install example clones the repo into an agent's skills directory. 2) https://github.com/sonlovinbot-team/Muse-animated-short-film (sonlovinbot-team) is an animated-short workflow. The post names Muse-animated-short-film and does not link it; this is the matching public repo. The README describes an idea-to-MP4 path on Muse AI: character sheets, a story bible, keyframes with match-cuts, mega prompts, video, voice-over, then ffmpeg assembly. The sample is The Last Lantern, eight scenes, and the README credits Đặng Hữu Sơn (sonlovinbot). Install, per the README, is copying the folder into Muse's skills directory or pasting the repo link into a Muse chat. 3) https://github.com/LuoJiangYong/muse-video-skill (LuoJiangYong) is a virtual film crew. The README describes the path from an idea to script, storyboard, art direction, and prompts, then compiled model-ready calls; 38 cases and six roles (director, writer, cinematography, art, VFX, sound). It is pre-production and call instructions, not the render itself; masonmosen's README draws the same distinction. The repo was created on 2026-06-12 and last pushed on 2026-09-30, earlier than the other three. 4) https://github.com/useapi/muse-api (useapi) is third-party, not an official Meta API. The post itself says it is a third-party API and not Meta's official interface, and the repo description says By useapi.net, third-party. The README presents a hosted MCP server, 37 tools, images and about-10-second videos with sound on your own Muse subscription, a free plan included, plus old-photo restoration, a talking photo, and a person swap, with Node, Python, n8n, and a skill among the examples. Those are the vendor's claims; this library did not call them. The install command in the post is npx skills add useapi/muse-api --skill muse-video, and it was not run here. This is not the shipwithmuse.live community directory and not an official Muse launch write-up. This library did not install Muse, did not install any of the four skills, did not sign in, did not generate video, and did not pay.",
+      "categories": [
+        "content",
+        "design"
+      ],
+      "role": "Muse video skills",
+      "sourceUrl": "https://x.com/777iiikk/status/2125536028341723497",
+      "secondaryUrls": [
+        "https://github.com/masonmosen/muse-video-prompt-skill",
+        "https://github.com/sonlovinbot-team/Muse-animated-short-film",
+        "https://github.com/LuoJiangYong/muse-video-skill",
+        "https://github.com/useapi/muse-api",
+        "https://studio.danghuuson.com/Muse-animated-short-film/",
+        "https://useapi.net/docs/api-muse-v1",
+        "https://video.twimg.com/amplify_video/2125535862419324928/vid/avc1/1280x720/NtJPAE75hJqO6-Ia.mp4"
+      ],
+      "previewImage": "/previews/muse-video-open-skills.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "安装这些 Skill、执行帖子里的 npx skills add、登录 Muse、把 Muse 账号交给 useapi.net，或为此付费之前，先自己读仓库和条款。useapi/muse-api 是第三方，不是 Meta 官方接口。本库没有代为安装、登录、生成或付费。",
+      "approvalBoundaryEn": "Read the repos and the terms before you install these skills, run the post's npx skills add command, sign in to Muse, hand a Muse account to useapi.net, or pay for any of it. useapi/muse-api is third-party, not an official Meta interface. This library did not install, sign in, generate, or pay.",
+      "connectors": [
+        "Muse",
+        "GitHub",
+        "ffmpeg",
+        "useapi.net"
+      ],
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-26T01:30:00Z",
+      "qualityNote": "收录理由：想用 Muse 做电影感短片时，公开 Skill 散在四个 MIT 仓库里，其中一个还是第三方接口。7ik.（@777iiikk）把约 10 秒的海上突袭短片说成 Muse 直出，并推荐这四个 Skill。边界：直出是作者的说法，本库没有复现。useapi/muse-api 是 useapi.net 的第三方接口，不是 Meta 官方 Muse API，帖子和仓库都写了这一点。masonmosen 的 README 写内置 Muse Video 被上游按地区拦住（错误名 video_not_available，README 记到 2026-11-05），那是 README 的记录，不是本库测的。LuoJiangYong 的仓库更早（2026-06 就有了），做的是前期策划和调用指令，不是 Muse 出片本身。帖子没有给 Muse-animated-short-film 的链接，本条对上的是 sonlovinbot-team 的公开仓库。和已有的 shipwithmuse.live 作品目录、以及 Muse 官方发布稿不是同一条。本库没有安装 Muse，没有执行 npx skills add，没有登录任何服务，没有生成视频，也没有付费。",
+      "qualityNoteEn": "Why listed: public skills for a cinematic Muse clip sit in four MIT repositories, and one of them is a third-party API. 7ik. (@777iiikk) posts an about-10-second sea-raid clip, says Muse generated it directly, and recommends these four skills. Limits: the direct-generation line is the author's claim and was not reproduced here. useapi/muse-api is useapi.net's third-party API, not an official Meta Muse API; both the post and the repo say so. The masonmosen README says built-in Muse Video is blocked upstream by region (error name video_not_available, noted through 2026-11-05); that is the README's record, not a test run here. LuoJiangYong's repo is older (it already existed in 2026-06) and does pre-production plus compiled calls, not Muse rendering itself. The post names Muse-animated-short-film without a link; the public repo matched here is sonlovinbot-team's. This is not the shipwithmuse.live directory and not an official Muse launch write-up. Muse was not installed, npx skills add was not run, no service was signed in to, no video was generated, and nothing was paid.",
+      "verifyLog": "2026-11-26 上午（Asia/Shanghai，约 09:10–09:30）。帖子 https://x.com/777iiikk/status/2125536028341723497 。X posts API：id 2125536028341723497，author_id 1998015968115875840，created_at 2026-11-25T10:24:14.000Z（上海 2026-11-25 18:24:14），作者名 7ik.、用户名 777iiikk、verified_type blue。没有另编法律姓名。public_metrics：like 53、repost 8、reply 7、quote 0、bookmark 66、impression 5372。media 13_2125535862419324928，duration_ms 10453，1280×720，view_count 2635。API 返回的 text 在第一个 Skill 处截断。长文用 fxtwitter 读到（同一时刻 like 53、repost 8、bookmark 66、views 5375）。长文开头是「这 10 秒海上突袭大片是用 Muse 直出的」，然后建议收藏 4 个 GitHub Skill。链接展开：1）https://github.com/masonmosen/muse-video-prompt-skill ；2）Muse-animated-short-film 没有链接；3）https://github.com/LuoJiangYong/muse-video-skill ；4）展开结果是 http://github.com/useapi/muse-api （http，不是 https），正文写安装命令 npx skills add useapi/muse-api --skill muse-video，并写「第三方 API，非 Meta 官方接口」。本条用的 useapi 地址是 https://github.com/useapi/muse-api 。视频：官方 1280×720 地址 https://video.twimg.com/amplify_video/2125535862419324928/vid/avc1/1280x720/NtJPAE75hJqO6-Ia.mp4 下载 2417072 字节，sha256 9c2b66f59cc60a7d228f7fcedc3fd8a1e0b4a0c2e0fd8dd3cabf73dafab0dabd。ffprobe：H.264 + AAC，容器 10.538667 秒，视频流 10.460851 秒，音频流 10.538667 秒（AAC LC，立体声，24000 Hz），creation_time 2026-11-25T10:24:13.000000Z。抽看的帧：0 秒是糊掉的水面；约 2 秒是黑艇上的战术人员和浪花；约 4 秒是艇上人员朝向阳光下的岩岸（预览用这一帧）；约 6 秒是艇的侧面和一排人员，背景是岩岸；约 8 秒是艇沿干燥岩岸行驶；约 10 秒是艇首设备和乘员，仍是岩岸。没有把没看到的镜头写进来。预览：4.0 秒的帧从 1280×720 缩到 1200×675，上方用画面顶边平均色补 62 像素（#9DA9A0），下方用底边平均色补 63 像素（#121316），成 1200×800 WebP，没有裁切，没有加字。MP4 不进仓库。GitHub API 同一上午：masonmosen/muse-video-prompt-skill 创建 2026-10-05T06:23:09Z，pushed_at 2026-11-05T08:30:27Z，默认分支 master，language Python，MIT，stars 285，forks 53（说明稿里的 284 / 52 是更早一次读数，以这次为准）。README 仍在该默认分支：六段式提示词、约 10 秒一段、snapshot ID、ffmpeg 拼到 30 秒以上、抽帧核对、锁脸弱。Demo 段写 Muse built-in video generation is currently blocked upstream by region (403 video_not_available, still blocked as of 2026-11-05; checked daily at 09:06)。README 还指向 references/cases/ 里的杭州国庆 30.04 秒 9:16 案例，以及麻将负面案例（脸对不上）。这些文件没有逐个打开，也不是本库生成的。安装示例是 git clone 后放进助手 skills 目录，例如 Claude Code 的 ~/.claude/skills/muse-video-prompt-skill/ 。sonlovinbot-team/Muse-animated-short-film 创建 2026-10-03T02:38:57Z，pushed_at 2026-10-31T05:45:38Z，language 为空，MIT，stars 160，forks 50，homepage 字段 https://studio.danghuuson.com/Muse-animated-short-film/ 。README 正文另链 https://app.danghuuson.com/Muse-animated-short-film/ 。两个页面这次都没有打开。README 作者行是 Đặng Hữu Sơn（sonlovinbot），并写 CEO and Co-Founder LovinBot AI。流程是角色设定、故事圣经、match-cut 关键帧、mega prompt、视频、旁白、ffmpeg。示例 The Last Lantern，8 个场景，目录 examples/the-last-lantern/ ，其中的 STORY / MEGA_PROMPTS / VO_SCRIPT / FLOW 没有逐个打开。安装是拷进 Muse skills（示例 ~/workspace/skills/animated-short-film/），或把仓库链接贴进 Muse 对话。仓库名搜索还看到 Abdul-hannan-coder/Muse-animated-short-film-en（创建 2026-11-23，0 star，描述和 homepage 都空）。名字对不上帖子里的 Muse-animated-short-film，README 没有读，不采用。LuoJiangYong/muse-video-skill 创建 2026-06-12T06:26:58Z，pushed_at 2026-09-30T14:53:15Z，Python，MIT，stars 196，forks 43（说明稿里的 195 是更早读数），has_pages true，homepage 空，默认分支 main。README 写 38 个案例、六角色，并写不做视频渲染、生图和生视频，产出是策划和调用指令；版本行写 v0.36.7。masonmosen 的 README 称它是 pre-production engine。README 里的 luojiangyong.com 预览路径没有打开，所以不写一个没打开过的 Pages 地址。useapi/muse-api 创建 2026-10-12T06:01:38Z，pushed_at 2026-11-23T03:10:00Z，Python，MIT，stars 63，forks 14，描述以 By useapi.net, third-party 收尾。homepage 字段是 https://useapi.net/docs/api-muse-v1 加 GitHub 来源的 utm 参数。README 写托管 MCP（https://api.useapi.net/v1/muse/mcp ，37 个工具）、约 10 秒带声音的视频、老照片修复、照片说话、视频换人、Node / Python / n8n / skill，安装命令与帖子相同。价格只记 README 的说法：useapi.net 每月 15 美元、覆盖其全部 API 和 3 个 Muse 账号；Muse 订阅写成免费版、Power 每月 20 美元、Maximum 每月 100 美元（README 写截至 2026 年 10 月）；免费档「我们的测试」写一个视频约占每周额度的 2% 到 3%。没有打开 useapi.net。中文段写 useapi.net 是独立的第三方 API，与 Meta 无关联。去重：main c088c54 的 data 里没有 muse-video-open-skills，也没有这四个仓库地址。已有 shipwithmuse 是作品目录，errand-opensource 是桌面壳，都不是这条。未做：没有安装 Muse，没有执行 git clone 或 npx skills add，没有登录 Muse 或 useapi，没有调用接口，没有生成视频，没有付费，没有复现这条约 10 秒的片子，也没有测试 README 里的地区限制。",
+      "verifyLogEn": "Morning of 2026-11-26 (Asia/Shanghai, about 09:10–09:30). Post https://x.com/777iiikk/status/2125536028341723497 . X posts API: id 2125536028341723497, author_id 1998015968115875840, created_at 2026-11-25T10:24:14.000Z (2026-11-25 18:24:14 Shanghai), display name 7ik., username 777iiikk, verified_type blue. No legal name was invented. public_metrics: like 53, repost 8, reply 7, quote 0, bookmark 66, impression 5372. Media 13_2125535862419324928, duration_ms 10453, 1280×720, view_count 2635. The text field returned by that API is cut off at the first skill. The long note was read via fxtwitter (same moment: like 53, repost 8, bookmark 66, views 5375). The note opens with the author's line that this 10-second sea-raid clip was generated directly with Muse, then recommends four GitHub skills. Expanded links: 1) https://github.com/masonmosen/muse-video-prompt-skill ; 2) Muse-animated-short-film has no link; 3) https://github.com/LuoJiangYong/muse-video-skill ; 4) the expanded target is http://github.com/useapi/muse-api (http, not https). The note gives the install command npx skills add useapi/muse-api --skill muse-video and says it is a third-party API, not Meta's official interface. This entry uses https://github.com/useapi/muse-api . Video: the official 1280×720 URL https://video.twimg.com/amplify_video/2125535862419324928/vid/avc1/1280x720/NtJPAE75hJqO6-Ia.mp4 downloaded at 2417072 bytes, sha256 9c2b66f59cc60a7d228f7fcedc3fd8a1e0b4a0c2e0fd8dd3cabf73dafab0dabd. ffprobe: H.264 + AAC, container 10.538667s, video stream 10.460851s, audio stream 10.538667s (AAC LC, stereo, 24000 Hz), creation_time 2026-11-25T10:24:13.000000Z. Frames looked at: 0s is blurred water; about 2s is operators on a black boat in spray; about 4s is operators on the boat toward a sunlit rocky coast (the preview uses this frame); about 6s is a side view of the boat and a row of operators with the coast behind; about 8s is the boat running along a dry rocky coast; about 10s is the bow gear and the crew, still against the coast. Shots that were not seen are not described. Preview: the 4.0s frame was scaled from 1280×720 to 1200×675, padded 62px on top with the top-edge average (#9DA9A0) and 63px on the bottom with the bottom-edge average (#121316), to a 1200×800 WebP, with no crop and no added text. The MP4 is not in the repo. GitHub API the same morning: masonmosen/muse-video-prompt-skill created 2026-10-05T06:23:09Z, pushed_at 2026-11-05T08:30:27Z, default branch master, language Python, MIT, stars 285, forks 53 (the brief's 284 / 52 was an earlier read; this read is the one recorded). The README still on that default branch describes the six-part prompt, about 10 seconds a clip, snapshot IDs, an ffmpeg stitch past 30 seconds, a frame check, and weak face-lock. The Demo section says Muse built-in video generation is currently blocked upstream by region (403 video_not_available, still blocked as of 2026-11-05; checked daily at 09:06). The README also points at a Hangzhou National Day 30.04s 9:16 case under references/cases/ and a mahjong negative case where faces did not match. Those files were not opened one by one and were not generated here. The install example is git clone into an agent skills directory, for example Claude Code's ~/.claude/skills/muse-video-prompt-skill/ . sonlovinbot-team/Muse-animated-short-film created 2026-10-03T02:38:57Z, pushed_at 2026-10-31T05:45:38Z, language empty, MIT, stars 160, forks 50, homepage field https://studio.danghuuson.com/Muse-animated-short-film/ . The README body also links https://app.danghuuson.com/Muse-animated-short-film/ . Neither page was opened. The README credits Đặng Hữu Sơn (sonlovinbot) and says CEO and Co-Founder LovinBot AI. The pipeline is character sheets, story bible, match-cut keyframes, mega prompts, video, voice-over, ffmpeg. The sample is The Last Lantern, eight scenes, under examples/the-last-lantern/ ; STORY / MEGA_PROMPTS / VO_SCRIPT / FLOW were not opened one by one. Install is copying into Muse skills (example ~/workspace/skills/animated-short-film/) or pasting the repo link into a Muse chat. A name search also returned Abdul-hannan-coder/Muse-animated-short-film-en (created 2026-11-23, 0 stars, empty description and homepage). The name does not match the post's Muse-animated-short-film, its README was not read, and it is not used. LuoJiangYong/muse-video-skill created 2026-06-12T06:26:58Z, pushed_at 2026-09-30T14:53:15Z, Python, MIT, stars 196, forks 43 (the brief's 195 was an earlier read), has_pages true, homepage empty, default branch main. The README describes 38 cases and six roles, and says it does not render video or generate images or video; the output is the plan and the call instructions. The version line says v0.36.7. masonmosen's README calls it a pre-production engine. Preview paths on luojiangyong.com in that README were not opened, so no unopened Pages URL is cited. useapi/muse-api created 2026-10-12T06:01:38Z, pushed_at 2026-11-23T03:10:00Z, Python, MIT, stars 63, forks 14, description ending By useapi.net, third-party. The homepage field is https://useapi.net/docs/api-muse-v1 plus GitHub-source utm parameters. The README describes a hosted MCP (https://api.useapi.net/v1/muse/mcp , 37 tools), about-10-second videos with sound, old-photo restoration, a talking photo, a person swap, and Node / Python / n8n / skill examples; the install command matches the post. Prices are recorded only as the README states them: useapi.net at $15 a month, covering every useapi.net API and 3 Muse accounts; Muse plans written as Free, Power at $20 a month, and Maximum at $100 a month (the README says as of October 2026); the free-plan line it calls our tests says one video used about 2 to 3 percent of the weekly allowance. useapi.net was not opened. The Chinese section says useapi.net is an independent third-party API with no affiliation to Meta. Dedupe: muse-video-open-skills and these four repo URLs are absent from data on main c088c54. The existing shipwithmuse entry is a build directory and errand-opensource is a desktop shell; neither is this case. Not done: Muse was not installed, git clone and npx skills add were not run, Muse and useapi were not signed in to, no API was called, no video was generated, nothing was paid, the about-10-second clip was not reproduced, and the region limit in the README was not tested.",
+      "landing": {
+        "what": "一条社区帖加上四个公开 Skill。7ik.（@777iiikk）用一条约 10 秒的海上突袭短片说明他想让 Muse 做出的电影感，并说片子是 Muse 直接生成的；下面四个仓库分别管提示词和拼接、动画短片全流程、开拍前的虚拟剧组，以及 useapi.net 的第三方调用。前三个是社区写的 Muse 用法，第四个不是 Meta 官方接口。",
+        "whatEn": "One community post plus four public skills. 7ik. (@777iiikk) uses an about-10-second sea-raid clip to show the cinematic look he wants from Muse, and says Muse generated the clip directly. The four repos cover prompts and stitching, a full animated-short pipeline, a virtual crew for pre-production, and third-party calls from useapi.net. The first three are community Muse workflows. The fourth is not an official Meta interface.",
+        "contrast": {
+          "caption": "左列是这条帖子和四个仓库对得上的事。右列只说明它和本库已有条目、以及官方发布稿为什么不是同一条。",
+          "captionEn": "Left column: what this post and the four repos actually are. Right column: why this is not an existing catalog entry or an official launch write-up.",
+          "leftLabel": "这条",
+          "leftLabelEn": "This entry",
+          "rightLabel": "不要看成别的",
+          "rightLabelEn": "Not these",
+          "rows": [
+            {
+              "aspect": "是什么",
+              "aspectEn": "What it is",
+              "left": "一条约 10 秒的作者演示，加上四个 MIT Skill。",
+              "leftEn": "An author's about-10-second demo, plus four MIT skills.",
+              "right": "shipwithmuse.live 是别人做的作品目录。errand-opensource 是桌面壳。都不是这四个仓库。",
+              "rightEn": "shipwithmuse.live is a directory of other people's builds. errand-opensource is a desktop shell. Neither is these four repos."
+            },
+            {
+              "aspect": "和官方的关系",
+              "aspectEn": "Relation to official",
+              "left": "前三个是社区 Skill。useapi/muse-api 是第三方，帖子和仓库都写了。",
+              "leftEn": "The first three are community skills. useapi/muse-api is third-party, as both the post and the repo say.",
+              "right": "不是 Muse 官方发布稿，也不能把 useapi.net 当成 Meta 官方接口。",
+              "rightEn": "Not an official Muse launch write-up, and useapi.net is not Meta's official interface."
+            },
+            {
+              "aspect": "短片",
+              "aspectEn": "The clip",
+              "left": "作者称 Muse 直出。画面是艇上的战术人员朝向岩岸。",
+              "leftEn": "The author says Muse generated it directly. The picture is operators in a boat toward a rocky coast.",
+              "right": "本库没有复现。预览只是作者演示里的一帧。",
+              "rightEn": "Not reproduced here. The card shows one frame from the author's demo."
+            }
+          ]
+        },
+        "steps": [
+          {
+            "title": "先看帖子和四个仓库",
+            "titleEn": "Read the post and the four repos first",
+            "body": "帖子里能看到作者的短片，以及他对四个 Skill 的一句话介绍。第二个只写了仓库名，没有链接。第四个下面有一行提醒：第三方 API，不是 Meta 官方接口。",
+            "bodyEn": "The post shows the author's clip and a one-line note on each skill. The second skill is named and not linked. Under the fourth, the post says it is a third-party API, not Meta's official interface.",
+            "links": [
+              {
+                "href": "https://x.com/777iiikk/status/2125536028341723497",
+                "label": "7ik. 的帖子",
+                "labelEn": "7ik.'s post"
+              },
+              {
+                "href": "https://github.com/masonmosen/muse-video-prompt-skill",
+                "label": "muse-video-prompt-skill",
+                "labelEn": "muse-video-prompt-skill"
+              },
+              {
+                "href": "https://github.com/sonlovinbot-team/Muse-animated-short-film",
+                "label": "Muse-animated-short-film",
+                "labelEn": "Muse-animated-short-film"
+              },
+              {
+                "href": "https://github.com/LuoJiangYong/muse-video-skill",
+                "label": "muse-video-skill",
+                "labelEn": "muse-video-skill"
+              },
+              {
+                "href": "https://github.com/useapi/muse-api",
+                "label": "useapi/muse-api",
+                "labelEn": "useapi/muse-api"
+              }
+            ]
+          },
+          {
+            "title": "分清四件事",
+            "titleEn": "Separate the four jobs",
+            "body": "masonmosen 的仓库管内置视频的提示词、多段拼接和抽帧核对。sonlovinbot-team 的仓库管动画短片从角色到成片。LuoJiangYong 的仓库停在剧本、分镜和调用指令，不负责渲染。useapi 的仓库是第三方去调 Muse，README 里的价格、额度和 37 个工具都是厂商自己的说法。",
+            "bodyEn": "masonmosen's repo is prompts, multi-segment stitching, and frame checks for built-in video. sonlovinbot-team's repo takes an animated short from characters to a finished film. LuoJiangYong's repo stops at the script, the storyboard, and the call instructions; it does not render. useapi's repo is a third party calling Muse. Prices, allowances, and the 37 tools in that README are the vendor's own statements.",
+            "links": [
+              {
+                "href": "https://github.com/masonmosen/muse-video-prompt-skill",
+                "label": "提示词与拼接",
+                "labelEn": "Prompts and stitching"
+              },
+              {
+                "href": "https://github.com/sonlovinbot-team/Muse-animated-short-film",
+                "label": "动画短片流程",
+                "labelEn": "Animated-short pipeline"
+              },
+              {
+                "href": "https://github.com/LuoJiangYong/muse-video-skill",
+                "label": "虚拟剧组",
+                "labelEn": "Virtual crew"
+              },
+              {
+                "href": "https://github.com/useapi/muse-api",
+                "label": "第三方 API 仓库",
+                "labelEn": "Third-party API repo"
+              }
+            ]
+          },
+          {
+            "title": "真要装，再自己装",
+            "titleEn": "Install it yourself only if you mean to",
+            "body": "masonmosen 的 README 是 git clone 进 skills 目录。动画短片的 README 是拷进 Muse 的 skills，或把链接贴进 Muse 对话。useapi 的帖子命令是 npx skills add useapi/muse-api --skill muse-video。三条路都会碰到别人的代码、Muse 账号或第三方服务。本库没有执行其中任何一步。",
+            "bodyEn": "masonmosen's README says git clone into a skills directory. The animated-short README says copy the folder into Muse's skills, or paste the link into a Muse chat. The useapi command in the post is npx skills add useapi/muse-api --skill muse-video. Each path reaches someone else's code, a Muse account, or a third-party service. This library did not run any of these steps.",
+            "links": [
+              {
+                "href": "https://github.com/masonmosen/muse-video-prompt-skill",
+                "label": "masonmosen 的 README",
+                "labelEn": "masonmosen README"
+              },
+              {
+                "href": "https://github.com/sonlovinbot-team/Muse-animated-short-film",
+                "label": "动画短片 README",
+                "labelEn": "Animated-short README"
+              },
+              {
+                "href": "https://github.com/useapi/muse-api",
+                "label": "useapi 的 README",
+                "labelEn": "useapi README"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "「Muse 直出」是 7ik. 的说法。本库没有安装 Muse，没有生成视频，没有把这条约 10 秒的海上突袭短片重做一遍。",
+            "textEn": "“Generated directly with Muse” is 7ik.'s statement. This library did not install Muse, did not generate video, and did not remake the about-10-second sea-raid clip."
+          },
+          {
+            "text": "useapi/muse-api 是 useapi.net 的第三方接口，不是 Meta 官方 Muse API。帖子写了「第三方 API，非 Meta 官方接口」，仓库说明也写了 third-party。README 里的月费、订阅档和每周额度都是厂商的说法，本库没有打开文档站，没有注册，没有付费，也没有调用。",
+            "textEn": "useapi/muse-api is useapi.net's third-party interface, not an official Meta Muse API. The post says it is a third-party API and not Meta's official interface, and the repo description says third-party. Monthly fees, plan names, and weekly allowances in the README are the vendor's statements. This library did not open the docs site, did not sign up, did not pay, and did not call it."
+          },
+          {
+            "text": "masonmosen 的 README 写内置 Muse Video 被上游按地区拦住，错误名 video_not_available，并记到 2026-11-05。那是 README 的记录。本库没有测试你所在地区能不能生成。",
+            "textEn": "masonmosen's README says built-in Muse Video is blocked upstream by region, under the error name video_not_available, noted through 2026-11-05. That is the README's record. This library did not test whether generation works in any region."
+          },
+          {
+            "text": "LuoJiangYong/muse-video-skill 做的是前期策划和调用指令，不是只对着 Muse 出片，仓库也比另外三个更早。动画短片那个名字在帖子里没有链接；本条用的是 sonlovinbot-team 的公开仓库，不是名字相近的另一个空描述仓库。",
+            "textEn": "LuoJiangYong/muse-video-skill is pre-production and call instructions, not Muse-only rendering, and the repo is older than the other three. The animated-short name has no link in the post; this entry uses sonlovinbot-team's public repo, not a different empty-description repo with a similar name."
+          },
+          {
+            "text": "这不是 shipwithmuse.live 的作品目录，也不是 Muse 官方发布稿。预览是作者演示里的一帧，不是本库跑出来的画面。",
+            "textEn": "This is not the shipwithmuse.live build directory and not an official Muse launch write-up. The card shows a frame from the author's demo, not a picture this library generated."
+          }
+        ],
+        "previewCredit": "预览是 @777iiikk 的 X 演示在约 4 秒处的一帧：战术人员乘艇驶向阳光下的岩岸。1280×720 缩成 1200×675，上方补 62 像素、下方补 63 像素，成 1200×800，没有裁切，没有加字。不是本库生成的画面。",
+        "previewCreditEn": "Still from @777iiikk's X demo at about 4 seconds: operators in a boat heading toward a sunlit rocky coast. Scaled from 1280×720 to 1200×675 and padded 62px on top and 63px on the bottom to 1200×800, with no crop and no added text. Not a picture generated by this library."
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12331,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-26T01:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12664,13 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://x.com/777iiikk/status/2125536028341723497",
+      "https://github.com/masonmosen/muse-video-prompt-skill",
+      "https://github.com/sonlovinbot-team/Muse-animated-short-film",
+      "https://github.com/LuoJiangYong/muse-video-skill",
+      "https://github.com/useapi/muse-api",
+      "https://video.twimg.com/amplify_video/2125535862419324928/vid/avc1/1280x720/NtJPAE75hJqO6-Ia.mp4"
     ]
   }
 }
