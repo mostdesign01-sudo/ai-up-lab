@@ -1,6 +1,315 @@
 {
   "cases": [
     {
+      "id": "pierre-computer",
+      "slug": "pierre-computer",
+      "title": "Pierre Computer：写一次任务就关掉应用，它在隔离的 Linux 里做完再回来",
+      "titleEn": "Pierre Computer: write the task, close the app, and it finishes the work in an isolated Linux computer",
+      "kind": "tool",
+      "hook": "你写一次任务，关掉应用，它在隔离的 Linux 里做完再回来。",
+      "hookEn": "Write the task, close the app, and it finishes the work in an isolated Linux computer.",
+      "summary": "Pierre Computer（https://lp.pierre.finance/computer ）是 CloudWalk 旗下 Pierre 理财应用里的个人代理。产品页用葡萄牙语写「你说一次，它替你做」：你写下要办的事，关掉应用，它去做，做完再回来，决定留给你。帮助中心《O que é o Pierre Computer?》把它写成 Pierre 的电脑：一个真的 Linux 环境，不是你的手机，也不是你自己的电脑，不读取、不改动你设备上的东西。它把你的财务数据、一台会执行任务的电脑，以及要跟好几周的事放在一起。",
+      "summaryEn": "Pierre Computer (https://lp.pierre.finance/computer ) is a personal agent inside Pierre, the finance app from CloudWalk. The product page, in Portuguese, says you ask once and it does the work: you write the task, close the app, and it comes back with the work done and a decision for you. The help article “O que é o Pierre Computer?” calls it Pierre’s computer: a real Linux environment, not your phone and not your own computer, and it does not read or change anything on your devices. It puts your financial data, a computer that carries out tasks, and follow-up on matters that take weeks in one place.",
+      "categories": [
+        "finance",
+        "automation",
+        "productivity"
+      ],
+      "role": "Personal agent",
+      "sourceUrl": "https://lp.pierre.finance/computer",
+      "secondaryUrls": [
+        "https://www.cloudwalk.io/newsroom/cloudwalk-launches-pierre-computer-a-personal-ai-agent-that-autonomously-performs-tasks-across-platforms",
+        "https://ajuda.pierre.finance/pt-BR/articles/17681345-o-que-e-o-pierre-computer",
+        "https://ajuda.pierre.finance/pt-BR/articles/16035183-quais-sao-os-planos-do-pierre"
+      ],
+      "previewImage": "/previews/pierre-computer.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "默认情况下，购买、付款、订阅和预订要先看到金额、地址和支付方式再批准；价格变了会再问一次。它只读财务数据，不做 Pix 或银行转账，不改密码、邮箱、电话或两步验证，也不删除账户。本库没有代为注册、连接应用或批准任何付款。",
+      "approvalBoundaryEn": "By default a purchase, payment, subscription, or reservation waits until you see the amount, address, and payment method; a price change is asked again. It only reads financial data, does not send Pix or bank transfers, and does not change a password, email, phone, or two-factor setup, or delete an account. This library did not sign up, connect an app, or approve any payment.",
+      "connectors": [
+        "Gmail",
+        "Google Calendar",
+        "Google Drive",
+        "Notion",
+        "Slack",
+        "GitHub",
+        "Google Docs",
+        "Outlook",
+        "Spreadsheets"
+      ],
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-26T01:00:00Z",
+      "qualityNote": "收录理由：理财应用里有一个会自己把任务做完的个人代理，而且官方把隔离环境、购买审批和不能转账写在帮助里。边界：页面是葡萄牙语，面向巴西的 Pierre 客户，Computer 只在应用里，不在 WhatsApp。谁今天就能用，产品页、帮助中心和新闻稿并不一致；Pro 月费帮助页写 39 雷亚尔，新闻稿写 39.90 雷亚尔，都只是各页原文，不是本库付过的账单。产品页问答写它不推荐投资。本库没有注册、登录或安装应用，没有连接任何账号，没有批准购买或转账，也没有上传账单。",
+      "qualityNoteEn": "Why listed: a finance app with a personal agent that finishes the task, and the help center states the isolated environment, purchase approval, and the ban on transfers. Limits: the pages are in Portuguese for Pierre customers in Brazil, and Computer runs in the app, not in WhatsApp. The product page, the help center, and the newsroom do not agree on who can use it today. The plans page lists Pro at 39 reais a month and the newsroom lists 39.90; both are quoted from those pages, not a bill this library paid. The product FAQ says it does not recommend investments. This library did not sign up, sign in, or install the app, did not connect any account, did not approve a purchase or transfer, and did not upload a statement.",
+      "verifyLog": "2026-11-26 上午（Asia/Shanghai，抓取约 00:53–01:00 UTC）：https://lp.pierre.finance/computer HTTP 200，title 为 Pierre Computer - Você pede uma vez, ele trabalha por horas。页头写 Você pede uma vez. Ele faz por você. 和 Escreva o que quer resolver, feche o app e vá viver. 产品页例子：三天布宜诺斯艾利斯行程；5 公里、4 周、每周 3 练的跑步计划放进 Google Agenda 的空档；读 Gmail 里 12 封 newsletter 再建议周末；咖啡例写 R$ 24,90，同一品牌，要你确认。连接一句写 Planilhas, Agenda, Gmail, Slack, GitHub e Docs。界面芯片还有 Agenda、Gmail、Notion。正文写 Comparar passagens, cancelar assinaturas, simular um financiamento, planejar os custos de uma viagem，以及 A compra, o pagamento e a contratação só acontecem depois que você aprova, vendo o valor exato。FAQ：O Computer compra com meu dinheiro? 答 Não，工作到确认画面为止，你也可以事先规定上限；Quanto tempo uma tarefa demora? 写有时要几小时，时间是它的，你可以关掉应用；Ele investe por mim? 答 Não，不推荐资产、不指示投资产品、不做投资咨询；Preciso conectar todos os meus bancos? 写不必须，但 Open Finance 连得越多结果越好，缺的部分它会说明而不是估。页尾仍写 Acesse o app e seja um dos primeiros a testar o Pierre Computer。JSON-LD SoftwareApplication 的 operatingSystem 为 iOS, Android，featureList 含 Integração com Gmail, Excel, Calendar e Notion。https://ajuda.pierre.finance/pt-BR/articles/17681345-o-que-e-o-pierre-computer HTTP 200，可见文案写 Atualizado ontem，time 元素 dateTime 为 2026-11-24T11:23:21Z，title 为 24 de novembro de 2026。正文：ambiente Linux de verdade；不是你的手机或电脑，设备上的东西不被读取或改动；跟几周的事（compra, viagem, renegociação）会留着，到约好的日期再回来。连接示例：Gmail、Google Agenda、Google Drive、Notion。旅行会打开真实网站比机票和住宿，预订或购买停在确认画面。你如果让它发邮件或建事件，它就在应用里做。浏览器：打开网站、搜索、比价、填表、建购物车。能跑代码并在对话里给出 Excel、CSV、PDF、Word、幻灯片和图表。财务只读：saldo, extrato, faturas, parcelas, investimentos, empréstimos 和 Cartão Pierre 3%。不做 Pix，也不做 transferência。默认不购买、付款、订阅或预订；先显示金额、地址和支付方式，价格变了再问。自动批准：你设每笔上限，24 小时合计最多 3 倍，位置写 Cartão、Configurações、Cartão agêntico。付款用一次性虚拟卡，卡数据不出现在对话里。登录在 Cofre de acessos；短信验证码或更难的 captcha 会停下来问你。不改密码、邮箱、电话或两步验证，不删除账户。Quem pode usar：Pro 和 Premium；持有 Cartão Pierre 3% 的人即使在 Básico 也能用。WhatsApp：Computer 只在应用里。打开方式：聊天顶部点 Computer；普通 Chat 里若是 Computer 的任务，会显示 Mover para o Computer。https://ajuda.pierre.finance/pt-BR/articles/16035183-quais-sao-os-planos-do-pierre HTTP 200，页面日期 22 de outubro de 2026（HTML 中的日期为 2026-10-22）。Básico 免费：1 家银行、1 个代理、有消息上限。Pro：R$ 39 por mês，或按年折合 R$ 33,25 por mês。Premium：R$ 199 por mês，或按年折合 R$ 166,58 por mês。内置 Albert、Marie、Galileu、Leo 不占名额。取消路径写 App Store 或 Google Play。https://www.cloudwalk.io/newsroom/cloudwalk-launches-pierre-computer-a-personal-ai-agent-that-autonomously-performs-tasks-across-platforms HTTP 200，日期 Nov 24, 2026。连接器写 Gmail, Outlook, Google Calendar, Slack, GitHub, Notion, and more。写 Pro 和 Premium 已可用、没有候补名单、即将给所有用户；Pro 写成 R$39.90 per month，和帮助页的 R$ 39 不一致，两处都只转述。新闻稿还写可以用购物网站上已保存的其他机构的卡，以及 2 million users、80 million messages、5 million agents、99% of customer support、10 million active users，这些是新闻稿数字，不是本库测量。新闻稿把这次发布写成给巴西人用的 Pierre 的新一章。预览：本机 Chrome 无头（Playwright）打开产品页，点 Facilita sua vida 后截 #computer（2880×1952），等比放入 1200×800，得到 1180×800，左右各补 10px 页面边缘色 rgb(9,9,11)，没有裁掉这块画面，没有加字。去重：main c088c54 的 data 以及当时全部 73 个打开的 PR head 的 data 目录都没有 pierre-computer、pierre.finance、airbots、spendgap、openfal。未做：没有注册或登录，没有安装 iOS 或 Android 应用，没有连接 Gmail、日历、Slack、GitHub、Notion 或其他应用，没有批准购买、付款或转账，没有上传账单，没有打开计费。",
+      "verifyLogEn": "2026-11-26 morning (Asia/Shanghai; fetches about 00:53–01:00 UTC): https://lp.pierre.finance/computer HTTP 200, title Pierre Computer - Você pede uma vez, ele trabalha por horas. The header reads Você pede uma vez. Ele faz por você. and Escreva o que quer resolver, feche o app e vá viver. Examples on the page: a 3-day Buenos Aires itinerary; a 5 km plan, 4 weeks, 3 runs a week, dropped into free slots on Google Agenda; reading 12 Gmail newsletters and suggesting a weekend; a coffee example at R$ 24,90 for the same brand, asking you to confirm. The connector line reads Planilhas, Agenda, Gmail, Slack, GitHub e Docs. The UI chips also show Agenda, Gmail, and Notion. Body copy lists Comparar passagens, cancelar assinaturas, simular um financiamento, planejar os custos de uma viagem, and A compra, o pagamento e a contratação só acontecem depois que você aprova, vendo o valor exato. FAQ: O Computer compra com meu dinheiro? answers Não, it works up to the confirmation screen, and you can set a ceiling first; Quanto tempo uma tarefa demora? says it can take hours and the time is its, so you can close the app; Ele investe por mim? answers Não, it does not recommend an asset, indicate an investment product, or give investment advice; Preciso conectar todos os meus bancos? says no, but more Open Finance connections improve the result, and it says when it is working from a partial picture instead of estimating. The page still says Acesse o app e seja um dos primeiros a testar o Pierre Computer. JSON-LD SoftwareApplication operatingSystem is iOS, Android, and the featureList includes Integração com Gmail, Excel, Calendar e Notion. https://ajuda.pierre.finance/pt-BR/articles/17681345-o-que-e-o-pierre-computer HTTP 200; the visible label is Atualizado ontem, and the time element has dateTime 2026-11-24T11:23:21Z and title 24 de novembro de 2026. The body says ambiente Linux de verdade; it is not your phone or your computer, and nothing on your devices is read or changed; for matters that take weeks (compra, viagem, renegociação) it keeps the thread and returns on an agreed date. Connect examples: Gmail, Google Agenda, Google Drive, Notion. For travel it opens real sites and compares flights and lodging, and stops on the confirmation screen before booking or buying. If you ask it to send an email or create an event, it does that in the app. Browser: open sites, search, compare prices, fill forms, build carts. It can run code and deliver Excel, CSV, PDF, Word, slides, and charts in the chat. Financial data is read-only: saldo, extrato, faturas, parcelas, investimentos, empréstimos, and the Cartão Pierre 3%. It does not do Pix or a transferência. By default it does not purchase, pay, subscribe, or reserve; it shows the amount, address, and payment method, and asks again if the price changes. Optional auto-approval: a per-purchase maximum you set, totaling at most 3 times that in 24 hours, under Cartão, Configurações, Cartão agêntico. Payments use a one-time virtual card and the card details are not shown in the chat. Logins live in the Cofre de acessos; an SMS code or a harder captcha stops and asks you. It does not change password, email, phone, or two-factor, and it does not delete accounts. Quem pode usar: Pro and Premium, and people with the Cartão Pierre 3% even on Básico. WhatsApp: Computer works only in the app. How to open it: tap Computer at the top of the chat; a Computer task asked in regular Chat shows Mover para o Computer. https://ajuda.pierre.finance/pt-BR/articles/16035183-quais-sao-os-planos-do-pierre HTTP 200, page date 22 de outubro de 2026 (2026-10-22 in the HTML). Básico is free: 1 bank, 1 agent, a message limit. Pro: R$ 39 por mês, or R$ 33,25 por mês billed annually. Premium: R$ 199 por mês, or R$ 166,58 por mês billed annually. Built-in Albert, Marie, Galileu, and Leo do not count toward the cap. Cancellation points at the App Store or Google Play. https://www.cloudwalk.io/newsroom/cloudwalk-launches-pierre-computer-a-personal-ai-agent-that-autonomously-performs-tasks-across-platforms HTTP 200, dated Nov 24, 2026. Connectors named: Gmail, Outlook, Google Calendar, Slack, GitHub, Notion, and more. It says Pro and Premium already have it, with no waitlist, and that it will soon reach all users; Pro is written as R$39.90 per month, which does not match the help page’s R$ 39, and both are quoted only. The newsroom also says Pierre can use cards from other institutions already saved on shopping sites, and it states 2 million users, 80 million messages, 5 million agents, 99% of customer support, and 10 million active users; those are newsroom figures, not measured here. The newsroom frames the launch as a new chapter of Pierre for Brazilians. Preview: headless Chrome via Playwright opened the product page, Facilita sua vida was selected, and #computer was captured at 2880×1952, fitted inside 1200×800 to 1180×800, padded 10px on the left and 10px on the right with the page edge color rgb(9,9,11). The captured frame was not cropped and no text was added. Dedupe: pierre-computer, pierre.finance, airbots, spendgap, and openfal are absent from data on main c088c54 and from the data directory of all 73 open PR heads at the time. Not done: no sign-up or sign-in, no iOS or Android install, no connection to Gmail, calendar, Slack, GitHub, Notion, or any other app, no approved purchase, payment, or transfer, no uploaded statement, and billing was not opened.",
+      "landing": {
+        "what": "Pierre 应用里的一个任务代理。你在聊天顶部打开 Computer，写下要办的事，然后可以关掉应用。帮助中心说它跑在一台隔离的 Linux 上，用你连接的应用和浏览器把事做完，再回到对话里。它是给巴西 Pierre 客户用的功能，不是一个公开的英文桌面程序。",
+        "whatEn": "A task agent inside the Pierre app. You open Computer at the top of the chat, write what you need, and you can close the app. The help center says it runs on an isolated Linux computer, uses the apps you connect and the browser, and returns to the thread. It is a feature for Pierre customers in Brazil, not a public English desktop program.",
+        "previewCredit": "预览来自产品页 Computer 区块的官方界面，左右补上页面底色。",
+        "previewCreditEn": "Preview of the official Computer section on the product page, padded left and right with the page background.",
+        "steps": [
+          {
+            "title": "先看谁能用、要多少钱",
+            "titleEn": "Read who can use it, and the prices",
+            "body": "帮助中心写 Computer 在 Pro 和 Premium，持有 Pierre 3% 卡的人在免费的 Básico 也能用。计划页写 Básico 免费，Pro 每月 39 雷亚尔或按年折合 33.25，Premium 每月 199 或按年折合 166.58。新闻稿把 Pro 写成每月 39.90 雷亚尔，并写没有候补名单。三处说法不一样，以你打开应用时看到的为准。本库没有注册。",
+            "bodyEn": "The help center says Computer is on Pro and Premium, and that Pierre 3% cardholders can use it on the free Básico plan. The plans page lists Básico as free, Pro at 39 reais a month or 33.25 billed annually, and Premium at 199 or 166.58 billed annually. The newsroom lists Pro at 39.90 reais a month and says there is no waitlist. The three pages do not match; what you see in the app is the one that applies. This library did not sign up.",
+            "links": [
+              {
+                "href": "https://ajuda.pierre.finance/pt-BR/articles/17681345-o-que-e-o-pierre-computer",
+                "label": "Pierre Computer 是什么",
+                "labelEn": "What Pierre Computer is"
+              },
+              {
+                "href": "https://ajuda.pierre.finance/pt-BR/articles/16035183-quais-sao-os-planos-do-pierre",
+                "label": "Pierre 的计划与价格",
+                "labelEn": "Pierre plans and prices"
+              }
+            ]
+          },
+          {
+            "title": "在应用里打开 Computer",
+            "titleEn": "Open Computer in the app",
+            "body": "产品页的结构化数据写操作系统是 iOS 和 Android。帮助中心写：打开应用，进聊天，点顶部的 Computer，再写下任务。如果在普通聊天里提出 Computer 才做的事，会出现 Mover para o Computer。本库没有安装应用，也没有登录。",
+            "bodyEn": "The product page’s structured data lists iOS and Android. The help center says: open the app, go to the chat, tap Computer at the top, and write the task. A Computer task asked in the regular chat shows Mover para o Computer. This library did not install the app or sign in.",
+            "links": [
+              {
+                "href": "https://lp.pierre.finance/computer",
+                "label": "Pierre Computer 产品页",
+                "labelEn": "Pierre Computer product page"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "默认不在你批准前购买、付款、订阅或预订。它不做 Pix 或银行转账，也不提供投资建议。",
+            "textEn": "It does not purchase, pay, subscribe, or reserve before you approve. It does not send Pix or a bank transfer, and it does not give investment advice."
+          },
+          {
+            "text": "这是巴西 Pierre 客户的功能。Computer 不在 WhatsApp 聊天里运行。",
+            "textEn": "This is a feature for Pierre customers in Brazil. Computer does not run in the WhatsApp chat."
+          }
+        ]
+      }
+    },
+    {
+      "id": "airbots",
+      "slug": "airbots",
+      "title": "Airbots：销售管线的幕僚，先在 WhatsApp 或 iMessage 里把草稿发来",
+      "titleEn": "Airbots: a sales chief of staff that texts the next draft in WhatsApp or iMessage",
+      "kind": "tool",
+      "hook": "销售幕僚在 WhatsApp 或 iMessage 里先把草稿发来。",
+      "hookEn": "A sales chief of staff texts the next draft in WhatsApp or iMessage for you to approve.",
+      "summary": "Airbots（产品页标题和 airbots.ai 写作 Airbot，官方博客标题写作 Airbots；https://www.goairspeed.com/airbots ）是 Airspeed 做的工作幕僚。公开页面先讲销售管线。产品页的原句是：它看着你的通话、CRM 和收件箱，在你想到要问之前，用 WhatsApp 把已经起草好的下一步发给你。页面上的工作包括通话准备、管道检查、跟进草稿和会议邀请。对话示例下面写着公司名是虚构的。发邮件、创建会议邀请或改 CRM 之前，它在 WhatsApp 里列出改动，等你点批准；你改口，它就不发。博客（2026-11-17）写当天开放早期使用，请人到 airbots.ai 加入候补名单，并写没有新的应用或仪表盘，WhatsApp 和 iMessage 都会出现。产品页写单独使用是邀请制，安装步骤按 WhatsApp。短页写门很快就会开，Product Hunt 的访客可以跳过候补，表单却仍是加入候补。没有看到单独的公开价格。博客说每条消息后面有一组代理在后台工作，用户看到的仍是一条对话。产品页列出的连接包括 Slack、Salesforce、HubSpot、Outlook、Gong、Gmail、Google 日历，以及 Notion、Linear 等。本库没有加入候补名单，没有登录，也没有连接任何账号。",
+      "summaryEn": "Airbots (the product-page title and airbots.ai say Airbot; the official blog title says Airbots; https://www.goairspeed.com/airbots ) is a chief of staff from Airspeed. The public pages lead with the sales pipeline. The product page’s own line is that it watches your calls, CRM, and inbox, and messages you in WhatsApp before you think to ask, with the next step already drafted. The jobs on the page are call prep, pipeline checks, follow-up drafts, and meeting invites. Under the sample thread the page says the company names are fictional. Before it sends an email, creates a meeting invite, or changes the CRM, it lists the change in WhatsApp and waits for you to tap Approve; if you reply with a change, nothing is sent. The blog (2026-11-17) says early access opened that day, asks people to join the waitlist at airbots.ai, and says there is no new app or dashboard; it names both WhatsApp and iMessage. The product page says standalone use is invite-only and its setup steps are for WhatsApp. The short page says the doors open very soon and that Product Hunt visitors can skip the waitlist, while the form is still join the waitlist. No separate public price was found. The blog says a team of agents works behind each message; what you see is still one thread. Connectors named on the product page include Slack, Salesforce, HubSpot, Outlook, Gong, Gmail, and Google Calendar, plus Notion, Linear, and others. This library did not join the waitlist, sign in, or connect any account.",
+      "categories": [
+        "sales",
+        "automation"
+      ],
+      "role": "Sales chief of staff",
+      "sourceUrl": "https://www.goairspeed.com/airbots",
+      "secondaryUrls": [
+        "https://www.goairspeed.com/blog/meet-airbots-ai-chief-of-staff-whatsapp-imessage",
+        "https://airbots.ai/",
+        "https://news.ycombinator.com/item?id=50647456"
+      ],
+      "previewImage": "/previews/airbots.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": true,
+      "hasRoutine": true,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "在你于对话里批准之前，它不发送邮件、不创建会议邀请、不改 CRM。本库没有加入候补名单，没有登录，也没有连接 WhatsApp、iMessage 或任何工作账号。",
+      "approvalBoundaryEn": "It does not send an email, create a meeting invite, or change the CRM until you approve in the thread. This library did not join the waitlist, sign in, or connect WhatsApp, iMessage, or any work account.",
+      "connectors": [
+        "WhatsApp",
+        "iMessage",
+        "Slack",
+        "Salesforce",
+        "HubSpot",
+        "Outlook",
+        "Gong",
+        "Clay",
+        "Granola",
+        "Gmail",
+        "Google Calendar",
+        "Google Drive",
+        "Google Slides",
+        "Asana",
+        "Attio",
+        "Canva",
+        "Gainsight",
+        "Google Docs",
+        "Linear",
+        "Notion",
+        "PostHog",
+        "Pylon",
+        "Seismic",
+        "Vanta",
+        "Zendesk",
+        "ZoomInfo"
+      ],
+      "publishedAt": "2026-11-17",
+      "updatedAt": "2026-11-26T01:00:00Z",
+      "qualityNote": "收录理由：它不另给你一个要打开的后台，而是在消息里先把销售上的下一步草稿发来，发送和改 CRM 之前要你批准。边界：公开页面以销售管线为主，不是家庭生活总管。博客和 airbots.ai 写 WhatsApp 和 iMessage；产品页的安装步骤和常见问题按 WhatsApp 来写。单独使用仍是邀请制或候补名单，短页同时写门很快就会开、Product Hunt 的访客可以跳过候补。没有看到单独的公开价格，这里不编。示例对话里的公司名是页面标明的虚构名字。博客说每条消息后面有一组代理，用户看到的仍是一条对话。本库没有加入候补、没有预约演示、没有登录，也没有连接任何账号或批准发送。",
+      "qualityNoteEn": "Why listed: it does not hand you another dashboard to open. It texts the next sales step already drafted, and it waits for your approval before sending or changing the CRM. Limits: the public pages lead with the sales pipeline, not a household life agent. The blog and airbots.ai name WhatsApp and iMessage; the product page’s setup and FAQ are written for WhatsApp. Standalone use is still invite-only or a waitlist, while the short page also says the doors open very soon and that Product Hunt visitors can skip the waitlist. No separate public price was found, so none is invented here. Company names in the sample thread are labeled fictional on the page. The blog says a team of agents sits behind each message; what you see is still one thread. This library did not join the waitlist, book a demo, sign in, connect any account, or approve a send.",
+      "verifyLog": "2026-11-26 上午（Asia/Shanghai，抓取约 00:53–01:00 UTC）：https://www.goairspeed.com/airbots HTTP 200，title 为 Airbot: A chief of staff for your pipeline。页顶横幅写 Airbots is live on Product Hunt today，链接到 https://www.producthunt.com/products/airbots ；该 Product Hunt 页返回人机验证（HTTP 403，正文 Just a moment），所以 Product Hunt 上的价格和评论没有读到，不写入正文。产品页正文：A chief of staff for your whole pipeline. Your Airbot watches your calls, CRM, and inbox, and messages you in WhatsApp before you think to ask, with the next step already drafted. 工作项：Call prep、Pipeline checks、Follow-up drafts、Meeting invites。示例对话标 Example conversations. Company names are fictional. 集成标志一行：Airspeed、Salesforce、HubSpot、Gong、Clay、Granola、Gmail、Outlook、Google Calendar、Google Drive、Slack、Google Slides。Also connects to：Asana、Attio、Canva、Gainsight、Google Docs、Linear、Notion、PostHog、Pylon、Seismic、Vanta、Zendesk、ZoomInfo。活动卡片上还出现 Zoom 和 Loom，那些卡片用的是虚构公司，不放进连接器列表。页面写 Airspeed manages the models, MCP servers, and APIs behind your Airbot。安装三步是连接 WhatsApp。FAQ：定时检查不需要你开着 Airspeed；批准发生在 WhatsApp，包括发邮件、创建邀请、改 CRM，改口则不发送；单独的 Airbot 是 invite-only，从邀请链接或 airbots.ai 候补名单进入，再到 app.airbots.ai 用手机号登录并连接 Google Workspace 或 Outlook。产品页正文没有把 iMessage 写成安装步骤，iMessage 出现在站点导航里的博客标题。https://www.goairspeed.com/blog/meet-airbots-ai-chief-of-staff-whatsapp-imessage HTTP 200，time datetime 2026-11-17，作者 Helene Dötsch。标题 Meet Airbots: Your AI Chief of Staff, Now in WhatsApp and iMessage。写当天开放 early access，Join the waitlist at airbots.ai，没有新应用、仪表盘或上线流程。典型早晨短信（博客原文，虚构的 Acme）：You’ve got five calls today. Heads up: your champion at Acme left last week, and I’ve found her replacement. Want me to draft an intro before 2pm? Devang Agrawal 的引语写 Behind every message is a team of agents that never stops working。还写 Approve every send，Airbots never sends an email unless you ask it to，以及 SOC 2 Type II。博客另写 180 customers in 20 countries、2022 年创立、伦敦和纽约、超过 2500 万美元融资包括 2026 年 6 月 DN Capital 领投的 2000 万美元 A 轮；页脚有 G2 4.7。这些是站点上的公司说法，不是本库测的产品效果，也不进卡片短句。https://airbots.ai/ HTTP 200，title Airbot by Airspeed，og:title 为 Airbot: your AI chief of staff in WhatsApp and iMessage。短对话写 We're opening the doors very soon 和 Hey Product Hunt / You get to skip the waitlist，页面上仍是 Join the waitlist 表单。页面没有写免费或付费价格。HN https://news.ycombinator.com/item?id=50647456 HTTP 200，标题 AI Chief of Staff，链到 airbots.ai。Firebase item API HTTP 200：by vaibagra，score 5，descendants 1，time 1795640416（2026-11-25T21:00:16Z，上海 2026-11-26 05:00:16）。评论者 devang1994_ag 自述是 Airbots 的联合创始人。预览：本机 Chrome 无头（Playwright）截产品页 #in-action（2880×1694），这块里有 WhatsApp 样式的示例对话。等比放入 1200×800 得到 1200×706，上方补 47px（顶行平均色 rgb(186,111,180)，与页面上的紫色公告条相接），下方补 47px（底行平均色 rgb(245,244,240)）。没有裁掉这块画面，没有加字。右下角的 Contact us 是页面自己的按钮。去重：main c088c54 和当时全部打开的 PR head 的 data 里没有 airbots、goairspeed、airbots.ai。未做：没有加入候补名单，没有预约演示，没有登录 app.airbots.ai，没有连接 WhatsApp、iMessage、Gmail、日历、Slack、Salesforce 或其他工具，没有批准发送。",
+      "verifyLogEn": "2026-11-26 morning (Asia/Shanghai; fetches about 00:53–01:00 UTC): https://www.goairspeed.com/airbots HTTP 200, title Airbot: A chief of staff for your pipeline. The top banner reads Airbots is live on Product Hunt today and links to https://www.producthunt.com/products/airbots . That Product Hunt page returned a bot check (HTTP 403, body Just a moment), so prices and comments on Product Hunt were not read and are not in the entry. Product page body: A chief of staff for your whole pipeline. Your Airbot watches your calls, CRM, and inbox, and messages you in WhatsApp before you think to ask, with the next step already drafted. Jobs: Call prep, Pipeline checks, Follow-up drafts, Meeting invites. The sample is labeled Example conversations. Company names are fictional. Logo row: Airspeed, Salesforce, HubSpot, Gong, Clay, Granola, Gmail, Outlook, Google Calendar, Google Drive, Slack, Google Slides. Also connects to: Asana, Attio, Canva, Gainsight, Google Docs, Linear, Notion, PostHog, Pylon, Seismic, Vanta, Zendesk, ZoomInfo. Zoom and Loom also appear on activity cards that use fictional companies, so they are not in the connector list. The page says Airspeed manages the models, MCP servers, and APIs behind your Airbot. The three setup steps connect WhatsApp. FAQ: scheduled checks run without Airspeed kept open; approval happens in WhatsApp for sending an email, creating an invite, or changing the CRM, and a changed reply sends nothing; Airbot on its own is invite-only, joined from an invite link or the waitlist at airbots.ai, then sign-in at app.airbots.ai with a phone number and Google Workspace or Outlook. The product-page body does not describe an iMessage setup; iMessage appears there in the blog title in the site navigation. https://www.goairspeed.com/blog/meet-airbots-ai-chief-of-staff-whatsapp-imessage HTTP 200, time datetime 2026-11-17, author Helene Dötsch. Title: Meet Airbots: Your AI Chief of Staff, Now in WhatsApp and iMessage. It says early access opens that day, Join the waitlist at airbots.ai, and there is no new app, dashboard, or rollout. The sample morning text (the blog’s own copy, fictional Acme): You’ve got five calls today. Heads up: your champion at Acme left last week, and I’ve found her replacement. Want me to draft an intro before 2pm? The Devang Agrawal quote says Behind every message is a team of agents that never stops working. It also says Approve every send, Airbots never sends an email unless you ask it to, and SOC 2 Type II. The blog also says 180 customers in 20 countries, founded in 2022, London and New York, and more than $25 million raised including a $20 million Series A in June 2026 led by DN Capital; the footer shows G2 4.7. Those are company statements on the site, not results measured here, and they are not in the card line. https://airbots.ai/ HTTP 200, title Airbot by Airspeed, og:title Airbot: your AI chief of staff in WhatsApp and iMessage. The short thread says We're opening the doors very soon and Hey Product Hunt / You get to skip the waitlist, and the page still has a Join the waitlist form. The page states no free or paid price. HN https://news.ycombinator.com/item?id=50647456 HTTP 200, title AI Chief of Staff, linking airbots.ai. The Firebase item API returned HTTP 200: by vaibagra, score 5, descendants 1, time 1795640416 (2026-11-25T21:00:16Z, 2026-11-26 05:00:16 Shanghai). Commenter devang1994_ag describes himself as cofounder of Airbots. Preview: headless Chrome via Playwright captured #in-action on the product page (2880×1694), which includes the WhatsApp-style sample thread. Fitted inside 1200×800 to 1200×706, padded 47px on top with the top-row average rgb(186,111,180), continuing the page’s purple announcement bar, and 47px on the bottom with the bottom-row average rgb(245,244,240). The captured frame was not cropped and no text was added. The Contact us control at the lower right is the page’s own button. Dedupe: airbots, goairspeed, and airbots.ai are absent from data on main c088c54 and from the data directories of the open PR heads. Not done: did not join the waitlist, book a demo, sign in at app.airbots.ai, connect WhatsApp, iMessage, Gmail, calendar, Slack, Salesforce, or any other tool, or approve a send.",
+      "landing": {
+        "what": "Airspeed 放在消息里的销售幕僚。官方博客叫它 Airbots，产品页和 airbots.ai 叫它 Airbot。它盯着通话、CRM 和收件箱，先把草稿发到 WhatsApp；博客和短页也写 iMessage。你在同一条对话里批准之后，它才对外发送。",
+        "whatEn": "Airspeed’s sales chief of staff, delivered in messages. The official blog calls it Airbots; the product page and airbots.ai call it Airbot. It watches calls, CRM, and inbox, and texts the draft to WhatsApp first; the blog and the short page also name iMessage. It sends outward only after you approve in that same thread.",
+        "previewCredit": "预览来自产品页上的 WhatsApp 示例对话，上下补上画面边缘的颜色。",
+        "previewCreditEn": "Preview of the WhatsApp sample thread on the product page, padded top and bottom with the frame’s edge colors.",
+        "steps": [
+          {
+            "title": "先看产品页上的示例",
+            "titleEn": "Read the sample on the product page",
+            "body": "示例对话写的是通话准备、管道检查、跟进草稿和会议邀请。页面标明公司名是虚构的。本库没有预约演示。",
+            "bodyEn": "The sample thread shows call prep, a pipeline check, a follow-up draft, and a meeting invite. The page says the company names are fictional. This library did not book a demo.",
+            "links": [
+              {
+                "href": "https://www.goairspeed.com/airbots",
+                "label": "Airbot 产品页",
+                "labelEn": "Airbot product page"
+              }
+            ]
+          },
+          {
+            "title": "访问仍是候补或邀请",
+            "titleEn": "Access is still a waitlist or an invite",
+            "body": "博客写 2026-11-17 开放 early access，并让人到 airbots.ai 加入候补名单。产品页写单独使用是邀请制。短页写门很快开，Product Hunt 的访客可以跳过候补，同时表单仍是加入候补名单。没有公开价格。本库没有加入候补，也没有登录。",
+            "bodyEn": "The blog says early access opened on 2026-11-17 and points people to the waitlist at airbots.ai. The product page says standalone use is invite-only. The short page says the doors open very soon and that Product Hunt visitors can skip the waitlist, while the form is still Join the waitlist. No public price is listed. This library did not join the waitlist or sign in.",
+            "links": [
+              {
+                "href": "https://www.goairspeed.com/blog/meet-airbots-ai-chief-of-staff-whatsapp-imessage",
+                "label": "Airbots 发布博客",
+                "labelEn": "Airbots launch blog"
+              },
+              {
+                "href": "https://airbots.ai/",
+                "label": "airbots.ai 候补页",
+                "labelEn": "airbots.ai waitlist"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "公开页面以销售管线为主。不要把它当成家庭生活总管。",
+            "textEn": "The public pages lead with the sales pipeline. Do not treat it as a household life agent."
+          },
+          {
+            "text": "没有在你批准之前，它不发送邮件、不创建邀请、不改 CRM。",
+            "textEn": "Until you approve, it does not send an email, create an invite, or change the CRM."
+          }
+        ]
+      }
+    },
+    {
+      "id": "spendgap",
+      "slug": "spendgap",
+      "title": "Spendgap：收齐发票，标出涨价和续费，并起草你自己发出的邮件",
+      "titleEn": "Spendgap: collect invoices, flag price rises and renewals, and draft the email you send yourself",
+      "kind": "tool",
+      "hook": "它收发票、标出涨价和续费，议价邮件由你自己发出。",
+      "hookEn": "It collects invoices, flags renewals and price rises, and drafts the email you send.",
+      "summary": "Spendgap（https://spendgap.ai/ ）是一个收发票、看软件订阅的免费工具。首页写：我们收集你的发票，帮你少付钱，而且免费。它通知涨价和续费，找出缺的发票，并写好一封从你自己的地址发出的邮件。每个工具可以留下、要求降价、看看别的选择、及时取消，或标出没用的、重叠的工具和空着的座位。首页注明页面上的价格是示例。第一次检查是上传最近三个月的银行或信用卡对账单（PDF 或 CSV），发票也可以来自 Claude、ChatGPT，或由你转发。网站写免费，并写每个公司每个月最多读 100 张发票，多出来的等到下个月。作者在 Show HN 里也这么说，并说如果用的人到 100，会在整理代码之后做可以自托管、也能用本地模型的版本；那个版本现在还不能下载。首页问答写它不读你的 Gmail，安全页又写了一个可选的只读邮箱。公开的技能文件写着版本 5.0.0。它不给供应商发信。本库没有注册、没有登录、没有上传对账单或发票，也没有连接邮箱或助手。",
+      "summaryEn": "Spendgap (https://spendgap.ai/ ) is a free tool that collects invoices and watches software subscriptions. The homepage says: we collect your invoices and help you pay less, and it is free. It notifies you about price rises and renewals, finds missing invoices, and writes an email you send from your own address. For each tool you can keep it, ask for a lower price, look at other options, cancel in time, or spot unused tools, overlapping tools, and unused seats. The homepage says the prices shown are examples. The first check is an upload of the last three months of bank or card statements (PDF or CSV). Invoices can also come from Claude or ChatGPT, or you forward them. The site says it is free and that it reads at most 100 invoices a month per company, with the rest waiting until the next month. The Show HN author says the same, and says that if 100 people use it, a self-hosted version that can use local models would follow a code cleanup. That version cannot be downloaded now. The homepage FAQ says it does not read your Gmail, while the security page describes an optional read-only mailbox. A public skill file lists version 5.0.0. It does not write to a vendor. This library did not sign up, sign in, upload a statement or invoice, or connect a mailbox or an assistant.",
+      "categories": [
+        "finance",
+        "automation"
+      ],
+      "role": "Invoice assistant",
+      "sourceUrl": "https://spendgap.ai/",
+      "secondaryUrls": [
+        "https://spendgap.ai/security",
+        "https://spendgap.ai/SKILL.md",
+        "https://news.ycombinator.com/item?id=50641746"
+      ],
+      "previewImage": "/previews/spendgap.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": true,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "它不给供应商发信。邮件草稿由你自己从自己的地址发出。本库没有注册、登录、上传对账单或发票，也没有连接 Gmail、Google、Claude 或 ChatGPT。",
+      "approvalBoundaryEn": "It does not email a vendor. You send the draft yourself from your own address. This library did not sign up, sign in, upload a statement or an invoice, or connect Gmail, Google, Claude, or ChatGPT.",
+      "connectors": [
+        "Claude",
+        "ChatGPT",
+        "Gmail"
+      ],
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-26T01:00:00Z",
+      "qualityNote": "收录理由：它把收发票、发现涨价和重复订阅、起草降价或取消邮件放在一件工具里，信由你自己发。边界：这是财务和邮件流程，不是首席幕僚。首页上的金额是站点标明的示例。网站写免费，并写每个公司每个月最多读 100 张发票；Show HN 的作者也这么说，还说如果用的人到 100，会在整理代码之后做可以自托管的版本，那个版本现在还不能下载。首页问答写它不读 Gmail，安全页又写了可选的只读邮箱，两处都照录。公开的技能文件要求先连接 Spendgap 再去读邮箱。本库没有注册、登录、上传对账单或发票，没有连接邮箱或助手，也没有安装技能文件。",
+      "qualityNoteEn": "Why listed: it collects invoices, flags price rises and duplicate subscriptions, and drafts the email asking for a lower price or a cancellation, which you send yourself. Limits: this is a finance and mail workflow, not a chief of staff. Amounts on the homepage are labeled as examples. The site says it is free and that it reads at most 100 invoices a month per company. The Show HN author says the same, and also says a self-hosted version would come after a code cleanup if 100 people use it. That version is not something you can download now. The homepage FAQ says it does not read Gmail, while the security page describes an optional read-only mailbox; both are recorded as written. The public skill file says to connect Spendgap before reading mail. This library did not sign up, sign in, upload a statement or invoice, connect a mailbox or an assistant, or install the skill file.",
+      "verifyLog": "2026-11-26 上午（Asia/Shanghai，抓取约 00:53–01:00 UTC）：https://spendgap.ai/ HTTP 200，title 为 Spendgap: see what your company pays for, free。首页：We collect your invoices and help you pay less. Free. 页脚写 Product names and logos are trademarks of their owners and are shown only as examples. Spendgap isn't affiliated with or endorsed by them. Prices shown are examples. 第一次检查写上传最近三个月的银行或信用卡对账单，PDF 或 CSV；发票也可以来自 Claude 或 ChatGPT，或由你转发，转发规则之后会收下新发票。它可以把发票自动发给会计。首页隐私句：Private and encrypted、Not used for training AI。问答：Do you read my Gmail? 答 No，由你自己的 AI 在允许后只把账单、收据、续费通知和试用发来。Do you need my passwords? 答 No。Can a vendor be emailed without me? 答 No，Spendgap never writes to a vendor。Why it's free 一节写每个公司每个月最多读 100 张发票，多的等到下个月，因为托管和读文件的 AI 由他们付。对账单 7 天后删除，不存卡号和账号，登录用邮箱链接或 Google。https://spendgap.ai/security HTTP 200。安全页在「账单怎么到我们这里」里写了三条：转发和上传、你的 AI 助手，以及 A connected mailbox (optional)，只读，只找账单、收据、续费和试用，不能发送、修改或删除邮件，断开后删除已存的凭据。这和首页「不读 Gmail、没有直接的 Gmail 连接」并列为两套说法。https://spendgap.ai/SKILL.md HTTP 200，front matter 写 name spendgap、version 5.0.0。文件要求先连接 Spendgap，再由用户自己的 AI 读 Gmail 里的账单邮件；还写 once forwarding is set up, new bills arrive by themselves, and an email on the 5th lists renewals and price rises。本库没有安装或运行这个文件。HN https://news.ycombinator.com/item?id=50641746 HTTP 200，标题 Show HN: Free tool to collect invoices and spot forgotten subscriptions，链到 spendgap.ai。Firebase item API HTTP 200：by make_it_sure，score 8，descendants 5，time 1795611460（2026-11-25T12:57:40Z，上海 2026-11-25 20:57:40）。作者正文写 fully free, but limited to reading 100 invoices a month, since I cover the AI costs，并写想在用的人到 100 之后发布可自托管、含本地模型的版本，代码还要整理。作者回复写 it's AI mostly. I compared some paid services like transaction discovery API and were worse than Sonnet. Still, i don't have enough data to judge fully yet。这是作者评论，不是本库评测，不进卡片短句。预览：本机 Chrome 无头（Playwright）截首页英雄图元素（alt 写这是一家示例公司的首页，2200×1258），等比放入 1200×800 得到 1200×686，上方补 57px（顶行平均色 rgb(237,237,237)），下方补 57px（底行平均色 rgb(254,254,254)）。没有裁掉这张图，没有加字。图上的金额是站点的示例。去重：main c088c54 和当时全部打开的 PR head 的 data 里没有 spendgap。未做：没有注册或登录，没有打开 app.spendgap.ai 的演示以外的登录流（预览用的是营销页上的图，没有进入需要登录的产品），没有上传对账单或发票，没有连接 Gmail、Google、Claude 或 ChatGPT，没有安装技能文件，没有发送任何邮件。",
+      "verifyLogEn": "2026-11-26 morning (Asia/Shanghai; fetches about 00:53–01:00 UTC): https://spendgap.ai/ HTTP 200, title Spendgap: see what your company pays for, free. Homepage: We collect your invoices and help you pay less. Free. The footer says Product names and logos are trademarks of their owners and are shown only as examples. Spendgap isn't affiliated with or endorsed by them. Prices shown are examples. The first check says to upload the last three months of bank or card statements, PDF or CSV; invoices can also come from Claude or ChatGPT, or you forward them, and a forwarding rule then picks up new ones. It can send invoices to your accountant automatically. Homepage privacy lines: Private and encrypted, and Not used for training AI. FAQ: Do you read my Gmail? answers No; your own AI, with permission, sends only bills, receipts, renewal notices, and trials. Do you need my passwords? answers No. Can a vendor be emailed without me? answers No, Spendgap never writes to a vendor. The Why it's free section says it reads at most 100 invoices a month per company, and the rest wait until next month, because they pay for hosting and the AI that reads files. Statements are deleted after 7 days, card and account numbers are not stored, and sign-in is an email link or Google. https://spendgap.ai/security HTTP 200. Under how bills reach them, the security page lists three paths: forwarding and uploads, your AI assistant, and A connected mailbox (optional), read-only, looking only for bills, receipts, renewals, and trials, unable to send, change, or delete mail, with stored credentials deleted on disconnect. That sits beside the homepage’s “we do not read Gmail and there is no direct Gmail connection.” https://spendgap.ai/SKILL.md HTTP 200; the front matter says name spendgap and version 5.0.0. The file says to connect Spendgap first, then the user’s own AI reads billing email in Gmail; it also says once forwarding is set up, new bills arrive by themselves, and an email on the 5th lists renewals and price rises. This library did not install or run that file. HN https://news.ycombinator.com/item?id=50641746 HTTP 200, title Show HN: Free tool to collect invoices and spot forgotten subscriptions, linking spendgap.ai. The Firebase item API returned HTTP 200: by make_it_sure, score 8, descendants 5, time 1795611460 (2026-11-25T12:57:40Z, 2026-11-25 20:57:40 Shanghai). The author’s text says fully free, but limited to reading 100 invoices a month, since I cover the AI costs, and that a self-hosted version, including local models, would be released after a code cleanup if people use it, with the goal set at 100 users. The author’s reply says it's AI mostly. I compared some paid services like transaction discovery API and were worse than Sonnet. Still, i don't have enough data to judge fully yet. That is an author comment, not a benchmark run here, and it is not in the card line. Preview: headless Chrome via Playwright captured the homepage hero image element (the alt text calls it an example company’s home page, 2200×1258), fitted inside 1200×800 to 1200×686, padded 57px on top with the top-row average rgb(237,237,237) and 57px on the bottom with the bottom-row average rgb(254,254,254). The image was not cropped and no text was added. Amounts in the picture are the site’s examples. Dedupe: spendgap is absent from data on main c088c54 and from the data directories of the open PR heads. Not done: no sign-up or sign-in, the signed-in app at app.spendgap.ai was not opened (the preview is the image on the marketing page), no statement or invoice was uploaded, Gmail, Google, Claude, and ChatGPT were not connected, the skill file was not installed, and no email was sent.",
+      "landing": {
+        "what": "一个看公司软件账单的小工具。它收发票，标出涨价、续费、缺发票和重叠订阅，再起草你自己发出的邮件。它不是会替你跑完一天工作的个人代理。",
+        "whatEn": "A small tool for a company’s software bills. It collects invoices, flags price rises, renewals, missing invoices, and overlapping subscriptions, and drafts the email you send yourself. It is not a personal agent that runs your day.",
+        "previewCredit": "预览来自官网首页的产品界面图，上下补上画面边缘的颜色。图中金额是该页标明的示例。",
+        "previewCreditEn": "Preview of the product image on the homepage, padded top and bottom with the image’s edge colors. Amounts in it are examples labeled on that page.",
+        "steps": [
+          {
+            "title": "先读它要你交什么",
+            "titleEn": "Read what it asks you to hand over",
+            "body": "首页让你上传最近三个月的银行或信用卡对账单，或由你自己的 AI 转发发票。安全页另外写了一个可选的只读邮箱。本库没有上传任何文件，也没有连接邮箱。",
+            "bodyEn": "The homepage asks for the last three months of bank or card statements, or for your own AI to forward invoices. The security page also describes an optional read-only mailbox. This library did not upload a file or connect a mailbox.",
+            "links": [
+              {
+                "href": "https://spendgap.ai/",
+                "label": "Spendgap 首页",
+                "labelEn": "Spendgap homepage"
+              },
+              {
+                "href": "https://spendgap.ai/security",
+                "label": "Spendgap 安全说明",
+                "labelEn": "Spendgap security note"
+              }
+            ]
+          },
+          {
+            "title": "邮件要你自己发",
+            "titleEn": "You send the email yourself",
+            "body": "首页写 Spendgap 不给供应商发信。你改完草稿，从自己的地址发出。技能文件在网站上公开，版本号写着 5.0.0。本库没有安装它。",
+            "bodyEn": "The homepage says Spendgap never writes to a vendor. You edit the draft and send it from your own address. A skill file is public on the site and its version line says 5.0.0. This library did not install it.",
+            "links": [
+              {
+                "href": "https://spendgap.ai/SKILL.md",
+                "label": "公开的技能文件",
+                "labelEn": "Public skill file"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "网站写每个公司每个月最多读 100 张发票。自托管版本只出现在作者的 Show HN 留言里，现在还不能下载。",
+            "textEn": "The site says it reads at most 100 invoices a month per company. A self-hosted version is only in the author’s Show HN comment and cannot be downloaded now."
+          },
+          {
+            "text": "首页上的金额是示例。不要把预览图里的数字当成某家公司的真实账单。",
+            "textEn": "Amounts on the homepage are examples. Do not read the numbers in the preview as a real company’s bills."
+          }
+        ]
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12443,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-26T01:00:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 224,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12776,22 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://lp.pierre.finance/computer",
+      "https://www.cloudwalk.io/newsroom/cloudwalk-launches-pierre-computer-a-personal-ai-agent-that-autonomously-performs-tasks-across-platforms",
+      "https://ajuda.pierre.finance/pt-BR/articles/17681345-o-que-e-o-pierre-computer",
+      "https://ajuda.pierre.finance/pt-BR/articles/16035183-quais-sao-os-planos-do-pierre",
+      "https://www.goairspeed.com/airbots",
+      "https://www.goairspeed.com/blog/meet-airbots-ai-chief-of-staff-whatsapp-imessage",
+      "https://airbots.ai/",
+      "https://www.producthunt.com/products/airbots",
+      "https://spendgap.ai/",
+      "https://spendgap.ai/security",
+      "https://spendgap.ai/SKILL.md",
+      "https://news.ycombinator.com/item?id=50647456",
+      "https://news.ycombinator.com/item?id=50641746",
+      "https://hacker-news.firebaseio.com/v0/item/50647456.json",
+      "https://hacker-news.firebaseio.com/v0/item/50641746.json"
     ]
   }
 }
