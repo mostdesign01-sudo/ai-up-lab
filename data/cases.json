@@ -1,6 +1,147 @@
 {
   "cases": [
     {
+      "id": "openfal",
+      "slug": "openfal",
+      "title": "Openfal：在自己的电脑上，把 Qwen-Image、Wan 和 MiniMax 跑成本地 API 与 Studio",
+      "titleEn": "Openfal: run Qwen-Image, Wan, and MiniMax on your own machine as a local API and Studio",
+      "kind": "tool",
+      "hook": "在自己的电脑上，把图像和视频模型跑成本地 API 与 Studio。",
+      "hookEn": "Run image and video models on your own machine as a local API and Studio.",
+      "summary": "Openfal（https://openfal.org/ ）是一个独立项目：官网和 README 都写明它与 fal.ai 无关，没有受其背书或赞助。它跑在你自己的 Windows、Linux 或 macOS 上，用一条 CLI 把 Qwen-Image-2.1、Wan 2.2 和 MiniMax H3 收成固定的本地端点，并带浏览器 Studio，处在托管 API 和 ComfyUI 节点图之间。兼容的是 fal 风格的路由名、/queue/* 提交、SSE，以及类似 fal_client 的 Python SDK（openfal.subscribe、run、submit、upload_file）；官网写明只覆盖它支持的本地模型，不是完整的 fal.ai 目录，也没有对等的审核能力。安装按官网和 README：需要 Python 3.10+；Windows / Linux 的 NVIDIA 显卡要先装 CUDA 版 PyTorch，再 pip install -e \".[inference]\"，然后 openfal detect、openfal autosetup --tier minimal -y、openfal serve --port 8008。默认只绑 127.0.0.1；要给局域网用，需加上 --host 0.0.0.0 和 --api-key。Studio 在 http://127.0.0.1:8008/ ，OpenAPI 在 /docs。官网 CLI 卡片和 pyproject.toml 都写版本 0.1.0。README 表格里的工作流是：Qwen-Image-2.1 文生图和参考图编辑；Wan 2.2 文生视频、图生视频、Animate 和 recast；MiniMax H3 / Ref2VA 的带声音视频、参考视频、recast / relight / insert，以及文生图、图生图。minimax/h3-max 开头的路由指向本地 H3 分区，不会另下一份 H3 Max。官网列出的下载体积是官方估算，不是本库量的：最小图像档约 16.1 GB，其余档位约 21.7、48.0、88.1、98.6 和 186.7 GB。应用源码是 MIT，版权行写 Copyright (c) 2026 openfal Contributors；模型权重仍受各自上游许可证约束。仓库里的 desktop/README.md 还写了桌面安装包。项目自己公布了 RTX 5090 上对照 ComfyUI 和 vLLM-Omni 的数字，以及一台 64 GB M4 Max 的验证记录，都不是本库测的。适合想在本机出图、出视频，又不想手画节点图的人。本库没有安装，没有下载权重，没有启动服务，也没有生成图像或视频。",
+      "summaryEn": "Openfal (https://openfal.org/ ) is an independent project: the site and the README both say it is not affiliated with, endorsed by, or sponsored by fal.ai. It runs on your own Windows, Linux, or macOS machine and uses one CLI to turn Qwen-Image-2.1, Wan 2.2, and MiniMax H3 into fixed local endpoints plus a browser Studio, sitting between a hosted API and a ComfyUI node graph. What it matches is fal-style route names, /queue/* submission, SSE, and a fal_client-style Python SDK (openfal.subscribe, run, submit, upload_file). The site says this covers only the local models it supports, not the full fal.ai catalog, and not moderation parity. Install, as the site and README describe it: Python 3.10+; on Windows or Linux with an NVIDIA GPU, install a CUDA build of PyTorch first, then pip install -e \".[inference]\", then openfal detect, openfal autosetup --tier minimal -y, and openfal serve --port 8008. It binds 127.0.0.1 by default; LAN access needs --host 0.0.0.0 and --api-key. Studio is at http://127.0.0.1:8008/ and OpenAPI is at /docs. The site's CLI card and pyproject.toml both say version 0.1.0. The README table lists Qwen-Image-2.1 text-to-image and reference editing; Wan 2.2 text-to-video, image-to-video, Animate, and recast; and MiniMax H3 / Ref2VA video with audio, reference video, recast / relight / insert, plus text-to-image and image-to-image. Route names starting with minimax/h3-max point at the local H3 partitions and do not download a separate H3 Max. The download sizes on the site are the project's own estimates, not measured here: about 16.1 GB for the smallest image tier, and about 21.7, 48.0, 88.1, 98.6, and 186.7 GB for the larger tiers. The application source is MIT, with the copyright line Copyright (c) 2026 openfal Contributors; model weights keep their upstream licenses. desktop/README.md in the repo also describes a desktop installer. The project publishes its own RTX 5090 numbers against ComfyUI and vLLM-Omni, and a validation note for one 64 GB M4 Max; none of that was measured here. Useful if you want images and video on your own machine without drawing a node graph. This library did not install it, did not download weights, did not start the server, and did not generate an image or a video.",
+      "categories": [
+        "content",
+        "design",
+        "engineering"
+      ],
+      "role": "Local image and video API",
+      "sourceUrl": "https://openfal.org/",
+      "secondaryUrls": [
+        "https://github.com/webbrain-one/openfal",
+        "https://github.com/esokullu/openfal",
+        "https://github.com/webbrain-one/openfal/blob/main/README.md",
+        "https://github.com/webbrain-one/openfal/blob/main/LICENSE",
+        "https://github.com/webbrain-one/openfal/blob/main/pyproject.toml",
+        "https://news.ycombinator.com/item?id=50647219",
+        "https://github.com/webbrain-one/openfal/blob/main/docs/benchmark-rtx-5090-2026-11-18.md",
+        "https://github.com/webbrain-one/openfal/blob/main/docs/validation-macos-2026-11-19.md",
+        "https://github.com/webbrain-one/openfal/blob/main/desktop/README.md",
+        "https://github.com/webbrain-one/openfal/blob/main/openfal/ui/index.html"
+      ],
+      "previewImage": "/previews/openfal.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "下载数 GB 到上百 GB 的模型权重、安装依赖、把服务绑到 0.0.0.0，或使用仍受上游许可证约束的权重之前，先自己看条款、磁盘和显存。本库没有代为安装或下载。",
+      "approvalBoundaryEn": "Before you download multi-gigabyte to hundred-gigabyte model weights, install the dependencies, bind the server to 0.0.0.0, or use weights that keep their upstream licenses, read the terms and check disk and VRAM yourself. This library did not install or download them for you.",
+      "connectors": [
+        "Python",
+        "PyTorch",
+        "fal-style API"
+      ],
+      "publishedAt": "2026-11-25",
+      "updatedAt": "2026-11-26T12:20:00Z",
+      "qualityNote": "收录理由：想在自己的机器上出图、出视频，又不想手画 ComfyUI 节点，也不想把每次生成都交给托管 API。Openfal 用一条 CLI 把 Qwen-Image-2.1、Wan 2.2 和 MiniMax H3 收成核对过的本地端点，并带浏览器 Studio。边界：它是独立项目，不是 fal.ai 官方产品，也不是完整目录或功能对等；safety-checker 和 prompt-expansion 这些兼容字段不会去调托管服务，has_nsfw_concepts 不是审核保证。应用源码是 MIT，权重仍走各自上游许可证。minimax/h3-max 开头的名字指向本地 H3 分区，不会另下 H3 Max。Animate 和替换是生成流程，身份和动作是否保住要自己看画面。队列在内存里，重启就丢。只有设了 OPENFAL_SYNTHETIC_FALLBACK=1 才会出开发用的占位结果。官网的体积是估算：最小图像档约 16.1 GB，更大档位约 21.7、48.0、88.1、98.6 和 186.7 GB。README 里的 RTX 5090 耗时和 64 GB M4 Max 验证是项目自己的记录。本库没有安装，没有下载权重，没有启动服务，也没有生成图像或视频。",
+      "qualityNoteEn": "Why listed: for people who want images and video on their own machine without drawing a ComfyUI graph and without sending every generation to a hosted API. Openfal uses one CLI to turn Qwen-Image-2.1, Wan 2.2, and MiniMax H3 into checked local endpoints, plus a browser Studio. Limits: it is an independent project, not an official fal.ai product, and not a full catalog or feature match. Compatibility fields such as safety-checker and prompt-expansion do not call a hosted service, and has_nsfw_concepts is not a moderation guarantee. The application source is MIT; the weights keep their upstream licenses. Names starting with minimax/h3-max point at the local H3 partitions and do not download a separate H3 Max. Animate and replacement are generative workflows, so identity and motion still need a look at the picture. The queue lives in memory and is gone after a restart. Development placeholder renders turn on only when OPENFAL_SYNTHETIC_FALLBACK=1. The sizes on the site are estimates: about 16.1 GB for the smallest image tier, and about 21.7, 48.0, 88.1, 98.6, and 186.7 GB for the larger tiers. The RTX 5090 timings and the 64 GB M4 Max validation in the README are the project's own records. This library did not install it, did not download weights, did not start the server, and did not generate an image or a video.",
+      "verifyLog": "2026-11-26 晚间（Asia/Shanghai，抓取约 19:58–20:20，即 11:58–12:20 UTC）。https://openfal.org/ HTTP 200，content-length 49294，last-modified Wed, 25 Nov 2026 20:25:53 GMT，server 为 GitHub.com（GitHub Pages）。title 为 openfal — Local fal-Compatible Inference Server for Image & Video Diffusion。眉题写 MIT LICENSED · LOCAL PYTORCH INFERENCE · FAL-COMPATIBLE API。主标题写 Local image & video generation with a fal-compatible API and one-CLI setup。正文写 Run Qwen-Image-2.1, Wan 2.2, and MiniMax H3 on your own Windows, Linux, or macOS host—without wiring ComfyUI node graphs。CLI 卡片写 openfal cli — v0.1.0，三步为 openfal detect、openfal autosetup --tier minimal -y（~16.1 GB）、openfal serve --port 8008，并写 Studio http://127.0.0.1:8008/ 与 OpenAPI http://127.0.0.1:8008/docs。安装段写 Python 3.10+，Windows/Linux NVIDIA 先 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128，再 pip install -e \".[inference]\"；macOS/CPU 可以跳过 index-url 那一行。默认绑定 127.0.0.1；局域网写 --host 0.0.0.0 --api-key。页上的档位估算：qwen_image_21 ~16.1 GB，wan22_animate ~21.7 GB，minimax-omni-compact ~48.0 GB，minimax-only ~88.1 GB，alibaba-only ~98.6 GB，all ~186.7 GB。页脚写 openfal · MIT Licensed source code (model weights retain upstream licenses)。GitHub 按钮的 href 仍是 https://github.com/esokullu/openfal 。README https://raw.githubusercontent.com/esokullu/openfal/main/README.md HTTP 200，开头写 Independent project: openfal is not affiliated with, endorsed by, or sponsored by fal.ai。工作流表与官网一致：qwen/image-2.1/text-to-image 与 edit（Qwen-Image-2.1-Turbo）；wan/v2.2/text-to-video（Wan2.2-T2V-A14B）、image-to-video（Wan2.2-I2V-A14B）、animate 与 recast（Wan2.2-Animate-14B）；minimax/h3/text-to-video 与 image-to-video（MiniMax FL2VA）；minimax/h3/reference-to-video、minimax/h3-max/recast、relight、insert-video（MiniMax Ref2VA，H3-Max 路由映射到本地 H3 分区）；minimax/h3/text-to-image 与 image-to-image（MiniMax H3-Image）。README 写 These are generative workflows; identity, motion and scene fidelity still require visual inspection。Some accepted compatibility fields, including safety-checker and prompt-expansion options, do not invoke equivalent hosted services. has_nsfw_concepts is not a moderation guarantee。队列 Its queue state is held in memory and does not survive server restarts。OPENFAL_SYNTHETIC_FALLBACK=1 explicitly enables development placeholder rendering。当前 PyTorch 运行器选 logical cuda:0 或 MPS/CPU 回退；dual_* 只是内存规划，不代表一卡一个 expert 或张量并行。Apple Silicon 上 CPU 与 MPS 共用同一内存池，README 写 24/36/48 GB Mac 仍未测试。体积表注明是 approximate download sizes for the supported FP8/INT8 selection, not measured runtime memory。项目自己的 RTX 5090 表（README，并写 2026-11-18 / 2026-11-19，单卡、--warmup 1 --repeats 2 --concurrency 1 --sequential-local；openfal 与 ComfyUI 在 Windows 原生，vLLM-Omni 在同一张卡的 WSL2）：qwen21_t2i 1344×768、8 steps，warm 为 openfal 3.98 s / 24.7 GB，ComfyUI 5.32 s / 16.6 GB，vLLM-Omni 2.45 s / 24.7 GB；minimax_h3_t2i warm 为 3.47 s / 26.1 GB、3.83 s / 30.8 GB、65.00 s / 16.3 GB；wan22_i2v_14b 848×480、33f @ 16 fps、20 steps，warm 为 109.14 s / 19.3 GB、85.87 s / 31.3 GB、75.58 s / 21.2 GB；minimax_h3_i2v warm 为 52.78 s / 26.4 GB、48.34 s / 30.9 GB、116.41 s / 14.2 GB。脚注写 openfal 与 ComfyUI 生成 73 帧（24 fps 下 3.04 s），vLLM-Omni 至少 4 秒并输出 107 帧（4.46 s）；启动时间约 1.8 s / 18.6 s / 53–129 s。这些只记成项目自己公布的数字。同一段 README 写 64 GB Apple M4 Max（Mac16,6，macOS 26.0.1，PyTorch 2.15.0 / Metal 4）验证了 13 个客户端端点里的 12 个：图像 66–298 s，MiniMax FL2VA 视频加音频 45–53 min，Wan 2.2 58–105 min，MiniMax Ref2VA 约 4 h；并写 minimax/h3-max/recast、多段 Animate，以及 24–48 GB Mac 仍未验证。pyproject.toml（raw，webbrain-one/openfal）name openfal，version 0.1.0，requires-python >=3.10，authors 为 openfal Contributors，license text MIT，描述为 Local fal-compatible inference server, Python SDK, CLI, and Studio UI。LICENSE 为 MIT License，Copyright (c) 2026 openfal Contributors。https://pypi.org/pypi/openfal/json HTTP 404，没有读到 PyPI 版本。GitHub API：请求 esokullu/openfal 返回 message Moved Permanently；https://github.com/esokullu/openfal HTTP 301，location https://github.com/webbrain-one/openfal ，最终 HTTP 200。webbrain-one/openfal：stargazers_count 2，forks 0，size 9477（GitHub 的 KB 字段），created_at 2026-11-16T03:18:43Z，pushed_at 2026-11-25T20:25:14Z，homepage https://openfal.org/ ，license MIT。仓库描述写了 Face Swap；README 写 recast、relight、insert 是参考条件生成，不是确定性的换脸或保运动合成，正文不采用仓库描述里的 Face Swap 说法。owner login 是 webbrain-one。Show HN https://news.ycombinator.com/item?id=50647219 HTTP 200，标题 Show HN: Openfal, local image and video generation with a fal-style API，15 points by webbrain at 2026-11-25T20:40:52Z，5 comments。评论者说法只记在这里：takeshisato 写在 RTX 5090 上 8 张 1024×1024 不到 4 秒、显存大约 6GB；williamhartley 写 M1 MacBook Air 大约每张 1024×1024 11 秒；esokullu 回复问 1024 是不是太小、以及和 ComfyUI 有没有差别。没有把 HN 发帖账号 webbrain、评论账号 esokullu、GitHub owner webbrain-one 核成同一个人。desktop/README.md 写了 npm install / npm start，以及 Windows NSIS、macOS dmg、Linux AppImage 的打包脚本；本库没有执行。仓库 docs/assets 只有 svg 标志，没有现成的 Studio 位图。预览：下载 https://raw.githubusercontent.com/webbrain-one/openfal/main/openfal/ui/index.html （HTTP 200，131733 字节），用本机 Chrome 经 Playwright 打开这个静态文件，视口 1440×900、deviceScaleFactor 2，截到 2880×1800。画面是页面自带的 Simple / Text to Image：模型名 Qwen-Image-2.1 Turbo，徽章仍是源码里的 Checking...，提示词框是源码 SIMPLE_MODELS.t2i 的示例句，结果区写 No output yet。等比缩到 1200×750，上方补 25px 顶边色 rgb(255,255,255)，下方补 25px 底边色 rgb(244,244,245)，成 1200×800 WebP。没有裁切，没有加字。去重：main c088c54 的 data 没有 openfal、openfal.org、esokullu/openfal；当时 44 个打开的 PR head 的 data 里也没有 id 或 slug openfal，#181 只在核验记录和 changelog 里写了未收 Openfal。未做：没有 pip install，没有下载权重，没有执行 openfal detect / autosetup / serve，没有打开 127.0.0.1:8008，没有调用任何生成端点，没有点 Run，没有 npm install 桌面端，没有复跑 RTX 5090 或 M4 Max 的数字。",
+      "verifyLogEn": "2026-11-26 evening (Asia/Shanghai; fetches about 19:58–20:20, which is 11:58–12:20 UTC). https://openfal.org/ HTTP 200, content-length 49294, last-modified Wed, 25 Nov 2026 20:25:53 GMT, server GitHub.com (GitHub Pages). Title: openfal — Local fal-Compatible Inference Server for Image & Video Diffusion. The eyebrow reads MIT LICENSED · LOCAL PYTORCH INFERENCE · FAL-COMPATIBLE API. The headline reads Local image & video generation with a fal-compatible API and one-CLI setup. The body says Run Qwen-Image-2.1, Wan 2.2, and MiniMax H3 on your own Windows, Linux, or macOS host—without wiring ComfyUI node graphs. The CLI card reads openfal cli — v0.1.0, with openfal detect, openfal autosetup --tier minimal -y (~16.1 GB), and openfal serve --port 8008, plus Studio at http://127.0.0.1:8008/ and OpenAPI at http://127.0.0.1:8008/docs. The install section says Python 3.10+; on Windows/Linux NVIDIA, pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128 first, then pip install -e \".[inference]\"; macOS/CPU can skip the index-url line. The default bind is 127.0.0.1; LAN access is written as --host 0.0.0.0 --api-key. Tier estimates on the page: qwen_image_21 ~16.1 GB, wan22_animate ~21.7 GB, minimax-omni-compact ~48.0 GB, minimax-only ~88.1 GB, alibaba-only ~98.6 GB, all ~186.7 GB. The footer reads openfal · MIT Licensed source code (model weights retain upstream licenses). The GitHub button href is still https://github.com/esokullu/openfal. README at https://raw.githubusercontent.com/esokullu/openfal/main/README.md HTTP 200 opens with Independent project: openfal is not affiliated with, endorsed by, or sponsored by fal.ai. The workflow table matches the site: qwen/image-2.1/text-to-image and edit (Qwen-Image-2.1-Turbo); wan/v2.2/text-to-video (Wan2.2-T2V-A14B), image-to-video (Wan2.2-I2V-A14B), animate and recast (Wan2.2-Animate-14B); minimax/h3/text-to-video and image-to-video (MiniMax FL2VA); minimax/h3/reference-to-video, minimax/h3-max/recast, relight, insert-video (MiniMax Ref2VA; H3-Max route names map to local H3 partitions); minimax/h3/text-to-image and image-to-image (MiniMax H3-Image). The README says these are generative workflows and that identity, motion, and scene fidelity still require visual inspection. Some accepted compatibility fields, including safety-checker and prompt-expansion options, do not invoke equivalent hosted services. has_nsfw_concepts is not a moderation guarantee. The queue state is held in memory and does not survive server restarts. OPENFAL_SYNTHETIC_FALLBACK=1 explicitly enables development placeholder rendering. The current PyTorch runners select logical cuda:0 or fall back to MPS/CPU; dual_* names are memory-planning profiles and do not establish one expert per GPU or tensor parallelism. On Apple Silicon, CPU and MPS share one memory pool, and the README says 24/36/48 GB Macs remain untested. The size table is labeled approximate download sizes for the supported FP8/INT8 selection, not measured runtime memory. The project's own RTX 5090 table (README; dated 2026-11-18 / 2026-11-19; one GPU; --warmup 1 --repeats 2 --concurrency 1 --sequential-local; openfal and ComfyUI native on Windows, vLLM-Omni on the same GPU under WSL2): qwen21_t2i at 1344×768, 8 steps, warm openfal 3.98 s / 24.7 GB, ComfyUI 5.32 s / 16.6 GB, vLLM-Omni 2.45 s / 24.7 GB; minimax_h3_t2i warm 3.47 s / 26.1 GB, 3.83 s / 30.8 GB, 65.00 s / 16.3 GB; wan22_i2v_14b at 848×480, 33f at 16 fps, 20 steps, warm 109.14 s / 19.3 GB, 85.87 s / 31.3 GB, 75.58 s / 21.2 GB; minimax_h3_i2v warm 52.78 s / 26.4 GB, 48.34 s / 30.9 GB, 116.41 s / 14.2 GB. The footnote says openfal and ComfyUI generate 73 frames (3.04 s at 24 fps) while vLLM-Omni enforces at least 4 seconds and outputs 107 frames (4.46 s); startup is about 1.8 s / 18.6 s / 53–129 s. Those figures are recorded only as the project's own numbers. The same README says a 64 GB Apple M4 Max (Mac16,6, macOS 26.0.1, PyTorch 2.15.0 / Metal 4) validated 12 of 13 client-suite endpoints: images 66–298 s, MiniMax FL2VA video plus audio 45–53 min, Wan 2.2 58–105 min, MiniMax Ref2VA about 4 h; and that minimax/h3-max/recast, multi-segment Animate, and 24–48 GB Macs remain unvalidated. pyproject.toml (raw, webbrain-one/openfal) has name openfal, version 0.1.0, requires-python >=3.10, authors openfal Contributors, license text MIT, and the description Local fal-compatible inference server, Python SDK, CLI, and Studio UI. LICENSE is the MIT License, Copyright (c) 2026 openfal Contributors. https://pypi.org/pypi/openfal/json returned HTTP 404, so no PyPI version was read. GitHub API: esokullu/openfal answered message Moved Permanently; https://github.com/esokullu/openfal was HTTP 301 to https://github.com/webbrain-one/openfal, which was HTTP 200. webbrain-one/openfal: stargazers_count 2, forks 0, size 9477 (GitHub's KB field), created_at 2026-11-16T03:18:43Z, pushed_at 2026-11-25T20:25:14Z, homepage https://openfal.org/, license MIT. The repo description says Face Swap; the README says recast, relight, and insert are reference-conditioned generation, not deterministic face replacement or motion-preserving compositing, so the Face Swap wording from the repo description is not used in the entry. The owner login is webbrain-one. Show HN https://news.ycombinator.com/item?id=50647219 HTTP 200, title Show HN: Openfal, local image and video generation with a fal-style API, 15 points by webbrain at 2026-11-25T20:40:52Z, 5 comments. Commenter claims stay here: takeshisato wrote that a batch of 8 images at 1024×1024 finished in under 4 seconds on an RTX 5090 with VRAM around 6GB; williamhartley wrote about 11 seconds per 1024×1024 image on an M1 MacBook Air; esokullu replied asking whether 1024 was too small and whether it differed in ComfyUI. The HN poster webbrain, the commenter esokullu, and the GitHub owner webbrain-one were not verified to be the same person. desktop/README.md describes npm install / npm start and packager scripts for a Windows NSIS installer, a macOS dmg, and a Linux AppImage; none of that was run. docs/assets in the repo contains only SVG marks, no ready-made Studio bitmap. Preview: downloaded https://raw.githubusercontent.com/webbrain-one/openfal/main/openfal/ui/index.html (HTTP 200, 131733 bytes) and opened that static file in local Chrome through Playwright, viewport 1440×900, deviceScaleFactor 2, captured at 2880×1800. The frame is the page's own Simple / Text to Image view: model name Qwen-Image-2.1 Turbo, the badge still the source's Checking..., the prompt box the example sentence from SIMPLE_MODELS.t2i in the source, and the result panel reading No output yet. Scaled to 1200×750, padded 25px on top with the top-edge color rgb(255,255,255) and 25px on the bottom with the bottom-edge color rgb(244,244,245), to a 1200×800 WebP. Nothing cropped, no text added. Dedupe: data on main c088c54 has no openfal, openfal.org, or esokullu/openfal; the data directories of the 44 open PR heads at the time also have no id or slug openfal. #181 mentions Openfal only as not added, in its verify log and changelog. Not done: no pip install, no weight download, no openfal detect / autosetup / serve, 127.0.0.1:8008 was not opened, no generation endpoint was called, Run was not clicked, the desktop app was not npm-installed, and the RTX 5090 and M4 Max figures were not re-run.",
+      "landing": {
+        "what": "一个装在你自己电脑上的图像和视频推理服务。作者把它放在托管 API 和节点图工作站中间：路由名和 Python 调用看起来像 fal，背后是已经接好的本地权重和固定端点，而不是让你自己拼 ComfyUI 节点。浏览器里有 Studio，也可以直接 POST 或把任务放进内存队列。仓库里另有一份桌面壳的说明，第一次打开时可以在窗口里选权重目录；那条路径本库没有跑过。",
+        "whatEn": "An image and video inference service you install on your own computer. The project places it between a hosted API and a node-graph workstation: the route names and the Python calls look like fal, and behind them are pre-wired local weights and fixed endpoints, rather than a ComfyUI graph you assemble yourself. A browser Studio is included, and you can also POST directly or put a job on an in-memory queue. The repo also documents a desktop shell that can pick a weights folder on first launch; this library did not run that path.",
+        "steps": [
+          {
+            "title": "先读独立项目声明和体积",
+            "titleEn": "Read the independence notice and the sizes first",
+            "body": "官网和 README 都写这是独立项目，与 fal.ai 无关。应用源码是 MIT，权重仍受上游许可证约束。页上的 16.1 GB 到 186.7 GB 是官方估算的下载体积，不是跑起来之后的显存。",
+            "bodyEn": "The site and the README both say this is an independent project, not part of fal.ai. The application source is MIT, and the weights keep their upstream licenses. The 16.1 GB to 186.7 GB figures on the page are the project's download estimates, not the VRAM you will see while it runs.",
+            "links": [
+              {
+                "href": "https://openfal.org/",
+                "label": "Openfal 官网",
+                "labelEn": "Openfal site"
+              },
+              {
+                "href": "https://github.com/webbrain-one/openfal/blob/main/README.md",
+                "label": "README",
+                "labelEn": "README"
+              },
+              {
+                "href": "https://github.com/webbrain-one/openfal/blob/main/LICENSE",
+                "label": "MIT 许可证",
+                "labelEn": "MIT license"
+              }
+            ]
+          },
+          {
+            "title": "按 README 安装，再决定档位",
+            "titleEn": "Install from the README, then pick a tier",
+            "body": "Python 3.10+。NVIDIA 的 Windows 和 Linux 要先装 CUDA 版 PyTorch，再执行 pip install -e \".[inference]\"。然后是 openfal detect、openfal autosetup --tier minimal -y（最小图像档，官网写约 16.1 GB），以及 openfal serve --port 8008。想先看会下什么，可以加 --dry-run。本库没有执行这些命令，也没有下载权重。",
+            "bodyEn": "Python 3.10+. On NVIDIA Windows and Linux, install a CUDA build of PyTorch first, then pip install -e \".[inference]\". Then openfal detect, openfal autosetup --tier minimal -y (the smallest image tier, about 16.1 GB on the site), and openfal serve --port 8008. Add --dry-run if you want to see what would download. This library did not run these commands or download weights.",
+            "links": [
+              {
+                "href": "https://openfal.org/#quickstart",
+                "label": "官网安装三步",
+                "labelEn": "Install steps on the site"
+              },
+              {
+                "href": "https://github.com/webbrain-one/openfal/blob/main/pyproject.toml",
+                "label": "pyproject.toml（0.1.0）",
+                "labelEn": "pyproject.toml (0.1.0)"
+              }
+            ]
+          },
+          {
+            "title": "在跑着服务的那台机器上打开 Studio",
+            "titleEn": "Open Studio on the machine that is serving",
+            "body": "服务起来之后，在同一台机器的浏览器打开 http://127.0.0.1:8008/ ，接口说明在 /docs。要给局域网里的别的电脑用，README 要求显式 --host 0.0.0.0，并加上 --api-key。本库没有启动服务，预览只是仓库里那份 Studio 页面的空状态。",
+            "bodyEn": "After the server is running, open http://127.0.0.1:8008/ in a browser on that same machine; the API docs are at /docs. To let another computer on the LAN in, the README tells you to pass --host 0.0.0.0 and --api-key. This library did not start the server. The preview is only the empty state of the Studio page from the repo.",
+            "links": [
+              {
+                "href": "https://openfal.org/#api",
+                "label": "官网的调用示例",
+                "labelEn": "Call examples on the site"
+              },
+              {
+                "href": "https://github.com/webbrain-one/openfal/blob/main/openfal/ui/index.html",
+                "label": "仓库里的 Studio 页面",
+                "labelEn": "Studio page in the repo"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "不是 fal.ai 官方项目，也不是它的完整目录。官网写独立项目、未受背书或赞助。兼容的是路由名、队列、SSE 和 Python 调用方式；safety-checker、prompt-expansion 不会去调托管服务，has_nsfw_concepts 不是审核保证。",
+            "textEn": "Not an official fal.ai project, and not its full catalog. The site calls it an independent project, not endorsed or sponsored. What matches is route names, the queue, SSE, and the Python calling style. safety-checker and prompt-expansion do not call a hosted service, and has_nsfw_concepts is not a moderation guarantee."
+          },
+          {
+            "text": "MIT 只覆盖应用源码。Copyright (c) 2026 openfal Contributors。模型权重仍受各自上游许可证约束，不能把整个栈说成 MIT。",
+            "textEn": "MIT covers the application source only. The copyright line is Copyright (c) 2026 openfal Contributors. Model weights keep their upstream licenses, so the whole stack is not MIT."
+          },
+          {
+            "text": "Animate、recast、relight 和 insert 是生成流程。README 写身份、动作和场景是否保住需要自己看画面；它们不是像素级合成，也不是保证保真的换脸。minimax/h3-max 开头的路由不会另下 H3 Max。",
+            "textEn": "Animate, recast, relight, and insert are generative workflows. The README says identity, motion, and scene fidelity still need a visual check. They are not pixel-exact compositing and not a fidelity guarantee for face replacement. Routes starting with minimax/h3-max do not download a separate H3 Max."
+          },
+          {
+            "text": "默认只听 127.0.0.1。绑到 0.0.0.0 时 README 要求加 API key，并只给信任的客户端。队列在内存里，重启即丢失。OPENFAL_SYNTHETIC_FALLBACK=1 才会出开发占位图，缺权重不会偷偷换成占位结果。",
+            "textEn": "By default it listens on 127.0.0.1 only. When you bind 0.0.0.0, the README tells you to set an API key and to allow only trusted clients. The queue is in memory and disappears on restart. OPENFAL_SYNTHETIC_FALLBACK=1 is what turns on development placeholders; missing weights do not silently switch to a placeholder."
+          },
+          {
+            "text": "官网体积和 README 里的 RTX 5090、M4 Max 数字都是项目自己公布的。本库没有安装，没有下载权重，没有启动 openfal serve，也没有生成图像或视频。",
+            "textEn": "The sizes on the site and the RTX 5090 and M4 Max figures in the README are the project's own publications. This library did not install it, did not download weights, did not start openfal serve, and did not generate an image or a video."
+          }
+        ],
+        "previewCredit": "预览：仓库里的 Studio 页面（openfal/ui/index.html）在浏览器中打开后的空状态，等比缩小后上下补边成 3:2，未裁切、未加字",
+        "previewCreditEn": "Preview: the empty state of the Studio page in the repo (openfal/ui/index.html), opened in a browser, scaled down and padded top and bottom to 3:2, not cropped and with no text added"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12275,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-26T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12608,23 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://openfal.org/",
+      "https://openfal.org/#quickstart",
+      "https://openfal.org/#api",
+      "https://openfal.org/#benchmarks",
+      "https://github.com/esokullu/openfal",
+      "https://github.com/webbrain-one/openfal",
+      "https://raw.githubusercontent.com/esokullu/openfal/main/README.md",
+      "https://raw.githubusercontent.com/webbrain-one/openfal/main/README.md",
+      "https://raw.githubusercontent.com/webbrain-one/openfal/main/LICENSE",
+      "https://raw.githubusercontent.com/webbrain-one/openfal/main/pyproject.toml",
+      "https://raw.githubusercontent.com/webbrain-one/openfal/main/openfal/ui/index.html",
+      "https://raw.githubusercontent.com/webbrain-one/openfal/main/desktop/README.md",
+      "https://github.com/webbrain-one/openfal/blob/main/docs/benchmark-rtx-5090-2026-11-18.md",
+      "https://github.com/webbrain-one/openfal/blob/main/docs/validation-macos-2026-11-19.md",
+      "https://news.ycombinator.com/item?id=50647219",
+      "https://pypi.org/pypi/openfal/json"
     ]
   }
 }
