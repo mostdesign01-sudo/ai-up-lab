@@ -1,6 +1,134 @@
 {
   "cases": [
     {
+      "id": "faster-mac-use",
+      "slug": "faster-mac-use",
+      "title": "Faster Mac Use：给已有编程助手用的 macOS 后台电脑控制引擎",
+      "titleEn": "Faster Mac Use: a background macOS computer-use engine for the coding agent you already use",
+      "kind": "tool",
+      "hook": "给已有编程助手用的 macOS 后台控制引擎，不抢鼠标。",
+      "hookEn": "A background macOS engine for the coding agent you already use.",
+      "summary": "Faster Mac Use（命令行里叫 fmu，官网 https://clifan.com/faster-mac-use/ ）是接在你已经在用的编程助手上的 macOS 后台电脑控制引擎，不是一个新的聊天机器人。GitHub 和 PyPI 上的作者账号是 lifan-builds，官网页脚写 Built by Lifan Builds。它通过 MCP 让助手在后台驱动已经登录的 Chrome 标签页，以及 macOS 里的原生应用。官网的说法是不抢当前窗口的焦点，物理鼠标留在原地，页面上写着 0.0 px drift。适合已经在用 Claude Code、Cursor、Codex 或 Antigravity、又想让助手操作自己这台 Mac 的人。捆绑的 browser-routing 技能，作者在 README 和 Show HN 标题里称为五条路线。技能文件里的表按场景写了六种走法：结构化数据走命令行、接口或已有的 MCP，不为了静态数据打开浏览器；YouTube 和 B 站先走字幕或接口；公开检索先用 search_web，只打开选中的那一页；没登录的公开页和本机开发页走 headless；已经登录的 Chrome 才走 MV3 扩展桥；系统应用走辅助功能。技能还写了几条执行习惯：多步动作合成一次调用，不要盲目空等；优先看界面差异，而不是每次重读整页；助手自己打开的标签在事情做完后关掉，用户自己开的标签默认不关。Antigravity 用一条命令装成原生插件：uvx --from faster-mac-use fmu setup --antigravity，目录是 ~/.gemini/config/plugins/faster-mac-use/，里面有 MCP、这套技能和一条常开的路由规则。README 写 Claude Code、Codex、Cursor 先用 fmu setup --all 把技能装进检测到的助手，注释里列出 --claude、--codex、--cursor 和 --all，接着给的注册例子是 claude mcp add 和 codex mcp add。官网把同一段 MCP JSON 标成可以放进 .cursor/mcp.json。README 和官网都给了在后台操作「计算器」的例子，一条用 uvx 直接跑，一条先 pip install。README 另写，一台 Mac 上如果同时开着多个助手，守护进程还能认出 Devin 和 Gemini。打开的官网和 README 没有写出 Grok Bot。系统边界按官网写：macOS 14 及以上，把辅助功能权限授给终端或 IDE；MV3（页面写 :19222/ext）驱动 Chrome，headless 可以不装扩展；窗口最小化时辅助功能仍能处理应用，ocr() 需要窗口没有最小化。README 补充：原生辅助功能和 Vision 文字识别需要 macOS，并建议 Apple Silicon、macOS 14 及以上。许可证按 README 和 PyPI 的 license 表达式写，是 AGPL-3.0-only。仓库里的 ATTRIBUTION.md 是署名附加条款：复制件和修改版要在说明和版本输出里保留 Based on Faster Mac Use by lifan-builds，标明改过的地方，并且不把 Faster Mac Use、lifan-builds 这两个名字当商标用。官网徽章和页脚写的是 AGPL-3.0。PyPI JSON 显示当前版本 0.5.8，要求 Python 3.10 及以上，0.5.8 上传于 2026-11-27；列出的最早版本 0.1.0 上传于 2026-11-18。同一天作者发了 Show HN，标题是这条产品和五路线技能的介绍，不是 Hacker News 首页。速度和用量都是作者自己的页面：首页写七日 8513 次调用、平均 576 token；README 的七日遥测写 8460 次、平均 576.1 token。两处数字不一样。首页给工作负载 A 的徽章写 114× fewer tokens、13.9× faster，并注明图表按平方根缩放。页面简介还写 token 用量可以低到 10 倍至 114 倍。这些都不是本库测的。本库跑在 Linux 上，没有在 macOS 上安装，没有授予辅助功能权限，没有运行 uvx 或 pip install，没有连接 Claude Code、Codex、Cursor 或 Antigravity，没有操作任何人的 Chrome 或系统应用，也没有复跑基准。",
+      "summaryEn": "Faster Mac Use (the command is fmu; the site is https://clifan.com/faster-mac-use/ ) is a background macOS computer-use engine you attach to a coding agent you already use. It is not a new chatbot. The author account on GitHub and PyPI is lifan-builds, and the site footer says Built by Lifan Builds. Over MCP, the agent drives Chrome tabs you are already signed into, and native macOS apps, in the background. The site's own line is that it does not take the focused window, and that the physical mouse stays where it is; the page writes 0.0 px drift. Useful if you already use Claude Code, Cursor, Codex, or Antigravity and want that agent to operate your Mac. The bundled browser-routing skill is what the README and the Show HN title call a five-lane routing skill. The table in the skill file lists six situations: structured data goes to a CLI, an API, or an MCP you already have, instead of opening a browser for static data; YouTube and Bilibili go to a transcript or API first; public discovery uses search_web first and opens only the chosen URL; public pages and local dev pages use headless; signed-in Chrome uses the MV3 extension bridge; system apps use Accessibility. The skill also states a few habits: batch several steps into one call and do not sleep blindly; prefer a diff of the UI over rereading the whole page; close tabs the agent opened once the task is finished, and leave tabs the user opened alone by default. Antigravity installs as a native plugin with one command, uvx --from faster-mac-use fmu setup --antigravity, into ~/.gemini/config/plugins/faster-mac-use/, which holds the MCP, this skill, and an always-on routing rule. The README says Claude Code, Codex, and Cursor start with fmu setup --all, and the comment lists --claude, --codex, --cursor, and --all; the register examples that follow are claude mcp add and codex mcp add. The site labels the same MCP JSON as something you can put in .cursor/mcp.json. Both the README and the site give a Calculator example that runs in the background, one via uvx with no install, one after pip install. The README also says that if several agents are open on one Mac, the daemon can tell Devin and Gemini apart from the others. The homepage and README that were opened do not mention Grok Bot. The limits, as the site writes them: macOS 14 or newer, Accessibility granted to the terminal or IDE; MV3 (the page writes :19222/ext) drives Chrome, and headless can run without the extension; Accessibility can still handle a minimized app, and ocr() needs the window not minimized. The README adds that native Accessibility and Vision text recognition require macOS, and recommends Apple Silicon and macOS 14 or newer. The license, as the README and the PyPI license expression write it, is AGPL-3.0-only. ATTRIBUTION.md in the repository is the extra attribution text: copies and modified versions keep Based on Faster Mac Use by lifan-builds in the docs and in version output, mark what changed, and do not use the names Faster Mac Use or lifan-builds as trademarks. The badge and footer on the site say AGPL-3.0. The PyPI JSON shows the current version as 0.5.8, requires Python 3.10 or newer, and shows 0.5.8 uploaded on 2026-11-27; the earliest listed release, 0.1.0, was uploaded on 2026-11-18. The same day the author posted a Show HN whose title introduces this product and the five-lane skill. It is not a Hacker News front-page item. Speeds and usage figures are the author's own pages: the homepage says 8,513 calls over seven days and 576 tokens on average; the README's seven-day telemetry says 8,460 calls and 576.1 tokens. The two figures differ. The homepage badge for workload A reads 114× fewer tokens and 13.9× faster, and the page marks the chart as square-root scaled. The page's own description also says token use can be 10× to 114× lower. None of that was measured here. This library runs on Linux. It did not install the tool on macOS, did not grant Accessibility, did not run uvx or pip install, did not connect Claude Code, Codex, Cursor, or Antigravity, did not operate anyone's Chrome or system apps, and did not re-run the benchmarks.",
+      "categories": [
+        "automation",
+        "coding",
+        "engineering"
+      ],
+      "role": "macOS computer-use engine",
+      "sourceUrl": "https://clifan.com/faster-mac-use/",
+      "secondaryUrls": [
+        "https://github.com/lifan-builds/faster-mac-use",
+        "https://pypi.org/project/faster-mac-use/",
+        "https://news.ycombinator.com/item?id=50661603"
+      ],
+      "previewImage": "/previews/faster-mac-use.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "它会操作本机已经登录的 Chrome 和 macOS 应用，需要把辅助功能权限授给终端或 IDE。许可证是 AGPL-3.0-only，并带署名附加条款。本库没有安装。使用前先自己看权限和许可证。",
+      "approvalBoundaryEn": "It operates Chrome you are already signed into, and macOS apps, on your own machine, and it needs Accessibility permission for your terminal or IDE. The license is AGPL-3.0-only, plus extra attribution terms. This library did not install it. Read the permissions and the license yourself before you use it.",
+      "connectors": [
+        "MCP",
+        "Chrome",
+        "Claude Code",
+        "Cursor",
+        "Codex",
+        "Antigravity"
+      ],
+      "publishedAt": "2026-11-27",
+      "updatedAt": "2026-11-27T12:20:00Z",
+      "qualityNote": "收录理由：已经在用 Claude Code、Cursor、Codex 或 Antigravity 的人，如果要让助手去操作自己登录过的 Chrome 和 Mac 上的软件，又不想焦点被抢走、鼠标被拖走，这是做这件事的开源引擎，还附了一份「能不打开浏览器就别打开」的路由技能。它不是另一个聊天助手。边界：许可证是 AGPL-3.0-only，并带署名附加条款。复制或改过再给别人用时，要保留作者署名，也不能把产品名和作者账号当商标用。它会控制本机已登录的浏览器和系统应用，使用前要把辅助功能权限授给终端或 IDE。官网写需要 macOS 14 及以上；文字识别要求窗口没有最小化；已登录的 Chrome 走扩展桥，公开页可以走不装扩展的 headless。首页写七日 8513 次调用、平均 576 token，README 写 8460 次、平均 576.1 token；工作负载 A 的 114 倍和 13.9 倍，以及 0.0 像素不移动鼠标，都是作者页面上的自述，本库没有复跑。首页演示的三个光标是虚拟光标，本条不把它收成多 agent 产品。本库没有在 macOS 上安装，没有授予辅助功能权限，没有运行安装命令或计算器示例，没有连接上面任何一个编程助手，没有操作任何人的 Chrome 或系统应用。卡片上的图是官网首页首屏，不是本库跑出来的工具界面。",
+      "qualityNoteEn": "Why listed: if you already use Claude Code, Cursor, Codex, or Antigravity and want that agent to operate Chrome you are signed into and the apps on your Mac, without taking focus or dragging the mouse, this is an open-source engine for that job, with a routing skill whose point is to avoid opening a browser when you do not have to. It is not another chatbot. Limits: the license is AGPL-3.0-only, plus extra attribution terms. Copies and modified versions have to keep the author credit, and the product name and author account are not granted as trademarks. It controls the signed-in browser and system apps on your machine, and you grant Accessibility to your terminal or IDE first. The site says macOS 14 or newer; text recognition needs the window not minimized; signed-in Chrome goes through the extension bridge, and public pages can use headless without the extension. The homepage says 8,513 calls over seven days and 576 tokens on average; the README says 8,460 calls and 576.1 tokens. The 114× and 13.9× figures for workload A, and the claim of 0.0 px of mouse movement, are the author's own pages, and this library did not re-run them. The three cursors in the homepage demo are virtual cursors, and this entry does not file the project as a multi-agent product. This library did not install it on macOS, did not grant Accessibility, did not run the install command or the Calculator example, did not connect any of those coding agents, and did not operate anyone's Chrome or system apps. The card picture is the first screen of the official homepage, not a tool screen produced by this library.",
+      "verifyLog": "2026-11-27 核对（不换算时区）。官网 https://clifan.com/faster-mac-use/ HTTP 200，title 为 Faster Mac Use (fmu) — Background Multi-Cursor Computer Use for macOS。首屏原文：Background computer use for macOS that never touches your cursor. Drive unfocused Chrome \"Agent\" tabs and native macOS apps — bundled with the browser-routing skill and Antigravity plugin at 0.0 px drift. 安装命令原文 uvx --from faster-mac-use fmu setup --antigravity。醒目数字原文 8,513 7d calls · 576 avg tok · 0.0 px drift。工作负载 A 徽章原文 114× fewer tokens · 13.9× faster，旁边标注 √-scaled · o200k_base · 268-tok schema。页面脚本里的 WORKLOADS.A 行是作者自己的数据：faster-mac-use REPL + UID diff 2024 tok / 133 ms；OpenAI Codex CUA cua_repl 5732 tok / 359 ms；agent-browser v0.41 CLI 23288 tok / 1763 ms；@playwright/mcp v0.0.84 MCP 231125 tok / 1850 ms。条的长度用 Math.sqrt 计算，所以不是线性比例。同页还有工作负载 D（1510 tok / 326 ms，徽章 195× fewer tokens · 14.9× faster vs stacked MCPs）和工作负载 B（1264 tok / 395 ms，徽章 38× fewer tokens · 32.2× faster vs open-computer-use）。meta description 原文含 10x to 114x lower token usage。系统边界三行原文：macOS 14+ AX / Grant Accessibility permission to your terminal or IDE.；MV3 (:19222/ext) drives Chrome; headless runs without it.；AXUIElement handles minimized apps; ocr() needs unminimized windows. 「Add to your agent in 30 seconds」原文 Pair with Claude Code, Cursor, Codex, or Antigravity via MCP。页内配置片段把 MCP JSON 标成 mcp_config.json / .cursor/mcp.json，Codex 片段是 command fmu、args mcp，Shell 片段是 pip install faster-mac-use 再对 Calculator 发 steps。页脚原文 Built by Lifan Builds · Released under the AGPL-3.0 License，徽章文字是 AGPL-3.0。打开的官网和 README 没有写出 Grok Bot。README（main）把产品称为 5-lane routing skill，七日遥测原文 Measured across 8,460 live calls，Average tokens/call 576.1（p95 = 1,848），中位延迟 48.8 ms headless（1182 次）、103.5 ms native macOS AX（845 次）、144.5 ms logged-in Chrome MV3（6387 次）。技能文件 .agents/skills/browser-routing/SKILL.md 的表有六行：命令行 / API / MCP；YouTube 与 Bilibili 走字幕或接口；公开检索先 search_web；公开页和本机页走 headless；已登录 Chrome 走 MV3（ws://127.0.0.1:19222/ext）；原生 macOS 应用走 AX。README 的安装节：Antigravity 用 uvx --from faster-mac-use fmu setup --antigravity，装到 ~/.gemini/config/plugins/faster-mac-use/；Claude Code、Codex、Cursor 用 fmu setup --all（注释列出 --claude、--codex、--cursor、--all），接着的例子是 claude mcp add 和 codex mcp add，没有单独的 cursor mcp add 行。零安装示例是 uvx 在后台对 Calculator 计算 7×6。平台句原文：Native fmu-ax accessibility and Vision.framework OCR require macOS (Apple Silicon / macOS 14+ recommended)。「Multiple agents on one Mac」一节写守护进程能认出的宿主包括 Antigravity、Claude Code、Codex、Devin、Gemini、Cursor。许可证节原文 AGPL-3.0-only，并指向 ATTRIBUTION.md 的 Section 7 附加条款。ATTRIBUTION.md 要求保留 Based on Faster Mac Use by lifan-builds，标明修改版，且不授权把 Faster Mac Use 或 lifan-builds 当商标使用。LICENSE 文件开头是 GNU Affero General Public License Version 3, 19 November 2007。PyPI 项目 HTML 这次返回的是一段要求启用 JavaScript 的验证页，没有读到网页上的 Uploaded 一行；PyPI JSON https://pypi.org/pypi/faster-mac-use/json HTTP 200：version 0.5.8，license_expression AGPL-3.0-only，requires_python >=3.10，author lifan-builds，0.5.8 的上传时间 2026-11-27T00:14:26.814275Z 与 2026-11-27T00:14:28.178916Z，列出的最早版本 0.1.0 上传于 2026-11-18T04:33:19.370884Z。GitHub API HTTP 200：stargazers_count 14，forks_count 0，spdx_id AGPL-3.0（API 的 SPDX 标识没有 only），created_at 2026-11-08T00:43:23Z，pushed_at 2026-11-27T00:58:18Z，description 为 Background-first, multi-cursor browser and native macOS computer-use engine for AI agents。任务简报里的星标是更早一次看到的 0，这次以 GitHub API 的 14 为准，不把 14 写成社区已经很大。Hacker News https://news.ycombinator.com/item?id=50661603 HTTP 200，标题 Show HN: Faster Mac Use – Background Chrome/macOS MCP and 5-lane routing skill，作者 lifan-builds，时间 2026-11-27T01:07:18Z，打开时 3 points、0 comments，没有把它写成首页。去重：main c088c54 的 cases、html-items、models、agent-ui 没有 faster-mac-use、clifan.com 或这条 sourceUrl；打开的 PR 标题和正文搜索 faster-mac-use、clifan、Faster Mac 没有结果；#179 到 #184 的补丁里也没有这几个词。预览：无头 Chrome 打开官网首页，视口 1200×800，默认深色，存成 PNG 后再转 WebP，尺寸仍是 1200×800，没有裁切，没有加字。页面另有 og:image https://clifan.com/faster-mac-use/og.jpg，这次用的是首页首屏，不是那张 OG。未做：没有在 macOS 上安装，没有授予辅助功能权限，没有运行 uvx --from faster-mac-use fmu，没有 pip install，没有 fmu setup，没有 mcp add，没有连接 Claude Code、Codex、Cursor、Antigravity、Devin 或 Gemini，没有操作任何人的 Chrome 或系统应用，没有复跑作者基准。",
+      "verifyLogEn": "Checked 2026-11-27, with no timezone conversion. The site https://clifan.com/faster-mac-use/ returned HTTP 200. The title is Faster Mac Use (fmu) — Background Multi-Cursor Computer Use for macOS. The first screen reads: Background computer use for macOS that never touches your cursor. Drive unfocused Chrome \"Agent\" tabs and native macOS apps — bundled with the browser-routing skill and Antigravity plugin at 0.0 px drift. The install line is uvx --from faster-mac-use fmu setup --antigravity. The prominent figures read 8,513 7d calls · 576 avg tok · 0.0 px drift. The workload A badge reads 114× fewer tokens · 13.9× faster, next to the label √-scaled · o200k_base · 268-tok schema. The page script's WORKLOADS.A rows are the author's own data: faster-mac-use REPL + UID diff 2024 tok / 133 ms; OpenAI Codex CUA cua_repl 5732 tok / 359 ms; agent-browser v0.41 CLI 23288 tok / 1763 ms; @playwright/mcp v0.0.84 MCP 231125 tok / 1850 ms. Bar length is computed with Math.sqrt, so the bars are not linear. The same page also has workload D (1510 tok / 326 ms, badge 195× fewer tokens · 14.9× faster vs stacked MCPs) and workload B (1264 tok / 395 ms, badge 38× fewer tokens · 32.2× faster vs open-computer-use). The meta description includes the words 10x to 114x lower token usage. The three limit lines read: macOS 14+ AX / Grant Accessibility permission to your terminal or IDE.; MV3 (:19222/ext) drives Chrome; headless runs without it.; AXUIElement handles minimized apps; ocr() needs unminimized windows. Add to your agent in 30 seconds reads Pair with Claude Code, Cursor, Codex, or Antigravity via MCP. The in-page config snippet labels the MCP JSON as mcp_config.json / .cursor/mcp.json; the Codex snippet is command fmu and args mcp; the shell snippet is pip install faster-mac-use and then steps against Calculator. The footer reads Built by Lifan Builds · Released under the AGPL-3.0 License, and the badge text is AGPL-3.0. The homepage and README that were opened do not mention Grok Bot. The README on main calls the bundle a 5-lane routing skill. Its seven-day telemetry reads Measured across 8,460 live calls, average tokens/call 576.1 (p95 = 1,848), and median latency 48.8 ms headless (1182 calls), 103.5 ms native macOS AX (845 calls), 144.5 ms logged-in Chrome MV3 (6387 calls). The table in .agents/skills/browser-routing/SKILL.md has six rows: CLI / API / MCP; YouTube and Bilibili via transcript or API; public discovery via search_web first; public and local pages via headless; signed-in Chrome via MV3 (ws://127.0.0.1:19222/ext); native macOS apps via AX. The README install section: Antigravity uses uvx --from faster-mac-use fmu setup --antigravity into ~/.gemini/config/plugins/faster-mac-use/; Claude Code, Codex, and Cursor use fmu setup --all (the comment lists --claude, --codex, --cursor, and --all), and the following examples are claude mcp add and codex mcp add, with no separate cursor mcp add line. The zero-install example is uvx driving Calculator through 7×6 in the background. The platform sentence reads: Native fmu-ax accessibility and Vision.framework OCR require macOS (Apple Silicon / macOS 14+ recommended). The Multiple agents on one Mac section says the daemon can recognize Antigravity, Claude Code, Codex, Devin, Gemini, and Cursor. The license section reads AGPL-3.0-only and points at the Section 7 additional terms in ATTRIBUTION.md. ATTRIBUTION.md requires keeping Based on Faster Mac Use by lifan-builds, marking modified versions, and grants no trademark right to use the names Faster Mac Use or lifan-builds. The LICENSE file opens with GNU Affero General Public License Version 3, 19 November 2007. The PyPI project HTML returned a JavaScript challenge this time, so the Uploaded line on the human page was not read. The PyPI JSON at https://pypi.org/pypi/faster-mac-use/json returned HTTP 200: version 0.5.8, license_expression AGPL-3.0-only, requires_python >=3.10, author lifan-builds, 0.5.8 upload times 2026-11-27T00:14:26.814275Z and 2026-11-27T00:14:28.178916Z, and the earliest listed release 0.1.0 uploaded at 2026-11-18T04:33:19.370884Z. The GitHub API returned HTTP 200: stargazers_count 14, forks_count 0, spdx_id AGPL-3.0 (the API's SPDX id does not say only), created_at 2026-11-08T00:43:23Z, pushed_at 2026-11-27T00:58:18Z, description Background-first, multi-cursor browser and native macOS computer-use engine for AI agents. The brief's earlier look saw 0 stars; this check uses the API's 14, and 14 is not written up as a large community. Hacker News https://news.ycombinator.com/item?id=50661603 returned HTTP 200, title Show HN: Faster Mac Use – Background Chrome/macOS MCP and 5-lane routing skill, by lifan-builds, at 2026-11-27T01:07:18Z, 3 points and 0 comments when opened, and it is not described as the front page. Dedupe: cases, html-items, models, and agent-ui on main c088c54 do not contain faster-mac-use, clifan.com, or this sourceUrl; a search of open PR titles and bodies for faster-mac-use, clifan, and Faster Mac found nothing; the patches of #179 through #184 do not contain those words either. Preview: headless Chrome opened the homepage at a 1200×800 viewport, default dark theme, saved as PNG and converted to WebP, still 1200×800, nothing cropped, no text added. The page also has og:image https://clifan.com/faster-mac-use/og.jpg; this entry uses the first screen, not that OG image. Not done: not installed on macOS, Accessibility not granted, uvx --from faster-mac-use fmu not run, pip install not run, fmu setup not run, mcp add not run, Claude Code, Codex, Cursor, Antigravity, Devin, and Gemini not connected, nobody's Chrome or system apps operated, and the author's benchmarks not re-run.",
+      "landing": {
+        "what": "一层加在现有编程助手上的 macOS 控制能力。助手通过一个叫 cua 的 MCP 工具，在后台操作你已经登录的 Chrome 和系统里的应用。作者把「什么时候不该打开浏览器」写成了随包附带的 browser-routing 技能。命令行名字是 fmu。",
+        "whatEn": "A macOS control layer you add to a coding agent you already have. The agent uses one MCP tool, named cua, to operate Chrome you are signed into and native apps in the background. The author ships the question of when not to open a browser as a bundled skill called browser-routing. The command-line name is fmu.",
+        "steps": [
+          {
+            "title": "先看 AGPL 和署名条款",
+            "titleEn": "Read the AGPL and the attribution terms first",
+            "body": "仓库和 PyPI 写的许可证是 AGPL-3.0-only。ATTRIBUTION.md 是附加条款：复制件和修改版要保留作者署名，标明改过的地方，并且不能把 Faster Mac Use 或 lifan-builds 当商标用。官网徽章写的是 AGPL-3.0。",
+            "bodyEn": "The repository and PyPI state the license as AGPL-3.0-only. ATTRIBUTION.md adds terms: copies and modified versions keep the author credit, mark what changed, and do not use Faster Mac Use or lifan-builds as a trademark. The badge on the site says AGPL-3.0.",
+            "links": [
+              {
+                "href": "https://github.com/lifan-builds/faster-mac-use/blob/main/LICENSE",
+                "label": "仓库 LICENSE（GNU AGPL 第 3 版）",
+                "labelEn": "Repository LICENSE (GNU AGPL version 3)"
+              },
+              {
+                "href": "https://github.com/lifan-builds/faster-mac-use/blob/main/ATTRIBUTION.md",
+                "label": "署名附加条款",
+                "labelEn": "Attribution terms"
+              }
+            ]
+          },
+          {
+            "title": "按你正在用的助手安装",
+            "titleEn": "Install it for the agent you already use",
+            "body": "Antigravity 用官网和 README 都写的一条命令：uvx --from faster-mac-use fmu setup --antigravity，装到 ~/.gemini/config/plugins/faster-mac-use/。Claude Code、Codex、Cursor 按 README 先跑 fmu setup --all，再按例子注册 MCP；官网把同一段 MCP JSON 标成可以放进 .cursor/mcp.json。需要 macOS 14 及以上，并把辅助功能权限授给终端或 IDE。本库没有执行这些命令。",
+            "bodyEn": "For Antigravity, the site and the README both give one command: uvx --from faster-mac-use fmu setup --antigravity, which installs into ~/.gemini/config/plugins/faster-mac-use/. For Claude Code, Codex, and Cursor, the README says to run fmu setup --all and then register the MCP from the examples; the site labels the same MCP JSON as something you can put in .cursor/mcp.json. It needs macOS 14 or newer, and Accessibility permission for your terminal or IDE. This library did not run these commands.",
+            "links": [
+              {
+                "href": "https://clifan.com/faster-mac-use/",
+                "label": "官网首页和快速开始",
+                "labelEn": "Official homepage and quick start"
+              },
+              {
+                "href": "https://github.com/lifan-builds/faster-mac-use",
+                "label": "GitHub 仓库 README",
+                "labelEn": "GitHub README"
+              },
+              {
+                "href": "https://github.com/lifan-builds/faster-mac-use/blob/main/.agents/skills/browser-routing/SKILL.md",
+                "label": "browser-routing 技能原文",
+                "labelEn": "browser-routing skill"
+              }
+            ]
+          },
+          {
+            "title": "想先看它动不动你的鼠标",
+            "titleEn": "If you want to see whether it moves your mouse",
+            "body": "README 给了一个不先安装、用 uvx 在后台操作「计算器」算 7×6 的例子。官网的 Shell 片段是先 pip install，再对同一个计算器发按键。两条都是作者写的示例。本库没有运行。",
+            "bodyEn": "The README gives an example that does not install first: uvx drives the Calculator app through 7×6 in the background. The shell snippet on the site installs with pip first, then sends keys to the same Calculator. Both are the author's examples. This library did not run them.",
+            "links": [
+              {
+                "href": "https://pypi.org/project/faster-mac-use/",
+                "label": "PyPI 项目页（当前 0.5.8）",
+                "labelEn": "PyPI project page (current 0.5.8)"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "只在 macOS 上做原生控制。官网写 macOS 14 及以上，并要授予辅助功能权限。已登录的 Chrome 走 MV3 扩展桥，headless 可以不装扩展。窗口最小化时辅助功能还能处理应用，文字识别需要窗口没有最小化。",
+            "textEn": "Native control is for macOS. The site says macOS 14 or newer, and Accessibility has to be granted. Signed-in Chrome uses the MV3 extension bridge; headless can run without the extension. Accessibility can still handle a minimized app; text recognition needs the window not minimized."
+          },
+          {
+            "text": "它会碰到你已经登录的浏览器和本机应用。助手自己打开的标签，技能写的是做完再关；用户自己打开的标签默认不关。使用前先看它会动哪些窗口。",
+            "textEn": "It touches the browser you are signed into and the apps on your machine. The skill says tabs the agent opened are closed when the task is finished; tabs you opened yourself are left alone by default. See which windows it will touch before you turn it on."
+          },
+          {
+            "text": "0.0 像素、114 倍、13.9 倍、七日调用次数和各档毫秒都是作者官网或 README 上的自述。首页写 8513 次，README 写 8460 次，两处不一样。本库没有复跑。",
+            "textEn": "The 0.0 px figure, the 114× and 13.9× figures, the seven-day call counts, and the millisecond figures are the author's own site or README. The homepage says 8,513 calls and the README says 8,460. This library did not re-run them."
+          },
+          {
+            "text": "本库在 Linux 上编写这条，没有安装这个 macOS 工具，没有连接 Claude Code、Codex、Cursor 或 Antigravity，也没有操作任何人的 Chrome。",
+            "textEn": "This entry was written on Linux. This library did not install the macOS tool, did not connect Claude Code, Codex, Cursor, or Antigravity, and did not operate anyone's Chrome."
+          }
+        ],
+        "previewCredit": "预览图是官网首页首屏（默认深色），原尺寸 1200×800，没有裁切，没有加字。图上的调用次数和倍数是作者页面上的自述。本库没有安装或运行这个工具。",
+        "previewCreditEn": "The picture is the first screen of the official homepage (default dark theme), 1200×800, not cropped, with no text added. The call counts and multiples on it are the author's own page. This library did not install or run the tool."
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12262,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-27T12:20:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 222,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12595,16 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://clifan.com/faster-mac-use/",
+      "https://github.com/lifan-builds/faster-mac-use",
+      "https://github.com/lifan-builds/faster-mac-use/blob/main/README.md",
+      "https://github.com/lifan-builds/faster-mac-use/blob/main/LICENSE",
+      "https://github.com/lifan-builds/faster-mac-use/blob/main/ATTRIBUTION.md",
+      "https://github.com/lifan-builds/faster-mac-use/blob/main/.agents/skills/browser-routing/SKILL.md",
+      "https://pypi.org/project/faster-mac-use/",
+      "https://pypi.org/pypi/faster-mac-use/json",
+      "https://news.ycombinator.com/item?id=50661603"
     ]
   }
 }
