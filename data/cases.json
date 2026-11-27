@@ -1,6 +1,343 @@
 {
   "cases": [
     {
+      "id": "google-workspace-mcp",
+      "slug": "google-workspace-mcp",
+      "title": "Google Workspace MCP 与命令行：给个人助手用的官方邮件、文件和日历接口",
+      "titleEn": "Google Workspace MCP and CLI: official mail, file, and calendar doors for a personal assistant",
+      "kind": "tool",
+      "hook": "给个人助手用的官方邮件、文件和日历接口。",
+      "hookEn": "Official mail, file, and calendar doors for a personal assistant.",
+      "summary": "Google 在 2026-11-24 宣布 Workspace MCP 服务器和官方 Workspace 命令行（文档里的名字是 gwscli）一般可用。这不是一个新的聊天机器人，而是给已经在用的个人助手接上 Gmail、云端硬盘、文档和日历的两扇官方门。产品博客写：MCP 服务器按开放的 MCP 标准，给云端和网页里的助手开箱使用，一般可用的产品是 Gmail、Google Drive、Docs、Sheets、Slides、Calendar、Chat 和 Tasks，Keep 还写着即将推出。命令行给本地、终端和沙箱里的 agent 用，带范围登录和管理员护栏。同一天的 Workspace Updates 也写这两项一般可用，并写面向全部网域的推出要两周；技术上要求 agent 改走官方 MCP 或 CLI、不再直接调传统 REST API，开始日写的是 2027-02-01；用量超出免费额度后的 Scaled 档计费，开始日写的是 2027-04-01，先覆盖 Gmail、Calendar、Drive 的 API 以及 CLI 和 MCP。这两段都是时间表。Updates 还写，目前超过 99% 的活跃开发者落在不另外收费的 Standard 档里。开发者配置文档（页面标注更新于 2026-11-26）把 People、Classroom、Universal Search 放在 Developer Preview，不在这页的一般可用步骤里。个人 Google 账号可以走文档里的 Quick setup / Personal mode：控制台帮你建只给自己账号用的 OAuth 客户端，文档举例可以接到 Google Antigravity 和 Claude；Claude 那一节写明要用 Claude Enterprise、Pro、Max 或 Team。Gmail 能不能发信，以官方工具列表为准，列表页同样标注更新于 2026-11-26。完整端点 /mcp/v1 列出的工具有 apply_sensitive_message_label、apply_sensitive_thread_label、create_draft、create_filter、create_label、forward、get_draft、get_message、get_thread、label_message、label_thread、list_drafts、list_filters、list_labels、mark_message_spam、mark_thread_spam、reply、search_threads、send_message、trash_message、trash_thread、unlabel_message、unlabel_thread、unmark_message_spam、unmark_thread_spam、untrash_message、untrash_thread、update_draft、update_label、update_message_labels。其中 send_message 的说明是立刻从已登录账号发出一封新邮件，reply 是回复某一封，forward 是转发某一封，这三项的参数里都有附件字段；create_draft 是把信放进草稿。缩减端点 /mcp/v1self 的列表里没有 send_message、reply、forward，也没有那两个 apply_sensitive 工具，但有 create_draft、update_draft 和 trash。配置文档写，高影响操作（举例是发信、改共享日历、分享或丢弃文件、访问共享数据）要走 MCP 的表单确认。命令行指南里的 Gmail 命令表列出的是搜索和阅读、列出并创建草稿、标签、垃圾箱和垃圾邮件；其中 gmail create_draft 的说明是创建草稿或回复草稿、并不发出。社区文章和当天的讨论说 Gmail 的 MCP 不能发信、不能回复、不能转发，这和上面这份官方 /mcp/v1 工具列表对不上。配置文档还单独写了间接提示注入：助手读到不可信的邮件或文件时，有人可能藏进指令，让它改、拿走或删掉你账号里的数据，所以要自己筛提示、并核对助手做了什么。本库没有建 Google Cloud 项目，没有做 OAuth，没有连接 Claude 或 Antigravity，没有安装或运行 gwscli，没有读任何人的邮箱、云端硬盘或日历，没有发信，也没有建草稿。",
+      "summaryEn": "On 2026-11-24 Google announced that the Workspace MCP servers and the official Workspace command line (the docs call it gwscli) are generally available. This is not a new chatbot. It is two official doors that let an assistant you already use reach Gmail, Drive, documents, and calendars. The product blog says the MCP servers follow the open MCP standard for cloud and web agents, and that the generally available products are Gmail, Google Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks, with Keep still listed as coming soon. The command line is for agents in a local machine, a terminal, or a sandbox, with scoped sign-in and admin guardrails. The same day's Workspace Updates post also calls both generally available, and says the rollout to all domains takes two weeks. It sets 2027-02-01 as the day technical enforcement begins for the rule that agents use the official MCP servers or CLI instead of calling the traditional REST APIs directly, and 2027-04-01 as the day Scaled-tier billing begins for usage above the free allowance, starting with the Gmail, Calendar, and Drive APIs plus the CLI and MCP. Both dates are a schedule. The Updates post also says more than 99% of active developers currently sit in the Standard tier, which stays free of that extra charge. The developer configuration guide (marked updated 2026-11-26) puts People, Classroom, and Universal Search in Developer Preview, outside the generally available steps on that page. A personal Google Account can use the guide's Quick setup / Personal mode, which creates an OAuth client for that account only. The guide's examples name Google Antigravity and Claude, and the Claude section says Claude Enterprise, Pro, Max, or Team is required. Whether Gmail can send is taken from the official tool list, also marked updated 2026-11-26. The full endpoint /mcp/v1 lists apply_sensitive_message_label, apply_sensitive_thread_label, create_draft, create_filter, create_label, forward, get_draft, get_message, get_thread, label_message, label_thread, list_drafts, list_filters, list_labels, mark_message_spam, mark_thread_spam, reply, search_threads, send_message, trash_message, trash_thread, unlabel_message, unlabel_thread, unmark_message_spam, unmark_thread_spam, untrash_message, untrash_thread, update_draft, update_label, and update_message_labels. The send_message page says it sends a new email immediately from the signed-in account, reply replies to one message, and forward forwards one message; all three include an attachments field. create_draft puts a message in Drafts. The reduced endpoint /mcp/v1self does not list send_message, reply, forward, or the two apply_sensitive tools, and it does list create_draft, update_draft, and trash. The configuration guide says high-impact actions (its examples are sending email, changing a shared calendar, sharing or trashing files, and opening shared data) go through MCP form confirmation. The command-line guide's Gmail command table lists search and read, listing and creating drafts, labels, Trash, and Spam; gmail create_draft is described as creating a draft or a reply draft without sending it. A community article and the same day's discussion say the Gmail MCP cannot send, reply, or forward, which does not match this official /mcp/v1 tool list. The configuration guide also has a section on indirect prompt injection: an untrusted email or file can hide instructions that make an assistant change, take, or delete data in your account, so you screen prompts and check what the assistant did. This library did not create a Google Cloud project, did not complete OAuth, did not connect Claude or Antigravity, did not install or run gwscli, did not read anyone's mail, Drive, or calendar, did not send mail, and did not create a draft.",
+      "categories": [
+        "productivity",
+        "automation",
+        "engineering"
+      ],
+      "role": "Official Workspace interface",
+      "sourceUrl": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "secondaryUrls": [
+        "https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace",
+        "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+        "https://developers.google.com/workspace/guides/workspace-cli",
+        "https://developers.google.com/workspace/gmail/api/reference/mcp",
+        "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/send_message",
+        "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/reply",
+        "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/forward"
+      ],
+      "previewImage": "/previews/google-workspace-mcp.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "intermediate",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": true,
+      "requiresApproval": true,
+      "approvalBoundary": "发信、回复、转发、分享或丢弃文件、改共享日程这类高影响操作，官方文档要求先经过使用人确认。本库没有代为授权、发信或建草稿。",
+      "approvalBoundaryEn": "The official docs require the person to confirm high-impact actions such as sending, replying, forwarding, sharing or trashing files, and changing a shared calendar. This library did not authorize an account, send mail, or create a draft.",
+      "connectors": [
+        "gmail",
+        "calendar",
+        "Google Drive",
+        "Google Docs",
+        "Google Chat",
+        "Google Tasks"
+      ],
+      "publishedAt": "2026-11-24",
+      "updatedAt": "2026-11-27T02:30:00Z",
+      "qualityNote": "收录理由：个人助手要读邮件、改日程、翻文件时，以前各接各的接口。Google 这次给了一套自己托管的 MCP 服务器，外加一个给终端和沙箱里的 agent 用的命令行，并写明高影响操作要人确认。边界：这是给助手用的官方接口，不是 Google 新做的一个聊天机器人。一般可用的名单是 Gmail、Drive、Docs、Sheets、Slides、Calendar、Chat、Tasks；Keep 仍是即将推出。People、Classroom、Universal Search 在开发者预览，不在一般可用步骤里。Workspace AI Tools Addendum 要求 agent 走官方 MCP 或 CLI，技术强制的开始日写的是 2027-02-01；Scaled 档超出免费额度后的计费开始日写的是 2027-04-01。Updates 同时写，一般可用的推出要两周，超过 99% 的活跃开发者仍在不另收费的 Standard 档。Gmail 的完整工具端点列出了 send_message、reply 和 forward，说明文字分别是立刻发信、回复和转发；缩减端点没有这三项。命令行指南的 Gmail 命令表写的是搜索、阅读、草稿、标签、垃圾箱和垃圾邮件，创建草稿的那条写明并不发出。社区文章说 Gmail 的 MCP 不能发信、不能回复、不能转发，和这份官方工具列表不一致，本库没有调用任何工具去裁判。文档还写了间接提示注入，以及高影响操作要人确认。命令行文档提到打包好的 agent skills，本库没有安装。本库没有建 Google Cloud 项目，没有做 OAuth，没有连接 Claude 或 Antigravity，没有安装或运行命令行，没有读任何人的邮箱、云端硬盘或日历，没有发信，也没有建草稿。",
+      "qualityNoteEn": "Why listed: when a personal assistant needs mail, a calendar, and files, each connection used to be separate. Google is offering its own hosted MCP servers plus a command line for agents in a terminal or sandbox, and it says high-impact actions need a person to confirm. Limits: these are official interfaces for an assistant, and they are not a new Google chatbot. The generally available list is Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks; Keep is still coming soon. People, Classroom, and Universal Search are in Developer Preview and are outside the generally available steps. The Workspace AI Tools Addendum requires agents to use the official MCP servers or CLI, with technical enforcement dated 2027-02-01; Scaled-tier charges above the free allowance are dated 2027-04-01. The Updates post also says the general-availability rollout takes two weeks, and that more than 99% of active developers remain on the Standard tier with no extra charge. Gmail's full tool endpoint lists send_message, reply, and forward, described as sending immediately, replying, and forwarding; the reduced endpoint does not list those three. The command-line guide's Gmail table covers search, read, drafts, labels, Trash, and Spam, and the create-draft command says it does not send. A community article says the Gmail MCP cannot send, reply, or forward, which does not match this official tool list, and this library called no tool to settle it. The docs also describe indirect prompt injection, and they require confirmation for high-impact actions. The command-line docs mention packaged agent skills, which were not installed here. This library did not create a Google Cloud project, did not complete OAuth, did not connect Claude or Antigravity, did not install or run the command line, did not read anyone's mail, Drive, or calendar, did not send mail, and did not create a draft.",
+      "verifyLog": "2026-11-27 核对，只记日期、不记钟点。产品博客 https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace 可打开，作者 Yulie Kwon Kim，日期 November 24, 2026。正文有 Now generally available: Workspace MCP servers and CLI；MCP 覆盖 Gmail, Google Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks（with Keep coming soon）；CLI 给 local and desktop agents。Workspace AI Tools Addendum：agents connect through the Workspace MCP servers or CLI instead of traditional REST APIs（technical enforcement begins on February 1, 2027）；usage quotas（billing begins on April 1, 2027）；高影响例子 sending external emails, changing Drive sharing permissions, or making bulk edits。Workspace Updates https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html 日期 November 24, 2026。同一篇写 generally available，Rollout pace 又写 Rapid Release and Scheduled Release domains: Rolling out to all in 2 weeks，对象包括 Workspace MCP servers (GA) 和 Google Workspace CLI (GA)。MCP or CLI requirement 的 technical enforcement begins on February 1, 2027。Usage limits and billing：Starting April 1, 2027，Scaled tier billing begins for the Gmail, Google Calendar, and Google Drive APIs, and the Workspace CLI and MCP servers。Standard tier: No cost。Over 99% of active developers currently operate within the Standard tier and will continue to access these APIs at no additional cost。Availability: Available to all Google Workspace customers and developers。配置文档 https://developers.google.com/workspace/guides/configure-mcp-servers 页脚 Last updated 2026-11-26 UTC。Quick setup for personal use / Personal mode onboarding；举例 Antigravity 回调 https://antigravity.google/oauth-callback ，Claude 回调 https://claude.ai/api/mcp/auth_callback 。Claude 一节写 must have the Claude Enterprise, Pro, Max, or Team plan。测试提示用 gmail.search_threads、gmail.get_thread、gmail.create_draft（allowing you to review and send it from Gmail），没有把发信当作测试提示。Supported products 表：Gmail、Drive、Docs、Sheets、Slides、Calendar、Chat、Tasks 为正文的一般可用服务器；People API、Classroom、Universal Search 标 Developer Preview。间接提示注入一节写 agents can read, modify, and delete data。表单确认一节的例子是 sending emails, modifying shared calendar events, sharing or trashing files, or accessing shared data；/mcp/v1 用表单确认，/mcp/v1self 是不支持表单确认时的退路。Gmail 工具列表 https://developers.google.com/workspace/gmail/api/reference/mcp 页脚 Last updated 2026-11-26 UTC。/mcp/v1 与 /mcp/v1self 的工具名按页面表格原样写入正文。send_message 页首句 Sends a new email message immediately；reply 页首句 Replies to a specific email message；forward 页首句 Forwards a specific email message；三页都有 attachments 字段，页脚同为 2026-11-26 UTC。命令行指南 https://developers.google.com/workspace/guides/workspace-cli ：Gmail 能力摘要为 Search and read threads and messages, list and create drafts and replies, manage labels, and move messages or threads to or from Trash and Spam。命令表 gmail create_draft 为 Create a draft email or reply without sending it。该表的 Gmail 行没有 send_message。People API 在命令行指南里标 Developer Preview。指南另有 Packaged agent skills，以及 Human-in-the-loop 一节，敏感操作举例 sending messages；示例提示文字是 Allow this app to use send_message?，Chat 的命令表另有 chat send_message。本条没有把这句示例当成 Gmail 命令表里的发信命令。社区文章 https://techstackups.com/ 上的《Google Will Make AI Agents Use Its Workspace MCP Servers. The Gmail One Can't Send Email》只作线索。Hacker News https://news.ycombinator.com/item?id=50653477 经 Algolia 读到标题与该文相同，作者 ritzaco，创建于 2026-11-26，核对时 226 点。预览：无头 Chrome 打开产品博客，把 Now generally available 一节滚进 1440×960 视口后截图，该视口已是 3:2，等比缩到 1200×800 WebP，没有裁切，没有加字。未做：没有建 Google Cloud 项目，没有做 OAuth，没有连接 Claude 或 Antigravity，没有下载或执行安装脚本，没有运行 gwscli，没有对 gmailmcp.googleapis.com 发 tools/list 或 tools/call，没有读邮箱、云端硬盘或日历，没有发信或建草稿。",
+      "verifyLogEn": "Checked on 2026-11-27; dates only, no clock times. The product blog https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace loaded, by Yulie Kwon Kim, dated November 24, 2026. The body includes Now generally available: Workspace MCP servers and CLI; MCP covers Gmail, Google Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks (with Keep coming soon); the CLI is for local and desktop agents. The Workspace AI Tools Addendum says agents connect through the Workspace MCP servers or CLI instead of traditional REST APIs (technical enforcement begins on February 1, 2027); usage quotas (billing begins on April 1, 2027); high-impact examples are sending external emails, changing Drive sharing permissions, or making bulk edits. Workspace Updates https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html is dated November 24, 2026. The same post says generally available, and its Rollout pace says Rapid Release and Scheduled Release domains: Rolling out to all in 2 weeks, covering the Workspace MCP servers (GA) and the Google Workspace CLI (GA). Technical enforcement of the MCP or CLI requirement begins on February 1, 2027. Usage limits and billing: Starting April 1, 2027, Scaled tier billing begins for the Gmail, Google Calendar, and Google Drive APIs, and the Workspace CLI and MCP servers. Standard tier: No cost. Over 99% of active developers currently operate within the Standard tier and will continue to access these APIs at no additional cost. Availability: Available to all Google Workspace customers and developers. The configuration guide https://developers.google.com/workspace/guides/configure-mcp-servers ends with Last updated 2026-11-26 UTC. It documents Quick setup for personal use / Personal mode onboarding; the Antigravity callback example is https://antigravity.google/oauth-callback and the Claude callback example is https://claude.ai/api/mcp/auth_callback . The Claude section says you must have the Claude Enterprise, Pro, Max, or Team plan. The test prompts use gmail.search_threads, gmail.get_thread, and gmail.create_draft (allowing you to review and send it from Gmail); sending is not one of the test prompts. The Supported products table lists Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks as the generally available servers in the body; People API, Classroom, and Universal Search are marked Developer Preview. The indirect prompt injection section says agents can read, modify, and delete data. The form-confirmation section's examples are sending emails, modifying shared calendar events, sharing or trashing files, or accessing shared data; /mcp/v1 uses form confirmation and /mcp/v1self is the fallback when a host does not support it. The Gmail tool list https://developers.google.com/workspace/gmail/api/reference/mcp ends with Last updated 2026-11-26 UTC. The /mcp/v1 and /mcp/v1self tool names are copied from that table into the entry. The send_message page opens with Sends a new email message immediately; reply opens with Replies to a specific email message; forward opens with Forwards a specific email message; all three pages include an attachments field and the same 2026-11-26 UTC footer. The command-line guide https://developers.google.com/workspace/guides/workspace-cli summarizes Gmail as Search and read threads and messages, list and create drafts and replies, manage labels, and move messages or threads to or from Trash and Spam. The command table describes gmail create_draft as Create a draft email or reply without sending it. That Gmail table has no send_message row. The People API is marked Developer Preview in the command-line guide. The guide also documents packaged agent skills and a human-in-the-loop section whose sensitive-action examples include sending messages; the sample prompt text is Allow this app to use send_message?, and the Chat command table separately lists chat send_message. This entry does not treat that sample as a Gmail send command. The community article on https://techstackups.com/ titled Google Will Make AI Agents Use Its Workspace MCP Servers. The Gmail One Can't Send Email is only a lead. Hacker News https://news.ycombinator.com/item?id=50653477 , read through Algolia, has the same title, author ritzaco, created 2026-11-26, 226 points at the check. Preview: headless Chrome opened the product blog, scrolled the Now generally available section into a 1440×960 viewport, and captured it; that viewport was already 3:2 and was scaled to a 1200×800 WebP, nothing cropped, no text added. Not done: no Google Cloud project was created, OAuth was not completed, Claude and Antigravity were not connected, the install script was not downloaded or run, gwscli was not run, no tools/list or tools/call was sent to gmailmcp.googleapis.com, and no mailbox, Drive, or calendar was read, and no message was sent or drafted.",
+      "landing": {
+        "what": "两扇由 Google 托管的门，让你已经在用的助手碰到 Workspace 里的邮件、文件和日程。一扇是远程 MCP 服务器，每个产品一条地址；另一扇是命令行 gwscli，给跑在自己电脑、终端或沙箱里的 agent。个人账号可以按文档的个人模式做出只给自己用的登录客户端。企业侧的新附加条款要求 agent 走这两扇门，并给了 2027 年的两个开始日：技术强制，以及超出免费额度后的用量计费。",
+        "whatEn": "Two Google-hosted doors that let an assistant you already use touch mail, files, and calendars in Workspace. One is a set of remote MCP servers, one address per product. The other is the gwscli command line, for an agent on your own computer, in a terminal, or in a sandbox. A personal account can follow the guide's personal mode and create a sign-in client that works only for that account. On the business side, a new addendum tells agents to use these two doors, and it gives two start dates in 2027: technical enforcement, and usage billing above the free allowance.",
+        "steps": [
+          {
+            "title": "先看一般可用的范围和两个开始日",
+            "titleEn": "Read what is generally available, and the two start dates",
+            "body": "产品博客和 Workspace Updates 都写 2026-11-24。一般可用的产品是 Gmail、Drive、Docs、Sheets、Slides、Calendar、Chat、Tasks；Keep 仍是即将推出。People、Classroom、Universal Search 在开发者预览。Updates 同时写，向全部网域推出要两周。agent 必须改走 MCP 或 CLI 的技术强制，开始日是 2027-02-01；Scaled 档超出免费额度后的计费，开始日是 2027-04-01。",
+            "bodyEn": "The product blog and Workspace Updates are both dated 2026-11-24. The generally available products are Gmail, Drive, Docs, Sheets, Slides, Calendar, Chat, and Tasks; Keep is still coming soon. People, Classroom, and Universal Search are in Developer Preview. The Updates post also says the rollout to all domains takes two weeks. Technical enforcement of the MCP or CLI rule starts on 2027-02-01; Scaled-tier billing above the free allowance starts on 2027-04-01.",
+            "links": [
+              {
+                "href": "https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace",
+                "label": "产品博客：一般可用的宣布",
+                "labelEn": "Product blog: the general-availability announcement"
+              },
+              {
+                "href": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+                "label": "Workspace Updates：推出节奏和计费时间表",
+                "labelEn": "Workspace Updates: rollout and billing dates"
+              }
+            ]
+          },
+          {
+            "title": "个人账号按配置文档做 Quick setup",
+            "titleEn": "For a personal account, follow Quick setup in the configuration guide",
+            "body": "配置文档写，个人模式会在 Google Cloud 控制台里准备一个只给你自己的 Google 账号用的 OAuth 客户端，并打开相应的 API 和 MCP 服务。文档举例的宿主是 Google Antigravity 和 Claude；Claude 那一节要求 Enterprise、Pro、Max 或 Team。每个产品有自己的服务器地址，Gmail 的完整端点是 https://gmailmcp.googleapis.com/mcp/v1 。本库没有建项目，也没有登录。",
+            "bodyEn": "The configuration guide says personal mode prepares, in the Google Cloud console, an OAuth client that works only for your own Google Account, and turns on the APIs and MCP services. The guide's example hosts are Google Antigravity and Claude; the Claude section requires Enterprise, Pro, Max, or Team. Each product has its own server address. Gmail's full endpoint is https://gmailmcp.googleapis.com/mcp/v1 . This library did not create a project and did not sign in.",
+            "links": [
+              {
+                "href": "https://developers.google.com/workspace/guides/configure-mcp-servers",
+                "label": "配置 Google Workspace MCP 服务器",
+                "labelEn": "Configure the Google Workspace MCP servers"
+              },
+              {
+                "href": "https://developers.google.com/workspace/gmail/api/reference/mcp",
+                "label": "Gmail MCP 工具列表",
+                "labelEn": "Gmail MCP tool list"
+              }
+            ]
+          },
+          {
+            "title": "终端里的 agent 看官方命令行文档",
+            "titleEn": "For an agent in the terminal, read the official command-line guide",
+            "body": "命令行文档把 gwscli 写成给 Claude Code、Codex、Antigravity 这类终端助手，也给直接在终端里操作的人。文档有安装脚本、gwscli auth setup 和 gwscli auth login，并提到打包好的 agent skills。Gmail 命令表里的创建草稿写明并不发出。本库没有下载安装脚本，也没有运行任何 gwscli 命令。",
+            "bodyEn": "The command-line guide describes gwscli for terminal assistants such as Claude Code, Codex, and Antigravity, and for a person working directly in a terminal. It includes an install script, gwscli auth setup, gwscli auth login, and packaged agent skills. In the Gmail command table, creating a draft is described as not sending it. This library did not download the install script and did not run any gwscli command.",
+            "links": [
+              {
+                "href": "https://developers.google.com/workspace/guides/workspace-cli",
+                "label": "使用 Google Workspace 命令行",
+                "labelEn": "Use the Google Workspace command-line interface"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "Keep 在产品博客里仍是即将推出。People、Classroom、Universal Search 在配置文档里是 Developer Preview，不在一般可用的设置步骤里。",
+            "textEn": "Keep is still coming soon on the product blog. People, Classroom, and Universal Search are Developer Preview in the configuration guide and are outside the generally available setup steps."
+          },
+          {
+            "text": "Gmail 完整端点 /mcp/v1 的官方列表含 send_message、reply、forward，说明分别是立刻发信、回复和转发，参数里可以带附件。缩减端点 /mcp/v1self 没有这三项。命令行指南的 Gmail 命令表没有发信命令，创建草稿写明并不发出。社区文章说不能发信、不能回复、不能转发，和这份 /mcp/v1 列表不一致。本库没有调用这些工具。",
+            "textEn": "Gmail's full endpoint /mcp/v1 officially lists send_message, reply, and forward, described as sending immediately, replying, and forwarding, and their parameters can include attachments. The reduced endpoint /mcp/v1self does not list those three. The command-line guide's Gmail table has no send command, and creating a draft is described as not sending. A community article says it cannot send, reply, or forward, which does not match this /mcp/v1 list. This library called none of these tools."
+          },
+          {
+            "text": "配置文档写，助手读到不可信邮件或文件时存在间接提示注入，高影响操作要人确认。企业附加条款的技术强制开始日是 2027-02-01，超出免费额度的 Scaled 计费开始日是 2027-04-01。Updates 还写一般可用的推出要两周。",
+            "textEn": "The configuration guide describes indirect prompt injection when an assistant reads untrusted mail or files, and it requires a person to confirm high-impact actions. Technical enforcement in the business addendum starts on 2027-02-01, and Scaled billing above the free allowance starts on 2027-04-01. The Updates post also says the general-availability rollout takes two weeks."
+          },
+          {
+            "text": "本库没有建 Google Cloud 项目，没有做 OAuth，没有连接 Claude 或 Antigravity，没有安装或运行 gwscli，没有读任何人的邮箱、云端硬盘或日历，没有发信，也没有建草稿。预览是官方博客那一节的页面截图，不是本库登录后的界面。",
+            "textEn": "This library did not create a Google Cloud project, did not complete OAuth, did not connect Claude or Antigravity, did not install or run gwscli, did not read anyone's mail, Drive, or calendar, did not send mail, and did not create a draft. The preview is a screenshot of that section of the official blog, not a screen from an account this library signed in to."
+          }
+        ],
+        "previewCredit": "预览：Google Workspace 产品博客「Now generally available」一节的页面截图，视口已是 3:2，等比缩到 1200×800，未裁切，未加字",
+        "previewCreditEn": "Preview: a screenshot of the Now generally available section on the Google Workspace product blog; the viewport was already 3:2 and was scaled to 1200×800, not cropped, no text added"
+      }
+    },
+    {
+      "id": "central-intelligence",
+      "slug": "central-intelligence",
+      "title": "Central Intelligence：邮件、日程、笔记和消息放在一处的个人 AI 工作区",
+      "titleEn": "Central Intelligence: a personal AI workspace for mail, calendar, notes, and messages",
+      "kind": "tool",
+      "hook": "个人 AI 工作区，邮件、日程和笔记放在一处。",
+      "hookEn": "A personal AI workspace for mail, calendar, notes, and messages.",
+      "summary": "Central Intelligence（https://centralintelligence.com/ ）把自己叫做 personal AI workspace，也叫做 personal OS：一个跟着人走的地方，用来处理邮件、日程、消息、视频通话、笔记、思维导图、新闻、自己做的小应用和听写。首页列出的平台是 Web、Mac、Windows、Linux，iOS 和 Android 标着 Coming soon；常见问题写公开测试覆盖网页、macOS、Windows 和 Linux，手机应用是计划中的，所以这里不写成已经上架。内置助手叫 ARC。首页写它把笔记、消息和日历放在一起帮你排一天；说明文写，可以让它从笔记里抽出下一步，你先看它的建议，再打开日历决定什么时候做。常见问题写，ARC 会准备下一步，支持的操作先给你看过再执行。说明文 https://centralintelligence.com/blog/why-we-built-central-intelligence 页头写 Published 27 November 2026。文里说可以继续用已有的 Gmail 和 Microsoft 邮箱，在 All Inboxes 里一起读；付费计划可以要一个 @ci.email 地址，或用自己的域名邮箱；发信时自己选从哪个地址出去。价格页 https://centralintelligence.com/pricing 的套餐卡片没有写出这个邮箱功能，所以具体落在哪一档，以你打开价格页和结账页时看到的为准。价格页写的数字是：Free 永久 £0，可以和 ARC 聊天、每月 500 个额度、最多 50 条笔记和同时 3 个目标、消息和通话、新闻简报，对照表里的存储是 100 MB。Pro 每月 £20，或每年 £220；含 Free 的内容，另有每月 5,000 个额度、笔记和目标不限量、每月最多 60 分钟对 ARC 说话、ARC 跨邮件和日历、提醒、记忆、目标计划和应用搭建器，对照表里的存储是 1 GB。Ultra 每月 £50，或每年 £550；每月 20,000 个额度、每月最多 300 分钟语音、agent 最长 6 小时且同时 4 个、存储 5 GB。Business 是定制，对照表写每月 25,000 个额度、存储 10 GB、每月最多 600 分钟语音，卡片上写 ARC 可以替你给人发消息。英国用英镑，其他地方用美元。付费档目前没有试用，年付是一次付清。首页写一分钟可以建免费账号，并会发确认码；常见问题写可以用邮箱、Google 或 Microsoft 注册，再用发来的码确认。打开的这几页没有写邀请码。本库没有注册，所以没有看到注册表单后面还有没有别的门。说明文里，作者说他们内部换掉了 Teams、Slack、WhatsApp、Notion、Obsidian、Microsoft To Do、Xmind、Outlook、OneDrive、ChatGPT 和 Wispr Flow，并说因此省下数千英镑。这是他们自己的叙述。首页写你的内容不会被拿去卖或做广告，连接哪些账号、哪些操作要你批准，由你决定。说明文写可以在设置里断开 Google 账号，隐私政策解释服务商会处理哪些数据。隐私政策页写生效日 2026-05-05、最近更新 2026-10-10，控制者是英格兰和威尔士的 Central Intelligence Ltd（公司号 16973632）。官网、价格页和这份隐私政策在这篇说明文之前就已经公开；今天新的是这篇说明文。本库没有注册，没有登录，没有连接 Gmail 或 Microsoft，没有让 ARC 改日程或发信，也没有安装桌面端。",
+      "summaryEn": "Central Intelligence (https://centralintelligence.com/ ) calls itself a personal AI workspace and a personal OS: one place that goes with you for email, calendar, messages, video calls, notes, mind maps, news, small apps you build, and dictation. The homepage lists Web, Mac, Windows, and Linux, with iOS and Android marked Coming soon. The FAQ says the public beta covers the web, macOS, Windows, and Linux, and that the phone apps are planned, so this entry does not treat them as already in the stores. The built-in assistant is named ARC. The homepage says it brings notes, messages, and the calendar together to help you plan a day. The essay says you can ask it to pull next steps out of your notes, look at what it suggests, then open the calendar and decide when to do the work. The FAQ says ARC prepares next steps and that supported actions are shown to you before they run. The essay at https://centralintelligence.com/blog/why-we-built-central-intelligence is headed Published 27 November 2026. It says you can keep a Gmail address and a Microsoft address and read both in All Inboxes; a paid plan can claim an @ci.email address or use a mailbox on your own domain; when you send, you choose which address it comes from. The plan cards on https://centralintelligence.com/pricing do not name that mailbox, so which tier includes it is whatever the pricing page and the checkout show when you open them. The figures on the pricing page are: Free is £0 forever, with chat with ARC, 500 credits a month, up to 50 notes and 3 goals at a time, messages and calls, and news briefings, and the comparison table lists 100 MB of storage. Pro is £20 a month or £220 a year; it includes Free, plus 5,000 credits a month, unlimited notes and goals, up to 60 minutes a month of talking to ARC, ARC across email and calendar, reminders, memories, an AI goal planner, and an app builder, and the table lists 1 GB of storage. Ultra is £50 a month or £550 a year, with 20,000 credits a month, up to 300 minutes of voice, agents running up to 6 hours with 4 at once, and 5 GB of storage. Business is custom; the table lists 25,000 credits a month, 10 GB of storage, and up to 600 minutes of voice, and the card says ARC messages people for you. Prices are in pounds in the UK and in US dollars elsewhere. Paid plans currently have no trial, and annual plans are one payment. The homepage says you can create a free account in a minute and that a confirmation code is sent; the FAQ says you can sign up with email, Google, or Microsoft and confirm with the code. The pages opened here do not mention an invite code. This library did not register, so it did not see whether anything else sits behind the sign-up form. In the essay the authors say they replaced Teams, Slack, WhatsApp, Notion, Obsidian, Microsoft To Do, Xmind, Outlook, OneDrive, ChatGPT, and Wispr Flow internally, and that this saved thousands of pounds. That is their own account. The homepage says your content is not sold or used for advertising, and that you choose which accounts to connect and which actions to approve. The essay says a Google account can be disconnected from Settings, and that the privacy policy explains what service providers process. The privacy policy page says it is effective 2026-05-05, last updated 2026-10-10, and names Central Intelligence Ltd of England and Wales (company number 16973632) as the controller. The site, the pricing page, and that privacy policy were already public before this essay; what is new today is the essay. This library did not register, did not sign in, did not connect Gmail or Microsoft, did not let ARC change a calendar or send mail, and did not install a desktop app.",
+      "categories": [
+        "productivity",
+        "automation"
+      ],
+      "role": "Personal AI workspace",
+      "sourceUrl": "https://centralintelligence.com/",
+      "secondaryUrls": [
+        "https://centralintelligence.com/blog/why-we-built-central-intelligence",
+        "https://centralintelligence.com/pricing",
+        "https://centralintelligence.com/privacy",
+        "https://news.ycombinator.com/item?id=50661376"
+      ],
+      "previewImage": "/previews/central-intelligence.webp",
+      "sourceType": "official-launch",
+      "language": "zh",
+      "difficulty": "starter",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "官网写，ARC 准备下一步，支持的操作要你看过再执行。连接 Gmail 或 Microsoft、改日程、发信，都由你自己决定。本库没有注册，也没有替你做这些。",
+      "approvalBoundaryEn": "The site says ARC prepares next steps and that supported actions are shown to you before they run. Connecting Gmail or Microsoft, changing a calendar, and sending mail are your own decisions. This library did not register and did not do any of those for you.",
+      "connectors": [
+        "gmail",
+        "calendar",
+        "email"
+      ],
+      "publishedAt": "2026-11-27",
+      "updatedAt": "2026-11-27T02:30:00Z",
+      "qualityNote": "收录理由：它把自己放在个人 AI 工作区这个位置，把邮件、日程、消息、笔记和听写收进同一个地方，内置助手 ARC 从笔记里抽下一步，支持的操作先给人看再执行。今天新的是说明文，页头写 Published 27 November 2026。边界：官网、价格页和隐私政策在这篇说明文之前就已经公开，隐私政策写生效日 2026-05-05、最近更新 2026-10-10。公开测试写的是网页、macOS、Windows、Linux；iOS 和 Android 是即将推出，这里不写成已经上架。价格按价格页书写：Free 永久不收费，Pro 每月 20 英镑或每年 220 英镑，Ultra 每月 50 英镑或每年 550 英镑，Business 另谈；英国用英镑，其他地方用美元；付费档目前没有试用。说明文说付费计划可以要 @ci.email 或用自己的域名，价格页卡片没有写出这项，具体档位以你打开页面时为准。作者说换掉了一串旧工具并省下数千英镑，那是他们自己的叙述。首页写内容不拿去卖、不做广告；说明文写可以在设置里断开 Google 账号。打开的页面没有写邀请码。本库没有注册，没有登录，没有连接 Gmail 或 Microsoft，没有让 ARC 改日程或发信，也没有安装桌面端。预览是官网首页的展示，不是登录之后看到的界面。",
+      "qualityNoteEn": "Why listed: it places itself as a personal AI workspace that keeps mail, calendar, messages, notes, and dictation in one place, and the built-in assistant ARC pulls next steps out of notes, with supported actions shown to a person before they run. What is new today is the essay, headed Published 27 November 2026. Limits: the site, the pricing page, and the privacy policy were already public before that essay. The privacy policy says it is effective 2026-05-05 and was last updated 2026-10-10. The public beta is described as web, macOS, Windows, and Linux; iOS and Android are coming soon, and this entry does not treat them as already in the stores. Prices are written as on the pricing page: Free stays free, Pro is 20 pounds a month or 220 pounds a year, Ultra is 50 pounds a month or 550 pounds a year, and Business is by conversation; pounds in the UK and US dollars elsewhere; paid plans currently have no trial. The essay says a paid plan can claim an @ci.email address or use your own domain, and the pricing cards do not name that feature, so the tier is whatever the page shows when you open it. The authors' account of replacing a list of older tools and saving thousands of pounds is their own narrative. The homepage says content is not sold and is not used for advertising; the essay says a Google account can be disconnected from Settings. The pages opened here do not mention an invite code. This library did not register, did not sign in, did not connect Gmail or Microsoft, did not let ARC change a calendar or send mail, and did not install a desktop app.",
+      "verifyLog": "2026-11-27 核对，只记日期。首页 https://centralintelligence.com/ 可打开，标题 Central Intelligence | Personal AI workspace。可见文案有 All your tools. One intelligence.、Your personal OS.、平台行 Web Mac Windows Linux，iOS Android Coming soon，以及 Email、Calendar、Messages、Video calls、Notes、Mind maps、News、Personal apps、Dictation。首页还有 Your content is not sold or used for advertising，以及 Create your free account in a minute. We send a code to confirm your email。常见问题写 Central Intelligence is a personal AI workspace；Will ARC take actions for me? Supported actions are presented for your review and approval；Where can I use it? available for web, macOS, Windows and Linux in public beta. iOS and Android apps are planned；How do I sign up? with your email, or with Google or Microsoft, and confirm your email with the code we send。说明文 https://centralintelligence.com/blog/why-we-built-central-intelligence 页头 Published 27 November 2026。正文有 saved thousands of pounds；从 Teams、Slack、WhatsApp、Notion、Obsidian、Microsoft To Do、Xmind、Outlook、OneDrive、ChatGPT、Wispr Flow 换过来，这是作者自述；All Inboxes；On a paid plan, you can also claim an @ci.email address or set up a mailbox on your own domain；You can disconnect a Google account from Settings；We don’t sell your content or use it for advertising。价格页 https://centralintelligence.com/pricing 可打开。Free £0 forever：Chat with ARC、500 credits a month、Up to 50 notes and 3 goals、Messages and calls、News briefings。Pro £20/month 或 £220/year。Ultra £50/month 或 £550/year。Business Custom，卡片写 ARC messages people for you。对照表存储 Free 100 MB、Pro 1 GB、Ultra 5 GB、Business 10 GB；语音 Free 无、Pro 最多 60 分钟、Ultra 最多 300 分钟、Business 最多 600 分钟。Charged in pounds in the UK and in US dollars everywhere else。Is there a paid-plan trial? Paid plans do not currently include a trial。价格卡片没有 @ci.email 字样。隐私政策 https://centralintelligence.com/privacy 写 Effective 5 May 2026、Last updated 10 October 2026、Controller Central Intelligence Ltd、company number 16973632、registered office 49 Waddington Road, London。本库没有逐条摘完全部处理目的。导航上有 Downloads，直接打开 /downloads 返回 404，没有另找下载地址，也没有下载安装包。Hacker News https://news.ycombinator.com/item?id=50661376 经 Algolia 读到标题 We Built Central Intelligence，作者 hansmorano，创建于 2026-11-27，指向说明文，核对时 1 点、0 条评论，不写成登上首页。预览：无头 Chrome 以 1440×960 打开官网首页首屏，视口已是 3:2，等比缩到 1200×800 WebP，没有裁切，没有加字。画面是官网展示，含平台图标和功能名，不是登录后的界面。未做：没有注册，没有登录，没有连接 Gmail 或 Microsoft，没有和 ARC 对话，没有改日程，没有发信，没有安装桌面端或手机端。",
+      "verifyLogEn": "Checked on 2026-11-27; dates only. The homepage https://centralintelligence.com/ loaded, title Central Intelligence | Personal AI workspace. Visible copy includes All your tools. One intelligence., Your personal OS., a platform row of Web, Mac, Windows, Linux, with iOS and Android Coming soon, and Email, Calendar, Messages, Video calls, Notes, Mind maps, News, Personal apps, Dictation. The homepage also says Your content is not sold or used for advertising, and Create your free account in a minute. We send a code to confirm your email. The FAQ says Central Intelligence is a personal AI workspace; Will ARC take actions for me? Supported actions are presented for your review and approval; Where can I use it? available for web, macOS, Windows and Linux in public beta. iOS and Android apps are planned; How do I sign up? with your email, or with Google or Microsoft, and confirm your email with the code we send. The essay https://centralintelligence.com/blog/why-we-built-central-intelligence is headed Published 27 November 2026. The body includes saved thousands of pounds; the move off Teams, Slack, WhatsApp, Notion, Obsidian, Microsoft To Do, Xmind, Outlook, OneDrive, ChatGPT, and Wispr Flow is the authors' own account; All Inboxes; On a paid plan, you can also claim an @ci.email address or set up a mailbox on your own domain; You can disconnect a Google account from Settings; We don’t sell your content or use it for advertising. The pricing page https://centralintelligence.com/pricing loaded. Free is £0 forever: Chat with ARC, 500 credits a month, Up to 50 notes and 3 goals, Messages and calls, News briefings. Pro is £20/month or £220/year. Ultra is £50/month or £550/year. Business is Custom, and the card says ARC messages people for you. The comparison table lists storage of 100 MB, 1 GB, 5 GB, and 10 GB, and voice of none, up to 60 minutes, up to 300 minutes, and up to 600 minutes. Charged in pounds in the UK and in US dollars everywhere else. Is there a paid-plan trial? Paid plans do not currently include a trial. The plan cards do not mention @ci.email. The privacy policy https://centralintelligence.com/privacy says Effective 5 May 2026, Last updated 10 October 2026, Controller Central Intelligence Ltd, company number 16973632, registered office 49 Waddington Road, London. This library did not extract every processing purpose. The nav includes Downloads; opening /downloads returned 404, no other download address was hunted, and no installer was downloaded. Hacker News https://news.ycombinator.com/item?id=50661376 , read through Algolia, is titled We Built Central Intelligence, author hansmorano, created 2026-11-27, linking the essay, with 1 point and 0 comments at the check, so it is not described as a front-page post. Preview: headless Chrome opened the homepage first screen at 1440×960; the viewport was already 3:2 and was scaled to a 1200×800 WebP, nothing cropped, no text added. The picture is the public site, including platform icons and feature names, not a signed-in screen. Not done: no registration, no sign-in, Gmail and Microsoft were not connected, ARC was not talked to, no calendar was changed, no mail was sent, and no desktop or phone app was installed.",
+      "landing": {
+        "what": "一个个人 AI 工作区。官网的说法是 personal OS：邮件、日程、消息、通话、笔记、思维导图、新闻、自己做的小应用和听写放在一处。助手叫 ARC，从笔记里抽出下一步，你看过再决定做不做。2026-11-27 的说明文讲他们为什么要做它；产品页面、价格和隐私政策在这之前就已经能打开。",
+        "whatEn": "A personal AI workspace. The site's own phrase is personal OS: email, calendar, messages, calls, notes, mind maps, news, small apps you build, and dictation in one place. The assistant is named ARC. It pulls next steps out of notes, and you look before anything supported runs. The essay of 2026-11-27 says why they built it; the product pages, pricing, and privacy policy were already open before that.",
+        "steps": [
+          {
+            "title": "先读首页和今天的说明文",
+            "titleEn": "Read the homepage and today's essay first",
+            "body": "首页写它是什么、ARC 帮你排一天、哪些平台能用。说明文写他们怎么从笔记交到日历，以及他们自己换掉了哪些工具。换掉工具和省下的钱是作者的叙述。",
+            "bodyEn": "The homepage says what it is, how ARC helps plan a day, and which platforms it runs on. The essay describes the handoff from notes to the calendar, and which tools the authors say they replaced. The replaced tools and the money saved are the authors' account.",
+            "links": [
+              {
+                "href": "https://centralintelligence.com/",
+                "label": "Central Intelligence 官网",
+                "labelEn": "Central Intelligence homepage"
+              },
+              {
+                "href": "https://centralintelligence.com/blog/why-we-built-central-intelligence",
+                "label": "说明文：Why we built Central Intelligence",
+                "labelEn": "Essay: Why we built Central Intelligence"
+              }
+            ]
+          },
+          {
+            "title": "注册前看价格页",
+            "titleEn": "Read the pricing page before you sign up",
+            "body": "Free 不收费。Pro、Ultra 有公开的英镑月价和年价，Business 要另谈。付费档目前没有试用。说明文说付费计划可以要 @ci.email 或自己的域名邮箱，价格卡片没有写出这项。本库没有注册，没有看到结账页。",
+            "bodyEn": "Free has no charge. Pro and Ultra have public monthly and yearly prices in pounds, and Business is a conversation. Paid plans currently have no trial. The essay says a paid plan can claim an @ci.email address or a mailbox on your own domain, and the plan cards do not name that. This library did not register and did not see a checkout page.",
+            "links": [
+              {
+                "href": "https://centralintelligence.com/pricing",
+                "label": "价格页",
+                "labelEn": "Pricing"
+              }
+            ]
+          },
+          {
+            "title": "公开测试先从网页开始",
+            "titleEn": "The public beta starts on the web",
+            "body": "常见问题写网页、macOS、Windows、Linux 是公开测试，iOS 和 Android 还在计划。注册可以用邮箱、Google 或 Microsoft，再用邮件里的码确认。连接旧邮箱、让 ARC 改日程或发信之前，先看它要你确认的那一步。本库没有安装，也没有连接任何账号。",
+            "bodyEn": "The FAQ says the web, macOS, Windows, and Linux are in public beta, and that iOS and Android are still planned. Sign-up can use email, Google, or Microsoft, then the code from the email. Before you connect an existing mailbox or let ARC change a calendar or send mail, read the confirmation step it shows you. This library did not install it and did not connect any account.",
+            "links": [
+              {
+                "href": "https://centralintelligence.com/privacy",
+                "label": "隐私政策",
+                "labelEn": "Privacy policy"
+              }
+            ]
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "iOS 和 Android 在首页标着即将推出，常见问题写的是计划中。这里不写成已经可以在应用商店下载。",
+            "textEn": "iOS and Android are marked coming soon on the homepage, and the FAQ calls them planned. This entry does not treat them as already downloadable from an app store."
+          },
+          {
+            "text": "说明文里换掉的软件名单和省下数千英镑是作者自己的叙述。价格、额度和存储以价格页为准；@ci.email 写在说明文的付费计划里，价格卡片没有写出对应档位。",
+            "textEn": "The list of replaced apps and the thousands of pounds saved in the essay are the authors' own account. Prices, credits, and storage follow the pricing page; @ci.email is described in the essay as a paid-plan feature, and the plan cards do not name the tier."
+          },
+          {
+            "text": "首页写内容不拿去卖、不做广告。说明文写可以在设置里断开 Google 账号，并指向隐私政策。隐私政策的生效日和更新日期以该页为准。",
+            "textEn": "The homepage says content is not sold and is not used for advertising. The essay says a Google account can be disconnected from Settings and points to the privacy policy. The policy's effective date and last-updated date are whatever that page states."
+          },
+          {
+            "text": "本库没有注册，没有登录，没有连接 Gmail 或 Microsoft，没有让 ARC 改日程或发信，也没有安装桌面端。预览是官网首页，不是登录后的界面。",
+            "textEn": "This library did not register, did not sign in, did not connect Gmail or Microsoft, did not let ARC change a calendar or send mail, and did not install a desktop app. The preview is the public homepage, not a signed-in screen."
+          }
+        ],
+        "previewCredit": "预览：Central Intelligence 官网首页首屏，视口已是 3:2，等比缩到 1200×800，未裁切，未加字；是官网展示，不是登录后的界面",
+        "previewCreditEn": "Preview: the Central Intelligence homepage first screen; the viewport was already 3:2 and was scaled to 1200×800, not cropped, no text added; it is the public site, not a signed-in screen"
+      }
+    },
+    {
+      "id": "docket",
+      "slug": "docket",
+      "title": "Docket：给 agent 用的 Gmail 和 Google 日历命令行",
+      "titleEn": "Docket: a Gmail and Google Calendar command line for agents",
+      "kind": "tool",
+      "hook": "给 agent 用的 Gmail 和日历命令行工具。",
+      "hookEn": "A Gmail and Calendar command line for agents.",
+      "summary": "Docket（https://github.com/zachpmanson/docket ）是一个给 agent 用的 Gmail 和 Google 日历命令行，仓库简介就写着 Agent-facing Gmail & Calendar CLI。它是终端里的工具，给人看的时候打表格，接到管道或重定向时改出 JSON。子命令是 auth、mail、cal。README 写用 nix build 得到 ./result/bin/docket，并举例 docket --account default mail search、mail read 和 cal list。那些终端输出印在 README 里，是文档示例。仓库创建于 2026-08-16，今天又有推送；它不是今天才第一次出现。设计文档写邮件走 Gmail 的 REST API（google.golang.org/api/gmail/v1），文档明确写了不用 IMAP，也不用 SMTP。日历走 CalDAV，文档写这是因为示例配置借用了 Thunderbird 的 OAuth 客户端，而那个客户端的项目上 Calendar 的 REST API 是关着的。权限文档写：邮件的搜索、列表、阅读默认允许，mail.send、mail.reply、mail.label 默认拒绝；日历的列表和查询默认允许，cal.create、cal.update、cal.delete 默认拒绝。被允许的写操作还要再加 --confirm，--dry-run 只预览。示例配置使用 Thunderbird 的公开客户端，Google 的同意页会显示成 Thunderbird；文档写超出个人使用就应该注册自己的客户端。仓库根目录没有 LICENSE 文件，GitHub 的许可证字段是空的，所以这里不把它写成开源软件。它是一个很小的个人项目。本库没有克隆仓库，没有跑 nix build，没有做 OAuth，没有读任何邮箱或日历。",
+      "summaryEn": "Docket (https://github.com/zachpmanson/docket ) is a command line for agents that talks to Gmail and Google Calendar. The repository description is Agent-facing Gmail & Calendar CLI. It is a terminal tool: a table when a person is looking, JSON when the output is piped or redirected. The subcommands are auth, mail, and cal. The README says nix build produces ./result/bin/docket, and it shows examples of docket --account default mail search, mail read, and cal list. The terminal text in the README is a documentation example. The repository was created on 2026-08-16 and was pushed again today; it is not appearing for the first time today. The design document says mail uses the Gmail REST API (google.golang.org/api/gmail/v1), and it says in so many words that it does not use IMAP or SMTP. Calendar uses CalDAV. The document says that is because the sample configuration borrows Thunderbird's OAuth client, and the Calendar REST API is turned off on that client's project. The permissions document says mail search, list, and read are allowed by default, while mail.send, mail.reply, and mail.label are denied by default; calendar list and search are allowed by default, while cal.create, cal.update, and cal.delete are denied by default. A write that has been allowed still needs --confirm, and --dry-run only previews. The sample configuration uses Thunderbird's public client, so Google's consent screen attributes the consent to Thunderbird; the docs say anything beyond personal use should register its own client. The repository root has no LICENSE file, and GitHub's license field is empty, so this entry does not call it open source. It is a very small personal project. This library did not clone the repository, did not run nix build, did not complete OAuth, and did not read any mailbox or calendar.",
+      "categories": [
+        "automation",
+        "engineering"
+      ],
+      "role": "Agent mail and calendar CLI",
+      "sourceUrl": "https://github.com/zachpmanson/docket",
+      "secondaryUrls": [
+        "https://github.com/zachpmanson/docket/blob/master/permissions.md",
+        "https://github.com/zachpmanson/docket/blob/master/docket-design.md",
+        "https://news.ycombinator.com/item?id=50653477"
+      ],
+      "previewImage": "/previews/docket.webp",
+      "sourceType": "community",
+      "language": "zh",
+      "difficulty": "advanced",
+      "featured": false,
+      "hasMultiAgent": false,
+      "hasRoutine": false,
+      "hasSkill": false,
+      "requiresApproval": true,
+      "approvalBoundary": "发信、回复、改标签和改日程在默认配置里是拒绝的；要先在配置里明确打开，写操作还要再加 --confirm。本库没有登录，也没有授权任何一项。",
+      "approvalBoundaryEn": "Sending, replying, changing labels, and changing the calendar are denied in the default configuration; each one has to be turned on explicitly, and a write also needs --confirm. This library did not sign in and did not grant any of them.",
+      "connectors": [
+        "gmail",
+        "calendar"
+      ],
+      "publishedAt": "2026-08-16",
+      "updatedAt": "2026-11-27T02:30:00Z",
+      "qualityNote": "收录理由：官方 Gmail 接口正在改规则的同一天，这个命令行给 agent 一条读信、读日程的路，写操作默认关掉，要人在配置里打开并再确认一次。角色是给 agent 用的命令行，收录时按工具写。边界：仓库 2026-08-16 就建了，今天只是又被提到、又有推送。邮件文档写的是 Gmail REST API。日历文档写的是 CalDAV，原因是示例登录借用 Thunderbird 的客户端。有人在讨论里说它走 IMAP，这和仓库的设计文档对不上，正文以仓库文档为准。发信和回复默认拒绝。根目录没有许可证文件，GitHub 许可证字段为空，这里不写开源。它是很小的个人项目。README 里的终端输出是文档示例。本库没有克隆，没有跑 nix build，没有做 OAuth，没有读任何邮箱或日历。",
+      "qualityNoteEn": "Why listed: on the same day the official Gmail interface is changing its rules, this command line gives an agent a way to read mail and a calendar, with writes off unless a person turns them on in the configuration and confirms again. The role is a command line for agents, and the entry describes it as a tool. Limits: the repository was created on 2026-08-16; today it was mentioned again and pushed again. The mail document describes the Gmail REST API. The calendar document describes CalDAV, because the sample sign-in borrows Thunderbird's client. A comment in the discussion says it uses IMAP, which does not match the repository's design document, so the entry follows the repository. Sending and replying are denied by default. The root has no license file, GitHub's license field is empty, and this entry does not call it open source. It is a very small personal project. The terminal text in the README is a documentation example. This library did not clone it, did not run nix build, did not complete OAuth, and did not read any mailbox or calendar.",
+      "verifyLog": "2026-11-27 核对，只记日期。GitHub API：zachpmanson/docket，description 为 Agent-facing Gmail & Calendar CLI，created_at 2026-08-16，pushed_at 2026-11-27，default_branch master，language Go，stargazers_count 1，forks_count 0，license 为 null，open_issues_count 3。根目录列表有 README.md、permissions.md、docket-design.md、flake.nix、cmd/、gmail/、internal/，没有 LICENSE 文件，请求 /LICENSE 为 404。README 写 nix build，二进制 ./result/bin/docket，用法 docket [--account <name>] <auth|mail|cal>，终端给人看、管道出 JSON，示例命令为 mail search、mail read、cal list。permissions.md 的操作矩阵：邮件读 mail.search、mail.list、mail.read、mail.thread、mail.attachment 默认允许；邮件写 mail.send、mail.reply、mail.label 默认拒绝；日历读 cal.list、cal.search、cal.agenda、cal.show、cal.freebusy、cal.find-slot 默认允许；日历写 cal.create、cal.update、cal.delete 默认拒绝；凭证 auth.login、auth.import、auth.export、auth.remove 默认拒绝。写操作还要 --confirm，--dry-run 只预览。示例 OAuth 使用 Thunderbird 的客户端，同意页归到 Thunderbird，超出个人使用应自备客户端。docket-design.md：Mail 一节写 Library google.golang.org/api/gmail/v1 (REST), not IMAP/SMTP。Calendar 一节写 Use CalDAV, not the REST API，端点形式 https://apidata.googleusercontent.com/caldav/v2/<calendar-id>/events ，原因是 Thunderbird 借用的 OAuth 项目上 Calendar REST 被关掉。Hacker News https://news.ycombinator.com/item?id=50653477 的一条 2026-11-27 评论，作者 pavo-etc，链到本仓库，原文写 Gives agents full access to IMAP controls and caldav。其中 CalDAV 和设计文档一致，IMAP 和设计文档的 REST、not IMAP/SMTP 不一致，正文不采用 IMAP 这一句。仓库页侧栏能看到一条名为 docket v0.1.0 的 release，本库没有打开 release 说明。预览：无头 Chrome 打开仓库页，对 article.markdown-body 整块截图（约 838×649），等比放大后左右用页面边缘的白色补齐到 1200×800 WebP，没有裁掉这块 README，没有加字。图里的终端示例是 README 原文，不是本库运行的输出。宽表格在 GitHub 页面里本身显示不全，预览保持页面上的样子。未做：没有 git clone，没有 nix build，没有 nix develop，没有 make test，没有复制 config.toml，没有跑 docket auth login，没有读邮箱或日历。",
+      "verifyLogEn": "Checked on 2026-11-27; dates only. GitHub API: zachpmanson/docket, description Agent-facing Gmail & Calendar CLI, created_at 2026-08-16, pushed_at 2026-11-27, default_branch master, language Go, stargazers_count 1, forks_count 0, license null, open_issues_count 3. The root listing includes README.md, permissions.md, docket-design.md, flake.nix, cmd/, gmail/, and internal/, and has no LICENSE file; requesting /LICENSE returned 404. The README says nix build, binary ./result/bin/docket, usage docket [--account <name>] <auth|mail|cal>, a table for a person and JSON when piped, with example commands mail search, mail read, and cal list. The permissions.md matrix: mail reads mail.search, mail.list, mail.read, mail.thread, and mail.attachment are allowed by default; mail writes mail.send, mail.reply, and mail.label are denied by default; calendar reads cal.list, cal.search, cal.agenda, cal.show, cal.freebusy, and cal.find-slot are allowed by default; calendar writes cal.create, cal.update, and cal.delete are denied by default; credentials auth.login, auth.import, auth.export, and auth.remove are denied by default. Writes also need --confirm, and --dry-run only previews. The sample OAuth client is Thunderbird's, the consent screen is attributed to Thunderbird, and anything beyond personal use should register its own client. docket-design.md: the Mail section says Library google.golang.org/api/gmail/v1 (REST), not IMAP/SMTP. The Calendar section says Use CalDAV, not the REST API, with an endpoint of the form https://apidata.googleusercontent.com/caldav/v2/<calendar-id>/events , because the Calendar REST API is disabled on the Thunderbird OAuth project the sample borrows. A 2026-11-27 comment on Hacker News https://news.ycombinator.com/item?id=50653477 , author pavo-etc, links this repository and says Gives agents full access to IMAP controls and caldav. CalDAV matches the design document; IMAP does not match the document's REST, not IMAP/SMTP, so the entry does not adopt the IMAP sentence. The repository sidebar shows a release named docket v0.1.0; this library did not open the release notes. Preview: headless Chrome opened the repository page and captured the whole article.markdown-body element (about 838×649), scaled it up, and padded the left and right with the page's own white edge to a 1200×800 WebP; that README block was not cropped and no text was added. The terminal example in the picture is the README's own text, not output from a run here. A wide table is already cut off on the GitHub page, and the preview keeps that page as it is. Not done: no git clone, no nix build, no nix develop, no make test, config.toml was not copied, docket auth login was not run, and no mailbox or calendar was read.",
+      "landing": {
+        "what": "一个 Go 写的命令行，给 agent 在无界面的机器上读 Gmail 和 Google 日历。人在终端前看表格，程序接到管道时拿到 JSON。写邮件和改日程默认是关的。仓库从 2026-08-16 就在，今天因为官方 Gmail 接口的讨论又被人提起。",
+        "whatEn": "A command line written in Go, so an agent on a machine without a screen can read Gmail and Google Calendar. A person at the terminal sees a table; a program on the other end of a pipe gets JSON. Sending mail and changing the calendar are off by default. The repository has been up since 2026-08-16 and was mentioned again today in the discussion of the official Gmail interface.",
+        "steps": [
+          {
+            "title": "先读 README、权限文档和设计文档",
+            "titleEn": "Read the README, the permissions doc, and the design doc",
+            "body": "README 写了 nix build 和 auth、mail、cal 三类子命令。权限文档给每一项操作一个默认开关。设计文档写邮件和日历各自走哪条协议。本库只读了这些页面，没有构建。",
+            "bodyEn": "The README describes nix build and the auth, mail, and cal subcommands. The permissions doc gives every operation a default switch. The design doc says which protocol mail uses and which protocol the calendar uses. This library only read those pages and did not build it.",
+            "links": [
+              {
+                "href": "https://github.com/zachpmanson/docket",
+                "label": "Docket 仓库",
+                "labelEn": "Docket repository"
+              },
+              {
+                "href": "https://github.com/zachpmanson/docket/blob/master/permissions.md",
+                "label": "权限说明",
+                "labelEn": "Permissions"
+              },
+              {
+                "href": "https://github.com/zachpmanson/docket/blob/master/docket-design.md",
+                "label": "设计文档",
+                "labelEn": "Design document"
+              }
+            ]
+          },
+          {
+            "title": "登录前先看默认拒绝了什么",
+            "titleEn": "Before you sign in, see what is denied by default",
+            "body": "发信、回复、改标签、创建和修改日程，默认都是拒绝。打开某一项之后，真正写入还要加 --confirm。示例配置借用 Thunderbird 的 OAuth 客户端，同意页会显示成 Thunderbird；给别人用之前，文档让你注册自己的客户端。本库没有登录。",
+            "bodyEn": "Sending, replying, changing labels, and creating or changing events are denied by default. After one of those is turned on, an actual write still needs --confirm. The sample configuration borrows Thunderbird's OAuth client, so the consent screen names Thunderbird; the docs tell you to register your own client before anyone else uses it. This library did not sign in.",
+            "links": []
+          }
+        ],
+        "boundaries": [
+          {
+            "text": "邮件文档写的是 Gmail REST API，并写明不用 IMAP、不用 SMTP。日历文档写的是 CalDAV。讨论里有人说它走 IMAP，那一句和设计文档不一致，这里不把它当成功能。",
+            "textEn": "The mail document describes the Gmail REST API and says it does not use IMAP or SMTP. The calendar document describes CalDAV. A comment in the discussion says it uses IMAP; that sentence does not match the design document and is not treated as a feature here."
+          },
+          {
+            "text": "发信和回复默认拒绝，要在配置里逐项打开，写入时还要 --confirm。示例登录客户端是 Thunderbird 的，超出个人使用应自备客户端。",
+            "textEn": "Sending and replying are denied by default, have to be turned on one by one in the configuration, and a write also needs --confirm. The sample sign-in client is Thunderbird's; anything beyond personal use should bring its own client."
+          },
+          {
+            "text": "仓库根目录没有许可证文件，GitHub 许可证字段是空的。这是很小的个人项目，2026-08-16 创建。本库没有克隆，没有构建，没有登录，没有读邮箱或日历。预览是 GitHub 上 README 的渲染，里面的终端文字是文档示例。",
+            "textEn": "The repository root has no license file, and GitHub's license field is empty. It is a very small personal project, created on 2026-08-16. This library did not clone it, did not build it, did not sign in, and did not read a mailbox or a calendar. The preview is the README as GitHub renders it, and the terminal text in it is a documentation example."
+          }
+        ],
+        "previewCredit": "预览：GitHub 上 Docket README 的渲染，整块截取后左右补白边成 1200×800，未裁切这块正文，未加字；终端示例是 README 原文，不是本库运行的输出",
+        "previewCreditEn": "Preview: the Docket README as rendered on GitHub, the whole block captured and padded left and right to 1200×800, that text not cropped, no text added; the terminal example is the README's own text, not output from a run here"
+      }
+    },
+    {
       "id": "dreamcoder",
       "slug": "dreamcoder",
       "title": "DreamCoder：浏览器里平铺几十个 agent、终端和审阅的本地编程工作台",
@@ -12134,10 +12471,10 @@
     }
   ],
   "meta": {
-    "updatedAt": "2026-11-20T12:15:00Z",
+    "updatedAt": "2026-11-27T02:30:00Z",
     "timezone": "Asia/Shanghai",
-    "version": "1.4.82",
-    "count": 221,
+    "version": "1.4.83",
+    "count": 224,
     "sourcesCrawled": [
       "https://openpencil.dev/",
       "https://github.com/open-pencil/open-pencil",
@@ -12467,7 +12804,24 @@
       "https://news.ycombinator.com/item?id=50573266",
       "https://pika.art/blog/pika-enact",
       "https://pika.art/pika-h3-flex",
-      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp"
+      "https://cdn.pika.art/v2/creation/cms/notion/3d4def814b639f561d66a26a482e3b70.webp",
+      "https://workspace.google.com/blog/product-announcements/built-for-trust-and-control-new-ai-agent-protections-and-developer-tools-in-google-workspace",
+      "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+      "https://developers.google.com/workspace/guides/configure-mcp-servers",
+      "https://developers.google.com/workspace/guides/workspace-cli",
+      "https://developers.google.com/workspace/gmail/api/reference/mcp",
+      "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/send_message",
+      "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/reply",
+      "https://developers.google.com/workspace/gmail/api/reference/mcp/tools_list/forward",
+      "https://centralintelligence.com/",
+      "https://centralintelligence.com/blog/why-we-built-central-intelligence",
+      "https://centralintelligence.com/pricing",
+      "https://centralintelligence.com/privacy",
+      "https://news.ycombinator.com/item?id=50661376",
+      "https://github.com/zachpmanson/docket",
+      "https://github.com/zachpmanson/docket/blob/master/permissions.md",
+      "https://github.com/zachpmanson/docket/blob/master/docket-design.md",
+      "https://news.ycombinator.com/item?id=50653477"
     ]
   }
 }
